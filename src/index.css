@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #0A0F1A; color: #E8E6DF; }
+body { font-family: 'Inter', 'DM Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+button { font-family: inherit; }

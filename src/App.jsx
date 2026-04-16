@@ -105,7 +105,7 @@ const Nav = ({ current, go }) => {
         <Tab id="about" label="About" />
         <Tab id="pcs" label="PCS Guide" />
 
-        <div style={{ position: "relative" }}
+        <div style={{ position: "relative" , paddingBottom: 4}}
           onMouseEnter={() => setBasesOpen(true)}
           onMouseLeave={() => setBasesOpen(false)}>
           <button onClick={() => setBasesOpen(!basesOpen)} style={{
@@ -123,7 +123,7 @@ const Nav = ({ current, go }) => {
             whiteSpace: "nowrap",
           }}>Bases ▾</button>
           {basesOpen && (
-            <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 200, marginTop: 4, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
+            <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 200, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               {["nas", "corry", "whiting", "eglin", "hurlburt"].map(id => {
                 const p = pages.find(x => x.id === id);
                 return <button key={id} onClick={() => { go(id); setBasesOpen(false); }} style={{ display: "block", width: "100%", textAlign: "left", background: current === id ? "rgba(201,168,76,0.12)" : "transparent", border: "none", color: current === id ? C.gold : "rgba(255,255,255,0.85)", padding: "11px 16px", fontSize: 12, cursor: "pointer", borderRadius: 4, fontFamily: SS, fontWeight: current === id ? 700 : 500 }}>{p.label}</button>;

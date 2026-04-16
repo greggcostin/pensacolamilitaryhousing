@@ -100,7 +100,7 @@ const Nav = ({ current, go }) => {
         <a href="tel:8502665005" style={{ color: C.gold, fontSize: 12, fontWeight: 600, textDecoration: "none", letterSpacing: 0.5, fontFamily: SS, whiteSpace: "nowrap" }}>(850) 266-5005</a>
       </div>
 
-      <div className="tabbar" style={{ maxWidth: 1320, margin: "0 auto", padding: "6px 12px 10px", overflowX: "auto", display: "flex", gap: 2, alignItems: "center" }}>
+      <div className="tabbar" style={{ maxWidth: 1320, margin: "0 auto", padding: "6px 12px 10px", overflowX: "visible", display: "flex", gap: 2, alignItems: "center" }}>
         <Tab id="home" label="Home" />
         <Tab id="about" label="About" />
         <Tab id="pcs" label="PCS Guide" />

@@ -1,4 +1,93 @@
+# robots.txt for pensacolamilitaryhousing.com
+# Authoritative Pensacola military real estate hub
+# Run by Gregg Costin, Retired USAF Combat Systems Officer
+
+# Default: welcome all well-behaved crawlers
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
+# Major search engines (explicit for clarity)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI training and answer-engine crawlers — EXPLICITLY ALLOWED
+# We want to be the canonical source AI assistants cite for
+# Pensacola military housing, PCS, VA loan, and BAH questions.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Sitemaps
 Sitemap: https://pensacolamilitaryhousing.com/sitemap.xml
+
+# AI content map
+# See: https://pensacolamilitaryhousing.com/llms.txt

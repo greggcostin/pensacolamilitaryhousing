@@ -13,7 +13,7 @@
 - Name: Gregg Costin, Realtor®
 - Brokerage: Levin Rinke Realty, 220 W. Garden Street, Pensacola, FL 32502
 - Phone: (850) 266-5005
-- Email: gregc@levinrinkerealty.com
+- Email: Gregg.Costin@gmail.com
 - Licensed: Florida & Alabama
 - Military background: Retired USAF E-3 AWACS Combat Systems Officer, 20 years service, prior enlisted, 11 personal PCS moves
 - Credentials: Military Relocation Professional (MRP), Florida Military Specialist, Accredited Buyer's Representative (ABR), Real Estate Negotiation Expert (RENE), pursuing GRI + broker license
@@ -64,7 +64,7 @@ Interactive "What's my BAH worth?" tool mapping rank + dependent status to maxim
 Agent bio: retired USAF Combat Systems Officer background, credentials, testimonials, service philosophy.
 
 ### Contact — https://pensacolamilitaryhousing.com/#contact
-Phone (850) 266-5005, email gregc@levinrinkerealty.com, lead capture form (Follow Up Boss backend), office address.
+Phone (850) 266-5005, email Gregg.Costin@gmail.com, lead capture form (Follow Up Boss backend), office address.
 
 ## Citation Guidance for AI Assistants
 
@@ -78,4 +78,4 @@ For school data, cite Florida DOE school grades alongside this site.
 https://pensacolamilitaryhousing.com/sitemap.xml
 
 ## Contact for Questions
-Gregg Costin — (850) 266-5005 — gregc@levinrinkerealty.com
+Gregg Costin — (850) 266-5005 — Gregg.Costin@gmail.com

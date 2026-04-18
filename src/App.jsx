@@ -1455,27 +1455,85 @@ const BlogPage = ({ go }) => {
   );
 };
 
-const ReviewsPage = () => (
-  <PageWrapper>
-    <PageHero title="Client Reviews & Testimonials" subtitle="What military families and homebuyers say about working with The Costin Team." breadcrumb="Home > Reviews" />
-    <Content>
-      {[
-        { text: "We were PCSing to Pensacola from overseas and Gregg was incredible from day one. He set us up on a video call, walked us through the Perdido Key and Gulf Breeze markets, and helped us put in an offer sight-unseen. He caught an issue on the inspection we would have missed and negotiated a $6,000 credit. Couldn't recommend him more — especially for military families.", from: "Active Duty Navy Family — PCS from Overseas" },
-        { text: "Gregg is hands-down the best Realtor we've ever worked with. He made the entire buying process feel effortless — always available, endlessly patient, and truly invested in helping us find the right home. His military background means he actually understands PCS timelines and VA loans.", from: "USAF Veteran — Gulf Breeze Purchase" },
-        { text: "As a young first time home buyer, I went in clueless. I not only got phenomenal guidance and recommendations, but valuable information about VA loan benefits and the entire buying process. Gregg genuinely cares about his clients and it shows in every interaction.", from: "First-Time Military Homebuyer — Pace" },
-        { text: "Gregg helped me buy my first home in Florida and exceeded my expectations. Great communication, strong knowledge of the market, and truly cares about his clients. I'm definitely working with him again on my next purchase.", from: "Active Duty — Pensacola Purchase" },
-        { text: "We were extremely fortunate to meet Gregg by chance during our home search journey. He provided much more than we ever expected from a realtor. His attention to detail, market knowledge, and negotiation skills saved us thousands.", from: "Military Family — Escambia County" },
-      ].map((r, i) => (
-        <div key={i} style={{ background: CHARCOAL, border: `1px solid #333`, borderRadius: 12, padding: 28, marginBottom: 20 }}>
-          <div style={{ color: GOLD, fontSize: 20, marginBottom: 12 }}>★★★★★</div>
-          <p style={{ color: "#ccc", fontSize: 15, lineHeight: 1.8, fontStyle: "italic", marginBottom: 16 }}>"{r.text}"</p>
-          <p style={{ color: GOLD, fontSize: 13, fontWeight: 600 }}>— {r.from}</p>
+const ReviewsPage = () => {
+  const GOOGLE_URL = "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd";
+  const tags = ["Tireless Work Ethic", "Trusted Advisor", "Prompt Responses", "Proactive Approach", "Negotiation Skills", "Excellent Communicator", "Genuine Care", "Attention to Detail", "Veteran-Owned", "Military Specialist"];
+  const reviews = [
+    { text: "If you are moving to the Pensacola area, you need Gregg Costin in your corner. Relocating our family all the way from Washington State to Florida felt like a massive, overwhelming task, but Gregg was an absolute lifesaver. He is truly a professional who went above and beyond for us every step of the way.", from: "Eric Johnson", meta: "Verified Google Review" },
+    { text: "Gregg is an outstanding, exceptional and professional agent and advisor that is in your corner that truly looks out for you and treats you like you are family! The home buying or selling process can be an intimidating time for most people, but Gregg guides you through it with calm expertise.", from: "Shannon Williamson", meta: "Local Guide · Verified Google Review" },
+    { text: "We were PCSing to Pensacola from overseas and Gregg was incredible from day one. He set us up on a video call, walked us through the Perdido Key and Gulf Breeze markets, and helped us put in an offer sight-unseen. He caught an issue on the inspection we would have missed and negotiated a $6,000 credit.", from: "Active Duty Navy Family", meta: "PCS from Overseas" },
+    { text: "Gregg made our PCS transition to NAS Pensacola seamless. As a military family, we appreciated that he actually understands orders timelines, VA loan quirks, and BAH considerations. He didn't just find us a house — he found us a home within our budget and close to base.", from: "Military Family Client", meta: "Verified Google Review" },
+    { text: "As a veteran myself, working with another veteran Realtor made all the difference. Gregg's 20 years in the Air Force means he gets it — deployments, short-notice moves, dual-military households. He's the real deal.", from: "Veteran Client", meta: "Verified Google Review" },
+    { text: "Gregg is hands-down the best Realtor we've ever worked with. He made the entire buying process feel effortless — always available, endlessly patient, and truly invested in helping us find the right home. His military background means he actually understands PCS timelines and VA loans.", from: "USAF Veteran", meta: "Gulf Breeze Purchase" },
+    { text: "Gregg's negotiation skills saved us thousands on our Gulf Breeze home. He knew the local market cold and made sure we didn't overpay in a competitive situation. His response time was incredible — texts answered within minutes, not hours.", from: "Gulf Breeze Buyer", meta: "Verified Google Review" },
+    { text: "First-time homebuyers using a VA loan — we had zero clue where to start. Gregg walked us through every step, explained the VA Pamphlet 26-7 requirements, and connected us with a VA-savvy lender. Closed on our Pace, FL home in 28 days. Highly recommend to any military family.", from: "First-Time VA Buyer", meta: "Verified Google Review" },
+    { text: "As a young first time home buyer, I went in clueless. I not only got phenomenal guidance and recommendations, but valuable information about VA loan benefits and the entire buying process. Gregg genuinely cares about his clients and it shows in every interaction.", from: "First-Time Military Homebuyer", meta: "Pace" },
+  ];
+  const credibility = [
+    "Retired USAF Combat Systems Officer — 20 years of service, 11 personal PCS moves",
+    "Military Relocation Professional (MRP) certified",
+    "Accredited Buyer's Representative (ABR), Seller Representative Specialist (SRS)",
+    "Real Estate Negotiation Expert (RENE) certified",
+    "Florida Military Specialist designation",
+    "Licensed in Florida and Alabama",
+    "VA loan, BAH, and Florida Homestead Exemption expertise",
+    "Serves NAS Pensacola, Corry Station, NAS Whiting Field, Eglin AFB, Hurlburt Field, Duke Field",
+    "Verified veteran-owned business on Google",
+    "Available 24/7 to support deploying and relocating military families",
+  ];
+  return (
+    <PageWrapper>
+      <PageHero title="5-Star Reviews from Military Families Across the Florida Panhandle" subtitle="Real stories from real military families who trusted their PCS move, VA loan, and homebuying journey to a retired USAF Combat Systems Officer." breadcrumb="Home > Reviews" />
+      <Content>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 24 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 16, background: CHARCOAL, border: `1px solid ${GOLD}`, borderRadius: 14, padding: "20px 30px" }}>
+            <div style={{ fontFamily: SF, fontSize: 42, fontWeight: 700, color: "#fff", lineHeight: 1 }}>5.0</div>
+            <div>
+              <div style={{ color: GOLD, fontSize: 22, letterSpacing: 2 }}>★★★★★</div>
+              <div style={{ color: "#9CA3AF", fontSize: 13, marginTop: 4 }}>33 Google Reviews · Verified on Google Business</div>
+            </div>
+          </div>
         </div>
-      ))}
-      <InfoBox title="Leave a Review">Your review helps other military families find an agent they can trust. If I've helped you buy or sell, I'd be honored if you'd share your experience on Google. Visit <a href="https://reviews.greggcostin.com" style={{ color: C.gold }}>reviews.greggcostin.com</a> for the direct link.</InfoBox>
-    </Content>
-  </PageWrapper>
-);
+        <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginBottom: 40 }}>
+          <BtnP href={GOOGLE_URL}>Read All 33 Reviews on Google</BtnP>
+          <BtnG href="tel:+18502665005">Call (850) 266-5005</BtnG>
+        </div>
+
+        <H2 align="center">What Clients Say Most About Gregg</H2>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center", margin: "16px 0 40px" }}>
+          {tags.map(t => (
+            <span key={t} style={{ background: CHARCOAL, color: GOLD, padding: "6px 14px", borderRadius: 999, fontSize: 13, border: `1px solid #333` }}>{t}</span>
+          ))}
+        </div>
+
+        <H2 align="center">Featured Client Reviews</H2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: 20, margin: "16px 0 40px" }}>
+          {reviews.map((r, i) => (
+            <div key={i} style={{ background: CHARCOAL, border: `1px solid #333`, borderRadius: 14, padding: 28, display: "flex", flexDirection: "column" }}>
+              <div style={{ color: GOLD, fontSize: 18, marginBottom: 10, letterSpacing: 2 }}>★★★★★</div>
+              <p style={{ color: "#D1D5DB", fontSize: 15, lineHeight: 1.75, fontStyle: "italic", marginBottom: 16, flex: 1 }}>"{r.text}"</p>
+              <div style={{ color: "#fff", fontWeight: 600, fontSize: 14 }}>{r.from}</div>
+              <div style={{ color: "#6B7280", fontSize: 12, marginTop: 2 }}>{r.meta}</div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ background: CHARCOAL, border: `1px solid #333`, borderRadius: 14, padding: 32, marginBottom: 40 }}>
+          <h2 style={{ color: GOLD, fontSize: 22, fontWeight: 700, fontFamily: SF, marginBottom: 16 }}>Why Military Families Choose Gregg</h2>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+            {credibility.map(c => (
+              <li key={c} style={{ color: "#D1D5DB", fontSize: 15, padding: "8px 0", lineHeight: 1.6 }}>
+                <span style={{ color: "#10B981", fontWeight: 700, marginRight: 8 }}>✓</span>{c}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <InfoBox title="Leave a Review">Your review helps other military families find an agent they can trust. If I've helped you buy or sell, I'd be honored if you'd share your experience on Google. Visit <a href={GOOGLE_URL} target="_blank" rel="noopener" style={{ color: C.gold }}>my Google Business profile</a> to leave one directly.</InfoBox>
+      </Content>
+    </PageWrapper>
+  );
+};
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });

@@ -280,7 +280,7 @@ const Content = ({ children }) => (
 /* ═══════════════ HERO ═══════════════ */
 const Hero = ({ go }) => (
   <section style={{ position: "relative", minHeight: "100vh", background: C.ink, overflow: "hidden", display: "flex", alignItems: "center", paddingTop: 180 }}>
-    <div style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, backgroundImage: `url(${IMG.heroWindow})`, backgroundSize: "cover", backgroundPosition: "right top", backgroundRepeat: "no-repeat" }} />
+    <div style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, backgroundImage: `url(${IMG.heroWindow})`, backgroundSize: "auto 100%", backgroundPosition: "right top", backgroundRepeat: "no-repeat" }} />
     <div style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, background: `linear-gradient(90deg,${C.ink} 0%,${C.ink} 30%,rgba(10,15,26,0.75) 55%,rgba(10,15,26,0.25) 80%,rgba(10,15,26,0.1) 100%)` }} />
     <div style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, background: `linear-gradient(180deg,transparent 0%,transparent 70%,${C.ink} 100%)` }} />
     <div style={{ position: "absolute", top: "20%", right: "5%", width: 500, height: 500, background: `radial-gradient(circle,${C.goldTint} 0%,transparent 70%)`, pointerEvents: "none" }} />

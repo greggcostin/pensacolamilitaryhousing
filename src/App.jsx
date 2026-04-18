@@ -196,7 +196,7 @@ const Nav = ({ current, go }) => {
         <Tab id="va-loan" label="VA Loans" />
         <Tab id="calculator" label="Mortgage Calculator" />
         <Tab id="homestead" label="Homestead" />
-        <Tab id="blog" label="Blog" />
+        <ExtTab href="/blog.html" label="Blog" />
         <ExtTab href="/reviews.html" label="Reviews" />
         <ExtTab href="/faq.html" label="FAQ" />
         <Tab id="contact" label="Contact" />

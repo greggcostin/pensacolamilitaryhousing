@@ -20,7 +20,7 @@ const SS = "'Inter', 'DM Sans', system-ui, sans-serif";
 
 const pages = [
   { id: "home", label: "Home" },
-  { id: "about", label: "About" },
+  { id: "about", label: "About Me" },
   { id: "pcs", label: "PCS Guide" },
   { id: "va-loan", label: "VA Loans" },
   { id: "homestead", label: "Homestead" },
@@ -35,6 +35,35 @@ const pages = [
   { id: "contact", label: "Contact" },
 ];
 
+const BASES_LINKS = [
+  { label: "NAS Pensacola", href: "/nas-pensacola.html", blurb: "The Cradle of Naval Aviation. Flight training, Blue Angels, and the #1 PCS destination for Naval Aviators and Combat Systems Officers." },
+  { label: "Corry Station", href: "/corry-station.html", blurb: "The Navy's premier information warfare, cryptology, and cyber training base." },
+  { label: "Saufley Field", href: "/saufley-field.html", blurb: "NIOC Pensacola, a CIWT detachment, NETSAFA, and DLI Pensacola linguist training. Tenant of NAS Pensacola." },
+  { label: "NAS Whiting Field", href: "/nas-whiting-field.html", blurb: "The Navy's primary helicopter training base and one of the busiest airfields in the world." },
+  { label: "Hurlburt Field", href: "/hurlburt-field.html", blurb: "Headquarters of Air Force Special Operations Command. AC-130s, MC-130s, CV-22s, and the special tactics community." },
+  { label: "Eglin AFB", href: "/eglin-afb.html", blurb: "33rd Fighter Wing (F-35A training), 96th Test Wing, 7th SFG, and the largest forested Air Force installation in the US." },
+  { label: "Duke Field", href: "/duke-field.html", blurb: "Home of the 919th Special Operations Wing (AFRC). MC-130J and MQ-9, adjacent to Crestview." },
+];
+
+const COMMUNITY_LINKS = [
+  { label: "Gulf Breeze", href: "/gulf-breeze.html", blurb: "The #1 family choice for NAS Pensacola. A-rated Santa Rosa schools, 15-min commute, premium pricing." },
+  { label: "Navarre", href: "/navarre.html", blurb: "Santa Rosa County beach community between Hurlburt Field and NAS Pensacola. 15-25% cheaper per square foot than Gulf Breeze." },
+  { label: "Pace", href: "/pace.html", blurb: "New construction, A-rated schools, best BAH-per-square-foot value in the Pensacola MHA." },
+  { label: "Milton", href: "/milton.html", blurb: "Santa Rosa County seat. Historic downtown, 10 minutes to NAS Whiting Field, lowest BAH-supported entry point." },
+  { label: "Cantonment", href: "/cantonment.html", blurb: "North Escambia County. Larger lots, new construction, 20-25 minutes to NAS Pensacola." },
+  { label: "Perdido Key", href: "/perdido-key.html", blurb: "Gulf-front barrier island. 15 minutes to NAS Pensacola, beach lifestyle, strong rental investment play." },
+  { label: "East Pensacola Heights", href: "/east-pensacola-heights.html", blurb: "Historic walkable peninsula. 5-10 minutes to NAS Pensacola. Character bungalows on Bayou Texar." },
+  { label: "East Hill", href: "/east-hill.html", blurb: "Historic Craftsman neighborhood, walkable 12th Avenue dining, 10-15 min to NAS Pensacola." },
+  { label: "Cordova Park", href: "/cordova-park.html", blurb: "Established mid-century neighborhood near Cordova Mall. Solid Escambia schools, central Pensacola." },
+  { label: "Ferry Pass", href: "/ferry-pass.html", blurb: "North Pensacola suburban neighborhoods. Mid-century and 1990s-2000s homes, 20-30 min commute, E-4 friendly pricing." },
+  { label: "Bellview/Myrtle Grove", href: "/bellview-myrtle-grove.html", blurb: "West Pensacola working-class neighborhoods. 10-15 min to NAS Pensacola. Strongest E-3 to E-5 starter-home market." },
+  { label: "Navy Point/Warrington", href: "/navy-point-warrington.html", blurb: "5 minutes from the NAS Pensacola main gate. Closest off-base housing in the MHA. Historic ties, most affordable entry." },
+  { label: "Niceville/Valparaiso/Bluewater Bay", href: "/niceville-valparaiso-bluewater-bay.html", blurb: "Eglin AFB East Gate housing. A-rated Niceville High zone, master-planned Bluewater Bay, 10-minute commute for 33rd FW and 96th TW families." },
+  { label: "Fort Walton Beach/Shalimar", href: "/fort-walton-beach-shalimar.html", blurb: "Adjacent to the Eglin AFB West Gate. 5-15 minute commute, Okaloosa schools, broad mix of price points for E-4 to O-5 families." },
+  { label: "Destin", href: "/destin.html", blurb: "Gulf-front Okaloosa resort city. Premium beach and condo market, 20 min to Eglin, 10 min to Hurlburt. Strong military investment-rental play." },
+  { label: "Crestview", href: "/crestview.html", blurb: "Okaloosa County budget play for Eglin AFB and Duke Field. New construction, strongest FL023 BAH-to-price ratio." },
+];
+
 const IMG = {
   heroWindow: "/images/hero-window.jpg",
   window: "/images/hero-window.jpg",
@@ -45,10 +74,14 @@ const IMG = {
   logoStacked: "/images/logo-stacked.png",
   logoHoriz: "/images/logo-horizontal.png",
   logoH: "/images/logo-horizontal.png",
+  logo08: "/images/logo-08.png",
+  logoLrr: "/images/logo-lrr.png",
   ocpPortrait: "/images/mil-ocp-portrait.jpg",
   deployedCrew: "/images/mil-deployed-crew.jpg",
   familyAwacs: "/images/mil-family-awacs.jpg",
-  closingDay: "/images/closing-day.jpg",
+  closingDay: "/images/office.jpg",
+  closing4196: "/images/gregg-4196.jpg",
+  closing4197: "/images/gregg-4197.jpg",
   flightsuitAwacs: "/images/mil-flightsuit-awacs.jpg",
   promotion: "/images/mil-promotion.jpg",
   kidsCockpit: "/images/mil-kids-cockpit.jpg",
@@ -62,81 +95,110 @@ const IMG = {
   serviceBlues: "/images/mil-service-blues.jpg",
   awacsFlightline: "/images/mil-awacs-flightline.jpg",
   flightlineOCPs: "/images/mil-flightline-ocps.jpg",
+  aboutAwacsFlightline: "/images/about-awacs-flightline.jpg",
+  aboutFlightsuitAwacs: "/images/about-flightsuit-awacs.jpg",
+  aboutDeployedCrew: "/images/about-deployed-crew.jpg",
+  aboutServiceBlues: "/images/about-service-blues.jpg",
+  aboutPromotion: "/images/about-promotion.jpg",
+  aboutAwacsFoggy: "/images/about-awacs-foggy.jpg",
+  aboutFlightlineOCPs: "/images/about-flightline-ocps.jpg",
+  aboutCockpitTanker: "/images/about-cockpit-tanker.jpg",
+  aboutFlightsuitMom: "/images/about-flightsuit-mom.jpg",
+  storyOcpSelfie: "/images/story-ocp-selfie.jpg",
 };
 
 const Nav = ({ current, go }) => {
   const [scrolled, setScrolled] = useState(false);
-  const [mob, setMob] = useState(false);
   const [basesOpen, setBasesOpen] = useState(false);
+  const [commsOpen, setCommsOpen] = useState(false);
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", fn);
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
+  const tabStyle = (active) => ({
+    background: active ? "rgba(201,168,76,0.15)" : "transparent",
+    border: "none",
+    color: active ? C.gold : "rgba(255,255,255,0.8)",
+    padding: "6px 10px",
+    fontSize: 11,
+    cursor: "pointer",
+    borderRadius: 4,
+    fontWeight: active ? 700 : 500,
+    letterSpacing: 0.5,
+    textTransform: "uppercase",
+    whiteSpace: "nowrap",
+    fontFamily: SS,
+    textDecoration: "none",
+    display: "inline-block",
+  });
+
   const Tab = ({ id, label }) => (
-    <button onClick={() => go(id)} style={{
-      background: current === id ? "rgba(201,168,76,0.15)" : "transparent",
-      border: "none",
-      color: current === id ? C.gold : "rgba(255,255,255,0.8)",
-      padding: "6px 10px",
-      fontSize: 11,
-      cursor: "pointer",
-      borderRadius: 4,
-      fontWeight: current === id ? 700 : 500,
-      letterSpacing: 0.5,
-      textTransform: "uppercase",
-      whiteSpace: "nowrap",
-      fontFamily: SS,
-    }}>{label}</button>
+    <button onClick={() => go(id)} style={tabStyle(current === id)}>{label}</button>
   );
+
+  const ExtTab = ({ href, label }) => (
+    <a href={href} style={tabStyle(false)}>{label}</a>
+  );
+
+  const DropItem = ({ href, label }) => (
+    <a href={href} style={{ display: "block", width: "100%", textAlign: "left", textDecoration: "none", color: "rgba(255,255,255,0.85)", padding: "11px 16px", fontSize: 12, borderRadius: 4, fontFamily: SS, fontWeight: 500 }}>{label}</a>
+  );
+
+  const basesActiveIds = ["nas", "whiting", "corry", "eglin", "hurlburt"];
+  const basesActive = basesActiveIds.includes(current);
+  const commsActive = current === "neighborhoods";
 
   return (
     <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000, background: scrolled ? "rgba(10,15,26,0.95)" : "rgba(10,15,26,0.88)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${scrolled ? "rgba(255,255,255,0.08)" : "transparent"}`, transition: "all .3s ease" }}>
-      <div style={{ maxWidth: 1320, margin: "0 auto", padding: "10px 16px 0", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <div style={{ cursor: "pointer", flexShrink: 0 }} onClick={() => go("home")}>
-          <img src={IMG.logoH} alt="The Costin Team" style={{ height: 36, objectFit: "contain" }} />
+      <div style={{ maxWidth: 1320, margin: "0 auto", padding: "10px 16px 0", display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: 16 }}>
+        <div style={{ justifySelf: "start", cursor: "pointer" }} onClick={() => go("home")}>
+          <img src={IMG.logoLrr} alt="Levin Rinke Realty" style={{ height: 108, objectFit: "contain" }} />
         </div>
-        <a href="tel:8502665005" style={{ color: C.gold, fontSize: 12, fontWeight: 600, textDecoration: "none", letterSpacing: 0.5, fontFamily: SS, whiteSpace: "nowrap" }}>(850) 266-5005</a>
+        <div style={{ justifySelf: "center", cursor: "pointer" }} onClick={() => go("home")}>
+          <img src={IMG.logo08} alt="The Costin Team" style={{ height: 108, objectFit: "contain" }} />
+        </div>
+        <div style={{ justifySelf: "end", display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
+          <a href="tel:8502665005" style={{ color: C.gold, fontSize: 20, fontWeight: 700, textDecoration: "none", letterSpacing: 0.5, fontFamily: SS, whiteSpace: "nowrap" }}>(850) 266-5005</a>
+          <a href="mailto:Gregg.Costin@gmail.com" style={{ color: C.gold, fontSize: 14, fontWeight: 600, textDecoration: "none", letterSpacing: 0.3, fontFamily: SS, whiteSpace: "nowrap" }}>Gregg.Costin@gmail.com</a>
+        </div>
       </div>
 
-      <div className="tabbar" style={{ maxWidth: 1320, margin: "0 auto", padding: "6px 12px 10px", overflowX: "visible", display: "flex", gap: 2, alignItems: "center" }}>
+      <div className="tabbar" style={{ maxWidth: 1320, margin: "0 auto", padding: "6px 12px 10px", overflowX: "visible", display: "flex", gap: 2, alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
         <Tab id="home" label="Home" />
-        <Tab id="about" label="About" />
+        <Tab id="about" label="About Me" />
         <Tab id="pcs" label="PCS Guide" />
 
-        <div style={{ position: "relative" , paddingBottom: 4}}
+        <div style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setBasesOpen(true)}
           onMouseLeave={() => setBasesOpen(false)}>
-          <button onClick={() => setBasesOpen(!basesOpen)} style={{
-            background: ["nas", "whiting", "corry", "eglin", "hurlburt"].includes(current) ? "rgba(201,168,76,0.15)" : "transparent",
-            border: "none",
-            color: ["nas", "whiting", "corry", "eglin", "hurlburt"].includes(current) ? C.gold : "rgba(255,255,255,0.8)",
-            padding: "6px 10px",
-            fontSize: 11,
-            cursor: "pointer",
-            borderRadius: 4,
-            fontWeight: ["nas", "whiting", "corry", "eglin", "hurlburt"].includes(current) ? 700 : 500,
-            letterSpacing: 0.5,
-            textTransform: "uppercase",
-            fontFamily: SS,
-            whiteSpace: "nowrap",
-          }}>Bases ▾</button>
+          <button onClick={() => setBasesOpen(!basesOpen)} style={tabStyle(basesActive)}>Bases ▾</button>
           {basesOpen && (
-            <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 200, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
-              {["nas", "corry", "whiting", "eglin", "hurlburt"].map(id => {
-                const p = pages.find(x => x.id === id);
-                return <button key={id} onClick={() => { go(id); setBasesOpen(false); }} style={{ display: "block", width: "100%", textAlign: "left", background: current === id ? "rgba(201,168,76,0.12)" : "transparent", border: "none", color: current === id ? C.gold : "rgba(255,255,255,0.85)", padding: "11px 16px", fontSize: 12, cursor: "pointer", borderRadius: 4, fontFamily: SS, fontWeight: current === id ? 700 : 500 }}>{p.label}</button>;
-              })}
+            <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 220, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
+              {BASES_LINKS.map(b => <DropItem key={b.href} href={b.href} label={b.label} />)}
             </div>
           )}
         </div>
 
-        <Tab id="neighborhoods" label="Neighborhoods" />
+        <div style={{ position: "relative", paddingBottom: 4 }}
+          onMouseEnter={() => setCommsOpen(true)}
+          onMouseLeave={() => setCommsOpen(false)}>
+          <button onClick={() => { go("neighborhoods"); setCommsOpen(false); }} style={tabStyle(commsActive)}>Communities ▾</button>
+          {commsOpen && (
+            <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, maxHeight: 440, overflowY: "auto", boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
+              <button onClick={() => { go("neighborhoods"); setCommsOpen(false); }} style={{ display: "block", width: "100%", textAlign: "left", background: commsActive ? "rgba(201,168,76,0.12)" : "transparent", border: "none", color: C.gold, padding: "10px 16px", fontSize: 11, cursor: "pointer", borderRadius: 4, fontFamily: SS, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", borderBottom: `1px solid ${C.hairline}`, marginBottom: 4 }}>All Communities Overview</button>
+              {COMMUNITY_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
+            </div>
+          )}
+        </div>
+
         <Tab id="va-loan" label="VA Loans" />
+        <Tab id="calculator" label="Mortgage Calculator" />
         <Tab id="homestead" label="Homestead" />
         <Tab id="blog" label="Blog" />
         <Tab id="reviews" label="Reviews" />
+        <ExtTab href="/faq.html" label="FAQ" />
         <Tab id="contact" label="Contact" />
       </div>
     </nav>
@@ -217,18 +279,18 @@ const Content = ({ children }) => (
 
 /* ═══════════════ HERO ═══════════════ */
 const Hero = ({ go }) => (
-  <section style={{ position: "relative", minHeight: "100vh", background: C.ink, overflow: "hidden", display: "flex", alignItems: "center" }}>
-    <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${IMG.heroWindow})`, backgroundSize: "cover", backgroundPosition: "center right" }} />
-    <div style={{ position: "absolute", inset: 0, background: `linear-gradient(90deg,${C.ink} 0%,${C.ink} 30%,rgba(10,15,26,0.75) 55%,rgba(10,15,26,0.25) 80%,rgba(10,15,26,0.1) 100%)` }} />
-    <div style={{ position: "absolute", inset: 0, background: `linear-gradient(180deg,transparent 0%,transparent 70%,${C.ink} 100%)` }} />
+  <section style={{ position: "relative", minHeight: "100vh", background: C.ink, overflow: "hidden", display: "flex", alignItems: "center", paddingTop: 180 }}>
+    <div style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, backgroundImage: `url(${IMG.heroWindow})`, backgroundSize: "contain", backgroundPosition: "right top", backgroundRepeat: "no-repeat" }} />
+    <div style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, background: `linear-gradient(90deg,${C.ink} 0%,${C.ink} 30%,rgba(10,15,26,0.75) 55%,rgba(10,15,26,0.25) 80%,rgba(10,15,26,0.1) 100%)` }} />
+    <div style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, background: `linear-gradient(180deg,transparent 0%,transparent 70%,${C.ink} 100%)` }} />
     <div style={{ position: "absolute", top: "20%", right: "5%", width: 500, height: 500, background: `radial-gradient(circle,${C.goldTint} 0%,transparent 70%)`, pointerEvents: "none" }} />
-    <div style={{ position: "relative", zIndex: 2, width: "100%", maxWidth: 1280, margin: "0 auto", padding: "140px 32px 120px" }}>
+    <div style={{ position: "relative", zIndex: 2, width: "100%", maxWidth: 1280, margin: "0 auto", padding: "40px 32px 120px" }}>
       <div style={{ maxWidth: 720 }}>
         <Eyebrow>Retired USAF Combat Systems Officer · E-3 AWACS</Eyebrow>
         <h1 style={{ fontFamily: SF, fontWeight: 500, fontSize: "clamp(40px,5.2vw,68px)", lineHeight: 1.05, letterSpacing: "-0.01em", color: "#fff", margin: 0 }}>
           Pensacola's <span style={{ fontSize: "1.2em", fontWeight: 700 }}>#1</span><br />
           <span style={{ fontStyle: "italic", color: C.gold, fontWeight: 400 }}>military relocation</span><br />
-          specialist.
+          REALTOR&reg;
         </h1>
         <p style={{ marginTop: 28, fontSize: 18, lineHeight: 1.7, color: "rgba(255,255,255,0.78)", maxWidth: 580, fontWeight: 300 }}>
           PCS and VA loan expertise for active duty, veterans, and military families buying, selling, and building wealth across the Florida Panhandle and Gulf Coast.
@@ -249,24 +311,42 @@ const Hero = ({ go }) => (
     </div>
     <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 2, borderTop: `1px solid ${C.hairline}`, background: "rgba(10,15,26,0.85)", backdropFilter: "blur(8px)" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 32px", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))", gap: 32 }}>
-        {[["USAF", "Prior Enlisted, Retired Combat Systems Officer"], ["11", "Personal PCS Moves"], ["Top 5%", "Pensacola Agents"], ["5.0 ★", "Zillow Premier Agent"]].map(([n, l]) => (
-          <div key={l}>
-            <div style={{ fontFamily: SF, fontSize: 32, color: C.gold, fontWeight: 500, lineHeight: 1 }}>{n}</div>
-            <div style={{ marginTop: 8, fontSize: 11, letterSpacing: 2.2, textTransform: "uppercase", color: C.muted, fontFamily: SS }}>{l}</div>
-          </div>
-        ))}
+        {[["USAF", "Prior Enlisted, Retired Combat Systems Officer"], ["11", "Personal PCS Moves"], ["Top 5%", "Pensacola Agents"], ["5.0 ★", "Zillow Premier Agent", "https://www.zillow.com/profile/GreggCostin"]].map(([n, l, href]) => {
+          const inner = (
+            <>
+              <div style={{ fontFamily: SF, fontSize: 32, color: C.gold, fontWeight: 500, lineHeight: 1 }}>{n}</div>
+              <div style={{ marginTop: 8, fontSize: 11, letterSpacing: 2.2, textTransform: "uppercase", color: C.muted, fontFamily: SS }}>{l}</div>
+            </>
+          );
+          return href
+            ? <a key={l} href={href} target="_blank" rel="noopener" style={{ textDecoration: "none", display: "block", cursor: "pointer" }}>{inner}</a>
+            : <div key={l}>{inner}</div>;
+        })}
       </div>
     </div>
   </section>
 );
 
 const TrustBar = () => (
-  <section style={{ background: C.ink, borderBottom: `1px solid ${C.hairline}`, padding: "28px 32px" }}>
-    <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", justifyContent: "center", alignItems: "center", gap: 48, flexWrap: "wrap" }}>
-      <span style={{ color: C.mutedD, fontSize: 10, letterSpacing: 3, textTransform: "uppercase", fontFamily: SS }}>Preferred Agent</span>
-      {["VeteranPCS", "Tier 1 Group", "M.O.R.E. Network", "Levin Rinke Realty", "Forbes Global Properties"].map(n => (
-        <div key={n} style={{ color: C.muted, fontSize: 12, fontWeight: 500, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: SS }}>{n}</div>
-      ))}
+  <section style={{ background: C.ink, borderBottom: `1px solid ${C.hairline}`, padding: "40px 32px" }}>
+    <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+      <div style={{ textAlign: "center", color: C.gold, fontSize: 18, fontWeight: 800, letterSpacing: 4, textTransform: "uppercase", fontFamily: SS, marginBottom: 32, textDecoration: "underline", textUnderlineOffset: 6, textDecorationThickness: 2 }}>Preferred Agent</div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 32, alignItems: "end" }}>
+        {[
+          { name: "VeteranPCS", logo: "/images/partner-veteranpcs.png" },
+          { name: "Tier 1 Group", logo: "/images/partner-tier1.png" },
+          { name: "M.O.R.E. Network", logo: "/images/partner-more.png" },
+          { name: "Levin Rinke Realty", logo: "/images/partner-lrr.png", scale: 1.5 },
+          { name: "Forbes Global Properties", logo: "/images/partner-forbes.png" },
+        ].map(({ name, logo, scale = 1 }) => (
+          <div key={name} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
+            <div style={{ color: C.muted, fontSize: 12, fontWeight: 500, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: SS, textAlign: "center" }}>{name}</div>
+            <div style={{ width: 200, height: 112, display: "flex", alignItems: "center", justifyContent: "center", overflow: "visible" }}>
+              <img src={logo} alt={name} style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain", display: "block", opacity: 0.9, transform: `scale(${scale})`, transformOrigin: "center" }} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );
@@ -303,7 +383,7 @@ const MilitaryStory = ({ go }) => (
         <Eyebrow>20 Years of Service</Eyebrow>
         <H2>I didn't just study the military lifestyle. I lived it.</H2>
         <p style={{ fontSize: 17, lineHeight: 1.75, color: C.muted, fontWeight: 300, marginBottom: 24 }}>
-          20 years as a USAF Combat Systems Officer on the E-3 AWACS. 11 PCS moves. Deployments to combat zones. I know what it feels like to house-hunt from 6,000 miles away with a family counting on you to get it right.
+          I am a Prior-Enlisted, Retired USAF Combat Systems Officer on the E-3 AWACS. 11 PCS moves. Deployments to combat zones. I know what it feels like to house-hunt from 6,000 miles away with a family counting on you to get it right.
         </p>
         <p style={{ fontSize: 15.5, lineHeight: 1.85, color: C.text, fontWeight: 300, marginBottom: 32 }}>
           That experience drives everything I do as a Realtor. When you call me 90 days before PCS, I already know the questions you haven't thought to ask yet — because I've been in your exact seat.
@@ -311,14 +391,17 @@ const MilitaryStory = ({ go }) => (
         <BtnP onClick={() => go("about")}>Read My Full Story</BtnP>
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
-        <div style={{ gridColumn: "1/3" }}>
-          <img src={IMG.awacsReflection} alt="E-3 AWACS on the flightline" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
+        <div>
+          <img src={IMG.aboutDeployedCrew} alt="Deployed crew with E-3 AWACS and Canadian flag" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
+        </div>
+        <div style={{ background: C.ink }}>
+          <img src={IMG.storyOcpSelfie} alt="In OCPs on deployment" style={{ width: "100%", height: 220, objectFit: "contain", objectPosition: "center", display: "block" }} />
         </div>
         <div>
-          <img src={IMG.t6Cockpit} alt="In the T-6 cockpit" style={{ width: "100%", height: 200, objectFit: "cover", objectPosition: "center", display: "block" }} />
+          <img src={IMG.aboutServiceBlues} alt="Service Dress blues at commissioning" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
         </div>
         <div>
-          <img src={IMG.deployedCrew} alt="Deployed crew photo" style={{ width: "100%", height: 200, objectFit: "cover", objectPosition: "center 40%", display: "block" }} />
+          <img src={IMG.aboutPromotion} alt="Promotion ceremony — Always With Honor" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
         </div>
       </div>
     </div>
@@ -328,9 +411,10 @@ const MilitaryStory = ({ go }) => (
 const SocialProof = ({ go }) => (
   <Section>
     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: 64, alignItems: "center" }}>
-      <div>
-        <img src={IMG.closingDay} alt="Closing day with happy clients" style={{ width: "100%", height: 420, objectFit: "cover", objectPosition: "center", display: "block", borderRadius: 0 }} />
-        <p style={{ color: C.mutedD, fontSize: 11, marginTop: 8, letterSpacing: 1, textTransform: "uppercase" }}>Closing Day — Pensacola, FL</p>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "center" }}>
+        <img src={IMG.closing4196} alt="Gregg Costin with happy clients at closing — Home Sweet Home" style={{ width: "65%", aspectRatio: "1600 / 1220", objectFit: "cover", display: "block" }} />
+        <img src={IMG.closing4197} alt="Another great closing with Gregg Costin and clients" style={{ width: "65%", aspectRatio: "1600 / 1220", objectFit: "cover", display: "block" }} />
+        <p style={{ color: C.mutedD, fontSize: 11, marginTop: 4, letterSpacing: 1, textTransform: "uppercase" }}>Closing Days — Serving Clients Across the Florida Panhandle</p>
       </div>
       <div>
         <Eyebrow>Results</Eyebrow>
@@ -355,7 +439,7 @@ const SocialProof = ({ go }) => (
 
 const CtaBanner = ({ go }) => (
   <section style={{ position: "relative", padding: "100px 32px", overflow: "hidden" }}>
-    <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${IMG.familyAwacs})`, backgroundSize: "cover", backgroundPosition: "center 35%" }} />
+    <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${IMG.familyAwacs})`, backgroundSize: "cover", backgroundPosition: "center center" }} />
     <div style={{ position: "absolute", inset: 0, background: "rgba(10,15,26,0.82)" }} />
     <div style={{ position: "relative", zIndex: 2, maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
       <h2 style={{ fontFamily: SF, fontWeight: 500, fontSize: "clamp(28px,3.5vw,48px)", lineHeight: 1.1, color: "#fff", marginBottom: 20 }}>
@@ -373,41 +457,91 @@ const CtaBanner = ({ go }) => (
   </section>
 );
 
-const Footer = ({ go }) => (
-  <footer style={{ background: C.ink, borderTop: `1px solid ${C.hairline}`, padding: "64px 32px 40px" }}>
-    <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 40, marginBottom: 48 }}>
-        <div>
-          <img src={IMG.logoStacked} alt="The Costin Team" style={{ height: 80, marginBottom: 16 }} />
-          <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}>Levin Rinke Realty<br />220 W. Garden St., Pensacola, FL 32502<br />Licensed in Florida & Alabama</p>
+const BasesAndCommunitiesSection = () => {
+  const cardStyle = { background: C.elevated, border: `1px solid ${C.hairline}`, borderRadius: 12, padding: 20, textDecoration: "none", display: "block", transition: "border-color 0.2s" };
+  const cardHover = e => (e.currentTarget.style.borderColor = C.goldLine);
+  const cardLeave = e => (e.currentTarget.style.borderColor = C.hairline);
+  const colTitleStyle = { color: C.gold, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, marginTop: 0, fontFamily: SS };
+  return (
+    <section id="bases-communities" style={{ background: C.panel, padding: "96px 32px", borderTop: `1px solid ${C.hairline}` }}>
+      <div id="bases"></div>
+      <div id="neighborhoods"></div>
+      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+        <Eyebrow>Bases &amp; Communities</Eyebrow>
+        <h2 style={{ fontFamily: SF, fontWeight: 500, fontSize: "clamp(24px,3vw,38px)", lineHeight: 1.15, color: "#fff", marginTop: 0, marginBottom: 16, paddingBottom: 12, borderBottom: `2px solid ${C.goldLine}` }}>Bases &amp; Communities We Serve</h2>
+        <p style={{ color: C.muted, fontSize: 16, lineHeight: 1.7, marginBottom: 40, maxWidth: 780, fontWeight: 300 }}>Full PCS and housing guides for every installation and every neighborhood across the Pensacola and Fort Walton Beach Military Housing Areas. Click any card for the complete built-out guide.</p>
+
+        <h3 style={colTitleStyle}>Bases</h3>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 14, marginBottom: 48 }}>
+          {BASES_LINKS.map(b => (
+            <a key={b.href} href={b.href} style={cardStyle} onMouseEnter={cardHover} onMouseLeave={cardLeave}>
+              <div style={{ fontFamily: SF, color: "#fff", fontSize: 18, fontWeight: 500, marginBottom: 8 }}>{b.label}</div>
+              <div style={{ color: C.muted, fontSize: 13.5, lineHeight: 1.6 }}>{b.blurb}</div>
+              <div style={{ color: C.gold, fontSize: 11, letterSpacing: 2, textTransform: "uppercase", fontWeight: 600, marginTop: 12, fontFamily: SS }}>Read Guide →</div>
+            </a>
+          ))}
         </div>
-        <div>
-          <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Quick Links</div>
-          {["pcs", "va-loan", "homestead", "neighborhoods", "reviews", "contact"].map(id => {
-            const p = pages.find(x => x.id === id);
-            return <button key={id} onClick={() => go(id)} style={{ display: "block", background: "none", border: "none", color: C.muted, padding: "6px 0", fontSize: 13, cursor: "pointer", textAlign: "left" }}>{p.label}</button>;
-          })}
+
+        <h3 style={colTitleStyle}>Communities</h3>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 14 }}>
+          {COMMUNITY_LINKS.map(c => (
+            <a key={c.href} href={c.href} style={cardStyle} onMouseEnter={cardHover} onMouseLeave={cardLeave}>
+              <div style={{ fontFamily: SF, color: "#fff", fontSize: 18, fontWeight: 500, marginBottom: 8 }}>{c.label}</div>
+              <div style={{ color: C.muted, fontSize: 13.5, lineHeight: 1.6 }}>{c.blurb}</div>
+              <div style={{ color: C.gold, fontSize: 11, letterSpacing: 2, textTransform: "uppercase", fontWeight: 600, marginTop: 12, fontFamily: SS }}>Read Guide →</div>
+            </a>
+          ))}
         </div>
-        <div>
-          <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Installations</div>
-          {["nas", "corry", "whiting", "eglin", "hurlburt"].map(id => {
-            const p = pages.find(x => x.id === id);
-            return <button key={id} onClick={() => go(id)} style={{ display: "block", background: "none", border: "none", color: C.muted, padding: "6px 0", fontSize: 13, cursor: "pointer", textAlign: "left" }}>{p.label}</button>;
-          })}
-        </div>
-        <div>
-          <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Contact</div>
-          <a href="tel:8502665005" style={{ color: "#fff", fontSize: 20, fontWeight: 600, textDecoration: "none", display: "block", marginBottom: 8, fontFamily: SF }}>(850) 266-5005</a>
-          <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}>Gregg.Costin@gmail.com<br />Instagram: @greggcostinrealtor<br />YouTube: Pensacola Military Realtor</p>
+
+        <div style={{ marginTop: 40, display: "flex", gap: 12, flexWrap: "wrap" }}>
+          <a href="/faq.html" style={{ color: C.gold, fontSize: 12, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", textDecoration: "none", padding: "12px 24px", border: `1px solid ${C.goldLine}`, borderRadius: 6, fontFamily: SS }}>Full PCS FAQ →</a>
+          <a href="/reviews.html" style={{ color: C.gold, fontSize: 12, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", textDecoration: "none", padding: "12px 24px", border: `1px solid ${C.goldLine}`, borderRadius: 6, fontFamily: SS }}>Client Reviews →</a>
         </div>
       </div>
-      <div style={{ borderTop: `1px solid ${C.hairline}`, paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
-        <p style={{ color: C.mutedD, fontSize: 11 }}>© 2026 The Costin Team. All rights reserved. | <a href="https://www.pensacolamilitaryhousing.com" style={{ color: C.mutedD }}>PensacolaMilitaryHousing.com</a></p>
-        <p style={{ color: C.mutedD, fontSize: 11 }}>Gregg Costin, Realtor® · MRP® · ABR® · SRS® · RENE®</p>
+    </section>
+  );
+};
+
+const Footer = ({ go }) => {
+  const footerLinkStyle = { display: "block", background: "none", border: "none", color: C.muted, padding: "5px 0", fontSize: 13, cursor: "pointer", textAlign: "left", textDecoration: "none", fontFamily: SS };
+  return (
+    <footer style={{ background: C.ink, borderTop: `1px solid ${C.hairline}`, padding: "64px 32px 40px" }}>
+      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 40, marginBottom: 48 }}>
+          <div>
+            <img src={IMG.logoStacked} alt="The Costin Team" style={{ height: 80, marginBottom: 16 }} />
+            <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}>Levin Rinke Realty<br />220 W. Garden St., Pensacola, FL 32502<br />Licensed in Florida & Alabama</p>
+          </div>
+          <div>
+            <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Quick Links</div>
+            {["pcs", "va-loan", "homestead", "neighborhoods", "reviews", "contact"].map(id => {
+              const p = pages.find(x => x.id === id);
+              return <button key={id} onClick={() => go(id)} style={footerLinkStyle}>{p.label}</button>;
+            })}
+            <a href="/faq.html" style={footerLinkStyle}>PCS FAQ</a>
+          </div>
+          <div>
+            <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Bases</div>
+            {BASES_LINKS.map(b => <a key={b.href} href={b.href} style={footerLinkStyle}>{b.label}</a>)}
+          </div>
+          <div>
+            <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Communities</div>
+            {COMMUNITY_LINKS.map(c => <a key={c.href} href={c.href} style={footerLinkStyle}>{c.label}</a>)}
+          </div>
+          <div>
+            <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Contact</div>
+            <a href="tel:8502665005" style={{ color: "#fff", fontSize: 20, fontWeight: 600, textDecoration: "none", display: "block", marginBottom: 8, fontFamily: SF }}>(850) 266-5005</a>
+            <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}><a href="mailto:Gregg.Costin@gmail.com" style={{ color: C.muted, textDecoration: "none" }}>Gregg.Costin@gmail.com</a><br />Instagram: @greggcostinrealtor<br />YouTube: Pensacola Military Realtor</p>
+          </div>
+        </div>
+        <div style={{ borderTop: `1px solid ${C.hairline}`, paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
+          <p style={{ color: C.mutedD, fontSize: 11 }}>© 2026 The Costin Team. All rights reserved. | <a href="https://www.pensacolamilitaryhousing.com" style={{ color: C.mutedD }}>PensacolaMilitaryHousing.com</a></p>
+          <p style={{ color: C.mutedD, fontSize: 11 }}>Gregg Costin, Realtor® · MRP® · ABR® · SRS® · RENE®</p>
+        </div>
       </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 const AboutPage = ({ go }) => (
   <div>
@@ -422,11 +556,21 @@ const AboutPage = ({ go }) => (
             I served 20 years as a Combat Systems Officer on the E-3 AWACS, completing 11 PCS moves and multiple combat deployments. That experience is the foundation of everything I bring to real estate.
           </p>
         </div>
-        <div style={{ position: "relative" }}>
-          <img src={IMG.navyNoTie} alt="Gregg Costin" style={{ width: "100%", maxWidth: 400, height: 480, objectFit: "cover", objectPosition: "center top", display: "block" }} />
-          <div style={{ position: "absolute", bottom: -20, right: -20, background: C.gold, padding: "20px 28px" }}>
-            <div style={{ fontFamily: SF, fontSize: 28, fontWeight: 500, color: C.ink, lineHeight: 1 }}>20</div>
-            <div style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: C.ink, fontFamily: SS, marginTop: 4 }}>Years USAF</div>
+        <div style={{ display: "flex", gap: 16, alignItems: "stretch" }}>
+          <img src={IMG.navyNoTie} alt="Gregg Costin" style={{ flex: "1 1 auto", maxWidth: 400, height: 480, objectFit: "cover", objectPosition: "center top", display: "block" }} />
+          <div style={{ display: "flex", flexDirection: "column", gap: 10, flexShrink: 0 }}>
+            {[
+              ["20 Yrs", "USAF Retired"],
+              ["Prior Enlisted E-5", "2M0 AFSC"],
+              ["11", "PCS Moves"],
+              ["Combat Veteran", "OIF / OEF / GWOT"],
+              ["E-3 AWACS", "Combat Systems Officer"],
+            ].map(([big, small]) => (
+              <div key={small} style={{ background: C.gold, padding: "14px 18px", minWidth: 150, flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <div style={{ fontFamily: SF, fontSize: 20, fontWeight: 600, color: C.ink, lineHeight: 1 }}>{big}</div>
+                <div style={{ fontSize: 10, letterSpacing: 1.5, textTransform: "uppercase", color: C.ink, fontFamily: SS, marginTop: 6, fontWeight: 600 }}>{small}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -437,18 +581,28 @@ const AboutPage = ({ go }) => (
       <H2>Combat Systems Officer · E-3 AWACS</H2>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 8, marginBottom: 40 }}>
         <div style={{ gridColumn: "span 2" }}>
-          <img src={IMG.awacsRefuel} alt="E-3 AWACS aerial refueling" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center", display: "block" }} />
-          <p style={{ color: C.mutedD, fontSize: 11, marginTop: 6, letterSpacing: 1 }}>E-3 AWACS during aerial refueling operations</p>
+          <img src={IMG.aboutAwacsFlightline} alt="E-3 AWACS on the flightline" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center", display: "block" }} />
+          <p style={{ color: C.mutedD, fontSize: 11, marginTop: 6, letterSpacing: 1 }}>E-3 AWACS on the flightline</p>
         </div>
-        <div><img src={IMG.t6Cockpit} alt="In the T-6 cockpit" style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }} /></div>
-        <div><img src={IMG.deployedCrew} alt="Deployed crew" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center 40%", display: "block" }} /></div>
-        <div><img src={IMG.vetHandshake} alt="With a veteran" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center 20%", display: "block" }} /></div>
-        <div><img src={IMG.promotion} alt="Promotion ceremony" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center 30%", display: "block" }} /></div>
-        <div><img src={IMG.awacsReflection} alt="AWACS reflection" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
-        <div><img src={IMG.ocpPortrait} alt="In OCPs" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center top", display: "block" }} /></div>
-        <div><img src={IMG.flightlineOCPs} alt="On the flightline" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
+        <div><img src={IMG.aboutFlightsuitAwacs} alt="In flightsuit with E-3 AWACS" style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }} /></div>
+        <div><img src={IMG.aboutDeployedCrew} alt="Deployed crew" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center 40%", display: "block" }} /></div>
+        <div><img src={IMG.aboutServiceBlues} alt="Service Dress blues" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center 20%", display: "block" }} /></div>
+        <div><img src={IMG.aboutPromotion} alt="Promotion ceremony" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center 30%", display: "block" }} /></div>
+        <div><img src={IMG.aboutAwacsFoggy} alt="AWACS on a foggy flightline" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
+        <div><img src={IMG.aboutFlightlineOCPs} alt="On the flightline in OCPs" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center top", display: "block" }} /></div>
+        <div><img src={IMG.aboutCockpitTanker} alt="In cockpit with KC-135 tanker" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
+        <div style={{ background: C.ink }}><img src={IMG.aboutFlightsuitMom} alt="In flightsuit with mom" style={{ width: "100%", height: 220, objectFit: "contain", objectPosition: "center", display: "block" }} /></div>
       </div>
-      <Body>My 20-year career included assignments at Tinker AFB (Oklahoma), Kadena AB (Japan), NATO E-3A Component (Germany), and multiple combat deployments. I managed teams, led operations under pressure, and navigated the complexities of military life — the same skills I bring to every real estate transaction.</Body>
+      <H3>My Story: From Global Strategy to Local Real Estate Excellence</H3>
+      <Body>My journey into real estate didn't start with a lifelong passion for houses; it started with a vow.</Body>
+      <Body>When I bought my very first home early in my career, I was completely burned by a horrible agent. The experience left such a deep mark on me that I made a promise right then and there: I would self-educate to the absolute highest level so I would never have to rely on another real estate agent again. As I bought and sold properties across the entire United States during every military PCS move, I mastered the process from the ground up. I have experienced firsthand what it's like to have a terrible agent, which means I know exactly what it takes to be an exceptional one.</Body>
+      <Body>My promise to you as a client is simple: to be better than anyone else out there in the local market. I bring that same relentless drive and determination to your transaction so you can completely avoid the pitfalls and mistakes I once faced. I aspire to be a cut above anyone else you come in contact with, delivering the absolute best in customer service, market knowledge, expertise, and fierce negotiation skills.</Body>
+      <H3>Forged by Military Discipline</H3>
+      <Body>That standard of excellence is rooted deeply in my military background. Over the course of my career in the United States Air Force, I evolved from hands-on technical expertise to high-level strategic planning.</Body>
+      <Body>I began at the tip of the spear in nuclear deterrence as a 2M0 cruise missile technician, ensuring the readiness of payloads on the B-52 Stratofortress. After earning a prestigious double B.S. and B.A. degree from the University of Tampa, I commissioned as an officer and took to the skies. As a Navigator and Combat Systems Officer (CSO) aboard the E-3 AWACS, I managed complex tactical routing and electronic warfare across multiple deployments to combat zones including Iraq, Afghanistan, and Syria, as well as strategic hubs across the Middle East and the Pacific.</Body>
+      <Body>My career culminated in the senior echelons of military strategy as the Chief of Integrated Air and Missile Defense (IAMD) Plans for CENTCOM A5, where I architected theater-wide defense strategies to protect our forward-deployed forces.</Body>
+      <H3>The Gregg Costin Team Promise</H3>
+      <Body>Today, I combine the precision, strategic planning, and unwavering discipline of a military war planner with my hard-earned real estate expertise. When you work with me, you aren't just getting an agent — you are getting an aggressively educated advocate who will fight for your best interests every single step of the way.</Body>
     </Section>
 
     <Section>
@@ -905,28 +1059,259 @@ const BaseGuide = ({ base, go }) => {
   );
 };
 
+const LoanCalculator = () => {
+  const [loanType, setLoanType] = useState("va");
+  const [homePrice, setHomePrice] = useState(375000);
+  const [downPct, setDownPct] = useState(0);
+  const [termYears, setTermYears] = useState(30);
+  const [rate, setRate] = useState(6.25);
+  const [taxRate, setTaxRate] = useState(0.85);
+  const [insuranceAnnual, setInsuranceAnnual] = useState(2500);
+  const [hoaMonthly, setHoaMonthly] = useState(0);
+  const [vaFirstUse, setVaFirstUse] = useState(true);
+  const [vaExempt, setVaExempt] = useState(false);
+
+  const rateDefaults = { va: 6.25, fha: 6.5, conv: 6.75 };
+  const downDefaults = { va: 0, fha: 3.5, conv: 5 };
+
+  const setLoan = (type) => {
+    setLoanType(type);
+    setRate(rateDefaults[type]);
+    setDownPct(downDefaults[type]);
+  };
+
+  const hp = Number(homePrice) || 0;
+  const dp = Number(downPct) || 0;
+  const downPayment = hp * (dp / 100);
+  const baseLoan = Math.max(0, hp - downPayment);
+
+  let upfrontFee = 0;
+  let upfrontLabel = "";
+  if (loanType === "va" && !vaExempt) {
+    let pct;
+    if (dp < 5) pct = vaFirstUse ? 2.15 : 3.3;
+    else if (dp < 10) pct = 1.5;
+    else pct = 1.25;
+    upfrontFee = baseLoan * (pct / 100);
+    upfrontLabel = `VA Funding Fee (${pct}%)`;
+  } else if (loanType === "fha") {
+    upfrontFee = baseLoan * 0.0175;
+    upfrontLabel = "FHA Upfront MIP (1.75%)";
+  }
+  const totalLoan = baseLoan + upfrontFee;
+
+  const monthRate = (Number(rate) / 100) / 12;
+  const numPmts = Number(termYears) * 12;
+  const pi = monthRate === 0 ? totalLoan / numPmts : totalLoan * (monthRate * Math.pow(1 + monthRate, numPmts)) / (Math.pow(1 + monthRate, numPmts) - 1);
+
+  const taxMonthly = (hp * (Number(taxRate) / 100)) / 12;
+  const insMonthly = Number(insuranceAnnual) / 12;
+  const hoaM = Number(hoaMonthly) || 0;
+
+  let miMonthly = 0;
+  let miLabel = "";
+  const ltv = hp > 0 ? (totalLoan / hp) * 100 : 0;
+  if (loanType === "fha") {
+    miMonthly = (totalLoan * 0.0055) / 12;
+    miLabel = "FHA Annual MIP (0.55%)";
+  } else if (loanType === "conv" && dp < 20) {
+    miMonthly = (totalLoan * 0.006) / 12;
+    miLabel = "Conventional PMI (~0.6%)";
+  }
+
+  const totalMonthly = pi + taxMonthly + insMonthly + miMonthly + hoaM;
+  const totalInterest = pi * numPmts - totalLoan;
+
+  const fmt = (n) => "$" + Number(n || 0).toLocaleString("en-US", { maximumFractionDigits: 0 });
+  const fmt2 = (n) => "$" + Number(n || 0).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  const inputStyle = { width: "100%", padding: "10px 12px", background: CHARCOAL, border: "1px solid #444", borderRadius: 6, color: "#fff", fontSize: 14, outline: "none", fontFamily: SS, boxSizing: "border-box" };
+  const labelStyle = { color: C.muted, fontSize: 11, fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 6, display: "block", fontFamily: SS };
+  const rowStyle = { display: "flex", justifyContent: "space-between", padding: "10px 0", borderBottom: `1px solid ${C.hairline}` };
+
+  const loanTypeInfo = {
+    va: { title: "VA Loan", desc: "Zero down, no PMI, funded by the Department of Veterans Affairs. Available to eligible service members, veterans, and surviving spouses." },
+    fha: { title: "FHA Loan", desc: "Federal Housing Administration loan. 3.5% minimum down (with 580+ credit score), backed by HUD. Good fit when VA isn't available." },
+    conv: { title: "Conventional Loan", desc: "Fannie Mae / Freddie Mac standard loan. 3-5% down typical; 20% down avoids PMI. Most common for second homes and investment properties." },
+  };
+
+  return (
+    <PageWrapper>
+      <PageHero title="Loan Calculator: VA, FHA, and Conventional" subtitle="Prefilled with 2026 Pensacola-area market defaults. Every input is editable. Estimates only — confirm with a VA-literate lender before offer." breadcrumb="Home > Loan Calculator" />
+      <Content>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 32 }}>
+          <div>
+            <div style={{ display: "flex", gap: 4, marginBottom: 20, background: C.elevated, padding: 4, borderRadius: 8 }}>
+              {[{id:"va",label:"VA Loan"},{id:"fha",label:"FHA"},{id:"conv",label:"Conventional"}].map(t => (
+                <button key={t.id} onClick={() => setLoan(t.id)} style={{
+                  flex: 1, padding: "10px 12px",
+                  background: loanType === t.id ? C.gold : "transparent",
+                  color: loanType === t.id ? C.ink : "rgba(255,255,255,0.75)",
+                  border: "none", borderRadius: 6,
+                  fontSize: 12, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase",
+                  cursor: "pointer", fontFamily: SS,
+                }}>{t.label}</button>
+              ))}
+            </div>
+            <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.6, marginBottom: 24, fontStyle: "italic" }}>{loanTypeInfo[loanType].desc}</p>
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Home Price</label>
+              <input type="number" value={homePrice} onChange={e=>setHomePrice(e.target.value)} style={inputStyle} />
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
+              <div>
+                <label style={labelStyle}>Down Payment %</label>
+                <input type="number" step="0.5" value={downPct} onChange={e=>setDownPct(e.target.value)} style={inputStyle} />
+              </div>
+              <div>
+                <label style={labelStyle}>Down Payment $</label>
+                <div style={{ ...inputStyle, color: C.gold, display: "flex", alignItems: "center" }}>{fmt(downPayment)}</div>
+              </div>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
+              <div>
+                <label style={labelStyle}>Interest Rate %</label>
+                <input type="number" step="0.125" value={rate} onChange={e=>setRate(e.target.value)} style={inputStyle} />
+              </div>
+              <div>
+                <label style={labelStyle}>Loan Term (yrs)</label>
+                <select value={termYears} onChange={e=>setTermYears(Number(e.target.value))} style={inputStyle}>
+                  <option value={30}>30</option>
+                  <option value={20}>20</option>
+                  <option value={15}>15</option>
+                </select>
+              </div>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
+              <div>
+                <label style={labelStyle}>Property Tax Rate %</label>
+                <input type="number" step="0.05" value={taxRate} onChange={e=>setTaxRate(e.target.value)} style={inputStyle} />
+              </div>
+              <div>
+                <label style={labelStyle}>Home Insurance /yr</label>
+                <input type="number" step="100" value={insuranceAnnual} onChange={e=>setInsuranceAnnual(e.target.value)} style={inputStyle} />
+              </div>
+            </div>
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>HOA (monthly, optional)</label>
+              <input type="number" step="10" value={hoaMonthly} onChange={e=>setHoaMonthly(e.target.value)} style={inputStyle} />
+            </div>
+
+            {loanType === "va" && (
+              <div style={{ background: C.elevated, border: `1px solid ${C.hairline}`, padding: 16, borderRadius: 8, marginBottom: 12 }}>
+                <label style={{ display: "flex", alignItems: "center", gap: 10, color: "#fff", fontSize: 13, cursor: "pointer", marginBottom: 10 }}>
+                  <input type="checkbox" checked={vaFirstUse} onChange={e=>setVaFirstUse(e.target.checked)} /> First-time VA loan use
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 10, color: "#fff", fontSize: 13, cursor: "pointer" }}>
+                  <input type="checkbox" checked={vaExempt} onChange={e=>setVaExempt(e.target.checked)} /> Funding fee exempt (Purple Heart or 10%+ VA disability)
+                </label>
+              </div>
+            )}
+          </div>
+
+          <div>
+            <div style={{ background: C.elevated, border: `2px solid ${C.goldLine}`, borderRadius: 12, padding: 28, marginBottom: 16 }}>
+              <div style={{ color: C.gold, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8, fontFamily: SS }}>Estimated Monthly Payment</div>
+              <div style={{ fontFamily: SF, color: "#fff", fontSize: 44, fontWeight: 500, marginBottom: 20, lineHeight: 1 }}>{fmt2(totalMonthly)}</div>
+              <div style={rowStyle}>
+                <span style={{ color: C.muted, fontSize: 14 }}>Principal &amp; Interest</span>
+                <span style={{ color: "#fff", fontSize: 14, fontWeight: 600 }}>{fmt2(pi)}</span>
+              </div>
+              <div style={rowStyle}>
+                <span style={{ color: C.muted, fontSize: 14 }}>Property Tax</span>
+                <span style={{ color: "#fff", fontSize: 14, fontWeight: 600 }}>{fmt2(taxMonthly)}</span>
+              </div>
+              <div style={rowStyle}>
+                <span style={{ color: C.muted, fontSize: 14 }}>Home Insurance</span>
+                <span style={{ color: "#fff", fontSize: 14, fontWeight: 600 }}>{fmt2(insMonthly)}</span>
+              </div>
+              {miMonthly > 0 && (
+                <div style={rowStyle}>
+                  <span style={{ color: C.muted, fontSize: 14 }}>{miLabel}</span>
+                  <span style={{ color: "#fff", fontSize: 14, fontWeight: 600 }}>{fmt2(miMonthly)}</span>
+                </div>
+              )}
+              {hoaM > 0 && (
+                <div style={rowStyle}>
+                  <span style={{ color: C.muted, fontSize: 14 }}>HOA</span>
+                  <span style={{ color: "#fff", fontSize: 14, fontWeight: 600 }}>{fmt2(hoaM)}</span>
+                </div>
+              )}
+            </div>
+
+            <div style={{ background: C.elevated, border: `1px solid ${C.hairline}`, borderRadius: 12, padding: 24 }}>
+              <div style={{ color: C.gold, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 12, fontFamily: SS }}>Loan Summary</div>
+              <div style={rowStyle}>
+                <span style={{ color: C.muted, fontSize: 13 }}>Home Price</span>
+                <span style={{ color: "#fff", fontSize: 13, fontWeight: 600 }}>{fmt(hp)}</span>
+              </div>
+              <div style={rowStyle}>
+                <span style={{ color: C.muted, fontSize: 13 }}>Down Payment ({dp}%)</span>
+                <span style={{ color: "#fff", fontSize: 13, fontWeight: 600 }}>{fmt(downPayment)}</span>
+              </div>
+              <div style={rowStyle}>
+                <span style={{ color: C.muted, fontSize: 13 }}>Base Loan Amount</span>
+                <span style={{ color: "#fff", fontSize: 13, fontWeight: 600 }}>{fmt(baseLoan)}</span>
+              </div>
+              {upfrontFee > 0 && (
+                <div style={rowStyle}>
+                  <span style={{ color: C.muted, fontSize: 13 }}>{upfrontLabel}</span>
+                  <span style={{ color: "#fff", fontSize: 13, fontWeight: 600 }}>{fmt(upfrontFee)}</span>
+                </div>
+              )}
+              <div style={rowStyle}>
+                <span style={{ color: C.muted, fontSize: 13 }}>Total Financed</span>
+                <span style={{ color: C.gold, fontSize: 14, fontWeight: 700 }}>{fmt(totalLoan)}</span>
+              </div>
+              <div style={rowStyle}>
+                <span style={{ color: C.muted, fontSize: 13 }}>Loan-to-Value</span>
+                <span style={{ color: "#fff", fontSize: 13, fontWeight: 600 }}>{ltv.toFixed(1)}%</span>
+              </div>
+              <div style={{ ...rowStyle, borderBottom: "none" }}>
+                <span style={{ color: C.muted, fontSize: 13 }}>Total Interest ({termYears} yrs)</span>
+                <span style={{ color: "#fff", fontSize: 13, fontWeight: 600 }}>{fmt(totalInterest)}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <InfoBox title="Estimates Only — Confirm With a Lender">
+          This calculator uses 2026 Pensacola-area defaults: property tax 0.85% (Escambia/Santa Rosa/Okaloosa county median), homeowners insurance $2,500/yr (inland; coastal flood zones run meaningfully higher), and prevailing 30-year rates as of 2026 (VA 6.25%, FHA 6.5%, Conventional 6.75%). Your actual numbers depend on credit score, debt-to-income, flood zone, insurance quotes, and your specific lender's pricing.<br /><br />
+          <strong>VA funding fee:</strong> First use &lt;5% down 2.15%, subsequent use &lt;5% down 3.3%, 5-9.99% down 1.5%, 10%+ down 1.25%. Exempt for Purple Heart recipients and veterans with 10%+ service-connected disability.<br />
+          <strong>FHA MIP:</strong> 1.75% upfront (financed) plus 0.55% annual for most 30-year loans.<br />
+          <strong>Conventional PMI:</strong> Assumed 0.6% annual when LTV &gt; 80%. Actual PMI varies by credit score, DTI, and coverage.
+        </InfoBox>
+
+        <div style={{ textAlign: "center", marginTop: 48 }}>
+          <p style={{ color: C.muted, fontSize: 15.5, lineHeight: 1.7, marginBottom: 24, maxWidth: 640, margin: "0 auto 24px" }}>Ready to turn a calculation into an offer? I connect you with VA-literate lenders who specialize in military buyers and match the home to your exact BAH and goals.</p>
+          <BtnP href="tel:8502665005">Call 850-266-5005</BtnP>
+        </div>
+      </Content>
+    </PageWrapper>
+  );
+};
+
 const NeighborhoodsPage = ({ go }) => (
   <PageWrapper>
-    <PageHero title="Pensacola Area Neighborhood Guides" subtitle="From waterfront living in Gulf Breeze to affordable new construction in Pace — find the right community for your family and budget." breadcrumb="Home > Neighborhoods" />
+    <PageHero title="Pensacola Area Communities &amp; Neighborhood Guides" subtitle="From Gulf-front beach living on Perdido Key to A-rated Santa Rosa schools in Gulf Breeze to starter homes minutes from the NAS Pensacola main gate — the complete guide to every community we serve." breadcrumb="Home > Communities" />
     <Content>
-      <P>The greater Pensacola area offers an incredible range of neighborhoods, each with distinct character, price points, and lifestyle advantages. Here's an overview to help you narrow your search before we dive deeper.</P>
-      {[
-        { name: "Gulf Breeze", price: "$380-480K", desc: "The premier family community in the Pensacola area. Located across the Pensacola Bay Bridge in Santa Rosa County, Gulf Breeze offers consistently A-rated schools, waterfront parks, safe neighborhoods, and easy beach access. It's the top choice for military families with school-age children who want quality of life and don't mind a 15-20 minute commute to NAS Pensacola.", vibe: "Waterfront suburban, family-focused, quiet" },
-        { name: "Pace / Milton", price: "$260-350K", desc: "Santa Rosa County's affordable corridor. Pace has boomed with new construction in the last 5 years and offers some of the best price-per-square-foot in the market. Milton has a charming small-town downtown and is closest to Whiting Field. Both benefit from Santa Rosa School District.", vibe: "Suburban, new construction, growing" },
-        { name: "Perdido Key", price: "$450-700K+", desc: "Florida's westernmost barrier island. Perdido Key offers beach living, strong investment potential (short-term rental market), and a quiet escape from the city. Great for officers, dual-income families, or investors looking to build rental income.", vibe: "Beach, relaxed, investment-oriented" },
-        { name: "East Pensacola Heights", price: "$280-380K", desc: "The closest residential neighborhood to NAS Pensacola's main gate. Historic homes with character, tree-lined streets, and a walkable community feel. It's gentrifying steadily, with home values appreciating faster than the metro average.", vibe: "Historic, walkable, convenient" },
-        { name: "Cantonment", price: "$250-330K", desc: "North Escambia County with a rural feel but still within 20-25 minutes of NAS Pensacola. Larger lots, more land, and lower prices. Good for families who want space and are willing to trade commute time for elbow room.", vibe: "Rural suburban, spacious, affordable" },
-        { name: "Navarre", price: "$350-450K", desc: "A beautiful beach community in eastern Santa Rosa County, ideally positioned between Hurlburt Field (15-20 min) and Eglin AFB (25-30 min). Excellent schools, stunning beaches, and a strong military family community.", vibe: "Beach, family-friendly, military community" },
-      ].map(n => (
-        <div key={n.name} style={{ background: CHARCOAL, border: `1px solid #333`, borderRadius: 12, padding: 28, marginTop: 24 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: 8, marginBottom: 12 }}>
-            <h3 style={{ fontFamily: SF, color: "#fff", fontSize: 22, margin: 0 }}>{n.name}</h3>
-            <span style={{ color: GOLD, fontSize: 14, fontWeight: 600 }}>{n.price}</span>
-          </div>
-          <p style={{ color: "#aaa", fontSize: 14, lineHeight: 1.8, marginBottom: 8 }}>{n.desc}</p>
-          <p style={{ color: WARM_GRAY, fontSize: 12, fontStyle: "italic" }}>Vibe: {n.vibe}</p>
-        </div>
-      ))}
+      <P>Thirteen distinct communities across the Pensacola and Fort Walton Beach Military Housing Areas. Each has its own BAH fit, school zoning, commute profile, and character. Click any card below for the full built-out guide with facts, sub-neighborhoods, BAH math, schools, hurricane considerations, and FAQ.</P>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16, marginTop: 24 }}>
+        {COMMUNITY_LINKS.map(n => (
+          <a key={n.href} href={n.href} style={{
+            background: CHARCOAL, border: `1px solid #333`, borderRadius: 12,
+            padding: 24, textDecoration: "none", display: "block",
+            transition: "border-color 0.2s",
+          }}
+            onMouseEnter={e => e.currentTarget.style.borderColor = GOLD}
+            onMouseLeave={e => e.currentTarget.style.borderColor = "#333"}>
+            <h3 style={{ fontFamily: SF, color: "#fff", fontSize: 20, margin: "0 0 10px", fontWeight: 500 }}>{n.label}</h3>
+            <p style={{ color: "#bbb", fontSize: 14, lineHeight: 1.7, marginBottom: 14 }}>{n.blurb}</p>
+            <div style={{ color: GOLD, fontSize: 11, letterSpacing: 2, textTransform: "uppercase", fontWeight: 600, fontFamily: SS }}>Read {n.label} Guide →</div>
+          </a>
+        ))}
+      </div>
       <InfoBox title="Need Help Choosing?">Every family has different priorities — schools, commute, budget, lifestyle, investment potential. Call me at (850) 266-5005 and we'll narrow it down together in a 15-minute conversation. No pressure, no obligation.</InfoBox>
     </Content>
   </PageWrapper>
@@ -1132,7 +1517,7 @@ const ContactPage = () => {
             </div>
             <div style={{ marginBottom: 24 }}>
               <p style={{ color: "#fff", fontSize: 16, fontWeight: 600, marginBottom: 4 }}>Email</p>
-              <p style={{ color: GOLD, fontSize: 15 }}>Gregg.Costin@gmail.com</p>
+              <p><a href="mailto:Gregg.Costin@gmail.com" style={{ color: GOLD, fontSize: 15, textDecoration: "none", fontWeight: 600 }}>Gregg.Costin@gmail.com</a></p>
             </div>
             <div style={{ marginBottom: 24 }}>
               <p style={{ color: "#fff", fontSize: 16, fontWeight: 600, marginBottom: 4 }}>Office</p>
@@ -1200,7 +1585,38 @@ const ContactPage = () => {
 
 export default function App() {
   const [page, setPage] = useState("home");
-  const go = (id) => { setPage(id); window.scrollTo(0, 0); };
+  const go = (id) => {
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname);
+    }
+    setPage(id);
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    const HASH_TO_PAGE = { "calculator": "calculator", "bah-calculator": "calculator" };
+    const handleHash = () => {
+      const id = window.location.hash.substring(1);
+      if (!id) return;
+      if (HASH_TO_PAGE[id]) {
+        setPage(HASH_TO_PAGE[id]);
+        window.scrollTo(0, 0);
+        return;
+      }
+      const tryScroll = (attempts = 10) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else if (attempts > 0) {
+          setTimeout(() => tryScroll(attempts - 1), 80);
+        }
+      };
+      tryScroll();
+    };
+    if (window.location.hash) handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, [page]);
 
   return (
     <div style={{ fontFamily: SS, margin: 0, padding: 0, background: C.ink, minHeight: "100vh" }}>
@@ -1208,19 +1624,28 @@ export default function App() {
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
         .tabbar::-webkit-scrollbar { display: none; }
         .tabbar { -ms-overflow-style: none; scrollbar-width: none; }
+        [id] { scroll-margin-top: 100px; }
       `}</style>
       <Nav current={page} go={go} />
       {page === "home" && <>
         <Hero go={go} />
         <TrustBar />
+        <div id="services"></div>
+        <div id="va-loans"></div>
+        <div id="pcs-guide"></div>
         <Services go={go} />
+        <div id="about-gregg"></div>
         <MilitaryStory go={go} />
         <SocialProof go={go} />
+        <BasesAndCommunitiesSection />
+        <div id="contact"></div>
+        <div id="bah-calculator"></div>
         <CtaBanner go={go} />
       </>}
       {page === "about" && <AboutPage go={go} />}
       {page === "pcs" && <PCSPage go={go} />}
       {page === "va-loan" && <VALoanPage go={go} />}
+      {page === "calculator" && <LoanCalculator />}
       {page === "homestead" && <HomesteadPage go={go} />}
       {page === "nas" && <BaseGuide base="nas" go={go} />}
       {page === "whiting" && <BaseGuide base="whiting" go={go} />}

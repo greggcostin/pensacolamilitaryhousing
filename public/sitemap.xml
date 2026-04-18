@@ -13,6 +13,12 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://pensacolamilitaryhousing.com/reviews.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://pensacolamilitaryhousing.com/nas-pensacola.html</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -31,10 +37,28 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://pensacolamilitaryhousing.com/saufley-field.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pensacolamilitaryhousing.com/hurlburt-field.html</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/eglin-afb.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/duke-field.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pensacolamilitaryhousing.com/gulf-breeze.html</loc>
@@ -55,10 +79,82 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://pensacolamilitaryhousing.com/milton.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://pensacolamilitaryhousing.com/cantonment.html</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/perdido-key.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/east-pensacola-heights.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/east-hill.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/cordova-park.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/ferry-pass.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/bellview-myrtle-grove.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/navy-point-warrington.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/niceville-valparaiso-bluewater-bay.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/fort-walton-beach-shalimar.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/destin.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/crestview.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://pensacolamilitaryhousing.com/#pcs-guide</loc>
@@ -74,6 +170,12 @@
   </url>
   <url>
     <loc>https://pensacolamilitaryhousing.com/#neighborhoods</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/#bases</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>

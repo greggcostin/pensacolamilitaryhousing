@@ -1,1 +1,3 @@
-# No redirect rules needed - SPA uses state-based routing
+# Cloudflare Pages serves matching static files first (e.g., /blog.html, /reviews.html).
+# Unknown paths fall through to index.html so the SPA can resolve /about, /pcs-guide, etc.
+/* /index.html 200

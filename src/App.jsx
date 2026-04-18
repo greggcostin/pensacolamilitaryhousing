@@ -1641,15 +1641,48 @@ const ContactPage = () => {
   );
 };
 
+const PAGE_TO_SLUG = {
+  home: "/",
+  about: "/about",
+  pcs: "/pcs-guide",
+  neighborhoods: "/neighborhoods",
+  "va-loan": "/va-loans",
+  calculator: "/mortgage-calculator",
+  homestead: "/homestead",
+  contact: "/contact",
+  reviews: "/reviews",
+  blog: "/blog",
+};
+const SLUG_TO_PAGE = Object.fromEntries(Object.entries(PAGE_TO_SLUG).map(([k, v]) => [v, k]));
+
+const resolvePageFromPath = (pathname) => {
+  const clean = pathname.replace(/\/$/, "") || "/";
+  return SLUG_TO_PAGE[clean] || "home";
+};
+
 export default function App() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState(() => typeof window !== "undefined" ? resolvePageFromPath(window.location.pathname) : "home");
+
   const go = (id) => {
     if (window.location.hash) {
       history.replaceState(null, "", window.location.pathname);
     }
+    const slug = PAGE_TO_SLUG[id] || "/";
+    if (window.location.pathname !== slug) {
+      history.pushState({ page: id }, "", slug);
+    }
     setPage(id);
     window.scrollTo(0, 0);
   };
+
+  useEffect(() => {
+    const onPopState = () => {
+      setPage(resolvePageFromPath(window.location.pathname));
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
   useEffect(() => {
     const HASH_TO_PAGE = { "calculator": "calculator", "bah-calculator": "calculator" };

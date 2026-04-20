@@ -290,18 +290,19 @@
                         }
                         /* Hero — match shorter mobile banner so the image actually shows */
                         @media (max-width: 900px){
-                          section[style*="minHeight: \"100vh\""][style*="paddingTop: 180"]{padding-top:120px!important}
-                          section[style*="minHeight: \"100vh\""] > div[style*="top: 180"]{top:120px!important}
+                          .hero-section{padding-top:120px!important;min-height:auto!important}
+                          .hero-section > .hero-bg-image{top:120px!important;background-size:cover!important;background-position:center 25%!important}
+                          .hero-section > div[style*="top: 180"]{top:120px!important}
                         }
                         @media (max-width: 640px){
-                          section[style*="minHeight: \"100vh\""][style*="paddingTop: 180"]{padding-top:95px!important;min-height:100vh!important}
-                          section[style*="minHeight: \"100vh\""] > div[style*="top: 180"]{top:95px!important}
-                          /* Force hero bg image to cover on mobile so the face fills the visible area */
-                          section[style*="minHeight: \"100vh\""] > div[style*="hero-window"]{
-                            background-size:cover!important;background-position:center top!important;
-                          }
+                          .hero-section{padding-top:95px!important}
+                          .hero-section > .hero-bg-image{top:95px!important;background-size:cover!important;background-position:center 20%!important}
+                          .hero-section > div[style*="top: 180"]{top:95px!important}
                           section[style*="padding: \"100px 32px\""]{padding:60px 20px!important}
                           section[style*="padding: \"140px 32px 80px\""]{padding:100px 20px 50px!important}
+                        }
+                        @media (max-width: 480px){
+                          .hero-section > .hero-bg-image{background-position:center 15%!important}
                         }
                         /* Prevent horizontal scroll from any stray wide element */
                         #root{overflow-x:hidden}

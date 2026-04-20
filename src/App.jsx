@@ -303,7 +303,7 @@ const Hero = ({ go }) => (
           <BtnG href="tel:8502665005">Call 850-266-5005</BtnG>
         </div>
         <div style={{ marginTop: 48, display: "flex", gap: 12, flexWrap: "wrap" }}>
-          {["MRP®", "ABR®", "SRS®", "RENE®"].map(d => (
+          {["MRP®", "ABR®", "SRS®", "RENE®", "FMS®"].map(d => (
             <div key={d} style={{ border: `1px solid ${C.goldLine}`, padding: "8px 16px", color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, fontFamily: SS }}>{d}</div>
           ))}
         </div>
@@ -380,7 +380,7 @@ const MilitaryStory = ({ go }) => (
   <Section bg={C.panel}>
     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: 64, alignItems: "center" }}>
       <div>
-        <Eyebrow>20 Years of Service</Eyebrow>
+        <Eyebrow>A Full USAF Career — Enlisted to Officer</Eyebrow>
         <H2>I didn't just study the military lifestyle. I lived it.</H2>
         <p style={{ fontSize: 17, lineHeight: 1.75, color: C.muted, fontWeight: 300, marginBottom: 24 }}>
           I am a Prior-Enlisted, Retired USAF Combat Systems Officer on the E-3 AWACS. 11 PCS moves. Deployments to combat zones. I know what it feels like to house-hunt from 6,000 miles away with a family counting on you to get it right.
@@ -509,11 +509,11 @@ const Footer = ({ go }) => {
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 40, marginBottom: 48 }}>
           <div>
-            <img src={IMG.logoStacked} alt="The Costin Team" style={{ height: 80, marginBottom: 16 }} />
+            <img src={IMG.logoStacked} alt="The Costin Team" style={{ height: 160, marginBottom: 16 }} />
             <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}>Levin Rinke Realty<br />220 W. Garden St., Pensacola, FL 32502<br />Licensed in Florida & Alabama</p>
           </div>
           <div>
-            <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Quick Links</div>
+            <div style={{ color: C.gold, fontSize: 16, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Quick Links</div>
             {["pcs", "va-loan", "homestead", "neighborhoods", "reviews", "contact"].map(id => {
               const p = pages.find(x => x.id === id);
               return <button key={id} onClick={() => go(id)} style={footerLinkStyle}>{p.label}</button>;
@@ -521,22 +521,22 @@ const Footer = ({ go }) => {
             <a href="/faq.html" style={footerLinkStyle}>PCS FAQ</a>
           </div>
           <div>
-            <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Bases</div>
+            <div style={{ color: C.gold, fontSize: 16, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Bases</div>
             {BASES_LINKS.map(b => <a key={b.href} href={b.href} style={footerLinkStyle}>{b.label}</a>)}
           </div>
           <div>
-            <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Communities</div>
+            <div style={{ color: C.gold, fontSize: 16, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Communities</div>
             {COMMUNITY_LINKS.map(c => <a key={c.href} href={c.href} style={footerLinkStyle}>{c.label}</a>)}
           </div>
           <div>
-            <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Contact</div>
-            <a href="tel:8502665005" style={{ color: "#fff", fontSize: 20, fontWeight: 600, textDecoration: "none", display: "block", marginBottom: 8, fontFamily: SF }}>(850) 266-5005</a>
-            <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}><a href="mailto:Gregg.Costin@gmail.com" style={{ color: C.muted, textDecoration: "none" }}>Gregg.Costin@gmail.com</a><br />Instagram: @greggcostinrealtor<br />YouTube: Pensacola Military Realtor</p>
+            <div style={{ color: C.gold, fontSize: 16, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Contact</div>
+            <a href="tel:8502665005" style={{ color: "#fff", fontSize: 40, fontWeight: 600, textDecoration: "none", display: "block", marginBottom: 8, fontFamily: SF, whiteSpace: "nowrap" }}>(850) 266-5005</a>
+            <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}><a href="mailto:Gregg.Costin@gmail.com" style={{ color: C.muted, textDecoration: "none" }}>Gregg.Costin@gmail.com</a><br />Instagram: <a href="https://www.instagram.com/greggcostinrealtor/" target="_blank" rel="noopener" style={{ color: C.muted, textDecoration: "none" }}>@greggcostinrealtor</a><br />Facebook: <a href="https://www.facebook.com/greggcostin/" target="_blank" rel="noopener" style={{ color: C.muted, textDecoration: "none" }}>@greggcostin</a><br /><span style={{ whiteSpace: "nowrap" }}>YouTube: <a href="https://www.youtube.com/@PensacolaMilitaryRealtor" target="_blank" rel="noopener" style={{ color: C.muted, textDecoration: "none" }}>@PensacolaMilitaryRealtor</a></span></p>
           </div>
         </div>
         <div style={{ borderTop: `1px solid ${C.hairline}`, paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
           <p style={{ color: C.mutedD, fontSize: 11 }}>© 2026 The Costin Team. All rights reserved. | <a href="https://www.pensacolamilitaryhousing.com" style={{ color: C.mutedD }}>PensacolaMilitaryHousing.com</a></p>
-          <p style={{ color: C.mutedD, fontSize: 11 }}>Gregg Costin, Realtor® · MRP® · ABR® · SRS® · RENE®</p>
+          <p style={{ color: C.mutedD, fontSize: 11 }}>Gregg Costin, Realtor® · MRP® · ABR® · SRS® · RENE® · FMS®</p>
         </div>
       </div>
     </footer>
@@ -553,14 +553,14 @@ const AboutPage = ({ go }) => (
             From the flight deck to your <span style={{ color: C.gold, fontStyle: "italic" }}>front door.</span>
           </h1>
           <p style={{ fontSize: 17, lineHeight: 1.75, color: C.muted, fontWeight: 300, maxWidth: 540 }}>
-            I served 20 years as a Combat Systems Officer on the E-3 AWACS, completing 11 PCS moves and multiple combat deployments. That experience is the foundation of everything I bring to real estate.
+            I completed a full USAF career — starting as a prior-enlisted Staff Sergeant (E-5) and retiring as a Captain (O-3) serving as a Combat Systems Officer on the E-3 AWACS. Along the way I completed 11 PCS moves and multiple combat deployments. That experience is the foundation of everything I bring to real estate.
           </p>
         </div>
         <div style={{ display: "flex", gap: 16, alignItems: "stretch" }}>
           <img src={IMG.navyNoTie} alt="Gregg Costin" style={{ flex: "1 1 auto", maxWidth: 400, height: 480, objectFit: "cover", objectPosition: "center top", display: "block" }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 10, flexShrink: 0 }}>
             {[
-              ["20 Yrs", "USAF Retired"],
+              ["USAF Retired", "SSgt → Captain"],
               ["Prior Enlisted E-5", "2M0 AFSC"],
               ["11", "PCS Moves"],
               ["Combat Veteran", "OIF / OEF / GWOT"],
@@ -625,8 +625,10 @@ const AboutPage = ({ go }) => (
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 24, marginTop: 40 }}>
         {[
           { title: "Military Relocation Professional (MRP®)", desc: "NAR certification for agents specializing in serving current and former military service members." },
-          { title: "Accredited Buyer's Representative (ABR®)", desc: "Advanced buyer representation training — negotiation, market analysis, and fiduciary advocacy." },
-          { title: "Seller Representative Specialist (SRS®)", desc: "Premier seller representation certification covering pricing, marketing, and listing strategy." },
+          { title: "Florida Military Specialist (FMS®)", desc: "Florida Realtors (Florida Association of Realtors) certification for agents trained on Florida-specific military and veteran housing, VA loan, and PCS-relocation issues." },
+          { title: "Accredited Buyer's Representative (ABR®)", desc: "NAR advanced buyer-representation training — negotiation, market analysis, and fiduciary advocacy." },
+          { title: "Seller Representative Specialist (SRS®)", desc: "NAR premier seller-representation certification covering pricing, marketing, and listing strategy." },
+          { title: "Real Estate Negotiation Expert (RENE®)", desc: "NAR certification for advanced offer and counter-offer negotiation techniques across all transaction types." },
           { title: "Forbes Global Properties · Rookie of the Year 2025", desc: "Recognized for outstanding transactions, sales volume, and market impact in first year." },
           { title: "Zillow Premier Agent · Top 5%", desc: "Perfect 5-star rating. Recognized among the top-performing agents in the Pensacola metro area." },
           { title: "Licensed FL + AL", desc: "Dual-licensed to serve military families across the Florida Panhandle and coastal Alabama markets." },
@@ -652,11 +654,13 @@ const PCSPage = ({ go }) => (
       <ComparisonTable
         headers={["Installation", "Branch", "Primary Mission", "Nearest Neighborhoods"]}
         rows={[
-          ["NAS Pensacola", "Navy/Marines", "Aviation training, NATTC, Blue Angels", "East Pensacola Heights, Gulf Breeze, Perdido Key"],
-          ["Corry Station", "Navy", "Information Warfare, Intel, IT training", "Pensacola proper, West Pensacola, Cantonment"],
-          ["Whiting Field", "Navy", "Primary flight training (TW-5)", "Milton, Pace, East Milton"],
-          ["Eglin AFB", "Air Force", "96th TW, 33rd FW, 7th SFG", "Niceville, Crestview, FWB, Valparaiso"],
-          ["Hurlburt Field", "Air Force", "AFSOC, 1st SOW", "Mary Esther, Navarre, FWB"],
+          ["NAS Pensacola", "Navy/Marines/Air Force", "Aviation training (NFO + USAF CSO schoolhouse), NATTC, Blue Angels", "East Pensacola Heights, Gulf Breeze, Perdido Key"],
+          ["Corry Station", "Navy", "Information Warfare, cryptology, cyber, intel, IT training (CIWT)", "Pensacola proper, West Pensacola, Cantonment"],
+          ["Saufley Field", "Navy", "NIOC Pensacola, CIWT detachment, NETSAFA, DLI linguist training (tenant of NAS Pensacola)", "Bellview/Myrtle Grove, Cantonment, Ferry Pass"],
+          ["NAS Whiting Field", "Navy/Marines/Coast Guard", "Primary fixed-wing (T-6B) + all USN/USMC/USCG rotary-wing training (TRAWING 5)", "Milton, Pace, East Milton"],
+          ["Hurlburt Field", "Air Force", "AFSOC, 1st SOW (AC-130, MC-130, CV-22)", "Mary Esther, Navarre, FWB"],
+          ["Eglin AFB", "Air Force/Army", "33rd FW (F-35A FTU), 96th TW, 53rd Wing, AFRL, 7th SFG", "Niceville, Crestview, FWB, Valparaiso, Bluewater Bay"],
+          ["Duke Field", "Air Force Reserve", "919th Special Operations Wing (MC-130J, MQ-9)", "Crestview, Laurel Hill, Niceville"],
         ]}
       />
       <H2>Pensacola Real Estate Market Snapshot</H2>
@@ -704,6 +708,13 @@ const PCSPage = ({ go }) => (
       <P>The VA loan is the single most powerful financial tool available to military homebuyers. Zero down payment, no private mortgage insurance, competitive interest rates, and more flexible underwriting than conventional loans. In Pensacola's market, where the median home is around $305,000, a VA loan means you can buy a home with essentially just closing costs out of pocket — and even those can often be negotiated as seller concessions.</P>
       <P>Key Pensacola-specific VA considerations: Florida requires a Wood Destroying Organism (WDO/termite) inspection on VA purchases. Flood zone determination matters — parts of Pensacola, especially waterfront areas, fall in flood zones that require separate flood insurance. And VA appraisals in this market have been coming in at or near purchase price, which means fewer appraisal gap issues than in overheated markets.</P>
       <button onClick={() => go("va-loan")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Read the Complete VA Loan Guide →</button>
+      <H2>2026 BAH Rates for Pensacola (MHA FL064)</H2>
+      <P>These are the 2026 Basic Allowance for Housing monthly rates for service members assigned to NAS Pensacola, NTTC Corry Station, and NAS Whiting Field — Military Housing Area <strong style={{ color: "#fff" }}>FL064</strong>. The "With Dependents" column applies to any service member with authorized dependents (spouse, children, or qualifying family members); "Without Dependents" is the single or unaccompanied rate. Prior-enlisted commissioned officer rates (O-1E, O-2E, O-3E) appear at the top of the officer table. Always verify your exact rate at the official DoD BAH calculator before signing an offer or lease.</P>
+      <BAHTable title="Enlisted (E-1 through E-9)" rows={[["E-1 through E-4", BAH_DATA.FL064.enlisted[0][1], BAH_DATA.FL064.enlisted[0][2]], ...BAH_DATA.FL064.enlisted.filter(([g]) => !["E-1","E-2","E-3","E-4"].includes(g))]} />
+      <BAHTable title="Warrant Officer (W-1 through W-5)" rows={BAH_DATA.FL064.warrant} />
+      <BAHTable title="Officer (O-1 through O-6, including Prior-Enlisted O-1E, O-2E, O-3E)" rows={BAH_DATA.FL064.officer.filter(([g]) => g !== "O-7")} />
+      <P style={{ fontSize: 14, color: WARM_GRAY, marginTop: 12 }}><em>Source: DoD 2026 BAH tables for MHA FL064 ({BAH_DATA.FL064.yoyChange}). E-1 through E-4 share a single "junior enlisted" rate by DoD convention, which is why they're collapsed into one row above. Fort Walton Beach (Eglin AFB, Hurlburt Field, Duke Field) falls under MHA FL023 — different rates. For FL023 or any other MHA, use the <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/" target="_blank" rel="noopener" style={{ color: GOLD }}>official DoD BAH calculator</a>.</em></P>
+      <button onClick={() => go("calculator")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Run Your BAH Through the Mortgage Calculator →</button>
       <H2>Florida Benefits for Military Families</H2>
       <ul style={{ paddingLeft: 20 }}>
         <Li><strong style={{ color: "#fff" }}>No state income tax.</strong> Your military pay and any additional income are not subject to state income tax in Florida.</Li>
@@ -1470,7 +1481,7 @@ const ReviewsPage = () => {
     { text: "As a young first time home buyer, I went in clueless. I not only got phenomenal guidance and recommendations, but valuable information about VA loan benefits and the entire buying process. Gregg genuinely cares about his clients and it shows in every interaction.", from: "First-Time Military Homebuyer", meta: "Pace" },
   ];
   const credibility = [
-    "Retired USAF Combat Systems Officer — 20 years of service, 11 personal PCS moves",
+    "Retired USAF Captain — Combat Systems Officer (E-3 AWACS), prior-enlisted Staff Sergeant, 11 personal PCS moves",
     "Military Relocation Professional (MRP) certified",
     "Accredited Buyer's Representative (ABR), Seller Representative Specialist (SRS)",
     "Real Estate Negotiation Expert (RENE) certified",
@@ -1490,12 +1501,12 @@ const ReviewsPage = () => {
             <div style={{ fontFamily: SF, fontSize: 42, fontWeight: 700, color: "#fff", lineHeight: 1 }}>5.0</div>
             <div>
               <div style={{ color: GOLD, fontSize: 22, letterSpacing: 2 }}>★★★★★</div>
-              <div style={{ color: "#9CA3AF", fontSize: 13, marginTop: 4 }}>33 Google Reviews · Verified on Google Business</div>
+              <div style={{ color: "#9CA3AF", fontSize: 13, marginTop: 4 }}>34 Google Reviews · Verified on Google Business</div>
             </div>
           </div>
         </div>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginBottom: 40 }}>
-          <BtnP href={GOOGLE_URL}>Read All 33 Reviews on Google</BtnP>
+          <BtnP href={GOOGLE_URL}>Read All 34 Reviews on Google</BtnP>
           <BtnG href="tel:+18502665005">Call (850) 266-5005</BtnG>
         </div>
 
@@ -1582,7 +1593,7 @@ const ContactPage = () => {
               <p style={{ color: "#aaa", fontSize: 14, lineHeight: 1.7 }}>Levin Rinke Realty<br />220 W. Garden Street<br />Pensacola, FL 32502</p>
             </div>
             <H3>Social & Web</H3>
-            <p style={{ color: "#aaa", fontSize: 14, lineHeight: 2 }}>Instagram: @greggcostinrealtor<br />Facebook: Gregg Costin - Gulf Coast Realtor<br />YouTube: Pensacola Military Realtor<br />Personal site: <a href="https://www.greggcostin.com" style={{ color: C.gold }} target="_blank" rel="noopener noreferrer">GreggCostin.com</a></p>
+            <p style={{ color: "#aaa", fontSize: 14, lineHeight: 2 }}>Instagram: <a href="https://www.instagram.com/greggcostinrealtor/" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@greggcostinrealtor</a><br />Facebook: <a href="https://www.facebook.com/greggcostin/" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@greggcostin</a><br /><span style={{ whiteSpace: "nowrap" }}>YouTube: <a href="https://www.youtube.com/@PensacolaMilitaryRealtor" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@PensacolaMilitaryRealtor</a></span><br />LinkTree: <a href="https://linktr.ee/Greggcostin" style={{ color: C.gold, textDecoration: "none" }} target="_blank" rel="noopener">linktr.ee/Greggcostin</a></p>
           </div>
           <div>
             <H3>Send a Message</H3>

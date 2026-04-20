@@ -235,12 +235,50 @@
                 "inLanguage": "en-US"
               }
           </script>
+              <style>
+                        html,body{margin:0;padding:0;overflow-x:hidden;-webkit-text-size-adjust:100%}
+                        *{box-sizing:border-box}
+                        img{max-width:100%;height:auto}
+                        /* SPA nav banner — responsive collapse on tablet + phone */
+                        @media (max-width: 900px){
+                          nav[style*="position: fixed"] > div[style*="grid-template-columns"]{
+                            grid-template-columns:1fr!important;justify-items:center!important;gap:8px!important;padding:8px 12px 0!important;
+                          }
+                          nav[style*="position: fixed"] img[alt="Levin Rinke Realty"],
+                          nav[style*="position: fixed"] img[alt="The Costin Team"]{height:72px!important}
+                          nav[style*="position: fixed"] a[href^="tel:"][style*="fontSize"]{font-size:18px!important}
+                        }
+                        @media (max-width: 640px){
+                          nav[style*="position: fixed"] img[alt="Levin Rinke Realty"],
+                          nav[style*="position: fixed"] img[alt="The Costin Team"]{height:56px!important}
+                          nav[style*="position: fixed"] a[href^="tel:"][style*="fontSize"]{font-size:16px!important}
+                          nav[style*="position: fixed"] a[href^="mailto:"][style*="fontSize"]{font-size:12px!important}
+                          .tabbar{gap:1px!important;padding:4px 8px 8px!important}
+                          .tabbar button,.tabbar a{padding:6px 10px!important;font-size:10px!important;letter-spacing:1px!important}
+                        }
+                        /* Hero + section padding scale-down on phones */
+                        @media (max-width: 900px){
+                          section[style*="minHeight: \"100vh\""][style*="paddingTop: 180"]{padding-top:140px!important}
+                        }
+                        @media (max-width: 640px){
+                          section[style*="minHeight: \"100vh\""][style*="paddingTop: 180"]{padding-top:200px!important;min-height:90vh!important}
+                          section[style*="padding: \"100px 32px\""]{padding:60px 20px!important}
+                          section[style*="padding: \"140px 32px 80px\""]{padding:100px 20px 50px!important}
+                        }
+                        /* Hide phone-email cluster shrink on very small screens */
+                        @media (max-width: 420px){
+                          .tabbar{font-size:9.5px!important}
+                          .tabbar button,.tabbar a{padding:5px 7px!important;letter-spacing:0.8px!important}
+                        }
+                        /* Prevent horizontal scroll from any stray wide element */
+                        #root{overflow-x:hidden}
+              </style>
       </head>
   <body>
-          <div id="root"></div>div>
+          <div id="root"></div>
           <script type="module" src="/src/main.jsx"></script>
   </body>
-</html>html>
+</html>
 
   </body></title>
               </script>

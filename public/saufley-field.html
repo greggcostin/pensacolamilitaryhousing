@@ -164,6 +164,64 @@ main>*{max-width:none;margin-left:0;margin-right:0}
 main .explore{max-width:none}
 header>*{max-width:760px;margin-left:auto;margin-right:auto}
 footer{max-width:760px}
+.bah-title{color:var(--gold);font-family:var(--serif);font-size:17px;font-weight:600;margin:24px 0 10px;text-align:left}
+.bah-wrap{overflow-x:auto;border:1px solid var(--hair);border-radius:10px;margin-bottom:12px}
+.bah-table{width:100%;border-collapse:collapse;min-width:380px}
+.bah-table thead th{color:var(--muted);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:12px 14px;border-bottom:1px solid var(--gold-line);background:var(--ink)}
+.bah-table thead th:first-child{text-align:left}
+.bah-table thead th:not(:first-child){text-align:right}
+.bah-table tbody tr:nth-child(even){background:rgba(255,255,255,0.02)}
+.bah-table tbody td{padding:10px 14px;border-bottom:1px solid var(--hair);font-size:14px}
+.bah-table tbody td:first-child{color:#fff;font-weight:600}
+.bah-table tbody td:nth-child(2){color:var(--gold);font-weight:600;text-align:right}
+.bah-table tbody td:nth-child(3){color:var(--text);text-align:right}
+.bah-source{font-size:13px;color:var(--muted);font-style:italic;margin-top:8px}
+.bah-source a{color:var(--gold)}
+/* MOBILE-REFINEMENTS */
+html,body{-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto}
+@media(max-width:900px){
+  main{padding:32px 18px 18px!important}
+  main>*{max-width:100%!important}
+  header{padding:40px 18px 28px!important}
+  header>*{max-width:100%!important}
+  h1{font-size:clamp(24px,6vw,36px)!important}
+  h2{font-size:22px!important;margin:36px 0 14px!important}
+  h3{font-size:16px!important}
+  .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
+  .explore{grid-template-columns:1fr!important;gap:12px!important;margin:1.5rem auto 2rem!important}
+  .explore-col{padding:1.25rem!important}
+  .bah-wrap{border-radius:8px!important}
+  .bah-table{font-size:13px!important}
+  .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}
+  .main-banner{margin-bottom:0!important}
+  .main-banner .banner-tabs{gap:0!important;padding:4px 6px 8px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:6px 10px!important;font-size:10px!important;letter-spacing:1px!important}
+  .main-banner .dropdown-menu{min-width:200px!important;max-height:60vh!important}
+  footer{max-width:100%!important;padding:1.25rem 18px 2rem!important;font-size:.8rem!important}
+  .cta{padding:1.25rem!important;margin:1.75rem auto!important}
+  .reviews-grid{grid-template-columns:1fr!important;gap:14px!important}
+  .review-card{padding:22px!important}
+  .rating-stack{gap:12px!important}
+  .rating-box{padding:14px 20px!important}
+  .rating-box .score{font-size:2rem!important}
+  .rating-box .stars{font-size:1.6rem!important}
+}
+@media(max-width:480px){
+  main{padding:24px 14px 14px!important}
+  header{padding:32px 14px 22px!important}
+  h1{font-size:clamp(22px,7vw,30px)!important}
+  h2{font-size:19px!important}
+  .main-banner .banner-lrr img,.main-banner .banner-logo img{height:56px!important}
+  .main-banner .banner-phone{font-size:16px!important}
+  .main-banner .banner-email{font-size:11px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:5px 8px!important;font-size:9.5px!important;letter-spacing:0.5px!important}
+  .bah-table{font-size:12px!important;min-width:320px!important}
+  .bah-table thead th{font-size:10px!important;padding:8px 8px!important}
+  .bah-table tbody td{padding:8px 8px!important}
+  details{padding:.8rem 1rem!important}
+  .cta{padding:1rem!important}
+}
 </style>
 </head>
 <body>
@@ -224,14 +282,57 @@ footer{max-width:760px}
 <p><strong><a href="/gulf-breeze.html">Gulf Breeze</a></strong> &mdash; 25-30 minutes east across the 3 Mile Bridge. Top-tier Santa Rosa schools for families with school-age kids; longer commute.</p>
 <p><strong><a href="/pace.html">Pace</a></strong> &mdash; 30-35 minutes east. A-rated Santa Rosa schools at a meaningfully lower cost than Gulf Breeze.</p>
 
+<h2>Schools Near Saufley Field</h2>
+<p>Saufley Field families choose between two school districts depending on which neighborhood they land in: <strong>Escambia County Public Schools</strong> (Bellview, Myrtle Grove, Cantonment, Ferry Pass — all the west and north Pensacola options closest to Saufley's gate) and <strong>Santa Rosa County School District</strong> (Gulf Breeze, Pace, Milton — the eastern options across the 3 Mile Bridge or up Hwy 90). Both districts honor the <strong>Interstate Compact on Educational Opportunity for Military Children</strong>, which protects mid-year enrollment, credit transfer, course placement, and extracurricular continuity for students arriving on PCS orders. Both have active <strong>military family liaisons</strong> and counselors experienced with the compressed timelines of information-warfare and linguist training pipelines.</p>
+<p>The honest framing: <strong>Escambia and Santa Rosa are not the same story</strong>. Santa Rosa earns an A district grade year after year with near-uniformly strong schools; Escambia earns a solid overall grade but has wider variance between its best and weakest zones. Where your specific parcel sits matters more than the county name.</p>
+<p><strong>Bellview / Myrtle Grove (Escambia) — the closest-to-the-gate option.</strong> Typical feeders: <strong>Bellview Elementary</strong>, <strong>Myrtle Grove Elementary</strong>, <strong>Bellview Middle</strong>, and either <strong>Escambia High School</strong> or <strong>Pine Forest High School</strong> depending on street. Schools here perform in the middle of Escambia's lineup — solid but not flagship. Pairs well with entry-level Saufley BAH budgets (E-1 through E-5) where a 5-10 minute commute matters more than top-tier school rankings.</p>
+<p><strong>Cantonment (North Escambia) — the stronger Escambia play.</strong> Feeder schools include <strong>Jim Allen Elementary</strong>, <strong>Kingsfield Elementary</strong>, <strong>Beulah Elementary</strong>, <strong>Ransom Middle</strong>, <strong>Beulah Middle</strong>, and <strong>Tate High School</strong> (A-rated, one of the strongest comprehensive high schools in Escambia with a solid AP catalog). This is the single best Escambia zone for Saufley families prioritizing schools without crossing into Santa Rosa County. Commute to Saufley runs 15-20 minutes.</p>
+<p><strong>Ferry Pass (Escambia) — middle of the pack.</strong> Feeders typically include <strong>Ferry Pass Elementary</strong>, <strong>Ferry Pass Middle</strong>, and <strong>Washington High School</strong> (home of Escambia's flagship IB Diploma Programme — the standout reason to target this zone if your student is IB-track). Non-IB Ferry Pass students are zoned to <strong>Pine Forest High</strong> or <strong>Escambia High</strong>. Mixed overall, strong upside specifically for IB-track families.</p>
+<p><strong>Gulf Breeze (Santa Rosa) — the top call if commute is negotiable.</strong> <strong>Gulf Breeze Elementary</strong>, <strong>Gulf Breeze Middle</strong>, and <strong>Gulf Breeze High School</strong> are all A-rated, with Gulf Breeze High consistently among the top-performing public high schools in the Panhandle. Strong AP catalog, dual-enrollment pathway through Pensacola State College, and a heavily military-connected student body (NAS Pensacola, Corry, Saufley families). Trade-off: 25-30 minute commute to Saufley across the 3 Mile Bridge.</p>
+<p><strong>Pace (Santa Rosa) — A-rated at lower cost.</strong> <strong>Pace High School</strong>, <strong>Sims Middle</strong>, and the Pace-zoned elementaries (<strong>Pea Ridge</strong>, <strong>Wallace Lake</strong>, <strong>Bagdad Elementary</strong>) all earn A grades and give you Santa Rosa school quality at meaningfully lower home prices than Gulf Breeze. Commute to Saufley is 30-35 minutes via Hwy 90. Best fit when Gulf Breeze's school story sells you but Gulf Breeze's price tag does not.</p>
+<p><strong>IB, AP, and dual enrollment.</strong> Escambia's IB Diploma Programme is hosted at <strong>Washington High School</strong> (Ferry Pass zone by default; out-of-zone IB applications accepted each year). Tate, Escambia, and Pine Forest run AP catalogs. Santa Rosa's flagship AP/IB offerings are at <strong>Gulf Breeze High</strong> and <strong>Navarre High</strong>. Dual enrollment in both counties flows through <strong>Pensacola State College</strong> — students can graduate high school with an AA degree at zero tuition cost, a notable benefit for future-officer and ROTC-track kids.</p>
+<p><strong>Special-needs and gifted.</strong> Both districts run mature ESE (Exceptional Student Education) and gifted programs. Escambia's gifted magnet is strongest at Tate High, Ransom Middle, and Washington High's IB feeder elementaries. Santa Rosa's gifted cluster is strongest at Gulf Breeze Middle and Holley-Navarre Middle. If your student is on an IEP, 504, or gifted plan, I connect you with the receiving district's military liaison <em>before</em> you write an offer so we can confirm program availability at the exact school zoned to your target address.</p>
+<p>As with every transaction, I map every candidate home to its <em>exact</em> elementary, middle, and high school zone by <strong>parcel address</strong> before you commit. Escambia boundary lines can split the same street, and zones in the Bellview / Myrtle Grove / Ferry Pass corridor have shifted in recent years. "Bellview address" does not always mean "Bellview Middle + Escambia High"; some parcels feed into <strong>Beulah Middle</strong> and <strong>Pine Forest High</strong> instead — a meaningfully different school package. Zone verification is non-negotiable on every Saufley home search.</p>
+
 <h2>BAH Math for Saufley Field</h2>
 <p>Saufley Field is in the Pensacola MHA (FL064). 2026 monthly BAH with dependents: E-1 through E-4 $1,794, E-5 $1,863, E-6 $2,235, E-7 $2,256, O-1 $1,914, O-3 $2,271, O-4 $2,457, O-5 $2,610. Because so many Saufley students are E-1 to E-4 at first duty station with $1,794/mo BAH, the buying math is genuinely tight in the core Pensacola neighborhoods &mdash; which is why Bellview, Myrtle Grove, Ferry Pass, and select Cantonment inventory become the practical purchase options. Instructors and permanent-party NIOC personnel at E-6 and above have much wider selection.</p>
+<h2>2026 BAH Rates for Saufley Field (MHA FL064)</h2>
+<p>Below are the 2026 Basic Allowance for Housing monthly rates for service members assigned to Saufley Field (Military Housing Area FL064 — shared with NAS Pensacola, Corry Station, and NAS Whiting Field). The "With Dependents" column applies to any service member with authorized dependents; "Without Dependents" is the single or unaccompanied rate. Prior-enlisted commissioned officer rates (O-1E, O-2E, O-3E) appear at the top of the officer table.</p>
+<div class="bah-title">Enlisted (E-1 through E-9)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>E-1 through E-4</td><td>$1,794</td><td>$1,521</td></tr>
+<tr><td>E-5</td><td>$1,863</td><td>$1,644</td></tr>
+<tr><td>E-6</td><td>$2,235</td><td>$1,722</td></tr>
+<tr><td>E-7</td><td>$2,256</td><td>$1,791</td></tr>
+<tr><td>E-8</td><td>$2,265</td><td>$1,941</td></tr>
+<tr><td>E-9</td><td>$2,304</td><td>$2,046</td></tr>
+</tbody></table></div>
+<div class="bah-title">Warrant Officer (W-1 through W-5)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>W-1</td><td>$2,253</td><td>$1,782</td></tr>
+<tr><td>W-2</td><td>$2,262</td><td>$1,938</td></tr>
+<tr><td>W-3</td><td>$2,274</td><td>$2,061</td></tr>
+<tr><td>W-4</td><td>$2,325</td><td>$2,229</td></tr>
+<tr><td>W-5</td><td>$2,427</td><td>$2,241</td></tr>
+</tbody></table></div>
+<div class="bah-title">Officer (O-1 through O-6, including Prior-Enlisted O-1E, O-2E, O-3E)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>O-1E</td><td>$2,259</td><td>$1,860</td></tr>
+<tr><td>O-2E</td><td>$2,268</td><td>$2,022</td></tr>
+<tr><td>O-3E</td><td>$2,340</td><td>$2,226</td></tr>
+<tr><td>O-1</td><td>$1,914</td><td>$1,719</td></tr>
+<tr><td>O-2</td><td>$2,232</td><td>$1,842</td></tr>
+<tr><td>O-3</td><td>$2,271</td><td>$2,097</td></tr>
+<tr><td>O-4</td><td>$2,457</td><td>$2,232</td></tr>
+<tr><td>O-5</td><td>$2,610</td><td>$2,244</td></tr>
+<tr><td>O-6</td><td>$2,631</td><td>$2,247</td></tr>
+</tbody></table></div>
+<p class="bah-source"><em>Source: DoD 2026 BAH tables for MHA FL064 (+0.5% from 2025). E-1 through E-4 share a single "junior enlisted" rate by DoD convention, which is why they're collapsed into one row above. Fort Walton Beach (Eglin AFB, Hurlburt Field, Duke Field) falls under MHA FL023 — different rates. For FL023 or any other MHA, use the <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/" target="_blank" rel="noopener">official DoD BAH calculator</a>.</em></p>
+
 
 <h2>Rent vs. Buy for Saufley Field Students and Instructors</h2>
 <p>Cryptologic and information-warfare pipelines at Saufley vary widely in length. Some technical courses run 6-12 months (rent is usually smarter). Instructor billets and NIOC permanent-party tours run 3+ years (buying with a VA loan is almost always the stronger financial move). DLI linguist students can be on pipelines of 12-18 months or longer. I run a specific rent-vs-buy analysis for every Saufley family based on pipeline length, rate/rank, and follow-on orders predictability.</p>
 
-<h2>Schools Near Saufley Field</h2>
-<p>West Pensacola neighborhoods closest to Saufley fall within Escambia County Public Schools, with zone assignments varying by specific address. Typical schools include Bellview Elementary, Myrtle Grove Elementary, Bellview Middle, and Escambia High or Pine Forest High depending on street. For families prioritizing top-tier A-rated schools, Gulf Breeze (Santa Rosa County, 25-30 minutes east) is the stronger call at the cost of commute. Both counties honor the Interstate Compact on Educational Opportunity for Military Children.</p>
 
 <h2>PCS Timeline to Saufley Field</h2>
 <p>Standard 60-90 day PCS. Recommended: contact me at receipt of orders for a 20-minute no-cost PCS consultation. Days 1-14: Certificate of Eligibility + VA loan pre-approval. Days 15-30: virtual home tours, neighborhood selection. Days 30-60: offer, inspection, appraisal. Days 60-90: closing aligned with your report date. I coordinate remote closings for service members PCSing in from OCONUS or on short-notice orders.</p>
@@ -292,7 +393,7 @@ footer{max-width:760px}
 </div>
 </main>
 <footer>
-<p><strong>Gregg Costin, Realtor</strong> &middot; Retired USAF Combat Systems Officer (E-3 AWACS) &middot; 20 years service, 11 PCS moves<br>
+<p><strong>Gregg Costin, Realtor</strong> &middot; Retired USAF Captain &middot; Prior-Enlisted Staff Sergeant &middot; Combat Systems Officer on the E-3 AWACS &middot; 11 PCS moves<br>
 Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502 &middot; Licensed FL &amp; AL<br>
 MRP &middot; ABR &middot; RENE &middot; Florida Military Specialist &middot; Pursuing GRI</p>
 <p><a href="/">Home</a> &middot; <a href="/faq.html">FAQ</a> &middot; <a href="/sitemap.xml">Sitemap</a> &middot; <a href="/llms.txt">AI content map</a></p>

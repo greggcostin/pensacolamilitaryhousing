@@ -164,6 +164,64 @@ main>*{max-width:none;margin-left:0;margin-right:0}
 main .explore{max-width:none}
 header>*{max-width:760px;margin-left:auto;margin-right:auto}
 footer{max-width:760px}
+.bah-title{color:var(--gold);font-family:var(--serif);font-size:17px;font-weight:600;margin:24px 0 10px;text-align:left}
+.bah-wrap{overflow-x:auto;border:1px solid var(--hair);border-radius:10px;margin-bottom:12px}
+.bah-table{width:100%;border-collapse:collapse;min-width:380px}
+.bah-table thead th{color:var(--muted);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:12px 14px;border-bottom:1px solid var(--gold-line);background:var(--ink)}
+.bah-table thead th:first-child{text-align:left}
+.bah-table thead th:not(:first-child){text-align:right}
+.bah-table tbody tr:nth-child(even){background:rgba(255,255,255,0.02)}
+.bah-table tbody td{padding:10px 14px;border-bottom:1px solid var(--hair);font-size:14px}
+.bah-table tbody td:first-child{color:#fff;font-weight:600}
+.bah-table tbody td:nth-child(2){color:var(--gold);font-weight:600;text-align:right}
+.bah-table tbody td:nth-child(3){color:var(--text);text-align:right}
+.bah-source{font-size:13px;color:var(--muted);font-style:italic;margin-top:8px}
+.bah-source a{color:var(--gold)}
+/* MOBILE-REFINEMENTS */
+html,body{-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto}
+@media(max-width:900px){
+  main{padding:32px 18px 18px!important}
+  main>*{max-width:100%!important}
+  header{padding:40px 18px 28px!important}
+  header>*{max-width:100%!important}
+  h1{font-size:clamp(24px,6vw,36px)!important}
+  h2{font-size:22px!important;margin:36px 0 14px!important}
+  h3{font-size:16px!important}
+  .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
+  .explore{grid-template-columns:1fr!important;gap:12px!important;margin:1.5rem auto 2rem!important}
+  .explore-col{padding:1.25rem!important}
+  .bah-wrap{border-radius:8px!important}
+  .bah-table{font-size:13px!important}
+  .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}
+  .main-banner{margin-bottom:0!important}
+  .main-banner .banner-tabs{gap:0!important;padding:4px 6px 8px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:6px 10px!important;font-size:10px!important;letter-spacing:1px!important}
+  .main-banner .dropdown-menu{min-width:200px!important;max-height:60vh!important}
+  footer{max-width:100%!important;padding:1.25rem 18px 2rem!important;font-size:.8rem!important}
+  .cta{padding:1.25rem!important;margin:1.75rem auto!important}
+  .reviews-grid{grid-template-columns:1fr!important;gap:14px!important}
+  .review-card{padding:22px!important}
+  .rating-stack{gap:12px!important}
+  .rating-box{padding:14px 20px!important}
+  .rating-box .score{font-size:2rem!important}
+  .rating-box .stars{font-size:1.6rem!important}
+}
+@media(max-width:480px){
+  main{padding:24px 14px 14px!important}
+  header{padding:32px 14px 22px!important}
+  h1{font-size:clamp(22px,7vw,30px)!important}
+  h2{font-size:19px!important}
+  .main-banner .banner-lrr img,.main-banner .banner-logo img{height:56px!important}
+  .main-banner .banner-phone{font-size:16px!important}
+  .main-banner .banner-email{font-size:11px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:5px 8px!important;font-size:9.5px!important;letter-spacing:0.5px!important}
+  .bah-table{font-size:12px!important;min-width:320px!important}
+  .bah-table thead th{font-size:10px!important;padding:8px 8px!important}
+  .bah-table tbody td{padding:8px 8px!important}
+  details{padding:.8rem 1rem!important}
+  .cta{padding:1rem!important}
+}
 </style>
 </head>
 <body>
@@ -215,10 +273,52 @@ footer{max-width:760px}
 <p><strong>Baker &amp; Holt</strong> &mdash; Rural communities north and west of Crestview. Land is available in larger parcels at lower prices. Strong fit for families who want acreage, horses, or a shop. Commute 15-25 minutes.</p>
 <p><strong>Niceville / Valparaiso</strong> &mdash; 25-30 minutes south to Duke Field. Higher cost but A-rated Okaloosa schools. Best for families with school-age children who also travel to Eglin's main base frequently.</p>
 <p><strong>Laurel Hill</strong> &mdash; Further north. Rural, affordable, extended commute to Duke. Niche fit for reservists who already live in the area.</p>
+<h2>Schools for Duke Field Families</h2>
+<p>Duke Field is a tenant of Eglin AFB, which means Duke families choose between the same two school districts as Eglin families: <strong>Okaloosa County</strong> (Crestview, Niceville, Valparaiso, Bluewater Bay, Fort Walton Beach, Shalimar, Destin, Laurel Hill) and <strong>Santa Rosa County</strong> (Navarre, if you're willing to take the longer commute). Both districts earn strong Florida DOE grades and both honor the <strong>Interstate Compact on Educational Opportunity for Military Children</strong>, which protects mid-year PCS enrollment, course placement, and credit transfer. Both districts have established <strong>military family liaisons</strong> and counselors who understand the AFRC / reserve rhythm many Duke families live on.</p>
+<p>Because most Duke Field permanent-party and AFRC families live in <strong>Crestview</strong>, that's the school zone you'll spend the most time evaluating — but it is not your only option. Here is the honest breakdown by neighborhood:</p>
+<p><strong>Crestview — the default for Duke families.</strong> <strong>Crestview High School</strong> earns A grades most years, has a large military-connected student body (Duke Field, Eglin, 7th Special Forces Group, and nearby Blackstone-area active-duty families), and runs a respectable AP and dual-enrollment catalog through Northwest Florida State College. Feeder middle schools include <strong>Shoal River Middle</strong>, <strong>Davidson Middle</strong>, and <strong>Ruckel-style Baker School</strong> (K-12, more rural). Feeder elementaries include <strong>Antioch Elementary</strong>, <strong>Bob Sikes Elementary</strong>, <strong>Walker Elementary</strong>, <strong>Northwood Elementary</strong>, and <strong>Riverside Elementary</strong>. Quality varies by specific attendance zone — Antioch and Bob Sikes are consistently A-rated, others more variable.</p>
+<p><strong>Laurel Hill — the rural north option.</strong> <strong>Laurel Hill School</strong> is a K-12 combined school in the northern end of Okaloosa County with a small, tight-knit student body. Florida DOE grades are generally solid but enrollment is limited. This is where you end up if you want acreage and a small-town school environment and are willing to drive further to Duke.</p>
+<p><strong>Niceville / Bluewater Bay — the top-tier school commute.</strong> If school quality is your number-one filter, <strong>Niceville High School</strong> (routinely among Florida's top 5 public high schools), <strong>Ruckel Middle</strong>, and the A-rated elementaries (<strong>Bluewater Elementary</strong>, <strong>Edge Elementary</strong>, <strong>Plew Elementary</strong>) are 25-30 minutes south of Duke. Home prices are meaningfully higher than Crestview. Worth the commute and cost for families targeting nationally ranked IB Diploma Programmes, deep AP offerings, and NWFSC dual enrollment.</p>
+<p><strong>Fort Walton Beach / Shalimar / Choctawhatchee zone.</strong> <strong>Choctawhatchee High School</strong> is a strong A-rated comprehensive high school with a large military-connected population and solid career academies (cyber, engineering, health science). Feeder <strong>Max Bruner Middle</strong> and <strong>Shalimar Elementary</strong> are reliable. Commute from Duke Field to Shalimar / FWB is 30-35 minutes — longer than Niceville but with lower home prices.</p>
+<p><strong>Navarre (Santa Rosa County) — the Santa Rosa alternative.</strong> Navarre High School and Holley-Navarre Middle are the highest-performing secondary schools in the Panhandle. Feeder elementaries (<strong>East Navarre</strong>, <strong>West Navarre</strong>, <strong>Holley-Navarre Primary</strong>) all earn A grades. Commute to Duke Field is the longest of any option (45-55 minutes) — this is only the right call if your Duke Field assignment happens to overlap with a spouse working at Hurlburt or NAS Pensacola and you need a family-wide commute compromise.</p>
+<p><strong>IB, AP, and dual enrollment.</strong> Crestview High offers AP courses and a dual-enrollment pathway through Northwest Florida State College's Niceville campus. Okaloosa students can earn an AA degree tuition-free while still in high school — a significant benefit for future-officer and ROTC-track students. Niceville and Choctawhatchee host the county's flagship IB programmes.</p>
+<p><strong>Special-needs and gifted.</strong> Okaloosa runs mature ESE and gifted programs; the gifted magnet is strongest at Ruckel Middle and Niceville High, but Crestview-zoned schools also offer gifted pull-out and ESE services. If your student is on an IEP, 504, or gifted plan, I connect you with the district's military liaison <em>before</em> you write an offer so we can confirm the specific program will be available at the exact school zoned to your target address.</p>
+<p>As with every transaction I touch, I map every candidate home to its <em>exact</em> elementary, middle, and high school zone by <strong>parcel address</strong> before you commit. Crestview's school boundary lines shift as the district manages growth, and "Crestview address" does not always mean "Crestview High zone" — some rural Okaloosa parcels feed into <strong>Baker School</strong> or <strong>Laurel Hill School</strong> even though the street address says Crestview. This zone verification is non-negotiable on every Duke Field home search.</p>
 <h2>BAH Math for Duke Field</h2>
 <p>Duke Field shares the FL023 Fort Walton Beach MHA with Eglin AFB. Because BAH is set by the beach-area market but Crestview's home prices are meaningfully lower, FL023 is one of the strongest VA-loan value markets in the Southeast. E-5 BAH with dependents ($2,433/mo) supports $360K+ in Crestview. E-6 ($2,526) clears most new-construction inventory. E-7 ($2,841) and O-3 ($3,399) comfortably support the upper end of the Crestview market.</p>
-<h2>Schools</h2>
-<p>Crestview-area families attend Okaloosa County Schools, with Crestview High School as the primary comprehensive high school. The district honors the Interstate Compact for Educational Opportunity for Military Children. Families prioritizing top-tier Okaloosa schools (Niceville High, Choctawhatchee) should plan for the longer south commute from Niceville to Duke Field.</p>
+<h2>2026 BAH Rates for Duke Field (MHA FL023)</h2>
+<p>Below are the 2026 Basic Allowance for Housing monthly rates for service members assigned to Duke Field (Military Housing Area FL023 — Fort Walton Beach, shared with Eglin AFB and Hurlburt Field). The "With Dependents" column applies to any service member with authorized dependents; "Without Dependents" is the single or unaccompanied rate. Prior-enlisted commissioned officer rates (O-1E, O-2E, O-3E) appear at the top of the officer table.</p>
+<div class="bah-title">Enlisted (E-1 through E-9)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>E-1 through E-4</td><td>$2,340</td><td>$2,007</td></tr>
+<tr><td>E-5</td><td>$2,433</td><td>$2,157</td></tr>
+<tr><td>E-6</td><td>$2,526</td><td>$2,250</td></tr>
+<tr><td>E-7</td><td>$2,841</td><td>$2,340</td></tr>
+<tr><td>E-8</td><td>$3,189</td><td>$2,457</td></tr>
+<tr><td>E-9</td><td>$3,447</td><td>$2,586</td></tr>
+</tbody></table></div>
+<div class="bah-title">Warrant Officer (W-1 through W-5)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>W-1</td><td>$2,544</td><td>$2,322</td></tr>
+<tr><td>W-2</td><td>$2,985</td><td>$2,454</td></tr>
+<tr><td>W-3</td><td>$3,414</td><td>$2,589</td></tr>
+<tr><td>W-4</td><td>$3,456</td><td>$2,604</td></tr>
+<tr><td>W-5</td><td>$3,516</td><td>$2,922</td></tr>
+</tbody></table></div>
+<div class="bah-title">Officer (O-1 through O-6, including Prior-Enlisted O-1E, O-2E, O-3E)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>O-1E</td><td>$2,910</td><td>$2,430</td></tr>
+<tr><td>O-2E</td><td>$3,351</td><td>$2,514</td></tr>
+<tr><td>O-3E</td><td>$3,468</td><td>$2,601</td></tr>
+<tr><td>O-1</td><td>$2,451</td><td>$2,244</td></tr>
+<tr><td>O-2</td><td>$2,523</td><td>$2,406</td></tr>
+<tr><td>O-3</td><td>$3,399</td><td>$2,592</td></tr>
+<tr><td>O-4</td><td>$3,528</td><td>$2,865</td></tr>
+<tr><td>O-5</td><td>$3,612</td><td>$3,066</td></tr>
+<tr><td>O-6</td><td>$3,642</td><td>$3,393</td></tr>
+</tbody></table></div>
+<p class="bah-source"><em>Source: DoD 2026 BAH tables for MHA FL023 (+0.4% from 2025). E-1 through E-4 share a single "junior enlisted" rate by DoD convention, which is why they're collapsed into one row above. NAS Pensacola, Corry Station, Saufley Field, and NAS Whiting Field fall under MHA FL064 — different rates. For FL064 or any other MHA, use the <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/" target="_blank" rel="noopener">official DoD BAH calculator</a>.</em></p>
+
 <h2>Frequently Asked Questions</h2>
 <details open><summary>What is Duke Field?</summary><p>Duke Field is Eglin Auxiliary Field 3, a USAF airfield approximately 15 miles north of Eglin AFB's main base and adjacent to Crestview, Florida. It is the home of the 919th Special Operations Wing, an Air Force Reserve Command wing flying MC-130J Commando II and MQ-9 Reaper. Duke Field is part of the Eglin enterprise and shares the FL023 BAH MHA with Eglin AFB.</p></details>
 <details><summary>Where do Duke Field military families live?</summary><p>Crestview is the default choice for most Duke Field reservists and full-time air reserve technicians, with 10-15 minute commutes and a meaningfully lower cost of living than Niceville or Destin. Baker and Holt offer rural land at low prices for families who want acreage. Niceville and Valparaiso work for families who want top-tier schools and are willing to drive 25-30 minutes.</p></details>
@@ -275,7 +375,7 @@ footer{max-width:760px}
 </div>
 </main>
 <footer>
-<p><strong>Gregg Costin, Realtor</strong> &middot; Retired USAF Combat Systems Officer (E-3 AWACS) &middot; 20 years service, 11 PCS moves<br>
+<p><strong>Gregg Costin, Realtor</strong> &middot; Retired USAF Captain &middot; Prior-Enlisted Staff Sergeant &middot; Combat Systems Officer on the E-3 AWACS &middot; 11 PCS moves<br>
 Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502 &middot; Licensed FL &amp; AL<br>
 MRP &middot; ABR &middot; RENE &middot; Florida Military Specialist &middot; Pursuing GRI</p>
 <p><a href="/">Home</a> &middot; <a href="/faq.html">FAQ</a> &middot; <a href="/sitemap.xml">Sitemap</a> &middot; <a href="/llms.txt">AI content map</a></p>

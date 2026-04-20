@@ -164,6 +164,64 @@ main>*{max-width:none;margin-left:0;margin-right:0}
 main .explore{max-width:none}
 header>*{max-width:760px;margin-left:auto;margin-right:auto}
 footer{max-width:760px}
+.bah-title{color:var(--gold);font-family:var(--serif);font-size:17px;font-weight:600;margin:24px 0 10px;text-align:left}
+.bah-wrap{overflow-x:auto;border:1px solid var(--hair);border-radius:10px;margin-bottom:12px}
+.bah-table{width:100%;border-collapse:collapse;min-width:380px}
+.bah-table thead th{color:var(--muted);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:12px 14px;border-bottom:1px solid var(--gold-line);background:var(--ink)}
+.bah-table thead th:first-child{text-align:left}
+.bah-table thead th:not(:first-child){text-align:right}
+.bah-table tbody tr:nth-child(even){background:rgba(255,255,255,0.02)}
+.bah-table tbody td{padding:10px 14px;border-bottom:1px solid var(--hair);font-size:14px}
+.bah-table tbody td:first-child{color:#fff;font-weight:600}
+.bah-table tbody td:nth-child(2){color:var(--gold);font-weight:600;text-align:right}
+.bah-table tbody td:nth-child(3){color:var(--text);text-align:right}
+.bah-source{font-size:13px;color:var(--muted);font-style:italic;margin-top:8px}
+.bah-source a{color:var(--gold)}
+/* MOBILE-REFINEMENTS */
+html,body{-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto}
+@media(max-width:900px){
+  main{padding:32px 18px 18px!important}
+  main>*{max-width:100%!important}
+  header{padding:40px 18px 28px!important}
+  header>*{max-width:100%!important}
+  h1{font-size:clamp(24px,6vw,36px)!important}
+  h2{font-size:22px!important;margin:36px 0 14px!important}
+  h3{font-size:16px!important}
+  .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
+  .explore{grid-template-columns:1fr!important;gap:12px!important;margin:1.5rem auto 2rem!important}
+  .explore-col{padding:1.25rem!important}
+  .bah-wrap{border-radius:8px!important}
+  .bah-table{font-size:13px!important}
+  .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}
+  .main-banner{margin-bottom:0!important}
+  .main-banner .banner-tabs{gap:0!important;padding:4px 6px 8px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:6px 10px!important;font-size:10px!important;letter-spacing:1px!important}
+  .main-banner .dropdown-menu{min-width:200px!important;max-height:60vh!important}
+  footer{max-width:100%!important;padding:1.25rem 18px 2rem!important;font-size:.8rem!important}
+  .cta{padding:1.25rem!important;margin:1.75rem auto!important}
+  .reviews-grid{grid-template-columns:1fr!important;gap:14px!important}
+  .review-card{padding:22px!important}
+  .rating-stack{gap:12px!important}
+  .rating-box{padding:14px 20px!important}
+  .rating-box .score{font-size:2rem!important}
+  .rating-box .stars{font-size:1.6rem!important}
+}
+@media(max-width:480px){
+  main{padding:24px 14px 14px!important}
+  header{padding:32px 14px 22px!important}
+  h1{font-size:clamp(22px,7vw,30px)!important}
+  h2{font-size:19px!important}
+  .main-banner .banner-lrr img,.main-banner .banner-logo img{height:56px!important}
+  .main-banner .banner-phone{font-size:16px!important}
+  .main-banner .banner-email{font-size:11px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:5px 8px!important;font-size:9.5px!important;letter-spacing:0.5px!important}
+  .bah-table{font-size:12px!important;min-width:320px!important}
+  .bah-table thead th{font-size:10px!important;padding:8px 8px!important}
+  .bah-table tbody td{padding:8px 8px!important}
+  details{padding:.8rem 1rem!important}
+  .cta{padding:1rem!important}
+}
 </style>
 </head>
 <body>
@@ -225,10 +283,53 @@ footer{max-width:760px}
 <p><strong>Destin</strong> &mdash; Premium beach market. Best for O-4 and above or dual-income E-7+ buyers. Longer commute to Eglin.</p>
 <p><strong><a href="/navarre.html">Navarre</a></strong> &mdash; Lower cost, A-rated Santa Rosa schools, 30-minute commute. A solid BAH value play.</p>
 <p><strong><a href="/crestview.html">Crestview</a></strong> &mdash; The budget play. 30 minutes to East Gate, meaningfully lower cost, best for E-4 to E-6 and for 7th SFG families who want more land.</p>
+<h2>Schools for Eglin Families</h2>
+<p>Eglin families have it good. <strong>Okaloosa County School District</strong> — which serves Niceville, Valparaiso, Bluewater Bay, Fort Walton Beach, Shalimar, Destin, and Crestview — is one of the top-performing districts in Florida, consistently earning an overall <strong>A grade</strong> from the Florida DOE and producing nationally ranked schools across every grade band. Santa Rosa County also serves nearby Navarre, if Eglin's West-Gate commute and a different county's school lineup are a better fit for your family.</p>
+<p>Both districts honor the <strong>Interstate Compact on Educational Opportunity for Military Children</strong>, which protects mid-year enrollment, credit transfer, course placement, and extracurricular continuity for military-connected students. Both have dedicated <strong>military family liaisons</strong> and counselors experienced with the PCS rhythm — a January arrival will not lose a math class credit, be dropped from an IB track, or be denied a seat in band or varsity sports at either district.</p>
+<p><strong>Niceville / Bluewater Bay — the flagship tier.</strong> Niceville High School is routinely ranked among Florida's top 5 public high schools, with a nationally recognized IB Diploma Programme, deep AP catalog, dual enrollment through Northwest Florida State College, and strong athletic and STEM programs. Feeder middle (<strong>Ruckel Middle</strong>) and elementaries (<strong>Bluewater Elementary</strong>, <strong>Edge Elementary</strong>, <strong>Plew Elementary</strong>) all perform at the top of the state. This is the default pick for Eglin families with school-age kids — and it's reflected in Niceville home prices.</p>
+<p><strong>Choctawhatchee / Shalimar — strong alternative.</strong> Choctawhatchee High School is an A-rated comprehensive high school with a large military-connected student body drawn from Eglin, Hurlburt, and the Coast Guard station. Strong AP and career academy offerings, including cyber, engineering, and health science pathways. Feeder <strong>Max Bruner Middle</strong> and <strong>Shalimar Elementary</strong> are reliable A-grade schools. Shorter commute and more affordable home prices than the Niceville zone.</p>
+<p><strong>Fort Walton Beach — solid with a caveat.</strong> Fort Walton Beach High School has historically been a B-to-A school with year-to-year variability. Feeder middle (<strong>Max Bruner</strong> or <strong>Meigs Middle</strong> depending on zone) and elementary choices (<strong>Elliott Point</strong>, <strong>Edwins</strong>, <strong>Wright Elementary</strong>) are generally solid. Check the current year's grade and subgroup scores before committing to this zone if schools are your top priority.</p>
+<p><strong>Destin — smaller but high-performing.</strong> <strong>Destin Elementary</strong> and <strong>Destin Middle</strong> are tight-knit A-rated schools serving a smaller, more affluent student population. Destin-zoned high-schoolers attend <strong>Fort Walton Beach High</strong>. Families who land in Destin and want a different high school option sometimes apply to Niceville or Choctawhatchee on an out-of-zone / school-choice basis; both accept a limited number of applications each year.</p>
+<p><strong>Crestview — the budget play with solid schools.</strong> <strong>Crestview High School</strong> earns A grades most years and has a large military-connected population from Duke Field, Eglin, and the Army's 7th Special Forces Group. Feeder <strong>Shoal River Middle</strong>, <strong>Davidson Middle</strong>, and elementaries like <strong>Antioch</strong>, <strong>Bob Sikes</strong>, and <strong>Walker Elementary</strong> round out the K-12 pipeline. A meaningful step up from some Fort Walton Beach zones and a meaningful step down from Niceville — the right call for families who need the Crestview housing budget to work.</p>
+<p><strong>Navarre (Santa Rosa County, for West-Gate commuters).</strong> Navarre High School and Holley-Navarre Middle are the highest-performing secondary schools in the entire Panhandle, with strong IB/AP pathways and a military-heavy student body. Feeder elementaries (<strong>East Navarre</strong>, <strong>West Navarre</strong>, <strong>Holley-Navarre Primary</strong>) all earn A grades. Trade-off: 25-35 minute commute to Eglin's West Gate via US-98. For West-Gate commuters whose schools are the #1 priority, Navarre often edges out even Niceville.</p>
+<p><strong>IB, AP, and dual enrollment.</strong> Three Okaloosa high schools host IB Diploma Programmes (Niceville, Choctawhatchee, and a limited program at Crestview). Every Okaloosa high school offers AP courses. Dual enrollment is available through <strong>Northwest Florida State College</strong> (Niceville campus) — Okaloosa students can graduate high school with an AA degree at zero tuition cost, a significant benefit for future-officer and ROTC-track students. Santa Rosa offers dual enrollment through Pensacola State College.</p>
+<p><strong>Special-needs and gifted programming.</strong> Both districts run mature ESE (Exceptional Student Education) and gifted programs. Okaloosa's gifted magnet is strongest at Ruckel Middle and Niceville High; Santa Rosa's at Holley-Navarre Middle and Navarre High. If your student is on an IEP, 504, or gifted plan, I connect you with the receiving district's military liaison <em>before</em> you write an offer so we confirm that specific program availability at the exact school zoned to your target address.</p>
+<p>As always, I map every candidate home to its exact elementary, middle, and high school zone — <em>by parcel address</em>, not by city name — before you commit. Okaloosa boundary lines can split the same street, and "Niceville address" does not always mean "Niceville High zone." This is the single most commonly missed step in an Eglin home search and it is non-negotiable on every transaction I touch.</p>
 <h2>BAH and Purchase Price Reality Check</h2>
 <p>The FL023 Fort Walton Beach MHA is one of the higher-BAH areas in the Southeast because of Destin and FWB beach pricing. 2026 monthly rates with dependents run E-5 $2,433, E-6 $2,526, E-7 $2,841, O-3 $3,399, O-5 $3,612. This makes Eglin one of the stronger VA-loan markets in the Panhandle &mdash; E-6 BAH comfortably supports $400K+ in Niceville, and O-3 and above reaches into Destin and Bluewater Bay. I run a full BAH-to-purchase-price match before your first showing so you see the honest math.</p>
-<h2>Schools for Eglin Families</h2>
-<p>Okaloosa County Schools serve Niceville, Valparaiso, Fort Walton Beach, Shalimar, and Destin. The district consistently earns high Florida DOE grades. Niceville High, Fort Walton Beach High, and Choctawhatchee High are the top comprehensive high schools, with Niceville and Choctawhatchee standing out for military-connected student populations and IB/AP pathways. Okaloosa honors the Interstate Compact for Educational Opportunity for Military Children, which is non-negotiable for mid-year PCS arrivals. Crestview-area students attend Crestview High School (also A-rated).</p>
+<h2>2026 BAH Rates for Eglin AFB (MHA FL023)</h2>
+<p>Below are the 2026 Basic Allowance for Housing monthly rates for service members assigned to Eglin AFB (Military Housing Area FL023 — Fort Walton Beach, shared with Hurlburt Field and Duke Field). The "With Dependents" column applies to any service member with authorized dependents; "Without Dependents" is the single or unaccompanied rate. Prior-enlisted commissioned officer rates (O-1E, O-2E, O-3E) appear at the top of the officer table.</p>
+<div class="bah-title">Enlisted (E-1 through E-9)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>E-1 through E-4</td><td>$2,340</td><td>$2,007</td></tr>
+<tr><td>E-5</td><td>$2,433</td><td>$2,157</td></tr>
+<tr><td>E-6</td><td>$2,526</td><td>$2,250</td></tr>
+<tr><td>E-7</td><td>$2,841</td><td>$2,340</td></tr>
+<tr><td>E-8</td><td>$3,189</td><td>$2,457</td></tr>
+<tr><td>E-9</td><td>$3,447</td><td>$2,586</td></tr>
+</tbody></table></div>
+<div class="bah-title">Warrant Officer (W-1 through W-5)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>W-1</td><td>$2,544</td><td>$2,322</td></tr>
+<tr><td>W-2</td><td>$2,985</td><td>$2,454</td></tr>
+<tr><td>W-3</td><td>$3,414</td><td>$2,589</td></tr>
+<tr><td>W-4</td><td>$3,456</td><td>$2,604</td></tr>
+<tr><td>W-5</td><td>$3,516</td><td>$2,922</td></tr>
+</tbody></table></div>
+<div class="bah-title">Officer (O-1 through O-6, including Prior-Enlisted O-1E, O-2E, O-3E)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>O-1E</td><td>$2,910</td><td>$2,430</td></tr>
+<tr><td>O-2E</td><td>$3,351</td><td>$2,514</td></tr>
+<tr><td>O-3E</td><td>$3,468</td><td>$2,601</td></tr>
+<tr><td>O-1</td><td>$2,451</td><td>$2,244</td></tr>
+<tr><td>O-2</td><td>$2,523</td><td>$2,406</td></tr>
+<tr><td>O-3</td><td>$3,399</td><td>$2,592</td></tr>
+<tr><td>O-4</td><td>$3,528</td><td>$2,865</td></tr>
+<tr><td>O-5</td><td>$3,612</td><td>$3,066</td></tr>
+<tr><td>O-6</td><td>$3,642</td><td>$3,393</td></tr>
+</tbody></table></div>
+<p class="bah-source"><em>Source: DoD 2026 BAH tables for MHA FL023 (+0.4% from 2025). E-1 through E-4 share a single "junior enlisted" rate by DoD convention, which is why they're collapsed into one row above. NAS Pensacola, Corry Station, Saufley Field, and NAS Whiting Field fall under MHA FL064 — different rates. For FL064 or any other MHA, use the <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/" target="_blank" rel="noopener">official DoD BAH calculator</a>.</em></p>
+
 <h2>PCS Timeline to Eglin AFB</h2>
 <p>Standard 60-90 day PCS. Days 1-14: Certificate of Eligibility + VA loan pre-approval. Days 15-30: virtual home tours and neighborhood selection. Days 30-60: offer, inspection, appraisal. Days 60-90: closing aligned with RNLT date. I coordinate remote closings for deployed service members and PCS inbound from OCONUS.</p>
 <h2>Frequently Asked Questions</h2>
@@ -288,7 +389,7 @@ footer{max-width:760px}
 </div>
 </main>
 <footer>
-<p><strong>Gregg Costin, Realtor</strong> &middot; Retired USAF Combat Systems Officer (E-3 AWACS) &middot; 20 years service, 11 PCS moves<br>
+<p><strong>Gregg Costin, Realtor</strong> &middot; Retired USAF Captain &middot; Prior-Enlisted Staff Sergeant &middot; Combat Systems Officer on the E-3 AWACS &middot; 11 PCS moves<br>
 Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502 &middot; Licensed FL &amp; AL<br>
 MRP &middot; ABR &middot; RENE &middot; Florida Military Specialist &middot; Pursuing GRI</p>
 <p><a href="/">Home</a> &middot; <a href="/faq.html">FAQ</a> &middot; <a href="/sitemap.xml">Sitemap</a> &middot; <a href="/llms.txt">AI content map</a></p>

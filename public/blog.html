@@ -74,6 +74,14 @@ footer a{color:var(--gold)}
 .cta p{text-align:center}
 .cta strong{color:#fff}
 .cta a{color:var(--gold);font-weight:700}
+.explore{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:2.5rem auto 3rem;max-width:900px}
+.explore-col{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem;text-align:center}
+.explore-title{color:var(--gold);font-size:.85rem;margin:0 0 1rem;text-transform:uppercase;letter-spacing:2px;font-weight:700}
+.explore .related{display:flex;flex-direction:column;gap:0;margin:0}
+.explore .related a{color:var(--text);padding:.5rem 0;border-bottom:1px solid var(--hair);font-size:.92rem;text-decoration:none}
+.explore .related a:last-child{border-bottom:none}
+.explore .related a:hover{color:var(--gold)}
+@media(max-width:720px){.explore{grid-template-columns:1fr}}
 @media(max-width:640px){.topnav{font-size:.8rem;justify-content:flex-start}.topnav-phone{margin-left:0}header{padding:40px 20px}main{padding:32px 20px}.blog-card{padding:24px}}
 /* MAIN-BANNER */
 .main-banner{position:sticky;top:0;z-index:1000;background:rgba(10,15,26,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.08);font-family:'Inter','DM Sans',system-ui,-apple-system,sans-serif;margin-bottom:0}
@@ -96,6 +104,51 @@ footer a{color:var(--gold)}
 .main-banner .dropdown-menu a:hover{background:rgba(201,168,76,0.12);color:#C9A84C}
 @media(max-width:900px){.main-banner .banner-row{grid-template-columns:1fr;justify-items:center;gap:8px}.main-banner .banner-lrr,.main-banner .banner-logo,.main-banner .banner-contact{justify-self:center}.main-banner .banner-lrr img,.main-banner .banner-logo img{height:72px}.main-banner .banner-phone{font-size:16px}.main-banner .banner-email{font-size:12px}}
 header,header .crumbs,header h1,header .lead,header p{text-align:center;margin-left:auto;margin-right:auto}
+/* MOBILE-REFINEMENTS */
+html,body{-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto}
+@media(max-width:900px){
+  main{padding:32px 18px 18px!important}
+  main>*{max-width:100%!important}
+  header{padding:40px 18px 28px!important}
+  header>*{max-width:100%!important}
+  h1{font-size:clamp(24px,6vw,36px)!important}
+  h2{font-size:22px!important;margin:36px 0 14px!important}
+  h3{font-size:16px!important}
+  .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
+  .explore{grid-template-columns:1fr!important;gap:12px!important;margin:1.5rem auto 2rem!important}
+  .explore-col{padding:1.25rem!important}
+  .bah-wrap{border-radius:8px!important}
+  .bah-table{font-size:13px!important}
+  .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}
+  .main-banner{margin-bottom:0!important}
+  .main-banner .banner-tabs{gap:0!important;padding:4px 6px 8px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:6px 10px!important;font-size:10px!important;letter-spacing:1px!important}
+  .main-banner .dropdown-menu{min-width:200px!important;max-height:60vh!important}
+  footer{max-width:100%!important;padding:1.25rem 18px 2rem!important;font-size:.8rem!important}
+  .cta{padding:1.25rem!important;margin:1.75rem auto!important}
+  .reviews-grid{grid-template-columns:1fr!important;gap:14px!important}
+  .review-card{padding:22px!important}
+  .rating-stack{gap:12px!important}
+  .rating-box{padding:14px 20px!important}
+  .rating-box .score{font-size:2rem!important}
+  .rating-box .stars{font-size:1.6rem!important}
+}
+@media(max-width:480px){
+  main{padding:24px 14px 14px!important}
+  header{padding:32px 14px 22px!important}
+  h1{font-size:clamp(22px,7vw,30px)!important}
+  h2{font-size:19px!important}
+  .main-banner .banner-lrr img,.main-banner .banner-logo img{height:56px!important}
+  .main-banner .banner-phone{font-size:16px!important}
+  .main-banner .banner-email{font-size:11px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:5px 8px!important;font-size:9.5px!important;letter-spacing:0.5px!important}
+  .bah-table{font-size:12px!important;min-width:320px!important}
+  .bah-table thead th{font-size:10px!important;padding:8px 8px!important}
+  .bah-table tbody td{padding:8px 8px!important}
+  details{padding:.8rem 1rem!important}
+  .cta{padding:1rem!important}
+}
 </style>
 </head>
 <body>
@@ -238,6 +291,50 @@ Want me to run the exact numbers for your rank and target neighborhoods? Call (8
 <div class="cta">
 <p><strong>Want help applying any of this to your specific PCS or purchase?</strong></p>
 <p style="margin-top:12px">Call or text <a href="tel:+18502665005">(850) 266-5005</a> &nbsp;|&nbsp; Email <a href="mailto:Gregg.Costin@gmail.com">Gregg.Costin@gmail.com</a></p>
+</div>
+<h2>Explore Other Bases &amp; Areas</h2>
+<div class="explore">
+<div class="explore-col">
+<h3 class="explore-title">Bases</h3>
+<div class="related">
+<a href="/nas-pensacola.html">NAS Pensacola</a>
+<a href="/corry-station.html">Corry Station</a>
+<a href="/saufley-field.html">Saufley Field</a>
+<a href="/nas-whiting-field.html">NAS Whiting Field</a>
+<a href="/hurlburt-field.html">Hurlburt Field</a>
+<a href="/eglin-afb.html">Eglin AFB</a>
+<a href="/duke-field.html">Duke Field</a>
+</div>
+</div>
+<div class="explore-col">
+<h3 class="explore-title">Communities</h3>
+<div class="related">
+<a href="/gulf-breeze.html">Gulf Breeze</a>
+<a href="/navarre.html">Navarre</a>
+<a href="/pace.html">Pace</a>
+<a href="/milton.html">Milton</a>
+<a href="/cantonment.html">Cantonment</a>
+<a href="/perdido-key.html">Perdido Key</a>
+<a href="/east-pensacola-heights.html">East Pensacola Heights</a>
+<a href="/east-hill.html">East Hill</a>
+<a href="/cordova-park.html">Cordova Park</a>
+<a href="/ferry-pass.html">Ferry Pass</a>
+<a href="/bellview-myrtle-grove.html">Bellview/Myrtle Grove</a>
+<a href="/navy-point-warrington.html">Navy Point/Warrington</a>
+<a href="/niceville-valparaiso-bluewater-bay.html">Niceville/Valparaiso/Bluewater Bay</a>
+<a href="/fort-walton-beach-shalimar.html">Fort Walton Beach/Shalimar</a>
+<a href="/destin.html">Destin</a>
+<a href="/crestview.html">Crestview</a>
+</div>
+</div>
+<div class="explore-col">
+<h3 class="explore-title">More</h3>
+<div class="related">
+<a href="/faq.html">PCS FAQ</a>
+<a href="/reviews.html">Reviews</a>
+<a href="/">Home</a>
+</div>
+</div>
 </div>
 </main>
 <footer>

@@ -157,6 +157,64 @@ main>*{max-width:none;margin-left:0;margin-right:0}
 main .explore{max-width:none}
 header>*{max-width:760px;margin-left:auto;margin-right:auto}
 footer{max-width:760px}
+.bah-title{color:var(--gold);font-family:var(--serif);font-size:17px;font-weight:600;margin:24px 0 10px;text-align:left}
+.bah-wrap{overflow-x:auto;border:1px solid var(--hair);border-radius:10px;margin-bottom:12px}
+.bah-table{width:100%;border-collapse:collapse;min-width:380px}
+.bah-table thead th{color:var(--muted);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:12px 14px;border-bottom:1px solid var(--gold-line);background:var(--ink)}
+.bah-table thead th:first-child{text-align:left}
+.bah-table thead th:not(:first-child){text-align:right}
+.bah-table tbody tr:nth-child(even){background:rgba(255,255,255,0.02)}
+.bah-table tbody td{padding:10px 14px;border-bottom:1px solid var(--hair);font-size:14px}
+.bah-table tbody td:first-child{color:#fff;font-weight:600}
+.bah-table tbody td:nth-child(2){color:var(--gold);font-weight:600;text-align:right}
+.bah-table tbody td:nth-child(3){color:var(--text);text-align:right}
+.bah-source{font-size:13px;color:var(--muted);font-style:italic;margin-top:8px}
+.bah-source a{color:var(--gold)}
+/* MOBILE-REFINEMENTS */
+html,body{-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto}
+@media(max-width:900px){
+  main{padding:32px 18px 18px!important}
+  main>*{max-width:100%!important}
+  header{padding:40px 18px 28px!important}
+  header>*{max-width:100%!important}
+  h1{font-size:clamp(24px,6vw,36px)!important}
+  h2{font-size:22px!important;margin:36px 0 14px!important}
+  h3{font-size:16px!important}
+  .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
+  .explore{grid-template-columns:1fr!important;gap:12px!important;margin:1.5rem auto 2rem!important}
+  .explore-col{padding:1.25rem!important}
+  .bah-wrap{border-radius:8px!important}
+  .bah-table{font-size:13px!important}
+  .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}
+  .main-banner{margin-bottom:0!important}
+  .main-banner .banner-tabs{gap:0!important;padding:4px 6px 8px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:6px 10px!important;font-size:10px!important;letter-spacing:1px!important}
+  .main-banner .dropdown-menu{min-width:200px!important;max-height:60vh!important}
+  footer{max-width:100%!important;padding:1.25rem 18px 2rem!important;font-size:.8rem!important}
+  .cta{padding:1.25rem!important;margin:1.75rem auto!important}
+  .reviews-grid{grid-template-columns:1fr!important;gap:14px!important}
+  .review-card{padding:22px!important}
+  .rating-stack{gap:12px!important}
+  .rating-box{padding:14px 20px!important}
+  .rating-box .score{font-size:2rem!important}
+  .rating-box .stars{font-size:1.6rem!important}
+}
+@media(max-width:480px){
+  main{padding:24px 14px 14px!important}
+  header{padding:32px 14px 22px!important}
+  h1{font-size:clamp(22px,7vw,30px)!important}
+  h2{font-size:19px!important}
+  .main-banner .banner-lrr img,.main-banner .banner-logo img{height:56px!important}
+  .main-banner .banner-phone{font-size:16px!important}
+  .main-banner .banner-email{font-size:11px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:5px 8px!important;font-size:9.5px!important;letter-spacing:0.5px!important}
+  .bah-table{font-size:12px!important;min-width:320px!important}
+  .bah-table thead th{font-size:10px!important;padding:8px 8px!important}
+  .bah-table tbody td{padding:8px 8px!important}
+  details{padding:.8rem 1rem!important}
+  .cta{padding:1rem!important}
+}
 </style></head><body>
 <nav class="main-banner" aria-label="Main site navigation">
 <div class="banner-row">
@@ -215,8 +273,55 @@ footer{max-width:760px}
 <h2>Gates and Access</h2><h3>West Gate (primary)</h3><p>Main entrance off Blue Angel Parkway. Handles the bulk of inbound traffic from Gulf Breeze, downtown Pensacola, and points east. Rush hour wait 10-20 minutes.</p><h3>Back Gate / Radford</h3><p>Secondary access from the south, useful for residents coming from Perdido Key and western neighborhoods.</p>
 <h2>On-Base Housing (Balfour Beatty)</h2><p>NAS Pensacola on-base housing is managed by Balfour Beatty Communities. Neighborhoods include Capehart, Bronson Field, and Mustin Beach. Waitlists vary by rank and bedroom count — typically 3-12 months for E-5 to E-7, longer for flag officer quarters. Residents forfeit BAH in exchange for rent-free housing, so the financial tradeoff favors off-base purchase for most E-6 and above families with 3+ year assignments.</p>
 <h2>Best Off-Base Neighborhoods for NAS Pensacola Families</h2><p>In descending order of how often I place NAS Pensacola families:</p><p><strong><a href="/gulf-breeze.html">Gulf Breeze</a></strong> — 15-minute commute, top schools, premium pricing. The default choice for families with school-age kids.</p><p><strong><a href="/pace.html">Pace</a></strong> — 30-35-minute commute, same A-rated Santa Rosa County schools, significantly lower cost per square foot. Best BAH value play.</p><p><strong><a href="/navarre.html">Navarre</a></strong> — 35-minute commute, A-rated schools, beach access. Better fit if you expect a follow-on Hurlburt assignment.</p><p><strong><a href="/cantonment.html">Cantonment</a></strong> — 20-25-minute commute, budget-friendly, mixed schools. Best for E-3 to E-5 budgets.</p><p>Perdido Key is viable for waterfront-lifestyle families but flood insurance pushes total monthly cost above Gulf Breeze for comparable homes.</p>
-<h2>Schools Near NAS Pensacola</h2><p>School district boundaries follow county lines. Santa Rosa County (Gulf Breeze, Navarre, Pace, Milton) consistently outranks Escambia County (Pensacola proper, Cantonment, Perdido Key) on Florida DOE grades, though Escambia has strong pockets. Both counties honor the Interstate Compact on Educational Opportunity for Military Children. I zone every home to its specific elementary, middle, and high school before offer — non-negotiable on every transaction.</p>
+<h2>Schools Near NAS Pensacola</h2>
+<p>NAS Pensacola families choose between two school districts depending on which neighborhood they land in: <strong>Santa Rosa County School District</strong> (Gulf Breeze, Navarre, Pace, Milton) and <strong>Escambia County Public Schools</strong> (Pensacola proper, East Hill, North Hill, Cordova, Cantonment, Ferry Pass, Bellview / Myrtle Grove, Perdido Key). Both districts honor the <strong>Interstate Compact on Educational Opportunity for Military Children</strong>, which protects mid-year enrollment, credit transfer, course placement, and extracurricular continuity for students arriving on PCS orders. Both have active <strong>military family liaisons</strong> and counselors who understand aviation-pipeline, CSO, and NFO training rhythms.</p>
+<p>The honest framing: <strong>Santa Rosa earns an A district grade year after year with near-uniformly strong schools; Escambia earns a solid district grade but has wider variance</strong> between top-performing zones and weaker pockets. Where your specific parcel sits matters far more than the county name. For families whose #1 filter is schools, Santa Rosa wins most of the time. For families who need the shortest commute or the lowest price, Escambia has specific zones that work very well.</p>
+<p><strong>Gulf Breeze (Santa Rosa) — the flagship and default pick for families.</strong> <strong>Gulf Breeze Elementary</strong>, <strong>Gulf Breeze Middle</strong>, and <strong>Gulf Breeze High School</strong> are all A-rated, with Gulf Breeze High consistently among the top public high schools in the entire Panhandle. Strong AP catalog, dual-enrollment through Pensacola State College, and a heavily military-connected student body (NAS Pensacola, Corry, Saufley, Whiting families). This is where I place most NAS Pensacola families with school-age children. 15-minute commute to the West Gate via the 3 Mile Bridge.</p>
+<p><strong>Pace (Santa Rosa) — A-rated at lower cost.</strong> <strong>Pace High School</strong>, <strong>Sims Middle</strong>, and the Pace-zoned elementaries (<strong>Pea Ridge</strong>, <strong>Wallace Lake</strong>, <strong>Bagdad Elementary</strong>) all earn A grades. Gives you Santa Rosa school quality at meaningfully lower home prices than Gulf Breeze, in exchange for a 30-35-minute commute via I-10 and US-90. Best fit when Gulf Breeze's school story sells you but Gulf Breeze's price tag does not.</p>
+<p><strong>Navarre (Santa Rosa) — top-tier schools, longer commute.</strong> <strong>Navarre High School</strong> and <strong>Holley-Navarre Middle</strong> are among the highest-performing secondary schools in the entire Panhandle, with strong IB and AP offerings. Feeder elementaries (<strong>East Navarre</strong>, <strong>West Navarre</strong>, <strong>Holley-Navarre Primary</strong>) all earn A grades. 35-minute commute to NAS Pensacola — the right call for families who anticipate a follow-on Hurlburt or Eglin assignment, or for dual-military couples splitting commute cost.</p>
+<p><strong>Milton (Santa Rosa) — budget Santa Rosa.</strong> <strong>Milton High</strong>, <strong>King Middle</strong>, and elementaries (<strong>Benny Russell</strong>, <strong>Rhodes</strong>, <strong>Berryhill</strong>) are solid B-to-A performers — a step below Pace and Gulf Breeze on rankings, but still the strongest of the low-cost options. 35-40 minute commute. Works well for E-4 to E-6 families who value Santa Rosa schools but need Milton pricing.</p>
+<p><strong>Pensacola proper — East Hill, North Hill, Cordova Park (Escambia) — strategic for IB families.</strong> East Hill and North Hill zones typically feed <strong>A.K. Suter Elementary</strong>, <strong>Workman Middle</strong>, and <strong>Pensacola High School</strong>, which hosts Escambia's flagship <strong>International Baccalaureate Diploma Programme</strong>. Cordova Park feeds into <strong>Cordova Park Elementary</strong> and connects into either Workman / Pensacola High or Ferry Pass Middle / Washington High pathways. For IB-track students, these zones are the sharpest pick in Escambia and put you 10-15 minutes from the NAS main gate.</p>
+<p><strong>Cantonment (North Escambia) — the strongest Escambia non-IB play.</strong> Feeders include <strong>Jim Allen Elementary</strong>, <strong>Kingsfield Elementary</strong>, <strong>Beulah Elementary</strong>, <strong>Ransom Middle</strong>, <strong>Beulah Middle</strong>, and <strong>Tate High School</strong> (A-rated, one of Escambia's strongest comprehensive high schools, with a deep AP catalog and NJROTC). 20-25 minute commute to NAS Pensacola. Excellent fit for E-5 to E-7 families who want newer construction + solid schools without jumping to Santa Rosa prices.</p>
+<p><strong>Ferry Pass (Escambia).</strong> <strong>Ferry Pass Elementary</strong>, <strong>Ferry Pass Middle</strong>, and <strong>Washington High School</strong> — Washington hosts Escambia's second IB Diploma Programme. The IB hook is the main reason to target this zone if your student is IB-track. Non-IB Ferry Pass students route into <strong>Pine Forest High</strong> or <strong>Escambia High</strong> depending on parcel.</p>
+<p><strong>Bellview / Myrtle Grove (Escambia) — entry-level pricing.</strong> Typical feeders: <strong>Bellview Elementary</strong>, <strong>Myrtle Grove Elementary</strong>, <strong>Bellview Middle</strong>, and either <strong>Escambia High</strong> or <strong>Pine Forest High</strong>. Schools perform in the middle of Escambia's lineup. Fits tight BAH budgets (E-3 through E-5) where a 10-minute commute matters more than top-tier school rankings.</p>
+<p><strong>Perdido Key / Innerarity Point (Escambia) — beach with caveats.</strong> Zoned to <strong>Hellen Caro Elementary</strong> (A-rated, one of Escambia's stronger elementaries), <strong>Bailey Middle</strong>, and <strong>Escambia High</strong> or <strong>Pine Forest High</strong> depending on parcel. The elementary story is strong; the middle-high pipeline is average. Factor in waterfront flood/wind insurance when comparing against Cantonment or Gulf Breeze.</p>
+<p><strong>IB, AP, and dual enrollment.</strong> Escambia hosts <strong>two</strong> IB Diploma Programmes — <strong>Pensacola High School</strong> (flagship) and <strong>Washington High School</strong> — both accept out-of-zone applications each year. Tate, Escambia, and Pine Forest run strong AP catalogs. Santa Rosa's flagship AP/IB offerings are at <strong>Gulf Breeze High</strong>, <strong>Pace High</strong>, and <strong>Navarre High</strong>. Dual enrollment in both counties flows through <strong>Pensacola State College</strong> — students can graduate high school with an AA degree at zero tuition cost, a notable benefit for future-officer, NJROTC, and ROTC-track students.</p>
+<p><strong>Special-needs and gifted programming.</strong> Both districts run mature ESE (Exceptional Student Education) and gifted programs. Escambia's gifted magnet is strongest at Tate High, Ransom Middle, and Washington / Pensacola High's IB feeder elementaries. Santa Rosa's gifted cluster is strongest at Gulf Breeze Middle and Holley-Navarre Middle. If your student is on an IEP, 504, or gifted plan, I connect you with the receiving district's military liaison <em>before</em> you write an offer so we can confirm program availability at the exact school zoned to your target address.</p>
+<p><strong>Private and charter alternatives.</strong> NAS Pensacola families also draw on a handful of well-regarded private and charter options: <strong>Pensacola Catholic High School</strong> (K-12 Catholic, downtown Pensacola), <strong>Creative Learning Academy</strong> (charter, central Pensacola), <strong>Pensacola Christian Academy</strong> (K-12 private), and <strong>Beulah Academy of Science</strong> (charter, Beulah/Cantonment corridor). Worth evaluating alongside public zoning, especially if public-zone school grades miss your family's threshold.</p>
+<p>As with every transaction, I zone every candidate home to its <em>exact</em> elementary, middle, and high school by <strong>parcel address</strong> before you commit. Escambia boundary lines split same-named neighborhoods — "East Hill address" does not always mean the Pensacola High IB feeder zone, and Ferry Pass zones have shifted in recent years. Santa Rosa is more predictable but still has parcel-level variations along the Gulf Breeze / Tiger Point and Pace / Pea Ridge borders. Zone verification is non-negotiable on every NAS Pensacola home search.</p>
 <h2>PCS Timeline to NAS Pensacola</h2><p>Standard 60-90 day PCS timeline. Recommended: contact me at receipt of orders for a 20-minute no-cost PCS consultation. Days 1-14: Certificate of Eligibility + VA loan pre-approval. Days 15-30: virtual home tours, neighborhood selection. Days 30-60: offer, inspection, appraisal. Days 60-90: closing aligned with your report-no-later-than date. I coordinate remote closings for service members unable to travel for the HHT.</p>
+<h2>2026 BAH Rates for NAS Pensacola (MHA FL064)</h2>
+<p>Below are the 2026 Basic Allowance for Housing monthly rates for service members assigned to NAS Pensacola (Military Housing Area FL064). The "With Dependents" column applies to any service member with authorized dependents; "Without Dependents" is the single or unaccompanied rate. Prior-enlisted commissioned officer rates (O-1E, O-2E, O-3E) appear at the top of the officer table.</p>
+<div class="bah-title">Enlisted (E-1 through E-9)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>E-1 through E-4</td><td>$1,794</td><td>$1,521</td></tr>
+<tr><td>E-5</td><td>$1,863</td><td>$1,644</td></tr>
+<tr><td>E-6</td><td>$2,235</td><td>$1,722</td></tr>
+<tr><td>E-7</td><td>$2,256</td><td>$1,791</td></tr>
+<tr><td>E-8</td><td>$2,265</td><td>$1,941</td></tr>
+<tr><td>E-9</td><td>$2,304</td><td>$2,046</td></tr>
+</tbody></table></div>
+<div class="bah-title">Warrant Officer (W-1 through W-5)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>W-1</td><td>$2,253</td><td>$1,782</td></tr>
+<tr><td>W-2</td><td>$2,262</td><td>$1,938</td></tr>
+<tr><td>W-3</td><td>$2,274</td><td>$2,061</td></tr>
+<tr><td>W-4</td><td>$2,325</td><td>$2,229</td></tr>
+<tr><td>W-5</td><td>$2,427</td><td>$2,241</td></tr>
+</tbody></table></div>
+<div class="bah-title">Officer (O-1 through O-6, including Prior-Enlisted O-1E, O-2E, O-3E)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>O-1E</td><td>$2,259</td><td>$1,860</td></tr>
+<tr><td>O-2E</td><td>$2,268</td><td>$2,022</td></tr>
+<tr><td>O-3E</td><td>$2,340</td><td>$2,226</td></tr>
+<tr><td>O-1</td><td>$1,914</td><td>$1,719</td></tr>
+<tr><td>O-2</td><td>$2,232</td><td>$1,842</td></tr>
+<tr><td>O-3</td><td>$2,271</td><td>$2,097</td></tr>
+<tr><td>O-4</td><td>$2,457</td><td>$2,232</td></tr>
+<tr><td>O-5</td><td>$2,610</td><td>$2,244</td></tr>
+<tr><td>O-6</td><td>$2,631</td><td>$2,247</td></tr>
+</tbody></table></div>
+<p class="bah-source"><em>Source: DoD 2026 BAH tables for MHA FL064 (+0.5% from 2025). E-1 through E-4 share a single "junior enlisted" rate by DoD convention, which is why they're collapsed into one row above. Fort Walton Beach (Eglin AFB, Hurlburt Field, Duke Field) falls under MHA FL023 — different rates. For FL023 or any other MHA, use the <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/" target="_blank" rel="noopener">official DoD BAH calculator</a>.</em></p>
 <h2>Frequently Asked Questions</h2>
 <details open><summary>What is NAS Pensacola known for?</summary><p>NAS Pensacola is the "Cradle of Naval Aviation" - every Naval Aviator, Naval Flight Officer, and Air Force Combat Systems Officer has trained here since 1914. It hosts the Blue Angels, Naval Aviation Schools Command, and the National Naval Aviation Museum.</p></details>
 <details><summary>Does NAS Pensacola train USAF Combat Systems Officers?</summary><p>Yes. NAS Pensacola is the single US schoolhouse for the USAF Combat Systems Officer (CSO) aviation training pipeline, operated by the 479th Flying Training Group (479 FTG). The 455th Flying Training Squadron runs the primary phase on the T-6A Texan II. The 451st Flying Training Squadron runs the secondary/advanced phase on the T-1A Jayhawk. USAF CSO students typically spend 12-18 months at NAS Pensacola before track assignment to follow-on platforms (E-3 AWACS, E-8 JSTARS, KC-135, B-1B, B-52, AC-130, U-28, F-15E WSO, and others). The Navy's Naval Flight Officer pipeline (Training Air Wing SIX &mdash; VT-4, VT-10, VT-86) operates at the same base.</p></details>
@@ -269,4 +374,4 @@ footer{max-width:760px}
 </div>
 </div>
 </div>
-</main><footer><p><strong>Gregg Costin, Realtor</strong> &middot; Retired USAF Combat Systems Officer (E-3 AWACS) &middot; 20 years service, 11 PCS moves<br>Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502</p><p><a href="/">Home</a> &middot; <a href="/faq.html">FAQ</a> &middot; <a href="/sitemap.xml">Sitemap</a> &middot; <a href="/llms.txt">AI content map</a></p></footer></body></html>
+</main><footer><p><strong>Gregg Costin, Realtor</strong> &middot; Retired USAF Captain &middot; Prior-Enlisted Staff Sergeant &middot; Combat Systems Officer on the E-3 AWACS &middot; 11 PCS moves<br>Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502</p><p><a href="/">Home</a> &middot; <a href="/faq.html">FAQ</a> &middot; <a href="/sitemap.xml">Sitemap</a> &middot; <a href="/llms.txt">AI content map</a></p></footer></body></html>

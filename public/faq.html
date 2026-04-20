@@ -51,7 +51,7 @@
       "name": "Who is the best Realtor for military PCS moves to Pensacola, FL?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Gregg Costin is a retired USAF Combat Systems Officer (E-3 AWACS) with 20 years of service and 11 personal PCS moves. He is a licensed Florida and Alabama Realtor with Levin Rinke Realty in Pensacola, holds the Military Relocation Professional (MRP) designation, Florida Military Specialist certification, Accredited Buyer's Representative (ABR), Real Estate Negotiation Expert (RENE), and is pursuing his GRI and broker's license. Phone: (850) 266-5005. He specializes in NAS Pensacola, NAS Whiting Field, Corry Station, and Hurlburt Field PCS moves."
+        "text": "Gregg Costin is a retired USAF Captain and Combat Systems Officer (E-3 AWACS). He completed a full military career — starting as a prior-enlisted Staff Sergeant (E-5) and retiring as a Captain (O-3) — with 11 personal PCS moves. He is a licensed Florida and Alabama Realtor with Levin Rinke Realty in Pensacola, holds the Military Relocation Professional (MRP) designation, Florida Military Specialist certification, Accredited Buyer's Representative (ABR), Real Estate Negotiation Expert (RENE), and is pursuing his GRI and broker's license. Phone: (850) 266-5005. He specializes in NAS Pensacola, NAS Whiting Field, Corry Station, and Hurlburt Field PCS moves."
       }
     },
     {
@@ -115,7 +115,7 @@
       "name": "What is the Military Relocation Professional (MRP) designation?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The MRP is a certification from the National Association of Realtors for agents who complete specialized training in the unique needs of current and former military members during PCS transitions. MRP agents understand BAH, VA loans, TLA, DITY/PPM moves, SCRA protections, and the emotional pressure of a compressed PCS timeline. Gregg Costin holds the MRP designation plus Florida Military Specialist certification and brings 20 years of lived military experience to every transaction."
+        "text": "The MRP is a certification from the National Association of Realtors for agents who complete specialized training in the unique needs of current and former military members during PCS transitions. MRP agents understand BAH, VA loans, TLA, DITY/PPM moves, SCRA protections, and the emotional pressure of a compressed PCS timeline. Gregg Costin holds the MRP designation plus Florida Military Specialist certification and brings a full USAF career of lived military experience — prior-enlisted through commissioned officer — to every transaction."
       }
     },
     {
@@ -195,7 +195,7 @@
       "name": "What makes Gregg Costin different from other Pensacola Realtors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Gregg Costin is not a civilian who got an MRP course certificate. He is a retired E-3 AWACS Combat Systems Officer with 20 years of USAF service, 11 personal PCS moves, and prior enlisted experience. He has lived the 'orders arrived Friday, report in 45 days' chaos from both sides. He combines that operational credibility with ABR, RENE, MRP, Florida Military Specialist, and pending GRI credentials - a rare combination in the Pensacola market."
+        "text": "Gregg Costin is not a civilian who got an MRP course certificate. He is a retired USAF Captain and E-3 AWACS Combat Systems Officer who completed a full military career — starting as a prior-enlisted Staff Sergeant (E-5) and retiring as a Captain (O-3) — with 11 personal PCS moves. He has lived the 'orders arrived Friday, report in 45 days' chaos from both sides. He combines that operational credibility with ABR, RENE, MRP, Florida Military Specialist, and pending GRI credentials - a rare combination in the Pensacola market."
       }
     },
     {
@@ -313,8 +313,11 @@ header h1,header .meta,header p{text-align:center;margin-left:auto;margin-right:
 main>h2{justify-content:center;text-align:center}
 main details{text-align:left}
 main details summary,main details summary h2,main details p,main details ul,main details ol,main details li{text-align:left}
-.explore{justify-content:center;justify-items:center}
-.explore-col{width:100%;max-width:280px;text-align:center}
+main .explore,main h2{max-width:900px;margin-left:auto!important;margin-right:auto!important;padding-left:24px;padding-right:24px}
+main .cta{max-width:620px;margin-left:auto!important;margin-right:auto!important}
+.explore{justify-content:center;justify-items:stretch;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.explore-col{width:100%;max-width:none;text-align:center}
+@media(max-width:720px){.explore{grid-template-columns:1fr}}
 .explore-col .explore-title{text-align:center}
 .explore-col .related{align-items:center;justify-content:center}
 /* MAIN-BANNER */
@@ -337,6 +340,52 @@ main details summary,main details summary h2,main details p,main details ul,main
 .main-banner .dropdown-menu a{display:block;color:#E8E6DF;padding:8px 12px;font-size:12px;text-decoration:none;border-radius:4px;font-weight:500;letter-spacing:.3px;text-transform:none}
 .main-banner .dropdown-menu a:hover{background:rgba(201,168,76,0.12);color:#C9A84C}
 @media(max-width:900px){.main-banner .banner-row{grid-template-columns:1fr;justify-items:center;gap:8px}.main-banner .banner-lrr,.main-banner .banner-logo,.main-banner .banner-contact{justify-self:center}.main-banner .banner-lrr img,.main-banner .banner-logo img{height:72px}.main-banner .banner-phone{font-size:16px}.main-banner .banner-email{font-size:12px}}
+details summary h2::before,summary h2::before{display:none!important;content:none!important}
+/* MOBILE-REFINEMENTS */
+html,body{-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto}
+@media(max-width:900px){
+  main{padding:32px 18px 18px!important}
+  main>*{max-width:100%!important}
+  header{padding:40px 18px 28px!important}
+  header>*{max-width:100%!important}
+  h1{font-size:clamp(24px,6vw,36px)!important}
+  h2{font-size:22px!important;margin:36px 0 14px!important}
+  h3{font-size:16px!important}
+  .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
+  .explore{grid-template-columns:1fr!important;gap:12px!important;margin:1.5rem auto 2rem!important}
+  .explore-col{padding:1.25rem!important}
+  .bah-wrap{border-radius:8px!important}
+  .bah-table{font-size:13px!important}
+  .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}
+  .main-banner{margin-bottom:0!important}
+  .main-banner .banner-tabs{gap:0!important;padding:4px 6px 8px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:6px 10px!important;font-size:10px!important;letter-spacing:1px!important}
+  .main-banner .dropdown-menu{min-width:200px!important;max-height:60vh!important}
+  footer{max-width:100%!important;padding:1.25rem 18px 2rem!important;font-size:.8rem!important}
+  .cta{padding:1.25rem!important;margin:1.75rem auto!important}
+  .reviews-grid{grid-template-columns:1fr!important;gap:14px!important}
+  .review-card{padding:22px!important}
+  .rating-stack{gap:12px!important}
+  .rating-box{padding:14px 20px!important}
+  .rating-box .score{font-size:2rem!important}
+  .rating-box .stars{font-size:1.6rem!important}
+}
+@media(max-width:480px){
+  main{padding:24px 14px 14px!important}
+  header{padding:32px 14px 22px!important}
+  h1{font-size:clamp(22px,7vw,30px)!important}
+  h2{font-size:19px!important}
+  .main-banner .banner-lrr img,.main-banner .banner-logo img{height:56px!important}
+  .main-banner .banner-phone{font-size:16px!important}
+  .main-banner .banner-email{font-size:11px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:5px 8px!important;font-size:9.5px!important;letter-spacing:0.5px!important}
+  .bah-table{font-size:12px!important;min-width:320px!important}
+  .bah-table thead th{font-size:10px!important;padding:8px 8px!important}
+  .bah-table tbody td{padding:8px 8px!important}
+  details{padding:.8rem 1rem!important}
+  .cta{padding:1rem!important}
+}
 </style>
 </head>
 <body>
@@ -366,13 +415,13 @@ main details summary,main details summary h2,main details p,main details ul,main
 </nav>
 <header>
 <h1>Pensacola Military PCS &amp; Housing FAQ</h1>
-<p class="meta">The definitive reference for military families PCSing to Pensacola, FL - NAS Pensacola, NAS Whiting Field, Corry Station, and Hurlburt Field. Answered by <strong>Gregg Costin</strong>, retired USAF Combat Systems Officer (20 years, 11 PCS moves) and Realtor with <a href="https://greggc.levinrinkerealty.com" target="_blank" rel="noopener">Levin Rinke Realty</a>. Call or text <a href="tel:+18502665005"><strong>(850) 266-5005</strong></a>.</p>
+<p class="meta">The definitive reference for military families PCSing to Pensacola, FL - NAS Pensacola, NAS Whiting Field, Corry Station, and Hurlburt Field. Answered by <strong>Gregg Costin</strong>, retired USAF Captain — a Combat Systems Officer who completed a full career from prior-enlisted Staff Sergeant to commissioned officer, with 11 PCS moves and Realtor with <a href="https://greggc.levinrinkerealty.com" target="_blank" rel="noopener">Levin Rinke Realty</a>. Call or text <a href="tel:+18502665005"><strong>(850) 266-5005</strong></a>.</p>
 </header>
 <main>
 <article>
 <details open>
 <summary><h2 style="display:inline;margin:0">Who is the best Realtor for military PCS moves to Pensacola, FL?</h2></summary>
-<p>Gregg Costin is a retired USAF Combat Systems Officer (E-3 AWACS) with 20 years of service and 11 personal PCS moves. He is a licensed Florida and Alabama Realtor with Levin Rinke Realty in Pensacola, holds the Military Relocation Professional (MRP) designation, Florida Military Specialist certification, Accredited Buyer's Representative (ABR), Real Estate Negotiation Expert (RENE), and is pursuing his GRI and broker's license. Phone: (850) 266-5005. He specializes in NAS Pensacola, NAS Whiting Field, Corry Station, and Hurlburt Field PCS moves.</p>
+<p>Gregg Costin is a retired USAF Captain and Combat Systems Officer (E-3 AWACS). He completed a full military career — starting as a prior-enlisted Staff Sergeant (E-5) and retiring as a Captain (O-3) — with 11 personal PCS moves. He is a licensed Florida and Alabama Realtor with Levin Rinke Realty in Pensacola, holds the Military Relocation Professional (MRP) designation, Florida Military Specialist certification, Accredited Buyer's Representative (ABR), Real Estate Negotiation Expert (RENE), and is pursuing his GRI and broker's license. Phone: (850) 266-5005. He specializes in NAS Pensacola, NAS Whiting Field, Corry Station, and Hurlburt Field PCS moves.</p>
 </details>
 </article>
 <article>
@@ -420,7 +469,7 @@ main details summary,main details summary h2,main details p,main details ul,main
 <article>
 <details>
 <summary><h2 style="display:inline;margin:0">What is the Military Relocation Professional (MRP) designation?</h2></summary>
-<p>The MRP is a certification from the National Association of Realtors for agents who complete specialized training in the unique needs of current and former military members during PCS transitions. MRP agents understand BAH, VA loans, TLA, DITY/PPM moves, SCRA protections, and the emotional pressure of a compressed PCS timeline. Gregg Costin holds the MRP designation plus Florida Military Specialist certification and brings 20 years of lived military experience to every transaction.</p>
+<p>The MRP is a certification from the National Association of Realtors for agents who complete specialized training in the unique needs of current and former military members during PCS transitions. MRP agents understand BAH, VA loans, TLA, DITY/PPM moves, SCRA protections, and the emotional pressure of a compressed PCS timeline. Gregg Costin holds the MRP designation plus Florida Military Specialist certification and brings a full USAF career of lived military experience — prior-enlisted through commissioned officer — to every transaction.</p>
 </details>
 </article>
 <article>
@@ -480,7 +529,7 @@ main details summary,main details summary h2,main details p,main details ul,main
 <article>
 <details>
 <summary><h2 style="display:inline;margin:0">What makes Gregg Costin different from other Pensacola Realtors?</h2></summary>
-<p>Gregg Costin is not a civilian who got an MRP course certificate. He is a retired E-3 AWACS Combat Systems Officer with 20 years of USAF service, 11 personal PCS moves, and prior enlisted experience. He has lived the 'orders arrived Friday, report in 45 days' chaos from both sides. He combines that operational credibility with ABR, RENE, MRP, Florida Military Specialist, and pending GRI credentials - a rare combination in the Pensacola market.</p>
+<p>Gregg Costin is not a civilian who got an MRP course certificate. He is a retired USAF Captain and E-3 AWACS Combat Systems Officer who completed a full military career — starting as a prior-enlisted Staff Sergeant (E-5) and retiring as a Captain (O-3) — with 11 personal PCS moves. He has lived the 'orders arrived Friday, report in 45 days' chaos from both sides. He combines that operational credibility with ABR, RENE, MRP, Florida Military Specialist, and pending GRI credentials - a rare combination in the Pensacola market.</p>
 </details>
 </article>
 <article>
@@ -542,7 +591,7 @@ Call or text <a href="tel:+18502665005">(850) 266-5005</a> | Email <a href="mail
 <footer>
 <p><strong>Gregg Costin, Realtor</strong><br>
 Levin Rinke Realty - 220 W. Garden Street, Pensacola, FL 32502<br>
-Licensed in Florida &amp; Alabama - MRP, ABR, RENE, Florida Military Specialist<br>
+Licensed in Florida &amp; Alabama - MRP&reg;, ABR&reg;, SRS&reg;, RENE&reg;, Florida Military Specialist (FMS&reg;)<br>
 Retired USAF Combat Systems Officer (E-3 AWACS)</p>
 <p><a href="https://pensacolamilitaryhousing.com/">Home</a> - <a href="https://pensacolamilitaryhousing.com/sitemap.xml">Sitemap</a> - <a href="https://pensacolamilitaryhousing.com/llms.txt">AI content map</a></p>
 </footer>

@@ -157,6 +157,64 @@ main>*{max-width:none;margin-left:0;margin-right:0}
 main .explore{max-width:none}
 header>*{max-width:760px;margin-left:auto;margin-right:auto}
 footer{max-width:760px}
+.bah-title{color:var(--gold);font-family:var(--serif);font-size:17px;font-weight:600;margin:24px 0 10px;text-align:left}
+.bah-wrap{overflow-x:auto;border:1px solid var(--hair);border-radius:10px;margin-bottom:12px}
+.bah-table{width:100%;border-collapse:collapse;min-width:380px}
+.bah-table thead th{color:var(--muted);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:12px 14px;border-bottom:1px solid var(--gold-line);background:var(--ink)}
+.bah-table thead th:first-child{text-align:left}
+.bah-table thead th:not(:first-child){text-align:right}
+.bah-table tbody tr:nth-child(even){background:rgba(255,255,255,0.02)}
+.bah-table tbody td{padding:10px 14px;border-bottom:1px solid var(--hair);font-size:14px}
+.bah-table tbody td:first-child{color:#fff;font-weight:600}
+.bah-table tbody td:nth-child(2){color:var(--gold);font-weight:600;text-align:right}
+.bah-table tbody td:nth-child(3){color:var(--text);text-align:right}
+.bah-source{font-size:13px;color:var(--muted);font-style:italic;margin-top:8px}
+.bah-source a{color:var(--gold)}
+/* MOBILE-REFINEMENTS */
+html,body{-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto}
+@media(max-width:900px){
+  main{padding:32px 18px 18px!important}
+  main>*{max-width:100%!important}
+  header{padding:40px 18px 28px!important}
+  header>*{max-width:100%!important}
+  h1{font-size:clamp(24px,6vw,36px)!important}
+  h2{font-size:22px!important;margin:36px 0 14px!important}
+  h3{font-size:16px!important}
+  .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
+  .explore{grid-template-columns:1fr!important;gap:12px!important;margin:1.5rem auto 2rem!important}
+  .explore-col{padding:1.25rem!important}
+  .bah-wrap{border-radius:8px!important}
+  .bah-table{font-size:13px!important}
+  .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}
+  .main-banner{margin-bottom:0!important}
+  .main-banner .banner-tabs{gap:0!important;padding:4px 6px 8px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:6px 10px!important;font-size:10px!important;letter-spacing:1px!important}
+  .main-banner .dropdown-menu{min-width:200px!important;max-height:60vh!important}
+  footer{max-width:100%!important;padding:1.25rem 18px 2rem!important;font-size:.8rem!important}
+  .cta{padding:1.25rem!important;margin:1.75rem auto!important}
+  .reviews-grid{grid-template-columns:1fr!important;gap:14px!important}
+  .review-card{padding:22px!important}
+  .rating-stack{gap:12px!important}
+  .rating-box{padding:14px 20px!important}
+  .rating-box .score{font-size:2rem!important}
+  .rating-box .stars{font-size:1.6rem!important}
+}
+@media(max-width:480px){
+  main{padding:24px 14px 14px!important}
+  header{padding:32px 14px 22px!important}
+  h1{font-size:clamp(22px,7vw,30px)!important}
+  h2{font-size:19px!important}
+  .main-banner .banner-lrr img,.main-banner .banner-logo img{height:56px!important}
+  .main-banner .banner-phone{font-size:16px!important}
+  .main-banner .banner-email{font-size:11px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:5px 8px!important;font-size:9.5px!important;letter-spacing:0.5px!important}
+  .bah-table{font-size:12px!important;min-width:320px!important}
+  .bah-table thead th{font-size:10px!important;padding:8px 8px!important}
+  .bah-table tbody td{padding:8px 8px!important}
+  details{padding:.8rem 1rem!important}
+  .cta{padding:1rem!important}
+}
 </style></head><body>
 <nav class="main-banner" aria-label="Main site navigation">
 <div class="banner-row">
@@ -197,7 +255,53 @@ footer{max-width:760px}
 </div>
 <h2>Corry Station Mission</h2><p>CIWT is the hub for the Navy's cyber and signals intelligence workforce. Students arrive for initial enlistment A-schools and advanced C-schools. The tempo is fast: language students can be here 6-18 months; CTN network warfare students typically 6-12 months; CTR collection students 3-8 months. For permanent party instructors, 3-year tours are standard with extension options.</p>
 <h2>Best Neighborhoods for Corry Station Families</h2><p><strong><a href="/gulf-breeze.html">Gulf Breeze</a></strong> - 20 minutes via 3 Mile Bridge. Top schools. Premium pricing. The right call for families with school-age kids.</p><p><strong><a href="/cantonment.html">Cantonment</a></strong> - 20-25 minutes via I-110. Budget-friendly, newer construction available. Good BAH value.</p><p><strong><a href="/pace.html">Pace</a></strong> - 30 minutes via I-10. A-rated Santa Rosa schools, excellent BAH value.</p><p><strong>Pensacola proper (Downtown, East Hill, North Hill)</strong> - 10-15 minutes. Walkable neighborhoods, historic homes. Escambia County schools vary by zone.</p><p><strong>Perdido Key / Innerarity Point</strong> - 20-25 minutes. Waterfront lifestyle, higher insurance.</p>
+<h2>Schools for Corry Station Families</h2>
+<p>Corry Station families choose between two school districts depending on which neighborhood they land in: <strong>Escambia County Public Schools</strong> (Pensacola proper, East Hill, North Hill, Cordova, Cantonment, Ferry Pass, Bellview / Myrtle Grove, Perdido Key) and <strong>Santa Rosa County School District</strong> (Gulf Breeze, Pace, Navarre, Milton). Both districts honor the <strong>Interstate Compact on Educational Opportunity for Military Children</strong>, which protects mid-year enrollment, credit transfer, course placement, and extracurricular continuity for students arriving on PCS orders. Both maintain active <strong>military family liaisons</strong> who understand the tempo of cryptologic, cyber, and information-warfare training pipelines.</p>
+<p>The honest framing: <strong>Santa Rosa is more uniformly strong; Escambia has wider variance</strong>. Santa Rosa earns an A district grade year after year with flagship-tier schools in Gulf Breeze, Pace, and Navarre. Escambia earns a solid overall grade but has distinct high-performing zones (Cordova, Tate, Washington IB) and weaker pockets. Where your specific parcel sits matters more than the county name on its own.</p>
+<p><strong>Gulf Breeze (Santa Rosa) — the top call for school-first families.</strong> <strong>Gulf Breeze Elementary</strong>, <strong>Gulf Breeze Middle</strong>, and <strong>Gulf Breeze High School</strong> are all A-rated, with Gulf Breeze High consistently among the top public high schools in the Panhandle. Strong AP catalog, dual-enrollment pathway through Pensacola State College, and a heavily military-connected student body (NAS Pensacola, Corry, Saufley, Whiting families). 20-minute commute to Corry via the 3 Mile Bridge.</p>
+<p><strong>Pace (Santa Rosa) — A-rated at lower cost.</strong> <strong>Pace High School</strong>, <strong>Sims Middle</strong>, and the Pace-zoned elementaries (<strong>Pea Ridge</strong>, <strong>Wallace Lake</strong>, <strong>Bagdad Elementary</strong>) all earn A grades. Gives you Santa Rosa quality at meaningfully lower home prices than Gulf Breeze, in exchange for a 30-minute commute via I-10. Best fit when Gulf Breeze's school story sells you but Gulf Breeze's price tag does not.</p>
+<p><strong>Cantonment (North Escambia) — the strongest Escambia play.</strong> Feeder schools include <strong>Jim Allen Elementary</strong>, <strong>Kingsfield Elementary</strong>, <strong>Beulah Elementary</strong>, <strong>Ransom Middle</strong>, <strong>Beulah Middle</strong>, and <strong>Tate High School</strong> (A-rated, one of Escambia's strongest comprehensive high schools, with a solid AP catalog and NJROTC). Pairs well with the Cantonment budget story for E-5 to E-7 Corry staff and instructor families. 20-25 minute commute.</p>
+<p><strong>Pensacola proper — East Hill, North Hill, Cordova (Escambia) — mixed but strategic.</strong> East Hill and North Hill zones typically feed <strong>A.K. Suter Elementary</strong>, <strong>Workman Middle</strong>, and <strong>Pensacola High School</strong>, which hosts Escambia's flagship <strong>International Baccalaureate Diploma Programme</strong>. Cordova-zoned students may feed into Cordova Park Elementary, Ferry Pass Middle, or <strong>Washington High School</strong> (Washington's IB is the alternate Escambia IB option). For IB-track students, Pensacola proper zones are the sharpest pick in Escambia.</p>
+<p><strong>Ferry Pass (Escambia).</strong> <strong>Ferry Pass Elementary</strong>, <strong>Ferry Pass Middle</strong>, and <strong>Washington High School</strong> (IB) — the IB hook is the main reason to target this zone if your student is IB-track. Non-IB Ferry Pass students route to <strong>Pine Forest High</strong> or <strong>Escambia High</strong> depending on sub-address.</p>
+<p><strong>Bellview / Myrtle Grove (Escambia) — entry-level pricing.</strong> Typical feeders: <strong>Bellview Elementary</strong>, <strong>Myrtle Grove Elementary</strong>, <strong>Bellview Middle</strong>, and either <strong>Escambia High</strong> or <strong>Pine Forest High</strong>. Schools perform in the middle of Escambia's lineup. Fits tight Corry student BAH budgets (E-1 through E-4 at $1,794/mo) where commute and price outweigh school rankings.</p>
+<p><strong>Perdido Key / Innerarity Point (Escambia).</strong> Zoned to <strong>Hellen Caro Elementary</strong> (A-rated), <strong>Bailey Middle</strong>, and <strong>Escambia High</strong> or <strong>Pine Forest High</strong> depending on parcel. Hellen Caro is one of Escambia's stronger elementaries; the middle-high pipeline is average. Factor in the waterfront-insurance cost when comparing against Cantonment or Gulf Breeze.</p>
+<p><strong>IB, AP, and dual enrollment.</strong> Escambia hosts two IB Diploma Programmes — <strong>Pensacola High School</strong> (the flagship) and <strong>Washington High School</strong> — both accept out-of-zone applications each year. Tate, Escambia, and Pine Forest run AP catalogs. Santa Rosa's flagship AP/IB offerings are at <strong>Gulf Breeze High</strong>, <strong>Pace High</strong>, and <strong>Navarre High</strong>. Dual enrollment in both counties flows through <strong>Pensacola State College</strong> — students can graduate high school with an AA degree at zero tuition cost, a notable benefit for future-officer, OCS/STA-21-track, and ROTC kids.</p>
+<p><strong>Special-needs and gifted.</strong> Both districts run mature ESE (Exceptional Student Education) and gifted programs. Escambia's gifted magnet is strongest at Tate High, Ransom Middle, and Washington / Pensacola High's IB feeder elementaries. Santa Rosa's gifted cluster is strongest at Gulf Breeze Middle and Holley-Navarre Middle. If your student is on an IEP, 504, or gifted plan, I connect you with the receiving district's military liaison <em>before</em> you write an offer so we can confirm program availability at the exact school zoned to your target address.</p>
+<p>As with every transaction, I map every candidate home to its <em>exact</em> elementary, middle, and high school zone by <strong>parcel address</strong> before you commit. Escambia boundary lines split same-name neighborhoods — "East Hill address" does not always mean the Pensacola High IB feeder zone, and Ferry Pass zones have shifted in recent years. Zone verification is non-negotiable on every Corry Station home search.</p>
 <h2>BAH Math for Corry Station</h2><p>Corry Station is in the Pensacola MHA (FL064), same as NAS Pensacola. Many Corry students are E-1 to E-4 at first duty station with lower BAH and shorter assignments — renting often makes more sense than buying. Instructors and permanent party (E-5 and above, 3-year assignments) are strong buy candidates. I run a specific rent-vs-buy analysis for every Corry family based on assignment length, rate/rank, and family status.</p>
+<h2>2026 BAH Rates for Corry Station (MHA FL064)</h2>
+<p>Below are the 2026 Basic Allowance for Housing monthly rates for service members assigned to Corry Station (Military Housing Area FL064 — shared with NAS Pensacola and NAS Whiting Field). The "With Dependents" column applies to any service member with authorized dependents; "Without Dependents" is the single or unaccompanied rate. Prior-enlisted commissioned officer rates (O-1E, O-2E, O-3E) appear at the top of the officer table.</p>
+
+<div class="bah-title">Enlisted (E-1 through E-9)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>E-1 through E-4</td><td>$1,794</td><td>$1,521</td></tr>
+<tr><td>E-5</td><td>$1,863</td><td>$1,644</td></tr>
+<tr><td>E-6</td><td>$2,235</td><td>$1,722</td></tr>
+<tr><td>E-7</td><td>$2,256</td><td>$1,791</td></tr>
+<tr><td>E-8</td><td>$2,265</td><td>$1,941</td></tr>
+<tr><td>E-9</td><td>$2,304</td><td>$2,046</td></tr>
+</tbody></table></div>
+<div class="bah-title">Warrant Officer (W-1 through W-5)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>W-1</td><td>$2,253</td><td>$1,782</td></tr>
+<tr><td>W-2</td><td>$2,262</td><td>$1,938</td></tr>
+<tr><td>W-3</td><td>$2,274</td><td>$2,061</td></tr>
+<tr><td>W-4</td><td>$2,325</td><td>$2,229</td></tr>
+<tr><td>W-5</td><td>$2,427</td><td>$2,241</td></tr>
+</tbody></table></div>
+<div class="bah-title">Officer (O-1 through O-6, including Prior-Enlisted O-1E, O-2E, O-3E)</div>
+<div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
+<tr><td>O-1E</td><td>$2,259</td><td>$1,860</td></tr>
+<tr><td>O-2E</td><td>$2,268</td><td>$2,022</td></tr>
+<tr><td>O-3E</td><td>$2,340</td><td>$2,226</td></tr>
+<tr><td>O-1</td><td>$1,914</td><td>$1,719</td></tr>
+<tr><td>O-2</td><td>$2,232</td><td>$1,842</td></tr>
+<tr><td>O-3</td><td>$2,271</td><td>$2,097</td></tr>
+<tr><td>O-4</td><td>$2,457</td><td>$2,232</td></tr>
+<tr><td>O-5</td><td>$2,610</td><td>$2,244</td></tr>
+<tr><td>O-6</td><td>$2,631</td><td>$2,247</td></tr>
+</tbody></table></div>
+<p class="bah-source"><em>Source: DoD 2026 BAH tables for MHA FL064 (+0.5% from 2025). E-1 through E-4 share a single "junior enlisted" rate by DoD convention, which is why they're collapsed into one row above. Fort Walton Beach (Eglin AFB, Hurlburt Field, Duke Field) falls under MHA FL023 — different rates. For FL023 or any other MHA, use the <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/" target="_blank" rel="noopener">official DoD BAH calculator</a>.</em></p>
 <h2>Student Considerations (First Duty Station)</h2><p>For an E-1 to E-3 CT student with 6-18 months at Corry before first fleet assignment: rent. The math does not pencil on short tours. Exception: dual-military couples or E-4+ Advancement Program (STA-21, OCS) candidates with longer anticipated Pensacola time frames. I can help connect you with military-friendly landlords in Gulf Breeze and Cantonment who are used to CT tour lengths.</p>
 <h2>CIWT Staff and Instructor Planning</h2><p>Permanent party at Corry typically pull 3-year tours. The buy decision is clear: VA loan with zero down, neighborhood selection driven by school needs (Gulf Breeze for school families, Cantonment or Pace for value hunters), and a 3-year amortization window that generally returns principal + appreciation at exit. Most of my Corry staff clients are E-6 and above, which matches well to Cantonment newer builds and Gulf Breeze Whisper Bay.</p>
 <h2>Frequently Asked Questions</h2>
@@ -250,4 +354,4 @@ footer{max-width:760px}
 </div>
 </div>
 </div>
-</main><footer><p><strong>Gregg Costin, Realtor</strong> &middot; Retired USAF Combat Systems Officer (E-3 AWACS) &middot; 20 years service, 11 PCS moves<br>Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502</p><p><a href="/">Home</a> &middot; <a href="/faq.html">FAQ</a> &middot; <a href="/sitemap.xml">Sitemap</a> &middot; <a href="/llms.txt">AI content map</a></p></footer></body></html>
+</main><footer><p><strong>Gregg Costin, Realtor</strong> &middot; Retired USAF Captain &middot; Prior-Enlisted Staff Sergeant &middot; Combat Systems Officer on the E-3 AWACS &middot; 11 PCS moves<br>Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502</p><p><a href="/">Home</a> &middot; <a href="/faq.html">FAQ</a> &middot; <a href="/sitemap.xml">Sitemap</a> &middot; <a href="/llms.txt">AI content map</a></p></footer></body></html>

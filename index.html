@@ -288,21 +288,27 @@
                           .tabbar{padding:2px 4px 6px!important}
                           .tabbar button,.tabbar a{padding:4px 6px!important;font-size:9px!important;letter-spacing:.3px!important}
                         }
-                        /* Hero — match shorter mobile banner so the image actually shows */
+                        /* Hero — on mobile, photo becomes a band at the bottom so text doesn't overlap the face */
                         @media (max-width: 900px){
-                          .hero-section{padding-top:120px!important;min-height:auto!important}
-                          .hero-section > .hero-bg-image{top:120px!important;background-size:cover!important;background-position:center 25%!important}
-                          .hero-section > div[style*="top: 180"]{top:120px!important}
+                          .hero-section{padding-top:120px!important;min-height:auto!important;display:block!important}
+                          .hero-bg-image{top:auto!important;bottom:0!important;height:340px!important;background-size:cover!important;background-position:center 25%!important}
+                          .hero-gradient-h{top:auto!important;bottom:0!important;height:340px!important;background:linear-gradient(180deg,rgba(10,15,26,0.9) 0%,rgba(10,15,26,0.15) 35%,rgba(10,15,26,0.6) 100%)!important}
+                          .hero-gradient-v{display:none!important}
+                          .hero-glow{display:none!important}
+                          .hero-content{padding:20px 24px 360px!important}
                         }
                         @media (max-width: 640px){
                           .hero-section{padding-top:95px!important}
-                          .hero-section > .hero-bg-image{top:95px!important;background-size:cover!important;background-position:center 20%!important}
-                          .hero-section > div[style*="top: 180"]{top:95px!important}
+                          .hero-bg-image{height:300px!important;background-position:center 20%!important}
+                          .hero-gradient-h{height:300px!important}
+                          .hero-content{padding:16px 20px 320px!important}
                           section[style*="padding: \"100px 32px\""]{padding:60px 20px!important}
                           section[style*="padding: \"140px 32px 80px\""]{padding:100px 20px 50px!important}
                         }
                         @media (max-width: 480px){
-                          .hero-section > .hero-bg-image{background-position:center 15%!important}
+                          .hero-bg-image{height:280px!important;background-position:center 15%!important}
+                          .hero-gradient-h{height:280px!important}
+                          .hero-content{padding:12px 18px 300px!important}
                         }
                         /* Prevent horizontal scroll from any stray wide element */
                         #root{overflow-x:hidden}

@@ -23,6 +23,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-W29GHBK38M');
+document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('tel:')===0){gtag('event','phone_call_click',{event_category:'conversion',event_label:h.replace('tel:','')});}else if(h.indexOf('mailto:')===0){gtag('event','email_click',{event_category:'conversion',event_label:h.replace('mailto:','')});}else if(h.indexOf('google.com/maps')>-1&&h.indexOf('Gregg')>-1){gtag('event','google_reviews_click',{event_category:'social_proof'});}else if(h.indexOf('zillow.com/profile')>-1){gtag('event','zillow_profile_click',{event_category:'social_proof'});}else if(h.indexOf('instagram.com/greggcostin')>-1){gtag('event','instagram_click',{event_category:'social'});}else if(h.indexOf('facebook.com/greggcostin')>-1){gtag('event','facebook_click',{event_category:'social'});}else if(h.indexOf('youtube.com/@Pensacola')>-1){gtag('event','youtube_click',{event_category:'social'});}else if(h.indexOf('linktr.ee/Greggcostin')>-1){gtag('event','linktree_click',{event_category:'social'});}else if(h.indexOf('greggc.levinrinkerealty.com')>-1){gtag('event','brokerage_profile_click',{event_category:'social_proof'});}});
 </script>
 <script type="application/ld+json">
 {

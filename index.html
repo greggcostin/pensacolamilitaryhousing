@@ -13,6 +13,27 @@
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
                         gtag('config', 'G-W29GHBK38M');
+                        // Conversion event tracking — fires on tel:, mailto:, external-profile clicks + form submits
+                        document.addEventListener('click', function(e){
+                          var a = e.target.closest('a');
+                          if(!a) return;
+                          var href = a.getAttribute('href') || '';
+                          if(href.indexOf('tel:') === 0){ gtag('event','phone_call_click',{ event_category:'conversion', event_label: href.replace('tel:','') }); }
+                          else if(href.indexOf('mailto:') === 0){ gtag('event','email_click',{ event_category:'conversion', event_label: href.replace('mailto:','') }); }
+                          else if(href.indexOf('calendly') > -1){ gtag('event','calendly_click',{ event_category:'conversion' }); }
+                          else if(href.indexOf('google.com/maps') > -1 && href.indexOf('Gregg') > -1){ gtag('event','google_reviews_click',{ event_category:'social_proof' }); }
+                          else if(href.indexOf('zillow.com/profile') > -1){ gtag('event','zillow_profile_click',{ event_category:'social_proof' }); }
+                          else if(href.indexOf('instagram.com/greggcostin') > -1){ gtag('event','instagram_click',{ event_category:'social' }); }
+                          else if(href.indexOf('facebook.com/greggcostin') > -1){ gtag('event','facebook_click',{ event_category:'social' }); }
+                          else if(href.indexOf('youtube.com/@Pensacola') > -1){ gtag('event','youtube_click',{ event_category:'social' }); }
+                          else if(href.indexOf('linktr.ee/Greggcostin') > -1){ gtag('event','linktree_click',{ event_category:'social' }); }
+                          else if(href.indexOf('greggc.levinrinkerealty.com') > -1){ gtag('event','brokerage_profile_click',{ event_category:'social_proof' }); }
+                        });
+                        document.addEventListener('submit', function(e){
+                          if(e.target && e.target.tagName === 'FORM'){
+                            gtag('event','form_submit',{ event_category:'conversion', event_label: e.target.getAttribute('action') || 'inline' });
+                          }
+                        });
               </script>
 
               <title>Pensacola Military Housing | Gregg Costin, Realtor® | PCS & VA Loan Specialist</title>
@@ -135,7 +156,7 @@
                 "aggregateRating": {
                   "@type": "AggregateRating",
                   "ratingValue": "5.0",
-                  "reviewCount": "33",
+                  "reviewCount": "34",
                   "bestRating": "5",
                   "worstRating": "1"
                 },
@@ -197,7 +218,7 @@
                 "aggregateRating": {
                   "@type": "AggregateRating",
                   "ratingValue": "5.0",
-                  "reviewCount": "33",
+                  "reviewCount": "34",
                   "bestRating": "5",
                   "worstRating": "1"
                 },

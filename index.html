@@ -308,6 +308,35 @@
                         /* Amortization analyzer input row — 4 across on desktop, 2 on tablet, 1 on phone */
                         @media (max-width: 820px){ .amort-input-row{grid-template-columns:repeat(2, minmax(0, 1fr))!important} }
                         @media (max-width: 480px){ .amort-input-row{grid-template-columns:1fr!important} }
+                        /* About page — mobile image rendering fixes */
+                        @media (max-width: 820px){
+                          /* Hero portrait + badges stack vertically */
+                          .about-hero-right{flex-direction:column!important;align-items:stretch!important;gap:20px!important}
+                          .about-hero-portrait{max-width:100%!important;width:100%!important;height:auto!important;max-height:520px!important;object-position:center 20%!important}
+                          .about-hero-badges{flex-direction:row!important;flex-wrap:wrap!important;gap:8px!important}
+                          .about-hero-badges > div{flex:1 1 calc(50% - 4px)!important;min-width:0!important}
+                          /* Career grid — 2 across on tablet, uncrop portrait photos */
+                          .about-career-grid{grid-template-columns:repeat(2, minmax(0, 1fr))!important}
+                          .about-career-wide{grid-column:span 2!important}
+                          .about-career-grid img{height:auto!important;max-height:360px!important;object-fit:cover!important}
+                          .about-career-mom img{height:auto!important;max-height:360px!important;object-fit:cover!important}
+                          /* Family cockpit photo — let aspect ratio breathe */
+                          .about-family-img{height:auto!important;max-height:420px!important}
+                          /* Home page 2x2 story grid — collapse to 1 col so photos aren't tiny */
+                          .home-story-grid img{height:auto!important;max-height:320px!important}
+                        }
+                        @media (max-width: 480px){
+                          /* Career grid — 1 across on phone */
+                          .about-career-grid{grid-template-columns:1fr!important;gap:12px!important}
+                          .about-career-wide{grid-column:span 1!important}
+                          .about-career-grid img{max-height:none!important}
+                          .about-career-mom img{max-height:none!important}
+                          /* Home story grid — 1 across on phone */
+                          .home-story-grid{grid-template-columns:1fr!important;gap:12px!important}
+                          .home-story-grid img{max-height:none!important}
+                          /* Hero badges — 2 per row on phone */
+                          .about-hero-badges > div{flex:1 1 calc(50% - 4px)!important;padding:10px 12px!important}
+                        }
               </style>
       </head>
   <body>

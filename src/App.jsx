@@ -389,7 +389,7 @@ const MilitaryStory = ({ go }) => (
         </p>
         <BtnP onClick={() => go("about")}>Read My Full Story</BtnP>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+      <div className="home-story-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
         <div>
           <img loading="lazy" src={IMG.aboutDeployedCrew} alt="Deployed crew with E-3 AWACS and Canadian flag" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
         </div>
@@ -555,9 +555,9 @@ const AboutPage = ({ go }) => (
             I completed a full USAF career — starting as a prior-enlisted Staff Sergeant (E-5) and retiring as a Captain (O-3) serving as a Combat Systems Officer on the E-3 AWACS. Along the way I completed 11 PCS moves and multiple combat deployments. That experience is the foundation of everything I bring to real estate.
           </p>
         </div>
-        <div style={{ display: "flex", gap: 16, alignItems: "stretch" }}>
-          <img loading="lazy" src={IMG.navyNoTie} alt="Gregg Costin" style={{ flex: "1 1 auto", maxWidth: 400, height: 480, objectFit: "cover", objectPosition: "center top", display: "block" }} />
-          <div style={{ display: "flex", flexDirection: "column", gap: 10, flexShrink: 0 }}>
+        <div className="about-hero-right" style={{ display: "flex", gap: 16, alignItems: "stretch" }}>
+          <img className="about-hero-portrait" loading="lazy" src={IMG.navyNoTie} alt="Gregg Costin" style={{ flex: "1 1 auto", maxWidth: 400, height: 480, objectFit: "cover", objectPosition: "center top", display: "block" }} />
+          <div className="about-hero-badges" style={{ display: "flex", flexDirection: "column", gap: 10, flexShrink: 0 }}>
             {[
               ["USAF Retired", "SSgt → Captain"],
               ["Prior Enlisted E-5", "2M0 AFSC"],
@@ -578,8 +578,8 @@ const AboutPage = ({ go }) => (
     <Section bg={C.panel}>
       <Eyebrow>Military Career</Eyebrow>
       <H2>Combat Systems Officer · E-3 AWACS</H2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 8, marginBottom: 40 }}>
-        <div style={{ gridColumn: "span 2" }}>
+      <div className="about-career-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 8, marginBottom: 40 }}>
+        <div className="about-career-wide" style={{ gridColumn: "span 2" }}>
           <img loading="lazy" src={IMG.aboutAwacsFlightline} alt="E-3 AWACS on the flightline" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center", display: "block" }} />
           <p style={{ color: C.mutedD, fontSize: 11, marginTop: 6, letterSpacing: 1 }}>E-3 AWACS on the flightline</p>
         </div>
@@ -590,7 +590,7 @@ const AboutPage = ({ go }) => (
         <div><img loading="lazy" src={IMG.aboutAwacsFoggy} alt="AWACS on a foggy flightline" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
         <div><img loading="lazy" src={IMG.aboutFlightlineOCPs} alt="On the flightline in OCPs" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center top", display: "block" }} /></div>
         <div><img loading="lazy" src={IMG.aboutCockpitTanker} alt="In cockpit with KC-135 tanker" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
-        <div style={{ background: C.ink }}><img loading="lazy" src={IMG.aboutFlightsuitMom} alt="In flightsuit with mom" style={{ width: "100%", height: 220, objectFit: "contain", objectPosition: "center", display: "block" }} /></div>
+        <div className="about-career-mom" style={{ background: C.ink }}><img loading="lazy" src={IMG.aboutFlightsuitMom} alt="In flightsuit with mom" style={{ width: "100%", height: 220, objectFit: "contain", objectPosition: "center", display: "block" }} /></div>
       </div>
       <H3>My Story: From Global Strategy to Local Real Estate Excellence</H3>
       <Body>My journey into real estate didn't start with a lifelong passion for houses; it started with a vow.</Body>
@@ -607,7 +607,7 @@ const AboutPage = ({ go }) => (
     <Section>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 48, alignItems: "center" }}>
         <div>
-          <img loading="lazy" src={IMG.kidsCockpit} alt="Family in AWACS cockpit" style={{ width: "100%", height: 360, objectFit: "cover", display: "block" }} />
+          <img className="about-family-img" loading="lazy" src={IMG.kidsCockpit} alt="Family in AWACS cockpit" style={{ width: "100%", height: 360, objectFit: "cover", display: "block" }} />
           <p style={{ color: C.mutedD, fontSize: 11, marginTop: 6, letterSpacing: 1 }}>Sharing the mission with the next generation</p>
         </div>
         <div>

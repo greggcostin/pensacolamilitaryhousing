@@ -89,5 +89,6 @@ Allow: /
 # Sitemaps
 Sitemap: https://pensacolamilitaryhousing.com/sitemap.xml
 
-# AI content map
+# AI content maps
 # See: https://pensacolamilitaryhousing.com/llms.txt
+# See: https://pensacolamilitaryhousing.com/llms-full.txt

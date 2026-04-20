@@ -1070,6 +1070,654 @@ const BaseGuide = ({ base, go }) => {
   );
 };
 
+const runAmortSchedule = ({ P, mRate, N, basePmt, extras }) => {
+  const freqExtraPerMonth = extras.freq === "monthly" ? 0 : basePmt / 12;
+  const applyCustom = (month) => {
+    const amt = Number(extras.customAmt) || 0;
+    if (amt === 0) return 0;
+    const start = Math.max(1, Math.round(Number(extras.customStart) || 1));
+    if (month < start) return 0;
+    const cf = extras.customFreq;
+    if (cf === "onetime") return month === start ? amt : 0;
+    if (cf === "weekly") return amt * (52 / 12);
+    if (cf === "monthly") return amt;
+    if (cf === "quarterly") return (month - start) % 3 === 0 ? amt : 0;
+    if (cf === "annual") return (month - start) % 12 === 0 ? amt : 0;
+    return 0;
+  };
+  let bal = P, totalInt = 0;
+  const schedule = [];
+  let month = 0;
+  while (bal > 0.005 && month < N + 24) {
+    month++;
+    const interest = bal * mRate;
+    let extraPrincipal = (Number(extras.monthly) || 0) + freqExtraPerMonth + applyCustom(month);
+    if (month % 12 === 1 && (Number(extras.annual) || 0) > 0) extraPrincipal += Number(extras.annual);
+    let principalPaid = basePmt - interest + extraPrincipal;
+    if (principalPaid > bal) principalPaid = bal;
+    bal -= principalPaid;
+    totalInt += interest;
+    schedule.push({ month, interest, principal: principalPaid, balance: bal });
+  }
+  const byYear = [];
+  let cur = null;
+  schedule.forEach(r => {
+    const y = Math.ceil(r.month / 12);
+    if (!cur || cur.year !== y) {
+      if (cur) byYear.push(cur);
+      cur = { year: y, principal: 0, interest: 0, balance: r.balance };
+    }
+    cur.principal += r.principal;
+    cur.interest += r.interest;
+    cur.balance = r.balance;
+  });
+  if (cur) byYear.push(cur);
+  return { schedule, byYear, totalInterest: totalInt, totalMonths: schedule.length, basePmt };
+};
+
+const AmortizationAnalyzer = ({ principal, annualRate, years, basePayment }) => {
+  const [freq, setFreq] = useState("monthly");
+  const [extraMonthly, setExtraMonthly] = useState(0);
+  const [extraAnnual, setExtraAnnual] = useState(0);
+  const [customAmt, setCustomAmt] = useState(0);
+  const [customFreq, setCustomFreq] = useState("onetime");
+  const [customStart, setCustomStart] = useState(12);
+  const [hover, setHover] = useState(null);
+
+  const P = Number(principal) || 0;
+  const R = Number(annualRate) / 100;
+  const N = Math.round(Number(years) * 12);
+  const mRate = R / 12;
+  const basePmt = basePayment && isFinite(basePayment) ? basePayment : (mRate === 0 ? P / N : P * (mRate * Math.pow(1 + mRate, N)) / (Math.pow(1 + mRate, N) - 1));
+
+  const baseline = runAmortSchedule({ P, mRate, N, basePmt, extras: { monthly: 0, annual: 0, customAmt: 0, customFreq: "onetime", customStart: 1, freq: "monthly" } });
+  const accelerated = runAmortSchedule({ P, mRate, N, basePmt, extras: { monthly: Number(extraMonthly) || 0, annual: Number(extraAnnual) || 0, customAmt, customFreq, customStart, freq } });
+
+  const interestSaved = Math.max(0, baseline.totalInterest - accelerated.totalInterest);
+  const monthsSaved = Math.max(0, baseline.totalMonths - accelerated.totalMonths);
+  const yrsSaved = Math.floor(monthsSaved / 12);
+  const moSaved = monthsSaved % 12;
+  const baselineRatio = P > 0 ? (baseline.totalInterest / P) * 100 : 0;
+  const accelRatio = P > 0 ? (accelerated.totalInterest / P) * 100 : 0;
+  const baselineAnnualized = P > 0 && baseline.totalMonths > 0 ? (baseline.totalInterest / P) / (baseline.totalMonths / 12) * 100 : 0;
+  const accelAnnualized = P > 0 && accelerated.totalMonths > 0 ? (accelerated.totalInterest / P) / (accelerated.totalMonths / 12) * 100 : 0;
+
+  const fmt = (n) => "$" + Math.round(Number(n || 0)).toLocaleString("en-US");
+
+  // SVG chart of balance over time (baseline vs. accelerated)
+  const chartW = 720, chartH = 300, padL = 56, padR = 16, padT = 16, padB = 36;
+  const plotW = chartW - padL - padR;
+  const plotH = chartH - padT - padB;
+  const maxMonth = Math.max(baseline.totalMonths, accelerated.totalMonths, 1);
+  const maxBal = P || 1;
+  const scaleX = (m) => padL + (m / maxMonth) * plotW;
+  const scaleY = (b) => padT + plotH - (b / maxBal) * plotH;
+  const sampleBalances = (byYear, total) => {
+    const pts = [[0, P]];
+    byYear.forEach(r => pts.push([r.year * 12, r.balance]));
+    if (pts[pts.length - 1][1] > 0.01) pts.push([total, 0]);
+    return pts;
+  };
+  const ptsBase = sampleBalances(baseline.byYear, baseline.totalMonths);
+  const ptsAccel = sampleBalances(accelerated.byYear, accelerated.totalMonths);
+  const toPath = (pts) => pts.map((p, i) => `${i === 0 ? "M" : "L"} ${scaleX(p[0]).toFixed(1)} ${scaleY(p[1]).toFixed(1)}`).join(" ");
+
+  // Y-axis ticks
+  const yTicks = [0, 0.25, 0.5, 0.75, 1].map(t => ({ y: scaleY(t * maxBal), val: fmt(t * maxBal) }));
+  // X-axis ticks (every 5 years or so)
+  const maxYears = Math.ceil(maxMonth / 12);
+  const tickStep = maxYears > 20 ? 5 : (maxYears > 10 ? 2 : 1);
+  const xTicks = [];
+  for (let y = 0; y <= maxYears; y += tickStep) {
+    xTicks.push({ x: scaleX(y * 12), label: y + "y" });
+  }
+
+  const inputStyle = { width: "100%", padding: "10px 12px", background: CHARCOAL, border: "1px solid #444", borderRadius: 6, color: "#fff", fontSize: 14, outline: "none", fontFamily: SS, boxSizing: "border-box" };
+  const labelStyle = { color: C.muted, fontSize: 11, fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 6, display: "block", fontFamily: SS };
+  const card = { background: C.panel, border: `1px solid ${C.hairline}`, borderRadius: 10, padding: 20 };
+
+  return (
+    <div style={{ marginTop: 72, marginBottom: 32 }}>
+      <div style={{ borderTop: `1px solid ${C.hairline}`, paddingTop: 48 }}>
+        <Eyebrow>Amortization & Payoff Analyzer</Eyebrow>
+        <H2>Run the Numbers on Extra Payments</H2>
+        <p style={{ color: C.muted, fontSize: 15.5, lineHeight: 1.75, marginBottom: 32 }}>
+          Every extra dollar toward principal attacks interest at the front of the loan where interest is highest. Model different payment frequencies and extra-payment strategies below — this uses the <strong style={{ color: C.gold }}>same loan amount, interest rate, and term</strong> from your calculator above. Everything updates live.
+        </p>
+
+        <div className="amort-input-row" style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 12, marginBottom: 24 }}>
+          <div style={card}>
+            <label style={labelStyle}>Payment Frequency</label>
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+              {[["monthly", "Monthly"], ["biweekly", "Bi-weekly"], ["weekly", "Weekly"]].map(([id, lbl]) => (
+                <button key={id} onClick={() => setFreq(id)} style={{ flex: 1, minWidth: 80, padding: "8px 10px", background: freq === id ? C.gold : "transparent", color: freq === id ? C.ink : C.muted, border: `1px solid ${freq === id ? C.gold : "#444"}`, borderRadius: 6, fontSize: 12, fontWeight: 600, cursor: "pointer", fontFamily: SS, letterSpacing: 1, textTransform: "uppercase" }}>{lbl}</button>
+              ))}
+            </div>
+            <p style={{ color: C.mutedD, fontSize: 11, marginTop: 8, lineHeight: 1.5 }}>Accelerated bi-weekly or weekly = 13 monthly payments/yr instead of 12.</p>
+          </div>
+          <div style={card}>
+            <label style={labelStyle}>Extra Monthly Payment ($)</label>
+            <input type="number" value={extraMonthly} onChange={e => setExtraMonthly(e.target.value)} style={inputStyle} min="0" />
+            <p style={{ color: C.mutedD, fontSize: 11, marginTop: 8, lineHeight: 1.5 }}>Added to every monthly principal payment.</p>
+          </div>
+          <div style={card}>
+            <label style={labelStyle}>Annual Lump Sum ($)</label>
+            <input type="number" value={extraAnnual} onChange={e => setExtraAnnual(e.target.value)} style={inputStyle} min="0" />
+            <p style={{ color: C.mutedD, fontSize: 11, marginTop: 8, lineHeight: 1.5 }}>E.g. tax refund or bonus applied once per year.</p>
+          </div>
+          <div style={card}>
+            <label style={labelStyle}>Custom Extra Payment ($)</label>
+            <input type="number" value={customAmt} onChange={e => setCustomAmt(e.target.value)} style={inputStyle} min="0" placeholder="0" />
+            <label style={{ ...labelStyle, fontSize: 10, marginTop: 10 }}>Frequency</label>
+            <select value={customFreq} onChange={e => setCustomFreq(e.target.value)} style={inputStyle}>
+              <option value="onetime">One-Time</option>
+              <option value="weekly">Every Week</option>
+              <option value="monthly">Every Month</option>
+              <option value="quarterly">Every Quarter</option>
+              <option value="annual">Every Year</option>
+            </select>
+            <label style={{ ...labelStyle, fontSize: 10, marginTop: 10 }}>{customFreq === "onetime" ? "Applied at month #" : "Starting at month #"}</label>
+            <input type="number" value={customStart} onChange={e => setCustomStart(e.target.value)} style={inputStyle} min="1" />
+          </div>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 12, marginBottom: 32 }}>
+          <div style={{ ...card, borderColor: C.goldLine, background: `linear-gradient(135deg, ${C.goldTint}, transparent)` }}>
+            <div style={{ color: C.mutedD, fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>Interest Saved</div>
+            <div style={{ color: C.gold, fontSize: 28, fontWeight: 600, fontFamily: SF, lineHeight: 1 }}>{fmt(interestSaved)}</div>
+            <div style={{ color: C.mutedD, fontSize: 11, marginTop: 6 }}>vs. baseline 30-yr schedule</div>
+          </div>
+          <div style={card}>
+            <div style={{ color: C.mutedD, fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>Time Saved</div>
+            <div style={{ color: "#fff", fontSize: 24, fontWeight: 600, fontFamily: SF, lineHeight: 1 }}>{yrsSaved} yr {moSaved} mo</div>
+            <div style={{ color: C.mutedD, fontSize: 11, marginTop: 6 }}>Paid off in {Math.floor(accelerated.totalMonths/12)} yr {accelerated.totalMonths%12} mo</div>
+          </div>
+          <div style={card}>
+            <div style={{ color: C.mutedD, fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>Nominal Rate</div>
+            <div style={{ color: "#fff", fontSize: 24, fontWeight: 600, fontFamily: SF, lineHeight: 1 }}>{annualRate}%</div>
+            <div style={{ color: C.mutedD, fontSize: 11, marginTop: 6 }}>Your contract rate (unchanged)</div>
+          </div>
+          <div style={card}>
+            <div style={{ color: C.mutedD, fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>Effective Cost</div>
+            <div style={{ color: "#fff", fontSize: 24, fontWeight: 600, fontFamily: SF, lineHeight: 1 }}>{accelRatio.toFixed(1)}%</div>
+            <div style={{ color: C.mutedD, fontSize: 11, marginTop: 6 }}>of principal paid as interest (vs. {baselineRatio.toFixed(1)}% baseline)</div>
+          </div>
+        </div>
+
+        <div style={card}>
+          <div style={{ color: "#fff", fontSize: 14, fontWeight: 600, fontFamily: SF, marginBottom: 14 }}>Balance Over Time</div>
+          <div style={{ display: "flex", gap: 18, marginBottom: 12, flexWrap: "wrap" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 24, height: 2, background: "#6B7280", display: "inline-block" }}/><span style={{ color: C.muted, fontSize: 12 }}>Baseline ({years} yr)</span></div>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 24, height: 2, background: C.gold, display: "inline-block" }}/><span style={{ color: C.muted, fontSize: 12 }}>Accelerated</span></div>
+          </div>
+          <div style={{ position: "relative" }}>
+          <svg viewBox={`0 0 ${chartW} ${chartH}`} preserveAspectRatio="none" style={{ width: "100%", height: "auto", display: "block" }}
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              const relX = ((e.clientX - rect.left) / rect.width) * chartW;
+              if (relX < padL || relX > chartW - padR) { setHover(null); return; }
+              const rawMonth = Math.round(((relX - padL) / plotW) * maxMonth);
+              const snapped = Math.max(3, Math.min(maxMonth, Math.round(rawMonth / 3) * 3));
+              const year = Math.ceil(snapped / 12);
+              const monthOfYear = ((snapped - 1) % 12) + 1;
+              const quarter = Math.ceil(monthOfYear / 3);
+              const baseBal = snapped <= baseline.schedule.length ? baseline.schedule[snapped-1].balance : 0;
+              const accelBal = snapped <= accelerated.schedule.length ? accelerated.schedule[snapped-1].balance : 0;
+              const baseInt = baseline.schedule.slice(0, snapped).reduce((s, r) => s + r.interest, 0);
+              const accelInt = accelerated.schedule.slice(0, snapped).reduce((s, r) => s + r.interest, 0);
+              setHover({ month: snapped, year, quarter, baseBal, accelBal, baseInt, accelInt });
+            }}
+            onMouseLeave={() => setHover(null)}>
+            {yTicks.map((t, i) => (
+              <g key={"y"+i}>
+                <line x1={padL} y1={t.y} x2={chartW-padR} y2={t.y} stroke={C.hairline} strokeDasharray="2 4" />
+                <text x={padL-8} y={t.y+4} textAnchor="end" fill={C.mutedD} fontSize="11" fontFamily="Inter,sans-serif">{t.val}</text>
+              </g>
+            ))}
+            {xTicks.map((t, i) => (
+              <text key={"x"+i} x={t.x} y={chartH-12} textAnchor="middle" fill={C.mutedD} fontSize="11" fontFamily="Inter,sans-serif">{t.label}</text>
+            ))}
+            <path d={toPath(ptsBase)} fill="none" stroke="#6B7280" strokeWidth="2" />
+            <path d={toPath(ptsAccel)} fill="none" stroke={C.gold} strokeWidth="2.5" />
+            {hover && (
+              <g>
+                <line x1={scaleX(hover.month)} y1={padT} x2={scaleX(hover.month)} y2={chartH-padB} stroke={C.gold} strokeDasharray="3 3" opacity="0.55" />
+                <circle cx={scaleX(hover.month)} cy={scaleY(hover.baseBal)} r="5" fill="#6B7280" stroke="#fff" strokeWidth="1.5"/>
+                <circle cx={scaleX(hover.month)} cy={scaleY(hover.accelBal)} r="5" fill={C.gold} stroke="#fff" strokeWidth="1.5"/>
+              </g>
+            )}
+          </svg>
+          {hover && (
+            <div style={{ position: "absolute", top: 8, right: 8, background: C.ink, border: `1px solid ${C.goldLine}`, borderRadius: 8, padding: "12px 16px", fontSize: 12, lineHeight: 1.6, pointerEvents: "none", minWidth: 200, boxShadow: "0 6px 18px rgba(0,0,0,0.5)" }}>
+              <div style={{ color: C.gold, fontWeight: 700, fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 6 }}>Year {hover.year} · Q{hover.quarter}</div>
+              <div style={{ color: C.muted, fontSize: 11, marginBottom: 8 }}>Month {hover.month}</div>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "4px 0" }}>
+                <span style={{ color: "#9CA3AF" }}>Baseline balance</span>
+                <span style={{ color: "#fff", fontWeight: 600 }}>{fmt(hover.baseBal)}</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "4px 0" }}>
+                <span style={{ color: C.gold }}>Accelerated balance</span>
+                <span style={{ color: C.gold, fontWeight: 700 }}>{fmt(hover.accelBal)}</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "4px 0", borderTop: `1px solid ${C.hairline}`, marginTop: 4 }}>
+                <span style={{ color: C.mutedD, fontSize: 11 }}>Interest paid so far</span>
+                <span style={{ color: "#fff", fontSize: 11 }}>{fmt(hover.accelInt)}</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "2px 0" }}>
+                <span style={{ color: C.mutedD, fontSize: 11 }}>Saved vs baseline</span>
+                <span style={{ color: C.gold, fontSize: 11, fontWeight: 700 }}>{fmt(Math.max(0, hover.baseInt - hover.accelInt))}</span>
+              </div>
+            </div>
+          )}
+          </div>
+        </div>
+
+        <div style={{ marginTop: 32 }}>
+          <div style={{ color: "#fff", fontSize: 14, fontWeight: 600, fontFamily: SF, marginBottom: 14 }}>Annual Breakdown (Accelerated Schedule)</div>
+          <div style={{ overflowX: "auto", border: `1px solid ${C.hairline}`, borderRadius: 10 }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 540 }}>
+              <thead>
+                <tr style={{ background: C.ink }}>
+                  <th style={{ color: C.muted, fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", padding: "12px 14px", textAlign: "left", borderBottom: `1px solid ${C.goldLine}` }}>Year</th>
+                  <th style={{ color: C.muted, fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", padding: "12px 14px", textAlign: "right", borderBottom: `1px solid ${C.goldLine}` }}>Principal</th>
+                  <th style={{ color: C.muted, fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", padding: "12px 14px", textAlign: "right", borderBottom: `1px solid ${C.goldLine}` }}>Interest</th>
+                  <th style={{ color: C.muted, fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", padding: "12px 14px", textAlign: "right", borderBottom: `1px solid ${C.goldLine}` }}>Ending Balance</th>
+                </tr>
+              </thead>
+              <tbody>
+                {accelerated.byYear.map((r, i) => (
+                  <tr key={r.year} style={{ background: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)" }}>
+                    <td style={{ color: "#fff", fontSize: 14, fontWeight: 600, padding: "10px 14px", borderBottom: `1px solid ${C.hairline}` }}>Year {r.year}</td>
+                    <td style={{ color: C.gold, fontSize: 14, fontWeight: 600, padding: "10px 14px", textAlign: "right", borderBottom: `1px solid ${C.hairline}` }}>{fmt(r.principal)}</td>
+                    <td style={{ color: C.text, fontSize: 14, padding: "10px 14px", textAlign: "right", borderBottom: `1px solid ${C.hairline}` }}>{fmt(r.interest)}</td>
+                    <td style={{ color: "#fff", fontSize: 14, fontWeight: 600, padding: "10px 14px", textAlign: "right", borderBottom: `1px solid ${C.hairline}` }}>{fmt(r.balance)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ color: C.mutedD, fontSize: 12, fontStyle: "italic", marginTop: 12, lineHeight: 1.6 }}>
+            <strong>How to read this:</strong> "Effective Cost" is the total interest you pay divided by the amount you borrowed — a more honest measure of mortgage cost than the nominal rate. Annual payments in bi-weekly/weekly mode already account for the extra month's payment you make per year.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const computeLoanProduct = (loan) => {
+  const hp = Number(loan.price) || 0;
+  const dp = Number(loan.downPct) || 0;
+  const downPayment = hp * dp / 100;
+  const baseLoan = Math.max(0, hp - downPayment);
+
+  let upfrontFee = 0;
+  let upfrontLabel = "";
+  if (loan.type === "va" && !loan.vaExempt) {
+    let pct;
+    if (dp < 5) pct = loan.firstUse ? 2.15 : 3.3;
+    else if (dp < 10) pct = 1.5;
+    else pct = 1.25;
+    upfrontFee = baseLoan * pct / 100;
+    upfrontLabel = `VA Funding Fee ${pct}%`;
+  } else if (loan.type === "fha") {
+    upfrontFee = baseLoan * 0.0175;
+    upfrontLabel = "FHA Upfront MIP 1.75%";
+  }
+  const totalLoan = baseLoan + upfrontFee;
+
+  const R = Number(loan.rate) / 100;
+  const N = Math.round(Number(loan.years) * 12);
+  const mRate = R / 12;
+  const basePmt = mRate === 0 ? totalLoan / N : totalLoan * (mRate * Math.pow(1 + mRate, N)) / (Math.pow(1 + mRate, N) - 1);
+
+  let miMonthly = 0;
+  let miLabel = "";
+  const ltv = hp > 0 ? (totalLoan / hp) * 100 : 0;
+  if (loan.type === "fha") {
+    miMonthly = totalLoan * 0.0055 / 12;
+    miLabel = "FHA Annual MIP 0.55%";
+  } else if (loan.type === "conv" && dp < 20) {
+    miMonthly = totalLoan * 0.006 / 12;
+    miLabel = "Conv PMI ~0.6%";
+  }
+
+  const sched = runAmortSchedule({ P: totalLoan, mRate, N, basePmt, extras: { monthly: Number(loan.extra) || 0, annual: 0, customAmt: 0, customFreq: "onetime", customStart: 1, freq: "monthly" } });
+
+  let pmiMonths = 0;
+  if (loan.type === "fha") {
+    pmiMonths = sched.totalMonths;
+  } else if (loan.type === "conv" && dp < 20) {
+    const removalIdx = sched.schedule.findIndex(r => r.balance / hp <= 0.78);
+    pmiMonths = removalIdx >= 0 ? removalIdx + 1 : sched.totalMonths;
+  }
+  const totalMI = miMonthly * pmiMonths;
+
+  return { sched, basePmt, miMonthly, miLabel, upfrontFee, upfrontLabel, totalLoan, baseLoan, downPayment, ltv, pmiMonths, totalMI };
+};
+
+const LoanComparison = () => {
+  const [a, setA] = useState({ label: "Loan A — VA, 0% down", type: "va", price: 375000, downPct: 0, rate: 6.25, years: 30, extra: 0, firstUse: true, vaExempt: false });
+  const [b, setB] = useState({ label: "Loan B — FHA, 3.5% down", type: "fha", price: 375000, downPct: 3.5, rate: 6.5, years: 30, extra: 0, firstUse: true, vaExempt: false });
+  const [compareHover, setCompareHover] = useState(null);
+
+  const rA = computeLoanProduct(a);
+  const rB = computeLoanProduct(b);
+  const fmt = (n) => "$" + Math.round(Number(n || 0)).toLocaleString("en-US");
+
+  const totalMonthlyA = rA.basePmt + rA.miMonthly;
+  const totalMonthlyB = rB.basePmt + rB.miMonthly;
+  const ratioA = a.price > 0 ? (rA.sched.totalInterest / rA.totalLoan) * 100 : 0;
+  const ratioB = b.price > 0 ? (rB.sched.totalInterest / rB.totalLoan) * 100 : 0;
+  const intDelta = Math.abs(rA.sched.totalInterest - rB.sched.totalInterest);
+  const winnerInt = rA.sched.totalInterest < rB.sched.totalInterest ? "A" : "B";
+  const pmtDelta = Math.abs(totalMonthlyA - totalMonthlyB);
+  const winnerPmt = totalMonthlyA < totalMonthlyB ? "A" : "B";
+  const outOfPocketA = rA.downPayment;
+  const outOfPocketB = rB.downPayment;
+  const totalCostOfBorrowA = rA.sched.totalInterest + rA.totalMI + rA.upfrontFee;
+  const totalCostOfBorrowB = rB.sched.totalInterest + rB.totalMI + rB.upfrontFee;
+
+  const chartW = 720, chartH = 260, padL = 56, padR = 16, padT = 16, padB = 32;
+  const plotW = chartW - padL - padR;
+  const plotH = chartH - padT - padB;
+  const maxMonth = Math.max(rA.sched.totalMonths, rB.sched.totalMonths, 1);
+  const maxBal = Math.max(rA.totalLoan || 0, rB.totalLoan || 0, 1);
+  const scaleX = (m) => padL + (m / maxMonth) * plotW;
+  const scaleY = (v) => padT + plotH - (v / maxBal) * plotH;
+  const pointsOf = (r) => {
+    const pts = [[0, r.totalLoan]];
+    r.sched.byYear.forEach(y => pts.push([y.year * 12, y.balance]));
+    if (pts[pts.length - 1][1] > 0.01) pts.push([r.sched.totalMonths, 0]);
+    return pts;
+  };
+  const pathOf = (pts) => pts.map((p, i) => `${i === 0 ? "M" : "L"} ${scaleX(p[0]).toFixed(1)} ${scaleY(p[1]).toFixed(1)}`).join(" ");
+  const ptsA = pointsOf(rA);
+  const ptsB = pointsOf(rB);
+  const yTicks = [0, 0.25, 0.5, 0.75, 1].map(t => ({ y: scaleY(t * maxBal), val: fmt(t * maxBal) }));
+  const maxYears = Math.ceil(maxMonth / 12);
+  const tickStep = maxYears > 20 ? 5 : (maxYears > 10 ? 2 : 1);
+  const xTicks = [];
+  for (let y = 0; y <= maxYears; y += tickStep) xTicks.push({ x: scaleX(y * 12), label: y + "y" });
+
+  const inputStyle = { width: "100%", padding: "10px 12px", background: CHARCOAL, border: "1px solid #444", borderRadius: 6, color: "#fff", fontSize: 14, outline: "none", fontFamily: SS, boxSizing: "border-box" };
+  const labelStyle = { color: C.muted, fontSize: 11, fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 6, display: "block", fontFamily: SS };
+  const card = { background: C.panel, border: `1px solid ${C.hairline}`, borderRadius: 10, padding: 20 };
+
+  const typeDesc = {
+    va: "VA loan — zero down allowed, no monthly PMI, VA funding fee financed into loan (unless exempt).",
+    fha: "FHA loan — 3.5% min down (580+ FICO), 1.75% upfront MIP + 0.55% annual MIP for life of loan (<10% down).",
+    conv: "Conventional — typically 3-5% down, 0.6% annual PMI if LTV > 80% (auto-removed at 78% LTV).",
+  };
+
+  const LoanForm = ({ loan, setLoan, color }) => (
+    <div style={{ ...card, borderColor: color, borderWidth: 2 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+        <span style={{ width: 12, height: 12, borderRadius: 12, background: color, display: "inline-block", flexShrink: 0 }} />
+        <input value={loan.label} onChange={e => setLoan({ ...loan, label: e.target.value })} style={{ ...inputStyle, fontWeight: 700, fontSize: 14, padding: "8px 10px" }} />
+      </div>
+      <label style={labelStyle}>Loan Product</label>
+      <div style={{ display: "flex", gap: 6, marginBottom: 14 }}>
+        {[["va","VA"],["fha","FHA"],["conv","Conventional"]].map(([id,lbl]) => (
+          <button key={id} onClick={() => {
+            const defaultRate = { va: 6.25, fha: 6.5, conv: 6.75 }[id];
+            const defaultDown = { va: 0, fha: 3.5, conv: 5 }[id];
+            setLoan({ ...loan, type: id, rate: defaultRate, downPct: defaultDown });
+          }} style={{ flex: 1, padding: "8px 10px", background: loan.type === id ? color : "transparent", color: loan.type === id ? C.ink : C.muted, border: `1px solid ${loan.type === id ? color : "#444"}`, borderRadius: 6, fontSize: 11, fontWeight: 700, cursor: "pointer", fontFamily: SS, letterSpacing: 1, textTransform: "uppercase" }}>{lbl}</button>
+        ))}
+      </div>
+      <p style={{ color: C.mutedD, fontSize: 11, lineHeight: 1.55, marginBottom: 14 }}>{typeDesc[loan.type]}</p>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+        <div><label style={labelStyle}>Home Price ($)</label><input type="number" value={loan.price} onChange={e => setLoan({ ...loan, price: e.target.value })} style={inputStyle} /></div>
+        <div><label style={labelStyle}>Rate (%)</label><input type="number" step="0.125" value={loan.rate} onChange={e => setLoan({ ...loan, rate: e.target.value })} style={inputStyle} /></div>
+        <div><label style={labelStyle}>Term (Years)</label><input type="number" value={loan.years} onChange={e => setLoan({ ...loan, years: e.target.value })} style={inputStyle} /></div>
+        <div><label style={labelStyle}>Extra Monthly ($)</label><input type="number" value={loan.extra} onChange={e => setLoan({ ...loan, extra: e.target.value })} style={inputStyle} /></div>
+      </div>
+      <div style={{ marginTop: 14 }}>
+        <label style={labelStyle}>Down Payment</label>
+        <div style={{ display: "flex", gap: 6, marginBottom: 8, flexWrap: "wrap" }}>
+          {(loan.type === "va" ? [0, 5, 10] : loan.type === "fha" ? [3.5, 5, 10, 20] : [5, 10, 20]).map(dp => (
+            <button key={dp} onClick={() => setLoan({ ...loan, downPct: dp })} style={{ flex: "1 1 60px", padding: "6px 8px", background: Number(loan.downPct) === dp ? color : "transparent", color: Number(loan.downPct) === dp ? C.ink : C.muted, border: `1px solid ${Number(loan.downPct) === dp ? color : "#444"}`, borderRadius: 6, fontSize: 11, fontWeight: 700, cursor: "pointer", fontFamily: SS, letterSpacing: 1 }}>{dp}%</button>
+          ))}
+          <input type="number" step="0.1" value={loan.downPct} onChange={e => setLoan({ ...loan, downPct: e.target.value })} style={{ ...inputStyle, flex: "1 1 70px", maxWidth: 90, padding: "6px 8px", fontSize: 12 }} placeholder="Custom" />
+        </div>
+      </div>
+      {loan.type === "va" && (
+        <div style={{ marginTop: 10, padding: "10px 12px", background: "rgba(201,168,76,0.08)", border: `1px solid ${C.goldLine}`, borderRadius: 6, fontSize: 12, color: C.muted }}>
+          <div style={{ color: C.gold, fontWeight: 700, fontSize: 11, letterSpacing: 1, textTransform: "uppercase", marginBottom: 6 }}>VA Funding Fee: {loan.vaExempt ? "0% (exempt)" : (Number(loan.downPct) < 5 ? (loan.firstUse ? "2.15%" : "3.3%") : Number(loan.downPct) < 10 ? "1.5%" : "1.25%") + (loan.firstUse ? " (first use)" : " (subsequent use)")}</div>
+          <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginTop: 4 }}>
+            <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer" }}>
+              <input type="checkbox" checked={loan.firstUse} onChange={e => setLoan({ ...loan, firstUse: e.target.checked })} /> First-time VA use
+            </label>
+            <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer" }}>
+              <input type="checkbox" checked={loan.vaExempt} onChange={e => setLoan({ ...loan, vaExempt: e.target.checked })} /> Exempt (10%+ VA disability / Purple Heart)
+            </label>
+          </div>
+          <div style={{ marginTop: 6, color: C.muted, fontSize: 11 }}>No monthly PMI — VA loans never require mortgage insurance.</div>
+        </div>
+      )}
+      {loan.type === "fha" && (
+        <div style={{ marginTop: 10, padding: "10px 12px", background: "rgba(201,168,76,0.08)", border: `1px solid ${C.goldLine}`, borderRadius: 6, fontSize: 12, color: C.muted }}>
+          <div style={{ color: C.gold, fontWeight: 700, fontSize: 11, letterSpacing: 1, textTransform: "uppercase", marginBottom: 4 }}>FHA MIP Required (lifetime for &lt;10% down)</div>
+          <div>1.75% upfront MIP financed into the loan + 0.55% annual MIP paid monthly. FHA minimum down is 3.5%. Unlike conventional PMI, FHA MIP does not auto-remove at 78% LTV when down payment is under 10%.</div>
+        </div>
+      )}
+      {loan.type === "conv" && (
+        <div style={{ marginTop: 10, padding: "10px 12px", background: Number(loan.downPct) >= 20 ? "rgba(16,185,129,0.08)" : "rgba(201,168,76,0.08)", border: `1px solid ${Number(loan.downPct) >= 20 ? "#10B981" : C.goldLine}`, borderRadius: 6, fontSize: 12, color: C.muted }}>
+          <div style={{ color: Number(loan.downPct) >= 20 ? "#10B981" : C.gold, fontWeight: 700, fontSize: 11, letterSpacing: 1, textTransform: "uppercase", marginBottom: 4 }}>
+            {Number(loan.downPct) >= 20 ? "No PMI Required" : "PMI Required (~0.6% annual)"}
+          </div>
+          <div>{Number(loan.downPct) >= 20 ? "20%+ down clears the 80% LTV threshold — no monthly PMI ever." : "Conventional PMI is required while LTV > 80%. It auto-removes at 78% LTV of the original home value (Homeowners Protection Act of 1998) — approximately when you've paid the loan down to 78% of the purchase price."}</div>
+        </div>
+      )}
+      <div style={{ marginTop: 12, display: "flex", justifyContent: "space-between", padding: "8px 12px", background: C.ink, borderRadius: 6, fontSize: 12 }}>
+        <span style={{ color: C.muted }}>Base loan (price − down)</span>
+        <span style={{ color: "#fff", fontWeight: 700 }}>{fmt((Number(loan.price)||0) - (Number(loan.price)||0)*(Number(loan.downPct)||0)/100)}</span>
+      </div>
+    </div>
+  );
+
+  const ResultSummary = ({ r, loan, color }) => (
+    <div style={{ ...card, borderColor: color }}>
+      <div style={{ color, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 10 }}>{loan.label}</div>
+      <div style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", fontSize: 13 }}>
+        <span style={{ color: C.muted }}>Down payment ({loan.downPct}%)</span>
+        <span style={{ color: "#fff", fontWeight: 600 }}>{fmt(r.downPayment)}</span>
+      </div>
+      {r.upfrontFee > 0 && (
+        <div style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", fontSize: 13 }}>
+          <span style={{ color: C.muted }}>{r.upfrontLabel}</span>
+          <span style={{ color: "#fff", fontWeight: 600 }}>{fmt(r.upfrontFee)}</span>
+        </div>
+      )}
+      <div style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", fontSize: 13, borderTop: `1px solid ${C.hairline}`, marginTop: 6 }}>
+        <span style={{ color: C.muted }}>Financed total</span>
+        <span style={{ color: "#fff", fontWeight: 600 }}>{fmt(r.totalLoan)}</span>
+      </div>
+      <div style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", fontSize: 13 }}>
+        <span style={{ color: C.muted }}>Monthly P&amp;I</span>
+        <span style={{ color: "#fff", fontWeight: 600 }}>{fmt(r.basePmt)}</span>
+      </div>
+      {r.miMonthly > 0 && (
+        <div style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", fontSize: 13 }}>
+          <span style={{ color: C.muted }}>{r.miLabel}</span>
+          <span style={{ color: "#fff", fontWeight: 600 }}>{fmt(r.miMonthly)}/mo</span>
+        </div>
+      )}
+      <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", fontSize: 15, borderTop: `1px solid ${C.goldLine}`, marginTop: 8, fontWeight: 700 }}>
+        <span style={{ color: color }}>Total monthly</span>
+        <span style={{ color: color }}>{fmt(r.basePmt + r.miMonthly)}</span>
+      </div>
+      <div style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", fontSize: 12 }}>
+        <span style={{ color: C.mutedD }}>Total interest paid</span>
+        <span style={{ color: "#fff" }}>{fmt(r.sched.totalInterest)}</span>
+      </div>
+      {r.totalMI > 0 && (
+        <div style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", fontSize: 12 }}>
+          <span style={{ color: C.mutedD }}>Total MI/PMI paid</span>
+          <span style={{ color: "#fff" }}>{fmt(r.totalMI)}{r.pmiMonths > 0 && r.pmiMonths < r.sched.totalMonths ? ` (${Math.ceil(r.pmiMonths/12)}-yr until auto-removal)` : ""}</span>
+        </div>
+      )}
+    </div>
+  );
+
+  return (
+    <div style={{ marginTop: 64, marginBottom: 32 }}>
+      <div style={{ borderTop: `1px solid ${C.hairline}`, paddingTop: 48 }}>
+        <Eyebrow>Side-by-Side Loan Comparison</Eyebrow>
+        <H2>Compare Two Loans Head-to-Head</H2>
+        <p style={{ color: C.muted, fontSize: 15.5, lineHeight: 1.75, marginBottom: 28 }}>
+          Pit two scenarios against each other — different loan amounts, rates, terms, or extra-payment strategies — and see which one saves you more in monthly cash flow, lifetime interest, and effective interest-rate cost.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 16, marginBottom: 24 }}>
+          {LoanForm({ loan: a, setLoan: setA, color: C.gold })}
+          {LoanForm({ loan: b, setLoan: setB, color: "#6B7280" })}
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 16, marginBottom: 24 }}>
+          {ResultSummary({ r: rA, loan: a, color: C.gold })}
+          {ResultSummary({ r: rB, loan: b, color: "#6B7280" })}
+        </div>
+
+        <div className="amort-input-row" style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 12, marginBottom: 28 }}>
+          <div style={card}>
+            <div style={{ color: C.mutedD, fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>Total Monthly Savings</div>
+            <div style={{ color: "#fff", fontSize: 22, fontWeight: 600, fontFamily: SF, lineHeight: 1 }}>{fmt(pmtDelta)}/mo</div>
+            <div style={{ color: C.mutedD, fontSize: 11, marginTop: 6 }}>{winnerPmt === "A" ? a.label : b.label} is {fmt(pmtDelta)} cheaper monthly (P&amp;I + MI)</div>
+          </div>
+          <div style={{ ...card, borderColor: C.goldLine, background: `linear-gradient(135deg, ${C.goldTint}, transparent)` }}>
+            <div style={{ color: C.mutedD, fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>Lifetime Interest Delta</div>
+            <div style={{ color: C.gold, fontSize: 26, fontWeight: 600, fontFamily: SF, lineHeight: 1 }}>{fmt(intDelta)}</div>
+            <div style={{ color: C.mutedD, fontSize: 11, marginTop: 6 }}>{winnerInt === "A" ? a.label : b.label} pays {fmt(intDelta)} less in interest over life</div>
+          </div>
+          <div style={card}>
+            <div style={{ color: C.mutedD, fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>Effective Cost — A</div>
+            <div style={{ color: "#fff", fontSize: 22, fontWeight: 600, fontFamily: SF, lineHeight: 1 }}>{ratioA.toFixed(1)}%</div>
+            <div style={{ color: C.mutedD, fontSize: 11, marginTop: 6 }}>of financed total paid as interest</div>
+          </div>
+          <div style={card}>
+            <div style={{ color: C.mutedD, fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8 }}>Effective Cost — B</div>
+            <div style={{ color: "#fff", fontSize: 22, fontWeight: 600, fontFamily: SF, lineHeight: 1 }}>{ratioB.toFixed(1)}%</div>
+            <div style={{ color: C.mutedD, fontSize: 11, marginTop: 6 }}>of financed total paid as interest</div>
+          </div>
+        </div>
+
+        <div style={card}>
+          <div style={{ color: "#fff", fontSize: 14, fontWeight: 600, fontFamily: SF, marginBottom: 14 }}>Balance Over Time — Both Loans</div>
+          <div style={{ display: "flex", gap: 18, marginBottom: 12, flexWrap: "wrap" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 24, height: 2, background: C.gold, display: "inline-block" }}/><span style={{ color: C.muted, fontSize: 12 }}>{a.label}</span></div>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 24, height: 2, background: "#6B7280", display: "inline-block" }}/><span style={{ color: C.muted, fontSize: 12 }}>{b.label}</span></div>
+          </div>
+          <div style={{ position: "relative" }}>
+          <svg viewBox={`0 0 ${chartW} ${chartH}`} preserveAspectRatio="none" style={{ width: "100%", height: "auto", display: "block" }}
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              const relX = ((e.clientX - rect.left) / rect.width) * chartW;
+              if (relX < padL || relX > chartW - padR) { setCompareHover(null); return; }
+              const rawMonth = Math.round(((relX - padL) / plotW) * maxMonth);
+              const snapped = Math.max(3, Math.min(maxMonth, Math.round(rawMonth / 3) * 3));
+              const year = Math.ceil(snapped / 12);
+              const monthOfYear = ((snapped - 1) % 12) + 1;
+              const quarter = Math.ceil(monthOfYear / 3);
+              const aBal = snapped <= rA.sched.schedule.length ? rA.sched.schedule[snapped-1].balance : 0;
+              const bBal = snapped <= rB.sched.schedule.length ? rB.sched.schedule[snapped-1].balance : 0;
+              const aInt = rA.sched.schedule.slice(0, snapped).reduce((s, r) => s + r.interest, 0);
+              const bInt = rB.sched.schedule.slice(0, snapped).reduce((s, r) => s + r.interest, 0);
+              setCompareHover({ month: snapped, year, quarter, aBal, bBal, aInt, bInt });
+            }}
+            onMouseLeave={() => setCompareHover(null)}>
+            {yTicks.map((t, i) => (
+              <g key={"y"+i}>
+                <line x1={padL} y1={t.y} x2={chartW-padR} y2={t.y} stroke={C.hairline} strokeDasharray="2 4" />
+                <text x={padL-8} y={t.y+4} textAnchor="end" fill={C.mutedD} fontSize="11" fontFamily="Inter,sans-serif">{t.val}</text>
+              </g>
+            ))}
+            {xTicks.map((t, i) => (
+              <text key={"x"+i} x={t.x} y={chartH-12} textAnchor="middle" fill={C.mutedD} fontSize="11" fontFamily="Inter,sans-serif">{t.label}</text>
+            ))}
+            <path d={pathOf(ptsB)} fill="none" stroke="#6B7280" strokeWidth="2" />
+            <path d={pathOf(ptsA)} fill="none" stroke={C.gold} strokeWidth="2.5" />
+            {compareHover && (
+              <g>
+                <line x1={scaleX(compareHover.month)} y1={padT} x2={scaleX(compareHover.month)} y2={chartH-padB} stroke={C.gold} strokeDasharray="3 3" opacity="0.55" />
+                <circle cx={scaleX(compareHover.month)} cy={scaleY(compareHover.bBal)} r="5" fill="#6B7280" stroke="#fff" strokeWidth="1.5"/>
+                <circle cx={scaleX(compareHover.month)} cy={scaleY(compareHover.aBal)} r="5" fill={C.gold} stroke="#fff" strokeWidth="1.5"/>
+              </g>
+            )}
+          </svg>
+          {compareHover && (
+            <div style={{ position: "absolute", top: 8, right: 8, background: C.ink, border: `1px solid ${C.goldLine}`, borderRadius: 8, padding: "12px 16px", fontSize: 12, lineHeight: 1.6, pointerEvents: "none", minWidth: 220, boxShadow: "0 6px 18px rgba(0,0,0,0.5)" }}>
+              <div style={{ color: C.gold, fontWeight: 700, fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 6 }}>Year {compareHover.year} · Q{compareHover.quarter}</div>
+              <div style={{ color: C.muted, fontSize: 11, marginBottom: 8 }}>Month {compareHover.month}</div>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "4px 0" }}>
+                <span style={{ color: C.gold }}>{a.label.length > 22 ? a.label.slice(0, 22) + "…" : a.label}</span>
+                <span style={{ color: C.gold, fontWeight: 700 }}>{fmt(compareHover.aBal)}</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "4px 0" }}>
+                <span style={{ color: "#9CA3AF" }}>{b.label.length > 22 ? b.label.slice(0, 22) + "…" : b.label}</span>
+                <span style={{ color: "#fff", fontWeight: 600 }}>{fmt(compareHover.bBal)}</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "4px 0", borderTop: `1px solid ${C.hairline}`, marginTop: 4 }}>
+                <span style={{ color: C.mutedD, fontSize: 11 }}>Balance delta</span>
+                <span style={{ color: "#fff", fontSize: 11, fontWeight: 600 }}>{fmt(Math.abs(compareHover.aBal - compareHover.bBal))}</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "2px 0" }}>
+                <span style={{ color: C.mutedD, fontSize: 11 }}>Interest paid so far</span>
+                <span style={{ color: C.gold, fontSize: 11, fontWeight: 700 }}>A: {fmt(compareHover.aInt)} · B: {fmt(compareHover.bInt)}</span>
+              </div>
+            </div>
+          )}
+          </div>
+        </div>
+
+        <div style={{ marginTop: 28, overflowX: "auto", border: `1px solid ${C.hairline}`, borderRadius: 10 }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 580 }}>
+            <thead>
+              <tr style={{ background: C.ink }}>
+                <th style={{ color: C.muted, fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", padding: "12px 14px", textAlign: "left", borderBottom: `1px solid ${C.goldLine}` }}>Metric</th>
+                <th style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", padding: "12px 14px", textAlign: "right", borderBottom: `1px solid ${C.goldLine}` }}>{a.label}</th>
+                <th style={{ color: C.muted, fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", padding: "12px 14px", textAlign: "right", borderBottom: `1px solid ${C.goldLine}` }}>{b.label}</th>
+                <th style={{ color: C.muted, fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", padding: "12px 14px", textAlign: "right", borderBottom: `1px solid ${C.goldLine}` }}>Difference</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Loan Product", { va: "VA", fha: "FHA", conv: "Conventional" }[a.type], { va: "VA", fha: "FHA", conv: "Conventional" }[b.type], a.type === b.type ? "—" : "different"],
+                ["Home Price", fmt(a.price), fmt(b.price), fmt(Math.abs((Number(a.price)||0) - (Number(b.price)||0)))],
+                ["Down Payment", fmt(rA.downPayment) + " (" + a.downPct + "%)", fmt(rB.downPayment) + " (" + b.downPct + "%)", fmt(Math.abs(rA.downPayment - rB.downPayment))],
+                ["Upfront Fee/MIP", rA.upfrontFee > 0 ? `${fmt(rA.upfrontFee)} (${rA.upfrontLabel})` : "—", rB.upfrontFee > 0 ? `${fmt(rB.upfrontFee)} (${rB.upfrontLabel})` : "—", fmt(Math.abs(rA.upfrontFee - rB.upfrontFee))],
+                ["Financed Total (base + fee)", fmt(rA.totalLoan), fmt(rB.totalLoan), fmt(Math.abs(rA.totalLoan - rB.totalLoan))],
+                ["Nominal Rate", a.rate + "%", b.rate + "%", Math.abs(Number(a.rate) - Number(b.rate)).toFixed(2) + "%"],
+                ["Term", a.years + " yr", b.years + " yr", Math.abs(Number(a.years) - Number(b.years)) + " yr"],
+                ["Monthly P&I", fmt(rA.basePmt), fmt(rB.basePmt), fmt(Math.abs(rA.basePmt - rB.basePmt))],
+                ["Monthly PMI/MIP", rA.miMonthly > 0 ? fmt(rA.miMonthly) : "—", rB.miMonthly > 0 ? fmt(rB.miMonthly) : "—", fmt(Math.abs(rA.miMonthly - rB.miMonthly))],
+                ["Total Monthly Payment", fmt(rA.basePmt + rA.miMonthly), fmt(rB.basePmt + rB.miMonthly), fmt(pmtDelta)],
+                ["Payoff Time", `${Math.floor(rA.sched.totalMonths/12)} yr ${rA.sched.totalMonths%12} mo`, `${Math.floor(rB.sched.totalMonths/12)} yr ${rB.sched.totalMonths%12} mo`, Math.abs(rA.sched.totalMonths - rB.sched.totalMonths) + " mo"],
+                ["Total Interest Paid", fmt(rA.sched.totalInterest), fmt(rB.sched.totalInterest), fmt(intDelta)],
+                ["Total PMI/MIP Paid", rA.totalMI > 0 ? fmt(rA.totalMI) : "—", rB.totalMI > 0 ? fmt(rB.totalMI) : "—", fmt(Math.abs(rA.totalMI - rB.totalMI))],
+                ["Effective Cost (Int/Financed)", ratioA.toFixed(1) + "%", ratioB.toFixed(1) + "%", Math.abs(ratioA - ratioB).toFixed(1) + "%"],
+                ["Total Cost of Borrowing", fmt(totalCostOfBorrowA), fmt(totalCostOfBorrowB), fmt(Math.abs(totalCostOfBorrowA - totalCostOfBorrowB))],
+                ["Cash to Close (est.)", fmt(outOfPocketA), fmt(outOfPocketB), fmt(Math.abs(outOfPocketA - outOfPocketB))],
+              ].map(([lbl, av, bv, diff], i) => (
+                <tr key={lbl} style={{ background: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)" }}>
+                  <td style={{ color: "#fff", fontSize: 14, fontWeight: 600, padding: "10px 14px", borderBottom: `1px solid ${C.hairline}` }}>{lbl}</td>
+                  <td style={{ color: C.gold, fontSize: 14, fontWeight: 600, padding: "10px 14px", textAlign: "right", borderBottom: `1px solid ${C.hairline}` }}>{av}</td>
+                  <td style={{ color: C.text, fontSize: 14, padding: "10px 14px", textAlign: "right", borderBottom: `1px solid ${C.hairline}` }}>{bv}</td>
+                  <td style={{ color: "#fff", fontSize: 14, fontWeight: 600, padding: "10px 14px", textAlign: "right", borderBottom: `1px solid ${C.hairline}` }}>{diff}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ color: C.mutedD, fontSize: 12, fontStyle: "italic", marginTop: 14, lineHeight: 1.6 }}>
+          Edit any field above — amount, rate, term, or extra monthly — and everything recalculates live. Useful for comparing VA vs FHA vs Conventional, or "pay extra $200/mo" vs "refinance to a lower rate," or 30-yr vs 15-yr.
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const LoanCalculator = () => {
   const [loanType, setLoanType] = useState("va");
   const [homePrice, setHomePrice] = useState(375000);
@@ -1148,7 +1796,7 @@ const LoanCalculator = () => {
 
   return (
     <PageWrapper>
-      <PageHero title="Loan Calculator: VA, FHA, and Conventional" subtitle="Prefilled with 2026 Pensacola-area market defaults. Every input is editable. Estimates only — confirm with a VA-literate lender before offer." breadcrumb="Home > Loan Calculator" />
+      <PageHero title="Loan Calculator: VA, FHA, and Conventional" subtitle={<>Prefilled with 2026 Pensacola-area market defaults. Every input is editable.<br />Estimates only* — confirm with a VA-literate lender before offer.</>} breadcrumb="Home > Loan Calculator" />
       <Content>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 32 }}>
           <div>
@@ -1293,6 +1941,14 @@ const LoanCalculator = () => {
           <strong>FHA MIP:</strong> 1.75% upfront (financed) plus 0.55% annual for most 30-year loans.<br />
           <strong>Conventional PMI:</strong> Assumed 0.6% annual when LTV &gt; 80%. Actual PMI varies by credit score, DTI, and coverage.
         </InfoBox>
+
+        <AmortizationAnalyzer principal={totalLoan} annualRate={Number(rate)} years={Number(termYears)} basePayment={pi} />
+
+        <LoanComparison />
+
+        <p style={{ color: C.mutedD, fontSize: 11, fontStyle: "italic", marginTop: 40, padding: "10px 14px", border: `1px dashed ${C.goldLine}`, borderRadius: 6, lineHeight: 1.65 }}>
+          <strong style={{ color: C.gold, fontStyle: "normal" }}>Disclaimer:</strong> All loan products, interest rates, fees (VA funding fee, FHA upfront and annual MIP, conventional PMI), and projected savings shown on this page are estimates using 2026 Pensacola-area market assumptions. Your actual loan terms, rate lock, pricing adjustments, MI rates, closing costs, and eligibility depend on your credit profile, debt-to-income ratio, property specifics, and the lender's underwriting. <strong style={{ color: "#fff", fontStyle: "normal" }}>Always verify every product, payment, and cost figure with your licensed mortgage loan officer before making any decision.</strong>
+        </p>
 
         <div style={{ textAlign: "center", marginTop: 48 }}>
           <p style={{ color: C.muted, fontSize: 15.5, lineHeight: 1.7, marginBottom: 24, maxWidth: 640, margin: "0 auto 24px" }}>Ready to turn a calculation into an offer? I connect you with VA-literate lenders who specialize in military buyers and match the home to your exact BAH and goals.</p>

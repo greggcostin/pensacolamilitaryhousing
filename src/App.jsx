@@ -194,7 +194,7 @@ const Nav = ({ current, go }) => {
         </div>
 
         <Tab id="va-loan" label="VA Loans" />
-        <Tab id="calculator" label="Mortgage Calculator" />
+        <Tab id="calculator" label="Mortgage Calculators" />
         <Tab id="homestead" label="Homestead" />
         <ExtTab href="/blog.html" label="Blog" />
         <ExtTab href="/reviews.html" label="Reviews" />
@@ -714,7 +714,7 @@ const PCSPage = ({ go }) => (
       <BAHTable title="Warrant Officer (W-1 through W-5)" rows={BAH_DATA.FL064.warrant} />
       <BAHTable title="Officer (O-1 through O-6, including Prior-Enlisted O-1E, O-2E, O-3E)" rows={BAH_DATA.FL064.officer.filter(([g]) => g !== "O-7")} />
       <P style={{ fontSize: 14, color: WARM_GRAY, marginTop: 12 }}><em>Source: DoD 2026 BAH tables for MHA FL064 ({BAH_DATA.FL064.yoyChange}). E-1 through E-4 share a single "junior enlisted" rate by DoD convention, which is why they're collapsed into one row above. Fort Walton Beach (Eglin AFB, Hurlburt Field, Duke Field) falls under MHA FL023 — different rates. For FL023 or any other MHA, use the <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/" target="_blank" rel="noopener" style={{ color: GOLD }}>official DoD BAH calculator</a>.</em></P>
-      <button onClick={() => go("calculator")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Run Your BAH Through the Mortgage Calculator →</button>
+      <button onClick={() => go("calculator")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Run Your BAH Through the Mortgage Calculators →</button>
       <H2>Florida Benefits for Military Families</H2>
       <ul style={{ paddingLeft: 20 }}>
         <Li><strong style={{ color: "#fff" }}>No state income tax.</strong> Your military pay and any additional income are not subject to state income tax in Florida.</Li>
@@ -2314,7 +2314,7 @@ const PAGE_TO_SLUG = {
   pcs: "/pcs-guide",
   neighborhoods: "/neighborhoods",
   "va-loan": "/va-loans",
-  calculator: "/mortgage-calculator",
+  calculator: "/mortgage-calculators",
   homestead: "/homestead",
   contact: "/contact",
   reviews: "/reviews",

@@ -154,10 +154,10 @@ const Nav = ({ current, go }) => {
     <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000, background: scrolled ? "rgba(10,15,26,0.95)" : "rgba(10,15,26,0.88)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${scrolled ? "rgba(255,255,255,0.08)" : "transparent"}`, transition: "all .3s ease" }}>
       <div style={{ maxWidth: 1320, margin: "0 auto", padding: "10px 16px 0", display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: 16 }}>
         <div style={{ justifySelf: "start", cursor: "pointer" }} onClick={() => go("home")}>
-          <img src={IMG.logoLrr} alt="Levin Rinke Realty" style={{ height: 108, objectFit: "contain" }} />
+          <img loading="lazy" src={IMG.logoLrr} alt="Levin Rinke Realty" style={{ height: 108, objectFit: "contain" }} />
         </div>
         <div style={{ justifySelf: "center", cursor: "pointer" }} onClick={() => go("home")}>
-          <img src={IMG.logo08} alt="The Costin Team" style={{ height: 108, objectFit: "contain" }} />
+          <img loading="lazy" src={IMG.logo08} alt="The Costin Team" style={{ height: 108, objectFit: "contain" }} />
         </div>
         <div style={{ justifySelf: "end", display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
           <a href="tel:8502665005" style={{ color: C.gold, fontSize: 20, fontWeight: 700, textDecoration: "none", letterSpacing: 0.5, fontFamily: SS, whiteSpace: "nowrap" }}>(850) 266-5005</a>
@@ -342,7 +342,7 @@ const TrustBar = () => (
           <div key={name} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
             <div style={{ color: C.muted, fontSize: 12, fontWeight: 500, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: SS, textAlign: "center" }}>{name}</div>
             <div style={{ width: 200, height: 112, display: "flex", alignItems: "center", justifyContent: "center", overflow: "visible" }}>
-              <img src={logo} alt={name} style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain", display: "block", opacity: 0.9, transform: `scale(${scale})`, transformOrigin: "center" }} />
+              <img loading="lazy" src={logo} alt={name} style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain", display: "block", opacity: 0.9, transform: `scale(${scale})`, transformOrigin: "center" }} />
             </div>
           </div>
         ))}
@@ -392,16 +392,16 @@ const MilitaryStory = ({ go }) => (
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
         <div>
-          <img src={IMG.aboutDeployedCrew} alt="Deployed crew with E-3 AWACS and Canadian flag" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
+          <img loading="lazy" src={IMG.aboutDeployedCrew} alt="Deployed crew with E-3 AWACS and Canadian flag" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
         </div>
         <div style={{ background: C.ink }}>
-          <img src={IMG.storyOcpSelfie} alt="In OCPs on deployment" style={{ width: "100%", height: 220, objectFit: "contain", objectPosition: "center", display: "block" }} />
+          <img loading="lazy" src={IMG.storyOcpSelfie} alt="In OCPs on deployment" style={{ width: "100%", height: 220, objectFit: "contain", objectPosition: "center", display: "block" }} />
         </div>
         <div>
-          <img src={IMG.aboutServiceBlues} alt="Service Dress blues at commissioning" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
+          <img loading="lazy" src={IMG.aboutServiceBlues} alt="Service Dress blues at commissioning" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
         </div>
         <div>
-          <img src={IMG.aboutPromotion} alt="Promotion ceremony — Always With Honor" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
+          <img loading="lazy" src={IMG.aboutPromotion} alt="Promotion ceremony — Always With Honor" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center", display: "block" }} />
         </div>
       </div>
     </div>
@@ -509,7 +509,7 @@ const Footer = ({ go }) => {
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 40, marginBottom: 48 }}>
           <div>
-            <img src={IMG.logoStacked} alt="The Costin Team" style={{ height: 160, marginBottom: 16 }} />
+            <img loading="lazy" src={IMG.logoStacked} alt="The Costin Team" style={{ height: 160, marginBottom: 16 }} />
             <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}>Levin Rinke Realty<br />220 W. Garden St., Pensacola, FL 32502<br />Licensed in Florida & Alabama</p>
           </div>
           <div>
@@ -557,7 +557,7 @@ const AboutPage = ({ go }) => (
           </p>
         </div>
         <div style={{ display: "flex", gap: 16, alignItems: "stretch" }}>
-          <img src={IMG.navyNoTie} alt="Gregg Costin" style={{ flex: "1 1 auto", maxWidth: 400, height: 480, objectFit: "cover", objectPosition: "center top", display: "block" }} />
+          <img loading="lazy" src={IMG.navyNoTie} alt="Gregg Costin" style={{ flex: "1 1 auto", maxWidth: 400, height: 480, objectFit: "cover", objectPosition: "center top", display: "block" }} />
           <div style={{ display: "flex", flexDirection: "column", gap: 10, flexShrink: 0 }}>
             {[
               ["USAF Retired", "SSgt → Captain"],
@@ -581,17 +581,17 @@ const AboutPage = ({ go }) => (
       <H2>Combat Systems Officer · E-3 AWACS</H2>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 8, marginBottom: 40 }}>
         <div style={{ gridColumn: "span 2" }}>
-          <img src={IMG.aboutAwacsFlightline} alt="E-3 AWACS on the flightline" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center", display: "block" }} />
+          <img loading="lazy" src={IMG.aboutAwacsFlightline} alt="E-3 AWACS on the flightline" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center", display: "block" }} />
           <p style={{ color: C.mutedD, fontSize: 11, marginTop: 6, letterSpacing: 1 }}>E-3 AWACS on the flightline</p>
         </div>
-        <div><img src={IMG.aboutFlightsuitAwacs} alt="In flightsuit with E-3 AWACS" style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }} /></div>
-        <div><img src={IMG.aboutDeployedCrew} alt="Deployed crew" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center 40%", display: "block" }} /></div>
-        <div><img src={IMG.aboutServiceBlues} alt="Service Dress blues" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center 20%", display: "block" }} /></div>
-        <div><img src={IMG.aboutPromotion} alt="Promotion ceremony" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center 30%", display: "block" }} /></div>
-        <div><img src={IMG.aboutAwacsFoggy} alt="AWACS on a foggy flightline" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
-        <div><img src={IMG.aboutFlightlineOCPs} alt="On the flightline in OCPs" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center top", display: "block" }} /></div>
-        <div><img src={IMG.aboutCockpitTanker} alt="In cockpit with KC-135 tanker" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
-        <div style={{ background: C.ink }}><img src={IMG.aboutFlightsuitMom} alt="In flightsuit with mom" style={{ width: "100%", height: 220, objectFit: "contain", objectPosition: "center", display: "block" }} /></div>
+        <div><img loading="lazy" src={IMG.aboutFlightsuitAwacs} alt="In flightsuit with E-3 AWACS" style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }} /></div>
+        <div><img loading="lazy" src={IMG.aboutDeployedCrew} alt="Deployed crew" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center 40%", display: "block" }} /></div>
+        <div><img loading="lazy" src={IMG.aboutServiceBlues} alt="Service Dress blues" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center 20%", display: "block" }} /></div>
+        <div><img loading="lazy" src={IMG.aboutPromotion} alt="Promotion ceremony" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center 30%", display: "block" }} /></div>
+        <div><img loading="lazy" src={IMG.aboutAwacsFoggy} alt="AWACS on a foggy flightline" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
+        <div><img loading="lazy" src={IMG.aboutFlightlineOCPs} alt="On the flightline in OCPs" style={{ width: "100%", height: 220, objectFit: "cover", objectPosition: "center top", display: "block" }} /></div>
+        <div><img loading="lazy" src={IMG.aboutCockpitTanker} alt="In cockpit with KC-135 tanker" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
+        <div style={{ background: C.ink }}><img loading="lazy" src={IMG.aboutFlightsuitMom} alt="In flightsuit with mom" style={{ width: "100%", height: 220, objectFit: "contain", objectPosition: "center", display: "block" }} /></div>
       </div>
       <H3>My Story: From Global Strategy to Local Real Estate Excellence</H3>
       <Body>My journey into real estate didn't start with a lifelong passion for houses; it started with a vow.</Body>
@@ -608,7 +608,7 @@ const AboutPage = ({ go }) => (
     <Section>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 48, alignItems: "center" }}>
         <div>
-          <img src={IMG.kidsCockpit} alt="Family in AWACS cockpit" style={{ width: "100%", height: 360, objectFit: "cover", display: "block" }} />
+          <img loading="lazy" src={IMG.kidsCockpit} alt="Family in AWACS cockpit" style={{ width: "100%", height: 360, objectFit: "cover", display: "block" }} />
           <p style={{ color: C.mutedD, fontSize: 11, marginTop: 6, letterSpacing: 1 }}>Sharing the mission with the next generation</p>
         </div>
         <div>
@@ -2233,7 +2233,7 @@ const ContactPage = () => {
           <div>
             <H3>Direct Contact</H3>
             <div style={{ textAlign: "center", marginBottom: 24 }}>
-              <img src={IMG.navyTie} alt="Gregg Costin" style={{ width: 180, height: 180, borderRadius: "50%", objectFit: "cover", objectPosition: "center top", border: `3px solid ${GOLD}44` }} />
+              <img loading="lazy" src={IMG.navyTie} alt="Gregg Costin" style={{ width: 180, height: 180, borderRadius: "50%", objectFit: "cover", objectPosition: "center top", border: `3px solid ${GOLD}44` }} />
             </div>
             <div style={{ marginBottom: 24 }}>
               <p style={{ color: "#fff", fontSize: 18, fontWeight: 600, marginBottom: 4 }}>Business Line</p>

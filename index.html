@@ -288,27 +288,24 @@
                           .tabbar{padding:2px 4px 6px!important}
                           .tabbar button,.tabbar a{padding:4px 6px!important;font-size:9px!important;letter-spacing:.3px!important}
                         }
-                        /* Hero — on mobile, photo becomes a band at the bottom so text doesn't overlap the face */
+                        /* Hero on mobile: flex column, order children so photo sits between content and stats row */
                         @media (max-width: 900px){
-                          .hero-section{padding-top:120px!important;min-height:auto!important;display:block!important}
-                          .hero-bg-image{top:auto!important;bottom:0!important;height:340px!important;background-size:cover!important;background-position:center 25%!important}
-                          .hero-gradient-h{top:auto!important;bottom:0!important;height:340px!important;background:linear-gradient(180deg,rgba(10,15,26,0.9) 0%,rgba(10,15,26,0.15) 35%,rgba(10,15,26,0.6) 100%)!important}
-                          .hero-gradient-v{display:none!important}
-                          .hero-glow{display:none!important}
-                          .hero-content{padding:20px 24px 360px!important}
+                          .hero-section{padding-top:120px!important;min-height:auto!important;display:flex!important;flex-direction:column!important;align-items:stretch!important}
+                          .hero-content{order:1!important;padding:20px 24px 28px!important}
+                          .hero-bg-image{order:2!important;position:static!important;top:auto!important;bottom:auto!important;width:100%!important;height:340px!important;background-size:cover!important;background-position:center 25%!important}
+                          .hero-stats{order:3!important;position:static!important;bottom:auto!important}
+                          .hero-gradient-h,.hero-gradient-v,.hero-glow{display:none!important}
                         }
                         @media (max-width: 640px){
                           .hero-section{padding-top:95px!important}
+                          .hero-content{padding:16px 20px 24px!important}
                           .hero-bg-image{height:300px!important;background-position:center 20%!important}
-                          .hero-gradient-h{height:300px!important}
-                          .hero-content{padding:16px 20px 320px!important}
                           section[style*="padding: \"100px 32px\""]{padding:60px 20px!important}
                           section[style*="padding: \"140px 32px 80px\""]{padding:100px 20px 50px!important}
                         }
                         @media (max-width: 480px){
+                          .hero-content{padding:12px 18px 20px!important}
                           .hero-bg-image{height:280px!important;background-position:center 15%!important}
-                          .hero-gradient-h{height:280px!important}
-                          .hero-content{padding:12px 18px 300px!important}
                         }
                         /* Prevent horizontal scroll from any stray wide element */
                         #root{overflow-x:hidden}

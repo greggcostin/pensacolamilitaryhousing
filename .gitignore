@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .vite/
+scripts/image-originals/
 .DS_Store
 Thumbs.db
 *.log

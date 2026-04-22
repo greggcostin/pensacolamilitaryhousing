@@ -238,6 +238,7 @@ const Nav = ({ current, go }) => {
           )}
         </div>
 
+        <ExtTab href="/va-loan-pensacola.html" label="VA Loan Guide" />
         <Tab id="calculator" label="Calculators" />
         <ExtTab href="/reviews.html" label="Reviews" />
         <Tab id="contact" label="Contact" />

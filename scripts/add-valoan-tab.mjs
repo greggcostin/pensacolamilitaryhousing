@@ -15,8 +15,9 @@ for (const f of files) {
   const path = join(PUB, f);
   let html = readFileSync(path, "utf8");
   if (!html.includes(ANCHOR)) continue;
-  // Skip if already present
-  if (html.includes('<a href="/va-loan-pensacola.html">VA Loan Guide</a>')) continue;
+  // Skip if the standalone tab (followed immediately by Calculators) is already there
+  if (html.includes(NEW_BLOCK)) continue;
+  // Replace only the FIRST occurrence (the one in banner-tabs, not the one in dropdown menus)
   html = html.replace(ANCHOR, NEW_BLOCK);
   writeFileSync(path, html, "utf8");
   count++;

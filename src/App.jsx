@@ -45,6 +45,30 @@ const BASES_LINKS = [
   { label: "Duke Field", href: "/duke-field.html", blurb: "Home of the 919th Special Operations Wing (AFRC). MC-130J and MQ-9, adjacent to Crestview." },
 ];
 
+const HOMES_LINKS = [
+  { label: "Homes — NAS Pensacola", href: "/homes-for-sale-nas-pensacola.html" },
+  { label: "Homes — Whiting Field", href: "/homes-for-sale-nas-whiting-field.html" },
+  { label: "Homes — Corry Station", href: "/homes-for-sale-corry-station.html" },
+  { label: "Homes — Saufley Field", href: "/homes-for-sale-saufley-field.html" },
+  { label: "Homes — Hurlburt Field", href: "/homes-for-sale-hurlburt-field.html" },
+  { label: "Homes — Eglin AFB", href: "/homes-for-sale-eglin-afb.html" },
+  { label: "Homes — Duke Field", href: "/homes-for-sale-duke-field.html" },
+];
+
+const RESOURCE_LINKS = [
+  { label: "PCS Checklist", href: "/pcs-checklist.html" },
+  { label: "2026 BAH Rates", href: "/fl064-bah-rates.html" },
+  { label: "VA Loan Guide", href: "/va-loan-pensacola.html" },
+  { label: "Assumable VA Loans", href: "/assumable-va-loans-pensacola.html" },
+  { label: "VA Disability Tax (FL)", href: "/va-disability-property-tax-florida.html" },
+  { label: "Military School Zones", href: "/school-zones-military-families.html" },
+  { label: "NAS Pensacola vs Hurlburt", href: "/nas-pensacola-vs-hurlburt-field.html" },
+  { label: "Gulf Breeze vs Navarre", href: "/gulf-breeze-vs-navarre.html" },
+  { label: "Niceville vs Crestview", href: "/niceville-vs-crestview.html" },
+  { label: "FAQ", href: "/faq.html" },
+  { label: "Reviews", href: "/reviews.html" },
+];
+
 const COMMUNITY_LINKS = [
   { label: "Gulf Breeze", href: "/gulf-breeze.html", blurb: "The #1 family choice for NAS Pensacola. A-rated Santa Rosa schools, 15-min commute, premium pricing." },
   { label: "Navarre", href: "/navarre.html", blurb: "Santa Rosa County beach community between Hurlburt Field and NAS Pensacola. 15-25% cheaper per square foot than Gulf Breeze." },
@@ -111,6 +135,8 @@ const Nav = ({ current, go }) => {
   const [scrolled, setScrolled] = useState(false);
   const [basesOpen, setBasesOpen] = useState(false);
   const [commsOpen, setCommsOpen] = useState(false);
+  const [homesOpen, setHomesOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", fn);
@@ -193,11 +219,29 @@ const Nav = ({ current, go }) => {
           )}
         </div>
 
-        <Tab id="va-loan" label="VA Loans" />
-        <Tab id="calculator" label="Mortgage Calculators" />
-        <Tab id="homestead" label="Homestead" />
-        <ExtTab href="/reviews.html" label="Reviews" />
-        <ExtTab href="/faq.html" label="FAQ" />
+        <div style={{ position: "relative", paddingBottom: 4 }}
+          onMouseEnter={() => setHomesOpen(true)}
+          onMouseLeave={() => setHomesOpen(false)}>
+          <button onClick={() => setHomesOpen(!homesOpen)} style={tabStyle(false)}>Homes ▾</button>
+          {homesOpen && (
+            <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, maxHeight: 440, overflowY: "auto", boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
+              {HOMES_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
+            </div>
+          )}
+        </div>
+
+        <div style={{ position: "relative", paddingBottom: 4 }}
+          onMouseEnter={() => setResourcesOpen(true)}
+          onMouseLeave={() => setResourcesOpen(false)}>
+          <button onClick={() => setResourcesOpen(!resourcesOpen)} style={tabStyle(false)}>Resources ▾</button>
+          {resourcesOpen && (
+            <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 260, maxHeight: 440, overflowY: "auto", boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
+              {RESOURCE_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
+            </div>
+          )}
+        </div>
+
+        <Tab id="calculator" label="Calculators" />
         <Tab id="contact" label="Contact" />
       </div>
     </nav>

@@ -21,7 +21,7 @@ a:hover{color:var(--gold-soft)}
 .banner-lrr img,.banner-logo img{height:108px;width:auto;display:block}
 .banner-contact{text-align:right}
 .banner-phone{color:var(--gold)!important;font-size:22px;font-weight:700;letter-spacing:.5px;display:block}
-.banner-email{color:var(--muted)!important;font-size:12px;letter-spacing:1px;text-transform:uppercase;display:block;margin-top:2px}
+.banner-email{color:var(--gold)!important;font-size:13px;font-weight:500;letter-spacing:.3px;display:block;margin-top:2px;font-family:inherit}
 .banner-tabs{max-width:1320px;margin:0 auto;padding:6px 12px 10px;display:flex;gap:2px;align-items:center;justify-content:center;flex-wrap:wrap;border-top:1px solid var(--hair)}
 .banner-tabs>a,.banner-tabs .dropdown>button{background:transparent;border:none;color:var(--muted);padding:8px 14px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:inherit;text-decoration:none;transition:color .2s;white-space:nowrap}
 .banner-tabs>a:hover,.banner-tabs .dropdown>button:hover{color:var(--gold)}

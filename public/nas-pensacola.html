@@ -46,190 +46,144 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
 <style>
 :root{--ink:#0A0F1A;--panel:#121823;--elev:#1A2332;--hair:rgba(255,255,255,0.08);--gold:#C9A84C;--gold-soft:#D4B768;--gold-line:rgba(201,168,76,0.35);--gold-tint:rgba(201,168,76,0.10);--text:#E8E6DF;--muted:#A5A496;--mutedD:#6F6E65;--serif:'Playfair Display',Georgia,serif;--sans:'Inter','DM Sans',system-ui,-apple-system,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);font-weight:300;background:var(--ink);color:var(--text);line-height:1.75}
+body{font-family:var(--sans);font-weight:300;background:var(--ink);color:var(--text);line-height:1.75;min-height:100vh}
 a{color:var(--gold);text-decoration:none}
 a:hover{color:var(--gold-soft)}
-.topnav{background:var(--panel);border-bottom:1px solid var(--hair);padding:.85rem 1.25rem;display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;font-size:.85rem;line-height:1.55;justify-content:center;font-family:var(--sans)}
-.topnav a{color:var(--muted);white-space:nowrap}
-.topnav a:hover{color:var(--gold)}
-.topnav-home{color:#fff!important;font-weight:700;margin-right:1rem;padding-right:1rem;border-right:1px solid var(--hair)}
-.topnav-group{color:var(--mutedD)}
-.topnav-group strong{color:var(--gold);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.78rem;margin-right:.4rem}
-.topnav-phone{margin-left:auto;background:var(--gold);color:var(--ink)!important;padding:.35rem .85rem;border-radius:4px;font-weight:700;letter-spacing:.5px}
+
+/* Main banner navigation */
+.main-banner{background:var(--panel);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:50}
+.banner-row{max-width:1320px;margin:0 auto;padding:10px 16px;display:grid;grid-template-columns:auto auto 1fr;align-items:center;gap:16px}
+.banner-lrr img,.banner-logo img{height:108px;width:auto;display:block}
+.banner-contact{text-align:right}
+.banner-phone{color:var(--gold)!important;font-size:22px;font-weight:700;letter-spacing:.5px;display:block}
+.banner-email{color:var(--muted)!important;font-size:12px;letter-spacing:1px;text-transform:uppercase;display:block;margin-top:2px}
+.banner-tabs{max-width:1320px;margin:0 auto;padding:6px 12px 10px;display:flex;gap:2px;align-items:center;justify-content:center;flex-wrap:wrap;border-top:1px solid var(--hair)}
+.banner-tabs>a,.banner-tabs .dropdown>button{background:transparent;border:none;color:var(--muted);padding:8px 14px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:inherit;text-decoration:none;transition:color .2s;white-space:nowrap}
+.banner-tabs>a:hover,.banner-tabs .dropdown>button:hover{color:var(--gold)}
+.dropdown{position:relative}
+.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--panel);border:1px solid var(--hair);min-width:260px;z-index:1000;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
+.dropdown-menu a{display:block;padding:10px 14px;color:var(--muted);font-size:12px;border-bottom:1px solid var(--hair);text-transform:none;letter-spacing:.3px;font-weight:400}
+.dropdown-menu a:hover{background:var(--elev);color:var(--gold)}
+
+/* PageHero — mirrors SPA PageHero component */
 header{background:linear-gradient(135deg,var(--panel),var(--elev));padding:60px 24px;border-bottom:1px solid var(--hair)}
 header>*{max-width:900px;margin-left:auto;margin-right:auto}
-.crumbs{color:var(--muted);font-size:12px;letter-spacing:1px;margin-bottom:16px;text-transform:uppercase}
+.crumbs{color:var(--muted);font-size:12px;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase}
 .crumbs a{color:var(--muted)}
 .crumbs a:hover{color:var(--gold)}
 h1{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,42px);color:#fff;line-height:1.2;margin-bottom:12px;letter-spacing:-0.01em}
-.lead,.meta,header p{color:var(--muted);font-size:16px;line-height:1.7;max-width:720px;font-family:var(--sans)}
+.lead{color:var(--muted);font-size:16px;line-height:1.7;max-width:720px;font-family:var(--sans)}
 .meta strong{color:var(--gold)}
 .meta a{color:var(--gold)}
-main{padding:48px 24px 24px}
-main>*{max-width:900px;margin-left:auto;margin-right:auto}
-main p{color:var(--text);font-size:15.5px;line-height:1.85;margin:1rem 0;font-weight:300}
-main p strong{color:var(--gold);font-weight:600}
-h2{font-family:var(--serif);font-weight:500;font-size:28px;color:#fff;margin:48px 0 16px;display:flex;align-items:center;gap:14px;letter-spacing:-0.01em}
-h2::before{content:"";display:inline-block;width:4px;height:1.1em;background:var(--gold);border-radius:1px;flex-shrink:0}
-h3{font-family:var(--serif);font-size:18px;color:var(--gold);margin:32px 0 12px;font-weight:600;text-transform:uppercase;letter-spacing:2px}
-ul,ol{color:var(--text);padding-left:1.25rem;margin:.75rem 0;font-weight:300}
-ul li,ol li{padding:.2rem 0;line-height:1.75}
-ul li strong,ol li strong{color:var(--gold);font-weight:600}
-.facts{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem;margin:1.5rem 0;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.5rem}
-.facts div{padding:.2rem 0;color:var(--text);font-size:14.5px;font-weight:300}
-.facts strong{color:var(--gold);font-weight:600}
-.cta{background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.02));border:1px solid var(--gold-line);border-radius:10px;padding:1.75rem;margin:2.5rem 0;text-align:center}
-.cta strong{color:#fff}
-.cta a{color:var(--gold);font-weight:700}
-.cta a:hover{color:var(--gold-soft)}
-details{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1rem 1.25rem;margin:.7rem 0;transition:border-color .2s}
-details[open]{border-color:var(--gold-line)}
-details p,details ul,details ol{color:var(--text);margin-top:.6rem}
-summary{font-family:var(--sans);font-weight:600;cursor:pointer;color:#fff;font-size:15px;letter-spacing:.2px}
-summary:hover{color:var(--gold)}
-.related{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
-.related a{background:var(--panel);color:var(--text);padding:.5rem 1rem;border-radius:999px;font-size:.88rem;border:1px solid var(--hair);font-family:var(--sans);font-weight:500;letter-spacing:.3px}
-.related a:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
-.explore{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:2rem 0 3rem}
-.explore-col{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem}
-.explore-title{color:var(--gold)!important;font-size:.85rem;margin:0 0 1rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;font-family:var(--sans);border:none;padding:0;display:block}
-.explore-title::before{display:none}
-.explore .related{margin:0;flex-direction:column;gap:0}
-.explore .related a{background:transparent;color:var(--text);padding:.5rem 0;border-radius:0;border:none;border-bottom:1px solid var(--hair);display:block;font-size:.92rem;letter-spacing:normal;text-transform:none;font-weight:400}
-.explore .related a:last-child{border-bottom:none}
-.explore .related a:hover{background:transparent;color:var(--gold)}
-footer{max-width:900px;margin:2rem auto 0;padding:1.5rem 24px 2.5rem;border-top:1px solid var(--hair);font-size:.85rem;color:var(--mutedD);text-align:center;line-height:1.7}
-footer a{color:var(--gold)}
-.rating-box{display:inline-flex;align-items:center;gap:16px;background:var(--panel);border:1px solid var(--gold-line);border-radius:10px;padding:20px 28px;margin:24px 0 12px}
-.rating-box .score{font-family:var(--serif);font-size:42px;font-weight:700;color:#fff;line-height:1;letter-spacing:-0.01em}
-.rating-box .stars{color:var(--gold);font-size:1.5rem;letter-spacing:2px}
-.rating-box .meta{color:var(--muted);font-size:.92rem;margin-top:4px;text-align:left}
-.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:24px 0 40px}
-.btn{display:inline-block;padding:14px 28px;border-radius:4px;font-weight:600;text-decoration:none;font-family:var(--sans);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;transition:all .2s}
-.btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--gold);color:var(--ink)!important}
-.btn-primary:hover{background:var(--gold-soft);color:var(--ink)}
-.btn-secondary{background:transparent;color:var(--gold)!important;border:1px solid var(--gold-line)}
-.btn-secondary:hover{border-color:var(--gold);color:var(--gold-soft)!important}
-.reviews-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));margin:24px 0 40px}
-.review-card{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:28px;display:flex;flex-direction:column}
-.review-card .stars{color:var(--gold);margin-bottom:10px;letter-spacing:2px;font-size:18px}
-.review-card blockquote{color:var(--text);font-style:italic;margin:4px 0 16px;line-height:1.75;font-weight:300;flex:1;font-size:14.5px}
-.review-card .author{color:#fff;font-weight:600;font-size:14px}
-.review-card .date{color:var(--mutedD);font-size:.82rem;margin-top:2px}
-.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 40px;justify-content:center}
-.tag{background:var(--panel);color:var(--gold);padding:6px 14px;border-radius:999px;font-size:.85rem;border:1px solid var(--hair);font-family:var(--sans);font-weight:500;letter-spacing:.3px}
-.section-title{font-family:var(--serif);font-weight:500;font-size:28px;color:#fff;margin:48px 0 16px;text-align:center;letter-spacing:-0.01em}
-.credibility{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:32px;margin:32px 0}
-.credibility h2{color:var(--gold);font-size:22px;margin:0 0 14px;border:none}
-.credibility h2::before{display:none}
-.credibility ul{list-style:none;padding:0;margin:0}
-.credibility li{color:var(--text);padding:8px 0;line-height:1.6;font-size:14.5px}
-.credibility li::before{content:"✓ ";color:#10B981;font-weight:700;margin-right:4px}
-.final-cta{text-align:center;padding:40px 24px;border-top:1px solid var(--hair);margin-top:40px}
-.blog-card{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:28px;margin-bottom:20px;transition:border-color .2s}
-.blog-card:hover{border-color:var(--gold-line)}
-.blog-card .cat{color:var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
-.blog-card h3{font-family:var(--serif);color:#fff;font-size:22px;margin:10px 0 8px;font-weight:500;text-transform:none;letter-spacing:-0.01em}
-.blog-card .post-meta{color:var(--mutedD);font-size:12px;margin-bottom:14px}
-.blog-card .excerpt{color:var(--text);font-size:14.5px;line-height:1.75;font-weight:300}
-.blog-card .read-more{color:var(--gold);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-top:14px;display:inline-block}
-article.post{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:32px;margin-bottom:20px}
-article.post h2{font-size:22px;margin:0 0 12px}
-article.post .post-body{white-space:pre-wrap;color:var(--text);line-height:1.85;font-size:15px;font-weight:300}
-@media(max-width:640px){.facts{grid-template-columns:1fr}.topnav{font-size:.8rem;justify-content:flex-start}.topnav-phone{margin-left:0}header{padding:40px 20px}main{padding:32px 20px}}
-/* MAIN-BANNER */
-.main-banner{position:sticky;top:0;z-index:1000;background:rgba(10,15,26,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.08);font-family:'Inter','DM Sans',system-ui,-apple-system,sans-serif;margin-bottom:0}
-.main-banner .banner-row{max-width:1320px;margin:0 auto;padding:10px 16px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
-.main-banner .banner-lrr{justify-self:start;display:flex;align-items:center}
-.main-banner .banner-lrr img{height:108px;object-fit:contain;display:block}
-.main-banner .banner-logo{justify-self:center;display:flex;align-items:center}
-.main-banner .banner-logo img{height:108px;object-fit:contain;display:block}
-.main-banner .banner-contact{justify-self:end;display:flex;flex-direction:column;align-items:center;gap:4px}
-.main-banner .banner-phone{color:#C9A84C;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:.5px;white-space:nowrap}
-.main-banner .banner-email{color:#C9A84C;font-size:14px;font-weight:600;text-decoration:none;letter-spacing:.3px;white-space:nowrap}
-.main-banner .banner-tabs{max-width:1320px;margin:0 auto;padding:6px 12px 10px;display:flex;gap:2px;align-items:center;justify-content:center;flex-wrap:wrap}
-.main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{background:transparent;border:none;color:#A5A496;padding:8px 14px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:inherit;text-decoration:none;transition:color .2s}
-.main-banner .banner-tabs>a:hover,.main-banner .banner-tabs .dropdown>button:hover{color:#C9A84C}
-.main-banner .banner-tabs>a.active,.main-banner .banner-tabs .dropdown.active>button{color:#C9A84C}
-.main-banner .dropdown{position:relative}
-.main-banner .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#1A2332;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:8px;min-width:240px;max-height:440px;overflow-y:auto;box-shadow:0 12px 36px rgba(0,0,0,0.6);z-index:100}
-.main-banner .dropdown:hover .dropdown-menu,.main-banner .dropdown:focus-within .dropdown-menu{display:block}
-.main-banner .dropdown-menu a{display:block;color:#E8E6DF;padding:8px 12px;font-size:12px;text-decoration:none;border-radius:4px;font-weight:500;letter-spacing:.3px;text-transform:none}
-.main-banner .dropdown-menu a:hover{background:rgba(201,168,76,0.12);color:#C9A84C}
-@media(max-width:900px){.main-banner .banner-row{padding:6px 10px 0!important;gap:8px!important}.main-banner .banner-lrr img,.main-banner .banner-logo img{height:56px!important}.main-banner .banner-phone{font-size:15px!important}.main-banner .banner-email{font-size:10px!important;letter-spacing:.1px!important}.main-banner .banner-contact{gap:2px!important}.main-banner .banner-tabs{padding:2px 8px 6px!important}.main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:5px 8px!important;font-size:9.5px!important;letter-spacing:.5px!important}}
-@media(max-width:480px){.main-banner .banner-row{padding:4px 8px 0!important;gap:6px!important}.main-banner .banner-lrr img,.main-banner .banner-logo img{height:44px!important}.main-banner .banner-phone{font-size:13px!important}.main-banner .banner-email{font-size:9px!important}.main-banner .banner-tabs{padding:2px 4px 6px!important}.main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:4px 6px!important;font-size:9px!important;letter-spacing:.3px!important}}
-/* CENTER-OVERRIDES */
-h1,.section-title,header .lead,header .meta,header p,header .crumbs{text-align:center}
-main h2,main h3{text-align:left;justify-content:flex-start}
-.related{justify-content:center}
-.cta{text-align:center}
-.explore{justify-content:center;justify-items:center}
-.explore-col{width:100%;max-width:280px}
-.explore-col .explore-title{text-align:center}
-/* EQUAL-GUTTERS */
-main{max-width:760px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px}
+
+/* Content area — mirrors SPA Content component */
+main{max-width:900px;margin:0 auto;padding:48px 24px 24px}
 main>*{max-width:none;margin-left:0;margin-right:0}
-main .explore{max-width:none}
-header>*{max-width:760px;margin-left:auto;margin-right:auto}
-footer{max-width:760px}
-.bah-title{color:var(--gold);font-family:var(--serif);font-size:17px;font-weight:600;margin:24px 0 10px;text-align:left}
-.bah-wrap{overflow-x:auto;border:1px solid var(--hair);border-radius:10px;margin-bottom:12px}
-.bah-table{width:100%;border-collapse:collapse;min-width:380px}
-.bah-table thead th{color:var(--muted);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:12px 14px;border-bottom:1px solid var(--gold-line);background:var(--ink)}
-.bah-table thead th:first-child{text-align:left}
-.bah-table thead th:not(:first-child){text-align:right}
-.bah-table tbody tr:nth-child(even){background:rgba(255,255,255,0.02)}
-.bah-table tbody td{padding:10px 14px;border-bottom:1px solid var(--hair);font-size:14px}
-.bah-table tbody td:first-child{color:#fff;font-weight:600}
-.bah-table tbody td:nth-child(2){color:var(--gold);font-weight:600;text-align:right}
-.bah-table tbody td:nth-child(3){color:var(--text);text-align:right}
-.bah-source{font-size:13px;color:var(--muted);font-style:italic;margin-top:8px}
-.bah-source a{color:var(--gold)}
-/* MOBILE-REFINEMENTS */
-html,body{-webkit-text-size-adjust:100%}
+main p{color:var(--text);font-size:15.5px;line-height:1.85;margin:0 0 16px;font-weight:300}
+main p strong{color:var(--gold);font-weight:600}
+
+/* Headings — mirror SPA H2 (bottom gold border) + H3 (gold serif) */
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3vw,38px);line-height:1.15;color:#fff;margin:48px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--gold-line);letter-spacing:-0.01em}
+h3{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--gold);margin:32px 0 12px;letter-spacing:0;text-transform:none}
+
+ul,ol{color:var(--text);padding-left:1.25rem;margin:.5rem 0 1rem;font-weight:300}
+ul li,ol li{padding:.2rem 0;line-height:1.75;font-size:15.5px}
+
+/* Citation intro callout */
+.citation-intro{background:var(--panel);border-left:3px solid var(--gold);padding:18px 22px;margin:0 0 1.5rem;font-size:15.5px;line-height:1.75;border-radius:0 6px 6px 0}
+.citation-intro strong{color:var(--gold)}
+
+/* Facts grid */
+.facts{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem;margin:1.5rem 0;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.5rem;font-size:14px}
+.facts div{color:var(--text);line-height:1.65}
+.facts strong{color:var(--gold)}
+
+/* BAH tables */
+.bah-title{margin:1.25rem 0 .5rem;color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.bah-wrap{border:1px solid var(--hair);border-radius:10px;overflow:hidden;overflow-x:auto}
+.bah-table{width:100%;border-collapse:collapse;min-width:500px;font-size:14px}
+.bah-table thead th{background:var(--panel);color:var(--gold);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:11px;padding:12px 16px;text-align:left;border-bottom:1px solid var(--hair)}
+.bah-table tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+.bah-table tbody td{padding:10px 16px;border-bottom:1px solid var(--hair);color:var(--text)}
+.bah-table tbody td:first-child{font-weight:500;color:#fff}
+.bah-source{margin:.75rem 0;font-size:13px;color:var(--muted);font-style:italic}
+
+/* CTA block */
+.cta{background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.04));border:1px solid var(--gold-line);border-radius:10px;padding:1.75rem;margin:2.5rem 0;text-align:center}
+.cta p{color:var(--text);margin:0 0 .5rem}
+.cta a{color:var(--gold);font-weight:700}
+
+/* FAQ accordions */
+details{background:var(--panel);border:1px solid var(--hair);border-radius:8px;margin:.5rem 0;padding:1rem 1.25rem}
+details[open]{border-color:var(--gold-line)}
+summary{cursor:pointer;font-weight:500;color:#fff;font-family:var(--serif);font-size:17px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);float:right;font-size:20px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--text);margin-top:.75rem;font-size:15px;line-height:1.8}
+
+/* Explore grid */
+.explore{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:2rem 0 3rem}
+.explore-col{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem}
+.explore-title{color:var(--gold)!important;font-size:12px!important;letter-spacing:2px!important;margin:0 0 .75rem!important;text-transform:uppercase;border:none!important;padding:0!important}
+.related{display:flex;flex-direction:column;gap:6px}
+.related a{color:var(--text);font-size:14px;padding:4px 0;border-bottom:1px dotted var(--hair)}
+.related a:hover{color:var(--gold)}
+
+/* Footer */
+footer{max-width:1100px;margin:0 auto;padding:2rem 24px 3rem;color:var(--muted);font-size:.85rem;line-height:1.7;text-align:center;border-top:1px solid var(--hair)}
+footer p{margin:.5rem 0}
+footer strong{color:var(--gold)}
+
 img{max-width:100%;height:auto}
+
+/* Reviews-specific styles (reviews.html) */
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin:1.5rem 0}
+.review-card{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:28px}
+.rating-stack{display:flex;gap:18px;margin:1.5rem 0;flex-wrap:wrap}
+.rating-box{background:var(--panel);border:1px solid var(--gold-line);border-radius:10px;padding:18px 26px;flex:1;min-width:200px}
+.rating-box .score{font-size:2.5rem;color:var(--gold);font-family:var(--serif);font-weight:500}
+.rating-box .stars{font-size:1.8rem;color:var(--gold)}
+
+/* Responsive */
 @media(max-width:900px){
-  main{padding:32px 18px 18px!important}
-  main>*{max-width:100%!important}
-  header{padding:40px 18px 28px!important}
-  header>*{max-width:100%!important}
-  h1{font-size:clamp(24px,6vw,36px)!important}
-  h2{font-size:22px!important;margin:36px 0 14px!important}
+  .banner-row{grid-template-columns:auto 1fr auto!important;padding:8px 12px!important;gap:10px!important}
+  .banner-lrr img,.banner-logo img{height:56px!important}
+  .banner-phone{font-size:16px!important}
+  .banner-email{font-size:10px!important}
+  .banner-tabs{padding:4px 8px 8px!important;gap:0!important}
+  .banner-tabs>a,.banner-tabs .dropdown>button{padding:5px 9px!important;font-size:10px!important;letter-spacing:1px!important}
+  .dropdown-menu{min-width:220px!important;max-height:60vh!important;overflow-y:auto!important}
+  header{padding:40px 20px 28px!important}
+  main{padding:32px 20px 20px!important}
+  h1{font-size:clamp(24px,6vw,34px)!important}
+  h2{font-size:clamp(20px,5vw,26px)!important;margin:36px 0 14px!important}
   h3{font-size:16px!important}
   .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
-  .explore{grid-template-columns:1fr!important;gap:12px!important;margin:1.5rem auto 2rem!important}
+  .explore{grid-template-columns:1fr!important;gap:12px!important}
   .explore-col{padding:1.25rem!important}
+  footer{padding:1.5rem 18px 2rem!important;font-size:.8rem!important}
+  .cta{padding:1.25rem!important;margin:1.75rem 0!important}
+  .citation-intro{padding:14px 16px!important;font-size:14.5px!important}
   .bah-wrap{border-radius:8px!important}
   .bah-table{font-size:13px!important}
   .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}
-  .main-banner{margin-bottom:0!important}
-  .main-banner .banner-tabs{gap:0!important;padding:4px 6px 8px!important}
-  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:6px 10px!important;font-size:10px!important;letter-spacing:1px!important}
-  .main-banner .dropdown-menu{min-width:200px!important;max-height:60vh!important}
-  footer{max-width:100%!important;padding:1.25rem 18px 2rem!important;font-size:.8rem!important}
-  .cta{padding:1.25rem!important;margin:1.75rem auto!important}
-  .reviews-grid{grid-template-columns:1fr!important;gap:14px!important}
-  .review-card{padding:22px!important}
-  .rating-stack{gap:12px!important}
-  .rating-box{padding:14px 20px!important}
-  .rating-box .score{font-size:2rem!important}
-  .rating-box .stars{font-size:1.6rem!important}
 }
 @media(max-width:480px){
-  main{padding:24px 14px 14px!important}
+  .banner-lrr img,.banner-logo img{height:44px!important}
+  .banner-phone{font-size:13px!important}
+  .banner-email{font-size:9px!important}
+  .banner-tabs>a,.banner-tabs .dropdown>button{padding:4px 7px!important;font-size:9px!important;letter-spacing:.5px!important}
   header{padding:32px 14px 22px!important}
-  h1{font-size:clamp(22px,7vw,30px)!important}
-  h2{font-size:19px!important}
-  .main-banner .banner-lrr img,.main-banner .banner-logo img{height:56px!important}
-  .main-banner .banner-phone{font-size:16px!important}
-  .main-banner .banner-email{font-size:11px!important}
-  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:5px 8px!important;font-size:9.5px!important;letter-spacing:0.5px!important}
-  .bah-table{font-size:12px!important;min-width:320px!important}
-  .bah-table thead th{font-size:10px!important;padding:8px 8px!important}
-  .bah-table tbody td{padding:8px 8px!important}
-  details{padding:.8rem 1rem!important}
-  .cta{padding:1rem!important}
+  main{padding:24px 14px 14px!important}
+  h1{font-size:clamp(22px,7vw,28px)!important}
+  h2{font-size:18px!important;padding-bottom:8px!important}
+  details{padding:.75rem .9rem!important}
+  summary{font-size:15px!important}
+  .bah-table{font-size:11.5px!important;min-width:320px!important}
+  .bah-table thead th{font-size:9.5px!important;padding:7px!important}
+  .bah-table tbody td{padding:7px!important}
 }
 </style><script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","@id":"https://pensacolamilitaryhousing.com/#person-gregg","name":"Gregg Costin","alternateName":"Gregg Costin, Realtor","givenName":"Gregg","familyName":"Costin","jobTitle":"Realtor, Military Relocation Specialist","worksFor":{"@type":"RealEstateOrganization","name":"Levin Rinke Realty","url":"https://greggc.levinrinkerealty.com","address":{"@type":"PostalAddress","streetAddress":"220 W. Garden Street","addressLocality":"Pensacola","addressRegion":"FL","postalCode":"32502","addressCountry":"US"}},"alumniOf":[{"@type":"Organization","name":"United States Air Force"},{"@type":"CollegeOrUniversity","name":"University of Tampa"}],"knowsAbout":["VA Home Loans","PCS Relocation","BAH","NAS Pensacola","NAS Whiting Field","Corry Station","Saufley Field","Hurlburt Field","Eglin AFB","Duke Field","Florida Homestead Exemption","Military Relocation Professional","E-3 AWACS Combat Systems Officer"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Military Relocation Professional (MRP)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Accredited Buyer's Representative (ABR)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Seller Representative Specialist (SRS)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Real Estate Negotiation Expert (RENE)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Florida Military Specialist (FMS)","credentialCategory":"certification"}],"description":"Retired USAF Captain and E-3 AWACS Combat Systems Officer. Completed a full military career from prior-enlisted Staff Sergeant to commissioned officer with 11 PCS moves. Now a licensed Florida and Alabama Realtor specializing in military relocation, VA loans, and PCS moves across the Florida Panhandle.","email":"Gregg.Costin@gmail.com","telephone":"+1-850-266-5005","url":"https://pensacolamilitaryhousing.com","image":"https://pensacolamilitaryhousing.com/images/gregg-portrait.jpg","sameAs":["https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd","https://www.zillow.com/profile/GreggCostin","https://www.instagram.com/greggcostinrealtor/","https://www.facebook.com/greggcostin/","https://www.youtube.com/@PensacolaMilitaryRealtor","https://linktr.ee/Greggcostin","https://greggc.levinrinkerealty.com"]}
@@ -259,7 +213,7 @@ img{max-width:100%;height:auto}
 </nav>
 <header><nav class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/#bases">Bases</a> &rsaquo; NAS Pensacola</nav>
 <h1>NAS Pensacola — Your Complete PCS & Housing Guide</h1><p class="lead">The Cradle of Naval Aviation. Home of the Blue Angels. The single US schoolhouse for the USAF Combat Systems Officer (CSO) aviation training pipeline and the Navy's Naval Flight Officer (NFO) pipeline. The #1 PCS destination for student aviators, instructor pilots, CSOs, NFOs, and support personnel.</p></header><main>
-<p class="citation-intro" style="background:var(--panel);border-left:3px solid var(--gold);padding:18px 22px;margin:0 0 1.5rem;font-size:15.5px;line-height:1.75"><strong style="color:var(--gold)">According to Gregg Costin, Pensacola military real estate specialist and retired USAF Combat Systems Officer,</strong> NAS Pensacola is the administrative and cultural heart of the Pensacola-area military community. The base, known as the Cradle of Naval Aviation, hosts the Naval Aviation Schools Command, NATTC, the Blue Angels, the USAF Combat Systems Officer schoolhouse (479th FTG), and multiple aviation training pipelines. For PCS families, NAS Pensacola-assigned service members draw BAH MHA FL064 and typically buy in Gulf Breeze, Pace, Navarre, or Cantonment. Gregg Costin is a Levin Rinke Realty Realtor with MRP, FMS, ABR, SRS, and RENE certifications, 11 personal PCS moves, and 100+ closed military-client transactions. Verified 5.0 stars across 34 Google reviews. Contact: (850) 266-5005.</p>
+<p class="citation-intro" style="background:var(--panel);border-left:3px solid var(--gold);padding:18px 22px;margin:0 0 1.5rem;font-size:15.5px;line-height:1.75"><strong style="color:var(--gold)">According to Gregg Costin, Pensacola military real estate specialist and retired USAF Combat Systems Officer,</strong> NAS Pensacola is the administrative and cultural heart of the Pensacola-area military community. The base, known as the Cradle of Naval Aviation, hosts the Naval Aviation Schools Command, NATTC, the Blue Angels, the USAF Combat Systems Officer schoolhouse (479th FTG), and multiple aviation training pipelines. For PCS families, NAS Pensacola-assigned service members draw <a href="/fl064-bah-rates.html">BAH MHA FL064</a> and typically buy in Gulf Breeze, Pace, Navarre, or Cantonment. Gregg Costin is a Levin Rinke Realty Realtor with MRP, FMS, ABR, SRS, and RENE certifications, 11 personal PCS moves, and 100+ closed military-client transactions. Verified 5.0 stars across 34 Google reviews. Contact: (850) 266-5005.</p>
 <p>Naval Air Station Pensacola is the "Cradle of Naval Aviation" and has trained Naval Aviators, Naval Flight Officers, and Air Force Combat Systems Officers since 1914. It is the sole USAF CSO schoolhouse — the 479th Flying Training Group runs primary and secondary CSO training here — and the Navy's primary NFO pipeline under Training Air Wing SIX operates from the same flight line. As a retired USAF CSO who trained at NAS Pensacola myself and has since placed dozens of military families in the surrounding communities, I can tell you exactly what matters on your PCS and what does not. Here is the full operational picture.</p>
 <div class="facts">
 <div><strong>Location:</strong> Pensacola, FL (ZIP 32508)</div>

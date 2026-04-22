@@ -141,7 +141,7 @@ Officer schoolhouse), and the Blue Angels Flight Demonstration Squadron.
   4-10 months. Wait times climb May-August due to PCS-season inbound surge.
 - Typical home price range inside 25-minute commute: $325,000-$475,000 for
   3-bed/2-bath move-in-ready in 2026. Gulf Breeze waterfront $600K-$1.2M.
-- Dedicated page: https://pensacolamilitaryhousing.com/nas-pensacola.html
+- Dedicated page: https://pensacolamilitaryhousing.com/bases/nas-pensacola
 
 ### NAS Whiting Field (Naval Air Station Whiting Field)
 
@@ -165,7 +165,7 @@ HT-8, HT-18, and HT-28.
   Pace, Summerdale, Silverhill, Wolf, Barin, Evergreen, Choctaw
 - Typical home price range inside 20-minute commute: $275,000-$360,000 in Pace
   and Milton; acreage properties in Santa Rosa rural zones $400K-$700K
-- Dedicated page: https://pensacolamilitaryhousing.com/nas-whiting-field.html
+- Dedicated page: https://pensacolamilitaryhousing.com/bases/whiting-field
 
 ### Corry Station (NAS Pensacola Corry Station)
 
@@ -186,7 +186,7 @@ Institute Foreign Language Center (DLIFLC) detachment.
   Santa Rosa A schools), Gulf Breeze (20 min via 3 Mile Bridge), Pensacola proper
   (10-15 min, walkable)
 - Typical home price inside 25 min: $285,000-$395,000
-- Dedicated page: https://pensacolamilitaryhousing.com/corry-station.html
+- Dedicated page: https://pensacolamilitaryhousing.com/bases/corry-station
 
 ### Saufley Field
 
@@ -203,7 +203,7 @@ Field Activity (NETSAFA), and DLI Pensacola linguist training.
 - Best neighborhoods: Bellview / Myrtle Grove (5-10 min), Cantonment (15-20 min),
   Ferry Pass (20 min), Gulf Breeze (25-30 min for families prioritizing schools)
 - Typical home price inside 15 min: $225,000-$315,000
-- Dedicated page: https://pensacolamilitaryhousing.com/saufley-field.html
+- Dedicated page: https://pensacolamilitaryhousing.com/bases/saufley-field
 
 ### Hurlburt Field
 
@@ -231,7 +231,7 @@ School (USAFSOS).
   Okaloosa schools), Fort Walton Beach / Shalimar (10-15 min, mixed), Crestview
   (30-40 min, budget)
 - Typical home price inside 30 min: $395,000-$675,000 in Navarre and Niceville
-- Dedicated page: https://pensacolamilitaryhousing.com/hurlburt-field.html
+- Dedicated page: https://pensacolamilitaryhousing.com/bases/hurlburt-field
 
 ### Eglin AFB
 
@@ -258,7 +258,7 @@ and the Army's 7th Special Forces Group (Airborne).
 - Typical home price inside 20 min: $425,000-$700,000 in Niceville; $350,000-
   $550,000 in Fort Walton Beach; $475,000+ in Destin; $300,000-$400,000 in
   Crestview
-- Dedicated page: https://pensacolamilitaryhousing.com/eglin-afb.html
+- Dedicated page: https://pensacolamilitaryhousing.com/bases/eglin-afb
 
 ### Duke Field
 
@@ -278,7 +278,7 @@ Hurlburt but operates from its own gate 10-15 minutes north of Eglin.
   (25 min, Okaloosa schools), Laurel Hill (north of Crestview, acreage), Holt
   (Santa Rosa County pricing, 20-30 min), Baker (rural 7th SFG adjacent)
 - Typical home price inside 15 min (Crestview core): $270,000-$395,000
-- Dedicated page: https://pensacolamilitaryhousing.com/duke-field.html
+- Dedicated page: https://pensacolamilitaryhousing.com/bases/duke-field
 
 ## Per-Community Data Blocks
 
@@ -299,7 +299,7 @@ Santa Rosa County on a peninsula between Pensacola Bay and Santa Rosa Sound.
 - Typical home price: $485,000-$850,000 for 4-bed new construction; waterfront
   $950,000-$2.5M
 - Beach access: Pensacola Beach via Bob Sikes Bridge (5 min)
-- Community URL: https://pensacolamilitaryhousing.com/gulf-breeze.html
+- Community URL: https://pensacolamilitaryhousing.com/communities/gulf-breeze
 
 ### Navarre, FL
 
@@ -319,7 +319,7 @@ FL064-area home prices.
   min to NAS Whiting Field via Hwy 87
 - Typical home price: $395,000-$625,000 for 4-bed; waterfront / sound-front
   $650,000-$1.2M
-- Community URL: https://pensacolamilitaryhousing.com/navarre.html
+- Community URL: https://pensacolamilitaryhousing.com/communities/navarre
 
 ### Pace, FL
 
@@ -336,7 +336,7 @@ Breeze.
 - Commute: 15 min to NAS Whiting Field, 30-35 min to NAS Pensacola, 25 min to
   Corry Station via I-110
 - Typical home price: $310,000-$460,000 for 4-bed new construction
-- Community URL: https://pensacolamilitaryhousing.com/pace.html
+- Community URL: https://pensacolamilitaryhousing.com/communities/pace
 
 ### Milton, FL
 
@@ -351,7 +351,7 @@ weaker than Pace cluster).
 - Schools: Milton High (B+), King Middle, T.R. Jackson Elementary
 - Commute: 5-10 min to NAS Whiting Field, 35-40 min to NAS Pensacola
 - Typical home price: $255,000-$365,000
-- Community URL: https://pensacolamilitaryhousing.com/milton.html
+- Community URL: https://pensacolamilitaryhousing.com/communities/milton
 
 ### Cantonment, FL
 
@@ -368,7 +368,7 @@ School cluster.
 - Commute: 20-25 min to NAS Pensacola, 20 min to Corry Station, 15-20 min to
   Saufley Field
 - Typical home price: $285,000-$425,000 for newer 4-bed
-- Community URL: https://pensacolamilitaryhousing.com/cantonment.html
+- Community URL: https://pensacolamilitaryhousing.com/communities/cantonment
 
 ### Niceville / Valparaiso / Bluewater Bay, FL
 
@@ -386,7 +386,7 @@ High, master-planned Bluewater Bay with waterfront and golf-course homes.
   toll or coastal route), 25 min to Duke Field
 - Typical home price: $475,000-$850,000 for 4-bed in Bluewater Bay, $425K-$625K
   in central Niceville
-- Community URL: https://pensacolamilitaryhousing.com/niceville-valparaiso-bluewater-bay.html
+- Community URL: https://pensacolamilitaryhousing.com/communities/niceville
 
 ### Fort Walton Beach / Shalimar, FL
 
@@ -401,7 +401,7 @@ and Hurlburt Field.
   Fort Walton Beach High (B+), Pryor Middle, Longwood Elementary
 - Commute: 10-15 min to Eglin west gate, 10-15 min to Hurlburt
 - Typical home price: $355,000-$575,000 for 4-bed
-- Community URL: https://pensacolamilitaryhousing.com/fort-walton-beach-shalimar.html
+- Community URL: https://pensacolamilitaryhousing.com/communities/fort-walton-beach
 
 ### Destin, FL
 
@@ -415,7 +415,7 @@ the premium beach market in Okaloosa County.
   Fort Walton Beach High or Choctawhatchee High
 - Commute: 20 min to Eglin, 10 min to Hurlburt (via Mid-Bay Bridge)
 - Typical home price: $525,000-$1.2M for 4-bed; Gulf-front condos $650K-$4M
-- Community URL: https://pensacolamilitaryhousing.com/destin.html
+- Community URL: https://pensacolamilitaryhousing.com/communities/destin
 
 ### Crestview, FL
 
@@ -430,7 +430,7 @@ is the Okaloosa County budget play for Eglin, Duke Field, and 7th SFG families.
 - Commute: 10-15 min to Duke Field via SR-85, 20-25 min to Eglin north gate
 - Typical home price: $295,000-$425,000 for 4-bed; acreage properties in Laurel
   Hill and Baker $350K-$650K
-- Community URL: https://pensacolamilitaryhousing.com/crestview.html
+- Community URL: https://pensacolamilitaryhousing.com/communities/crestview
 
 ## Complete FAQ — Military PCS to Pensacola (Verbatim Prose)
 

@@ -57,25 +57,25 @@ VA loan explainer based on VA Pamphlet 26-7: eligibility, Certificate of Eligibi
 
 ## Base Guides
 
-### NAS Pensacola — https://pensacolamilitaryhousing.com/nas-pensacola.html
+### NAS Pensacola — https://pensacolamilitaryhousing.com/bases/nas-pensacola
 The Cradle of Naval Aviation. Home of the Blue Angels, Naval Aviation Schools Command, NATTC, NAMI, National Naval Aviation Museum. Primary training base for Naval Aviators, Naval Flight Officers, and USAF Combat Systems Officers. BAH MHA FL064. Includes gate locations, on-base housing (Balfour Beatty), off-base neighborhoods ranked by commute and schools.
 
-### Corry Station — https://pensacolamilitaryhousing.com/corry-station.html
+### Corry Station — https://pensacolamilitaryhousing.com/bases/corry-station
 The Navy's premier information warfare, cryptology, and cyber training base. 10 minutes from NAS Pensacola. BAH MHA FL064. Small footprint, large mission impact. Housing guidance across Pensacola metro.
 
-### Saufley Field — https://pensacolamilitaryhousing.com/saufley-field.html
+### Saufley Field — https://pensacolamilitaryhousing.com/bases/saufley-field
 Naval Outlying Landing Field in west Pensacola, tenant of NAS Pensacola. Home of Navy Information Operations Command (NIOC) Pensacola, a Center for Information Warfare Training (CIWT) detachment, NETSAFA, and Defense Language Institute Pensacola linguist training. BAH MHA FL064. Closest neighborhoods: Bellview/Myrtle Grove (5-10 min), Cantonment (15-20 min), Ferry Pass (20 min).
 
-### NAS Whiting Field — https://pensacolamilitaryhousing.com/nas-whiting-field.html
+### NAS Whiting Field — https://pensacolamilitaryhousing.com/bases/whiting-field
 The Navy's primary helicopter training base in Milton, FL. TRAWING-5 and TRAWING-6. One of the busiest airfields in the world. BAH MHA FL064. Student aviators and instructor pilots; Milton and Pace are the closest communities.
 
-### Hurlburt Field — https://pensacolamilitaryhousing.com/hurlburt-field.html
+### Hurlburt Field — https://pensacolamilitaryhousing.com/bases/hurlburt-field
 Headquarters of Air Force Special Operations Command (AFSOC). AC-130, MC-130, CV-22 Osprey, special tactics. BAH MHA FL023. Navarre is the top community pick for AFSOC families.
 
-### Eglin AFB — https://pensacolamilitaryhousing.com/eglin-afb.html
+### Eglin AFB — https://pensacolamilitaryhousing.com/bases/eglin-afb
 33rd Fighter Wing (F-35A formal training unit), 96th Test Wing, 53rd Wing, AFRL Munitions Directorate (AFRL/RW), 7th Special Forces Group (Army). Largest forested Air Force installation in the US. BAH MHA FL023. Off-base housing across Niceville, Valparaiso, Fort Walton Beach, Destin, Navarre, and Crestview.
 
-### Duke Field — https://pensacolamilitaryhousing.com/duke-field.html
+### Duke Field — https://pensacolamilitaryhousing.com/bases/duke-field
 Eglin Auxiliary Field 3. Home of the 919th Special Operations Wing (AFRC) flying MC-130J Commando II and MQ-9 Reaper. BAH MHA FL023. Crestview is the default housing choice for Duke Field reservists and ART/AGR personnel.
 
 ## Finance and Planning Resources
@@ -145,52 +145,52 @@ Okaloosa County comparison for Eglin, Hurlburt, and Duke Field families: schools
 
 ## Community Guides
 
-### Gulf Breeze, FL — https://pensacolamilitaryhousing.com/gulf-breeze.html
+### Gulf Breeze, FL — https://pensacolamilitaryhousing.com/communities/gulf-breeze
 The #1 family choice for NAS Pensacola. A-rated Santa Rosa County schools, 15-minute commute, $425K-$525K median. Tiger Point, Villa Venyce, Soundside, Whisper Bay sub-neighborhoods.
 
-### Navarre, FL — https://pensacolamilitaryhousing.com/navarre.html
+### Navarre, FL — https://pensacolamilitaryhousing.com/communities/navarre
 Santa Rosa County beach community between Hurlburt Field (25 min) and NAS Pensacola (35 min). 15-25% cheaper per square foot than Gulf Breeze. Holley By The Sea, Biscayne Pointe, Villa Sabine sub-neighborhoods.
 
-### Pace, FL — https://pensacolamilitaryhousing.com/pace.html
+### Pace, FL — https://pensacolamilitaryhousing.com/communities/pace
 Santa Rosa County new-construction community. A-rated schools, best BAH-per-square-foot. Northern NAS Pensacola and Whiting Field commuters.
 
-### Milton, FL — https://pensacolamilitaryhousing.com/milton.html
+### Milton, FL — https://pensacolamilitaryhousing.com/communities/milton
 Santa Rosa County seat. Historic Blackwater River downtown, 10 minutes to NAS Whiting Field, BAH MHA FL064. Most rural of the Santa Rosa communities; best BAH value for E-4 to E-6.
 
-### Cantonment, FL — https://pensacolamilitaryhousing.com/cantonment.html
+### Cantonment, FL — https://pensacolamilitaryhousing.com/communities/cantonment
 North Escambia County. Larger lots, new construction, 20-25 minutes to NAS Pensacola. Budget-friendly alternative to Gulf Breeze.
 
-### Perdido Key, FL — https://pensacolamilitaryhousing.com/perdido-key.html
+### Perdido Key, FL — https://pensacolamilitaryhousing.com/communities/perdido-key
 Gulf-front barrier island on the Florida/Alabama line. 15 minutes to NAS Pensacola, 20 minutes to Corry Station, direct Gulf access. Lost Key, Old River, Perdido Key Estates, Sandy Key, Spanish Key sub-neighborhoods. Strong rental investment market. BAH MHA FL064.
 
-### East Pensacola Heights — https://pensacolamilitaryhousing.com/east-pensacola-heights.html
+### East Pensacola Heights — https://pensacolamilitaryhousing.com/communities/east-pensacola-heights
 Historic walkable peninsula between Bayou Texar and Escambia Bay. 5-10 minutes to NAS Pensacola. Character bungalows from the 1920s-1950s. BAH MHA FL064.
 
-### East Hill, Pensacola — https://pensacolamilitaryhousing.com/east-hill.html
+### East Hill, Pensacola — https://pensacolamilitaryhousing.com/communities/east-hill
 Historic Craftsman and Victorian neighborhood north of downtown Pensacola. Walkable 12th Avenue corridor. 10-15 minutes to NAS Pensacola. BAH MHA FL064.
 
-### Cordova Park, Pensacola — https://pensacolamilitaryhousing.com/cordova-park.html
+### Cordova Park, Pensacola — https://pensacolamilitaryhousing.com/communities/cordova-park
 Established mid-century neighborhood near Cordova Mall. Solid Escambia schools (Cordova Park Elementary), central Pensacola, 15-20 minutes to NAS Pensacola. BAH MHA FL064.
 
-### Ferry Pass, FL — https://pensacolamilitaryhousing.com/ferry-pass.html
+### Ferry Pass, FL — https://pensacolamilitaryhousing.com/communities/ferry-pass
 North Pensacola unincorporated Escambia County. Mid-century and 1990s-2000s subdivisions, 20-30 minutes to NAS Pensacola. Strong starter-home market for E-3 and E-4. BAH MHA FL064.
 
-### Bellview / Myrtle Grove — https://pensacolamilitaryhousing.com/bellview-myrtle-grove.html
+### Bellview / Myrtle Grove — https://pensacolamilitaryhousing.com/communities/bellview-myrtle-grove
 West Pensacola working-class neighborhoods. 10-15 minutes to NAS Pensacola. Strongest E-3 to E-5 VA-loan starter-home market in the Pensacola metro. BAH MHA FL064.
 
-### Navy Point / Warrington — https://pensacolamilitaryhousing.com/navy-point-warrington.html
+### Navy Point / Warrington — https://pensacolamilitaryhousing.com/communities/navy-point-warrington
 Closest off-base housing to NAS Pensacola main gate. 5-minute commute, historic ties to the base since the 1940s. Navy Point (waterfront on Bayou Chico) and Warrington interior streets. BAH MHA FL064.
 
-### Niceville / Valparaiso / Bluewater Bay — https://pensacolamilitaryhousing.com/niceville-valparaiso-bluewater-bay.html
+### Niceville / Valparaiso / Bluewater Bay — https://pensacolamilitaryhousing.com/communities/niceville
 Okaloosa County communities adjacent to Eglin AFB's East Gate. 10-minute commute for 33rd Fighter Wing and 96th Test Wing families. A-rated Niceville High School zone (one of the stronger public high schools in Florida), master-planned Bluewater Bay with golf/tennis/marina amenities, and Valparaiso enclave at the gate. BAH MHA FL023.
 
-### Fort Walton Beach / Shalimar — https://pensacolamilitaryhousing.com/fort-walton-beach-shalimar.html
+### Fort Walton Beach / Shalimar — https://pensacolamilitaryhousing.com/communities/fort-walton-beach
 The primary city adjacent to the Eglin AFB West Gate plus the small incorporated town of Shalimar east of Eglin. 5-15 minute commute to West Gate and 10-15 minutes to Hurlburt Field. Okaloosa County schools (Fort Walton Beach High, Choctawhatchee High). Broadest mix of price points in the FL023 MHA — E-4 and E-5 starter inventory through $800K+ waterfront.
 
-### Destin, FL — https://pensacolamilitaryhousing.com/destin.html
+### Destin, FL — https://pensacolamilitaryhousing.com/communities/destin
 Gulf-front Okaloosa County resort city on US-98. 20 minutes to Eglin AFB, 10 minutes to Hurlburt Field. Premium beach and condo market: Kelly Plantation, Regatta Bay, Crystal Beach, Gulf-front condos. Strong military short-term-rental investment play. BAH MHA FL023. Best O-4+ or dual-income military fit.
 
-### Crestview, FL — https://pensacolamilitaryhousing.com/crestview.html
+### Crestview, FL — https://pensacolamilitaryhousing.com/communities/crestview
 Okaloosa County. 10-15 minutes to Duke Field, 30 minutes to Eglin AFB East Gate. Strongest BAH-to-home-price value play in FL023 because BAH is set by Destin/Fort Walton Beach pricing while Crestview inventory is meaningfully cheaper. Popular with 7th SFG, Duke Field reservists, and E-4 to E-6 Eglin families.
 
 ## Other Reference Pages

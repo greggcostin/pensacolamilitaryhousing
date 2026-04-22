@@ -36,13 +36,13 @@ const pages = [
 ];
 
 const BASES_LINKS = [
-  { label: "NAS Pensacola", href: "/nas-pensacola.html", blurb: "The Cradle of Naval Aviation. Flight training, Blue Angels, and the #1 PCS destination for Naval Aviators and Combat Systems Officers." },
-  { label: "Corry Station", href: "/corry-station.html", blurb: "The Navy's premier information warfare, cryptology, and cyber training base." },
-  { label: "Saufley Field", href: "/saufley-field.html", blurb: "NIOC Pensacola, a CIWT detachment, NETSAFA, and DLI Pensacola linguist training. Tenant of NAS Pensacola." },
-  { label: "NAS Whiting Field", href: "/nas-whiting-field.html", blurb: "The Navy's primary helicopter training base and one of the busiest airfields in the world." },
-  { label: "Hurlburt Field", href: "/hurlburt-field.html", blurb: "Headquarters of Air Force Special Operations Command. AC-130s, MC-130s, CV-22s, and the special tactics community." },
-  { label: "Eglin AFB", href: "/eglin-afb.html", blurb: "33rd Fighter Wing (F-35A training), 96th Test Wing, 7th SFG, and the largest forested Air Force installation in the US." },
-  { label: "Duke Field", href: "/duke-field.html", blurb: "Home of the 919th Special Operations Wing (AFRC). MC-130J and MQ-9, adjacent to Crestview." },
+  { label: "NAS Pensacola", href: "/bases/nas-pensacola", blurb: "The Cradle of Naval Aviation. Flight training, Blue Angels, and the #1 PCS destination for Naval Aviators and Combat Systems Officers." },
+  { label: "Corry Station", href: "/bases/corry-station", blurb: "The Navy's premier information warfare, cryptology, and cyber training base." },
+  { label: "Saufley Field", href: "/bases/saufley-field", blurb: "NIOC Pensacola, a CIWT detachment, NETSAFA, and DLI Pensacola linguist training. Tenant of NAS Pensacola." },
+  { label: "NAS Whiting Field", href: "/bases/whiting-field", blurb: "The Navy's primary helicopter training base and one of the busiest airfields in the world." },
+  { label: "Hurlburt Field", href: "/bases/hurlburt-field", blurb: "Headquarters of Air Force Special Operations Command. AC-130s, MC-130s, CV-22s, and the special tactics community." },
+  { label: "Eglin AFB", href: "/bases/eglin-afb", blurb: "33rd Fighter Wing (F-35A training), 96th Test Wing, 7th SFG, and the largest forested Air Force installation in the US." },
+  { label: "Duke Field", href: "/bases/duke-field", blurb: "Home of the 919th Special Operations Wing (AFRC). MC-130J and MQ-9, adjacent to Crestview." },
 ];
 
 const HOMES_LINKS = [
@@ -70,22 +70,22 @@ const RESOURCE_LINKS = [
 ];
 
 const COMMUNITY_LINKS = [
-  { label: "Gulf Breeze", href: "/gulf-breeze.html", blurb: "The #1 family choice for NAS Pensacola. A-rated Santa Rosa schools, 15-min commute, premium pricing." },
-  { label: "Navarre", href: "/navarre.html", blurb: "Santa Rosa County beach community between Hurlburt Field and NAS Pensacola. 15-25% cheaper per square foot than Gulf Breeze." },
-  { label: "Pace", href: "/pace.html", blurb: "New construction, A-rated schools, best BAH-per-square-foot value in the Pensacola MHA." },
-  { label: "Milton", href: "/milton.html", blurb: "Santa Rosa County seat. Historic downtown, 10 minutes to NAS Whiting Field, lowest BAH-supported entry point." },
-  { label: "Cantonment", href: "/cantonment.html", blurb: "North Escambia County. Larger lots, new construction, 20-25 minutes to NAS Pensacola." },
-  { label: "Perdido Key", href: "/perdido-key.html", blurb: "Gulf-front barrier island. 15 minutes to NAS Pensacola, beach lifestyle, strong rental investment play." },
-  { label: "East Pensacola Heights", href: "/east-pensacola-heights.html", blurb: "Historic walkable peninsula. 5-10 minutes to NAS Pensacola. Character bungalows on Bayou Texar." },
-  { label: "East Hill", href: "/east-hill.html", blurb: "Historic Craftsman neighborhood, walkable 12th Avenue dining, 10-15 min to NAS Pensacola." },
-  { label: "Cordova Park", href: "/cordova-park.html", blurb: "Established mid-century neighborhood near Cordova Mall. Solid Escambia schools, central Pensacola." },
-  { label: "Ferry Pass", href: "/ferry-pass.html", blurb: "North Pensacola suburban neighborhoods. Mid-century and 1990s-2000s homes, 20-30 min commute, E-4 friendly pricing." },
-  { label: "Bellview/Myrtle Grove", href: "/bellview-myrtle-grove.html", blurb: "West Pensacola working-class neighborhoods. 10-15 min to NAS Pensacola. Strongest E-3 to E-5 starter-home market." },
-  { label: "Navy Point/Warrington", href: "/navy-point-warrington.html", blurb: "5 minutes from the NAS Pensacola main gate. Closest off-base housing in the MHA. Historic ties, most affordable entry." },
-  { label: "Niceville/Valparaiso/Bluewater Bay", href: "/niceville-valparaiso-bluewater-bay.html", blurb: "Eglin AFB East Gate housing. A-rated Niceville High zone, master-planned Bluewater Bay, 10-minute commute for 33rd FW and 96th TW families." },
-  { label: "Fort Walton Beach/Shalimar", href: "/fort-walton-beach-shalimar.html", blurb: "Adjacent to the Eglin AFB West Gate. 5-15 minute commute, Okaloosa schools, broad mix of price points for E-4 to O-5 families." },
-  { label: "Destin", href: "/destin.html", blurb: "Gulf-front Okaloosa resort city. Premium beach and condo market, 20 min to Eglin, 10 min to Hurlburt. Strong military investment-rental play." },
-  { label: "Crestview", href: "/crestview.html", blurb: "Okaloosa County budget play for Eglin AFB and Duke Field. New construction, strongest FL023 BAH-to-price ratio." },
+  { label: "Gulf Breeze", href: "/communities/gulf-breeze", blurb: "The #1 family choice for NAS Pensacola. A-rated Santa Rosa schools, 15-min commute, premium pricing." },
+  { label: "Navarre", href: "/communities/navarre", blurb: "Santa Rosa County beach community between Hurlburt Field and NAS Pensacola. 15-25% cheaper per square foot than Gulf Breeze." },
+  { label: "Pace", href: "/communities/pace", blurb: "New construction, A-rated schools, best BAH-per-square-foot value in the Pensacola MHA." },
+  { label: "Milton", href: "/communities/milton", blurb: "Santa Rosa County seat. Historic downtown, 10 minutes to NAS Whiting Field, lowest BAH-supported entry point." },
+  { label: "Cantonment", href: "/communities/cantonment", blurb: "North Escambia County. Larger lots, new construction, 20-25 minutes to NAS Pensacola." },
+  { label: "Perdido Key", href: "/communities/perdido-key", blurb: "Gulf-front barrier island. 15 minutes to NAS Pensacola, beach lifestyle, strong rental investment play." },
+  { label: "East Pensacola Heights", href: "/communities/east-pensacola-heights", blurb: "Historic walkable peninsula. 5-10 minutes to NAS Pensacola. Character bungalows on Bayou Texar." },
+  { label: "East Hill", href: "/communities/east-hill", blurb: "Historic Craftsman neighborhood, walkable 12th Avenue dining, 10-15 min to NAS Pensacola." },
+  { label: "Cordova Park", href: "/communities/cordova-park", blurb: "Established mid-century neighborhood near Cordova Mall. Solid Escambia schools, central Pensacola." },
+  { label: "Ferry Pass", href: "/communities/ferry-pass", blurb: "North Pensacola suburban neighborhoods. Mid-century and 1990s-2000s homes, 20-30 min commute, E-4 friendly pricing." },
+  { label: "Bellview/Myrtle Grove", href: "/communities/bellview-myrtle-grove", blurb: "West Pensacola working-class neighborhoods. 10-15 min to NAS Pensacola. Strongest E-3 to E-5 starter-home market." },
+  { label: "Navy Point/Warrington", href: "/communities/navy-point-warrington", blurb: "5 minutes from the NAS Pensacola main gate. Closest off-base housing in the MHA. Historic ties, most affordable entry." },
+  { label: "Niceville/Valparaiso/Bluewater Bay", href: "/communities/niceville", blurb: "Eglin AFB East Gate housing. A-rated Niceville High zone, master-planned Bluewater Bay, 10-minute commute for 33rd FW and 96th TW families." },
+  { label: "Fort Walton Beach/Shalimar", href: "/communities/fort-walton-beach", blurb: "Adjacent to the Eglin AFB West Gate. 5-15 minute commute, Okaloosa schools, broad mix of price points for E-4 to O-5 families." },
+  { label: "Destin", href: "/communities/destin", blurb: "Gulf-front Okaloosa resort city. Premium beach and condo market, 20 min to Eglin, 10 min to Hurlburt. Strong military investment-rental play." },
+  { label: "Crestview", href: "/communities/crestview", blurb: "Okaloosa County budget play for Eglin AFB and Duke Field. New construction, strongest FL023 BAH-to-price ratio." },
 ];
 
 const IMG = {

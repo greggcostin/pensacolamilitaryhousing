@@ -1,3 +1,36 @@
-# Cloudflare Pages serves matching static files first (e.g., /blog.html, /reviews.html).
-# Unknown paths fall through to index.html so the SPA can resolve /about, /pcs-guide, etc.
+# Cloudflare Pages routing. Specific rewrites and redirects are processed
+# top-to-bottom; the SPA catch-all at the bottom handles everything else.
+
+# ── Base-page clean URLs (rewrite status 200 — URL stays as shown, content served from .html) ──
+/bases/nas-pensacola          /nas-pensacola.html                     200
+/bases/corry-station          /corry-station.html                     200
+/bases/saufley-field          /saufley-field.html                     200
+/bases/whiting-field          /nas-whiting-field.html                 200
+/bases/nas-whiting-field      /nas-whiting-field.html                 200
+/bases/hurlburt-field         /hurlburt-field.html                    200
+/bases/eglin-afb              /eglin-afb.html                         200
+/bases/duke-field             /duke-field.html                        200
+
+# ── Community clean URLs ─────────────────────────────────────────────────
+/communities/gulf-breeze            /gulf-breeze.html                           200
+/communities/navarre                /navarre.html                               200
+/communities/pace                   /pace.html                                  200
+/communities/milton                 /milton.html                                200
+/communities/cantonment             /cantonment.html                            200
+/communities/perdido-key            /perdido-key.html                           200
+/communities/east-pensacola-heights /east-pensacola-heights.html                200
+/communities/east-hill              /east-hill.html                             200
+/communities/cordova-park           /cordova-park.html                          200
+/communities/ferry-pass             /ferry-pass.html                            200
+/communities/bellview-myrtle-grove  /bellview-myrtle-grove.html                 200
+/communities/navy-point-warrington  /navy-point-warrington.html                 200
+/communities/niceville              /niceville-valparaiso-bluewater-bay.html    200
+/communities/valparaiso             /niceville-valparaiso-bluewater-bay.html    200
+/communities/fort-walton-beach      /fort-walton-beach-shalimar.html            200
+/communities/mary-esther            /fort-walton-beach-shalimar.html            200
+/communities/shalimar               /fort-walton-beach-shalimar.html            200
+/communities/destin                 /destin.html                                200
+/communities/crestview              /crestview.html                             200
+
+# ── SPA fallback (must be last) ──
 /* /index.html 200

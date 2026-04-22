@@ -66,7 +66,6 @@ const RESOURCE_LINKS = [
   { label: "Gulf Breeze vs Navarre", href: "/gulf-breeze-vs-navarre.html" },
   { label: "Niceville vs Crestview", href: "/niceville-vs-crestview.html" },
   { label: "FAQ", href: "/faq.html" },
-  { label: "Reviews", href: "/reviews.html" },
 ];
 
 const COMMUNITY_LINKS = [

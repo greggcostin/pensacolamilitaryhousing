@@ -25,53 +25,62 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
 const STYLES = `<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/site.css">`;
-
-const __UNUSED_STYLES = `<!-- legacy inline CSS moved to /site.css --><style>
-:root{--ink:#0A0F1A}
+<style>
+:root{--ink:#0A0F1A;--panel:#121823;--elev:#1A2332;--hair:rgba(255,255,255,0.08);--gold:#C9A84C;--gold-soft:#D4B768;--gold-line:rgba(201,168,76,0.35);--gold-tint:rgba(201,168,76,0.10);--text:#E8E6DF;--muted:#A5A496;--mutedD:#6F6E65;--serif:'Playfair Display',Georgia,serif;--sans:'Inter','DM Sans',system-ui,-apple-system,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);font-weight:300;background:var(--ink);color:var(--text);line-height:1.75;min-height:100vh}
+body{font-family:var(--sans);font-weight:300;background:var(--ink);color:var(--text);line-height:1.75}
 a{color:var(--gold);text-decoration:none}
 a:hover{color:var(--gold-soft)}
-.main-banner{background:rgba(10,15,26,0.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:1000;transition:all .3s ease}
-.banner-row{max-width:1320px;margin:0 auto;padding:10px 16px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
-.banner-lrr{justify-self:start;cursor:pointer}
-.banner-logo{justify-self:center;cursor:pointer}
-.banner-lrr img,.banner-logo img{height:108px;width:auto;display:block;object-fit:contain}
-.banner-contact{justify-self:end;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
-.banner-phone{color:var(--gold)!important;font-size:20px;font-weight:700;letter-spacing:.5px;text-decoration:none;font-family:var(--sans);white-space:nowrap;display:block}
-.banner-email{color:var(--gold)!important;font-size:14px;font-weight:600;letter-spacing:.3px;text-decoration:none;font-family:var(--sans);white-space:nowrap;display:block;text-transform:none}
-.banner-tabs{max-width:1320px;margin:0 auto;padding:6px 12px 10px;display:flex;gap:2px;align-items:center;justify-content:center;flex-wrap:wrap}
-.banner-tabs>a,.banner-tabs .dropdown>button{background:transparent;border:none;color:rgba(255,255,255,0.8);padding:6px 10px;font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);text-decoration:none;border-radius:4px;white-space:nowrap;transition:all .2s;display:inline-block}
-.banner-tabs>a:hover,.banner-tabs .dropdown>button:hover{background:rgba(201,168,76,0.15);color:var(--gold)}
-.dropdown{position:relative;padding-bottom:4px}
-.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--elev);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:8px;min-width:240px;max-height:440px;overflow-y:auto;z-index:100;box-shadow:0 12px 36px rgba(0,0,0,0.6)}
-.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
-.dropdown-menu a{display:block;padding:11px 16px;color:rgba(255,255,255,0.85);font-size:12px;border:none;border-radius:4px;text-transform:none;letter-spacing:.3px;font-weight:500;font-family:var(--sans);text-decoration:none}
-.dropdown-menu a:hover{background:rgba(201,168,76,0.1);color:var(--gold)}
-.homes-dropdown{display:none!important}
-header{background:linear-gradient(135deg,var(--panel),var(--elev));padding:60px 24px;border-bottom:1px solid var(--hair)}
+.main-banner{background:var(--panel);border-bottom:1px solid var(--hair)}
+.banner-row{max-width:1200px;margin:0 auto;padding:10px 16px;display:grid;grid-template-columns:auto auto 1fr;align-items:center;gap:16px}
+.banner-lrr img,.banner-logo img{height:108px;width:auto;display:block}
+.banner-contact{text-align:right;font-family:var(--sans)}
+.banner-phone{color:var(--gold)!important;font-size:22px;font-weight:700;letter-spacing:.5px;display:block}
+.banner-email{color:var(--muted)!important;font-size:12px;letter-spacing:1px;text-transform:uppercase;display:block;margin-top:2px}
+.banner-tabs{max-width:1200px;margin:0 auto;padding:4px 16px 10px;display:flex;flex-wrap:wrap;gap:2px;justify-content:center;border-top:1px solid var(--hair)}
+.banner-tabs>a,.banner-tabs .dropdown>button{padding:8px 14px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);background:transparent;border:0;cursor:pointer;font-family:var(--sans);font-weight:500}
+.banner-tabs>a:hover,.banner-tabs .dropdown>button:hover{color:var(--gold)}
+.dropdown{position:relative}
+.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--panel);border:1px solid var(--hair);min-width:240px;z-index:1000;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.dropdown:hover .dropdown-menu{display:block}
+.dropdown-menu a{display:block;padding:10px 14px;color:var(--muted);font-size:12px;border-bottom:1px solid var(--hair)}
+.dropdown-menu a:hover{background:var(--elev);color:var(--gold)}
+header{background:linear-gradient(135deg,var(--panel),var(--elev));padding:60px 24px;border-bottom:1px solid var(--hair);text-align:center}
 header>*{max-width:900px;margin-left:auto;margin-right:auto}
-.crumbs{color:var(--muted);font-size:12px;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase}
+.crumbs{color:var(--muted);font-size:12px;letter-spacing:1px;margin-bottom:16px;text-transform:uppercase;text-align:center}
 .crumbs a{color:var(--muted)}
 .crumbs a:hover{color:var(--gold)}
-h1{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,42px);color:#fff;line-height:1.2;margin-bottom:12px;letter-spacing:-0.01em}
-.lead{color:var(--muted);font-size:16px;line-height:1.7;max-width:720px;font-family:var(--sans)}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,42px);color:#fff;line-height:1.2;margin:0 auto 12px;letter-spacing:-0.01em;text-align:center}
+.lead,.meta,header p{color:var(--muted);font-size:16px;line-height:1.7;max-width:720px;margin-left:auto;margin-right:auto;font-family:var(--sans);text-align:center}
 .meta strong{color:var(--gold)}
 .meta a{color:var(--gold)}
-main{max-width:900px;margin:0 auto;padding:48px 24px 24px}
+main{max-width:900px;margin-left:auto;margin-right:auto;padding:48px 24px 24px}
 main>*{max-width:none;margin-left:0;margin-right:0}
-main p{color:var(--text);font-size:15.5px;line-height:1.85;margin:0 0 16px;font-weight:300}
+main p{color:var(--text);font-size:15.5px;line-height:1.85;margin:1rem 0;font-weight:300}
 main p strong{color:var(--gold);font-weight:600}
-h2{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3vw,38px);line-height:1.15;color:#fff;margin:48px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--gold-line);letter-spacing:-0.01em}
-h3{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--gold);margin:32px 0 12px;letter-spacing:0;text-transform:none}
-ul,ol{color:var(--text);padding-left:1.25rem;margin:.5rem 0 1rem;font-weight:300}
-ul li,ol li{padding:.2rem 0;line-height:1.75;font-size:15.5px}
-.citation-intro{background:var(--panel);border-left:3px solid var(--gold);padding:18px 22px;margin:0 0 1.5rem;font-size:15.5px;line-height:1.75;border-radius:0 6px 6px 0}
-.citation-intro strong{color:var(--gold)}
+h2{font-family:var(--serif);font-weight:500;font-size:28px;color:#fff;margin:48px 0 16px;display:flex;align-items:center;gap:14px;letter-spacing:-0.01em}
+h2::before{content:"";display:inline-block;width:4px;height:1.1em;background:var(--gold);border-radius:1px;flex-shrink:0}
+h3{font-family:var(--serif);font-size:18px;color:var(--gold);margin:32px 0 12px;font-weight:600;text-transform:uppercase;letter-spacing:2px}
+ul,ol{color:var(--text);padding-left:1.25rem;margin:.75rem 0;font-weight:300}
+ul li,ol li{padding:.2rem 0;line-height:1.75}
 .facts{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem;margin:1.5rem 0;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.5rem;font-size:14px}
-.facts div{color:var(--text);line-height:1.65}
+.facts div{color:var(--text)}
 .facts strong{color:var(--gold)}
+.cta{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:var(--ink);padding:1.75rem;border-radius:10px;margin:2rem auto;text-align:center;font-weight:500}
+.cta a{color:var(--ink);font-weight:700;text-decoration:underline}
+details{background:var(--panel);border:1px solid var(--hair);border-radius:8px;margin:.5rem 0;padding:1rem 1.25rem}
+details[open]{border-color:var(--gold-line)}
+summary{cursor:pointer;font-weight:500;color:#fff;font-family:var(--serif);font-size:17px}
+details p{color:var(--text);margin-top:.75rem;font-size:15px}
+.explore{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:2rem auto 3rem}
+.explore-col{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem}
+.explore-title{color:var(--gold)!important;font-size:12px!important;letter-spacing:2px!important;margin:0 0 .75rem!important;text-transform:uppercase}
+.related{display:flex;flex-direction:column;gap:6px}
+.related a{color:var(--text);font-size:14px;padding:4px 0;border-bottom:1px dotted var(--hair)}
+.related a:hover{color:var(--gold)}
+footer{max-width:1100px;margin:0 auto;padding:2rem 24px 3rem;color:var(--muted);font-size:.85rem;line-height:1.7;text-align:center;border-top:1px solid var(--hair)}
+footer p{margin:.5rem 0}
+footer strong{color:var(--gold)}
 .bah-title{margin:1.25rem 0 .5rem;color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
 .bah-wrap{border:1px solid var(--hair);border-radius:10px;overflow:hidden;overflow-x:auto}
 .bah-table{width:100%;border-collapse:collapse;min-width:500px;font-size:14px}
@@ -80,63 +89,45 @@ ul li,ol li{padding:.2rem 0;line-height:1.75;font-size:15.5px}
 .bah-table tbody td{padding:10px 16px;border-bottom:1px solid var(--hair);color:var(--text)}
 .bah-table tbody td:first-child{font-weight:500;color:#fff}
 .bah-source{margin:.75rem 0;font-size:13px;color:var(--muted);font-style:italic}
-.cta{background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.04));border:1px solid var(--gold-line);border-radius:10px;padding:1.75rem;margin:2.5rem 0;text-align:center}
-.cta p{color:var(--text);margin:0 0 .5rem}
-.cta a{color:var(--gold);font-weight:700}
-details{background:var(--panel);border:1px solid var(--hair);border-radius:8px;margin:.5rem 0;padding:1rem 1.25rem}
-details[open]{border-color:var(--gold-line)}
-summary{cursor:pointer;font-weight:500;color:#fff;font-family:var(--serif);font-size:17px;list-style:none}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--gold);float:right;font-size:20px;line-height:1}
-details[open] summary::after{content:"−"}
-details p{color:var(--text);margin-top:.75rem;font-size:15px;line-height:1.8}
-.explore{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:2rem 0 3rem}
-.explore-col{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem}
-.explore-title{color:var(--gold)!important;font-size:12px!important;letter-spacing:2px!important;margin:0 0 .75rem!important;text-transform:uppercase;border:none!important;padding:0!important}
-.related{display:flex;flex-direction:column;gap:6px}
-.related a{color:var(--text);font-size:14px;padding:4px 0;border-bottom:1px dotted var(--hair)}
-.related a:hover{color:var(--gold)}
-footer{max-width:1100px;margin:0 auto;padding:2rem 24px 3rem;color:var(--muted);font-size:.85rem;line-height:1.7;text-align:center;border-top:1px solid var(--hair)}
-footer p{margin:.5rem 0}
-footer strong{color:var(--gold)}
 img{max-width:100%;height:auto}
 @media(max-width:900px){
-  .banner-row{grid-template-columns:auto 1fr auto!important;padding:8px 12px!important;gap:10px!important}
-  .banner-lrr img,.banner-logo img{height:56px!important}
-  .banner-phone{font-size:16px!important}
-  .banner-email{font-size:10px!important}
-  .banner-tabs{padding:4px 8px 8px!important;gap:0!important}
-  .banner-tabs>a,.banner-tabs .dropdown>button{padding:5px 9px!important;font-size:10px!important;letter-spacing:1px!important}
-  .dropdown-menu{min-width:220px!important;max-height:60vh!important;overflow-y:auto!important}
-  header{padding:40px 20px 28px!important}
-  main{padding:32px 20px 20px!important}
-  h1{font-size:clamp(24px,6vw,34px)!important}
-  h2{font-size:clamp(20px,5vw,26px)!important;margin:36px 0 14px!important}
+  main{max-width:100%!important;padding:32px 18px 18px!important}
+  header{padding:40px 18px 28px!important}
+  header>*{max-width:100%!important}
+  h1{font-size:clamp(24px,6vw,36px)!important}
+  h2{font-size:22px!important;margin:36px 0 14px!important}
   h3{font-size:16px!important}
   .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
-  .explore{grid-template-columns:1fr!important;gap:12px!important}
+  .explore{grid-template-columns:1fr!important;gap:12px!important;margin:1.5rem auto 2rem!important}
   .explore-col{padding:1.25rem!important}
-  footer{padding:1.5rem 18px 2rem!important;font-size:.8rem!important}
-  .cta{padding:1.25rem!important;margin:1.75rem 0!important}
-  .citation-intro{padding:14px 16px!important;font-size:14.5px!important}
   .bah-wrap{border-radius:8px!important}
   .bah-table{font-size:13px!important}
   .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}
+  .main-banner{margin-bottom:0!important}
+  .main-banner .banner-tabs{gap:0!important;padding:4px 6px 8px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:6px 10px!important;font-size:10px!important;letter-spacing:1px!important}
+  .main-banner .dropdown-menu{min-width:200px!important;max-height:60vh!important}
+  footer{max-width:100%!important;padding:1.25rem 18px 2rem!important;font-size:.8rem!important}
+  .cta{padding:1.25rem!important;margin:1.75rem auto!important}
+  .banner-row{grid-template-columns:auto 1fr auto!important}
+  .banner-lrr img,.banner-logo img{height:56px!important}
+  .banner-phone{font-size:16px!important}
+  .banner-email{font-size:10px!important}
 }
 @media(max-width:480px){
-  .banner-lrr img,.banner-logo img{height:44px!important}
-  .banner-phone{font-size:13px!important}
-  .banner-email{font-size:9px!important}
-  .banner-tabs>a,.banner-tabs .dropdown>button{padding:4px 7px!important;font-size:9px!important;letter-spacing:.5px!important}
-  header{padding:32px 14px 22px!important}
   main{padding:24px 14px 14px!important}
-  h1{font-size:clamp(22px,7vw,28px)!important}
-  h2{font-size:18px!important;padding-bottom:8px!important}
-  details{padding:.75rem .9rem!important}
-  summary{font-size:15px!important}
-  .bah-table{font-size:11.5px!important;min-width:320px!important}
-  .bah-table thead th{font-size:9.5px!important;padding:7px!important}
-  .bah-table tbody td{padding:7px!important}
+  header{padding:32px 14px 22px!important}
+  h1{font-size:clamp(22px,7vw,30px)!important}
+  h2{font-size:19px!important}
+  .main-banner .banner-lrr img,.main-banner .banner-logo img{height:44px!important}
+  .main-banner .banner-phone{font-size:13px!important}
+  .main-banner .banner-email{font-size:9px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:4px 6px!important;font-size:9px!important;letter-spacing:.3px!important}
+  .bah-table{font-size:12px!important;min-width:320px!important}
+  .bah-table thead th{font-size:10px!important;padding:8px 8px!important}
+  .bah-table tbody td{padding:8px 8px!important}
+  details{padding:.8rem 1rem!important}
+  .cta{padding:1rem!important}
 }
 </style>`;
 
@@ -155,7 +146,7 @@ const TOPNAV = `<nav class="main-banner" aria-label="Main site navigation">
 <a href="/pcs-guide">PCS Guide</a>
 <div class="dropdown"><button type="button">Bases ▾</button><div class="dropdown-menu"><a href="/nas-pensacola.html">NAS Pensacola</a><a href="/corry-station.html">Corry Station</a><a href="/saufley-field.html">Saufley Field</a><a href="/nas-whiting-field.html">NAS Whiting Field</a><a href="/hurlburt-field.html">Hurlburt Field</a><a href="/eglin-afb.html">Eglin AFB</a><a href="/duke-field.html">Duke Field</a></div></div>
 <div class="dropdown"><button type="button">Communities ▾</button><div class="dropdown-menu"><a href="/gulf-breeze.html">Gulf Breeze</a><a href="/navarre.html">Navarre</a><a href="/pace.html">Pace</a><a href="/milton.html">Milton</a><a href="/cantonment.html">Cantonment</a><a href="/perdido-key.html">Perdido Key</a><a href="/east-pensacola-heights.html">East Pensacola Heights</a><a href="/east-hill.html">East Hill</a><a href="/cordova-park.html">Cordova Park</a><a href="/ferry-pass.html">Ferry Pass</a><a href="/bellview-myrtle-grove.html">Bellview/Myrtle Grove</a><a href="/navy-point-warrington.html">Navy Point/Warrington</a><a href="/niceville-valparaiso-bluewater-bay.html">Niceville/Valparaiso/Bluewater Bay</a><a href="/fort-walton-beach-shalimar.html">Fort Walton Beach/Shalimar</a><a href="/destin.html">Destin</a><a href="/crestview.html">Crestview</a></div></div>
-<div class="dropdown homes-dropdown" aria-hidden="true"><button type="button" tabindex="-1">Homes ▾</button><div class="dropdown-menu"><a href="/homes-for-sale-nas-pensacola.html">Homes — NAS Pensacola</a><a href="/homes-for-sale-nas-whiting-field.html">Homes — Whiting Field</a><a href="/homes-for-sale-corry-station.html">Homes — Corry Station</a><a href="/homes-for-sale-saufley-field.html">Homes — Saufley Field</a><a href="/homes-for-sale-hurlburt-field.html">Homes — Hurlburt Field</a><a href="/homes-for-sale-eglin-afb.html">Homes — Eglin AFB</a><a href="/homes-for-sale-duke-field.html">Homes — Duke Field</a></div></div>
+<div class="dropdown"><button type="button">Homes ▾</button><div class="dropdown-menu"><a href="/homes-for-sale-nas-pensacola.html">Homes — NAS Pensacola</a><a href="/homes-for-sale-nas-whiting-field.html">Homes — Whiting Field</a><a href="/homes-for-sale-corry-station.html">Homes — Corry Station</a><a href="/homes-for-sale-saufley-field.html">Homes — Saufley Field</a><a href="/homes-for-sale-hurlburt-field.html">Homes — Hurlburt Field</a><a href="/homes-for-sale-eglin-afb.html">Homes — Eglin AFB</a><a href="/homes-for-sale-duke-field.html">Homes — Duke Field</a></div></div>
 <div class="dropdown"><button type="button">Resources ▾</button><div class="dropdown-menu"><a href="/pcs-checklist.html">PCS Checklist</a><a href="/fl064-bah-rates.html">2026 BAH Rates</a><a href="/va-loan-pensacola.html">VA Loan Guide</a><a href="/assumable-va-loans-pensacola.html">Assumable VA Loans</a><a href="/va-disability-property-tax-florida.html">VA Disability Tax (FL)</a><a href="/school-zones-military-families.html">Military School Zones</a><a href="/homestead">Florida Homestead</a><a href="/nas-pensacola-vs-hurlburt-field.html">NAS Pensacola vs Hurlburt</a><a href="/gulf-breeze-vs-navarre.html">Gulf Breeze vs Navarre</a><a href="/niceville-vs-crestview.html">Niceville vs Crestview</a><a href="/faq.html">FAQ</a></div></div>
 <a href="/mortgage-calculators">Calculators</a>
 <a href="/reviews.html">Reviews</a>

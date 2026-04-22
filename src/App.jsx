@@ -66,6 +66,7 @@ const RESOURCE_LINKS = [
   { label: "Gulf Breeze vs Navarre", href: "/gulf-breeze-vs-navarre.html" },
   { label: "Niceville vs Crestview", href: "/niceville-vs-crestview.html" },
   { label: "FAQ", href: "/faq.html" },
+  { label: "Reviews", href: "/reviews.html" },
 ];
 
 const COMMUNITY_LINKS = [
@@ -218,13 +219,15 @@ const Nav = ({ current, go }) => {
           )}
         </div>
 
-        {/* Homes dropdown hidden from users but rendered in DOM for crawlers/SEO.
-            position:absolute + left:-9999px keeps the links parseable by Googlebot/Bingbot/GPTBot/ClaudeBot/PerplexityBot without exposing them visually or to keyboard/screen-reader users. */}
-        <div aria-hidden="true" style={{ position: "absolute", left: -9999, width: 1, height: 1, overflow: "hidden" }}>
-          <span>Homes</span>
-          {HOMES_LINKS.map(c => (
-            <a key={c.href} href={c.href} tabIndex={-1}>{c.label}</a>
-          ))}
+        <div style={{ position: "relative", paddingBottom: 4 }}
+          onMouseEnter={() => setHomesOpen(true)}
+          onMouseLeave={() => setHomesOpen(false)}>
+          <button onClick={() => setHomesOpen(!homesOpen)} style={tabStyle(false)}>Homes ▾</button>
+          {homesOpen && (
+            <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, maxHeight: 440, overflowY: "auto", boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
+              {HOMES_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
+            </div>
+          )}
         </div>
 
         <div style={{ position: "relative", paddingBottom: 4 }}
@@ -239,7 +242,6 @@ const Nav = ({ current, go }) => {
         </div>
 
         <Tab id="calculator" label="Calculators" />
-        <ExtTab href="/reviews.html" label="Reviews" />
         <Tab id="contact" label="Contact" />
       </div>
     </nav>

@@ -239,6 +239,7 @@ const Nav = ({ current, go }) => {
         </div>
 
         <Tab id="calculator" label="Calculators" />
+        <ExtTab href="/reviews.html" label="Reviews" />
         <Tab id="contact" label="Contact" />
       </div>
     </nav>

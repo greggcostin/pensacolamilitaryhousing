@@ -25,8 +25,10 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
 const STYLES = `<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap">
-<style>
-:root{--ink:#0A0F1A;--panel:#121823;--elev:#1A2332;--hair:rgba(255,255,255,0.08);--gold:#C9A84C;--gold-soft:#D4B768;--gold-line:rgba(201,168,76,0.35);--gold-tint:rgba(201,168,76,0.10);--text:#E8E6DF;--muted:#A5A496;--mutedD:#6F6E65;--serif:'Playfair Display',Georgia,serif;--sans:'Inter','DM Sans',system-ui,-apple-system,sans-serif}
+<link rel="stylesheet" href="/site.css">`;
+
+const __UNUSED_STYLES = `<!-- legacy inline CSS moved to /site.css --><style>
+:root{--ink:#0A0F1A}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:var(--sans);font-weight:300;background:var(--ink);color:var(--text);line-height:1.75;min-height:100vh}
 a{color:var(--gold);text-decoration:none}

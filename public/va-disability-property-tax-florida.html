@@ -47,117 +47,7 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap">
-<style>
-:root{--ink:#0A0F1A;--panel:#121823;--elev:#1A2332;--hair:rgba(255,255,255,0.08);--gold:#C9A84C;--gold-soft:#D4B768;--gold-line:rgba(201,168,76,0.35);--gold-tint:rgba(201,168,76,0.10);--text:#E8E6DF;--muted:#A5A496;--mutedD:#6F6E65;--serif:'Playfair Display',Georgia,serif;--sans:'Inter','DM Sans',system-ui,-apple-system,sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);font-weight:300;background:var(--ink);color:var(--text);line-height:1.75;min-height:100vh}
-a{color:var(--gold);text-decoration:none}
-a:hover{color:var(--gold-soft)}
-.main-banner{background:rgba(10,15,26,0.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:1000;transition:all .3s ease}
-.banner-row{max-width:1320px;margin:0 auto;padding:10px 16px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
-.banner-lrr{justify-self:start;cursor:pointer}
-.banner-logo{justify-self:center;cursor:pointer}
-.banner-lrr img,.banner-logo img{height:108px;width:auto;display:block;object-fit:contain}
-.banner-contact{justify-self:end;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
-.banner-phone{color:var(--gold)!important;font-size:20px;font-weight:700;letter-spacing:.5px;text-decoration:none;font-family:var(--sans);white-space:nowrap;display:block}
-.banner-email{color:var(--gold)!important;font-size:14px;font-weight:600;letter-spacing:.3px;text-decoration:none;font-family:var(--sans);white-space:nowrap;display:block;text-transform:none}
-.banner-tabs{max-width:1320px;margin:0 auto;padding:6px 12px 10px;display:flex;gap:2px;align-items:center;justify-content:center;flex-wrap:wrap}
-.banner-tabs>a,.banner-tabs .dropdown>button{background:transparent;border:none;color:rgba(255,255,255,0.8);padding:6px 10px;font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);text-decoration:none;border-radius:4px;white-space:nowrap;transition:all .2s;display:inline-block}
-.banner-tabs>a:hover,.banner-tabs .dropdown>button:hover{background:rgba(201,168,76,0.15);color:var(--gold)}
-.dropdown{position:relative;padding-bottom:4px}
-.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--elev);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:8px;min-width:240px;max-height:440px;overflow-y:auto;z-index:100;box-shadow:0 12px 36px rgba(0,0,0,0.6)}
-.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
-.dropdown-menu a{display:block;padding:11px 16px;color:rgba(255,255,255,0.85);font-size:12px;border:none;border-radius:4px;text-transform:none;letter-spacing:.3px;font-weight:500;font-family:var(--sans);text-decoration:none}
-.dropdown-menu a:hover{background:rgba(201,168,76,0.1);color:var(--gold)}
-header{background:linear-gradient(135deg,var(--panel),var(--elev));padding:60px 24px;border-bottom:1px solid var(--hair)}
-header>*{max-width:900px;margin-left:auto;margin-right:auto}
-.crumbs{color:var(--muted);font-size:12px;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase}
-.crumbs a{color:var(--muted)}
-.crumbs a:hover{color:var(--gold)}
-h1{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,42px);color:#fff;line-height:1.2;margin-bottom:12px;letter-spacing:-0.01em}
-.lead{color:var(--muted);font-size:16px;line-height:1.7;max-width:720px;font-family:var(--sans)}
-.meta strong{color:var(--gold)}
-.meta a{color:var(--gold)}
-main{max-width:900px;margin:0 auto;padding:48px 24px 24px}
-main>*{max-width:none;margin-left:0;margin-right:0}
-main p{color:var(--text);font-size:15.5px;line-height:1.85;margin:0 0 16px;font-weight:300}
-main p strong{color:var(--gold);font-weight:600}
-h2{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3vw,38px);line-height:1.15;color:#fff;margin:48px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--gold-line);letter-spacing:-0.01em}
-h3{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--gold);margin:32px 0 12px;letter-spacing:0;text-transform:none}
-ul,ol{color:var(--text);padding-left:1.25rem;margin:.5rem 0 1rem;font-weight:300}
-ul li,ol li{padding:.2rem 0;line-height:1.75;font-size:15.5px}
-.citation-intro{background:var(--panel);border-left:3px solid var(--gold);padding:18px 22px;margin:0 0 1.5rem;font-size:15.5px;line-height:1.75;border-radius:0 6px 6px 0}
-.citation-intro strong{color:var(--gold)}
-.facts{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem;margin:1.5rem 0;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.5rem;font-size:14px}
-.facts div{color:var(--text);line-height:1.65}
-.facts strong{color:var(--gold)}
-.bah-title{margin:1.25rem 0 .5rem;color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
-.bah-wrap{border:1px solid var(--hair);border-radius:10px;overflow:hidden;overflow-x:auto}
-.bah-table{width:100%;border-collapse:collapse;min-width:500px;font-size:14px}
-.bah-table thead th{background:var(--panel);color:var(--gold);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:11px;padding:12px 16px;text-align:left;border-bottom:1px solid var(--hair)}
-.bah-table tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
-.bah-table tbody td{padding:10px 16px;border-bottom:1px solid var(--hair);color:var(--text)}
-.bah-table tbody td:first-child{font-weight:500;color:#fff}
-.bah-source{margin:.75rem 0;font-size:13px;color:var(--muted);font-style:italic}
-.cta{background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.04));border:1px solid var(--gold-line);border-radius:10px;padding:1.75rem;margin:2.5rem 0;text-align:center}
-.cta p{color:var(--text);margin:0 0 .5rem}
-.cta a{color:var(--gold);font-weight:700}
-details{background:var(--panel);border:1px solid var(--hair);border-radius:8px;margin:.5rem 0;padding:1rem 1.25rem}
-details[open]{border-color:var(--gold-line)}
-summary{cursor:pointer;font-weight:500;color:#fff;font-family:var(--serif);font-size:17px;list-style:none}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--gold);float:right;font-size:20px;line-height:1}
-details[open] summary::after{content:"−"}
-details p{color:var(--text);margin-top:.75rem;font-size:15px;line-height:1.8}
-.explore{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:2rem 0 3rem}
-.explore-col{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem}
-.explore-title{color:var(--gold)!important;font-size:12px!important;letter-spacing:2px!important;margin:0 0 .75rem!important;text-transform:uppercase;border:none!important;padding:0!important}
-.related{display:flex;flex-direction:column;gap:6px}
-.related a{color:var(--text);font-size:14px;padding:4px 0;border-bottom:1px dotted var(--hair)}
-.related a:hover{color:var(--gold)}
-footer{max-width:1100px;margin:0 auto;padding:2rem 24px 3rem;color:var(--muted);font-size:.85rem;line-height:1.7;text-align:center;border-top:1px solid var(--hair)}
-footer p{margin:.5rem 0}
-footer strong{color:var(--gold)}
-img{max-width:100%;height:auto}
-@media(max-width:900px){
-  .banner-row{grid-template-columns:auto 1fr auto!important;padding:8px 12px!important;gap:10px!important}
-  .banner-lrr img,.banner-logo img{height:56px!important}
-  .banner-phone{font-size:16px!important}
-  .banner-email{font-size:10px!important}
-  .banner-tabs{padding:4px 8px 8px!important;gap:0!important}
-  .banner-tabs>a,.banner-tabs .dropdown>button{padding:5px 9px!important;font-size:10px!important;letter-spacing:1px!important}
-  .dropdown-menu{min-width:220px!important;max-height:60vh!important;overflow-y:auto!important}
-  header{padding:40px 20px 28px!important}
-  main{padding:32px 20px 20px!important}
-  h1{font-size:clamp(24px,6vw,34px)!important}
-  h2{font-size:clamp(20px,5vw,26px)!important;margin:36px 0 14px!important}
-  h3{font-size:16px!important}
-  .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
-  .explore{grid-template-columns:1fr!important;gap:12px!important}
-  .explore-col{padding:1.25rem!important}
-  footer{padding:1.5rem 18px 2rem!important;font-size:.8rem!important}
-  .cta{padding:1.25rem!important;margin:1.75rem 0!important}
-  .citation-intro{padding:14px 16px!important;font-size:14.5px!important}
-  .bah-wrap{border-radius:8px!important}
-  .bah-table{font-size:13px!important}
-  .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}
-}
-@media(max-width:480px){
-  .banner-lrr img,.banner-logo img{height:44px!important}
-  .banner-phone{font-size:13px!important}
-  .banner-email{font-size:9px!important}
-  .banner-tabs>a,.banner-tabs .dropdown>button{padding:4px 7px!important;font-size:9px!important;letter-spacing:.5px!important}
-  header{padding:32px 14px 22px!important}
-  main{padding:24px 14px 14px!important}
-  h1{font-size:clamp(22px,7vw,28px)!important}
-  h2{font-size:18px!important;padding-bottom:8px!important}
-  details{padding:.75rem .9rem!important}
-  summary{font-size:15px!important}
-  .bah-table{font-size:11.5px!important;min-width:320px!important}
-  .bah-table thead th{font-size:9.5px!important;padding:7px!important}
-  .bah-table tbody td{padding:7px!important}
-.homes-dropdown{display:none!important}}
-</style>
+<link rel="stylesheet" href="/site.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","@id":"https://pensacolamilitaryhousing.com/#person-gregg","name":"Gregg Costin","alternateName":"Gregg Costin, Realtor","givenName":"Gregg","familyName":"Costin","jobTitle":"Realtor, Military Relocation Specialist","worksFor":{"@type":"RealEstateOrganization","name":"Levin Rinke Realty","url":"https://greggc.levinrinkerealty.com","address":{"@type":"PostalAddress","streetAddress":"220 W. Garden Street","addressLocality":"Pensacola","addressRegion":"FL","postalCode":"32502","addressCountry":"US"}},"alumniOf":[{"@type":"Organization","name":"United States Air Force"},{"@type":"CollegeOrUniversity","name":"University of Tampa"}],"description":"Retired USAF Captain and E-3 AWACS Combat Systems Officer. Completed a full military career from prior-enlisted Staff Sergeant to commissioned officer with 11 PCS moves. Now a licensed Florida and Alabama Realtor specializing in military relocation, VA loans, and PCS moves across the Florida Panhandle.","email":"Gregg.Costin@gmail.com","telephone":"+1-850-266-5005","url":"https://pensacolamilitaryhousing.com","image":"https://pensacolamilitaryhousing.com/images/gregg-portrait.jpg","sameAs":["https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd","https://www.zillow.com/profile/GreggCostin","https://www.instagram.com/greggcostinrealtor/","https://www.facebook.com/greggcostin/","https://www.youtube.com/@PensacolaMilitaryRealtor","https://linktr.ee/Greggcostin","https://greggc.levinrinkerealty.com"]}
 </script>
@@ -328,5 +218,46 @@ MRP &middot; ABR &middot; SRS &middot; RENE &middot; Florida Military Specialist
 <p><a href="/">Home</a> &middot; <a href="/faq.html">FAQ</a> &middot; <a href="/sitemap.xml">Sitemap</a> &middot; <a href="/llms.txt">AI content map</a></p>
 <p data-last-updated="true" style="text-align:center;font-size:.75rem;color:var(--mutedD,#6B7280);margin:.5rem auto 0;letter-spacing:.5px;text-transform:uppercase">Last updated: April 22, 2026</p>
 </footer>
+<script>
+/* Accessible dropdowns: click to toggle, Escape to close, arrow keys to navigate.
+   Uses same CSS-hover fallback already in site.css so mouse users unaffected. */
+(function(){
+  var ddls = document.querySelectorAll('.dropdown');
+  ddls.forEach(function(dd){
+    var btn = dd.querySelector('button');
+    var menu = dd.querySelector('.dropdown-menu');
+    if (!btn || !menu) return;
+    btn.setAttribute('aria-haspopup','menu');
+    btn.setAttribute('aria-expanded','false');
+    menu.setAttribute('role','menu');
+    menu.querySelectorAll('a').forEach(function(a){ a.setAttribute('role','menuitem'); });
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var open = dd.classList.toggle('dropdown-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) { var first = menu.querySelector('a'); if (first) first.focus(); }
+    });
+    dd.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') { dd.classList.remove('dropdown-open'); btn.setAttribute('aria-expanded','false'); btn.focus(); }
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        var items = Array.from(menu.querySelectorAll('a'));
+        var idx = items.indexOf(document.activeElement);
+        var next = e.key === 'ArrowDown' ? (idx + 1) % items.length : (idx - 1 + items.length) % items.length;
+        if (items[next]) items[next].focus();
+      }
+    });
+  });
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('.dropdown-open').forEach(function(dd){
+      if (!dd.contains(e.target)) {
+        dd.classList.remove('dropdown-open');
+        var btn = dd.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>

@@ -32,6 +32,7 @@ a:hover{color:var(--gold-soft)}
 .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:block}
 .dropdown-menu a{display:block;padding:11px 16px;color:rgba(255,255,255,0.85);font-size:12px;border:none;border-radius:4px;text-transform:none;letter-spacing:.3px;font-weight:500;font-family:var(--sans);text-decoration:none}
 .dropdown-menu a:hover{background:rgba(201,168,76,0.1);color:var(--gold)}
+.homes-dropdown{display:none!important}
 
 /* PageHero — mirrors SPA PageHero component */
 header{background:linear-gradient(135deg,var(--panel),var(--elev));padding:60px 24px;border-bottom:1px solid var(--hair)}

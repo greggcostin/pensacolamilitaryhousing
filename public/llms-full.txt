@@ -467,7 +467,7 @@ Q: Can I use a VA loan to buy a home near NAS Pensacola?
 A: Yes. VA loans are the standard financing path for military buyers in the
 Pensacola area. Zero down payment, no PMI regardless of loan-to-value, 2026
 funding fee of 2.15% first use (waived for disabled veterans), Tier 1 county
-loan limit of $806,500 for Escambia, Santa Rosa, and Okaloosa counties, and a
+loan limit of $832,750 for Escambia, Santa Rosa, and Okaloosa counties, and a
 DTI and residual income structure that routinely approves at 50-60% DTI where
 conventional loans cap at 45%.
 
@@ -552,7 +552,7 @@ your BAH bracket and commute preferences.
 
 ### VA Loan Pamphlet 26-7 Key Points
 
-- Zero down payment to Tier 1 county loan limit ($806,500 in Escambia / Santa
+- Zero down payment to Tier 1 county loan limit ($832,750 in Escambia / Santa
   Rosa / Okaloosa counties for 2026)
 - No PMI at any LTV
 - Funding fee: 2.15% first-use regular military / 3.30% subsequent-use; 1.50%

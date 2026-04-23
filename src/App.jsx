@@ -176,7 +176,7 @@ const Nav = ({ current, go }) => {
   const commsActive = current === "neighborhoods";
 
   return (
-    <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000, background: scrolled ? "rgba(10,15,26,0.95)" : "rgba(10,15,26,0.88)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${scrolled ? "rgba(255,255,255,0.08)" : "transparent"}`, transition: "all .3s ease" }}>
+    <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000, background: "rgba(10,15,26,0.95)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.08)", transition: "all .3s ease" }}>
       <div style={{ maxWidth: 1320, margin: "0 auto", padding: "10px 16px 0", display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: 16 }}>
         <div style={{ justifySelf: "start", cursor: "pointer" }} onClick={() => go("home")}>
           <img loading="lazy" src={IMG.logoLrr} alt="Levin Rinke Realty" style={{ height: 108, objectFit: "contain" }} />

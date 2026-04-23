@@ -2463,6 +2463,12 @@ export default function App() {
   };
 
   useEffect(() => {
+    // Defensive mount-time sync: if the useState initializer picked the wrong
+    // page (hydration race, stale history state, etc.), re-resolve from the
+    // URL so refresh on /about, /pcs-guide, etc. reliably shows that page.
+    const resolved = resolvePageFromPath(window.location.pathname);
+    if (resolved !== page) setPage(resolved);
+
     const onPopState = () => {
       setPage(resolvePageFromPath(window.location.pathname));
       window.scrollTo(0, 0);

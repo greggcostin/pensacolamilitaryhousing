@@ -192,7 +192,7 @@ const Nav = ({ current, go }) => {
 
       <div className="tabbar" style={{ maxWidth: 1320, margin: "0 auto", padding: "6px 12px 10px", overflowX: "visible", display: "flex", gap: 2, alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
         <Tab id="home" label="Home" />
-        <Tab id="about" label="About Me" />
+        <ExtTab href="/about" label="About Me" />
         <Tab id="pcs" label="PCS Guide" />
 
         <div style={{ position: "relative", paddingBottom: 4 }}

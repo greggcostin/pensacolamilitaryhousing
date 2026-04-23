@@ -250,6 +250,38 @@
               }
           </script>
 
+          <!-- Schema: Organization — the brokerage entity Gregg works under -->
+          <script type="application/ld+json">
+              {
+                "@context": "https://schema.org",
+                "@type": "RealEstateOrganization",
+                "@id": "https://pensacolamilitaryhousing.com/#brokerage",
+                "name": "Levin Rinke Realty",
+                "url": "https://greggc.levinrinkerealty.com",
+                "telephone": "+1-850-266-5005",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "220 W. Garden Street",
+                  "addressLocality": "Pensacola",
+                  "addressRegion": "FL",
+                  "postalCode": "32502",
+                  "addressCountry": "US"
+                },
+                "areaServed": [
+                  {"@type": "State", "name": "Florida"},
+                  {"@type": "State", "name": "Alabama"}
+                ],
+                "knowsAbout": [
+                  "Residential Real Estate",
+                  "Military Relocation",
+                  "VA Home Loans",
+                  "Florida Panhandle Real Estate",
+                  "Pensacola Real Estate"
+                ],
+                "employee": {"@id": "https://pensacolamilitaryhousing.com/#person-gregg"}
+              }
+          </script>
+
           <!-- Schema: Person — canonical entity definition referenced by @id across every page -->
           <script type="application/ld+json">
               {

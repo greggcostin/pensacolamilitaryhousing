@@ -2363,13 +2363,13 @@ const ContactPage = () => {
               <img loading="lazy" src={IMG.navyTie} alt="Gregg Costin" style={{ width: 360, height: 360, maxWidth: "100%", borderRadius: "50%", objectFit: "cover", objectPosition: "center -30px", border: `3px solid ${GOLD}44`, display: "block", marginLeft: "auto", marginRight: "auto" }} />
             </div>
             <div style={{ textAlign: "center", marginBottom: 24, display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <p style={{ color: "#fff", fontSize: 22, fontWeight: 600, fontFamily: SF, margin: "0 0 6px", letterSpacing: .2, textAlign: "center" }}>Gregg Costin, Realtor<sup style={{ fontSize: "0.55em", verticalAlign: "top", marginLeft: 1 }}>®</sup></p>
+              <p style={{ color: "#fff", fontSize: 26, fontWeight: 600, fontFamily: SF, margin: "0 0 6px", letterSpacing: .2, textAlign: "center" }}>Gregg Costin, Realtor<sup style={{ fontSize: "0.55em", verticalAlign: "top", marginLeft: 1 }}>®</sup></p>
               <p style={{ color: GOLD, fontSize: 11, fontWeight: 600, margin: "0 0 16px", letterSpacing: 2, textTransform: "uppercase", textAlign: "center" }}>MRP<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; ABR<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; SRS<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; RENE<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; FMS<sup style={{ fontSize: "0.8em" }}>®</sup></p>
               <a href="tel:8502665005" style={{ color: GOLD, fontSize: 24, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>(850) 266-5005</a>
               <p style={{ color: "#888", fontSize: 13, marginTop: 4, textAlign: "center" }}>Call or text — this is my direct line</p>
             </div>
             <div style={{ background: "rgba(10,15,26,0.4)", border: `1px solid rgba(201,168,76,0.2)`, borderRadius: 10, overflow: "hidden", marginTop: 12, boxShadow: "0 4px 18px rgba(0,0,0,0.25)" }}>
-              <div style={{ background: "linear-gradient(135deg,#152018,#1f2d23)", color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Social &amp; Web</div>
+              <div style={{ background: `linear-gradient(135deg, ${C.panel}, ${C.elevated})`, color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Social &amp; Web</div>
               <div style={{ padding: "4px 16px" }}>
                 {[
                   ["Instagram", "@greggcostinrealtor", "https://www.instagram.com/greggcostinrealtor/"],
@@ -2383,11 +2383,11 @@ const ContactPage = () => {
                   </div>
                 ))}
               </div>
-              <div style={{ background: "linear-gradient(135deg,#152018,#1f2d23)", color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderTop: `1px solid rgba(201,168,76,0.25)`, borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Email</div>
+              <div style={{ background: `linear-gradient(135deg, ${C.panel}, ${C.elevated})`, color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderTop: `1px solid rgba(201,168,76,0.25)`, borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Email</div>
               <div style={{ padding: "12px 16px", textAlign: "center" }}>
                 <a href="mailto:gregg.costin@gmail.com" style={{ color: GOLD, fontSize: 14, fontWeight: 600, textDecoration: "none" }}>gregg.costin@gmail.com</a>
               </div>
-              <div style={{ background: "linear-gradient(135deg,#152018,#1f2d23)", color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderTop: `1px solid rgba(201,168,76,0.25)`, borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Levin Rinke Realty Offices</div>
+              <div style={{ background: `linear-gradient(135deg, ${C.panel}, ${C.elevated})`, color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderTop: `1px solid rgba(201,168,76,0.25)`, borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Levin Rinke Realty Offices</div>
               <div style={{ padding: "12px 16px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, textAlign: "center" }}>
                 <div>
                   <div style={{ color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", marginBottom: 4, textAlign: "center" }}>Downtown</div>

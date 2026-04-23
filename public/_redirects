@@ -70,5 +70,12 @@
 # make sure the old no-extension forms land cleanly on the new content.
 /homestead                /florida-homestead-exemption-military     301
 
+# ── Explicit SPA rewrites for routes owned by React (not static HTML) ──
+# These force /about and /contact to always serve the SPA so the React
+# ContactPage (with intake form) and AboutPage render correctly, even if
+# an earlier deploy accidentally shipped static HTML at these paths.
+/about      /index.html   200
+/contact    /index.html   200
+
 # ── SPA fallback (must be last) ──
 /* /index.html 200

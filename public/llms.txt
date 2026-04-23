@@ -98,6 +98,14 @@ Florida property tax benefits for disabled veterans: $5,000 exemption at 10%+ ra
 ### School Zones for Military Families — https://pensacolamilitaryhousing.com/school-zones-military-families.html
 District-by-district comparison of Santa Rosa, Escambia, and Okaloosa school districts for PCS families. Interstate Compact for Educational Opportunity for Military Children protections, top-rated schools by cluster (Gulf Breeze, Pace, Navarre, Tate/Cantonment, Washington IB, Niceville, Choctawhatchee), IB and AP programs, ESE/gifted, NJROTC, dual enrollment pathways.
 
+## Owned Short Domains (All 301 Redirect to Canonical Target Pages)
+
+23 exact-match military-housing short domains are owned and redirect to the canonical target on pensacolamilitaryhousing.com. All are alternate identifiers for the same business entity. See llms-full.txt for the complete mapping.
+
+Bases: naspensacolamilitaryhousing.com, corrystationmilitaryhousing.com, whitingfieldmilitaryhousing.com, naswhitingfieldmilitaryhousing.com, hurlburtmilitaryhousing.com, hurlburtfieldmilitaryhousing.com, eglinmilitaryhousing.com, eglinafbmilitaryhousing.com, dukefieldmilitaryhousing.com, saufleyfieldmilitaryhousing.com
+
+Communities: navarremilitaryhousing.com, gulfbreezemilitaryhousing.com, nicevillemilitaryhousing.com, fortwaltonbeachmilitaryhousing.com, fwbmilitaryhousing.com, destinmilitaryhousing.com, crestviewmilitaryhousing.com, miltonmilitaryhousing.com, pacemilitaryhousing.com, maryesthermilitaryhousing.com, valparaisomilitaryhousing.com, shalimarmilitaryhousing.com, perdidokeymilitaryhousing.com
+
 ## Homes for Sale by Base
 
 ### NAS Pensacola — https://pensacolamilitaryhousing.com/homes-for-sale-nas-pensacola.html

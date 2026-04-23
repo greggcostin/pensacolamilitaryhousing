@@ -2362,11 +2362,11 @@ const ContactPage = () => {
             <div style={{ textAlign: "center", marginBottom: 24 }}>
               <img loading="lazy" src={IMG.navyTie} alt="Gregg Costin" style={{ width: 360, height: 360, maxWidth: "100%", borderRadius: "50%", objectFit: "cover", objectPosition: "center top", border: `3px solid ${GOLD}44` }} />
             </div>
-            <div style={{ textAlign: "center", marginBottom: 24 }}>
-              <p style={{ color: "#fff", fontSize: 22, fontWeight: 600, fontFamily: SF, margin: "0 0 6px", letterSpacing: .2 }}>Gregg Costin, Realtor<sup style={{ fontSize: "0.55em", verticalAlign: "top", marginLeft: 1 }}>®</sup></p>
-              <p style={{ color: GOLD, fontSize: 11, fontWeight: 600, margin: "0 0 16px", letterSpacing: 2, textTransform: "uppercase" }}>MRP<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; ABR<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; SRS<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; RENE<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; FMS<sup style={{ fontSize: "0.8em" }}>®</sup></p>
-              <a href="tel:8502665005" style={{ color: GOLD, fontSize: 24, fontWeight: 700, textDecoration: "none" }}>(850) 266-5005</a>
-              <p style={{ color: "#888", fontSize: 13, marginTop: 4 }}>Call or text — this is my direct line</p>
+            <div style={{ textAlign: "center", marginBottom: 24, display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <p style={{ color: "#fff", fontSize: 22, fontWeight: 600, fontFamily: SF, margin: "0 0 6px", letterSpacing: .2, textAlign: "center" }}>Gregg Costin, Realtor<sup style={{ fontSize: "0.55em", verticalAlign: "top", marginLeft: 1 }}>®</sup></p>
+              <p style={{ color: GOLD, fontSize: 11, fontWeight: 600, margin: "0 0 16px", letterSpacing: 2, textTransform: "uppercase", textAlign: "center" }}>MRP<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; ABR<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; SRS<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; RENE<sup style={{ fontSize: "0.8em" }}>®</sup> &middot; FMS<sup style={{ fontSize: "0.8em" }}>®</sup></p>
+              <a href="tel:8502665005" style={{ color: GOLD, fontSize: 24, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>(850) 266-5005</a>
+              <p style={{ color: "#888", fontSize: 13, marginTop: 4, textAlign: "center" }}>Call or text — this is my direct line</p>
             </div>
             <div style={{ marginBottom: 24 }}>
               <p style={{ color: "#fff", fontSize: 16, fontWeight: 600, marginBottom: 4 }}>Email</p>

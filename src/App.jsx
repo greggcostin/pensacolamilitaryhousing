@@ -22,7 +22,6 @@ const pages = [
   { id: "home", label: "Home" },
   { id: "about", label: "About Me" },
   { id: "pcs", label: "PCS Guide" },
-  { id: "va-loan", label: "VA Loans" },
   { id: "homestead", label: "Homestead" },
   { id: "nas", label: "NAS Pensacola" },
   { id: "whiting", label: "Whiting Field" },
@@ -405,10 +404,10 @@ const Services = ({ go }) => (
     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 1, background: C.hairline, border: `1px solid ${C.hairline}` }}>
       {[
         { title: "PCS Relocation", link: "pcs", desc: "Complete relocation support for military families moving to the Florida Panhandle. Virtual tours, closing coordination across time zones, and deep knowledge of every base community." },
-        { title: "VA Home Loans", link: "va-loan", desc: "Expert guidance through the VA loan process. Zero down payment, no PMI, competitive rates. I've helped hundreds of military families leverage their earned benefit to build real wealth." },
+        { title: "VA Home Loans", link: "__external:/va-loan-guide", desc: "Expert guidance through the VA loan process. Zero down payment, no PMI, competitive rates. I've helped hundreds of military families leverage their earned benefit to build real wealth." },
         { title: "Sell Your Home", link: "contact", desc: "PCSing out? I'll get your home sold fast and for top dollar with aggressive marketing, professional photography, and pricing strategy backed by real market data." },
       ].map(({ title, desc, link }) => (
-        <div key={title} onClick={() => go(link)} style={{ background: C.ink, padding: "48px 40px", cursor: "pointer", minHeight: 320, display: "flex", flexDirection: "column" }}>
+        <div key={title} onClick={() => { if (link.startsWith("__external:")) { window.location.href = link.slice(11); } else { go(link); } }} style={{ background: C.ink, padding: "48px 40px", cursor: "pointer", minHeight: 320, display: "flex", flexDirection: "column" }}>
           <h3 style={{ fontFamily: SF, color: "#fff", fontSize: 26, fontWeight: 500, margin: "0 0 16px" }}>{title}</h3>
           <p style={{ color: C.muted, fontSize: 15, lineHeight: 1.75, fontWeight: 300, flex: 1 }}>{desc}</p>
           <div style={{ marginTop: 24, color: C.gold, fontSize: 12, letterSpacing: 2, textTransform: "uppercase", fontFamily: SS }}>Learn More →</div>
@@ -556,10 +555,11 @@ const Footer = ({ go }) => {
           </div>
           <div>
             <div style={{ color: C.gold, fontSize: 16, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Quick Links</div>
-            {["pcs", "va-loan", "homestead", "neighborhoods", "reviews", "contact"].map(id => {
+            {["pcs", "homestead", "neighborhoods", "reviews", "contact"].map(id => {
               const p = pages.find(x => x.id === id);
               return <button key={id} onClick={() => go(id)} style={footerLinkStyle}>{p.label}</button>;
             })}
+            <a href="/va-loan-guide" style={footerLinkStyle}>VA Loan Guide</a>
             <a href="/faq.html" style={footerLinkStyle}>PCS FAQ</a>
           </div>
           <div>
@@ -826,7 +826,7 @@ const PCSPage = ({ go }) => (
       <H2>VA Loan Basics for Pensacola</H2>
       <P>The VA loan is the single most powerful financial tool available to military homebuyers. Zero down payment, no private mortgage insurance, competitive interest rates, and more flexible underwriting than conventional loans. In Pensacola's market, where the median home is around $305,000, a VA loan means you can buy a home with essentially just closing costs out of pocket — and even those can often be negotiated as seller concessions.</P>
       <P>Key Pensacola-specific VA considerations: Florida requires a Wood Destroying Organism (WDO/termite) inspection on VA purchases. Flood zone determination matters — parts of Pensacola, especially waterfront areas, fall in flood zones that require separate flood insurance. And VA appraisals in this market have been coming in at or near purchase price, which means fewer appraisal gap issues than in overheated markets.</P>
-      <button onClick={() => go("va-loan")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Read the Complete VA Loan Guide →</button>
+      <a href="/va-loan-guide" style={{ display: "inline-block", background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, textDecoration: "none", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Read the Complete VA Loan Guide →</a>
       <H2>2026 BAH Rates for Pensacola (MHA FL064)</H2>
       <P>These are the 2026 Basic Allowance for Housing monthly rates for service members assigned to NAS Pensacola, NTTC Corry Station, and NAS Whiting Field — Military Housing Area <strong style={{ color: "#fff" }}>FL064</strong>. The "With Dependents" column applies to any service member with authorized dependents (spouse, children, or qualifying family members); "Without Dependents" is the single or unaccompanied rate. Prior-enlisted commissioned officer rates (O-1E, O-2E, O-3E) appear at the top of the officer table. Always verify your exact rate at the official DoD BAH calculator before signing an offer or lease.</P>
       <BAHTable title="Enlisted (E-1 through E-9)" rows={[["E-1 through E-4", BAH_DATA.FL064.enlisted[0][1], BAH_DATA.FL064.enlisted[0][2]], ...BAH_DATA.FL064.enlisted.filter(([g]) => !["E-1","E-2","E-3","E-4"].includes(g))]} />

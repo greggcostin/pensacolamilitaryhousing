@@ -64,6 +64,12 @@
 /va-loan-pensacola.html   /va-loan-guide   301
 /va-loan-pensacola        /va-loan-guide   301
 
+# Merged SPA /va-loan(s) route into the static /va-loan-guide
+/va-loans.html   /va-loan-guide   301
+/va-loans        /va-loan-guide   301
+/va-loan.html    /va-loan-guide   301
+/va-loan         /va-loan-guide   301
+
 # ── Aliases to the new (2026-04-23) content pages ──
 # Navigation in static pages still links to some SPA-era slugs. Cloudflare
 # Pages auto-serves the .html files now that they exist; these aliases just

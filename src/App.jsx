@@ -2057,6 +2057,11 @@ const LoanCalculator = () => {
           </div>
         </div>
 
+        <div style={{ background: "rgba(201,168,76,0.08)", border: `2px solid ${GOLD}55`, borderRadius: 12, padding: "18px 22px", margin: "16px 0 24px" }}>
+          <p style={{ color: GOLD, fontSize: 14, fontWeight: 800, margin: "0 0 8px", letterSpacing: 0.5 }}>⚠️ BAH IS A FOUNDATION, NOT A CEILING</p>
+          <p style={{ color: "#ddd", fontSize: 14, lineHeight: 1.75, margin: 0 }}>The purchase-price estimates above assume BAH covers 100% of your PITI payment. In reality, many military families invest $200-$500/month above BAH to secure a home in a better school district, safer neighborhood, or closer to base. I model specific scenarios for every buyer — call <a href="tel:+18502665005" style={{ color: GOLD, fontWeight: 600 }}>(850) 266-5005</a> and we will run your numbers together.</p>
+        </div>
+
         <InfoBox title="Estimates Only — Confirm With a Lender">
           This calculator uses 2026 Pensacola-area defaults: property tax 0.85% (Escambia/Santa Rosa/Okaloosa county median), homeowners insurance $2,500/yr (inland; coastal flood zones run meaningfully higher), and prevailing 30-year rates as of 2026 (VA 6.25%, FHA 6.5%, Conventional 6.75%). Your actual numbers depend on credit score, debt-to-income, flood zone, insurance quotes, and your specific lender's pricing.<br /><br />
           <strong>VA funding fee:</strong> First use &lt;5% down 2.15%, subsequent use &lt;5% down 3.3%, 5-9.99% down 1.5%, 10%+ down 1.25%. Exempt for Purple Heart recipients and veterans with 10%+ service-connected disability.<br />

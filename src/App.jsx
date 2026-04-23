@@ -686,6 +686,84 @@ const AboutPage = ({ go }) => (
   </div>
 );
 
+// Self-contained inquiry form, used inline on content pages (PCS guide,
+// VA loan, etc.) without the surrounding ContactPage hero + contact-detail
+// column. Keeps the same webhook and validation as the /contact page so
+// leads land in the same inbox regardless of origin.
+const InquiryForm = () => {
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });
+  const [status, setStatus] = useState("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+  const WEBHOOK_URL = "https://costin-contact.gregg-costin.workers.dev";
+  const handleChange = (field) => (e) => setFormData({ ...formData, [field]: e.target.value });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("submitting");
+    setErrorMsg("");
+    if (!formData.name.trim() || !formData.email.trim()) { setStatus("error"); setErrorMsg("Name and email are required."); return; }
+    try {
+      const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(formData) });
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setStatus("success");
+        setFormData({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });
+      } else { setStatus("error"); setErrorMsg(data.error || "Something went wrong. Please call (850) 266-5005."); }
+    } catch (err) { setStatus("error"); setErrorMsg("Connection error. Please call (850) 266-5005 directly."); }
+  };
+  return (
+    <div style={{ marginTop: 32 }}>
+      <H3>Send a Message</H3>
+      {status === "success" ? (
+        <div style={{ background: "#1a3a1a", border: "2px solid #3aa03a", borderRadius: 12, padding: 24, textAlign: "center" }}>
+          <div style={{ fontSize: 40, marginBottom: 12 }}>✓</div>
+          <h4 style={{ color: "#6adf6a", fontSize: 18, fontWeight: 700, marginBottom: 12 }}>Message Received</h4>
+          <p style={{ color: "#ccc", fontSize: 14, lineHeight: 1.7, marginBottom: 16 }}>Thanks for reaching out. I've received your message and will respond within 2 hours during business hours.</p>
+          <button onClick={() => setStatus("idle")} style={{ marginTop: 16, background: "transparent", border: `1px solid ${GOLD}55`, color: GOLD, padding: "10px 20px", borderRadius: 6, cursor: "pointer", fontSize: 13, fontWeight: 600 }}>Send Another Message</button>
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <input type="text" name="website" value={formData.honeypot} onChange={handleChange("honeypot")} style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
+          <div>
+            <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Full Name *</label>
+            <input type="text" value={formData.name} onChange={handleChange("name")} required disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+          </div>
+          <div>
+            <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Email Address *</label>
+            <input type="email" value={formData.email} onChange={handleChange("email")} required disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+          </div>
+          <div>
+            <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Phone Number</label>
+            <input type="tel" value={formData.phone} onChange={handleChange("phone")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+          </div>
+          <div>
+            <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>What Can I Help With?</label>
+            <select value={formData.inquiryType} onChange={handleChange("inquiryType")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none" }}>
+              <option>PCS Relocation — Buying</option>
+              <option>PCS Relocation — Selling</option>
+              <option>VA Loan Questions</option>
+              <option>Investment Property</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div>
+            <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Message</label>
+            <textarea rows={4} value={formData.message} onChange={handleChange("message")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box" }} />
+          </div>
+          {status === "error" && (
+            <div style={{ background: "#3a1a1a", border: "1px solid #a03a3a", borderRadius: 8, padding: 12, color: "#ff9999", fontSize: 13 }}>
+              ⚠ {errorMsg}
+            </div>
+          )}
+          <button type="submit" disabled={status === "submitting"} style={{ background: status === "submitting" ? `${GOLD}66` : GOLD, color: BLACK, border: "none", padding: "14px 28px", fontSize: 14, fontWeight: 700, borderRadius: 8, cursor: status === "submitting" ? "wait" : "pointer", textTransform: "uppercase", letterSpacing: .5, marginTop: 8 }}>
+            {status === "submitting" ? "Sending..." : "Send Message"}
+          </button>
+          <p style={{ color: "#666", fontSize: 11, marginTop: 4, textAlign: "center" }}>By submitting, you agree to be contacted by The Costin Team. Your information is never sold or shared.</p>
+        </form>
+      )}
+    </div>
+  );
+};
+
 const PCSPage = ({ go }) => (
   <PageWrapper>
     <PageHero title="PCS to Pensacola: The Complete Guide for Military Families (2026)" subtitle="Everything you need to know about buying a home, finding the right neighborhood, navigating VA loans, and settling your family into life on the Gulf Coast." breadcrumb="Home > PCS to Pensacola Guide" />
@@ -771,6 +849,7 @@ const PCSPage = ({ go }) => (
         <div>
           <P>Not every Realtor understands PCS timelines. Not every Realtor knows how to structure a VA offer that wins. Not every Realtor has sat in the seat you're sitting in — staring at orders to a new base, trying to figure out where to live, how to finance it, and how to make it all work on a military timeline.</P>
           <P>I have. Eleven times. And now I help military families do the same thing I had to figure out the hard way. With better information, better strategy, and better results.</P>
+          <InquiryForm />
         </div>
       </div>
       <H2>Frequently Asked Questions</H2>

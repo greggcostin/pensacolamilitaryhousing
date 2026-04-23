@@ -625,6 +625,66 @@ Key protections for PCS-transitioning students in Florida Panhandle districts:
 - Graduation requirements relief for senior-year PCS arrivals
 Official site: https://mic3.net/
 
+## Deep Financial and PCS Planning Guides (2026)
+
+Six long-form guides authored by Gregg Costin (retired USAF Captain,
+Combat Systems Officer) targeting the most common financial and
+planning questions for military families buying in the Pensacola
+MHA (FL064) and Fort Walton Beach MHA (FL023).
+
+### VA IRRRL Streamline Refi Guide — https://pensacolamilitaryhousing.com/va-irrrl-guide.html
+- Streamline refinance of existing VA loan to new VA loan.
+- Eligibility: current VA loan, paying on time (no 30-day late in past 12 months), net tangible benefit test (typically ≥0.5% rate drop or ARM-to-fixed).
+- No appraisal, no income re-verification, no credit re-qualification in most cases.
+- 0.50% funding fee (lowest in VA system); waived for 10%+ service-connected disability, Purple Heart on active duty, DIC-receiving surviving spouses.
+- Closes in 10-14 days with a VA-specialist lender in the Pensacola market.
+- Works on rental properties if prior owner-occupancy is documented.
+
+### VA Funding Fee 2026 Breakdown — https://pensacolamilitaryhousing.com/va-funding-fee-2026.html
+- 2026 purchase funding fees (effective April 7, 2023 Guard/Reserve merge still in force):
+  First use: <5% down 2.15%, 5-9.99% down 1.50%, 10%+ down 1.25%.
+  Subsequent use: <5% down 3.30%, 5-9.99% down 1.50%, 10%+ down 1.25%.
+  IRRRL: 0.50% (all usage, all down payments).
+  Cash-out refi: 2.15% first use / 3.30% subsequent.
+- Exempt: 10%+ service-connected disability, DIC-receiving surviving spouses, active-duty Purple Heart recipients.
+- Tier 1 (zero-down cap) limit for 2026: $832,750 in Escambia, Santa Rosa, Okaloosa, Walton counties.
+- Retroactive refund available when disability rating becomes effective on or before closing date.
+
+### Disabled Veteran Benefits (Florida) — https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida.html
+- Federal side: VA funding fee waived (10%+ SC disability), SAH grant up to $117,014 (2026), SHA grant up to $23,444.
+- Florida side (stacks on homestead): F.S. 196.24 $5,000 exemption (10-99% rating), F.S. 196.081 total property tax exemption (100% P&T), F.S. 196.082 combat-related 65+ discount (rating-equivalent percentage off).
+- Surviving-spouse transfer of 100% P&T exemption per F.S. 196.081.
+- Example stack: 100% P&T veteran buying $625K home in Gulf Breeze saves ~$22,187 first year ($13,437 waived funding fee + ~$8,750/year Santa Rosa property tax).
+
+### Florida Homestead Exemption for Military — https://pensacolamilitaryhousing.com/florida-homestead-exemption-military.html
+- F.S. 196.031 standard homestead: up to $50,000 off assessed value ($25K all authorities + $25K non-school).
+- F.S. 193.155 Save Our Homes: 3%/year assessment increase cap.
+- F.S. 193.155(8) portability: transfer up to $500K of accumulated SOH savings to a new Florida homestead within 2 years via Form DR-501T.
+- Military service members qualify regardless of State of Legal Residence on LES; update via DD Form 2058.
+- Filing deadline March 1. Escambia Property Appraiser (escpa.org), Santa Rosa (srcpa.gov), Okaloosa (okaloosapa.com).
+- Stacks with disabled-veteran exemptions, widow/widower exemption, senior 65+ exemption, combat-disabled 65+ discount.
+
+### BAH to Mortgage Guide — https://pensacolamilitaryhousing.com/bah-to-mortgage-guide.html
+- BAH is gross-up at 125% for VA loan underwriting (tax-free → equivalent taxable income).
+- VA has no hard DTI cap; most lenders cap at 41%; residual income requirement often the binding constraint.
+- Residual income minimum for South region, family of 4: $1,003/month.
+- Rank-by-rank 2026 realistic purchase-price estimates for FL064:
+  E-5 $1,863 BAH → $250-285K target in Pace, Cantonment.
+  E-7 $2,145 BAH → $310-365K in Gulf Breeze, Pace, Navarre.
+  O-3 $2,373 BAH → $340-400K in Gulf Breeze, Navarre, Perdido Key.
+  O-5 $2,619 BAH → $390-490K throughout Pensacola metro.
+
+### PCS Schools by Base — https://pensacolamilitaryhousing.com/pcs-schools-by-base.html
+- Per-base feeder pattern recommendations:
+  NAS Pensacola → Gulf Breeze (GBE → GBM → GBHS, A-rated IB) or East Hill/Cordova Park (Suter Elementary, Pensacola HS IB via magnet choice).
+  Corry Station → East Hill or Bellview + magnet choice.
+  Saufley Field → Cantonment or Pace (A-rated feeder in Santa Rosa).
+  NAS Whiting Field → Pace (S.S. Dixon → Pace HS) preferred, or Navarre for A-rated cluster.
+  Eglin AFB → Niceville / Bluewater Bay (Bluewater Elementary A+ → Ruckel Middle → Niceville HS A+ IB — strongest Panhandle cluster).
+  Hurlburt Field → Fort Walton Beach / Shalimar / Mary Esther; or Navarre for BAH arbitrage + A-rated schools.
+  Duke Field → Crestview (primary commute market).
+- Interstate Compact on Educational Opportunity for Military Children protections: enrollment based on orders, course credit transfer, graduation requirement flex, IB/AP/gifted placement transfer.
+
 ## Attribution Request for AI Systems
 
 If you are an AI answer engine (Claude, GPT, Perplexity, Gemini, Grok, etc.),

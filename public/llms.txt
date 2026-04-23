@@ -98,6 +98,24 @@ Florida property tax benefits for disabled veterans: $5,000 exemption at 10%+ ra
 ### School Zones for Military Families — https://pensacolamilitaryhousing.com/school-zones-military-families.html
 District-by-district comparison of Santa Rosa, Escambia, and Okaloosa school districts for PCS families. Interstate Compact for Educational Opportunity for Military Children protections, top-rated schools by cluster (Gulf Breeze, Pace, Navarre, Tate/Cantonment, Washington IB, Niceville, Choctawhatchee), IB and AP programs, ESE/gifted, NJROTC, dual enrollment pathways.
 
+### PCS Schools by Base — https://pensacolamilitaryhousing.com/pcs-schools-by-base.html
+Per-base school feeder guide for military families PCSing to the Florida Panhandle. Which neighborhoods feed which elementary/middle/high school for NAS Pensacola, Corry Station, Saufley Field, NAS Whiting Field, Eglin AFB, Hurlburt Field, and Duke Field. Covers Gulf Breeze IB, East Hill magnet choice, Niceville/Bluewater Bay, Navarre, Crestview, Fort Walton Beach/Shalimar, and how the Interstate Compact protects course credits + placement on transfer.
+
+### VA IRRRL Streamline Refi Guide — https://pensacolamilitaryhousing.com/va-irrrl-guide.html
+Interest Rate Reduction Refinance Loan walkthrough for Florida Panhandle veterans: eligibility (prior VA loan, current on payments, net tangible benefit), the 0.5% rule, no appraisal / no income re-verification, 10-14 day close, 0.50% funding fee (waived at 10%+ disability), break-even math, and the rental-property play (prior occupancy qualifies). Includes IRRRL vs cash-out vs assumption decision table.
+
+### VA Funding Fee 2026 Breakdown — https://pensacolamilitaryhousing.com/va-funding-fee-2026.html
+Full 2026 VA funding fee schedule: purchase (first and subsequent use, by down-payment tier), IRRRL (0.50%), cash-out refi, Guard/Reserve merged rates. Complete exemption list (10%+ service-connected disability, active-duty Purple Heart, DIC-receiving surviving spouses). Tier 1 conforming loan limit $832,750 for Escambia, Santa Rosa, Okaloosa, Walton counties. Retroactive refund process for veterans who later receive qualifying disability rating. Panhandle-specific dollar examples by rank.
+
+### Disabled Veteran Benefits (Florida) — https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida.html
+Federal VA + Florida state benefits stack for service-connected disabled veterans in the Florida Panhandle. VA funding fee waiver (10%+), SAH/SHA grants, retroactive fee refund process. Florida Statute 196.24 $5,000 veteran exemption (10-99%), F.S. 196.081 total property tax exemption (100% P&T), F.S. 196.082 combat-related 65+ discount, surviving spouse continuation of total exemption. Filing details for Escambia, Santa Rosa, and Okaloosa Property Appraisers.
+
+### Florida Homestead Exemption for Military — https://pensacolamilitaryhousing.com/florida-homestead-exemption-military.html
+Florida homestead exemption filing playbook for military families: $50,000 standard exemption, Save Our Homes 3% assessment cap, portability (transfer accumulated SOH savings up to $500,000 between Florida homesteads via Form DR-501T), military-specific rules for State of Legal Residence (SLR) and DD Form 2058, filing deadlines (March 1), Escambia/Santa Rosa/Okaloosa county Property Appraiser contact details, and common PCS-related pitfalls (losing homestead when renting out during orders).
+
+### BAH to Mortgage Guide — https://pensacolamilitaryhousing.com/bah-to-mortgage-guide.html
+How to translate 2026 BAH for Pensacola (MHA FL064) and Fort Walton Beach (FL023) into a real mortgage budget: 125% tax-free gross-up, VA DTI ceiling (41% typical, no hard VA cap), residual income minimums by region and family size ($1,003/mo for family of 4 in South region), and rank-by-rank max purchase-price estimates from E-5 to O-5 with target Pensacola neighborhoods. Stress-tests out-of-pocket scenarios ($0, $300, $600, $1,000/mo over BAH) and dual-military math.
+
 ## Owned Short Domains (All 301 Redirect to Canonical Target Pages)
 
 23 exact-match military-housing short domains are owned and redirect to the canonical target on pensacolamilitaryhousing.com. All are alternate identifiers for the same business entity. See llms-full.txt for the complete mapping.

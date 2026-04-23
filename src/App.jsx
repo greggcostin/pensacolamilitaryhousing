@@ -2388,14 +2388,14 @@ const ContactPage = () => {
                 <a href="mailto:gregg.costin@gmail.com" style={{ color: GOLD, fontSize: 14, fontWeight: 600, textDecoration: "none" }}>gregg.costin@gmail.com</a>
               </div>
               <div style={{ background: "linear-gradient(135deg,#152018,#1f2d23)", color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderTop: `1px solid rgba(201,168,76,0.25)`, borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Levin Rinke Realty Offices</div>
-              <div style={{ padding: "12px 16px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+              <div style={{ padding: "12px 16px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, textAlign: "center" }}>
                 <div>
-                  <div style={{ color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", marginBottom: 4 }}>Downtown</div>
-                  <div style={{ color: "#bbb", fontSize: 12.5, lineHeight: 1.55 }}>220 W. Garden Street<br />Pensacola, FL 32502</div>
+                  <div style={{ color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", marginBottom: 4, textAlign: "center" }}>Downtown</div>
+                  <div style={{ color: "#bbb", fontSize: 12.5, lineHeight: 1.55, textAlign: "center" }}>220 W. Garden Street<br />Pensacola, FL 32502</div>
                 </div>
                 <div>
-                  <div style={{ color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", marginBottom: 4 }}>Perdido Key</div>
-                  <div style={{ color: "#bbb", fontSize: 12.5, lineHeight: 1.55 }}>13575 Perdido Key Dr<br />Pensacola, FL 32507</div>
+                  <div style={{ color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", marginBottom: 4, textAlign: "center" }}>Perdido Key</div>
+                  <div style={{ color: "#bbb", fontSize: 12.5, lineHeight: 1.55, textAlign: "center" }}>13575 Perdido Key Dr<br />Pensacola, FL 32507</div>
                 </div>
               </div>
             </div>
@@ -2414,19 +2414,19 @@ const ContactPage = () => {
                 <input type="text" name="website" value={formData.honeypot} onChange={handleChange("honeypot")} style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
                 <div>
                   <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Full Name *</label>
-                  <input type="text" value={formData.name} onChange={handleChange("name")} required disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <input type="text" value={formData.name} onChange={handleChange("name")} required disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
                 </div>
                 <div>
                   <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Email Address *</label>
-                  <input type="email" value={formData.email} onChange={handleChange("email")} required disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <input type="email" value={formData.email} onChange={handleChange("email")} required disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
                 </div>
                 <div>
                   <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Phone Number</label>
-                  <input type="tel" value={formData.phone} onChange={handleChange("phone")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <input type="tel" value={formData.phone} onChange={handleChange("phone")} disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
                 </div>
                 <div>
                   <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>What Can I Help With?</label>
-                  <select value={formData.inquiryType} onChange={handleChange("inquiryType")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none" }}>
+                  <select value={formData.inquiryType} onChange={handleChange("inquiryType")} disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none" }}>
                     <option>PCS Relocation — Buying</option>
                     <option>PCS Relocation — Selling</option>
                     <option>VA Loan Questions</option>
@@ -2436,7 +2436,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Message</label>
-                  <textarea rows={12} value={formData.message} onChange={handleChange("message")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box" }} />
+                  <textarea rows={12} value={formData.message} onChange={handleChange("message")} disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box" }} />
                 </div>
                 {status === "error" && (
                   <div style={{ background: "#3a1a1a", border: "1px solid #a03a3a", borderRadius: 8, padding: 12, color: "#ff9999", fontSize: 13 }}>

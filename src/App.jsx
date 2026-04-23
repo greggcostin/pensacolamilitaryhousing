@@ -844,13 +844,15 @@ const PCSPage = ({ go }) => (
       </ul>
       <button onClick={() => go("homestead")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Read the Homestead Exemption Guide →</button>
       <H2>Why Work With a Military Relocation Specialist?</H2>
-      <div style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: 24, alignItems: "start", marginTop: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "minmax(0,400px) 1fr", gap: 32, alignItems: "start", marginTop: 16 }}>
         <img src={IMG.grayNoTie} alt="Gregg Costin" style={{ width: "100%", borderRadius: 10, objectFit: "cover", aspectRatio: "3/4", border: `2px solid ${GOLD}22` }} />
         <div>
           <P>Not every Realtor understands PCS timelines. Not every Realtor knows how to structure a VA offer that wins. Not every Realtor has sat in the seat you're sitting in — staring at orders to a new base, trying to figure out where to live, how to finance it, and how to make it all work on a military timeline.</P>
           <P>I have. Eleven times. And now I help military families do the same thing I had to figure out the hard way. With better information, better strategy, and better results.</P>
-          <InquiryForm />
         </div>
+      </div>
+      <div style={{ maxWidth: 560, margin: "48px auto 0" }}>
+        <InquiryForm />
       </div>
       <H2>Frequently Asked Questions</H2>
       <FAQ q="How far in advance should I start working with a Realtor before my PCS?" a="Ideally 90 days out, but I've helped families close in as few as 21 days when the timeline demands it. The earlier you start, the more options you have — but late starters are welcome. I'll make it work." />

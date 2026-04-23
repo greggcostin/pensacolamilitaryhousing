@@ -2368,13 +2368,36 @@ const ContactPage = () => {
               <a href="tel:8502665005" style={{ color: GOLD, fontSize: 24, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>(850) 266-5005</a>
               <p style={{ color: "#888", fontSize: 13, marginTop: 4, textAlign: "center" }}>Call or text — this is my direct line</p>
             </div>
-            <div style={{ marginBottom: 24 }}>
-              <p style={{ color: "#fff", fontSize: 16, fontWeight: 600, marginBottom: 4 }}>Email</p>
-              <p><a href="mailto:Gregg.Costin@gmail.com" style={{ color: GOLD, fontSize: 15, textDecoration: "none", fontWeight: 600 }}>Gregg.Costin@gmail.com</a></p>
-            </div>
-            <div style={{ marginBottom: 24 }}>
-              <p style={{ color: "#fff", fontSize: 16, fontWeight: 600, marginBottom: 4 }}>Office</p>
-              <p style={{ color: "#aaa", fontSize: 14, lineHeight: 1.7 }}>Levin Rinke Realty<br />220 W. Garden Street<br />Pensacola, FL 32502</p>
+            <div style={{ background: "rgba(10,15,26,0.4)", border: `1px solid rgba(201,168,76,0.2)`, borderRadius: 10, overflow: "hidden", marginTop: 12, boxShadow: "0 4px 18px rgba(0,0,0,0.25)" }}>
+              <div style={{ background: "linear-gradient(135deg,#152018,#1f2d23)", color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Social &amp; Web</div>
+              <div style={{ padding: "4px 16px" }}>
+                {[
+                  ["Instagram", "@greggcostinrealtor", "https://www.instagram.com/greggcostinrealtor/"],
+                  ["Facebook", "@greggcostin", "https://www.facebook.com/greggcostin/"],
+                  ["YouTube", "@PensacolaMilitaryRealtor", "https://www.youtube.com/@PensacolaMilitaryRealtor"],
+                  ["LinkTree", "linktr.ee/Greggcostin", "https://linktr.ee/Greggcostin"],
+                ].map(([label, value, href]) => (
+                  <div key={label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "9px 0", borderBottom: "1px solid rgba(255,255,255,0.05)", gap: 12 }}>
+                    <span style={{ color: "#bbb", fontSize: 12, letterSpacing: 0.5 }}>{label}</span>
+                    <a href={href} target="_blank" rel="noopener" style={{ color: GOLD, fontSize: 13, fontWeight: 600, textDecoration: "none", textAlign: "right", wordBreak: "break-word" }}>{value}</a>
+                  </div>
+                ))}
+              </div>
+              <div style={{ background: "linear-gradient(135deg,#152018,#1f2d23)", color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderTop: `1px solid rgba(201,168,76,0.25)`, borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Email</div>
+              <div style={{ padding: "12px 16px", textAlign: "center" }}>
+                <a href="mailto:gregg.costin@gmail.com" style={{ color: GOLD, fontSize: 14, fontWeight: 600, textDecoration: "none" }}>gregg.costin@gmail.com</a>
+              </div>
+              <div style={{ background: "linear-gradient(135deg,#152018,#1f2d23)", color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderTop: `1px solid rgba(201,168,76,0.25)`, borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Levin Rinke Realty Offices</div>
+              <div style={{ padding: "12px 16px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+                <div>
+                  <div style={{ color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", marginBottom: 4 }}>Downtown</div>
+                  <div style={{ color: "#bbb", fontSize: 12.5, lineHeight: 1.55 }}>220 W. Garden Street<br />Pensacola, FL 32502</div>
+                </div>
+                <div>
+                  <div style={{ color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", marginBottom: 4 }}>Perdido Key</div>
+                  <div style={{ color: "#bbb", fontSize: 12.5, lineHeight: 1.55 }}>13575 Perdido Key Dr<br />Pensacola, FL 32507</div>
+                </div>
+              </div>
             </div>
           </div>
           <div>
@@ -2428,16 +2451,9 @@ const ContactPage = () => {
             )}
           </div>
         </div>
-        <div style={{ textAlign: "center", margin: "40px auto 0", maxWidth: 640 }}>
-          <h3 style={{ fontSize: 18, color: C.gold, marginTop: 0, marginBottom: 12, fontWeight: 700, fontFamily: SF, textAlign: "center" }}>Social & Web</h3>
-          <p style={{ color: "#aaa", fontSize: 14, lineHeight: 2, textAlign: "center", margin: 0 }}>
-            Instagram: <a href="https://www.instagram.com/greggcostinrealtor/" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@greggcostinrealtor</a><br />
-            Facebook: <a href="https://www.facebook.com/greggcostin/" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@greggcostin</a><br />
-            <span style={{ whiteSpace: "nowrap" }}>YouTube: <a href="https://www.youtube.com/@PensacolaMilitaryRealtor" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@PensacolaMilitaryRealtor</a></span><br />
-            LinkTree: <a href="https://linktr.ee/Greggcostin" style={{ color: C.gold, textDecoration: "none" }} target="_blank" rel="noopener">linktr.ee/Greggcostin</a>
-          </p>
+        <div style={{ marginTop: 24 }}>
+          <InfoBox title="Response Time">I respond to every inquiry within 2 hours during business hours (8am-8pm CT, 7 days a week). After hours messages receive a response by 8am the next morning. If your situation is urgent, call directly — I answer my phone.</InfoBox>
         </div>
-        <InfoBox title="Response Time">I respond to every inquiry within 2 hours during business hours (8am-8pm CT, 7 days a week). After hours messages receive a response by 8am the next morning. If your situation is urgent, call directly — I answer my phone.</InfoBox>
       </Content>
     </PageWrapper>
   );

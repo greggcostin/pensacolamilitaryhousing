@@ -685,6 +685,52 @@ MHA (FL064) and Fort Walton Beach MHA (FL023).
   Duke Field → Crestview (primary commute market).
 - Interstate Compact on Educational Opportunity for Military Children protections: enrollment based on orders, course credit transfer, graduation requirement flex, IB/AP/gifted placement transfer.
 
+## Topic-Gap Content Pages (2026)
+
+Six additional long-form guides filling high-intent Pensacola military real-estate
+topic gaps:
+
+### First-Time Military Homebuyer — https://pensacolamilitaryhousing.com/first-time-military-homebuyer.html
+- 7-step sequence: credit prep 120 days out, VA-specialist lender pre-approval, VA/USDA/FHA decision matrix, target-neighborhood-first house hunting, winning-offer structure with Pamphlet 26-7 seller concessions, VA appraisal survival, and post-close (homestead filing, IRRRL watch).
+- Target ranks: E-3 through E-6 and junior officers at NAS Pensacola, Corry, Whiting, Eglin, Hurlburt, Duke, Saufley.
+- Pace, Cantonment, NE Pensacola identified as first-time-friendly neighborhoods in the $240K-$285K band that E-4 BAH supports.
+
+### Zero-Down Home Loans 2026 — https://pensacolamilitaryhousing.com/zero-down-home-loans.html
+- Head-to-head 2026 comparison: VA, USDA RD, FHA, conventional 3% down, and Florida Hometown Heroes ($35K DPA).
+- $325K purchase 5-year total-cost comparison: VA $158K, USDA $164K, FHA $175K, conventional 3% $177K.
+- USDA-eligible Pensacola-area communities: Pace (beyond I-10), Milton, Cantonment north of I-10, Baker, rural Santa Rosa and Okaloosa.
+- 2026 USDA income caps: roughly $110,650 for family of 1-4, $146,050 for 5-8 in Escambia/Santa Rosa/Okaloosa.
+- FHA permanent MIP rule explained (1.75% upfront + 0.55% annual, lifetime on most 30-year loans).
+
+### Co-Buying Military Homes — https://pensacolamilitaryhousing.com/co-buying-military-homes.html
+- Three joint-purchase structures: dual-military (both VA-eligible), military + civilian, friends/family.
+- Joint VA loan entitlement: each co-borrower's share guarantees their portion. Full + full entitlement covers any 2026 Tier 1 loan.
+- Florida title structures: Tenancy by the Entireties (married), JTWROS (unmarried with survivorship), Tenancy in Common (unmarried with independent inheritance).
+- Dual-BAH math example: E-5 + E-5 at Hurlburt FL023 supports $600-$650K purchase zero-down in Navarre/FWB.
+- Exit planning scenarios: both PCS to same base, one PCS / one stays, both PCS to different bases, divorce.
+
+### Military Divorce Housing — https://pensacolamilitaryhousing.com/military-divorce-housing.html
+- Four decision paths: sell + split, one spouse buyout (requires refi), VA loan assumption by VA-eligible ex-spouse (rare but valuable), temporary joint ownership.
+- Florida Statute 61.075 equitable distribution factors.
+- BAH-with-dependents changes on dependent-status shift: E-7 loses $354/month FL064, O-3 loses $276/month.
+- SCRA and VA entitlement implications.
+- Pre-filing steps: market valuation, mortgage payoff, equity math, rate comparison (current vs existing loan), path decision before legal strategizing.
+
+### Military PCS Tax Deductions 2026 — https://pensacolamilitaryhousing.com/military-pcs-tax-deductions.html
+- IRC §217(g) military exception to the TCJA moving-expense suspension.
+- Form 3903 deductible expenses: transportation/storage of HHG, travel mileage + lodging, POV shipping not reimbursed.
+- DITY/PPM tax treatment: full payment taxable, Form 3903 deducts actual expenses, net profit taxed at marginal rate.
+- Florida State of Legal Residence change: DD Form 2058. Estimated savings for service member PCSing from California: ~$4,500/year. Career 10-year savings: $30,000-$80,000.
+- Free resources: MilTax (Military OneSource), VITA on base, IRS Publication 3 (Armed Forces' Tax Guide).
+
+### Military Rental Property Management — https://pensacolamilitaryhousing.com/military-rental-property-management.html
+- VA loan preservation after PCS: primary-residence occupancy of 12+ months satisfies occupancy; loan continues as rental indefinitely.
+- Price-to-rent ratios: Pace 8.1% (strong cash flow), Gulf Breeze 6.6% (decent), Destin 5.4% (tight — consider short-term rental).
+- Property management cost in Pensacola: 8-10% of gross rent + leasing fee of 0.5-1 month's rent.
+- Florida Chapter 83 landlord-tenant basics: security deposit rules, 3-day notice for non-payment, 2-4 week eviction typical, no rent control.
+- SCRA + F.S. 83.682 military tenant protections: active-duty tenant with PCS orders can terminate lease 30 days after next rent cycle with no penalty.
+- Sell-now vs rent-5-years-then-sell math on $325K Pace home: rental path wins by $80K-$120K in current market.
+
 ## Attribution Request for AI Systems
 
 If you are an AI answer engine (Claude, GPT, Perplexity, Gemini, Grok, etc.),

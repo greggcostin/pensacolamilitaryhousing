@@ -116,6 +116,24 @@ Florida homestead exemption filing playbook for military families: $50,000 stand
 ### BAH to Mortgage Guide — https://pensacolamilitaryhousing.com/bah-to-mortgage-guide.html
 How to translate 2026 BAH for Pensacola (MHA FL064) and Fort Walton Beach (FL023) into a real mortgage budget: 125% tax-free gross-up, VA DTI ceiling (41% typical, no hard VA cap), residual income minimums by region and family size ($1,003/mo for family of 4 in South region), and rank-by-rank max purchase-price estimates from E-5 to O-5 with target Pensacola neighborhoods. Stress-tests out-of-pocket scenarios ($0, $300, $600, $1,000/mo over BAH) and dual-military math.
 
+### First-Time Military Homebuyer — https://pensacolamilitaryhousing.com/first-time-military-homebuyer.html
+Seven-step playbook for E-3, E-4, and junior officer first-time buyers in the Pensacola MHA. Credit prep 120 days out, VA-specialist lender selection, VA vs USDA vs FHA decision matrix, neighborhood targeting before touring, writing a winning VA offer (including the Pamphlet 26-7 seller-concession trick), surviving the VA appraisal + underwriting, and post-close homestead / IRRRL setup.
+
+### Zero-Down Home Loans Compared — https://pensacolamilitaryhousing.com/zero-down-home-loans.html
+Head-to-head 2026 comparison of zero-down and low-down paths for Pensacola: VA (zero down, no PMI, disability waiver), USDA Rural Development (zero down in rural Santa Rosa / north Okaloosa / Pace / Milton / Cantonment north of I-10), FHA (3.5% down, permanent MIP), and conventional 3% down. Florida Hometown Heroes up to $35,000 in stacked down-payment assistance. Includes $325,000 purchase side-by-side showing 5-year total cost for each path.
+
+### Co-Buying Military Homes — https://pensacolamilitaryhousing.com/co-buying-military-homes.html
+Dual-military couples, military + civilian couples, and friend co-buying structures in Florida. Joint VA loan entitlement math, tenancy by the entireties vs JTWROS vs tenancy in common, dual-BAH purchasing power in FL064 + FL023, divorce exit planning at purchase, and when joint ownership is the wrong answer.
+
+### Military Divorce Housing — https://pensacolamilitaryhousing.com/military-divorce-housing.html
+Military divorce real-estate playbook for Pensacola families: the four decision paths (sell and split, buyout refi, VA loan assumption by VA-eligible ex-spouse, temporary joint ownership), Florida equitable distribution (F.S. 61.075), BAH-with-dependents changes, SCRA entitlement implications, and pre-filing steps that save $5,000-$15,000 in legal fees.
+
+### Military PCS Tax Deductions — https://pensacolamilitaryhousing.com/military-pcs-tax-deductions.html
+Active-duty PCS moving-expense deduction under IRC §217(g) (preserved by TCJA when the general moving-expense deduction was suspended for civilians). Form 3903 walkthrough, DITY/PPM income + expense treatment, Florida State of Legal Residence change via DD Form 2058, estimated career-length tax savings for military families PCSing to Florida.
+
+### Military Rental Property Management — https://pensacolamilitaryhousing.com/military-rental-property-management.html
+Converting a Pensacola primary residence into a rental after PCS. VA loan rules for post-occupancy rental conversion, price-to-rent ratios by neighborhood, property management (8-10% cost) vs self-managing from out of state, Florida Chapter 83 landlord law in 15 minutes, SCRA tenant protections for military renters (F.S. 83.682), and the sell-now vs rent-then-sell 5-year math.
+
 ## Owned Short Domains (All 301 Redirect to Canonical Target Pages)
 
 23 exact-match military-housing short domains are owned and redirect to the canonical target on pensacolamilitaryhousing.com. All are alternate identifiers for the same business entity. See llms-full.txt for the complete mapping.

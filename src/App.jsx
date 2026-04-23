@@ -319,7 +319,9 @@ const Content = ({ children }) => (
 );
 
 /* ═══════════════ HERO ═══════════════ */
-const Hero = ({ go }) => (
+const Hero = ({ go }) => {
+  const [inquiryOpen, setInquiryOpen] = useState(false);
+  return (
   <section className="hero-section" style={{ position: "relative", minHeight: "100vh", background: C.ink, overflow: "hidden", display: "flex", alignItems: "center", paddingTop: 180 }}>
     <div className="hero-bg-image" style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, backgroundImage: `url(${IMG.heroWindow})`, backgroundSize: "auto 100%", backgroundPosition: "right top", backgroundRepeat: "no-repeat" }} />
     <div className="hero-gradient-h" style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, background: `linear-gradient(90deg,${C.ink} 0%,${C.ink} 30%,rgba(10,15,26,0.75) 55%,rgba(10,15,26,0.25) 80%,rgba(10,15,26,0.1) 100%)` }} />
@@ -340,7 +342,7 @@ const Hero = ({ go }) => (
           NAS Pensacola · Corry Station · Whiting Field · Eglin AFB · Hurlburt Field
         </p>
         <div style={{ marginTop: 40, display: "flex", gap: 16, flexWrap: "wrap" }}>
-          <BtnP onClick={() => go("pcs")}>Start Your PCS Search</BtnP>
+          <BtnP onClick={() => setInquiryOpen(true)}>Start Your PCS Search</BtnP>
           <BtnG href="tel:8502665005">Call 850-266-5005</BtnG>
         </div>
         <div style={{ marginTop: 48, display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -365,8 +367,33 @@ const Hero = ({ go }) => (
         })}
       </div>
     </div>
+    {inquiryOpen && <InquiryModal onClose={() => setInquiryOpen(false)} />}
   </section>
-);
+  );
+};
+
+const InquiryModal = ({ onClose }) => {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [onClose]);
+  return (
+    <div onClick={onClose} style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(10,15,26,0.92)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", zIndex: 2000, display: "flex", alignItems: "flex-start", justifyContent: "center", padding: "80px 20px 40px", overflowY: "auto" }}>
+      <div onClick={e => e.stopPropagation()} style={{ background: C.panel, border: `1px solid ${C.hairline}`, borderRadius: 14, padding: "40px 32px 32px", width: "100%", maxWidth: 560, position: "relative", boxShadow: "0 20px 60px rgba(0,0,0,0.6)" }}>
+        <button onClick={onClose} aria-label="Close" style={{ position: "absolute", top: 12, right: 14, background: "transparent", border: "none", color: "#999", fontSize: 28, lineHeight: 1, cursor: "pointer", padding: 6 }}>×</button>
+        <h2 style={{ fontFamily: SF, fontSize: 26, color: "#fff", margin: "0 0 8px", textAlign: "center", fontWeight: 500 }}>Start Your PCS Search</h2>
+        <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.7, margin: "0 0 8px", textAlign: "center" }}>Tell me a bit about your move. I respond within 2 hours during business hours.</p>
+        <InquiryForm />
+      </div>
+    </div>
+  );
+};
 
 const TrustBar = () => (
   <section style={{ background: C.ink, borderBottom: `1px solid ${C.hairline}`, padding: "40px 32px" }}>

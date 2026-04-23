@@ -2358,7 +2358,7 @@ const ContactPage = () => {
       <Content>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 32 }}>
           <div>
-            <H3>Direct Contact</H3>
+            <h3 style={{ fontSize: 18, color: C.gold, marginTop: 32, marginBottom: 12, fontWeight: 700, fontFamily: SF, textAlign: "center" }}>Direct Contact</h3>
             <div style={{ textAlign: "center", marginBottom: 24 }}>
               <img loading="lazy" src={IMG.navyTie} alt="Gregg Costin" style={{ width: 360, height: 360, maxWidth: "100%", borderRadius: "50%", objectFit: "cover", objectPosition: "center top", border: `3px solid ${GOLD}44` }} />
             </div>

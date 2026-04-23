@@ -342,7 +342,7 @@ const Hero = ({ go }) => {
           NAS Pensacola · Corry Station · Whiting Field · Eglin AFB · Hurlburt Field
         </p>
         <div style={{ marginTop: 40, display: "flex", gap: 16, flexWrap: "wrap" }}>
-          <BtnP onClick={() => setInquiryOpen(true)}>Start Your PCS Search</BtnP>
+          <BtnP onClick={() => { if (hasSubmittedInquiry()) { go("pcs"); } else { setInquiryOpen(true); } }}>Start Your PCS Search</BtnP>
           <BtnG href="tel:8502665005">Call 850-266-5005</BtnG>
         </div>
         <div style={{ marginTop: 48, display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -717,6 +717,11 @@ const AboutPage = ({ go }) => (
 // VA loan, etc.) without the surrounding ContactPage hero + contact-detail
 // column. Keeps the same webhook and validation as the /contact page so
 // leads land in the same inbox regardless of origin.
+// localStorage flag so repeat visitors aren't asked for the same info twice.
+const INQUIRY_KEY = "pmh-inquiry-submitted";
+const hasSubmittedInquiry = () => { try { return localStorage.getItem(INQUIRY_KEY) === "1"; } catch { return false; } };
+const markInquirySubmitted = () => { try { localStorage.setItem(INQUIRY_KEY, "1"); } catch {} };
+
 const InquiryForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });
   const [status, setStatus] = useState("idle");
@@ -733,6 +738,7 @@ const InquiryForm = () => {
       const data = await response.json();
       if (response.ok && data.success) {
         setStatus("success");
+        markInquirySubmitted();
         setFormData({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });
       } else { setStatus("error"); setErrorMsg(data.error || "Something went wrong. Please call (850) 266-5005."); }
     } catch (err) { setStatus("error"); setErrorMsg("Connection error. Please call (850) 266-5005 directly."); }
@@ -791,8 +797,11 @@ const InquiryForm = () => {
   );
 };
 
-const PCSPage = ({ go }) => (
+const PCSPage = ({ go }) => {
+  const [gateOpen, setGateOpen] = useState(() => !hasSubmittedInquiry());
+  return (
   <PageWrapper>
+    {gateOpen && <InquiryModal onClose={() => setGateOpen(false)} />}
     <PageHero title="PCS to Pensacola: The Complete Guide for Military Families (2026)" subtitle="Everything you need to know about buying a home, finding the right neighborhood, navigating VA loans, and settling your family into life on the Gulf Coast." />
     <Content>
       <H2>Military Installations in the Pensacola Area</H2>
@@ -891,7 +900,8 @@ const PCSPage = ({ go }) => (
       <InfoBox title="Ready to Start?">Call or text me at (850) 266-5005, or send me a message through the contact page. I respond to every inquiry within 2 hours during business hours. Let's talk about your PCS and find you the right home.</InfoBox>
     </Content>
   </PageWrapper>
-);
+  );
+};
 
 const VALoanPage = ({ go }) => (
   <PageWrapper>

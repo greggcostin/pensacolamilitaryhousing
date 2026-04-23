@@ -64,5 +64,11 @@
 /va-loan-pensacola.html   /va-loan-guide   301
 /va-loan-pensacola        /va-loan-guide   301
 
+# ── Aliases to the new (2026-04-23) content pages ──
+# Navigation in static pages still links to some SPA-era slugs. Cloudflare
+# Pages auto-serves the .html files now that they exist; these aliases just
+# make sure the old no-extension forms land cleanly on the new content.
+/homestead                /florida-homestead-exemption-military     301
+
 # ── SPA fallback (must be last) ──
 /* /index.html 200

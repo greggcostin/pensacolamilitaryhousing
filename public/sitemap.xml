@@ -175,10 +175,58 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://pensacolamilitaryhousing.com/about.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/contact.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pensacolamilitaryhousing.com/va-loan-guide</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/va-irrrl-guide.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/va-funding-fee-2026.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/florida-homestead-exemption-military.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/bah-to-mortgage-guide.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://pensacolamilitaryhousing.com/pcs-schools-by-base.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola.html</loc>

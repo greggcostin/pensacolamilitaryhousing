@@ -2450,12 +2450,7 @@ const resolvePageFromPath = (pathname) => {
 };
 
 export default function App() {
-  // Derive the active page directly from window.location on every render so
-  // refreshing any URL (/about, /pcs-guide, /homestead, etc.) always shows the
-  // right page. Previous state-based approach was susceptible to stale initial
-  // state on refresh. A version counter forces re-render when go() navigates.
-  const [, bump] = useReducer(x => x + 1, 0);
-  const page = typeof window !== "undefined" ? resolvePageFromPath(window.location.pathname) : "home";
+  const [page, setPage] = useState(() => typeof window !== "undefined" ? resolvePageFromPath(window.location.pathname) : "home");
 
   const go = (id) => {
     if (window.location.hash) {
@@ -2465,13 +2460,13 @@ export default function App() {
     if (window.location.pathname !== slug) {
       history.pushState({ page: id }, "", slug);
     }
-    bump();
+    setPage(id);
     window.scrollTo(0, 0);
   };
 
   useEffect(() => {
     const onPopState = () => {
-      bump();
+      setPage(resolvePageFromPath(window.location.pathname));
       window.scrollTo(0, 0);
     };
     window.addEventListener("popstate", onPopState);
@@ -2484,7 +2479,8 @@ export default function App() {
       const id = window.location.hash.substring(1);
       if (!id) return;
       if (HASH_TO_PAGE[id]) {
-        go(HASH_TO_PAGE[id]);
+        setPage(HASH_TO_PAGE[id]);
+        window.scrollTo(0, 0);
         return;
       }
       const tryScroll = (attempts = 10) => {

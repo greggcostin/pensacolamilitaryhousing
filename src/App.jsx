@@ -2376,8 +2376,6 @@ const ContactPage = () => {
               <p style={{ color: "#fff", fontSize: 16, fontWeight: 600, marginBottom: 4 }}>Office</p>
               <p style={{ color: "#aaa", fontSize: 14, lineHeight: 1.7 }}>Levin Rinke Realty<br />220 W. Garden Street<br />Pensacola, FL 32502</p>
             </div>
-            <H3>Social & Web</H3>
-            <p style={{ color: "#aaa", fontSize: 14, lineHeight: 2 }}>Instagram: <a href="https://www.instagram.com/greggcostinrealtor/" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@greggcostinrealtor</a><br />Facebook: <a href="https://www.facebook.com/greggcostin/" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@greggcostin</a><br /><span style={{ whiteSpace: "nowrap" }}>YouTube: <a href="https://www.youtube.com/@PensacolaMilitaryRealtor" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@PensacolaMilitaryRealtor</a></span><br />LinkTree: <a href="https://linktr.ee/Greggcostin" style={{ color: C.gold, textDecoration: "none" }} target="_blank" rel="noopener">linktr.ee/Greggcostin</a></p>
           </div>
           <div>
             <H3>Send a Message</H3>
@@ -2429,6 +2427,15 @@ const ContactPage = () => {
               </form>
             )}
           </div>
+        </div>
+        <div style={{ textAlign: "center", margin: "40px auto 0", maxWidth: 640 }}>
+          <h3 style={{ fontSize: 18, color: C.gold, marginTop: 0, marginBottom: 12, fontWeight: 700, fontFamily: SF, textAlign: "center" }}>Social & Web</h3>
+          <p style={{ color: "#aaa", fontSize: 14, lineHeight: 2, textAlign: "center", margin: 0 }}>
+            Instagram: <a href="https://www.instagram.com/greggcostinrealtor/" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@greggcostinrealtor</a><br />
+            Facebook: <a href="https://www.facebook.com/greggcostin/" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@greggcostin</a><br />
+            <span style={{ whiteSpace: "nowrap" }}>YouTube: <a href="https://www.youtube.com/@PensacolaMilitaryRealtor" target="_blank" rel="noopener" style={{ color: C.gold, textDecoration: "none" }}>@PensacolaMilitaryRealtor</a></span><br />
+            LinkTree: <a href="https://linktr.ee/Greggcostin" style={{ color: C.gold, textDecoration: "none" }} target="_blank" rel="noopener">linktr.ee/Greggcostin</a>
+          </p>
         </div>
         <InfoBox title="Response Time">I respond to every inquiry within 2 hours during business hours (8am-8pm CT, 7 days a week). After hours messages receive a response by 8am the next morning. If your situation is urgent, call directly — I answer my phone.</InfoBox>
       </Content>

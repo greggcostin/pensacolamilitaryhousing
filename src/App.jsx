@@ -2058,7 +2058,7 @@ const LoanCalculator = () => {
         </div>
 
         <div style={{ background: "rgba(201,168,76,0.08)", border: `2px solid ${GOLD}55`, borderRadius: 12, padding: "18px 22px", margin: "16px 0 24px" }}>
-          <p style={{ color: GOLD, fontSize: 14, fontWeight: 800, margin: "0 0 8px", letterSpacing: 0.5 }}>⚠️ BAH IS A FOUNDATION, NOT A CEILING</p>
+          <p style={{ color: GOLD, fontSize: 28, fontWeight: 800, margin: "0 0 12px", letterSpacing: 0.5 }}>⚠️ BAH IS A FOUNDATION, NOT A CEILING</p>
           <p style={{ color: "#ddd", fontSize: 14, lineHeight: 1.75, margin: 0 }}>The purchase-price estimates above assume BAH covers 100% of your PITI payment. In reality, many military families invest $200-$500/month above BAH to secure a home in a better school district, safer neighborhood, or closer to base. I model specific scenarios for every buyer — call <a href="tel:+18502665005" style={{ color: GOLD, fontWeight: 600 }}>(850) 266-5005</a> and we will run your numbers together.</p>
         </div>
 

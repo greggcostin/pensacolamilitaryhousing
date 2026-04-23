@@ -304,11 +304,11 @@ const PageWrapper = ({ children }) => (
   <div style={{ background: C.ink, minHeight: "100vh", paddingTop: 200 }}>{children}</div>
 );
 const PageHero = ({ title, subtitle, breadcrumb }) => (
-  <section style={{ background: `linear-gradient(135deg, ${C.panel}, #1a2332)`, paddingTop: 72, paddingBottom: 72, paddingLeft: 24, paddingRight: 24, borderBottom: `1px solid ${C.hairline}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+  <section style={{ background: `linear-gradient(135deg, ${C.panel}, #1a2332)`, paddingTop: 72, paddingBottom: 72, paddingLeft: 24, paddingRight: 24, borderBottom: `1px solid ${C.hairline}`, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
     <div style={{ maxWidth: 900, width: "100%" }}>
-      {breadcrumb && <div style={{ color: C.muted, fontSize: 12, marginBottom: 16, letterSpacing: 1 }}>{breadcrumb}</div>}
-      <h1 style={{ fontFamily: SF, fontSize: "clamp(28px,4vw,42px)", color: "#fff", lineHeight: 1.2, marginTop: 0, marginBottom: 12, fontWeight: 500 }}>{title}</h1>
-      {subtitle && <p style={{ color: C.muted, fontSize: 16, lineHeight: 1.7, maxWidth: 700, margin: 0 }}>{subtitle}</p>}
+      {breadcrumb && <div style={{ color: C.muted, fontSize: 12, marginBottom: 16, letterSpacing: 1, textAlign: "center" }}>{breadcrumb}</div>}
+      <h1 style={{ fontFamily: SF, fontSize: "clamp(28px,4vw,42px)", color: "#fff", lineHeight: 1.2, marginTop: 0, marginBottom: 12, fontWeight: 500, textAlign: "center" }}>{title}</h1>
+      {subtitle && <p style={{ color: C.muted, fontSize: 16, lineHeight: 1.7, maxWidth: 700, margin: "0 auto", textAlign: "center" }}>{subtitle}</p>}
     </div>
   </section>
 );

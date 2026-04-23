@@ -113,6 +113,15 @@ footer strong{color:var(--gold)}
 .bah-table tbody td{padding:10px 16px;border-bottom:1px solid var(--hair);color:var(--text)}
 .bah-table tbody td:first-child{font-weight:500;color:#fff}
 .bah-source{margin:.75rem 0;font-size:13px;color:var(--muted);font-style:italic}
+.va-table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;background:rgba(10,15,26,0.4);border-radius:10px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.35);margin:8px 0 4px}
+.va-table thead th{background:linear-gradient(135deg,#152018,#1f2d23);color:var(--gold);font-weight:700;letter-spacing:1.2px;text-transform:uppercase;font-size:11px;padding:14px 16px;text-align:left;border-bottom:1px solid rgba(201,168,76,0.25)}
+.va-table thead th:not(:last-child){border-right:1px solid rgba(255,255,255,0.04)}
+.va-table tbody td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--text);font-weight:300;vertical-align:middle}
+.va-table tbody tr:last-child td{border-bottom:none}
+.va-table tbody tr:nth-child(even) td{background:rgba(255,255,255,0.015)}
+.va-table tbody td:first-child{font-weight:600;color:#fff;letter-spacing:.2px}
+.va-table tbody td.va-col{color:#eef6ee;font-weight:600;background:rgba(106,223,106,0.05)!important;border-left:1px solid rgba(106,223,106,0.18);border-right:1px solid rgba(106,223,106,0.18)}
+.va-table thead th.va-col{color:#9be89b;background:linear-gradient(135deg,#152b1a,#1d3a24)!important;border-left:1px solid rgba(106,223,106,0.28);border-right:1px solid rgba(106,223,106,0.28)}
 img{max-width:100%;height:auto}
 @media(max-width:900px){
   main{max-width:100%!important;padding:32px 18px 18px!important}
@@ -276,23 +285,23 @@ img{max-width:100%;height:auto}
 
 <h3>VA Loan vs Conventional vs FHA</h3>
 <div style="background:#1a2a1a;border:1px solid #2a4a2a;border-radius:12px;padding:22px;margin:16px 0 24px">
-<table>
-<thead><tr><th>Feature</th><th>VA Loan</th><th>Conventional</th><th>FHA</th></tr></thead>
+<table class="va-table">
+<thead><tr><th>Feature</th><th class="va-col">VA Loan</th><th>Conventional</th><th>FHA</th></tr></thead>
 <tbody>
-<tr><td>Down Payment</td><td>$0</td><td>3-20%</td><td>3.5%</td></tr>
-<tr><td>PMI / MIP</td><td>None</td><td>Required under 20% down</td><td>Required (life of loan)</td></tr>
-<tr><td>Interest Rates</td><td>Typically lowest</td><td>Market rate</td><td>Moderate</td></tr>
-<tr><td>Credit Score Minimum</td><td>No VA minimum (lender overlays 580-620)</td><td>620-680+</td><td>580+</td></tr>
-<tr><td>Funding Fee</td><td>0.5-3.3% (waived for 10%+ disabled vets)</td><td>None</td><td>1.75% upfront + annual</td></tr>
-<tr><td>Seller Concessions</td><td>4% of reasonable value (see note)</td><td>3-6% by down payment</td><td>Up to 6%</td></tr>
-<tr><td>Assumable</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+<tr><td>Down Payment</td><td class="va-col">$0</td><td>3-20%</td><td>3.5%</td></tr>
+<tr><td>PMI / MIP</td><td class="va-col">None</td><td>Required under 20% down</td><td>Required (life of loan)</td></tr>
+<tr><td>Interest Rates</td><td class="va-col">Typically lowest</td><td>Market rate</td><td>Moderate</td></tr>
+<tr><td>Credit Score Minimum</td><td class="va-col">No VA minimum (lender overlays 580-620)</td><td>620-680+</td><td>580+</td></tr>
+<tr><td>Funding Fee</td><td class="va-col">0.5-3.3% (waived for 10%+ disabled vets)</td><td>None</td><td>1.75% upfront + annual</td></tr>
+<tr><td>Seller Concessions</td><td class="va-col">4% of reasonable value (see note)</td><td>3-6% by down payment</td><td>Up to 6%</td></tr>
+<tr><td>Assumable</td><td class="va-col">Yes</td><td>No</td><td>Yes</td></tr>
 </tbody>
 </table>
 </div>
 
 <h3>VA Funding Fee Schedule (2026)</h3>
 <div style="background:#1a2a1a;border:1px solid #2a4a2a;border-radius:12px;padding:22px;margin:16px 0 24px">
-<table>
+<table class="va-table">
 <thead><tr><th>Usage</th><th>Down Payment</th><th>Regular Military</th><th>Guard / Reserve</th></tr></thead>
 <tbody>
 <tr><td>First Use</td><td>0% down</td><td>2.15%</td><td>2.15%</td></tr>

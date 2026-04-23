@@ -98,43 +98,30 @@ async function ensureDnsRecord(zoneId, type, name, content) {
 }
 
 async function ensureRedirectRule(zoneId, domain, target) {
-  const phase = "http_request_dynamic_redirect";
-  const ruleset = await cf("GET", `/zones/${zoneId}/rulesets/phases/${phase}/entrypoint`).catch(() => null);
+  // Using legacy Page Rules API — works with just Zone:Edit (no account-level
+  // rulesets permission needed). 1 rule per zone, well under the free-plan cap.
+  const existing = await cf("GET", `/zones/${zoneId}/pagerules`);
 
-  const expr = `(http.host eq "${domain}") or (http.host eq "www.${domain}")`;
-  const rule = {
-    description: `Forward to pensacolamilitaryhousing.com`,
-    expression: expr,
-    action: "redirect",
-    action_parameters: {
-      from_value: {
-        target_url: { value: target },
-        status_code: 301,
-        preserve_query_string: false,
-      },
-    },
-    enabled: true,
-  };
-
-  if (!ruleset || !ruleset.rules || ruleset.rules.length === 0) {
-    await cf("PUT", `/zones/${zoneId}/rulesets/phases/${phase}/entrypoint`, {
-      rules: [rule],
-    });
-    return "created";
-  }
-
-  // Check if an identical rule already exists
-  const match = ruleset.rules.find(r =>
-    r.expression === expr && r.action === "redirect" &&
-    r.action_parameters?.from_value?.target_url?.value === target
+  // Already have an identical forwarding rule? Skip.
+  const match = (existing || []).find(pr =>
+    pr.actions?.some(a => a.id === "forwarding_url" && a.value?.url === target)
   );
   if (match) return "ok";
 
-  // Append our rule (don't disturb existing rules)
-  await cf("PUT", `/zones/${zoneId}/rulesets/phases/${phase}/entrypoint`, {
-    rules: [...ruleset.rules, rule],
-  });
-  return "appended";
+  const body = {
+    targets: [{
+      target: "url",
+      constraint: { operator: "matches", value: `*${domain}/*` },
+    }],
+    actions: [{
+      id: "forwarding_url",
+      value: { url: target, status_code: 301 },
+    }],
+    priority: 1,
+    status: "active",
+  };
+  await cf("POST", `/zones/${zoneId}/pagerules`, body);
+  return "created";
 }
 
 async function setupDomain(domain, target) {

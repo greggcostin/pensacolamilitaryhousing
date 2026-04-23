@@ -587,7 +587,7 @@ const Footer = ({ go }) => {
 
 const AboutPage = ({ go }) => (
   <div>
-    <section style={{ position: "relative", padding: "140px 32px 80px", background: C.ink }}>
+    <section style={{ position: "relative", padding: "200px 32px 80px", background: C.ink }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 48, alignItems: "center" }}>
         <div>
           <Eyebrow>About Gregg Costin</Eyebrow>
@@ -690,7 +690,6 @@ const PCSPage = ({ go }) => (
   <PageWrapper>
     <PageHero title="PCS to Pensacola: The Complete Guide for Military Families (2026)" subtitle="Everything you need to know about buying a home, finding the right neighborhood, navigating VA loans, and settling your family into life on the Gulf Coast." breadcrumb="Home > PCS to Pensacola Guide" />
     <Content>
-      <InfoBox title="About This Guide">Written by a retired Air Force aviator who completed 11 PCS moves and has helped hundreds of military families make this exact transition. Updated quarterly with current market data.</InfoBox>
       <H2>Military Installations in the Pensacola Area</H2>
       <P>The greater Pensacola area is home to several major military installations, each serving different branches and mission sets. Understanding which base you're reporting to is the first step in narrowing your housing search.</P>
       <ComparisonTable

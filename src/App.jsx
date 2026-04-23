@@ -58,7 +58,7 @@ const HOMES_LINKS = [
 const RESOURCE_LINKS = [
   { label: "PCS Checklist", href: "/pcs-checklist.html" },
   { label: "2026 BAH Rates", href: "/fl064-bah-rates.html" },
-  { label: "VA Loan Guide", href: "/va-loan-pensacola.html" },
+  { label: "VA Loan Guide", href: "/va-loan-guide" },
   { label: "Assumable VA Loans", href: "/assumable-va-loans-pensacola.html" },
   { label: "VA Disability Tax (FL)", href: "/va-disability-property-tax-florida.html" },
   { label: "Military School Zones", href: "/school-zones-military-families.html" },
@@ -238,7 +238,7 @@ const Nav = ({ current, go }) => {
           )}
         </div>
 
-        <ExtTab href="/va-loan-pensacola.html" label="VA Loan Guide" />
+        <ExtTab href="/va-loan-guide" label="VA Loan Guide" />
         <Tab id="calculator" label="Calculators" />
         <ExtTab href="/reviews.html" label="Reviews" />
         <Tab id="contact" label="Contact" />

@@ -60,5 +60,9 @@
 /communities/bluewater-bay        /communities/niceville                301
 /bases/nas-whiting-field          /bases/whiting-field                  301
 
+# VA Loan page slug rename (va-loan-pensacola -> va-loan-guide)
+/va-loan-pensacola.html   /va-loan-guide   301
+/va-loan-pensacola        /va-loan-guide   301
+
 # ── SPA fallback (must be last) ──
 /* /index.html 200

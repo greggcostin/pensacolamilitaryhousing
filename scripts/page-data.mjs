@@ -5,12 +5,12 @@ export const pages = [
 // 1. VA LOAN PENSACOLA
 // ─────────────────────────────────────────────────────────────────────────
 {
-  slug: "va-loan-pensacola",
-  title: "VA Loan Pensacola | Guide for Active Duty & Veterans | Gregg Costin",
+  slug: "va-loan-guide",
+  title: "VA Loan Guide | Active Duty & Veterans | Gregg Costin",
   description: "Pensacola VA loan guide: entitlement, COE, 2026 funding fee tiers, Tier 1 county limits, entitlement restoration, assumable VA, seller concessions.",
   keywords: "VA loan Pensacola, VA loan Florida Panhandle, Pensacola VA mortgage, Certificate of Eligibility, VA funding fee 2026, VA loan Escambia County, VA loan Santa Rosa County, VA loan Okaloosa County, VA entitlement restoration, assumable VA loan",
-  h1: "VA Loan Pensacola — A Field Guide from a Retired USAF Captain",
-  breadcrumbName: "VA Loan Pensacola",
+  h1: "VA Loan Guide — A Field Guide from a Retired USAF Captain",
+  breadcrumbName: "VA Loan Guide",
   areaServed: "Pensacola",
   lead: "Everything I wish someone had told me before I used my VA loan the first time. No lender pitch. No MLS signup. Just the VA Pamphlet 26-7 rules, 2026 numbers, and Panhandle-specific guidance.",
   knowsAbout: ["VA Home Loans", "VA Pamphlet 26-7", "VA Funding Fee", "Certificate of Eligibility", "VA Entitlement Restoration", "Assumable VA Loans", "Pensacola", "Gulf Breeze", "Eglin AFB"],

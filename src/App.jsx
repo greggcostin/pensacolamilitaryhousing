@@ -301,7 +301,7 @@ const ComparisonTable = ({ headers, rows }) => (
   </div>
 );
 const PageWrapper = ({ children }) => (
-  <div style={{ background: C.ink, minHeight: "100vh", paddingTop: 80 }}>{children}</div>
+  <div style={{ background: C.ink, minHeight: "100vh", paddingTop: 200 }}>{children}</div>
 );
 const PageHero = ({ title, subtitle, breadcrumb }) => (
   <section style={{ background: `linear-gradient(135deg, ${C.panel}, #1a2332)`, paddingTop: 72, paddingBottom: 72, paddingLeft: 24, paddingRight: 24, borderBottom: `1px solid ${C.hairline}`, display: "flex", alignItems: "center", justifyContent: "center" }}>

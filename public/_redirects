@@ -1,36 +1,64 @@
-# Cloudflare Pages routing. Specific rewrites and redirects are processed
-# top-to-bottom; the SPA catch-all at the bottom handles everything else.
+# Cloudflare Pages routing. Files at public/bases/*.html and public/communities/*.html
+# are served natively at /bases/<slug> and /communities/<slug> via auto-pretty-URL —
+# no rewrites needed for those. This file handles 301 redirects from legacy URLs and
+# alias community names to the canonical clean paths, plus the SPA fallback.
 
-# ── Base-page clean URLs (rewrite status 200 — URL stays as shown, content served from .html) ──
-/bases/nas-pensacola          /nas-pensacola.html                     200
-/bases/corry-station          /corry-station.html                     200
-/bases/saufley-field          /saufley-field.html                     200
-/bases/whiting-field          /nas-whiting-field.html                 200
-/bases/nas-whiting-field      /nas-whiting-field.html                 200
-/bases/hurlburt-field         /hurlburt-field.html                    200
-/bases/eglin-afb              /eglin-afb.html                         200
-/bases/duke-field             /duke-field.html                        200
+# ── Base legacy paths → canonical clean URLs (301 permanent) ──
+/nas-pensacola.html          /bases/nas-pensacola        301
+/nas-pensacola               /bases/nas-pensacola        301
+/corry-station.html          /bases/corry-station        301
+/corry-station               /bases/corry-station        301
+/saufley-field.html          /bases/saufley-field        301
+/saufley-field               /bases/saufley-field        301
+/nas-whiting-field.html      /bases/whiting-field        301
+/nas-whiting-field           /bases/whiting-field        301
+/hurlburt-field.html         /bases/hurlburt-field       301
+/hurlburt-field              /bases/hurlburt-field       301
+/eglin-afb.html              /bases/eglin-afb            301
+/eglin-afb                   /bases/eglin-afb            301
+/duke-field.html             /bases/duke-field           301
+/duke-field                  /bases/duke-field           301
 
-# ── Community clean URLs ─────────────────────────────────────────────────
-/communities/gulf-breeze            /gulf-breeze.html                           200
-/communities/navarre                /navarre.html                               200
-/communities/pace                   /pace.html                                  200
-/communities/milton                 /milton.html                                200
-/communities/cantonment             /cantonment.html                            200
-/communities/perdido-key            /perdido-key.html                           200
-/communities/east-pensacola-heights /east-pensacola-heights.html                200
-/communities/east-hill              /east-hill.html                             200
-/communities/cordova-park           /cordova-park.html                          200
-/communities/ferry-pass             /ferry-pass.html                            200
-/communities/bellview-myrtle-grove  /bellview-myrtle-grove.html                 200
-/communities/navy-point-warrington  /navy-point-warrington.html                 200
-/communities/niceville              /niceville-valparaiso-bluewater-bay.html    200
-/communities/valparaiso             /niceville-valparaiso-bluewater-bay.html    200
-/communities/fort-walton-beach      /fort-walton-beach-shalimar.html            200
-/communities/mary-esther            /fort-walton-beach-shalimar.html            200
-/communities/shalimar               /fort-walton-beach-shalimar.html            200
-/communities/destin                 /destin.html                                200
-/communities/crestview              /crestview.html                             200
+# ── Community legacy paths → canonical clean URLs ──
+/gulf-breeze.html                         /communities/gulf-breeze                301
+/gulf-breeze                              /communities/gulf-breeze                301
+/navarre.html                             /communities/navarre                    301
+/navarre                                  /communities/navarre                    301
+/pace.html                                /communities/pace                       301
+/pace                                     /communities/pace                       301
+/milton.html                              /communities/milton                     301
+/milton                                   /communities/milton                     301
+/cantonment.html                          /communities/cantonment                 301
+/cantonment                               /communities/cantonment                 301
+/perdido-key.html                         /communities/perdido-key                301
+/perdido-key                              /communities/perdido-key                301
+/east-pensacola-heights.html              /communities/east-pensacola-heights     301
+/east-pensacola-heights                   /communities/east-pensacola-heights     301
+/east-hill.html                           /communities/east-hill                  301
+/east-hill                                /communities/east-hill                  301
+/cordova-park.html                        /communities/cordova-park               301
+/cordova-park                             /communities/cordova-park               301
+/ferry-pass.html                          /communities/ferry-pass                 301
+/ferry-pass                               /communities/ferry-pass                 301
+/bellview-myrtle-grove.html               /communities/bellview-myrtle-grove      301
+/bellview-myrtle-grove                    /communities/bellview-myrtle-grove      301
+/navy-point-warrington.html               /communities/navy-point-warrington      301
+/navy-point-warrington                    /communities/navy-point-warrington      301
+/niceville-valparaiso-bluewater-bay.html  /communities/niceville                  301
+/niceville-valparaiso-bluewater-bay       /communities/niceville                  301
+/fort-walton-beach-shalimar.html          /communities/fort-walton-beach          301
+/fort-walton-beach-shalimar               /communities/fort-walton-beach          301
+/destin.html                              /communities/destin                     301
+/destin                                   /communities/destin                     301
+/crestview.html                           /communities/crestview                  301
+/crestview                                /communities/crestview                  301
+
+# ── Community aliases for sub-community short domains ──
+/communities/valparaiso           /communities/niceville                301
+/communities/mary-esther          /communities/fort-walton-beach        301
+/communities/shalimar             /communities/fort-walton-beach        301
+/communities/bluewater-bay        /communities/niceville                301
+/bases/nas-whiting-field          /bases/whiting-field                  301
 
 # ── SPA fallback (must be last) ──
 /* /index.html 200

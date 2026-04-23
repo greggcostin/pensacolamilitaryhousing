@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer } from "react";
 
 /* ═══════════════ DESIGN TOKENS ═══════════════ */
 const C = {
@@ -844,11 +844,11 @@ const PCSPage = ({ go }) => (
       </ul>
       <button onClick={() => go("homestead")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Read the Homestead Exemption Guide →</button>
       <H2>Why Work With a Military Relocation Specialist?</H2>
-      <div style={{ display: "grid", gridTemplateColumns: "minmax(0,400px) 1fr", gap: 32, alignItems: "start", marginTop: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "minmax(0,400px) 1fr", gap: 40, alignItems: "center", marginTop: 16 }}>
         <img src={IMG.grayNoTie} alt="Gregg Costin" style={{ width: "100%", borderRadius: 10, objectFit: "cover", aspectRatio: "3/4", border: `2px solid ${GOLD}22` }} />
         <div>
-          <P>Not every Realtor understands PCS timelines. Not every Realtor knows how to structure a VA offer that wins. Not every Realtor has sat in the seat you're sitting in — staring at orders to a new base, trying to figure out where to live, how to finance it, and how to make it all work on a military timeline.</P>
-          <P>I have. Eleven times. And now I help military families do the same thing I had to figure out the hard way. With better information, better strategy, and better results.</P>
+          <p style={{ color: "#ddd", fontSize: 19, lineHeight: 1.75, marginBottom: 20 }}>Not every Realtor understands PCS timelines. Not every Realtor knows how to structure a VA offer that wins. Not every Realtor has sat in the seat you're sitting in — staring at orders to a new base, trying to figure out where to live, how to finance it, and how to make it all work on a military timeline.</p>
+          <p style={{ color: "#ddd", fontSize: 19, lineHeight: 1.75, marginBottom: 0 }}>I have. <strong style={{ color: "#fff" }}>Eleven times.</strong> And now I help military families do the same thing I had to figure out the hard way. With better information, better strategy, and better results.</p>
         </div>
       </div>
       <div style={{ maxWidth: 560, margin: "48px auto 0" }}>
@@ -2450,7 +2450,12 @@ const resolvePageFromPath = (pathname) => {
 };
 
 export default function App() {
-  const [page, setPage] = useState(() => typeof window !== "undefined" ? resolvePageFromPath(window.location.pathname) : "home");
+  // Derive the active page directly from window.location on every render so
+  // refreshing any URL (/about, /pcs-guide, /homestead, etc.) always shows the
+  // right page. Previous state-based approach was susceptible to stale initial
+  // state on refresh. A version counter forces re-render when go() navigates.
+  const [, bump] = useReducer(x => x + 1, 0);
+  const page = typeof window !== "undefined" ? resolvePageFromPath(window.location.pathname) : "home";
 
   const go = (id) => {
     if (window.location.hash) {
@@ -2460,19 +2465,13 @@ export default function App() {
     if (window.location.pathname !== slug) {
       history.pushState({ page: id }, "", slug);
     }
-    setPage(id);
+    bump();
     window.scrollTo(0, 0);
   };
 
   useEffect(() => {
-    // Defensive mount-time sync: if the useState initializer picked the wrong
-    // page (hydration race, stale history state, etc.), re-resolve from the
-    // URL so refresh on /about, /pcs-guide, etc. reliably shows that page.
-    const resolved = resolvePageFromPath(window.location.pathname);
-    if (resolved !== page) setPage(resolved);
-
     const onPopState = () => {
-      setPage(resolvePageFromPath(window.location.pathname));
+      bump();
       window.scrollTo(0, 0);
     };
     window.addEventListener("popstate", onPopState);
@@ -2485,8 +2484,7 @@ export default function App() {
       const id = window.location.hash.substring(1);
       if (!id) return;
       if (HASH_TO_PAGE[id]) {
-        setPage(HASH_TO_PAGE[id]);
-        window.scrollTo(0, 0);
+        go(HASH_TO_PAGE[id]);
         return;
       }
       const tryScroll = (attempts = 10) => {

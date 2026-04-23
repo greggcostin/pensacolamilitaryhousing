@@ -56,10 +56,16 @@ const HOMES_LINKS = [
 
 const RESOURCE_LINKS = [
   { label: "PCS Checklist", href: "/pcs-checklist.html" },
+  { label: "PCS Schools by Base", href: "/pcs-schools-by-base.html" },
   { label: "2026 BAH Rates", href: "/fl064-bah-rates.html" },
+  { label: "BAH to Mortgage Guide", href: "/bah-to-mortgage-guide.html" },
   { label: "VA Loan Guide", href: "/va-loan-guide" },
+  { label: "VA IRRRL Refi Guide", href: "/va-irrrl-guide.html" },
+  { label: "VA Funding Fee 2026", href: "/va-funding-fee-2026.html" },
   { label: "Assumable VA Loans", href: "/assumable-va-loans-pensacola.html" },
+  { label: "Disabled Veteran Benefits (FL)", href: "/disabled-veteran-benefits-florida.html" },
   { label: "VA Disability Tax (FL)", href: "/va-disability-property-tax-florida.html" },
+  { label: "FL Homestead (Military)", href: "/florida-homestead-exemption-military.html" },
   { label: "Military School Zones", href: "/school-zones-military-families.html" },
   { label: "NAS Pensacola vs Hurlburt", href: "/nas-pensacola-vs-hurlburt-field.html" },
   { label: "Gulf Breeze vs Navarre", href: "/gulf-breeze-vs-navarre.html" },

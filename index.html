@@ -282,6 +282,63 @@
               }
           </script>
 
+          <!-- Schema: Service blocks for the three primary offerings -->
+          <script type="application/ld+json">
+              {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "VA Loan Homebuyer Consultation",
+                "serviceType": "Real Estate Agent Consultation",
+                "description": "Free 30-minute consultation for active-duty service members, veterans, and eligible surviving spouses using a VA loan to purchase a home in the Florida Panhandle. Covers entitlement status, COE process, funding fee, tier limits, seller concessions, and PCS-aligned timeline planning.",
+                "provider": {"@id": "https://pensacolamilitaryhousing.com/#person-gregg"},
+                "areaServed": [
+                  {"@type": "City", "name": "Pensacola"},
+                  {"@type": "City", "name": "Gulf Breeze"},
+                  {"@type": "City", "name": "Navarre"},
+                  {"@type": "City", "name": "Pace"},
+                  {"@type": "City", "name": "Milton"},
+                  {"@type": "City", "name": "Niceville"},
+                  {"@type": "City", "name": "Fort Walton Beach"},
+                  {"@type": "City", "name": "Destin"},
+                  {"@type": "City", "name": "Crestview"},
+                  {"@type": "Place", "name": "NAS Pensacola"},
+                  {"@type": "Place", "name": "Eglin AFB"},
+                  {"@type": "Place", "name": "Hurlburt Field"}
+                ],
+                "audience": {"@type": "Audience", "audienceType": "Military service members, veterans, and surviving spouses"},
+                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+                "url": "https://pensacolamilitaryhousing.com/va-loan-guide"
+              }
+          </script>
+          <script type="application/ld+json">
+              {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "PCS Relocation Planning",
+                "serviceType": "Military Relocation Consultation",
+                "description": "End-to-end PCS relocation planning for military families moving to or from the Florida Panhandle. Includes neighborhood assessment, school zoning, commute mapping, rank-appropriate BAH-to-mortgage modeling, VA loan lender introduction, and timeline coordination to the service member's RNLTD.",
+                "provider": {"@id": "https://pensacolamilitaryhousing.com/#person-gregg"},
+                "areaServed": {"@type": "AdministrativeArea", "name": "Florida Panhandle"},
+                "audience": {"@type": "Audience", "audienceType": "Active-duty military families on PCS orders"},
+                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+                "url": "https://pensacolamilitaryhousing.com/pcs-checklist.html"
+              }
+          </script>
+          <script type="application/ld+json">
+              {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "First-Time Military Homebuyer Coaching",
+                "serviceType": "Real Estate Homebuyer Coaching",
+                "description": "One-on-one coaching for E-3 through E-6 enlisted and junior officers purchasing their first home. Covers credit preparation, VA vs USDA vs FHA vs conventional decision, pre-approval, offer strategy, VA appraisal navigation, and post-close Florida homestead filing.",
+                "provider": {"@id": "https://pensacolamilitaryhousing.com/#person-gregg"},
+                "areaServed": {"@type": "AdministrativeArea", "name": "Florida Panhandle"},
+                "audience": {"@type": "Audience", "audienceType": "First-time military homebuyers"},
+                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+                "url": "https://pensacolamilitaryhousing.com/first-time-military-homebuyer.html"
+              }
+          </script>
+
           <!-- Schema: Person — canonical entity definition referenced by @id across every page -->
           <script type="application/ld+json">
               {

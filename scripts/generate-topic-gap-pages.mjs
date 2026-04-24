@@ -137,15 +137,15 @@ const PAGES = [
   },
 
   // ─────────────────────────────────────────────────────────────────
-  // 2. Co-Buying Military Homes
+  // 2. Dual-Military Homes
   // ─────────────────────────────────────────────────────────────────
   {
-    slug: "co-buying-military-homes",
-    title: "Co-Buying Military Homes Pensacola | Dual-BAH & Joint VA | Gregg Costin",
+    slug: "dual-military-homes",
+    title: "Dual-Military Homes Pensacola | Dual-BAH & Joint VA | Gregg Costin",
     description: "Dual-military, friend co-buying, and joint VA loan strategies for Pensacola military families. Entitlement, title, exit planning, divorce risk.",
     keywords: "dual military home Pensacola, joint VA loan, co-buying military, dual BAH home, friends buy house military, VA loan two veterans, dual income military home, shared military mortgage",
-    h1: "Co-Buying a Home in the Military — Dual-BAH, Joint VA, and the Exit Planning Nobody Mentions",
-    breadcrumbName: "Co-Buying Military Homes",
+    h1: "Dual-Military and Joint-Entitlement Homes — Dual-BAH, Joint VA, and the Exit Planning Nobody Mentions",
+    breadcrumbName: "Dual-Military Homes",
     areaServed: "Pensacola",
     knowsAbout: ["Dual Military Home Purchase", "Joint VA Loan", "Co-Buying Real Estate", "Dual BAH", "Tenancy in Common", "Joint Tenancy Florida", "Military Exit Strategy"],
     lead: "Dual-military couples and military-and-civilian couples buy differently than single-earner households. So do two friends co-buying a rental. This is the complete playbook for joint purchases in the Pensacola market — and the exit plan most agents do not discuss.",
@@ -390,7 +390,7 @@ const PAGES = [
 <ul>
 <li><a href="/va-loan-guide">VA Loan Guide</a></li>
 <li><a href="/va-irrrl-guide.html">VA IRRRL Refi Guide</a></li>
-<li><a href="/co-buying-military-homes.html">Co-Buying Military Homes</a></li>
+<li><a href="/dual-military-homes.html">Dual-Military Homes</a></li>
 <li><a href="/bah-to-mortgage-guide.html">BAH to Mortgage Guide</a></li>
 </ul>
 
@@ -898,7 +898,7 @@ Gross rent:              $2,200
 <li><a href="/va-irrrl-guide.html">VA IRRRL — Refi Your Rental</a></li>
 <li><a href="/bah-to-mortgage-guide.html">BAH to Mortgage Guide</a></li>
 <li><a href="/pcs-checklist.html">PCS Checklist</a></li>
-<li><a href="/co-buying-military-homes.html">Co-Buying Military Homes</a></li>
+<li><a href="/dual-military-homes.html">Dual-Military Homes</a></li>
 </ul>
 
 <h2>Sources</h2>

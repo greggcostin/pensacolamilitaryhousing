@@ -74,7 +74,11 @@
 # Navigation in static pages still links to some SPA-era slugs. Cloudflare
 # Pages auto-serves the .html files now that they exist; these aliases just
 # make sure the old no-extension forms land cleanly on the new content.
-/homestead                /florida-homestead-exemption-military     301
+/homestead                      /florida-homestead-exemption-military     301
+
+# Co-Buying page renamed to Dual-Military Homes
+/co-buying-military-homes.html  /dual-military-homes.html                 301
+/co-buying-military-homes       /dual-military-homes.html                 301
 
 # ── SPA fallback (must be last) ──
 # Cloudflare Pages auto-strips .html from destinations in explicit rules,

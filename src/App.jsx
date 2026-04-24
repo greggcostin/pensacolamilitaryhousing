@@ -65,7 +65,7 @@ const RESOURCE_LINKS = [
   { label: "VA Funding Fee 2026", href: "/va-funding-fee-2026.html" },
   { label: "Assumable VA Loans", href: "/assumable-va-loans-pensacola.html" },
   { label: "Zero-Down Loans Compared", href: "/zero-down-home-loans.html" },
-  { label: "Co-Buying Military Homes", href: "/co-buying-military-homes.html" },
+  { label: "Dual-Military Homes", href: "/dual-military-homes.html" },
   { label: "Military Divorce Housing", href: "/military-divorce-housing.html" },
   { label: "Military Rental Property", href: "/military-rental-property-management.html" },
   { label: "Military PCS Tax Deductions", href: "/military-pcs-tax-deductions.html" },

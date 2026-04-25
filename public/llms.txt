@@ -136,11 +136,17 @@ Converting a Pensacola primary residence into a rental after PCS. VA loan rules 
 
 ## Owned Short Domains (All 301 Redirect to Canonical Target Pages)
 
-23 exact-match military-housing short domains are owned and redirect to the canonical target on pensacolamilitaryhousing.com. All are alternate identifiers for the same business entity. See llms-full.txt for the complete mapping.
+41 exact-match military-housing, brand, and topical Pensacola short domains are owned and redirect to the canonical target on pensacolamilitaryhousing.com. All are alternate identifiers for the same business entity. See llms-full.txt for the complete mapping.
 
-Bases: naspensacolamilitaryhousing.com, corrystationmilitaryhousing.com, whitingfieldmilitaryhousing.com, naswhitingfieldmilitaryhousing.com, hurlburtmilitaryhousing.com, hurlburtfieldmilitaryhousing.com, eglinmilitaryhousing.com, eglinafbmilitaryhousing.com, dukefieldmilitaryhousing.com, saufleyfieldmilitaryhousing.com
+Brand / personal (all 301 to homepage): costinteam.com, costinteamrealtors.com, thecostinteam.com, thegreggcostinteam.com, greggcostin.com, greggcostin.net, greggcostinrealtor.com
 
-Communities: navarremilitaryhousing.com, gulfbreezemilitaryhousing.com, nicevillemilitaryhousing.com, fortwaltonbeachmilitaryhousing.com, fwbmilitaryhousing.com, destinmilitaryhousing.com, crestviewmilitaryhousing.com, miltonmilitaryhousing.com, pacemilitaryhousing.com, maryesthermilitaryhousing.com, valparaisomilitaryhousing.com, shalimarmilitaryhousing.com, perdidokeymilitaryhousing.com
+Topical / authority (Pensacola-area broad keywords, 301 to homepage or topic page): pensacolamilitary.com, pensacolamilitaryexpert.com, panhandlemilitary.com, pensacolabah.com (→ /bah-rates), pensacolavaloan.com (→ /va-loan-guide), pensacolapcsguide.com (→ /pcs-checklist), pensacolapcsexpert.com (→ /pcs-checklist), pensacolapcsagent.com (→ /pcs-checklist), pensacolamilitaryguide.com (→ /pcs-checklist)
+
+Bases (10 → 7 base pages): naspensacolamilitaryhousing.com, corrystationmilitaryhousing.com, whitingfieldmilitaryhousing.com, naswhitingfieldmilitaryhousing.com, hurlburtmilitaryhousing.com, hurlburtfieldmilitaryhousing.com, eglinmilitaryhousing.com, eglinafbmilitaryhousing.com, dukefieldmilitaryhousing.com, saufleyfieldmilitaryhousing.com
+
+Communities (13 → 8 community pages, sub-communities folded to nearest hub): navarremilitaryhousing.com, gulfbreezemilitaryhousing.com, nicevillemilitaryhousing.com, valparaisomilitaryhousing.com (→ Niceville), fortwaltonbeachmilitaryhousing.com, fwbmilitaryhousing.com, maryesthermilitaryhousing.com (→ Fort Walton Beach), shalimarmilitaryhousing.com (→ Fort Walton Beach), destinmilitaryhousing.com, crestviewmilitaryhousing.com, miltonmilitaryhousing.com, pacemilitaryhousing.com, perdidokeymilitaryhousing.com
+
+Alabama Gulf Coast (no FL community page; closest geo redirect): gulfshoresmilitaryhousing.com (→ /communities/perdido-key), orangebeachmilitaryhousing.com (→ /communities/perdido-key)
 
 ## Homes for Sale by Base
 

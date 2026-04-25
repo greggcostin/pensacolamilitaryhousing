@@ -30,31 +30,11 @@ if (!TOKEN) {
   process.exit(1);
 }
 
-const DOMAINS = [
-  ["naspensacolamilitaryhousing.com",        "https://pensacolamilitaryhousing.com/bases/nas-pensacola"],
-  ["corrystationmilitaryhousing.com",        "https://pensacolamilitaryhousing.com/bases/corry-station"],
-  ["whitingfieldmilitaryhousing.com",        "https://pensacolamilitaryhousing.com/bases/whiting-field"],
-  ["naswhitingfieldmilitaryhousing.com",     "https://pensacolamilitaryhousing.com/bases/whiting-field"],
-  ["hurlburtmilitaryhousing.com",            "https://pensacolamilitaryhousing.com/bases/hurlburt-field"],
-  ["hurlburtfieldmilitaryhousing.com",       "https://pensacolamilitaryhousing.com/bases/hurlburt-field"],
-  ["eglinmilitaryhousing.com",               "https://pensacolamilitaryhousing.com/bases/eglin-afb"],
-  ["eglinafbmilitaryhousing.com",            "https://pensacolamilitaryhousing.com/bases/eglin-afb"],
-  ["dukefieldmilitaryhousing.com",           "https://pensacolamilitaryhousing.com/bases/duke-field"],
-  ["saufleyfieldmilitaryhousing.com",        "https://pensacolamilitaryhousing.com/bases/saufley-field"],
-  ["navarremilitaryhousing.com",             "https://pensacolamilitaryhousing.com/communities/navarre"],
-  ["gulfbreezemilitaryhousing.com",          "https://pensacolamilitaryhousing.com/communities/gulf-breeze"],
-  ["nicevillemilitaryhousing.com",           "https://pensacolamilitaryhousing.com/communities/niceville"],
-  ["fortwaltonbeachmilitaryhousing.com",     "https://pensacolamilitaryhousing.com/communities/fort-walton-beach"],
-  ["fwbmilitaryhousing.com",                 "https://pensacolamilitaryhousing.com/communities/fort-walton-beach"],
-  ["destinmilitaryhousing.com",              "https://pensacolamilitaryhousing.com/communities/destin"],
-  ["crestviewmilitaryhousing.com",           "https://pensacolamilitaryhousing.com/communities/crestview"],
-  ["miltonmilitaryhousing.com",              "https://pensacolamilitaryhousing.com/communities/milton"],
-  ["pacemilitaryhousing.com",                "https://pensacolamilitaryhousing.com/communities/pace"],
-  ["maryesthermilitaryhousing.com",          "https://pensacolamilitaryhousing.com/communities/mary-esther"],
-  ["valparaisomilitaryhousing.com",          "https://pensacolamilitaryhousing.com/communities/valparaiso"],
-  ["shalimarmilitaryhousing.com",            "https://pensacolamilitaryhousing.com/communities/shalimar"],
-  ["perdidokeymilitaryhousing.com",          "https://pensacolamilitaryhousing.com/communities/perdido-key"],
-];
+// All 41 owned short domains and their canonical 301 targets.
+// Direct redirects only — no chains — so PageRank consolidates cleanly.
+// Source-of-truth in scripts/domain-funnel.mjs.
+import { DOMAIN_MAP, CANONICAL } from "./domain-funnel.mjs";
+const DOMAINS = DOMAIN_MAP.map(([d, path]) => [d, `${CANONICAL}${path}`]);
 
 async function cf(method, path, body) {
   const r = await fetch(`${CF_API}${path}`, {

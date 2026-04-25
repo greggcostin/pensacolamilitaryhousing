@@ -1,8 +1,58 @@
-# Marketing Kit — 23 Short Domains
+# Marketing Kit — 41 Short Domains
 
-All 23 domains 301 to a specific canonical page on pensacolamilitaryhousing.com. Use them as memorable, base-specific or community-specific entry points on offline and social materials.
+41 owned domains 301-redirect to specific canonical pages on pensacolamilitaryhousing.com — a structured 301 funnel that consolidates SEO equity, captures keyword-match search traffic, and provides memorable physical-marketing entry points. Use them as base/community-specific or topic-specific entry points across offline, social, and partnership materials.
 
-## The 23 domains by base / community
+## Domain → target funnel summary
+
+| Bucket | Count | Funnel target |
+|---|---|---|
+| Brand / personal name | 7 | Homepage `/` |
+| Topical broad authority | 3 | Homepage `/` |
+| Topical exact-keyword match | 6 | Specific topic page (BAH / VA / PCS) |
+| Base-specific | 10 | `/bases/<base>` (7 pages) |
+| Community-specific | 13 | `/communities/<community>` (8 pages) |
+| Alabama Gulf Coast | 2 | `/communities/perdido-key` (closest neighbor) |
+| **Total redirected** | **41** | (canonical not redirected) |
+
+## The 41 domains by category
+
+### Brand / Personal Name (7 → homepage)
+
+| Short domain | Lands on | Use for |
+|---|---|---|
+| GreggCostin.com | / | Personal-name SEO + offline branding |
+| GreggCostin.net | / | Personal-name SEO redundancy |
+| GreggCostinRealtor.com | / | "Realtor + Gregg Costin" search consolidation |
+| CostinTeam.com | / | Team-brand SEO |
+| TheCostinTeam.com | / | "The Costin Team" branded search |
+| CostinTeamRealtors.com | / | Brokerage / team brand |
+| TheGreggCostinTeam.com | / | Long-tail team-brand search |
+
+### Topical Broad Authority (3 → homepage)
+
+| Short domain | Lands on | Use for |
+|---|---|---|
+| PensacolaMilitary.com | / | Highest-volume short keyword |
+| PensacolaMilitaryExpert.com | / | "Pensacola military expert" branded authority |
+| PanhandleMilitary.com | / | Florida Panhandle regional authority |
+
+### Topical Exact-Keyword Match (6 → specific page) — HIGH SEO VALUE
+
+| Short domain | Lands on | Use for |
+|---|---|---|
+| PensacolaBAH.com | /bah-rates.html | "Pensacola BAH" exact match — high search intent |
+| PensacolaVALoan.com | /va-loan-guide | "Pensacola VA loan" exact match |
+| PensacolaPCSGuide.com | /pcs-checklist.html | "Pensacola PCS guide" exact match |
+| PensacolaPCSExpert.com | /pcs-checklist.html | "Pensacola PCS expert" |
+| PensacolaPCSAgent.com | /pcs-checklist.html | "Pensacola PCS agent" |
+| PensacolaMilitaryGuide.com | /pcs-checklist.html | "Pensacola military guide" |
+
+### Bases (10 domains → 7 pages)
+
+| Short domain | Lands on | Use for |
+|---|---|---|
+| NASPensacolaMilitaryHousing.com | /bases/nas-pensacola | Naval aviation + Blue Angels + CSO/NFO pipeline clients |
+| CorryStationMilitaryHousing.com | /bases/corry-station | Information warfare / cryptologic technician clients |
 
 ### Bases (10 domains → 7 pages)
 
@@ -19,7 +69,7 @@ All 23 domains 301 to a specific canonical page on pensacolamilitaryhousing.com.
 | DukeFieldMilitaryHousing.com | /bases/duke-field | 919 SOW reservists + ART / AGR |
 | SaufleyFieldMilitaryHousing.com | /bases/saufley-field | NIOC Pensacola / CIWT det / DLI linguists |
 
-### Communities (13 domains → 4 community pages)
+### Communities (13 domains → 8 community pages)
 
 | Short domain | Lands on | Use for |
 |---|---|---|
@@ -36,6 +86,15 @@ All 23 domains 301 to a specific canonical page on pensacolamilitaryhousing.com.
 | ValparaisoMilitaryHousing.com | /communities/niceville | Eglin east-gate |
 | ShalimarMilitaryHousing.com | /communities/fort-walton-beach | Eglin west-gate |
 | PerdidoKeyMilitaryHousing.com | /communities/perdido-key | Waterfront / retirement market |
+
+### Alabama Gulf Coast (2 domains → /communities/perdido-key)
+
+| Short domain | Lands on | Use for |
+|---|---|---|
+| GulfShoresMilitaryHousing.com | /communities/perdido-key | AL-side beach families crossing the line; closest FL community match |
+| OrangeBeachMilitaryHousing.com | /communities/perdido-key | AL-side luxury / second-home prospects |
+
+> AL-side traffic should eventually be served by dedicated Gulf Shores / Orange Beach community pages once an AL-licensed transaction volume justifies the content investment. Until then, Perdido Key is the closest geographic + lifestyle match.
 
 ---
 

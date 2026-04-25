@@ -29,10 +29,10 @@ export const DOMAIN_MAP = [
   // ── Topical / exact-keyword → matching content page (HIGH SEO VALUE) ──
   ["pensacolabah.com",                     "/bah-rates.html"],
   ["pensacolavaloan.com",                  "/va-loan-guide"],
-  ["pensacolapcsguide.com",                "/pcs-checklist.html"],
-  ["pensacolapcsexpert.com",               "/pcs-checklist.html"],
-  ["pensacolapcsagent.com",                "/pcs-checklist.html"],
-  ["pensacolamilitaryguide.com",           "/pcs-checklist.html"],
+  ["pensacolapcsguide.com",                "/pcs-guide"],
+  ["pensacolapcsexpert.com",               "/pcs-guide"],
+  ["pensacolapcsagent.com",                "/pcs-guide"],
+  ["pensacolamilitaryguide.com",           "/pcs-guide"],
 
   // ── Base-specific (10 short domains → 7 base pages) ──
   ["naspensacolamilitaryhousing.com",      "/bases/nas-pensacola"],

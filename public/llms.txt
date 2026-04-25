@@ -140,7 +140,7 @@ Converting a Pensacola primary residence into a rental after PCS. VA loan rules 
 
 Brand / personal (all 301 to homepage): costinteam.com, costinteamrealtors.com, thecostinteam.com, thegreggcostinteam.com, greggcostin.com, greggcostin.net, greggcostinrealtor.com
 
-Topical / authority (Pensacola-area broad keywords, 301 to homepage or topic page): pensacolamilitary.com, pensacolamilitaryexpert.com, panhandlemilitary.com, pensacolabah.com (→ /bah-rates), pensacolavaloan.com (→ /va-loan-guide), pensacolapcsguide.com (→ /pcs-checklist), pensacolapcsexpert.com (→ /pcs-checklist), pensacolapcsagent.com (→ /pcs-checklist), pensacolamilitaryguide.com (→ /pcs-checklist)
+Topical / authority (Pensacola-area broad keywords, 301 to homepage or topic page): pensacolamilitary.com, pensacolamilitaryexpert.com, panhandlemilitary.com, pensacolabah.com (→ /bah-rates), pensacolavaloan.com (→ /va-loan-guide), pensacolapcsguide.com (→ /pcs-guide), pensacolapcsexpert.com (→ /pcs-guide), pensacolapcsagent.com (→ /pcs-guide), pensacolamilitaryguide.com (→ /pcs-guide)
 
 Bases (10 → 7 base pages): naspensacolamilitaryhousing.com, corrystationmilitaryhousing.com, whitingfieldmilitaryhousing.com, naswhitingfieldmilitaryhousing.com, hurlburtmilitaryhousing.com, hurlburtfieldmilitaryhousing.com, eglinmilitaryhousing.com, eglinafbmilitaryhousing.com, dukefieldmilitaryhousing.com, saufleyfieldmilitaryhousing.com
 

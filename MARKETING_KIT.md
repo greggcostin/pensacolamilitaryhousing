@@ -42,17 +42,10 @@
 |---|---|---|
 | PensacolaBAH.com | /bah-rates.html | "Pensacola BAH" exact match — high search intent |
 | PensacolaVALoan.com | /va-loan-guide | "Pensacola VA loan" exact match |
-| PensacolaPCSGuide.com | /pcs-checklist.html | "Pensacola PCS guide" exact match |
-| PensacolaPCSExpert.com | /pcs-checklist.html | "Pensacola PCS expert" |
-| PensacolaPCSAgent.com | /pcs-checklist.html | "Pensacola PCS agent" |
-| PensacolaMilitaryGuide.com | /pcs-checklist.html | "Pensacola military guide" |
-
-### Bases (10 domains → 7 pages)
-
-| Short domain | Lands on | Use for |
-|---|---|---|
-| NASPensacolaMilitaryHousing.com | /bases/nas-pensacola | Naval aviation + Blue Angels + CSO/NFO pipeline clients |
-| CorryStationMilitaryHousing.com | /bases/corry-station | Information warfare / cryptologic technician clients |
+| PensacolaPCSGuide.com | /pcs-guide | "Pensacola PCS guide" exact match |
+| PensacolaPCSExpert.com | /pcs-guide | "Pensacola PCS expert" |
+| PensacolaPCSAgent.com | /pcs-guide | "Pensacola PCS agent" |
+| PensacolaMilitaryGuide.com | /pcs-guide | "Pensacola military guide" |
 
 ### Bases (10 domains → 7 pages)
 

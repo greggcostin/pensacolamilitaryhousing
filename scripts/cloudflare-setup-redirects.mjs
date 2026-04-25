@@ -36,7 +36,7 @@ if (!TOKEN) {
 import { DOMAIN_MAP, CANONICAL } from "./domain-funnel.mjs";
 const DOMAINS = DOMAIN_MAP.map(([d, path]) => [d, `${CANONICAL}${path}`]);
 
-async function cf(method, path, body) {
+async function cf(method, path, body, { allow404 = false } = {}) {
   const r = await fetch(`${CF_API}${path}`, {
     method,
     headers: {
@@ -47,6 +47,7 @@ async function cf(method, path, body) {
   });
   const data = await r.json();
   if (!data.success) {
+    if (allow404 && r.status === 404) return null;
     const errs = (data.errors || []).map(e => `[${e.code}] ${e.message}`).join(" | ");
     throw new Error(`CF ${method} ${path} failed: ${errs || r.status}`);
   }
@@ -78,30 +79,46 @@ async function ensureDnsRecord(zoneId, type, name, content) {
 }
 
 async function ensureRedirectRule(zoneId, domain, target) {
-  // Using legacy Page Rules API — works with just Zone:Edit (no account-level
-  // rulesets permission needed). 1 rule per zone, well under the free-plan cap.
-  const existing = await cf("GET", `/zones/${zoneId}/pagerules`);
+  // Modern Single Redirects API (Rulesets engine, http_request_dynamic_redirect
+  // phase). Cloudflare retired the legacy Page Rules API for Account-owned
+  // tokens — this is the supported replacement. Single Redirects also fire
+  // earlier in the request pipeline than Page Rules, so they win even if
+  // legacy rules linger.
+  const phasePath = `/zones/${zoneId}/rulesets/phases/http_request_dynamic_redirect/entrypoint`;
 
-  // Already have an identical forwarding rule? Skip.
-  const match = (existing || []).find(pr =>
-    pr.actions?.some(a => a.id === "forwarding_url" && a.value?.url === target)
-  );
-  if (match) return "ok";
+  // Fetch current entrypoint ruleset (may not exist yet)
+  const ruleset = await cf("GET", phasePath, null, { allow404: true });
+  const existingRules = ruleset?.rules || [];
 
-  const body = {
-    targets: [{
-      target: "url",
-      constraint: { operator: "matches", value: `*${domain}/*` },
-    }],
-    actions: [{
-      id: "forwarding_url",
-      value: { url: target, status_code: 301 },
-    }],
-    priority: 1,
-    status: "active",
+  const RULE_DESCRIPTION = "PMH funnel: 301 to canonical";
+  const newRule = {
+    action: "redirect",
+    action_parameters: {
+      from_value: {
+        status_code: 301,
+        target_url: { value: target },
+        preserve_query_string: false,
+      },
+    },
+    expression: `(http.host eq "${domain}" or http.host eq "www.${domain}")`,
+    description: RULE_DESCRIPTION,
+    enabled: true,
   };
-  await cf("POST", `/zones/${zoneId}/pagerules`, body);
-  return "created";
+
+  // Already correct? Skip.
+  const current = existingRules.find(r => r.description === RULE_DESCRIPTION);
+  if (current && current.action_parameters?.from_value?.target_url?.value === target) {
+    return "ok";
+  }
+
+  // Otherwise replace our rule (preserve any other unrelated rules)
+  const updatedRules = [
+    ...existingRules.filter(r => r.description !== RULE_DESCRIPTION),
+    newRule,
+  ];
+
+  await cf("PUT", phasePath, { rules: updatedRules });
+  return current ? "updated" : "created";
 }
 
 async function setupDomain(domain, target) {

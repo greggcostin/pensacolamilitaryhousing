@@ -186,7 +186,7 @@ export const pages = [
 <li>Start virtual home tours in your target neighborhoods. Filter by commute to your new duty station and school zones.</li>
 <li>If buying: get pre-approval letter from VA-specialist lender in hand before you tour.</li>
 <li>If renting: get on wait lists for Balfour Beatty Communities or equivalent base housing at NAS Pensacola, Hurlburt, or Eglin.</li>
-<li>Compare <a href="/fl064-bah-rates.html">FL064 (Pensacola) vs FL023 (Fort Walton Beach)</a> BAH rates for your duty station.</li>
+<li>Compare <a href="/bah-rates.html">FL064 (Pensacola) vs FL023 (Fort Walton Beach)</a> BAH rates for your duty station.</li>
 </ul>
 <h3>Family and Schools</h3>
 <ul>
@@ -573,7 +573,7 @@ for (const b of baseShortData) {
 <p>Most MLS searches aren't built for military buyers. A standard "Pensacola homes for sale" query returns 2,500+ listings sorted by price descending — useless when you have orders and a 60-day close window. This page is the ${b.base}-specific filter: listings pre-vetted for VA loan compatibility, priced within BAH ${b.mha}, commute-timed to the gate, and zoned to schools that work for school-age military families.</p>
 
 <h2>Who Buys Near ${b.base}</h2>
-<p>The typical ${b.base} buyer population includes: ${b.population}. Rank range runs from first-duty-station junior enlisted through senior officers on command tours. BAH MHA ${b.mha} sets the buying-power ceiling for each pay grade — see the <a href="/fl064-bah-rates.html">2026 BAH rates page</a> for the complete rank table.</p>
+<p>The typical ${b.base} buyer population includes: ${b.population}. Rank range runs from first-duty-station junior enlisted through senior officers on command tours. BAH MHA ${b.mha} sets the buying-power ceiling for each pay grade — see the <a href="/bah-rates.html">2026 BAH rates page</a> for the complete rank table.</p>
 
 <h2>Target Neighborhoods for ${b.base} Families</h2>
 <p>Primary buy zones, ranked by how often I place ${b.base} families: ${b.primary}. Each has different strengths — commute time, school rating, price per square foot, Santa Rosa vs Escambia vs Okaloosa county, Pensacola MHA vs Fort Walton Beach MHA. See the <a href="${b.basePath}">full ${b.base} PCS guide</a> for neighborhood-by-neighborhood analysis.</p>

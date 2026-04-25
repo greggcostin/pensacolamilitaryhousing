@@ -41,7 +41,7 @@ const RESOURCE_PAGES = [
   "va-loan-pensacola.html",
   "assumable-va-loans-pensacola.html",
   "pcs-checklist.html",
-  "fl064-bah-rates.html",
+  "bah-rates.html",
   "va-disability-property-tax-florida.html",
   "school-zones-military-families.html",
 ];

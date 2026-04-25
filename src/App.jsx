@@ -58,7 +58,7 @@ const RESOURCE_LINKS = [
   { label: "PCS Checklist", href: "/pcs-checklist.html" },
   { label: "PCS Schools by Base", href: "/pcs-schools-by-base.html" },
   { label: "First-Time Military Homebuyer", href: "/first-time-military-homebuyer.html" },
-  { label: "2026 BAH Rates", href: "/fl064-bah-rates.html" },
+  { label: "2026 BAH Rates", href: "/bah-rates.html" },
   { label: "BAH to Mortgage Guide", href: "/bah-to-mortgage-guide.html" },
   { label: "VA Loan Guide", href: "/va-loan-guide" },
   { label: "VA IRRRL Refi Guide", href: "/va-irrrl-guide.html" },

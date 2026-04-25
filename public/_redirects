@@ -80,6 +80,10 @@
 /co-buying-military-homes.html  /dual-military-homes.html                 301
 /co-buying-military-homes       /dual-military-homes.html                 301
 
+# BAH Rates page renamed (dropped MHA code from URL)
+/fl064-bah-rates.html           /bah-rates.html                           301
+/fl064-bah-rates                /bah-rates.html                           301
+
 # ── SPA fallback (must be last) ──
 # Cloudflare Pages auto-strips .html from destinations in explicit rules,
 # which turned `/about /index.html 200` into a 308 redirect to `/`. The

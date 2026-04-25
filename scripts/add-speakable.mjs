@@ -12,7 +12,7 @@ const TARGETS = [
   { path: "public/va-funding-fee-2026.html", url: "https://pensacolamilitaryhousing.com/va-funding-fee-2026.html" },
   { path: "public/va-irrrl-guide.html", url: "https://pensacolamilitaryhousing.com/va-irrrl-guide.html" },
   { path: "public/bah-to-mortgage-guide.html", url: "https://pensacolamilitaryhousing.com/bah-to-mortgage-guide.html" },
-  { path: "public/fl064-bah-rates.html", url: "https://pensacolamilitaryhousing.com/fl064-bah-rates.html" },
+  { path: "public/bah-rates.html", url: "https://pensacolamilitaryhousing.com/bah-rates.html" },
   { path: "public/disabled-veteran-benefits-florida.html", url: "https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida.html" },
   { path: "public/pcs-checklist.html", url: "https://pensacolamilitaryhousing.com/pcs-checklist.html" },
 ];

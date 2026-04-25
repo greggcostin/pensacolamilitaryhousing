@@ -248,7 +248,7 @@ const PAGES = [
 <li><a href="/va-irrrl-guide.html">VA IRRRL Guide</a> — streamline refi details</li>
 <li><a href="/disabled-veteran-benefits-florida.html">Disabled Veteran Benefits (Florida)</a> — stacking federal + FL exemptions</li>
 <li><a href="/assumable-va-loans-pensacola.html">Assumable VA Loans</a> — taking over a lower rate</li>
-<li><a href="/fl064-bah-rates.html">2026 BAH Rates</a> — sizing your budget</li>
+<li><a href="/bah-rates.html">2026 BAH Rates</a> — sizing your budget</li>
 </ul>
 
 <h2>Sources</h2>
@@ -595,7 +595,7 @@ Max Purchase Price = Max Loan (zero-down VA)
 <tr><td>O-5</td><td>$2,619</td><td>$8,900</td><td>$2,619</td><td>$390,000 - $490,000</td></tr>
 </tbody>
 </table>
-<p>Full BAH tables: <a href="/fl064-bah-rates.html">FL064 BAH Rates</a>. Note E-6/E-7 have wider ranges because pay scales widely with time-in-service; the lower end assumes new to rank, the upper end assumes time-in-service.</p>
+<p>Full BAH tables: <a href="/bah-rates.html">FL064 BAH Rates</a>. Note E-6/E-7 have wider ranges because pay scales widely with time-in-service; the lower end assumes new to rank, the upper end assumes time-in-service.</p>
 <p><strong>Caveat:</strong> "Realistic purchase price" assumes zero down, 6.5% 30-year rate, modest other debts. With 5% down, 100% disability waiver, or an IRRRL-refinanceable rate, numbers flex up 5-15%.</p>
 
 <h2>Same BAH, Three Different Affordability Outcomes</h2>
@@ -635,7 +635,7 @@ Max Purchase Price = Max Loan (zero-down VA)
 
 <h2>Related Pages</h2>
 <ul>
-<li><a href="/fl064-bah-rates.html">2026 BAH Rates — FL064 + FL023</a></li>
+<li><a href="/bah-rates.html">2026 BAH Rates — FL064 + FL023</a></li>
 <li><a href="/va-loan-guide">VA Loan Guide</a></li>
 <li><a href="/va-funding-fee-2026.html">VA Funding Fee 2026</a></li>
 <li><a href="/disabled-veteran-benefits-florida.html">Disabled Veteran Benefits</a></li>

@@ -259,7 +259,7 @@ ${data.lifestyle.map(l => `<li>${l}</li>`).join("\n")}
 <li><a href="/va-loan-guide">VA Loan Guide</a> — zero-down financing, funding fee, seller concessions, 2026 Tier 1 limits.</li>
 <li><a href="/va-funding-fee-2026.html">VA Funding Fee 2026</a> — exact tier and waiver rules.</li>
 <li><a href="/bah-to-mortgage-guide.html">BAH to Mortgage Guide</a> — rank-by-rank buying-power math for FL064 and FL023.</li>
-<li><a href="/fl064-bah-rates.html">2026 BAH Rates</a> — official DoD tables for this MHA.</li>
+<li><a href="/bah-rates.html">2026 BAH Rates</a> — official DoD tables for this MHA.</li>
 <li><a href="/florida-homestead-exemption-military.html">Florida Homestead Exemption</a> — property tax savings for military families who buy.</li>
 <li><a href="/disabled-veteran-benefits-florida.html">Disabled Veteran Benefits</a> — if you are 10%+ service-connected rated.</li>
 <li><a href="/first-time-military-homebuyer.html">First-Time Military Homebuyer</a> — full playbook for E-3 to junior officer first purchases.</li>
@@ -343,7 +343,7 @@ const PILLAR_CLUSTERS = [
     afterMarker: "<h2>Sources</h2>",
     clusterTitle: "Related BAH & Budget Resources",
     satellites: [
-      ["2026 BAH Rates (FL064 + FL023)", "/fl064-bah-rates.html"],
+      ["2026 BAH Rates (FL064 + FL023)", "/bah-rates.html"],
       ["VA Loan Guide", "/va-loan-guide"],
       ["Zero-Down Home Loans Compared", "/zero-down-home-loans.html"],
       ["First-Time Military Homebuyer", "/first-time-military-homebuyer.html"],

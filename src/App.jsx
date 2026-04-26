@@ -56,6 +56,7 @@ const HOMES_LINKS = [
 
 // Items that live under the PCS Guide dropdown (planning-stage essentials).
 const PCS_LINKS = [
+  { label: "PCS Guide", href: "/pcs-guide" },
   { label: "PCS Checklist", href: "/pcs-checklist.html" },
   { label: "PCS Schools by Base", href: "/pcs-schools-by-base.html" },
   { label: "2026 BAH Rates", href: "/bah-rates.html" },

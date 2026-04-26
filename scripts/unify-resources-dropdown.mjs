@@ -12,6 +12,7 @@
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const PCS = [
+  ["PCS Guide",                        "/pcs-guide"],
   ["PCS Checklist",                    "/pcs-checklist.html"],
   ["PCS Schools by Base",              "/pcs-schools-by-base.html"],
   ["2026 BAH Rates",                   "/bah-rates.html"],

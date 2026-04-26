@@ -744,7 +744,7 @@ const AboutPage = ({ go }) => (
           { title: "Licensed FL + AL", desc: "Dual-licensed to serve military families across the Florida Panhandle and coastal Alabama markets." },
         ].map(c => (
           <div key={c.title} style={{ background: C.elevated, border: `1px solid ${C.hairline}`, padding: 28 }}>
-            <h4 style={{ fontFamily: SF, color: C.gold, fontSize: 16, fontWeight: 500, marginBottom: 8 }}>{c.title}</h4>
+            <h4 style={{ fontFamily: SF, color: C.gold, fontSize: 22, fontWeight: 500, marginBottom: 8 }}>{c.title}</h4>
             <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.7, fontWeight: 300 }}>{c.desc}</p>
           </div>
         ))}

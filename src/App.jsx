@@ -65,6 +65,7 @@ const PCS_LINKS = [
 
 // Items that live under the VA Loan Guide dropdown (financing essentials).
 const VA_LINKS = [
+  { label: "VA Loan Guide", href: "/va-loan-guide" },
   { label: "BAH to Mortgage Guide", href: "/bah-to-mortgage-guide.html" },
   { label: "VA IRRRL Refi Guide", href: "/va-irrrl-guide.html" },
   { label: "VA Funding Fee 2026", href: "/va-funding-fee-2026.html" },

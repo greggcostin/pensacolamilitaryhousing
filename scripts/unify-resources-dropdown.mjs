@@ -20,6 +20,7 @@ const PCS = [
 ];
 
 const VA = [
+  ["VA Loan Guide",                    "/va-loan-guide"],
   ["BAH to Mortgage Guide",            "/bah-to-mortgage-guide.html"],
   ["VA IRRRL Refi Guide",              "/va-irrrl-guide.html"],
   ["VA Funding Fee 2026",              "/va-funding-fee-2026.html"],

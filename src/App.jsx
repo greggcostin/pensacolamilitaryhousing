@@ -54,24 +54,31 @@ const HOMES_LINKS = [
   { label: "Homes — Duke Field", href: "/homes-for-sale-duke-field.html" },
 ];
 
-const RESOURCE_LINKS = [
+// Items that live under the PCS Guide dropdown (planning-stage essentials).
+const PCS_LINKS = [
   { label: "PCS Checklist", href: "/pcs-checklist.html" },
   { label: "PCS Schools by Base", href: "/pcs-schools-by-base.html" },
-  { label: "First-Time Military Homebuyer", href: "/first-time-military-homebuyer.html" },
   { label: "2026 BAH Rates", href: "/bah-rates.html" },
+  { label: "FL Homestead (Military)", href: "/florida-homestead-exemption-military.html" },
+];
+
+// Items that live under the VA Loan Guide dropdown (financing essentials).
+const VA_LINKS = [
   { label: "BAH to Mortgage Guide", href: "/bah-to-mortgage-guide.html" },
-  { label: "VA Loan Guide", href: "/va-loan-guide" },
   { label: "VA IRRRL Refi Guide", href: "/va-irrrl-guide.html" },
   { label: "VA Funding Fee 2026", href: "/va-funding-fee-2026.html" },
   { label: "Assumable VA Loans", href: "/assumable-va-loans-pensacola.html" },
   { label: "Zero-Down Loans Compared", href: "/zero-down-home-loans.html" },
+];
+
+const RESOURCE_LINKS = [
+  { label: "First-Time Military Homebuyer", href: "/first-time-military-homebuyer.html" },
   { label: "Dual-Military Homes", href: "/dual-military-homes.html" },
   { label: "Military Divorce Housing", href: "/military-divorce-housing.html" },
   { label: "Military Rental Property", href: "/military-rental-property-management.html" },
   { label: "Military PCS Tax Deductions", href: "/military-pcs-tax-deductions.html" },
   { label: "Disabled Veteran Benefits (FL)", href: "/disabled-veteran-benefits-florida.html" },
   { label: "VA Disability Tax (FL)", href: "/va-disability-property-tax-florida.html" },
-  { label: "FL Homestead (Military)", href: "/florida-homestead-exemption-military.html" },
   { label: "Military School Zones", href: "/school-zones-military-families.html" },
   { label: "NAS Pensacola vs Hurlburt", href: "/nas-pensacola-vs-hurlburt-field.html" },
   { label: "Gulf Breeze vs Navarre", href: "/gulf-breeze-vs-navarre.html" },
@@ -148,6 +155,8 @@ const Nav = ({ current, go }) => {
   const [commsOpen, setCommsOpen] = useState(false);
   const [homesOpen, setHomesOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [pcsOpen, setPcsOpen] = useState(false);
+  const [vaOpen, setVaOpen] = useState(false);
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", fn);
@@ -205,7 +214,17 @@ const Nav = ({ current, go }) => {
       <div className="tabbar" style={{ maxWidth: 1320, margin: "0 auto", padding: "6px 12px 10px", overflowX: "visible", display: "flex", gap: 2, alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
         <Tab id="home" label="Home" />
         <Tab id="about" label="About Me" />
-        <Tab id="pcs" label="PCS Guide" />
+
+        <div style={{ position: "relative", paddingBottom: 4 }}
+          onMouseEnter={() => setPcsOpen(true)}
+          onMouseLeave={() => setPcsOpen(false)}>
+          <button onClick={() => { go("pcs"); setPcsOpen(false); }} style={tabStyle(current === "pcs")}>PCS Guide ▾</button>
+          {pcsOpen && (
+            <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
+              {PCS_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
+            </div>
+          )}
+        </div>
 
         <div style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setBasesOpen(true)}
@@ -249,7 +268,16 @@ const Nav = ({ current, go }) => {
           )}
         </div>
 
-        <ExtTab href="/va-loan-guide" label="VA Loan Guide" />
+        <div style={{ position: "relative", paddingBottom: 4 }}
+          onMouseEnter={() => setVaOpen(true)}
+          onMouseLeave={() => setVaOpen(false)}>
+          <a href="/va-loan-guide" onClick={() => setVaOpen(false)} style={tabStyle(false)}>VA Loan Guide ▾</a>
+          {vaOpen && (
+            <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
+              {VA_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
+            </div>
+          )}
+        </div>
         <Tab id="calculator" label="Calculators" />
         <ExtTab href="/reviews.html" label="Reviews" />
         <Tab id="contact" label="Contact" />

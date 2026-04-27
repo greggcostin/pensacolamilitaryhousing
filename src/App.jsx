@@ -649,6 +649,9 @@ const Footer = ({ go }) => {
           <p style={{ color: C.mutedD, fontSize: 11 }}>© 2026 The Costin Team. All rights reserved. | <a href="https://pensacolamilitaryhousing.com/" style={{ color: C.mutedD }}>PensacolaMilitaryHousing.com</a></p>
           <p style={{ color: C.mutedD, fontSize: 11 }}>Gregg Costin, Realtor® · MRP® · ABR® · SRS® · RENE® · FMS®</p>
         </div>
+        <p style={{ color: C.mutedD, fontSize: 10.5, fontStyle: "italic", lineHeight: 1.6, marginTop: 16, textAlign: "center", maxWidth: 1100, marginLeft: "auto", marginRight: "auto" }}>
+          <strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (220 W. Garden St., Pensacola, FL 32502). Information on this site — including BAH figures, VA loan terms, funding fees, tax rules, homestead and disability benefits, school zoning, and rental/investment commentary — is provided for general informational purposes only and is not legal, tax, financial, mortgage, lending, or investment advice. Real estate, lending, tax, and benefits rules change frequently and depend on individual circumstances; verify current figures with official sources (DoD BAH calculator, VA, IRS, your county property appraiser) and consult a licensed attorney, CPA, or NMLS-licensed loan officer for guidance specific to your situation. Gregg Costin is not a mortgage lender, attorney, tax professional, or financial advisor, and is not affiliated with, endorsed by, or representing the U.S. Department of Defense, Department of Veterans Affairs, or any branch of the U.S. military. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.
+        </p>
       </div>
     </footer>
   );

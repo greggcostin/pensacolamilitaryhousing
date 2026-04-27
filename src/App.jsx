@@ -85,6 +85,13 @@ const RESOURCE_LINKS = [
   { label: "NAS Pensacola vs Hurlburt", href: "/nas-pensacola-vs-hurlburt-field.html" },
   { label: "Gulf Breeze vs Navarre", href: "/gulf-breeze-vs-navarre.html" },
   { label: "Niceville vs Crestview", href: "/niceville-vs-crestview.html" },
+  { label: "On vs Off-Base — NAS Pensacola", href: "/on-base-vs-off-base-nas-pensacola.html" },
+  { label: "On vs Off-Base — Corry Station", href: "/on-base-vs-off-base-corry-station.html" },
+  { label: "On vs Off-Base — Saufley Field", href: "/on-base-vs-off-base-saufley-field.html" },
+  { label: "On vs Off-Base — Whiting Field", href: "/on-base-vs-off-base-nas-whiting-field.html" },
+  { label: "On vs Off-Base — Hurlburt Field", href: "/on-base-vs-off-base-hurlburt-field.html" },
+  { label: "On vs Off-Base — Eglin AFB", href: "/on-base-vs-off-base-eglin-afb.html" },
+  { label: "On vs Off-Base — Duke Field", href: "/on-base-vs-off-base-duke-field.html" },
   { label: "FAQ", href: "/faq.html" },
   { label: "Reviews", href: "/reviews.html" },
 ];

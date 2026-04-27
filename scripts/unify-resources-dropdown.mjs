@@ -40,6 +40,13 @@ const RESOURCES = [
   ["NAS Pensacola vs Hurlburt",        "/nas-pensacola-vs-hurlburt-field.html"],
   ["Gulf Breeze vs Navarre",           "/gulf-breeze-vs-navarre.html"],
   ["Niceville vs Crestview",           "/niceville-vs-crestview.html"],
+  ["On vs Off-Base — NAS Pensacola",   "/on-base-vs-off-base-nas-pensacola.html"],
+  ["On vs Off-Base — Corry Station",   "/on-base-vs-off-base-corry-station.html"],
+  ["On vs Off-Base — Saufley Field",   "/on-base-vs-off-base-saufley-field.html"],
+  ["On vs Off-Base — Whiting Field",   "/on-base-vs-off-base-nas-whiting-field.html"],
+  ["On vs Off-Base — Hurlburt Field",  "/on-base-vs-off-base-hurlburt-field.html"],
+  ["On vs Off-Base — Eglin AFB",       "/on-base-vs-off-base-eglin-afb.html"],
+  ["On vs Off-Base — Duke Field",      "/on-base-vs-off-base-duke-field.html"],
   ["FAQ",                              "/faq.html"],
   ["Reviews",                          "/reviews.html"],
 ];

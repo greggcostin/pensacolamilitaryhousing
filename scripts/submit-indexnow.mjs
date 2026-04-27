@@ -1,44 +1,60 @@
-// Submit the canonical sitemap URLs to IndexNow so Bing, Yandex, DuckDuckGo,
-// Naver, and Seznam re-crawl quickly. IndexNow is a free, open protocol —
-// one POST hits all participating engines at once.
+// Submit canonical sitemap URLs to two re-crawl APIs:
+//   1. IndexNow  — free open protocol; pings Bing, Yandex, DuckDuckGo, Naver, Seznam in one POST
+//   2. Bing Webmaster URL Submission API (when BING_WEBMASTER_API_KEY is set in .env.local)
 //
-// Run after deploys: `node scripts/submit-indexnow.mjs`
-// Or wire into your build/CI to fire automatically on every push to main.
+// Run after deploys: `node --env-file=.env.local scripts/submit-indexnow.mjs`
+// Or just `npm run indexnow` (package.json wires the env-file flag).
 
 import { readFileSync } from "node:fs";
 
 const HOST = "pensacolamilitaryhousing.com";
 const KEY = "a1a4a0be0196a455ad3c188805e7d969";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
-const ENDPOINT = "https://api.indexnow.org/IndexNow";
+const INDEXNOW = "https://api.indexnow.org/IndexNow";
+const BING_API = "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlBatch";
+const BING_KEY = process.env.BING_WEBMASTER_API_KEY;
 
 const sitemap = readFileSync("public/sitemap.xml", "utf8");
 const urlList = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
   .map(m => m[1])
   .filter(u => u.startsWith(`https://${HOST}`));
 
-console.log(`Submitting ${urlList.length} URLs to IndexNow...`);
+console.log(`Loaded ${urlList.length} URLs from sitemap.\n`);
 
-const body = {
-  host: HOST,
-  key: KEY,
-  keyLocation: KEY_LOCATION,
-  urlList,
-};
-
-const r = await fetch(ENDPOINT, {
-  method: "POST",
-  headers: { "Content-Type": "application/json; charset=utf-8" },
-  body: JSON.stringify(body),
-});
-
-// IndexNow returns 200 (success) or 202 (received, processing) — both fine.
-// 4xx means the key file isn't reachable yet; deploy first, then re-run.
-if (r.status === 200 || r.status === 202) {
-  console.log(`✓ IndexNow accepted: HTTP ${r.status}`);
-} else {
-  const text = await r.text().catch(() => "");
-  console.error(`✗ IndexNow returned HTTP ${r.status}: ${text.slice(0, 200)}`);
-  console.error(`  If this is your first run, the key file at ${KEY_LOCATION} may not be deployed yet.`);
-  process.exit(1);
+// ─── 1. IndexNow ─────────────────────────────────────────────────────────
+{
+  console.log("→ IndexNow (Bing + Yandex + DuckDuckGo + Naver + Seznam)");
+  const r = await fetch(INDEXNOW, {
+    method: "POST",
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+    body: JSON.stringify({ host: HOST, key: KEY, keyLocation: KEY_LOCATION, urlList }),
+  });
+  if (r.status === 200 || r.status === 202) {
+    console.log(`  ✓ accepted (HTTP ${r.status})\n`);
+  } else {
+    const text = await r.text().catch(() => "");
+    console.error(`  ✗ HTTP ${r.status}: ${text.slice(0, 200)}`);
+    console.error(`  If first run, the key file at ${KEY_LOCATION} may not be deployed yet.\n`);
+  }
 }
+
+// ─── 2. Bing direct (only if key available) ───────────────────────────────
+if (BING_KEY) {
+  console.log("→ Bing Webmaster URL Submission API (direct)");
+  // Bing's quota is 10,000 URLs/day for verified sites — plenty for our ~64.
+  const r = await fetch(`${BING_API}?apikey=${BING_KEY}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+    body: JSON.stringify({ siteUrl: `https://${HOST}`, urlList }),
+  });
+  const data = await r.json().catch(() => ({}));
+  if (r.ok && data?.d === null) {
+    console.log(`  ✓ accepted (HTTP ${r.status})\n`);
+  } else {
+    console.error(`  ✗ HTTP ${r.status}: ${JSON.stringify(data).slice(0, 300)}\n`);
+  }
+} else {
+  console.log("→ Bing Webmaster API skipped (BING_WEBMASTER_API_KEY not set)\n");
+}
+
+console.log("Done.");

@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "vite build && node scripts/postbuild-spa-routes.mjs",
         "preview": "vite preview",
-        "indexnow": "node scripts/submit-indexnow.mjs",
+        "indexnow": "node --env-file=.env.local scripts/submit-indexnow.mjs",
         "og-images": "node scripts/generate-og-images.mjs"
     },
     "dependencies": {

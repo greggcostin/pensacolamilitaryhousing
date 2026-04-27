@@ -97,10 +97,10 @@ footer a{color:var(--gold)}
 .cta strong{color:#fff}
 .cta a{color:var(--gold);font-weight:700}
 .explore{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:2.5rem auto 3rem;max-width:900px}
-.explore-col{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem;text-align:center}
+.explore-col{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem;text-align:center;min-width:0;overflow-wrap:anywhere}
 .explore-title{color:var(--gold);font-size:.85rem;margin:0 0 1rem;text-transform:uppercase;letter-spacing:2px;font-weight:700}
 .explore .related{display:flex;flex-direction:column;gap:0;margin:0}
-.explore .related a{color:var(--text);padding:.5rem 0;border-bottom:1px solid var(--hair);font-size:.92rem;text-decoration:none}
+.explore .related a{color:var(--text);padding:.5rem 0;border-bottom:1px solid var(--hair);font-size:.92rem;text-decoration:none;overflow-wrap:anywhere}
 .explore .related a:last-child{border-bottom:none}
 .explore .related a:hover{color:var(--gold)}
 @media(max-width:720px){.explore{grid-template-columns:1fr}}
@@ -140,7 +140,7 @@ img{max-width:100%;height:auto}
   h3{font-size:16px!important}
   .facts{grid-template-columns:1fr!important;padding:1.25rem!important;gap:.4rem 0!important}
   .explore{grid-template-columns:1fr!important;gap:12px!important;margin:1.5rem auto 2rem!important}
-  .explore-col{padding:1.25rem!important}
+  .explore-col{padding:1.25rem!important;min-width:0;overflow-wrap:anywhere}
   .bah-wrap{border-radius:8px!important}
   .bah-table{font-size:13px!important}
   .bah-table thead th,.bah-table tbody td{padding:9px 10px!important}

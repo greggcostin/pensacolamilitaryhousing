@@ -9,7 +9,9 @@
         "build": "vite build && node scripts/postbuild-spa-routes.mjs",
         "preview": "vite preview",
         "indexnow": "node --env-file=.env.local scripts/submit-indexnow.mjs",
-        "og-images": "node scripts/generate-og-images.mjs"
+        "og-images": "node scripts/generate-og-images.mjs",
+        "optimize-images": "node scripts/optimize-images.mjs",
+        "modern-images": "node scripts/generate-modern-images.mjs"
     },
     "dependencies": {
         "react": "^18.3.1",

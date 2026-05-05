@@ -309,6 +309,18 @@ const Nav = ({ current, go }) => {
         <Tab id="calculator" label="Calculators" />
         <ExtTab href="/reviews.html" label="Reviews" />
         <Tab id="contact" label="Contact" />
+        <button
+          type="button"
+          onClick={() => { const d = document.getElementById("search-modal"); if (d && d.showModal) d.showModal(); }}
+          aria-label="Search the site"
+          style={{ background: "transparent", border: `1px solid ${C.gold}66`, color: C.gold, cursor: "pointer", padding: "5px 10px", fontSize: 11, fontWeight: 500, letterSpacing: ".5px", textTransform: "uppercase", fontFamily: "inherit", borderRadius: 4, display: "inline-flex", alignItems: "center", gap: 6, marginLeft: 4 }}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Search</span>
+        </button>
       </div>
     </nav>
   );

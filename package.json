@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "vite",
         "prebuild": "node scripts/bump-dates.mjs",
-        "build": "vite build && node scripts/postbuild-spa-routes.mjs",
+        "build": "vite build && node scripts/postbuild-spa-routes.mjs && pagefind --site dist --output-subdir pagefind",
         "preview": "vite preview",
         "indexnow": "node --env-file=.env.local scripts/submit-indexnow.mjs",
         "og-images": "node scripts/generate-og-images.mjs",
@@ -20,6 +20,7 @@
     "devDependencies": {
         "@jsquash/avif": "^2.1.1",
         "@vitejs/plugin-react": "^4.3.4",
+        "pagefind": "^1.5.2",
         "sharp": "^0.34.5",
         "vite": "^5.4.10"
     }

@@ -153,7 +153,9 @@ function ogPath(htmlPath) {
   return `${OG_DIR}/${slug}.png`;
 }
 
-const pages = walk("public");
+const filter = process.argv[2] || ""; // optional slug substring filter
+const pages = walk("public").filter(p => !filter || p.includes(filter));
+if (filter) console.log(`Filter: "${filter}" → ${pages.length} matching pages`);
 let generated = 0, updated = 0;
 
 for (const path of pages) {

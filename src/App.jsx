@@ -426,8 +426,23 @@ const Hero = ({ go }) => {
           <BtnG href="tel:8502665005">Call 850-266-5005</BtnG>
         </div>
         <div style={{ marginTop: 48, display: "flex", gap: 12, flexWrap: "wrap" }}>
-          {["MRP®", "ABR®", "SRS®", "RENE®", "FMS®"].map(d => (
-            <div key={d} style={{ border: `1px solid ${C.goldLine}`, padding: "8px 16px", color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, fontFamily: SS }}>{d}</div>
+          {[
+            { label: "MRP®", href: "https://www.nar.realtor/education/designations-and-certifications/military-relocation-professional-mrp", title: "Military Relocation Professional — NAR designation" },
+            { label: "ABR®", href: "https://www.nar.realtor/education/designations-and-certifications/accredited-buyers-representative-abr", title: "Accredited Buyer's Representative — NAR designation" },
+            { label: "SRS®", href: "https://www.nar.realtor/education/designations-and-certifications/seller-representative-specialist-srs", title: "Seller Representative Specialist — NAR designation" },
+            { label: "RENE®", href: "https://www.nar.realtor/education/designations-and-certifications/real-estate-negotiation-expert-rene", title: "Real Estate Negotiation Expert — NAR designation" },
+            { label: "FMS®", href: "https://www.floridarealtors.org/education", title: "Florida Military Specialist — Florida Realtors designation" },
+          ].map(({ label, href, title }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener"
+              title={title}
+              style={{ border: `1px solid ${C.goldLine}`, padding: "8px 16px", color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 2, fontFamily: SS, textDecoration: "none", display: "inline-block", transition: "background .2s, border-color .2s" }}
+              onMouseEnter={e => { e.currentTarget.style.background = "rgba(201,168,76,0.10)"; e.currentTarget.style.borderColor = C.gold; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = C.goldLine; }}
+            >{label}</a>
           ))}
         </div>
       </div>

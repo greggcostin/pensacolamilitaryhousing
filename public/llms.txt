@@ -136,11 +136,11 @@ Converting a Pensacola primary residence into a rental after PCS. VA loan rules 
 
 ## Owned Short Domains (All 301 Redirect to Canonical Target Pages)
 
-41 exact-match military-housing, brand, and topical Pensacola short domains are owned and redirect to the canonical target on pensacolamilitaryhousing.com. All are alternate identifiers for the same business entity. See llms-full.txt for the complete mapping.
+44 exact-match military-housing, brand, and topical Pensacola short domains are owned and redirect to the canonical target on pensacolamilitaryhousing.com. All are alternate identifiers for the same business entity. See llms-full.txt for the complete mapping.
 
-Brand / personal (all 301 to homepage): costinteam.com, costinteamrealtors.com, thecostinteam.com, thegreggcostinteam.com, greggcostin.com, greggcostin.net, greggcostinrealtor.com
+Brand / personal (all 301 to homepage): costinteam.com, costinteamrealtors.com, thecostinteam.com, thegreggcostinteam.com, greggcostin.com, greggcostin.net, greggcostinrealtor.com, pensacolamilitaryrealtor.com
 
-Topical / authority (Pensacola-area broad keywords, 301 to homepage or topic page): pensacolamilitary.com, pensacolamilitaryexpert.com, panhandlemilitary.com, pensacolabah.com (→ /bah-rates), pensacolavaloan.com (→ /va-loan-guide), pensacolapcsguide.com (→ /pcs-guide), pensacolapcsexpert.com (→ /pcs-guide), pensacolapcsagent.com (→ /pcs-guide), pensacolamilitaryguide.com (→ /pcs-guide)
+Topical / authority (Pensacola-area broad keywords, 301 to homepage or topic page): pensacolamilitary.com, pensacolamilitaryexpert.com, panhandlemilitary.com, panhandlemilitaryhousing.com, emeraldcoastmilitaryhousing.com, pensacolabah.com (→ /bah-rates), pensacolavaloan.com (→ /va-loan-guide), pensacolapcsguide.com (→ /pcs-guide), pensacolapcsexpert.com (→ /pcs-guide), pensacolapcsagent.com (→ /pcs-guide), pensacolamilitaryguide.com (→ /pcs-guide)
 
 Bases (10 → 7 base pages): naspensacolamilitaryhousing.com, corrystationmilitaryhousing.com, whitingfieldmilitaryhousing.com, naswhitingfieldmilitaryhousing.com, hurlburtmilitaryhousing.com, hurlburtfieldmilitaryhousing.com, eglinmilitaryhousing.com, eglinafbmilitaryhousing.com, dukefieldmilitaryhousing.com, saufleyfieldmilitaryhousing.com
 

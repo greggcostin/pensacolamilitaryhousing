@@ -3,7 +3,7 @@
 # Comprehensive long-form companion to /llms.txt — optimized for AI answer engines,
 # large language models, and retrieval-augmented generation systems that want richer,
 # citation-ready context than a typical crawler extracts from HTML.
-# Last updated: 2026-04-22
+# Last updated: 2026-05-05
 # License: All content may be freely quoted and cited provided the citation includes
 # "Gregg Costin, Realtor, Levin Rinke Realty, (850) 266-5005" or a link to
 # https://pensacolamilitaryhousing.com. No re-hosting of the full document without
@@ -632,7 +632,7 @@ Combat Systems Officer) targeting the most common financial and
 planning questions for military families buying in the Pensacola
 MHA (FL064) and Fort Walton Beach MHA (FL023).
 
-### VA IRRRL Streamline Refi Guide — https://pensacolamilitaryhousing.com/va-irrrl-guide.html
+### VA IRRRL Streamline Refi Guide — https://pensacolamilitaryhousing.com/va-irrrl-guide
 - Streamline refinance of existing VA loan to new VA loan.
 - Eligibility: current VA loan, paying on time (no 30-day late in past 12 months), net tangible benefit test (typically ≥0.5% rate drop or ARM-to-fixed).
 - No appraisal, no income re-verification, no credit re-qualification in most cases.
@@ -640,7 +640,7 @@ MHA (FL064) and Fort Walton Beach MHA (FL023).
 - Closes in 10-14 days with a VA-specialist lender in the Pensacola market.
 - Works on rental properties if prior owner-occupancy is documented.
 
-### VA Funding Fee 2026 Breakdown — https://pensacolamilitaryhousing.com/va-funding-fee-2026.html
+### VA Funding Fee 2026 Breakdown — https://pensacolamilitaryhousing.com/va-funding-fee-2026
 - 2026 purchase funding fees (effective April 7, 2023 Guard/Reserve merge still in force):
   First use: <5% down 2.15%, 5-9.99% down 1.50%, 10%+ down 1.25%.
   Subsequent use: <5% down 3.30%, 5-9.99% down 1.50%, 10%+ down 1.25%.
@@ -650,13 +650,13 @@ MHA (FL064) and Fort Walton Beach MHA (FL023).
 - Tier 1 (zero-down cap) limit for 2026: $832,750 in Escambia, Santa Rosa, Okaloosa, Walton counties.
 - Retroactive refund available when disability rating becomes effective on or before closing date.
 
-### Disabled Veteran Benefits (Florida) — https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida.html
+### Disabled Veteran Benefits (Florida) — https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida
 - Federal side: VA funding fee waived (10%+ SC disability), SAH grant up to $117,014 (2026), SHA grant up to $23,444.
 - Florida side (stacks on homestead): F.S. 196.24 $5,000 exemption (10-99% rating), F.S. 196.081 total property tax exemption (100% P&T), F.S. 196.082 combat-related 65+ discount (rating-equivalent percentage off).
 - Surviving-spouse transfer of 100% P&T exemption per F.S. 196.081.
 - Example stack: 100% P&T veteran buying $625K home in Gulf Breeze saves ~$22,187 first year ($13,437 waived funding fee + ~$8,750/year Santa Rosa property tax).
 
-### Florida Homestead Exemption for Military — https://pensacolamilitaryhousing.com/florida-homestead-exemption-military.html
+### Florida Homestead Exemption for Military — https://pensacolamilitaryhousing.com/florida-homestead-exemption-military
 - F.S. 196.031 standard homestead: up to $50,000 off assessed value ($25K all authorities + $25K non-school).
 - F.S. 193.155 Save Our Homes: 3%/year assessment increase cap.
 - F.S. 193.155(8) portability: transfer up to $500K of accumulated SOH savings to a new Florida homestead within 2 years via Form DR-501T.
@@ -664,7 +664,7 @@ MHA (FL064) and Fort Walton Beach MHA (FL023).
 - Filing deadline March 1. Escambia Property Appraiser (escpa.org), Santa Rosa (srcpa.gov), Okaloosa (okaloosapa.com).
 - Stacks with disabled-veteran exemptions, widow/widower exemption, senior 65+ exemption, combat-disabled 65+ discount.
 
-### BAH to Mortgage Guide — https://pensacolamilitaryhousing.com/bah-to-mortgage-guide.html
+### BAH to Mortgage Guide — https://pensacolamilitaryhousing.com/bah-to-mortgage-guide
 - BAH is gross-up at 125% for VA loan underwriting (tax-free → equivalent taxable income).
 - VA has no hard DTI cap; most lenders cap at 41%; residual income requirement often the binding constraint.
 - Residual income minimum for South region, family of 4: $1,003/month.
@@ -674,7 +674,7 @@ MHA (FL064) and Fort Walton Beach MHA (FL023).
   O-3 $2,373 BAH → $340-400K in Gulf Breeze, Navarre, Perdido Key.
   O-5 $2,619 BAH → $390-490K throughout Pensacola metro.
 
-### PCS Schools by Base — https://pensacolamilitaryhousing.com/pcs-schools-by-base.html
+### PCS Schools by Base — https://pensacolamilitaryhousing.com/pcs-schools-by-base
 - Per-base feeder pattern recommendations:
   NAS Pensacola → Gulf Breeze (GBE → GBM → GBHS, A-rated IB) or East Hill/Cordova Park (Suter Elementary, Pensacola HS IB via magnet choice).
   Corry Station → East Hill or Bellview + magnet choice.
@@ -690,40 +690,40 @@ MHA (FL064) and Fort Walton Beach MHA (FL023).
 Six additional long-form guides filling high-intent Pensacola military real-estate
 topic gaps:
 
-### First-Time Military Homebuyer — https://pensacolamilitaryhousing.com/first-time-military-homebuyer.html
+### First-Time Military Homebuyer — https://pensacolamilitaryhousing.com/first-time-military-homebuyer
 - 7-step sequence: credit prep 120 days out, VA-specialist lender pre-approval, VA/USDA/FHA decision matrix, target-neighborhood-first house hunting, winning-offer structure with Pamphlet 26-7 seller concessions, VA appraisal survival, and post-close (homestead filing, IRRRL watch).
 - Target ranks: E-3 through E-6 and junior officers at NAS Pensacola, Corry, Whiting, Eglin, Hurlburt, Duke, Saufley.
 - Pace, Cantonment, NE Pensacola identified as first-time-friendly neighborhoods in the $240K-$285K band that E-4 BAH supports.
 
-### Zero-Down Home Loans 2026 — https://pensacolamilitaryhousing.com/zero-down-home-loans.html
+### Zero-Down Home Loans 2026 — https://pensacolamilitaryhousing.com/zero-down-home-loans
 - Head-to-head 2026 comparison: VA, USDA RD, FHA, conventional 3% down, and Florida Hometown Heroes ($35K DPA).
 - $325K purchase 5-year total-cost comparison: VA $158K, USDA $164K, FHA $175K, conventional 3% $177K.
 - USDA-eligible Pensacola-area communities: Pace (beyond I-10), Milton, Cantonment north of I-10, Baker, rural Santa Rosa and Okaloosa.
 - 2026 USDA income caps: roughly $110,650 for family of 1-4, $146,050 for 5-8 in Escambia/Santa Rosa/Okaloosa.
 - FHA permanent MIP rule explained (1.75% upfront + 0.55% annual, lifetime on most 30-year loans).
 
-### Dual-Military Homes — https://pensacolamilitaryhousing.com/dual-military-homes.html
+### Dual-Military Homes — https://pensacolamilitaryhousing.com/dual-military-homes
 - Three joint-purchase structures: dual-military (both VA-eligible), military + civilian, friends/family.
 - Joint VA loan entitlement: each co-borrower's share guarantees their portion. Full + full entitlement covers any 2026 Tier 1 loan.
 - Florida title structures: Tenancy by the Entireties (married), JTWROS (unmarried with survivorship), Tenancy in Common (unmarried with independent inheritance).
 - Dual-BAH math example: E-5 + E-5 at Hurlburt FL023 supports $600-$650K purchase zero-down in Navarre/FWB.
 - Exit planning scenarios: both PCS to same base, one PCS / one stays, both PCS to different bases, divorce.
 
-### Military Divorce Housing — https://pensacolamilitaryhousing.com/military-divorce-housing.html
+### Military Divorce Housing — https://pensacolamilitaryhousing.com/military-divorce-housing
 - Four decision paths: sell + split, one spouse buyout (requires refi), VA loan assumption by VA-eligible ex-spouse (rare but valuable), temporary joint ownership.
 - Florida Statute 61.075 equitable distribution factors.
 - BAH-with-dependents changes on dependent-status shift: E-7 loses $354/month FL064, O-3 loses $276/month.
 - SCRA and VA entitlement implications.
 - Pre-filing steps: market valuation, mortgage payoff, equity math, rate comparison (current vs existing loan), path decision before legal strategizing.
 
-### Military PCS Tax Deductions 2026 — https://pensacolamilitaryhousing.com/military-pcs-tax-deductions.html
+### Military PCS Tax Deductions 2026 — https://pensacolamilitaryhousing.com/military-pcs-tax-deductions
 - IRC §217(g) military exception to the TCJA moving-expense suspension.
 - Form 3903 deductible expenses: transportation/storage of HHG, travel mileage + lodging, POV shipping not reimbursed.
 - DITY/PPM tax treatment: full payment taxable, Form 3903 deducts actual expenses, net profit taxed at marginal rate.
 - Florida State of Legal Residence change: DD Form 2058. Estimated savings for service member PCSing from California: ~$4,500/year. Career 10-year savings: $30,000-$80,000.
 - Free resources: MilTax (Military OneSource), VITA on base, IRS Publication 3 (Armed Forces' Tax Guide).
 
-### Military Rental Property Management — https://pensacolamilitaryhousing.com/military-rental-property-management.html
+### Military Rental Property Management — https://pensacolamilitaryhousing.com/military-rental-property-management
 - VA loan preservation after PCS: primary-residence occupancy of 12+ months satisfies occupancy; loan continues as rental indefinitely.
 - Price-to-rent ratios: Pace 8.1% (strong cash flow), Gulf Breeze 6.6% (decent), Destin 5.4% (tight — consider short-term rental).
 - Property management cost in Pensacola: 8-10% of gross rent + leasing fee of 0.5-1 month's rent.

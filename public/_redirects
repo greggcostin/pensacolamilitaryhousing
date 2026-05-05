@@ -77,12 +77,56 @@
 /homestead                      /florida-homestead-exemption-military     301
 
 # Co-Buying page renamed to Dual-Military Homes
-/co-buying-military-homes.html  /dual-military-homes.html                 301
-/co-buying-military-homes       /dual-military-homes.html                 301
+/co-buying-military-homes.html  /dual-military-homes                      301
+/co-buying-military-homes       /dual-military-homes                      301
 
 # BAH Rates page renamed (dropped MHA code from URL)
-/fl064-bah-rates.html           /bah-rates.html                           301
-/fl064-bah-rates                /bah-rates.html                           301
+/fl064-bah-rates.html           /bah-rates                                301
+/fl064-bah-rates                /bah-rates                                301
+
+# ── Canonical consolidation: .html → clean URL (301) ──
+# Standalone top-level pages canonicalize to clean URLs (matching the
+# /bases/<slug> and /communities/<slug> convention). Cloudflare Pages
+# auto-pretty-serves the .html file when the clean URL is requested,
+# so the destination resolves without a chain.
+/assumable-va-loans-pensacola.html         /assumable-va-loans-pensacola         301
+/bah-rates.html                            /bah-rates                            301
+/bah-to-mortgage-guide.html                /bah-to-mortgage-guide                301
+/blog.html                                 /blog                                 301
+/disabled-veteran-benefits-florida.html    /disabled-veteran-benefits-florida    301
+/dual-military-homes.html                  /dual-military-homes                  301
+/faq.html                                  /faq                                  301
+/first-time-military-homebuyer.html        /first-time-military-homebuyer        301
+/florida-homestead-exemption-military.html /florida-homestead-exemption-military 301
+/gulf-breeze-vs-navarre.html               /gulf-breeze-vs-navarre               301
+/homes-for-sale-corry-station.html         /homes-for-sale-corry-station         301
+/homes-for-sale-duke-field.html            /homes-for-sale-duke-field            301
+/homes-for-sale-eglin-afb.html             /homes-for-sale-eglin-afb             301
+/homes-for-sale-hurlburt-field.html        /homes-for-sale-hurlburt-field        301
+/homes-for-sale-nas-pensacola.html         /homes-for-sale-nas-pensacola         301
+/homes-for-sale-nas-whiting-field.html     /homes-for-sale-nas-whiting-field     301
+/homes-for-sale-saufley-field.html         /homes-for-sale-saufley-field         301
+/military-divorce-housing.html             /military-divorce-housing             301
+/military-pcs-tax-deductions.html          /military-pcs-tax-deductions          301
+/military-rental-property-management.html  /military-rental-property-management  301
+/nas-pensacola-vs-hurlburt-field.html      /nas-pensacola-vs-hurlburt-field      301
+/niceville-vs-crestview.html               /niceville-vs-crestview               301
+/on-base-vs-off-base-corry-station.html    /on-base-vs-off-base-corry-station    301
+/on-base-vs-off-base-duke-field.html       /on-base-vs-off-base-duke-field       301
+/on-base-vs-off-base-eglin-afb.html        /on-base-vs-off-base-eglin-afb        301
+/on-base-vs-off-base-hurlburt-field.html   /on-base-vs-off-base-hurlburt-field   301
+/on-base-vs-off-base-nas-pensacola.html    /on-base-vs-off-base-nas-pensacola    301
+/on-base-vs-off-base-nas-whiting-field.html /on-base-vs-off-base-nas-whiting-field 301
+/on-base-vs-off-base-saufley-field.html    /on-base-vs-off-base-saufley-field    301
+/pcs-checklist.html                        /pcs-checklist                        301
+/pcs-schools-by-base.html                  /pcs-schools-by-base                  301
+/reviews.html                              /reviews                              301
+/school-zones-military-families.html       /school-zones-military-families       301
+/va-disability-property-tax-florida.html   /va-disability-property-tax-florida   301
+/va-funding-fee-2026.html                  /va-funding-fee-2026                  301
+/va-irrrl-guide.html                       /va-irrrl-guide                       301
+/va-loan-guide.html                        /va-loan-guide                        301
+/zero-down-home-loans.html                 /zero-down-home-loans                 301
 
 # ── SPA fallback (must be last) ──
 # Cloudflare Pages auto-strips .html from destinations in explicit rules,

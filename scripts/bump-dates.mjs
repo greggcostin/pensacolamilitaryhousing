@@ -1,25 +1,29 @@
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+// Refresh `<lastmod>` in sitemap.xml and the "Last updated" stamps in
+// llms.txt / llms-full.txt to today's date. Wired into `npm run build`
+// so dates track deploys without manual edits.
+//
+// Override the date with: node scripts/bump-dates.mjs 2026-04-22
 
-const TODAY_ISO = "2026-04-21";
-const TODAY_HUMAN = "April 21, 2026";
+import { readFileSync, writeFileSync } from "node:fs";
 
-// Update sitemap
+const arg = process.argv[2];
+const TODAY = arg && /^\d{4}-\d{2}-\d{2}$/.test(arg)
+  ? arg
+  : new Date().toISOString().slice(0, 10);
+
+// 1) Sitemap: bump every <lastmod> to today.
 const sitemapPath = "public/sitemap.xml";
-const bases = ["nas-pensacola", "nas-whiting-field", "corry-station", "hurlburt-field", "eglin-afb", "duke-field"];
 let sitemap = readFileSync(sitemapPath, "utf8");
-for (const b of bases) {
-  const re = new RegExp(`(<loc>https://pensacolamilitaryhousing\\.com/${b}\\.html</loc>\\s*<lastmod>)[^<]+(</lastmod>)`);
-  sitemap = sitemap.replace(re, `$1${TODAY_ISO}$2`);
-}
-writeFileSync(sitemapPath, sitemap);
-console.log("Sitemap bumped");
+const before = sitemap;
+sitemap = sitemap.replace(/<lastmod>[^<]+<\/lastmod>/g, `<lastmod>${TODAY}</lastmod>`);
+if (sitemap !== before) writeFileSync(sitemapPath, sitemap);
 
-// Update "Last updated" stamps in the 6 expanded base pages
-for (const b of bases) {
-  const path = `public/${b}.html`;
-  let html = readFileSync(path, "utf8");
-  html = html.replace(/Last updated: April 20, 2026/g, `Last updated: ${TODAY_HUMAN}`);
-  writeFileSync(path, html);
-  console.log(`Stamped: ${b}.html`);
+// 2) llms.txt + llms-full.txt: refresh "Last updated:" header.
+for (const path of ["public/llms.txt", "public/llms-full.txt"]) {
+  let txt;
+  try { txt = readFileSync(path, "utf8"); } catch { continue; }
+  const updated = txt.replace(/^# Last updated:.*$/m, `# Last updated: ${TODAY}`);
+  if (updated !== txt) writeFileSync(path, updated);
 }
+
+console.log(`Bumped lastmod / Last updated to ${TODAY}`);

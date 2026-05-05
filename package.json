@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "prebuild": "node scripts/bump-dates.mjs",
         "build": "vite build && node scripts/postbuild-spa-routes.mjs",
         "preview": "vite preview",
         "indexnow": "node --env-file=.env.local scripts/submit-indexnow.mjs",

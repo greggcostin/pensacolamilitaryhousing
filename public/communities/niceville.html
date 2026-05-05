@@ -248,20 +248,6 @@ img{max-width:100%;height:auto}
   .explore .related .subhead{margin:1.4rem 0 .35rem;font-size:.72rem}
 }
 /* EXPLORE_V2_CSS_END */
-/* Sticky mobile call CTA — hidden on desktop, pinned bottom-right on phone */
-.sticky-mobile-cta{display:none}
-@media (max-width:800px){
-  .sticky-mobile-cta{
-    display:inline-flex;align-items:center;gap:6px;
-    position:fixed;bottom:16px;right:16px;z-index:9999;
-    background:#C9A84C;color:#0A0F1A!important;
-    font-weight:700;font-size:15px;letter-spacing:.2px;
-    padding:12px 18px;min-height:44px;border-radius:999px;
-    box-shadow:0 6px 20px rgba(0,0,0,.45);
-    text-decoration:none;font-family:var(--sans,'Inter',system-ui,sans-serif);
-  }
-  .sticky-mobile-cta:hover,.sticky-mobile-cta:focus{background:#D4B768}
-}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","@id":"https://pensacolamilitaryhousing.com/#person-gregg","name":"Gregg Costin","alternateName":"Gregg Costin, Realtor","givenName":"Gregg","familyName":"Costin","jobTitle":"Realtor, Military Relocation Specialist","worksFor":{"@type":"RealEstateOrganization","name":"Levin Rinke Realty","url":"https://greggc.levinrinkerealty.com","address":{"@type":"PostalAddress","streetAddress":"220 W. Garden Street","addressLocality":"Pensacola","addressRegion":"FL","postalCode":"32502","addressCountry":"US"}},"alumniOf":[{"@type":"Organization","name":"United States Air Force"},{"@type":"CollegeOrUniversity","name":"University of Tampa"}],"knowsAbout":["VA Home Loans","PCS Relocation","BAH","NAS Pensacola","NAS Whiting Field","Corry Station","Saufley Field","Hurlburt Field","Eglin AFB","Duke Field","Florida Homestead Exemption","Military Relocation Professional","E-3 AWACS Combat Systems Officer"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Military Relocation Professional (MRP)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Accredited Buyer's Representative (ABR)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Seller Representative Specialist (SRS)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Real Estate Negotiation Expert (RENE)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Florida Military Specialist (FMS)","credentialCategory":"certification"}],"description":"Retired USAF Captain and E-3 AWACS Combat Systems Officer. Completed a full military career from prior-enlisted Staff Sergeant to commissioned officer with 11 PCS moves. Now a licensed Florida and Alabama Realtor specializing in military relocation, VA loans, and PCS moves across the Florida Panhandle.","email":"gregg.costin@gmail.com","telephone":"+1-850-266-5005","url":"https://pensacolamilitaryhousing.com","image":"https://pensacolamilitaryhousing.com/images/gregg-portrait.jpg"}
@@ -270,8 +256,8 @@ img{max-width:100%;height:auto}
 <body>
 <nav class="main-banner" aria-label="Main site navigation">
 <div class="banner-row">
-<a href="/" class="banner-lrr"><picture><source srcset="/images/logo-lrr.avif" type="image/avif"><source srcset="/images/logo-lrr.webp" type="image/webp"><img loading="lazy" src="/images/logo-lrr.png" alt="Levin Rinke Realty" width="240" height="108"></picture></a>
-<a href="/" class="banner-logo"><picture><source srcset="/images/logo-08.avif" type="image/avif"><source srcset="/images/logo-08.webp" type="image/webp"><img loading="lazy" src="/images/logo-08.png" alt="The Costin Team" width="240" height="108"></picture></a>
+<a href="/" class="banner-lrr"><img loading="lazy" src="/images/logo-lrr.png" alt="Levin Rinke Realty" width="240" height="108"></a>
+<a href="/" class="banner-logo"><img loading="lazy" src="/images/logo-08.png" alt="The Costin Team" width="240" height="108"></a>
 <div class="banner-contact">
 <a href="tel:8502665005" class="banner-phone">(850) 266-5005</a>
 <a href="mailto:gregg.costin@gmail.com" class="banner-email">gregg.costin@gmail.com</a>
@@ -293,11 +279,6 @@ img{max-width:100%;height:auto}
 <header>
 <h1>Niceville, Valparaiso &amp; Bluewater Bay &mdash; Eglin AFB East Gate Housing</h1>
 <p class="lead">The Okaloosa County communities adjacent to Eglin AFB's East Gate. A-rated Niceville High School zone, the master-planned Bluewater Bay community, and the shortest commute for 33rd Fighter Wing and 96th Test Wing families.</p>
-<!-- hero-cta -->
-<div class="hero-cta-row" style="display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 4px;align-items:center">
-  <a href="tel:8502665005" data-cta="hero" style="display:inline-flex;align-items:center;gap:8px;background:var(--gold,#C9A84C);color:var(--ink,#0A0F1A);font-weight:700;font-size:15px;letter-spacing:.3px;padding:12px 22px;border-radius:6px;text-decoration:none;min-height:44px;line-height:1">📞 Call (850) 266-5005</a>
-  <a href="mailto:gregg.costin@gmail.com" data-cta="hero-email" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--gold,#C9A84C);font-weight:600;font-size:14px;letter-spacing:.3px;padding:12px 18px;border:1px solid var(--gold-line,rgba(201,168,76,0.45));border-radius:6px;text-decoration:none;min-height:44px;line-height:1">✉ Email Gregg</a>
-</div>
 </header>
 <main>
 <p>Niceville is the primary Okaloosa County city on the northeast corner of Eglin AFB. Valparaiso is a small incorporated enclave immediately adjacent to the Eglin gate (and effectively surrounded by base land). Bluewater Bay is a large master-planned community within Niceville on Rocky Bayou, with its own golf course, tennis, marina, and a newer housing stock than the rest of Niceville. Together, this is the default housing destination for Eglin permanent party with school-age children &mdash; the commute is 5-10 minutes, Niceville High is the top Okaloosa school zone, and Bluewater Bay amenities are genuinely attractive.</p>
@@ -452,7 +433,5 @@ MRP &middot; ABR &middot; RENE &middot; Florida Military Specialist &middot; Pur
 <p style="text-align:center;color:var(--mutedD,#6f6e65);font-size:.75rem;margin:.5rem 0 0;letter-spacing:.5px;text-transform:uppercase">Content last verified: April 2026</p>
 <p data-legal="disclaimer" style="color:var(--mutedD,#6f6e65);font-size:.7rem;font-style:italic;line-height:1.6;margin:1rem auto 0;text-align:center;max-width:820px"><strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (220 W. Garden St., Pensacola, FL 32502). Information on this site — including BAH figures, VA loan terms, funding fees, tax rules, homestead and disability benefits, school zoning, and rental/investment commentary — is provided for general informational purposes only and is not legal, tax, financial, mortgage, lending, or investment advice. Real estate, lending, tax, and benefits rules change frequently and depend on individual circumstances; verify current figures with official sources (DoD BAH calculator, VA, IRS, your county property appraiser) and consult a licensed attorney, CPA, or NMLS-licensed loan officer for guidance specific to your situation. Gregg Costin is not a mortgage lender, attorney, tax professional, or financial advisor, and is not affiliated with, endorsed by, or representing the U.S. Department of Defense, Department of Veterans Affairs, or any branch of the U.S. military. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.</p>
 </footer>
-<!-- sticky-mobile-cta -->
-<a href="tel:8502665005" class="sticky-mobile-cta" aria-label="Call Gregg Costin at 850-266-5005" data-cta="sticky-mobile">📞 (850) 266-5005</a>
 </body>
 </html>

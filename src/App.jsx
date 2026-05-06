@@ -60,6 +60,7 @@ const PCS_LINKS = [
   { label: "PCS Checklist", href: "/pcs-checklist.html" },
   { label: "PCS Schools by Base", href: "/pcs-schools-by-base.html" },
   { label: "2026 BAH Rates", href: "/bah-rates.html" },
+  { label: "FL Home Insurance", href: "/florida-home-insurance-military" },
   { label: "FL Homestead (Military)", href: "/florida-homestead-exemption-military.html" },
 ];
 

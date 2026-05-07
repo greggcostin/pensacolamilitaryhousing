@@ -500,13 +500,13 @@ const TrustBar = () => (
           { name: "VeteranPCS", logo: "/images/partner-veteranpcs.png" },
           { name: "TIER 1 PCS", logo: "/images/partner-tier1.png" },
           { name: "M.O.R.E. Network", logo: "/images/partner-more.png" },
-          { name: "Levin Rinke Realty", logo: "/images/partner-lrr.png", height: 180 },
+          { name: "Levin Rinke Realty", logo: "/images/partner-lrr.png" },
           { name: "Forbes Global Properties", logo: "/images/partner-forbes.png" },
-        ].map(({ name, logo, height = 135 }) => (
+        ].map(({ name, logo }) => (
           <div key={name} className="trust-card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
             <div style={{ color: C.muted, fontSize: 12, fontWeight: 500, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: SS, textAlign: "center" }}>{name}</div>
-            <div style={{ width: 200, height: height, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-              <Pic loading="lazy" src={logo} alt={name} style={{ maxHeight: height, maxWidth: 200, objectFit: "contain", display: "block", opacity: 0.9 }} />
+            <div style={{ width: 200, height: 135, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+              <Pic loading="lazy" src={logo} alt={name} style={{ maxHeight: 135, maxWidth: 200, objectFit: "contain", display: "block", opacity: 0.9 }} />
             </div>
           </div>
         ))}

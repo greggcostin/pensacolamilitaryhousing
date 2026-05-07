@@ -500,13 +500,13 @@ const TrustBar = () => (
           { name: "VeteranPCS", logo: "/images/partner-veteranpcs.png" },
           { name: "TIER 1 PCS", logo: "/images/partner-tier1.png" },
           { name: "M.O.R.E. Network", logo: "/images/partner-more.png" },
-          { name: "Levin Rinke Realty", logo: "/images/partner-lrr.png", scale: 1.5 },
+          { name: "Levin Rinke Realty", logo: "/images/partner-lrr.png" },
           { name: "Forbes Global Properties", logo: "/images/partner-forbes.png" },
-        ].map(({ name, logo, scale = 1 }) => (
-          <div key={name} className="trust-card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
+        ].map(({ name, logo }) => (
+          <div key={name} className="trust-card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14, width: "100%" }}>
             <div style={{ color: C.muted, fontSize: 12, fontWeight: 500, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: SS, textAlign: "center", minHeight: 18 }}>{name}</div>
-            <div style={{ width: 200, height: 112, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-              <Pic loading="lazy" src={logo} alt={name} style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain", display: "block", opacity: 0.9, transform: `scale(${scale})`, transformOrigin: "center" }} />
+            <div style={{ width: "100%", maxWidth: 240, aspectRatio: "16 / 9", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <Pic loading="lazy" src={logo} alt={name} style={{ maxHeight: "100%", maxWidth: "100%", width: "auto", height: "auto", objectFit: "contain", display: "block", opacity: 0.95 }} />
             </div>
           </div>
         ))}

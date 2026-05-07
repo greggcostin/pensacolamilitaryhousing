@@ -495,17 +495,17 @@ const TrustBar = () => (
   <section style={{ background: C.ink, borderBottom: `1px solid ${C.hairline}`, padding: "40px 32px" }}>
     <div style={{ maxWidth: 1280, margin: "0 auto" }}>
       <div style={{ textAlign: "center", color: C.gold, fontSize: 18, fontWeight: 800, letterSpacing: 4, textTransform: "uppercase", fontFamily: SS, marginBottom: 32, textDecoration: "underline", textUnderlineOffset: 6, textDecorationThickness: 2 }}>Preferred Agent</div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 32, alignItems: "end" }}>
+      <div className="trust-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 48, alignItems: "start" }}>
         {[
           { name: "VeteranPCS", logo: "/images/partner-veteranpcs.png" },
-          { name: "Tier 1 Group", logo: "/images/partner-tier1.png" },
+          { name: "TIER 1 PCS", logo: "/images/partner-tier1.png" },
           { name: "M.O.R.E. Network", logo: "/images/partner-more.png" },
           { name: "Levin Rinke Realty", logo: "/images/partner-lrr.png", scale: 1.5 },
           { name: "Forbes Global Properties", logo: "/images/partner-forbes.png" },
         ].map(({ name, logo, scale = 1 }) => (
-          <div key={name} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
-            <div style={{ color: C.muted, fontSize: 12, fontWeight: 500, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: SS, textAlign: "center" }}>{name}</div>
-            <div style={{ width: 200, height: 112, display: "flex", alignItems: "center", justifyContent: "center", overflow: "visible" }}>
+          <div key={name} className="trust-card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
+            <div style={{ color: C.muted, fontSize: 12, fontWeight: 500, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: SS, textAlign: "center", minHeight: 18 }}>{name}</div>
+            <div style={{ width: 200, height: 112, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
               <Pic loading="lazy" src={logo} alt={name} style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain", display: "block", opacity: 0.9, transform: `scale(${scale})`, transformOrigin: "center" }} />
             </div>
           </div>
@@ -783,7 +783,7 @@ const AboutPage = ({ go }) => (
           <Eyebrow>Family Man</Eyebrow>
           <H2>11 PCS moves. I get it.</H2>
           <Body>When I say I understand the stress of a PCS move, I mean it. My family and I have lived it — packing up, finding homes from overseas, navigating schools and neighborhoods sight-unseen. Now I channel that experience into making your transition as smooth as possible.</Body>
-          <Body>I am the preferred real estate agent for VeteranPCS, Tier 1 Group, and the M.O.R.E. Network — three of the most respected military relocation organizations in the country. I'm also recognized as a Zillow Premier Agent in the top 5% of Pensacola-area Realtors with a perfect 5-star rating.</Body>
+          <Body>I am the preferred real estate agent for VeteranPCS, TIER 1 PCS, and the M.O.R.E. Network — three of the most respected military relocation organizations in the country. I'm also recognized as a Zillow Premier Agent in the top 5% of Pensacola-area Realtors with a perfect 5-star rating.</Body>
         </div>
       </div>
     </Section>

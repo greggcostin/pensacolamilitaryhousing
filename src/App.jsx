@@ -505,8 +505,8 @@ const TrustBar = () => (
         ].map(({ name, logo }) => (
           <div key={name} className="trust-card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
             <div style={{ color: C.muted, fontSize: 12, fontWeight: 500, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: SS, textAlign: "center" }}>{name}</div>
-            <div style={{ width: 200, height: 90, display: "flex", alignItems: "center", justifyContent: "center", overflow: "visible" }}>
-              <Pic loading="lazy" src={logo} alt={name} style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain", display: "block", opacity: 0.9 }} />
+            <div style={{ width: 200, height: 90, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+              <Pic loading="lazy" src={logo} alt={name} style={{ maxHeight: 90, maxWidth: 200, objectFit: "contain", display: "block", opacity: 0.9 }} />
             </div>
           </div>
         ))}

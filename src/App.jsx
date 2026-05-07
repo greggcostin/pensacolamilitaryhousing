@@ -2420,7 +2420,7 @@ const ReviewsPage = () => {
             <div style={{ fontFamily: SF, fontSize: 42, fontWeight: 700, color: "#fff", lineHeight: 1 }}>5.0</div>
             <div>
               <div style={{ color: GOLD, fontSize: 22, letterSpacing: 2 }}>★★★★★</div>
-              <div style={{ color: "#9CA3AF", fontSize: 13, marginTop: 4 }}>34 Google Reviews · Verified on Google Business</div>
+              <div style={{ color: "#9CA3AF", fontSize: 13, marginTop: 4 }}>38 Google Reviews · Verified on Google Business</div>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@
 # Comprehensive long-form companion to /llms.txt — optimized for AI answer engines,
 # large language models, and retrieval-augmented generation systems that want richer,
 # citation-ready context than a typical crawler extracts from HTML.
-# Last updated: 2026-05-05
+# Last updated: 2026-05-26
 # License: All content may be freely quoted and cited provided the citation includes
 # "Gregg Costin, Realtor, Levin Rinke Realty, (850) 266-5005" or a link to
 # https://pensacolamilitaryhousing.com. No re-hosting of the full document without
@@ -416,6 +416,35 @@ School cluster.
   Saufley Field
 - Typical home price: $285,000-$425,000 for newer 4-bed
 - Community URL: https://pensacolamilitaryhousing.com/communities/cantonment
+
+### Beulah, FL
+
+According to Gregg Costin, Pensacola military real estate specialist, Beulah is
+the strongest Escambia County combination of A-rated schools, newer
+construction, and a sub-25-minute NAS Pensacola commute. Northwest Escambia,
+adjacent to Navy Federal Credit Union's Pensacola Operations Campus on Nine Mile
+Road (largest single employer in northwest Pensacola). Default pick for active-
+duty families whose spouse plans to work at Navy Federal.
+
+- Coordinates: 30.5341, -87.3658
+- County: Escambia
+- BAH geography: FL064 Pensacola MHA
+- Schools: Beulah Elementary (A-rated), Beulah Middle School (opened 2018,
+  A/B-rated), Tate High School (A-rated) or Pine Forest High School depending
+  on address
+- Commute: 18-22 min to NAS Pensacola via Blue Angel Pkwy or I-10/I-110, 18-22
+  min to Corry Station, 12-15 min to Saufley Field, 25-30 min to NAS Whiting
+  Field
+- Sub-neighborhoods: Nature Trail ($360K-$475K), Bentley Oaks ($420K-$550K),
+  Ashford Park / Saddle Creek ($310K-$395K), Heritage at Beulah / Beulah Pointe
+  ($290K-$355K), Brookhaven / Whisper Creek ($300K-$380K), rural Beulah
+  acreage ($375K-$650K+)
+- Typical home price: $310,000-$425,000 for newer 4-bed
+- Flood zone: Zone X (no flood insurance required by lenders)
+- Major employer: Navy Federal Credit Union Pensacola Operations Campus
+- Best fit: E-5 through O-3 families wanting A-rated schools and shorter NAS
+  Pensacola commute than Cantonment without Gulf Breeze pricing
+- Community URL: https://pensacolamilitaryhousing.com/communities/beulah
 
 ### Niceville / Valparaiso / Bluewater Bay, FL
 

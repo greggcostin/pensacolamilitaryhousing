@@ -104,6 +104,7 @@ const COMMUNITY_LINKS = [
   { label: "Pace", href: "/communities/pace", blurb: "New construction, A-rated schools, best BAH-per-square-foot value in the Pensacola MHA." },
   { label: "Milton", href: "/communities/milton", blurb: "Santa Rosa County seat. Historic downtown, 10 minutes to NAS Whiting Field, lowest BAH-supported entry point." },
   { label: "Cantonment", href: "/communities/cantonment", blurb: "North Escambia County. Larger lots, new construction, 20-25 minutes to NAS Pensacola." },
+  { label: "Beulah", href: "/communities/beulah", blurb: "Northwest Escambia. A-rated Beulah schools, 18-22 min to NAS Pensacola, Navy Federal HQ adjacent. Newer construction at $310K-$425K." },
   { label: "Perdido Key", href: "/communities/perdido-key", blurb: "Gulf-front barrier island. 15 minutes to NAS Pensacola, beach lifestyle, strong rental investment play." },
   { label: "East Pensacola Heights", href: "/communities/east-pensacola-heights", blurb: "Historic walkable peninsula. 5-10 minutes to NAS Pensacola. Character bungalows on Bayou Texar." },
   { label: "East Hill", href: "/communities/east-hill", blurb: "Historic Craftsman neighborhood, walkable 12th Avenue dining, 10-15 min to NAS Pensacola." },

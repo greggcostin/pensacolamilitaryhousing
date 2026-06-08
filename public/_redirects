@@ -132,5 +132,7 @@
 # Cloudflare Pages auto-strips .html from destinations in explicit rules,
 # which turned `/about /index.html 200` into a 308 redirect to `/`. The
 # wildcard fallback below handles /about, /contact, /pcs-guide, etc.
-# correctly without that conversion happening.
+# correctly without that conversion happening. SPA-route shells
+# (about.html, contact.html) carry canonical=/, so Google already
+# consolidates them to the home page — no redirects needed here.
 /* /index.html 200

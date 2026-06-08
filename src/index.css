@@ -4,3 +4,15 @@ body { font-family: 'Inter', 'DM Sans', system-ui, sans-serif; -webkit-font-smoo
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 button { font-family: inherit; }
+/* Hero background — modern formats with progressive fallback.
+   Browsers that don't support image-set() use the first (jpg) declaration;
+   modern browsers override with the second, preferring AVIF then WebP.
+   backgroundSize/Position/Repeat stay inline on the .hero-bg-image element. */
+.hero-bg-image {
+  background-image: url(/images/hero-window.jpg);
+  background-image: image-set(
+    url(/images/hero-window.avif) type("image/avif"),
+    url(/images/hero-window.webp) type("image/webp"),
+    url(/images/hero-window.jpg) type("image/jpeg")
+  );
+}

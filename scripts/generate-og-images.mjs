@@ -55,7 +55,6 @@ function categorize(filePath) {
   if (p === "/index.html" || p === "/") return "Pensacola Military Real Estate";
   if (p.startsWith("/bases/")) return "Military Base Guide";
   if (p.startsWith("/communities/")) return "Community Profile";
-  if (p.startsWith("/homes-for-sale-")) return "Homes for Sale";
   if (p.startsWith("/on-base-vs-off-base-")) return "On vs Off-Base Housing";
   if (/\bbah\b/i.test(p)) return "BAH & Affordability";
   if (/va-(loan|irrrl|funding|disability)/i.test(p) || /assumable-va/i.test(p) || /zero-down/i.test(p)) return "VA Loan & Financing";

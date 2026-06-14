@@ -151,29 +151,6 @@ Communities (13 → 8 community pages, sub-communities folded to nearest hub): n
 
 Alabama Gulf Coast (no FL community page; closest geo redirect): gulfshoresmilitaryhousing.com (→ /communities/perdido-key), orangebeachmilitaryhousing.com (→ /communities/perdido-key)
 
-## Homes for Sale by Base
-
-### NAS Pensacola — https://pensacolamilitaryhousing.com/homes-for-sale-nas-pensacola
-Military-filtered home inventory near NAS Pensacola in BAH FL064 range. Primary buy zones: Gulf Breeze, Pace, Navarre, Cantonment. Watchlist service for sailors, Naval Aviators, Marines, CSO students, Blue Angels, NATTC personnel.
-
-### NAS Whiting Field — https://pensacolamilitaryhousing.com/homes-for-sale-nas-whiting-field
-Primary buy zones: Pace, Milton, Navarre, rural Santa Rosa. Watchlist for Student Naval Aviators, helicopter pilots, instructor pilots, Marine and Coast Guard helo students.
-
-### Corry Station — https://pensacolamilitaryhousing.com/homes-for-sale-corry-station
-Primary buy zones: Cantonment, Ferry Pass, Bellview, Gulf Breeze. Watchlist for Cryptologic Technicians (CTI/CTN/CTR/CTT/CTM), information warfare, cyber, linguist students.
-
-### Saufley Field — https://pensacolamilitaryhousing.com/homes-for-sale-saufley-field
-Primary buy zones: Bellview, Myrtle Grove, Cantonment, Ferry Pass. Watchlist for NIOC Pensacola personnel, CIWT detachment students, NETSAFA, DLI linguist trainees.
-
-### Hurlburt Field — https://pensacolamilitaryhousing.com/homes-for-sale-hurlburt-field
-Primary buy zones: Navarre, Mary Esther, Niceville, Bluewater Bay. Watchlist for AFSOC aircrew (CV-22, AC-130J, MC-130J, U-28A, MQ-9), Special Tactics operators.
-
-### Eglin AFB — https://pensacolamilitaryhousing.com/homes-for-sale-eglin-afb
-Primary buy zones: Niceville, Bluewater Bay, Fort Walton Beach, Destin. Watchlist for 33rd FW F-35A pilots, 96th TW test personnel, 53rd Wing, 350th SWW, 7th SFG soldiers.
-
-### Duke Field — https://pensacolamilitaryhousing.com/homes-for-sale-duke-field
-Primary buy zones: Crestview, Niceville, Laurel Hill, Holt. Watchlist for 919th SOW Active Associate reservists, ART/AGR, 2nd SOS MQ-9 aircrew, 711th SOS MC-130J crew.
-
 ## On-Base vs Off-Base Decision Guides
 
 One dedicated page per base analyzing on-base (Balfour Beatty) wait times, BAH forfeit math, break-even vs off-base rent/buy, rank-by-rank recommendation:

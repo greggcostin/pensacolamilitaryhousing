@@ -44,16 +44,6 @@ const BASES_LINKS = [
   { label: "Duke Field", href: "/bases/duke-field", blurb: "Home of the 919th Special Operations Wing (AFRC). MC-130J and MQ-9, adjacent to Crestview." },
 ];
 
-const HOMES_LINKS = [
-  { label: "Homes — NAS Pensacola", href: "/homes-for-sale-nas-pensacola.html" },
-  { label: "Homes — Whiting Field", href: "/homes-for-sale-nas-whiting-field.html" },
-  { label: "Homes — Corry Station", href: "/homes-for-sale-corry-station.html" },
-  { label: "Homes — Saufley Field", href: "/homes-for-sale-saufley-field.html" },
-  { label: "Homes — Hurlburt Field", href: "/homes-for-sale-hurlburt-field.html" },
-  { label: "Homes — Eglin AFB", href: "/homes-for-sale-eglin-afb.html" },
-  { label: "Homes — Duke Field", href: "/homes-for-sale-duke-field.html" },
-];
-
 // Items that live under the PCS Guide dropdown (planning-stage essentials).
 const PCS_LINKS = [
   { label: "PCS Guide", href: "/pcs-guide" },
@@ -183,7 +173,6 @@ const Nav = ({ current, go }) => {
   const [scrolled, setScrolled] = useState(false);
   const [basesOpen, setBasesOpen] = useState(false);
   const [commsOpen, setCommsOpen] = useState(false);
-  const [homesOpen, setHomesOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [pcsOpen, setPcsOpen] = useState(false);
   const [vaOpen, setVaOpen] = useState(false);
@@ -277,14 +266,6 @@ const Nav = ({ current, go }) => {
               {COMMUNITY_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
             </div>
           )}
-        </div>
-
-        {/* Homes links: invisible to users, parseable by crawlers. WCAG visually-hidden pattern.
-            URLs remain active, sitemap + llms.txt still list them, SEO link equity preserved. */}
-        <div aria-hidden="true" style={{ position: "absolute", left: -9999, width: 1, height: 1, overflow: "hidden" }}>
-          {HOMES_LINKS.map(c => (
-            <a key={c.href} href={c.href} tabIndex={-1}>{c.label}</a>
-          ))}
         </div>
 
         <div style={{ position: "relative", paddingBottom: 4 }}

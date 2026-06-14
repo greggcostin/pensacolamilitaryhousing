@@ -1,7 +1,7 @@
 // Deepen internal linking across non-base/non-community content clusters:
 // finance pages (VA loan, IRRRL, COE, funding fee, assumable, etc.),
-// tax/benefits pages, the new Florida insurance page, homes-for-sale
-// pages, and the on-base-vs-off-base series.
+// tax/benefits pages, the Florida insurance page, and the
+// on-base-vs-off-base series.
 //
 // Same mechanism as deepen-internal-links.mjs: find first natural-prose
 // occurrence of a target name in the body region (between <main> and

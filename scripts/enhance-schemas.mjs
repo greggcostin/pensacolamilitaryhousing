@@ -36,14 +36,6 @@ const COORDS = {
   "fort-walton-beach-shalimar": { lat: "30.4213", lng: "-86.6186" },
   "destin": { lat: "30.3935", lng: "-86.4958" },
   "crestview": { lat: "30.7621", lng: "-86.5703" },
-  // Homes-for-sale maps to each base
-  "homes-for-sale-nas-pensacola": { lat: "30.3513", lng: "-87.3071" },
-  "homes-for-sale-nas-whiting-field": { lat: "30.7243", lng: "-87.0219" },
-  "homes-for-sale-corry-station": { lat: "30.4133", lng: "-87.2797" },
-  "homes-for-sale-saufley-field": { lat: "30.4688", lng: "-87.3428" },
-  "homes-for-sale-hurlburt-field": { lat: "30.4280", lng: "-86.6897" },
-  "homes-for-sale-eglin-afb": { lat: "30.4640", lng: "-86.5477" },
-  "homes-for-sale-duke-field": { lat: "30.6470", lng: "-86.5219" },
   "on-base-vs-off-base-nas-pensacola": { lat: "30.3513", lng: "-87.3071" },
   "on-base-vs-off-base-nas-whiting-field": { lat: "30.7243", lng: "-87.0219" },
   "on-base-vs-off-base-corry-station": { lat: "30.4133", lng: "-87.2797" },
@@ -67,7 +59,7 @@ const COORDS = {
   "reviews": { lat: "30.4213", lng: "-87.2169" },
 };
 
-const AGGREGATE_RATING = `,"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"34","bestRating":"5","worstRating":"1"}`;
+const AGGREGATE_RATING = `,"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"38","bestRating":"5","worstRating":"1"}`;
 
 const SAME_AS = [
   "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd",
@@ -111,15 +103,12 @@ function articleSchemaJson(meta, slug) {
 }
 
 function breadcrumbJson(slug, name) {
-  // For resource pages, section = Resources; for homes-for-sale = Homes; else Bases
+  // For resource pages, section = Resources; else Bases
   let section = "Bases";
   let sectionHref = "https://pensacolamilitaryhousing.com/#bases";
   if (["va-loan-pensacola","assumable-va-loans-pensacola","pcs-checklist","fl064-bah-rates","va-disability-property-tax-florida","school-zones-military-families","nas-pensacola-vs-hurlburt-field","gulf-breeze-vs-navarre","niceville-vs-crestview"].includes(slug) || slug === "faq" || slug === "reviews") {
     section = "Resources";
     sectionHref = "https://pensacolamilitaryhousing.com/#resources";
-  } else if (slug.startsWith("homes-for-sale-")) {
-    section = "Homes for Sale";
-    sectionHref = "https://pensacolamilitaryhousing.com/#homes";
   }
   return {
     "@context": "https://schema.org",

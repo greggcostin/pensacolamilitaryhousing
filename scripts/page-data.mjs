@@ -547,58 +547,16 @@ export const pages = [
 
 ];
 
-// Homes-for-sale base pages (7)
+// Shared base metadata used by the on-base-vs-off-base generator below.
 const baseShortData = [
-  { base: "NAS Pensacola", slug: "homes-for-sale-nas-pensacola", basePath: "/nas-pensacola.html", mha: "FL064", primary: "Gulf Breeze, Pace, Navarre, Cantonment", population: "Sailors, Naval Aviators, Marines, CSO students, Blue Angels, NATTC students" },
-  { base: "NAS Whiting Field", slug: "homes-for-sale-nas-whiting-field", basePath: "/nas-whiting-field.html", mha: "FL064", primary: "Pace, Milton, Navarre, rural Santa Rosa", population: "Student Naval Aviators, helicopter pilots, instructor pilots, Marine and Coast Guard helo students" },
-  { base: "Corry Station", slug: "homes-for-sale-corry-station", basePath: "/corry-station.html", mha: "FL064", primary: "Cantonment, Ferry Pass, Bellview, Gulf Breeze", population: "Cryptologic Technicians (CTI/CTN/CTR/CTT/CTM), information warfare, cyber, linguist students" },
-  { base: "Saufley Field", slug: "homes-for-sale-saufley-field", basePath: "/saufley-field.html", mha: "FL064", primary: "Bellview, Myrtle Grove, Cantonment, Ferry Pass", population: "NIOC Pensacola personnel, CIWT detachment students, NETSAFA, DLI linguist trainees" },
-  { base: "Hurlburt Field", slug: "homes-for-sale-hurlburt-field", basePath: "/hurlburt-field.html", mha: "FL023", primary: "Navarre, Mary Esther, Niceville, Bluewater Bay", population: "AFSOC aircrew (CV-22, AC-130J, MC-130J, U-28A, MQ-9), Special Tactics operators, maintenance, mission support" },
-  { base: "Eglin AFB", slug: "homes-for-sale-eglin-afb", basePath: "/eglin-afb.html", mha: "FL023", primary: "Niceville, Bluewater Bay, Fort Walton Beach, Destin", population: "33rd FW F-35A pilots, 96th TW test and research personnel, 53rd Wing, 350th SWW, 7th SFG soldiers" },
-  { base: "Duke Field", slug: "homes-for-sale-duke-field", basePath: "/duke-field.html", mha: "FL023", primary: "Crestview, Niceville, Laurel Hill, Holt", population: "919th SOW Active Associate reservists, ART/AGR, 2nd SOS MQ-9 aircrew, 711th SOS MC-130J crew" },
+  { base: "NAS Pensacola", basePath: "/nas-pensacola.html", mha: "FL064", primary: "Gulf Breeze, Pace, Navarre, Cantonment", population: "Sailors, Naval Aviators, Marines, CSO students, Blue Angels, NATTC students" },
+  { base: "NAS Whiting Field", basePath: "/nas-whiting-field.html", mha: "FL064", primary: "Pace, Milton, Navarre, rural Santa Rosa", population: "Student Naval Aviators, helicopter pilots, instructor pilots, Marine and Coast Guard helo students" },
+  { base: "Corry Station", basePath: "/corry-station.html", mha: "FL064", primary: "Cantonment, Ferry Pass, Bellview, Gulf Breeze", population: "Cryptologic Technicians (CTI/CTN/CTR/CTT/CTM), information warfare, cyber, linguist students" },
+  { base: "Saufley Field", basePath: "/saufley-field.html", mha: "FL064", primary: "Bellview, Myrtle Grove, Cantonment, Ferry Pass", population: "NIOC Pensacola personnel, CIWT detachment students, NETSAFA, DLI linguist trainees" },
+  { base: "Hurlburt Field", basePath: "/hurlburt-field.html", mha: "FL023", primary: "Navarre, Mary Esther, Niceville, Bluewater Bay", population: "AFSOC aircrew (CV-22, AC-130J, MC-130J, U-28A, MQ-9), Special Tactics operators, maintenance, mission support" },
+  { base: "Eglin AFB", basePath: "/eglin-afb.html", mha: "FL023", primary: "Niceville, Bluewater Bay, Fort Walton Beach, Destin", population: "33rd FW F-35A pilots, 96th TW test and research personnel, 53rd Wing, 350th SWW, 7th SFG soldiers" },
+  { base: "Duke Field", basePath: "/duke-field.html", mha: "FL023", primary: "Crestview, Niceville, Laurel Hill, Holt", population: "919th SOW Active Associate reservists, ART/AGR, 2nd SOS MQ-9 aircrew, 711th SOS MC-130J crew" },
 ];
-
-for (const b of baseShortData) {
-  pages.push({
-    slug: b.slug,
-    title: `Homes for Sale Near ${b.base} | Military-Friendly Listings | Gregg Costin`,
-    description: `Current homes for sale near ${b.base} filtered for military families: VA-loan ready, BAH ${b.mha}, commute-mapped, school-zoned. Gregg Costin, Realtor.`,
-    keywords: `homes for sale ${b.base}, ${b.base} homes for sale, ${b.base} military realtor, VA loan ${b.base}, BAH ${b.mha} homes, ${b.base} housing, Pensacola military realtor`,
-    h1: `Homes for Sale Near ${b.base}`,
-    breadcrumbName: `Homes for Sale — ${b.base}`,
-    areaServed: b.base,
-    lead: `Military-filtered home inventory near ${b.base}. VA-ready listings, BAH ${b.mha}-compatible pricing, commute-mapped to the gate, school-zoned at the parcel level.`,
-    knowsAbout: ["VA Home Loans", "Military Housing", b.base, `BAH ${b.mha}`, "PCS Relocation"],
-    body: `
-<p>Most MLS searches aren't built for military buyers. A standard "Pensacola homes for sale" query returns 2,500+ listings sorted by price descending — useless when you have orders and a 60-day close window. This page is the ${b.base}-specific filter: listings pre-vetted for VA loan compatibility, priced within BAH ${b.mha}, commute-timed to the gate, and zoned to schools that work for school-age military families.</p>
-
-<h2>Who Buys Near ${b.base}</h2>
-<p>The typical ${b.base} buyer population includes: ${b.population}. Rank range runs from first-duty-station junior enlisted through senior officers on command tours. BAH MHA ${b.mha} sets the buying-power ceiling for each pay grade — see the <a href="/bah-rates.html">2026 BAH rates page</a> for the complete rank table.</p>
-
-<h2>Target Neighborhoods for ${b.base} Families</h2>
-<p>Primary buy zones, ranked by how often I place ${b.base} families: ${b.primary}. Each has different strengths — commute time, school rating, price per square foot, Santa Rosa vs Escambia vs Okaloosa county, Pensacola MHA vs Fort Walton Beach MHA. See the <a href="${b.basePath}">full ${b.base} PCS guide</a> for neighborhood-by-neighborhood analysis.</p>
-
-<h2>What "Military-Friendly Listing" Actually Means</h2>
-<ul>
-<li><strong>VA loan acceptable</strong>: seller is open to VA buyers and has not written "VA financing not accepted" or similar exclusions. Occasionally sellers exclude VA from accepted financing types; military buyers filter these out upfront.</li>
-<li><strong>MPR-clean</strong>: roof, HVAC, plumbing, electrical all in functional condition. A VA appraisal requires Minimum Property Requirements — listings with deferred-maintenance red flags create costly repair-credit negotiations at closing.</li>
-<li><strong>Price within BAH bracket</strong>: total monthly payment (P&amp;I + taxes + insurance + HOA) fits inside your BAH after 2026 rate adjustments.</li>
-<li><strong>Gate commute under 30 minutes</strong>: verified by actual drive time at shift-change rush hour, not just map estimate.</li>
-<li><strong>Parcel-zoned to an acceptable school cluster</strong>: verified against county zoning maps, not listing agent descriptions.</li>
-</ul>
-
-<h2>Ready for the Shortlist?</h2>
-<p>I maintain a private watchlist of VA-qualified ${b.base}-area inventory updated weekly. To receive the current matched shortlist, text or email me with: rank, dependent status, RNLTD, and school-age children (if any). I'll send a filtered list of 8-15 homes within 24 hours — no MLS signup, no drip email, no pressure. If the match isn't there today, I keep watching and send updates as new listings hit the market.</p>
-`,
-    faqs: [
-      { q: `What BAH applies to ${b.base}?`, a: `${b.base} is in the ${b.mha} Military Housing Area. See the full 2026 BAH rate table at the BAH rates page for your specific pay grade.` },
-      { q: `How close to the ${b.base} gate should I live?`, a: `Depends on your tolerance for commute vs housing cost. Most ${b.base} families cluster 15-30 minutes from the gate, trading a few extra minutes for better schools or lower home prices. See the full ${b.base} PCS guide for neighborhood-by-neighborhood commute times.` },
-      { q: "Can I use a VA loan on these listings?", a: "Yes — all listings I send are VA-loan acceptable with a VA-specialist lender, meet VA Minimum Property Requirements, and are priced within reasonable BAH brackets for the relevant pay-grade range." },
-      { q: "How do I get the current shortlist?", a: "Text or email me with your rank, dependent status, RNLTD, school-age children, and any neighborhood preferences. I'll send a filtered list within 24 hours — no MLS signup, no marketing email sequence, no pressure." },
-      { q: "What if nothing is available right now?", a: "I keep you on an active watchlist and send new listings as they come to market. Typical Pensacola-area military inventory turns over every 7-14 days during peak PCS season (May-August) and every 14-30 days off-season." },
-    ],
-  });
-}
 
 // On-base vs off-base pages (7)
 for (const b of baseShortData) {

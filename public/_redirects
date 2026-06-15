@@ -1,6 +1,8 @@
 # Cloudflare Pages routing. Files at public/bases/*.html and public/communities/*.html
 # are served natively at /bases/<slug> and /communities/<slug> via auto-pretty-URL —
 # no rewrites needed for those. This file handles 301 redirects from legacy URLs and
+/neighborhoods               /communities                301
+
 # alias community names to the canonical clean paths, plus the SPA fallback.
 
 # ── Base legacy paths → canonical clean URLs (301 permanent) ──

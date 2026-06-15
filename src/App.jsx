@@ -2208,30 +2208,48 @@ const LoanCalculator = () => {
   );
 };
 
-const NeighborhoodsPage = ({ go }) => (
+const NeighborhoodsPage = ({ go }) => {
+  const [inquiryOpen, setInquiryOpen] = useState(false);
+  return (
   <PageWrapper>
     <PageHero title="Pensacola Area Communities &amp; Neighborhood Guides" subtitle="From Gulf-front beach living on Perdido Key to A-rated Santa Rosa schools in Gulf Breeze to starter homes minutes from the NAS Pensacola main gate — the complete guide to every community we serve." breadcrumb="Home > Communities" />
     <Content>
       <P>Thirteen distinct communities across the Pensacola and Fort Walton Beach Military Housing Areas. Each has its own BAH fit, school zoning, commute profile, and character. Click any card below for the full built-out guide with facts, sub-neighborhoods, BAH math, schools, hurricane considerations, and FAQ.</P>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16, marginTop: 24 }}>
-        {COMMUNITY_LINKS.map(n => (
+        {COMMUNITY_LINKS.map(n => {
+          const slug = n.href.split("/").pop();
+          return (
           <a key={n.href} href={n.href} style={{
             background: CHARCOAL, border: `1px solid #333`, borderRadius: 12,
-            padding: 24, textDecoration: "none", display: "block",
+            textDecoration: "none", display: "block", overflow: "hidden",
             transition: "border-color 0.2s",
           }}
             onMouseEnter={e => e.currentTarget.style.borderColor = GOLD}
             onMouseLeave={e => e.currentTarget.style.borderColor = "#333"}>
-            <h3 style={{ fontFamily: SF, color: "#fff", fontSize: 20, margin: "0 0 10px", fontWeight: 500 }}>{n.label}</h3>
-            <p style={{ color: "#bbb", fontSize: 14, lineHeight: 1.7, marginBottom: 14 }}>{n.blurb}</p>
-            <div style={{ color: GOLD, fontSize: 11, letterSpacing: 2, textTransform: "uppercase", fontWeight: 600, fontFamily: SS }}>Read {n.label} Guide →</div>
+            {/* Photo header: drops in /images/communities/<slug>.jpg when present; branded gradient until then */}
+            <div style={{ height: 158, background: "linear-gradient(135deg,#1A2332,#2C3A4F)", position: "relative" }}>
+              <img src={`/images/communities/${slug}.jpg`} alt={`${n.label}, Florida — community near Pensacola`} loading="lazy"
+                onError={e => { e.currentTarget.style.display = "none"; }}
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            </div>
+            <div style={{ padding: 24 }}>
+              <h3 style={{ fontFamily: SF, color: "#fff", fontSize: 20, margin: "0 0 10px", fontWeight: 500 }}>{n.label}</h3>
+              <p style={{ color: "#bbb", fontSize: 14, lineHeight: 1.7, marginBottom: 14 }}>{n.blurb}</p>
+              <div style={{ color: GOLD, fontSize: 11, letterSpacing: 2, textTransform: "uppercase", fontWeight: 600, fontFamily: SS }}>Read {n.label} Guide →</div>
+            </div>
           </a>
-        ))}
+          );
+        })}
       </div>
       <InfoBox title="Need Help Choosing?">Every family has different priorities — schools, commute, budget, lifestyle, investment potential. Call me at (850) 266-5005 and we'll narrow it down together in a 15-minute conversation. No pressure, no obligation.</InfoBox>
+      <div style={{ textAlign: "center", marginTop: 36 }}>
+        <BtnP onClick={() => setInquiryOpen(true)}>Request a Consultation</BtnP>
+      </div>
     </Content>
+    {inquiryOpen && <InquiryModal onClose={() => setInquiryOpen(false)} />}
   </PageWrapper>
-);
+  );
+};
 
 const BLOG_API = "https://costin-blog.gregg-costin.workers.dev";
 
@@ -2592,7 +2610,7 @@ const PAGE_TO_SLUG = {
   home: "/",
   about: "/about",
   pcs: "/pcs-guide",
-  neighborhoods: "/neighborhoods",
+  neighborhoods: "/communities",
   "va-loan": "/va-loans",
   calculator: "/mortgage-calculators",
   homestead: "/homestead",

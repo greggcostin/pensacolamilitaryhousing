@@ -512,7 +512,7 @@ const Services = ({ go }) => (
       {[
         { title: "PCS Relocation", link: "pcs", desc: "Complete relocation support for military families moving to the Florida Panhandle. Virtual tours, closing coordination across time zones, and deep knowledge of every base community." },
         { title: "VA Home Loans", link: "__external:/va-loan-guide", desc: "Expert guidance through the VA loan process. Zero down payment, no PMI, competitive rates. I've helped hundreds of military families leverage their earned benefit to build real wealth." },
-        { title: "Sell Your Home", link: "contact", desc: "PCSing out? I'll get your home sold fast and for top dollar with aggressive marketing, professional photography, and pricing strategy backed by real market data." },
+        { title: "Sell Your Home", link: "__external:/sell", desc: "PCSing out? I'll get your home sold fast and for top dollar with aggressive marketing, professional photography, and pricing strategy backed by real market data." },
       ].map(({ title, desc, link }) => (
         <div key={title} onClick={() => { if (link.startsWith("__external:")) { window.location.href = link.slice(11); } else { go(link); } }} style={{ background: C.ink, padding: "48px 40px", cursor: "pointer", minHeight: 320, display: "flex", flexDirection: "column" }}>
           <h3 style={{ fontFamily: SF, color: "#fff", fontSize: 26, fontWeight: 500, margin: "0 0 16px" }}>{title}</h3>

@@ -2414,7 +2414,7 @@ const ReviewsPage = () => {
           </div>
         </div>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginBottom: 40 }}>
-          <BtnP href={GOOGLE_URL}>Read All 34 Reviews on Google</BtnP>
+          <BtnP href={GOOGLE_URL}>Read All 42 Reviews on Google</BtnP>
           <BtnG href="tel:+18502665005">Call (850) 266-5005</BtnG>
         </div>
 

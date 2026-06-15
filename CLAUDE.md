@@ -15,10 +15,10 @@ No test, lint, typecheck, or format scripts exist. This is plain JavaScript (ESM
 ### Single-file React SPA
 The entire application lives in `src/App.jsx` (~1200 lines). Every page and component — `Nav`, `Hero`, `AboutPage`, `PCSPage`, `VALoanPage`, `HomesteadPage`, `BaseGuide`, `NeighborhoodsPage`, `BlogPage`, `ReviewsPage`, `ContactPage`, `Footer`, plus shared primitives (`H2`, `H3`, `Body`, `BtnP`, `BtnG`, `Section`, `FAQ`, `InfoBox`, `PageWrapper`, `PageHero`, `Content`) — is defined in this one file. Do not split components into separate files without a reason; the single-file layout is intentional.
 
-### State-based routing (no URLs, no router)
-`App` holds `const [page, setPage] = useState("home")` and passes `go = (id) => { setPage(id); window.scrollTo(0, 0); }` down. Navigation is conditional rendering: `{page === "about" && <AboutPage go={go} />}`. There is no `react-router`, no hash routing, no `history.pushState`. The URL is always `/` while using the SPA. `public/_redirects` documents this: "No redirect rules needed — SPA uses state-based routing."
+### URL routing (custom pushState router — no react-router)
+`App` holds `const [page, setPage] = useState(() => resolvePageFromPath(window.location.pathname))` and navigates via `go(id)`, which calls `history.pushState` and updates state; a `popstate` listener syncs `page` back from the URL. A route map near the bottom of `App.jsx` (`const PAGE_TO_SLUG = { home: "/", about: "/about", calculator: "/mortgage-calculators", ... }`, with its inverse `SLUG_TO_PAGE`) plus `resolvePageFromPath` is the single source of truth for page↔path. There is also a hash handler mapping `#calculator`/`#bah-calculator` to the calculator page. Rendering is still conditional (`{page === "calculator" && <LoanCalculator />}`).
 
-Consequence: deep links into SPA pages (e.g., `/about`) do not exist. If a feature needs to be linkable, it must live as a standalone HTML page in `public/` (see below), not as a new SPA route.
+Consequence: deep links DO work (e.g., `/mortgage-calculators`, `/about` resolve to the right SPA page). `scripts/postbuild-spa-routes.mjs` runs after `vite build` to emit a prerendered HTML shell per route so crawlers and direct hits get real HTML. When adding an SPA page, add it to `ROUTE_MAP` (and the postbuild route list) — do not assume a bare path is a 404 just because there's no matching `public/*.html` file. The prerendered `public/*.html` pages below are a *separate* SEO surface, not the SPA's routing mechanism.
 
 ### Two parallel content surfaces
 1. **The React SPA** (`index.html` → `src/App.jsx`) — the interactive marketing site.

@@ -666,6 +666,8 @@ const Footer = ({ go }) => {
               const p = pages.find(x => x.id === id);
               return <button key={id} onClick={() => go(id)} style={footerLinkStyle}>{p.label}</button>;
             })}
+            <a href="/buy" style={footerLinkStyle}>Buy a Home</a>
+            <a href="/sell" style={footerLinkStyle}>Sell Your Home</a>
             <a href="/va-loan-guide" style={footerLinkStyle}>VA Loan Guide</a>
             <a href="/faq.html" style={footerLinkStyle}>PCS FAQ</a>
           </div>

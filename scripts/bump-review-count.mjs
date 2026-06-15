@@ -1,22 +1,20 @@
-// Bump review count to reflect the current 35 verified Google reviews on Gregg's
-// Google Business Profile. Updates visible prose, schema, and llms.txt.
-// Also raises reviews.html AggregateRating reviewCount back from 8 to 35 —
-// the 8 was a conservative placeholder matching the count of reviews
-// enumerated on the page; 35 is the truthful GBP total.
+// Bump Google review count to the current verified Google Business Profile
+// total. As of 2026-06-14 Gregg's GBP shows 42 five-star reviews (was 38).
+// Updates visible prose, AggregateRating schema, llms.txt/llms-full.txt, and
+// the SPA (src/App.jsx). Zillow's count (19) is tracked separately and is not
+// touched here. The reviewCount in AggregateRating reflects the Google GBP
+// total; the page's enumerated Review[] testimonials are a curated subset.
 
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const REPLACEMENTS = [
-  // Visible prose on base pages and llms.txt
-  { from: "34 five-star Google reviews", to: "35 five-star Google reviews" },
-  { from: "34 Google reviews", to: "35 Google reviews" },
-  { from: "Verified 5.0 stars across 34", to: "Verified 5.0 stars across 35" },
-  // reviews.html AggregateRating reviewCount — was 8 (enumerated count),
-  // bump to 35 (actual GBP count). The Review[] array of 8 cherry-picked
-  // testimonials remains; AggregateRating summarizes all 35 on GBP.
-  { from: '"reviewCount": "8",', to: '"reviewCount": "35",' },
-  // reviews.html visible meta label
-  { from: "34 Google Reviews &middot;", to: "35 Google Reviews &middot;" },
+  { from: "38 five-star Google reviews", to: "42 five-star Google reviews" },
+  { from: "38 Google reviews", to: "42 Google reviews" },
+  { from: "38 Google Reviews", to: "42 Google Reviews" },
+  { from: "Read All 38 Reviews on Google", to: "Read All 42 Reviews on Google" },
+  { from: '"reviewCount": "38"', to: '"reviewCount": "42"' },
+  { from: "5.0 stars from 38 reviews", to: "5.0 stars from 42 reviews" },
+  { from: "5.0-star Google rating from 38 verified reviews", to: "5.0-star Google rating from 42 verified reviews" },
 ];
 
 function walk(dir, out = []) {
@@ -28,7 +26,7 @@ function walk(dir, out = []) {
   return out;
 }
 
-const files = [...walk("public"), "index.html", "MARKETING_KIT.md"];
+const files = [...walk("public"), "index.html", "MARKETING_KIT.md", "src/App.jsx"];
 let touched = 0, subs = 0;
 
 for (const path of files) {
@@ -41,4 +39,4 @@ for (const path of files) {
   if (c !== before) { writeFileSync(path, c, "utf8"); touched++; }
 }
 
-console.log(`Review-count bump: ${subs} replacements across ${touched} files.`);
+console.log(`Review-count bump 38->42: ${subs} replacements across ${touched} files.`);

@@ -59,7 +59,7 @@ const COORDS = {
   "reviews": { lat: "30.4213", lng: "-87.2169" },
 };
 
-const AGGREGATE_RATING = `,"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"38","bestRating":"5","worstRating":"1"}`;
+const AGGREGATE_RATING = `,"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"42","bestRating":"5","worstRating":"1"}`;
 
 const SAME_AS = [
   "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd",

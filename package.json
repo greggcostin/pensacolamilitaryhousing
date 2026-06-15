@@ -8,7 +8,7 @@
         "prebuild": "node scripts/bump-dates.mjs",
         "build": "vite build && node scripts/postbuild-spa-routes.mjs && pagefind --site dist --output-subdir pagefind",
         "preview": "vite preview",
-        "indexnow": "node --env-file=.env.local scripts/submit-indexnow.mjs",
+        "indexnow": "node --env-file-if-exists=.env.local scripts/submit-indexnow.mjs",
         "og-images": "node scripts/generate-og-images.mjs",
         "optimize-images": "node scripts/optimize-images.mjs",
         "modern-images": "node scripts/generate-modern-images.mjs"

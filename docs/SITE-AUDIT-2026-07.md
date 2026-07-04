@@ -52,6 +52,16 @@ The adversarial verification pass was interrupted by a transient rate limit, so 
 
 Net: the audit's critical findings are overwhelmingly real, but three of the scariest-sounding specifics (free-agent claim, Hurlburt rule, IB school) need a source check before you touch them, and the VA-math cluster needs its own verification pass rather than trusting either the site or the auditor.
 
+### Corrections applied (2026-07-04, source-backed)
+
+All YMYL clusters were re-verified against primary sources and fixed. Commits on `main`:
+
+- **BAH figures (`c5fc3a8`)** — Rebuilt the drifted FL023 tables in `bah-rates.html` (enlisted/warrant/officer) and corrected the stale FL064 affordability tables in `bah-to-mortgage-guide.html` and `va-loan-guide.html` to the canonical `App.jsx` `BAH_DATA` values (e.g. E-6 $1,983→$2,235, O-3 $2,373→$2,271). Worked example recomputed. FL023 without-dependents FAQ range corrected to $2,007–$3,393.
+- **Geography (`3efc81e`)** — Corrected implausibly short NAS Pensacola drive times on `communities/east-pensacola-heights.html` (5 min → ~20-25 min via Navy Blvd; repositioned the page's proximity hook around downtown, which is genuinely ~5 min), `perdido-key.html` (15 → ~20-25 min), and `cordova-park.html` (15-20 → ~20-25 min), across visible copy and all three schema blocks each.
+- **On-base housing (`7852e79`)** — Verified every installation's privatized partner against official CNIC / AF Housing / operator sites. NAS Pensacola, Corry Station (Corry Village), and NAS Whiting Field = **Balfour Beatty Communities**; Eglin AFB, Hurlburt Field, Duke Field = **Corvias**. Dropped the "Balfour Beatty, Lendlease, or similar" hedge. Fixed the Corry "has no on-base housing" error (it has Corry Village). Clarified Saufley and Duke have no family housing of their own. **Removed all fabricated "typical 2026 wait times"** from prose, visible FAQs, and FAQPage JSON-LD on all 7 pages, replaced with honest "the housing office holds the only current list" guidance.
+
+Resolutions to the "NARROWED / NOT REPRODUCED" items above: the **IB school** was confirmed = Pensacola High (IBO code 000442), and only IB attributions were switched (JROTC left intact) in an earlier commit; the **VA-math cluster** was recomputed against the 2023+ fee schedule (the auditor's "3.30% is wrong" flag was itself stale — 3.30% is correct and was left unchanged), with the genuine errors (invented reserve fee %, wrong loan limit, non-homestead §196.082 fabrication, millage direction) fixed in earlier commits.
+
 ---
 
 ## 2. Systemic Findings

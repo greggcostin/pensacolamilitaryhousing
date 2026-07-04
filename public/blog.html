@@ -69,6 +69,23 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
 <style>
 :root{--ink:#0A0F1A;--panel:#121823;--elev:#1A2332;--hair:rgba(255,255,255,0.08);--gold:#C9A84C;--gold-soft:#D4B768;--gold-line:rgba(201,168,76,0.35);--gold-tint:rgba(201,168,76,0.10);--text:#E8E6DF;--muted:#A5A496;--mutedD:#6F6E65;--serif:'Playfair Display',Georgia,serif;--sans:'Inter','DM Sans',system-ui,-apple-system,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
+/* IMAGERY */
+.hero-band,.figure-band{border-radius:12px;overflow:hidden;background:var(--panel);line-height:0}
+.hero-band{margin:0 0 6px;border:1px solid var(--gold-line);box-shadow:0 18px 48px rgba(0,0,0,.45)}
+.figure-band{margin:2.25rem 0 .5rem;border:1px solid var(--hair)}
+.hero-band picture,.figure-band picture{display:block}
+.hero-band img,.figure-band img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+figure{margin:0}
+figcaption{line-height:1.5;color:var(--muted);font-size:12px;font-style:italic;text-align:center;margin:8px 0 0;font-family:var(--sans);font-weight:300;letter-spacing:.2px}
+figcaption a{color:var(--muted);text-decoration:underline}
+.author-card{display:flex;align-items:center;gap:15px;background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:13px 18px;margin:22px auto 6px;max-width:540px}
+.author-card picture{flex:0 0 auto;display:block;line-height:0}
+.author-card img{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--gold-line);display:block}
+.author-card .ac-txt{text-align:left;min-width:0}
+.author-card .ac-name{color:#fff;font-weight:600;font-size:14.5px;font-family:var(--sans);line-height:1.35}
+.author-card .ac-cred{color:var(--muted);font-size:12px;line-height:1.5;font-family:var(--sans);font-weight:300}
+.author-card .ac-updated{color:var(--gold);font-size:11px;letter-spacing:.6px;margin-top:3px;text-transform:uppercase;font-weight:600;font-family:var(--sans)}
+@media(max-width:640px){.hero-band img,.figure-band img{aspect-ratio:4/3}.author-card{gap:12px;padding:12px 14px}.author-card img{width:52px;height:52px}}
 body{font-family:var(--sans);font-weight:300;background:var(--ink);color:var(--text);line-height:1.75}
 a{color:var(--gold);text-decoration:none}
 a:hover{color:var(--gold-soft)}
@@ -258,6 +275,7 @@ main>h2{justify-content:center;text-align:center;max-width:900px;margin-left:aut
 <p class="lead">Market insights, VA loan guidance, PCS tips, and neighborhood deep-dives from a retired USAF Combat Systems Officer turned Realtor.</p>
 </header>
 <main data-pagefind-body>
+<div class="author-card"><picture><source srcset="/images/gregg-portrait.avif" type="image/avif"><source srcset="/images/gregg-portrait.webp" type="image/webp"><img src="/images/gregg-portrait.jpg" width="60" height="60" alt="Gregg Costin, Realtor and retired U.S. Air Force officer" loading="lazy" decoding="async"></picture><div class="ac-txt"><div class="ac-name">Gregg Costin</div><div class="ac-cred">Retired USAF Combat Systems Officer &middot; Realtor at Levin Rinke Realty (FL &amp; AL) &middot; MRP &middot; ABR &middot; RENE</div><div class="ac-updated">Reviewed &amp; updated &middot; June 2026</div></div></div>
 <article class="blog-card" id="personal-property-activity-pcs-2026">
 <div class="cat">PCS</div>
 <h2>What the New Personal Property Activity (PPA) Means for Your 2026 PCS to Pensacola</h2>

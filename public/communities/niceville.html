@@ -58,6 +58,23 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
 <style>
 :root{--ink:#0A0F1A;--panel:#121823;--elev:#1A2332;--hair:rgba(255,255,255,0.08);--gold:#C9A84C;--gold-soft:#D4B768;--gold-line:rgba(201,168,76,0.35);--gold-tint:rgba(201,168,76,0.10);--text:#E8E6DF;--muted:#A5A496;--mutedD:#6F6E65;--serif:'Playfair Display',Georgia,serif;--sans:'Inter','DM Sans',system-ui,-apple-system,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
+/* IMAGERY */
+.hero-band,.figure-band{border-radius:12px;overflow:hidden;background:var(--panel);line-height:0}
+.hero-band{margin:0 0 6px;border:1px solid var(--gold-line);box-shadow:0 18px 48px rgba(0,0,0,.45)}
+.figure-band{margin:2.25rem 0 .5rem;border:1px solid var(--hair)}
+.hero-band picture,.figure-band picture{display:block}
+.hero-band img,.figure-band img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+figure{margin:0}
+figcaption{line-height:1.5;color:var(--muted);font-size:12px;font-style:italic;text-align:center;margin:8px 0 0;font-family:var(--sans);font-weight:300;letter-spacing:.2px}
+figcaption a{color:var(--muted);text-decoration:underline}
+.author-card{display:flex;align-items:center;gap:15px;background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:13px 18px;margin:22px auto 6px;max-width:540px}
+.author-card picture{flex:0 0 auto;display:block;line-height:0}
+.author-card img{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--gold-line);display:block}
+.author-card .ac-txt{text-align:left;min-width:0}
+.author-card .ac-name{color:#fff;font-weight:600;font-size:14.5px;font-family:var(--sans);line-height:1.35}
+.author-card .ac-cred{color:var(--muted);font-size:12px;line-height:1.5;font-family:var(--sans);font-weight:300}
+.author-card .ac-updated{color:var(--gold);font-size:11px;letter-spacing:.6px;margin-top:3px;text-transform:uppercase;font-weight:600;font-family:var(--sans)}
+@media(max-width:640px){.hero-band img,.figure-band img{aspect-ratio:4/3}.author-card{gap:12px;padding:12px 14px}.author-card img{width:52px;height:52px}}
 body{font-family:var(--sans);font-weight:300;background:var(--ink);color:var(--text);line-height:1.75}
 a{color:var(--gold);text-decoration:none}
 a:hover{color:var(--gold-soft)}
@@ -301,6 +318,8 @@ img{max-width:100%;height:auto}
 <p class="lead">The Okaloosa County communities adjacent to Eglin AFB's East Gate. A-rated Niceville High School zone, the master-planned Bluewater Bay community, and the shortest commute for 33rd Fighter Wing and 96th Test Wing families.</p>
 </header>
 <main data-pagefind-body>
+<figure class="hero-band"><picture><source srcset="/images/communities/niceville.avif" type="image/avif"><source srcset="/images/communities/niceville.webp" type="image/webp"><img src="/images/communities/niceville.jpg" width="1600" height="900" alt="Golden sunrise over Choctawhatchee Bay near Niceville, Florida" loading="eager" fetchpriority="high" decoding="async"></picture><figcaption>Dawn over Choctawhatchee Bay near Niceville and Bluewater Bay. U.S. Air Force photo (public domain).</figcaption></figure>
+<div class="author-card"><picture><source srcset="/images/gregg-portrait.avif" type="image/avif"><source srcset="/images/gregg-portrait.webp" type="image/webp"><img src="/images/gregg-portrait.jpg" width="60" height="60" alt="Gregg Costin, Realtor and retired U.S. Air Force officer" loading="lazy" decoding="async"></picture><div class="ac-txt"><div class="ac-name">Gregg Costin</div><div class="ac-cred">Retired USAF Combat Systems Officer &middot; Realtor at Levin Rinke Realty (FL &amp; AL) &middot; MRP &middot; ABR &middot; RENE</div><div class="ac-updated">Reviewed &amp; updated &middot; April 2026</div></div></div>
 <p>Niceville is the primary Okaloosa County city on the northeast corner of <a href="/bases/eglin-afb">Eglin AFB</a>. Valparaiso is a small incorporated enclave immediately adjacent to the Eglin gate (and effectively surrounded by base land). Bluewater Bay is a large master-planned community within Niceville on Rocky Bayou, with its own golf course, tennis, marina, and a newer housing stock than the rest of Niceville. Together, this is the default housing destination for Eglin permanent party with school-age children &mdash; the commute is 5-10 minutes, Niceville High is the top Okaloosa school zone, and Bluewater Bay amenities are genuinely attractive.</p>
 <div class="facts">
 <div><strong>Commute to Eglin AFB East Gate:</strong> 5-10 min via SR-85</div>

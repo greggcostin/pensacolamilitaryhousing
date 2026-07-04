@@ -338,7 +338,7 @@ const PAGES = [
 
 <h2>Filing Your Benefits — Pensacola-Area Specifics</h2>
 <h3>Escambia County Property Appraiser</h3>
-<p>File homestead + disabled veteran exemptions in person at 213 Palafox Place, Pensacola, or online via escpa.org. Deadline: <strong>March 1</strong> of the tax year. If you close on April 15, you file for the following tax year's benefits.</p>
+<p>File homestead + disabled veteran exemptions in person at 221 Palafox Place, Suite 300, Pensacola, or online via escpa.org. Deadline: <strong>March 1</strong> of the tax year. If you close on April 15, you file for the following tax year's benefits.</p>
 <h3>Santa Rosa County Property Appraiser</h3>
 <p>File at 6495 Caroline Street, Milton, or online via srcpa.gov. Same March 1 deadline. Santa Rosa is generally faster to process than Escambia.</p>
 <h3>Okaloosa County Property Appraiser</h3>
@@ -455,7 +455,7 @@ const PAGES = [
 <h2>Pensacola-Area County Filing Details</h2>
 <h3>Escambia County</h3>
 <ul>
-<li><strong>Address:</strong> 213 Palafox Place, Pensacola, FL 32502</li>
+<li><strong>Address:</strong> 221 Palafox Place, Suite 300, Pensacola, FL 32502</li>
 <li><strong>Phone:</strong> (850) 434-2735</li>
 <li><strong>Online filing:</strong> escpa.org</li>
 <li><strong>Typical walk-in wait:</strong> 30-45 minutes in March (peak season); 10-15 minutes off-season.</li>

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node *)",
+      "Bash(npm run *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(curl -sILk --max-time 8 -A Mozilla/5.0 https://www.__TRACKED_VAR__/)",
+      "Bash(curl -sILk --max-time 6 -A Mozilla/5.0 https://__TRACKED_VAR__/)",
+      "Bash(grep -oE \"orangebeachmilitaryhousing\\\\.com[\\\\\"\\\\'][^,]{0,30}\" index.html)",
+      "Bash(grep -oE \".{0,50}orangebeachmilitaryhousing\\\\.com.{0,80}\" index.html)"
+    ]
+  }
+}

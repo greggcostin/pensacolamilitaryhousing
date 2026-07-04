@@ -419,11 +419,9 @@ export const pages = [
 <h3>2. 100% Permanent and Total (P&amp;T) — Full Property Tax Waiver (F.S. 196.081)</h3>
 <p>A veteran with a 100% P&amp;T service-connected disability, or one whose condition has been determined "total disability" by VA for reasons of unemployability, pays <strong>zero property tax</strong> on their primary Florida residence. No income test. No means test. The entire tax bill — county, school district, fire, municipal — is waived as long as the veteran occupies the home as a primary residence and holds homestead. On a $400,000 Pensacola-area home, this is approximately $4,200-5,800 per year in savings. Surviving spouses continue receiving this full exemption after the veteran's death provided they remain at the same residence and do not remarry.</p>
 <h3>3. Combat-Related Disability Additional Discount for Veterans 65+ (F.S. 196.082)</h3>
-<p>Veterans 65 and older with a combat-related disability receive an additional discount on their homestead property tax proportional to their disability percentage. A 40% combat-related disabled 65-year-old veteran, for example, receives a 40% discount on assessed value above and beyond the $5,000 flat exemption. This stacks with the homestead exemption.</p>
+<p>Veterans 65 and older with a combat-related disability receive an additional discount on their homestead property tax proportional to their disability percentage. A 40% combat-related disabled 65-year-old veteran, for example, receives a 40% discount on the ad valorem tax owed on the homestead (the statute discounts the tax, not assessed value), on top of the $5,000 exemption. This stacks with the homestead exemption.</p>
 <h3>4. Service-Connected Total and Permanent Disability for Surviving Spouses (F.S. 196.081(3))</h3>
 <p>If a service member dies in the line of duty or from a service-connected disability, the surviving spouse is entitled to the full property tax waiver on their primary residence, transferable to a new residence upon sale (portability) as long as the spouse does not remarry.</p>
-<h3>5. Disabled Veteran Discount on Non-Homestead Property (F.S. 196.082)</h3>
-<p>A less-known provision: 65+ veterans with combat-related disability can apply the proportional disability discount to a single non-homestead property they own, capped at the homestead exemption amount. This is an edge-case benefit but saves 65+ combat-disabled veterans with a rental property several hundred dollars per year.</p>
 
 <h2>How to File — Escambia, Santa Rosa, and Okaloosa County Process</h2>
 <ol>
@@ -448,7 +446,7 @@ export const pages = [
 <li><strong>100% P&amp;T disability (full waiver)</strong>: ~$4,200-5,800/year saved</li>
 <li><strong>65+ combat-disabled (40% rating, w/ homestead)</strong>: ~$1,700-2,300/year saved</li>
 </ul>
-<p>Numbers are approximate — actual savings depend on millage rate, city vs unincorporated, and school board/special districts. Escambia has lower total millage than Santa Rosa; Okaloosa is in the middle.</p>
+<p>Numbers are approximate — actual savings depend on millage rate, city vs unincorporated, and school board/special districts. Escambia has higher total millage than Santa Rosa; Okaloosa is in the middle.</p>
 
 <h2>Common Mistakes to Avoid</h2>
 <p><strong>Mistake 1: Filing homestead without filing disability.</strong> Many veterans file the homestead exemption when they close on the home but don't know about the additional $5,000 disability exemption. Always file both at the same time.</p>
@@ -485,7 +483,7 @@ export const pages = [
 <h2>The Three Districts at a Glance</h2>
 <ul>
 <li><strong>Santa Rosa County School District</strong> — Gulf Breeze, Pace, Milton, Navarre. Consistently earns Florida A district grade. Smaller district, higher per-student investment, near-uniformly strong schools. Pick this if you can afford the housing.</li>
-<li><strong>Escambia County Public Schools</strong> — Pensacola, Cantonment, Ferry Pass, Bellview, Myrtle Grove. Larger, older district with wide variance between its best and weakest zones. Top zones (Cantonment, select Washington High IB feeders) are excellent. Mid and lower zones earn B-C grades. Parcel-level zone verification matters here more than anywhere.</li>
+<li><strong>Escambia County Public Schools</strong> — Pensacola, Cantonment, Ferry Pass, Bellview, Myrtle Grove. Larger, older district with wide variance between its best and weakest zones. Top zones (Cantonment, the Pensacola High IB magnet) are excellent. Mid and lower zones earn B-C grades. Parcel-level zone verification matters here more than anywhere.</li>
 <li><strong>Okaloosa County School District</strong> — Niceville, Valparaiso, Bluewater Bay, Fort Walton Beach, Shalimar, Crestview, Destin. Mid-sized district with strong top-tier schools (Niceville High, Choctawhatchee) and heavy military-family focus.</li>
 </ul>
 
@@ -502,10 +500,10 @@ export const pages = [
 </ul>
 
 <h2>Escambia County — Zone Verification Is Non-Negotiable</h2>
-<p>Escambia's variance is the widest in the Panhandle. Tate High (Cantonment) is one of the best public high schools in Northwest Florida. Escambia High and Pine Forest High are middle-of-the-pack. Washington High's IB feeder program is a hidden gem.</p>
+<p>Escambia's variance is the widest in the Panhandle. Tate High (Cantonment) is one of the best public high schools in Northwest Florida. Escambia High and Pine Forest High are middle-of-the-pack. Pensacola High's IB Diploma Programme (downtown magnet) is a hidden gem.</p>
 <ul>
 <li><strong>Tate High (Cantonment)</strong> — A-rated consistently. Strong AP catalog. Best Escambia zone for families prioritizing schools without crossing into Santa Rosa. Feeds from Kingsfield Elementary, Jim Allen Elementary, Beulah Elementary, Ransom Middle, Beulah Middle.</li>
-<li><strong>Washington High's IB Diploma Programme</strong> — Escambia's flagship International Baccalaureate program. Ferry Pass area. Out-of-zone IB applications accepted annually. Worth targeting specifically if your student is IB-track.</li>
+<li><strong>Pensacola High's IB Diploma Programme</strong> — Escambia's flagship (and only) International Baccalaureate program. Downtown Pensacola magnet. Out-of-zone IB applications accepted annually. Worth targeting specifically if your student is IB-track.</li>
 <li><strong>Booker T. Washington High / Pine Forest High / Escambia High</strong> — mid-tier comprehensive high schools. Solid vocational tracks, moderate AP density. Fine for families prioritizing commute over top-tier rankings.</li>
 <li><strong>Pensacola High</strong> — historic magnet, downtown Pensacola. Strong arts and humanities magnet programs. Mixed overall rating but specific programs are standouts.</li>
 <li><strong>Cordova Park Elementary, Gulf Breeze Elementary (wait — this is Santa Rosa), Global Learning Academy</strong> — elementary standouts worth zone-chasing.</li>
@@ -645,7 +643,7 @@ pages.push({
 
 <h2>Schools</h2>
 <ul>
-<li><strong>NAS Pensacola side</strong>: Santa Rosa County (Gulf Breeze, Pace, Navarre) earns a statewide A district grade year over year. Escambia County is mixed — excellent in Cantonment (Tate High) and select Washington High IB zones, average elsewhere.</li>
+<li><strong>NAS Pensacola side</strong>: Santa Rosa County (Gulf Breeze, Pace, Navarre) earns a statewide A district grade year over year. Escambia County is mixed — excellent in Cantonment (Tate High) and the Pensacola High IB magnet, average elsewhere.</li>
 <li><strong>Hurlburt side</strong>: Okaloosa County has the strongest single-cluster schools in the Panhandle (Niceville High). Choctawhatchee High is also excellent. Fort Walton Beach mid-tier is solid. Crestview is weaker.</li>
 </ul>
 <p>For families prioritizing top-tier schools, both bases have excellent options — Gulf Breeze / Pace / Navarre on the NAS Pensacola side, Niceville / Bluewater Bay on the Hurlburt side.</p>

@@ -339,11 +339,22 @@ const Section = ({ children, bg = C.ink }) => (
     <div style={{ maxWidth: 1280, margin: "0 auto" }}>{children}</div>
   </section>
 );
+// GA4 event helpers — no-op if gtag isn't present (SSR/prerender/ad-block).
+function track(event, params) {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", event, params || {});
+  }
+}
+function trackPageView(path) {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", "page_view", { page_path: path, page_location: window.location.origin + path, page_title: document.title });
+  }
+}
 const FAQ = ({ q, a }) => {
   const [open, setOpen] = useState(false);
   return (
     <div style={{ borderBottom: `1px solid ${CHARCOAL}` }}>
-      <button onClick={() => setOpen(!open)} style={{ width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "18px 0", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <button onClick={() => { if (!open) track("faq_expand", { event_category: "engagement", event_label: typeof q === "string" ? q.slice(0, 100) : "faq" }); setOpen(!open); }} style={{ width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "18px 0", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <span style={{ color: "#fff", fontSize: 15, fontWeight: 600, paddingRight: 16, fontFamily: SF }}>{q}</span>
         <span style={{ color: C.gold, fontSize: 20, flexShrink: 0 }}>{open ? "−" : "+"}</span>
       </button>
@@ -1992,6 +2003,9 @@ const LoanCalculator = () => {
   const [hoaMonthly, setHoaMonthly] = useState(0);
   const [vaFirstUse, setVaFirstUse] = useState(true);
   const [vaExempt, setVaExempt] = useState(false);
+  const calcUsedRef = useRef(false);
+  useEffect(() => { track("calculator_open", { event_category: "engagement", event_label: "loan_calculator" }); }, []);
+  const markCalcUsed = () => { if (!calcUsedRef.current) { calcUsedRef.current = true; track("calculator_use", { event_category: "engagement", event_label: "loan_calculator" }); } };
 
   const rateDefaults = { va: 6.25, fha: 6.5, conv: 6.75 };
   const downDefaults = { va: 0, fha: 3.5, conv: 5 };
@@ -2061,7 +2075,7 @@ const LoanCalculator = () => {
     <PageWrapper>
       <PageHero title="Loan Calculator: VA, FHA, and Conventional" subtitle={<>Prefilled with 2026 Pensacola-area market defaults. Every input is editable.<br />Estimates only* — confirm with a VA-literate lender before offer.</>} breadcrumb="Home > Loan Calculator" />
       <Content>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 32 }}>
+        <div onChange={markCalcUsed} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 32 }}>
           <div>
             <div style={{ display: "flex", gap: 4, marginBottom: 20, background: C.elevated, padding: 4, borderRadius: 8 }}>
               {[{id:"va",label:"VA Loan"},{id:"fha",label:"FHA"},{id:"conv",label:"Conventional"}].map(t => (
@@ -2658,12 +2672,14 @@ export default function App() {
     }
     setPage(id);
     window.scrollTo(0, 0);
+    trackPageView(slug);
   };
 
   useEffect(() => {
     const onPopState = () => {
       setPage(resolvePageFromPath(window.location.pathname));
       window.scrollTo(0, 0);
+      trackPageView(window.location.pathname);
     };
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);

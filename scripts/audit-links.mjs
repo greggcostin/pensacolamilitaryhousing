@@ -17,8 +17,10 @@ for (const f of files) {
   existingPages.add(rel);
   existingPages.add(rel.replace(/\.html$/, ""));
 }
-// SPA routes + redirects
-["/", "/about", "/contact", "/pcs-guide", "/neighborhoods", "/va-loans", "/mortgage-calculators", "/homestead", "/reviews", "/blog",
+// SPA routes + redirects. Keep in sync with PAGE_TO_SLUG in src/App.jsx and the
+// prerendered shells written by scripts/postbuild-spa-routes.mjs.
+["/", "/about", "/contact", "/pcs-guide", "/communities", "/neighborhoods",
+ "/va-loans", "/mortgage-calculators", "/homestead", "/reviews", "/blog", "/buy", "/sell",
  "/va-loan-guide", "/va-loans.html", "/va-loan", "/va-loan.html", "/va-loan-pensacola", "/va-loan-pensacola.html",
  "/co-buying-military-homes", "/co-buying-military-homes.html",
  "/sitemap.xml", "/llms.txt", "/llms-full.txt", "/robots.txt", "/site.webmanifest", "/_redirects",
@@ -40,7 +42,9 @@ for (const f of files) {
   }
 }
 
-const broken = Object.keys(hrefs).filter(h => !existingPages.has(h) && !existingPages.has(h + ".html"));
+// /pagefind/* is generated into dist/ by pagefind at build time; not a source file.
+const isBuildArtifact = (h) => h.startsWith("/pagefind/");
+const broken = Object.keys(hrefs).filter(h => !existingPages.has(h) && !existingPages.has(h + ".html") && !isBuildArtifact(h));
 console.log("=== BROKEN INTERNAL LINKS ===");
 broken.slice(0, 40).forEach(h => {
   console.log(`  ${h}  ← ${hrefs[h].length} refs, e.g. ${hrefs[h][0]}`);

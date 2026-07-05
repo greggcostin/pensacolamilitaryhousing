@@ -62,6 +62,17 @@ All YMYL clusters were re-verified against primary sources and fixed. Commits on
 
 Resolutions to the "NARROWED / NOT REPRODUCED" items above: the **IB school** was confirmed = Pensacola High (IBO code 000442), and only IB attributions were switched (JROTC left intact) in an earlier commit; the **VA-math cluster** was recomputed against the 2023+ fee schedule (the auditor's "3.30% is wrong" flag was itself stale — 3.30% is correct and was left unchanged), with the genuine errors (invented reserve fee %, wrong loan limit, non-homestead §196.082 fabrication, millage direction) fixed in earlier commits.
 
+### Round 2 (2026-07-05, source-backed)
+
+Imagery (2.9) fully shipped — author cards on all 58 template pages, 24 sourced area/base heroes, topical bands, Buy/Sell/Insurance/Homestead heroes, `/communities` card cache-bust. Then four more CRITICAL clusters:
+
+- **Advertising compliance (2.8, `172123b`)** — first-time-buyer "buyer's agent costs you nothing / seller pays" rewritten to post-NAR-settlement-accurate language; invented "90% of families" stat dropped. Per Gregg's explicit instruction, the homepage "#1 military relocation Realtor" headline and the "largest" (sell) / "hundreds" (buy) claims were LEFT AS-IS.
+- **BAH (2.5, `681a400`/`5e19786`)** — the Hurlburt "live in Navarre and still get Pensacola MHA BAH" self-contradiction fixed (BAH follows duty station → Hurlburt member keeps the HIGHER FL023 rate); stale figures corrected on faq (E-6), whiting (O-1), perdido (E-5 with-deps), bah-rates H2, and the SPA PCS table/FAQ.
+- **VA rules (2.3, `3bd07fa`+`b39d8b3`)** — full-entitlement borrowers no longer told county limits/25%-down apply (Blue Water Navy Act removed limits for full entitlement; $832,750 is the 2026 BASELINE, not "Tier 1 high-cost"); civilian-can't-assume error fixed; veteran+spouse zero-down (not 25%); funding-fee Guard/Reserve equalization re-attributed to the Blue Water Navy Act (Jan 1 2020, not the PACT Act); disabled-vet fee relabeled first-use; SCRA foreclosure window 9mo → 1 year.
+- **FL statute/tax (2.4, `af1b7fb`)** — $5K-exemption savings 10x overstatement fixed; SAH/SHA to real FY2026 caps; homestead portability 2yr → 3yr (Amendment 5); Citizens cap 14% → 15% (2026) + F.S. 627.4025 hurricane trigger; F.S. 83.57 notice 60/15 → 30/7 (HB 1417) + Section 121 military 10-yr suspension added; Hometown Heroes "free/forgiven" → deferred 0% second mortgage.
+
+**Still open from the audit:** remaining 2.2 geography items (Blue Angel Pkwy on the Gulf Breeze route, Destin→Hurlburt time, 2nd SOS at Duke, Perdido Old River side, Saufley routing, Crestview "Baker", Cordova boundaries); remaining 2.6 school items (Corry→Jay Middle zoning, FDOE grade year labels, Cantonment Tate feeder, Duke "Baker School"); and the technical HIGH/MED items 2.10-2.19 (schema integrity/Course+HowTo removal, FAQPage sync incl. buy/sell orphaned schema, mid-page CTAs + tel: links, table styling, analytics events, SPA route shells/blog, accessibility, annual-update data file, breadcrumbs).
+
 ---
 
 ## 2. Systemic Findings

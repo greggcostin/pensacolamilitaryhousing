@@ -104,7 +104,7 @@ const COMMUNITY_LINKS = [
   { label: "Navy Point/Warrington", href: "/communities/navy-point-warrington", blurb: "5 minutes from the NAS Pensacola main gate. Closest off-base housing in the MHA. Historic ties, most affordable entry." },
   { label: "Niceville/Valparaiso/Bluewater Bay", href: "/communities/niceville", blurb: "Eglin AFB East Gate housing. A-rated Niceville High zone, master-planned Bluewater Bay, 10-minute commute for 33rd FW and 96th TW families." },
   { label: "Fort Walton Beach/Shalimar", href: "/communities/fort-walton-beach", blurb: "Adjacent to the Eglin AFB West Gate. 5-15 minute commute, Okaloosa schools, broad mix of price points for E-4 to O-5 families." },
-  { label: "Destin", href: "/communities/destin", blurb: "Gulf-front Okaloosa resort city. Premium beach and condo market, 20 min to Eglin, 10 min to Hurlburt. Strong military investment-rental play." },
+  { label: "Destin", href: "/communities/destin", blurb: "Gulf-front Okaloosa resort city. Premium beach and condo market, 20 min to Eglin, about 25 min to Hurlburt. Strong military investment-rental play." },
   { label: "Crestview", href: "/communities/crestview", blurb: "Okaloosa County budget play for Eglin AFB and Duke Field. New construction, strongest FL023 BAH-to-price ratio." },
 ];
 

@@ -540,11 +540,11 @@ MRP &middot; ABR &middot; SRS &middot; RENE &middot; Florida Military Specialist
 <div id="inquiry-body">
 <form id="inquiry-form" novalidate>
 <input class="ihp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-<div><label>Full Name *</label><input type="text" name="name" required></div>
-<div><label>Email Address *</label><input type="email" name="email" required></div>
-<div><label>Phone Number</label><input type="tel" name="phone"></div>
-<div><label>What Can I Help With?</label><select name="inquiryType"><option selected>PCS Relocation — Buying</option><option>PCS Relocation — Selling</option><option>VA Loan Questions</option><option>Investment Property</option><option>General Inquiry</option></select></div>
-<div><label>Message</label><textarea name="message" rows="4"></textarea></div>
+<div><label for="inq-name">Full Name *</label><input id="inq-name" type="text" name="name" required></div>
+<div><label for="inq-email">Email Address *</label><input id="inq-email" type="email" name="email" required></div>
+<div><label for="inq-phone">Phone Number</label><input id="inq-phone" type="tel" name="phone"></div>
+<div><label for="inq-type">What Can I Help With?</label><select id="inq-type" name="inquiryType"><option selected>PCS Relocation — Buying</option><option>PCS Relocation — Selling</option><option>VA Loan Questions</option><option>Investment Property</option><option>General Inquiry</option></select></div>
+<div><label for="inq-message">Message</label><textarea id="inq-message" name="message" rows="4"></textarea></div>
 <div class="ierr" id="inquiry-err" style="display:none"></div>
 <button type="submit" class="isubmit">Send Message</button>
 <p class="ifine">By submitting, you agree to be contacted by The Costin Team. Your information is never sold or shared.</p>

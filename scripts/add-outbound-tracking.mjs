@@ -6,7 +6,7 @@ import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const ANCHOR = "{gtag('event','brokerage_profile_click',{event_category:'social_proof'});}";
 const INSERT =
-  "else if(h.indexOf('findbuyers')>-1){gtag('event','home_valuation_click',{event_category:'conversion'});}" +
+  "else if(h.indexOf('whats-my-home-worth')>-1){gtag('event','home_valuation_click',{event_category:'conversion'});}" +
   "else if(h.indexOf('825bayshore')>-1){gtag('event','property_page_click',{event_category:'conversion'});}";
 
 function walk(dir, out = []) {

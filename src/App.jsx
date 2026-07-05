@@ -1472,19 +1472,19 @@ const AmortizationAnalyzer = ({ principal, annualRate, years, basePayment }) => 
           </div>
           <div style={card}>
             <label style={labelStyle}>Extra Monthly Payment ($)</label>
-            <input type="number" value={extraMonthly} onChange={e => setExtraMonthly(e.target.value)} style={inputStyle} min="0" />
+            <input type="number" aria-label="Extra monthly payment in dollars" value={extraMonthly} onChange={e => setExtraMonthly(e.target.value)} style={inputStyle} min="0" />
             <p style={{ color: C.mutedD, fontSize: 11, marginTop: 8, lineHeight: 1.5 }}>Added to every monthly principal payment.</p>
           </div>
           <div style={card}>
             <label style={labelStyle}>Annual Lump Sum ($)</label>
-            <input type="number" value={extraAnnual} onChange={e => setExtraAnnual(e.target.value)} style={inputStyle} min="0" />
+            <input type="number" aria-label="Annual lump sum in dollars" value={extraAnnual} onChange={e => setExtraAnnual(e.target.value)} style={inputStyle} min="0" />
             <p style={{ color: C.mutedD, fontSize: 11, marginTop: 8, lineHeight: 1.5 }}>E.g. tax refund or bonus applied once per year.</p>
           </div>
           <div style={card}>
             <label style={labelStyle}>Custom Extra Payment ($)</label>
-            <input type="number" value={customAmt} onChange={e => setCustomAmt(e.target.value)} style={inputStyle} min="0" placeholder="0" />
+            <input type="number" aria-label="Custom extra payment in dollars" value={customAmt} onChange={e => setCustomAmt(e.target.value)} style={inputStyle} min="0" placeholder="0" />
             <label style={{ ...labelStyle, fontSize: 10, marginTop: 10 }}>Frequency</label>
-            <select value={customFreq} onChange={e => setCustomFreq(e.target.value)} style={inputStyle}>
+            <select aria-label="Custom payment frequency" value={customFreq} onChange={e => setCustomFreq(e.target.value)} style={inputStyle}>
               <option value="onetime">One-Time</option>
               <option value="weekly">Every Week</option>
               <option value="monthly">Every Month</option>
@@ -1492,7 +1492,7 @@ const AmortizationAnalyzer = ({ principal, annualRate, years, basePayment }) => 
               <option value="annual">Every Year</option>
             </select>
             <label style={{ ...labelStyle, fontSize: 10, marginTop: 10 }}>{customFreq === "onetime" ? "Applied at month #" : "Starting at month #"}</label>
-            <input type="number" value={customStart} onChange={e => setCustomStart(e.target.value)} style={inputStyle} min="1" />
+            <input type="number" aria-label="Custom payment start month" value={customStart} onChange={e => setCustomStart(e.target.value)} style={inputStyle} min="1" />
           </div>
         </div>
 
@@ -1729,7 +1729,7 @@ const LoanComparison = () => {
     <div style={{ ...card, borderColor: color, borderWidth: 2 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
         <span style={{ width: 12, height: 12, borderRadius: 12, background: color, display: "inline-block", flexShrink: 0 }} />
-        <input value={loan.label} onChange={e => setLoan({ ...loan, label: e.target.value })} style={{ ...inputStyle, fontWeight: 700, fontSize: 14, padding: "8px 10px" }} />
+        <input aria-label="Loan name" value={loan.label} onChange={e => setLoan({ ...loan, label: e.target.value })} style={{ ...inputStyle, fontWeight: 700, fontSize: 14, padding: "8px 10px" }} />
       </div>
       <label style={labelStyle}>Loan Product</label>
       <div style={{ display: "flex", gap: 6, marginBottom: 14 }}>
@@ -1743,10 +1743,10 @@ const LoanComparison = () => {
       </div>
       <p style={{ color: C.mutedD, fontSize: 11, lineHeight: 1.55, marginBottom: 14 }}>{typeDesc[loan.type]}</p>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-        <div><label style={labelStyle}>Home Price ($)</label><input type="number" value={loan.price} onChange={e => setLoan({ ...loan, price: e.target.value })} style={inputStyle} /></div>
-        <div><label style={labelStyle}>Rate (%)</label><input type="number" step="0.125" value={loan.rate} onChange={e => setLoan({ ...loan, rate: e.target.value })} style={inputStyle} /></div>
-        <div><label style={labelStyle}>Term (Years)</label><input type="number" value={loan.years} onChange={e => setLoan({ ...loan, years: e.target.value })} style={inputStyle} /></div>
-        <div><label style={labelStyle}>Extra Monthly ($)</label><input type="number" value={loan.extra} onChange={e => setLoan({ ...loan, extra: e.target.value })} style={inputStyle} /></div>
+        <div><label style={labelStyle}>Home Price ($)</label><input type="number" aria-label="Home price in dollars" value={loan.price} onChange={e => setLoan({ ...loan, price: e.target.value })} style={inputStyle} /></div>
+        <div><label style={labelStyle}>Rate (%)</label><input type="number" step="0.125" aria-label="Interest rate percent" value={loan.rate} onChange={e => setLoan({ ...loan, rate: e.target.value })} style={inputStyle} /></div>
+        <div><label style={labelStyle}>Term (Years)</label><input type="number" aria-label="Loan term in years" value={loan.years} onChange={e => setLoan({ ...loan, years: e.target.value })} style={inputStyle} /></div>
+        <div><label style={labelStyle}>Extra Monthly ($)</label><input type="number" aria-label="Extra monthly payment in dollars" value={loan.extra} onChange={e => setLoan({ ...loan, extra: e.target.value })} style={inputStyle} /></div>
       </div>
       <div style={{ marginTop: 14 }}>
         <label style={labelStyle}>Down Payment</label>
@@ -1754,7 +1754,7 @@ const LoanComparison = () => {
           {(loan.type === "va" ? [0, 5, 10] : loan.type === "fha" ? [3.5, 5, 10, 20] : [5, 10, 20]).map(dp => (
             <button key={dp} onClick={() => setLoan({ ...loan, downPct: dp })} style={{ flex: "1 1 60px", padding: "6px 8px", background: Number(loan.downPct) === dp ? color : "transparent", color: Number(loan.downPct) === dp ? C.ink : C.muted, border: `1px solid ${Number(loan.downPct) === dp ? color : "#444"}`, borderRadius: 6, fontSize: 11, fontWeight: 700, cursor: "pointer", fontFamily: SS, letterSpacing: 1 }}>{dp}%</button>
           ))}
-          <input type="number" step="0.1" value={loan.downPct} onChange={e => setLoan({ ...loan, downPct: e.target.value })} style={{ ...inputStyle, flex: "1 1 70px", maxWidth: 90, padding: "6px 8px", fontSize: 12 }} placeholder="Custom" />
+          <input type="number" step="0.1" aria-label="Custom down payment percent" value={loan.downPct} onChange={e => setLoan({ ...loan, downPct: e.target.value })} style={{ ...inputStyle, flex: "1 1 70px", maxWidth: 90, padding: "6px 8px", fontSize: 12 }} placeholder="Custom" />
         </div>
       </div>
       {loan.type === "va" && (
@@ -2094,12 +2094,12 @@ const LoanCalculator = () => {
 
             <div style={{ marginBottom: 16 }}>
               <label style={labelStyle}>Home Price</label>
-              <input type="number" value={homePrice} onChange={e=>setHomePrice(e.target.value)} style={inputStyle} />
+              <input type="number" aria-label="Home price" value={homePrice} onChange={e=>setHomePrice(e.target.value)} style={inputStyle} />
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
               <div>
                 <label style={labelStyle}>Down Payment %</label>
-                <input type="number" step="0.5" value={downPct} onChange={e=>setDownPct(e.target.value)} style={inputStyle} />
+                <input type="number" step="0.5" aria-label="Down payment percent" value={downPct} onChange={e=>setDownPct(e.target.value)} style={inputStyle} />
               </div>
               <div>
                 <label style={labelStyle}>Down Payment $</label>
@@ -2109,11 +2109,11 @@ const LoanCalculator = () => {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
               <div>
                 <label style={labelStyle}>Interest Rate %</label>
-                <input type="number" step="0.125" value={rate} onChange={e=>setRate(e.target.value)} style={inputStyle} />
+                <input type="number" step="0.125" aria-label="Interest rate percent" value={rate} onChange={e=>setRate(e.target.value)} style={inputStyle} />
               </div>
               <div>
                 <label style={labelStyle}>Loan Term (yrs)</label>
-                <select value={termYears} onChange={e=>setTermYears(Number(e.target.value))} style={inputStyle}>
+                <select aria-label="Loan term in years" value={termYears} onChange={e=>setTermYears(Number(e.target.value))} style={inputStyle}>
                   <option value={30}>30</option>
                   <option value={20}>20</option>
                   <option value={15}>15</option>
@@ -2123,16 +2123,16 @@ const LoanCalculator = () => {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
               <div>
                 <label style={labelStyle}>Property Tax Rate %</label>
-                <input type="number" step="0.05" value={taxRate} onChange={e=>setTaxRate(e.target.value)} style={inputStyle} />
+                <input type="number" step="0.05" aria-label="Property tax rate percent" value={taxRate} onChange={e=>setTaxRate(e.target.value)} style={inputStyle} />
               </div>
               <div>
                 <label style={labelStyle}>Home Insurance /yr</label>
-                <input type="number" step="100" value={insuranceAnnual} onChange={e=>setInsuranceAnnual(e.target.value)} style={inputStyle} />
+                <input type="number" step="100" aria-label="Home insurance per year" value={insuranceAnnual} onChange={e=>setInsuranceAnnual(e.target.value)} style={inputStyle} />
               </div>
             </div>
             <div style={{ marginBottom: 16 }}>
               <label style={labelStyle}>HOA (monthly, optional)</label>
-              <input type="number" step="10" value={hoaMonthly} onChange={e=>setHoaMonthly(e.target.value)} style={inputStyle} />
+              <input type="number" step="10" aria-label="HOA monthly optional" value={hoaMonthly} onChange={e=>setHoaMonthly(e.target.value)} style={inputStyle} />
             </div>
 
             {loanType === "va" && (

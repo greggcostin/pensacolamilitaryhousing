@@ -1,4 +1,5 @@
 import { useState, useEffect, useReducer, useId, useRef } from "react";
+import { META_BY_PAGE, SITE } from "./routeMeta.js";
 
 /* ═══════════════ DESIGN TOKENS ═══════════════ */
 const C = {
@@ -2672,18 +2673,40 @@ export default function App() {
     }
     setPage(id);
     window.scrollTo(0, 0);
+    const m = META_BY_PAGE[id] || META_BY_PAGE.home;
+    if (m) document.title = m.title; // set before page_view so GA4 logs the right title
     trackPageView(slug);
   };
 
   useEffect(() => {
     const onPopState = () => {
-      setPage(resolvePageFromPath(window.location.pathname));
+      const id = resolvePageFromPath(window.location.pathname);
+      setPage(id);
       window.scrollTo(0, 0);
+      const m = META_BY_PAGE[id] || META_BY_PAGE.home;
+      if (m) document.title = m.title;
       trackPageView(window.location.pathname);
     };
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
+
+  // Per-route head sync (audit 2.15): keep document.title + canonical + og in step
+  // with the current SPA page, from the SAME source as the prerendered shells.
+  useEffect(() => {
+    const m = META_BY_PAGE[page] || META_BY_PAGE.home;
+    const canon = SITE + (m.slug || "/");
+    document.title = m.title;
+    const set = (sel, attr, val) => { const el = document.head.querySelector(sel); if (el && val != null) el.setAttribute(attr, val); };
+    set('link[rel="canonical"]', "href", canon);
+    set('meta[name="description"]', "content", m.description);
+    set('meta[property="og:url"]', "content", canon);
+    set('meta[property="og:title"]', "content", m.title);
+    set('meta[property="og:description"]', "content", m.description);
+    set('meta[name="twitter:url"]', "content", canon);
+    set('meta[name="twitter:title"]', "content", m.title);
+    set('meta[name="twitter:description"]', "content", m.description);
+  }, [page]);
 
   useEffect(() => {
     const HASH_TO_PAGE = { "calculator": "calculator", "bah-calculator": "calculator" };

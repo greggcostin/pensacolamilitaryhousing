@@ -979,7 +979,7 @@ const PCSPage = ({ go }) => {
       <FAQ q="How far in advance should I start working with a Realtor before my PCS?" a="Ideally 90 days out, but I've helped families close in as few as 21 days when the timeline demands it. The earlier you start, the more options you have — but late starters are welcome. I'll make it work." />
       <FAQ q="Can I buy a home sight-unseen during a PCS?" a="Yes, and it's more common than you'd think. I provide detailed video walkthroughs, drone footage, and neighborhood context via video call. I've closed dozens of sight-unseen purchases for PCSing families. The key is having an agent you trust to be your eyes and ears." />
       <FAQ q="What's the average commute from Gulf Breeze to NAS Pensacola?" a="15-20 minutes via the Pensacola Bay Bridge (3-Mile Bridge). During morning rush it can push toward 25 minutes, but it's a scenic drive and the school quality in Gulf Breeze (Santa Rosa School District) makes it worth it for most families." />
-      <FAQ q="Is BAH enough to cover a mortgage in Pensacola?" a="For most ranks E-5 and above, yes. An E-6 with dependents receives approximately $1,950/month BAH for the Pensacola area, which comfortably covers a mortgage on a $280-320K home. O-3 with dependents receives approximately $2,250/month, opening up homes in the $350-400K range. I can run exact numbers based on your rank and situation." />
+      <FAQ q="Is BAH enough to cover a mortgage in Pensacola?" a="For most ranks E-5 and above, yes. An E-6 with dependents receives approximately $2,235/month BAH for the Pensacola area, which comfortably covers a mortgage on a $305-350K home. O-3 with dependents receives approximately $2,271/month, opening up homes in the $325-385K range. I can run exact numbers based on your rank and situation." />
       <FAQ q="Should I rent first or buy immediately?" a="If you know you'll be in Pensacola for 3+ years, buying typically makes more financial sense — especially with a VA loan at zero down. If your assignment is less than 2 years, renting may be smarter unless you plan to keep the property as a rental investment. I can help you model both scenarios." />
       <FAQ q="Do I need a Realtor if I'm looking at new construction?" a="Absolutely. Builder sales reps work for the builder, not you. Having your own representation costs you nothing (the builder pays the commission) and ensures someone is advocating for your interests on inspections, upgrades, and contract terms." />
       <InfoBox title="Ready to Start?">Call or text me at (850) 266-5005, or send me a message through the contact page. I respond to every inquiry within 2 hours during business hours. Let's talk about your PCS and find you the right home.</InfoBox>
@@ -1046,12 +1046,12 @@ const VALoanPage = ({ go }) => (
       <ComparisonTable
         headers={["Rank (w/ dependents)", "Pensacola BAH (approx)", "Estimated Max Purchase Price", "Target Neighborhoods"]}
         rows={[
-          ["E-5", "$1,725/mo", "$250-280K", "Pace, Cantonment, NE Pensacola"],
-          ["E-6", "$1,950/mo", "$280-320K", "Pace, Milton, East Pensacola"],
-          ["E-7", "$2,100/mo", "$310-360K", "Gulf Breeze, Pace, Navarre"],
-          ["O-1/O-2", "$1,850/mo", "$270-310K", "Pace, East Pensacola, Milton"],
-          ["O-3", "$2,250/mo", "$340-400K", "Gulf Breeze, Navarre, Perdido"],
-          ["O-4", "$2,500/mo", "$380-450K", "Gulf Breeze, Pensacola, Perdido"],
+          ["E-5", "$1,863/mo", "$250-285K", "Pace, Cantonment, NE Pensacola"],
+          ["E-6", "$2,235/mo", "$305-350K", "Pace, Milton, East Pensacola"],
+          ["E-7", "$2,256/mo", "$325-385K", "Gulf Breeze, Pace, Navarre"],
+          ["O-1/O-2", "$1,914-2,232/mo", "$265-355K", "Pace, East Pensacola, Milton"],
+          ["O-3", "$2,271/mo", "$325-385K", "Gulf Breeze, Navarre, Perdido"],
+          ["O-4", "$2,457/mo", "$360-440K", "Gulf Breeze, Pensacola, Perdido"],
         ]}
       />
       <div style={{ background: `${GOLD}12`, border: `2px solid ${GOLD}55`, borderRadius: 12, padding: 24, marginTop: 16, marginBottom: 24 }}>

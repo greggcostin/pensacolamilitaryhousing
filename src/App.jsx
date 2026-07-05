@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from "react";
+import { useState, useEffect, useReducer, useId, useRef } from "react";
 
 /* ═══════════════ DESIGN TOKENS ═══════════════ */
 const C = {
@@ -6,7 +6,7 @@ const C = {
   hairline: "rgba(255,255,255,0.08)",
   gold: "#C9A84C", goldSoft: "#D4B768",
   goldTint: "rgba(201,168,76,0.10)", goldLine: "rgba(201,168,76,0.35)",
-  text: "#E8E6DF", muted: "#A5A496", mutedD: "#6F6E65",
+  text: "#E8E6DF", muted: "#A5A496", mutedD: "#8f8e83",
 };
 const GOLD = C.gold;
 const BLACK = C.ink;
@@ -239,7 +239,7 @@ const Nav = ({ current, go }) => {
         <div style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setPcsOpen(true)}
           onMouseLeave={() => setPcsOpen(false)}>
-          <button onClick={() => { go("pcs"); setPcsOpen(false); }} style={tabStyle(current === "pcs")}>PCS Guide ▾</button>
+          <button onClick={() => { go("pcs"); setPcsOpen(false); }} aria-haspopup="true" aria-expanded={pcsOpen} style={tabStyle(current === "pcs")}>PCS Guide ▾</button>
           {pcsOpen && (
             <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               {PCS_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
@@ -250,7 +250,7 @@ const Nav = ({ current, go }) => {
         <div style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setBasesOpen(true)}
           onMouseLeave={() => setBasesOpen(false)}>
-          <button onClick={() => setBasesOpen(!basesOpen)} style={tabStyle(basesActive)}>Bases ▾</button>
+          <button onClick={() => setBasesOpen(!basesOpen)} aria-haspopup="true" aria-expanded={basesOpen} style={tabStyle(basesActive)}>Bases ▾</button>
           {basesOpen && (
             <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 220, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               {BASES_LINKS.map(b => <DropItem key={b.href} href={b.href} label={b.label} />)}
@@ -261,7 +261,7 @@ const Nav = ({ current, go }) => {
         <div style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setCommsOpen(true)}
           onMouseLeave={() => setCommsOpen(false)}>
-          <button onClick={() => { go("neighborhoods"); setCommsOpen(false); }} style={tabStyle(commsActive)}>Communities ▾</button>
+          <button onClick={() => { go("neighborhoods"); setCommsOpen(false); }} aria-haspopup="true" aria-expanded={commsOpen} style={tabStyle(commsActive)}>Communities ▾</button>
           {commsOpen && (
             <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, maxHeight: 440, overflowY: "auto", boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               <button onClick={() => { go("neighborhoods"); setCommsOpen(false); }} style={{ display: "block", width: "100%", textAlign: "left", background: commsActive ? "rgba(201,168,76,0.12)" : "transparent", border: "none", color: C.gold, padding: "10px 16px", fontSize: 11, cursor: "pointer", borderRadius: 4, fontFamily: SS, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", borderBottom: `1px solid ${C.hairline}`, marginBottom: 4 }}>All Communities Overview</button>
@@ -273,7 +273,7 @@ const Nav = ({ current, go }) => {
         <div style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setResourcesOpen(true)}
           onMouseLeave={() => setResourcesOpen(false)}>
-          <button onClick={() => setResourcesOpen(!resourcesOpen)} style={tabStyle(false)}>Resources ▾</button>
+          <button onClick={() => setResourcesOpen(!resourcesOpen)} aria-haspopup="true" aria-expanded={resourcesOpen} style={tabStyle(false)}>Resources ▾</button>
           {resourcesOpen && (
             <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 260, maxHeight: 440, overflowY: "auto", boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               {RESOURCE_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
@@ -284,7 +284,7 @@ const Nav = ({ current, go }) => {
         <div style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setVaOpen(true)}
           onMouseLeave={() => setVaOpen(false)}>
-          <a href="/va-loan-guide" onClick={() => setVaOpen(false)} style={tabStyle(false)}>VA Loan Guide ▾</a>
+          <a href="/va-loan-guide" onClick={() => setVaOpen(false)} aria-haspopup="true" aria-expanded={vaOpen} style={tabStyle(false)}>VA Loan Guide ▾</a>
           {vaOpen && (
             <div style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               {VA_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
@@ -453,21 +453,39 @@ const Hero = ({ go }) => {
 };
 
 const InquiryModal = ({ onClose }) => {
+  const dialogRef = useRef(null);
+  const headingId = useId();
   useEffect(() => {
-    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    const prevFocus = document.activeElement;
+    const node = dialogRef.current;
+    const sel = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const focusables = () => node ? Array.from(node.querySelectorAll(sel)) : [];
+    const firstEl = focusables()[0];
+    if (firstEl) firstEl.focus();
+    const onKey = (e) => {
+      if (e.key === "Escape") { onClose(); return; }
+      if (e.key === "Tab") {
+        const els = focusables();
+        if (els.length === 0) return;
+        const first = els[0], last = els[els.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
     window.addEventListener("keydown", onKey);
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prevOverflow;
+      if (prevFocus && prevFocus.focus) prevFocus.focus();
     };
   }, [onClose]);
   return (
     <div onClick={onClose} style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(10,15,26,0.92)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", zIndex: 2000, display: "flex", alignItems: "flex-start", justifyContent: "center", padding: "80px 20px 40px", overflowY: "auto" }}>
-      <div onClick={e => e.stopPropagation()} style={{ background: C.panel, border: `1px solid ${C.hairline}`, borderRadius: 14, padding: "40px 32px 32px", width: "100%", maxWidth: 560, position: "relative", boxShadow: "0 20px 60px rgba(0,0,0,0.6)" }}>
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby={headingId} onClick={e => e.stopPropagation()} style={{ background: C.panel, border: `1px solid ${C.hairline}`, borderRadius: 14, padding: "40px 32px 32px", width: "100%", maxWidth: 560, position: "relative", boxShadow: "0 20px 60px rgba(0,0,0,0.6)" }}>
         <button onClick={onClose} aria-label="Close" style={{ position: "absolute", top: 12, right: 14, background: "transparent", border: "none", color: "#999", fontSize: 28, lineHeight: 1, cursor: "pointer", padding: 6 }}>×</button>
-        <h2 style={{ fontFamily: SF, fontSize: 26, color: "#fff", margin: "0 0 8px", textAlign: "center", fontWeight: 500 }}>Start Your PCS Search</h2>
+        <h2 id={headingId} style={{ fontFamily: SF, fontSize: 26, color: "#fff", margin: "0 0 8px", textAlign: "center", fontWeight: 500 }}>Start Your PCS Search</h2>
         <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.7, margin: "0 0 8px", textAlign: "center" }}>Tell me a bit about your move. I respond within 2 hours during business hours.</p>
         <InquiryForm />
       </div>
@@ -811,6 +829,7 @@ const InquiryForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const uid = useId();
   const WEBHOOK_URL = "https://costin-contact.gregg-costin.workers.dev";
   const handleChange = (field) => (e) => setFormData({ ...formData, [field]: e.target.value });
   const handleSubmit = async (e) => {
@@ -842,20 +861,20 @@ const InquiryForm = () => {
         <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           <input type="text" name="website" value={formData.honeypot} onChange={handleChange("honeypot")} style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
           <div>
-            <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Full Name *</label>
-            <input type="text" value={formData.name} onChange={handleChange("name")} required disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+            <label htmlFor={`${uid}-name`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Full Name *</label>
+            <input id={`${uid}-name`} type="text" value={formData.name} onChange={handleChange("name")} required disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
           </div>
           <div>
-            <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Email Address *</label>
-            <input type="email" value={formData.email} onChange={handleChange("email")} required disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+            <label htmlFor={`${uid}-email`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Email Address *</label>
+            <input id={`${uid}-email`} type="email" value={formData.email} onChange={handleChange("email")} required disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
           </div>
           <div>
-            <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Phone Number</label>
-            <input type="tel" value={formData.phone} onChange={handleChange("phone")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+            <label htmlFor={`${uid}-phone`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Phone Number</label>
+            <input id={`${uid}-phone`} type="tel" value={formData.phone} onChange={handleChange("phone")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
           </div>
           <div>
-            <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>What Can I Help With?</label>
-            <select value={formData.inquiryType} onChange={handleChange("inquiryType")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none" }}>
+            <label htmlFor={`${uid}-type`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>What Can I Help With?</label>
+            <select id={`${uid}-type`} value={formData.inquiryType} onChange={handleChange("inquiryType")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none" }}>
               <option>PCS Relocation — Buying</option>
               <option>PCS Relocation — Selling</option>
               <option>VA Loan Questions</option>
@@ -864,8 +883,8 @@ const InquiryForm = () => {
             </select>
           </div>
           <div>
-            <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Message</label>
-            <textarea rows={4} value={formData.message} onChange={handleChange("message")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box" }} />
+            <label htmlFor={`${uid}-message`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Message</label>
+            <textarea id={`${uid}-message`} rows={4} value={formData.message} onChange={handleChange("message")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box" }} />
           </div>
           {status === "error" && (
             <div style={{ background: "#3a1a1a", border: "1px solid #a03a3a", borderRadius: 8, padding: 12, color: "#ff9999", fontSize: 13 }}>
@@ -2480,6 +2499,7 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const uid = useId();
   const WEBHOOK_URL = "https://costin-contact.gregg-costin.workers.dev";
 
   const handleChange = (field) => (e) => setFormData({ ...formData, [field]: e.target.value });
@@ -2560,20 +2580,20 @@ const ContactPage = () => {
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 12, flex: 1 }}>
                 <input type="text" name="website" value={formData.honeypot} onChange={handleChange("honeypot")} style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }} tabIndex={-1} autoComplete="off" aria-hidden="true" />
                 <div>
-                  <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Full Name *</label>
-                  <input type="text" value={formData.name} onChange={handleChange("name")} required disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <label htmlFor={`${uid}-name`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Full Name *</label>
+                  <input id={`${uid}-name`} type="text" value={formData.name} onChange={handleChange("name")} required disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
                 </div>
                 <div>
-                  <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Email Address *</label>
-                  <input type="email" value={formData.email} onChange={handleChange("email")} required disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <label htmlFor={`${uid}-email`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Email Address *</label>
+                  <input id={`${uid}-email`} type="email" value={formData.email} onChange={handleChange("email")} required disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
                 </div>
                 <div>
-                  <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Phone Number</label>
-                  <input type="tel" value={formData.phone} onChange={handleChange("phone")} disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  <label htmlFor={`${uid}-phone`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Phone Number</label>
+                  <input id={`${uid}-phone`} type="tel" value={formData.phone} onChange={handleChange("phone")} disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
                 </div>
                 <div>
-                  <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>What Can I Help With?</label>
-                  <select value={formData.inquiryType} onChange={handleChange("inquiryType")} disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none" }}>
+                  <label htmlFor={`${uid}-type`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>What Can I Help With?</label>
+                  <select id={`${uid}-type`} value={formData.inquiryType} onChange={handleChange("inquiryType")} disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none" }}>
                     <option>PCS Relocation — Buying</option>
                     <option>PCS Relocation — Selling</option>
                     <option>VA Loan Questions</option>
@@ -2582,8 +2602,8 @@ const ContactPage = () => {
                   </select>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
-                  <label style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Message</label>
-                  <textarea rows={12} value={formData.message} onChange={handleChange("message")} disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box", flex: 1, minHeight: 200 }} />
+                  <label htmlFor={`${uid}-message`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>Message</label>
+                  <textarea id={`${uid}-message`} rows={12} value={formData.message} onChange={handleChange("message")} disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box", flex: 1, minHeight: 200 }} />
                 </div>
                 {status === "error" && (
                   <div style={{ background: "#3a1a1a", border: "1px solid #a03a3a", borderRadius: 8, padding: 12, color: "#ff9999", fontSize: 13 }}>
@@ -2676,13 +2696,17 @@ export default function App() {
 
   return (
     <div style={{ fontFamily: SS, margin: 0, padding: 0, background: C.ink, minHeight: "100vh" }}>
+      <a href="#main" className="skip-link">Skip to main content</a>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
         .tabbar::-webkit-scrollbar { display: none; }
         .tabbar { -ms-overflow-style: none; scrollbar-width: none; }
         [id] { scroll-margin-top: 100px; }
+        .skip-link { position: absolute; left: -9999px; top: 0; z-index: 3000; background: ${C.gold}; color: ${C.ink}; padding: 10px 16px; font-weight: 700; text-decoration: none; border-radius: 0 0 6px 0; }
+        .skip-link:focus { left: 0; }
       `}</style>
       <Nav current={page} go={go} />
+      <main id="main" tabIndex={-1} style={{ outline: "none" }}>
       {page === "home" && <>
         <Hero go={go} />
         <TrustBar />
@@ -2712,6 +2736,7 @@ export default function App() {
       {page === "blog" && <BlogPage go={go} />}
       {page === "reviews" && <ReviewsPage />}
       {page === "contact" && <ContactPage />}
+      </main>
       <Footer go={go} />
     </div>
   );

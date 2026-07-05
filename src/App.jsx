@@ -446,7 +446,7 @@ const Hero = ({ go }) => {
     </div>
     <div className="hero-stats" style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 2, borderTop: `1px solid ${C.hairline}`, background: "rgba(10,15,26,0.85)", backdropFilter: "blur(8px)" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 32px", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))", gap: 32 }}>
-        {[["USAF", "Prior Enlisted, Retired Combat Systems Officer"], ["11", "Personal PCS Moves"], ["Top 5%", "Pensacola Agents"], ["5.0 ★", "Zillow Premier Agent", "https://www.zillow.com/profile/GreggCostin"]].map(([n, l, href]) => {
+        {[["USAF", "Prior Enlisted, Retired Combat Systems Officer"], ["11", "Personal PCS Moves"], ["Top .8%", "Pensacola Agents"], ["5.0 ★", "Zillow Premier Agent", "https://www.zillow.com/profile/GreggCostin"]].map(([n, l, href]) => {
           const inner = (
             <>
               <div style={{ fontFamily: SF, fontSize: 32, color: C.gold, fontWeight: 500, lineHeight: 1 }}>{n}</div>
@@ -814,7 +814,7 @@ const AboutPage = ({ go }) => (
           { title: "Seller Representative Specialist (SRS®)", desc: "NAR premier seller-representation certification covering pricing, marketing, and listing strategy." },
           { title: "Real Estate Negotiation Expert (RENE®)", desc: "NAR certification for advanced offer and counter-offer negotiation techniques across all transaction types." },
           { title: "Forbes Global Properties · Rookie of the Year 2025", desc: "Recognized for outstanding transactions, sales volume, and market impact in first year." },
-          { title: "Zillow Premier Agent · Top 5%", desc: "Perfect 5-star rating. Recognized among the top-performing agents in the Pensacola metro area." },
+          { title: "Zillow Premier Agent · Top .8%", desc: "Perfect 5-star rating. Recognized among the top-performing agents in the Pensacola metro area." },
           { title: "Licensed FL + AL", desc: "Dual-licensed to serve military families across the Florida Panhandle and coastal Alabama markets." },
         ].map(c => (
           <div key={c.title} style={{ background: C.elevated, border: `1px solid ${C.hairline}`, padding: 28 }}>

@@ -2228,7 +2228,7 @@ const NeighborhoodsPage = ({ go }) => {
             onMouseLeave={e => e.currentTarget.style.borderColor = "#333"}>
             {/* Photo header: drops in /images/communities/<slug>.jpg when present; branded gradient until then */}
             <div style={{ height: 158, background: "linear-gradient(135deg,#1A2332,#2C3A4F)", position: "relative" }}>
-              <img src={`/images/communities/${slug}.jpg`} alt={`${n.label}, Florida — community near Pensacola`} loading="lazy"
+              <img src={`/images/communities/${slug}.jpg?v=2`} alt={`${n.label}, Florida — community near Pensacola`} loading="lazy"
                 onError={e => { e.currentTarget.style.display = "none"; }}
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>

@@ -599,8 +599,9 @@ const SocialProof = ({ go }) => (
         <H2>The mission doesn't end at the offer.</H2>
         <div style={{ marginTop: 24 }}>
           {[
-            { text: "Gregg is hands-down the best Realtor we've ever worked with. He made the entire buying process feel effortless — always available, endlessly patient, and truly invested.", from: "USAF Veteran — Gulf Breeze" },
-            { text: "As a young first time home buyer, I went in clueless. I got phenomenal guidance about VA loan benefits and the entire buying process. Gregg genuinely cares.", from: "First-Time Military Homebuyer — Pace" },
+            { text: "Relocating our family all the way from Washington State to Florida felt like a massive, overwhelming task, but Gregg was an absolute lifesaver. He is truly a professional who went above and beyond for us every step of the way.", from: "Eric Johnson — Relocated from Washington State" },
+            { text: "From the very beginning, he set himself apart by taking the time to meet with us, understand our situation, and tailor his approach specifically to our needs as a military family.", from: "Joshua Slavens — Military Family" },
+            { text: "We were extremely fortunate to meet Gregg by chance during our home search journey. He provided much more than we ever expected from a realtor. As a Veteran I cannot recommend him more highly.", from: "Darin Vazquez — Veteran" },
           ].map((r, i) => (
             <div key={i} style={{ background: C.elevated, border: `1px solid ${C.hairline}`, padding: 24, marginBottom: 16 }}>
               <div style={{ color: C.gold, fontSize: 16, marginBottom: 8 }}>★★★★★</div>

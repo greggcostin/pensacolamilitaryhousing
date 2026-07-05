@@ -20,11 +20,13 @@ const REVIEWS = "public/reviews.html";
 
 function currentCounts() {
   const h = readFileSync(REVIEWS, "utf8");
-  const g = h.match(/"reviewCount":\s*"(\d+)"/);
-  const g2 = h.match(/(\d+) Google Reviews/i);
+  // Google/Zillow counts are read from the VISIBLE page text. The self-serving
+  // "reviewCount"/aggregateRating JSON-LD was removed 2026-07 (ineligible for
+  // review rich results + manual-action-adjacent), so counts now live only in
+  // visible copy — do not reintroduce review structured data on our own entity.
+  const g = h.match(/(\d+) Google Reviews/i);
   const z = h.match(/(\d+) Zillow Reviews/i);
   if (!g || !z) { console.error("PARSE FAILURE: count patterns not found in " + REVIEWS); process.exit(3); }
-  if (g2 && g2[1] !== g[1]) console.error(`WARNING: schema reviewCount ${g[1]} != visible "${g2[1]} Google Reviews" — fix manually`);
   return { google: Number(g[1]), zillow: Number(z[1]) };
 }
 
@@ -74,8 +76,6 @@ const PATTERNS = {
     "{n} Google reviews",
     "{n} Google Reviews",
     "Read All {n} Reviews on Google",
-    '"reviewCount": "{n}"',
-    '"reviewCount":"{n}"',
     "5.0 stars from {n} reviews",
     "5.0-star Google rating from {n} verified reviews",
     "{n} verified Google reviews",

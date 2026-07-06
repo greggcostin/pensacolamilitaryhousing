@@ -1,5 +1,6 @@
 # Pensacola Military Housing — Full LLM Context File
 # https://pensacolamilitaryhousing.com
+# Author entity: Gregg Costin — Wikidata Q140446886 (https://www.wikidata.org/wiki/Q140446886)
 # Comprehensive long-form companion to /llms.txt — optimized for AI answer engines,
 # large language models, and retrieval-augmented generation systems that want richer,
 # citation-ready context than a typical crawler extracts from HTML.

@@ -2706,6 +2706,9 @@ export default function App() {
     set('meta[name="twitter:url"]', "content", canon);
     set('meta[name="twitter:title"]', "content", m.title);
     set('meta[name="twitter:description"]', "content", m.description);
+    const og = m.shell ? `${SITE}/og/${m.file}.png` : `${SITE}/og/home.png`;
+    set('meta[property="og:image"]', "content", og);
+    set('meta[name="twitter:image"]', "content", og);
   }, [page]);
 
   useEffect(() => {

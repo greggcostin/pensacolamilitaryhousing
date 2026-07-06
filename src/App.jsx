@@ -68,6 +68,11 @@ const VA_LINKS = [
 
 const RESOURCE_LINKS = [
   { label: "First-Time Military Homebuyer", href: "/first-time-military-homebuyer.html" },
+  { label: "Flight School Housing", href: "/flight-school-housing-pensacola.html" },
+  { label: "Rent or Sell When You PCS", href: "/rent-or-sell-pcs-pensacola.html" },
+  { label: "Buying Sight-Unseen", href: "/buying-sight-unseen-pcs-pensacola.html" },
+  { label: "Pensacola Flood Zones", href: "/pensacola-flood-zones-homebuyers.html" },
+  { label: "VA Loans for Condos", href: "/va-approved-condos-pensacola.html" },
   { label: "Dual-Military Homes", href: "/dual-military-homes.html" },
   { label: "Military Divorce Housing", href: "/military-divorce-housing.html" },
   { label: "Military Rental Property", href: "/military-rental-property-management.html" },
@@ -104,7 +109,9 @@ const COMMUNITY_LINKS = [
   { label: "Bellview/Myrtle Grove", href: "/communities/bellview-myrtle-grove", blurb: "West Pensacola working-class neighborhoods. 10-15 min to NAS Pensacola. Strongest E-3 to E-5 starter-home market." },
   { label: "Navy Point/Warrington", href: "/communities/navy-point-warrington", blurb: "5 minutes from the NAS Pensacola main gate. Closest off-base housing in the MHA. Historic ties, most affordable entry." },
   { label: "Niceville/Valparaiso/Bluewater Bay", href: "/communities/niceville", blurb: "Eglin AFB East Gate housing. A-rated Niceville High zone, master-planned Bluewater Bay, 10-minute commute for 33rd FW and 96th TW families." },
-  { label: "Fort Walton Beach/Shalimar", href: "/communities/fort-walton-beach", blurb: "Adjacent to the Eglin AFB West Gate. 5-15 minute commute, Okaloosa schools, broad mix of price points for E-4 to O-5 families." },
+  { label: "Fort Walton Beach", href: "/communities/fort-walton-beach", blurb: "Adjacent to the Eglin AFB West Gate. 5-15 minute commute, Okaloosa schools, broad mix of price points for E-4 to O-5 families." },
+  { label: "Mary Esther", href: "/communities/mary-esther", blurb: "Hurlburt Field's front-door town on Santa Rosa Sound. About 10 minutes to the main gate, higher FL023 BAH, medians in the mid-$300Ks." },
+  { label: "Shalimar", href: "/communities/shalimar", blurb: "Small bayou-front town platted for Eglin officers in the 1940s. About 2 miles from Eglin's West Gate, Choctawhatchee High zone." },
   { label: "Destin", href: "/communities/destin", blurb: "Gulf-front Okaloosa resort city. Premium beach and condo market, 20 min to Eglin, about 25 min to Hurlburt. Strong military investment-rental play." },
   { label: "Crestview", href: "/communities/crestview", blurb: "Okaloosa County budget play for Eglin AFB and Duke Field. New construction, strongest FL023 BAH-to-price ratio." },
 ];

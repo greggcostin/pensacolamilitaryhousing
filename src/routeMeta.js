@@ -39,8 +39,8 @@ export const ROUTE_META = [
   },
   {
     page: "pcs", file: "pcs-guide", slug: "/pcs-guide", shell: true, crumb: "PCS Guide",
-    title: "PCS to Pensacola: Military Relocation Guide",
-    description: "A retired USAF officer's PCS guide to Pensacola and the Emerald Coast — BAH by base, on- and off-base housing, VA loans, schools, and moving timelines.",
+    title: "Moving to Pensacola: Military PCS Guide",
+    description: "Moving to Pensacola on military orders? A retired USAF officer's PCS guide — BAH by base, on- and off-base housing, VA loans, schools, and moving timelines.",
     heading: "PCS to Pensacola & the Emerald Coast",
     intro: "Everything a military family needs to plan a PCS to NAS Pensacola, Whiting Field, Corry Station, Hurlburt Field, Eglin AFB, or Duke Field — BAH, on- vs off-base housing, VA loans, schools, and a 60/30/7-day timeline.",
   },

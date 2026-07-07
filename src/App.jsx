@@ -185,9 +185,6 @@ const Nav = ({ current, go }) => {
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [pcsOpen, setPcsOpen] = useState(false);
   const [vaOpen, setVaOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const isMobile = () => typeof window !== "undefined" && window.matchMedia("(max-width:900px)").matches;
-  const closeMenu = () => setMenuOpen(false);
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", fn);
@@ -212,7 +209,7 @@ const Nav = ({ current, go }) => {
   });
 
   const Tab = ({ id, label }) => (
-    <button onClick={() => { closeMenu(); go(id); }} style={tabStyle(current === id)}>{label}</button>
+    <button onClick={() => go(id)} style={tabStyle(current === id)}>{label}</button>
   );
 
   const ExtTab = ({ href, label }) => (
@@ -228,7 +225,7 @@ const Nav = ({ current, go }) => {
   const commsActive = current === "neighborhoods";
 
   return (
-    <nav className={menuOpen ? "spa-nav nav-open" : "spa-nav"} style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000, background: "rgba(10,15,26,0.95)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.08)", transition: "all .3s ease" }}>
+    <nav className="spa-nav" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000, background: "rgba(10,15,26,0.95)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.08)", transition: "all .3s ease" }}>
       <div style={{ maxWidth: 1320, margin: "0 auto", padding: "10px 16px 0", display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: 16 }}>
         <div style={{ justifySelf: "start", cursor: "pointer" }} onClick={() => go("home")}>
           <Pic loading="lazy" src={IMG.logoLrr} alt="Levin Rinke Realty" style={{ height: 108, objectFit: "contain" }} />
@@ -242,11 +239,7 @@ const Nav = ({ current, go }) => {
         </div>
       </div>
 
-      <button type="button" className="nav-burger" aria-expanded={menuOpen} aria-controls="spa-tabbar" aria-label="Open navigation menu" onClick={() => setMenuOpen(o => !o)}>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" /></svg>
-        Menu
-      </button>
-      <div id="spa-tabbar" className="tabbar" style={{ maxWidth: 1320, margin: "0 auto", padding: "6px 12px 10px", overflowX: "visible", display: "flex", gap: 2, alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
+      <div className="tabbar" style={{ maxWidth: 1320, margin: "0 auto", padding: "6px 12px 10px", overflowX: "visible", display: "flex", gap: 2, alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
         <Tab id="home" label="Home" />
         <Tab id="about" label="About Me" />
         <ExtTab href="/buy" label="Buy" />
@@ -255,7 +248,7 @@ const Nav = ({ current, go }) => {
         <div className="spa-drop" style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setPcsOpen(true)}
           onMouseLeave={() => setPcsOpen(false)}>
-          <button onClick={() => { if (isMobile()) { setPcsOpen(o => !o); } else { closeMenu(); go("pcs"); setPcsOpen(false); } }} aria-haspopup="true" aria-expanded={pcsOpen} style={tabStyle(current === "pcs")}>PCS Guide ▾</button>
+          <button onClick={() => { go("pcs"); setPcsOpen(false); }} aria-haspopup="true" aria-expanded={pcsOpen} style={tabStyle(current === "pcs")}>PCS Guide ▾</button>
           {pcsOpen && (
             <div className="spa-dropmenu" style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               {PCS_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
@@ -277,7 +270,7 @@ const Nav = ({ current, go }) => {
         <div className="spa-drop" style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setCommsOpen(true)}
           onMouseLeave={() => setCommsOpen(false)}>
-          <button onClick={() => { if (isMobile()) { setCommsOpen(o => !o); } else { closeMenu(); go("neighborhoods"); setCommsOpen(false); } }} aria-haspopup="true" aria-expanded={commsOpen} style={tabStyle(commsActive)}>Communities ▾</button>
+          <button onClick={() => { go("neighborhoods"); setCommsOpen(false); }} aria-haspopup="true" aria-expanded={commsOpen} style={tabStyle(commsActive)}>Communities ▾</button>
           {commsOpen && (
             <div className="spa-dropmenu" style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, maxHeight: 440, overflowY: "auto", boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               <button onClick={() => { go("neighborhoods"); setCommsOpen(false); }} style={{ display: "block", width: "100%", textAlign: "left", background: commsActive ? "rgba(201,168,76,0.12)" : "transparent", border: "none", color: C.gold, padding: "10px 16px", fontSize: 11, cursor: "pointer", borderRadius: 4, fontFamily: SS, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", borderBottom: `1px solid ${C.hairline}`, marginBottom: 4 }}>All Communities Overview</button>
@@ -300,7 +293,7 @@ const Nav = ({ current, go }) => {
         <div className="spa-drop" style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setVaOpen(true)}
           onMouseLeave={() => setVaOpen(false)}>
-          <a href="/va-loan-guide" onClick={(e) => { if (isMobile()) { e.preventDefault(); setVaOpen(o => !o); } else { setVaOpen(false); } }} aria-haspopup="true" aria-expanded={vaOpen} style={tabStyle(false)}>VA Loan Guide ▾</a>
+          <a href="/va-loan-guide" onClick={() => setVaOpen(false)} aria-haspopup="true" aria-expanded={vaOpen} style={tabStyle(false)}>VA Loan Guide ▾</a>
           {vaOpen && (
             <div className="spa-dropmenu" style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               {VA_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
@@ -2760,23 +2753,18 @@ export default function App() {
         [id] { scroll-margin-top: 100px; }
         .skip-link { position: absolute; left: -9999px; top: 0; z-index: 3000; background: ${C.gold}; color: ${C.ink}; padding: 10px 16px; font-weight: 700; text-decoration: none; border-radius: 0 0 6px 0; }
         .skip-link:focus { left: 0; }
-        /* ── mobile nav + hero (<=900px) ── */
-        .nav-burger { display: none; }
+        /* ── mobile header + hero tweaks (<=900px); tab bar always visible, wraps like desktop ── */
         @media (max-width: 900px) {
           .spa-nav > div:first-of-type { padding: 8px 12px 0 !important; gap: 8px !important; }
           .spa-nav img { height: 46px !important; }
           .spa-nav a[href^="tel:"] { font-size: 15px !important; }
           .spa-nav a[href^="mailto:"] { font-size: 10px !important; }
-          .nav-burger { display: flex; align-items: center; justify-content: center; gap: 8px; width: calc(100% - 24px); margin: 6px auto 8px; padding: 12px 16px; background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.35); border-radius: 8px; color: ${C.gold}; font-family: ${SS}; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; min-height: 46px; }
-          .nav-burger svg { width: 18px; height: 18px; }
-          .spa-nav .tabbar { display: none !important; }
-          .spa-nav.nav-open .tabbar { display: flex !important; flex-direction: column; align-items: stretch; gap: 0 !important; flex-wrap: nowrap !important; padding: 0 12px 10px !important; }
-          .spa-nav.nav-open .tabbar > button, .spa-nav.nav-open .tabbar > a, .spa-nav.nav-open .tabbar > .spa-drop > button, .spa-nav.nav-open .tabbar > .spa-drop > a { width: 100% !important; text-align: left !important; box-sizing: border-box; padding: 13px 16px !important; font-size: 14px !important; min-height: 46px; display: flex !important; align-items: center; justify-content: flex-start; border-bottom: 1px solid rgba(255,255,255,0.07); border-radius: 0 !important; margin-left: 0 !important; }
-          .spa-nav.nav-open .tabbar > .spa-drop { width: 100% !important; position: static !important; padding-bottom: 0 !important; }
-          .spa-nav.nav-open .spa-dropmenu { position: static !important; left: auto !important; top: auto !important; min-width: 0 !important; max-height: none !important; width: 100% !important; box-shadow: none !important; border: none !important; border-radius: 0 !important; background: rgba(0,0,0,0.28) !important; padding: 0 !important; overflow: visible !important; }
-          .spa-nav.nav-open .spa-dropmenu a, .spa-nav.nav-open .spa-dropmenu button { padding: 12px 28px !important; min-height: 44px; display: flex !important; align-items: center; font-size: 13px !important; }
-          .hero-section { min-height: auto !important; padding-top: 120px !important; }
-          .hero-bg-image, .hero-gradient-h, .hero-gradient-v { top: 120px !important; }
+          .spa-nav .tabbar > button, .spa-nav .tabbar > a, .spa-nav .tabbar .spa-drop > button, .spa-nav .tabbar .spa-drop > a { padding: 5px 7px !important; font-size: 10px !important; letter-spacing: 0.3px !important; }
+          /* open dropdowns as a viewport-wide panel under the bar so no link ever sits off-screen */
+          .spa-nav .spa-drop { position: static !important; }
+          .spa-nav .spa-dropmenu { left: 12px !important; right: 12px !important; top: 100% !important; min-width: 0 !important; max-height: 55vh !important; overflow-y: auto !important; }
+          .hero-section { min-height: auto !important; padding-top: 150px !important; }
+          .hero-bg-image, .hero-gradient-h, .hero-gradient-v { top: 150px !important; }
           .hero-gradient-h { background: linear-gradient(90deg, ${C.ink} 0%, rgba(10,15,26,0.85) 55%, rgba(10,15,26,0.6) 100%) !important; }
           .hero-content { padding: 24px 20px 64px !important; }
         }

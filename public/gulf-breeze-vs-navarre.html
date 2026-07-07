@@ -250,24 +250,11 @@ img{max-width:100%;height:auto}
 (function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function() {(w[g].q=w[g].q||[]).push(arguments);}),(w[g].ds=1*new Date());(e="script"), (t=d.createElement(e)),(e=d.getElementsByTagName(e)[0]);t.async=1;t.src=i; e.parentNode.insertBefore(t,e);}) (window,"https://widgetbe.com/agent",document,"widgetTracker"); window.widgetTracker("create", "WT-ZZMZHBMI"); window.widgetTracker("send", "pageview");
 </script>
 <!-- end FollowUpBoss Widget Tracker -->
-<style id="mnav-css">
-.banner-burger{display:none}
-@media(max-width:900px){
-  .banner-burger{display:flex;align-items:center;justify-content:center;gap:8px;width:calc(100% - 24px);margin:2px auto 6px;padding:12px 16px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);border-radius:8px;color:var(--gold);font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;min-height:46px}
-  .banner-burger svg{width:18px;height:18px}
-  .banner-tabs{display:none!important;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0!important;flex-wrap:nowrap!important;padding:0 12px 10px!important}
-  .main-banner.nav-open .banner-tabs{display:flex!important}
-  .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{width:100%;text-align:left;box-sizing:border-box;padding:14px 16px!important;font-size:14px!important;letter-spacing:.6px!important;min-height:48px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,0.07);border-radius:0}
-  .banner-tabs .dropdown{position:static;width:100%;padding-bottom:0}
-  .main-banner .banner-tabs .dropdown>button{justify-content:space-between}
-  .main-banner .banner-tabs .dropdown>button::after{content:"+";font-size:18px;color:var(--gold);line-height:1}
-  .main-banner .banner-tabs .dropdown.open>button::after{content:"\2212"}
-  .banner-tabs .dropdown:hover .dropdown-menu,.banner-tabs .dropdown:focus-within .dropdown-menu{display:none}
-  .banner-tabs .dropdown.open .dropdown-menu{display:block;position:static;box-shadow:none;border:none;border-radius:0;background:rgba(0,0,0,0.28);min-width:0;max-height:none;padding:0}
-  .banner-tabs .dropdown.open .dropdown-menu a{padding:13px 28px;min-height:46px;display:flex;align-items:center;font-size:13px}
-  .banner-search{width:100%;justify-content:center;margin-top:4px}
-}
-</style>
+<style id="ddfix-css">@media(max-width:900px){
+.main-banner{position:relative}
+.main-banner .dropdown{position:static}
+.main-banner .dropdown-menu{left:12px;right:12px;top:100%;min-width:0!important;max-height:55vh!important;overflow-y:auto}
+}</style>
 </head>
 <body>
 <nav class="main-banner" aria-label="Main site navigation">
@@ -279,17 +266,16 @@ img{max-width:100%;height:auto}
 <a href="mailto:gregg.costin@gmail.com" class="banner-email">gregg.costin@gmail.com</a>
 </div>
 </div>
-<button type="button" class="banner-burger" aria-expanded="false" aria-controls="banner-tabs" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>Menu</button>
-<div class="banner-tabs" id="banner-tabs">
+<div class="banner-tabs">
 <a href="/">Home</a>
 <a href="/about">About Me</a>
 <a href="/buy">Buy</a>
 <a href="/sell">Sell</a>
-<div class="dropdown"><button type="button" data-hub="/pcs-guide">PCS Guide ▾</button><div class="dropdown-menu"><a href="/pcs-guide">PCS Guide</a><a href="/pcs-checklist">PCS Checklist</a><a href="/pcs-schools-by-base">PCS Schools by Base</a><a href="/bah-rates">2026 BAH Rates</a><a href="/florida-home-insurance-military">FL Home Insurance</a><a href="/florida-homestead-exemption-military">FL Homestead (Military)</a></div></div>
+<div class="dropdown"><button type="button" onclick="location.href='/pcs-guide'">PCS Guide ▾</button><div class="dropdown-menu"><a href="/pcs-guide">PCS Guide</a><a href="/pcs-checklist">PCS Checklist</a><a href="/pcs-schools-by-base">PCS Schools by Base</a><a href="/bah-rates">2026 BAH Rates</a><a href="/florida-home-insurance-military">FL Home Insurance</a><a href="/florida-homestead-exemption-military">FL Homestead (Military)</a></div></div>
 <div class="dropdown"><button type="button">Bases ▾</button><div class="dropdown-menu"><a href="/bases/nas-pensacola">NAS Pensacola</a><a href="/bases/corry-station">Corry Station</a><a href="/bases/saufley-field">Saufley Field</a><a href="/bases/whiting-field">NAS Whiting Field</a><a href="/bases/hurlburt-field">Hurlburt Field</a><a href="/bases/eglin-afb">Eglin AFB</a><a href="/bases/duke-field">Duke Field</a></div></div>
 <div class="dropdown"><button type="button">Communities ▾</button><div class="dropdown-menu"><a href="/communities" style="color:#C9A84C;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.1)">All Communities Overview</a><a href="/communities/gulf-breeze">Gulf Breeze</a><a href="/communities/navarre">Navarre</a><a href="/communities/pace">Pace</a><a href="/communities/milton">Milton</a><a href="/communities/cantonment">Cantonment</a><a href="/communities/beulah">Beulah</a><a href="/communities/perdido-key">Perdido Key</a><a href="/communities/east-pensacola-heights">East Pensacola Heights</a><a href="/communities/east-hill">East Hill</a><a href="/communities/cordova-park">Cordova Park</a><a href="/communities/ferry-pass">Ferry Pass</a><a href="/communities/bellview-myrtle-grove">Bellview/Myrtle Grove</a><a href="/communities/navy-point-warrington">Navy Point/Warrington</a><a href="/communities/niceville">Niceville/Valparaiso/Bluewater Bay</a><a href="/communities/fort-walton-beach">Fort Walton Beach</a><a href="/communities/mary-esther">Mary Esther</a><a href="/communities/shalimar">Shalimar</a><a href="/communities/destin">Destin</a><a href="/communities/crestview">Crestview</a></div></div>
 
-<div class="dropdown"><button type="button">Resources ▾</button><div class="dropdown-menu"><a href="/first-time-military-homebuyer">First-Time Military Homebuyer</a><a href="/flight-school-housing-pensacola">Flight School Housing</a><a href="/rent-or-sell-pcs-pensacola">Rent or Sell When You PCS</a><a href="/cash-offer-pensacola">Cash Offer vs Listing</a><a href="/buying-sight-unseen-pcs-pensacola">Buying Sight-Unseen</a><a href="/pensacola-flood-zones-homebuyers">Pensacola Flood Zones</a><a href="/va-approved-condos-pensacola">VA Loans for Condos</a><a href="/dual-military-homes">Dual-Military Homes</a><a href="/military-divorce-housing">Military Divorce Housing</a><a href="/military-rental-property-management">Military Rental Property</a><a href="/military-pcs-tax-deductions">Military PCS Tax Deductions</a><a href="/disabled-veteran-benefits-florida">Disabled Veteran Benefits (FL)</a><a href="/va-disability-property-tax-florida">VA Disability Tax (FL)</a><a href="/school-zones-military-families">Military School Zones</a><a href="/nas-pensacola-vs-hurlburt-field">NAS Pensacola vs Hurlburt</a><a href="/gulf-breeze-vs-navarre">Gulf Breeze vs Navarre</a><a href="/niceville-vs-crestview">Niceville vs Crestview</a><a href="/on-base-vs-off-base-nas-pensacola">On vs Off-Base — NAS Pensacola</a><a href="/on-base-vs-off-base-corry-station">On vs Off-Base — Corry Station</a><a href="/on-base-vs-off-base-saufley-field">On vs Off-Base — Saufley Field</a><a href="/on-base-vs-off-base-nas-whiting-field">On vs Off-Base — Whiting Field</a><a href="/on-base-vs-off-base-hurlburt-field">On vs Off-Base — Hurlburt Field</a><a href="/on-base-vs-off-base-eglin-afb">On vs Off-Base — Eglin AFB</a><a href="/on-base-vs-off-base-duke-field">On vs Off-Base — Duke Field</a><a href="/faq">FAQ</a><a href="/reviews">Reviews</a></div></div><div class="dropdown"><button type="button" data-hub="/va-loan-guide">VA Loan Guide ▾</button><div class="dropdown-menu"><a href="/va-loan-guide">VA Loan Guide</a><a href="/va-coe-guide">VA Certificate of Eligibility</a><a href="/bah-to-mortgage-guide">BAH to Mortgage Guide</a><a href="/va-irrrl-guide">VA IRRRL Refi Guide</a><a href="/va-funding-fee-2026">VA Funding Fee 2026</a><a href="/assumable-va-loans-pensacola">Assumable VA Loans</a><a href="/zero-down-home-loans">Zero-Down Loans Compared</a></div></div>
+<div class="dropdown"><button type="button">Resources ▾</button><div class="dropdown-menu"><a href="/first-time-military-homebuyer">First-Time Military Homebuyer</a><a href="/flight-school-housing-pensacola">Flight School Housing</a><a href="/rent-or-sell-pcs-pensacola">Rent or Sell When You PCS</a><a href="/cash-offer-pensacola">Cash Offer vs Listing</a><a href="/buying-sight-unseen-pcs-pensacola">Buying Sight-Unseen</a><a href="/pensacola-flood-zones-homebuyers">Pensacola Flood Zones</a><a href="/va-approved-condos-pensacola">VA Loans for Condos</a><a href="/dual-military-homes">Dual-Military Homes</a><a href="/military-divorce-housing">Military Divorce Housing</a><a href="/military-rental-property-management">Military Rental Property</a><a href="/military-pcs-tax-deductions">Military PCS Tax Deductions</a><a href="/disabled-veteran-benefits-florida">Disabled Veteran Benefits (FL)</a><a href="/va-disability-property-tax-florida">VA Disability Tax (FL)</a><a href="/school-zones-military-families">Military School Zones</a><a href="/nas-pensacola-vs-hurlburt-field">NAS Pensacola vs Hurlburt</a><a href="/gulf-breeze-vs-navarre">Gulf Breeze vs Navarre</a><a href="/niceville-vs-crestview">Niceville vs Crestview</a><a href="/on-base-vs-off-base-nas-pensacola">On vs Off-Base — NAS Pensacola</a><a href="/on-base-vs-off-base-corry-station">On vs Off-Base — Corry Station</a><a href="/on-base-vs-off-base-saufley-field">On vs Off-Base — Saufley Field</a><a href="/on-base-vs-off-base-nas-whiting-field">On vs Off-Base — Whiting Field</a><a href="/on-base-vs-off-base-hurlburt-field">On vs Off-Base — Hurlburt Field</a><a href="/on-base-vs-off-base-eglin-afb">On vs Off-Base — Eglin AFB</a><a href="/on-base-vs-off-base-duke-field">On vs Off-Base — Duke Field</a><a href="/faq">FAQ</a><a href="/reviews">Reviews</a></div></div><div class="dropdown"><button type="button" onclick="location.href='/va-loan-guide'">VA Loan Guide ▾</button><div class="dropdown-menu"><a href="/va-loan-guide">VA Loan Guide</a><a href="/va-coe-guide">VA Certificate of Eligibility</a><a href="/bah-to-mortgage-guide">BAH to Mortgage Guide</a><a href="/va-irrrl-guide">VA IRRRL Refi Guide</a><a href="/va-funding-fee-2026">VA Funding Fee 2026</a><a href="/assumable-va-loans-pensacola">Assumable VA Loans</a><a href="/zero-down-home-loans">Zero-Down Loans Compared</a></div></div>
 <a href="/mortgage-calculators">Calculators</a>
 <a href="/reviews">Reviews</a>
 <a href="/contact">Contact</a>
@@ -645,23 +631,6 @@ else{errBox.textContent='\u26a0 '+(res.j.error||'Something went wrong. Please ca
 })
 .catch(function(){errBox.textContent='\u26a0 Connection error. Please call (850) 266-5005 directly.';errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';});
 });
-})();
-</script>
-<script>
-(function(){
-  var banner=document.querySelector(".main-banner");if(!banner)return;
-  var burger=banner.querySelector(".banner-burger");
-  if(burger)burger.addEventListener("click",function(){
-    var open=banner.classList.toggle("nav-open");
-    burger.setAttribute("aria-expanded",open?"true":"false");
-  });
-  var mq=window.matchMedia("(max-width:900px)");
-  banner.querySelectorAll(".banner-tabs .dropdown>button").forEach(function(btn){
-    btn.addEventListener("click",function(e){
-      if(mq.matches){e.preventDefault();btn.parentElement.classList.toggle("open");}
-      else if(btn.dataset.hub){location.href=btn.dataset.hub;}
-    });
-  });
 })();
 </script>
 </body>

@@ -92,3 +92,7 @@ Sitemap: https://pensacolamilitaryhousing.com/sitemap.xml
 # AI content maps
 # See: https://pensacolamilitaryhousing.com/llms.txt
 # See: https://pensacolamilitaryhousing.com/llms-full.txt
+
+# Lead-magnet PDFs are delivered via the email-capture form, not indexed
+User-agent: *
+Disallow: /downloads/

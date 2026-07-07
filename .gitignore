@@ -12,3 +12,10 @@ npm-debug.log*
 
 # Local Claude Code settings (machine-specific)
 .claude/
+
+# local strategy/working docs — never publish (repo is PUBLIC)
+GROWTH-PLAN.md
+NAP-MASTER-SHEET.md
+REVIEW-PACK.md
+OUTREACH-PACK.md
+SPHERE-EMAIL-*.md

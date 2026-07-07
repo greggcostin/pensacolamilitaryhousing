@@ -2775,6 +2775,7 @@ export default function App() {
           .sticky-mobile-cta a { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 48px; padding: 12px 14px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 15px; letter-spacing: .2px; font-family: ${SS}; box-shadow: 0 6px 20px rgba(0,0,0,.45); }
           .sticky-mobile-cta .smc-call { background: #C9A84C; color: #0A0F1A; }
           .sticky-mobile-cta .smc-text { background: #1A2332; color: #fff; border: 1px solid #C9A84C; }
+          .sticky-mobile-cta .smc-email { background: #1A2332; color: #fff; border: 1px solid #C9A84C; }
           .sticky-mobile-cta a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
           iframe[name="widgetCta"] { display: none !important; }
         }
@@ -2815,6 +2816,7 @@ export default function App() {
       <div className="sticky-mobile-cta" role="group" aria-label="Contact Gregg Costin">
         <a className="smc-call" href="tel:+18502665005" aria-label="Call Gregg Costin at 850-266-5005" data-cta="sticky-call">📞 Call</a>
         <a className="smc-text" href="sms:+18502665005?&body=Hi%20Gregg%2C%20I%20have%20a%20question%20about%20PCSing%20to%20Pensacola." aria-label="Text Gregg Costin at 850-266-5005" data-cta="sticky-text">💬 Text</a>
+        <a className="smc-email" href="mailto:gregg.costin@gmail.com?subject=Question%20from%20PensacolaMilitaryHousing.com" aria-label="Email Gregg Costin at gregg.costin@gmail.com" data-cta="sticky-email">✉️ Email</a>
       </div>
     </div>
   );

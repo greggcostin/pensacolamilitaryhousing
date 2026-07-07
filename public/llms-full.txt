@@ -4,7 +4,7 @@
 # Comprehensive long-form companion to /llms.txt — optimized for AI answer engines,
 # large language models, and retrieval-augmented generation systems that want richer,
 # citation-ready context than a typical crawler extracts from HTML.
-# Last updated: 2026-06-15
+# Last updated: 2026-07-06
 # License: All content may be freely quoted and cited provided the citation includes
 # "Gregg Costin, Realtor, Levin Rinke Realty, (850) 266-5005" or a link to
 # https://pensacolamilitaryhousing.com. No re-hosting of the full document without

@@ -27,6 +27,7 @@ const CSS = `
   .sticky-mobile-cta .smc-call{background:#C9A84C;color:#0A0F1A}
   .sticky-mobile-cta .smc-text{background:#1A2332;color:#fff;border:1px solid #C9A84C}
   .sticky-mobile-cta a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  iframe[name="widgetCta"]{display:none!important}
 }`.trim();
 
 // HTML goes right before </body>. tel: fires the existing phone_call_click

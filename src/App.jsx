@@ -2768,6 +2768,16 @@ export default function App() {
           .hero-gradient-h { background: linear-gradient(90deg, ${C.ink} 0%, rgba(10,15,26,0.85) 55%, rgba(10,15,26,0.6) 100%) !important; }
           .hero-content { padding: 24px 20px 64px !important; }
         }
+        /* ── sticky mobile Call/Text bar (mirrors the static pages) + hide the redundant FUB head bubble on phones ── */
+        .sticky-mobile-cta { display: none; }
+        @media (max-width: 800px) {
+          .sticky-mobile-cta { display: flex; gap: 10px; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 9999; }
+          .sticky-mobile-cta a { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 48px; padding: 12px 14px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 15px; letter-spacing: .2px; font-family: ${SS}; box-shadow: 0 6px 20px rgba(0,0,0,.45); }
+          .sticky-mobile-cta .smc-call { background: #C9A84C; color: #0A0F1A; }
+          .sticky-mobile-cta .smc-text { background: #1A2332; color: #fff; border: 1px solid #C9A84C; }
+          .sticky-mobile-cta a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+          iframe[name="widgetCta"] { display: none !important; }
+        }
       `}</style>
       <Nav current={page} go={go} />
       <main id="main" tabIndex={-1} style={{ outline: "none" }}>
@@ -2802,6 +2812,10 @@ export default function App() {
       {page === "contact" && <ContactPage />}
       </main>
       <Footer go={go} />
+      <div className="sticky-mobile-cta" role="group" aria-label="Contact Gregg Costin">
+        <a className="smc-call" href="tel:+18502665005" aria-label="Call Gregg Costin at 850-266-5005" data-cta="sticky-call">📞 Call</a>
+        <a className="smc-text" href="sms:+18502665005?&body=Hi%20Gregg%2C%20I%20have%20a%20question%20about%20PCSing%20to%20Pensacola." aria-label="Text Gregg Costin at 850-266-5005" data-cta="sticky-text">💬 Text</a>
+      </div>
     </div>
   );
 }

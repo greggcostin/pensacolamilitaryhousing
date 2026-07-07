@@ -29,6 +29,7 @@
                           if(!a) return;
                           var href = a.getAttribute('href') || '';
                           if(href.indexOf('tel:') === 0){ gtag('event','phone_call_click',{ event_category:'conversion', event_label: href.replace('tel:','') }); }
+                          else if(href.indexOf('sms:') === 0){ gtag('event','text_message_click',{ event_category:'conversion' }); }
                           else if(href.indexOf('mailto:') === 0){ gtag('event','email_click',{ event_category:'conversion', event_label: href.replace('mailto:','') }); }
                           else if(href.indexOf('calendly') > -1){ gtag('event','calendly_click',{ event_category:'conversion' }); }
                           else if(href.indexOf('google.com/maps') > -1 && href.indexOf('Gregg') > -1){ gtag('event','google_reviews_click',{ event_category:'social_proof' }); }

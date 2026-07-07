@@ -36,7 +36,7 @@ window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
 gtag('config','G-W29GHBK38M');gtag('config','GT-WVGM66XS');
-document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('tel:')===0){gtag('event','phone_call_click',{event_category:'conversion',event_label:h.replace('tel:','')});}else if(h.indexOf('mailto:')===0){gtag('event','email_click',{event_category:'conversion',event_label:h.replace('mailto:','')});}else if(h.indexOf('google.com/maps')>-1&&h.indexOf('Gregg')>-1){gtag('event','google_reviews_click',{event_category:'social_proof'});}else if(h.indexOf('zillow.com/profile')>-1){gtag('event','zillow_profile_click',{event_category:'social_proof'});}else if(h.indexOf('instagram.com/greggcostin')>-1){gtag('event','instagram_click',{event_category:'social'});}else if(h.indexOf('facebook.com/greggcostin')>-1){gtag('event','facebook_click',{event_category:'social'});}else if(h.indexOf('youtube.com/@Pensacola')>-1){gtag('event','youtube_click',{event_category:'social'});}else if(h.indexOf('linktr.ee/Greggcostin')>-1){gtag('event','linktree_click',{event_category:'social'});}else if(h.indexOf('greggc.levinrinkerealty.com')>-1){gtag('event','brokerage_profile_click',{event_category:'social_proof'});}else if(h.indexOf('whats-my-home-worth')>-1){gtag('event','home_valuation_click',{event_category:'conversion'});}else if(h.indexOf('825bayshore')>-1){gtag('event','property_page_click',{event_category:'conversion'});}else if(h.indexOf('travel.dod.mil')>-1){gtag('event','dod_bah_calc_click',{event_category:'outbound'});}});
+document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('tel:')===0){gtag('event','phone_call_click',{event_category:'conversion',event_label:h.replace('tel:','')});}else if(h.indexOf('mailto:')===0){gtag('event','email_click',{event_category:'conversion',event_label:h.replace('mailto:','')});}else if(h.indexOf('google.com/maps')>-1&&h.indexOf('Gregg')>-1){gtag('event','google_reviews_click',{event_category:'social_proof'});}else if(h.indexOf('zillow.com/profile')>-1){gtag('event','zillow_profile_click',{event_category:'social_proof'});}else if(h.indexOf('instagram.com/greggcostin')>-1){gtag('event','instagram_click',{event_category:'social'});}else if(h.indexOf('facebook.com/greggcostin')>-1){gtag('event','facebook_click',{event_category:'social'});}else if(h.indexOf('youtube.com/@Pensacola')>-1){gtag('event','youtube_click',{event_category:'social'});}else if(h.indexOf('linktr.ee/Greggcostin')>-1){gtag('event','linktree_click',{event_category:'social'});}else if(h.indexOf('greggc.levinrinkerealty.com')>-1){gtag('event','brokerage_profile_click',{event_category:'social_proof'});}else if(h.indexOf('sms:')===0){gtag('event','text_message_click',{event_category:'conversion'});}else if(h.indexOf('whats-my-home-worth')>-1){gtag('event','home_valuation_click',{event_category:'conversion'});}else if(h.indexOf('825bayshore')>-1){gtag('event','property_page_click',{event_category:'conversion'});}else if(h.indexOf('travel.dod.mil')>-1){gtag('event','dod_bah_calc_click',{event_category:'outbound'});}});
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Blog","name":"Pensacola Military Real Estate Blog","url":"https://pensacolamilitaryhousing.com/blog","author":{"@type":"Person","name":"Gregg Costin","jobTitle":"Retired USAF Combat Systems Officer, Realtor","url":"https://pensacolamilitaryhousing.com"},"publisher":{"@type":"RealEstateAgent","@id":"https://pensacolamilitaryhousing.com/#agent","name":"Gregg Costin - The Costin Team","telephone":"+1-850-266-5005","address":{"@type":"PostalAddress","streetAddress":"220 W. Garden Street","addressLocality":"Pensacola","addressRegion":"FL","postalCode":"32502","addressCountry":"US"}}}
@@ -223,6 +223,23 @@ main>h2{justify-content:center;text-align:center;max-width:900px;margin-left:aut
   .explore .related .subhead{margin:1.4rem 0 .35rem;font-size:.72rem}
 }
 /* EXPLORE_V2_CSS_END */
+/* Sticky mobile Call/Text CTA — hidden on desktop, floating bar on phone */
+.sticky-mobile-cta{display:none}
+@media (max-width:800px){
+  .sticky-mobile-cta{
+    display:flex;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;
+  }
+  .sticky-mobile-cta a{
+    flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    min-height:48px;padding:12px 14px;border-radius:12px;text-decoration:none;
+    font-weight:700;font-size:15px;letter-spacing:.2px;
+    font-family:var(--sans,'Inter',system-ui,sans-serif);
+    box-shadow:0 6px 20px rgba(0,0,0,.45);
+  }
+  .sticky-mobile-cta .smc-call{background:#C9A84C;color:#0A0F1A}
+  .sticky-mobile-cta .smc-text{background:#1A2332;color:#fff;border:1px solid #C9A84C}
+  .sticky-mobile-cta a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://pensacolamilitaryhousing.com/#person-gregg","name":"Gregg Costin","alternateName":"Gregg Costin, Realtor","givenName":"Gregg","familyName":"Costin","jobTitle":"Realtor, Military Relocation Specialist","award":["Forbes Global Properties Rookie of the Year 2025"],"memberOf":[{"@type":"Organization","name":"National Association of Realtors","url":"https://www.nar.realtor/"},{"@type":"Organization","name":"Florida Realtors","url":"https://www.floridarealtors.org/"}],"knowsLanguage":["en-US"],"worksFor":{"@type":"Organization","name":"Levin Rinke Realty","url":"https://greggc.levinrinkerealty.com","address":{"@type":"PostalAddress","streetAddress":"220 W. Garden Street","addressLocality":"Pensacola","addressRegion":"FL","postalCode":"32502","addressCountry":"US"}},"alumniOf":[{"@type":"Organization","name":"United States Air Force"},{"@type":"CollegeOrUniversity","name":"University of Tampa"}],"knowsAbout":["VA Home Loans","PCS Relocation","BAH","NAS Pensacola","NAS Whiting Field","Corry Station","Saufley Field","Hurlburt Field","Eglin AFB","Duke Field","Florida Homestead Exemption","Military Relocation Professional","E-3 AWACS Combat Systems Officer"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Military Relocation Professional (MRP)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Accredited Buyer's Representative (ABR)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Seller Representative Specialist (SRS)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Real Estate Negotiation Expert (RENE)","credentialCategory":"certification"},{"@type":"EducationalOccupationalCredential","name":"Florida Military Specialist (FMS)","credentialCategory":"certification"}],"description":"Retired USAF Captain and E-3 AWACS Combat Systems Officer. Completed a full military career from prior-enlisted Staff Sergeant to commissioned officer with 11 PCS moves. Now a licensed Florida and Alabama Realtor specializing in military relocation, VA loans, and PCS moves across the Florida Panhandle.","email":"gregg.costin@gmail.com","telephone":"+1-850-266-5005","url":"https://pensacolamilitaryhousing.com","image":"https://pensacolamilitaryhousing.com/images/gregg-portrait.jpg","identifier":[{"@type":"PropertyValue","propertyID":"Wikidata","value":"Q140446886"}],"sameAs":["https://www.wikidata.org/wiki/Q140446886"]}</script>
 <!-- Microsoft Clarity (heatmaps + session recordings) -->
@@ -624,5 +641,10 @@ Want me to run the exact numbers for your rank and target neighborhoods? Call (8
 })();
 </script>
 
+<!-- sticky-mobile-cta -->
+<div class="sticky-mobile-cta" role="group" aria-label="Contact Gregg Costin">
+<a class="smc-call" href="tel:+18502665005" aria-label="Call Gregg Costin at 850-266-5005" data-cta="sticky-call">📞 Call</a>
+<a class="smc-text" href="sms:+18502665005?&body=Hi%20Gregg%2C%20I%20have%20a%20question%20about%20PCSing%20to%20Pensacola." aria-label="Text Gregg Costin at 850-266-5005" data-cta="sticky-text">💬 Text</a>
+</div>
 </body>
 </html>

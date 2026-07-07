@@ -68,11 +68,11 @@ const VA_LINKS = [
 
 const RESOURCE_LINKS = [
   { label: "First-Time Military Homebuyer", href: "/first-time-military-homebuyer.html" },
-  { label: "Flight School Housing", href: "/flight-school-housing-pensacola.html" },
-  { label: "Rent or Sell When You PCS", href: "/rent-or-sell-pcs-pensacola.html" },
-  { label: "Buying Sight-Unseen", href: "/buying-sight-unseen-pcs-pensacola.html" },
-  { label: "Pensacola Flood Zones", href: "/pensacola-flood-zones-homebuyers.html" },
-  { label: "VA Loans for Condos", href: "/va-approved-condos-pensacola.html" },
+  { label: "Flight School Housing", href: "/flight-school-housing-pensacola" },
+  { label: "Rent or Sell When You PCS", href: "/rent-or-sell-pcs-pensacola" },
+  { label: "Buying Sight-Unseen", href: "/buying-sight-unseen-pcs-pensacola" },
+  { label: "Pensacola Flood Zones", href: "/pensacola-flood-zones-homebuyers" },
+  { label: "VA Loans for Condos", href: "/va-approved-condos-pensacola" },
   { label: "Dual-Military Homes", href: "/dual-military-homes.html" },
   { label: "Military Divorce Housing", href: "/military-divorce-housing.html" },
   { label: "Military Rental Property", href: "/military-rental-property-management.html" },

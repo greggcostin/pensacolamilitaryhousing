@@ -8,25 +8,36 @@ import { join } from "node:path";
 const MARKER = "<!-- sticky-mobile-cta -->";
 
 // CSS goes inside the existing <style>...</style> block so we don't add
-// another network request. Mobile-only via media query.
+// another network request. Mobile-only via media query. Two-button Call + Text
+// bar — this is a text-first military audience, so SMS is a first-class action.
 const CSS = `
-/* Sticky mobile call CTA — hidden on desktop, pinned bottom-right on phone */
+/* Sticky mobile Call/Text CTA — hidden on desktop, floating bar on phone */
 .sticky-mobile-cta{display:none}
 @media (max-width:800px){
   .sticky-mobile-cta{
-    display:inline-flex;align-items:center;gap:6px;
-    position:fixed;bottom:16px;right:16px;z-index:9999;
-    background:#C9A84C;color:#0A0F1A!important;
-    font-weight:700;font-size:15px;letter-spacing:.2px;
-    padding:12px 18px;min-height:44px;border-radius:999px;
-    box-shadow:0 6px 20px rgba(0,0,0,.45);
-    text-decoration:none;font-family:var(--sans,'Inter',system-ui,sans-serif);
+    display:flex;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;
   }
-  .sticky-mobile-cta:hover,.sticky-mobile-cta:focus{background:#D4B768}
+  .sticky-mobile-cta a{
+    flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    min-height:48px;padding:12px 14px;border-radius:12px;text-decoration:none;
+    font-weight:700;font-size:15px;letter-spacing:.2px;
+    font-family:var(--sans,'Inter',system-ui,sans-serif);
+    box-shadow:0 6px 20px rgba(0,0,0,.45);
+  }
+  .sticky-mobile-cta .smc-call{background:#C9A84C;color:#0A0F1A}
+  .sticky-mobile-cta .smc-text{background:#1A2332;color:#fff;border:1px solid #C9A84C}
+  .sticky-mobile-cta a:focus-visible{outline:2px solid #fff;outline-offset:2px}
 }`.trim();
 
-// HTML goes right before </body>.
-const HTML = `${MARKER}\n<a href="tel:8502665005" class="sticky-mobile-cta" aria-label="Call Gregg Costin at 850-266-5005" data-cta="sticky-mobile">📞 (850) 266-5005</a>\n`;
+// HTML goes right before </body>. tel: fires the existing phone_call_click
+// handler; sms: is tracked via the sms clause added to the shared click handler.
+const SMS_BODY = "Hi%20Gregg%2C%20I%20have%20a%20question%20about%20PCSing%20to%20Pensacola.";
+const HTML = `${MARKER}
+<div class="sticky-mobile-cta" role="group" aria-label="Contact Gregg Costin">
+<a class="smc-call" href="tel:+18502665005" aria-label="Call Gregg Costin at 850-266-5005" data-cta="sticky-call">📞 Call</a>
+<a class="smc-text" href="sms:+18502665005?&body=${SMS_BODY}" aria-label="Text Gregg Costin at 850-266-5005" data-cta="sticky-text">💬 Text</a>
+</div>
+`;
 
 const files = [];
 function walk(dir) {

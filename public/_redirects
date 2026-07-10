@@ -57,8 +57,6 @@
 
 # ── Community aliases for sub-community short domains ──
 /communities/valparaiso           /communities/niceville                301
-/communities/mary-esther          /communities/fort-walton-beach        301
-/communities/shalimar             /communities/fort-walton-beach        301
 /communities/bluewater-bay        /communities/niceville                301
 /bases/nas-whiting-field          /bases/whiting-field                  301
 
@@ -137,3 +135,8 @@
 # (about.html, contact.html) carry canonical=/, so Google already
 # consolidates them to the home page — no redirects needed here.
 /* /index.html 200
+
+/communities/mary-esther.html     /communities/mary-esther     301
+/communities/shalimar.html        /communities/shalimar        301
+
+/new-construction-pensacola.html  /new-construction-pensacola  301

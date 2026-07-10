@@ -1,0 +1,23 @@
+# Cloudflare Pages custom headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# Site-wide security headers
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Lead-magnet deliverables: never index, even if a crawler ignores robots.txt.
+# (Delivered via the email-capture form on /pcs-checklist.)
+/downloads/*
+  X-Robots-Tag: noindex, nofollow
+
+# Vite content-hashed bundles can never go stale — cache for a year.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Pagefind index chunks are content-addressed too.
+/pagefind/*
+  Cache-Control: public, max-age=604800

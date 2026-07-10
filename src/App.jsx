@@ -71,6 +71,7 @@ const RESOURCE_LINKS = [
   { label: "Flight School Housing", href: "/flight-school-housing-pensacola" },
   { label: "Rent or Sell When You PCS", href: "/rent-or-sell-pcs-pensacola" },
   { label: "Cash Offer vs Listing", href: "/cash-offer-pensacola" },
+  { label: "New Construction Guide", href: "/new-construction-pensacola" },
   { label: "Buying Sight-Unseen", href: "/buying-sight-unseen-pcs-pensacola" },
   { label: "Pensacola Flood Zones", href: "/pensacola-flood-zones-homebuyers" },
   { label: "VA Loans for Condos", href: "/va-approved-condos-pensacola" },
@@ -127,7 +128,7 @@ const IMG = {
   logoStacked: "/images/logo-stacked.png",
   logoHoriz: "/images/logo-horizontal.png",
   logoH: "/images/logo-horizontal.png",
-  logo08: "/images/logo-08.png",
+  logo08: "/images/logo-08-sm.png",
   logoLrr: "/images/logo-lrr.png",
   ocpPortrait: "/images/mil-ocp-portrait.jpg",
   deployedCrew: "/images/mil-deployed-crew.jpg",
@@ -525,12 +526,12 @@ const TrustBar = () => (
           { name: "Levin Rinke Realty", logo: "/images/partner-lrr.png" },
           { name: "Forbes Global Properties", logo: "/images/partner-forbes.png" },
         ].map(({ name, logo }) => (
-          <div key={name} className="trust-card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
+          <a key={name} href="/about" aria-label={`${name} — see Gregg's credentials`} className="trust-card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14, textDecoration: "none", cursor: "pointer" }}>
             <div style={{ color: C.muted, fontSize: 12, fontWeight: 500, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: SS, textAlign: "center" }}>{name}</div>
             <div style={{ width: 200, height: 135, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
               <Pic loading="lazy" src={logo} alt={name} style={{ maxHeight: 135, maxWidth: 200, objectFit: "contain", display: "block", opacity: 0.9 }} />
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
@@ -626,7 +627,7 @@ const SocialProof = ({ go }) => (
 
 const CtaBanner = ({ go }) => (
   <section style={{ position: "relative", padding: "100px 32px", overflow: "hidden" }}>
-    <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${IMG.familyAwacs})`, backgroundSize: "cover", backgroundPosition: "center center" }} />
+    <div style={{ position: "absolute", inset: 0, backgroundImage: "url(/images/mil-family-awacs.webp)", backgroundSize: "cover", backgroundPosition: "center center" }} />
     <div style={{ position: "absolute", inset: 0, background: "rgba(10,15,26,0.82)" }} />
     <div style={{ position: "relative", zIndex: 2, maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
       <h2 style={{ fontFamily: SF, fontWeight: 500, fontSize: "clamp(28px,3.5vw,48px)", lineHeight: 1.1, color: "#fff", marginBottom: 20 }}>
@@ -1743,7 +1744,7 @@ const LoanComparison = () => {
       <label style={labelStyle}>Loan Product</label>
       <div style={{ display: "flex", gap: 6, marginBottom: 14 }}>
         {[["va","VA"],["fha","FHA"],["conv","Conventional"]].map(([id,lbl]) => (
-          <button key={id} onClick={() => {
+          <button key={id} aria-pressed={loan.type === id} onClick={() => {
             const defaultRate = { va: 6.25, fha: 6.5, conv: 6.75 }[id];
             const defaultDown = { va: 0, fha: 3.5, conv: 5 }[id];
             setLoan({ ...loan, type: id, rate: defaultRate, downPct: defaultDown });
@@ -1761,7 +1762,7 @@ const LoanComparison = () => {
         <label style={labelStyle}>Down Payment</label>
         <div style={{ display: "flex", gap: 6, marginBottom: 8, flexWrap: "wrap" }}>
           {(loan.type === "va" ? [0, 5, 10] : loan.type === "fha" ? [3.5, 5, 10, 20] : [5, 10, 20]).map(dp => (
-            <button key={dp} onClick={() => setLoan({ ...loan, downPct: dp })} style={{ flex: "1 1 60px", padding: "6px 8px", background: Number(loan.downPct) === dp ? color : "transparent", color: Number(loan.downPct) === dp ? C.ink : C.muted, border: `1px solid ${Number(loan.downPct) === dp ? color : "#444"}`, borderRadius: 6, fontSize: 11, fontWeight: 700, cursor: "pointer", fontFamily: SS, letterSpacing: 1 }}>{dp}%</button>
+            <button key={dp} aria-pressed={Number(loan.downPct) === dp} onClick={() => setLoan({ ...loan, downPct: dp })} style={{ flex: "1 1 60px", padding: "6px 8px", background: Number(loan.downPct) === dp ? color : "transparent", color: Number(loan.downPct) === dp ? C.ink : C.muted, border: `1px solid ${Number(loan.downPct) === dp ? color : "#444"}`, borderRadius: 6, fontSize: 11, fontWeight: 700, cursor: "pointer", fontFamily: SS, letterSpacing: 1 }}>{dp}%</button>
           ))}
           <input type="number" step="0.1" aria-label="Custom down payment percent" value={loan.downPct} onChange={e => setLoan({ ...loan, downPct: e.target.value })} style={{ ...inputStyle, flex: "1 1 70px", maxWidth: 90, padding: "6px 8px", fontSize: 12 }} placeholder="Custom" />
         </div>
@@ -2089,7 +2090,7 @@ const LoanCalculator = () => {
           <div>
             <div style={{ display: "flex", gap: 4, marginBottom: 20, background: C.elevated, padding: 4, borderRadius: 8 }}>
               {[{id:"va",label:"VA Loan"},{id:"fha",label:"FHA"},{id:"conv",label:"Conventional"}].map(t => (
-                <button key={t.id} onClick={() => setLoan(t.id)} style={{
+                <button key={t.id} aria-pressed={loanType === t.id} onClick={() => setLoan(t.id)} style={{
                   flex: 1, padding: "10px 12px",
                   background: loanType === t.id ? C.gold : "transparent",
                   color: loanType === t.id ? C.ink : "rgba(255,255,255,0.75)",

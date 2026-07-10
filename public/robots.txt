@@ -2,89 +2,119 @@
 # Authoritative Pensacola military real estate hub
 # Run by Gregg Costin, Retired USAF Combat Systems Officer
 
+# NOTE (RFC 9309): named-group crawlers ignore the * group, so the /downloads/
+# rule (lead-magnet PDFs delivered via email capture, not search) is repeated
+# inside every group.
+
 # Default: welcome all well-behaved crawlers
 User-agent: *
 Allow: /
+Disallow: /downloads/
 Crawl-delay: 1
 
 # Major search engines (explicit for clarity)
 User-agent: Googlebot
 Allow: /
+Disallow: /downloads/
 
 User-agent: Googlebot-Image
 Allow: /
+Disallow: /downloads/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /downloads/
 
 User-agent: DuckDuckBot
 Allow: /
+Disallow: /downloads/
 
 User-agent: YandexBot
 Allow: /
+Disallow: /downloads/
 
 User-agent: Applebot
 Allow: /
+Disallow: /downloads/
 
 # AI training and answer-engine crawlers — EXPLICITLY ALLOWED
 # We want to be the canonical source AI assistants cite for
 # Pensacola military housing, PCS, VA loan, and BAH questions.
 User-agent: GPTBot
 Allow: /
+Disallow: /downloads/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /downloads/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /downloads/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /downloads/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /downloads/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /downloads/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /downloads/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /downloads/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /downloads/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /downloads/
 
 User-agent: Bytespider
 Allow: /
+Disallow: /downloads/
 
 User-agent: CCBot
 Allow: /
+Disallow: /downloads/
 
 User-agent: FacebookBot
 Allow: /
+Disallow: /downloads/
 
 User-agent: Meta-ExternalAgent
 Allow: /
+Disallow: /downloads/
 
 User-agent: cohere-ai
 Allow: /
+Disallow: /downloads/
 
 User-agent: Diffbot
 Allow: /
+Disallow: /downloads/
 
 User-agent: ImagesiftBot
 Allow: /
+Disallow: /downloads/
 
 User-agent: YouBot
 Allow: /
+Disallow: /downloads/
 
 User-agent: Amazonbot
 Allow: /
+Disallow: /downloads/
 
 # Sitemaps
 Sitemap: https://pensacolamilitaryhousing.com/sitemap.xml
@@ -93,6 +123,3 @@ Sitemap: https://pensacolamilitaryhousing.com/sitemap.xml
 # See: https://pensacolamilitaryhousing.com/llms.txt
 # See: https://pensacolamilitaryhousing.com/llms-full.txt
 
-# Lead-magnet PDFs are delivered via the email-capture form, not indexed
-User-agent: *
-Disallow: /downloads/

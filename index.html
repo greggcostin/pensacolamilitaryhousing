@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en-US">
       <head>
+<script>if(location.hostname.indexOf('.pages.dev')>-1)location.replace('https://pensacolamilitaryhousing.com'+location.pathname+location.search);</script>
               <meta charset="UTF-8" />
               <link rel="icon" type="image/png" href="/images/favicon.png" />
               <link rel="manifest" href="/site.webmanifest" />
@@ -514,9 +515,17 @@
                   y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
               })(window, document, "clarity", "script", "wm7ddbciup");
           </script>
-      <!-- FollowUpBoss Widget Tracker -->
+      <!-- FollowUpBoss Widget Tracker (deferred: keeps the ~525KB widget JS off the critical path) -->
 <script>
-(function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function() {(w[g].q=w[g].q||[]).push(arguments);}),(w[g].ds=1*new Date());(e="script"), (t=d.createElement(e)),(e=d.getElementsByTagName(e)[0]);t.async=1;t.src=i; e.parentNode.insertBefore(t,e);}) (window,"https://widgetbe.com/agent",document,"widgetTracker"); window.widgetTracker("create", "WT-ZZMZHBMI"); window.widgetTracker("send", "pageview");
+(function(){
+  function loadFUB(){
+    if(window.__fubLoaded){return;} window.__fubLoaded=true;
+    (function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function() {(w[g].q=w[g].q||[]).push(arguments);}),(w[g].ds=1*new Date());(e="script"), (t=d.createElement(e)),(e=d.getElementsByTagName(e)[0]);t.async=1;t.src=i; e.parentNode.insertBefore(t,e);}) (window,"https://widgetbe.com/agent",document,"widgetTracker");
+    window.widgetTracker("create", "WT-ZZMZHBMI");
+    window.widgetTracker("send", "pageview");
+  }
+  if ('requestIdleCallback' in window) { requestIdleCallback(loadFUB, {timeout: 5000}); } else { setTimeout(loadFUB, 4000); }
+})();
 </script>
 <!-- end FollowUpBoss Widget Tracker -->
 </head>
@@ -583,6 +592,8 @@
                   <li><a href="/pcs-checklist" style="color:#E8E9EB"><strong>PCS Checklist</strong></a> — 60 / 30 / 7-day timeline for military families</li>
                   <li><a href="/va-disability-property-tax-florida" style="color:#E8E9EB"><strong>VA Disability Tax (FL)</strong></a> — $5K exemption at 10%+, full waiver at 100%</li>
                   <li><a href="/school-zones-military-families" style="color:#E8E9EB"><strong>Military School Zones</strong></a> — Santa Rosa vs Escambia vs Okaloosa</li>
+                  <li><a href="/rent-or-sell-pcs-pensacola" style="color:#E8E9EB"><strong>Selling Before a PCS</strong></a> — the rent-or-sell decision, with a live calculator</li>
+                  <li><a href="/cash-offer-pensacola" style="color:#E8E9EB"><strong>Got a Cash Offer?</strong></a> — what investors really pay vs a listed sale</li>
                   <li><a href="/faq" style="color:#E8E9EB"><strong>Military PCS FAQ</strong></a> — 60 answers covering every PCS decision</li>
                   <li><a href="/reviews" style="color:#E8E9EB"><strong>Client Reviews</strong></a> — 43 five-star Google reviews</li>
                   <li><a href="/blog" style="color:#E8E9EB"><strong>Blog</strong></a> — VA loan guidance, BAH breakdowns, neighborhood deep dives</li>
@@ -620,8 +631,7 @@
             <div id="search"></div>
           </dialog>
           <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-          <script src="/pagefind/pagefind-ui.js"></script>
-          <style>
+                    <style>
             .search-modal{border:1px solid rgba(201,168,76,0.35);background:#0A0F1A;color:#E8E6DF;padding:0;max-width:720px;width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.7);overflow:hidden;font-family:'Inter',system-ui,sans-serif}
             .search-modal::backdrop{background:rgba(0,0,0,0.78);backdrop-filter:blur(4px)}
             .search-modal[open]{display:flex;flex-direction:column}
@@ -650,9 +660,17 @@
               // Open is wired via React's onClick in App.jsx, but lazy-init Pagefind here.
               const observer = new MutationObserver(function(){
                 if(modal.hasAttribute('open') && !inited){
-                  try { new PagefindUI({ element: '#search', showSubResults: true, autofocus: true, resetStyles: false }); inited = true; }
-                  catch(e){ console.error('Pagefind UI failed to init', e); }
-                  setTimeout(function(){ var i = document.querySelector('.pagefind-ui__search-input'); if(i) i.focus(); }, 50);
+                  var initPagefind = function(){
+                    try { new PagefindUI({ element: '#search', showSubResults: true, autofocus: true, resetStyles: false }); inited = true; }
+                    catch(e){ console.error('Pagefind UI failed to init', e); }
+                    setTimeout(function(){ var i = document.querySelector('.pagefind-ui__search-input'); if(i) i.focus(); }, 50);
+                  };
+                  if (typeof PagefindUI === 'undefined') {
+                    var pfs = document.createElement('script');
+                    pfs.src = '/pagefind/pagefind-ui.js';
+                    pfs.onload = initPagefind;
+                    document.head.appendChild(pfs);
+                  } else { initPagefind(); }
                   if(window.gtag) gtag('event','site_search_open',{event_category:'engagement'});
                 }
               });

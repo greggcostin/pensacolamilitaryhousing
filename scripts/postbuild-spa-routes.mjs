@@ -39,12 +39,28 @@ function swap(html, needle, repl, label, route) {
 // unambiguously via a lookahead (the modal markup itself is preserved).
 const ROOT_RE = /<div id="root">[\s\S]*?<\/div>\s*<\/div>(?=\s*<!-- Site search modal)/;
 
+// Optional per-route crawlable link block rendered inside the prerender shell —
+// gives high-equity SPA routes real internal links to the decision-tool pages.
+const SHELL_LINKS = {
+  "pcs-guide": [
+    ["Selling your house before a PCS (rent-or-sell calculator)", "/rent-or-sell-pcs-pensacola"],
+    ["Got a cash offer? What investors really pay", "/cash-offer-pensacola"],
+    ["PCS checklist: 60 / 30 / 7-day timeline", "/pcs-checklist"],
+    ["2026 BAH rates: Pensacola & Fort Walton Beach", "/bah-rates"],
+    ["Assumable VA loans in Pensacola", "/assumable-va-loans-pensacola"],
+  ],
+};
+
 function makeFallback(r) {
+  const tools = SHELL_LINKS[r.file]
+    ? `<section style="margin:0 0 24px"><h2 style="color:#C4A75A;font-size:18px;margin:0 0 10px;font-weight:500">PCS Decision Tools</h2><ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2">${SHELL_LINKS[r.file].map(([label, href]) => `<li><a href="${href}" style="color:#E8E9EB">${label}</a></li>`).join("")}</ul></section>`
+    : "";
   return `            <div style="background:#0A0F1A;color:#E8E9EB;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh;padding:40px 24px;max-width:1100px;margin:0 auto">
               <header style="margin-bottom:32px">
                 <p style="color:#C4A75A;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;margin:0 0 8px">Pensacola Military Housing</p>
                 <h1 style="font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 16px;color:#fff;font-weight:500">${r.heading}</h1>
                 <p style="font-size:16px;line-height:1.7;color:#B8BAC0;margin:0 0 20px;max-width:720px">${r.intro}</p>
+                ${tools}
                 <p style="font-size:15px;margin:0 0 8px"><strong>Call or text:</strong> <a href="tel:8502665005" style="color:#C4A75A;text-decoration:none">(850) 266-5005</a> &nbsp;&middot;&nbsp; <strong>Email:</strong> <a href="mailto:gregg.costin@gmail.com" style="color:#C4A75A;text-decoration:none">gregg.costin@gmail.com</a></p>
                 <p style="font-size:14px;color:#8A8D94;margin:0">Gregg Costin, Realtor&reg; &middot; Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502 &middot; Licensed in Florida &amp; Alabama</p>
               </header>

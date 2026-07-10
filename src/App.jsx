@@ -62,6 +62,7 @@ const VA_LINKS = [
   { label: "BAH to Mortgage Guide", href: "/bah-to-mortgage-guide.html" },
   { label: "VA IRRRL Refi Guide", href: "/va-irrrl-guide.html" },
   { label: "VA Funding Fee 2026", href: "/va-funding-fee-2026.html" },
+  { label: "VA Closing Costs (FL)", href: "/va-loan-closing-costs-florida" },
   { label: "Assumable VA Loans", href: "/assumable-va-loans-pensacola.html" },
   { label: "Zero-Down Loans Compared", href: "/zero-down-home-loans.html" },
 ];

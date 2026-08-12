@@ -50,3 +50,23 @@ PAGE-->
 8. End with a Sources and References section (`<h2>` + `<ul>` of official links) when the
    post makes factual claims.
 9. **Never fabricate**: prices, rates, school grades, laws, or client stories. Hedge or omit.
+10. **NO EM DASHES: standing rule (Gregg, Aug 2026).** Never use the em dash character or
+    `&mdash;` anywhere in a post: not in the title, lead, excerpt, FAQ answers, or body.
+    Rewrite with commas, colons, periods, or parentheses; use plain hyphens for ranges
+    ("$280K-$315K"). Do not substitute double hyphens. The factory refuses to build any
+    fragment containing one.
+
+## SEO checklist — standing rule, every post (factory enforces the starred items)
+
+- ★ `targetKeywords` present; primary keyword appears in the title (front-loaded), in the
+  H1, in the first 100 words of the body, and reads naturally in the slug.
+- ★ Title ≤65 chars; meta description 120-165 chars containing the primary keyword.
+- ★ 6+ internal links minimum (spec above says 6-12; mega-guides 25+).
+- H2s are question-shaped and match real search queries; each opens with a 40-80 word
+  direct answer (this is both the AI-citation format and the featured-snippet format).
+- Secondary keywords appear in at least one H2 each; no keyword stuffing — natural prose.
+- FAQ questions mirror People-Also-Ask phrasing for the topic.
+- Excerpt is click-worthy on the /blog index and in SERPs.
+- Stats carry named sources + vintage (both an E-E-A-T and an AI-citation signal).
+- Related links + hub links wired so the post is never an orphan.
+- After build: run `npm run og-images` so the post has its own social card.

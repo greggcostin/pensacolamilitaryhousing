@@ -66,6 +66,12 @@ h2{font-size:19px!important}
 
 function loadFragment(path) {
   const frag = readFileSync(path, "utf8");
+  // STANDING RULE (Gregg, Aug 2026): no em dashes anywhere in blog content.
+  // Rewrite with commas, colons, periods, parentheses, or plain hyphens for ranges.
+  if (frag.includes("—") || frag.includes("&mdash;")) {
+    const n = (frag.match(/—|&mdash;/g) || []).length;
+    throw new Error(`${path}: contains ${n} em dash(es). Standing rule: blogs never use em dashes. Rewrite them before building.`);
+  }
   const m = /<!--PAGE\s*([\s\S]*?)\s*PAGE-->/m.exec(frag);
   if (!m) throw new Error("No PAGE json block in " + path);
   const spec = JSON.parse(m[1]);
@@ -73,6 +79,15 @@ function loadFragment(path) {
   for (const req of ["slug", "title", "description", "category", "datePublished", "h1", "lead", "excerpt"]) {
     if (!spec[req]) throw new Error(`${path}: missing "${req}"`);
   }
+  // SEO gate (standing rule): fail loudly on the basics rather than publish weak pages.
+  if (spec.title.length > 65) throw new Error(`${path}: title ${spec.title.length} chars (max 65)`);
+  if (spec.description.length < 120 || spec.description.length > 165) throw new Error(`${path}: description ${spec.description.length} chars (need 120-165)`);
+  if (!spec.targetKeywords || !spec.targetKeywords.length) throw new Error(`${path}: targetKeywords required (SEO standing rule)`);
+  const kw = spec.targetKeywords[0].toLowerCase();
+  const inTitle = spec.title.toLowerCase().includes(kw.split(" ").slice(0, 2).join(" "));
+  if (!inTitle) console.warn(`  WARN ${spec.slug}: primary keyword "${spec.targetKeywords[0]}" not evident in title`);
+  const links = (spec.body.match(/href="\//g) || []).length;
+  if (links < 6) throw new Error(`${path}: only ${links} internal links (SEO standing rule: 6+)`);
   spec.dateModified = spec.dateModified || spec.datePublished;
   return spec;
 }

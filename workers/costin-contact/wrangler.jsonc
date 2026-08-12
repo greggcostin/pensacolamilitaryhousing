@@ -1,0 +1,10 @@
+{
+  // Deploy config for the existing costin-contact worker.
+  // keep_vars preserves the dashboard-set plain-text vars
+  // (GREGG_EMAIL, GREGG_PHONE, NOTIFICATION_FROM); secrets persist automatically.
+  "name": "costin-contact",
+  "main": "worker.js",
+  "compatibility_date": "2026-04-16",
+  "keep_vars": true,
+  "workers_dev": true
+}

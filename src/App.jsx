@@ -246,6 +246,7 @@ const Nav = ({ current, go }) => {
         <Tab id="about" label="About Me" />
         <ExtTab href="/buy" label="Buy" />
         <ExtTab href="/sell" label="Sell" />
+        <ExtTab href="/pcs-home-search" label="Search Homes" />
 
         <div className="spa-drop" style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => setPcsOpen(true)}
@@ -2534,6 +2535,48 @@ const ReviewsPage = () => {
   );
 };
 
+// Inline Calendly scheduler. Uses explicit initInlineWidget (not the script's
+// load-time auto-scan) so it initializes correctly after SPA client-side navigation.
+const CALENDLY_URL = "https://calendly.com/Greggcostin?hide_gdpr_banner=1&background_color=121823&text_color=e8e6df&primary_color=c9a84c";
+const CalendlyEmbed = () => {
+  const ref = useRef(null);
+  useEffect(() => {
+    const init = () => {
+      if (window.Calendly && ref.current && !ref.current.querySelector("iframe")) {
+        window.Calendly.initInlineWidget({ url: CALENDLY_URL, parentElement: ref.current });
+      }
+    };
+    let script = document.querySelector("script[data-calendly-loader]");
+    if (window.Calendly) init();
+    else if (script) script.addEventListener("load", init);
+    else {
+      script = document.createElement("script");
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      script.setAttribute("data-calendly-loader", "1");
+      script.addEventListener("load", init);
+      document.body.appendChild(script);
+    }
+    const onMsg = (e) => {
+      if (e.origin && e.origin.indexOf("calendly.com") > -1 && e.data && e.data.event === "calendly.event_scheduled" && window.gtag) {
+        window.gtag("event", "strategy_call_booked", { event_category: "conversion" });
+      }
+    };
+    window.addEventListener("message", onMsg);
+    return () => window.removeEventListener("message", onMsg);
+  }, []);
+  return (
+    <div>
+      <div style={{ background: C.panel, border: `1px solid ${C.hairline}`, borderRadius: 12, overflow: "hidden" }}>
+        <div ref={ref} style={{ minWidth: 300, height: 660 }} />
+      </div>
+      <p style={{ color: C.mutedD, fontSize: 12, margin: "10px 0 0", textAlign: "center" }}>
+        Calendar not loading? <a href="https://calendly.com/Greggcostin" target="_blank" rel="noopener" style={{ color: C.gold }}>Open it directly</a> or call/text <a href="tel:+18502665005" style={{ color: C.gold }}>(850) 266-5005</a>.
+      </p>
+    </div>
+  );
+};
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
   const [status, setStatus] = useState("idle");
@@ -2564,6 +2607,13 @@ const ContactPage = () => {
     <PageWrapper>
       <PageHero title="Contact Gregg Costin" subtitle="Whether you're 90 days from PCS or boots-on-ground tomorrow, I respond to every inquiry within 2 hours during business hours." />
       <Content>
+        <div style={{ background: "linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.03))", border: `1px solid ${C.goldLine}`, borderRadius: 14, padding: "24px 24px 20px", marginBottom: 36 }}>
+          <h3 style={{ fontFamily: SF, fontSize: 22, color: "#fff", margin: "0 0 8px", fontWeight: 500 }}>Fastest option: book a 15-minute call</h3>
+          <p style={{ color: C.muted, fontSize: 14.5, lineHeight: 1.7, margin: "0 0 16px" }}>
+            Pick any open slot below and it's confirmed instantly — the calendar shows times in <strong style={{ color: C.gold }}>your</strong> time zone, so it works from Ramstein or Yokosuka as easily as from downtown Pensacola. Prefer email or a message? The form below works too.
+          </p>
+          <CalendlyEmbed />
+        </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 32 }}>
           <div style={{ maxWidth: 420, margin: "0 auto", width: "100%" }}>
             <h3 style={{ fontSize: 18, color: C.gold, marginTop: 32, marginBottom: 12, fontWeight: 700, fontFamily: SF, textAlign: "center" }}>Direct Contact</h3>

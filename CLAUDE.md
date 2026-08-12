@@ -20,9 +20,13 @@ The entire application lives in `src/App.jsx` (~1200 lines). Every page and comp
 
 Consequence: deep links DO work (e.g., `/mortgage-calculators`, `/about` resolve to the right SPA page). `scripts/postbuild-spa-routes.mjs` runs after `vite build` to emit a prerendered HTML shell per route so crawlers and direct hits get real HTML. When adding an SPA page, add it to `ROUTE_MAP` (and the postbuild route list) — do not assume a bare path is a 404 just because there's no matching `public/*.html` file. The prerendered `public/*.html` pages below are a *separate* SEO surface, not the SPA's routing mechanism.
 
-### Two parallel content surfaces
-1. **The React SPA** (`index.html` → `src/App.jsx`) — the interactive marketing site.
-2. **Prerendered static HTML pages in `public/`** — `faq.html`, `nas-pensacola.html`, `nas-whiting-field.html`, `corry-station.html`, `cantonment.html`, `gulf-breeze.html`, `hurlburt-field.html`, `navarre.html`, `pace.html`, `reviews.html`. These are independent SEO landing pages served by the host alongside the SPA. They are not generated from `App.jsx` and must be edited directly. When you change SPA content (addresses, phone, rates, base info), check whether the same content appears in a `public/*.html` page and update both.
+### Two parallel content surfaces (updated Aug 2026)
+1. **The React SPA** (`index.html` → `src/App.jsx`, now ~2,850 lines) — serves only these routes: `/`, `/about`, `/contact`, `/pcs-guide`, `/blog`, `/mortgage-calculators`, `/communities` (see `PAGE_TO_SLUG`). Per-route meta lives in `src/routeMeta.js`.
+2. **Static HTML pages in `public/` are the PRIMARY SEO surface** — ~78 hand-maintained pages: all `public/bases/*.html` and `public/communities/*.html` plus every guide/tool page at the top level. Cloudflare Pages serves them at clean URLs (auto pretty-URLs, e.g. `public/bah-rates.html` → `/bah-rates`); `public/_redirects` 301s the legacy `.html` forms and provides the `/* → /index.html` SPA fallback. Each static page is self-contained: full head (meta/OG/JSON-LD ×6), nav, inquiry modal (POSTs to the contact worker), sticky mobile CTA, Pagefind search, GA4 + Clarity + FollowUpBoss trackers, footer. They are not generated from `App.jsx` and must be edited directly. When you change SPA content (addresses, phone, rates, base info), check whether the same content appears in a `public/*.html` page and update both.
+
+**Creating a new static page:** use `scripts/page-factory.mjs` — it clones the proven template (`public/first-time-military-homebuyer.html`), swaps head/meta/JSON-LD/H1/content from a fragment file, and appends the sitemap entry. Then run `npm run og-images` and add the page to `public/llms.txt`.
+
+**Contact worker contract** (`costin-contact` Cloudflare worker, source not in repo): requires `name`, `email`, AND `message` (400 without all three); honeypot field must be named `_gotcha`; `inquiryType` must exactly match the worker's stage map strings (e.g. `"PCS / Relocation — Buying"` — WITH the slash) or the FUB lead files as "Prospect" instead of "Lead".
 
 ### Styling
 Inline styles only, driven by a design tokens object `C` at the top of `App.jsx` (`C.gold`, `C.ink`, `C.panel`, etc.) plus legacy aliases (`GOLD`, `BLACK`, `DARK`, `CHARCOAL`, `CREAM`, `WARM_GRAY`, `LIGHT`). Two font families (`SF` = Playfair Display serif, `SS` = Inter sans) are imported via a `<style>@import url(...)</style>` block inside `App`. `src/index.css` only holds a handful of global resets. No Tailwind, no CSS modules, no styled-components.
@@ -43,4 +47,4 @@ Neither worker's source lives in this repo.
 `index.html` carries extensive meta tags, Open Graph, Twitter cards, and JSON-LD (`RealEstateAgent` schema). `public/robots.txt`, `public/sitemap.xml`, and `public/llms.txt` are maintained by hand. When adding or renaming pages, update `sitemap.xml` and, if relevant, `llms.txt`. Google Analytics is wired in `index.html` as `G-W29GHBK38M`.
 
 ## Deployment notes
-The `public/_redirects` file and the `outDir: 'dist'` Vite config suggest Netlify-style hosting. The site serves at `https://pensacolamilitaryhousing.com/`.
+Hosting is **Cloudflare Pages** (see the `_redirects` comments and the `.pages.dev` canonical-redirect snippet in every static page head). Build: `npm run build` = bump-dates → vite build → postbuild SPA shells → Pagefind index, output to `dist/`. The site serves at `https://pensacolamilitaryhousing.com/`.

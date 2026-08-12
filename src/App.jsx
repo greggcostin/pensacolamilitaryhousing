@@ -38,37 +38,37 @@ const pages = [
 const BASES_LINKS = [
   { label: "NAS Pensacola", href: "/bases/nas-pensacola", blurb: "The Cradle of Naval Aviation. Flight training, Blue Angels, and the #1 PCS destination for Naval Aviators and Combat Systems Officers." },
   { label: "Corry Station", href: "/bases/corry-station", blurb: "The Navy's premier information warfare, cryptology, and cyber training base." },
-  { label: "Saufley Field", href: "/bases/saufley-field", blurb: "NIOC Pensacola, a CIWT detachment, NETSAFA, and DLI Pensacola linguist training. Tenant of NAS Pensacola." },
+  { label: "Saufley Field", href: "/bases/saufley-field", blurb: "NETPDC, the Navy Advancement Center, and NOSC Pensacola. Education-and-support tenant field of NAS Pensacola." },
   { label: "NAS Whiting Field", href: "/bases/whiting-field", blurb: "The Navy's primary helicopter training base and one of the busiest airfields in the world." },
   { label: "Hurlburt Field", href: "/bases/hurlburt-field", blurb: "Headquarters of Air Force Special Operations Command. AC-130s, MC-130s, CV-22s, and the special tactics community." },
   { label: "Eglin AFB", href: "/bases/eglin-afb", blurb: "33rd Fighter Wing (F-35A training), 96th Test Wing, 7th SFG, and the largest forested Air Force installation in the US." },
-  { label: "Duke Field", href: "/bases/duke-field", blurb: "Home of the 919th Special Operations Wing (AFRC). MC-130J and MQ-9, adjacent to Crestview." },
+  { label: "Duke Field", href: "/bases/duke-field", blurb: "Home of the 919th Special Operations Wing (AFRC). C-146A Wolfhound ops, adjacent to Crestview." },
 ];
 
 // Items that live under the PCS Guide dropdown (planning-stage essentials).
 const PCS_LINKS = [
   { label: "PCS Guide", href: "/pcs-guide" },
-  { label: "PCS Checklist", href: "/pcs-checklist.html" },
-  { label: "PCS Schools by Base", href: "/pcs-schools-by-base.html" },
-  { label: "2026 BAH Rates", href: "/bah-rates.html" },
+  { label: "PCS Checklist", href: "/pcs-checklist" },
+  { label: "PCS Schools by Base", href: "/pcs-schools-by-base" },
+  { label: "2026 BAH Rates", href: "/bah-rates" },
   { label: "FL Home Insurance", href: "/florida-home-insurance-military" },
-  { label: "FL Homestead (Military)", href: "/florida-homestead-exemption-military.html" },
+  { label: "FL Homestead (Military)", href: "/florida-homestead-exemption-military" },
 ];
 
 // Items that live under the VA Loan Guide dropdown (financing essentials).
 const VA_LINKS = [
   { label: "VA Loan Guide", href: "/va-loan-guide" },
   { label: "VA Certificate of Eligibility", href: "/va-coe-guide" },
-  { label: "BAH to Mortgage Guide", href: "/bah-to-mortgage-guide.html" },
-  { label: "VA IRRRL Refi Guide", href: "/va-irrrl-guide.html" },
-  { label: "VA Funding Fee 2026", href: "/va-funding-fee-2026.html" },
+  { label: "BAH to Mortgage Guide", href: "/bah-to-mortgage-guide" },
+  { label: "VA IRRRL Refi Guide", href: "/va-irrrl-guide" },
+  { label: "VA Funding Fee 2026", href: "/va-funding-fee-2026" },
   { label: "VA Closing Costs (FL)", href: "/va-loan-closing-costs-florida" },
-  { label: "Assumable VA Loans", href: "/assumable-va-loans-pensacola.html" },
-  { label: "Zero-Down Loans Compared", href: "/zero-down-home-loans.html" },
+  { label: "Assumable VA Loans", href: "/assumable-va-loans-pensacola" },
+  { label: "Zero-Down Loans Compared", href: "/zero-down-home-loans" },
 ];
 
 const RESOURCE_LINKS = [
-  { label: "First-Time Military Homebuyer", href: "/first-time-military-homebuyer.html" },
+  { label: "First-Time Military Homebuyer", href: "/first-time-military-homebuyer" },
   { label: "Flight School Housing", href: "/flight-school-housing-pensacola" },
   { label: "Rent or Sell When You PCS", href: "/rent-or-sell-pcs-pensacola" },
   { label: "Cash Offer vs Listing", href: "/cash-offer-pensacola" },
@@ -76,25 +76,25 @@ const RESOURCE_LINKS = [
   { label: "Buying Sight-Unseen", href: "/buying-sight-unseen-pcs-pensacola" },
   { label: "Pensacola Flood Zones", href: "/pensacola-flood-zones-homebuyers" },
   { label: "VA Loans for Condos", href: "/va-approved-condos-pensacola" },
-  { label: "Dual-Military Homes", href: "/dual-military-homes.html" },
-  { label: "Military Divorce Housing", href: "/military-divorce-housing.html" },
-  { label: "Military Rental Property", href: "/military-rental-property-management.html" },
-  { label: "Military PCS Tax Deductions", href: "/military-pcs-tax-deductions.html" },
-  { label: "Disabled Veteran Benefits (FL)", href: "/disabled-veteran-benefits-florida.html" },
-  { label: "VA Disability Tax (FL)", href: "/va-disability-property-tax-florida.html" },
-  { label: "Military School Zones", href: "/school-zones-military-families.html" },
-  { label: "NAS Pensacola vs Hurlburt", href: "/nas-pensacola-vs-hurlburt-field.html" },
-  { label: "Gulf Breeze vs Navarre", href: "/gulf-breeze-vs-navarre.html" },
-  { label: "Niceville vs Crestview", href: "/niceville-vs-crestview.html" },
-  { label: "On vs Off-Base — NAS Pensacola", href: "/on-base-vs-off-base-nas-pensacola.html" },
-  { label: "On vs Off-Base — Corry Station", href: "/on-base-vs-off-base-corry-station.html" },
-  { label: "On vs Off-Base — Saufley Field", href: "/on-base-vs-off-base-saufley-field.html" },
-  { label: "On vs Off-Base — Whiting Field", href: "/on-base-vs-off-base-nas-whiting-field.html" },
-  { label: "On vs Off-Base — Hurlburt Field", href: "/on-base-vs-off-base-hurlburt-field.html" },
-  { label: "On vs Off-Base — Eglin AFB", href: "/on-base-vs-off-base-eglin-afb.html" },
-  { label: "On vs Off-Base — Duke Field", href: "/on-base-vs-off-base-duke-field.html" },
-  { label: "FAQ", href: "/faq.html" },
-  { label: "Reviews", href: "/reviews.html" },
+  { label: "Dual-Military Homes", href: "/dual-military-homes" },
+  { label: "Military Divorce Housing", href: "/military-divorce-housing" },
+  { label: "Military Rental Property", href: "/military-rental-property-management" },
+  { label: "Military PCS Tax Deductions", href: "/military-pcs-tax-deductions" },
+  { label: "Disabled Veteran Benefits (FL)", href: "/disabled-veteran-benefits-florida" },
+  { label: "VA Disability Tax (FL)", href: "/va-disability-property-tax-florida" },
+  { label: "Military School Zones", href: "/school-zones-military-families" },
+  { label: "NAS Pensacola vs Hurlburt", href: "/nas-pensacola-vs-hurlburt-field" },
+  { label: "Gulf Breeze vs Navarre", href: "/gulf-breeze-vs-navarre" },
+  { label: "Niceville vs Crestview", href: "/niceville-vs-crestview" },
+  { label: "On vs Off-Base — NAS Pensacola", href: "/on-base-vs-off-base-nas-pensacola" },
+  { label: "On vs Off-Base — Corry Station", href: "/on-base-vs-off-base-corry-station" },
+  { label: "On vs Off-Base — Saufley Field", href: "/on-base-vs-off-base-saufley-field" },
+  { label: "On vs Off-Base — Whiting Field", href: "/on-base-vs-off-base-nas-whiting-field" },
+  { label: "On vs Off-Base — Hurlburt Field", href: "/on-base-vs-off-base-hurlburt-field" },
+  { label: "On vs Off-Base — Eglin AFB", href: "/on-base-vs-off-base-eglin-afb" },
+  { label: "On vs Off-Base — Duke Field", href: "/on-base-vs-off-base-duke-field" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Reviews", href: "/reviews" },
 ];
 
 const COMMUNITY_LINKS = [
@@ -303,7 +303,7 @@ const Nav = ({ current, go }) => {
           )}
         </div>
         <Tab id="calculator" label="Calculators" />
-        <ExtTab href="/reviews.html" label="Reviews" />
+        <ExtTab href="/reviews" label="Reviews" />
         <Tab id="contact" label="Contact" />
         <button
           type="button"
@@ -429,7 +429,8 @@ const Hero = ({ go }) => {
           NAS Pensacola · Corry Station · Whiting Field · Eglin AFB · Hurlburt Field
         </p>
         <div style={{ marginTop: 40, display: "flex", gap: 16, flexWrap: "wrap" }}>
-          <BtnP onClick={() => { if (hasSubmittedInquiry()) { go("pcs"); } else { setInquiryOpen(true); } }}>Start Your PCS Search</BtnP>
+          <BtnP onClick={() => { if (hasSubmittedInquiry()) { window.location.href = "/pcs-home-search"; } else { setInquiryOpen(true); } }}>Start Your PCS Search</BtnP>
+          <BtnG href="/pcs-home-search">Browse Live MLS Listings</BtnG>
           <BtnG href="tel:8502665005">Call 850-266-5005</BtnG>
         </div>
         <div style={{ marginTop: 48, display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -456,15 +457,16 @@ const Hero = ({ go }) => {
     </div>
     <div className="hero-stats" style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 2, borderTop: `1px solid ${C.hairline}`, background: "rgba(10,15,26,0.85)", backdropFilter: "blur(8px)" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 32px", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))", gap: 32 }}>
-        {[["USAF", "Prior Enlisted, Retired Combat Systems Officer"], ["11", "Personal PCS Moves"], ["Top 0.8%", "Pensacola Agents"], ["5.0 ★", "Zillow Premier Agent", "https://www.zillow.com/profile/GreggCostin"]].map(([n, l, href]) => {
+        {[["USAF", "Prior Enlisted, Retired Combat Systems Officer", "/about"], ["11", "Personal PCS Moves", "/about"], ["Top 0.8%", "Pensacola Agents", "/reviews"], ["5.0 ★", "Zillow Premier Agent", "https://www.zillow.com/profile/GreggCostin"]].map(([n, l, href]) => {
           const inner = (
             <>
               <div style={{ fontFamily: SF, fontSize: 32, color: C.gold, fontWeight: 500, lineHeight: 1 }}>{n}</div>
               <div style={{ marginTop: 8, fontSize: 11, letterSpacing: 2.2, textTransform: "uppercase", color: C.muted, fontFamily: SS }}>{l}</div>
             </>
           );
+          const external = href && href.startsWith("http");
           return href
-            ? <a key={l} href={href} target="_blank" rel="noopener" style={{ textDecoration: "none", display: "block", cursor: "pointer" }}>{inner}</a>
+            ? <a key={l} href={href} {...(external ? { target: "_blank", rel: "noopener" } : {})} style={{ textDecoration: "none", display: "block", cursor: "pointer" }}>{inner}</a>
             : <div key={l}>{inner}</div>;
         })}
       </div>
@@ -640,6 +642,7 @@ const CtaBanner = ({ go }) => (
       </p>
       <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
         <BtnP href="tel:8502665005">Call 850-266-5005</BtnP>
+        <BtnG href="/book-pcs-call">Book a 15-Min Strategy Call</BtnG>
         <BtnG onClick={() => go("contact")}>Send a Message</BtnG>
       </div>
     </div>
@@ -683,8 +686,8 @@ const BasesAndCommunitiesSection = () => {
         </div>
 
         <div style={{ marginTop: 40, display: "flex", gap: 12, flexWrap: "wrap" }}>
-          <a href="/faq.html" style={{ color: C.gold, fontSize: 12, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", textDecoration: "none", padding: "12px 24px", border: `1px solid ${C.goldLine}`, borderRadius: 6, fontFamily: SS }}>Full PCS FAQ →</a>
-          <a href="/reviews.html" style={{ color: C.gold, fontSize: 12, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", textDecoration: "none", padding: "12px 24px", border: `1px solid ${C.goldLine}`, borderRadius: 6, fontFamily: SS }}>Client Reviews →</a>
+          <a href="/faq" style={{ color: C.gold, fontSize: 12, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", textDecoration: "none", padding: "12px 24px", border: `1px solid ${C.goldLine}`, borderRadius: 6, fontFamily: SS }}>Full PCS FAQ →</a>
+          <a href="/reviews" style={{ color: C.gold, fontSize: 12, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", textDecoration: "none", padding: "12px 24px", border: `1px solid ${C.goldLine}`, borderRadius: 6, fontFamily: SS }}>Client Reviews →</a>
         </div>
       </div>
     </section>
@@ -710,7 +713,7 @@ const Footer = ({ go }) => {
             <a href="/buy" style={footerLinkStyle}>Buy a Home</a>
             <a href="/sell" style={footerLinkStyle}>Sell Your Home</a>
             <a href="/va-loan-guide" style={footerLinkStyle}>VA Loan Guide</a>
-            <a href="/faq.html" style={footerLinkStyle}>PCS FAQ</a>
+            <a href="/faq" style={footerLinkStyle}>PCS FAQ</a>
           </div>
           <div>
             <div style={{ color: C.gold, fontSize: 16, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Bases</div>
@@ -849,7 +852,7 @@ const hasSubmittedInquiry = () => { try { return localStorage.getItem(INQUIRY_KE
 const markInquirySubmitted = () => { try { localStorage.setItem(INQUIRY_KEY, "1"); } catch {} };
 
 const InquiryForm = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const uid = useId();
@@ -861,12 +864,14 @@ const InquiryForm = () => {
     setErrorMsg("");
     if (!formData.name.trim() || !formData.email.trim()) { setStatus("error"); setErrorMsg("Name and email are required."); return; }
     try {
-      const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(formData) });
+      // The contact worker requires `message` and reads the honeypot from `_gotcha`.
+      const payload = { name: formData.name, email: formData.email, phone: formData.phone, inquiryType: formData.inquiryType, message: formData.message.trim() || `Inquiry from ${window.location.pathname} (no message text)`, _gotcha: formData.honeypot };
+      const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       const data = await response.json();
       if (response.ok && data.success) {
         setStatus("success");
         markInquirySubmitted();
-        setFormData({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });
+        setFormData({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
       } else { setStatus("error"); setErrorMsg(data.error || "Something went wrong. Please call (850) 266-5005."); }
     } catch (err) { setStatus("error"); setErrorMsg("Connection error. Please call (850) 266-5005 directly."); }
   };
@@ -898,11 +903,11 @@ const InquiryForm = () => {
           <div>
             <label htmlFor={`${uid}-type`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>What Can I Help With?</label>
             <select id={`${uid}-type`} value={formData.inquiryType} onChange={handleChange("inquiryType")} disabled={status === "submitting"} style={{ width: "100%", padding: "12px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none" }}>
-              <option>PCS Relocation — Buying</option>
-              <option>PCS Relocation — Selling</option>
+              <option>PCS / Relocation — Buying</option>
+              <option>PCS / Relocation — Selling</option>
               <option>VA Loan Questions</option>
               <option>Investment Property</option>
-              <option>General Inquiry</option>
+              <option>General Question</option>
             </select>
           </div>
           <div>
@@ -931,6 +936,15 @@ const PCSPage = ({ go }) => {
     {gateOpen && <InquiryModal onClose={() => setGateOpen(false)} />}
     <PageHero title="PCS to Pensacola: The Complete Guide for Military Families (2026)" subtitle="Everything you need to know about buying a home, finding the right neighborhood, navigating VA loans, and settling your family into life on the Gulf Coast." />
     <Content>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 18, flexWrap: "wrap", background: "linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.03))", border: `1px solid ${C.goldLine}`, borderRadius: 12, padding: "16px 20px", marginBottom: 28 }}>
+        <div style={{ flex: "1 1 300px", minWidth: 0, color: C.text, fontSize: 14.5, lineHeight: 1.6 }}>
+          <strong style={{ color: C.gold }}>PCS orders in hand?</strong> Tell me your rank, family size, and report date — I'll send a tailored housing game plan within one business day. No pressure, no spam.
+        </div>
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+          <button type="button" onClick={() => setGateOpen(true)} style={{ background: C.gold, color: C.ink, border: "none", padding: "12px 20px", borderRadius: 8, fontWeight: 700, fontSize: 13.5, cursor: "pointer", fontFamily: SS, letterSpacing: .3 }}>Get My PCS Plan →</button>
+          <a href="sms:+18502665005?&body=Hi%20Gregg%2C%20I%27m%20PCSing%20to%20Pensacola%20%E2%80%94%20can%20you%20send%20me%20a%20housing%20game%20plan%3F" style={{ display: "inline-flex", alignItems: "center", padding: "12px 18px", borderRadius: 8, border: `1px solid ${C.goldLine}`, color: C.gold, textDecoration: "none", fontWeight: 600, fontSize: 13.5, fontFamily: SS }}>Text Gregg</a>
+        </div>
+      </div>
       <H2>Military Installations in the Pensacola Area</H2>
       <P>The greater Pensacola area is home to several major military installations, each serving different branches and mission sets. Understanding which base you're reporting to is the first step in narrowing your housing search.</P>
       <ComparisonTable
@@ -938,11 +952,11 @@ const PCSPage = ({ go }) => {
         rows={[
           ["NAS Pensacola", "Navy/Marines/Air Force", "Aviation training (NFO + USAF CSO schoolhouse), NATTC, Blue Angels", "East Pensacola Heights, Gulf Breeze, Perdido Key"],
           ["Corry Station", "Navy", "Information Warfare, cryptology, cyber, intel, IT training (CIWT)", "Pensacola proper, West Pensacola, Cantonment"],
-          ["Saufley Field", "Navy", "NIOC Pensacola, CIWT detachment, NETSAFA, DLI linguist training (tenant of NAS Pensacola)", "Bellview/Myrtle Grove, Cantonment, Ferry Pass"],
+          ["Saufley Field", "Navy", "NETPDC, Navy Advancement Center, NOSC Pensacola (tenant of NAS Pensacola)", "Bellview/Myrtle Grove, Cantonment, Ferry Pass"],
           ["NAS Whiting Field", "Navy/Marines/Coast Guard", "Primary fixed-wing (T-6B) + all USN/USMC/USCG rotary-wing training (TRAWING 5)", "Milton, Pace, East Milton"],
           ["Hurlburt Field", "Air Force", "AFSOC, 1st SOW (AC-130, MC-130, CV-22)", "Mary Esther, Navarre, FWB"],
           ["Eglin AFB", "Air Force/Army", "33rd FW (F-35A FTU), 96th TW, 53rd Wing, AFRL, 7th SFG", "Niceville, Crestview, FWB, Valparaiso, Bluewater Bay"],
-          ["Duke Field", "Air Force Reserve", "919th Special Operations Wing (MC-130J, MQ-9)", "Crestview, Laurel Hill, Niceville"],
+          ["Duke Field", "Air Force Reserve", "919th Special Operations Wing (C-146A at Duke; AC-130J/MQ-9 at Hurlburt)", "Crestview, Laurel Hill, Niceville"],
         ]}
       />
       <H2>Pensacola Real Estate Market Snapshot</H2>
@@ -2521,7 +2535,7 @@ const ReviewsPage = () => {
 };
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const uid = useId();
@@ -2535,11 +2549,13 @@ const ContactPage = () => {
     setErrorMsg("");
     if (!formData.name.trim() || !formData.email.trim()) { setStatus("error"); setErrorMsg("Name and email are required."); return; }
     try {
-      const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(formData) });
+      // The contact worker requires `message` and reads the honeypot from `_gotcha`.
+      const payload = { name: formData.name, email: formData.email, phone: formData.phone, inquiryType: formData.inquiryType, message: formData.message.trim() || `Inquiry from ${window.location.pathname} (no message text)`, _gotcha: formData.honeypot };
+      const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       const data = await response.json();
       if (response.ok && data.success) {
         setStatus("success");
-        setFormData({ name: "", email: "", phone: "", inquiryType: "PCS Relocation — Buying", message: "", honeypot: "" });
+        setFormData({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
       } else { setStatus("error"); setErrorMsg(data.error || "Something went wrong. Please call (850) 266-5005."); }
     } catch (err) { setStatus("error"); setErrorMsg("Connection error. Please call (850) 266-5005 directly."); }
   };
@@ -2618,11 +2634,11 @@ const ContactPage = () => {
                 <div>
                   <label htmlFor={`${uid}-type`} style={{ color: "#999", fontSize: 12, marginBottom: 4, display: "block", textTransform: "uppercase", letterSpacing: 1 }}>What Can I Help With?</label>
                   <select id={`${uid}-type`} value={formData.inquiryType} onChange={handleChange("inquiryType")} disabled={status === "submitting"} style={{ width: "100%", padding: "18px 16px", background: CHARCOAL, border: "1px solid #444", borderRadius: 8, color: "#fff", fontSize: 14, outline: "none" }}>
-                    <option>PCS Relocation — Buying</option>
-                    <option>PCS Relocation — Selling</option>
+                    <option>PCS / Relocation — Buying</option>
+                    <option>PCS / Relocation — Selling</option>
                     <option>VA Loan Questions</option>
                     <option>Investment Property</option>
-                    <option>General Inquiry</option>
+                    <option>General Question</option>
                   </select>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>

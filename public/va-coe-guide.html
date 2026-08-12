@@ -389,7 +389,7 @@ footer a{color:var(--gold)}
 <p class="ih">Ready to make your move to Pensacola?</p>
 <p class="is">I am a retired USAF officer and dual-licensed Realtor who has made 11 PCS moves myself. Tell me your rank, timeline, and target base, and I will build you a plan &mdash; no pressure, no obligation.</p>
 <div class="ir">
-<button type="button" class="ip" data-inquiry-open data-inquiry-type="PCS Relocation &mdash; Buying">Start Your Pensacola Home Search &rarr;</button>
+<button type="button" class="ip" data-inquiry-open data-inquiry-type="PCS / Relocation &mdash; Buying">Start Your Pensacola Home Search &rarr;</button>
 <a class="il" href="tel:+18502665005">Call or Text (850) 266-5005</a>
 </div>
 </div>
@@ -474,6 +474,9 @@ footer a{color:var(--gold)}
 <span class="subhead">Buy or Sell</span>
 <a href="/buy">Buy a Home</a>
 <a href="/sell">Sell Your Home</a>
+<a href="/pcs-home-search">Search Live MLS Listings</a>
+<a href="/whats-my-home-worth">What&rsquo;s My Home Worth?</a>
+<a href="/book-pcs-call">Book a 15-Min Strategy Call</a>
 <span class="subhead">PCS Planning</span>
 <a href="/pcs-guide">PCS Guide</a>
 <a href="/pcs-checklist">PCS Checklist</a>
@@ -618,7 +621,7 @@ MRP &middot; ABR &middot; SRS &middot; RENE &middot; FMS &middot; Pursuing GRI</
 <div><label for="inq-name">Full Name *</label><input id="inq-name" type="text" name="name" required></div>
 <div><label for="inq-email">Email Address *</label><input id="inq-email" type="email" name="email" required></div>
 <div><label for="inq-phone">Phone Number</label><input id="inq-phone" type="tel" name="phone"></div>
-<div><label for="inq-type">What Can I Help With?</label><select id="inq-type" name="inquiryType"><option selected>PCS Relocation — Buying</option><option>PCS Relocation — Selling</option><option>VA Loan Questions</option><option>Investment Property</option><option>General Inquiry</option></select></div>
+<div><label for="inq-type">What Can I Help With?</label><select id="inq-type" name="inquiryType"><option selected>PCS / Relocation — Buying</option><option>PCS / Relocation — Selling</option><option>VA Loan Questions</option><option>Investment Property</option><option>General Question</option></select></div>
 <div><label for="inq-message">Message</label><textarea id="inq-message" name="message" rows="4"></textarea></div>
 <div class="ierr" id="inquiry-err" style="display:none"></div>
 <button type="submit" class="isubmit">Send Message</button>
@@ -641,7 +644,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 form.addEventListener('submit',function(e){
 e.preventDefault();errBox.style.display='none';
 var btn=form.querySelector('.isubmit');
-var data={name:get('name').trim(),email:get('email').trim(),phone:get('phone').trim(),inquiryType:get('inquiryType'),message:get('message').trim(),honeypot:get('website')};
+var data={name:get('name').trim(),email:get('email').trim(),phone:get('phone').trim(),inquiryType:get('inquiryType'),message:get('message').trim()||('Inquiry from '+location.pathname+' (no message text)'),_gotcha:get('website')};
 if(!data.name||!data.email){errBox.textContent='\u26a0 Name and email are required.';errBox.style.display='block';return;}
 btn.disabled=true;btn.textContent='Sending...';
 fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})

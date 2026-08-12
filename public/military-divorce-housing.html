@@ -202,6 +202,18 @@ footer a{color:var(--gold)}
 .inq-cta .ir{display:flex;flex-wrap:wrap;gap:12px}
 .inq-cta .ip{background:var(--gold);color:var(--ink);border:none;padding:13px 22px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--sans);letter-spacing:.3px;text-decoration:none;display:inline-flex;align-items:center}
 .inq-cta .il{display:inline-flex;align-items:center;padding:13px 22px;border-radius:8px;border:1px solid var(--gold-line);color:var(--gold);text-decoration:none;font-weight:600;font-size:14px;font-family:var(--sans)}
+
+/*PHONE_BANNER_CSS — small-phone banner shrink this page was missing*/
+@media(max-width:480px){
+main{padding:24px 14px 14px!important}
+header{padding:32px 14px 22px!important}
+h1{font-size:clamp(22px,7vw,30px)!important}
+h2{font-size:19px!important}
+.main-banner .banner-lrr img,.main-banner .banner-logo img{height:44px!important}
+.main-banner .banner-phone{font-size:13px!important}
+.main-banner .banner-email{font-size:9px!important}
+.main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:4px 6px!important;font-size:9px!important;letter-spacing:.3px!important}
+}
 </style>
 <!-- Microsoft Clarity (heatmaps + session recordings) -->
 <script type="text/javascript">

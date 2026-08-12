@@ -2,7 +2,7 @@
 // (nav, modal, sticky CTA, search, footer, analytics all inherited verbatim) plus a
 // per-page fragment file.
 //
-// Fragment format (scratchpad/pages/<slug>.fragment.html):
+// Fragment format (<slug>.fragment.html):
 //   <!--PAGE
 //   { ...head fields json... }
 //   PAGE-->
@@ -12,18 +12,47 @@
 //   articleHeadline, figure {src,alt,caption}|null, faq [{q,a}], related [{href,label}]
 //
 // Usage: node scripts/page-factory.mjs <fragment-file> [more fragments...]
-// Fragment examples from the Aug 2026 build: see git history of docs/ or ask Claude.
 
 import { readFileSync, writeFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 
-const ROOT = new URL("..", import.meta.url).pathname.replace(/^/(w:)/, "$1") + "/";
+const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
 const TEMPLATE_PATH = ROOT + "public/first-time-military-homebuyer.html";
 const TODAY_ISO = "2026-08-12";
 const TODAY_LONG = "August 12, 2026";
 const MONTH_YEAR = "August 2026";
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-const jesc = (s) => JSON.stringify(s); // JSON-safe string with quotes
+const jesc = (s) => JSON.stringify(s);
+
+// The template page has no data tables, so its head CSS lacks the .bah-wrap /
+// .bah-table rules — including the overflow-x:auto that stops wide tables from
+// causing sideways scroll on phones. Injected into every built page.
+const BAH_TABLE_CSS = `
+/*BAH_TABLE_CSS*/
+.bah-title{margin:1.25rem 0 .5rem;color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.bah-wrap{border:1px solid var(--hair);border-radius:10px;overflow:hidden;overflow-x:auto;margin:1rem 0}
+.bah-wrap>table{margin:0;border:none;border-radius:0}
+.bah-table{width:100%;border-collapse:collapse;min-width:500px;font-size:14px}
+.bah-table thead th{background:var(--panel);color:var(--gold);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:11px;padding:12px 16px;text-align:left;border-bottom:1px solid var(--hair)}
+.bah-table tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+.bah-table tbody td{padding:10px 16px;border-bottom:1px solid var(--hair);color:var(--text)}
+.bah-table tbody td:first-child{font-weight:500;color:#fff}
+.bah-table tbody td:nth-child(2){color:var(--gold);font-weight:600}
+@media(max-width:900px){.bah-wrap{border-radius:8px}.bah-table{font-size:13px}.bah-table thead th,.bah-table tbody td{padding:9px 10px}}
+@media(max-width:480px){.bah-table{font-size:12px;min-width:320px}.bah-table thead th{font-size:10px;padding:8px 8px}.bah-table tbody td{padding:8px 8px}}
+/*PHONE_BANNER_CSS — small-phone banner shrink the template page was missing (nowrap email forced 38px sideways scroll under 480px)*/
+@media(max-width:480px){
+main{padding:24px 14px 14px!important}
+header{padding:32px 14px 22px!important}
+h1{font-size:clamp(22px,7vw,30px)!important}
+h2{font-size:19px!important}
+.main-banner .banner-lrr img,.main-banner .banner-logo img{height:44px!important}
+.main-banner .banner-phone{font-size:13px!important}
+.main-banner .banner-email{font-size:9px!important}
+.main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:4px 6px!important;font-size:9px!important;letter-spacing:.3px!important}
+}
+`;
 
 function buildPage(fragmentPath) {
   const frag = readFileSync(fragmentPath, "utf8");
@@ -34,24 +63,22 @@ function buildPage(fragmentPath) {
 
   let html = readFileSync(TEMPLATE_PATH, "utf8");
 
-  // sanity: template markers
-  for (const marker of ['<main data-pagefind-body>', "</main>", "<!-- EXPLORE_V2 -->", "inquiry-modal", "sticky-mobile-cta"]) {
+  for (const marker of ["<main data-pagefind-body>", "</main>", "<!-- EXPLORE_V2 -->", "inquiry-modal", "sticky-mobile-cta"]) {
     if (!html.includes(marker)) throw new Error("Template missing marker: " + marker);
   }
 
   const OLD_URL = "https://pensacolamilitaryhousing.com/first-time-military-homebuyer";
   const NEW_URL = "https://pensacolamilitaryhousing.com/" + spec.slug;
 
-  // ---- head ----
-  html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(spec.title)}</title>`);
-  html = html.replace(/<meta name="description" content="[^"]*"\s*\/>/, `<meta name="description" content="${esc(spec.description)}" />`);
-  html = html.replace(/<meta name="keywords" content="[^"]*">/, `<meta name="keywords" content="${esc(spec.keywords)}">`);
+  // ---- head (function replacements — content may contain "$n" patterns) ----
+  html = html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${esc(spec.title)}</title>`);
+  html = html.replace(/<meta name="description" content="[^"]*"\s*\/>/, () => `<meta name="description" content="${esc(spec.description)}" />`);
+  html = html.replace(/<meta name="keywords" content="[^"]*">/, () => `<meta name="keywords" content="${esc(spec.keywords)}">`);
   html = html.split(OLD_URL).join(NEW_URL);
   html = html.replace(/\/og\/first-time-military-homebuyer\.png/g, `/og/${spec.slug}.png`);
-  html = html.replace(/<meta property="og:title" content="[^"]*"\s*\/>/, `<meta property="og:title" content="${esc(spec.title)}" />`);
-  html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/>/, `<meta property="og:description" content="${esc(spec.description)}" />`);
+  html = html.replace(/<meta property="og:title" content="[^"]*"\s*\/>/, () => `<meta property="og:title" content="${esc(spec.title)}" />`);
+  html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/>/, () => `<meta property="og:description" content="${esc(spec.description)}" />`);
 
-  // Article JSON-LD: headline, description, dates (function replacements — content may contain "$n")
   html = html.replace(/("@type":"Article","headline":")[^"]*(")/, (_, a, b) => a + spec.articleHeadline.replace(/"/g, '\\"') + b);
   html = html.replace(/("@type":"Article","headline":"[^"]*","description":")[^"]*(")/, (_, a, b) => a + spec.description.replace(/"/g, '\\"') + b);
   html = html.replace(/"datePublished":"[^"]*"/, `"datePublished":"${TODAY_ISO}"`);
@@ -59,26 +86,27 @@ function buildPage(fragmentPath) {
   html = html.replace(/<meta property="article:published_time" content="[^"]*"\s*\/>/, `<meta property="article:published_time" content="${TODAY_ISO}T00:00:00Z" />`);
   html = html.replace(/<meta property="article:modified_time" content="[^"]*"\s*\/>/, `<meta property="article:modified_time" content="${TODAY_ISO}T00:00:00Z" />`);
 
-  // Breadcrumb: position-3 name
-  html = html.replace(/("@type":"ListItem","position":3,"name":")[^"]*(")/, `$1${spec.breadcrumbName.replace(/"/g, '\\"')}$2`);
+  html = html.replace(/("@type":"ListItem","position":3,"name":")[^"]*(")/, (_, a, b) => a + spec.breadcrumbName.replace(/"/g, '\\"') + b);
 
-  // FAQPage JSON-LD: replace existing block (or drop if no faq)
   const faqLd = spec.faq && spec.faq.length
     ? `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[${spec.faq.map(f => `{"@type":"Question","name":${jesc(f.q)},"acceptedAnswer":{"@type":"Answer","text":${jesc(f.a.replace(/<[^>]+>/g, ""))}}}`).join(",")}]}`
     : null;
-  html = html.replace(/<script type="application\/ld\+json">\s*\{"@context":"https:\/\/schema\.org","@type":"FAQPage"[\s\S]*?<\/script>/, faqLd ? `<script type="application/ld+json">\n${faqLd}\n</script>` : "");
+  html = html.replace(/<script type="application\/ld\+json">\s*\{"@context":"https:\/\/schema\.org","@type":"FAQPage"[\s\S]*?<\/script>/, () => faqLd ? `<script type="application/ld+json">\n${faqLd}\n</script>` : "");
 
-  // header h1 + lead
-  html = html.replace(/<h1>[\s\S]*?<\/h1>/, `<h1>${spec.h1}</h1>`);
-  html = html.replace(/<p class="lead">[\s\S]*?<\/p>/, `<p class="lead">${spec.lead}</p>`);
+  html = html.replace(/<h1>[\s\S]*?<\/h1>/, () => `<h1>${spec.h1}</h1>`);
+  html = html.replace(/<p class="lead">[\s\S]*?<\/p>/, () => `<p class="lead">${spec.lead}</p>`);
+
+  if (!html.includes("/*BAH_TABLE_CSS*/")) {
+    html = html.replace("</style>", BAH_TABLE_CSS + "</style>");
+  }
 
   // ---- main ----
   const mainStart = html.indexOf("<main data-pagefind-body>");
   const mainEnd = html.indexOf("</main>");
   const oldMain = html.slice(mainStart + "<main data-pagefind-body>".length, mainEnd);
 
-  // reuse template author-card with refreshed date — take the WHOLE line (the lazy
-  // </div></div> regex used previously stopped one close-tag short and unbalanced the page)
+  // Author-card: take the WHOLE line and assert tag balance (a lazy </div></div>
+  // regex once stopped one close-tag short and unbalanced every generated page).
   const acLine = oldMain.split("\n").find((l) => l.includes('class="author-card"'));
   if (!acLine) throw new Error("No author-card in template main");
   const openDivs = (acLine.match(/<div\b/g) || []).length;
@@ -86,7 +114,7 @@ function buildPage(fragmentPath) {
   if (openDivs !== closeDivs) throw new Error(`author-card line unbalanced: ${openDivs} open vs ${closeDivs} close`);
   const authorCard = acLine.trim().replace(/Reviewed &amp; updated &middot; [A-Za-z]+ \d{4}/, `Reviewed &amp; updated &middot; ${MONTH_YEAR}`);
 
-  // reuse template Explore grid verbatim — minus the template's own Related Guides block
+  // Explore grid verbatim — minus the template's own Related Guides block
   const exMatch = /<!-- EXPLORE_V2 -->[\s\S]*?<!-- \/EXPLORE_V2 -->/.exec(oldMain);
   if (!exMatch) throw new Error("No explore grid in template main");
   const explore = exMatch[0].replace(/<!-- RELATED_GUIDES_START -->[\s\S]*?<!-- RELATED_GUIDES_END -->\s*/, "");
@@ -106,14 +134,16 @@ function buildPage(fragmentPath) {
   const newMain = `\n${authorCard}\n${figure}${mainHTML}${faqVisible}${related}\n${explore}\n`;
   html = html.slice(0, mainStart + "<main data-pagefind-body>".length) + newMain + html.slice(mainEnd);
 
-  // footer stamps
   html = html.replace(/Last updated: [A-Za-z]+ \d{1,2}, \d{4}/, `Last updated: ${TODAY_LONG}`);
   html = html.replace(/Content last verified: [A-Za-z]+ \d{4}/, `Content last verified: ${MONTH_YEAR}`);
 
-  const outPath = ROOT + "public/" + spec.slug + ".html";
-  writeFileSync(outPath, html);
+  // final guard: generated page must have balanced div tags
+  const totalOpen = (html.match(/<div\b/g) || []).length;
+  const totalClose = (html.match(/<\/div>/g) || []).length;
+  if (totalOpen !== totalClose) throw new Error(`${spec.slug}: unbalanced divs (${totalOpen} open vs ${totalClose} close) — refusing to write`);
 
-  // sitemap entry
+  writeFileSync(ROOT + "public/" + spec.slug + ".html", html);
+
   const smPath = ROOT + "public/sitemap.xml";
   let sm = readFileSync(smPath, "utf8");
   if (!sm.includes(NEW_URL + "<")) {

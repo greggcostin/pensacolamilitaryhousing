@@ -203,6 +203,30 @@ footer a{color:var(--gold)}
 .inq-cta .ir{display:flex;flex-wrap:wrap;gap:12px}
 .inq-cta .ip{background:var(--gold);color:var(--ink);border:none;padding:13px 22px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--sans);letter-spacing:.3px;text-decoration:none;display:inline-flex;align-items:center}
 .inq-cta .il{display:inline-flex;align-items:center;padding:13px 22px;border-radius:8px;border:1px solid var(--gold-line);color:var(--gold);text-decoration:none;font-weight:600;font-size:14px;font-family:var(--sans)}
+
+/*BAH_TABLE_CSS*/
+.bah-title{margin:1.25rem 0 .5rem;color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.bah-wrap{border:1px solid var(--hair);border-radius:10px;overflow:hidden;overflow-x:auto;margin:1rem 0}
+.bah-wrap>table{margin:0;border:none;border-radius:0}
+.bah-table{width:100%;border-collapse:collapse;min-width:500px;font-size:14px}
+.bah-table thead th{background:var(--panel);color:var(--gold);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:11px;padding:12px 16px;text-align:left;border-bottom:1px solid var(--hair)}
+.bah-table tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+.bah-table tbody td{padding:10px 16px;border-bottom:1px solid var(--hair);color:var(--text)}
+.bah-table tbody td:first-child{font-weight:500;color:#fff}
+.bah-table tbody td:nth-child(2){color:var(--gold);font-weight:600}
+@media(max-width:900px){.bah-wrap{border-radius:8px}.bah-table{font-size:13px}.bah-table thead th,.bah-table tbody td{padding:9px 10px}}
+@media(max-width:480px){.bah-table{font-size:12px;min-width:320px}.bah-table thead th{font-size:10px;padding:8px 8px}.bah-table tbody td{padding:8px 8px}}
+/*PHONE_BANNER_CSS — small-phone banner shrink the template page was missing (nowrap email forced 38px sideways scroll under 480px)*/
+@media(max-width:480px){
+main{padding:24px 14px 14px!important}
+header{padding:32px 14px 22px!important}
+h1{font-size:clamp(22px,7vw,30px)!important}
+h2{font-size:19px!important}
+.main-banner .banner-lrr img,.main-banner .banner-logo img{height:44px!important}
+.main-banner .banner-phone{font-size:13px!important}
+.main-banner .banner-email{font-size:9px!important}
+.main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:4px 6px!important;font-size:9px!important;letter-spacing:.3px!important}
+}
 </style>
 <!-- Microsoft Clarity (heatmaps + session recordings) -->
 <script type="text/javascript">

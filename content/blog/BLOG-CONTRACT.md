@@ -51,10 +51,13 @@ PAGE-->
    post makes factual claims.
 9. **Never fabricate**: prices, rates, school grades, laws, or client stories. Hedge or omit.
 10. **NO EM DASHES: standing rule (Gregg, Aug 2026).** Never use the em dash character or
-    `&mdash;` anywhere in a post: not in the title, lead, excerpt, FAQ answers, or body.
-    Rewrite with commas, colons, periods, or parentheses; use plain hyphens for ranges
-    ("$280K-$315K"). Do not substitute double hyphens. The factory refuses to build any
-    fragment containing one.
+    `&mdash;` anywhere in a post's prose: not in the title, lead, excerpt, FAQ answers,
+    or body. Rewrite with commas, colons, periods, or parentheses; use plain hyphens for
+    ranges ("$280K-$315K"). Do not substitute double hyphens or numeric entities. The
+    factory refuses to build any fragment containing one. SOLE EXCEPTION: the
+    `data-inquiry-type="..."` attribute value must match the contact worker's exact
+    strings, which contain an em dash (e.g. "PCS / Relocation — Buying"); write the
+    literal character there, never an entity workaround.
 
 ## SEO checklist — standing rule, every post (factory enforces the starred items)
 
@@ -62,6 +65,9 @@ PAGE-->
   H1, in the first 100 words of the body, and reads naturally in the slug.
 - ★ Title ≤65 chars; meta description 120-165 chars containing the primary keyword.
 - ★ 6+ internal links minimum (spec above says 6-12; mega-guides 25+).
+- ★ Body 1,100+ words minimum (decision posts 1,500-2,500; mega-guides 4,000+). Depth means
+  covering the full question-space a searcher has, never padding.
+- ★ 4+ FAQ items minimum (6-10 for guides), phrased like People-Also-Ask questions.
 - H2s are question-shaped and match real search queries; each opens with a 40-80 word
   direct answer (this is both the AI-citation format and the featured-snippet format).
 - Secondary keywords appear in at least one H2 each; no keyword stuffing — natural prose.

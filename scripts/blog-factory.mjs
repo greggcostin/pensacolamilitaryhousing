@@ -66,11 +66,14 @@ h2{font-size:19px!important}
 
 function loadFragment(path) {
   const frag = readFileSync(path, "utf8");
-  // STANDING RULE (Gregg, Aug 2026): no em dashes anywhere in blog content.
+  // STANDING RULE (Gregg, Aug 2026): no em dashes anywhere in blog PROSE.
   // Rewrite with commas, colons, periods, parentheses, or plain hyphens for ranges.
-  if (frag.includes("—") || frag.includes("&mdash;")) {
-    const n = (frag.match(/—|&mdash;/g) || []).length;
-    throw new Error(`${path}: contains ${n} em dash(es). Standing rule: blogs never use em dashes. Rewrite them before building.`);
+  // Sole exception: data-inquiry-type attribute values, which must exactly match the
+  // contact worker's stage-map strings (those contain an em dash by contract).
+  const prose = frag.replace(/data-inquiry-type="[^"]*"/g, "").replace(/&#8212;/g, "—");
+  if (prose.includes("—") || prose.includes("&mdash;")) {
+    const n = (prose.match(/—|&mdash;/g) || []).length;
+    throw new Error(`${path}: contains ${n} em dash(es) in prose. Standing rule: blogs never use em dashes. Rewrite them before building.`);
   }
   const m = /<!--PAGE\s*([\s\S]*?)\s*PAGE-->/m.exec(frag);
   if (!m) throw new Error("No PAGE json block in " + path);
@@ -88,6 +91,10 @@ function loadFragment(path) {
   if (!inTitle) console.warn(`  WARN ${spec.slug}: primary keyword "${spec.targetKeywords[0]}" not evident in title`);
   const links = (spec.body.match(/href="\//g) || []).length;
   if (links < 6) throw new Error(`${path}: only ${links} internal links (SEO standing rule: 6+)`);
+  // Depth gates (standing rule): a post must be a real article, not a teaser.
+  const words = spec.body.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+  if (words < 1100) throw new Error(`${path}: body is ${words} words (standing rule: 1,100+ — cover the full question-space)`);
+  if (!spec.faq || spec.faq.length < 4) throw new Error(`${path}: ${spec.faq ? spec.faq.length : 0} FAQ items (standing rule: 4+, PAA-style)`);
   spec.dateModified = spec.dateModified || spec.datePublished;
   return spec;
 }

@@ -2311,7 +2311,6 @@ const NeighborhoodsPage = ({ go }) => {
   );
 };
 
-const BLOG_API = "https://costin-blog.gregg-costin.workers.dev";
 
 const STARTER_POSTS = [
   {
@@ -2360,18 +2359,15 @@ const STARTER_POSTS = [
 
 const BlogPage = ({ go }) => {
   const [posts, setPosts] = useState(STARTER_POSTS);
-  const [selectedPost, setSelectedPost] = useState(null);
   const [activeCategory, setActiveCategory] = useState("All");
 
+  // Posts live as static pages at /blog/<slug>; /blog/index.json is the manifest
+  // the blog factory regenerates on every build. Fall back to the baked-in list.
   useEffect(() => {
-    fetch(BLOG_API + "/api/posts")
-      .then(r => r.ok ? r.json() : [])
-      .then(apiPosts => {
-        if (Array.isArray(apiPosts) && apiPosts.length > 0) {
-          const slugs = new Set(STARTER_POSTS.map(p => p.slug));
-          const newPosts = apiPosts.filter(p => !slugs.has(p.slug));
-          setPosts([...newPosts, ...STARTER_POSTS]);
-        }
+    fetch("/blog/index.json")
+      .then(r => r.ok ? r.json() : null)
+      .then(manifest => {
+        if (Array.isArray(manifest) && manifest.length > 0) setPosts(manifest);
       })
       .catch(() => {});
   }, []);
@@ -2379,41 +2375,6 @@ const BlogPage = ({ go }) => {
   const categories = ["All", ...new Set(posts.map(p => p.category))];
   const filtered = activeCategory === "All" ? posts : posts.filter(p => p.category === activeCategory);
   const formatDate = (d) => new Date(d + "T12:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-
-  if (selectedPost) {
-    const post = posts.find(p => p.slug === selectedPost);
-    if (!post) return null;
-    return (
-      <PageWrapper>
-        <section style={{ background: `linear-gradient(135deg, ${C.panel}, #1a2332)`, padding: "60px 24px", borderBottom: `1px solid ${C.hairline}` }}>
-          <div style={{ maxWidth: 760, margin: "0 auto" }}>
-            <button onClick={() => setSelectedPost(null)} style={{ background: "none", border: "none", color: C.gold, fontSize: 13, cursor: "pointer", padding: 0, marginBottom: 20, fontFamily: SS, letterSpacing: 1 }}>← Back to Blog</button>
-            <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 16, flexWrap: "wrap" }}>
-              <span style={{ background: C.goldTint, border: `1px solid ${C.goldLine}`, color: C.gold, fontSize: 11, fontWeight: 600, padding: "4px 12px", borderRadius: 4, letterSpacing: 1, textTransform: "uppercase" }}>{post.category}</span>
-              <span style={{ color: C.muted, fontSize: 13 }}>{formatDate(post.date)}</span>
-              <span style={{ color: C.muted, fontSize: 13 }}>{post.readTime} read</span>
-            </div>
-            <h1 style={{ fontFamily: SF, fontSize: "clamp(28px,4vw,42px)", color: "#fff", lineHeight: 1.2, marginBottom: 0, fontWeight: 500 }}>{post.title}</h1>
-          </div>
-        </section>
-        <Content>
-          <div style={{ maxWidth: 760, margin: "0 auto" }}>
-            {post.body.split("\n\n").map((para, i) => (
-              <p key={i} style={{ color: "#ccc", fontSize: 15.5, lineHeight: 1.9, marginBottom: 16 }}>{para}</p>
-            ))}
-          </div>
-          <div style={{ maxWidth: 760, margin: "40px auto 0", padding: 28, background: C.elevated, border: `1px solid ${C.hairline}`, borderRadius: 12 }}>
-            <p style={{ color: "#fff", fontSize: 16, fontWeight: 600, marginBottom: 8, fontFamily: SF }}>Questions about this topic?</p>
-            <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.7, marginBottom: 16 }}>Call or text me at (850) 266-5005 and let's talk about your specific situation.</p>
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <a href="tel:8502665005" style={{ background: C.gold, color: C.ink, border: "none", padding: "12px 24px", fontSize: 12, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", textDecoration: "none", fontFamily: SS }}>Call 850-266-5005</a>
-              <button onClick={() => { setSelectedPost(null); go("contact"); }} style={{ background: "transparent", color: C.gold, border: `1px solid ${C.goldLine}`, padding: "12px 24px", fontSize: 12, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", cursor: "pointer", fontFamily: SS }}>Send a Message</button>
-            </div>
-          </div>
-        </Content>
-      </PageWrapper>
-    );
-  }
 
   return (
     <PageWrapper>
@@ -2433,9 +2394,9 @@ const BlogPage = ({ go }) => {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           {filtered.map(post => (
-            <div key={post.slug} onClick={() => setSelectedPost(post.slug)} style={{
+            <a key={post.slug} href={post.url || `/blog/${post.slug}`} style={{
               background: C.elevated, border: `1px solid ${C.hairline}`, borderRadius: 12,
-              padding: 28, cursor: "pointer",
+              padding: 28, cursor: "pointer", display: "block", textDecoration: "none",
             }}
               onMouseEnter={e => e.currentTarget.style.borderColor = C.goldLine}
               onMouseLeave={e => e.currentTarget.style.borderColor = C.hairline}
@@ -2448,7 +2409,7 @@ const BlogPage = ({ go }) => {
               <h3 style={{ fontFamily: SF, color: "#fff", fontSize: 22, fontWeight: 500, margin: "0 0 10px", lineHeight: 1.3 }}>{post.title}</h3>
               <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.7, margin: 0 }}>{post.excerpt}</p>
               <div style={{ marginTop: 16, color: C.gold, fontSize: 12, letterSpacing: 2, textTransform: "uppercase", fontFamily: SS }}>Read Article →</div>
-            </div>
+            </a>
           ))}
         </div>
       </Content>

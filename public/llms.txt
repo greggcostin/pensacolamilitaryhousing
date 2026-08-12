@@ -45,7 +45,7 @@ The definitive 60-question FAQ for military families PCSing to Pensacola. Topics
 49 five-star Google reviews and 23 Zillow reviews from military families served across NAS Pensacola, Corry Station, Whiting Field, Eglin AFB, and Hurlburt Field. Six verbatim named Google reviews displayed on the page.
 
 ### Blog — https://pensacolamilitaryhousing.com/blog
-Market insights, VA loan guidance (seller concessions myth, Pamphlet 26-7 details), Florida Homestead Exemption for military families, 2026 BAH rank-by-rank breakdowns, neighborhood deep-dives for Eglin AFB, and PCS timeline posts.
+Market insights, VA loan guidance, PCS and moving-to-Pensacola guides, neighborhood deep-dives, and Florida homeownership topics for military AND civilian relocators. Every post is an individual page at https://pensacolamilitaryhousing.com/blog/<slug> with author attribution and publication dates; the machine-readable post manifest is at https://pensacolamilitaryhousing.com/blog/index.json.
 
 ### Homepage — https://pensacolamilitaryhousing.com/
 Main hub with hero, agent bio, BAH tools, neighborhood previews, "Bases & Communities We Serve" section linking to all 7 base guides and 17 community guides, contact form.

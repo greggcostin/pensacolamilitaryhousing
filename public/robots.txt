@@ -56,6 +56,14 @@ User-agent: ClaudeBot
 Allow: /
 Disallow: /downloads/
 
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /downloads/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /downloads/
+
 User-agent: Claude-Web
 Allow: /
 Disallow: /downloads/

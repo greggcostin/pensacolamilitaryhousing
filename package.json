@@ -11,7 +11,8 @@
         "indexnow": "node --env-file-if-exists=.env.local scripts/submit-indexnow.mjs",
         "og-images": "node scripts/generate-og-images.mjs",
         "optimize-images": "node scripts/optimize-images.mjs",
-        "modern-images": "node scripts/generate-modern-images.mjs"
+        "modern-images": "node scripts/generate-modern-images.mjs",
+        "blog": "node scripts/blog-factory.mjs"
     },
     "dependencies": {
         "react": "^18.3.1",

@@ -1,0 +1,100 @@
+{
+  "posts": {
+    "bah-2026-pensacola-what-can-you-afford": {
+      "title": "2026 BAH for Pensacola: What Can You Actually Afford?",
+      "category": "BAH",
+      "datePublished": "2026-03-20",
+      "dateModified": "2026-03-20",
+      "targetKeywords": [
+        "2026 BAH Pensacola",
+        "BAH what can you afford",
+        "BAH home buying"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+      "metrics": []
+    },
+    "best-neighborhoods-eglin-afb-families": {
+      "title": "Best Neighborhoods for Eglin AFB Families in 2026: Niceville, Crestview, or Fort Walton Beach?",
+      "category": "Neighborhoods",
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-28",
+      "targetKeywords": [
+        "best neighborhoods Eglin AFB",
+        "Niceville vs Crestview vs Fort Walton Beach"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
+      "metrics": []
+    },
+    "florida-homestead-exemption-military": {
+      "title": "Florida Homestead Exemption: The Military Family's Guide to Saving Thousands on Property Taxes",
+      "category": "Homestead",
+      "datePublished": "2026-04-05",
+      "dateModified": "2026-04-05",
+      "targetKeywords": [
+        "Florida homestead exemption military",
+        "homestead exemption Pensacola"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+      "metrics": []
+    },
+    "pcs-to-pensacola-2026-complete-guide": {
+      "title": "PCS to Pensacola in 2026: What Military Families Need to Know Before They Move",
+      "category": "PCS",
+      "datePublished": "2026-04-15",
+      "dateModified": "2026-04-15",
+      "targetKeywords": [
+        "PCS to Pensacola",
+        "moving to Pensacola military",
+        "NAS Pensacola PCS guide"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide",
+      "metrics": []
+    },
+    "personal-property-activity-pcs-2026": {
+      "title": "What the New Personal Property Activity (PPA) Means for Your 2026 PCS to Pensacola",
+      "category": "PCS",
+      "datePublished": "2026-06-10",
+      "dateModified": "2026-06-10",
+      "targetKeywords": [
+        "personal property activity",
+        "PPA military move",
+        "PCS household goods 2026",
+        "HomeSafe replacement"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
+      "metrics": []
+    },
+    "va-loan-seller-concessions-truth": {
+      "title": "The VA Loan Seller Concessions Myth That's Costing Military Buyers Thousands",
+      "category": "VA Loans",
+      "datePublished": "2026-04-10",
+      "dateModified": "2026-04-10",
+      "targetKeywords": [
+        "VA loan seller concessions",
+        "VA loan myths",
+        "seller concessions Florida"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+      "metrics": []
+    },
+    "moving-to-pensacola-2026-guide": {
+      "title": "Moving to Pensacola, FL: The Complete 2026 Guide",
+      "category": "Living Here",
+      "datePublished": "2026-08-12",
+      "dateModified": "2026-08-12",
+      "targetKeywords": [
+        "moving to Pensacola FL",
+        "living in Pensacola",
+        "is Pensacola a good place to live"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide",
+      "metrics": []
+    }
+  },
+  "runs": [],
+  "config": {
+    "autoPublish": false,
+    "maxPostsPerRun": 1,
+    "cadenceNote": "weekly Tue 6am via scheduled task blog-engine-weekly; strategy docs/content-strategy.md"
+  }
+}

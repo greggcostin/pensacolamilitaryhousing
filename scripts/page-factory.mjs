@@ -77,10 +77,14 @@ function buildPage(fragmentPath) {
   const mainEnd = html.indexOf("</main>");
   const oldMain = html.slice(mainStart + "<main data-pagefind-body>".length, mainEnd);
 
-  // reuse template author-card with refreshed date
-  const acMatch = /<div class="author-card">[\s\S]*?<\/div><\/div>/.exec(oldMain);
-  if (!acMatch) throw new Error("No author-card in template main");
-  const authorCard = acMatch[0].replace(/Reviewed &amp; updated &middot; [A-Za-z]+ \d{4}/, `Reviewed &amp; updated &middot; ${MONTH_YEAR}`);
+  // reuse template author-card with refreshed date — take the WHOLE line (the lazy
+  // </div></div> regex used previously stopped one close-tag short and unbalanced the page)
+  const acLine = oldMain.split("\n").find((l) => l.includes('class="author-card"'));
+  if (!acLine) throw new Error("No author-card in template main");
+  const openDivs = (acLine.match(/<div\b/g) || []).length;
+  const closeDivs = (acLine.match(/<\/div>/g) || []).length;
+  if (openDivs !== closeDivs) throw new Error(`author-card line unbalanced: ${openDivs} open vs ${closeDivs} close`);
+  const authorCard = acLine.trim().replace(/Reviewed &amp; updated &middot; [A-Za-z]+ \d{4}/, `Reviewed &amp; updated &middot; ${MONTH_YEAR}`);
 
   // reuse template Explore grid verbatim — minus the template's own Related Guides block
   const exMatch = /<!-- EXPLORE_V2 -->[\s\S]*?<!-- \/EXPLORE_V2 -->/.exec(oldMain);

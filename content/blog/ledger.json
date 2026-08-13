@@ -108,6 +108,11 @@
   "config": {
     "autoPublish": false,
     "maxPostsPerRun": 1,
-    "cadenceNote": "weekly Tue 6am via scheduled task blog-engine-weekly; strategy docs/content-strategy.md"
+    "cadenceNote": "weekly Tue 6am via scheduled task blog-engine-weekly; strategy docs/content-strategy.md",
+    "models": {
+      "research": "opus",
+      "write": "fable",
+      "note": "Standing order Aug 13 2026: Opus researches (rigor, source discipline), Fable writes from the pack (prose). Set by Gregg after A/B testing."
+    }
   }
 }

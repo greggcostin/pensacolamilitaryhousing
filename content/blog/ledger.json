@@ -139,6 +139,7 @@
       "research": "opus",
       "write": "fable",
       "note": "Standing order Aug 13 2026: Opus researches (rigor, source discipline), Fable writes from the pack (prose). Set by Gregg after A/B testing."
-    }
+    },
+    "canonFixes": "staged"
   }
 }

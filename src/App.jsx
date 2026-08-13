@@ -304,6 +304,7 @@ const Nav = ({ current, go }) => {
           )}
         </div>
         <Tab id="calculator" label="Calculators" />
+        <Tab id="blog" label="Blog" />
         <ExtTab href="/reviews" label="Reviews" />
         <Tab id="contact" label="Contact" />
         <button

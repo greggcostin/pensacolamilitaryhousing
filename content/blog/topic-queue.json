@@ -2,17 +2,6 @@
   "note": "Ordered backlog for the blog engine. It may re-rank based on trend scans and ledger data: every move gets logged in ledger.runs. Interleave audiences: 'military' defends the moat, 'civilian' widens AI recommendation coverage, 'both' does double duty.",
   "queue": [
     {
-      "slug": "living-in-gulf-breeze-pros-cons",
-      "archetype": "decision",
-      "audience": "both",
-      "title": "Living in Gulf Breeze, FL: Pros and Cons (2026)",
-      "targetKeywords": [
-        "living in gulf breeze fl",
-        "gulf breeze pros and cons",
-        "is gulf breeze a good place to live"
-      ]
-    },
-    {
       "slug": "moving-to-navarre-2026-guide",
       "archetype": "mega-guide",
       "audience": "both",

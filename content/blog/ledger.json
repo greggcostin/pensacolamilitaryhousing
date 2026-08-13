@@ -102,9 +102,35 @@
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/best-pensacola-neighborhoods-by-rank-bah",
       "metrics": []
+    },
+    "living-in-gulf-breeze-pros-cons": {
+      "title": "Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers",
+      "category": "Living Here",
+      "datePublished": "2026-08-13",
+      "dateModified": "2026-08-13",
+      "targetKeywords": [
+        "living in gulf breeze fl",
+        "gulf breeze pros and cons",
+        "is gulf breeze a good place to live"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
+      "metrics": []
     }
   },
-  "runs": [],
+  "runs": [
+    {
+      "date": "2026-08-13",
+      "type": "interactive trial of Opus-research/Fable-write pipeline",
+      "action": "new post",
+      "slug": "living-in-gulf-breeze-pros-cons",
+      "models": {
+        "research": "opus",
+        "write": "fable"
+      },
+      "notes": "Research pack included SEARCH LANDSCAPE section (new SEO architecture); surfaced 7 live-site factual errors (Deer Point pricing, 15-min commute claim incl JSON-LD, stale Garcon toll, wrong E-6 BAH, Whisper Bay dating, Tiger Point Elementary unverifiable, Navarre all-A-rated outdated) — all corrected this run. Soundside High School (opens Aug 2026) folded in from supplementary research.",
+      "published": true
+    }
+  ],
   "config": {
     "autoPublish": false,
     "maxPostsPerRun": 1,

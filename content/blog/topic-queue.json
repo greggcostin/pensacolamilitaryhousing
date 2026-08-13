@@ -1,21 +1,169 @@
 {
   "note": "Ordered backlog for the blog engine. It may re-rank based on trend scans and ledger data: every move gets logged in ledger.runs. Interleave audiences: 'military' defends the moat, 'civilian' widens AI recommendation coverage, 'both' does double duty.",
   "queue": [
-    { "slug": "living-in-gulf-breeze-pros-cons", "archetype": "decision", "audience": "both", "title": "Living in Gulf Breeze, FL: Pros and Cons (2026)", "targetKeywords": ["living in gulf breeze fl", "gulf breeze pros and cons", "is gulf breeze a good place to live"] },
-    { "slug": "best-pensacola-neighborhoods-by-rank-bah", "archetype": "decision", "audience": "military", "title": "Best Pensacola Neighborhoods by Rank & BAH (E-1 to O-6)", "targetKeywords": ["best neighborhoods pensacola military", "where to live E-5 pensacola", "neighborhoods by BAH"] },
-    { "slug": "moving-to-navarre-2026-guide", "archetype": "mega-guide", "audience": "both", "title": "Moving to Navarre, FL: The 2026 Guide", "targetKeywords": ["moving to navarre fl", "living in navarre florida", "is navarre a good place to live"] },
-    { "slug": "pensacola-cost-of-living-2026", "archetype": "data-study", "audience": "civilian", "title": "The Real Cost of Living in Pensacola (2026 Numbers)", "targetKeywords": ["pensacola cost of living", "how expensive is pensacola", "pensacola vs national cost of living"] },
-    { "slug": "bah-vs-real-cost-by-zip-2026", "archetype": "data-study", "audience": "military", "title": "BAH vs. the Real Cost of Owning, by Pensacola ZIP (2026)", "targetKeywords": ["does bah cover a mortgage pensacola", "bah vs rent pensacola"], "note": "THE citable press asset: pitch PNJ/WEAR/military pubs on publish" },
-    { "slug": "retiring-in-pensacola-guide", "archetype": "mega-guide", "audience": "civilian", "title": "Retiring in Pensacola: Taxes, Healthcare, and Where to Live (2026)", "targetKeywords": ["retiring in pensacola", "is pensacola good for retirees", "best places to retire florida panhandle"] },
-    { "slug": "moving-to-pace-2026-guide", "archetype": "mega-guide", "audience": "both", "title": "Moving to Pace, FL: The 2026 Guide", "targetKeywords": ["moving to pace fl", "living in pace florida", "pace fl new construction"] },
-    { "slug": "pensacola-first-time-homebuyer-2026", "archetype": "decision", "audience": "civilian", "title": "First-Time Homebuyer in Pensacola: The 2026 Playbook", "targetKeywords": ["first time home buyer pensacola", "pensacola down payment assistance", "hometown heroes program pensacola"] },
-    { "slug": "pensacola-housing-market-q3-2026", "archetype": "living-stats", "audience": "both", "title": "Pensacola Housing Market Report: Q3 2026", "targetKeywords": ["pensacola housing market", "pensacola home prices 2026", "pensacola market forecast"], "note": "quarterly franchise: becomes a refreshed series" },
-    { "slug": "moving-to-milton-2026-guide", "archetype": "mega-guide", "audience": "both", "title": "Moving to Milton, FL: The 2026 Guide", "targetKeywords": ["moving to milton fl", "living in milton florida"] },
-    { "slug": "florida-insurance-survival-guide-2026", "archetype": "decision", "audience": "civilian", "title": "Florida Home Insurance in 2026: What Pensacola Buyers Actually Pay", "targetKeywords": ["florida home insurance cost 2026", "pensacola homeowners insurance", "citizens insurance florida"] },
-    { "slug": "moving-to-crestview-2026-guide", "archetype": "mega-guide", "audience": "both", "title": "Moving to Crestview, FL: The 2026 Guide", "targetKeywords": ["moving to crestview fl", "living in crestview florida"] },
-    { "slug": "pensacola-vs-destin-vs-fort-walton", "archetype": "decision", "audience": "civilian", "title": "Pensacola vs. Destin vs. Fort Walton Beach: Where Should You Actually Live?", "targetKeywords": ["pensacola vs destin", "pensacola vs fort walton beach", "emerald coast where to live"] },
-    { "slug": "remote-workers-moving-to-pensacola", "archetype": "decision", "audience": "civilian", "title": "Remote Workers Are Moving to Pensacola: Costs, Internet, and the Catch", "targetKeywords": ["remote work pensacola", "moving to pensacola remote worker", "cheapest florida beach towns remote work"] },
-    { "slug": "va-loan-assumption-buyers-guide", "archetype": "decision", "audience": "both", "title": "Assuming a VA Loan in 2026: The Buyer's Guide to 3% Rates (Civilians Can Too)", "targetKeywords": ["assume a va loan", "va loan assumption civilian", "assumable mortgage pensacola"] },
-    { "slug": "pensacola-investment-property-2026", "archetype": "decision", "audience": "civilian", "title": "Buying an Investment Property in Pensacola: 2026 Rent Math by Neighborhood", "targetKeywords": ["pensacola investment property", "pensacola rental property roi", "military town rental investing"] }
+    {
+      "slug": "living-in-gulf-breeze-pros-cons",
+      "archetype": "decision",
+      "audience": "both",
+      "title": "Living in Gulf Breeze, FL: Pros and Cons (2026)",
+      "targetKeywords": [
+        "living in gulf breeze fl",
+        "gulf breeze pros and cons",
+        "is gulf breeze a good place to live"
+      ]
+    },
+    {
+      "slug": "moving-to-navarre-2026-guide",
+      "archetype": "mega-guide",
+      "audience": "both",
+      "title": "Moving to Navarre, FL: The 2026 Guide",
+      "targetKeywords": [
+        "moving to navarre fl",
+        "living in navarre florida",
+        "is navarre a good place to live"
+      ]
+    },
+    {
+      "slug": "pensacola-cost-of-living-2026",
+      "archetype": "data-study",
+      "audience": "civilian",
+      "title": "The Real Cost of Living in Pensacola (2026 Numbers)",
+      "targetKeywords": [
+        "pensacola cost of living",
+        "how expensive is pensacola",
+        "pensacola vs national cost of living"
+      ]
+    },
+    {
+      "slug": "bah-vs-real-cost-by-zip-2026",
+      "archetype": "data-study",
+      "audience": "military",
+      "title": "BAH vs. the Real Cost of Owning, by Pensacola ZIP (2026)",
+      "targetKeywords": [
+        "does bah cover a mortgage pensacola",
+        "bah vs rent pensacola"
+      ],
+      "note": "THE citable press asset: pitch PNJ/WEAR/military pubs on publish"
+    },
+    {
+      "slug": "retiring-in-pensacola-guide",
+      "archetype": "mega-guide",
+      "audience": "civilian",
+      "title": "Retiring in Pensacola: Taxes, Healthcare, and Where to Live (2026)",
+      "targetKeywords": [
+        "retiring in pensacola",
+        "is pensacola good for retirees",
+        "best places to retire florida panhandle"
+      ]
+    },
+    {
+      "slug": "moving-to-pace-2026-guide",
+      "archetype": "mega-guide",
+      "audience": "both",
+      "title": "Moving to Pace, FL: The 2026 Guide",
+      "targetKeywords": [
+        "moving to pace fl",
+        "living in pace florida",
+        "pace fl new construction"
+      ]
+    },
+    {
+      "slug": "pensacola-first-time-homebuyer-2026",
+      "archetype": "decision",
+      "audience": "civilian",
+      "title": "First-Time Homebuyer in Pensacola: The 2026 Playbook",
+      "targetKeywords": [
+        "first time home buyer pensacola",
+        "pensacola down payment assistance",
+        "hometown heroes program pensacola"
+      ]
+    },
+    {
+      "slug": "pensacola-housing-market-q3-2026",
+      "archetype": "living-stats",
+      "audience": "both",
+      "title": "Pensacola Housing Market Report: Q3 2026",
+      "targetKeywords": [
+        "pensacola housing market",
+        "pensacola home prices 2026",
+        "pensacola market forecast"
+      ],
+      "note": "quarterly franchise: becomes a refreshed series"
+    },
+    {
+      "slug": "moving-to-milton-2026-guide",
+      "archetype": "mega-guide",
+      "audience": "both",
+      "title": "Moving to Milton, FL: The 2026 Guide",
+      "targetKeywords": [
+        "moving to milton fl",
+        "living in milton florida"
+      ]
+    },
+    {
+      "slug": "florida-insurance-survival-guide-2026",
+      "archetype": "decision",
+      "audience": "civilian",
+      "title": "Florida Home Insurance in 2026: What Pensacola Buyers Actually Pay",
+      "targetKeywords": [
+        "florida home insurance cost 2026",
+        "pensacola homeowners insurance",
+        "citizens insurance florida"
+      ]
+    },
+    {
+      "slug": "moving-to-crestview-2026-guide",
+      "archetype": "mega-guide",
+      "audience": "both",
+      "title": "Moving to Crestview, FL: The 2026 Guide",
+      "targetKeywords": [
+        "moving to crestview fl",
+        "living in crestview florida"
+      ]
+    },
+    {
+      "slug": "pensacola-vs-destin-vs-fort-walton",
+      "archetype": "decision",
+      "audience": "civilian",
+      "title": "Pensacola vs. Destin vs. Fort Walton Beach: Where Should You Actually Live?",
+      "targetKeywords": [
+        "pensacola vs destin",
+        "pensacola vs fort walton beach",
+        "emerald coast where to live"
+      ]
+    },
+    {
+      "slug": "remote-workers-moving-to-pensacola",
+      "archetype": "decision",
+      "audience": "civilian",
+      "title": "Remote Workers Are Moving to Pensacola: Costs, Internet, and the Catch",
+      "targetKeywords": [
+        "remote work pensacola",
+        "moving to pensacola remote worker",
+        "cheapest florida beach towns remote work"
+      ]
+    },
+    {
+      "slug": "va-loan-assumption-buyers-guide",
+      "archetype": "decision",
+      "audience": "both",
+      "title": "Assuming a VA Loan in 2026: The Buyer's Guide to 3% Rates (Civilians Can Too)",
+      "targetKeywords": [
+        "assume a va loan",
+        "va loan assumption civilian",
+        "assumable mortgage pensacola"
+      ]
+    },
+    {
+      "slug": "pensacola-investment-property-2026",
+      "archetype": "decision",
+      "audience": "civilian",
+      "title": "Buying an Investment Property in Pensacola: 2026 Rent Math by Neighborhood",
+      "targetKeywords": [
+        "pensacola investment property",
+        "pensacola rental property roi",
+        "military town rental investing"
+      ]
+    }
   ]
 }

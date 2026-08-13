@@ -22,11 +22,34 @@ registers it in `ledger.json`. Run `npm run og-images` after building new posts.
   "excerpt": "Card text for the /blog index (1-2 sentences)",
   "targetKeywords": ["primary query", "secondary query"],   // the engine measures these
   "faq": [{"q": "...", "a": "2-4 sentences, may contain one <a> link"}],
-  "related": [{"href": "/...", "label": "..."}]              // 5-7 existing pages
+  "related": [{"href": "/...", "label": "..."}],             // 5-7 existing pages
+  "figure": {                                    // REQUIRED — factory refuses to build without it
+    "src": "/images/blog/....jpg",               // must exist on disk (fetch-stock-image.mjs or reuse /images/topics|blog|bases|communities)
+    "alt": "literal description of what the photo shows",
+    "caption": "one line tying the image to the post",
+    "pos": "center 30%"                          // optional object-position for the 16:9 crop
+  }
 }
 PAGE-->
 ...body HTML...
 ```
+
+## Images (standing rule, Aug 2026)
+
+- **Every post ships a hero photo** (`figure` above) that is genuinely relevant — the real
+  place, the real aircraft, the real subject. No generic decoration.
+- **Sourcing:** `node scripts/fetch-stock-image.mjs "<query>" <slug>-hero --candidates 3
+  --dir public/images/blog` (commercial-safe licenses only; attribution recorded in
+  `content/blog/image-credits.json`). VIEW candidates with the Read tool before picking —
+  file titles lie. Finalize with `--finalize`, then `npm run modern-images`.
+- **Credits:** the factory auto-appends the license credit to the figcaption from the
+  ledger. CC-BY / CC-BY-SA images MUST keep that visible linked credit; public-domain DoD
+  imagery carries a courtesy "U.S. Navy photo" style line.
+- **Inline figures** for 2,500+ word posts: 1-2 of
+  `<figure class="figure-band"><img src="..." alt="..." loading="lazy"><figcaption>...</figcaption></figure>`
+  at natural section breaks. The factory rewrites them to `<picture>` (AVIF/WebP) + credit
+  form automatically — authors write the plain `<img>`.
+- Captions are prose: the no-em-dash rule applies.
 
 ## Writing spec (non-negotiable — this is what makes posts rank AND get cited by AI)
 

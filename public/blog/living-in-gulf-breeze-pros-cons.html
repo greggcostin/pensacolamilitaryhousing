@@ -244,6 +244,14 @@ h2{font-size:19px!important}
 .post-topmeta .cat{background:var(--gold-tint);border:1px solid var(--gold-line);color:var(--gold);font-size:11px;font-weight:600;padding:4px 12px;border-radius:4px;letter-spacing:1px;text-transform:uppercase}
 .post-topmeta span{color:var(--muted);font-size:13px}
 .backlink{display:inline-block;color:var(--gold);font-size:13px;letter-spacing:1px;margin-bottom:6px;text-decoration:none}
+/*POST_READING_CSS — long-form legibility on the dark scheme: regular weight (300 shimmers
+on dark), 17px, and a ~72ch text column; figures/tables keep the full 900px band.*/
+main p,main ul,main ol,main h2,main h3,main details,main blockquote{max-width:760px;margin-left:auto;margin-right:auto}
+main p{font-size:17px;line-height:1.75;font-weight:400}
+main ul,main ol{font-size:16.5px;line-height:1.7;font-weight:400}
+main li{margin:.4rem 0}
+main details p{font-size:16px}
+@media(max-width:640px){main p{font-size:16.5px}main ul,main ol{font-size:16px}}
 </style>
 <!-- Microsoft Clarity (heatmaps + session recordings) -->
 <script type="text/javascript">
@@ -311,6 +319,7 @@ h2{font-size:19px!important}
 <div class="author-card"><picture><source srcset="/images/gregg-portrait.avif" type="image/avif"><source srcset="/images/gregg-portrait.webp" type="image/webp"><img src="/images/gregg-portrait.jpg" width="60" height="60" alt="Gregg Costin, Realtor and retired U.S. Air Force officer" loading="lazy" decoding="async"></picture><div class="ac-txt"><div class="ac-name">Gregg Costin</div><div class="ac-cred">Retired USAF Combat Systems Officer &middot; Realtor at Levin Rinke Realty (FL &amp; AL) &middot; MRP &middot; ABR &middot; RENE</div><div class="ac-updated">Reviewed &amp; updated &middot; August 2026</div></div></div>
 <p style="text-align:center"><a class="backlink" href="/blog">&larr; All posts</a></p>
 <div class="post-topmeta"><span class="cat">Living Here</span><span>August 13, 2026</span><span>10 min read</span></div>
+<figure class="figure-band"><picture><source srcset="/images/blog/gulf-breeze-bridge.avif" type="image/avif"><source srcset="/images/blog/gulf-breeze-bridge.webp" type="image/webp"><img src="/images/blog/gulf-breeze-bridge.jpg" width="1600" height="900" alt="Pensacola Bay Bridge stretching north across the water from Gulf Breeze, Florida" fetchpriority="high" decoding="async"></picture><figcaption>The Pensacola Bay Bridge: Gulf Breeze's three-mile commute across the bay to downtown Pensacola. Photo: Skarz.</figcaption></figure>
 <p>Every week I get the same question: what does living in Gulf Breeze FL actually cost, and is it worth it? My answer starts with: which Gulf Breeze? The incorporated city on the peninsula, the mainland the county calls unincorporated Gulf Breeze, and the ZIP code that quietly includes Pensacola Beach are three different markets wearing one name. I am a retired USAF Combat Systems Officer, 11 PCS moves, selling on both sides of Pensacola Bay. Street-level detail: my <a href="/communities/gulf-breeze">Gulf Breeze community guide</a>.</p>
 
 <div class="facts">
@@ -366,6 +375,7 @@ h2{font-size:19px!important}
 </div>
 </div>
 
+<figure class="figure-band"><picture><source srcset="/images/blog/pensacola-beach-tower.avif" type="image/avif"><source srcset="/images/blog/pensacola-beach-tower.webp" type="image/webp"><img src="/images/blog/pensacola-beach-tower.jpg" width="1600" height="900" alt="Pensacola Beach beach ball water tower against a blue sky with a palm tree" loading="lazy" decoding="async" style="object-position:center 30%"></picture><figcaption>Cross the Bob Sikes Bridge from Gulf Breeze proper and the beach ball water tower marks your arrival on Pensacola Beach. Photo: <a href="https://commons.wikimedia.org/wiki/File%3ABeach%20Ball%20Water%20Tower.jpg" rel="noopener nofollow" target="_blank">Stepo114</a>, CC BY-SA 3.0.</figcaption></figure>
 <h2>What are the disadvantages of living in Gulf Breeze?</h2>
 <p>Seven real ones: the price premium; a bridge that has already failed once, for nine months; US-98 congestion; thin nightlife and retail; insurance stacking on waterfront addresses; Gulf Coast heat, rain, and hurricanes; and a limited local job base. None is disqualifying. All belong in your math.</p>
 <p>The bridge deserves the full story: I lived it. On September 15, 2020, FDOT closed the Pensacola Bay Bridge ahead of Hurricane Sally; Skanska's construction barges, 27 of 55 unsecured (a judge later ruled negligence), struck the span. It was out roughly nine months, to late May 2021; the five-minute hop became a long loop over Garcon Point. The replacement span (the General Daniel "Chappie" James Jr. Bridge) is six lanes and toll-free, and the fallback is cheaper: Florida took over Garcon Point in 2022 and cut its toll to $2.30 SunPass, $2.75 by plate (September 2025 base rates). The geometry is unchanged: one through road, US-98, one point of failure with a proven failure mode.</p>

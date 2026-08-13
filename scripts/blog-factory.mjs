@@ -28,6 +28,50 @@ const SITE = "https://pensacolamilitaryhousing.com";
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const jesc = (s) => JSON.stringify(String(s));
 
+// License + attribution ledger written by scripts/fetch-stock-image.mjs.
+// CC-BY / CC-BY-SA images MUST show their credit in the visible figcaption;
+// the factory appends it automatically so compliance can't be forgotten.
+const CREDITS_PATH = ROOT + "content/blog/image-credits.json";
+const IMAGE_CREDITS = existsSync(CREDITS_PATH) ? JSON.parse(readFileSync(CREDITS_PATH, "utf8")).images : {};
+
+function creditLine(src) {
+  const e = IMAGE_CREDITS[src];
+  if (!e) return "";
+  const isCC = /^cc\b/i.test(e.license) && !/cc0/i.test(e.license);
+  if (isCC) return ` Photo: <a href="${e.pageUrl}" rel="noopener nofollow" target="_blank">${esc(e.credit)}</a>, ${esc(e.license)}.`;
+  return ` Photo: ${esc(e.credit)}.`;
+}
+
+// Canonical figure markup: AVIF/WebP <picture>, hero eager / inline lazy,
+// credit auto-appended from the ledger when the caption doesn't already carry one.
+function figureHTML(fig, { hero = false } = {}) {
+  const src = fig.src;
+  if (!existsSync(ROOT + "public" + src)) throw new Error(`figure image missing on disk: public${src}`);
+  const avif = src.replace(/\.(jpe?g|png)$/i, ".avif");
+  const webp = src.replace(/\.(jpe?g|png)$/i, ".webp");
+  const load = hero ? `fetchpriority="high"` : `loading="lazy"`;
+  const posStyle = fig.pos ? ` style="object-position:${fig.pos}"` : "";
+  let caption = (fig.caption || "").trim();
+  const cl = creditLine(src);
+  if (cl && !/Photo:/.test(caption)) caption += cl;
+  return `<figure class="figure-band"><picture><source srcset="${avif}" type="image/avif"><source srcset="${webp}" type="image/webp"><img src="${src}" width="1600" height="900" alt="${esc(fig.alt)}" ${load} decoding="async"${posStyle}></picture><figcaption>${caption.trim()}</figcaption></figure>`;
+}
+
+// Rewrite every figure-band in body HTML to the canonical form above, so
+// fragment authors (and the engine) can write a bare <img> and still ship
+// modern formats + license credits.
+function upgradeBodyFigures(body) {
+  return body.replace(/<figure class="figure-band"[^>]*>\s*(?:<picture>[\s\S]*?<\/picture>|<img\b[^>]*>)\s*(?:<figcaption>[\s\S]*?<\/figcaption>)?\s*<\/figure>/g, (m) => {
+    const img = (/<img\b[^>]*>/.exec(m) || [])[0] || "";
+    const src = (/src="([^"]+)"/.exec(img) || [])[1];
+    if (!src) return m;
+    const alt = (/alt="([^"]*)"/.exec(img) || [])[1] || "";
+    const caption = (/<figcaption>([\s\S]*?)<\/figcaption>/.exec(m) || [])[1] || "";
+    const pos = (/object-position:\s*([^";]+)/.exec(m) || [])[1];
+    return figureHTML({ src, alt, caption, pos }, { hero: false });
+  });
+}
+
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const longDate = (iso) => { const [y, m, d] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
 const monthYear = (iso) => { const [y, m] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${y}`; };
@@ -62,6 +106,14 @@ h2{font-size:19px!important}
 .post-topmeta .cat{background:var(--gold-tint);border:1px solid var(--gold-line);color:var(--gold);font-size:11px;font-weight:600;padding:4px 12px;border-radius:4px;letter-spacing:1px;text-transform:uppercase}
 .post-topmeta span{color:var(--muted);font-size:13px}
 .backlink{display:inline-block;color:var(--gold);font-size:13px;letter-spacing:1px;margin-bottom:6px;text-decoration:none}
+/*POST_READING_CSS — long-form legibility on the dark scheme: regular weight (300 shimmers
+on dark), 17px, and a ~72ch text column; figures/tables keep the full 900px band.*/
+main p,main ul,main ol,main h2,main h3,main details,main blockquote{max-width:760px;margin-left:auto;margin-right:auto}
+main p{font-size:17px;line-height:1.75;font-weight:400}
+main ul,main ol{font-size:16.5px;line-height:1.7;font-weight:400}
+main li{margin:.4rem 0}
+main details p{font-size:16px}
+@media(max-width:640px){main p{font-size:16.5px}main ul,main ol{font-size:16px}}
 `;
 
 function loadFragment(path) {
@@ -95,6 +147,11 @@ function loadFragment(path) {
   const words = spec.body.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
   if (words < 1100) throw new Error(`${path}: body is ${words} words (standing rule: 1,100+ — cover the full question-space)`);
   if (!spec.faq || spec.faq.length < 4) throw new Error(`${path}: ${spec.faq ? spec.faq.length : 0} FAQ items (standing rule: 4+, PAA-style)`);
+  // IMAGE gate (standing rule, Aug 2026): every post ships with a relevant,
+  // commercially-licensed hero image plus descriptive alt text.
+  if (!spec.figure || !spec.figure.src || !spec.figure.alt) {
+    throw new Error(`${path}: figure {src, alt, caption} required (standing rule: every post has a licensed hero image — fetch via scripts/fetch-stock-image.mjs)`);
+  }
   spec.dateModified = spec.dateModified || spec.datePublished;
   return spec;
 }
@@ -161,7 +218,10 @@ function buildPost(spec, template) {
     ? `\n<!-- RELATED_GUIDES_START -->\n<h2>Related Guides for This Page</h2>\n<div class="related">\n${spec.related.map(r => `<a href="${r.href}">${r.label}</a>`).join("\n")}\n</div>\n<!-- RELATED_GUIDES_END -->`
     : "";
 
-  const newMain = `\n${authorCard}\n${topMeta}\n${spec.body}${faqVisible}${related}\n${explore}\n`;
+  const heroFigure = figureHTML(spec.figure, { hero: true });
+  const body = upgradeBodyFigures(spec.body);
+
+  const newMain = `\n${authorCard}\n${topMeta}\n${heroFigure}\n${body}${faqVisible}${related}\n${explore}\n`;
   html = html.slice(0, mainStart + "<main data-pagefind-body>".length) + newMain + html.slice(mainEnd);
 
   html = html.replace(/Last updated: [A-Za-z]+ \d{1,2}, \d{4}/, `Last updated: ${longDate(spec.dateModified)}`);

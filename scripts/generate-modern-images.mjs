@@ -25,18 +25,27 @@ const AVIF_QUALITY = 55;
 const WEBP_QUALITY = 78;
 
 const isImage = f => /\.(jpe?g|png)$/i.test(f);
-const files = readdirSync(SRC_DIR).filter(isImage);
+// Recursive walk so subdirectories (topics/, blog/) get variants too.
+function walk(dir) {
+  const out = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...walk(full));
+    else if (isImage(entry.name)) out.push(full);
+  }
+  return out;
+}
+const files = walk(SRC_DIR);
 
 let totalOrigBytes = 0, totalNewBytes = 0, generated = 0, skipped = 0;
 
-for (const file of files) {
-  const srcPath = join(SRC_DIR, file);
-  const { name } = parse(file);
+for (const srcPath of files) {
+  const { dir, name } = parse(srcPath);
   const srcStat = statSync(srcPath);
   totalOrigBytes += srcStat.size;
 
   for (const fmt of ["avif", "webp"]) {
-    const outPath = join(SRC_DIR, `${name}.${fmt}`);
+    const outPath = join(dir, `${name}.${fmt}`);
     if (!FORCE && existsSync(outPath) && statSync(outPath).mtimeMs >= srcStat.mtimeMs) {
       skipped++;
       totalNewBytes += statSync(outPath).size;

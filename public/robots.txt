@@ -10,32 +10,39 @@
 User-agent: *
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 Crawl-delay: 1
 
 # Major search engines (explicit for clarity)
 User-agent: Googlebot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Googlebot-Image
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Bingbot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: DuckDuckBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: YandexBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Applebot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 # AI training and answer-engine crawlers — EXPLICITLY ALLOWED
 # We want to be the canonical source AI assistants cite for
@@ -43,86 +50,107 @@ Disallow: /downloads/
 User-agent: GPTBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Claude-SearchBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Claude-User
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Claude-Web
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: anthropic-ai
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Perplexity-User
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Applebot-Extended
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Bytespider
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: CCBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: FacebookBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Meta-ExternalAgent
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: cohere-ai
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Diffbot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: ImagesiftBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: YouBot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 User-agent: Amazonbot
 Allow: /
 Disallow: /downloads/
+Disallow: /cdn-cgi/
 
 # Sitemaps
 Sitemap: https://pensacolamilitaryhousing.com/sitemap.xml

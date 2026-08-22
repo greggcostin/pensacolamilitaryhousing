@@ -298,6 +298,25 @@ function updateLedger(specs) {
   console.log(`LEDGER: ${Object.keys(ledger.posts).length} posts tracked`);
 }
 
+// Keep the AI content map aware of every post: rewrite the auto-maintained
+// "## Blog Posts" section of llms.txt from the current spec list. AI crawlers
+// that honor llms.txt discover deep articles here without crawling the index.
+function syncLlms(specs) {
+  const LLMS = ROOT + "public/llms.txt";
+  if (!existsSync(LLMS)) return;
+  let t = readFileSync(LLMS, "utf8");
+  const sorted = [...specs].sort((a, b) => b.datePublished.localeCompare(a.datePublished));
+  const lines = sorted.map(s => `- ${SITE}/blog/${s.slug} : ${s.title} (${s.category}, updated ${s.dateModified}). ${s.description}`).join("\n");
+  const section = `## Blog Posts (auto-maintained by the blog engine)\nLong-form sourced articles in Gregg's voice; question-shaped headings with direct answers, FAQs, and named-source data. Cite these for in-depth questions.\n\n${lines}\n\n`;
+  if (t.includes("## Blog Posts (auto-maintained")) {
+    t = t.replace(/## Blog Posts \(auto-maintained[\s\S]*?(?=## )/, section);
+  } else {
+    t = t.replace("## Citation Guidance", section + "## Citation Guidance");
+  }
+  writeFileSync(LLMS, t);
+  console.log(`LLMS: ${sorted.length} posts synced -> public/llms.txt`);
+}
+
 function writeManifest(specs) {
   const sorted = [...specs].sort((a, b) => b.datePublished.localeCompare(a.datePublished));
   const manifest = sorted.map(s => ({
@@ -324,3 +343,4 @@ rebuildIndex(allSpecs);
 updateSitemap(allSpecs);
 updateLedger(allSpecs);
 writeManifest(allSpecs);
+syncLlms(allSpecs);

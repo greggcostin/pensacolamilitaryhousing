@@ -72,6 +72,34 @@ Priority order (each is a real, checked opportunity as of Aug 2026):
    Fleet & Family readiness pages that list off-base housing resources; offer the
    PCS guide/BAH calculator as a linked resource.
 
+## 4. AI-answer citation surfaces (verified Aug 22, 2026)
+
+When someone asks an AI assistant for "a good realtor in Pensacola," the answer is
+grounded in live search results plus profile/review platforms. What actually ranks for
+that query today: U.S. News (realestate.usnews.com/agents), FastExpert, HomeLight,
+Yelp, Angi, EffectiveAgents, Clever — plus the Google local pack (GBP) and Reddit.
+
+DEAD ENDS (checked directly, do not chase): Three Best Rated has NO Pensacola
+real-estate-agents category (410; their Tampa page exists, so it's a coverage gap),
+and Expertise.com has NO /fl/pensacola/real-estate-agents page (404; larger metros
+only). Re-check yearly in case coverage expands.
+
+Priority claims/profiles (all free):
+1. **Bing Places for Business** — feeds Microsoft Copilot's local answers directly;
+   one-time Microsoft-account sign-in (same account unlocks Bing Webmaster Tools
+   ranking data, which is currently not connected).
+2. **Apple Business Connect** — feeds Siri/Apple Maps/Apple Intelligence.
+3. **U.S. News agent directory** + **FastExpert** + **HomeLight** — the pages that
+   actually rank for "top real estate agents Pensacola"; complete profiles with the
+   military-relocation positioning and site link.
+4. **Yelp business page** — claim, complete, and let review velocity accrue; Yelp
+   feeds multiple AI groundings and CarPlay/Apple surfaces.
+5. **Reddit (r/Pensacola and military-move threads)** — genuinely helpful answers
+   under your own name; AI answers cite these threads constantly. Never astroturf;
+   one useful comment a week compounds.
+6. Keep **Google review velocity** climbing (54 as of Aug 2026) — AI local answers
+   mirror the map pack, and count+recency is its strongest signal.
+
 Outreach template (short works):
 > Subject: Resource for [audience] PCSing to Pensacola
 > I'm Gregg Costin — retired USAF Combat Systems Officer (11 PCS moves) and an

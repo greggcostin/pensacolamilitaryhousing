@@ -2452,12 +2452,12 @@ const ReviewsPage = () => {
             <div style={{ fontFamily: SF, fontSize: 42, fontWeight: 700, color: "#fff", lineHeight: 1 }}>5.0</div>
             <div>
               <div style={{ color: GOLD, fontSize: 22, letterSpacing: 2 }}>★★★★★</div>
-              <div style={{ color: "#9CA3AF", fontSize: 13, marginTop: 4 }}>49 Google Reviews · Verified on Google Business</div>
+              <div style={{ color: "#9CA3AF", fontSize: 13, marginTop: 4 }}>54 Google Reviews · Verified on Google Business</div>
             </div>
           </div>
         </div>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginBottom: 40 }}>
-          <BtnP href={GOOGLE_URL}>Read All 49 Reviews on Google</BtnP>
+          <BtnP href={GOOGLE_URL}>Read All 54 Reviews on Google</BtnP>
           <BtnG href="tel:+18502665005">Call (850) 266-5005</BtnG>
         </div>
 

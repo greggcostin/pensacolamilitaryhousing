@@ -99,6 +99,24 @@
       "creditRequired": true,
       "credit": "Shixart1985",
       "query": "suitcase luggage hotel travel"
+    },
+    "/images/blog/veteran-flag-memorial.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Veterans Cemetary Flag.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AVeterans%20Cemetary%20Flag.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Noah Wulf",
+      "query": "veteran salutes american flag"
+    },
+    "/images/blog/escambia-courthouse.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Customshouse pano01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Customshouse%20pano01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Escambia County courthouse Pensacola Florida"
     }
   }
 }

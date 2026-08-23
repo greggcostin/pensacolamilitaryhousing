@@ -115,6 +115,20 @@
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
       "metrics": []
+    },
+    "florida-veteran-property-tax-county-guide": {
+      "title": "Florida Disabled Veteran Property Tax: County Filing Guide 2026",
+      "category": "Homestead",
+      "datePublished": "2026-08-22",
+      "dateModified": "2026-08-22",
+      "targetKeywords": [
+        "florida disabled veteran property tax exemption",
+        "100 percent disabled veteran property tax florida",
+        "tdiu property tax exemption florida",
+        "escambia county veteran property tax exemption"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+      "metrics": []
     }
   },
   "runs": [
@@ -129,6 +143,23 @@
       },
       "notes": "Research pack included SEARCH LANDSCAPE section (new SEO architecture); surfaced 7 live-site factual errors (Deer Point pricing, 15-min commute claim incl JSON-LD, stale Garcon toll, wrong E-6 BAH, Whisper Bay dating, Tiger Point Elementary unverifiable, Navarre all-A-rated outdated) — all corrected this run. Soundside High School (opens Aug 2026) folded in from supplementary research.",
       "published": true
+    },
+    {
+      "date": "2026-08-22",
+      "type": "user-directed post",
+      "action": "new",
+      "slug": "florida-veteran-property-tax-county-guide",
+      "models": {
+        "research": "opus",
+        "write": "fable"
+      },
+      "images": "fetch-new (veteran-flag-memorial CC BY-SA 4.0, escambia-courthouse CC BY-SA 3.0)",
+      "canonFixes": [
+        "va-disability-property-tax-florida: srcpa.gov+SuiteK, Okaloosa offices, 2026 homestead structure, 196.081(3) cite, TDIU letter-language, ad-valorem-only scope, verified millage figures, wheelchair 196.091 added, Escambia online-filing hedge",
+        "disabled-veteran-benefits-florida: DR-501 replaces obsolete VA 20-5455 + fabricated residency rule removed, automatic renewal corrected, PCS-rental 2026 law change (196.061(2)(a)), verified dollar examples, Okaloosa offices"
+      ],
+      "published": "main (Gregg-directed)",
+      "baseline": "docs/seo-baselines/bing-keywords-2026-08-22.csv"
     }
   ],
   "config": {

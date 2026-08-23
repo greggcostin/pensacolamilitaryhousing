@@ -38,10 +38,13 @@ PAGE-->
 
 - **Every post ships a hero photo** (`figure` above) that is genuinely relevant — the real
   place, the real aircraft, the real subject. No generic decoration.
-- **Sourcing:** `node scripts/fetch-stock-image.mjs "<query>" <slug>-hero --candidates 3
+- **Sourcing (standing order, Aug 22 2026): FETCH NEW imagery for every new post** —
+  `node scripts/fetch-stock-image.mjs "<query>" <slug>-hero --candidates 3
   --dir public/images/blog` (commercial-safe licenses only; attribution recorded in
   `content/blog/image-credits.json`). VIEW candidates with the Read tool before picking —
-  file titles lie. Finalize with `--finalize`, then `npm run modern-images`.
+  file titles lie. Finalize with `--finalize`, then `npm run modern-images`. Library
+  reuse (`/images/topics|blog|bases|communities/`) is the fallback only when 2-3 query
+  variants yield nothing that passes the eye test; log the substitution.
 - **Credits:** the factory auto-appends the license credit to the figcaption from the
   ledger. CC-BY / CC-BY-SA images MUST keep that visible linked credit; public-domain DoD
   imagery carries a courtesy "U.S. Navy photo" style line.

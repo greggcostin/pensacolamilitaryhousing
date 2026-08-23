@@ -306,7 +306,7 @@
         "va-funding-fee-2026: assumption 0.50% row added w/ cash-at-close caveat (38 USC 3729(b)(2), Circ 26-23-10); exemption reframed to statutory compensation test",
         "assumable-va-loans-pensacola: FL $404 locality variance added, $704 servicer ceiling (Circ 26-24-5), $250 prior-approval tier"
       ],
-      "staged": "branch blog/va-loan-assumption-buyers-guide-20260823 (autoPublish=false)"
+      "published": "main (merged ab438a0, Gregg approved: publish it)"
     }
   ],
   "config": {

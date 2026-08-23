@@ -9,12 +9,6 @@ questions-as-headings, insert lists/tables where data hides in prose.
 
 | Page | Score | Words | Wall paragraphs | Headings | Scan aids |
 |---|---|---|---|---|---|
-| /cash-offer-pensacola | 69 | 2719 | 6 (max 222w) | 12 (227w/ea) | 11 (247w/ea) |
-| /new-construction-pensacola | 69 | 3050 | 5 (max 191w) | 13 (235w/ea) | 13 (235w/ea) |
-| /va-loan-closing-costs-florida | 69 | 3058 | 5 (max 209w) | 13 (235w/ea) | 12 (255w/ea) |
-| /bases/eglin-afb | 69 | 3167 | 9 (max 188w) | 22 (144w/ea) | 11 (288w/ea) |
-| /blog/best-pensacola-neighborhoods-by-rank-bah | 69 | 3308 | 7 (max 136w) | 14 (236w/ea) | 13 (254w/ea) |
-| /blog/va-loan-seller-concessions-truth | 69 | 3688 | 8 (max 188w) | 16 (231w/ea) | 15 (246w/ea) |
 | /buying-sight-unseen-pcs-pensacola | 70 | 3236 | 8 (max 132w) | 17 (190w/ea) | 14 (231w/ea) |
 | /crestview-military-relocation | 70 | 3284 | 6 (max 104w) | 17 (193w/ea) | 19 (173w/ea) |
 | /faq | 70 | 5508 | 7 (max 139w) | 66 (83w/ea) | 61 (90w/ea) |
@@ -72,12 +66,14 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /communities/fort-walton-beach | 88 | 1352 | 2 (max 223w) | 17 (80w/ea) | 7 (193w/ea) |
 | /blog/moving-to-pensacola-2026-guide | 88 | 5338 | 2 (max 96w) | 32 (167w/ea) | 20 (267w/ea) |
 | /bah-rates | 94 | 2384 | 1 (max 191w) | 15 (159w/ea) | 22 (108w/ea) |
+| /cash-offer-pensacola | 94 | 2732 | 1 (max 138w) | 15 (182w/ea) | 13 (210w/ea) |
 | /disabled-veteran-benefits-florida | 94 | 2266 | 1 (max 130w) | 32 (71w/ea) | 15 (151w/ea) |
 | /florida-homestead-exemption-military | 94 | 1921 | 1 (max 107w) | 27 (71w/ea) | 19 (101w/ea) |
 | /gulf-breeze-vs-navarre | 94 | 1454 | 1 (max 114w) | 16 (91w/ea) | 12 (121w/ea) |
 | /military-pcs-tax-deductions | 94 | 1954 | 1 (max 105w) | 24 (81w/ea) | 20 (98w/ea) |
 | /military-rental-property-management | 94 | 2410 | 1 (max 121w) | 25 (96w/ea) | 22 (110w/ea) |
 | /nas-pensacola-vs-hurlburt-field | 94 | 1159 | 1 (max 88w) | 14 (83w/ea) | 8 (145w/ea) |
+| /new-construction-pensacola | 94 | 3062 | 1 (max 109w) | 16 (191w/ea) | 14 (219w/ea) |
 | /niceville-vs-crestview | 94 | 1221 | 1 (max 104w) | 15 (81w/ea) | 12 (102w/ea) |
 | /on-base-vs-off-base-corry-station | 94 | 1897 | 1 (max 96w) | 17 (112w/ea) | 18 (105w/ea) |
 | /on-base-vs-off-base-eglin-afb | 94 | 1974 | 1 (max 99w) | 17 (116w/ea) | 18 (110w/ea) |
@@ -89,12 +85,16 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /pcs-schools-by-base | 94 | 2098 | 1 (max 124w) | 27 (78w/ea) | 13 (161w/ea) |
 | /sell | 94 | 1418 | 1 (max 142w) | 23 (62w/ea) | 7 (203w/ea) |
 | /va-irrrl-guide | 94 | 2474 | 1 (max 122w) | 20 (124w/ea) | 17 (146w/ea) |
+| /va-loan-closing-costs-florida | 94 | 3077 | 1 (max 94w) | 16 (192w/ea) | 13 (237w/ea) |
 | /zero-down-home-loans | 94 | 1938 | 1 (max 93w) | 28 (69w/ea) | 22 (88w/ea) |
+| /bases/eglin-afb | 94 | 3171 | 1 (max 155w) | 23 (138w/ea) | 14 (227w/ea) |
 | /communities/cantonment | 94 | 1105 | 1 (max 120w) | 16 (69w/ea) | 6 (184w/ea) |
 | /communities/milton | 94 | 1186 | 1 (max 130w) | 16 (74w/ea) | 7 (169w/ea) |
 | /communities/navarre | 94 | 1148 | 1 (max 168w) | 16 (72w/ea) | 6 (191w/ea) |
 | /communities/pace | 94 | 1136 | 1 (max 181w) | 16 (71w/ea) | 6 (189w/ea) |
+| /blog/best-pensacola-neighborhoods-by-rank-bah | 94 | 3327 | 1 (max 93w) | 17 (196w/ea) | 15 (222w/ea) |
 | /blog/va-loan-assumption-buyers-guide | 94 | 4764 | 1 (max 98w) | 23 (207w/ea) | 17 (280w/ea) |
+| /blog/va-loan-seller-concessions-truth | 100 | 3702 | 0 (max 83w) | 18 (206w/ea) | 17 (218w/ea) |
 
 ## Reading the numbers
 - **Wall paragraphs**: paragraphs over 85 words; "max" is the single longest.

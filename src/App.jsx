@@ -334,9 +334,9 @@ const Eyebrow = ({ children }) => (
 const H2 = ({ children, align = "left" }) => (
   <h2 style={{ fontFamily: SF, fontWeight: 500, fontSize: "clamp(24px,3vw,38px)", lineHeight: 1.15, color: "#fff", textAlign: align, marginTop: 48, marginBottom: 16, paddingBottom: 12, borderBottom: `2px solid ${C.goldLine}` }}>{children}</h2>
 );
-const H3 = ({ children }) => <h3 style={{ fontSize: 18, color: C.gold, marginTop: 32, marginBottom: 12, fontWeight: 700, fontFamily: SF }}>{children}</h3>;
+const H3 = ({ children }) => <h3 style={{ fontSize: 20, color: C.gold, marginTop: 34, marginBottom: 12, fontWeight: 700, fontFamily: SF }}>{children}</h3>;
 const H3G = H3;
-const Body = ({ children }) => <p style={{ color: C.text, fontSize: 17, lineHeight: 1.75, marginBottom: 16, fontWeight: 400, maxWidth: 760, marginLeft: "auto", marginRight: "auto" }}>{children}</p>;
+const Body = ({ children }) => <p style={{ color: C.text, fontSize: 17, lineHeight: 1.75, marginBottom: 16, fontWeight: 400 }}>{children}</p>;
 const P = ({ children }) => <p style={{ color: "#bbb", fontSize: 15, lineHeight: 1.85, marginBottom: 16 }}>{children}</p>;
 const Li = ({ children }) => <li style={{ color: "#bbb", fontSize: 15, lineHeight: 1.85, marginBottom: 8, paddingLeft: 4 }}>{children}</li>;
 const BtnP = ({ children, onClick, href }) => {
@@ -793,15 +793,15 @@ const AboutPage = ({ go }) => (
         <div><Pic loading="lazy" src={IMG.aboutCockpitTanker} alt="In cockpit with KC-135 tanker" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} /></div>
         <div className="about-career-mom" style={{ background: C.ink }}><Pic loading="lazy" src={IMG.aboutFlightsuitMom} alt="In flightsuit with mom" style={{ width: "100%", height: 220, objectFit: "contain", objectPosition: "center", display: "block" }} /></div>
       </div>
-      <H3>My Story: From Global Strategy to Local Real Estate Excellence</H3>
+      <H2>My Story: From Global Strategy to Local Real Estate Excellence</H2>
       <Body>My journey into real estate didn't start with a lifelong passion for houses; it started with a vow.</Body>
       <Body>When I bought my very first home early in my career, I was completely burned by a horrible agent. The experience left such a deep mark on me that I made a promise right then and there: I would self-educate to the absolute highest level so I would never have to rely on another real estate agent again. As I bought and sold properties across the entire United States during every military PCS move, I mastered the process from the ground up. I have experienced firsthand what it's like to have a terrible agent, which means I know exactly what it takes to be an exceptional one.</Body>
       <Body>My promise to you as a client is simple: to be better than anyone else out there in the local market. I bring that same relentless drive and determination to your transaction so you can completely avoid the pitfalls and mistakes I once faced. I aspire to be a cut above anyone else you come in contact with, delivering the absolute best in customer service, market knowledge, expertise, and fierce negotiation skills.</Body>
-      <H3>Forged by Military Discipline</H3>
+      <H2>Forged by Military Discipline</H2>
       <Body>That standard of excellence is rooted deeply in my military background. Over the course of my career in the United States Air Force, I evolved from hands-on technical expertise to high-level strategic planning.</Body>
       <Body>I began at the tip of the spear in nuclear deterrence as a 2M0 cruise missile technician, ensuring the readiness of payloads on the B-52 Stratofortress. After earning a prestigious double B.S. and B.A. degree from the University of Tampa, I commissioned as an officer and took to the skies. As a Navigator and Combat Systems Officer (CSO) aboard the E-3 AWACS, I managed complex tactical routing and electronic warfare across multiple deployments to combat zones including Iraq, Afghanistan, and Syria, as well as strategic hubs across the Middle East and the Pacific.</Body>
       <Body>My career culminated in the senior echelons of military strategy as the Chief of Integrated Air and Missile Defense (IAMD) Plans for CENTCOM A5, where I architected theater-wide defense strategies to protect our forward-deployed forces.</Body>
-      <H3>The Gregg Costin Team Promise</H3>
+      <H2>The Gregg Costin Team Promise</H2>
       <Body>Today, I combine the precision, strategic planning, and unwavering discipline of a military war planner with my hard-earned real estate expertise. When you work with me, you aren't just getting an agent — you are getting an aggressively educated advocate who will fight for your best interests every single step of the way.</Body>
     </Section>
 

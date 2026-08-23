@@ -226,8 +226,10 @@ main details p{font-size:16px}
 /*HEADING_CSS*/
 main h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,38px);line-height:1.18;color:#fff;margin:48px auto 16px;padding-bottom:12px;border-bottom:2px solid var(--gold-line);letter-spacing:-0.01em}
 main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
-@media(min-width:641px){main p,main ul,main ol,main details,main blockquote,main h2,main h3{max-width:760px!important}main h2{font-size:clamp(26px,3.2vw,38px)!important}main h3{font-size:clamp(17px,1.6vw,20px)!important}}
-@media(max-width:640px){main h2{font-size:25px!important;margin:38px auto 14px;padding-bottom:10px}main h3{font-size:17px!important}}
+@media(min-width:641px){main p,main ul,main ol,main details,main blockquote,main h2,main h3,main .facts,main .related{max-width:760px!important;margin-left:auto!important;margin-right:auto!important}main h2{font-size:clamp(26px,3.2vw,38px)!important}main h3{font-size:clamp(17px,1.6vw,20px)!important}}
+@media(max-width:640px){main h2{font-size:25px!important;margin:38px auto 14px;padding-bottom:10px}main h3{font-size:17px!important}main h2,main h3{overflow-wrap:anywhere}}
+
+/*BAHWRAP_MIN*/.bah-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem auto;max-width:760px}.bah-wrap>table{margin:0}
 </style>
 <!-- Microsoft Clarity (heatmaps + session recordings) -->
 <script type="text/javascript">
@@ -309,7 +311,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <p>Plus the Florida Hometown Heroes program which stacks on top of any of these.</p>
 
 <h2>Head-to-Head Comparison — $325,000 Pensacola Purchase (2026 Rates)</h2>
-<table>
+<div class="bah-wrap"><table>
 <thead><tr><th>Feature</th><th>VA</th><th>USDA</th><th>FHA</th><th>Conventional 3%</th></tr></thead>
 <tbody>
 <tr><td>Down payment</td><td>$0</td><td>$0</td><td>$11,375</td><td>$9,750</td></tr>
@@ -322,7 +324,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <tr><td>Credit score min</td><td>580-620 (lender)</td><td>640+</td><td>580+</td><td>620+ (best at 720+)</td></tr>
 <tr><td>5-year total cost</td><td>~$158,000</td><td>~$164,000</td><td>~$175,000</td><td>~$177,000</td></tr>
 </tbody>
-</table>
+</table></div>
 <p><em>Numbers are approximate for illustration. Actual rates, fees, and PMI vary by lender, credit score, and geography. VA numbers assume non-exempt (no disability waiver); if exempt, VA drops by ~$7,000 over 5 years.</em></p>
 
 <h2>VA Loan — The Default for Eligible Military</h2>

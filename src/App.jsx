@@ -336,7 +336,7 @@ const H2 = ({ children, align = "left" }) => (
 );
 const H3 = ({ children }) => <h3 style={{ fontSize: 18, color: C.gold, marginTop: 32, marginBottom: 12, fontWeight: 700, fontFamily: SF }}>{children}</h3>;
 const H3G = H3;
-const Body = ({ children }) => <p style={{ color: C.text, fontSize: 15.5, lineHeight: 1.85, marginBottom: 16, fontWeight: 300 }}>{children}</p>;
+const Body = ({ children }) => <p style={{ color: C.text, fontSize: 17, lineHeight: 1.75, marginBottom: 16, fontWeight: 400, maxWidth: 760, marginLeft: "auto", marginRight: "auto" }}>{children}</p>;
 const P = ({ children }) => <p style={{ color: "#bbb", fontSize: 15, lineHeight: 1.85, marginBottom: 16 }}>{children}</p>;
 const Li = ({ children }) => <li style={{ color: "#bbb", fontSize: 15, lineHeight: 1.85, marginBottom: 8, paddingLeft: 4 }}>{children}</li>;
 const BtnP = ({ children, onClick, href }) => {

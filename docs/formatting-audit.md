@@ -10,9 +10,6 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | Page | Score | Words | Wall paragraphs | Headings | Scan aids |
 |---|---|---|---|---|---|
 | /florida-home-insurance-military | 70 | 4486 | 10 (max 128w) | 41 (109w/ea) | 22 (204w/ea) |
-| /assumable-va-loans-pensacola | 76 | 2323 | 4 (max 118w) | 16 (145w/ea) | 13 (179w/ea) |
-| /va-coe-guide | 76 | 3172 | 4 (max 140w) | 26 (122w/ea) | 18 (176w/ea) |
-| /communities/gulf-breeze | 76 | 1558 | 4 (max 135w) | 17 (92w/ea) | 7 (223w/ea) |
 | /bah-to-mortgage-guide | 82 | 2483 | 3 (max 105w) | 32 (78w/ea) | 20 (124w/ea) |
 | /nas-pensacola-gates | 82 | 3362 | 3 (max 113w) | 20 (168w/ea) | 20 (168w/ea) |
 | /bases/corry-station | 82 | 2684 | 3 (max 161w) | 18 (149w/ea) | 10 (268w/ea) |
@@ -29,6 +26,7 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /on-base-vs-off-base-duke-field | 88 | 1920 | 2 (max 103w) | 17 (113w/ea) | 18 (107w/ea) |
 | /on-base-vs-off-base-saufley-field | 88 | 1855 | 2 (max 100w) | 17 (109w/ea) | 18 (103w/ea) |
 | /school-zones-military-families | 88 | 1992 | 2 (max 126w) | 15 (133w/ea) | 14 (142w/ea) |
+| /va-coe-guide | 88 | 3172 | 2 (max 100w) | 26 (122w/ea) | 18 (176w/ea) |
 | /va-disability-property-tax-florida | 88 | 2195 | 2 (max 117w) | 17 (129w/ea) | 13 (169w/ea) |
 | /va-funding-fee-2026 | 88 | 2125 | 2 (max 111w) | 22 (97w/ea) | 17 (125w/ea) |
 | /whats-my-home-worth | 88 | 1507 | 2 (max 105w) | 11 (137w/ea) | 9 (167w/ea) |
@@ -42,6 +40,7 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /communities/ferry-pass | 88 | 1072 | 2 (max 133w) | 14 (77w/ea) | 7 (153w/ea) |
 | /communities/fort-walton-beach | 88 | 1352 | 2 (max 223w) | 17 (80w/ea) | 7 (193w/ea) |
 | /blog/moving-to-pensacola-2026-guide | 88 | 5338 | 2 (max 96w) | 32 (167w/ea) | 20 (267w/ea) |
+| /assumable-va-loans-pensacola | 94 | 2323 | 1 (max 118w) | 16 (145w/ea) | 13 (179w/ea) |
 | /bah-rates | 94 | 2384 | 1 (max 191w) | 15 (159w/ea) | 22 (108w/ea) |
 | /buying-sight-unseen-pcs-pensacola | 94 | 3247 | 1 (max 127w) | 19 (171w/ea) | 16 (203w/ea) |
 | /cash-offer-pensacola | 94 | 2732 | 1 (max 138w) | 15 (182w/ea) | 13 (210w/ea) |
@@ -78,6 +77,7 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /bases/whiting-field | 94 | 2690 | 1 (max 178w) | 20 (135w/ea) | 12 (224w/ea) |
 | /communities/beulah | 94 | 1778 | 1 (max 120w) | 20 (89w/ea) | 9 (198w/ea) |
 | /communities/cantonment | 94 | 1105 | 1 (max 120w) | 16 (69w/ea) | 6 (184w/ea) |
+| /communities/gulf-breeze | 94 | 1558 | 1 (max 101w) | 17 (92w/ea) | 8 (195w/ea) |
 | /communities/mary-esther | 94 | 2155 | 1 (max 152w) | 15 (144w/ea) | 11 (196w/ea) |
 | /communities/milton | 94 | 1186 | 1 (max 130w) | 16 (74w/ea) | 7 (169w/ea) |
 | /communities/navarre | 94 | 1148 | 1 (max 168w) | 16 (72w/ea) | 6 (191w/ea) |

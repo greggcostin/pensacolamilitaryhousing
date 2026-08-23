@@ -236,6 +236,20 @@
           "notes": "published today"
         }
       ]
+    },
+    "va-loan-assumption-buyers-guide": {
+      "title": "How to Assume a VA Loan in 2026: The Buyer's Playbook",
+      "category": "VA Loans",
+      "datePublished": "2026-08-23",
+      "dateModified": "2026-08-23",
+      "targetKeywords": [
+        "assume a va loan",
+        "va loan assumption civilian",
+        "how to assume a va loan",
+        "va assumable loans pensacola"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
+      "metrics": []
     }
   },
   "runs": [
@@ -267,6 +281,32 @@
       ],
       "published": "main (Gregg-directed)",
       "baseline": "docs/seo-baselines/bing-keywords-2026-08-22.csv"
+    },
+    {
+      "date": "2026-08-23",
+      "type": "engine run (user-triggered pipeline test)",
+      "measured": 10,
+      "classifications": {
+        "winner": [
+          "va-loan-seller-concessions-truth (4 kws pos 23-33)"
+        ],
+        "stalled": [],
+        "decayed": [],
+        "notes": "posts 9-10 days old; site 364 sessions/28d; niceville #2 page (32 sessions); Copilot 351 citations/3mo baseline"
+      },
+      "queueRerank": "va-loan-assumption-buyers-guide jumped to #1 (Bing pos-1 rankings w/ clicks on 4 assumable queries; sibling of winner)",
+      "action": "new",
+      "slug": "va-loan-assumption-buyers-guide",
+      "models": {
+        "research": "opus",
+        "write": "fable"
+      },
+      "images": "hero+inline reuse from topics library (assumable-va-loans.jpg, va-loan-guide.jpg) after 4 fetch queries failed the eye test (wrong subjects: cemetery, hurricane wreckage) — substitution logged per fetch-new-first standing order",
+      "canonFixes": [
+        "va-funding-fee-2026: assumption 0.50% row added w/ cash-at-close caveat (38 USC 3729(b)(2), Circ 26-23-10); exemption reframed to statutory compensation test",
+        "assumable-va-loans-pensacola: FL $404 locality variance added, $704 servicer ceiling (Circ 26-24-5), $250 prior-approval tier"
+      ],
+      "staged": "branch blog/va-loan-assumption-buyers-guide-20260823 (autoPublish=false)"
     }
   ],
   "config": {

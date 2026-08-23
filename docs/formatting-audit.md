@@ -9,9 +9,6 @@ questions-as-headings, insert lists/tables where data hides in prose.
 
 | Page | Score | Words | Wall paragraphs | Headings | Scan aids |
 |---|---|---|---|---|---|
-| /blog/florida-veteran-property-tax-county-guide | 62 | 5348 | 17 (max 181w) | 23 (233w/ea) | 14 (382w/ea) |
-| /bases/nas-pensacola | 65 | 3932 | 14 (max 206w) | 24 (164w/ea) | 11 (357w/ea) |
-| /blog/moving-to-pensacola-2026-guide | 68 | 5334 | 8 (max 126w) | 30 (178w/ea) | 17 (314w/ea) |
 | /cash-offer-pensacola | 69 | 2719 | 6 (max 222w) | 12 (227w/ea) | 11 (247w/ea) |
 | /new-construction-pensacola | 69 | 3050 | 5 (max 191w) | 13 (235w/ea) | 13 (235w/ea) |
 | /va-loan-closing-costs-florida | 69 | 3058 | 5 (max 209w) | 13 (235w/ea) | 12 (255w/ea) |
@@ -46,7 +43,7 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /blog/living-in-gulf-breeze-pros-cons | 70 | 3427 | 8 (max 124w) | 19 (180w/ea) | 13 (264w/ea) |
 | /blog/pcs-to-pensacola-2026-complete-guide | 70 | 3302 | 10 (max 128w) | 15 (220w/ea) | 13 (254w/ea) |
 | /blog/personal-property-activity-pcs-2026 | 70 | 3281 | 8 (max 160w) | 15 (219w/ea) | 16 (205w/ea) |
-| /assumable-va-loans-pensacola | 76 | 2302 | 4 (max 118w) | 16 (144w/ea) | 13 (177w/ea) |
+| /assumable-va-loans-pensacola | 76 | 2323 | 4 (max 118w) | 16 (145w/ea) | 13 (179w/ea) |
 | /va-coe-guide | 76 | 3172 | 4 (max 140w) | 26 (122w/ea) | 18 (176w/ea) |
 | /communities/gulf-breeze | 76 | 1558 | 4 (max 135w) | 17 (92w/ea) | 7 (223w/ea) |
 | /bah-to-mortgage-guide | 82 | 2483 | 3 (max 105w) | 32 (78w/ea) | 20 (124w/ea) |
@@ -55,14 +52,16 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /communities/destin | 82 | 1479 | 3 (max 157w) | 18 (82w/ea) | 7 (211w/ea) |
 | /communities/navy-point-warrington | 82 | 1424 | 3 (max 183w) | 16 (89w/ea) | 8 (178w/ea) |
 | /communities/niceville | 82 | 1435 | 3 (max 140w) | 18 (80w/ea) | 7 (205w/ea) |
-| /buy | 88 | 1473 | 2 (max 135w) | 20 (74w/ea) | 7 (210w/ea) |
+| /bases/nas-pensacola | 86 | 3938 | 2 (max 163w) | 26 (151w/ea) | 13 (303w/ea) |
+| /blog/florida-veteran-property-tax-county-guide | 87 | 5372 | 2 (max 94w) | 27 (199w/ea) | 18 (298w/ea) |
+| /buy | 88 | 1426 | 2 (max 135w) | 20 (71w/ea) | 7 (204w/ea) |
 | /dual-military-homes | 88 | 1998 | 2 (max 106w) | 25 (80w/ea) | 17 (118w/ea) |
 | /first-time-military-homebuyer | 88 | 2246 | 2 (max 119w) | 23 (98w/ea) | 17 (132w/ea) |
 | /military-divorce-housing | 88 | 1983 | 2 (max 105w) | 25 (79w/ea) | 16 (124w/ea) |
 | /on-base-vs-off-base-duke-field | 88 | 1920 | 2 (max 103w) | 17 (113w/ea) | 18 (107w/ea) |
 | /on-base-vs-off-base-saufley-field | 88 | 1855 | 2 (max 100w) | 17 (109w/ea) | 18 (103w/ea) |
 | /school-zones-military-families | 88 | 1992 | 2 (max 126w) | 15 (133w/ea) | 14 (142w/ea) |
-| /va-funding-fee-2026 | 88 | 2024 | 2 (max 111w) | 22 (92w/ea) | 17 (119w/ea) |
+| /va-funding-fee-2026 | 88 | 2125 | 2 (max 111w) | 22 (97w/ea) | 17 (125w/ea) |
 | /whats-my-home-worth | 88 | 1507 | 2 (max 105w) | 11 (137w/ea) | 9 (167w/ea) |
 | /communities/bellview-myrtle-grove | 88 | 1157 | 2 (max 132w) | 14 (83w/ea) | 7 (165w/ea) |
 | /communities/cordova-park | 88 | 1088 | 2 (max 160w) | 14 (78w/ea) | 7 (155w/ea) |
@@ -71,6 +70,7 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /communities/east-pensacola-heights | 88 | 1219 | 2 (max 154w) | 15 (81w/ea) | 7 (174w/ea) |
 | /communities/ferry-pass | 88 | 1072 | 2 (max 133w) | 14 (77w/ea) | 7 (153w/ea) |
 | /communities/fort-walton-beach | 88 | 1352 | 2 (max 223w) | 17 (80w/ea) | 7 (193w/ea) |
+| /blog/moving-to-pensacola-2026-guide | 88 | 5338 | 2 (max 96w) | 32 (167w/ea) | 20 (267w/ea) |
 | /bah-rates | 94 | 2384 | 1 (max 191w) | 15 (159w/ea) | 22 (108w/ea) |
 | /disabled-veteran-benefits-florida | 94 | 2266 | 1 (max 130w) | 32 (71w/ea) | 15 (151w/ea) |
 | /florida-homestead-exemption-military | 94 | 1921 | 1 (max 107w) | 27 (71w/ea) | 19 (101w/ea) |
@@ -94,6 +94,7 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /communities/milton | 94 | 1186 | 1 (max 130w) | 16 (74w/ea) | 7 (169w/ea) |
 | /communities/navarre | 94 | 1148 | 1 (max 168w) | 16 (72w/ea) | 6 (191w/ea) |
 | /communities/pace | 94 | 1136 | 1 (max 181w) | 16 (71w/ea) | 6 (189w/ea) |
+| /blog/va-loan-assumption-buyers-guide | 94 | 4764 | 1 (max 98w) | 23 (207w/ea) | 17 (280w/ea) |
 
 ## Reading the numbers
 - **Wall paragraphs**: paragraphs over 85 words; "max" is the single longest.

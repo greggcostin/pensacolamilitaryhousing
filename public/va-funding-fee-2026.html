@@ -226,8 +226,10 @@ main details p{font-size:16px}
 /*HEADING_CSS*/
 main h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,38px);line-height:1.18;color:#fff;margin:48px auto 16px;padding-bottom:12px;border-bottom:2px solid var(--gold-line);letter-spacing:-0.01em}
 main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
-@media(min-width:641px){main p,main ul,main ol,main details,main blockquote,main h2,main h3{max-width:760px!important}main h2{font-size:clamp(26px,3.2vw,38px)!important}main h3{font-size:clamp(17px,1.6vw,20px)!important}}
-@media(max-width:640px){main h2{font-size:25px!important;margin:38px auto 14px;padding-bottom:10px}main h3{font-size:17px!important}}
+@media(min-width:641px){main p,main ul,main ol,main details,main blockquote,main h2,main h3,main .facts,main .related{max-width:760px!important;margin-left:auto!important;margin-right:auto!important}main h2{font-size:clamp(26px,3.2vw,38px)!important}main h3{font-size:clamp(17px,1.6vw,20px)!important}}
+@media(max-width:640px){main h2{font-size:25px!important;margin:38px auto 14px;padding-bottom:10px}main h3{font-size:17px!important}main h2,main h3{overflow-wrap:anywhere}}
+
+/*BAHWRAP_MIN*/.bah-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem auto;max-width:760px}.bah-wrap>table{margin:0}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","@id":"https://pensacolamilitaryhousing.com/va-funding-fee-2026#webpage","url":"https://pensacolamilitaryhousing.com/va-funding-fee-2026","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","h2","h3","summary",".lead",".facts strong"]}}
@@ -305,27 +307,27 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <h2>2026 VA Funding Fee Tables</h2>
 
 <h3>Purchase Loan — First-Time Use</h3>
-<table>
+<div class="bah-wrap"><table>
 <thead><tr><th>Down Payment</th><th>Regular Military</th><th>National Guard / Reserve</th></tr></thead>
 <tbody>
 <tr><td>Less than 5%</td><td>2.15%</td><td>2.15%</td></tr>
 <tr><td>5% to 9.99%</td><td>1.50%</td><td>1.50%</td></tr>
 <tr><td>10% or more</td><td>1.25%</td><td>1.25%</td></tr>
 </tbody>
-</table>
+</table></div>
 
 <h3>Purchase Loan — Subsequent Use</h3>
-<table>
+<div class="bah-wrap"><table>
 <thead><tr><th>Down Payment</th><th>Regular Military</th><th>National Guard / Reserve</th></tr></thead>
 <tbody>
 <tr><td>Less than 5%</td><td>3.30%</td><td>3.30%</td></tr>
 <tr><td>5% to 9.99%</td><td>1.50%</td><td>1.50%</td></tr>
 <tr><td>10% or more</td><td>1.25%</td><td>1.25%</td></tr>
 </tbody>
-</table>
+</table></div>
 
 <h3>VA IRRRL and VA Cash-Out Refinance</h3>
-<table>
+<div class="bah-wrap"><table>
 <thead><tr><th>Loan Type</th><th>Funding Fee</th></tr></thead>
 <tbody>
 <tr><td>VA IRRRL (streamline)</td><td>0.50%</td></tr>
@@ -333,7 +335,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <tr><td>VA Cash-Out Refi — Subsequent Use</td><td>3.30%</td></tr>
 <tr><td>Loan Assumption (veteran or civilian assumer)</td><td>0.50% — cash at closing, cannot be financed</td></tr>
 </tbody>
-</table>
+</table></div>
 <p>The assumption fee (38 U.S.C. 3729(b)(2)) is the one fee on this page that can never be rolled into the loan: VA requires it collected in cash at closing. Exempt buyers pay $0 on an assumption too. Full assumption walkthrough: <a href="/assumable-va-loans-pensacola">Assumable VA Loans in Pensacola</a>.</p>
 
 <p><em>Source: Department of Veterans Affairs, 2026 funding fee schedule. Reservist rates merged with active-duty rates effective April 7, 2023, and have not been adjusted since.</em></p>
@@ -352,7 +354,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 
 <h2>Pensacola-Area Dollar Examples</h2>
 <p>Numbers using real Panhandle price points, first-time buyers, zero down (the default for most junior enlisted and mid-career):</p>
-<table>
+<div class="bah-wrap"><table>
 <thead><tr><th>Scenario</th><th>Price</th><th>Loan Amount</th><th>Funding Fee</th><th>After Disability Waiver</th></tr></thead>
 <tbody>
 <tr><td>E-5 first home, Milton</td><td>$265,000</td><td>$265,000</td><td>$5,697</td><td>$0</td></tr>
@@ -361,11 +363,11 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <tr><td>O-5 Hurlburt, Destin</td><td>$700,000</td><td>$700,000</td><td>$15,050</td><td>$0</td></tr>
 <tr><td>Retired USAF Captain, 30% disability, $600K home</td><td>$600,000</td><td>$600,000</td><td>Would be $12,900</td><td>$0</td></tr>
 </tbody>
-</table>
+</table></div>
 
 <h2>Tier 1 Loan Limits — 2026</h2>
 <p>The "Tier 1" loan limit is the conforming loan limit set by the FHFA each year. It defines how much you can borrow with <strong>zero down</strong> using full VA entitlement. Above the Tier 1 limit you can still use VA, but you will need a 25% down payment on the portion above the limit.</p>
-<table>
+<div class="bah-wrap"><table>
 <thead><tr><th>County (Panhandle)</th><th>2026 Tier 1 Limit</th><th>What This Means</th></tr></thead>
 <tbody>
 <tr><td>Escambia</td><td>$832,750</td><td>Zero down up to $832,750</td></tr>
@@ -373,7 +375,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <tr><td>Okaloosa</td><td>$832,750</td><td>Zero down up to $832,750</td></tr>
 <tr><td>Walton</td><td>$832,750</td><td>Zero down up to $832,750</td></tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Above $832,750:</strong> Say you want a $900,000 home in Destin with zero other VA loans outstanding. The VA will guarantee 25% of the Tier 1 limit ($208,187.50 of guaranty). Your lender will require the 25% gap on the amount above $832,750 — so $900,000 - $832,750 = $67,250 over, and you need 25% of that = <strong>$16,812.50 down</strong> plus closing costs. Rare to hit this in the Pensacola MHA, common in Destin/30A.</p>
 
 <h2>Rolling the Funding Fee Into the Loan</h2>

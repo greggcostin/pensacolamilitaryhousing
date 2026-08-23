@@ -106,6 +106,14 @@ h2{font-size:19px!important}
 .post-topmeta .cat{background:var(--gold-tint);border:1px solid var(--gold-line);color:var(--gold);font-size:11px;font-weight:600;padding:4px 12px;border-radius:4px;letter-spacing:1px;text-transform:uppercase}
 .post-topmeta span{color:var(--muted);font-size:13px}
 .backlink{display:inline-block;color:var(--gold);font-size:13px;letter-spacing:1px;margin-bottom:6px;text-decoration:none}
+/*FACTS_CSS — quick-facts callout box (same look as the guide pages); the blog
+template lacked these rules so .facts rendered as bare text. Facts + related
+align to the 760px reading column so their left edge matches the H2s.*/
+.facts{background:var(--panel);border:1px solid var(--hair);border-radius:10px;padding:1.5rem;margin:1.5rem auto;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.5rem;font-size:14px;max-width:760px}
+.facts div{color:var(--text)}
+.facts strong{color:var(--gold)}
+@media(max-width:640px){.facts{grid-template-columns:1fr}}
+main .facts,main .related{max-width:760px;margin-left:auto;margin-right:auto}
 /*POST_READING_CSS — long-form legibility on the dark scheme: regular weight (300 shimmers
 on dark), 17px, and a ~72ch text column; figures/tables keep the full 900px band.*/
 main p,main ul,main ol,main h2,main h3,main details,main blockquote{max-width:760px;margin-left:auto;margin-right:auto}

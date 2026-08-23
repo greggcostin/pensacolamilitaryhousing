@@ -259,8 +259,8 @@ main details p{font-size:16px}
 /*HEADING_CSS*/
 main h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,38px);line-height:1.18;color:#fff;margin:48px auto 16px;padding-bottom:12px;border-bottom:2px solid var(--gold-line);letter-spacing:-0.01em}
 main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
-@media(min-width:641px){main p,main ul,main ol,main details,main blockquote,main h2,main h3{max-width:760px!important}main h2{font-size:clamp(26px,3.2vw,38px)!important}main h3{font-size:clamp(17px,1.6vw,20px)!important}}
-@media(max-width:640px){main h2{font-size:25px!important;margin:38px auto 14px;padding-bottom:10px}main h3{font-size:17px!important}}
+@media(min-width:641px){main p,main ul,main ol,main details,main blockquote,main h2,main h3,main .facts,main .related{max-width:760px!important;margin-left:auto!important;margin-right:auto!important}main h2{font-size:clamp(26px,3.2vw,38px)!important}main h3{font-size:clamp(17px,1.6vw,20px)!important}}
+@media(max-width:640px){main h2{font-size:25px!important;margin:38px auto 14px;padding-bottom:10px}main h3{font-size:17px!important}main h2,main h3{overflow-wrap:anywhere}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://pensacolamilitaryhousing.com/#person-gregg","name":"Gregg Costin","alternateName":"Gregg Costin, Realtor","givenName":"Gregg","familyName":"Costin","jobTitle":"Realtor, Military Relocation Specialist","award":["Forbes Global Properties Rookie of the Year 2025"],"memberOf":[{"@type":"Organization","name":"National Association of Realtors","url":"https://www.nar.realtor/"},{"@type":"Organization","name":"Florida Realtors","url":"https://www.floridarealtors.org/"}],"knowsLanguage":["en-US"],"worksFor":{"@type":"Organization","name":"Levin Rinke Realty","url":"https://greggc.levinrinkerealty.com","address":{"@type":"PostalAddress","streetAddress":"220 W. Garden Street","addressLocality":"Pensacola","addressRegion":"FL","postalCode":"32502","addressCountry":"US"}},"alumniOf":[{"@type":"Organization","name":"United States Air Force"},{"@type":"CollegeOrUniversity","name":"University of Tampa"}],"description":"Retired USAF Captain and E-3 AWACS Combat Systems Officer. Completed a full military career from prior-enlisted Staff Sergeant to commissioned officer with 11 PCS moves. Now a licensed Florida and Alabama Realtor specializing in military relocation, VA loans, and PCS moves across the Florida Panhandle.","email":"gregg.costin@gmail.com","telephone":"+1-850-266-5005","url":"https://pensacolamilitaryhousing.com","image":"https://pensacolamilitaryhousing.com/images/gregg-portrait.jpg","identifier":[{"@type":"PropertyValue","propertyID":"Wikidata","value":"Q140446886"}],"sameAs":["https://www.wikidata.org/wiki/Q140446886"]}</script>
 <script type="application/ld+json">
@@ -343,7 +343,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 
 <h3>VA Loan vs Conventional vs FHA</h3>
 <div style="background:#1a2a1a;border:1px solid #2a4a2a;border-radius:12px;padding:22px;margin:16px 0 24px">
-<table class="va-table">
+<div class="bah-wrap"><table class="va-table">
 <thead><tr><th>Feature</th><th class="va-col">VA Loan</th><th>Conventional</th><th>FHA</th></tr></thead>
 <tbody>
 <tr><td>Down Payment</td><td class="va-col">$0</td><td>3-20%</td><td>3.5%</td></tr>
@@ -354,7 +354,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <tr><td>Seller Concessions</td><td class="va-col">4% of reasonable value (see note)</td><td>3-6% by down payment</td><td>Up to 6%</td></tr>
 <tr><td>Assumable</td><td class="va-col">Yes</td><td>No</td><td>Yes</td></tr>
 </tbody>
-</table>
+</table></div>
 </div>
 
 <h2>The Certificate of Eligibility (COE)</h2>
@@ -363,7 +363,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <h2>The 2026 VA Funding Fee</h2>
 <p>The VA funding fee is a one-time fee that keeps the VA loan program self-sustaining (no direct taxpayer cost). 2026 rates as published by VA:</p>
 <div style="background:#1a2a1a;border:1px solid #2a4a2a;border-radius:12px;padding:22px;margin:16px 0 24px">
-<table class="va-table">
+<div class="bah-wrap"><table class="va-table">
 <thead><tr><th>Usage</th><th>Down Payment</th><th>Regular Military</th><th>Guard / Reserve</th></tr></thead>
 <tbody>
 <tr><td>First Use</td><td>0% down</td><td>2.15%</td><td>2.15%</td></tr>
@@ -375,7 +375,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <tr><td>VA IRRRL (Streamline)</td><td>N/A</td><td>0.50%</td><td>0.50%</td></tr>
 <tr><td>VA Cash-Out Refi</td><td>N/A</td><td>2.15% / 3.30%</td><td>2.15% / 3.30%</td></tr>
 </tbody>
-</table>
+</table></div>
 <p style="margin:14px 0 0"><strong>Funding fee exemption:</strong> Veterans with a VA-rated service-connected disability of 10% or higher are exempt from the funding fee entirely. Active-duty Purple Heart recipients are also exempt. This saves $6,000-$15,000+ on a typical Pensacola purchase. Full details: <a href="/va-funding-fee-2026">2026 VA Funding Fee Breakdown</a>.</p>
 </div>
 <p>The funding fee is <strong>financed into the loan</strong> — you don't bring it to closing in cash. Example: $350,000 purchase, first use, zero down, regular military → $7,525 fee financed into the loan balance. <strong>Critical exemption</strong>: any service member with a 10% or greater service-connected disability rating at time of closing is fully exempt from the funding fee. Purple Heart recipients are exempt. Surviving spouses receiving DIC are exempt. I cross-check every VA loan closing disclosure for the funding fee waiver because lenders occasionally miss it when a disability rating changes mid-transaction.</p>

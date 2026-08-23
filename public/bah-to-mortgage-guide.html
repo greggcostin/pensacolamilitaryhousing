@@ -229,8 +229,10 @@ main details p{font-size:16px}
 /*HEADING_CSS*/
 main h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,38px);line-height:1.18;color:#fff;margin:48px auto 16px;padding-bottom:12px;border-bottom:2px solid var(--gold-line);letter-spacing:-0.01em}
 main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
-@media(min-width:641px){main p,main ul,main ol,main details,main blockquote,main h2,main h3{max-width:760px!important}main h2{font-size:clamp(26px,3.2vw,38px)!important}main h3{font-size:clamp(17px,1.6vw,20px)!important}}
-@media(max-width:640px){main h2{font-size:25px!important;margin:38px auto 14px;padding-bottom:10px}main h3{font-size:17px!important}}
+@media(min-width:641px){main p,main ul,main ol,main details,main blockquote,main h2,main h3,main .facts,main .related{max-width:760px!important;margin-left:auto!important;margin-right:auto!important}main h2{font-size:clamp(26px,3.2vw,38px)!important}main h3{font-size:clamp(17px,1.6vw,20px)!important}}
+@media(max-width:640px){main h2{font-size:25px!important;margin:38px auto 14px;padding-bottom:10px}main h3{font-size:17px!important}main h2,main h3{overflow-wrap:anywhere}}
+
+/*BAHWRAP_MIN*/.bah-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem auto;max-width:760px}.bah-wrap>table{margin:0}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","@id":"https://pensacolamilitaryhousing.com/bah-to-mortgage-guide#webpage","url":"https://pensacolamilitaryhousing.com/bah-to-mortgage-guide","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","h2","h3","summary",".lead",".facts strong"]}}
@@ -334,7 +336,7 @@ Max Purchase Price = Max Loan (zero-down VA)
 <p><strong>The short answer:</strong> Because lenders gross up tax-free BAH to 125%, a 2026 E-5 with dependents at NAS Pensacola (FL064, $1,863/mo BAH) realistically supports a <strong>$250,000-$285,000</strong> VA purchase with zero down, while an O-3 with dependents in the Fort Walton Beach MHA (FL023, $3,399/mo BAH) supports roughly <strong>$510,000-$575,000</strong>. The rank-by-rank tables below show every pay grade.</p>
 
 <h2>Rank-by-Rank 2026 Reality (Pensacola MHA FL064)</h2>
-<table>
+<div class="bah-wrap"><table>
 <thead><tr><th>Rank (w/dep)</th><th>BAH</th><th>Base Pay</th><th>Target PITI @ 100% BAH</th><th>Realistic VA Purchase Price</th></tr></thead>
 <tbody>
 <tr><td>E-4</td><td>$1,794</td><td>$2,850</td><td>$1,794</td><td>$240,000 - $270,000</td></tr>
@@ -348,13 +350,13 @@ Max Purchase Price = Max Loan (zero-down VA)
 <tr><td>O-4</td><td>$2,457</td><td>$7,500</td><td>$2,457</td><td>$360,000 - $440,000</td></tr>
 <tr><td>O-5</td><td>$2,610</td><td>$8,900</td><td>$2,610</td><td>$390,000 - $490,000</td></tr>
 </tbody>
-</table>
+</table></div>
 <p>Full BAH tables: <a href="/bah-rates">2026 BAH Rates — FL064 + FL023</a>. Note E-6/E-7 have wider ranges because pay scales widely with time-in-service; the lower end assumes new to rank, the upper end assumes time-in-service.</p>
 <p><strong>Caveat:</strong> "Realistic purchase price" assumes zero down, 6.5% 30-year rate, modest other debts. With 5% down, 100% disability waiver, or an IRRRL-refinanceable rate, numbers flex up 5-15%.</p>
 
 <h2>Rank-by-Rank 2026 Reality (Fort Walton Beach MHA FL023)</h2>
 <p>FL023 covers <strong>Eglin AFB, Hurlburt Field, and Duke Field</strong>. Same DTI math, same VA underwriting — just bigger BAH because the survey includes Destin and Fort Walton Beach beach pricing.</p>
-<table>
+<div class="bah-wrap"><table>
 <thead><tr><th>Rank (w/dep)</th><th>BAH</th><th>Base Pay</th><th>Target PITI @ 100% BAH</th><th>Realistic VA Purchase Price</th></tr></thead>
 <tbody>
 <tr><td>E-4</td><td>$2,340</td><td>$2,850</td><td>$2,340</td><td>$320,000 - $370,000</td></tr>
@@ -368,13 +370,13 @@ Max Purchase Price = Max Loan (zero-down VA)
 <tr><td>O-4</td><td>$3,528</td><td>$7,500</td><td>$3,528</td><td>$520,000 - $595,000</td></tr>
 <tr><td>O-5</td><td>$3,612</td><td>$8,900</td><td>$3,612</td><td>$540,000 - $610,000</td></tr>
 </tbody>
-</table>
+</table></div>
 <p>Warrant Officer rates apply primarily to <strong>7th Special Forces Group</strong> personnel at Eglin AFB. W-2 with dependents draws $2,898; W-4 draws $2,979 — supporting roughly $410,000-$465,000 and $430,000-$485,000 respectively at the same rate and DTI assumptions above.</p>
 <p><strong>Example:</strong> O-3 with dependents at Hurlburt Field. BAH $3,399 → grossed up $4,249. Base pay ~$5,900. Total gross ≈ $10,149. 41% = $4,161 max total debts. Assume $600/month in car + student loans. $4,161 − $600 = $3,561 available for PITI. At 6.5% 30-year + ~1% tax/ins, that supports roughly <strong>$510,000-$575,000</strong> purchase price, zero down — a full $130,000-$175,000 more than the same O-3 at NAS Pensacola.</p>
 
 <h2>FL064 vs FL023 — Same Rank, Different Buying Power</h2>
 <p>The fastest way to see the impact: same rank, side by side.</p>
-<table>
+<div class="bah-wrap"><table>
 <thead><tr><th>Rank (w/dep)</th><th>FL064 BAH</th><th>FL023 BAH</th><th>Monthly Delta</th><th>Buying-Power Delta</th></tr></thead>
 <tbody>
 <tr><td>E-4</td><td>$1,794</td><td>$2,340</td><td>+$546</td><td>+$80,000-$100,000</td></tr>
@@ -383,7 +385,7 @@ Max Purchase Price = Max Loan (zero-down VA)
 <tr><td>O-3</td><td>$2,271</td><td>$3,399</td><td>+$1,128</td><td>+$170,000-$175,000</td></tr>
 <tr><td>O-5</td><td>$2,610</td><td>$3,612</td><td>+$1,002</td><td>+$120,000-$150,000</td></tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Practical implication:</strong> If you have any negotiability on follow-on orders between an FL064 and FL023 base — or you are weighing a base-of-preference list — the BAH delta is real money. An O-3 making the same TIS pay receives nearly <strong>$13,500 more per year tax-free</strong> at Hurlburt vs NAS Pensacola, which translates to almost $170K more in qualifying mortgage capacity.</p>
 <p><strong>The catch:</strong> FL023 housing stock costs proportionally more. Niceville, Bluewater Bay, and Destin price points absorb most of that BAH delta. Crestview is the FL023 budget play — same BAH, smaller home price, biggest BAH-to-mortgage gap in the area.</p>
 

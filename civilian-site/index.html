@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>if(location.hostname.indexOf('.pages.dev')>-1)location.replace('https://greggcostin.com'+location.pathname+location.search);</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gregg Costin, Pensacola Realtor | The Costin Team</title>
@@ -186,6 +187,17 @@ footer a{color:var(--gold)}
   .banner-email{font-size:9px!important}
   .banner-tabs>a{padding:4px 6px!important;font-size:9px!important;letter-spacing:.3px!important}
 }
+
+/*FIGURE_CSS*/
+.figure-band{border-radius:12px;overflow:hidden;background:var(--panel);line-height:0;margin:2.25rem auto .5rem;border:1px solid var(--hair);max-width:760px}
+.figure-band picture{display:block}
+.figure-band img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+.figure-band--tall img{aspect-ratio:auto;max-height:600px;object-fit:contain;background:var(--panel)}
+.figure-band--43 img{aspect-ratio:4/3}
+figure{margin:0}
+figcaption{line-height:1.5;color:var(--muted);font-size:12px;font-style:italic;text-align:center;margin:8px 0 0;font-family:var(--sans);font-weight:300;letter-spacing:.2px;padding:0 10px 10px}
+figcaption a{color:var(--muted);text-decoration:underline}
+@media(max-width:640px){.figure-band--43 img{aspect-ratio:auto}}
 </style>
 </head>
 <body>
@@ -270,6 +282,7 @@ footer a{color:var(--gold)}
 
 <h2>Where we work</h2>
 <p>The Costin Team serves all of Escambia and Santa Rosa County plus the Fort Walton Beach and Destin corridor. Explore our in-depth neighborhood guides:</p>
+<figure class="figure-band figure-band--tall"><picture><source srcset="/images/pensacola-beach.webp" type="image/webp"><img src="/images/pensacola-beach.jpg" width="1400" height="1867" alt="Vintage neon Pensacola Beach sign with a sailfish pointing the way to the beaches" loading="lazy" decoding="async"></picture><figcaption>The landmark Pensacola Beach sign. Photo: <a href="https://commons.wikimedia.org/wiki/File%3APensacola%20Beach%20Sign(1).jpg" rel="noopener nofollow" target="_blank">TimothyJ</a>, CC BY 2.0</figcaption></figure>
 <div class="chips">
 <a href="https://pensacolamilitaryhousing.com/communities/gulf-breeze">Gulf Breeze</a>
 <a href="https://pensacolamilitaryhousing.com/communities/pace">Pace</a>

@@ -117,6 +117,61 @@
       "creditRequired": true,
       "credit": "Ebyabe",
       "query": "Escambia County courthouse Pensacola Florida"
+    },
+    "civilian-site/images/pensacola-beach.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Beach Sign(1).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Beach%20Sign(1).jpg",
+      "license": "CC BY 2.0",
+      "creditRequired": true,
+      "credit": "TimothyJ",
+      "query": "Pensacola Beach Florida",
+      "usedOn": "greggcostin.com/"
+    },
+    "civilian-site/images/saenger.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Saenger Thtr01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Saenger%20Thtr01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "usedOn": "greggcostin.com/contact"
+    },
+    "civilian-site/images/sold-keys.jpg": {
+      "source": "Wikimedia Commons (via Openverse)",
+      "title": "Hand holds house keys near door lock, symbolizing new beginnings and homeownership journey in a modern setting.jpg",
+      "pageUrl": "https://commons.wikimedia.org/w/index.php?curid=190519542",
+      "license": "CC BY 2.0",
+      "creditRequired": true,
+      "credit": "Shixart1985",
+      "usedOn": "greggcostin.com/sell"
+    },
+    "civilian-site/images/porch-home-cand1.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "American homes and gardens (1910) (17535589513).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAmerican%20homes%20and%20gardens%20(1910)%20(17535589513).jpg",
+      "license": "No restrictions",
+      "creditRequired": false,
+      "credit": "Internet Archive Book Images",
+      "query": "house front porch flowers welcoming"
+    },
+    "civilian-site/images/porch-home-cand2.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "American homes and gardens (1912) (17534668843).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAmerican%20homes%20and%20gardens%20(1912)%20(17534668843).jpg",
+      "license": "No restrictions",
+      "creditRequired": false,
+      "credit": "Internet Archive Book Images",
+      "query": "house front porch flowers welcoming"
+    },
+    "civilian-site/images/porch-home-cand3.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "American homes and gardens (1912) (17969028719).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAmerican%20homes%20and%20gardens%20(1912)%20(17969028719).jpg",
+      "license": "No restrictions",
+      "creditRequired": false,
+      "credit": "Internet Archive Book Images",
+      "query": "house front porch flowers welcoming"
     }
   }
 }

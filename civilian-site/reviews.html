@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>if(location.hostname.indexOf('.pages.dev')>-1)location.replace('https://greggcostin.com'+location.pathname+location.search);</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Client Reviews | Gregg Costin, The Costin Team</title>
@@ -179,6 +180,17 @@ footer a{color:var(--gold)}
   .banner-email{font-size:9px!important}
   .banner-tabs>a{padding:4px 6px!important;font-size:9px!important;letter-spacing:.3px!important}
 }
+
+/*FIGURE_CSS*/
+.figure-band{border-radius:12px;overflow:hidden;background:var(--panel);line-height:0;margin:2.25rem auto .5rem;border:1px solid var(--hair);max-width:760px}
+.figure-band picture{display:block}
+.figure-band img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+.figure-band--tall img{aspect-ratio:auto;max-height:600px;object-fit:contain;background:var(--panel)}
+.figure-band--43 img{aspect-ratio:4/3}
+figure{margin:0}
+figcaption{line-height:1.5;color:var(--muted);font-size:12px;font-style:italic;text-align:center;margin:8px 0 0;font-family:var(--sans);font-weight:300;letter-spacing:.2px;padding:0 10px 10px}
+figcaption a{color:var(--muted);text-decoration:underline}
+@media(max-width:640px){.figure-band--43 img{aspect-ratio:auto}}
 </style>
 </head>
 <body>

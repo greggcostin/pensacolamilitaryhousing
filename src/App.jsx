@@ -363,6 +363,13 @@ function trackPageView(path) {
     window.gtag("event", "page_view", { page_path: path, page_location: window.location.origin + path, page_title: document.title });
   }
 }
+// FollowUpBoss loads once per visit (deferred in index.html); without this, SPA route
+// changes never reach the CRM's visitor timeline.
+function trackFUBPageView() {
+  if (typeof window !== "undefined" && typeof window.widgetTracker === "function") {
+    window.widgetTracker("send", "pageview");
+  }
+}
 const FAQ = ({ q, a }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -2713,6 +2720,7 @@ export default function App() {
     const m = META_BY_PAGE[id] || META_BY_PAGE.home;
     if (m) document.title = m.title; // set before page_view so GA4 logs the right title
     trackPageView(slug);
+    trackFUBPageView();
   };
 
   useEffect(() => {
@@ -2723,6 +2731,7 @@ export default function App() {
       const m = META_BY_PAGE[id] || META_BY_PAGE.home;
       if (m) document.title = m.title;
       trackPageView(window.location.pathname);
+      trackFUBPageView();
     };
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);

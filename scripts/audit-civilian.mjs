@@ -112,8 +112,11 @@ for (const file of pages) {
     const src = (attrs.match(/src="([^"]*)"/) || [])[1] || "";
     if (src.startsWith("/") && !existsSync(ROOT + src)) f(file, `img file missing: ${src}`);
   }
-  // CC-licensed local images must carry a visible credit
+  // CC-licensed local images must carry a visible credit.
+  // OWNED images (team portraits, our own photography) are exempt.
+  const OWNED_IMAGES = ["nichole-sims"];
   for (const m of h.matchAll(/<img[^>]*src="\/images\/([^"]+)\.jpg"[^>]*>/g)) {
+    if (OWNED_IMAGES.includes(m[1])) continue;
     const fig = h.slice(h.indexOf(m[0]), h.indexOf(m[0]) + 1200);
     if (!/Photo:/.test(fig)) f(file, `CC image without figcaption credit: ${m[1]}`);
   }

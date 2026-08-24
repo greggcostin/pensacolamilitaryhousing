@@ -1,0 +1,6 @@
+# greggcostin.com — Gregg Costin | The Costin Team, Pensacola FL
+# All crawlers welcome, including AI assistants and LLM crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: https://greggcostin.com/sitemap.xml

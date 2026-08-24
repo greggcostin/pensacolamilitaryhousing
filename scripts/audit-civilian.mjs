@@ -114,7 +114,7 @@ for (const file of pages) {
   }
   // CC-licensed local images must carry a visible credit.
   // OWNED images (team portraits, our own photography) are exempt.
-  const OWNED_IMAGES = ["nichole-sims"];
+  const OWNED_IMAGES = ["nichole-sims", "rachel-ley"];
   for (const m of h.matchAll(/<img[^>]*src="\/images\/([^"]+)\.jpg"[^>]*>/g)) {
     if (OWNED_IMAGES.includes(m[1])) continue;
     const fig = h.slice(h.indexOf(m[0]), h.indexOf(m[0]) + 1200);

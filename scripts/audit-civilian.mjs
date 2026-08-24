@@ -47,6 +47,11 @@ for (const file of pages) {
   if (!ogImg.startsWith(SITE + "/og/")) f(file, `og:image not a branded per-page card: ${ogImg}`);
   else if (!existsSync(`${ROOT}/og/${ogImg.split("/og/")[1]}`)) f(file, `og image file missing: ${ogImg}`);
   if (!h.includes('rel="icon"')) f(file, "missing favicon");
+  for (const tag of ['name="twitter:title"', 'name="twitter:description"', 'name="twitter:url"', 'rel="apple-touch-icon"', 'rel="manifest"', 'name="theme-color"', 'name="ICBM"']) {
+    if (!h.includes(tag)) f(file, `missing ${tag}`);
+  }
+  if (!h.includes("max-video-preview:-1")) f(file, "robots meta missing max-video-preview:-1");
+  if (["buy.html", "sell.html"].includes(file) && !h.includes('"@type":"Service"')) f(file, "service page missing Service schema");
   if (!h.includes('name="robots" content="index,follow')) f(file, "missing robots meta");
   if (!h.includes(".pages.dev'")) f(file, "missing pages.dev canonical-redirect snippet");
 
@@ -141,6 +146,12 @@ for (const bot of ["GPTBot", "ClaudeBot", "PerplexityBot", "Bingbot", "Google-Ex
   if (!robots.includes(bot)) f("robots.txt", `missing explicit ${bot} welcome`);
 }
 if (!existsSync(`${ROOT}/_headers`)) f("_headers", "missing security headers file");
+else if (!readFileSync(`${ROOT}/_headers`, "utf8").includes("Strict-Transport-Security")) f("_headers", "missing HSTS");
+if (!existsSync(`${ROOT}/site.webmanifest`)) f("site.webmanifest", "missing");
+for (const bot of ["Applebot", "Amazonbot", "Meta-ExternalAgent", "Claude-SearchBot", "Perplexity-User"]) {
+  if (!robots.includes(`User-agent: ${bot}`)) f("robots.txt", `missing explicit ${bot} welcome`);
+}
+if (!readFileSync(`${ROOT}/llms.txt`, "utf8").includes("Q140446886")) f("llms.txt", "missing Wikidata entity line");
 if (!existsSync(`${ROOT}/llms.txt`)) f("llms.txt", "missing");
 if (!existsSync(`${ROOT}/llms-full.txt`)) f("llms-full.txt", "missing");
 if (!existsSync(`${ROOT}/404.html`)) f("404.html", "missing");

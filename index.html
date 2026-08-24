@@ -42,6 +42,7 @@
                           else if(href.indexOf('greggc.levinrinkerealty.com') > -1){ gtag('event','brokerage_profile_click',{ event_category:'social_proof' }); }
                           else if(href.indexOf('whats-my-home-worth') > -1){ gtag('event','home_valuation_click',{ event_category:'conversion' }); }
                           else if(href.indexOf('825bayshore') > -1){ gtag('event','property_page_click',{ event_category:'conversion' }); }
+                          else if(href.indexOf('http') === 0 && (href.indexOf('.gov') > -1 || href.indexOf('.mil') > -1 || href.indexOf('floridarevenue.com') > -1 || href.indexOf('fldoe.org') > -1 || href.indexOf('citizensfla.com') > -1)){ gtag('event','authority_link_click',{ event_category:'outbound', event_label: href.split('/')[2] || href }); }
                         });
                         document.addEventListener('submit', function(e){
                           if(e.target && e.target.tagName === 'FORM'){

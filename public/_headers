@@ -21,3 +21,13 @@
 # Pagefind index chunks are content-addressed too.
 /pagefind/*
   Cache-Control: public, max-age=604800
+
+# Photos/logos: stable filenames (NOT content-hashed), so no `immutable` —
+# 30 days instead of the Pages default 4h. Replacing a photo means renaming
+# it (or accepting up to 30 days of stale cache).
+/images/*
+  Cache-Control: public, max-age=2592000
+
+# OG cards: same stable-filename tradeoff; scrapers refetch rarely anyway.
+/og/*
+  Cache-Control: public, max-age=2592000

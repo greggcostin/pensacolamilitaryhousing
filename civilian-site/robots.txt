@@ -1,41 +1,118 @@
-# greggcostin.com — Gregg Costin | The Costin Team, Pensacola FL
-# All crawlers welcome, including AI assistants, AI training, and answer engines.
+# robots.txt for greggcostin.com
+# Gregg Costin | The Costin Team - Pensacola, FL real estate
+# All well-behaved crawlers welcome, including AI assistants, answer engines, and training crawlers.
 
 User-agent: *
 Allow: /
+Disallow: /cdn-cgi/
+Crawl-delay: 1
 
-# Explicit welcome for AI + answer-engine crawlers
-User-agent: GPTBot
+User-agent: Googlebot
 Allow: /
+Disallow: /cdn-cgi/
 
-User-agent: OAI-SearchBot
+User-agent: Googlebot-Image
 Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
+Disallow: /cdn-cgi/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: YandexBot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Applebot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: FacebookBot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /cdn-cgi/
 
 User-agent: CCBot
 Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: YouBot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Diffbot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: ImagesiftBot
+Allow: /
+Disallow: /cdn-cgi/
 
 Sitemap: https://greggcostin.com/sitemap.xml

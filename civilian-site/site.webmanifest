@@ -1,0 +1,25 @@
+{
+  "name": "Gregg Costin | The Costin Team - Pensacola Real Estate",
+  "short_name": "Costin Team",
+  "description": "Buy or sell in Pensacola with The Costin Team at Levin Rinke Realty. 5.0 stars on Google and Zillow.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0A0F1A",
+  "theme_color": "#0A0F1A",
+  "lang": "en-US",
+  "categories": [
+    "business",
+    "lifestyle",
+    "finance"
+  ],
+  "icons": [
+    {
+      "src": "/images/favicon.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

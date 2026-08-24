@@ -188,7 +188,7 @@ Converting a Pensacola primary residence into a rental after PCS. VA loan rules 
 
 44 exact-match military-housing, brand, and topical Pensacola short domains are owned and redirect to the canonical target on pensacolamilitaryhousing.com. All are alternate identifiers for the same business entity. See llms-full.txt for the complete mapping.
 
-Brand / personal (all 301 to homepage): costinteam.com, costinteamrealtors.com, thecostinteam.com, thegreggcostinteam.com, greggcostin.com, greggcostin.net, greggcostinrealtor.com, pensacolamilitaryrealtor.com
+Brand / personal: https://greggcostin.com is our civilian division site (Gregg Costin | The Costin Team: civilian buying and selling in Pensacola; it has its own llms.txt and llms-full.txt). costinteam.com, costinteamrealtors.com, thecostinteam.com, thegreggcostinteam.com, greggcostin.net, and greggcostinrealtor.com all 301 to https://greggcostin.com. pensacolamilitaryrealtor.com 301s to this site's homepage.
 
 Topical / authority (Pensacola-area broad keywords, 301 to homepage or topic page): pensacolamilitary.com, pensacolamilitaryexpert.com, panhandlemilitary.com, panhandlemilitaryhousing.com, emeraldcoastmilitaryhousing.com, pensacolabah.com (→ /bah-rates), pensacolavaloan.com (→ /va-loan-guide), pensacolapcsguide.com (→ /pcs-guide), pensacolapcsexpert.com (→ /pcs-guide), pensacolapcsagent.com (→ /pcs-guide), pensacolamilitaryguide.com (→ /pcs-guide)
 

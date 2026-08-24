@@ -95,7 +95,7 @@ for (const file of pages) {
   for (const m of h.matchAll(/href="(\/[^"#]*)"/g)) {
     const p = m[1];
     if (p.startsWith("/images/") || p.startsWith("/og/")) { if (!existsSync(ROOT + p)) f(file, `broken asset link ${p}`); continue; }
-    if ([".xml", ".txt"].some((e) => p.endsWith(e))) { if (!existsSync(ROOT + p)) f(file, `broken file link ${p}`); continue; }
+    if ([".xml", ".txt", ".webmanifest", ".json", ".png"].some((e) => p.endsWith(e))) { if (!existsSync(ROOT + p)) f(file, `broken file link ${p}`); continue; }
     const target = p === "/" ? "index.html" : p.slice(1) + ".html";
     if (p === "/about") continue; // _redirects alias
     if (!existsSync(`${ROOT}/${target}`)) f(file, `broken internal link ${p}`);

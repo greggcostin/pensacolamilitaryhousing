@@ -146,32 +146,41 @@
       "credit": "Shixart1985",
       "usedOn": "greggcostin.com/sell"
     },
-    "civilian-site/images/porch-home-cand1.jpg": {
+    "civilian-site/images/palafox-street.jpg": {
       "source": "Wikimedia Commons",
-      "title": "American homes and gardens (1910) (17535589513).jpg",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAmerican%20homes%20and%20gardens%20(1910)%20(17535589513).jpg",
-      "license": "No restrictions",
-      "creditRequired": false,
-      "credit": "Internet Archive Book Images",
-      "query": "house front porch flowers welcoming"
+      "title": "PensacolaPalafoxAug2008ParkMonument.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacolaPalafoxAug2008ParkMonument.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Infrogmation of New Orleans",
+      "query": "Palafox Street downtown Pensacola Florida"
     },
-    "civilian-site/images/porch-home-cand2.jpg": {
+    "civilian-site/images/bay-bridge.jpg": {
       "source": "Wikimedia Commons",
-      "title": "American homes and gardens (1912) (17534668843).jpg",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAmerican%20homes%20and%20gardens%20(1912)%20(17534668843).jpg",
-      "license": "No restrictions",
-      "creditRequired": false,
-      "credit": "Internet Archive Book Images",
-      "query": "house front porch flowers welcoming"
+      "title": "Pensacola Bay Bridge.JPG",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Bay%20Bridge.JPG",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Skye Marthaler",
+      "query": "Pensacola Bay Bridge Florida"
     },
-    "civilian-site/images/porch-home-cand3.jpg": {
+    "civilian-site/images/graffiti-bridge.jpg": {
       "source": "Wikimedia Commons",
-      "title": "American homes and gardens (1912) (17969028719).jpg",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAmerican%20homes%20and%20gardens%20(1912)%20(17969028719).jpg",
-      "license": "No restrictions",
+      "title": "Graffiti Bridge.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AGraffiti%20Bridge.jpg",
+      "license": "Public domain",
       "creditRequired": false,
-      "credit": "Internet Archive Book Images",
-      "query": "house front porch flowers welcoming"
+      "credit": "Adamnorre",
+      "query": "Graffiti Bridge Pensacola 17th Avenue"
+    },
+    "civilian-site/images/perdido-key.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Perdido Key Beach Access K (2ec01f39-0b55-48dd-8353-e8f7facb1c46).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APerdido%20Key%20Beach%20Access%20K%20(2ec01f39-0b55-48dd-8353-e8f7facb1c46).jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Breault",
+      "query": "Perdido Key beach white sand Florida"
     }
   }
 }

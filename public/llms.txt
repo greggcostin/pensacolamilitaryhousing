@@ -327,6 +327,9 @@ Free 24-hour Realtor-grade home valuation for PCS-out sellers: three MLS comp se
 ### Book a PCS Strategy Call — https://pensacolamilitaryhousing.com/book-pcs-call
 Free 15-minute planning call: BAH budget, neighborhoods by gate, timeline back-planning. OCONUS-friendly evening and weekend slots.
 
+### DATA STUDY: BAH vs. Cost of Owning by ZIP — https://pensacolamilitaryhousing.com/bah-vs-cost-of-owning-pensacola
+Original quarterly data study: July 2026 Zillow ZHVI typical home values for 26 Pensacola-area ZIPs run through a VA zero-down cost model (6.5%, 1.0% tax, $3,000 insurance, funding fee financed) against every 2026 BAH grade for FL064 and FL023. Key findings: only 1 of 26 ZIPs pencils for an FL064 E-5; 12 of 26 exceed every FL064 grade including O-6; an FL023 E-5 covers 12 of 26. Full methodology and per-ZIP table on the page. Citable with attribution.
+
 ### Renting on BAH in Pensacola — https://pensacolamilitaryhousing.com/renting-on-bah-pensacola
 2026 BAH-to-rent guide for short tours and students: rank-by-rank FL064/FL023 rates with and without dependents, real Milton/Pace rent ranges, SCRA lease-termination rights, Florida notice rules, and the roommate math flight students actually use.
 

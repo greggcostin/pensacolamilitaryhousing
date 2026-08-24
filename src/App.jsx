@@ -739,7 +739,7 @@ const Footer = ({ go }) => {
           </div>
         </div>
         <div style={{ borderTop: `1px solid ${C.hairline}`, paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
-          <p style={{ color: C.mutedD, fontSize: 11 }}>© 2026 The Costin Team. All rights reserved. | <a href="https://pensacolamilitaryhousing.com/" style={{ color: C.mutedD }}>PensacolaMilitaryHousing.com</a></p>
+          <p data-costin-sites style={{ color: C.mutedD, fontSize: 11 }}>© 2026 The Costin Team. All rights reserved. | PensacolaMilitaryHousing.com for military &amp; PCS families · <a href="https://greggcostin.com" style={{ color: C.mutedD }}>GreggCostin.com</a> for civilian buying &amp; selling</p>
           <p style={{ color: C.mutedD, fontSize: 11 }}>Gregg Costin, Realtor® · MRP® · ABR® · SRS® · RENE® · FMS®</p>
         </div>
         <p style={{ color: C.mutedD, fontSize: 10.5, fontStyle: "italic", lineHeight: 1.6, marginTop: 16, textAlign: "center", maxWidth: 1100, marginLeft: "auto", marginRight: "auto" }}>

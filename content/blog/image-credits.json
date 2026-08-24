@@ -181,6 +181,51 @@
       "creditRequired": false,
       "credit": "Breault",
       "query": "Perdido Key beach white sand Florida"
+    },
+    "civilian-site/images/navarre.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Beach - White Sands, Florida Coast (27268946483).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Beach%20-%20White%20Sands%2C%20Florida%20Coast%20(27268946483).jpg",
+      "license": "CC BY-SA 2.0",
+      "creditRequired": true,
+      "credit": "Tony Webster from Minneapolis, Minnesota, United States",
+      "query": "Gulf Islands National Seashore Santa Rosa Island dunes"
+    },
+    "civilian-site/images/pace-milton.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "FL Blackwater River SP bdwlk02.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFL%20Blackwater%20River%20SP%20bdwlk02.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Blackwater River State Park Florida"
+    },
+    "civilian-site/images/fort-walton.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "John T. Brooks Bridge.JPG",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJohn%20T.%20Brooks%20Bridge.JPG",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Mark Sublette",
+      "query": "Fort Walton Beach Florida Okaloosa Island"
+    },
+    "civilian-site/images/gulf-shores.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "The beach community of Gulf Shores, Alabama LCCN2010639257.tif",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AThe%20beach%20community%20of%20Gulf%20Shores%2C%20Alabama%20LCCN2010639257.tif",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Carol M. Highsmith",
+      "query": "Gulf Shores Alabama beach"
+    },
+    "civilian-site/images/orange-beach.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Alabama's Coastal Connection - Setting Out from Orange Beach - NARA - 7716828.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAlabama's%20Coastal%20Connection%20-%20Setting%20Out%20from%20Orange%20Beach%20-%20NARA%20-%207716828.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "A. E. Crane, U.S. Department of Transportation",
+      "query": "Orange Beach Alabama marina"
     }
   }
 }

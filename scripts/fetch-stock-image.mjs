@@ -119,8 +119,10 @@ if (args[0] === "--finalize") {
       if (credits.images[key]) { credits.images[finalRel] = credits.images[key]; }
     } else unlinkSync(full);
   }
-  // drop candidate entries
-  for (const k of Object.keys(credits.images)) if (/-cand\d+\.jpg$/.test(k)) delete credits.images[k];
+  // drop THIS slug's candidate entries only (other subjects may still be
+  // mid-review; wiping all -candN keys destroyed their credit lineage)
+  const candKeyRe = new RegExp(`${slug}-cand\\d+\\.jpg$`);
+  for (const k of Object.keys(credits.images)) if (candKeyRe.test(k)) delete credits.images[k];
   saveCredits(credits);
   console.log(`FINALIZED: ${base}.jpg (kept candidate ${keep})`);
   const entry = credits.images[finalRel];

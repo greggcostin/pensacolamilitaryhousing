@@ -18,8 +18,17 @@
 - [Reviews](https://greggcostin.com/reviews): verified 5.0-star client reviews
 - [Meet the Team](https://greggcostin.com/team): Gregg Costin bio and credentials
 - [Contact](https://greggcostin.com/contact): phone, email, office, contact form
+- [Search Homes](https://greggcostin.com/search): live MLS search with instant alerts, browse by city
+- [Resources](https://greggcostin.com/resources): Florida homeowner guides hub
+- [Florida Homestead Exemption](https://greggcostin.com/resources/florida-homestead-exemption): savings, deadlines, Save Our Homes, portability
+- [Florida Home Insurance](https://greggcostin.com/resources/florida-home-insurance): cost drivers, inspections, wind mitigation, flood
 
 ## Related
 
 - [PensacolaMilitaryHousing.com](https://pensacolamilitaryhousing.com/): our dedicated military and PCS division, with 90+ guides on BAH, VA loans, and base-by-base housing (same team, same brokerage)
 - Contact: (850) 266-5005 · Gregg.Costin@gmail.com · 220 W. Garden Street, Pensacola, FL 32502
+
+## Blog Posts (auto-maintained)
+
+- [Blog index](https://greggcostin.com/blog): all posts
+- [What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers](https://greggcostin.com/blog/what-moves-mortgage-rates): Why mortgage rates do not follow the Fed, how rate locks and discount points work, and what Pensacola area buyers should do at every stage of a rate cycle.

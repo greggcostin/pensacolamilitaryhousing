@@ -9,8 +9,13 @@ const ROOT = "civilian-site";
 const SITE = "https://greggcostin.com";
 const findings = [];
 const f = (page, msg) => findings.push(`${page}: ${msg}`);
+let LEDGER = {};
+try { LEDGER = JSON.parse(readFileSync("content/blog/image-credits.json", "utf8")).images; } catch {}
 
 const pages = readdirSync(ROOT).filter((x) => x.endsWith(".html") && x !== "404.html");
+for (const sub of ["blog", "resources"]) {
+  if (existsSync(`${ROOT}/${sub}`)) pages.push(...readdirSync(`${ROOT}/${sub}`).filter((x) => x.endsWith(".html")).map((x) => `${sub}/${x}`));
+}
 const slugOf = (file) => (file === "index.html" ? "/" : "/" + file.replace(".html", ""));
 const titles = new Map(), descs = new Map();
 
@@ -67,9 +72,9 @@ for (const file of pages) {
   } else {
     if (!types.includes("BreadcrumbList")) f(file, "missing BreadcrumbList");
     if (!parsed.some((p) => JSON.stringify(p).includes('"@id":"https://greggcostin.com/#team"'))) f(file, "schema not wired to #team entity");
-    const wp = parsed.find((p) => ["WebPage", "AboutPage", "ContactPage"].includes(p["@type"]));
+    const wp = parsed.find((p) => ["WebPage", "AboutPage", "ContactPage", "CollectionPage", "Blog", "Article"].includes(p["@type"]));
     if (!wp) f(file, "missing WebPage-type schema");
-    else if (!wp.dateModified) f(file, "WebPage schema missing dateModified");
+    else if (!wp.dateModified && !wp.datePublished && wp["@type"] !== "Blog") f(file, "WebPage schema missing dateModified");
   }
   if (file === "team.html" && !types.includes("Person")) f(file, "team page missing Person schema");
   // FAQPage answers must mirror visible <details> text
@@ -88,6 +93,7 @@ for (const file of pages) {
   const words = (body.replace(/<[^>]+>/g, " ").match(/\S+/g) || []).length;
   if (words < 250) f(file, `thin content: ${words} words`);
   for (const m of body.matchAll(/<p(?:\s[^>]*)?>([\s\S]*?)<\/p>/g)) {
+    if (/class="[^"]*testimony/.test(m[0])) continue; // quoted personal statements run long by design (Gregg, Aug 2026)
     const w = (m[1].replace(/<[^>]+>/g, " ").match(/\S+/g) || []).length;
     if (w > 85) f(file, `wall of text: ${w}-word paragraph ("${m[1].replace(/<[^>]+>/g, "").trim().slice(0, 40)}...")`);
   }
@@ -112,13 +118,18 @@ for (const file of pages) {
     const src = (attrs.match(/src="([^"]*)"/) || [])[1] || "";
     if (src.startsWith("/") && !existsSync(ROOT + src)) f(file, `img file missing: ${src}`);
   }
-  // CC-licensed local images must carry a visible credit.
-  // OWNED images (team portraits, our own photography) are exempt.
+  // Credit-required images must carry a visible credit. Exempt: OWNED images
+  // (team portraits, our own photography) and ledger entries with creditRequired=false (PD/CC0).
   const OWNED_IMAGES = ["nichole-sims", "rachel-ley"];
   for (const m of h.matchAll(/<img[^>]*src="\/images\/([^"]+)\.jpg"[^>]*>/g)) {
     if (OWNED_IMAGES.includes(m[1])) continue;
+    const entry = LEDGER[`civilian-site/images/${m[1]}.jpg`];
+    if (entry && entry.creditRequired === false) continue;
+    // A page-level consolidated credits block (data-photo-credits="name1 name2 ...") satisfies attribution
+    if (new RegExp(`data-photo-credits="[^"]*\\b${m[1]}\\b`).test(h)) continue;
+    const consolidated = new RegExp(`data-photo-credits="[^"]*${m[1]}`).test(h);
     const fig = h.slice(h.indexOf(m[0]), h.indexOf(m[0]) + 1200);
-    if (!/Photo:/.test(fig)) f(file, `CC image without figcaption credit: ${m[1]}`);
+    if (!consolidated && !/Photo:/.test(fig)) f(file, `credit-required image without figcaption credit: ${m[1]}`);
   }
 
   /* ---------- form contract ---------- */

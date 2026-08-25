@@ -1,0 +1,55 @@
+{
+ "note": "Civilian blog queue. The engine takes the top未 topic unless a current-events override applies (big Fed/rates/insurance/market news this week). Slugs are suggestions; keep them short.",
+ "queue": [
+  {
+   "slug": "property-taxes-escambia-santa-rosa",
+   "topic": "How property taxes actually work in Escambia and Santa Rosa County: millage, assessed vs market value, TRIM notices, and what new buyers get wrong",
+   "type": "evergreen"
+  },
+  {
+   "slug": "closing-costs-florida-buyers",
+   "topic": "Florida closing costs explained for buyers: what each line item is, who customarily pays what, and where there is room to negotiate",
+   "type": "evergreen"
+  },
+  {
+   "slug": "coastal-alabama-vs-panhandle",
+   "topic": "Buying on the Gulf: coastal Alabama (Orange Beach, Gulf Shores, Lillian) vs the Florida Panhandle, taxes, insurance, and lifestyle compared (Gregg is licensed in both states)",
+   "type": "evergreen"
+  },
+  {
+   "slug": "home-appraisals-explained",
+   "topic": "How home appraisals work: who hires the appraiser, what they compare, what happens when the number comes in low",
+   "type": "evergreen"
+  },
+  {
+   "slug": "refinance-break-even-math",
+   "topic": "When refinancing actually makes sense: the break-even math, costs people forget, and the reset-clock problem",
+   "type": "evergreen"
+  },
+  {
+   "slug": "title-insurance-explained",
+   "topic": "What title insurance is, why lenders require it, and what an owner policy protects in Florida",
+   "type": "evergreen"
+  },
+  {
+   "slug": "new-construction-vs-resale",
+   "topic": "New construction vs resale on the Gulf Coast: true costs, timelines, builder contracts, and inspection rights",
+   "type": "evergreen"
+  },
+  {
+   "slug": "hoa-fees-gulf-coast",
+   "topic": "HOA and condo fees on the Gulf Coast: what they cover, special assessments, and the questions to ask before you offer",
+   "type": "evergreen"
+  },
+  {
+   "slug": "market-check-monthly",
+   "topic": "RECURRING: Pensacola-area market check with researched, cited current data (inventory, days on market, price trends). Only run with real sourced numbers.",
+   "type": "current-events"
+  },
+  {
+   "slug": "rate-news-reaction",
+   "topic": "TEMPLATE: when a Fed meeting or big rate move happens, a same-week plain-English reaction post with cited sources",
+   "type": "current-events"
+  }
+ ]
+}

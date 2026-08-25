@@ -219,7 +219,10 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <a href="/">Home</a>
 <a href="/buy">Buy</a>
 <a href="/sell">Sell</a>
+<a href="/search">Search Homes</a>
 <a href="/neighborhoods">Neighborhoods</a>
+<a href="/resources">Resources</a>
+<a href="/blog">Blog</a>
 <a href="/reviews">Reviews</a>
 <a href="/faq">FAQ</a>
 <a href="/team">Meet the Team</a>
@@ -298,6 +301,45 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <details><summary>Should I get pre-approved before touring homes?</summary><p>Yes. Pre-approval tells you your real budget, exposes credit issues while there is still time to fix them, and makes your offer credible. Sellers in Pensacola routinely pass over offers that arrive without one.</p></details>
 <details><summary>What happens during the inspection period?</summary><p>You hire a licensed inspector, typically within 7 to 10 days of going under contract. If the report surfaces real issues, we negotiate repairs, credits, or a price adjustment, or you can walk away with your deposit while the contingency protects you.</p></details>
 
+
+<h2>Or send us a message right now</h2>
+<div style="background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:32px;max-width:640px;margin:1.5rem auto">
+<p style="margin:0 0 12px;color:var(--muted);font-size:14.5px">Tell us your price range, areas, and timeline. We respond within 2 hours during business hours.</p>
+<div id="inquiry-body-b">
+<form id="inquiry-form-b" novalidate style="display:flex;flex-direction:column;gap:12px">
+<input style="position:absolute;left:-9999px;opacity:0;pointer-events:none" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div><label for="b-name" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">Full Name *</label><input id="b-name" type="text" name="name" required style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"></div>
+<div><label for="b-email" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">Email Address *</label><input id="b-email" type="email" name="email" required style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"></div>
+<div><label for="b-phone" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">Phone Number</label><input id="b-phone" type="tel" name="phone" style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"></div>
+<div><label for="b-type" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">What Can We Help With?</label><select id="b-type" name="inquiryType" style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"><option selected>First-Time Home Buyer</option><option>Selling My Home</option><option>Investment Property</option><option>PCS / Relocation — Buying</option><option>General Question</option></select></div>
+<div><label for="b-message" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">Message</label><textarea id="b-message" name="message" rows="4" style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"></textarea></div>
+<div id="inquiry-err-b" style="display:none;background:#3a1a1a;border:1px solid #a03a3a;border-radius:8px;padding:12px;color:#ff9999;font-size:13px"></div>
+<button type="submit" class="btn-p" style="border:none;cursor:pointer">Send Message</button>
+<p style="color:#666;font-size:11px;margin-top:4px;text-align:center">By submitting, you agree to be contacted by The Costin Team. Your information is never sold or shared.</p>
+</form>
+</div>
+</div>
+<script>
+(function(){
+var form=document.getElementById('inquiry-form-b'),errBox=document.getElementById('inquiry-err-b'),body=document.getElementById('inquiry-body-b');
+if(!form)return;
+function get(n){var el=form.querySelector('[name="'+n+'"]');return el?el.value:'';}
+form.addEventListener('submit',function(e){
+e.preventDefault();errBox.style.display='none';
+var btn=form.querySelector('button[type=submit]');
+var data={name:get('name').trim(),email:get('email').trim(),phone:get('phone').trim(),inquiryType:get('inquiryType'),message:get('message').trim()||('Inquiry from '+location.pathname+' (no message text)'),_gotcha:get('website')};
+if(!data.name||!data.email){errBox.textContent='\u26a0 Name and email are required.';errBox.style.display='block';return;}
+btn.disabled=true;btn.textContent='Sending...';
+fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+.then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
+.then(function(res){
+if(res.ok&&res.j.success){body.innerHTML='<div style="background:#1a3a1a;border:2px solid #3aa03a;border-radius:12px;padding:24px;text-align:center"><div style="font-size:40px;margin-bottom:12px">\u2713</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. We will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('gc-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
+else{errBox.textContent='\u26a0 '+(res.j.error||'Something went wrong. Please call (850) 266-5005.');errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';}
+})
+.catch(function(){errBox.textContent='\u26a0 Connection error. Please call (850) 266-5005 directly.';errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';});
+});
+})();
+</script>
 <!-- inq-cta --><div class="inq-cta">
 <div style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;5.0 on Google and Zillow &middot; <a href="/reviews" style="color:var(--gold)">Verified Reviews</a></div>
 <p class="iq">&ldquo;We had an outstanding experience working with Gregg. From the very beginning, he set himself apart.&rdquo; &mdash; Joshua Slavens, Google review</p>

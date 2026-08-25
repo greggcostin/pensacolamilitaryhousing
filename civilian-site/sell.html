@@ -219,7 +219,10 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <a href="/">Home</a>
 <a href="/buy">Buy</a>
 <a href="/sell">Sell</a>
+<a href="/search">Search Homes</a>
 <a href="/neighborhoods">Neighborhoods</a>
+<a href="/resources">Resources</a>
+<a href="/blog">Blog</a>
 <a href="/reviews">Reviews</a>
 <a href="/faq">FAQ</a>
 <a href="/team">Meet the Team</a>
@@ -270,6 +273,45 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <details><summary>What is the best time of year to list in Pensacola?</summary><p>Spring and early summer bring the most buyers, including relocating families timed to school calendars and military orders. But well-priced homes sell year-round here, and lower winter inventory can mean less competition for your listing.</p></details>
 <details><summary>Can I sell if I still have a mortgage?</summary><p>Yes. Your loan is paid off from the sale proceeds at closing, and you keep the difference. We estimate your net proceeds, after payoff, taxes, and costs, before you list so there are no surprises at the closing table.</p></details>
 
+
+<h2>Request your listing consultation</h2>
+<div style="background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:32px;max-width:640px;margin:1.5rem auto">
+<p style="margin:0 0 12px;color:var(--muted);font-size:14.5px">Tell us about the property and your timeline. You will get a straight answer on price and strategy, no obligation.</p>
+<div id="inquiry-body-s">
+<form id="inquiry-form-s" novalidate style="display:flex;flex-direction:column;gap:12px">
+<input style="position:absolute;left:-9999px;opacity:0;pointer-events:none" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div><label for="s-name" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">Full Name *</label><input id="s-name" type="text" name="name" required style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"></div>
+<div><label for="s-email" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">Email Address *</label><input id="s-email" type="email" name="email" required style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"></div>
+<div><label for="s-phone" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">Phone Number</label><input id="s-phone" type="tel" name="phone" style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"></div>
+<div><label for="s-type" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">What Can We Help With?</label><select id="s-type" name="inquiryType" style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"><option>First-Time Home Buyer</option><option selected>Selling My Home</option><option>Investment Property</option><option>PCS / Relocation — Buying</option><option>General Question</option></select></div>
+<div><label for="s-message" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">Message</label><textarea id="s-message" name="message" rows="4" style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"></textarea></div>
+<div id="inquiry-err-s" style="display:none;background:#3a1a1a;border:1px solid #a03a3a;border-radius:8px;padding:12px;color:#ff9999;font-size:13px"></div>
+<button type="submit" class="btn-p" style="border:none;cursor:pointer">Send Message</button>
+<p style="color:#666;font-size:11px;margin-top:4px;text-align:center">By submitting, you agree to be contacted by The Costin Team. Your information is never sold or shared.</p>
+</form>
+</div>
+</div>
+<script>
+(function(){
+var form=document.getElementById('inquiry-form-s'),errBox=document.getElementById('inquiry-err-s'),body=document.getElementById('inquiry-body-s');
+if(!form)return;
+function get(n){var el=form.querySelector('[name="'+n+'"]');return el?el.value:'';}
+form.addEventListener('submit',function(e){
+e.preventDefault();errBox.style.display='none';
+var btn=form.querySelector('button[type=submit]');
+var data={name:get('name').trim(),email:get('email').trim(),phone:get('phone').trim(),inquiryType:get('inquiryType'),message:get('message').trim()||('Inquiry from '+location.pathname+' (no message text)'),_gotcha:get('website')};
+if(!data.name||!data.email){errBox.textContent='\u26a0 Name and email are required.';errBox.style.display='block';return;}
+btn.disabled=true;btn.textContent='Sending...';
+fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+.then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
+.then(function(res){
+if(res.ok&&res.j.success){body.innerHTML='<div style="background:#1a3a1a;border:2px solid #3aa03a;border-radius:12px;padding:24px;text-align:center"><div style="font-size:40px;margin-bottom:12px">\u2713</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. We will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('gc-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
+else{errBox.textContent='\u26a0 '+(res.j.error||'Something went wrong. Please call (850) 266-5005.');errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';}
+})
+.catch(function(){errBox.textContent='\u26a0 Connection error. Please call (850) 266-5005 directly.';errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';});
+});
+})();
+</script>
 <!-- inq-cta --><div class="inq-cta">
 <div style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;5.0 on Google and Zillow &middot; <a href="/reviews" style="color:var(--gold)">Verified Reviews</a></div>
 <p class="iq">&ldquo;Gregg is an outstanding, exceptional and professional agent and advisor that is in your corner.&rdquo; &mdash; Shannon Williamson, Google review</p>

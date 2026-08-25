@@ -182,9 +182,15 @@ a.tb-tile:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0
 .imodal .ifine{color:#666;font-size:11px;margin-top:4px;text-align:center}
 .imodal .iok{background:#1a3a1a;border:2px solid #3aa03a;border-radius:12px;padding:24px;text-align:center}
 .imodal .ierr{background:#3a1a1a;border:1px solid #a03a3a;border-radius:8px;padding:12px;color:#ff9999;font-size:13px}
+.hero-cta-overlay{display:none}
 @media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:32px}
-  .hero-portrait{max-width:380px;margin:0 auto}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .hero-portrait{max-width:380px;margin:0 auto;position:relative}
+  .hero-portrait::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,rgba(10,15,26,0) 0%,rgba(10,15,26,0.85) 100%);border-radius:0 0 12px 12px;pointer-events:none}
+  .hero .btn-row{display:none}
+  .hero-cta-overlay{display:flex;flex-direction:column;align-items:center;gap:10px;position:absolute;left:14px;right:14px;bottom:16px;z-index:2}
+  .hero-cta-overlay .btn-p,.hero-cta-overlay .btn-g{width:100%;max-width:320px;justify-content:center}
+  .hero-cta-overlay .btn-g{background:rgba(10,15,26,0.55);color:#fff;border-color:var(--gold)}
   .cards{grid-template-columns:1fr}
 }
 @media(max-width:820px){
@@ -260,7 +266,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <a class="btn-g" href="https://greggcostin.realscout.com/whats-my-home-worth">What's My Home Worth?</a>
 </div>
 </div>
-<div class="hero-portrait"><picture><source srcset="/images/gregg-courthouse.webp" type="image/webp"><img fetchpriority="high" src="/images/gregg-courthouse.jpg" alt="Gregg Costin seated on the steps of the Escambia County Court House in downtown Pensacola" width="928" height="1152"></picture></div>
+<div class="hero-portrait"><picture><source srcset="/images/gregg-courthouse.webp" type="image/webp"><img fetchpriority="high" src="/images/gregg-courthouse.jpg" alt="Gregg Costin seated on the steps of the Escambia County Court House in downtown Pensacola" width="928" height="1152"></picture><div class="hero-cta-overlay"><a class="btn-p" href="https://greggcostin.realscout.com/onboarding">Start Your Home Search</a><a class="btn-g" href="https://greggcostin.realscout.com/whats-my-home-worth">What's My Home Worth?</a></div></div>
 </div>
 </section>
 

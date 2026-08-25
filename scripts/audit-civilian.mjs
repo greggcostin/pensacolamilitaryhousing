@@ -120,7 +120,7 @@ for (const file of pages) {
   }
   // Credit-required images must carry a visible credit. Exempt: OWNED images
   // (team portraits, our own photography) and ledger entries with creditRequired=false (PD/CC0).
-  const OWNED_IMAGES = ["nichole-sims", "rachel-ley"];
+  const OWNED_IMAGES = ["nichole-sims", "rachel-ley", "cordova-park"];
   for (const m of h.matchAll(/<img[^>]*src="\/images\/([^"]+)\.jpg"[^>]*>/g)) {
     if (OWNED_IMAGES.includes(m[1])) continue;
     const entry = LEDGER[`civilian-site/images/${m[1]}.jpg`];

@@ -460,6 +460,14 @@
       "creditRequired": true,
       "credit": "AireWabiSabi",
       "query": "Rosemary Beach Florida houses"
+    },
+    "civilian-site/images/cordova-park.jpg": {
+      "source": "The Costin Team (own photography)",
+      "title": "Cordova Park oak canopy street",
+      "license": "All rights reserved (owner: Gregg Costin)",
+      "creditRequired": false,
+      "credit": "The Costin Team",
+      "usedOn": "greggcostin.com/neighborhoods"
     }
   }
 }

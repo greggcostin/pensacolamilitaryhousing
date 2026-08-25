@@ -13,7 +13,7 @@ let LEDGER = {};
 try { LEDGER = JSON.parse(readFileSync("content/blog/image-credits.json", "utf8")).images; } catch {}
 
 const pages = readdirSync(ROOT).filter((x) => x.endsWith(".html") && x !== "404.html");
-for (const sub of ["blog", "resources"]) {
+for (const sub of ["blog", "resources", "schools"]) {
   if (existsSync(`${ROOT}/${sub}`)) pages.push(...readdirSync(`${ROOT}/${sub}`).filter((x) => x.endsWith(".html")).map((x) => `${sub}/${x}`));
 }
 const slugOf = (file) => (file === "index.html" ? "/" : "/" + file.replace(".html", ""));

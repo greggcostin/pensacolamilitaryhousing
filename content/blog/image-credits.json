@@ -226,6 +226,240 @@
       "creditRequired": false,
       "credit": "A. E. Crane, U.S. Department of Transportation",
       "query": "Orange Beach Alabama marina"
+    },
+    "civilian-site/images/for-sale-sign-cand1.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "WestEndYardSale.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AWestEndYardSale.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Infrogmation of New Orleans",
+      "query": "house for sale sign front yard"
+    },
+    "civilian-site/images/for-sale-sign-cand2.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "WestendDisasterForSale.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AWestendDisasterForSale.jpg",
+      "license": "CC BY 2.5",
+      "creditRequired": true,
+      "credit": "Infrogmation",
+      "query": "house for sale sign front yard"
+    },
+    "civilian-site/images/for-sale-sign-cand3.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Eden-Talbott House, 1336 North Delaware Street, 1977 (Indianapolis, Ind.) - DPLA - 012900b34e91665b60dc1d4412fd687c.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AEden-Talbott%20House%2C%201336%20North%20Delaware%20Street%2C%201977%20(Indianapolis%2C%20Ind.)%20-%20DPLA%20-%20012900b34e91665b60dc1d4412fd687c.jpg",
+      "license": "CC BY 4.0",
+      "creditRequired": true,
+      "credit": "Indiana Landmarks",
+      "query": "house for sale sign front yard"
+    },
+    "civilian-site/images/perdido-beach-cand1.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Hub Stacy Restaurant, Perdido Key Florida.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AHub%20Stacy%20Restaurant%2C%20Perdido%20Key%20Florida.jpg",
+      "license": "CC BY 2.0",
+      "creditRequired": true,
+      "credit": "Infrogmation of New Orleans",
+      "query": "Perdido Key beach Florida"
+    },
+    "civilian-site/images/perdido-beach-cand2.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Perdido Key Beach Vacation August 2009 02.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APerdido%20Key%20Beach%20Vacation%20August%202009%2002.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Infrogmation of New Orleans",
+      "query": "Perdido Key beach Florida"
+    },
+    "civilian-site/images/fed-building.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Marriner S. Eccles Federal Reserve Board Building.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMarriner%20S.%20Eccles%20Federal%20Reserve%20Board%20Building.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "AgnosticPreachersKid",
+      "query": "Federal Reserve Eccles Building Washington"
+    },
+    "civilian-site/images/storm-shutters.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Storm shutters cover a homes windows and doors in Texas.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AStorm%20shutters%20cover%20a%20homes%20windows%20and%20doors%20in%20Texas.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Robert Kaufmann/FEMA",
+      "query": "hurricane shutters window house"
+    },
+    "civilian-site/images/florida-sign.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Welcome to Florida sign at State of Florida Official Welcome Center.JPG",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AWelcome%20to%20Florida%20sign%20at%20State%20of%20Florida%20Official%20Welcome%20Center.JPG",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Michael Rivera",
+      "query": "welcome to Florida sign"
+    },
+    "civilian-site/images/seaside-house-cand1.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Prince Edward Island - Garden Province of Canada its history, interests, and resources with information for tourists, etc (1899) (14756426356).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APrince%20Edward%20Island%20-%20Garden%20Province%20of%20Canada%20its%20history%2C%20interests%2C%20and%20resources%20with%20information%20for%20tourists%2C%20etc%20(1899)%20(14756426356).jpg",
+      "license": "No restrictions",
+      "creditRequired": false,
+      "credit": "Internet Archive Book Images",
+      "query": "Seaside Florida beach house"
+    },
+    "civilian-site/images/seaside-house-cand2.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Prince Edward Island - Garden Province of Canada its history, interests, and resources with information for tourists, etc (1899) (14779440475).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APrince%20Edward%20Island%20-%20Garden%20Province%20of%20Canada%20its%20history%2C%20interests%2C%20and%20resources%20with%20information%20for%20tourists%2C%20etc%20(1899)%20(14779440475).jpg",
+      "license": "No restrictions",
+      "creditRequired": false,
+      "credit": "Internet Archive Book Images",
+      "query": "Seaside Florida beach house"
+    },
+    "civilian-site/images/seaside-house-cand3.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "California Colleges.webp",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ACalifornia%20Colleges.webp",
+      "license": "CC0",
+      "creditRequired": false,
+      "credit": "Wikideas1",
+      "query": "Seaside Florida beach house"
+    },
+    "civilian-site/images/navarre-homes-cand1.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Beach front home damaged by hurricane dennis 2005.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ABeach%20front%20home%20damaged%20by%20hurricane%20dennis%202005.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "FEMA Photo by photographer Leif Skoogfors",
+      "query": "Navarre Beach Florida houses"
+    },
+    "civilian-site/images/navarre-homes-cand2.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "FEMA - 14013 - Photograph by Leif Skoogfors taken on 07-14-2005 in Florida.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFEMA%20-%2014013%20-%20Photograph%20by%20Leif%20Skoogfors%20taken%20on%2007-14-2005%20in%20Florida.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Leif Skoogfors",
+      "query": "Navarre Beach Florida houses"
+    },
+    "civilian-site/images/cantonment-fl-cand1.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Ramu Cantonment 03.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ARamu%20Cantonment%2003.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Asivechowdhury",
+      "query": "Cantonment Florida"
+    },
+    "civilian-site/images/cantonment-fl-cand2.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Ramu Cantonment 07.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ARamu%20Cantonment%2007.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Asivechowdhury",
+      "query": "Cantonment Florida"
+    },
+    "civilian-site/images/cantonment-fl-cand3.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Ramu Cantonment 12.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ARamu%20Cantonment%2012.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Asivechowdhury",
+      "query": "Cantonment Florida"
+    },
+    "civilian-site/images/construction-cand1.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Princeton Railroad Station, Crandon Park Zoo, Key Biscayne, Miami-Dade County, FL HABS FLA,13-KYBI,1- (sheet 2 of 5).tif",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APrinceton%20Railroad%20Station%2C%20Crandon%20Park%20Zoo%2C%20Key%20Biscayne%2C%20Miami-Dade%20County%2C%20FL%20HABS%20FLA%2C13-KYBI%2C1-%20(sheet%202%20of%205).tif",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Related names:\n\nRoach, Linda, faculty sponsor\nFlorida AandM University, School of Architecture, sponsor\nHengtuen, Edward",
+      "query": "new house construction framing lumber"
+    },
+    "civilian-site/images/construction-cand2.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Princeton Railroad Station, Crandon Park Zoo, Key Biscayne, Miami-Dade County, FL HABS FLA,13-KYBI,1- (sheet 5 of 5).tif",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APrinceton%20Railroad%20Station%2C%20Crandon%20Park%20Zoo%2C%20Key%20Biscayne%2C%20Miami-Dade%20County%2C%20FL%20HABS%20FLA%2C13-KYBI%2C1-%20(sheet%205%20of%205).tif",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Related names:\n\nRoach, Linda, faculty sponsor\nFlorida AandM University, School of Architecture, sponsor\nHengtuen, Edward",
+      "query": "new house construction framing lumber"
+    },
+    "civilian-site/images/construction-cand3.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Princeton Railroad Station, Crandon Park Zoo, Key Biscayne, Miami-Dade County, FL HABS FLA,13-KYBI,1- (sheet 4 of 5).tif",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APrinceton%20Railroad%20Station%2C%20Crandon%20Park%20Zoo%2C%20Key%20Biscayne%2C%20Miami-Dade%20County%2C%20FL%20HABS%20FLA%2C13-KYBI%2C1-%20(sheet%204%20of%205).tif",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Related names:\n\nRoach, Linda, faculty sponsor\nFlorida AandM University, School of Architecture, sponsor\nHengtuen, Edward",
+      "query": "new house construction framing lumber"
+    },
+    "civilian-site/images/live-oak-cand1.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "The Encyclopedia britannica; a dictionary of arts, sciences, and general literature. With new maps, and original American articles by eminent writers. With American revisions and additions, bringing (14593962057).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AThe%20Encyclopedia%20britannica%3B%20a%20dictionary%20of%20arts%2C%20sciences%2C%20and%20general%20literature.%20With%20new%20maps%2C%20and%20original%20American%20articles%20by%20eminent%20writers.%20With%20American%20revisions%20and%20additions%2C%20bringing%20(14593962057).jpg",
+      "license": "No restrictions",
+      "creditRequired": false,
+      "credit": "Baynes, Thomas Spencer, 1823-1887",
+      "query": "live oak tree spanish moss Florida"
+    },
+    "civilian-site/images/live-oak-cand2.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Coast watch (1979) (20039265533).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ACoast%20watch%20(1979)%20(20039265533).jpg",
+      "license": "No restrictions",
+      "creditRequired": false,
+      "credit": "Internet Archive Book Images",
+      "query": "live oak tree spanish moss Florida"
+    },
+    "civilian-site/images/live-oak-cand3.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Live Oak Trees (NYPL b11707405-G90F129 019F).tiff",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ALive%20Oak%20Trees%20(NYPL%20b11707405-G90F129%20019F).tiff",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Scan by NYPL",
+      "query": "live oak tree spanish moss Florida"
+    },
+    "civilian-site/images/perdido-river-cand1.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Distribution and migration of North American rails and their allies (1914) (14564222419).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ADistribution%20and%20migration%20of%20North%20American%20rails%20and%20their%20allies%20(1914)%20(14564222419).jpg",
+      "license": "No restrictions",
+      "creditRequired": false,
+      "credit": "Internet Archive Book Images",
+      "query": "Perdido River Florida"
+    },
+    "civilian-site/images/perdido-river-cand2.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "A plan of part of the rivers Tombecbe, Alabama, Tensa, Perdido, & Scambia in the province of West Florida; with a sketch of the boundary between the nation of upper Creek Indians and that part of the LOC 73691550.tif",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AA%20plan%20of%20part%20of%20the%20rivers%20Tombecbe%2C%20Alabama%2C%20Tensa%2C%20Perdido%2C%20%26%20Scambia%20in%20the%20province%20of%20West%20Florida%3B%20with%20a%20sketch%20of%20the%20boundary%20between%20the%20nation%20of%20upper%20Creek%20Indians%20and%20that%20part%20of%20the%20LOC%2073691550.tif",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Taitt, David; Stuart, John",
+      "query": "Perdido River Florida"
+    },
+    "civilian-site/images/beulah.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "LongleafPineForestBurnComparaison.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ALongleafPineForestBurnComparaison.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Gotty (Wikimedia Commons)",
+      "query": "longleaf pine forest Florida"
+    },
+    "civilian-site/images/cantonment.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Historic Home on Rosemary Avenue.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AHistoric%20Home%20on%20Rosemary%20Avenue.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "AireWabiSabi",
+      "query": "Rosemary Beach Florida houses"
     }
   }
 }

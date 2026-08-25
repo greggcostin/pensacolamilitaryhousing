@@ -468,6 +468,14 @@
       "creditRequired": false,
       "credit": "The Costin Team",
       "usedOn": "greggcostin.com/neighborhoods"
+    },
+    "civilian-site/images/gregg-courthouse.jpg": {
+      "source": "The Costin Team (own headshot, Gemini-assisted, watermark area retouched)",
+      "title": "Gregg Costin at the Escambia County Court House",
+      "license": "All rights reserved (owner: Gregg Costin)",
+      "creditRequired": false,
+      "credit": "The Costin Team",
+      "usedOn": "greggcostin.com/ + /team"
     }
   }
 }

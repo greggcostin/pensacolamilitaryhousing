@@ -12,10 +12,11 @@
    "slug": "property-taxes-escambia-santa-rosa",
    "datePublished": "2026-08-27",
    "type": "evergreen (seasonally timed to TRIM season)",
-   "words": 1900,
+   "words": 2160,
    "image": "prop-tax-hist.jpg (Wikimedia, Ebyabe, CC BY-SA 3.0, Lear-Rocheblave House, Historic Pensacola)",
-   "sources": "escpa.org 2026 important dates; santarosaclerk.com VAB notice; srcpa.gov ad valorem + millage; escambiataxcollector.com millage detail; taxfoundation.org HJR 1F analysis",
-   "metrics": "no GSC/Bing data available in-session"
+   "sources": "escpa.org 2026 important dates (TRIM Aug 14, VAB Sep 8); santarosaclerk.com VAB notice (Sep 14 4pm CST, $50); srcpa.gov ad-valorem (2026 SOH cap 2.7%); srcpa.gov/millage-rates table id=2026 (SR district millage); escambiataxcollector.com millage-rate-detail (2025 Escambia district millage, verbatim); FL Amendment 5 2026 additional exemption $26,411; taxfoundation.org HJR 1F analysis",
+   "metrics": "no GSC/Bing data available in-session",
+   "millageVerified": "All district totals re-derived from published component rates and reconciled exactly (ESC beach 12.7185 / uninc 13.4035 / Century 13.6389 / Pensacola 17.0080 / Downtown 19.0080; SR 2026 Gulf Breeze 11.2804 / uninc 11.3781 / Milton 13.4261 / Jay 16.5481). Worked examples recomputed from these rates."
   }
  ]
 }

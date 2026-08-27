@@ -1,0 +1,21 @@
+{
+ "note": "Civilian blog post ledger. One entry per published post: slug, date, topic type, image credit, and any measurement notes fed back into the queue.",
+ "posts": [
+  {
+   "slug": "what-moves-mortgage-rates",
+   "datePublished": "2026-08-24",
+   "type": "evergreen",
+   "image": "fed-building.jpg (Wikimedia, AgnosticPreachersKid, CC BY-SA 3.0)",
+   "metrics": "no GSC/Bing data available in-session"
+  },
+  {
+   "slug": "property-taxes-escambia-santa-rosa",
+   "datePublished": "2026-08-27",
+   "type": "evergreen (seasonally timed to TRIM season)",
+   "words": 1900,
+   "image": "prop-tax-hist.jpg (Wikimedia, Ebyabe, CC BY-SA 3.0, Lear-Rocheblave House, Historic Pensacola)",
+   "sources": "escpa.org 2026 important dates; santarosaclerk.com VAB notice; srcpa.gov ad valorem + millage; escambiataxcollector.com millage detail; taxfoundation.org HJR 1F analysis",
+   "metrics": "no GSC/Bing data available in-session"
+  }
+ ]
+}

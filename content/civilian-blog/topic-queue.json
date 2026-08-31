@@ -2,11 +2,6 @@
  "note": "Civilian blog queue. The engine takes the top未 topic unless a current-events override applies (big Fed/rates/insurance/market news this week). Slugs are suggestions; keep them short.",
  "queue": [
   {
-   "slug": "closing-costs-florida-buyers",
-   "topic": "Florida closing costs explained for buyers: what each line item is, who customarily pays what, and where there is room to negotiate",
-   "type": "evergreen"
-  },
-  {
    "slug": "coastal-alabama-vs-panhandle",
    "topic": "Buying on the Gulf: coastal Alabama (Orange Beach, Gulf Shores, Lillian) vs the Florida Panhandle, taxes, insurance, and lifestyle compared (Gregg is licensed in both states)",
    "type": "evergreen"

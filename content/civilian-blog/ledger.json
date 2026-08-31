@@ -17,6 +17,17 @@
    "sources": "escpa.org 2026 important dates (TRIM Aug 14, VAB Sep 8); santarosaclerk.com VAB notice (Sep 14 4pm CST, $50); srcpa.gov ad-valorem (2026 SOH cap 2.7%); srcpa.gov/millage-rates table id=2026 (SR district millage); escambiataxcollector.com millage-rate-detail (2025 Escambia district millage, verbatim); FL Amendment 5 2026 additional exemption $26,411; taxfoundation.org HJR 1F analysis",
    "metrics": "no GSC/Bing data available in-session",
    "millageVerified": "All district totals re-derived from published component rates and reconciled exactly (ESC beach 12.7185 / uninc 13.4035 / Century 13.6389 / Pensacola 17.0080 / Downtown 19.0080; SR 2026 Gulf Breeze 11.2804 / uninc 11.3781 / Milton 13.4261 / Jay 16.5481). Worked examples recomputed from these rates."
+  },
+  {
+   "slug": "closing-costs-florida-buyers",
+   "datePublished": "2026-08-31",
+   "type": "evergreen (queue head; no current-events override warranted)",
+   "words": 1732,
+   "image": "closing-costs.jpg (Wikimedia, Ebyabe, CC BY-SA 3.0, Escambia County Court House / Pensacola Customshouse)",
+   "sources": "floridarevenue.com doc stamp page (deed 70c per $100, Miami-Dade 60c + 45c surtax, note/mortgage 35c per $100); floridarevenue.com nonrecurring intangible tax (2 mills, x0.002); myfloridacfo.com title insurance overview citing FAC 69O-186.003 (owner original $5.75/1000 first 100k then $5.00/1000 to $1M, $100 min; simultaneous-issue lender min $25; reissue $3.30/$3.00); titlecapture.com county custom table (Escambia, Santa Rosa, Okaloosa, Walton = buyer-pays); escambiaclerk.com fee schedule per Fla. Stat. 28.24 ($10 first page, $8.50 each additional); consumerfinance.gov Closing Disclosure 3-business-day rule",
+   "currentEventsCheck": "Aug 31 2026 sweep: 30-yr ~6.62-6.68%, Fed on hold at 3.50-3.75%, jobs report Friday; FL insurance stabilizing (Citizens 8.8% cut). Nothing broke big enough to override the queue head.",
+   "metrics": "no GSC/Bing data available in-session",
+   "mathVerified": "Worked example recomputed: 350k deed stamps 3500x0.70=2450; 315k note stamps 3150x0.35=1102.50; intangible 315000x0.002=630; owner policy 575+1250=1825."
   }
  ]
 }

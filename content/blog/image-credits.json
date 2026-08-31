@@ -1,301 +1,310 @@
 {
- "note": "License + attribution ledger for downloaded imagery. CC-BY/CC-BY-SA entries MUST have their credit shown in the image's visible figcaption.",
- "images": {
-  "/images/blog/blue-angels-diamond.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "US Navy 031108-N-5862D-202 The Navy's Blue Angels flight demonstration team maintains a tight formation thrilling the audience, at Sherman Field onboard NAS Pensacola.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUS%20Navy%20031108-N-5862D-202%20The%20Navy's%20Blue%20Angels%20flight%20demonstration%20team%20maintains%20a%20tight%20formation%20thrilling%20the%20audience%2C%20at%20Sherman%20Field%20onboard%20NAS%20Pensacola.jpg",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "U.S. Navy",
-   "query": "Blue Angels Pensacola flight formation"
-  },
-  "/images/blog/pensacola-coast-aerial.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "US Navy 110706-N-BA418-009 Marine Capt. Benjamin Blanton looks over Naval Air Station Pensacola while flying in preparation for the 2011 Pensacola.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUS%20Navy%20110706-N-BA418-009%20Marine%20Capt.%20Benjamin%20Blanton%20looks%20over%20Naval%20Air%20Station%20Pensacola%20while%20flying%20in%20preparation%20for%20the%202011%20Pensacola.jpg",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "U.S. Navy",
-   "query": "Pensacola Florida aerial view"
-  },
-  "/images/blog/gulf-breeze-bridge.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Pensacola Bay Bridge Looking North.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Bay%20Bridge%20Looking%20North.jpg",
-   "license": "CC0",
-   "creditRequired": false,
-   "credit": "Skarz",
-   "query": "Pensacola Bay Bridge Gulf Breeze"
-  },
-  "/images/blog/eglin-f35.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "First F-35 Lightning Arrives at Eglin AFB Florida.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFirst%20F-35%20Lightning%20Arrives%20at%20Eglin%20AFB%20Florida.jpg",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "U.S. Air Force",
-   "query": "Eglin Air Force Base F-35 Lightning"
-  },
-  "/images/blog/palafox-plaza.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "PensacolaPalafoxAug2008ParkMonument.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacolaPalafoxAug2008ParkMonument.jpg",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Infrogmation of New Orleans",
-   "query": "Palafox Street downtown Pensacola"
-  },
-  "/images/blog/pensacola-beach-tower.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Beach Ball Water Tower.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ABeach%20Ball%20Water%20Tower.jpg",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Stepo114",
-   "query": "Pensacola Beach Florida"
-  },
-  "/images/blog/naval-aviation-museum.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Pensacola FL Naval Aviation msm01.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20FL%20Naval%20Aviation%20msm01.jpg",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Ebyabe",
-   "query": "National Naval Aviation Museum Pensacola"
-  },
-  "/images/blog/hurlburt-mv22-coast.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "USMC MV-22 Osprey over Hurlburt Field.JPG",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUSMC%20MV-22%20Osprey%20over%20Hurlburt%20Field.JPG",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "U.S. Air Force",
-   "query": "Hurlburt Field CV-22 Osprey"
-  },
-  "/images/blog/whiting-t6-texan.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "US Navy 030807-N-0000X-001 The T-6 Texan training aircraft takes off from the flight line at Naval Air Station (NAS) Pensacola.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUS%20Navy%20030807-N-0000X-001%20The%20T-6%20Texan%20training%20aircraft%20takes%20off%20from%20the%20flight%20line%20at%20Naval%20Air%20Station%20(NAS)%20Pensacola.jpg",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "U.S. Navy",
-   "query": "NAS Whiting Field training aircraft"
-  },
-  "/images/blog/crestview-7sfg-training.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "A U.S. Soldier with the 7th Special Forces Group (Airborne), runs down a 40-foot rappelling wall at the training tower at Eglin Base Air Force Base, Fla 130204-A-YI554-308.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AA%20U.S.%20Soldier%20with%20the%207th%20Special%20Forces%20Group%20(Airborne)%2C%20runs%20down%20a%2040-foot%20rappelling%20wall%20at%20the%20training%20tower%20at%20Eglin%20Base%20Air%20Force%20Base%2C%20Fla%20130204-A-YI554-308.jpg",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "U.S. Army",
-   "query": "7th Special Forces Group Eglin soldiers"
-  },
-  "/images/blog/navy-lodge-suitcase.jpg": {
-   "source": "Openverse (wikimedia)",
-   "title": "Travelers with luggage arrive at hotel entrance while suitcase waits on pavement",
-   "pageUrl": "https://commons.wikimedia.org/w/index.php?curid=187311890",
-   "license": "CC BY 2.0",
-   "creditRequired": true,
-   "credit": "Shixart1985",
-   "query": "suitcase luggage hotel travel"
-  },
-  "/images/blog/veteran-flag-memorial.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Veterans Cemetary Flag.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AVeterans%20Cemetary%20Flag.jpg",
-   "license": "CC BY-SA 4.0",
-   "creditRequired": true,
-   "credit": "Noah Wulf",
-   "query": "veteran salutes american flag"
-  },
-  "/images/blog/escambia-courthouse.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Pensacola Customshouse pano01.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Customshouse%20pano01.jpg",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Ebyabe",
-   "query": "Escambia County courthouse Pensacola Florida"
-  },
-  "civilian-site/images/pensacola-beach.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Pensacola Beach Sign(1).jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Beach%20Sign(1).jpg",
-   "license": "CC BY 2.0",
-   "creditRequired": true,
-   "credit": "TimothyJ",
-   "query": "Pensacola Beach Florida",
-   "usedOn": "greggcostin.com/"
-  },
-  "civilian-site/images/saenger.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Pensacola Saenger Thtr01.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Saenger%20Thtr01.jpg",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Ebyabe",
-   "usedOn": "greggcostin.com/contact"
-  },
-  "civilian-site/images/sold-keys.jpg": {
-   "source": "Wikimedia Commons (via Openverse)",
-   "title": "Hand holds house keys near door lock, symbolizing new beginnings and homeownership journey in a modern setting.jpg",
-   "pageUrl": "https://commons.wikimedia.org/w/index.php?curid=190519542",
-   "license": "CC BY 2.0",
-   "creditRequired": true,
-   "credit": "Shixart1985",
-   "usedOn": "greggcostin.com/sell"
-  },
-  "civilian-site/images/palafox-street.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "PensacolaPalafoxAug2008ParkMonument.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacolaPalafoxAug2008ParkMonument.jpg",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Infrogmation of New Orleans",
-   "query": "Palafox Street downtown Pensacola Florida"
-  },
-  "civilian-site/images/bay-bridge.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Pensacola Bay Bridge.JPG",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Bay%20Bridge.JPG",
-   "license": "CC BY-SA 4.0",
-   "creditRequired": true,
-   "credit": "Skye Marthaler",
-   "query": "Pensacola Bay Bridge Florida"
-  },
-  "civilian-site/images/graffiti-bridge.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Graffiti Bridge.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AGraffiti%20Bridge.jpg",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "Adamnorre",
-   "query": "Graffiti Bridge Pensacola 17th Avenue"
-  },
-  "civilian-site/images/perdido-key.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Perdido Key Beach Access K (2ec01f39-0b55-48dd-8353-e8f7facb1c46).jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APerdido%20Key%20Beach%20Access%20K%20(2ec01f39-0b55-48dd-8353-e8f7facb1c46).jpg",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "Breault",
-   "query": "Perdido Key beach white sand Florida"
-  },
-  "civilian-site/images/navarre.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Pensacola Beach - White Sands, Florida Coast (27268946483).jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Beach%20-%20White%20Sands%2C%20Florida%20Coast%20(27268946483).jpg",
-   "license": "CC BY-SA 2.0",
-   "creditRequired": true,
-   "credit": "Tony Webster from Minneapolis, Minnesota, United States",
-   "query": "Gulf Islands National Seashore Santa Rosa Island dunes"
-  },
-  "civilian-site/images/pace-milton.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "FL Blackwater River SP bdwlk02.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFL%20Blackwater%20River%20SP%20bdwlk02.jpg",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Ebyabe",
-   "query": "Blackwater River State Park Florida"
-  },
-  "civilian-site/images/fort-walton.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "John T. Brooks Bridge.JPG",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJohn%20T.%20Brooks%20Bridge.JPG",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Mark Sublette",
-   "query": "Fort Walton Beach Florida Okaloosa Island"
-  },
-  "civilian-site/images/gulf-shores.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "The beach community of Gulf Shores, Alabama LCCN2010639257.tif",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AThe%20beach%20community%20of%20Gulf%20Shores%2C%20Alabama%20LCCN2010639257.tif",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "Carol M. Highsmith",
-   "query": "Gulf Shores Alabama beach"
-  },
-  "civilian-site/images/orange-beach.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Alabama's Coastal Connection - Setting Out from Orange Beach - NARA - 7716828.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAlabama's%20Coastal%20Connection%20-%20Setting%20Out%20from%20Orange%20Beach%20-%20NARA%20-%207716828.jpg",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "A. E. Crane, U.S. Department of Transportation",
-   "query": "Orange Beach Alabama marina"
-  },
-  "civilian-site/images/fed-building.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Marriner S. Eccles Federal Reserve Board Building.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMarriner%20S.%20Eccles%20Federal%20Reserve%20Board%20Building.jpg",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "AgnosticPreachersKid",
-   "query": "Federal Reserve Eccles Building Washington"
-  },
-  "civilian-site/images/storm-shutters.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Storm shutters cover a homes windows and doors in Texas.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AStorm%20shutters%20cover%20a%20homes%20windows%20and%20doors%20in%20Texas.jpg",
-   "license": "Public domain",
-   "creditRequired": false,
-   "credit": "Robert Kaufmann/FEMA",
-   "query": "hurricane shutters window house"
-  },
-  "civilian-site/images/florida-sign.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Welcome to Florida sign at State of Florida Official Welcome Center.JPG",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AWelcome%20to%20Florida%20sign%20at%20State%20of%20Florida%20Official%20Welcome%20Center.JPG",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Michael Rivera",
-   "query": "welcome to Florida sign"
-  },
-  "civilian-site/images/beulah.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "LongleafPineForestBurnComparaison.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3ALongleafPineForestBurnComparaison.jpg",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Gotty (Wikimedia Commons)",
-   "query": "longleaf pine forest Florida"
-  },
-  "civilian-site/images/cantonment.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Historic Home on Rosemary Avenue.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3AHistoric%20Home%20on%20Rosemary%20Avenue.jpg",
-   "license": "CC BY-SA 4.0",
-   "creditRequired": true,
-   "credit": "AireWabiSabi",
-   "query": "Rosemary Beach Florida houses"
-  },
-  "civilian-site/images/cordova-park.jpg": {
-   "source": "The Costin Team (own photography)",
-   "title": "Cordova Park oak canopy street",
-   "license": "All rights reserved (owner: Gregg Costin)",
-   "creditRequired": false,
-   "credit": "The Costin Team",
-   "usedOn": "greggcostin.com/neighborhoods"
-  },
-  "civilian-site/images/gregg-courthouse.jpg": {
-   "source": "The Costin Team (own headshot, Gemini-assisted, watermark area retouched)",
-   "title": "Gregg Costin at the Escambia County Court House",
-   "license": "All rights reserved (owner: Gregg Costin)",
-   "creditRequired": false,
-   "credit": "The Costin Team",
-   "usedOn": "greggcostin.com/ + /team"
-  },
-  "civilian-site/images/prop-tax-hist.jpg": {
-   "source": "Wikimedia Commons",
-   "title": "Pensacola HD Lear-Rocheblave01.jpg",
-   "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20HD%20Lear-Rocheblave01.jpg",
-   "license": "CC BY-SA 3.0",
-   "creditRequired": true,
-   "credit": "Ebyabe",
-   "query": "Pensacola historic district houses"
+  "note": "License + attribution ledger for downloaded imagery. CC-BY/CC-BY-SA entries MUST have their credit shown in the image's visible figcaption.",
+  "images": {
+    "/images/blog/blue-angels-diamond.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "US Navy 031108-N-5862D-202 The Navy's Blue Angels flight demonstration team maintains a tight formation thrilling the audience, at Sherman Field onboard NAS Pensacola.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUS%20Navy%20031108-N-5862D-202%20The%20Navy's%20Blue%20Angels%20flight%20demonstration%20team%20maintains%20a%20tight%20formation%20thrilling%20the%20audience%2C%20at%20Sherman%20Field%20onboard%20NAS%20Pensacola.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "U.S. Navy",
+      "query": "Blue Angels Pensacola flight formation"
+    },
+    "/images/blog/pensacola-coast-aerial.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "US Navy 110706-N-BA418-009 Marine Capt. Benjamin Blanton looks over Naval Air Station Pensacola while flying in preparation for the 2011 Pensacola.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUS%20Navy%20110706-N-BA418-009%20Marine%20Capt.%20Benjamin%20Blanton%20looks%20over%20Naval%20Air%20Station%20Pensacola%20while%20flying%20in%20preparation%20for%20the%202011%20Pensacola.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "U.S. Navy",
+      "query": "Pensacola Florida aerial view"
+    },
+    "/images/blog/gulf-breeze-bridge.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Bay Bridge Looking North.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Bay%20Bridge%20Looking%20North.jpg",
+      "license": "CC0",
+      "creditRequired": false,
+      "credit": "Skarz",
+      "query": "Pensacola Bay Bridge Gulf Breeze"
+    },
+    "/images/blog/eglin-f35.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "First F-35 Lightning Arrives at Eglin AFB Florida.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFirst%20F-35%20Lightning%20Arrives%20at%20Eglin%20AFB%20Florida.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "U.S. Air Force",
+      "query": "Eglin Air Force Base F-35 Lightning"
+    },
+    "/images/blog/palafox-plaza.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "PensacolaPalafoxAug2008ParkMonument.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacolaPalafoxAug2008ParkMonument.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Infrogmation of New Orleans",
+      "query": "Palafox Street downtown Pensacola"
+    },
+    "/images/blog/pensacola-beach-tower.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Beach Ball Water Tower.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ABeach%20Ball%20Water%20Tower.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Stepo114",
+      "query": "Pensacola Beach Florida"
+    },
+    "/images/blog/naval-aviation-museum.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola FL Naval Aviation msm01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20FL%20Naval%20Aviation%20msm01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "National Naval Aviation Museum Pensacola"
+    },
+    "/images/blog/hurlburt-mv22-coast.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "USMC MV-22 Osprey over Hurlburt Field.JPG",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUSMC%20MV-22%20Osprey%20over%20Hurlburt%20Field.JPG",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "U.S. Air Force",
+      "query": "Hurlburt Field CV-22 Osprey"
+    },
+    "/images/blog/whiting-t6-texan.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "US Navy 030807-N-0000X-001 The T-6 Texan training aircraft takes off from the flight line at Naval Air Station (NAS) Pensacola.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUS%20Navy%20030807-N-0000X-001%20The%20T-6%20Texan%20training%20aircraft%20takes%20off%20from%20the%20flight%20line%20at%20Naval%20Air%20Station%20(NAS)%20Pensacola.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "U.S. Navy",
+      "query": "NAS Whiting Field training aircraft"
+    },
+    "/images/blog/crestview-7sfg-training.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "A U.S. Soldier with the 7th Special Forces Group (Airborne), runs down a 40-foot rappelling wall at the training tower at Eglin Base Air Force Base, Fla 130204-A-YI554-308.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AA%20U.S.%20Soldier%20with%20the%207th%20Special%20Forces%20Group%20(Airborne)%2C%20runs%20down%20a%2040-foot%20rappelling%20wall%20at%20the%20training%20tower%20at%20Eglin%20Base%20Air%20Force%20Base%2C%20Fla%20130204-A-YI554-308.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "U.S. Army",
+      "query": "7th Special Forces Group Eglin soldiers"
+    },
+    "/images/blog/navy-lodge-suitcase.jpg": {
+      "source": "Openverse (wikimedia)",
+      "title": "Travelers with luggage arrive at hotel entrance while suitcase waits on pavement",
+      "pageUrl": "https://commons.wikimedia.org/w/index.php?curid=187311890",
+      "license": "CC BY 2.0",
+      "creditRequired": true,
+      "credit": "Shixart1985",
+      "query": "suitcase luggage hotel travel"
+    },
+    "/images/blog/veteran-flag-memorial.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Veterans Cemetary Flag.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AVeterans%20Cemetary%20Flag.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Noah Wulf",
+      "query": "veteran salutes american flag"
+    },
+    "/images/blog/escambia-courthouse.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Customshouse pano01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Customshouse%20pano01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Escambia County courthouse Pensacola Florida"
+    },
+    "civilian-site/images/pensacola-beach.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Beach Sign(1).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Beach%20Sign(1).jpg",
+      "license": "CC BY 2.0",
+      "creditRequired": true,
+      "credit": "TimothyJ",
+      "query": "Pensacola Beach Florida",
+      "usedOn": "greggcostin.com/"
+    },
+    "civilian-site/images/saenger.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Saenger Thtr01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Saenger%20Thtr01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "usedOn": "greggcostin.com/contact"
+    },
+    "civilian-site/images/sold-keys.jpg": {
+      "source": "Wikimedia Commons (via Openverse)",
+      "title": "Hand holds house keys near door lock, symbolizing new beginnings and homeownership journey in a modern setting.jpg",
+      "pageUrl": "https://commons.wikimedia.org/w/index.php?curid=190519542",
+      "license": "CC BY 2.0",
+      "creditRequired": true,
+      "credit": "Shixart1985",
+      "usedOn": "greggcostin.com/sell"
+    },
+    "civilian-site/images/palafox-street.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "PensacolaPalafoxAug2008ParkMonument.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacolaPalafoxAug2008ParkMonument.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Infrogmation of New Orleans",
+      "query": "Palafox Street downtown Pensacola Florida"
+    },
+    "civilian-site/images/bay-bridge.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Bay Bridge.JPG",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Bay%20Bridge.JPG",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Skye Marthaler",
+      "query": "Pensacola Bay Bridge Florida"
+    },
+    "civilian-site/images/graffiti-bridge.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Graffiti Bridge.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AGraffiti%20Bridge.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Adamnorre",
+      "query": "Graffiti Bridge Pensacola 17th Avenue"
+    },
+    "civilian-site/images/perdido-key.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Perdido Key Beach Access K (2ec01f39-0b55-48dd-8353-e8f7facb1c46).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APerdido%20Key%20Beach%20Access%20K%20(2ec01f39-0b55-48dd-8353-e8f7facb1c46).jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Breault",
+      "query": "Perdido Key beach white sand Florida"
+    },
+    "civilian-site/images/navarre.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Beach - White Sands, Florida Coast (27268946483).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Beach%20-%20White%20Sands%2C%20Florida%20Coast%20(27268946483).jpg",
+      "license": "CC BY-SA 2.0",
+      "creditRequired": true,
+      "credit": "Tony Webster from Minneapolis, Minnesota, United States",
+      "query": "Gulf Islands National Seashore Santa Rosa Island dunes"
+    },
+    "civilian-site/images/pace-milton.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "FL Blackwater River SP bdwlk02.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFL%20Blackwater%20River%20SP%20bdwlk02.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Blackwater River State Park Florida"
+    },
+    "civilian-site/images/fort-walton.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "John T. Brooks Bridge.JPG",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AJohn%20T.%20Brooks%20Bridge.JPG",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Mark Sublette",
+      "query": "Fort Walton Beach Florida Okaloosa Island"
+    },
+    "civilian-site/images/gulf-shores.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "The beach community of Gulf Shores, Alabama LCCN2010639257.tif",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AThe%20beach%20community%20of%20Gulf%20Shores%2C%20Alabama%20LCCN2010639257.tif",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Carol M. Highsmith",
+      "query": "Gulf Shores Alabama beach"
+    },
+    "civilian-site/images/orange-beach.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Alabama's Coastal Connection - Setting Out from Orange Beach - NARA - 7716828.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAlabama's%20Coastal%20Connection%20-%20Setting%20Out%20from%20Orange%20Beach%20-%20NARA%20-%207716828.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "A. E. Crane, U.S. Department of Transportation",
+      "query": "Orange Beach Alabama marina"
+    },
+    "civilian-site/images/fed-building.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Marriner S. Eccles Federal Reserve Board Building.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMarriner%20S.%20Eccles%20Federal%20Reserve%20Board%20Building.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "AgnosticPreachersKid",
+      "query": "Federal Reserve Eccles Building Washington"
+    },
+    "civilian-site/images/storm-shutters.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Storm shutters cover a homes windows and doors in Texas.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AStorm%20shutters%20cover%20a%20homes%20windows%20and%20doors%20in%20Texas.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Robert Kaufmann/FEMA",
+      "query": "hurricane shutters window house"
+    },
+    "civilian-site/images/florida-sign.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Welcome to Florida sign at State of Florida Official Welcome Center.JPG",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AWelcome%20to%20Florida%20sign%20at%20State%20of%20Florida%20Official%20Welcome%20Center.JPG",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Michael Rivera",
+      "query": "welcome to Florida sign"
+    },
+    "civilian-site/images/beulah.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "LongleafPineForestBurnComparaison.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ALongleafPineForestBurnComparaison.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Gotty (Wikimedia Commons)",
+      "query": "longleaf pine forest Florida"
+    },
+    "civilian-site/images/cantonment.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Historic Home on Rosemary Avenue.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AHistoric%20Home%20on%20Rosemary%20Avenue.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "AireWabiSabi",
+      "query": "Rosemary Beach Florida houses"
+    },
+    "civilian-site/images/cordova-park.jpg": {
+      "source": "The Costin Team (own photography)",
+      "title": "Cordova Park oak canopy street",
+      "license": "All rights reserved (owner: Gregg Costin)",
+      "creditRequired": false,
+      "credit": "The Costin Team",
+      "usedOn": "greggcostin.com/neighborhoods"
+    },
+    "civilian-site/images/gregg-courthouse.jpg": {
+      "source": "The Costin Team (own headshot, Gemini-assisted, watermark area retouched)",
+      "title": "Gregg Costin at the Escambia County Court House",
+      "license": "All rights reserved (owner: Gregg Costin)",
+      "creditRequired": false,
+      "credit": "The Costin Team",
+      "usedOn": "greggcostin.com/ + /team"
+    },
+    "civilian-site/images/prop-tax-hist.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola HD Lear-Rocheblave01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20HD%20Lear-Rocheblave01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Pensacola historic district houses"
+    },
+    "civilian-site/images/closing-costs.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Customshouse01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Customshouse01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Escambia County Courthouse Pensacola Florida"
+    }
   }
- }
 }

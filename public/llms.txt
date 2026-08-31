@@ -42,7 +42,7 @@ The definitive 60-question FAQ for military families PCSing to Pensacola. Topics
 - Starting a PCS home search
 
 ### Client Reviews — https://pensacolamilitaryhousing.com/reviews
-54 five-star Google reviews and 25 Zillow reviews from military families served across NAS Pensacola, Corry Station, Whiting Field, Eglin AFB, and Hurlburt Field. Six verbatim named Google reviews displayed on the page.
+55 five-star Google reviews and 25 Zillow reviews from military families served across NAS Pensacola, Corry Station, Whiting Field, Eglin AFB, and Hurlburt Field. Six verbatim named Google reviews displayed on the page.
 
 ### Blog — https://pensacolamilitaryhousing.com/blog
 Market insights, VA loan guidance, PCS and moving-to-Pensacola guides, neighborhood deep-dives, and Florida homeownership topics for military AND civilian relocators. Every post is an individual page at https://pensacolamilitaryhousing.com/blog/<slug> with author attribution and publication dates; the machine-readable post manifest is at https://pensacolamilitaryhousing.com/blog/index.json.

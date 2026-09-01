@@ -1,0 +1,80 @@
+{
+  "config": {
+    "autoPublishCivilian": false
+  },
+  "runs": [
+    {
+      "date": "2026-09-01",
+      "bellwetherDelta": {
+        "bestRealtorPensacolaFL": "No change. Gregg still absent; all 10 slots held by the same directories (Yelp x3, HomeLight, Redfin, Zillow, U.S. News, EffectiveAgents, FastExpert) plus bestrealtorsinpensacola.com. Tier 1 directory occupation remains the only lever and is still unexecuted.",
+        "bestMilitaryRealtorPensacola": "WIN. pensacolamilitaryhousing.com entered the raw top-link set for the first time (slot 5) and the AI summary now names Gregg FIRST (was #2, and previously AI-only with no raw link). Attributable to /military-realtor-pensacola shipping 2026-08-24. panhandlepcs.com slipped slot 2 to slot 3.",
+        "greggCostinRealtor": "First capture. Brand query healthy: 10 owned/profile links, AI summary accurate on credentials, awards, phone, and office. Gap found: greggcostin.com does NOT appear in the link set for Gregg's own name.",
+        "newCompetitorUrls": [
+          "pensacolarealtymasters.com/pensacola-military-housing",
+          "americanvalorrealty.com/gulf-coast-military-friendly-realtor",
+          "militaryreferrals.com Pensacola page"
+        ]
+      },
+      "pmhSnapshot": {
+        "semrushRank": 6920034,
+        "semrushRankPrior": 6742845,
+        "organicKeywords": 153,
+        "organicKeywordsPrior": 156,
+        "semrushOrganicTraffic": 17,
+        "semrushOrganicTrafficPrior": 19,
+        "authorityScore": "unavailable (Semrush API units exhausted)",
+        "referringDomains": "unavailable (Semrush API units exhausted)",
+        "claritySessions28d": 388,
+        "clarityTopSources": {
+          "direct": 235,
+          "google": 67,
+          "internal": 48,
+          "bing": 12,
+          "chatgpt": 9,
+          "duckduckgo": 4,
+          "levinRinkeIdx": 4,
+          "facebook": 3
+        },
+        "clarityChatGptSessions28d": 9,
+        "clarityChatGptPrior": "11 / 90 days (2026-08-24)",
+        "clarityTopPages": {
+          "/": 110,
+          "/communities/niceville": 30,
+          "/pcs-guide": 28,
+          "/bah-rates": 27,
+          "/pensacola-flood-zones-homebuyers": 20
+        },
+        "clarityEvents28d": {
+          "OutboundClick": 36,
+          "ContactUs": 17,
+          "Search": 10,
+          "SeeReviews": 6,
+          "SubmitForm": 1
+        }
+      },
+      "gatesRun": {
+        "competitorSnapshot": "not due (next ~2026-11-24)",
+        "dataStudyRefresh": "not due (next October 2026)",
+        "decemberBahRollover": "not due",
+        "liveSanity": "pass - both homepages, both sitemaps, and one deep page each returned 200",
+        "auditCivilian": "pass - 101 pages, 0 findings",
+        "emDashLint": "pass - 94 pages + App.jsx clean"
+      },
+      "civilianItem": {
+        "item": "review-sync",
+        "priority": "2 (stale facts)",
+        "detail": "greggcostin.com claimed 54 Google reviews in 10 places across faq.html, index.html, and reviews.html plus a stale 79 aggregate; canonical PMH reviews page moved to 55 on 2026-08-31. Verified live before editing. Now 55 Google / 25 Zillow / 80 total on both sites.",
+        "filesChanged": 3,
+        "auditAfter": "101 pages, 0 findings"
+      },
+      "status": "staged",
+      "branch": "civilian/review-sync-20260901",
+      "notes": [
+        "Semrush API units exhausted after the first domain_rank call; backlinks_overview and the greggcostin.com snapshot recorded as unavailable rather than estimated.",
+        "greggcostin.com has no Clarity project yet - the civilian site is currently unmeasured.",
+        "OUT OF SCOPE, flagged for Gregg: public/reviews.html lines 38 and 462 still read '(54 reviews)' in prose - the Aug 31 sync commit missed them.",
+        "Working tree carried an untracked scripts/_tmp-assemble.mjs from another session; left untouched."
+      ]
+    }
+  ]
+}

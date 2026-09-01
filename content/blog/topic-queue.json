@@ -2,27 +2,16 @@
   "note": "Ordered backlog for the blog engine. It may re-rank based on trend scans and ledger data: every move gets logged in ledger.runs. Interleave audiences: 'military' defends the moat, 'civilian' widens AI recommendation coverage, 'both' does double duty.",
   "queue": [
     {
-      "slug": "va-loan-assumption-buyers-guide",
+      "slug": "florida-insurance-survival-guide-2026",
       "archetype": "decision",
-      "audience": "both",
-      "title": "Assuming a VA Loan in 2026: The Buyer's Guide to 3% Rates (Civilians Can Too)",
+      "audience": "civilian",
+      "title": "Florida Home Insurance in 2026: What Pensacola Buyers Actually Pay",
       "targetKeywords": [
-        "assume a va loan",
-        "va loan assumption civilian",
-        "assumable mortgage pensacola"
+        "florida home insurance cost 2026",
+        "pensacola homeowners insurance",
+        "citizens insurance florida"
       ],
-      "rerank": "Jumped to #1 on 2026-08-22: Bing baseline shows pos-1 rankings with clicks on 4 assumable-VA queries; sibling of WINNER va-loan-seller-concessions-truth; maps to /assumable-va-loans-pensacola money page."
-    },
-    {
-      "slug": "moving-to-navarre-2026-guide",
-      "archetype": "mega-guide",
-      "audience": "both",
-      "title": "Moving to Navarre, FL: The 2026 Guide",
-      "targetKeywords": [
-        "moving to navarre fl",
-        "living in navarre florida",
-        "is navarre a good place to live"
-      ]
+      "rerank": "Boosted to #2 on 2026-09-01 trend scan: Citizens filed an average statewide rate CUT for 2026 and its policy count is down sharply from the Oct-2023 peak, reversing the multi-year narrative every competing article still repeats. Large information-gain gap. CAVEAT logged this run: /florida-home-insurance-military.html is already a 7,020-word page on this topic, so the engine should first weigh a substantive REFRESH of that money page (civilian-framed new post only if the refresh leaves a distinct query set uncovered)."
     },
     {
       "slug": "pensacola-cost-of-living-2026",
@@ -99,17 +88,6 @@
       "targetKeywords": [
         "moving to milton fl",
         "living in milton florida"
-      ]
-    },
-    {
-      "slug": "florida-insurance-survival-guide-2026",
-      "archetype": "decision",
-      "audience": "civilian",
-      "title": "Florida Home Insurance in 2026: What Pensacola Buyers Actually Pay",
-      "targetKeywords": [
-        "florida home insurance cost 2026",
-        "pensacola homeowners insurance",
-        "citizens insurance florida"
       ]
     },
     {

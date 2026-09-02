@@ -104,7 +104,7 @@ function makeFallback(r) {
                 <p style="font-size:16px;line-height:1.7;color:#B8BAC0;margin:0 0 20px;max-width:720px">${r.intro}</p>
                 ${tools}
                 <p style="font-size:15px;margin:0 0 8px"><strong>Call or text:</strong> <a href="tel:8502665005" style="color:#C4A75A;text-decoration:none">(850) 266-5005</a> &nbsp;&middot;&nbsp; <strong>Email:</strong> <a href="mailto:gregg.costin@gmail.com" style="color:#C4A75A;text-decoration:none">gregg.costin@gmail.com</a></p>
-                <p style="font-size:14px;color:#8A8D94;margin:0">Gregg Costin, Realtor&reg; &middot; Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502 &middot; Licensed in Florida &amp; Alabama</p>
+                <p style="font-size:14px;color:#8A8D94;margin:0">Gregg Costin, Realtor&reg; &middot; Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502 &middot; Licensed in Florida &amp; Alabama &middot; Equal Housing Opportunity &middot; <a href="/privacy" style="color:#8A8D94">Privacy</a> &middot; <a href="/accessibility" style="color:#8A8D94">Accessibility</a></p>
               </header>
               ${body}
               <nav style="font-size:14px;color:#B8BAC0;line-height:1.9"><a href="/" style="color:#E8E9EB">Home</a> &middot; <a href="/about" style="color:#E8E9EB">About</a> &middot; <a href="/pcs-guide" style="color:#E8E9EB">PCS Guide</a> &middot; <a href="/communities" style="color:#E8E9EB">Communities</a> &middot; <a href="/mortgage-calculators" style="color:#E8E9EB">Calculators</a> &middot; <a href="/va-loan-guide" style="color:#E8E9EB">VA Loan Guide</a> &middot; <a href="/reviews" style="color:#E8E9EB">Reviews</a> &middot; <a href="/contact" style="color:#E8E9EB">Contact</a></nav>

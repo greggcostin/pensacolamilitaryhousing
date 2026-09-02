@@ -58,12 +58,6 @@ export const ROUTE_META = [
     heading: "Military Mortgage & BAH Calculators",
     intro: "Estimate your VA, FHA, or conventional payment, compare loan types, model the VA funding fee, and align a home price to your 2026 BAH for the Pensacola (FL064) and Fort Walton Beach (FL023) MHAs.",
   },
-  // shell:false — 301'd to static twins; kept only for runtime SPA title on client nav.
-  { page: "va-loan", slug: "/va-loans", shell: false, title: "VA Loans for Military Buyers | Pensacola", description: "VA loan guidance for Pensacola-area military buyers: zero down, funding fee, entitlement, and seller concessions." },
-  { page: "homestead", slug: "/homestead", shell: false, title: "Florida Homestead for Military Families", description: "How Florida homestead, Save Our Homes, and portability work for active-duty and veteran homeowners." },
-  // shell:false — real static twins served at these URLs; kept for runtime SPA title.
-  { page: "reviews", slug: "/reviews", shell: false, title: "Client Reviews | Gregg Costin, Pensacola Realtor", description: "Five-star reviews from military families across the Florida Panhandle for Realtor Gregg Costin." },
-  { page: "blog", slug: "/blog", shell: false, title: "Military Real Estate Blog | Pensacola", description: "VA loan guidance, BAH breakdowns, and Emerald Coast neighborhood deep dives for military families." },
   // shell:false — client-side unknown path only; the server serves public/404.html (audit 2026-09-02).
   { page: "notfound", slug: "/404", shell: false, title: "Page Not Found | Pensacola Military Housing", description: "That page does not exist. Find the PCS guide, 2026 BAH rates, VA loan guide, and community guides." },
 ];

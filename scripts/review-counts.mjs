@@ -60,6 +60,13 @@ const jobs = [];
 if (newG !== null && newG !== cur.google) jobs.push({ platform: "Google", from: cur.google, to: newG });
 if (newZ !== null && newZ !== cur.zillow) jobs.push({ platform: "Zillow", from: cur.zillow, to: newZ });
 
+// Both sites also quote a COMBINED total ("80 five-star reviews across Google
+// and Zillow"). It is derived, so it drifts silently whenever either count
+// moves. Derive it here rather than leaving it to a later hand-edit.
+const curTotal = cur.google + cur.zillow;
+const newTotal = (newG ?? cur.google) + (newZ ?? cur.zillow);
+if (newTotal !== curTotal) jobs.push({ platform: "Combined", from: curTotal, to: newTotal });
+
 if (!jobs.length) { console.log("IN SYNC — no changes needed", JSON.stringify(cur)); process.exit(0); }
 
 for (const j of jobs) {
@@ -79,16 +86,28 @@ const PATTERNS = {
     "5.0 stars from {n} reviews",
     "5.0-star Google rating from {n} verified reviews",
     "{n} verified Google reviews",
+    "Google Business Profile ({n} reviews)",
   ],
   Zillow: [
     "{n} Zillow reviews",
     "{n} Zillow Reviews",
     "Read All {n} Reviews on Zillow",
     "& {n} Zillow",
+    "Zillow agent profile ({n} reviews)",
+    "Read all {n} Zillow reviews",
+  ],
+  Combined: [
+    "{n} five-star reviews across Google and Zillow",
+    "5.0 stars across {n} reviews",
+    "{n} Google and Zillow reviews",
+    "{n} Google/Zillow reviews",
   ],
 };
 
-const files = [...walk("public"), "index.html", "MARKETING_KIT.md", "AGGREGATOR_PROFILES.md", "src/App.jsx"].filter(existsSync);
+// civilian-site is a separate deploy surface with its own copy of these counts.
+// It was originally left out of this walk, which is how greggcostin.com drifted
+// two counts behind pensacolamilitaryhousing.com.
+const files = [...walk("public"), ...walk("civilian-site"), "index.html", "MARKETING_KIT.md", "AGGREGATOR_PROFILES.md", "src/App.jsx"].filter(existsSync);
 let totalSubs = 0;
 const report = [];
 

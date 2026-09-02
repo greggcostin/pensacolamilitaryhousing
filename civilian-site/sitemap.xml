@@ -112,4 +112,16 @@
   <url><loc>https://greggcostin.com/blog/property-taxes-escambia-santa-rosa</loc><lastmod>2026-08-27</lastmod></url>
   <url><loc>https://greggcostin.com/blog/closing-costs-florida-buyers</loc><lastmod>2026-08-31</lastmod></url>
   <url><loc>https://greggcostin.com/blog/fed-rate-hike-what-it-means</loc><lastmod>2026-09-02</lastmod></url>
+  <url>
+    <loc>https://greggcostin.com/privacy</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://greggcostin.com/accessibility</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

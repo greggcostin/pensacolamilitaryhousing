@@ -25,15 +25,12 @@ const pages = [
   { id: "home", label: "Home" },
   { id: "about", label: "About Me" },
   { id: "pcs", label: "PCS Guide" },
-  { id: "homestead", label: "Homestead" },
   { id: "nas", label: "NAS Pensacola" },
   { id: "whiting", label: "Whiting Field" },
   { id: "corry", label: "Corry Station" },
   { id: "eglin", label: "Eglin AFB" },
   { id: "hurlburt", label: "Hurlburt Field" },
   { id: "neighborhoods", label: "Neighborhoods" },
-  { id: "blog", label: "Blog" },
-  { id: "reviews", label: "Reviews" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -306,7 +303,7 @@ const Nav = ({ current, go }) => {
           )}
         </div>
         <Tab id="calculator" label="Calculators" />
-        <Tab id="blog" label="Blog" />
+        <ExtTab href="/blog" label="Blog" />
         <ExtTab href="/reviews" label="Reviews" />
         <Tab id="contact" label="Contact" />
         <button
@@ -645,7 +642,7 @@ const SocialProof = ({ go }) => (
             </div>
           ))}
         </div>
-        <BtnG onClick={() => go("reviews")}>Read All Reviews</BtnG>
+        <BtnG href="/reviews">Read All Reviews</BtnG>
       </div>
     </div>
   </Section>
@@ -729,10 +726,12 @@ const Footer = ({ go }) => {
           </div>
           <div>
             <div style={{ color: C.gold, fontSize: 16, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Quick Links</div>
-            {["pcs", "homestead", "neighborhoods", "reviews", "contact"].map(id => {
+            {["pcs", "neighborhoods", "contact"].map(id => {
               const p = pages.find(x => x.id === id);
               return <button key={id} onClick={() => go(id)} style={footerLinkStyle}>{p.label}</button>;
             })}
+            <a href="/florida-homestead-exemption-military" style={footerLinkStyle}>Homestead</a>
+            <a href="/reviews" style={footerLinkStyle}>Reviews</a>
             <a href="/buy" style={footerLinkStyle}>Buy a Home</a>
             <a href="/sell" style={footerLinkStyle}>Sell Your Home</a>
             <a href="/va-loan-guide" style={footerLinkStyle}>VA Loan Guide</a>
@@ -754,7 +753,7 @@ const Footer = ({ go }) => {
         </div>
         <div style={{ borderTop: `1px solid ${C.hairline}`, paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
           <p data-costin-sites style={{ color: C.mutedD, fontSize: 11 }}>© 2026 The Costin Team. All rights reserved. | PensacolaMilitaryHousing.com for military &amp; PCS families · <a href="https://greggcostin.com" style={{ color: C.mutedD }}>GreggCostin.com</a> for civilian buying &amp; selling</p>
-          <p style={{ color: C.mutedD, fontSize: 11 }}>Gregg Costin, Realtor® · MRP® · ABR® · SRS® · RENE® · FMS®</p>
+          <p style={{ color: C.mutedD, fontSize: 11 }}>Gregg Costin, Realtor® · MRP® · ABR® · SRS® · RENE® · FMS® · <a href="/privacy" style={{ color: C.mutedD }}>Privacy</a> · <a href="/accessibility" style={{ color: C.mutedD }}>Accessibility</a></p>
         </div>
         <p style={{ color: C.mutedD, fontSize: 10.5, fontStyle: "italic", lineHeight: 1.6, marginTop: 16, textAlign: "center", maxWidth: 1100, marginLeft: "auto", marginRight: "auto" }}>
           <strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (220 W. Garden St., Pensacola, FL 32502). Information on this site (including BAH figures, VA loan terms, funding fees, tax rules, homestead and disability benefits, school zoning, and rental/investment commentary) is provided for general informational purposes only and is not legal, tax, financial, mortgage, lending, or investment advice. Real estate, lending, tax, and benefits rules change frequently and depend on individual circumstances; verify current figures with official sources (DoD BAH calculator, VA, IRS, your county property appraiser) and consult a licensed attorney, CPA, or NMLS-licensed loan officer for guidance specific to your situation. Gregg Costin is not a mortgage lender, attorney, tax professional, or financial advisor, and is not affiliated with, endorsed by, or representing the U.S. Department of Defense, Department of Veterans Affairs, or any branch of the U.S. military. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.
@@ -946,7 +945,7 @@ const InquiryForm = () => {
           <button type="submit" disabled={status === "submitting"} style={{ background: status === "submitting" ? `${GOLD}66` : GOLD, color: BLACK, border: "none", padding: "14px 28px", fontSize: 14, fontWeight: 700, borderRadius: 8, cursor: status === "submitting" ? "wait" : "pointer", textTransform: "uppercase", letterSpacing: .5, marginTop: 8 }}>
             {status === "submitting" ? "Sending..." : "Send Message"}
           </button>
-          <p style={{ color: "#666", fontSize: 11, marginTop: 4, textAlign: "center" }}>By submitting, you agree to be contacted by The Costin Team. Your information is never sold or shared.</p>
+          <p style={{ color: C.muted, fontSize: 12, lineHeight: 1.5, marginTop: 4, textAlign: "center" }}>By submitting you agree that The Costin Team at Levin Rinke Realty may contact you by phone, email, and text message about your inquiry. Consent is not a condition of purchase; message and data rates may apply; reply STOP to opt out. See our <a href="/privacy" style={{ color: C.gold }}>Privacy Policy</a>.</p>
         </form>
       )}
     </div>
@@ -1009,7 +1008,7 @@ const PCSPage = ({ go }) => {
       <ul style={{ paddingLeft: 20 }}>
         {FL_BENEFITS.map((b) => <Li key={b.title}><strong style={{ color: "#fff" }}>{b.title}</strong> {b.text}</Li>)}
       </ul>
-      <button onClick={() => go("homestead")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Read the Homestead Exemption Guide →</button>
+      <a href="/florida-homestead-exemption-military" style={{ display: "inline-block", background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, textDecoration: "none", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Read the Homestead Exemption Guide →</a>
       <H2>Why Work With a Military Relocation Specialist?</H2>
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0,400px) 1fr", gap: 40, alignItems: "center", marginTop: 16 }}>
         <Pic loading="eager" src={IMG.grayNoTie} alt="Gregg Costin" style={{ width: "100%", borderRadius: 10, objectFit: "cover", aspectRatio: "3/4", border: `2px solid ${GOLD}22` }} />
@@ -1028,137 +1027,6 @@ const PCSPage = ({ go }) => {
   </PageWrapper>
   );
 };
-
-const VALoanPage = ({ go }) => (
-  <PageWrapper>
-    <PageHero title="VA Loan Guide for Pensacola Homebuyers" subtitle="Zero down payment. No PMI. Competitive rates. Here's how to use your earned benefit to buy a home on the Gulf Coast." breadcrumb="Home > VA Loan Guide" />
-    <Content>
-      <P>The VA home loan is the most powerful mortgage product available to American military families. If you're an active duty service member, veteran, National Guard or Reserve member, or surviving spouse, you've likely earned access to this benefit. Here's how it works in the Pensacola market.</P>
-      <H2>Who Qualifies for a VA Loan?</H2>
-      <ul style={{ paddingLeft: 20 }}>
-        <Li>Active duty service members with 90+ continuous days of service</Li>
-        <Li>Veterans meeting length-of-service requirements (generally 90 days wartime, 181 days peacetime)</Li>
-        <Li>National Guard/Reserve members with 6+ years of service or 90 days of active duty under Title 10</Li>
-        <Li>Surviving spouses of service members who died in the line of duty or from a service-connected disability</Li>
-      </ul>
-      <H2>VA Loan Benefits vs Conventional and FHA</H2>
-      <ComparisonTable
-        headers={["Feature", "VA Loan", "Conventional", "FHA"]}
-        rows={[
-          ["Down Payment", "$0", "3-20%", "3.5%"],
-          ["PMI/MIP", "None", "Required <20% down", "Required (life of loan)"],
-          ["Interest Rates", "Typically lowest", "Market rate", "Moderate"],
-          ["Credit Score Min", "No VA minimum (lender overlays apply, typically 580-620)", "620-680+", "580+"],
-          ["Funding Fee", "0.5-3.3% (waived for disabled vets)", "None", "1.75% upfront + annual"],
-          ["Seller Concessions", "4% of reasonable value (see below)", "3-6% depending on down payment", "Up to 6%"],
-          ["Assumable", "Yes", "No", "Yes"],
-        ]}
-      />
-      <H2>Seller Concessions vs. Seller-Paid Closing Costs: What the VA Handbook Actually Says</H2>
-      <div style={{ background: "#1a2a1a", border: "1px solid #2a4a2a", borderRadius: 12, padding: 28, marginTop: 16, marginBottom: 24 }}>
-        <div style={{ color: "#6adf6a", fontSize: 13, fontWeight: 700, marginBottom: 12, textTransform: "uppercase", letterSpacing: 1.5 }}>VA Pamphlet 26-7, Chapter 8, Topic 5: Direct Guidance</div>
-        <p style={{ color: "#ccc", fontSize: 14, lineHeight: 1.9, marginBottom: 16 }}>Most agents and even some lenders incorrectly apply a blanket 4% cap to everything the seller pays. <strong style={{ color: "#fff" }}>That is a lender overlay, not a VA rule.</strong> The VA Handbook draws a clear distinction between two separate categories:</p>
-        <div style={{ background: "#0d1a0d", borderRadius: 8, padding: 20, marginBottom: 16 }}>
-          <div style={{ color: GOLD, fontSize: 14, fontWeight: 700, marginBottom: 8 }}>Category 1: Seller-Paid Closing Costs (NO CAP)</div>
-          <p style={{ color: "#bbb", fontSize: 14, lineHeight: 1.8 }}>Per VA Pamphlet 26-7 Chapter 8: <em style={{ color: "#ddd" }}>Payment of the buyer's closing costs by the seller is not a seller concession.</em> The VA does not limit a seller's payment of the buyer's normal, reasonable, and customary closing costs. These do <strong style={{ color: "#fff" }}>not</strong> count against the 4% cap.</p>
-        </div>
-        <div style={{ background: "#0d1a0d", borderRadius: 8, padding: 20, marginBottom: 16 }}>
-          <div style={{ color: GOLD, fontSize: 14, fontWeight: 700, marginBottom: 8 }}>Category 2: Seller Concessions (Capped at 4% of Reasonable Value)</div>
-          <p style={{ color: "#bbb", fontSize: 14, lineHeight: 1.8 }}>The 4% cap applies to: VA funding fee paid by seller, prepaid taxes/insurance, gifts, discount points, interest rate buydowns, and payoff of buyer's credit balances.</p>
-        </div>
-        <div style={{ background: `${GOLD}12`, border: `1px solid ${GOLD}33`, borderRadius: 8, padding: 16 }}>
-          <p style={{ color: GOLD, fontSize: 14, fontWeight: 700, marginBottom: 4 }}>What This Means in Practice</p>
-          <p style={{ color: "#ccc", fontSize: 14, lineHeight: 1.8 }}>On a $350,000 Pensacola purchase, 4% = $14,000 in allowable concessions. If the seller also agrees to pay $7,000 in normal closing costs, that's $21,000 in total seller contributions with no VA rule violation. <strong style={{ color: "#fff" }}>I work with lenders who follow VA guidelines, not restrictive overlays.</strong></p>
-        </div>
-      </div>
-      <H2>VA Funding Fee Breakdown</H2>
-      <ComparisonTable
-        headers={["Usage", "Down Payment", "Regular Military", "Reserves/Guard"]}
-        rows={[
-          ["First Use", "0% down", "2.15%", "2.40%"],
-          ["First Use", "5%+ down", "1.50%", "1.75%"],
-          ["First Use", "10%+ down", "1.25%", "1.50%"],
-          ["Subsequent Use", "0% down", "3.30%", "3.30%"],
-          ["Subsequent Use", "5%+ down", "1.50%", "1.75%"],
-        ]}
-      />
-      <InfoBox title="Funding Fee Exemption">Veterans with a VA-rated service-connected disability of 10% or higher are exempt from the funding fee entirely. Purple Heart recipients who are still on active duty are also exempt. This can save you $6,000-10,000+ on a Pensacola purchase.</InfoBox>
-      <H2>What Can You Afford on BAH?</H2>
-      <ComparisonTable
-        headers={["Rank (w/ dependents)", "Pensacola BAH (approx)", "Estimated Max Purchase Price", "Target Neighborhoods"]}
-        rows={[
-          ["E-5", "$1,863/mo", "$250-285K", "Pace, Cantonment, NE Pensacola"],
-          ["E-6", "$2,235/mo", "$305-350K", "Pace, Milton, East Pensacola"],
-          ["E-7", "$2,256/mo", "$325-385K", "Gulf Breeze, Pace, Navarre"],
-          ["O-1/O-2", "$1,914-2,232/mo", "$265-355K", "Pace, East Pensacola, Milton"],
-          ["O-3", "$2,271/mo", "$325-385K", "Gulf Breeze, Navarre, Perdido"],
-          ["O-4", "$2,457/mo", "$360-440K", "Gulf Breeze, Pensacola, Perdido"],
-        ]}
-      />
-      <div style={{ background: `${GOLD}12`, border: `2px solid ${GOLD}55`, borderRadius: 12, padding: 24, marginTop: 16, marginBottom: 24 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-          <span style={{ fontSize: 28 }}>⚠️</span>
-          <span style={{ color: GOLD, fontSize: 16, fontWeight: 800, letterSpacing: .5 }}>IMPORTANT: BAH IS A FOUNDATION, NOT A CEILING</span>
-        </div>
-        <p style={{ color: "#ddd", fontSize: 15, lineHeight: 1.85 }}>The purchase price estimates above assume your BAH covers 100% of your PITI payment. In reality, many military families invest $200-500/month above their BAH to secure a home in a better school district, safer neighborhood, or closer to base. <strong style={{ color: "#fff" }}>I model specific scenarios for every buyer</strong>. Call me at (850) 266-5005 and let's run the numbers together.</p>
-      </div>
-      <H2>Frequently Asked Questions</H2>
-      <FAQ q="Do sellers dislike VA loan offers?" a="This is one of the biggest myths in real estate. In Pensacola's current market, sellers are happy to receive any qualified offer. VA loans close at the same rate as conventional loans. A strong VA offer with clean terms, realistic price, and proof of pre-approval is competitive with any other offer type. I structure VA offers to win." />
-      <FAQ q="How long does a VA loan take to close?" a="Typically 30-45 days from contract to closing, similar to conventional. The VA appraisal usually comes back within 10-14 business days. I coordinate closely with your lender to ensure nothing falls through the cracks." />
-      <FAQ q="Can I use a VA loan for a condo in Pensacola?" a="Yes, but the condo complex must be on the VA's approved list or go through the approval process. Many popular Pensacola-area condo complexes are already VA-approved, especially on Perdido Key and in Gulf Breeze. I can check approval status before we waste time on a property that won't qualify." />
-      <InfoBox title="Next Step">Get pre-approved with a VA-experienced lender before you start your home search. I work with lenders who specialize in military transactions and understand the nuances of VA financing. Call me at (850) 266-5005 and I'll connect you.</InfoBox>
-    </Content>
-  </PageWrapper>
-);
-
-const HomesteadPage = ({ go }) => (
-  <PageWrapper>
-    <PageHero title="Florida Homestead Exemption Guide for Military Families" subtitle="How to save thousands on property taxes and protect your home's assessed value, including military-specific exemptions most agents don't know about." breadcrumb="Home > Florida Homestead Exemption" />
-    <Content>
-      <P>Florida's homestead exemption is one of the most valuable financial benefits available to homeowners in the state, and military families often have access to additional exemptions that can reduce your property tax bill even further.</P>
-      <div style={{ background: `${GOLD}08`, border: `1px solid ${GOLD}33`, borderRadius: 10, padding: 24, marginTop: 16, marginBottom: 24 }}>
-        <div style={{ color: GOLD, fontSize: 14, fontWeight: 700, marginBottom: 12, textTransform: "uppercase", letterSpacing: 1 }}>Key Benefits for Military Homeowners: At a Glance</div>
-        <ul style={{ paddingLeft: 20, margin: 0 }}>
-          <li style={{ color: "#ccc", fontSize: 14, lineHeight: 1.8, marginBottom: 6 }}><strong style={{ color: "#fff" }}>$50,000 standard homestead exemption</strong>: saves $800-1,200/year in property taxes</li>
-          <li style={{ color: "#ccc", fontSize: 14, lineHeight: 1.8, marginBottom: 6 }}><strong style={{ color: "#fff" }}>100% disabled veteran exemption</strong>: zero property taxes ($4,000-8,000+/year savings)</li>
-          <li style={{ color: "#ccc", fontSize: 14, lineHeight: 1.8, marginBottom: 6 }}><strong style={{ color: "#fff" }}>Save Our Homes portability</strong>: transfer your accrued tax benefit when PCSing within FL</li>
-          <li style={{ color: "#ccc", fontSize: 14, lineHeight: 1.8, marginBottom: 6 }}><strong style={{ color: "#fff" }}>Deployed service member exemption</strong>: additional tax reduction based on deployment days</li>
-        </ul>
-      </div>
-      <H2>Standard Homestead Exemption ($50,000)</H2>
-      <P>Every Florida homeowner who occupies their property as a primary residence is entitled to a homestead exemption that removes up to $50,000 from the assessed value of the home for property tax purposes. At Pensacola's current millage rate, this saves the average homeowner approximately $800-1,200 per year.</P>
-      <H2>Military-Specific Exemptions</H2>
-      <H3>Disabled Veteran Exemptions</H3>
-      <ul style={{ paddingLeft: 20 }}>
-        <Li><strong style={{ color: "#fff" }}>100% disability (or total and permanent):</strong> Full exemption from all property taxes on your homestead. Potentially saving $4,000-8,000+ per year in Pensacola.</Li>
-        <Li><strong style={{ color: "#fff" }}>Partial disability (10-99%):</strong> Additional $5,000 exemption beyond the standard homestead for veterans 65+ with a combat-related disability.</Li>
-        <Li><strong style={{ color: "#fff" }}>Surviving spouse:</strong> The surviving spouse of a veteran who died from service-connected causes may be entitled to a full exemption.</Li>
-      </ul>
-      <H2>Save Our Homes (SOH) Cap</H2>
-      <P>Once you establish homestead, the Save Our Homes amendment caps annual increases in your home's assessed value at 3% or the Consumer Price Index, whichever is lower, regardless of how much your property actually appreciates. In a market like Pensacola that has seen significant appreciation since 2020, this cap can create a growing gap between your assessed value and your actual market value.</P>
-      <H2>Portability: Transferring Your SOH Benefit</H2>
-      <P>If you PCS within Florida, you can transfer your accumulated SOH benefit to your new property. This portability benefit can save you significant money on property taxes at your new home. The portability benefit is the difference between your assessed value and your market value, up to $500,000.</P>
-      <InfoBox title="Important Portability Rules">You must establish a new homestead within 3 years of abandoning the previous one. You must apply for portability when you apply for homestead at the new property. The transfer is not automatic: you must file the proper forms with the county property appraiser.</InfoBox>
-      <H2>How to File for Homestead</H2>
-      <ul style={{ paddingLeft: 20 }}>
-        <Li>File with the Escambia County Property Appraiser (Pensacola) or Santa Rosa County Property Appraiser (Gulf Breeze, Pace, Milton, Navarre) depending on your property location.</Li>
-        <Li>Filing deadline: March 1 of the year following your purchase. If you close in November 2026, you must file by March 1, 2027.</Li>
-        <Li>Required documents: recorded deed, Florida driver's license or ID with property address, vehicle registration showing property address, and Social Security numbers for all applicants.</Li>
-        <Li>Military members: you may use your Leave and Earnings Statement as proof of Florida residency if your driver's license is from another state.</Li>
-      </ul>
-      <H2>Frequently Asked Questions</H2>
-      <FAQ q="Can I have homestead exemption if I'm active duty but my home state of record is not Florida?" a="Yes. Homestead exemption is based on where you live, not your state of legal residence. If you occupy the home as your primary residence, you can file for homestead regardless of your state of record." />
-      <FAQ q="What happens to my homestead if I PCS and keep the home as a rental?" a="You lose homestead exemption when you stop occupying the home as your primary residence. Your assessed value will reset to market value, and your property taxes will increase. Factor this into your rental property cash flow analysis." />
-      <FAQ q="How much does homestead actually save in Pensacola?" a="On a $325,000 home in Escambia County, the standard $50,000 exemption saves approximately $900-1,100 per year. A 100% disabled veteran pays zero property tax, a savings of $4,500-6,000+ per year on the same home. Over a 5-year assignment, that's $22,500-30,000." />
-      <div style={{ marginTop: 32, textAlign: "center" }}>
-        <button onClick={() => go("contact")} style={{ background: GOLD, color: BLACK, border: "none", padding: "16px 36px", fontSize: 14, fontWeight: 700, borderRadius: 8, cursor: "pointer", textTransform: "uppercase", letterSpacing: .5 }}>Questions? Call 850-266-5005</button>
-      </div>
-    </Content>
-  </PageWrapper>
-);
-
-
-const fmt = (n) => "$" + n.toLocaleString("en-US");
 
 const BAHTable = ({ title, rows }) => (
   <div style={{ marginBottom: 28 }}>
@@ -2262,193 +2130,6 @@ const NeighborhoodsPage = ({ go }) => {
 };
 
 
-const STARTER_POSTS = [
-  {
-    slug: "personal-property-activity-pcs-2026",
-    title: "What the New Personal Property Activity (PPA) Means for Your 2026 PCS to Pensacola",
-    excerpt: "On May 1, 2026, the Pentagon stood up the Personal Property Activity to run military moves after the HomeSafe household-goods contract collapsed. Here's what changed, what it means for your move to NAS Pensacola or Eglin, and how it affects your housing timeline.",
-    category: "PCS", date: "2026-06-10", readTime: "7 min",
-    body: "If you have orders to the Florida Panhandle this year, the way your household goods get moved looks different than it did 18 months ago. On May 1, 2026, the Pentagon officially stood up the Personal Property Activity (PPA), a permanent agency that now runs PCS household goods moves for every service member.\n\nHere's the plain-English version of what happened, and more importantly, what it means for your move to Pensacola.\n\nA Quick Timeline of How We Got Here\n\nFor years the Pentagon tried to privatize PCS moves under a single company. That effort was the Global Household Goods Contract (GHC), awarded to HomeSafe Alliance. The idea was one contractor, one app, one point of accountability for your move.\n\nIt did not go well. As HomeSafe began taking on real volume in 2024 and early 2025, families reported missed pickups, belongings delivered weeks late, and constant problems with the HomeSafe Connect platform. By spring 2025 the Army had paused its moves through HomeSafe, and on June 18, 2025, the Pentagon terminated the GHC contract for cause.\n\nTo stabilize the system, the Pentagon stood up a PCS Joint Task Force in mid-2025 under Army Major General Lance Curtis. In January 2026, Defense Secretary Pete Hegseth directed that task force to become permanent. That permanent agency, the Personal Property Activity, officially launched on May 1, 2026. It is based at Scott Air Force Base, Illinois, reports directly to the Secretary of Defense, and Maj. Gen. Curtis is its first commander.\n\nWhat This Means for Your Move (the Practical Part)\n\nFor now, your move runs through the traditional system: your installation's Personal Property Office (PPO), the DoD's move portal, and the long-standing network of approved moving companies. If your last PCS was before 2024, this will feel familiar. The single-contractor HomeSafe experience that frustrated so many families is gone.\n\nBook your move counseling as early as your orders allow. Summer is still peak PCS season on the Emerald Coast, and capacity through the traditional system is finite. The earlier you sit down with your PPO, the better your pickup and delivery windows.\n\nDocument everything. A detailed photo inventory of your high-value items and an honest weight estimate protect you if a claim comes up later.\n\nKnow your entitlements. A personally procured move (PPM, formerly DITY) is still on the table and can put money in your pocket if you are willing to manage the move yourself.\n\nWhy a Realtor Who Understands This Actually Matters\n\nWhen the logistics of your physical move are uncertain (and there is still some turbulence as the new agency finds its footing), the worst thing you can do is paint yourself into a corner on housing. If your household goods slip two weeks, you do not want to be stuck with a closing date, a lease gap, or a hotel bill you cannot cover. Part of my job is building flexibility into your timeline: realistic closing dates, rate-lock windows that account for move risk, and backup plans if your goods arrive late. I have done 11 PCS moves myself, so I plan for the move that actually happens, not the one on paper.\n\nThe Bottom Line\n\nThe takeaways for your 2026 move to Pensacola are simple: work your installation PPO early, keep good records, and build a housing plan that can absorb a delay. Want me to map your PCS and housing timeline together so the two do not collide? Call or text me at (850) 266-5005."
-  },
-  {
-    slug: "pcs-to-pensacola-2026-complete-guide",
-    title: "PCS to Pensacola in 2026: What Military Families Need to Know Before They Move",
-    excerpt: "Getting orders to NAS Pensacola, Corry Station, or Whiting Field? Here's the real-world guide to neighborhoods, BAH, schools, and the housing market from someone who's done 11 PCS moves.",
-    category: "PCS", date: "2026-04-15", readTime: "8 min",
-    body: "If you just got orders to Pensacola, congratulations. You're headed to one of the most military-friendly communities in the country, with white-sand beaches, no state income tax, and a cost of living that actually lets you build wealth on BAH.\n\nStart 90 Days Out\n\nThe biggest mistake I see is waiting until 30 days before report date to start looking at housing. At 90 days, you have options. At 30 days, you have pressure. Connect with a Realtor who understands military timelines, get pre-approved with a VA-experienced lender, and start narrowing neighborhoods.\n\nKnow Your BAH\n\nPensacola falls under MHA FL064. An E-6 with dependents receives $2,235/month in 2026. That comfortably covers a mortgage in Pace, Milton, or East Pensacola. Gulf Breeze and Perdido Key will push above BAH for most enlisted ranks, but the school quality and lifestyle can make the $200-400/month delta worthwhile.\n\nRent vs. Buy\n\nIf you're going to be in Pensacola for 3+ years, buying almost always wins financially with a VA loan at zero down. If you're a student aviator on a 12-18 month pipeline, renting is usually smarter unless you plan to keep the property as an investment.\n\nReady to start your search? Call me at (850) 266-5005 and let's build your PCS game plan."
-  },
-  {
-    slug: "va-loan-seller-concessions-truth",
-    title: "The VA Loan Seller Concessions Myth That's Costing Military Buyers Thousands",
-    excerpt: "Most agents and even some lenders incorrectly apply a blanket 4% cap to everything the seller pays on a VA loan. Here's what the VA Handbook actually says, and why it matters for your purchase.",
-    category: "VA Loans", date: "2026-04-10", readTime: "6 min",
-    body: "Here's a scenario I see at least once a month: a military buyer is told by their agent or lender that 'the seller can only contribute 4% on a VA loan.' They structure the offer accordingly, leaving money on the table.\n\nThat advice is wrong. Or more precisely, it's an oversimplification that costs veterans real money.\n\nWhat the VA Handbook Actually Says\n\nVA Pamphlet 26-7, Chapter 8, Topic 5 draws a clear line between two separate categories:\n\nSeller-Paid Closing Costs (NO CAP): Payment of the buyer's normal, reasonable, and customary closing costs is NOT a seller concession. The seller can pay 100% of your closing costs with no VA rule violation.\n\nSeller Concessions (4% Cap): The 4% limit only applies to concessions: things of value added to the transaction that the seller is not customarily expected to pay.\n\nThe Math on a $350,000 Pensacola Purchase: $14,000 in allowable concessions PLUS $7,000 in seller-paid closing costs = $21,000 in total seller contributions. Same VA benefit, $7,000 difference depending on your lender.\n\nCall me at (850) 266-5005 and I'll connect you with the right lenders."
-  },
-  {
-    slug: "florida-homestead-exemption-military",
-    title: "Florida Homestead Exemption: The Military Family's Guide to Saving Thousands on Property Taxes",
-    excerpt: "The homestead exemption saves the average Pensacola homeowner $800-1,200/year. Disabled veterans can pay zero property taxes. Here's how to file and the deadlines you can't miss.",
-    category: "Homestead", date: "2026-04-05", readTime: "5 min",
-    body: "Florida's homestead exemption is one of the most valuable financial benefits available to homeowners in the state, and military families often leave money on the table by not filing, or not filing correctly.\n\nThe Basics: $50,000 Off Your Assessed Value\n\nEvery Florida homeowner who occupies their property as a primary residence gets up to $50,000 removed from their assessed value. At Pensacola's current millage rate, that's roughly $800-1,200 per year back in your pocket.\n\nThe Military Game-Changer: Disabled Veteran Exemptions\n\nIf you have a 100% VA disability rating, you pay ZERO property taxes on your homestead. On a $325,000 home in Escambia County, that's $4,500-6,000+ per year in savings.\n\nThe Deadline You Cannot Miss: File by March 1 of the year following your purchase.\n\nQuestions about your specific situation? Call me at (850) 266-5005."
-  },
-  {
-    slug: "best-neighborhoods-eglin-afb-families",
-    title: "Best Neighborhoods for Eglin AFB Families in 2026: Niceville, Crestview, or Fort Walton Beach?",
-    excerpt: "Eglin families face a classic trade-off: top schools in Niceville, affordability in Crestview, or convenience in Fort Walton Beach. Here's how to choose based on your rank, family, and priorities.",
-    category: "Neighborhoods", date: "2026-03-28", readTime: "7 min",
-    body: "If you're PCSing to Eglin AFB, the first question everyone asks is: 'Where should I live?' The Emerald Coast has several strong options, and the right answer depends on your family's priorities.\n\nNiceville (The Gold Standard for Families): Median home price $330-420K. Commute 10-15 min. Schools A-rated Okaloosa County. Niceville is consistently the #1 choice for Eglin families with school-age children.\n\nCrestview (Best Value, Longer Commute): Median home price $260-330K. Commute 25-30 min. You get significantly more house for your money. 4-bedroom new builds under $300K are common.\n\nFort Walton Beach (Close to Everything): Median home price $300-400K. Commute 5-15 min. FWB is the natural choice if you want to be close to both Eglin and the beach without the premium of Niceville.\n\nWant help narrowing it down? Call me at (850) 266-5005."
-  },
-  {
-    slug: "bah-2026-pensacola-what-can-you-afford",
-    title: "2026 BAH for Pensacola: What Can You Actually Afford?",
-    excerpt: "BAH is a foundation, not a ceiling. Here's a rank-by-rank breakdown of what your 2026 housing allowance covers in the Pensacola market, and where the math gets real.",
-    category: "BAH", date: "2026-03-20", readTime: "6 min",
-    body: "Every military family PCSing to Pensacola asks the same question: 'Can I afford to buy on BAH?' The honest answer is: it depends on your rank, your family's priorities, and how you define 'afford.'\n\n2026 Pensacola BAH Reality Check: E-5 $1,863/month, E-6 $2,235/month, E-7 $2,256/month, O-3 $2,271/month, O-4 $2,457/month.\n\nWhat That Actually Buys: At current interest rates, an E-6's BAH of $2,235 covers a PITI payment on roughly a $280-310K home. That puts Pace, Milton, and East Pensacola Heights well within reach.\n\nThe Gap Is an Investment, Not a Problem: BAH was designed to cover approximately the median rental cost in your area. A $150-350/month gap between BAH and PITI is normal and often worth it when you factor in equity growth, tax benefits, and quality of life.\n\nWant me to run the exact numbers for your rank and target neighborhoods? Call (850) 266-5005."
-  },
-];
-
-const BlogPage = ({ go }) => {
-  const [posts, setPosts] = useState(STARTER_POSTS);
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  // Posts live as static pages at /blog/<slug>; /blog/index.json is the manifest
-  // the blog factory regenerates on every build. Fall back to the baked-in list.
-  useEffect(() => {
-    fetch("/blog/index.json")
-      .then(r => r.ok ? r.json() : null)
-      .then(manifest => {
-        if (Array.isArray(manifest) && manifest.length > 0) setPosts(manifest);
-      })
-      .catch(() => {});
-  }, []);
-
-  const categories = ["All", ...new Set(posts.map(p => p.category))];
-  const filtered = activeCategory === "All" ? posts : posts.filter(p => p.category === activeCategory);
-  const formatDate = (d) => new Date(d + "T12:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-
-  return (
-    <PageWrapper>
-      <PageHero title="Blog: Pensacola Military Real Estate" subtitle="Market insights, VA loan guidance, PCS tips, and neighborhood deep-dives from a retired USAF Combat Systems Officer turned Realtor." breadcrumb="Home > Blog" />
-      <Content>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 32 }}>
-          {categories.map(cat => (
-            <button key={cat} onClick={() => setActiveCategory(cat)} style={{
-              background: activeCategory === cat ? C.gold : "transparent",
-              color: activeCategory === cat ? C.ink : C.muted,
-              border: `1px solid ${activeCategory === cat ? C.gold : CHARCOAL}`,
-              padding: "8px 18px", fontSize: 12, borderRadius: 6, cursor: "pointer",
-              fontWeight: activeCategory === cat ? 700 : 500,
-              letterSpacing: 0.5, textTransform: "uppercase", fontFamily: SS,
-            }}>{cat}</button>
-          ))}
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          {filtered.map(post => (
-            <a key={post.slug} href={post.url || `/blog/${post.slug}`} style={{
-              background: C.elevated, border: `1px solid ${C.hairline}`, borderRadius: 12,
-              padding: 28, cursor: "pointer", display: "block", textDecoration: "none",
-            }}
-              onMouseEnter={e => e.currentTarget.style.borderColor = C.goldLine}
-              onMouseLeave={e => e.currentTarget.style.borderColor = C.hairline}
-            >
-              <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 12, flexWrap: "wrap" }}>
-                <span style={{ background: C.goldTint, border: `1px solid ${C.goldLine}`, color: C.gold, fontSize: 10, fontWeight: 600, padding: "3px 10px", borderRadius: 4, letterSpacing: 1, textTransform: "uppercase" }}>{post.category}</span>
-                <span style={{ color: C.mutedD, fontSize: 12 }}>{formatDate(post.date)}</span>
-                <span style={{ color: C.mutedD, fontSize: 12 }}>{post.readTime} read</span>
-              </div>
-              <h3 style={{ fontFamily: SF, color: "#fff", fontSize: 22, fontWeight: 500, margin: "0 0 10px", lineHeight: 1.3 }}>{post.title}</h3>
-              <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.7, margin: 0 }}>{post.excerpt}</p>
-              <div style={{ marginTop: 16, color: C.gold, fontSize: 12, letterSpacing: 2, textTransform: "uppercase", fontFamily: SS }}>Read Article →</div>
-            </a>
-          ))}
-        </div>
-      </Content>
-    </PageWrapper>
-  );
-};
-
-const ReviewsPage = () => {
-  const GOOGLE_URL = "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd";
-  const tags = ["Tireless Work Ethic", "Trusted Advisor", "Prompt Responses", "Proactive Approach", "Negotiation Skills", "Excellent Communicator", "Genuine Care", "Attention to Detail", "Veteran-Owned", "Military Specialist"];
-  // Real, verbatim Google reviews only — same verified 6-name set as public/reviews.html.
-  // Never add invented/persona testimonials here (FTC + Google policy risk).
-  const reviews = [
-    { text: "If you are moving to the Pensacola area, you need Gregg Costin in your corner. Relocating our family all the way from Washington State to Florida felt like a massive, overwhelming task, but Gregg was an absolute lifesaver. He is truly a professional who went above and beyond for us every step of the way.", from: "Eric Johnson", meta: "Verified Google Review" },
-    { text: "Gregg is an outstanding, exceptional and professional agent and advisor that is in your corner that truly looks out for you and treats you like you are family! The home buying or selling process can be an intimidating time for most people, but Gregg guides you through it with calm expertise.", from: "Shannon Williamson", meta: "Local Guide · Verified Google Review" },
-    { text: "We had an outstanding experience working with Gregg. From the very beginning, he set himself apart by taking the time to meet with us, understand our situation, and tailor his approach specifically to our needs as a military family.", from: "Joshua Slavens", meta: "Verified Google Review" },
-    { text: "We were extremely fortunate to meet Gregg by chance during our home search journey. He provided much more than we ever expected from a realtor. As a Veteran I cannot recommend him more highly.", from: "Darin Vazquez", meta: "Verified Google Review" },
-    { text: "Greg was a consummate professional and very dedicated to helping us find the best house. We live out of state and Greg went and toured a couple of houses for us and sent us videos.", from: "Julia Mayer", meta: "Verified Google Review" },
-    { text: "Gregg was a blessing throughout my home buying process. As a young first time home buyer, I went in clueless. I not only got phenomenal guidance and recommendations, but valuable information.", from: "Harleigh", meta: "Verified Google Review" },
-  ];
-  const credibility = [
-    "Retired USAF Captain, Combat Systems Officer (E-3 AWACS), prior-enlisted Staff Sergeant, 11 personal PCS moves",
-    "Military Relocation Professional (MRP) certified",
-    "Accredited Buyer's Representative (ABR), Seller Representative Specialist (SRS)",
-    "Real Estate Negotiation Expert (RENE) certified",
-    "Florida Military Specialist designation",
-    "Licensed in Florida and Alabama",
-    "VA loan, BAH, and Florida Homestead Exemption expertise",
-    "Serves NAS Pensacola, Corry Station, NAS Whiting Field, Eglin AFB, Hurlburt Field, Duke Field",
-    "Verified veteran-owned business on Google",
-    "Available 24/7 to support deploying and relocating military families",
-  ];
-  return (
-    <PageWrapper>
-      <PageHero title="5-Star Reviews from Military Families Across the Florida Panhandle" subtitle="Real stories from real military families who trusted their PCS move, VA loan, and homebuying journey to a retired USAF Combat Systems Officer." breadcrumb="Home > Reviews" />
-      <Content>
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: 24 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 16, background: CHARCOAL, border: `1px solid ${GOLD}`, borderRadius: 14, padding: "20px 30px" }}>
-            <div style={{ fontFamily: SF, fontSize: 42, fontWeight: 700, color: "#fff", lineHeight: 1 }}>5.0</div>
-            <div>
-              <div style={{ color: GOLD, fontSize: 22, letterSpacing: 2 }}>★★★★★</div>
-              <div style={{ color: "#9CA3AF", fontSize: 13, marginTop: 4 }}>55 Google Reviews · Verified on Google Business</div>
-            </div>
-          </div>
-        </div>
-        <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginBottom: 40 }}>
-          <BtnP href={GOOGLE_URL}>Read All 55 Reviews on Google</BtnP>
-          <BtnG href="tel:+18502665005">Call (850) 266-5005</BtnG>
-        </div>
-
-        <H2 align="center">What Clients Say Most About Gregg</H2>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center", margin: "16px 0 40px" }}>
-          {tags.map(t => (
-            <span key={t} style={{ background: CHARCOAL, color: GOLD, padding: "6px 14px", borderRadius: 999, fontSize: 13, border: `1px solid #333` }}>{t}</span>
-          ))}
-        </div>
-
-        <H2 align="center">Featured Client Reviews</H2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: 20, margin: "16px 0 40px" }}>
-          {reviews.map((r, i) => (
-            <div key={i} style={{ background: CHARCOAL, border: `1px solid #333`, borderRadius: 14, padding: 28, display: "flex", flexDirection: "column" }}>
-              <div style={{ color: GOLD, fontSize: 18, marginBottom: 10, letterSpacing: 2 }}>★★★★★</div>
-              <p style={{ color: "#D1D5DB", fontSize: 15, lineHeight: 1.75, fontStyle: "italic", marginBottom: 16, flex: 1 }}>"{r.text}"</p>
-              <div style={{ color: "#fff", fontWeight: 600, fontSize: 14 }}>{r.from}</div>
-              <div style={{ color: "#6B7280", fontSize: 12, marginTop: 2 }}>{r.meta}</div>
-            </div>
-          ))}
-        </div>
-
-        <div style={{ background: CHARCOAL, border: `1px solid #333`, borderRadius: 14, padding: 32, marginBottom: 40 }}>
-          <h2 style={{ color: GOLD, fontSize: 22, fontWeight: 700, fontFamily: SF, marginBottom: 16 }}>Why Military Families Choose Gregg</h2>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            {credibility.map(c => (
-              <li key={c} style={{ color: "#D1D5DB", fontSize: 15, padding: "8px 0", lineHeight: 1.6 }}>
-                <span style={{ color: "#10B981", fontWeight: 700, marginRight: 8 }}>✓</span>{c}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <InfoBox title="Leave a Review">Your review helps other military families find an agent they can trust. If I've helped you buy or sell, I'd be honored if you'd share your experience on Google. Visit <a href={GOOGLE_URL} target="_blank" rel="noopener" style={{ color: C.gold }}>my Google Business profile</a> to leave one directly.</InfoBox>
-      </Content>
-    </PageWrapper>
-  );
-};
-
-// Inline Calendly scheduler. Uses explicit initInlineWidget (not the script's
-// load-time auto-scan) so it initializes correctly after SPA client-side navigation.
-const CALENDLY_URL = "https://calendly.com/Greggcostin?hide_gdpr_banner=1&background_color=121823&text_color=e8e6df&primary_color=c9a84c";
 const CalendlyEmbed = () => {
   const ref = useRef(null);
   useEffect(() => {
@@ -2615,7 +2296,7 @@ const ContactPage = () => {
                 <button type="submit" disabled={status === "submitting"} style={{ background: status === "submitting" ? `${GOLD}66` : GOLD, color: BLACK, border: "none", padding: "14px 28px", fontSize: 14, fontWeight: 700, borderRadius: 8, cursor: status === "submitting" ? "wait" : "pointer", textTransform: "uppercase", letterSpacing: .5, marginTop: 8 }}>
                   {status === "submitting" ? "Sending..." : "Send Message"}
                 </button>
-                <p style={{ color: "#666", fontSize: 11, marginTop: 4, textAlign: "center" }}>By submitting, you agree to be contacted by The Costin Team. Your information is never sold or shared.</p>
+                <p style={{ color: C.muted, fontSize: 12, lineHeight: 1.5, marginTop: 4, textAlign: "center" }}>By submitting you agree that The Costin Team at Levin Rinke Realty may contact you by phone, email, and text message about your inquiry. Consent is not a condition of purchase; message and data rates may apply; reply STOP to opt out. See our <a href="/privacy" style={{ color: C.gold }}>Privacy Policy</a>.</p>
               </form>
             )}
           </div>
@@ -2633,12 +2314,8 @@ const PAGE_TO_SLUG = {
   about: "/about",
   pcs: "/pcs-guide",
   neighborhoods: "/communities",
-  "va-loan": "/va-loans",
   calculator: "/mortgage-calculators",
-  homestead: "/homestead",
   contact: "/contact",
-  reviews: "/reviews",
-  blog: "/blog",
 };
 const SLUG_TO_PAGE = Object.fromEntries(Object.entries(PAGE_TO_SLUG).map(([k, v]) => [v, k]));
 
@@ -2802,17 +2479,13 @@ export default function App() {
       </>}
       {page === "about" && <AboutPage go={go} />}
       {page === "pcs" && <PCSPage go={go} />}
-      {page === "va-loan" && <VALoanPage go={go} />}
       {page === "calculator" && <LoanCalculator />}
-      {page === "homestead" && <HomesteadPage go={go} />}
       {page === "nas" && <BaseGuide base="nas" go={go} />}
       {page === "whiting" && <BaseGuide base="whiting" go={go} />}
       {page === "corry" && <BaseGuide base="corry" go={go} />}
       {page === "eglin" && <BaseGuide base="eglin" go={go} />}
       {page === "hurlburt" && <BaseGuide base="hurlburt" go={go} />}
       {page === "neighborhoods" && <NeighborhoodsPage go={go} />}
-      {page === "blog" && <BlogPage go={go} />}
-      {page === "reviews" && <ReviewsPage />}
       {page === "contact" && <ContactPage />}
       {page === "notfound" && <NotFoundPage go={go} />}
       </main>

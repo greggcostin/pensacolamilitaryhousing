@@ -36,12 +36,12 @@ function wrap(text, maxChars, maxLines) {
     if (cur) lines.push(cur);
     cur = w;
     if (lines.length === maxLines - 1) {
-      // Last line — pack what fits, ellipsize if needed
-      while (cur.length + 1 + (words[words.indexOf(w) + 1] || "").length <= maxChars) {
-        const nw = words[words.indexOf(w) + 1];
-        if (!nw) break;
-        cur += " " + nw;
-      }
+      // Last line: pack the remaining words that fit, then ellipsize if any are left over.
+      // (audit 2026-09-02, og-01: the old loop re-read words.indexOf(w) and never advanced,
+      // so it appended the same next word until maxChars: "Fort Walton Walton Walton".)
+      let i = words.indexOf(w) + 1;
+      while (i < words.length && cur.length + 1 + words[i].length <= maxChars) { cur += " " + words[i]; i++; }
+      if (i < words.length) cur = cur.replace(/[,:;]?$/, "") + "\u2026";
       break;
     }
   }
@@ -66,15 +66,26 @@ function categorize(filePath) {
   return "Pensacola Military Housing";
 }
 
+// HTML entities inside an H1 must be decoded before the SVG re-escapes them, otherwise the
+// card paints a literal "&amp;" (audit 2026-09-02, og-01: 71 of 93 cards were affected).
+function decodeEntities(str) {
+  return str
+    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&quot;|&ldquo;|&rdquo;/g, '"').replace(/&#39;|&apos;|&rsquo;|&lsquo;/g, "'")
+    .replace(/&nbsp;/g, " ").replace(/&mdash;|&ndash;|[\u2014\u2013]/g, ":")
+    .replace(/&#(\d+);/g, (m, n) => String.fromCharCode(Number(n)))
+    .replace(/\s+/g, " ").trim();
+}
+
 // Strip HTML and extract page H1 (preferred) or <title>.
 function extractTitle(html) {
   const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
   if (h1) {
-    return h1[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+    return decodeEntities(h1[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim());
   }
   const t = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
   if (t) {
-    return t[1].split("|")[0].trim();
+    return decodeEntities(t[1].split("|")[0].trim());
   }
   return "Pensacola Military Housing";
 }

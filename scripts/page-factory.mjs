@@ -18,9 +18,9 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
 const TEMPLATE_PATH = ROOT + "public/first-time-military-homebuyer.html";
-const TODAY_ISO = "2026-08-24";
-const TODAY_LONG = "August 24, 2026";
-const MONTH_YEAR = "August 2026";
+const TODAY_ISO = "2026-09-02";
+const TODAY_LONG = "September 2, 2026";
+const MONTH_YEAR = "September 2026";
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const jesc = (s) => JSON.stringify(s);

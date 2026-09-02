@@ -162,7 +162,7 @@ footer a{color:var(--gold)}
 .imodal input,.imodal select,.imodal textarea{width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)}
 .imodal .ihp{position:absolute;left:-9999px;opacity:0;pointer-events:none}
 .imodal .isubmit{background:var(--gold);color:var(--ink);border:none;padding:14px 28px;font-size:14px;font-weight:700;border-radius:8px;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;margin-top:8px;font-family:var(--sans)}
-.imodal .ifine{color:#666;font-size:11px;margin-top:4px;text-align:center}
+.imodal .ifine{color:var(--muted);font-size:12px;line-height:1.5;margin-top:4px;text-align:center}
 .imodal .iok{background:#1a3a1a;border:2px solid #3aa03a;border-radius:12px;padding:24px;text-align:center}
 .imodal .ierr{background:#3a1a1a;border:1px solid #a03a3a;border-radius:8px;padding:12px;color:#ff9999;font-size:13px}
 @media(max-width:900px){
@@ -203,6 +203,7 @@ figure{margin:0}
 figcaption{line-height:1.5;color:var(--muted);font-size:12px;font-style:italic;text-align:center;margin:8px 0 0;font-family:var(--sans);font-weight:300;letter-spacing:.2px;padding:0 10px 10px}
 figcaption a{color:var(--muted);text-decoration:underline}
 @media(max-width:640px){.figure-band--43 img{aspect-ratio:auto}}
+.imodal .ifine a{color:var(--gold);text-decoration:underline}
 </style>
 </head>
 <body>
@@ -316,7 +317,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <div><label for="b-message" style="color:#999;font-size:12px;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:1px">Message</label><textarea id="b-message" name="message" rows="4" style="width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)"></textarea></div>
 <div id="inquiry-err-b" style="display:none;background:#3a1a1a;border:1px solid #a03a3a;border-radius:8px;padding:12px;color:#ff9999;font-size:13px"></div>
 <button type="submit" class="btn-p" style="border:none;cursor:pointer">Send Message</button>
-<p style="color:#666;font-size:11px;margin-top:4px;text-align:center">By submitting, you agree to be contacted by The Costin Team. Your information is never sold or shared.</p>
+<p style="color:#666;font-size:11px;margin-top:4px;text-align:center">By submitting you agree that The Costin Team at Levin Rinke Realty may contact you by phone, email, and text message about your inquiry. Consent is not a condition of purchase; message and data rates may apply; reply STOP to opt out. See our <a href="/privacy">Privacy Policy</a>.</p>
 </form>
 </div>
 </div>
@@ -356,7 +357,7 @@ else{errBox.textContent='\u26a0 '+(res.j.error||'Something went wrong. Please ca
 <p><strong>Gregg Costin, Realtor</strong> &middot; The Costin Team at Levin Rinke Realty<br>
 220 W. Garden Street, Pensacola, FL 32502 &middot; Licensed in Florida &amp; Alabama<br>
 ABR &middot; SRS &middot; RENE &middot; MRP &middot; FMS</p>
-<p><a href="/">Home</a> &middot; <a href="/buy">Buy</a> &middot; <a href="/sell">Sell</a> &middot; <a href="/neighborhoods">Neighborhoods</a> &middot; <a href="/reviews">Reviews</a> &middot; <a href="/faq">FAQ</a> &middot; <a href="/team">Meet the Team</a> &middot; <a href="/contact">Contact</a> &middot; <a href="https://pensacolamilitaryhousing.com/">Military &amp; PCS Division</a></p>
+<p><a href="/">Home</a> &middot; <a href="/buy">Buy</a> &middot; <a href="/sell">Sell</a> &middot; <a href="/neighborhoods">Neighborhoods</a> &middot; <a href="/reviews">Reviews</a> &middot; <a href="/faq">FAQ</a> &middot; <a href="/team">Meet the Team</a> &middot; <a href="/contact">Contact</a> &middot; <a href="https://pensacolamilitaryhousing.com/">Military &amp; PCS Division</a> &middot; <a href="/privacy">Privacy</a> &middot; <a href="/accessibility">Accessibility</a></p>
 <p><a href="https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd" rel="noopener" target="_blank">Google</a> &middot; <a href="https://www.zillow.com/profile/GreggCostin" rel="noopener" target="_blank">Zillow</a> &middot; <a href="https://www.facebook.com/greggcostin/" rel="noopener" target="_blank">Facebook</a> &middot; <a href="https://www.instagram.com/greggcostinrealtor/" rel="noopener" target="_blank">Instagram</a></p>
 <p style="color:var(--mutedD);font-size:.7rem;font-style:italic;line-height:1.6;margin:1rem auto 0;max-width:820px"><strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (220 W. Garden Street, Pensacola, FL 32502). Information on this site is provided for general informational purposes only and is not legal, tax, financial, mortgage, or investment advice. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.</p>
 </footer>
@@ -383,7 +384,7 @@ ABR &middot; SRS &middot; RENE &middot; MRP &middot; FMS</p>
 <div><label for="inq-message">Message</label><textarea id="inq-message" name="message" rows="4"></textarea></div>
 <div class="ierr" id="inquiry-err" style="display:none"></div>
 <button type="submit" class="isubmit">Send Message</button>
-<p class="ifine">By submitting, you agree to be contacted by The Costin Team. Your information is never sold or shared.</p>
+<p class="ifine">By submitting you agree that The Costin Team at Levin Rinke Realty may contact you by phone, email, and text message about your inquiry. Consent is not a condition of purchase; message and data rates may apply; reply STOP to opt out. See our <a href="/privacy">Privacy Policy</a>.</p>
 </form>
 </div>
 </div>

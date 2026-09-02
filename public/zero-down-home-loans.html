@@ -192,7 +192,7 @@ footer a{color:var(--gold)}
 .imodal input,.imodal select,.imodal textarea{width:100%;padding:12px 16px;background:var(--elev);border:1px solid #444;border-radius:8px;color:#fff;font-size:14px;outline:none;box-sizing:border-box;font-family:var(--sans)}
 .imodal .ihp{position:absolute;left:-9999px;opacity:0;pointer-events:none}
 .imodal .isubmit{background:var(--gold);color:var(--ink);border:none;padding:14px 28px;font-size:14px;font-weight:700;border-radius:8px;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;margin-top:8px;font-family:var(--sans)}
-.imodal .ifine{color:#666;font-size:11px;margin-top:4px;text-align:center}
+.imodal .ifine{color:var(--muted);font-size:12px;line-height:1.5;margin-top:4px;text-align:center}
 .imodal .iok{background:#1a3a1a;border:2px solid #3aa03a;border-radius:12px;padding:24px;text-align:center}
 .imodal .ierr{background:#3a1a1a;border:1px solid #a03a3a;border-radius:8px;padding:12px;color:#ff9999;font-size:13px}
 .inq-cta{background:linear-gradient(135deg,rgba(201,168,76,0.10),rgba(201,168,76,0.02));border:1px solid var(--gold-line);border-radius:14px;padding:26px 28px;margin:40px 0}
@@ -230,6 +230,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 @media(max-width:640px){main h2{font-size:25px!important;margin:38px auto 14px;padding-bottom:10px}main h3{font-size:17px!important}main h2,main h3{overflow-wrap:anywhere}}
 
 /*BAHWRAP_MIN*/.bah-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem auto;max-width:760px}.bah-wrap>table{margin:0}
+.imodal .ifine a{color:var(--gold);text-decoration:underline}
 </style>
 <!-- Microsoft Clarity (heatmaps + session recordings) -->
 <script type="text/javascript">
@@ -529,7 +530,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502 &middot; Licensed FL &amp; AL<br>
 MRP &middot; ABR &middot; SRS &middot; RENE &middot; FMS &middot; Pursuing GRI</p>
 <p data-costin-sites>The Costin Team online: <strong style="color:var(--text)">PensacolaMilitaryHousing.com</strong> for military &amp; PCS families &middot; <a href="https://greggcostin.com">GreggCostin.com</a> for civilian buying &amp; selling</p>
-<p><a href="/">Home</a> &middot; <a href="/faq">FAQ</a> &middot; <a href="/sitemap.xml">Sitemap</a> &middot; <a href="/llms.txt">AI content map</a></p>
+<p><a href="/">Home</a> &middot; <a href="/faq">FAQ</a> &middot; <a href="/sitemap.xml">Sitemap</a> &middot; <a href="/llms.txt">AI content map</a> &middot; <a href="/privacy">Privacy</a> &middot; <a href="/accessibility">Accessibility</a></p>
 <p data-last-updated="true" style="text-align:center;font-size:.75rem;color:var(--mutedD,#6B7280);margin:.5rem auto 0;letter-spacing:.5px;text-transform:uppercase">Last updated: July 6, 2026</p>
 <p style="text-align:center;color:var(--mutedD,#6f6e65);font-size:.75rem;margin:.5rem 0 0;letter-spacing:.5px;text-transform:uppercase">Content last verified: April 2026</p>
 <p data-legal="disclaimer" style="color:var(--mutedD,#6f6e65);font-size:.7rem;font-style:italic;line-height:1.6;margin:1rem auto 0;text-align:center;max-width:820px"><strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (220 W. Garden Street, Pensacola, FL 32502). Information on this site, including BAH figures, VA loan terms, funding fees, tax rules, homestead and disability benefits, school zoning, and rental/investment commentary, is provided for general informational purposes only and is not legal, tax, financial, mortgage, lending, or investment advice. Real estate, lending, tax, and benefits rules change frequently and depend on individual circumstances; verify current figures with official sources (DoD BAH calculator, VA, IRS, your county property appraiser) and consult a licensed attorney, CPA, or NMLS-licensed loan officer for guidance specific to your situation. Gregg Costin is not a mortgage lender, attorney, tax professional, or financial advisor, and is not affiliated with, endorsed by, or representing the U.S. Department of Defense, Department of Veterans Affairs, or any branch of the U.S. military. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.</p>
@@ -642,7 +643,7 @@ MRP &middot; ABR &middot; SRS &middot; RENE &middot; FMS &middot; Pursuing GRI</
 <div><label for="inq-message">Message</label><textarea id="inq-message" name="message" rows="4"></textarea></div>
 <div class="ierr" id="inquiry-err" style="display:none"></div>
 <button type="submit" class="isubmit">Send Message</button>
-<p class="ifine">By submitting, you agree to be contacted by The Costin Team. Your information is never sold or shared.</p>
+<p class="ifine">By submitting you agree that The Costin Team at Levin Rinke Realty may contact you by phone, email, and text message about your inquiry. Consent is not a condition of purchase; message and data rates may apply; reply STOP to opt out. See our <a href="/privacy">Privacy Policy</a>.</p>
 </form>
 </div>
 </div>

@@ -32,12 +32,29 @@ const [Y, M, D] = TODAY.split("-").map(Number);
 const LONG = `${MONTHS[M - 1]} ${D}, ${Y}`; // "July 6, 2026"
 const MONTH_YEAR = `${MONTHS[M - 1]} ${Y}`;  // "July 2026"
 
-// 1) Sitemap: bump every <lastmod> to today.
+// 1) Sitemap: honest per-URL <lastmod> (audit 2026-09-02, idx-03 / geo-04). Each static page
+// reports its own JSON-LD dateModified (or datePublished); only the SPA routes, the homepage
+// and the text files (which carry no per-page stamp) take the build date. Blanket-stamping
+// 101 URLs on every deploy told Google every page changed every time.
 const sitemapPath = "public/sitemap.xml";
 let sitemap = readFileSync(sitemapPath, "utf8");
 const before = sitemap;
-sitemap = sitemap.replace(/<lastmod>[^<]+<\/lastmod>/g, `<lastmod>${TODAY}</lastmod>`);
+const SPA_ROUTES = new Set(["/", "/about", "/contact", "/pcs-guide", "/communities", "/mortgage-calculators"]);
+let honest = 0, stamped = 0;
+sitemap = sitemap.replace(/<loc>https:\/\/pensacolamilitaryhousing\.com(\/[^<]*)?<\/loc>(\s*)<lastmod>[^<]+<\/lastmod>/g, (m, path, ws) => {
+  const p = path || "/";
+  let d = TODAY;
+  if (!SPA_ROUTES.has(p) && !/\.(txt|xml|json)$/.test(p)) {
+    try {
+      const html = readFileSync("public" + p + ".html", "utf8");
+      const hit = html.match(/"dateModified":\s*"(\d{4}-\d{2}-\d{2})/) || html.match(/"datePublished":\s*"(\d{4}-\d{2}-\d{2})/);
+      if (hit) { d = hit[1]; honest++; } else stamped++;
+    } catch { stamped++; }
+  } else stamped++;
+  return "<loc>https://pensacolamilitaryhousing.com" + (path || "") + "</loc>" + ws + "<lastmod>" + d + "</lastmod>";
+});
 if (sitemap !== before) writeFileSync(sitemapPath, sitemap);
+console.log("sitemap lastmod: " + honest + " URLs from their page dateModified, " + stamped + " stamped " + TODAY);
 
 // 2) llms.txt + llms-full.txt: refresh "Last updated:" header.
 for (const path of ["public/llms.txt", "public/llms-full.txt"]) {

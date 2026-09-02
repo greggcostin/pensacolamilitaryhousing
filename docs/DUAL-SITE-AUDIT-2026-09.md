@@ -39,7 +39,16 @@ What the lab data changes. Load performance is stronger than the byte-based grad
 - **Unused JavaScript of 446 to 504 KiB per page is almost entirely third-party** (Follow Up Boss widget 527 KiB, Google Tag Manager 191 KiB); first-party code is small on both sites. Loading the widget on first interaction [analytics-09] is the lever.
 - /pcs-guide shows 430 ms of render-blocking resources and the PMH desktop home 160 ms, consistent with the font discovery finding [perf-01].
 
-Scorecard revision. With lab data in hand, Performance is regraded: pensacolamilitaryhousing.com B- (80), greggcostin.com C+ (77, held down by the failing mobile CLS and the 3 MB neighborhoods page). Overall grades move to C- (70) and D+ (66). The tables below carry the revised numbers.
+### 0.2 PageSpeed Insights API and Chrome UX Report (run later the same day with an API key)
+
+The same nine pages were then run through Google's PageSpeed Insights API, which returns Chrome UX Report field data alongside a Lighthouse run from Google's own lab environment (slow 4G, throttled CPU, cold cache). Two findings:
+
+- **No field data exists for either site.** Every page-level and origin-level query returned nothing. Both domains are below the real-user traffic threshold Chrome needs before it reports Core Web Vitals, so Google cannot currently use field CWV for or against either site, and the numbers that matter are the lab numbers until traffic grows.
+- **Google's lab is harsher than a local machine.** Mobile performance scores were 57 (/pcs-guide), 68 (/bah-rates), 73 (/va-disability-property-tax-florida), 92 (/bases/nas-pensacola), 61 (greggcostin.com home, CLS 0.31), 63 (/buy, CLS 0.25) and 93 (/schools); the two homepage runs and the desktop runs errored on Google's side and were not retried. LCP landed at 4.7 to 6.1 seconds on the pages that scored in the 50s and 60s, with a text paragraph as the LCP element, which points at the font and render-blocking chain [perf-01] and the third-party tags rather than images.
+
+The archived output is docs/seo-baselines/psi-lab-2026-09-02.txt. The scorecard below uses the middle of the two lab environments rather than the optimistic local run.
+
+Scorecard revision. Performance is regraded with both lab sources in hand: pensacolamilitaryhousing.com C+ (76), greggcostin.com C (72, held down by the failing mobile CLS and the 3 MB neighborhoods page). Overall grades move to C- (69) and D+ (65). The tables below carry the revised numbers.
 
 ## 1. Executive scorecard
 
@@ -49,12 +58,12 @@ Grading scale: A 90 to 100, B 80 to 89, C 70 to 79, D 60 to 69, F below 60. Rule
 
 | Dimension | pensacolamilitaryhousing.com | greggcostin.com |
 |---|---|---|
-| Performance | **B-** (80) | **C+** (77) |
+| Performance | **C+** (76) | **C** (72) |
 | GEO / AI readiness | **C** (74) | **D** (62) |
 | Technical SEO | **D** (60) | **B-** (80) |
 | Visual design and UX | **D** (62) | **D** (60) |
 | Content authority | **C** (74) | **F** (55) |
-| **Overall** | **C- (70)** | **D+ (66)** |
+| **Overall** | **C- (69)** | **D+ (65)** |
 
 ### Why each score lands where it does
 
@@ -62,7 +71,7 @@ Grading scale: A 90 to 100, B 80 to 89, C 70 to 79, D 60 to 69, F below 60. Rule
 
 | Dimension | Basis |
 |---|---|
-| Performance B- | Lighthouse lab scores 98 to 100 on every page tested (section 0.1). The delivery layer is elite: Brotli on every text response, HTTP/3, 41 to 130 ms TTFB, a 99 KB compressed React bundle, sub-350 ms lab load. Two highs hold it down: not one `srcset` width descriptor on 324 images, so 300 to 378 KB heroes ship to phones [perf-03, media-01], and a 4 MB JPEG grid on /communities [media-02]. Fonts are discovered only after the JS bundle runs [perf-01], the bundle carries dead components [perf-02], and three images per page claim `fetchpriority=high` [perf-04, media-03]. |
+| Performance C+ | Local Lighthouse scores 98 to 100 (section 0.1) but Google's stricter lab scores 57 to 92 on mobile with 5 to 6 second LCP on three pages (section 0.2); no field data exists yet. The delivery layer is elite: Brotli on every text response, HTTP/3, 41 to 130 ms TTFB, a 99 KB compressed React bundle, sub-350 ms lab load. Two highs hold it down: not one `srcset` width descriptor on 324 images, so 300 to 378 KB heroes ship to phones [perf-03, media-01], and a 4 MB JPEG grid on /communities [media-02]. Fonts are discovered only after the JS bundle runs [perf-01], the bundle carries dead components [perf-02], and three images per page claim `fetchpriority=high` [perf-04, media-03]. |
 | GEO / AI readiness C | Best-in-class crawler policy, refreshed llms.txt files, and 351 Copilot citations per 90 days. But the canonical PCS destination is 164 words to any crawler that does not execute JavaScript [geo-01, idx-04], the pages.dev twin is fully crawlable by AI bots [geo-02], the quotable figure on answer pages sits 600 to 1,700 words below the H1 [geo-03], and freshness signals contradict each other [geo-04]. |
 | Technical SEO D | Canonicals, hreflang, sitemap parity and single-hop redirects are perfect. One critical drags the grade: every unknown URL returns a 200 copy of the homepage [idx-01, url-01]. Then a run of highs: an indexable duplicate host [idx-02], bulk-stamped lastmod on 101 of 101 URLs [idx-03], 71 of 93 OG share cards rendering raw entities or stuttered words [og-01], no audit gate for the 101 PMH URLs [og-02], 187 conflicting definitions of one RealEstateAgent @id [schema-03], and an invalid schema type on all 7 SPA routes [schema-04]. |
 | Visual design and UX D | Text contrast and the sticky Call/Text/Email bar are top-tier. Seven highs converge on phones: 4 to 6 rows of 9 to 10 px nav chips with no hamburger [mob-01], a 161 px fixed header [mob-02], horizontal overflow at 320 px [mob-03], 1,529 px of stats and partner logos before any service content [cro-01], a lead-gated primary CTA duplicating an ungated ghost button [cro-02], an on-load modal on /pcs-guide [cro-03], and 216 dead clicks on an unlinked FEMA date [cro-05]. |
@@ -72,7 +81,7 @@ Grading scale: A 90 to 100, B 80 to 89, C 70 to 79, D 60 to 69, F below 60. Rule
 
 | Dimension | Basis |
 |---|---|
-| Performance C+ | Lab scores 96 to 99 except the mobile homepage at 82, which fails Core Web Vitals on layout shift (CLS 0.294, section 0.1). Same elite edge (Brotli, HTTP/3, 286 DOM nodes, 12 requests) and width/height on 230 of 230 images. But no `srcset` anywhere, a 788 KB WebP heavier than its own JPEG, zero AVIF in the civilian pipeline [perf-03, media-01, media-08], LCP heroes lazy-loaded on /sell, four blog posts and one guide [media-04], and hot-linked cross-origin logos marked high priority with no preconnect [perf-04, media-11]. |
+| Performance C | Local lab 96 to 99 except the mobile homepage at 82; Google's lab scores the homepage 61 and /buy 63 with CLS 0.31 and 0.25, a Core Web Vitals layout-shift failure (sections 0.1 and 0.2); no field data exists yet. Same elite edge (Brotli, HTTP/3, 286 DOM nodes, 12 requests) and width/height on 230 of 230 images. But no `srcset` anywhere, a 788 KB WebP heavier than its own JPEG, zero AVIF in the civilian pipeline [perf-03, media-01, media-08], LCP heroes lazy-loaded on /sell, four blog posts and one guide [media-04], and hot-linked cross-origin logos marked high priority with no preconnect [perf-04, media-11]. |
 | GEO / AI readiness D | Crawler policy and the pages.dev noindex are correct. But llms-full.txt covers 6 of 102 pages and disagrees with PMH on the review count [geo-05], blog posts reference an author @id defined on only 2 pages [geo-06], no civilian local-intent pages exist for the cities the schema claims to serve [geo-11], the name domain is absent from the "gregg costin realtor" link set [synergy-06], and every page cites a Wikidata item deleted on 2026-07-07 [schema-01, synergy-01]. |
 | Technical SEO B- | Real 404s with noindex, honest sitemap lastmod on 98 of 102 URLs, a 0-finding audit gate, clean canonicals and single-hop redirects. What remains is medium or low: 82 school pages with one inbound link each [idx-07], School nodes that say the page is about the sales team [schema-10], templated descriptions over 155 characters on 93 pages [idx-09], and the shared entity split with PMH [schema-02]. |
 | Visual design and UX D | Palette, contrast and the sticky bar match PMH. But the header is sticky at 147 to 173 px on phones, 25 to 31% of the screen [mob-02], the nav wraps into 3 to 4 rows of 9 px chips [mob-01], the homepage hero CTAs render 28 px tall over the portrait below the fold because of an inherited `line-height:0` [mob-04, cro-04], 320 px layouts overflow to 360 px [mob-03], and an eight-tile trust band pushes the first service card to 1,868 px [cro-04]. |

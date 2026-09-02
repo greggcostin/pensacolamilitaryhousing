@@ -535,7 +535,7 @@ const InquiryModal = ({ onClose }) => {
 };
 
 const TrustBar = () => (
-  <section style={{ background: C.ink, borderBottom: `1px solid ${C.hairline}`, padding: "40px 32px" }}>
+  <section className="trust-bar" style={{ background: C.ink, borderBottom: `1px solid ${C.hairline}`, padding: "40px 32px" }}>
     <div style={{ maxWidth: 1280, margin: "0 auto" }}>
       <div style={{ textAlign: "center", color: C.gold, fontSize: 18, fontWeight: 800, letterSpacing: 4, textTransform: "uppercase", fontFamily: SS, marginBottom: 32, textDecoration: "underline", textUnderlineOffset: 6, textDecorationThickness: 2 }}>Preferred Agent</div>
       <div className="trust-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 48, alignItems: "start" }}>

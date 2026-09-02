@@ -624,6 +624,20 @@
                           .hero-bg-image{order:2!important;position:static!important;top:auto!important;bottom:auto!important;width:100%!important;height:340px!important;background-size:cover!important;background-position:center 25%!important}
                           .hero-stats{order:3!important;position:static!important;bottom:auto!important}
                           .hero-gradient-h,.hero-gradient-v,.hero-glow{display:none!important}
+                          /* cro-01 (audit 2026-09-02): 4 stats in 2 columns instead of a 383px one-column stack */
+                          .hero-stats>div{grid-template-columns:repeat(2,1fr)!important;gap:14px 20px!important;padding:16px 20px!important}
+                          .hero-stats [style*="font-size: 32px"]{font-size:22px!important}
+                          .hero-stats [style*="letter-spacing: 2.2px"]{font-size:10px!important;letter-spacing:1.4px!important;margin-top:5px!important}
+                        }
+                        /* cro-01: partner logos as a compact 3-column strip on phones instead of ~1,150px of stacked cards */
+                        @media (max-width: 640px){
+                          .trust-bar{padding:22px 16px!important}
+                          .trust-bar>div>div:first-child{font-size:13px!important;letter-spacing:3px!important;margin-bottom:14px!important}
+                          .trust-grid{grid-template-columns:repeat(3,1fr)!important;gap:10px 8px!important;align-items:center!important}
+                          .trust-card{gap:0!important}
+                          .trust-card>div:first-child{display:none!important}
+                          .trust-card>div:last-child{width:100%!important;height:56px!important}
+                          .trust-card img{max-height:56px!important;max-width:100px!important}
                         }
                         @media (max-width: 640px){
                           .hero-section{padding-top:95px!important}

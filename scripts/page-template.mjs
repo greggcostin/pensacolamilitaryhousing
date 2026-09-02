@@ -303,13 +303,17 @@ export function renderPage(p) {
 <meta property="og:title" content="${escapeAttr(p.title)}" />
 <meta property="og:description" content="${escapeAttr(p.description)}" />
 <meta property="og:url" content="${canonical}">
-<meta property="og:image" content="https://pensacolamilitaryhousing.com/images/og-image.jpg">
+<meta property="og:image" content="https://pensacolamilitaryhousing.com/og/${(canonical.split("pensacolamilitaryhousing.com/")[1] || "home").split("/").join("-")}.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta name="twitter:image" content="https://pensacolamilitaryhousing.com/images/og-image.jpg">
+<meta name="twitter:image" content="https://pensacolamilitaryhousing.com/og/${(canonical.split("pensacolamilitaryhousing.com/")[1] || "home").split("/").join("-")}.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pensacola Military Housing">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:title" content="${escapeAttr(p.title)}">
+<meta name="twitter:description" content="${escapeAttr(p.description)}">
+<meta name="twitter:url" content="${canonical}">
 ${placeJson}
 ${agentJson}
 ${faqJson}

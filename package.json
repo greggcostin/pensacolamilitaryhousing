@@ -5,8 +5,11 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "prebuild": "node scripts/check-em-dashes.mjs && node scripts/bump-dates.mjs",
+        "prebuild": "node scripts/check-em-dashes.mjs && node scripts/audit-military.mjs && node scripts/audit-entity.mjs && node scripts/bump-dates.mjs",
         "lint:emdash": "node scripts/check-em-dashes.mjs",
+        "audit:military": "node scripts/audit-military.mjs",
+        "audit:civilian": "node scripts/audit-civilian.mjs",
+        "audit:entity": "node scripts/audit-entity.mjs",
         "build": "vite build && node scripts/postbuild-spa-routes.mjs && pagefind --site dist --output-subdir pagefind",
         "preview": "vite preview",
         "indexnow": "node --env-file-if-exists=.env.local scripts/submit-indexnow.mjs",

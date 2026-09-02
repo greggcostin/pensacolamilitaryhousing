@@ -86,6 +86,8 @@ function buildPage(fragmentPath) {
   html = html.replace(/\/og\/first-time-military-homebuyer\.png/g, `/og/${spec.slug}.png`);
   html = html.replace(/<meta property="og:title" content="[^"]*"\s*\/>/, () => `<meta property="og:title" content="${esc(spec.title)}" />`);
   html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/>/, () => `<meta property="og:description" content="${esc(spec.description)}" />`);
+  html = html.replace(/<meta name="twitter:title" content="[^"]*">/, () => `<meta name="twitter:title" content="${esc(spec.title)}">`); // twitter:url follows the canonical via OLD_URL -> NEW_URL
+  html = html.replace(/<meta name="twitter:description" content="[^"]*">/, () => `<meta name="twitter:description" content="${esc(spec.description)}">`);
 
   html = html.replace(/("@type":"Article","headline":")[^"]*(")/, (_, a, b) => a + spec.articleHeadline.replace(/"/g, '\\"') + b);
   html = html.replace(/("@type":"Article","headline":"[^"]*","description":")[^"]*(")/, (_, a, b) => a + spec.description.replace(/"/g, '\\"') + b);

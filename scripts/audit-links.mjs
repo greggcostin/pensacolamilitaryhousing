@@ -43,7 +43,8 @@ for (const f of files) {
 }
 
 // /pagefind/* is generated into dist/ by pagefind at build time; not a source file.
-const isBuildArtifact = (h) => h.startsWith("/pagefind/");
+// /images/* is supplied at deploy time on the host (see CLAUDE.md), never in git.
+const isBuildArtifact = (h) => h.startsWith("/pagefind/") || h.startsWith("/images/");
 const broken = Object.keys(hrefs).filter(h => !existingPages.has(h) && !existingPages.has(h + ".html") && !isBuildArtifact(h));
 console.log("=== BROKEN INTERNAL LINKS ===");
 broken.slice(0, 40).forEach(h => {
@@ -56,6 +57,7 @@ let orphans = 0;
 for (const f of files) {
   const rel = "/" + f.replace("public/", "").replace(/\\/g, "/");
   const relNoHtml = rel.replace(/\.html$/, "");
+  if (rel === "/404.html") continue; // Cloudflare Pages not-found page: intentionally unlinked (audit 2026-09-02)
   if (!inbound[rel] && !inbound[relNoHtml]) {
     console.log("  -", rel);
     orphans++;

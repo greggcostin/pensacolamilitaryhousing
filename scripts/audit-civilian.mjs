@@ -99,6 +99,7 @@ for (const file of pages) {
   }
   const stripped = h.replace(/PCS \/ Relocation — (Buying|Selling)/g, "");
   if (stripped.includes("—")) f(file, "em dash outside worker inquiryType string");
+  if (h.includes("Q140446886") || h.includes("g.co/kgs/gregg-costin")) f(file, "cites the deleted Wikidata item or dead g.co/kgs link");
   const dOpen = (h.match(/<div\b/g) || []).length, dClose = (h.match(/<\/div>/g) || []).length;
   if (dOpen !== dClose) f(file, `div imbalance ${dOpen}/${dClose}`);
 
@@ -165,7 +166,10 @@ if (!existsSync(`${ROOT}/site.webmanifest`)) f("site.webmanifest", "missing");
 for (const bot of ["Applebot", "Amazonbot", "Meta-ExternalAgent", "Claude-SearchBot", "Perplexity-User"]) {
   if (!robots.includes(`User-agent: ${bot}`)) f("robots.txt", `missing explicit ${bot} welcome`);
 }
-if (!readFileSync(`${ROOT}/llms.txt`, "utf8").includes("Q140446886")) f("llms.txt", "missing Wikidata entity line");
+// Wikidata deleted Q140446886 on 2026-07-07; citing it is a negative trust signal (audit 2026-09-02, schema-01).
+for (const file of ["llms.txt", "llms-full.txt"]) {
+  if (readFileSync(`${ROOT}/${file}`, "utf8").includes("Q140446886")) f(file, "cites the deleted Wikidata item Q140446886");
+}
 if (!existsSync(`${ROOT}/llms.txt`)) f("llms.txt", "missing");
 if (!existsSync(`${ROOT}/llms-full.txt`)) f("llms-full.txt", "missing");
 if (!existsSync(`${ROOT}/404.html`)) f("404.html", "missing");

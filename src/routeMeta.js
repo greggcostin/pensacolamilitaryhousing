@@ -64,6 +64,8 @@ export const ROUTE_META = [
   // shell:false — real static twins served at these URLs; kept for runtime SPA title.
   { page: "reviews", slug: "/reviews", shell: false, title: "Client Reviews | Gregg Costin, Pensacola Realtor", description: "Five-star reviews from military families across the Florida Panhandle for Realtor Gregg Costin." },
   { page: "blog", slug: "/blog", shell: false, title: "Military Real Estate Blog | Pensacola", description: "VA loan guidance, BAH breakdowns, and Emerald Coast neighborhood deep dives for military families." },
+  // shell:false — client-side unknown path only; the server serves public/404.html (audit 2026-09-02).
+  { page: "notfound", slug: "/404", shell: false, title: "Page Not Found | Pensacola Military Housing", description: "That page does not exist. Find the PCS guide, 2026 BAH rates, VA loan guide, and community guides." },
 ];
 
 export const META_BY_PAGE = Object.fromEntries(ROUTE_META.map((e) => [e.page, e]));

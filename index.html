@@ -22,8 +22,18 @@
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
-                        gtag('config', 'G-W29GHBK38M');
+                        // Cross-domain linker (audit 2026-09-02, analytics-03): one GA4 user across both sites
+                        gtag('config', 'G-W29GHBK38M', { linker: { domains: ['pensacolamilitaryhousing.com', 'greggcostin.com'], accept_incoming: true } });
           gtag('config', 'GT-WVGM66XS');
+                        // First-touch attribution (audit 2026-09-02, analytics-02): remembered per browser and
+                        // merged into every lead payload so Follow Up Boss can tag the person with utm + landing page
+                        (function(){ try {
+                          var p = new URLSearchParams(location.search), keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+                          var a = JSON.parse(localStorage.getItem('costin_attr') || '{}'), hit = false;
+                          keys.forEach(function(k){ if (p.get(k)) { a[k] = p.get(k); hit = true; } });
+                          if (!a.landing_page || hit) { a.landing_page = location.pathname + location.search; a.referrer = document.referrer || ''; a.first_seen = new Date().toISOString(); }
+                          localStorage.setItem('costin_attr', JSON.stringify(a));
+                        } catch (e) {} })();
                         // Conversion event tracking — fires on tel:, mailto:, external-profile clicks + form submits
                         document.addEventListener('click', function(e){
                           var a = e.target.closest('a');
@@ -44,11 +54,8 @@
                           else if(href.indexOf('825bayshore') > -1){ gtag('event','property_page_click',{ event_category:'conversion' }); }
                           else if(href.indexOf('http') === 0 && (href.indexOf('.gov') > -1 || href.indexOf('.mil') > -1 || href.indexOf('floridarevenue.com') > -1 || href.indexOf('fldoe.org') > -1 || href.indexOf('citizensfla.com') > -1)){ gtag('event','authority_link_click',{ event_category:'outbound', event_label: href.split('/')[2] || href }); }
                         });
-                        document.addEventListener('submit', function(e){
-                          if(e.target && e.target.tagName === 'FORM'){
-                            gtag('event','form_submit',{ event_category:'conversion', event_label: e.target.getAttribute('action') || 'inline' });
-                          }
-                        });
+                        // form_submit listener removed 2026-09-02 (audit analytics-01): it fired on every attempt,
+                        // including spam and failures. Success-gated inquiry_submit is sent from App.jsx instead.
               </script>
 
               <title>Pensacola Military Housing | Gregg Costin, Realtor® | PCS & VA Loan</title>
@@ -59,7 +66,6 @@
           <meta name="googlebot" content="index, follow" />
           <meta name="bingbot" content="index, follow" />
           <link rel="canonical" href="https://pensacolamilitaryhousing.com/" />
-          <link rel="me" href="https://www.wikidata.org/wiki/Q140446886" />
 <link rel="alternate" hreflang="en-US" href="https://pensacolamilitaryhousing.com/">
 <link rel="alternate" hreflang="x-default" href="https://pensacolamilitaryhousing.com/">
       
@@ -114,7 +120,7 @@
                   "longitude": -87.2169
                 },
                 "worksFor": {
-                  "@type": "RealEstateOrganization",
+                  "@type": "Organization",
                   "name": "Levin Rinke Realty",
                   "address": {
                     "@type": "PostalAddress",
@@ -172,9 +178,8 @@
                 "jobTitle": "Realtor",
                 "description": "Retired USAF Combat Systems Officer specializing in military relocation, VA loans, and PCS moves across the Florida Panhandle. 20 years of service, 11 personal PCS moves, licensed in Florida and Alabama.",
                 "sameAs": [
-                  "https://www.wikidata.org/wiki/Q140446886",                  "https://greggcostin.com",
+                  "https://greggcostin.com",
                   "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd",
-                  "https://g.co/kgs/gregg-costin",
                   "https://www.zillow.com/profile/GreggCostin",
                   "https://www.facebook.com/greggcostin/",
                   "https://www.instagram.com/greggcostinrealtor",
@@ -228,7 +233,7 @@
                   {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59"}
                 ],
                 "sameAs": [
-                  "https://www.wikidata.org/wiki/Q140446886",                  "https://greggcostin.com",
+                  "https://greggcostin.com",
                   "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd",
                   "https://www.zillow.com/profile/GreggCostin",
                   "https://www.facebook.com/greggcostin/",
@@ -269,7 +274,7 @@
           <script type="application/ld+json">
               {
                 "@context": "https://schema.org",
-                "@type": "RealEstateOrganization",
+                "@type": "Organization",
                 "@id": "https://pensacolamilitaryhousing.com/#brokerage",
                 "name": "Levin Rinke Realty",
                 "url": "https://greggc.levinrinkerealty.com",
@@ -361,7 +366,6 @@
                 "@type": "Person",
                 "@id": "https://pensacolamilitaryhousing.com/#person-gregg",
                 "name": "Gregg Costin",
-                "identifier": [{"@type": "PropertyValue", "propertyID": "Wikidata", "value": "Q140446886"}],
                 "alternateName": "Gregg Costin, Realtor",
                 "givenName": "Gregg",
                 "familyName": "Costin",
@@ -378,7 +382,7 @@
                 "email": "gregg.costin@gmail.com",
                 "telephone": "+1-850-266-5005",
                 "worksFor": {
-                  "@type": "RealEstateOrganization",
+                  "@type": "Organization",
                   "name": "Levin Rinke Realty",
                   "url": "https://greggc.levinrinkerealty.com",
                   "address": {
@@ -417,7 +421,7 @@
                   {"@type": "EducationalOccupationalCredential", "name": "Real Estate Negotiation Expert (RENE)", "credentialCategory": "certification"}
                 ],
                 "sameAs": [
-                  "https://www.wikidata.org/wiki/Q140446886",                  "https://greggcostin.com",
+                  "https://greggcostin.com",
                   "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd",
                   "https://www.zillow.com/profile/GreggCostin",
                   "https://www.instagram.com/greggcostinrealtor/",

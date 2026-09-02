@@ -1,3 +1,5 @@
+> **RETIRED 2026-09-02.** Wikidata deleted Q140446886 on 2026-07-07 (RfD, notability). Every reference was purged with scripts/remove-wikidata-entity.mjs. Do not re-add an item unless it meets notability; the audit gate now fails on the old QID.
+
 # Wikidata Entity Playbook — Gregg Costin
 
 A Wikidata entry is one of the highest-leverage AI-citation moves available. ChatGPT, Claude, Perplexity, and Google's Knowledge Graph all draw heavily from Wikidata to ground entity-based answers. **A Wikidata Q-ID makes you a queryable entity** — when an AI is asked "who is the best Realtor for military families in Pensacola?" your structured data becomes a candidate answer.

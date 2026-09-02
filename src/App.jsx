@@ -1,4 +1,6 @@
-import { useState, useEffect, useReducer, useId, useRef } from "react";
+import { Fragment, useState, useEffect, useReducer, useId, useRef } from "react";
+import { BAH_DATA } from "./bahData.js";
+import { INSTALLATIONS, NEIGHBORHOOD_ROWS, PCS_CHECKLIST, FL_BENEFITS, PCS_FAQS } from "./pcsGuideData.js";
 import { META_BY_PAGE, SITE } from "./routeMeta.js";
 
 /* ═══════════════ DESIGN TOKENS ═══════════════ */
@@ -358,6 +360,17 @@ function track(event, params) {
     window.gtag("event", event, params || {});
   }
 }
+// First-touch attribution (audit 2026-09-02, analytics-02): index.html stores utm_* / landing
+// page / referrer in localStorage 'costin_attr'; every lead payload carries it plus the GA4
+// client id so the contact worker can tag the Follow Up Boss person.
+function withAttribution(payload) {
+  let attr = {};
+  try { attr = JSON.parse(localStorage.getItem("costin_attr") || "{}"); } catch {}
+  let gaClientId = "";
+  try { const m = document.cookie.match(/(?:^|; )_ga=GA\d\.\d\.(\d+\.\d+)/); if (m) gaClientId = m[1]; } catch {}
+  return { ...payload, ...attr, ga_client_id: gaClientId, page_path: window.location.pathname, sourceUrl: window.location.href };
+}
+
 function trackPageView(path) {
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
     window.gtag("event", "page_view", { page_path: path, page_location: window.location.origin + path, page_title: document.title });
@@ -489,6 +502,7 @@ const InquiryModal = ({ onClose }) => {
   const dialogRef = useRef(null);
   const headingId = useId();
   useEffect(() => {
+    track("inquiry_open", { cta_location: "spa-modal", page_path: window.location.pathname });
     const prevFocus = document.activeElement;
     const node = dialogRef.current;
     const sel = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -874,12 +888,13 @@ const InquiryForm = () => {
     if (!formData.name.trim() || !formData.email.trim()) { setStatus("error"); setErrorMsg("Name and email are required."); return; }
     try {
       // The contact worker requires `message` and reads the honeypot from `_gotcha`.
-      const payload = { name: formData.name, email: formData.email, phone: formData.phone, inquiryType: formData.inquiryType, message: formData.message.trim() || `Inquiry from ${window.location.pathname} (no message text)`, _gotcha: formData.honeypot };
+      const payload = withAttribution({ name: formData.name, email: formData.email, phone: formData.phone, inquiryType: formData.inquiryType, message: formData.message.trim() || `Inquiry from ${window.location.pathname} (no message text)`, _gotcha: formData.honeypot });
       const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       const data = await response.json();
       if (response.ok && data.success) {
         setStatus("success");
         markInquirySubmitted();
+        track("inquiry_submit", { inquiry_type: formData.inquiryType, cta_location: "spa-inquiry-form", page_path: window.location.pathname });
         setFormData({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
       } else { setStatus("error"); setErrorMsg(data.error || "Something went wrong. Please call (850) 266-5005."); }
     } catch (err) { setStatus("error"); setErrorMsg("Connection error. Please call (850) 266-5005 directly."); }
@@ -939,7 +954,9 @@ const InquiryForm = () => {
 };
 
 const PCSPage = ({ go }) => {
-  const [gateOpen, setGateOpen] = useState(() => !hasSubmittedInquiry());
+  // Opt-in only (audit 2026-09-02, cro-03): the in-body "Get My PCS Plan" strip opens the form.
+  // An on-load interstitial on the canonical PCS landing page hid the guide behind five fields.
+  const [gateOpen, setGateOpen] = useState(false);
   return (
   <PageWrapper>
     {gateOpen && <InquiryModal onClose={() => setGateOpen(false)} />}
@@ -958,15 +975,7 @@ const PCSPage = ({ go }) => {
       <P>The greater Pensacola area is home to several major military installations, each serving different branches and mission sets. Understanding which base you're reporting to is the first step in narrowing your housing search.</P>
       <ComparisonTable
         headers={["Installation", "Branch", "Primary Mission", "Nearest Neighborhoods"]}
-        rows={[
-          ["NAS Pensacola", "Navy/Marines/Air Force", "Aviation training (NFO + USAF CSO schoolhouse), NATTC, Blue Angels", "East Pensacola Heights, Gulf Breeze, Perdido Key"],
-          ["Corry Station", "Navy", "Information Warfare, cryptology, cyber, intel, IT training (CIWT)", "Pensacola proper, West Pensacola, Cantonment"],
-          ["Saufley Field", "Navy", "NETPDC, Navy Advancement Center, NOSC Pensacola (tenant of NAS Pensacola)", "Bellview/Myrtle Grove, Cantonment, Ferry Pass"],
-          ["NAS Whiting Field", "Navy/Marines/Coast Guard", "Primary fixed-wing (T-6B) + all USN/USMC/USCG rotary-wing training (TRAWING 5)", "Milton, Pace, East Milton"],
-          ["Hurlburt Field", "Air Force", "AFSOC, 1st SOW (AC-130, MC-130, CV-22)", "Mary Esther, Navarre, FWB"],
-          ["Eglin AFB", "Air Force/Army", "33rd FW (F-35A FTU), 96th TW, 53rd Wing, AFRL, 7th SFG", "Niceville, Crestview, FWB, Valparaiso, Bluewater Bay"],
-          ["Duke Field", "Air Force Reserve", "919th Special Operations Wing (C-146A at Duke; AC-130J/MQ-9 at Hurlburt)", "Crestview, Laurel Hill, Niceville"],
-        ]}
+        rows={INSTALLATIONS}
       />
       <H2>Pensacola Real Estate Market Snapshot</H2>
       <P>As of early 2026, the Pensacola metro area market looks like this: median home price around $305,000, median 71 days on market, approximately 2,300+ active listings, and a 97% sale-to-list ratio. This is a balanced market: not the frenzy of 2021-2022, but not a buyer's paradise either. There is room to negotiate, especially on homes that have been sitting, but well-priced properties in desirable neighborhoods still move quickly.</P>
@@ -974,41 +983,17 @@ const PCSPage = ({ go }) => {
       <H2>Neighborhood Comparison Guide</H2>
       <ComparisonTable
         headers={["Neighborhood", "Median Price", "Commute to NAS", "Schools", "Lifestyle"]}
-        rows={[
-          ["Gulf Breeze", "$380-450K", "15-20 min", "A-rated (SRSD)", "Waterfront, family-friendly, quiet"],
-          ["Pace", "$280-350K", "30-35 min", "Strong (SRSD)", "Suburban, new construction, affordable"],
-          ["East Pensacola", "$240-320K", "10-15 min", "Mixed (ECSD)", "Close to base, older homes, value"],
-          ["Perdido Key", "$450-700K+", "20-25 min", "A-rated", "Beach, investment potential, luxury"],
-          ["Cantonment", "$250-330K", "20-25 min", "Good (ECSD)", "Rural feel, acreage available"],
-          ["Navarre", "$350-450K", "40-50 min to NAS", "A-rated (SRSD)", "Beach community, Hurlburt/Eglin close"],
-          ["Milton", "$260-340K", "25-30 min", "Good (SRSD)", "Small town, Whiting Field close"],
-          ["Pensacola Downtown", "$350-600K+", "5-10 min", "Varies", "Walkable, historic, restaurants"],
-        ]}
+        rows={NEIGHBORHOOD_ROWS}
       />
       <H2>Your PCS Timeline Checklist</H2>
-      <H3>90 Days Out</H3>
-      <ul style={{ paddingLeft: 20 }}>
-        <Li>Connect with a military relocation Realtor (call 850-266-5005)</Li>
-        <Li>Get pre-approved with a VA-experienced lender</Li>
-        <Li>Identify your must-haves vs nice-to-haves for housing</Li>
-        <Li>Research school districts if you have children</Li>
-        <Li>Start virtual home tours and neighborhood research</Li>
-      </ul>
-      <H3>60 Days Out</H3>
-      <ul style={{ paddingLeft: 20 }}>
-        <Li>Narrow to 2-3 target neighborhoods</Li>
-        <Li>Set up automated MLS alerts for new listings in your criteria</Li>
-        <Li>Begin making offers on strong candidates (sight-unseen if necessary)</Li>
-        <Li>Coordinate with your current base housing office on move-out timeline</Li>
-      </ul>
-      <H3>30 Days Out</H3>
-      <ul style={{ paddingLeft: 20 }}>
-        <Li>Finalize under-contract property and complete inspections</Li>
-        <Li>Order VA appraisal</Li>
-        <Li>Coordinate closing date with your report date</Li>
-        <Li>Arrange temporary housing if needed (I maintain a list of military-friendly short-term rentals)</Li>
-        <Li>File for Florida homestead exemption after closing</Li>
-      </ul>
+      {PCS_CHECKLIST.map((c) => (
+        <Fragment key={c.label}>
+          <H3>{c.label}</H3>
+          <ul style={{ paddingLeft: 20 }}>
+            {c.items.map((it) => <Li key={it}>{it}</Li>)}
+          </ul>
+        </Fragment>
+      ))}
       <H2>VA Loan Basics for Pensacola</H2>
       <P>The VA loan is the single most powerful financial tool available to military homebuyers. Zero down payment, no private mortgage insurance, competitive interest rates, and more flexible underwriting than conventional loans. In Pensacola's market, where the median home is around $305,000, a VA loan means you can buy a home with essentially just closing costs out of pocket, and even those can often be negotiated as seller concessions.</P>
       <P>Key Pensacola-specific VA considerations: Florida requires a Wood Destroying Organism (WDO/termite) inspection on VA purchases. Flood zone determination matters: parts of Pensacola, especially waterfront areas, fall in flood zones that require separate flood insurance. And VA appraisals in this market have been coming in at or near purchase price, which means fewer appraisal gap issues than in overheated markets.</P>
@@ -1022,11 +1007,7 @@ const PCSPage = ({ go }) => {
       <button onClick={() => go("calculator")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Run Your BAH Through the Mortgage Calculators →</button>
       <H2>Florida Benefits for Military Families</H2>
       <ul style={{ paddingLeft: 20 }}>
-        <Li><strong style={{ color: "#fff" }}>No state income tax.</strong> Your military pay and any additional income are not subject to state income tax in Florida.</Li>
-        <Li><strong style={{ color: "#fff" }}>Homestead exemption.</strong> Up to $50,000 off your assessed value for property tax purposes, plus additional military exemptions for disabled veterans.</Li>
-        <Li><strong style={{ color: "#fff" }}>Save Our Homes portability.</strong> If you PCS within Florida, you can transfer your accrued Save Our Homes benefit to a new property.</Li>
-        <Li><strong style={{ color: "#fff" }}>Vehicle registration.</strong> Active duty military stationed in Florida can register vehicles with reduced fees.</Li>
-        <Li><strong style={{ color: "#fff" }}>In-state tuition.</strong> Military families qualify for in-state tuition at Florida's public universities and colleges.</Li>
+        {FL_BENEFITS.map((b) => <Li key={b.title}><strong style={{ color: "#fff" }}>{b.title}</strong> {b.text}</Li>)}
       </ul>
       <button onClick={() => go("homestead")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Read the Homestead Exemption Guide →</button>
       <H2>Why Work With a Military Relocation Specialist?</H2>
@@ -1041,12 +1022,7 @@ const PCSPage = ({ go }) => {
         <InquiryForm />
       </div>
       <H2>Frequently Asked Questions</H2>
-      <FAQ q="How far in advance should I start working with a Realtor before my PCS?" a="Ideally 90 days out, but I've helped families close in as few as 21 days when the timeline demands it. The earlier you start, the more options you have, but late starters are welcome. I'll make it work." />
-      <FAQ q="Can I buy a home sight-unseen during a PCS?" a="Yes, and it's more common than you'd think. I provide detailed video walkthroughs, drone footage, and neighborhood context via video call. I've closed dozens of sight-unseen purchases for PCSing families. The key is having an agent you trust to be your eyes and ears." />
-      <FAQ q="What's the average commute from Gulf Breeze to NAS Pensacola?" a="15-20 minutes via the Pensacola Bay Bridge (3-Mile Bridge). During morning rush it can push toward 25 minutes, but it's a scenic drive and the school quality in Gulf Breeze (Santa Rosa School District) makes it worth it for most families." />
-      <FAQ q="Is BAH enough to cover a mortgage in Pensacola?" a="For most ranks E-5 and above, yes. An E-6 with dependents receives approximately $2,235/month BAH for the Pensacola area, which comfortably covers a mortgage on a $305-350K home. O-3 with dependents receives approximately $2,271/month, opening up homes in the $325-385K range. I can run exact numbers based on your rank and situation." />
-      <FAQ q="Should I rent first or buy immediately?" a="If you know you'll be in Pensacola for 3+ years, buying typically makes more financial sense, especially with a VA loan at zero down. If your assignment is less than 2 years, renting may be smarter unless you plan to keep the property as a rental investment. I can help you model both scenarios." />
-      <FAQ q="Do I need a Realtor if I'm looking at new construction?" a="Absolutely. Builder sales reps work for the builder, not you. Having your own representation costs you nothing (the builder pays the commission) and ensures someone is advocating for your interests on inspections, upgrades, and contract terms." />
+      {PCS_FAQS.map((f) => <FAQ key={f.q} q={f.q} a={f.a} />)}
       <InfoBox title="Ready to Start?">Call or text me at (850) 266-5005, or send me a message through the contact page. I respond to every inquiry within 2 hours during business hours. Let's talk about your PCS and find you the right home.</InfoBox>
     </Content>
   </PageWrapper>
@@ -1181,40 +1157,6 @@ const HomesteadPage = ({ go }) => (
   </PageWrapper>
 );
 
-const BAH_DATA = {
-  FL064: {
-    mhaCode: "FL064", mhaName: "Pensacola, FL", yoyChange: "+0.5% from 2025",
-    installations: "NAS Pensacola • NTTC Corry Station • NAS Whiting Field",
-    enlisted: [
-      ["E-1",1794,1521],["E-2",1794,1521],["E-3",1794,1521],["E-4",1794,1521],
-      ["E-5",1863,1644],["E-6",2235,1722],["E-7",2256,1791],["E-8",2265,1941],["E-9",2304,2046],
-    ],
-    warrant: [
-      ["W-1",2253,1782],["W-2",2262,1938],["W-3",2274,2061],["W-4",2325,2229],["W-5",2427,2241],
-    ],
-    officer: [
-      ["O-1E",2259,1860],["O-2E",2268,2022],["O-3E",2340,2226],
-      ["O-1",1914,1719],["O-2",2232,1842],["O-3",2271,2097],
-      ["O-4",2457,2232],["O-5",2610,2244],["O-6",2631,2247],["O-7",2646,2259],
-    ],
-  },
-  FL023: {
-    mhaCode: "FL023", mhaName: "Fort Walton Beach, FL", yoyChange: "+0.4% from 2025",
-    installations: "Eglin AFB • Hurlburt Field",
-    enlisted: [
-      ["E-1",2340,2007],["E-2",2340,2007],["E-3",2340,2007],["E-4",2340,2007],
-      ["E-5",2433,2157],["E-6",2526,2250],["E-7",2841,2340],["E-8",3189,2457],["E-9",3447,2586],
-    ],
-    warrant: [
-      ["W-1",2544,2322],["W-2",2985,2454],["W-3",3414,2589],["W-4",3456,2604],["W-5",3516,2922],
-    ],
-    officer: [
-      ["O-1E",2910,2430],["O-2E",3351,2514],["O-3E",3468,2601],
-      ["O-1",2451,2244],["O-2",2523,2406],["O-3",3399,2592],
-      ["O-4",3528,2865],["O-5",3612,3066],["O-6",3642,3393],["O-7",3669,3453],
-    ],
-  },
-};
 
 const fmt = (n) => "$" + n.toLocaleString("en-US");
 
@@ -2562,11 +2504,12 @@ const ContactPage = () => {
     if (!formData.name.trim() || !formData.email.trim()) { setStatus("error"); setErrorMsg("Name and email are required."); return; }
     try {
       // The contact worker requires `message` and reads the honeypot from `_gotcha`.
-      const payload = { name: formData.name, email: formData.email, phone: formData.phone, inquiryType: formData.inquiryType, message: formData.message.trim() || `Inquiry from ${window.location.pathname} (no message text)`, _gotcha: formData.honeypot };
+      const payload = withAttribution({ name: formData.name, email: formData.email, phone: formData.phone, inquiryType: formData.inquiryType, message: formData.message.trim() || `Inquiry from ${window.location.pathname} (no message text)`, _gotcha: formData.honeypot });
       const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       const data = await response.json();
       if (response.ok && data.success) {
         setStatus("success");
+        track("inquiry_submit", { inquiry_type: formData.inquiryType, cta_location: "spa-contact-page", page_path: window.location.pathname });
         setFormData({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
       } else { setStatus("error"); setErrorMsg(data.error || "Something went wrong. Please call (850) 266-5005."); }
     } catch (err) { setStatus("error"); setErrorMsg("Connection error. Please call (850) 266-5005 directly."); }
@@ -2701,8 +2644,29 @@ const SLUG_TO_PAGE = Object.fromEntries(Object.entries(PAGE_TO_SLUG).map(([k, v]
 
 const resolvePageFromPath = (pathname) => {
   const clean = pathname.replace(/\/$/, "") || "/";
-  return SLUG_TO_PAGE[clean] || "home";
+  if (SLUG_TO_PAGE[clean]) return SLUG_TO_PAGE[clean];
+  if (clean === "/") return "home";
+  // Unknown path (audit 2026-09-02, idx-01). The server now returns public/404.html with a
+  // real 404 status; this branch only fires for client-side history states.
+  try { if (typeof window.gtag === "function") window.gtag("event", "page_not_found", { page_path: clean, page_referrer: document.referrer || "" }); } catch {}
+  return "notfound";
 };
+
+const NotFoundPage = ({ go }) => (
+  <PageWrapper>
+    <PageHero title="Page not found" subtitle="That address does not exist on this site. The pages military families use most are one tap away." />
+    <Content>
+      <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+        <BtnP onClick={() => go("home")}>Home</BtnP>
+        <BtnG onClick={() => go("pcs")}>PCS Guide</BtnG>
+        <BtnG href="/bah-rates">2026 BAH Rates</BtnG>
+        <BtnG href="/va-loan-guide">VA Loan Guide</BtnG>
+        <BtnG onClick={() => go("neighborhoods")}>Communities</BtnG>
+        <BtnG onClick={() => go("contact")}>Contact</BtnG>
+      </div>
+    </Content>
+  </PageWrapper>
+);
 
 export default function App() {
   const [page, setPage] = useState(() => typeof window !== "undefined" ? resolvePageFromPath(window.location.pathname) : "home");
@@ -2850,6 +2814,7 @@ export default function App() {
       {page === "blog" && <BlogPage go={go} />}
       {page === "reviews" && <ReviewsPage />}
       {page === "contact" && <ContactPage />}
+      {page === "notfound" && <NotFoundPage go={go} />}
       </main>
       <Footer go={go} />
       <div className="sticky-mobile-cta" role="group" aria-label="Contact Gregg Costin">

@@ -47,7 +47,7 @@ const PERSON_SCHEMA = {
   familyName: "Costin",
   jobTitle: "Realtor, Military Relocation Specialist",
   worksFor: {
-    "@type": "RealEstateOrganization",
+    "@type": "Organization",
     name: "Levin Rinke Realty",
     url: "https://greggc.levinrinkerealty.com",
     address: { "@type": "PostalAddress", streetAddress: "220 W. Garden Street", addressLocality: "Pensacola", addressRegion: "FL", postalCode: "32502", addressCountry: "US" },
@@ -75,7 +75,7 @@ function agentSchema(area, knows) {
     image: "https://pensacolamilitaryhousing.com/images/gregg-portrait.jpg",
     areaServed: { "@type": "Place", name: area },
     worksFor: {
-      "@type": "RealEstateOrganization",
+      "@type": "Organization",
       name: "Levin Rinke Realty",
       address: { "@type": "PostalAddress", streetAddress: "220 W. Garden Street", addressLocality: "Pensacola", addressRegion: "FL", postalCode: "32502", addressCountry: "US" },
     },

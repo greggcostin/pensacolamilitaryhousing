@@ -13,7 +13,8 @@
         "og-images": "node scripts/generate-og-images.mjs",
         "optimize-images": "node scripts/optimize-images.mjs",
         "modern-images": "node scripts/generate-modern-images.mjs",
-        "blog": "node scripts/blog-factory.mjs"
+        "blog": "node scripts/blog-factory.mjs",
+        "psi": "node --env-file-if-exists=.env.local scripts/psi-field-data.mjs"
     },
     "dependencies": {
         "react": "^18.3.1",

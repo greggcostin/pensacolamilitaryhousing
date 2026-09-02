@@ -70,6 +70,17 @@ export default {
       const tags = [siteSource];
       if (inquiryType) tags.push(inquiryType);
       if (isSocial) tags.push("Social: " + utmSource + (body.utm_campaign ? " / " + String(body.utm_campaign).slice(0, 60) : ""));
+      // Capture-time attribution (audit 2026-09-02, analytics-02): forms now send utm_*, landing_page,
+      // referrer, page_path, and ga_client_id. Tag the person and append a note so nothing is lost.
+      if (utmSource && !isSocial) tags.push("utm:" + utmSource.slice(0, 40) + (body.utm_medium ? "/" + String(body.utm_medium).slice(0, 40) : ""));
+      if (body.landing_page) tags.push("landing:" + String(body.landing_page).slice(0, 80));
+      const attrParts = [];
+      if (body.page_path) attrParts.push("Page: " + String(body.page_path).slice(0, 120));
+      if (body.landing_page) attrParts.push("Landing: " + String(body.landing_page).slice(0, 160));
+      if (body.referrer) attrParts.push("Referrer: " + String(body.referrer).slice(0, 160));
+      if (body.utm_campaign) attrParts.push("Campaign: " + String(body.utm_campaign).slice(0, 80));
+      if (body.ga_client_id) attrParts.push("GA client id: " + String(body.ga_client_id).slice(0, 40));
+      const attrNote = attrParts.length ? "\n\n[Attribution] " + attrParts.join(" | ") : "";
       const firstName = name.split(" ")[0];
       const lastName = name.split(" ").slice(1).join(" ") || "";
 
@@ -97,7 +108,7 @@ export default {
                 stage: fub_stage,
                 assignedTo: 1
               },
-              description: message
+              description: message + attrNote
             })
           });
           await eventResp.text();

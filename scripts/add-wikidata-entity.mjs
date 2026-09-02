@@ -1,3 +1,4 @@
+// RETIRED 2026-09-02: Wikidata deleted Q140446886 on 2026-07-07 (notability). Do not run. See scripts/remove-wikidata-entity.mjs.
 // Wire Gregg's Wikidata Q-ID (Q140446886) into the entity graph sitewide
 // (WIKIDATA_PLAYBOOK.md step "once Wikidata is live"). Idempotent.
 //   - Every Person (#person-gregg) JSON-LD block: add identifier PropertyValue

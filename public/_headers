@@ -31,3 +31,8 @@
 # OG cards: same stable-filename tradeoff; scrapers refetch rarely anyway.
 /og/*
   Cache-Control: public, max-age=2592000
+
+# De-index the *.pages.dev twin (audit 2026-09-02, idx-02): the canonical tag and
+# the JS redirect do not stop crawlers; the civilian site already does this.
+https://pensacolamilitaryhousing.pages.dev/*
+  X-Robots-Tag: noindex

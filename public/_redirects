@@ -131,11 +131,21 @@
 /new-construction-pensacola.html           /new-construction-pensacola           301
 /va-loan-closing-costs-florida.html        /va-loan-closing-costs-florida       301
 
-# ── SPA fallback (must be last) ──
-# Cloudflare Pages auto-strips .html from destinations in explicit rules,
-# which turned `/about /index.html 200` into a 308 redirect to `/`. The
-# wildcard fallback below handles /about, /contact, /pcs-guide, etc.
-# correctly without that conversion happening. SPA-route shells
-# (about.html, contact.html) carry canonical=/, so Google already
-# consolidates them to the home page — no redirects needed here.
-/* /index.html 200
+# ── Bare community / base slugs that had no alias rule (audit 2026-09-02, url-04) ──
+/beulah                                   /communities/beulah                     301
+/beulah.html                              /communities/beulah                     301
+/fort-walton-beach                        /communities/fort-walton-beach          301
+/fort-walton-beach.html                   /communities/fort-walton-beach          301
+/mary-esther                              /communities/mary-esther                301
+/niceville                                /communities/niceville                  301
+/niceville.html                           /communities/niceville                  301
+/shalimar                                 /communities/shalimar                   301
+/whiting-field                            /bases/whiting-field                    301
+/whiting-field.html                       /bases/whiting-field                    301
+
+# ── No SPA wildcard fallback (removed 2026-09-02, audit idx-01) ──
+# Every SPA route (/about, /contact, /pcs-guide, /communities,
+# /mortgage-calculators) has its own prerendered shell written by
+# scripts/postbuild-spa-routes.mjs, so Cloudflare Pages serves them as
+# real files. Unknown paths now fall through to public/404.html with a
+# genuine 404 status instead of a 200 copy of the homepage.

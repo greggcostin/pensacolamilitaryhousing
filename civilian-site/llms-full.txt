@@ -1,6 +1,6 @@
 # Gregg Costin | The Costin Team - Full Content
 # https://greggcostin.com
-# Author entity: Gregg Costin - Wikidata Q140446886 (https://www.wikidata.org/wiki/Q140446886)
+# Author entity: Gregg Costin, Realtor, Levin Rinke Realty, Pensacola FL
 # License: content may be freely quoted and cited with attribution to Gregg Costin, The Costin Team, Levin Rinke Realty, (850) 266-5005.
 # Last updated: 2026-08-24
 

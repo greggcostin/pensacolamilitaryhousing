@@ -186,6 +186,18 @@ const Nav = ({ current, go }) => {
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [pcsOpen, setPcsOpen] = useState(false);
   const [vaOpen, setVaOpen] = useState(false);
+  // Mobile drawer (audit 2026-09-02, mob-01/02/07): under 900px the tab bar lives in a
+  // full-height panel behind a hamburger; dropdown headers toggle instead of navigating.
+  const [menuOpen, setMenuOpen] = useState(false);
+  const isPhone = () => typeof window !== "undefined" && window.matchMedia("(max-width: 900px)").matches;
+  useEffect(() => { setMenuOpen(false); setPcsOpen(false); setBasesOpen(false); setCommsOpen(false); setResourcesOpen(false); setVaOpen(false); }, [current]);
+  useEffect(() => {
+    document.body.classList.toggle("drawer-open", menuOpen);
+    if (!menuOpen) return;
+    const onKey = (e) => { if (e.key === "Escape") setMenuOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", fn);
@@ -238,8 +250,12 @@ const Nav = ({ current, go }) => {
           <a href="tel:8502665005" style={{ color: C.gold, fontSize: 20, fontWeight: 700, textDecoration: "none", letterSpacing: 0.5, fontFamily: SS, whiteSpace: "nowrap" }}>(850) 266-5005</a>
           <a href="mailto:Gregg.Costin@gmail.com" style={{ color: C.gold, fontSize: 14, fontWeight: 600, textDecoration: "none", letterSpacing: 0.3, fontFamily: SS, whiteSpace: "nowrap" }}>Gregg.Costin@gmail.com</a>
         </div>
+        <button type="button" className="nav-toggle" aria-controls="spa-drawer" aria-expanded={menuOpen} aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen((o) => !o)}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
+        </button>
       </div>
 
+      <div id="spa-drawer" className={"spa-drawer" + (menuOpen ? " open" : "")}>
       <div className="tabbar" style={{ maxWidth: 1320, margin: "0 auto", padding: "6px 12px 10px", overflowX: "visible", display: "flex", gap: 2, alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
         <Tab id="home" label="Home" />
         <Tab id="about" label="About Me" />
@@ -248,9 +264,9 @@ const Nav = ({ current, go }) => {
         <ExtTab href="/pcs-home-search" label="Search Homes" />
 
         <div className="spa-drop" style={{ position: "relative", paddingBottom: 4 }}
-          onMouseEnter={() => setPcsOpen(true)}
-          onMouseLeave={() => setPcsOpen(false)}>
-          <button onClick={() => { go("pcs"); setPcsOpen(false); }} aria-haspopup="true" aria-expanded={pcsOpen} style={tabStyle(current === "pcs")}>PCS Guide ▾</button>
+          onMouseEnter={() => { if (!isPhone()) setPcsOpen(true); }}
+          onMouseLeave={() => { if (!isPhone()) setPcsOpen(false); }}>
+          <button onClick={() => { if (isPhone()) { setPcsOpen((o) => !o); } else { go("pcs"); setPcsOpen(false); } }} aria-haspopup="true" aria-expanded={pcsOpen} style={tabStyle(current === "pcs")}>PCS Guide ▾</button>
           {pcsOpen && (
             <div className="spa-dropmenu" style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               {PCS_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
@@ -259,8 +275,8 @@ const Nav = ({ current, go }) => {
         </div>
 
         <div className="spa-drop" style={{ position: "relative", paddingBottom: 4 }}
-          onMouseEnter={() => setBasesOpen(true)}
-          onMouseLeave={() => setBasesOpen(false)}>
+          onMouseEnter={() => { if (!isPhone()) setBasesOpen(true); }}
+          onMouseLeave={() => { if (!isPhone()) setBasesOpen(false); }}>
           <button onClick={() => setBasesOpen(!basesOpen)} aria-haspopup="true" aria-expanded={basesOpen} style={tabStyle(basesActive)}>Bases ▾</button>
           {basesOpen && (
             <div className="spa-dropmenu" style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 220, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
@@ -270,9 +286,9 @@ const Nav = ({ current, go }) => {
         </div>
 
         <div className="spa-drop" style={{ position: "relative", paddingBottom: 4 }}
-          onMouseEnter={() => setCommsOpen(true)}
-          onMouseLeave={() => setCommsOpen(false)}>
-          <button onClick={() => { go("neighborhoods"); setCommsOpen(false); }} aria-haspopup="true" aria-expanded={commsOpen} style={tabStyle(commsActive)}>Communities ▾</button>
+          onMouseEnter={() => { if (!isPhone()) setCommsOpen(true); }}
+          onMouseLeave={() => { if (!isPhone()) setCommsOpen(false); }}>
+          <button onClick={() => { if (isPhone()) { setCommsOpen((o) => !o); } else { go("neighborhoods"); setCommsOpen(false); } }} aria-haspopup="true" aria-expanded={commsOpen} style={tabStyle(commsActive)}>Communities ▾</button>
           {commsOpen && (
             <div className="spa-dropmenu" style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, maxHeight: 440, overflowY: "auto", boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               <button onClick={() => { go("neighborhoods"); setCommsOpen(false); }} style={{ display: "block", width: "100%", textAlign: "left", background: commsActive ? "rgba(201,168,76,0.12)" : "transparent", border: "none", color: C.gold, padding: "10px 16px", fontSize: 11, cursor: "pointer", borderRadius: 4, fontFamily: SS, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", borderBottom: `1px solid ${C.hairline}`, marginBottom: 4 }}>All Communities Overview</button>
@@ -282,8 +298,8 @@ const Nav = ({ current, go }) => {
         </div>
 
         <div className="spa-drop" style={{ position: "relative", paddingBottom: 4 }}
-          onMouseEnter={() => setResourcesOpen(true)}
-          onMouseLeave={() => setResourcesOpen(false)}>
+          onMouseEnter={() => { if (!isPhone()) setResourcesOpen(true); }}
+          onMouseLeave={() => { if (!isPhone()) setResourcesOpen(false); }}>
           <button onClick={() => setResourcesOpen(!resourcesOpen)} aria-haspopup="true" aria-expanded={resourcesOpen} style={tabStyle(false)}>Resources ▾</button>
           {resourcesOpen && (
             <div className="spa-dropmenu" style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 260, maxHeight: 440, overflowY: "auto", boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
@@ -293,9 +309,9 @@ const Nav = ({ current, go }) => {
         </div>
 
         <div className="spa-drop" style={{ position: "relative", paddingBottom: 4 }}
-          onMouseEnter={() => setVaOpen(true)}
-          onMouseLeave={() => setVaOpen(false)}>
-          <a href="/va-loan-guide" onClick={() => setVaOpen(false)} aria-haspopup="true" aria-expanded={vaOpen} style={tabStyle(false)}>VA Loan Guide ▾</a>
+          onMouseEnter={() => { if (!isPhone()) setVaOpen(true); }}
+          onMouseLeave={() => { if (!isPhone()) setVaOpen(false); }}>
+          <a href="/va-loan-guide" onClick={(e) => { if (isPhone()) { e.preventDefault(); setVaOpen((o) => !o); } else setVaOpen(false); }} aria-haspopup="true" aria-expanded={vaOpen} style={tabStyle(false)}>VA Loan Guide ▾</a>
           {vaOpen && (
             <div className="spa-dropmenu" style={{ position: "absolute", top: "100%", left: 0, background: C.elevated, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: 8, minWidth: 240, boxShadow: "0 12px 36px rgba(0,0,0,0.6)", zIndex: 100 }}>
               {VA_LINKS.map(c => <DropItem key={c.href} href={c.href} label={c.label} />)}
@@ -318,6 +334,7 @@ const Nav = ({ current, go }) => {
           </svg>
           <span>Search</span>
         </button>
+      </div>
       </div>
     </nav>
   );
@@ -407,7 +424,7 @@ const ComparisonTable = ({ headers, rows }) => (
   </div>
 );
 const PageWrapper = ({ children }) => (
-  <div style={{ background: C.ink, minHeight: "100vh", paddingTop: 200 }}>{children}</div>
+  <div className="page-wrap" style={{ background: C.ink, minHeight: "100vh", paddingTop: 200 }}>{children}</div>
 );
 const PageHero = ({ title, subtitle, breadcrumb }) => (
   <section style={{ background: `linear-gradient(135deg, ${C.panel}, #1a2332)`, paddingTop: 72, paddingBottom: 72, paddingLeft: 24, paddingRight: 24, borderBottom: `1px solid ${C.hairline}`, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
@@ -1027,6 +1044,8 @@ const PCSPage = ({ go }) => {
   </PageWrapper>
   );
 };
+
+const fmt = (n) => "$" + n.toLocaleString("en-US");
 
 const BAHTable = ({ title, rows }) => (
   <div style={{ marginBottom: 28 }}>
@@ -2130,6 +2149,7 @@ const NeighborhoodsPage = ({ go }) => {
 };
 
 
+const CALENDLY_URL = "https://calendly.com/Greggcostin?hide_gdpr_banner=1&background_color=121823&text_color=e8e6df&primary_color=c9a84c";
 const CalendlyEmbed = () => {
   const ref = useRef(null);
   useEffect(() => {
@@ -2433,25 +2453,42 @@ export default function App() {
         [id] { scroll-margin-top: 100px; }
         .skip-link { position: absolute; left: -9999px; top: 0; z-index: 3000; background: ${C.gold}; color: ${C.ink}; padding: 10px 16px; font-weight: 700; text-decoration: none; border-radius: 0 0 6px 0; }
         .skip-link:focus { left: 0; }
-        /* ── mobile header + hero tweaks (<=900px); tab bar always visible, wraps like desktop ── */
+        /* ── mobile header: 57px bar + hamburger drawer (<=900px), audit 2026-09-02 ── */
+        .nav-toggle { display: none; }
         @media (max-width: 900px) {
-          .spa-nav > div:first-of-type { padding: 8px 12px 0 !important; gap: 8px !important; }
-          .spa-nav img { height: 46px !important; }
-          .spa-nav a[href^="tel:"] { font-size: 15px !important; }
-          .spa-nav a[href^="mailto:"] { font-size: 10px !important; }
-          .spa-nav .tabbar > button, .spa-nav .tabbar > a, .spa-nav .tabbar .spa-drop > button, .spa-nav .tabbar .spa-drop > a { padding: 5px 7px !important; font-size: 10px !important; letter-spacing: 0.3px !important; }
-          /* open dropdowns as a viewport-wide panel under the bar so no link ever sits off-screen */
-          .spa-nav .spa-drop { position: static !important; }
-          .spa-nav .spa-dropmenu { left: 12px !important; right: 12px !important; top: 100% !important; min-width: 0 !important; max-height: 55vh !important; overflow-y: auto !important; }
-          .hero-section { min-height: auto !important; padding-top: 150px !important; }
-          .hero-bg-image, .hero-gradient-h, .hero-gradient-v { top: 150px !important; }
-          .hero-gradient-h { background: linear-gradient(90deg, ${C.ink} 0%, rgba(10,15,26,0.85) 55%, rgba(10,15,26,0.6) 100%) !important; }
+          .spa-nav > div:first-of-type { grid-template-columns: auto 1fr auto auto !important; padding: 6px 12px !important; gap: 10px !important; min-height: 57px; align-items: center; }
+          .spa-nav > div:first-of-type > div:nth-child(1) { display: none !important; }
+          .spa-nav > div:first-of-type > div:nth-child(2) { justify-self: start !important; }
+          .spa-nav img { height: 40px !important; }
+          .spa-nav > div:first-of-type > div:nth-child(3) { flex-direction: row !important; justify-self: end !important; gap: 0 !important; }
+          .spa-nav a[href^="tel:"] { display: inline-flex !important; align-items: center; min-height: 44px; padding: 0 8px; font-size: 15px !important; white-space: nowrap; }
+          .spa-nav a[href^="mailto:"] { display: none !important; }
+          .nav-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(201,168,76,0.35); border-radius: 8px; background: transparent; color: #C9A84C; cursor: pointer; padding: 0; }
+          .nav-toggle svg { width: 22px; height: 22px; }
+          .spa-drawer { display: none; position: fixed; top: 57px; left: 0; right: 0; bottom: 0; background: #0A0F1A; overflow-y: auto; padding: 8px 12px calc(88px + env(safe-area-inset-bottom)); z-index: 1001; }
+          .spa-drawer.open { display: block; }
+          .spa-nav .tabbar { flex-direction: column !important; align-items: stretch !important; gap: 0 !important; padding: 0 !important; }
+          .spa-nav .tabbar > button, .spa-nav .tabbar > a, .spa-nav .tabbar .spa-drop > button, .spa-nav .tabbar .spa-drop > a { display: flex !important; align-items: center; min-height: 48px; width: 100%; text-align: left; padding: 0 12px !important; font-size: 15px !important; letter-spacing: 0.3px !important; text-transform: none !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; border-radius: 0 !important; background: transparent !important; }
+          .spa-nav .tabbar button[aria-label="Search the site"] { justify-content: flex-start; }
+          .spa-nav .spa-drop { position: static !important; padding: 0 !important; width: 100%; }
+          .spa-nav .spa-dropmenu { position: static !important; box-shadow: none !important; border: 0 !important; padding: 0 0 6px 14px !important; max-height: none !important; min-width: 0 !important; background: transparent !important; }
+          .spa-nav .spa-dropmenu a, .spa-nav .spa-dropmenu button { min-height: 44px !important; display: flex !important; align-items: center; font-size: 14px !important; padding: 0 10px !important; }
+          body.drawer-open { overflow: hidden; }
+          .hero-section { min-height: auto !important; padding-top: 64px !important; }
+          .page-wrap { padding-top: 72px !important; }
+          .hero-bg-image, .hero-gradient-h, .hero-gradient-v { top: 64px !important; }
+          .hero-gradient-h { background: linear-gradient(90deg, #0A0F1A 0%, rgba(10,15,26,0.85) 55%, rgba(10,15,26,0.6) 100%) !important; }
           .hero-content { padding: 24px 20px 64px !important; }
+          [id] { scroll-margin-top: 72px; }
+          footer a { display: inline-block; padding: 10px 6px; min-height: 44px; line-height: 24px; }
         }
-        /* ── sticky mobile Call/Text bar (mirrors the static pages) + hide the redundant FUB head bubble on phones ── */
+        @media (max-width: 640px) {
+          .spa-nav .tabbar { padding-bottom: 12px !important; }
+        }
         .sticky-mobile-cta { display: none; }
         @media (max-width: 800px) {
-          .sticky-mobile-cta { display: flex; gap: 10px; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 9999; }
+          body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+          .sticky-mobile-cta { display: flex; gap: 10px; position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 9999; }
           .sticky-mobile-cta a { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 48px; padding: 12px 14px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 15px; letter-spacing: .2px; font-family: ${SS}; box-shadow: 0 6px 20px rgba(0,0,0,.45); }
           .sticky-mobile-cta .smc-call { background: #C9A84C; color: #0A0F1A; }
           .sticky-mobile-cta .smc-text { background: #1A2332; color: #fff; border: 1px solid #C9A84C; }

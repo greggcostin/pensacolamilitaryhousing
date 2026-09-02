@@ -231,6 +231,49 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 
 /*BAHWRAP_MIN*/.bah-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem auto;max-width:760px}.bah-wrap>table{margin:0}
 .imodal .ifine a{color:var(--gold);text-decoration:underline}
+
+/* MOBILE_DRAWER_START */
+.nav-toggle{display:none}
+@media(max-width:900px){
+  .main-banner{position:sticky;top:0}
+  .banner-row{grid-template-columns:auto 1fr auto auto!important;padding:6px 12px!important;gap:10px!important;min-height:56px;align-items:center}
+  .banner-lrr{display:none!important}
+  .banner-logo{justify-self:start}
+  .banner-logo img{height:40px!important}
+  .banner-contact{justify-self:end;flex-direction:row;gap:0}
+  .banner-email{display:none!important}
+  .banner-phone{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;font-size:15px!important;white-space:nowrap}
+  @media(max-width:340px){.banner-phone{font-size:13px!important;padding:0 4px}}
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--gold-line);border-radius:8px;background:transparent;color:var(--gold);cursor:pointer;padding:0}
+  .nav-toggle svg{width:22px;height:22px}
+  .site-drawer{display:none;position:fixed;top:56px;left:0;right:0;bottom:0;background:var(--ink);overflow-y:auto;padding:8px 12px calc(88px + env(safe-area-inset-bottom));z-index:1001}
+  .site-drawer.open{display:block}
+  .banner-tabs{flex-direction:column;align-items:stretch;gap:0!important;padding:0!important}
+  .banner-tabs>a,.banner-tabs .dropdown>button,.banner-tabs .banner-search{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 12px!important;font-size:15px!important;letter-spacing:.3px!important;border-bottom:1px solid var(--hair);border-radius:0;width:100%;text-align:left;text-transform:none;margin:0!important}
+  .banner-tabs>a.mil-link{border:1px solid var(--gold-line);border-radius:8px;margin:10px 0 0!important;justify-content:center}
+  .banner-tabs .dropdown{padding:0}
+  .banner-tabs .dropdown>button[aria-expanded="true"]{color:var(--gold)}
+  .dropdown-menu{position:static!important;display:none;box-shadow:none;border:0;padding:0 0 6px 14px;max-height:none!important;min-width:0;background:transparent}
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:none}
+  .dropdown.open .dropdown-menu{display:block}
+  .dropdown-menu a{min-height:44px;display:flex;align-items:center;font-size:14px;padding:0 10px}
+  body.drawer-open{overflow:hidden}
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .sticky-mobile-cta{bottom:calc(12px + env(safe-area-inset-bottom))}
+  footer a{display:inline-block;padding:10px 6px;min-height:44px;line-height:24px}
+  .chips a{min-height:44px;display:inline-flex;align-items:center}
+  .explore .related a,.related a{min-height:44px;display:flex;align-items:center;padding:8px 0}
+  .imodal .ifine{font-size:12px}
+}
+@media(max-width:640px){
+  .imodal-overlay{padding:16px 12px calc(24px + env(safe-area-inset-bottom));align-items:flex-start}
+  .imodal{padding:44px 18px 22px;border-radius:12px}
+  .imodal-close{width:44px;height:44px;top:6px;right:6px;padding:0;display:flex;align-items:center;justify-content:center}
+  .imodal input,.imodal select,.imodal textarea{font-size:16px;padding:12px 14px}
+  .imodal .isubmit{width:100%;min-height:48px}
+  main table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+/* MOBILE_DRAWER_END */
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","@id":"https://pensacolamilitaryhousing.com/va-funding-fee-2026#webpage","url":"https://pensacolamilitaryhousing.com/va-funding-fee-2026","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","h2","h3","summary",".lead",".facts strong"]}}
@@ -271,7 +314,9 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <a href="tel:+18502665005" class="banner-phone">(850) 266-5005</a>
 <a href="mailto:gregg.costin@gmail.com" class="banner-email">gregg.costin@gmail.com</a>
 </div>
+<button type="button" class="nav-toggle" aria-controls="site-drawer" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg></button>
 </div>
+<div id="site-drawer" class="site-drawer">
 <div class="banner-tabs">
 <a href="/">Home</a>
 <a href="/about">About Me</a>
@@ -291,6 +336,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
 <span class="banner-search-label">Search</span>
 </button>
+</div>
 </div>
 </nav>
 <header>
@@ -639,5 +685,14 @@ else{errBox.textContent='\u26a0 '+(res.j.error||'Something went wrong. Please ca
 });
 })();
 </script>
+<script>/* MOBILE_DRAWER_JS */(function(){var t=document.querySelector('.nav-toggle'),d=document.getElementById('site-drawer');if(!t||!d)return;var mq=window.matchMedia('(max-width:900px)');
+function setOpen(o){d.classList.toggle('open',o);document.body.classList.toggle('drawer-open',o);t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close menu':'Open menu');}
+t.addEventListener('click',function(){setOpen(!d.classList.contains('open'));});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('open')){setOpen(false);t.focus();}});
+d.querySelectorAll('.dropdown>button').forEach(function(b){var oc=b.getAttribute('onclick');var href=oc&&(oc.match(/'([^']+)'/)||[])[1];if(oc)b.removeAttribute('onclick');b.setAttribute('aria-haspopup','true');b.setAttribute('aria-expanded','false');
+b.addEventListener('click',function(e){if(mq.matches){e.preventDefault();var open=!b.parentElement.classList.contains('open');d.querySelectorAll('.dropdown.open').forEach(function(x){if(x!==b.parentElement){x.classList.remove('open');var xb=x.querySelector('button');if(xb)xb.setAttribute('aria-expanded','false');}});b.parentElement.classList.toggle('open',open);b.setAttribute('aria-expanded',open?'true':'false');}else if(href){location.href=href;}});});
+d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(mq.matches)setOpen(false);});});
+if(mq.addEventListener)mq.addEventListener('change',function(){if(!mq.matches)setOpen(false);});
+if(/[?&]drawer=open/.test(location.search))setOpen(true);})();</script>
 </body>
 </html>

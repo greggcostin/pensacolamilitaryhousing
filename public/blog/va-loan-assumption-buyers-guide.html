@@ -48,7 +48,7 @@ window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
 gtag('config','G-W29GHBK38M',{linker:{domains:['pensacolamilitaryhousing.com','greggcostin.com'],accept_incoming:true}});gtag('config','GT-WVGM66XS');(function(){try{var p=new URLSearchParams(location.search),keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];var a=JSON.parse(localStorage.getItem('costin_attr')||'{}'),hit=false;keys.forEach(function(k){if(p.get(k)){a[k]=p.get(k);hit=true;}});if(!a.landing_page||hit){a.landing_page=location.pathname+location.search;a.referrer=document.referrer||'';a.first_seen=new Date().toISOString();}localStorage.setItem('costin_attr',JSON.stringify(a));}catch(e){}})();
-document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('tel:')===0){gtag('event','phone_call_click',{event_category:'conversion',event_label:h.replace('tel:','')});}else if(h.indexOf('mailto:')===0){gtag('event','email_click',{event_category:'conversion',event_label:h.replace('mailto:','')});}else if(h.indexOf('google.com/maps')>-1&&h.indexOf('Gregg')>-1){gtag('event','google_reviews_click',{event_category:'social_proof'});}else if(h.indexOf('zillow.com/profile')>-1){gtag('event','zillow_profile_click',{event_category:'social_proof'});}else if(h.indexOf('instagram.com/greggcostin')>-1){gtag('event','instagram_click',{event_category:'social'});}else if(h.indexOf('facebook.com/greggcostin')>-1){gtag('event','facebook_click',{event_category:'social'});}else if(h.indexOf('youtube.com/@Pensacola')>-1){gtag('event','youtube_click',{event_category:'social'});}else if(h.indexOf('linktr.ee/Greggcostin')>-1){gtag('event','linktree_click',{event_category:'social'});}else if(h.indexOf('greggc.levinrinkerealty.com')>-1){gtag('event','brokerage_profile_click',{event_category:'social_proof'});}else if(h.indexOf('sms:')===0){gtag('event','text_message_click',{event_category:'conversion'});}else if(h.indexOf('whats-my-home-worth')>-1){gtag('event','home_valuation_click',{event_category:'conversion'});}else if(h.indexOf('825bayshore')>-1){gtag('event','property_page_click',{event_category:'conversion'});}else if(h.indexOf('travel.dod.mil')>-1){gtag('event','dod_bah_calc_click',{event_category:'outbound'});}else if(h.indexOf('http')===0&&(h.indexOf('.gov')>-1||h.indexOf('.mil')>-1||h.indexOf('floridarevenue.com')>-1||h.indexOf('fldoe.org')>-1||h.indexOf('citizensfla.com')>-1)){gtag('event','authority_link_click',{event_category:'outbound',event_label:h.split('/')[2]||h});}});document.addEventListener('toggle',function(e){var t=e.target;if(t&&t.tagName==='DETAILS'&&t.open){var s=t.querySelector('summary');gtag('event','faq_expand',{event_category:'engagement',event_label:s?s.textContent.trim().slice(0,100):'faq'});}},true);
+document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('tel:')===0){gtag('event','phone_call_click',{event_category:'conversion',event_label:h.replace('tel:','')});}else if(h.indexOf('mailto:')===0){gtag('event','email_click',{event_category:'conversion',event_label:h.replace('mailto:','')});}else if(h.indexOf('google.com/maps')>-1&&h.indexOf('Gregg')>-1){gtag('event','google_reviews_click',{event_category:'social_proof'});}else if(h.indexOf('zillow.com/profile')>-1){gtag('event','zillow_profile_click',{event_category:'social_proof'});}else if(h.indexOf('instagram.com/greggcostin')>-1){gtag('event','instagram_click',{event_category:'social'});}else if(h.indexOf('facebook.com/greggcostin')>-1){gtag('event','facebook_click',{event_category:'social'});}else if(h.indexOf('youtube.com/@Pensacola')>-1){gtag('event','youtube_click',{event_category:'social'});}else if(h.indexOf('linktr.ee/Greggcostin')>-1){gtag('event','linktree_click',{event_category:'social'});}else if(h.indexOf('greggc.levinrinkerealty.com')>-1){gtag('event','brokerage_profile_click',{event_category:'social_proof'});}else if(h.indexOf('sms:')===0){gtag('event','text_message_click',{event_category:'conversion'});}else if(h.indexOf('calendly')>-1){gtag('event','calendly_click',{event_category:'conversion'});}else if(h.indexOf('whats-my-home-worth')>-1){gtag('event','home_valuation_click',{event_category:'conversion'});}else if(h.indexOf('825bayshore')>-1){gtag('event','property_page_click',{event_category:'conversion'});}else if(h.indexOf('travel.dod.mil')>-1){gtag('event','dod_bah_calc_click',{event_category:'outbound'});}else if(h.indexOf('http')===0&&(h.indexOf('.gov')>-1||h.indexOf('.mil')>-1||h.indexOf('floridarevenue.com')>-1||h.indexOf('fldoe.org')>-1||h.indexOf('citizensfla.com')>-1)){gtag('event','authority_link_click',{event_category:'outbound',event_label:h.split('/')[2]||h});}});document.addEventListener('toggle',function(e){var t=e.target;if(t&&t.tagName==='DETAILS'&&t.open){var s=t.querySelector('summary');gtag('event','faq_expand',{event_category:'engagement',event_label:s?s.textContent.trim().slice(0,100):'faq'});}},true);
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -229,6 +229,50 @@ main h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,38px);
 main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 @media(min-width:641px){main p,main ul,main ol,main details,main blockquote,main h2,main h3,main .facts,main .related{max-width:760px!important;margin-left:auto!important;margin-right:auto!important}main h2{font-size:clamp(26px,3.2vw,38px)!important}main h3{font-size:clamp(17px,1.6vw,20px)!important}}
 @media(max-width:640px){main h2{font-size:25px!important;margin:38px auto 14px;padding-bottom:10px}main h3{font-size:17px!important}main h2,main h3{overflow-wrap:anywhere}}
+.imodal .ifine a{color:var(--gold);text-decoration:underline}
+
+/* MOBILE_DRAWER_START */
+.nav-toggle{display:none}
+@media(max-width:900px){
+  .main-banner{position:sticky;top:0}
+  .banner-row{grid-template-columns:auto 1fr auto auto!important;padding:6px 12px!important;gap:10px!important;min-height:56px;align-items:center}
+  .banner-lrr{display:none!important}
+  .banner-logo{justify-self:start}
+  .banner-logo img{height:40px!important}
+  .banner-contact{justify-self:end;flex-direction:row;gap:0}
+  .banner-email{display:none!important}
+  .banner-phone{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;font-size:15px!important;white-space:nowrap}
+  @media(max-width:340px){.banner-phone{font-size:13px!important;padding:0 4px}}
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--gold-line);border-radius:8px;background:transparent;color:var(--gold);cursor:pointer;padding:0}
+  .nav-toggle svg{width:22px;height:22px}
+  .site-drawer{display:none;position:fixed;top:56px;left:0;right:0;bottom:0;background:var(--ink);overflow-y:auto;padding:8px 12px calc(88px + env(safe-area-inset-bottom));z-index:1001}
+  .site-drawer.open{display:block}
+  .banner-tabs{flex-direction:column;align-items:stretch;gap:0!important;padding:0!important}
+  .banner-tabs>a,.banner-tabs .dropdown>button,.banner-tabs .banner-search{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 12px!important;font-size:15px!important;letter-spacing:.3px!important;border-bottom:1px solid var(--hair);border-radius:0;width:100%;text-align:left;text-transform:none;margin:0!important}
+  .banner-tabs>a.mil-link{border:1px solid var(--gold-line);border-radius:8px;margin:10px 0 0!important;justify-content:center}
+  .banner-tabs .dropdown{padding:0}
+  .banner-tabs .dropdown>button[aria-expanded="true"]{color:var(--gold)}
+  .dropdown-menu{position:static!important;display:none;box-shadow:none;border:0;padding:0 0 6px 14px;max-height:none!important;min-width:0;background:transparent}
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:none}
+  .dropdown.open .dropdown-menu{display:block}
+  .dropdown-menu a{min-height:44px;display:flex;align-items:center;font-size:14px;padding:0 10px}
+  body.drawer-open{overflow:hidden}
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .sticky-mobile-cta{bottom:calc(12px + env(safe-area-inset-bottom))}
+  footer a{display:inline-block;padding:10px 6px;min-height:44px;line-height:24px}
+  .chips a{min-height:44px;display:inline-flex;align-items:center}
+  .explore .related a,.related a{min-height:44px;display:flex;align-items:center;padding:8px 0}
+  .imodal .ifine{font-size:12px}
+}
+@media(max-width:640px){
+  .imodal-overlay{padding:16px 12px calc(24px + env(safe-area-inset-bottom));align-items:flex-start}
+  .imodal{padding:44px 18px 22px;border-radius:12px}
+  .imodal-close{width:44px;height:44px;top:6px;right:6px;padding:0;display:flex;align-items:center;justify-content:center}
+  .imodal input,.imodal select,.imodal textarea{font-size:16px;padding:12px 14px}
+  .imodal .isubmit{width:100%;min-height:48px}
+  main table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+/* MOBILE_DRAWER_END */
 
 /*BAH_TABLE_CSS*/
 .bah-title{margin:1.25rem 0 .5rem;color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
@@ -274,50 +318,6 @@ main ul,main ol{font-size:16.5px;line-height:1.7;font-weight:400}
 main li{margin:.4rem 0}
 main details p{font-size:16px}
 @media(max-width:640px){main p{font-size:16.5px}main ul,main ol{font-size:16px}}
-.imodal .ifine a{color:var(--gold);text-decoration:underline}
-
-/* MOBILE_DRAWER_START */
-.nav-toggle{display:none}
-@media(max-width:900px){
-  .main-banner{position:sticky;top:0}
-  .banner-row{grid-template-columns:auto 1fr auto auto!important;padding:6px 12px!important;gap:10px!important;min-height:56px;align-items:center}
-  .banner-lrr{display:none!important}
-  .banner-logo{justify-self:start}
-  .banner-logo img{height:40px!important}
-  .banner-contact{justify-self:end;flex-direction:row;gap:0}
-  .banner-email{display:none!important}
-  .banner-phone{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;font-size:15px!important;white-space:nowrap}
-  @media(max-width:340px){.banner-phone{font-size:13px!important;padding:0 4px}}
-  .nav-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--gold-line);border-radius:8px;background:transparent;color:var(--gold);cursor:pointer;padding:0}
-  .nav-toggle svg{width:22px;height:22px}
-  .site-drawer{display:none;position:fixed;top:56px;left:0;right:0;bottom:0;background:var(--ink);overflow-y:auto;padding:8px 12px calc(88px + env(safe-area-inset-bottom));z-index:1001}
-  .site-drawer.open{display:block}
-  .banner-tabs{flex-direction:column;align-items:stretch;gap:0!important;padding:0!important}
-  .banner-tabs>a,.banner-tabs .dropdown>button,.banner-tabs .banner-search{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 12px!important;font-size:15px!important;letter-spacing:.3px!important;border-bottom:1px solid var(--hair);border-radius:0;width:100%;text-align:left;text-transform:none;margin:0!important}
-  .banner-tabs>a.mil-link{border:1px solid var(--gold-line);border-radius:8px;margin:10px 0 0!important;justify-content:center}
-  .banner-tabs .dropdown{padding:0}
-  .banner-tabs .dropdown>button[aria-expanded="true"]{color:var(--gold)}
-  .dropdown-menu{position:static!important;display:none;box-shadow:none;border:0;padding:0 0 6px 14px;max-height:none!important;min-width:0;background:transparent}
-  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:none}
-  .dropdown.open .dropdown-menu{display:block}
-  .dropdown-menu a{min-height:44px;display:flex;align-items:center;font-size:14px;padding:0 10px}
-  body.drawer-open{overflow:hidden}
-  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
-  .sticky-mobile-cta{bottom:calc(12px + env(safe-area-inset-bottom))}
-  footer a{display:inline-block;padding:10px 6px;min-height:44px;line-height:24px}
-  .chips a{min-height:44px;display:inline-flex;align-items:center}
-  .explore .related a,.related a{min-height:44px;display:flex;align-items:center;padding:8px 0}
-  .imodal .ifine{font-size:12px}
-}
-@media(max-width:640px){
-  .imodal-overlay{padding:16px 12px calc(24px + env(safe-area-inset-bottom));align-items:flex-start}
-  .imodal{padding:44px 18px 22px;border-radius:12px}
-  .imodal-close{width:44px;height:44px;top:6px;right:6px;padding:0;display:flex;align-items:center;justify-content:center}
-  .imodal input,.imodal select,.imodal textarea{font-size:16px;padding:12px 14px}
-  .imodal .isubmit{width:100%;min-height:48px}
-  main table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
-}
-/* MOBILE_DRAWER_END */
 </style>
 <!-- Microsoft Clarity (heatmaps + session recordings) -->
 <script type="text/javascript">

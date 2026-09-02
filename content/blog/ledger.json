@@ -4,10 +4,11 @@
       "title": "2026 BAH Pensacola: What Can You Afford? | Gregg Costin",
       "category": "BAH",
       "datePublished": "2026-03-20",
-      "dateModified": "2026-08-12",
+      "dateModified": "2026-09-02",
       "targetKeywords": [
         "2026 BAH Pensacola",
         "BAH what can you afford",
+        "2027 BAH Pensacola",
         "BAH home buying"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
@@ -385,6 +386,46 @@
         "assumable-va-loans-pensacola: FL $404 locality variance added, $704 servicer ceiling (Circ 26-24-5), $250 prior-approval tier"
       ],
       "published": "main (merged ab438a0, Gregg approved: publish it)"
+    },
+    {
+      "date": "2026-09-02",
+      "type": "scheduled weekly engine run",
+      "measured": 11,
+      "classifications": {
+        "winner": [
+          "va-loan-seller-concessions-truth (4 kws pos 23-33 as of Aug 22; NOT re-verified this run, Semrush units exhausted)"
+        ],
+        "stalled": [
+          "bah-2026-pensacola-what-can-you-afford (pub Mar 20, 0 sessions, 0 ranked kws)",
+          "pcs-to-pensacola-2026-complete-guide",
+          "florida-homestead-exemption-military",
+          "best-neighborhoods-eglin-afb-families"
+        ],
+        "decayed": [],
+        "notes": "Clarity 28d: site 396 sessions / 717 pageviews, 25.19% avg scroll; /blog/ aggregate scroll 40.56% with 0.22 dead clicks per pageview, so the blog reads notably deeper than the site average. Blog sessions: veteran-property-tax 3, neighborhoods-by-rank-bah 2, gulf-breeze 2, eglin 1, rest 0. Semrush UNAVAILABLE (API units exhausted) so no position data and no decay verification this run. Formatting audit showed no blog post in the low-scoring band, so the refresh target was chosen on staleness and distinctiveness rather than scannability."
+      },
+      "queueRerank": "bah-vs-real-cost-by-zip-2026 #4 -> #1 (sibling of the BAH cluster refreshed this run; Zillow shows Pensacola average value 64,116, down 3.6% YoY with inventory favoring buyers, so the BAH-vs-cost answer is newly favorable and the flagged press asset becomes pitchable). pensacola-housing-market-q3-2026 #8 -> #2 (scheduled for the first October run; Q3 closes Sep 30). florida-insurance-survival-guide-2026 #10 -> #4. NEW item added: 2027-bah-pensacola-what-changed, held for the first run after DoD publishes the 2027 tables in mid-December.",
+      "action": "refresh",
+      "slug": "bah-2026-pensacola-what-can-you-afford",
+      "models": {
+        "research": "opus",
+        "write": "fable"
+      },
+      "modelNotes": "First Opus research agent stopped without a completion record (process exited); retried once per the resilience rule and the retry succeeded. No in-session substitution was needed. Fable wrote the fragment as specified.",
+      "images": "fetch-new attempted per standing order. Query 1 (Pensacola residential neighborhood) returned B&W HABS archival survey scans with film borders: rejected on the eye test. Query 2 (Pensacola suburban aerial) returned no candidates. Query 3 (Pace FL homes) returned no candidates. Query 4 (Milton FL houses) produced the winner: /images/blog/milton-fl-house.jpg, CC BY-SA 3.0, credit Ebyabe, a real Milton house in the price band the post works through. Replaced the previous generic stock hero (calculator and hundred dollar bills). Inline figure reuses /images/topics/bah-to-mortgage-keys.jpg.",
+      "canonFixes": [
+        "bah-2026-pensacola-what-can-you-afford: millage replaced the single blended \"roughly 13-14 mills across much of Escambia and Santa Rosa\" with verified per-jurisdiction figures (unincorporated Escambia 13.40 total for the 2025 tax year with county operating/Sheriff MSTU/library certified unchanged for FY2026-27; Santa Rosa 2026 preliminary, not final until Oct 2026: unincorporated and Pace 11.3781, Milton 13.4261, Gulf Breeze 11.2804). Sources: Escambia County Tax Collector millage detail, SRCPA millage page.",
+        "bah-2026-pensacola-what-can-you-afford: homestead math corrected. The post previously applied a flat 0,000 reduction. Verified against Fla. Stat. 196.031(1)(b): the additional up-to-5,000 exemption applies to assessed value above 0,000 for all levies OTHER THAN school district levies, so with Escambia school millage at 5.3590 the exemption is worth less than the flat shortcut assumes. Worked example recomputed.",
+        "bah-2026-pensacola-what-can-you-afford: mortgage rate refreshed from 6.69% (week of Aug 6 2026) to the verified 6.66% for the week ending Aug 27 2026 (Freddie Mac PMMS, fetched directly), with 15-yr 5.98%, prior week 6.65% and year-ago 6.56%. All payment math and the price-band table recomputed at 6.66%."
+      ],
+      "canonFixesNotApplied": [
+        "RESEARCH PACK CLAIM REJECTED: the pack reported Escambia unincorporated millage as 19.0080 and said the post understated tax by about $100/mo ($242 vs ~$340 on a $265K home). Independent cross-check contradicted this: the Tax Collector component list (county 6.6000 + school 5.3590 + Sheriff MSTU 0.6850 + library 0.3590 + Children’s Trust 0.3798 + NWFWMD 0.0207) sums to 13.4035, and a second source independently puts unincorporated Escambia at approximately 13.4 mills. The pack had flagged this as uncertain and asked for a human check. 19.0080 appears to be a stacked or maximum figure, not the unincorporated total. The 19.0080 and $340/mo figures were NOT written into the post.",
+        "FALSE ALARM: the pack suspected /bah-rates mislabels the +0.5% FL064 change as a national figure. The string 0.5% does not appear in public/bah-rates.html at all. No fix needed.",
+        "NOT APPLIED, needs Gregg: /bah-rates and /bah-to-mortgage-guide both use 6.5% as their illustrative mortgage rate while the refreshed post now uses the verified 6.66%. These are assumptions inside worked examples with derived price ranges, not simple factual claims, so correcting them means recomputing those outputs on two money pages. Left for a human-reviewed pass rather than an unattended run."
+      ],
+      "toolingFinding": "scripts/analyze-formatting.mjs paragraph regex /<p[^>]*>/ also matches <picture>, producing phantom wall paragraphs that span the figcaption plus the next real paragraph. The refreshed post reports score 88 with 2 walls (max 111w); with the regex corrected to /<p(?=[s>])[^>]*>/ it is score 100, 0 walls, longest real paragraph 83 words, i.e. unchanged from before the refresh. 95 built pages contain <picture>, so docs/formatting-audit.md understates scores across most of the site and the DECIDE step reads that table. Script is outside the engine writable scope; spawned as a separate task for Gregg.",
+      "staged": true,
+      "branch": "blog/bah-2026-pensacola-what-can-you-afford-20260902"
     }
   ],
   "config": {

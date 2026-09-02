@@ -43,6 +43,7 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /communities/east-pensacola-heights | 88 | 1057 | 2 (max 154w) | 15 (70w/ea) | 7 (151w/ea) |
 | /communities/ferry-pass | 88 | 913 | 2 (max 133w) | 14 (65w/ea) | 7 (130w/ea) |
 | /communities/fort-walton-beach | 88 | 1245 | 2 (max 221w) | 17 (73w/ea) | 7 (178w/ea) |
+| /blog/bah-2026-pensacola-what-can-you-afford | 88 | 4270 | 2 (max 111w) | 26 (164w/ea) | 17 (251w/ea) |
 | /blog/moving-to-pensacola-2026-guide | 88 | 5182 | 2 (max 96w) | 32 (162w/ea) | 20 (259w/ea) |
 | /accessibility | 90 | 418 | 0 (max 74w) | 10 (42w/ea) | 1 (418w/ea) |
 | /assumable-va-loans-pensacola | 94 | 2197 | 1 (max 118w) | 16 (137w/ea) | 13 (169w/ea) |
@@ -96,7 +97,6 @@ questions-as-headings, insert lists/tables where data hides in prose.
 | /faq | 100 | 5429 | 0 (max 84w) | 67 (81w/ea) | 63 (86w/ea) |
 | /florida-home-insurance-military | 100 | 4271 | 0 (max 85w) | 41 (104w/ea) | 22 (194w/ea) |
 | /veteran-realtor-destin | 100 | 3492 | 0 (max 84w) | 25 (140w/ea) | 21 (166w/ea) |
-| /blog/bah-2026-pensacola-what-can-you-afford | 100 | 2667 | 0 (max 85w) | 18 (148w/ea) | 14 (191w/ea) |
 | /blog/florida-homestead-exemption-military | 100 | 3084 | 0 (max 84w) | 18 (171w/ea) | 16 (193w/ea) |
 | /blog/living-in-gulf-breeze-pros-cons | 100 | 3285 | 0 (max 83w) | 21 (156w/ea) | 15 (219w/ea) |
 | /blog/pcs-to-pensacola-2026-complete-guide | 100 | 3157 | 0 (max 85w) | 17 (186w/ea) | 15 (210w/ea) |

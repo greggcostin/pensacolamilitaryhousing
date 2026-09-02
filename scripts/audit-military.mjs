@@ -136,6 +136,11 @@ for (const file of files) {
   }
   // 9. responsive images: no content <img> without width/height; no <source> without type
   for (const m of html.matchAll(/<img\b[^>]*>/g)) if (!/width="/.test(m[0]) || !/height="/.test(m[0])) { f(page, `img without width/height: ${(m[0].match(/src="([^"]+)"/) || [])[1]}`); break; }
+  // 9b. mob-03: every table sits in a horizontally scrolling wrapper (bare tables clip at 320px)
+  for (const m of html.matchAll(/<table\b/g)) {
+    const prefix = html.slice(Math.max(0, m.index - 140), m.index);
+    if (!/class="(?:bah-wrap|tbl-scroll|table-wrap|calc-table-wrap|rate-table-wrap)[^"]*"[^<]*$|overflow(?:-x)?:\s*auto[^<]*$/.test(prefix)) { f(page, "bare <table> without a scrolling wrapper (run scripts/wrap-tables.mjs)"); break; }
+  }
   // 10. unresolved template placeholders / merge junk
   for (const junk of ["{{", "__ENTITY_DROP__", "<<<<<<<", "TODO:", "lorem ipsum"]) if (html.includes(junk)) f(page, `contains "${junk}"`);
 }

@@ -16,6 +16,7 @@
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import { placeQuickAnswer } from "./quick-answer-lib.mjs";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
 const TEMPLATE_PATH = ROOT + "public/first-time-military-homebuyer.html";
@@ -233,6 +234,9 @@ function buildPost(spec, template) {
 
   const newMain = `\n${authorCard}\n${topMeta}\n${heroFigure}\n${body}${faqVisible}${related}\n${explore}\n`;
   html = html.slice(0, mainStart + "<main data-pagefind-body>".length) + newMain + html.slice(mainEnd);
+  // geo-03: optional dated quick-answer block right after the lead (spec.quickAnswer, 2-4 sentences with the post's key figure)
+  html = html.replace(/<div class="quick-answer" data-quick-answer>[\s\S]*?<\/div>\n?/, "");
+  if (spec.quickAnswer) html = placeQuickAnswer(html, { text: spec.quickAnswer });
 
   html = html.replace(/Last updated: [A-Za-z]+ \d{1,2}, \d{4}/, `Last updated: ${longDate(spec.dateModified)}`);
   html = html.replace(/Content last verified: [A-Za-z]+ \d{4}/, `Content last verified: ${monthYear(spec.dateModified)}`);

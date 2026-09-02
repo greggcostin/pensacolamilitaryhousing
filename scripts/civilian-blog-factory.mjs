@@ -15,6 +15,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import { SITE_DIR, SITE, esc, buildPage, figureBand, breadcrumbs, faqPage, makeOgCard, gate } from "./civilian-page-lib.mjs";
 import { publisherRef } from "./entity-lib.mjs";
+import { placeQuickAnswer } from "./quick-answer-lib.mjs";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
@@ -87,7 +88,8 @@ ${faqsHtml}
     h1: spec.h1, lead: spec.lead, main, dateISO: spec.datePublished, minWords: 1100,
     schemaBlocks: [articleSchema(spec), breadcrumbs([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: spec.h1, path: `/blog/${spec.slug}` }]), faqPage(spec.faqs)],
   };
-  const html = buildPage(pageSpec);
+  // geo-03: optional dated quick-answer block after the lead (fragment field "quickAnswer", 2-4 sentences with the post's key figure)
+  const html = spec.quickAnswer ? placeQuickAnswer(buildPage(pageSpec), { text: spec.quickAnswer, by: "Gregg Costin, Realtor, The Costin Team at Levin Rinke Realty" }) : buildPage(pageSpec);
   const gateErrs = gate({ title: spec.title, desc: spec.description, minWords: 1100 }, html);
   if (gateErrs.length) throw new Error(`${spec.slug}: POST-BUILD GATE FAIL\n  - ` + gateErrs.join("\n  - "));
   return pageSpec;

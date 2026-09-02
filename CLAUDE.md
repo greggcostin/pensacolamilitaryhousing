@@ -45,6 +45,9 @@ Neither worker's source lives in this repo.
 ### Assets not in the repo
 `App.jsx` references `/images/*.jpg|png` (hero, portraits, military photos, logos) through the `IMG` object. There is no `public/images/` directory in git. These assets are supplied at deploy time on the host. A missing local image is not a bug — don't chase it. `index.html` also references `/images/favicon.png` and `/images/og-image.jpg`.
 
+### Quick-answer blocks (geo-03, added 2026-09-02)
+The pages AI engines cite most carry a dated `.quick-answer` block (2-4 declarative sentences restating the page's key figure, with attribution) as the first child of `<main>`, before the CTA strip and author card. Copy lives in `scripts/add-quick-answers.mjs` (rerun to update; idempotent), the block builder in `scripts/quick-answer-lib.mjs`; both page factories and the civilian blog factory accept a `quickAnswer` field. Every sentence must restate a figure already on the page.
+
 ### Responsive images (both sites, added 2026-09-02)
 Every content image gets 480/768/1200 width variants in avif/webp/jpg from `node scripts/generate-responsive-images.mjs` (idempotent; only images a page references; drops any modern-format file that is not at least 5% smaller than its jpg) and every content `<picture>` plus the two header logos are rewritten by `node scripts/apply-responsive-images.mjs` (sizes presets keyed by container class; `--only <file>` to preview one page). Run both after adding an image or a page; the variants are committed alongside the originals. Do not hand-edit srcset lists.
 

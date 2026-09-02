@@ -147,7 +147,9 @@ function syncSitemapAndLlms(specs) {
   const START = "## Blog Posts (auto-maintained)";
   const list = specs.sort((a, b) => (a.datePublished < b.datePublished ? 1 : -1)).map((s) => `- [${s.h1}](${SITE}/blog/${s.slug}): ${s.description}`).join("\n");
   const block = `${START}\n\n- [Blog index](${SITE}/blog): all posts\n${list}\n`;
-  if (llms.includes(START)) llms = llms.replace(new RegExp(START + "[\\s\\S]*?(?=\\n## |$)"), block);
+  // START contains parentheses, so it must be escaped before use as a regex source.
+  const startRe = START.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (llms.includes(START)) llms = llms.replace(new RegExp(startRe + "[\\s\\S]*?(?=\\n## |$)"), () => block);
   else llms = llms.trimEnd() + "\n\n" + block;
   writeFileSync(llmsPath, llms);
 }

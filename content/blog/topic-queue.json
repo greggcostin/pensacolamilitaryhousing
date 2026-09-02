@@ -2,16 +2,41 @@
   "note": "Ordered backlog for the blog engine. It may re-rank based on trend scans and ledger data: every move gets logged in ledger.runs. Interleave audiences: 'military' defends the moat, 'civilian' widens AI recommendation coverage, 'both' does double duty.",
   "queue": [
     {
-      "slug": "va-loan-assumption-buyers-guide",
-      "archetype": "decision",
-      "audience": "both",
-      "title": "Assuming a VA Loan in 2026: The Buyer's Guide to 3% Rates (Civilians Can Too)",
+      "slug": "bah-vs-real-cost-by-zip-2026",
+      "archetype": "data-study",
+      "audience": "military",
+      "title": "BAH vs. the Real Cost of Owning, by Pensacola ZIP (2026)",
       "targetKeywords": [
-        "assume a va loan",
-        "va loan assumption civilian",
-        "assumable mortgage pensacola"
+        "does bah cover a mortgage pensacola",
+        "bah vs rent pensacola"
       ],
-      "rerank": "Jumped to #1 on 2026-08-22: Bing baseline shows pos-1 rankings with clicks on 4 assumable-VA queries; sibling of WINNER va-loan-seller-concessions-truth; maps to /assumable-va-loans-pensacola money page."
+      "note": "THE citable press asset: pitch PNJ/WEAR/military pubs on publish",
+      "rerank": "Jumped #4 -> #1 on 2026-09-01 trend scan. (a) Sibling of the BAH cluster refreshed this run; BAH is the site proven strongest cluster (/bah-rates is the #4 site page at 27 sessions/28d, BAH pages lead the 351/3mo Copilot citation baseline). (b) Market shifted: Zillow puts the Pensacola average home value at $264,116, down 3.6% year over year, with inventory favoring buyers, while VA 30-year rates sit near 6%. The BAH-vs-cost answer is newly favorable in more ZIPs, which is what makes this a story rather than a table. (c) It is the flagged press-pitch asset and a softening market is the moment it becomes pitchable. (d) It is the internal-link target the refreshed BAH affordability post now points at."
+    },
+    {
+      "slug": "pensacola-housing-market-q3-2026",
+      "archetype": "living-stats",
+      "audience": "both",
+      "title": "Pensacola Housing Market Report: Q3 2026",
+      "targetKeywords": [
+        "pensacola housing market",
+        "pensacola home prices 2026",
+        "pensacola market forecast"
+      ],
+      "note": "quarterly franchise: becomes a refreshed series",
+      "rerank": "Moved #8 -> #2 on 2026-09-01. Q3 closes Sep 30, so this cannot be written before the first October run: scheduled there. The softening data (prices down year over year, inventory up) makes the first installment of the quarterly franchise genuinely useful rather than boilerplate."
+    },
+    {
+      "slug": "2027-bah-pensacola-what-changed",
+      "archetype": "news-reaction",
+      "audience": "military",
+      "title": "2027 BAH for Pensacola: What Changed and What It Buys",
+      "targetKeywords": [
+        "2027 BAH Pensacola",
+        "2027 BAH rates",
+        "did BAH go up 2027"
+      ],
+      "note": "ADDED 2026-09-01 by trend scan. DoD publishes 2027 BAH tables mid-December effective Jan 1 (the 2026 tables were announced Dec 11 2025). Hold for the first run after the tables drop, then write same-week off the real FL064/FL023 numbers: this is the highest-intent, most time-boxed query of the year for this site. Do NOT write it early and do NOT predict a number."
     },
     {
       "slug": "moving-to-navarre-2026-guide",
@@ -25,6 +50,18 @@
       ]
     },
     {
+      "slug": "florida-insurance-survival-guide-2026",
+      "archetype": "decision",
+      "audience": "civilian",
+      "title": "Florida Home Insurance in 2026: What Pensacola Buyers Actually Pay",
+      "targetKeywords": [
+        "florida home insurance cost 2026",
+        "pensacola homeowners insurance",
+        "citizens insurance florida"
+      ],
+      "rerank": "Moved #10 -> #4 on 2026-09-01. Insurance is the recurring affordability breaker in both the market coverage and the BAH math: it is the line item that decides whether BAH covers PITI, so it feeds the whole BAH cluster."
+    },
+    {
       "slug": "pensacola-cost-of-living-2026",
       "archetype": "data-study",
       "audience": "civilian",
@@ -36,17 +73,6 @@
       ]
     },
     {
-      "slug": "bah-vs-real-cost-by-zip-2026",
-      "archetype": "data-study",
-      "audience": "military",
-      "title": "BAH vs. the Real Cost of Owning, by Pensacola ZIP (2026)",
-      "targetKeywords": [
-        "does bah cover a mortgage pensacola",
-        "bah vs rent pensacola"
-      ],
-      "note": "THE citable press asset: pitch PNJ/WEAR/military pubs on publish"
-    },
-    {
       "slug": "retiring-in-pensacola-guide",
       "archetype": "mega-guide",
       "audience": "civilian",
@@ -55,17 +81,6 @@
         "retiring in pensacola",
         "is pensacola good for retirees",
         "best places to retire florida panhandle"
-      ]
-    },
-    {
-      "slug": "moving-to-pace-2026-guide",
-      "archetype": "mega-guide",
-      "audience": "both",
-      "title": "Moving to Pace, FL: The 2026 Guide",
-      "targetKeywords": [
-        "moving to pace fl",
-        "living in pace florida",
-        "pace fl new construction"
       ]
     },
     {
@@ -80,16 +95,15 @@
       ]
     },
     {
-      "slug": "pensacola-housing-market-q3-2026",
-      "archetype": "living-stats",
+      "slug": "moving-to-pace-2026-guide",
+      "archetype": "mega-guide",
       "audience": "both",
-      "title": "Pensacola Housing Market Report: Q3 2026",
+      "title": "Moving to Pace, FL: The 2026 Guide",
       "targetKeywords": [
-        "pensacola housing market",
-        "pensacola home prices 2026",
-        "pensacola market forecast"
-      ],
-      "note": "quarterly franchise: becomes a refreshed series"
+        "moving to pace fl",
+        "living in pace florida",
+        "pace fl new construction"
+      ]
     },
     {
       "slug": "moving-to-milton-2026-guide",
@@ -99,17 +113,6 @@
       "targetKeywords": [
         "moving to milton fl",
         "living in milton florida"
-      ]
-    },
-    {
-      "slug": "florida-insurance-survival-guide-2026",
-      "archetype": "decision",
-      "audience": "civilian",
-      "title": "Florida Home Insurance in 2026: What Pensacola Buyers Actually Pay",
-      "targetKeywords": [
-        "florida home insurance cost 2026",
-        "pensacola homeowners insurance",
-        "citizens insurance florida"
       ]
     },
     {
@@ -155,5 +158,6 @@
         "military town rental investing"
       ]
     }
-  ]
+  ],
+  "lastRerank": "2026-09-01 (blog engine run)"
 }

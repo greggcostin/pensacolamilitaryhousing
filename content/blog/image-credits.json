@@ -305,6 +305,24 @@
       "creditRequired": true,
       "credit": "Ebyabe",
       "query": "Escambia County Courthouse Pensacola Florida"
+    },
+    "civilian-site/images/rate-hike-2026.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Federal Reserve Bank Birmingham Branch Nov 2011 01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFederal%20Reserve%20Bank%20Birmingham%20Branch%20Nov%202011%2001.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Chris Pruitt",
+      "query": "Federal Reserve Bank of Atlanta building"
+    },
+    "/images/blog/milton-fl-house.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Milton Hist Dist house01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMilton%20Hist%20Dist%20house01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Milton Florida Santa Rosa County houses"
     }
   }
 }

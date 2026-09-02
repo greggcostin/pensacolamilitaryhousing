@@ -61,6 +61,9 @@ const pcsGuideFaqJsonLd = () => JSON.stringify({
   mainEntity: PCS_FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 });
 
+import { ROUTE_SECTIONS, ROUTE_LINKS, BASE_LINKS } from "../src/routeSections.js";
+import { COMMUNITY_LINKS, COMMUNITY_GROUPS } from "../src/communitiesData.js";
+
 const SRC = "dist/index.html";
 const base = readFileSync(SRC, "utf8"); // utf8 => the ® in the title survives round-trip
 
@@ -82,18 +85,27 @@ const ROOT_RE = /<div id="root">[\s\S]*?<\/div>\s*<\/div>(?=\s*<!-- Site search 
 
 // Optional per-route crawlable link block rendered inside the prerender shell —
 // gives high-equity SPA routes real internal links to the decision-tool pages.
-const SHELL_LINKS = {
-  "pcs-guide": [
-    ["Selling your house before a PCS (rent-or-sell calculator)", "/rent-or-sell-pcs-pensacola"],
-    ["Got a cash offer? What investors really pay", "/cash-offer-pensacola"],
-    ["PCS checklist: 60 / 30 / 7-day timeline", "/pcs-checklist"],
-    ["2026 BAH rates: Pensacola & Fort Walton Beach", "/bah-rates"],
-    ["Assumable VA loans in Pensacola", "/assumable-va-loans-pensacola"],
-  ],
-};
+// src/routeSections.js (audit idx-04): every shell carries 300+ words of section copy mirroring the
+// React H2s, a descriptive link block, and (communities, pcs-guide) the base + community link grid.
+const SHELL_LINKS = ROUTE_LINKS;
+const H2 = 'style="color:#fff;font-size:22px;font-weight:500;margin:28px 0 10px"';
+const Pst = 'style="font-size:16px;line-height:1.7;color:#B8BAC0;margin:0 0 14px;max-width:760px"';
+function sectionsHtml(r) {
+  const secs = ROUTE_SECTIONS[r.file] || [];
+  return secs.map((s) => `<section><h2 ${H2}>${esc(s.h2)}</h2>${s.text.map((p) => `<p ${Pst}>${esc(p)}</p>`).join("")}</section>`).join("\n");
+}
+function communityGridHtml() {
+  const groups = COMMUNITY_GROUPS.map((g) => {
+    const items = COMMUNITY_LINKS.filter((c) => c.base === g).map((c) => `<li style="margin:0 0 10px"><a href="${c.href}" style="color:#E8E9EB;font-weight:600">${esc(c.label)}</a><span style="color:#B8BAC0"> &middot; ${esc(c.blurb)}</span></li>`).join("");
+    return `<h3 style="color:#C4A75A;font-size:17px;font-weight:500;margin:22px 0 8px">${esc(g)}</h3><ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:1.6">${items}</ul>`;
+  }).join("");
+  const bases = `<h3 style="color:#C4A75A;font-size:17px;font-weight:500;margin:22px 0 8px">Base guides</h3><ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2">${BASE_LINKS.map(([l, h]) => `<li><a href="${h}" style="color:#E8E9EB">${esc(l)}</a></li>`).join("")}</ul>`;
+  return `<section><h2 ${H2}>Community Guides by Base</h2>${groups}${bases}</section>`;
+}
 
 function makeFallback(r) {
-  const body = r.file === "pcs-guide" ? `<section style="margin:8px 0 32px">${pcsGuideBody()}</section>` : "";
+  const grid = r.file === "communities" || r.file === "pcs-guide" ? communityGridHtml() : "";
+  const body = (r.file === "pcs-guide" ? `<section style="margin:8px 0 32px">${pcsGuideBody()}</section>` : "") + sectionsHtml(r) + grid;
   const tools = SHELL_LINKS[r.file]
     ? `<section style="margin:0 0 24px"><h2 style="color:#C4A75A;font-size:18px;margin:0 0 10px;font-weight:500">PCS Decision Tools</h2><ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2">${SHELL_LINKS[r.file].map(([label, href]) => `<li><a href="${href}" style="color:#E8E9EB">${label}</a></li>`).join("")}</ul></section>`
     : "";

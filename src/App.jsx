@@ -1,5 +1,6 @@
 import { Fragment, useState, useEffect, useReducer, useId, useRef } from "react";
 import { BAH_DATA } from "./bahData.js";
+import { COMMUNITY_LINKS } from "./communitiesData.js";
 import { INSTALLATIONS, NEIGHBORHOOD_ROWS, PCS_CHECKLIST, FL_BENEFITS, PCS_FAQS } from "./pcsGuideData.js";
 import { META_BY_PAGE, SITE } from "./routeMeta.js";
 
@@ -96,27 +97,6 @@ const RESOURCE_LINKS = [
   { label: "Reviews", href: "/reviews" },
 ];
 
-const COMMUNITY_LINKS = [
-  { label: "Gulf Breeze", href: "/communities/gulf-breeze", blurb: "The #1 family choice for NAS Pensacola. A-rated Santa Rosa schools, 15-min commute, premium pricing." },
-  { label: "Navarre", href: "/communities/navarre", blurb: "Santa Rosa County beach community between Hurlburt Field and NAS Pensacola. 15-25% cheaper per square foot than Gulf Breeze." },
-  { label: "Pace", href: "/communities/pace", blurb: "New construction, A-rated schools, best BAH-per-square-foot value in the Pensacola MHA." },
-  { label: "Milton", href: "/communities/milton", blurb: "Santa Rosa County seat. Historic downtown, 10 minutes to NAS Whiting Field, lowest BAH-supported entry point." },
-  { label: "Cantonment", href: "/communities/cantonment", blurb: "North Escambia County. Larger lots, new construction, 20-25 minutes to NAS Pensacola." },
-  { label: "Beulah", href: "/communities/beulah", blurb: "Northwest Escambia. A-rated Beulah schools, 18-22 min to NAS Pensacola, Navy Federal HQ adjacent. Newer construction at $310K-$425K." },
-  { label: "Perdido Key", href: "/communities/perdido-key", blurb: "Gulf-front barrier island. About 20-25 minutes to NAS Pensacola, beach lifestyle, strong rental investment play." },
-  { label: "East Pensacola Heights", href: "/communities/east-pensacola-heights", blurb: "Historic walkable peninsula minutes from downtown, about 20-25 to NAS Pensacola. Character bungalows on Bayou Texar." },
-  { label: "East Hill", href: "/communities/east-hill", blurb: "Historic Craftsman neighborhood, walkable 12th Avenue dining, 10-15 min to NAS Pensacola." },
-  { label: "Cordova Park", href: "/communities/cordova-park", blurb: "Established mid-century neighborhood near Cordova Mall. Solid Escambia schools, central Pensacola." },
-  { label: "Ferry Pass", href: "/communities/ferry-pass", blurb: "North Pensacola suburban neighborhoods. Mid-century and 1990s-2000s homes, 20-30 min commute, E-4 friendly pricing." },
-  { label: "Bellview/Myrtle Grove", href: "/communities/bellview-myrtle-grove", blurb: "West Pensacola working-class neighborhoods. 10-15 min to NAS Pensacola. Strongest E-3 to E-5 starter-home market." },
-  { label: "Navy Point/Warrington", href: "/communities/navy-point-warrington", blurb: "5 minutes from the NAS Pensacola main gate. Closest off-base housing in the MHA. Historic ties, most affordable entry." },
-  { label: "Niceville/Valparaiso/Bluewater Bay", href: "/communities/niceville", blurb: "Eglin AFB East Gate housing. A-rated Niceville High zone, master-planned Bluewater Bay, 10-minute commute for 33rd FW and 96th TW families." },
-  { label: "Fort Walton Beach", href: "/communities/fort-walton-beach", blurb: "Adjacent to the Eglin AFB West Gate. 5-15 minute commute, Okaloosa schools, broad mix of price points for E-4 to O-5 families." },
-  { label: "Mary Esther", href: "/communities/mary-esther", blurb: "Hurlburt Field's front-door town on Santa Rosa Sound. About 10 minutes to the main gate, higher FL023 BAH, medians in the mid-$300Ks." },
-  { label: "Shalimar", href: "/communities/shalimar", blurb: "Small bayou-front town platted for Eglin officers in the 1940s. About 2 miles from Eglin's West Gate, Choctawhatchee High zone." },
-  { label: "Destin", href: "/communities/destin", blurb: "Gulf-front Okaloosa resort city. Premium beach and condo market, 20 min to Eglin, about 25 min to Hurlburt. Strong military investment-rental play." },
-  { label: "Crestview", href: "/communities/crestview", blurb: "Okaloosa County budget play for Eglin AFB and Duke Field. New construction, strongest FL023 BAH-to-price ratio." },
-];
 
 const IMG = {
   heroWindow: "/images/hero-window.jpg",

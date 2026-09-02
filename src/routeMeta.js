@@ -28,7 +28,7 @@ export const ROUTE_META = [
     title: "About Gregg Costin | Pensacola Military Realtor",
     description: "Retired USAF Captain and E-3 AWACS officer, now a dual-licensed Florida and Alabama Realtor guiding military families through PCS moves and VA loans.",
     heading: "About Gregg Costin",
-    intro: "Retired USAF Captain, E-3 AWACS Combat Systems Officer, and prior-enlisted Staff Sergeant with 11 personal PCS moves — now a Florida- and Alabama-licensed Realtor serving military families across the Emerald Coast.",
+    intro: "Retired USAF Captain, E-3 AWACS Combat Systems Officer, and prior-enlisted Staff Sergeant with 11 personal PCS moves, now a Florida- and Alabama-licensed Realtor serving military families across the Emerald Coast.",
   },
   {
     page: "contact", file: "contact", slug: "/contact", shell: true, crumb: "Contact",
@@ -40,16 +40,16 @@ export const ROUTE_META = [
   {
     page: "pcs", file: "pcs-guide", slug: "/pcs-guide", shell: true, crumb: "PCS Guide",
     title: "Moving to Pensacola: Military PCS Guide",
-    description: "Moving to Pensacola on military orders? A retired USAF officer's PCS guide — BAH by base, on- and off-base housing, VA loans, schools, and moving timelines.",
+    description: "Moving to Pensacola on military orders? A retired USAF officer's PCS guide: BAH by base, on- and off-base housing, VA loans, schools, and moving timelines.",
     heading: "PCS to Pensacola & the Emerald Coast",
-    intro: "Everything a military family needs to plan a PCS to NAS Pensacola, Whiting Field, Corry Station, Hurlburt Field, Eglin AFB, or Duke Field — BAH, on- vs off-base housing, VA loans, schools, and a 60/30/7-day timeline.",
+    intro: "Everything a military family needs to plan a PCS to NAS Pensacola, Whiting Field, Corry Station, Hurlburt Field, Eglin AFB, or Duke Field: BAH, on- vs off-base housing, VA loans, schools, and a 60/30/7-day timeline.",
   },
   {
     page: "neighborhoods", file: "communities", slug: "/communities", shell: true, crumb: "Communities",
     title: "Pensacola Military Community Guide by Base",
     description: "Compare Emerald Coast communities for military families by base, commute, BAH fit, and schools: Gulf Breeze, Navarre, Pace, Perdido Key, Niceville and more.",
     heading: "Emerald Coast Communities for Military Families",
-    intro: "Neighborhood-by-neighborhood guidance for PCSing families — commute to base, BAH fit, schools, and lifestyle across Escambia, Santa Rosa, and Okaloosa counties.",
+    intro: "Neighborhood-by-neighborhood guidance for PCSing families: commute to base, BAH fit, schools, and lifestyle across Escambia, Santa Rosa, and Okaloosa counties.",
   },
   {
     page: "calculator", file: "mortgage-calculators", slug: "/mortgage-calculators", shell: true, crumb: "Calculators",

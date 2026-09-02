@@ -1,0 +1,421 @@
+{
+  "model": {
+    "year": 2026,
+    "rate": 6.66,
+    "rateSource": "Freddie Mac PMMS 30-year fixed average, week ending August 27, 2026",
+    "rateUrl": "https://www.freddiemac.com/pmms",
+    "termYears": 30,
+    "downPayment": 0,
+    "fundingFeePct": 2.15,
+    "fundingFeeFinanced": true,
+    "millage": {
+      "nonSchool": 8.041,
+      "school": 5.359,
+      "note": "Escambia County unincorporated, 2025 tax year; homestead: first $25,000 off every levy, additional $25,000 off non-school levies only"
+    },
+    "insurance": {
+      "pctOfPrice": 0.98,
+      "floor": 2400,
+      "cap": 3600,
+      "note": "inland Zone X, newer roof; coastal or old-roof quotes can double this line"
+    },
+    "buyBelowShare": 0.9,
+    "roundTo": 5000
+  },
+  "piFactor": 0.006426,
+  "multiplier": {
+    "full": 118,
+    "buyBelow": 107
+  },
+  "generated": "2026-09-02",
+  "mha": {
+    "FL064": {
+      "E-1": {
+        "bah": 1794,
+        "full": 215000,
+        "buyBelow": 190000,
+        "bahNoDep": 1521,
+        "fullNoDep": 180000,
+        "buyBelowNoDep": 160000
+      },
+      "E-2": {
+        "bah": 1794,
+        "full": 215000,
+        "buyBelow": 190000,
+        "bahNoDep": 1521,
+        "fullNoDep": 180000,
+        "buyBelowNoDep": 160000
+      },
+      "E-3": {
+        "bah": 1794,
+        "full": 215000,
+        "buyBelow": 190000,
+        "bahNoDep": 1521,
+        "fullNoDep": 180000,
+        "buyBelowNoDep": 160000
+      },
+      "E-4": {
+        "bah": 1794,
+        "full": 215000,
+        "buyBelow": 190000,
+        "bahNoDep": 1521,
+        "fullNoDep": 180000,
+        "buyBelowNoDep": 160000
+      },
+      "E-5": {
+        "bah": 1863,
+        "full": 220000,
+        "buyBelow": 200000,
+        "bahNoDep": 1644,
+        "fullNoDep": 195000,
+        "buyBelowNoDep": 170000
+      },
+      "E-6": {
+        "bah": 2235,
+        "full": 270000,
+        "buyBelow": 240000,
+        "bahNoDep": 1722,
+        "fullNoDep": 205000,
+        "buyBelowNoDep": 180000
+      },
+      "E-7": {
+        "bah": 2256,
+        "full": 270000,
+        "buyBelow": 245000,
+        "bahNoDep": 1791,
+        "fullNoDep": 215000,
+        "buyBelowNoDep": 190000
+      },
+      "E-8": {
+        "bah": 2265,
+        "full": 270000,
+        "buyBelow": 245000,
+        "bahNoDep": 1941,
+        "fullNoDep": 230000,
+        "buyBelowNoDep": 205000
+      },
+      "E-9": {
+        "bah": 2304,
+        "full": 275000,
+        "buyBelow": 250000,
+        "bahNoDep": 2046,
+        "fullNoDep": 245000,
+        "buyBelowNoDep": 220000
+      },
+      "W-1": {
+        "bah": 2253,
+        "full": 270000,
+        "buyBelow": 245000,
+        "bahNoDep": 1782,
+        "fullNoDep": 210000,
+        "buyBelowNoDep": 190000
+      },
+      "W-2": {
+        "bah": 2262,
+        "full": 270000,
+        "buyBelow": 245000,
+        "bahNoDep": 1938,
+        "fullNoDep": 230000,
+        "buyBelowNoDep": 205000
+      },
+      "W-3": {
+        "bah": 2274,
+        "full": 275000,
+        "buyBelow": 245000,
+        "bahNoDep": 2061,
+        "fullNoDep": 250000,
+        "buyBelowNoDep": 220000
+      },
+      "W-4": {
+        "bah": 2325,
+        "full": 280000,
+        "buyBelow": 250000,
+        "bahNoDep": 2229,
+        "fullNoDep": 270000,
+        "buyBelowNoDep": 240000
+      },
+      "W-5": {
+        "bah": 2427,
+        "full": 290000,
+        "buyBelow": 260000,
+        "bahNoDep": 2241,
+        "fullNoDep": 270000,
+        "buyBelowNoDep": 240000
+      },
+      "O-1E": {
+        "bah": 2259,
+        "full": 270000,
+        "buyBelow": 245000,
+        "bahNoDep": 1860,
+        "fullNoDep": 220000,
+        "buyBelowNoDep": 200000
+      },
+      "O-2E": {
+        "bah": 2268,
+        "full": 270000,
+        "buyBelow": 245000,
+        "bahNoDep": 2022,
+        "fullNoDep": 245000,
+        "buyBelowNoDep": 215000
+      },
+      "O-3E": {
+        "bah": 2340,
+        "full": 280000,
+        "buyBelow": 255000,
+        "bahNoDep": 2226,
+        "fullNoDep": 265000,
+        "buyBelowNoDep": 240000
+      },
+      "O-1": {
+        "bah": 1914,
+        "full": 230000,
+        "buyBelow": 205000,
+        "bahNoDep": 1719,
+        "fullNoDep": 205000,
+        "buyBelowNoDep": 180000
+      },
+      "O-2": {
+        "bah": 2232,
+        "full": 270000,
+        "buyBelow": 240000,
+        "bahNoDep": 1842,
+        "fullNoDep": 220000,
+        "buyBelowNoDep": 195000
+      },
+      "O-3": {
+        "bah": 2271,
+        "full": 275000,
+        "buyBelow": 245000,
+        "bahNoDep": 2097,
+        "fullNoDep": 250000,
+        "buyBelowNoDep": 225000
+      },
+      "O-4": {
+        "bah": 2457,
+        "full": 295000,
+        "buyBelow": 265000,
+        "bahNoDep": 2232,
+        "fullNoDep": 270000,
+        "buyBelowNoDep": 240000
+      },
+      "O-5": {
+        "bah": 2610,
+        "full": 310000,
+        "buyBelow": 280000,
+        "bahNoDep": 2244,
+        "fullNoDep": 270000,
+        "buyBelowNoDep": 245000
+      },
+      "O-6": {
+        "bah": 2631,
+        "full": 315000,
+        "buyBelow": 285000,
+        "bahNoDep": 2247,
+        "fullNoDep": 270000,
+        "buyBelowNoDep": 245000
+      },
+      "O-7": {
+        "bah": 2646,
+        "full": 315000,
+        "buyBelow": 285000,
+        "bahNoDep": 2259,
+        "fullNoDep": 270000,
+        "buyBelowNoDep": 245000
+      }
+    },
+    "FL023": {
+      "E-1": {
+        "bah": 2340,
+        "full": 280000,
+        "buyBelow": 255000,
+        "bahNoDep": 2007,
+        "fullNoDep": 240000,
+        "buyBelowNoDep": 215000
+      },
+      "E-2": {
+        "bah": 2340,
+        "full": 280000,
+        "buyBelow": 255000,
+        "bahNoDep": 2007,
+        "fullNoDep": 240000,
+        "buyBelowNoDep": 215000
+      },
+      "E-3": {
+        "bah": 2340,
+        "full": 280000,
+        "buyBelow": 255000,
+        "bahNoDep": 2007,
+        "fullNoDep": 240000,
+        "buyBelowNoDep": 215000
+      },
+      "E-4": {
+        "bah": 2340,
+        "full": 280000,
+        "buyBelow": 255000,
+        "bahNoDep": 2007,
+        "fullNoDep": 240000,
+        "buyBelowNoDep": 215000
+      },
+      "E-5": {
+        "bah": 2433,
+        "full": 290000,
+        "buyBelow": 265000,
+        "bahNoDep": 2157,
+        "fullNoDep": 260000,
+        "buyBelowNoDep": 235000
+      },
+      "E-6": {
+        "bah": 2526,
+        "full": 305000,
+        "buyBelow": 275000,
+        "bahNoDep": 2250,
+        "fullNoDep": 270000,
+        "buyBelowNoDep": 245000
+      },
+      "E-7": {
+        "bah": 2841,
+        "full": 340000,
+        "buyBelow": 305000,
+        "bahNoDep": 2340,
+        "fullNoDep": 280000,
+        "buyBelowNoDep": 255000
+      },
+      "E-8": {
+        "bah": 3189,
+        "full": 380000,
+        "buyBelow": 345000,
+        "bahNoDep": 2457,
+        "fullNoDep": 295000,
+        "buyBelowNoDep": 265000
+      },
+      "E-9": {
+        "bah": 3447,
+        "full": 415000,
+        "buyBelow": 370000,
+        "bahNoDep": 2586,
+        "fullNoDep": 310000,
+        "buyBelowNoDep": 280000
+      },
+      "W-1": {
+        "bah": 2544,
+        "full": 305000,
+        "buyBelow": 275000,
+        "bahNoDep": 2322,
+        "fullNoDep": 280000,
+        "buyBelowNoDep": 250000
+      },
+      "W-2": {
+        "bah": 2985,
+        "full": 355000,
+        "buyBelow": 320000,
+        "bahNoDep": 2454,
+        "fullNoDep": 295000,
+        "buyBelowNoDep": 265000
+      },
+      "W-3": {
+        "bah": 3414,
+        "full": 410000,
+        "buyBelow": 365000,
+        "bahNoDep": 2589,
+        "fullNoDep": 310000,
+        "buyBelowNoDep": 280000
+      },
+      "W-4": {
+        "bah": 3456,
+        "full": 415000,
+        "buyBelow": 370000,
+        "bahNoDep": 2604,
+        "fullNoDep": 310000,
+        "buyBelowNoDep": 280000
+      },
+      "W-5": {
+        "bah": 3516,
+        "full": 425000,
+        "buyBelow": 380000,
+        "bahNoDep": 2922,
+        "fullNoDep": 350000,
+        "buyBelowNoDep": 315000
+      },
+      "O-1E": {
+        "bah": 2910,
+        "full": 350000,
+        "buyBelow": 315000,
+        "bahNoDep": 2430,
+        "fullNoDep": 290000,
+        "buyBelowNoDep": 265000
+      },
+      "O-2E": {
+        "bah": 3351,
+        "full": 405000,
+        "buyBelow": 360000,
+        "bahNoDep": 2514,
+        "fullNoDep": 300000,
+        "buyBelowNoDep": 270000
+      },
+      "O-3E": {
+        "bah": 3468,
+        "full": 420000,
+        "buyBelow": 375000,
+        "bahNoDep": 2601,
+        "fullNoDep": 310000,
+        "buyBelowNoDep": 280000
+      },
+      "O-1": {
+        "bah": 2451,
+        "full": 295000,
+        "buyBelow": 265000,
+        "bahNoDep": 2244,
+        "fullNoDep": 270000,
+        "buyBelowNoDep": 245000
+      },
+      "O-2": {
+        "bah": 2523,
+        "full": 300000,
+        "buyBelow": 270000,
+        "bahNoDep": 2406,
+        "fullNoDep": 290000,
+        "buyBelowNoDep": 260000
+      },
+      "O-3": {
+        "bah": 3399,
+        "full": 410000,
+        "buyBelow": 365000,
+        "bahNoDep": 2592,
+        "fullNoDep": 310000,
+        "buyBelowNoDep": 280000
+      },
+      "O-4": {
+        "bah": 3528,
+        "full": 425000,
+        "buyBelow": 380000,
+        "bahNoDep": 2865,
+        "fullNoDep": 340000,
+        "buyBelowNoDep": 310000
+      },
+      "O-5": {
+        "bah": 3612,
+        "full": 435000,
+        "buyBelow": 390000,
+        "bahNoDep": 3066,
+        "fullNoDep": 365000,
+        "buyBelowNoDep": 330000
+      },
+      "O-6": {
+        "bah": 3642,
+        "full": 440000,
+        "buyBelow": 395000,
+        "bahNoDep": 3393,
+        "fullNoDep": 410000,
+        "buyBelowNoDep": 365000
+      },
+      "O-7": {
+        "bah": 3669,
+        "full": 445000,
+        "buyBelow": 395000,
+        "bahNoDep": 3453,
+        "fullNoDep": 415000,
+        "buyBelowNoDep": 370000
+      }
+    }
+  }
+}

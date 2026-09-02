@@ -240,8 +240,8 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <body>
 <nav class="main-banner" aria-label="Main site navigation">
 <div class="banner-row">
-<a href="/" class="banner-lrr"><picture><source srcset="https://pensacolamilitaryhousing.com/images/logo-lrr.avif" type="image/avif"><source srcset="https://pensacolamilitaryhousing.com/images/logo-lrr.webp" type="image/webp"><img fetchpriority="high" src="https://pensacolamilitaryhousing.com/images/logo-lrr.png" alt="Levin Rinke Realty" width="834" height="472"></picture></a>
-<a href="/" class="banner-logo"><picture><source srcset="https://pensacolamilitaryhousing.com/images/logo-08-sm.avif" type="image/avif"><source srcset="https://pensacolamilitaryhousing.com/images/logo-08-sm.webp" type="image/webp"><img fetchpriority="high" src="https://pensacolamilitaryhousing.com/images/logo-08-sm.png" alt="The Costin Team" width="480" height="196"></picture></a>
+<a href="/" class="banner-lrr"><picture><source srcset="https://pensacolamilitaryhousing.com/images/logo-lrr.avif" type="image/avif"><source srcset="https://pensacolamilitaryhousing.com/images/logo-lrr.webp" type="image/webp"><img src="https://pensacolamilitaryhousing.com/images/logo-lrr.png" alt="Levin Rinke Realty" width="834" height="472" decoding="async"></picture></a>
+<a href="/" class="banner-logo"><picture><source srcset="https://pensacolamilitaryhousing.com/images/logo-08-sm.avif" type="image/avif"><source srcset="https://pensacolamilitaryhousing.com/images/logo-08-sm.webp" type="image/webp"><img src="https://pensacolamilitaryhousing.com/images/logo-08-sm.png" alt="The Costin Team" width="480" height="196" decoding="async"></picture></a>
 <div class="banner-contact">
 <a href="tel:+18502665005" class="banner-phone">(850) 266-5005</a>
 <a href="mailto:Gregg.Costin@gmail.com" class="banner-email">Gregg.Costin@gmail.com</a>
@@ -276,7 +276,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 
 <div class="nb-grid">
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/palafox-street.webp" type="image/webp"><img src="/images/palafox-street.jpg" alt="Tree-lined brick walkway along Palafox Street in downtown Pensacola" loading="lazy" decoding="async" width="1600" height="1200"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/palafox-street-480.avif 480w, /images/palafox-street-768.avif 768w, /images/palafox-street-1200.avif 1200w, /images/palafox-street.avif 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><source type="image/webp" srcset="/images/palafox-street.webp 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><img src="/images/palafox-street.jpg" srcset="/images/palafox-street-480.jpg 480w, /images/palafox-street-768.jpg 768w, /images/palafox-street-1200.jpg 1200w, /images/palafox-street.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px" width="1600" height="1200" alt="Tree-lined brick walkway along Palafox Street in downtown Pensacola" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3APensacolaPalafoxAug2008ParkMonument.jpg" rel="noopener nofollow" target="_blank">Infrogmation of New Orleans, CC BY-SA 3.0</a></div>
 <div class="nb-for">Walkability &middot; Character &middot; Dining</div>
@@ -286,7 +286,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/bay-bridge.webp" type="image/webp"><img src="/images/bay-bridge.jpg" alt="Pensacola Bay Bridge crossing toward Gulf Breeze" loading="lazy" decoding="async" width="1600" height="559"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/bay-bridge-480.avif 480w, /images/bay-bridge-768.avif 768w, /images/bay-bridge-1200.avif 1200w, /images/bay-bridge.avif 1600w" sizes="(max-width: 940px) 92vw, 900px"><source type="image/webp" srcset="/images/bay-bridge-480.webp 480w, /images/bay-bridge-768.webp 768w, /images/bay-bridge-1200.webp 1200w, /images/bay-bridge.webp 1600w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/bay-bridge.jpg" srcset="/images/bay-bridge-480.jpg 480w, /images/bay-bridge-768.jpg 768w, /images/bay-bridge-1200.jpg 1200w, /images/bay-bridge.jpg 1600w" sizes="(max-width: 940px) 92vw, 900px" width="1600" height="559" alt="Pensacola Bay Bridge crossing toward Gulf Breeze" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3APensacola%20Bay%20Bridge.JPG" rel="noopener nofollow" target="_blank">Skye Marthaler, CC BY-SA 4.0</a></div>
 <div class="nb-for">Schools &middot; Peninsula Living</div>
@@ -296,7 +296,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/pensacola-beach.webp" type="image/webp"><img src="/images/pensacola-beach.jpg" alt="Vintage neon Pensacola Beach sign with a sailfish" loading="lazy" decoding="async" width="1400" height="1867" style="object-position:center 35%"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/pensacola-beach-480.avif 480w, /images/pensacola-beach-768.avif 768w, /images/pensacola-beach-1200.avif 1200w, /images/pensacola-beach.avif 1400w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><source type="image/webp" srcset="/images/pensacola-beach-480.webp 480w, /images/pensacola-beach-768.webp 768w, /images/pensacola-beach-1200.webp 1200w, /images/pensacola-beach.webp 1400w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><img src="/images/pensacola-beach.jpg" srcset="/images/pensacola-beach-480.jpg 480w, /images/pensacola-beach-768.jpg 768w, /images/pensacola-beach-1200.jpg 1200w, /images/pensacola-beach.jpg 1400w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px" width="1400" height="1868" alt="Vintage neon Pensacola Beach sign with a sailfish" loading="lazy" style="object-position:center 35%" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3APensacola%20Beach%20Sign(1).jpg" rel="noopener nofollow" target="_blank">TimothyJ, CC BY 2.0</a></div>
 <div class="nb-for">Gulf Front &middot; Vacation Energy</div>
@@ -306,7 +306,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/perdido-key.webp" type="image/webp"><img src="/images/perdido-key.jpg" alt="White sand dunes and sea oats at a Perdido Key beach access" loading="lazy" decoding="async" width="1600" height="1200"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/perdido-key-480.avif 480w, /images/perdido-key-768.avif 768w, /images/perdido-key-1200.avif 1200w, /images/perdido-key.avif 1600w" sizes="(max-width: 940px) 92vw, 900px"><source type="image/webp" srcset="/images/perdido-key-480.webp 480w, /images/perdido-key-768.webp 768w, /images/perdido-key-1200.webp 1200w, /images/perdido-key.webp 1600w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/perdido-key.jpg" srcset="/images/perdido-key-480.jpg 480w, /images/perdido-key-768.jpg 768w, /images/perdido-key-1200.jpg 1200w, /images/perdido-key.jpg 1600w" sizes="(max-width: 940px) 92vw, 900px" width="1600" height="1200" alt="White sand dunes and sea oats at a Perdido Key beach access" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3APerdido%20Key%20Beach%20Access%20K%20(2ec01f39-0b55-48dd-8353-e8f7facb1c46).jpg" rel="noopener nofollow" target="_blank">Breault, public domain</a></div>
 <div class="nb-for">Waterfront &middot; Quiet Coast</div>
@@ -316,7 +316,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/graffiti-bridge.webp" type="image/webp"><img src="/images/graffiti-bridge.jpg" alt="Pensacola's Graffiti Bridge at night with light trails" loading="lazy" decoding="async" width="1600" height="1278"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/graffiti-bridge-480.avif 480w, /images/graffiti-bridge-768.avif 768w, /images/graffiti-bridge-1200.avif 1200w, /images/graffiti-bridge.avif 1600w" sizes="(max-width: 940px) 92vw, 900px"><source type="image/webp" srcset="/images/graffiti-bridge-480.webp 480w, /images/graffiti-bridge-768.webp 768w, /images/graffiti-bridge-1200.webp 1200w, /images/graffiti-bridge.webp 1600w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/graffiti-bridge.jpg" srcset="/images/graffiti-bridge-480.jpg 480w, /images/graffiti-bridge-768.jpg 768w, /images/graffiti-bridge-1200.jpg 1200w, /images/graffiti-bridge.jpg 1600w" sizes="(max-width: 940px) 92vw, 900px" width="1600" height="1278" alt="Pensacola's Graffiti Bridge at night with light trails" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3AGraffiti%20Bridge.jpg" rel="noopener nofollow" target="_blank">Adamnorre, public domain</a></div>
 <div class="nb-for">Up-and-Coming &middot; Bayou Access</div>
@@ -326,7 +326,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/pace-milton.webp" type="image/webp"><img src="/images/pace-milton.jpg" alt="Boardwalk through the pines at Blackwater River State Park near Milton" loading="lazy" decoding="async" width="1600" height="1200"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/pace-milton.avif 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><img src="/images/pace-milton.jpg" srcset="/images/pace-milton-480.jpg 480w, /images/pace-milton-768.jpg 768w, /images/pace-milton-1200.jpg 1200w, /images/pace-milton.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px" width="1600" height="1200" alt="Boardwalk through the pines at Blackwater River State Park near Milton" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3AFL%20Blackwater%20River%20SP%20bdwlk02.jpg" rel="noopener nofollow" target="_blank">Ebyabe, CC BY-SA 3.0</a></div>
 <div class="nb-for">Space Per Dollar &middot; New Construction</div>
@@ -336,7 +336,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/navarre.webp" type="image/webp"><img src="/images/navarre.jpg" alt="Sugar-white sand and sea oats on Santa Rosa Island, the barrier island Navarre Beach shares" loading="lazy" decoding="async" width="1600" height="1067"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/navarre-480.avif 480w, /images/navarre-768.avif 768w, /images/navarre-1200.avif 1200w, /images/navarre.avif 1600w" sizes="(max-width: 940px) 92vw, 900px"><source type="image/webp" srcset="/images/navarre-480.webp 480w, /images/navarre-768.webp 768w, /images/navarre-1200.webp 1200w, /images/navarre.webp 1600w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/navarre.jpg" srcset="/images/navarre-480.jpg 480w, /images/navarre-768.jpg 768w, /images/navarre-1200.jpg 1200w, /images/navarre.jpg 1600w" sizes="(max-width: 940px) 92vw, 900px" width="1600" height="1067" alt="Sugar-white sand and sea oats on Santa Rosa Island, the barrier island Navarre Beach shares" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3APensacola%20Beach%20-%20White%20Sands%2C%20Florida%20Coast%20(27268946483).jpg" rel="noopener nofollow" target="_blank">Tony Webster, CC BY-SA 2.0</a></div>
 <div class="nb-for">Beach Town &middot; Small-Town Feel</div>
@@ -346,7 +346,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/cordova-park.webp" type="image/webp"><img src="/images/cordova-park.jpg" alt="Live oaks draped in Spanish moss arching over a quiet Cordova Park street" loading="lazy" decoding="async" width="1200" height="675"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/cordova-park-480.avif 480w, /images/cordova-park-768.avif 768w, /images/cordova-park.avif 1200w" sizes="(max-width: 940px) 92vw, 900px"><source type="image/webp" srcset="/images/cordova-park.webp 1200w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/cordova-park.jpg" srcset="/images/cordova-park-480.jpg 480w, /images/cordova-park-768.jpg 768w, /images/cordova-park.jpg 1200w" sizes="(max-width: 940px) 92vw, 900px" width="1200" height="675" alt="Live oaks draped in Spanish moss arching over a quiet Cordova Park street" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: The Costin Team</div>
 <div class="nb-for">Established &middot; Convenient</div>
@@ -356,7 +356,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/beulah.webp" type="image/webp"><img src="/images/beulah.jpg" alt="Longleaf pine flatwoods with a sandy road in northwest Escambia County" loading="lazy" decoding="async" width="1200" height="900"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/beulah-480.avif 480w, /images/beulah-768.avif 768w, /images/beulah.avif 1200w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><source type="image/webp" srcset="/images/beulah.webp 1200w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><img src="/images/beulah.jpg" srcset="/images/beulah-480.jpg 480w, /images/beulah-768.jpg 768w, /images/beulah.jpg 1200w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px" width="1200" height="900" alt="Longleaf pine flatwoods with a sandy road in northwest Escambia County" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3ALongleafPineForestBurnComparaison.jpg" rel="noopener nofollow" target="_blank">Gotty (Wikimedia Commons)</a>, CC BY-SA 3.0</div>
 <div class="nb-for">Acreage Feel &middot; New Construction &middot; I-10 Access</div>
@@ -366,7 +366,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/cantonment.webp" type="image/webp"><img src="/images/cantonment.jpg" alt="Two-story teal Florida home with palm trees on a residential street" loading="lazy" decoding="async" width="1200" height="900"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/cantonment-480.avif 480w, /images/cantonment-768.avif 768w, /images/cantonment.avif 1200w" sizes="(max-width: 940px) 92vw, 900px"><source type="image/webp" srcset="/images/cantonment-480.webp 480w, /images/cantonment-768.webp 768w, /images/cantonment.webp 1200w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/cantonment.jpg" srcset="/images/cantonment-480.jpg 480w, /images/cantonment-768.jpg 768w, /images/cantonment.jpg 1200w" sizes="(max-width: 940px) 92vw, 900px" width="1200" height="900" alt="Two-story teal Florida home with palm trees on a residential street" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3AHistoric%20Home%20on%20Rosemary%20Avenue.jpg" rel="noopener nofollow" target="_blank">AireWabiSabi</a>, CC BY-SA 4.0</div>
 <div class="nb-for">Established &middot; Tate Schools &middot; North Corridor</div>
@@ -376,7 +376,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/fort-walton.webp" type="image/webp"><img src="/images/fort-walton.jpg" alt="The Brooks Bridge crossing Santa Rosa Sound at Fort Walton Beach" loading="lazy" decoding="async" width="1600" height="1061"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/fort-walton-480.avif 480w, /images/fort-walton-768.avif 768w, /images/fort-walton-1200.avif 1200w, /images/fort-walton.avif 1600w" sizes="(max-width: 940px) 92vw, 900px"><source type="image/webp" srcset="/images/fort-walton-480.webp 480w, /images/fort-walton-768.webp 768w, /images/fort-walton-1200.webp 1200w, /images/fort-walton.webp 1600w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/fort-walton.jpg" srcset="/images/fort-walton-480.jpg 480w, /images/fort-walton-768.jpg 768w, /images/fort-walton-1200.jpg 1200w, /images/fort-walton.jpg 1600w" sizes="(max-width: 940px) 92vw, 900px" width="1600" height="1061" alt="The Brooks Bridge crossing Santa Rosa Sound at Fort Walton Beach" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3AJohn%20T.%20Brooks%20Bridge.JPG" rel="noopener nofollow" target="_blank">Mark Sublette, CC BY-SA 3.0</a></div>
 <div class="nb-for">Sound &amp; Bay &middot; Established &middot; Okaloosa Hub</div>
@@ -386,7 +386,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/orange-beach.webp" type="image/webp"><img src="/images/orange-beach.jpg" alt="Boat heading out past the piers and condo towers of Orange Beach, Alabama" loading="lazy" decoding="async" width="1600" height="1061"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/orange-beach-480.avif 480w, /images/orange-beach-768.avif 768w, /images/orange-beach-1200.avif 1200w, /images/orange-beach.avif 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><source type="image/webp" srcset="/images/orange-beach-480.webp 480w, /images/orange-beach-768.webp 768w, /images/orange-beach-1200.webp 1200w, /images/orange-beach.webp 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><img src="/images/orange-beach.jpg" srcset="/images/orange-beach-480.jpg 480w, /images/orange-beach-768.jpg 768w, /images/orange-beach-1200.jpg 1200w, /images/orange-beach.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px" width="1600" height="1061" alt="Boat heading out past the piers and condo towers of Orange Beach, Alabama" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: A. E. Crane, U.S. DOT, public domain</div>
 <div class="nb-for">Boating Capital &middot; Condos &middot; Alabama Coast</div>
@@ -396,7 +396,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source srcset="/images/gulf-shores.webp" type="image/webp"><img src="/images/gulf-shores.jpg" alt="Stilted beach cottages among palms in Gulf Shores, Alabama" loading="lazy" decoding="async" width="1600" height="1067"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/gulf-shores-480.avif 480w, /images/gulf-shores-768.avif 768w, /images/gulf-shores-1200.avif 1200w, /images/gulf-shores.avif 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><source type="image/webp" srcset="/images/gulf-shores-480.webp 480w, /images/gulf-shores-768.webp 768w, /images/gulf-shores-1200.webp 1200w, /images/gulf-shores.webp 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><img src="/images/gulf-shores.jpg" srcset="/images/gulf-shores-480.jpg 480w, /images/gulf-shores-768.jpg 768w, /images/gulf-shores-1200.jpg 1200w, /images/gulf-shores.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px" width="1600" height="1067" alt="Stilted beach cottages among palms in Gulf Shores, Alabama" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: Carol M. Highsmith, public domain</div>
 <div class="nb-for">Beach Town &middot; Cottages &middot; Alabama Coast</div>
@@ -418,7 +418,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <li><strong>Across the Alabama line:</strong> Orange Beach for boaters and condo living, Gulf Shores for the classic beach-town cottage. Gregg's Alabama license covers both.</li>
 </ul>
 
-<figure class="figure-band"><picture><source srcset="/images/saenger.webp" type="image/webp"><img src="/images/saenger.jpg" alt="The historic Saenger Theatre on Palafox Street in downtown Pensacola" loading="lazy" decoding="async" width="1600" height="1200"></picture><figcaption>The Saenger Theatre on Palafox: the downtown culture that anchors East Hill and Midtown prices. Photo: <a href="https://commons.wikimedia.org/wiki/File%3APensacola%20Saenger%20Thtr01.jpg" rel="noopener nofollow" target="_blank">Ebyabe, CC BY-SA 3.0</a></figcaption></figure>
+<figure class="figure-band"><picture><source type="image/avif" srcset="/images/saenger-480.avif 480w, /images/saenger-768.avif 768w, /images/saenger-1200.avif 1200w, /images/saenger.avif 1400w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><source type="image/webp" srcset="/images/saenger-480.webp 480w, /images/saenger-768.webp 768w, /images/saenger-1200.webp 1200w, /images/saenger.webp 1400w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><img src="/images/saenger.jpg" srcset="/images/saenger-480.jpg 480w, /images/saenger-768.jpg 768w, /images/saenger-1200.jpg 1200w, /images/saenger.jpg 1400w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px" width="1400" height="1050" alt="The historic Saenger Theatre on Palafox Street in downtown Pensacola" loading="lazy" decoding="async"></picture><figcaption>The Saenger Theatre on Palafox: the downtown culture that anchors East Hill and Midtown prices. Photo: <a href="https://commons.wikimedia.org/wiki/File%3APensacola%20Saenger%20Thtr01.jpg" rel="noopener nofollow" target="_blank">Ebyabe, CC BY-SA 3.0</a></figcaption></figure>
 
 <h2>Common questions</h2>
 <details open><summary>What is the best neighborhood in Pensacola for families?</summary><p>Gulf Breeze is the usual first answer for its schools, with Pace and Cordova Park close behind. The honest version: the right answer depends on your budget, commute, and whether you value yard space or walkability, which is exactly the conversation to have before touring.</p></details>

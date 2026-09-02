@@ -241,10 +241,10 @@ const Nav = ({ current, go }) => {
     <nav className="spa-nav" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000, background: "rgba(10,15,26,0.95)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.08)", transition: "all .3s ease" }}>
       <div style={{ maxWidth: 1320, margin: "0 auto", padding: "10px 16px 0", display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: 16 }}>
         <div style={{ justifySelf: "start", cursor: "pointer" }} onClick={() => go("home")}>
-          <Pic loading="lazy" src={IMG.logoLrr} alt="Levin Rinke Realty" style={{ height: 108, objectFit: "contain" }} />
+          <Pic loading="eager" width={834} height={472} src={IMG.logoLrr} alt="Levin Rinke Realty" style={{ height: 108, objectFit: "contain" }} />
         </div>
         <div style={{ justifySelf: "center", cursor: "pointer" }} onClick={() => go("home")}>
-          <Pic loading="lazy" src={IMG.logo08} alt="The Costin Team" style={{ height: 108, objectFit: "contain" }} />
+          <Pic loading="eager" width={480} height={196} src={IMG.logo08} alt="The Costin Team" style={{ height: 108, objectFit: "contain" }} />
         </div>
         <div style={{ justifySelf: "end", display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
           <a href="tel:8502665005" style={{ color: C.gold, fontSize: 20, fontWeight: 700, textDecoration: "none", letterSpacing: 0.5, fontFamily: SS, whiteSpace: "nowrap" }}>(850) 266-5005</a>

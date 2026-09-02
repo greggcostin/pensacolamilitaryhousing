@@ -1,0 +1,131 @@
+{
+  "_comment": "Single source of truth for the shared entity graph on BOTH sites (audit 2026-09-02, schema-02/03/05/06, synergy-02). Edit here, then run: node scripts/build-entity-graph.mjs. The canonical @ids live on the name domain; pensacolamilitaryhousing.com references the same strings. No em dashes anywhere in this file.",
+  "ids": {
+    "person": "https://greggcostin.com/#gregg",
+    "team": "https://greggcostin.com/#team",
+    "brokerage": "https://greggcostin.com/#brokerage",
+    "portrait": "https://pensacolamilitaryhousing.com/#portrait",
+    "logo": "https://pensacolamilitaryhousing.com/#logo"
+  },
+  "nap": {
+    "name": "Gregg Costin - The Costin Team",
+    "alternateName": ["The Costin Team", "Gregg Costin Pensacola Realtor - Levin Rinke Realty"],
+    "telephone": "+1-850-266-5005",
+    "email": "greggcostin@gmail.com",
+    "streetAddress": "220 W Garden St",
+    "addressLocality": "Pensacola",
+    "addressRegion": "FL",
+    "postalCode": "32502",
+    "latitude": 30.4129639,
+    "longitude": -87.2188735,
+    "hasMap": "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd",
+    "priceRange": "$$"
+  },
+  "images": {
+    "portrait": { "url": "https://pensacolamilitaryhousing.com/images/gregg-portrait.jpg", "width": 1200, "height": 1200, "caption": "Gregg Costin, Realtor with Levin Rinke Realty, Pensacola, Florida" },
+    "courthouse": { "url": "https://greggcostin.com/images/gregg-courthouse.jpg", "width": 928, "height": 1152, "caption": "Gregg Costin at the Escambia County Courthouse, Pensacola" },
+    "logo": { "url": "https://pensacolamilitaryhousing.com/images/logo-08-sm.png", "width": 480, "height": 196, "caption": "The Costin Team at Levin Rinke Realty" }
+  },
+  "person": {
+    "name": "Gregg Costin",
+    "givenName": "Gregg",
+    "familyName": "Costin",
+    "alternateName": "Gregg Costin, Realtor",
+    "honorificSuffix": "MRP, ABR, SRS, RENE, FMS",
+    "jobTitle": "Realtor",
+    "description": "Realtor with Levin Rinke Realty, licensed in Florida and Alabama, leading The Costin Team for buyers and sellers across Pensacola, the Florida Panhandle and coastal Alabama, where he is a top-producing Baldwin County agent for Gulf Shores and Orange Beach. Retired USAF Captain and E-3 AWACS Combat Systems Officer with 20 years of service and 11 PCS moves, and a military relocation, VA loan and PCS specialist for NAS Pensacola, Corry Station, NAS Whiting Field, Eglin AFB and Hurlburt Field.",
+    "shortDescription": "Realtor with Levin Rinke Realty, licensed in Florida and Alabama; retired USAF Combat Systems Officer; serves Pensacola, the Florida Panhandle and Alabama's Gulf Shores and Orange Beach.",
+    "url": "https://greggcostin.com/team",
+    "award": [
+      "Forbes Global Properties Rookie of the Year 2025",
+      "Ranked number 3, number 4, and number 10 agent out of more than 450 agents on the Levin Rinke Realty leaderboard, Summer 2026",
+      "Ranked number 34 Realtor of more than 4,100 agents in the Pensacola MLS by volume and transactions, as of August 1, 2026"
+    ],
+    "memberOf": [
+      { "@type": "Organization", "name": "National Association of Realtors", "url": "https://www.nar.realtor/" },
+      { "@type": "Organization", "name": "Florida Realtors", "url": "https://www.floridarealtors.org/" },
+      { "@type": "Organization", "name": "Baldwin REALTORS", "url": "https://baldwinrealtors.com/" }
+    ],
+    "alumniOf": [
+      { "@type": "Organization", "name": "United States Air Force" },
+      { "@type": "CollegeOrUniversity", "name": "University of Tampa" }
+    ],
+    "credentials": [
+      { "name": "Florida Real Estate Sales Associate License", "category": "license", "by": { "@type": "GovernmentOrganization", "name": "Florida Department of Business and Professional Regulation", "url": "https://www.myfloridalicense.com/" } },
+      { "name": "Alabama Real Estate Salesperson License", "category": "license", "by": { "@type": "GovernmentOrganization", "name": "Alabama Real Estate Commission", "url": "https://arec.alabama.gov/" } },
+      { "name": "Military Relocation Professional (MRP)", "category": "certification", "by": { "@type": "Organization", "name": "National Association of Realtors" } },
+      { "name": "Accredited Buyer's Representative (ABR)", "category": "certification", "by": { "@type": "Organization", "name": "National Association of Realtors" } },
+      { "name": "Seller Representative Specialist (SRS)", "category": "certification", "by": { "@type": "Organization", "name": "National Association of Realtors" } },
+      { "name": "Real Estate Negotiation Expert (RENE)", "category": "certification", "by": { "@type": "Organization", "name": "National Association of Realtors" } },
+      { "name": "Florida Military Specialist (FMS)", "category": "certification", "by": { "@type": "Organization", "name": "Florida Realtors" } }
+    ],
+    "knowsAbout": [
+      "Pensacola real estate market",
+      "Gulf Shores and Orange Beach, Alabama real estate",
+      "Baldwin County, Alabama",
+      "Gulf Breeze, Pace, Navarre and Perdido Key real estate",
+      "Waterfront and coastal homes",
+      "VA home loans",
+      "PCS relocation",
+      "Basic Allowance for Housing (BAH)",
+      "Florida homestead exemption",
+      "NAS Pensacola", "NAS Whiting Field", "Corry Station", "Saufley Field", "Hurlburt Field", "Eglin AFB", "Duke Field",
+      "E-3 AWACS Combat Systems Officer"
+    ],
+    "sameAs": [
+      "https://pensacolamilitaryhousing.com/about",
+      "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd",
+      "https://www.zillow.com/profile/GreggCostin",
+      "https://www.homes.com/real-estate-agents/gregg-costin/864f0f3/",
+      "https://www.realtor.com/realestateagents/67f735742fa6e27009385154",
+      "https://www.linkedin.com/in/greggcostin",
+      "https://baldwinrealtors.com/agents/gregg-costin",
+      "https://www.facebook.com/greggcostin/",
+      "https://www.instagram.com/greggcostinrealtor/",
+      "https://linktr.ee/Greggcostin",
+      "https://greggc.levinrinkerealty.com"
+    ]
+  },
+  "team": {
+    "description": "Pensacola real estate team led by Gregg Costin at Levin Rinke Realty: buyer and seller representation across Escambia, Santa Rosa and Okaloosa counties in Florida and Baldwin County in Alabama, including Gulf Shores and Orange Beach, with a military relocation, VA loan and PCS specialty for NAS Pensacola, Corry Station, NAS Whiting Field, Eglin AFB and Hurlburt Field.",
+    "areaServed": [
+      { "@type": "City", "name": "Pensacola" }, { "@type": "City", "name": "Gulf Breeze" }, { "@type": "City", "name": "Pace" }, { "@type": "City", "name": "Milton" },
+      { "@type": "City", "name": "Navarre" }, { "@type": "City", "name": "Cantonment" }, { "@type": "City", "name": "Perdido Key" }, { "@type": "City", "name": "Niceville" },
+      { "@type": "City", "name": "Fort Walton Beach" }, { "@type": "City", "name": "Crestview" }, { "@type": "City", "name": "Destin" },
+      { "@type": "City", "name": "Orange Beach" }, { "@type": "City", "name": "Gulf Shores" }, { "@type": "City", "name": "Foley" },
+      { "@type": "AdministrativeArea", "name": "Escambia County, FL" }, { "@type": "AdministrativeArea", "name": "Santa Rosa County, FL" },
+      { "@type": "AdministrativeArea", "name": "Okaloosa County, FL" }, { "@type": "AdministrativeArea", "name": "Baldwin County, AL" }
+    ],
+    "knowsAbout": [
+      "Pensacola real estate market", "Gulf Breeze real estate", "Pace and Milton real estate", "Navarre real estate",
+      "Perdido Key and Pensacola Beach waterfront homes", "Gulf Shores and Orange Beach, Alabama real estate", "Baldwin County, Alabama",
+      "New construction", "VA home loans", "PCS relocation", "Basic Allowance for Housing (BAH)", "Florida homestead exemption", "Florida home insurance and flood zones"
+    ],
+    "sameAs": [
+      "https://pensacolamilitaryhousing.com/",
+      "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd",
+      "https://www.zillow.com/profile/GreggCostin",
+      "https://www.homes.com/real-estate-agents/gregg-costin/864f0f3/",
+      "https://www.facebook.com/greggcostin/",
+      "https://www.instagram.com/greggcostinrealtor/",
+      "https://linktr.ee/Greggcostin",
+      "https://greggc.levinrinkerealty.com"
+    ]
+  },
+  "brokerage": {
+    "name": "Levin Rinke Realty",
+    "url": "https://www.levinrinkerealty.com/"
+  },
+  "services": {
+    "pmh": [
+      { "id": "service-pcs", "name": "PCS Relocation Planning", "serviceType": "Military relocation consultation", "description": "Neighborhood, school-zone, commute, and BAH-to-mortgage planning for military families PCSing to the Florida Panhandle, timed to the report-no-later-than date.", "audience": "Active-duty military families on PCS orders", "url": "https://pensacolamilitaryhousing.com/pcs-guide", "offerUrl": "https://pensacolamilitaryhousing.com/contact" },
+      { "id": "service-va", "name": "VA Loan Homebuyer Guidance", "serviceType": "Real estate buyer representation", "description": "Buyer representation for service members, veterans, and surviving spouses using a VA loan: entitlement, COE, funding fee, appraisal, and seller concessions.", "audience": "Military service members, veterans, and surviving spouses", "url": "https://pensacolamilitaryhousing.com/va-loan-guide", "offerUrl": "https://pensacolamilitaryhousing.com/contact" },
+      { "id": "service-sell", "name": "Military Home Seller Representation", "serviceType": "Real estate seller representation", "description": "Listing and sale of homes for military owners on outbound PCS orders, including rent-versus-sell analysis and remote closings.", "audience": "Military homeowners with outbound PCS orders", "url": "https://pensacolamilitaryhousing.com/sell", "offerUrl": "https://pensacolamilitaryhousing.com/whats-my-home-worth" }
+    ],
+    "gc": [
+      { "id": "service-buy", "name": "Buyer Representation", "serviceType": "Real estate buyer representation", "description": "Accredited Buyer's Representative (ABR) service for buyers in Pensacola, Gulf Breeze, Pace, Navarre, Perdido Key and coastal Alabama: live MLS search, offer strategy, inspections, and closing.", "url": "https://greggcostin.com/buy", "offerUrl": "https://greggcostin.com/contact" },
+      { "id": "service-sell", "name": "Listing and Seller Representation", "serviceType": "Real estate seller representation", "description": "Seller Representative Specialist (SRS) listing service: comp-based pricing, professional photo and drone marketing, dedicated property websites, and RENE-certified negotiation.", "url": "https://greggcostin.com/sell", "offerUrl": "https://greggcostin.com/sell" },
+      { "id": "service-alabama", "name": "Gulf Shores and Orange Beach, Alabama Representation", "serviceType": "Real estate buyer and seller representation", "description": "Alabama-licensed representation for buyers and sellers in Gulf Shores, Orange Beach and the rest of Baldwin County, from the same team that serves Perdido Key and Pensacola across the state line.", "url": "https://greggcostin.com/gulf-shores-orange-beach", "offerUrl": "https://greggcostin.com/contact" }
+    ]
+  }
+}

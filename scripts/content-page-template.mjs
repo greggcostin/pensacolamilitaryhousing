@@ -40,7 +40,7 @@ const SAME_AS = [
 const PERSON_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://pensacolamilitaryhousing.com/#person-gregg",
+  "@id": "https://greggcostin.com/#gregg",
   name: "Gregg Costin",
   alternateName: "Gregg Costin, Realtor",
   givenName: "Gregg",
@@ -98,7 +98,7 @@ function articleSchema(p) {
     "@type": "Article",
     headline: p.h1,
     description: p.description,
-    author: { "@id": "https://pensacolamilitaryhousing.com/#person-gregg" },
+    author: { "@id": "https://greggcostin.com/#gregg" },
     publisher: {
       "@type": "RealEstateAgent",
       name: "Gregg Costin, Realtor — The Costin Team",

@@ -61,12 +61,12 @@ for (const file of pages) {
   if (!h.includes(".pages.dev'")) f(file, "missing pages.dev canonical-redirect snippet");
 
   /* ---------- schema ---------- */
-  const blocks = [...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]);
+  const blocks = [...h.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map((m) => m[1]);
   const parsed = [];
   for (const b of blocks) {
     try { parsed.push(JSON.parse(b)); } catch (e) { f(file, `invalid JSON-LD: ${e.message.slice(0, 60)}`); }
   }
-  const types = parsed.map((p) => p["@type"]);
+  const types = parsed.flatMap((p) => (p["@graph"] ? p["@graph"].map((n) => n["@type"]) : [p["@type"]]));
   if (file === "index.html") {
     for (const t of ["WebSite", "RealEstateAgent", "Person", "FAQPage"]) if (!types.includes(t)) f(file, `index missing ${t} schema`);
   } else {

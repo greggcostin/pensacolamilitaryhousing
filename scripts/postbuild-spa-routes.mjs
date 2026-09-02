@@ -138,7 +138,7 @@ for (const r of ROUTE_META.filter((e) => e.shell)) {
   const webPage = JSON.stringify({
     "@context": "https://schema.org", "@type": "WebPage", "@id": `${canon}#webpage`,
     url: canon, name: r.title, description: r.description,
-    isPartOf: { "@id": `${SITE}/#website` }, about: { "@id": `${SITE}/#agent` }, inLanguage: "en-US",
+    isPartOf: { "@id": `${SITE}/#website` }, about: { "@id": "https://greggcostin.com/#team" }, inLanguage: "en-US",
   });
   const crumbs = JSON.stringify({
     "@context": "https://schema.org", "@type": "BreadcrumbList",

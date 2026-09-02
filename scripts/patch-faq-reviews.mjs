@@ -18,7 +18,7 @@ function standaloneAgent(areaName) {
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "@id": "https://pensacolamilitaryhousing.com/#agent",
+    "@id": "https://greggcostin.com/#team",
     name: "Gregg Costin, Realtor",
     url: "https://pensacolamilitaryhousing.com",
     telephone: "+1-850-266-5005",

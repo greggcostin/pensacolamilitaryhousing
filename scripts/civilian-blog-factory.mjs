@@ -14,6 +14,7 @@
 // Usage: node scripts/civilian-blog-factory.mjs [slug]   (no arg = build all)
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import { SITE_DIR, SITE, esc, buildPage, figureBand, breadcrumbs, faqPage, makeOgCard, gate } from "./civilian-page-lib.mjs";
+import { publisherRef } from "./entity-lib.mjs";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
@@ -39,7 +40,7 @@ function articleSchema(spec) {
     "@context": "https://schema.org", "@type": "Article",
     headline: spec.h1, description: spec.description,
     author: { "@id": `${SITE}/#gregg` },
-    publisher: { "@type": "RealEstateAgent", "@id": `${SITE}/#team`, name: "Gregg Costin - The Costin Team", url: SITE, telephone: "+1-850-266-5005", logo: { "@type": "ImageObject", url: "https://pensacolamilitaryhousing.com/images/logo-08-sm.png" } },
+    publisher: publisherRef(),
     datePublished: spec.datePublished, dateModified: spec.dateModified || spec.datePublished,
     image: SITE + spec.figure.src,
     mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}/blog/${spec.slug}` },

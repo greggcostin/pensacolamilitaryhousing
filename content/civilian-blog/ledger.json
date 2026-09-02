@@ -29,6 +29,19 @@
    "metrics": "no GSC/Bing data available in-session",
    "mathVerified": "Worked example recomputed: 350k deed stamps 3500x0.70=2450; 315k note stamps 3150x0.35=1102.50; intangible 315000x0.002=630; owner policy 575+1250=1825.",
    "published": "2026-08-31 deployed to greggcostin.com (Pages deploy ddef7164), verified 200 on post + image + OG card + sitemap + blog index; IndexNow ping 200"
+  },
+  {
+   "slug": "fed-rate-hike-what-it-means",
+   "datePublished": "2026-09-01",
+   "type": "current-events (OVERRIDE of queue head coastal-alabama-vs-panhandle; queue left intact)",
+   "words": 1693,
+   "image": "rate-hike-2026.jpg (Wikimedia, Chris Pruitt, CC BY-SA 3.0, Birmingham Branch, Federal Reserve Bank of Atlanta)",
+   "sources": "Freddie Mac PMMS Aug 27 2026 (30-yr 6.66%, prior 6.65%, yr-ago 6.56%; 15-yr 5.98%); BEA Personal Income and Outlays July 2026 (PCE +3.7% y/y, core +3.3%); Dallas Fed trimmed mean PCE 2.3%; FOMC July 28-29 hold at 3.50-3.75%, 5th straight, 9-3 vote (Hammack/Kashkari/Logan dissent for higher), minutes released Aug 19; Bloomberg Aug 31 (10-yr topped 4.75%, first since Jan 2025); Real Estate News Sep 1 (Barr speech quote; 30-yr daily 6.89% vs 6.77% wk-ago; FedWatch 68.2%); Forbes Aug 31 (FedWatch 66%); BLS CPI release schedule (Aug CPI Fri Sep 11 8:30am ET); FOMC meets Sep 15-16; Florida Realtors July 2026 (SF 23,870 closed +5.1%, median 425k +3.7%, 4.5 mo supply; condo 8,194 +11%, median 295k flat, 7.8 mo supply, 12th straight pending increase)",
+   "currentEventsCheck": "Sep 1 2026 sweep triggered an override: FedWatch hike odds swung 40% -> 57% -> 66-68% in a week, 10-yr Treasury at a 19-20 month high, Fed governor publicly floating a hike ahead of the Sep 15-16 FOMC. Directional reversal after two years of cut expectations, and time-sensitive before the meeting, so the rate-news-reaction template beat the evergreen queue head.",
+   "mathVerified": "Payment math recomputed on a 340k 30-yr loan (20% down on the 425k FL median): 6.75% = 2,205.23/mo, 7.00% = 2,262.03/mo, delta 56.79/mo and 682/yr. Quoted as 'about 57 dollars a month'.",
+   "metrics": "no GSC/Bing data available in-session",
+   "engineFix": "Fixed a real bug in scripts/civilian-blog-factory.mjs: the llms.txt section-replace built its RegExp from the unescaped literal '## Blog Posts (auto-maintained)', so the parentheses compiled as a capture group and the pattern never matched. llms.txt had been frozen at the first post since Aug 24. Escaped the source and used a function replacer; all 4 posts now listed.",
+   "status": "DRAFT staged, not deployed (engine-config autoPublish=false)"
   }
  ]
 }

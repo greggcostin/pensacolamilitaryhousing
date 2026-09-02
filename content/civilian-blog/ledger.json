@@ -41,7 +41,8 @@
    "mathVerified": "Payment math recomputed on a 340k 30-yr loan (20% down on the 425k FL median): 6.75% = 2,205.23/mo, 7.00% = 2,262.03/mo, delta 56.79/mo and 682/yr. Quoted as 'about 57 dollars a month'.",
    "metrics": "no GSC/Bing data available in-session",
    "engineFix": "Fixed a real bug in scripts/civilian-blog-factory.mjs: the llms.txt section-replace built its RegExp from the unescaped literal '## Blog Posts (auto-maintained)', so the parentheses compiled as a capture group and the pattern never matched. llms.txt had been frozen at the first post since Aug 24. Escaped the source and used a function replacer; all 4 posts now listed.",
-   "status": "DRAFT staged, not deployed (engine-config autoPublish=false)"
+   "published": "2026-09-01 approved by Gregg and deployed to greggcostin.com (Pages deploy 96187781); verified 200 on post + blog index + image + OG card + sitemap + llms.txt; IndexNow ping 200",
+   "reviewCountSync": "Same session: verified LIVE counts via browser (Google Maps 55 reviews all five-star, Zillow profile 27 team reviews) and corrected Zillow 25 -> 27 and the combined total 79/80 -> 82 across both sites. scripts/review-counts.mjs did not walk civilian-site and had no combined-total patterns, which is why greggcostin.com kept drifting; both gaps fixed in that script."
   }
  ]
 }

@@ -254,11 +254,11 @@
         "bahNoDep": 1860,
         "fullNoDep": 220000,
         "buyBelowNoDep": 200000,
-        "basePay": 0,
-        "lenderLow": 55000,
-        "lenderHigh": 65000,
-        "dualLow": 200000,
-        "dualHigh": 225000
+        "basePay": null,
+        "lenderLow": null,
+        "lenderHigh": null,
+        "dualLow": null,
+        "dualHigh": null
       },
       "O-2E": {
         "bah": 2268,
@@ -267,11 +267,11 @@
         "bahNoDep": 2022,
         "fullNoDep": 245000,
         "buyBelowNoDep": 215000,
-        "basePay": 0,
-        "lenderLow": 60000,
-        "lenderHigh": 65000,
-        "dualLow": 200000,
-        "dualHigh": 225000
+        "basePay": null,
+        "lenderLow": null,
+        "lenderHigh": null,
+        "dualLow": null,
+        "dualHigh": null
       },
       "O-3E": {
         "bah": 2340,
@@ -280,11 +280,11 @@
         "bahNoDep": 2226,
         "fullNoDep": 265000,
         "buyBelowNoDep": 240000,
-        "basePay": 0,
-        "lenderLow": 60000,
-        "lenderHigh": 70000,
-        "dualLow": 205000,
-        "dualHigh": 230000
+        "basePay": null,
+        "lenderLow": null,
+        "lenderHigh": null,
+        "dualLow": null,
+        "dualHigh": null
       },
       "O-1": {
         "bah": 1914,
@@ -371,11 +371,11 @@
         "bahNoDep": 2259,
         "fullNoDep": 270000,
         "buyBelowNoDep": 245000,
-        "basePay": 0,
-        "lenderLow": 80000,
-        "lenderHigh": 90000,
-        "dualLow": 225000,
-        "dualHigh": 250000
+        "basePay": null,
+        "lenderLow": null,
+        "lenderHigh": null,
+        "dualLow": null,
+        "dualHigh": null
       }
     },
     "FL023": {
@@ -568,11 +568,11 @@
         "bahNoDep": 2430,
         "fullNoDep": 290000,
         "buyBelowNoDep": 265000,
-        "basePay": 0,
-        "lenderLow": 95000,
-        "lenderHigh": 110000,
-        "dualLow": 240000,
-        "dualHigh": 265000
+        "basePay": null,
+        "lenderLow": null,
+        "lenderHigh": null,
+        "dualLow": null,
+        "dualHigh": null
       },
       "O-2E": {
         "bah": 3351,
@@ -581,11 +581,11 @@
         "bahNoDep": 2514,
         "fullNoDep": 300000,
         "buyBelowNoDep": 270000,
-        "basePay": 0,
-        "lenderLow": 125000,
-        "lenderHigh": 140000,
-        "dualLow": 265000,
-        "dualHigh": 295000
+        "basePay": null,
+        "lenderLow": null,
+        "lenderHigh": null,
+        "dualLow": null,
+        "dualHigh": null
       },
       "O-3E": {
         "bah": 3468,
@@ -594,11 +594,11 @@
         "bahNoDep": 2601,
         "fullNoDep": 310000,
         "buyBelowNoDep": 280000,
-        "basePay": 0,
-        "lenderLow": 130000,
-        "lenderHigh": 145000,
-        "dualLow": 270000,
-        "dualHigh": 300000
+        "basePay": null,
+        "lenderLow": null,
+        "lenderHigh": null,
+        "dualLow": null,
+        "dualHigh": null
       },
       "O-1": {
         "bah": 2451,
@@ -685,11 +685,11 @@
         "bahNoDep": 3453,
         "fullNoDep": 415000,
         "buyBelowNoDep": 370000,
-        "basePay": 0,
-        "lenderLow": 140000,
-        "lenderHigh": 160000,
-        "dualLow": 280000,
-        "dualHigh": 315000
+        "basePay": null,
+        "lenderLow": null,
+        "lenderHigh": null,
+        "dualLow": null,
+        "dualHigh": null
       }
     }
   }

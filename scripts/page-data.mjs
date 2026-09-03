@@ -576,7 +576,7 @@ for (const b of baseShortData) {
 <p>${b.base} on-base housing is privatized — managed by Balfour Beatty Communities, Lendlease, or similar private partners depending on the base. The model: you forfeit your full BAH in exchange for the housing. No additional cost, no savings — unless you consider what you would have spent off-base. The on-base home is maintained by the property management company including utilities (typically capped under a "Resident Utility Allocation" system).</p>
 
 <h2>${b.base} Wait List Reality</h2>
-<p>2026 wait times vary by rank and bedroom count. Peak-season PCS (May-August) sees 4-9 months for 3-bedroom enlisted units and 6-14 months for 4-bedroom enlisted. Off-season is faster. Officer waits are typically shorter — 2-6 months for 3-bedroom and 4-10 months for 4-bedroom. Flag officer quarters can be 12+ months depending on installation.</p>
+<p>Wait times are not published, and they move month to month with bedroom count, pay grade, and season: the May-August PCS surge is the crunch. The base housing office holds the only accurate, current list, so apply the day you have orders and ask them directly.</p>
 
 <h2>The BAH Forfeit Math</h2>
 <p>On-base housing feels "free" because no rent or mortgage bill shows up. But it is not free — you are trading your full BAH for it. Compare that BAH amount against what you could net off-base:</p>
@@ -614,7 +614,7 @@ for (const b of baseShortData) {
 <p>I run the specific rent-vs-buy-vs-on-base math for every ${b.base} client at no cost. Call or text (850) 266-5005 with your rank, dependent status, and RNLTD.</p>
 `,
     faqs: [
-      { q: `What's the wait for ${b.base} on-base housing?`, a: `Typical 2026 wait times: 3-bedroom enlisted 4-9 months, 4-bedroom enlisted 6-14 months, officer 3-bedroom 2-6 months, officer 4-bedroom 4-10 months. Peak-season (May-August) PCS surge extends waits; off-season is faster.` },
+      { q: `What's the wait for ${b.base} on-base housing?`, a: `Wait times are not published and move month to month with bedroom size, pay grade, and season. The May-August PCS surge runs longest. Apply the day you have orders and get the current estimate straight from the ${b.base} housing office.` },
       { q: `Do I save money on base at ${b.base}?`, a: `Not directly — you forfeit your full BAH for on-base housing. The "savings" come from utility coverage (capped under Resident Utility Allocation) and zero maintenance liability. Net financial comparison to off-base typically favors off-base for 3+ year assignments because of equity build and rental-after-PCS optionality.` },
       { q: `Can I keep BAH and live on base at ${b.base}?`, a: `No. DoD policy requires forfeit of BAH for on-base housing. The only exception is if on-base housing is unavailable and you are directed to live off-base, in which case you retain full BAH.` },
       { q: `Is on-base housing open to reserve families?`, a: `Active-duty only at most installations. Reserve families on drill weekends typically use off-base lodging or reserve-specific billeting where available.` },

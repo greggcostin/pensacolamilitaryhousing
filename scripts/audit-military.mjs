@@ -43,6 +43,11 @@ function links(html, rel) {
   return out;
 }
 const visibleText = (html) => html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+// 10b (mil-02-waitclaim): no unsourced on-base waiting-time duration. No housing partner (Balfour Beatty, Corvias, Lendlease)
+// publishes wait times, so a sentence pairing wait-list wording with a concrete week/month/year figure is fabricated.
+// Pipeline/course/tour lengths ("students are here 6-18 months") carry no wait noun and are not flagged.
+const WAIT_NOUN = /\b(?:wait ?lists?|waiting lists?|wait ?times?|waits|the wait)\b/i, WAIT_DUR = /\b\d+\s*(?:\+|\s*(?:to|-|–)\s*\d+)?\s*(?:week|month|year)s?\b/i, WAIT_CTX = /\b(?:on-base|on base|housing|Balfour|Lendlease|Corvias|bedroom|pay grade|ranks?|quarters|barracks)\b/i;
+const ldStrings = (html) => { const out = []; const walkV = (v) => { if (typeof v === "string") out.push(v); else if (Array.isArray(v)) v.forEach(walkV); else if (v && typeof v === "object") Object.values(v).forEach(walkV); }; for (const m of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) { try { walkV(JSON.parse(m[1])); } catch {} } return out; };
 
 // ---- sitemap + og inventory ----
 const sitemap = readFileSync("public/sitemap.xml", "utf8");
@@ -143,6 +148,7 @@ for (const file of files) {
   }
   // 10. unresolved template placeholders / merge junk
   for (const junk of ["{{", "__ENTITY_DROP__", "<<<<<<<", "TODO:", "lorem ipsum"]) if (html.includes(junk)) f(page, `contains "${junk}"`);
+  waitscan: for (const t of [visibleText(html), ...metas(html, "description"), ...metas(html, "og:description"), ...metas(html, "twitter:description"), ...ldStrings(html)]) for (const s of t.split(/(?<=[.!?;])\s+/)) if (WAIT_NOUN.test(s) && WAIT_DUR.test(s) && WAIT_CTX.test(s)) { f(page, `unsourced on-base wait duration (no housing partner publishes wait times): "${s.trim().slice(0, 110)}"`); break waitscan; }
 }
 
 // ---- cross-page checks ----

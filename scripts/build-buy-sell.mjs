@@ -4,6 +4,7 @@
 // Rebranded from bemoregroup.net/buy + /sell into Gregg Costin's military niche;
 // testimonials use Gregg's REAL reviews (not the source site's other agents').
 import { readFileSync, writeFileSync } from "node:fs";
+import { IDS, publisherRef } from "./entity-lib.mjs";
 
 const CAL = "https://calendly.com/greggcostin";
 const VAL = "https://levinrinkerealty.findbuyers.com/greggc@levinrinkerealty.com";
@@ -170,7 +171,7 @@ function build(cfg) {
 
   // Article JSON-LD
   h = h.replace(/<script type="application\/ld\+json">\s*\{"@context":"https:\/\/schema.org","@type":"Article"[\s\S]*?<\/script>/,
-    `<script type="application/ld+json">\n{"@context":"https://schema.org","@type":"Article","headline":"${cfg.articleHeadline}","description":"${cfg.articleDesc}","author":{"@id":"${base}/#person-gregg"},"publisher":{"@type":"RealEstateAgent","@id":"${base}/#agent","name":"Gregg Costin - The Costin Team","url":"${base}","telephone":"+1-850-266-5005","logo":{"@type":"ImageObject","url":"${base}/images/logo-08.png"}},"datePublished":"2026-06-14","dateModified":"2026-06-14","image":"${cfg.ogImage}","mainEntityOfPage":{"@type":"WebPage","@id":"${base}/${cfg.slug}"},"inLanguage":"en-US","keywords":"${cfg.keywords}"}\n</script>`);
+    `<script type="application/ld+json">\n{"@context":"https://schema.org","@type":"Article","headline":"${cfg.articleHeadline}","description":"${cfg.articleDesc}","author":{"@id":"${IDS.person}"},"publisher":${JSON.stringify(publisherRef())},"datePublished":"2026-06-14","dateModified":"2026-06-14","image":"${cfg.ogImage}","mainEntityOfPage":{"@type":"WebPage","@id":"${base}/${cfg.slug}"},"inLanguage":"en-US","keywords":"${cfg.keywords}"}\n</script>`);
 
   // FAQPage JSON-LD
   const faqJson = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: cfg.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };

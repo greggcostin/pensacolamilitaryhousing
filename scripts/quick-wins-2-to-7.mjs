@@ -137,7 +137,7 @@ const BASE_EXPANSIONS = {
     ],
     faqs: [
       { q: "Does NAS Whiting Field have good on-base housing?", a: "Limited. Whiting's on-base inventory is smaller than NAS Pensacola's, heavily weighted toward instructor pilot families. Student aviator accompanied quarters fill fast during peak season." },
-      { q: "What's the wait for Whiting Field on-base housing?", a: "Typical 2026 wait: 2-6 months officer, 4-10 months enlisted. Shorter than NAS Pensacola because of lower total inventory and more predictable student rotation." },
+      { q: "What's the wait for Whiting Field on-base housing?", a: "Wait times are not published and shift with student-rotation timing, bedroom size, and season. The Whiting Field housing office quote is the only current number. Apply as soon as you have orders, and line up a Pace or Milton backup in parallel if you are landing in the May-August surge." },
       { q: "Is Pace or Milton better for a Whiting family?", a: "Pace if you prioritize schools and new construction. Milton if you prioritize short commute (5-10 min) and smaller-town feel. Most of my Whiting clients pick Pace for 3+ year instructor tours, Milton for 1-2 year student pipelines." },
       { q: "Can Coast Guard helo students live on-base at Whiting?", a: "Yes. USCG students in the TH-73A rotary pipeline at HT-8/18/28 have access to Whiting family housing alongside Navy and Marine Corps students. Allocation is by bedroom need, not by service." },
     ],
@@ -164,7 +164,7 @@ const BASE_EXPANSIONS = {
       "Destin if you're in at O-3+ and want beach lifestyle. Premium pricing; short commute to Hurlburt but inventory is thinner in the $500-$800K band.",
     ],
     faqs: [
-      { q: "Does Hurlburt Field have good on-base housing?", a: "Yes — one of the better on-base setups in the Panhandle. AFSOC family-oriented community, on-base CDC, commissary, BX. Wait times vary but generally 2-6 months for officers, 4-10 for enlisted." },
+      { q: "Does Hurlburt Field have good on-base housing?", a: "Yes — one of the better on-base setups in the Panhandle. AFSOC family-oriented community, on-base CDC, commissary, BX. Wait times move with bedroom size, pay grade, and season and are not published. The housing office holds the only current list, so apply as soon as you have orders." },
       { q: "How does Navarre commute to Hurlburt work?", a: "20-30 minutes via US-98, light traffic outside of peak summer tourist season. Popular for dual-career spouses commuting to NAS Pensacola and AFSOC families wanting Santa Rosa schools." },
       { q: "Is Hurlburt Field good for sending kids to Niceville schools?", a: "Workable but 25-35 min commute. Most Hurlburt families prioritizing Niceville schools live in Bluewater Bay or Niceville proper and accept the drive." },
       { q: "Can 7th Special Forces Group families use Hurlburt on-base?", a: "7th SFG is at Eglin (not Hurlburt) but inter-service housing agreements sometimes allow cross-assignment. Most 7 SFG families live in Crestview, Baker, or Laurel Hill for acreage and lower cost." },
@@ -196,7 +196,7 @@ const BASE_EXPANSIONS = {
     ],
     faqs: [
       { q: "How many gates does Eglin AFB have?", a: "Multiple — Nomad gate (east, Valparaiso side), West gate (Fort Walton Beach side), Duke gate (north, for 919 SOW reservists at Duke Field), and restricted-access gates for the test ranges. Your workplace determines your optimal neighborhood." },
-      { q: "What's the wait for Eglin on-base housing?", a: "Typical 2026 waits: 3-bedroom enlisted 4-10 months, 4-bedroom enlisted 6-14 months, officer 3-bedroom 2-6 months, officer 4-bedroom 4-10 months. The F-35 training community has priority flow during peak PCS season." },
+      { q: "What's the wait for Eglin on-base housing?", a: "Wait times are not published and move month to month with bedroom size, pay grade, and season. The May-August PCS surge runs longest. Apply the day you have orders and get the current estimate straight from the Eglin housing office." },
       { q: "Is the Niceville school cluster really better than Destin?", a: "For sustained academic performance and IB depth, yes. Niceville High consistently ranks in Florida's top public high schools. Destin has excellent elementary / middle but Destin-zoned high students attend Fort Walton Beach High (B), which is a notable step down." },
       { q: "Are there on-base housing options specifically for 7th SFG?", a: "Yes — specific Army SOF housing is allocated on Eglin for 7th Special Forces Group Green Berets and support personnel. Wait times and allocation are separate from Air Force family housing." },
     ],

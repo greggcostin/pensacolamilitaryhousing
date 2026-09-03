@@ -16,7 +16,7 @@
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { placeQuickAnswer } from "./quick-answer-lib.mjs";
+import { placeQuickAnswer } from "./quick-answer-lib.mjs"; import { IDS } from "./entity-lib.mjs";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
 const TEMPLATE_PATH = ROOT + "public/first-time-military-homebuyer.html";
@@ -255,7 +255,7 @@ function rebuildIndex(specs) {
 
   // head: replace every BlogPosting block with regenerated ones pointing at real URLs
   const postLd = sorted.map(s =>
-    `<script type="application/ld+json">\n{"@context":"https://schema.org","@type":"BlogPosting","headline":${jesc(s.title)},"description":${jesc(s.description)},"url":"${SITE}/blog/${s.slug}","datePublished":"${s.datePublished}","dateModified":"${s.dateModified}","author":{"@id":"${SITE}/#person-gregg"},"mainEntityOfPage":"${SITE}/blog/${s.slug}"}\n</script>`).join("\n");
+    `<script type="application/ld+json">\n{"@context":"https://schema.org","@type":"BlogPosting","headline":${jesc(s.title)},"description":${jesc(s.description)},"url":"${SITE}/blog/${s.slug}","datePublished":"${s.datePublished}","dateModified":"${s.dateModified}","author":{"@id":"${IDS.person}"},"mainEntityOfPage":"${SITE}/blog/${s.slug}"}\n</script>`).join("\n");
   const ldBlocks = html.match(/<script type="application\/ld\+json">\s*\{"@context":"https:\/\/schema\.org","@type":"BlogPosting"[\s\S]*?<\/script>/g) || [];
   if (ldBlocks.length) {
     html = html.replace(ldBlocks[0], () => postLd);

@@ -9,8 +9,9 @@
 https://greggcostin.pages.dev/*
   X-Robots-Tag: noindex
 
-# Photos and OG cards: stable filenames, 30-day cache (site convention; rename to bust)
+# Photos: stable filenames, 30-day cache (site convention; rename to bust)
 /images/*
   Cache-Control: public, max-age=2592000
+# OG cards: short TTL so a regenerated card is not invisible for a month (og-01)
 /og/*
-  Cache-Control: public, max-age=2592000
+  Cache-Control: public, max-age=86400

@@ -359,7 +359,7 @@ function get(n){var el=form.querySelector('[name="'+n+'"]');return el?el.value:'
 form.addEventListener('submit',function(e){
 e.preventDefault();errBox.style.display='none';
 var btn=form.querySelector('button[type=submit]');
-var data={name:get('name').trim(),email:get('email').trim(),phone:get('phone').trim(),inquiryType:get('inquiryType'),message:get('message').trim()||('Inquiry from '+location.pathname+' (no message text)'),_gotcha:get('website')};try{var __a=JSON.parse(localStorage.getItem('costin_attr')||'{}');for(var __k in __a){if(!(__k in data))data[__k]=__a[__k];}var __m=document.cookie.match(/(?:^|; )_ga=GAd.d.(d+.d+)/);if(__m)data.ga_client_id=__m[1];data.page_path=location.pathname;data.sourceUrl=location.href;}catch(e){}
+var data={name:get('name').trim(),email:get('email').trim(),phone:get('phone').trim(),inquiryType:get('inquiryType'),message:get('message').trim()||('Inquiry from '+location.pathname+' (no message text)'),_gotcha:get('website')};try{var __a=JSON.parse(localStorage.getItem('costin_attr')||'{}');for(var __k in __a){if(!(__k in data))data[__k]=__a[__k];}var __m=document.cookie.match(/(?:^|; )_ga=GA\d\.\d\.(\d+\.\d+)/);if(__m)data.ga_client_id=__m[1];data.page_path=location.pathname;data.sourceUrl=location.href;}catch(e){}
 if(!data.name||!data.email){errBox.textContent='\u26a0 Name and email are required.';errBox.style.display='block';return;}
 btn.disabled=true;btn.textContent='Sending...';
 fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
@@ -433,7 +433,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 form.addEventListener('submit',function(e){
 e.preventDefault();errBox.style.display='none';
 var btn=form.querySelector('.isubmit');
-var data={name:get('name').trim(),email:get('email').trim(),phone:get('phone').trim(),inquiryType:get('inquiryType'),message:get('message').trim()||('Inquiry from '+location.pathname+' (no message text)'),_gotcha:get('website')};try{var __a=JSON.parse(localStorage.getItem('costin_attr')||'{}');for(var __k in __a){if(!(__k in data))data[__k]=__a[__k];}var __m=document.cookie.match(/(?:^|; )_ga=GAd.d.(d+.d+)/);if(__m)data.ga_client_id=__m[1];data.page_path=location.pathname;data.sourceUrl=location.href;}catch(e){}
+var data={name:get('name').trim(),email:get('email').trim(),phone:get('phone').trim(),inquiryType:get('inquiryType'),message:get('message').trim()||('Inquiry from '+location.pathname+' (no message text)'),_gotcha:get('website')};try{var __a=JSON.parse(localStorage.getItem('costin_attr')||'{}');for(var __k in __a){if(!(__k in data))data[__k]=__a[__k];}var __m=document.cookie.match(/(?:^|; )_ga=GA\d\.\d\.(\d+\.\d+)/);if(__m)data.ga_client_id=__m[1];data.page_path=location.pathname;data.sourceUrl=location.href;}catch(e){}
 if(!data.name||!data.email){errBox.textContent='⚠ Name and email are required.';errBox.style.display='block';return;}
 btn.disabled=true;btn.textContent='Sending...';
 fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})

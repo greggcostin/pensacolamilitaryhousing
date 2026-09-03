@@ -28,9 +28,10 @@
 /images/*
   Cache-Control: public, max-age=2592000
 
-# OG cards: same stable-filename tradeoff; scrapers refetch rarely anyway.
+# OG cards: stable filenames, so a regenerated card reuses its URL. Keep the
+# edge TTL short or a fixed card stays invisible for a month (audit og-01).
 /og/*
-  Cache-Control: public, max-age=2592000
+  Cache-Control: public, max-age=86400
 
 # De-index the *.pages.dev twin (audit 2026-09-02, idx-02): the canonical tag and
 # the JS redirect do not stop crawlers; the civilian site already does this.

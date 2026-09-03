@@ -64,6 +64,9 @@ const BASE = { "E-4": "$2,850", "E-5": "$3,150", "E-6": "$3,530", "E-7": "$4,900
 const tableRows = (mha) => ["E-4", "E-5", "E-6", "E-7", "E-8", "O-1", "O-2", "O-3", "O-4", "O-5"].map((g) => row(g === "O-1" && mha === "FL023" ? "O-1/W-1" : g, G(mha, g), BASE[g])).join("\n");
 const delta = (g) => { const a = G("FL064", g), b = G("FL023", g); const lo = b.buyBelow - a.buyBelow, hi = b.full - a.full; return `<tr><td>${g}</td><td>${usd(a.bah)}</td><td>${usd(b.bah)}</td><td>+${usd(b.bah - a.bah)}</td><td>${lo === hi ? `+${usd(hi)}` : `+${usd(Math.min(lo, hi))} to +${usd(Math.max(lo, hi))}`}</td></tr>`; };
 const HEAD = `<thead><tr><th>Rank (w/dep)</th><th>BAH</th><th>Base Pay</th><th>Target PITI @ 100% BAH</th><th>BAH-neutral price (90% to 100% of BAH)</th></tr></thead>`;
+const RANK = { "E-1 to E-4": E4, "E-5": E5, "E-6": E6, "E-7": E7, "E-8": G("FL064", "E-8"), "E-9": G("FL064", "E-9"), "O-1": O1, "O-2": G("FL064", "O-2"), "O-3": O3, "O-4": O4, "O-5": O5, "O-6": O6 };
+const NODEP = { lo: Math.floor(Math.min(...Object.values(RANK).map((g) => g.bah - g.bahNoDep)) / 5) * 5, hi: Math.ceil(Math.max(...Object.values(RANK).map((g) => g.bah - g.bahNoDep)) / 5) * 5 };
+const RATEWEEK = MODEL.rateSource.replace(/^.*fixed average, /, "");
 
 const PATCHES = [
   ["public/bah-to-mortgage-guide.html", [
@@ -126,6 +129,12 @@ const PATCHES = [
   ]],
   ["public/blog/best-pensacola-neighborhoods-by-rank-bah.html", [
     [/Multiply your monthly BAH by roughly 120 to 125\./, `Multiply your monthly BAH by roughly ${OUT.multiplier.buyBelow} to ${OUT.multiplier.full}.`],
+    [/(<tr><td>(E-1 to E-4|E-[5-9]|O-[1-6])<\/td><td>)\$[\d,]+(<\/td><td>)~?\$[\d,]+K?-\$[\d,]+K?(<\/td>)/,
+      (m, p1, g, p3, p4) => `${p1}${usd(RANK[g].bah)}${p3}~${bandK(RANK[g])}${p4}`],
+    [/<th>BAH-neutral price<\/th>/, `<th>BAH-neutral price (90-100% of BAH)</th>`],
+    [/Without dependents, subtract roughly \$[\d,]+ to \$[\d,]+ a month depending on grade/, `Without dependents, subtract roughly ${usd(NODEP.lo)} to ${usd(NODEP.hi)} a month depending on grade`],
+    [/6\.69%, week of August 6, 2026/, `${MODEL.rate}%, ${RATEWEEK}`],
+    [/the 6\.69% thirty-year average for the week of August 6, 2026/, `the ${MODEL.rate}% thirty-year average for the ${RATEWEEK}`],
     [/which supports roughly \$215,000 to \$225,000 at full PITI/, `which supports roughly ${usd(E4.buyBelow)} to ${usd(E4.full)} (buy-below target to full-PITI ceiling)`],
     [/An E-5 at \$1,863 clears about \$225,000 to \$235,000, which is only \$69 a month and roughly \$10,000 of price above an E-4\./, `An E-5 at $1,863 clears about ${usd(E5.buyBelow)} to ${usd(E5.full)}, which is only $69 a month and roughly ${usd(E5.full - E4.full)} of price above an E-4.`],
     [/An E-6 at \$2,235 clears about \$270,000 to \$280,000, which changes everything\./, `An E-6 at $2,235 clears about ${usd(E6.buyBelow)} to ${usd(E6.full)}, which changes everything.`],
@@ -139,6 +148,8 @@ const PATCHES = [
   ]],
 ];
 
+// the built page is regenerated from this fragment by the blog factory, so it takes the same rules
+PATCHES.push(["content/blog/best-pensacola-neighborhoods-by-rank-bah.fragment.html", PATCHES.find((p) => p[0].endsWith("by-rank-bah.html"))[1]]);
 let changed = 0, stale = [];
 for (const [file, rules] of PATCHES) {
   let h = readFileSync(file, "utf8"); const before = h;
@@ -149,7 +160,7 @@ for (const [file, rules] of PATCHES) {
   }
   if (h !== before) { changed++; if (!CHECK) writeFileSync(file, h); }
   // stale scan: any of the retired bands still present
-  for (const s of ["$250,000-$285,000", "$250,000 - $285,000", "$330,000 - $385,000", "+$80,000-$100,000", "$280,000-$315,000", "$275K-$320K", "$275K-$310K", "$275K–$310K", "150-170 for a rough", "$225,000 to $235,000", "$215,000 to $225,000", "$270,000 to $280,000", "$510,000-$575,000</strong>. The rank", "roughly 120 times", "by roughly 120 for", "6.5% 30-year rate, modest"]) if (h.includes(s)) stale.push(`${file}: ${s}`);
+  for (const s of ["$250,000-$285,000", "$250,000 - $285,000", "$330,000 - $385,000", "+$80,000-$100,000", "$280,000-$315,000", "$275K-$320K", "$275K-$310K", "$275K–$310K", "150-170 for a rough", "$225,000 to $235,000", "$215,000 to $225,000", "$270,000 to $280,000", "$510,000-$575,000</strong>. The rank", "roughly 120 times", "by roughly 120 for", "6.5% 30-year rate, modest", "~$215K-$225K", "~$225K-$235K", "~$270K-$280K", "~$270K-$282K", "~$272K-$283K", "~$277K-$288K", "~$230K-$240K", "~$268K-$279K", "~$273K-$284K", "~$295K-$307K", "~$313K-$326K", "~$316K-$329K", "6.69%, week of August 6, 2026", "6.69% thirty-year average", "$175 to $390 a month", "<th>BAH-neutral price</th>"]) if (h.includes(s)) stale.push(`${file}: ${s}`);
 }
 if (stale.length) { console.log(stale.join("\n")); console.log(`AFFORDABILITY: ${stale.length} stale bands`); process.exit(1); }
 console.log(`affordability: ${changed} pages ${CHECK ? "would change" : "patched"}; no stale bands remain`);

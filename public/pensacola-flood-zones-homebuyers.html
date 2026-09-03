@@ -262,7 +262,10 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 @media (max-width: 900px){
   .nav-toggle{display:none!important}
   .site-drawer{display:block!important;position:static!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;background:none!important;padding:0!important;overflow:visible!important;z-index:auto!important}
-  .banner-row{grid-template-columns:auto 1fr auto!important;padding:6px 12px 0!important;gap:10px!important;min-height:0!important;align-items:center}
+  .main-banner{position:sticky!important;top:0!important;z-index:1000}
+  /* even spacing around the logos and the phone rather than one item pinned to each edge */
+  .banner-row{display:flex!important;flex-wrap:nowrap!important;justify-content:space-evenly!important;align-items:center;padding:6px 10px 0!important;gap:8px!important;min-height:0!important}
+  .banner-row>*{flex:0 0 auto}
   .banner-lrr{display:block!important;justify-self:start}
   .banner-logo{justify-self:center}
   .banner-lrr img,.banner-logo img{height:38px!important}
@@ -306,7 +309,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 <!-- end FollowUpBoss Widget Tracker -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Look Up a Pensacola Property's Flood Zone Before You Offer","description":"Step-by-step way for a homebuyer to check any Pensacola or Escambia County property's FEMA flood zone before making an offer.","totalTime":"PT2M","step":[{"@type":"HowToStep","position":1,"name":"Start with the local Forerunner tool","text":"For Escambia County properties use escambiacountyfl.withforerunner.com; for City of Pensacola properties use pensacolafl.withforerunner.com. Type the address and read the flood zone designation."},{"@type":"HowToStep","position":2,"name":"Confirm on FEMA's Map Service Center","text":"Search by address, place, or coordinates at msc.fema.gov, the official public source for flood hazard information, and view the current effective flood map."},{"@type":"HowToStep","position":3,"name":"Check the map's effective date","text":"For Pensacola and Escambia County, use the map panels effective August 19, 2025, not a cached older map from a third-party real estate site."},{"@type":"HowToStep","position":4,"name":"Ask for an elevation certificate","text":"Ask the listing agent for an elevation certificate and the seller's current flood policy details, if any exist. Both directly affect what you will pay."},{"@type":"HowToStep","position":5,"name":"Get a real flood insurance quote","text":"Get a flood insurance quote during your inspection window. The zone tells you whether coverage is required; only a quote tells you what it costs for that structure."},{"@type":"HowToStep","position":6,"name":"Ask for help if you are unsure","text":"Escambia County directs flood questions to FEMA's Map Assistance Center at 877-336-2627 and county Building Services at 850-595-3550."}]}</script>
 <style id="ddfix-css">@media(max-width:900px){
-.main-banner{position:relative}
+.main-banner{position:sticky;top:0;z-index:1000}
 .main-banner .dropdown{position:static}
 .main-banner .dropdown-menu{left:12px;right:12px;top:100%;min-width:0!important;max-height:55vh!important;overflow-y:auto}
 }</style>

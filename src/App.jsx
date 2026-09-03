@@ -637,7 +637,7 @@ const Services = ({ go }) => (
 
 const MilitaryStory = ({ go }) => (
   <Section bg={C.panel}>
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: 64, alignItems: "center" }}>
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(320px,100%),1fr))", gap: 64, alignItems: "center" }}>
       <div>
         <Eyebrow>A Full USAF Career: Enlisted to Officer</Eyebrow>
         <H2>I didn't just study the military lifestyle. I lived it.</H2>
@@ -669,7 +669,7 @@ const MilitaryStory = ({ go }) => (
 
 const SocialProof = ({ go }) => (
   <Section>
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: 64, alignItems: "center" }}>
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(320px,100%),1fr))", gap: 64, alignItems: "center" }}>
       <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "center" }}>
         <Pic loading="eager" sizes={PIC_SIZES.closing} src={IMG.closing4196} alt="Gregg Costin with happy clients at closing: Home Sweet Home" style={{ width: "65%", aspectRatio: "1600 / 1220", objectFit: "cover", display: "block" }} />
         <Pic loading="eager" sizes={PIC_SIZES.closing} src={IMG.closing4197} alt="Another great closing with Gregg Costin and clients" style={{ width: "65%", aspectRatio: "1600 / 1220", objectFit: "cover", display: "block" }} />
@@ -733,7 +733,7 @@ const BasesAndCommunitiesSection = () => {
         <p style={{ color: C.muted, fontSize: 16, lineHeight: 1.7, marginBottom: 40, maxWidth: 780, fontWeight: 300 }}>Full PCS and housing guides for every installation and every neighborhood across the Pensacola and Fort Walton Beach Military Housing Areas. Click any card for the complete built-out guide.</p>
 
         <h3 style={colTitleStyle}>Bases</h3>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 14, marginBottom: 48 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(260px,100%),1fr))", gap: 14, marginBottom: 48 }}>
           {BASES_LINKS.map(b => (
             <a key={b.href} href={b.href} style={cardStyle} onMouseEnter={cardHover} onMouseLeave={cardLeave}>
               <div style={{ fontFamily: SF, color: "#fff", fontSize: 18, fontWeight: 500, marginBottom: 8 }}>{b.label}</div>
@@ -744,7 +744,7 @@ const BasesAndCommunitiesSection = () => {
         </div>
 
         <h3 style={colTitleStyle}>Communities</h3>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 14 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(260px,100%),1fr))", gap: 14 }}>
           {COMMUNITY_LINKS.map(c => (
             <a key={c.href} href={c.href} style={cardStyle} onMouseEnter={cardHover} onMouseLeave={cardLeave}>
               <div style={{ fontFamily: SF, color: "#fff", fontSize: 18, fontWeight: 500, marginBottom: 8 }}>{c.label}</div>
@@ -891,7 +891,7 @@ const AboutPage = ({ go }) => (
 
     <Section bg={C.panel}>
       <H2 align="center">Credentials & Recognition</H2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 24, marginTop: 40 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(260px,100%),1fr))", gap: 24, marginTop: 40 }}>
         {[
           { title: "Military Relocation Professional (MRP®)", desc: "NAR certification for agents specializing in serving current and former military service members." },
           { title: "Florida Military Specialist (FMS®)", desc: "Florida Realtors (Florida Association of Realtors) certification for agents trained on Florida-specific military and veteran housing, VA loan, and PCS-relocation issues." },
@@ -1745,7 +1745,7 @@ const LoanComparison = () => {
           {LoanForm({ loan: b, setLoan: setB, color: "#6B7280" })}
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 16, marginBottom: 24 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(280px,100%),1fr))", gap: 16, marginBottom: 24 }}>
           {ResultSummary({ r: rA, loan: a, color: C.gold })}
           {ResultSummary({ r: rB, loan: b, color: "#6B7280" })}
         </div>
@@ -1971,7 +1971,7 @@ const LoanCalculator = () => {
     <PageWrapper>
       <PageHero title="Loan Calculator: VA, FHA, and Conventional" subtitle={<>Prefilled with 2026 Pensacola-area market defaults. Every input is editable.<br />Estimates only*. Confirm with a VA-literate lender before offer.</>} breadcrumb="Home > Loan Calculator" />
       <Content>
-        <div onChange={markCalcUsed} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 32 }}>
+        <div onChange={markCalcUsed} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(320px, 100%), 1fr))", gap: 32 }}>
           <div>
             <div style={{ display: "flex", gap: 4, marginBottom: 20, background: C.elevated, padding: 4, borderRadius: 8 }}>
               {[{id:"va",label:"VA Loan"},{id:"fha",label:"FHA"},{id:"conv",label:"Conventional"}].map(t => (
@@ -2259,7 +2259,7 @@ const ContactPage = () => {
           </p>
           <CalendlyEmbed />
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 32 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(280px,100%),1fr))", gap: 32 }}>
           <div style={{ maxWidth: 420, margin: "0 auto", width: "100%" }}>
             <h3 style={{ fontSize: 18, color: C.gold, marginTop: 32, marginBottom: 12, fontWeight: 700, fontFamily: SF, textAlign: "center" }}>Direct Contact</h3>
             <div style={{ textAlign: "center", marginBottom: 24 }}>
@@ -2489,10 +2489,11 @@ export default function App() {
         /* ── mobile header: 57px bar + hamburger drawer (<=900px), audit 2026-09-02 ── */
         .nav-toggle { display: none; }
         @media (max-width: 900px) {
-          .spa-nav > div:first-of-type { grid-template-columns: auto 1fr auto !important; padding: 6px 12px !important; gap: 10px !important; min-height: 57px; align-items: center; }
+          .spa-nav > div:first-of-type { display: flex !important; flex-wrap: nowrap !important; justify-content: space-evenly !important; align-items: center; padding: 6px 10px !important; gap: 8px !important; min-height: 57px; }
+          .spa-nav > div:first-of-type > * { flex: 0 1 auto; min-width: 0; }
           .spa-nav > div:first-of-type > div:nth-child(1) { display: none !important; }
           .spa-nav > div:first-of-type > div:nth-child(2) { justify-self: start !important; }
-          .spa-nav img { height: 40px !important; }
+          .spa-nav img { height: 40px !important; width: auto !important; max-width: 100% !important; }
           .spa-nav > div:first-of-type > div:nth-child(3) { flex-direction: row !important; justify-self: end !important; gap: 0 !important; }
           .spa-nav a[href^="tel:"] { display: inline-flex !important; align-items: center; min-height: 44px; padding: 0 8px; font-size: 15px !important; white-space: nowrap; }
           .spa-nav a[href^="mailto:"] { display: none !important; }

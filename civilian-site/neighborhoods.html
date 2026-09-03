@@ -191,7 +191,10 @@ figcaption a{color:var(--muted);text-decoration:underline}
 @media (max-width: 900px){
   .nav-toggle{display:none!important}
   .site-drawer{display:block!important;position:static!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;background:none!important;padding:0!important;overflow:visible!important;z-index:auto!important}
-  .banner-row{grid-template-columns:auto 1fr auto!important;padding:6px 12px 0!important;gap:10px!important;min-height:0!important;align-items:center}
+  .main-banner{position:sticky!important;top:0!important;z-index:1000}
+  /* even spacing around the logos and the phone rather than one item pinned to each edge */
+  .banner-row{display:flex!important;flex-wrap:nowrap!important;justify-content:space-evenly!important;align-items:center;padding:6px 10px 0!important;gap:8px!important;min-height:0!important}
+  .banner-row>*{flex:0 0 auto}
   .banner-lrr{display:block!important;justify-self:start}
   .banner-logo{justify-self:center}
   .banner-lrr img,.banner-logo img{height:38px!important}
@@ -302,7 +305,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source type="image/avif" srcset="/images/pace-milton.avif 1600w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/pace-milton.jpg" srcset="/images/pace-milton-480.jpg 480w, /images/pace-milton-768.jpg 768w, /images/pace-milton-1200.jpg 1200w, /images/pace-milton.jpg 1600w" sizes="(max-width: 940px) 92vw, 900px" width="1600" height="1200" alt="Boardwalk through the pines at Blackwater River State Park near Milton" loading="lazy" decoding="async"></picture></div>
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/pace-milton.avif 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><img src="/images/pace-milton.jpg" srcset="/images/pace-milton-480.jpg 480w, /images/pace-milton-768.jpg 768w, /images/pace-milton-1200.jpg 1200w, /images/pace-milton.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px" width="1600" height="1200" alt="Boardwalk through the pines at Blackwater River State Park near Milton" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: <a href="https://commons.wikimedia.org/wiki/File%3AFL%20Blackwater%20River%20SP%20bdwlk02.jpg" rel="noopener nofollow" target="_blank">Ebyabe, CC BY-SA 3.0</a></div>
 <div class="nb-for">Space Per Dollar &middot; New Construction</div>
@@ -372,7 +375,26 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </div>
 </div>
 <div class="nb-card">
-<div class="nb-photo"><picture><source type="image/avif" srcset="/images/gulf-shores-480.avif 480w, /images/gulf-shores-768.avif 768w, /images/gulf-shores-1200.avif 1200w, /images/gulf-shores.avif 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><source type="image/webp" srcset="/images/gulf-shores-480.webp 480w, /images/gulf-shores-768.webp 768w, /images/gulf-shores-1200.webp 1200w, /images/gulf-shores.webp 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px"><img src="/images/gulf-shores.jpg" srcset="/images/gulf-shores-480.jpg 480w, /images/gulf-shores-768.jpg 768w, /images/gulf-shores-1200.jpg 1200w, /images/gulf-shores.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px" width="1600" height="1067" alt="Stilted beach cottages among palms in Gulf Shores, Alabama" loading="lazy" decoding="async"></picture></div>
+<div class="nb-photo"><img src="/images/destin.jpg" srcset="/images/destin-480.jpg 480w, /images/destin-768.jpg 768w, /images/destin-1200.jpg 1200w, /images/destin.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px" width="1600" height="836" alt="Boats and the HarborWalk along Destin Harbor with the Gulf beyond" loading="lazy" decoding="async"></div>
+<div class="nb-body">
+<div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: Destin Vacation Boat Rentals, CC BY 2.0</div>
+<div class="nb-for">Gulf Front &middot; Resort Market &middot; Rentals</div>
+<h3>Destin</h3>
+<p>The resort end of Okaloosa County: emerald water, a working charter harbour, and a condo and short-term rental market with few equals in the Southeast. Prices and insurance both run above Fort Walton Beach, and the summer traffic on US-98 is real.</p>
+<a class="nb-link" href="https://pensacolamilitaryhousing.com/communities/destin">Destin deep guide &rarr;</a>
+</div>
+</div>
+<div class="nb-card">
+<div class="nb-photo"><img src="/images/niceville.jpg" srcset="/images/niceville.jpg 1600w" sizes="(max-width: 940px) 92vw, 900px" width="1600" height="900" alt="Golden-hour light over Boggy Bayou with live oaks along the Niceville shoreline" loading="lazy" decoding="async"></div>
+<div class="nb-body">
+<div class="nb-for">Bayou Living &middot; Schools &middot; Bluewater Bay</div>
+<h3>Niceville &amp; Bluewater Bay</h3>
+<p>Quiet bayou-front living at the top of Choctawhatchee Bay, anchored by the master-planned Bluewater Bay community with its own golf, marina and clubhouse. Niceville High is among the strongest school zones in Okaloosa County, and the housing stock is newer than most of the coast.</p>
+<a class="nb-link" href="https://pensacolamilitaryhousing.com/communities/niceville">Niceville deep guide &rarr;</a>
+</div>
+</div>
+<div class="nb-card">
+<div class="nb-photo"><picture><source type="image/avif" srcset="/images/gulf-shores-480.avif 480w, /images/gulf-shores-768.avif 768w, /images/gulf-shores-1200.avif 1200w, /images/gulf-shores.avif 1600w" sizes="(max-width: 940px) 92vw, 900px"><source type="image/webp" srcset="/images/gulf-shores-480.webp 480w, /images/gulf-shores-768.webp 768w, /images/gulf-shores-1200.webp 1200w, /images/gulf-shores.webp 1600w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/gulf-shores.jpg" srcset="/images/gulf-shores-480.jpg 480w, /images/gulf-shores-768.jpg 768w, /images/gulf-shores-1200.jpg 1200w, /images/gulf-shores.jpg 1600w" sizes="(max-width: 940px) 92vw, 900px" width="1600" height="1067" alt="Stilted beach cottages among palms in Gulf Shores, Alabama" loading="lazy" decoding="async"></picture></div>
 <div class="nb-body">
 <div class="nb-credit" style="color:var(--mutedD);font-size:10.5px;font-style:italic">Photo: Carol M. Highsmith, public domain</div>
 <div class="nb-for">Beach Town &middot; Cottages &middot; Alabama Coast</div>
@@ -394,7 +416,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <li><strong>Across the Alabama line:</strong> Orange Beach for boaters and condo living, Gulf Shores for the classic beach-town cottage. Gregg's Alabama license covers both.</li>
 </ul>
 
-<figure class="figure-band"><picture><source type="image/avif" srcset="/images/saenger-480.avif 480w, /images/saenger-768.avif 768w, /images/saenger-1200.avif 1200w, /images/saenger.avif 1400w" sizes="(max-width: 940px) 92vw, 900px"><source type="image/webp" srcset="/images/saenger-480.webp 480w, /images/saenger-768.webp 768w, /images/saenger-1200.webp 1200w, /images/saenger.webp 1400w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/saenger.jpg" srcset="/images/saenger-480.jpg 480w, /images/saenger-768.jpg 768w, /images/saenger-1200.jpg 1200w, /images/saenger.jpg 1400w" sizes="(max-width: 940px) 92vw, 900px" width="1400" height="1050" alt="The historic Saenger Theatre on Palafox Street in downtown Pensacola" loading="lazy" decoding="async"></picture><figcaption>The Saenger Theatre on Palafox: the downtown culture that anchors East Hill and Midtown prices. Photo: <a href="https://commons.wikimedia.org/wiki/File%3APensacola%20Saenger%20Thtr01.jpg" rel="noopener nofollow" target="_blank">Ebyabe, CC BY-SA 3.0</a></figcaption></figure>
+<figure class="figure-band"><picture><source type="image/avif" srcset="/images/saenger-480.avif 480w, /images/saenger-768.avif 768w, /images/saenger-1200.avif 1200w, /images/saenger.avif 1400w" sizes="(max-width: 800px) 92vw, 760px"><source type="image/webp" srcset="/images/saenger-480.webp 480w, /images/saenger-768.webp 768w, /images/saenger-1200.webp 1200w, /images/saenger.webp 1400w" sizes="(max-width: 800px) 92vw, 760px"><img src="/images/saenger.jpg" srcset="/images/saenger-480.jpg 480w, /images/saenger-768.jpg 768w, /images/saenger-1200.jpg 1200w, /images/saenger.jpg 1400w" sizes="(max-width: 800px) 92vw, 760px" width="1400" height="1050" alt="The historic Saenger Theatre on Palafox Street in downtown Pensacola" loading="lazy" decoding="async"></picture><figcaption>The Saenger Theatre on Palafox: the downtown culture that anchors East Hill and Midtown prices. Photo: <a href="https://commons.wikimedia.org/wiki/File%3APensacola%20Saenger%20Thtr01.jpg" rel="noopener nofollow" target="_blank">Ebyabe, CC BY-SA 3.0</a></figcaption></figure>
 
 <h2>Common questions</h2>
 <details open><summary>What is the best neighborhood in Pensacola for families?</summary><p>Gulf Breeze is the usual first answer for its schools, with Pace and Cordova Park close behind. The honest version: the right answer depends on your budget, commute, and whether you value yard space or walkability, which is exactly the conversation to have before touring.</p></details>

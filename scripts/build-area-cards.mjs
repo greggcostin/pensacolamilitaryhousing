@@ -38,7 +38,7 @@ const CARDS = [
   { href: "/gulf-shores-orange-beach", name: "Gulf Shores & Orange Beach, AL", img: "/images/orange-beach.jpg", alt: "Boat heading out past the piers and condo towers of Orange Beach, Alabama", blurb: "Alabama licensed, boating and Gulf-front condos" },
   // Okaloosa: the deep guides still live on the military site, so these two cards link across.
   { href: `${PMH}/communities/destin`, name: "Destin", img: "/images/destin.jpg", alt: "Boats and the HarborWalk along Destin Harbor with the Gulf beyond", blurb: "Gulf front, resort market, strong rental demand" },
-  { href: `${PMH}/communities/niceville`, name: "Niceville & Bluewater Bay", img: null, initial: "N", alt: "", blurb: "Bayou living, master-planned Bluewater Bay, A-rated schools" },
+  { href: `${PMH}/communities/niceville`, name: "Niceville & Bluewater Bay", img: "/images/niceville.jpg", alt: "Golden-hour light over Boggy Bayou with live oaks along the Niceville shoreline", blurb: "Bayou living, master-planned Bluewater Bay, A-rated schools" },
 ];
 
 const CSS = `<style>

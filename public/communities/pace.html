@@ -326,7 +326,10 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 @media (max-width: 900px){
   .nav-toggle{display:none!important}
   .site-drawer{display:block!important;position:static!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;background:none!important;padding:0!important;overflow:visible!important;z-index:auto!important}
-  .banner-row{grid-template-columns:auto 1fr auto!important;padding:6px 12px 0!important;gap:10px!important;min-height:0!important;align-items:center}
+  .main-banner{position:sticky!important;top:0!important;z-index:1000}
+  /* even spacing around the logos and the phone rather than one item pinned to each edge */
+  .banner-row{display:flex!important;flex-wrap:nowrap!important;justify-content:space-evenly!important;align-items:center;padding:6px 10px 0!important;gap:8px!important;min-height:0!important}
+  .banner-row>*{flex:0 0 auto}
   .banner-lrr{display:block!important;justify-self:start}
   .banner-logo{justify-self:center}
   .banner-lrr img,.banner-logo img{height:38px!important}
@@ -368,7 +371,7 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 </script>
 <!-- end FollowUpBoss Widget Tracker -->
 <style id="ddfix-css">@media(max-width:900px){
-.main-banner{position:relative}
+.main-banner{position:sticky;top:0;z-index:1000}
 .main-banner .dropdown{position:static}
 .main-banner .dropdown-menu{left:12px;right:12px;top:100%;min-width:0!important;max-height:55vh!important;overflow-y:auto}
 }</style>

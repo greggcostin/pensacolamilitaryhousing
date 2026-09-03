@@ -9,9 +9,15 @@
     "fundingFeePct": 2.15,
     "fundingFeeFinanced": true,
     "millage": {
-      "nonSchool": 8.041,
+      "nonSchool": 8.0445,
       "school": 5.359,
-      "note": "Escambia County unincorporated, 2025 tax year; homestead: first $25,000 off every levy, additional $25,000 off non-school levies only"
+      "note": "Escambia County unincorporated, 2025 tax year (latest certified), per the Escambia County Tax Collector: total 13.4035 mills"
+    },
+    "homestead": {
+      "first": 25000,
+      "additional": 26411,
+      "additionalYear": 2026,
+      "note": "Fla. Stat. 196.031(1)(b): first $25,000 off every levy; the additional exemption applies only to assessed value above $50,000 and not to school levies, and is CPI-indexed annually. 2026 tax year value $26,411 (Florida DOR, Additional Homestead Exemption Adjustment, rev. Jan 2026); 2025 was $25,722."
     },
     "insurance": {
       "pctOfPrice": 0.98,
@@ -21,6 +27,35 @@
     },
     "buyBelowShare": 0.9,
     "roundTo": 5000
+  },
+  "lender": {
+    "grossUp": 1.25,
+    "dti": 0.41,
+    "otherDebts": 500,
+    "spouseIncome": 3000,
+    "lowShare": 0.9
+  },
+  "basePay": {
+    "E-1": 2850,
+    "E-2": 2850,
+    "E-3": 2850,
+    "E-4": 2850,
+    "E-5": 3150,
+    "E-6": 3530,
+    "E-7": 4900,
+    "E-8": 5550,
+    "E-9": 6700,
+    "O-1": 3700,
+    "O-2": 4400,
+    "O-3": 5900,
+    "O-4": 7500,
+    "O-5": 8900,
+    "O-6": 11000,
+    "W-1": 3900,
+    "W-2": 4600,
+    "W-3": 5400,
+    "W-4": 6400,
+    "W-5": 7600
   },
   "piFactor": 0.006426,
   "multiplier": {
@@ -36,7 +71,12 @@
         "buyBelow": 190000,
         "bahNoDep": 1521,
         "fullNoDep": 180000,
-        "buyBelowNoDep": 160000
+        "buyBelowNoDep": 160000,
+        "basePay": 2850,
+        "lenderLow": 165000,
+        "lenderHigh": 185000,
+        "dualLow": 305000,
+        "dualHigh": 335000
       },
       "E-2": {
         "bah": 1794,
@@ -44,7 +84,12 @@
         "buyBelow": 190000,
         "bahNoDep": 1521,
         "fullNoDep": 180000,
-        "buyBelowNoDep": 160000
+        "buyBelowNoDep": 160000,
+        "basePay": 2850,
+        "lenderLow": 165000,
+        "lenderHigh": 185000,
+        "dualLow": 305000,
+        "dualHigh": 335000
       },
       "E-3": {
         "bah": 1794,
@@ -52,7 +97,12 @@
         "buyBelow": 190000,
         "bahNoDep": 1521,
         "fullNoDep": 180000,
-        "buyBelowNoDep": 160000
+        "buyBelowNoDep": 160000,
+        "basePay": 2850,
+        "lenderLow": 165000,
+        "lenderHigh": 185000,
+        "dualLow": 305000,
+        "dualHigh": 335000
       },
       "E-4": {
         "bah": 1794,
@@ -60,7 +110,12 @@
         "buyBelow": 190000,
         "bahNoDep": 1521,
         "fullNoDep": 180000,
-        "buyBelowNoDep": 160000
+        "buyBelowNoDep": 160000,
+        "basePay": 2850,
+        "lenderLow": 165000,
+        "lenderHigh": 185000,
+        "dualLow": 305000,
+        "dualHigh": 335000
       },
       "E-5": {
         "bah": 1863,
@@ -68,7 +123,12 @@
         "buyBelow": 200000,
         "bahNoDep": 1644,
         "fullNoDep": 195000,
-        "buyBelowNoDep": 170000
+        "buyBelowNoDep": 175000,
+        "basePay": 3150,
+        "lenderLow": 185000,
+        "lenderHigh": 205000,
+        "dualLow": 320000,
+        "dualHigh": 355000
       },
       "E-6": {
         "bah": 2235,
@@ -76,7 +136,12 @@
         "buyBelow": 240000,
         "bahNoDep": 1722,
         "fullNoDep": 205000,
-        "buyBelowNoDep": 180000
+        "buyBelowNoDep": 180000,
+        "basePay": 3530,
+        "lenderLow": 225000,
+        "lenderHigh": 250000,
+        "dualLow": 355000,
+        "dualHigh": 400000
       },
       "E-7": {
         "bah": 2256,
@@ -84,15 +149,25 @@
         "buyBelow": 245000,
         "bahNoDep": 1791,
         "fullNoDep": 215000,
-        "buyBelowNoDep": 190000
+        "buyBelowNoDep": 190000,
+        "basePay": 4900,
+        "lenderLow": 290000,
+        "lenderHigh": 320000,
+        "dualLow": 425000,
+        "dualHigh": 475000
       },
       "E-8": {
         "bah": 2265,
         "full": 270000,
         "buyBelow": 245000,
         "bahNoDep": 1941,
-        "fullNoDep": 230000,
-        "buyBelowNoDep": 205000
+        "fullNoDep": 235000,
+        "buyBelowNoDep": 205000,
+        "basePay": 5550,
+        "lenderLow": 315000,
+        "lenderHigh": 350000,
+        "dualLow": 455000,
+        "dualHigh": 510000
       },
       "E-9": {
         "bah": 2304,
@@ -100,7 +175,12 @@
         "buyBelow": 250000,
         "bahNoDep": 2046,
         "fullNoDep": 245000,
-        "buyBelowNoDep": 220000
+        "buyBelowNoDep": 220000,
+        "basePay": 6700,
+        "lenderLow": 370000,
+        "lenderHigh": 415000,
+        "dualLow": 515000,
+        "dualHigh": 575000
       },
       "W-1": {
         "bah": 2253,
@@ -108,7 +188,12 @@
         "buyBelow": 245000,
         "bahNoDep": 1782,
         "fullNoDep": 210000,
-        "buyBelowNoDep": 190000
+        "buyBelowNoDep": 190000,
+        "basePay": 3900,
+        "lenderLow": 245000,
+        "lenderHigh": 270000,
+        "dualLow": 375000,
+        "dualHigh": 420000
       },
       "W-2": {
         "bah": 2262,
@@ -116,7 +201,12 @@
         "buyBelow": 245000,
         "bahNoDep": 1938,
         "fullNoDep": 230000,
-        "buyBelowNoDep": 205000
+        "buyBelowNoDep": 205000,
+        "basePay": 4600,
+        "lenderLow": 275000,
+        "lenderHigh": 305000,
+        "dualLow": 410000,
+        "dualHigh": 460000
       },
       "W-3": {
         "bah": 2274,
@@ -124,7 +214,12 @@
         "buyBelow": 245000,
         "bahNoDep": 2061,
         "fullNoDep": 250000,
-        "buyBelowNoDep": 220000
+        "buyBelowNoDep": 220000,
+        "basePay": 5400,
+        "lenderLow": 310000,
+        "lenderHigh": 345000,
+        "dualLow": 450000,
+        "dualHigh": 500000
       },
       "W-4": {
         "bah": 2325,
@@ -132,7 +227,12 @@
         "buyBelow": 250000,
         "bahNoDep": 2229,
         "fullNoDep": 270000,
-        "buyBelowNoDep": 240000
+        "buyBelowNoDep": 240000,
+        "basePay": 6400,
+        "lenderLow": 355000,
+        "lenderHigh": 400000,
+        "dualLow": 500000,
+        "dualHigh": 560000
       },
       "W-5": {
         "bah": 2427,
@@ -140,7 +240,12 @@
         "buyBelow": 260000,
         "bahNoDep": 2241,
         "fullNoDep": 270000,
-        "buyBelowNoDep": 240000
+        "buyBelowNoDep": 240000,
+        "basePay": 7600,
+        "lenderLow": 420000,
+        "lenderHigh": 470000,
+        "dualLow": 565000,
+        "dualHigh": 630000
       },
       "O-1E": {
         "bah": 2259,
@@ -148,7 +253,12 @@
         "buyBelow": 245000,
         "bahNoDep": 1860,
         "fullNoDep": 220000,
-        "buyBelowNoDep": 200000
+        "buyBelowNoDep": 200000,
+        "basePay": 0,
+        "lenderLow": 55000,
+        "lenderHigh": 65000,
+        "dualLow": 200000,
+        "dualHigh": 225000
       },
       "O-2E": {
         "bah": 2268,
@@ -156,7 +266,12 @@
         "buyBelow": 245000,
         "bahNoDep": 2022,
         "fullNoDep": 245000,
-        "buyBelowNoDep": 215000
+        "buyBelowNoDep": 215000,
+        "basePay": 0,
+        "lenderLow": 60000,
+        "lenderHigh": 65000,
+        "dualLow": 200000,
+        "dualHigh": 225000
       },
       "O-3E": {
         "bah": 2340,
@@ -164,7 +279,12 @@
         "buyBelow": 255000,
         "bahNoDep": 2226,
         "fullNoDep": 265000,
-        "buyBelowNoDep": 240000
+        "buyBelowNoDep": 240000,
+        "basePay": 0,
+        "lenderLow": 60000,
+        "lenderHigh": 70000,
+        "dualLow": 205000,
+        "dualHigh": 230000
       },
       "O-1": {
         "bah": 1914,
@@ -172,7 +292,12 @@
         "buyBelow": 205000,
         "bahNoDep": 1719,
         "fullNoDep": 205000,
-        "buyBelowNoDep": 180000
+        "buyBelowNoDep": 180000,
+        "basePay": 3700,
+        "lenderLow": 215000,
+        "lenderHigh": 240000,
+        "dualLow": 345000,
+        "dualHigh": 385000
       },
       "O-2": {
         "bah": 2232,
@@ -180,7 +305,12 @@
         "buyBelow": 240000,
         "bahNoDep": 1842,
         "fullNoDep": 220000,
-        "buyBelowNoDep": 195000
+        "buyBelowNoDep": 195000,
+        "basePay": 4400,
+        "lenderLow": 265000,
+        "lenderHigh": 295000,
+        "dualLow": 400000,
+        "dualHigh": 445000
       },
       "O-3": {
         "bah": 2271,
@@ -188,7 +318,12 @@
         "buyBelow": 245000,
         "bahNoDep": 2097,
         "fullNoDep": 250000,
-        "buyBelowNoDep": 225000
+        "buyBelowNoDep": 225000,
+        "basePay": 5900,
+        "lenderLow": 330000,
+        "lenderHigh": 370000,
+        "dualLow": 470000,
+        "dualHigh": 530000
       },
       "O-4": {
         "bah": 2457,
@@ -196,7 +331,12 @@
         "buyBelow": 265000,
         "bahNoDep": 2232,
         "fullNoDep": 270000,
-        "buyBelowNoDep": 240000
+        "buyBelowNoDep": 240000,
+        "basePay": 7500,
+        "lenderLow": 415000,
+        "lenderHigh": 465000,
+        "dualLow": 560000,
+        "dualHigh": 625000
       },
       "O-5": {
         "bah": 2610,
@@ -204,7 +344,12 @@
         "buyBelow": 280000,
         "bahNoDep": 2244,
         "fullNoDep": 270000,
-        "buyBelowNoDep": 245000
+        "buyBelowNoDep": 245000,
+        "basePay": 8900,
+        "lenderLow": 495000,
+        "lenderHigh": 550000,
+        "dualLow": 635000,
+        "dualHigh": 710000
       },
       "O-6": {
         "bah": 2631,
@@ -212,7 +357,12 @@
         "buyBelow": 285000,
         "bahNoDep": 2247,
         "fullNoDep": 270000,
-        "buyBelowNoDep": 245000
+        "buyBelowNoDep": 245000,
+        "basePay": 11000,
+        "lenderLow": 595000,
+        "lenderHigh": 665000,
+        "dualLow": 740000,
+        "dualHigh": 825000
       },
       "O-7": {
         "bah": 2646,
@@ -220,7 +370,12 @@
         "buyBelow": 285000,
         "bahNoDep": 2259,
         "fullNoDep": 270000,
-        "buyBelowNoDep": 245000
+        "buyBelowNoDep": 245000,
+        "basePay": 0,
+        "lenderLow": 80000,
+        "lenderHigh": 90000,
+        "dualLow": 225000,
+        "dualHigh": 250000
       }
     },
     "FL023": {
@@ -230,7 +385,12 @@
         "buyBelow": 255000,
         "bahNoDep": 2007,
         "fullNoDep": 240000,
-        "buyBelowNoDep": 215000
+        "buyBelowNoDep": 215000,
+        "basePay": 2850,
+        "lenderLow": 200000,
+        "lenderHigh": 225000,
+        "dualLow": 335000,
+        "dualHigh": 370000
       },
       "E-2": {
         "bah": 2340,
@@ -238,7 +398,12 @@
         "buyBelow": 255000,
         "bahNoDep": 2007,
         "fullNoDep": 240000,
-        "buyBelowNoDep": 215000
+        "buyBelowNoDep": 215000,
+        "basePay": 2850,
+        "lenderLow": 200000,
+        "lenderHigh": 225000,
+        "dualLow": 335000,
+        "dualHigh": 370000
       },
       "E-3": {
         "bah": 2340,
@@ -246,7 +411,12 @@
         "buyBelow": 255000,
         "bahNoDep": 2007,
         "fullNoDep": 240000,
-        "buyBelowNoDep": 215000
+        "buyBelowNoDep": 215000,
+        "basePay": 2850,
+        "lenderLow": 200000,
+        "lenderHigh": 225000,
+        "dualLow": 335000,
+        "dualHigh": 370000
       },
       "E-4": {
         "bah": 2340,
@@ -254,7 +424,12 @@
         "buyBelow": 255000,
         "bahNoDep": 2007,
         "fullNoDep": 240000,
-        "buyBelowNoDep": 215000
+        "buyBelowNoDep": 215000,
+        "basePay": 2850,
+        "lenderLow": 200000,
+        "lenderHigh": 225000,
+        "dualLow": 335000,
+        "dualHigh": 370000
       },
       "E-5": {
         "bah": 2433,
@@ -262,7 +437,12 @@
         "buyBelow": 265000,
         "bahNoDep": 2157,
         "fullNoDep": 260000,
-        "buyBelowNoDep": 235000
+        "buyBelowNoDep": 235000,
+        "basePay": 3150,
+        "lenderLow": 220000,
+        "lenderHigh": 245000,
+        "dualLow": 350000,
+        "dualHigh": 390000
       },
       "E-6": {
         "bah": 2526,
@@ -270,7 +450,12 @@
         "buyBelow": 275000,
         "bahNoDep": 2250,
         "fullNoDep": 270000,
-        "buyBelowNoDep": 245000
+        "buyBelowNoDep": 245000,
+        "basePay": 3530,
+        "lenderLow": 245000,
+        "lenderHigh": 270000,
+        "dualLow": 375000,
+        "dualHigh": 420000
       },
       "E-7": {
         "bah": 2841,
@@ -278,7 +463,12 @@
         "buyBelow": 305000,
         "bahNoDep": 2340,
         "fullNoDep": 280000,
-        "buyBelowNoDep": 255000
+        "buyBelowNoDep": 255000,
+        "basePay": 4900,
+        "lenderLow": 320000,
+        "lenderHigh": 355000,
+        "dualLow": 460000,
+        "dualHigh": 515000
       },
       "E-8": {
         "bah": 3189,
@@ -286,7 +476,12 @@
         "buyBelow": 345000,
         "bahNoDep": 2457,
         "fullNoDep": 295000,
-        "buyBelowNoDep": 265000
+        "buyBelowNoDep": 265000,
+        "basePay": 5550,
+        "lenderLow": 365000,
+        "lenderHigh": 410000,
+        "dualLow": 510000,
+        "dualHigh": 570000
       },
       "E-9": {
         "bah": 3447,
@@ -294,7 +489,12 @@
         "buyBelow": 370000,
         "bahNoDep": 2586,
         "fullNoDep": 310000,
-        "buyBelowNoDep": 280000
+        "buyBelowNoDep": 280000,
+        "basePay": 6700,
+        "lenderLow": 435000,
+        "lenderHigh": 490000,
+        "dualLow": 580000,
+        "dualHigh": 650000
       },
       "W-1": {
         "bah": 2544,
@@ -302,7 +502,12 @@
         "buyBelow": 275000,
         "bahNoDep": 2322,
         "fullNoDep": 280000,
-        "buyBelowNoDep": 250000
+        "buyBelowNoDep": 250000,
+        "basePay": 3900,
+        "lenderLow": 260000,
+        "lenderHigh": 290000,
+        "dualLow": 395000,
+        "dualHigh": 440000
       },
       "W-2": {
         "bah": 2985,
@@ -310,7 +515,12 @@
         "buyBelow": 320000,
         "bahNoDep": 2454,
         "fullNoDep": 295000,
-        "buyBelowNoDep": 265000
+        "buyBelowNoDep": 265000,
+        "basePay": 4600,
+        "lenderLow": 315000,
+        "lenderHigh": 350000,
+        "dualLow": 455000,
+        "dualHigh": 505000
       },
       "W-3": {
         "bah": 3414,
@@ -318,7 +528,12 @@
         "buyBelow": 365000,
         "bahNoDep": 2589,
         "fullNoDep": 310000,
-        "buyBelowNoDep": 280000
+        "buyBelowNoDep": 280000,
+        "basePay": 5400,
+        "lenderLow": 375000,
+        "lenderHigh": 420000,
+        "dualLow": 515000,
+        "dualHigh": 580000
       },
       "W-4": {
         "bah": 3456,
@@ -326,7 +541,12 @@
         "buyBelow": 370000,
         "bahNoDep": 2604,
         "fullNoDep": 310000,
-        "buyBelowNoDep": 280000
+        "buyBelowNoDep": 280000,
+        "basePay": 6400,
+        "lenderLow": 425000,
+        "lenderHigh": 475000,
+        "dualLow": 565000,
+        "dualHigh": 635000
       },
       "W-5": {
         "bah": 3516,
@@ -334,7 +554,12 @@
         "buyBelow": 380000,
         "bahNoDep": 2922,
         "fullNoDep": 350000,
-        "buyBelowNoDep": 315000
+        "buyBelowNoDep": 315000,
+        "basePay": 7600,
+        "lenderLow": 485000,
+        "lenderHigh": 540000,
+        "dualLow": 630000,
+        "dualHigh": 700000
       },
       "O-1E": {
         "bah": 2910,
@@ -342,7 +567,12 @@
         "buyBelow": 315000,
         "bahNoDep": 2430,
         "fullNoDep": 290000,
-        "buyBelowNoDep": 265000
+        "buyBelowNoDep": 265000,
+        "basePay": 0,
+        "lenderLow": 95000,
+        "lenderHigh": 110000,
+        "dualLow": 240000,
+        "dualHigh": 265000
       },
       "O-2E": {
         "bah": 3351,
@@ -350,7 +580,12 @@
         "buyBelow": 360000,
         "bahNoDep": 2514,
         "fullNoDep": 300000,
-        "buyBelowNoDep": 270000
+        "buyBelowNoDep": 270000,
+        "basePay": 0,
+        "lenderLow": 125000,
+        "lenderHigh": 140000,
+        "dualLow": 265000,
+        "dualHigh": 295000
       },
       "O-3E": {
         "bah": 3468,
@@ -358,7 +593,12 @@
         "buyBelow": 375000,
         "bahNoDep": 2601,
         "fullNoDep": 310000,
-        "buyBelowNoDep": 280000
+        "buyBelowNoDep": 280000,
+        "basePay": 0,
+        "lenderLow": 130000,
+        "lenderHigh": 145000,
+        "dualLow": 270000,
+        "dualHigh": 300000
       },
       "O-1": {
         "bah": 2451,
@@ -366,15 +606,25 @@
         "buyBelow": 265000,
         "bahNoDep": 2244,
         "fullNoDep": 270000,
-        "buyBelowNoDep": 245000
+        "buyBelowNoDep": 245000,
+        "basePay": 3700,
+        "lenderLow": 245000,
+        "lenderHigh": 275000,
+        "dualLow": 375000,
+        "dualHigh": 425000
       },
       "O-2": {
         "bah": 2523,
         "full": 300000,
-        "buyBelow": 270000,
+        "buyBelow": 275000,
         "bahNoDep": 2406,
         "fullNoDep": 290000,
-        "buyBelowNoDep": 260000
+        "buyBelowNoDep": 260000,
+        "basePay": 4400,
+        "lenderLow": 280000,
+        "lenderHigh": 310000,
+        "dualLow": 415000,
+        "dualHigh": 465000
       },
       "O-3": {
         "bah": 3399,
@@ -382,15 +632,25 @@
         "buyBelow": 365000,
         "bahNoDep": 2592,
         "fullNoDep": 310000,
-        "buyBelowNoDep": 280000
+        "buyBelowNoDep": 280000,
+        "basePay": 5900,
+        "lenderLow": 395000,
+        "lenderHigh": 445000,
+        "dualLow": 540000,
+        "dualHigh": 605000
       },
       "O-4": {
         "bah": 3528,
         "full": 425000,
         "buyBelow": 380000,
         "bahNoDep": 2865,
-        "fullNoDep": 340000,
-        "buyBelowNoDep": 310000
+        "fullNoDep": 345000,
+        "buyBelowNoDep": 310000,
+        "basePay": 7500,
+        "lenderLow": 480000,
+        "lenderHigh": 535000,
+        "dualLow": 625000,
+        "dualHigh": 700000
       },
       "O-5": {
         "bah": 3612,
@@ -398,7 +658,12 @@
         "buyBelow": 390000,
         "bahNoDep": 3066,
         "fullNoDep": 365000,
-        "buyBelowNoDep": 330000
+        "buyBelowNoDep": 330000,
+        "basePay": 8900,
+        "lenderLow": 555000,
+        "lenderHigh": 620000,
+        "dualLow": 695000,
+        "dualHigh": 780000
       },
       "O-6": {
         "bah": 3642,
@@ -406,7 +671,12 @@
         "buyBelow": 395000,
         "bahNoDep": 3393,
         "fullNoDep": 410000,
-        "buyBelowNoDep": 365000
+        "buyBelowNoDep": 365000,
+        "basePay": 11000,
+        "lenderLow": 655000,
+        "lenderHigh": 730000,
+        "dualLow": 800000,
+        "dualHigh": 890000
       },
       "O-7": {
         "bah": 3669,
@@ -414,7 +684,12 @@
         "buyBelow": 395000,
         "bahNoDep": 3453,
         "fullNoDep": 415000,
-        "buyBelowNoDep": 370000
+        "buyBelowNoDep": 370000,
+        "basePay": 0,
+        "lenderLow": 140000,
+        "lenderHigh": 160000,
+        "dualLow": 280000,
+        "dualHigh": 315000
       }
     }
   }

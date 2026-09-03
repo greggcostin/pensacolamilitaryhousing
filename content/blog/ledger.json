@@ -227,7 +227,7 @@
       "title": "Best Pensacola Neighborhoods for Military, by Rank and BAH",
       "category": "Living Here",
       "datePublished": "2026-08-12",
-      "dateModified": "2026-08-12",
+      "dateModified": "2026-09-02",
       "targetKeywords": [
         "best neighborhoods pensacola military",
         "where to live E-5 pensacola",
@@ -426,6 +426,32 @@
       "toolingFinding": "scripts/analyze-formatting.mjs paragraph regex /<p[^>]*>/ also matches <picture>, producing phantom wall paragraphs that span the figcaption plus the next real paragraph. The refreshed post reports score 88 with 2 walls (max 111w); with the regex corrected to /<p(?=[s>])[^>]*>/ it is score 100, 0 walls, longest real paragraph 83 words, i.e. unchanged from before the refresh. 95 built pages contain <picture>, so docs/formatting-audit.md understates scores across most of the site and the DECIDE step reads that table. Script is outside the engine writable scope; spawned as a separate task for Gregg.",
       "staged": true,
       "branch": "blog/bah-2026-pensacola-what-can-you-afford-20260902"
+    },
+    {
+      "date": "2026-09-03",
+      "type": "user-directed continuation of the weekly run",
+      "action": "refresh (data study) + sitewide model correction",
+      "slug": "bah-vs-cost-of-owning-pensacola",
+      "models": {
+        "research": "opus",
+        "write": "in-session (numeric recompute, not prose generation)"
+      },
+      "canonFixes": [
+        "content/affordability-2026.json + scripts/build-affordability.mjs: Escambia unincorporated non-school millage corrected 8.041 -> 8.0445 (total 13.4035, not 13.400), per the Escambia County Tax Collector component table.",
+        "content/affordability-2026.json + scripts/build-affordability.mjs: the Florida additional homestead exemption is CPI-indexed under Fla. Stat. 196.031(1)(b), not a flat $25,000. Model now uses $26,411 for the 2026 tax year (Florida DOR, Additional Homestead Exemption Adjustment, rev. Jan 2026; 2025 was $25,722). Non-school taxable is assessed minus $51,411, not minus $50,000. Net effect on published bands: one row moved $5,000; multipliers unchanged at 118/107.",
+        "blog/bah-2026-pensacola-what-can-you-afford: homestead language and the worked example corrected for the indexed exemption (tax $3,015/yr -> $3,004/yr, $251/mo -> $250/mo) and millage stated as 13.4035.",
+        "bah-vs-cost-of-owning-pensacola: full recompute of all 26 ZIP rows onto the canonical model (6.66%, real per-county school/non-school millage, indexed homestead) replacing 6.5% and a flat 1.0%-of-value tax placeholder. Five findings rewritten, methodology and simplifications rewritten, dates bumped."
+      ],
+      "studyOutcome": "Headline SURVIVED the recompute: still only 1 of 26 ZIPs (32505) covered by an FL064 E-5, still 12 of 26 above every Pensacola-side grade, and still only Destin and Gulf Breeze proper above every FL023 grade. Median monthly moved $2,599 -> $2,582; FL023 E-5 coverage 12 -> 11 of 26. New fifth finding replaces the old median-gap bullet: unincorporated Okaloosa levies 9.5165 mills against Escambia 13.4035 and Santa Rosa 11.3897, about $85/mo on a $330,000 home, which is why Valparaiso costs less per month than Cantonment despite a higher price.",
+      "methodologyDecision": "Modeled every ZIP at its county UNINCORPORATED rate rather than the research pack per-ZIP city assignments. The pack rated several high-impact assignments Low confidence, and the city-vs-unincorporated swing reaches 67% (City of Crestview 15.8751 vs unincorporated Okaloosa 9.5165) and 27% in Escambia. Publishing per-ZIP city guesses on a page that carries a Citing this study block would have been false precision. The unincorporated tier is the only High-confidence tier, is one consistent rule, and matches the page framing that these costs are a floor. City rates are disclosed in the simplifications so a reader can adjust.",
+      "openItems": [
+        "Per-ZIP city/unincorporated assignment is unresolved and is the single biggest remaining uncertainty. Escambia PA parcel lookups on a sample of addresses per ZIP would settle 32503/32504/32505 (worth 3.6045 mills, 27% of the bill).",
+        "32561 spans three rates across two counties (Gulf Breeze city 11.2920, unincorporated Santa Rosa 11.3897, and Pensacola Beach in ESCAMBIA at 12.7185). Consider splitting or dropping that row.",
+        "Zillow typical values are still the July 2026 vintage; only the cost model was recomputed this run.",
+        "Santa Rosa 2026 millage is preliminary until October 2026; swap in the final rates then.",
+        "BASE_PAY E-9 and O-6 in build-affordability.mjs are still flagged in-file as unconfirmed against the DFAS 2026 table."
+      ],
+      "staged": true
     }
   ],
   "config": {

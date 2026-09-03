@@ -13,11 +13,24 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { BAH_DATA } from "../src/bahData.js";
 
+// Monthly base pay at a typical time in service for the grade. E-4 through O-5 are the figures
+// already published in the Base Pay column of public/bah-to-mortgage-guide.html. E-9 and O-6 were
+// added 2026-09-03 to complete the rank table and are approximations consistent with that
+// progression: CONFIRM BOTH against the DFAS 2026 pay table before treating them as sourced.
+const BASE_PAY = { "E-1": 2850, "E-2": 2850, "E-3": 2850, "E-4": 2850, "E-5": 3150, "E-6": 3530, "E-7": 4900, "E-8": 5550, "E-9": 6700, "O-1": 3700, "O-2": 4400, "O-3": 5900, "O-4": 7500, "O-5": 8900, "O-6": 11000, "W-1": 3900, "W-2": 4600, "W-3": 5400, "W-4": 6400, "W-5": 7600 };
+
+// What a lender will actually approve, which is the number a buyer shops with. BAH is tax free, so
+// underwriters gross it up; the VA has no hard DTI cap but most lenders hold at 41% of total gross
+// with residual income on top. The BAH-neutral figures below answer a different question (does the
+// whole payment fit inside the allowance) and stay published beside this as the conservative anchor.
+const LENDER = { grossUp: 1.25, dti: 0.41, otherDebts: 500, spouseIncome: 3000, lowShare: 0.9 };
+
 const MODEL = {
   year: 2026,
   rate: 6.66, rateSource: "Freddie Mac PMMS 30-year fixed average, week ending August 27, 2026", rateUrl: "https://www.freddiemac.com/pmms",
   termYears: 30, downPayment: 0, fundingFeePct: 2.15, fundingFeeFinanced: true,
-  millage: { nonSchool: 8.041, school: 5.359, note: "Escambia County unincorporated, 2025 tax year; homestead: first $25,000 off every levy, additional $25,000 off non-school levies only" },
+  millage: { nonSchool: 8.0445, school: 5.359, note: "Escambia County unincorporated, 2025 tax year (latest certified), per the Escambia County Tax Collector: total 13.4035 mills" },
+  homestead: { first: 25000, additional: 26411, additionalYear: 2026, note: "Fla. Stat. 196.031(1)(b): first $25,000 off every levy; the additional exemption applies only to assessed value above $50,000 and not to school levies, and is CPI-indexed annually. 2026 tax year value $26,411 (Florida DOR, Additional Homestead Exemption Adjustment, rev. Jan 2026); 2025 was $25,722." },
   insurance: { pctOfPrice: 0.98, floor: 2400, cap: 3600, note: "inland Zone X, newer roof; coastal or old-roof quotes can double this line" },
   buyBelowShare: 0.9,
   roundTo: 5000,
@@ -27,7 +40,8 @@ const piFactor = r / (1 - Math.pow(1 + r, -n));
 export function monthlyPITI(price) {
   const loan = price * (1 - MODEL.downPayment) * (1 + (MODEL.fundingFeeFinanced ? MODEL.fundingFeePct / 100 : 0));
   const pi = loan * piFactor;
-  const tax = (MODEL.millage.nonSchool * Math.max(0, price - 50000) + MODEL.millage.school * Math.max(0, price - 25000)) / 1000 / 12;
+  const nonSchoolExempt = MODEL.homestead.first + MODEL.homestead.additional;
+  const tax = (MODEL.millage.nonSchool * Math.max(0, price - nonSchoolExempt) + MODEL.millage.school * Math.max(0, price - MODEL.homestead.first)) / 1000 / 12;
   const ins = Math.min(MODEL.insurance.cap, Math.max(MODEL.insurance.floor, price * MODEL.insurance.pctOfPrice / 100)) / 12;
   return pi + tax + ins;
 }
@@ -45,13 +59,22 @@ const grades = {};
 for (const mha of Object.keys(BAH_DATA)) {
   grades[mha] = {};
   for (const group of ["enlisted", "warrant", "officer"]) for (const [grade, withDep, without] of BAH_DATA[mha][group]) {
+    const basePay = BASE_PAY[grade] || 0;
+    // qualifying payment: base pay plus grossed-up BAH, capped at the lender DTI, less other debts
+    const qual = (extra) => Math.max(0, (basePay + withDep * LENDER.grossUp + extra) * LENDER.dti - LENDER.otherDebts);
+    const solo = qual(0), dual = qual(LENDER.spouseIncome);
     grades[mha][grade] = {
       bah: withDep, full: priceForPayment(withDep), buyBelow: priceForPayment(withDep * MODEL.buyBelowShare),
       bahNoDep: without, fullNoDep: priceForPayment(without), buyBelowNoDep: priceForPayment(without * MODEL.buyBelowShare),
+      basePay,
+      // what a lender approves on the service member's income alone
+      lenderLow: priceForPayment(solo * LENDER.lowShare), lenderHigh: priceForPayment(solo),
+      // the same with a working spouse at LENDER.spouseIncome a month
+      dualLow: priceForPayment(dual * LENDER.lowShare), dualHigh: priceForPayment(dual),
     };
   }
 }
-const OUT = { model: MODEL, piFactor: Number(piFactor.toFixed(6)), multiplier: { full: Math.round(grades.FL064["E-5"].full / grades.FL064["E-5"].bah), buyBelow: Math.round(grades.FL064["E-5"].buyBelow / grades.FL064["E-5"].bah) }, generated: new Date().toISOString().slice(0, 10), mha: grades };
+const OUT = { model: MODEL, lender: LENDER, basePay: BASE_PAY, piFactor: Number(piFactor.toFixed(6)), multiplier: { full: Math.round(grades.FL064["E-5"].full / grades.FL064["E-5"].bah), buyBelow: Math.round(grades.FL064["E-5"].buyBelow / grades.FL064["E-5"].bah) }, generated: new Date().toISOString().slice(0, 10), mha: grades };
 const G = (m, g) => grades[m][g];
 const CHECK = process.argv.includes("--check");
 if (!CHECK) { writeFileSync("content/affordability-2026.json", JSON.stringify(OUT, null, 2) + "\n"); console.log("content/affordability-2026.json written; E-5 FL064", band(G("FL064", "E-5")), "| O-3 FL023", band(G("FL023", "O-3"))); }

@@ -60,7 +60,10 @@ for (const f of files) {
   const src = readFileSync(f, "utf8");
   const a = src.indexOf(START), b = src.indexOf(END);
   if (a < 0 || b < 0) { missing++; continue; }
-  const out = src.slice(0, a) + TABS_CSS.trim() + src.slice(b + END.length);
+  // write the block with the file's own line ending so a CRLF page does not go mixed
+  const CR = String.fromCharCode(13), LF = String.fromCharCode(10);
+  const eol = src.includes(CR + LF) ? CR + LF : LF;
+  const out = src.slice(0, a) + TABS_CSS.trim().split(/\r?\n/).join(eol) + src.slice(b + END.length);
   if (out !== src) { changed++; if (!DRY) writeFileSync(f, out, "utf8"); }
 }
 console.log(`${DRY ? "[dry] " : ""}mobile tabs: ${changed} pages rewritten, ${missing} without the drawer markers`);

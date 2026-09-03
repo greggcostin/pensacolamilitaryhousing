@@ -83,7 +83,8 @@ const PATTERNS = {
     "{n} Google reviews",
     "{n} Google Reviews",
     "Read All {n} Reviews on Google",
-    "5.0 stars from {n} reviews",
+    "Google Business Profile 5.0 stars from {n} reviews",
+    "5.0 stars across {n} Google and",
     "5.0-star Google rating from {n} verified reviews",
     "{n} verified Google reviews",
     "Google Business Profile ({n} reviews)",
@@ -95,6 +96,7 @@ const PATTERNS = {
     "& {n} Zillow",
     "Zillow agent profile ({n} reviews)",
     "Read all {n} Zillow reviews",
+    "Agent 5.0 stars from {n} reviews",
   ],
   Combined: [
     "{n} five-star reviews across Google and Zillow",
@@ -107,7 +109,7 @@ const PATTERNS = {
 // civilian-site is a separate deploy surface with its own copy of these counts.
 // It was originally left out of this walk, which is how greggcostin.com drifted
 // two counts behind pensacolamilitaryhousing.com.
-const files = [...walk("public"), ...walk("civilian-site"), "index.html", "MARKETING_KIT.md", "AGGREGATOR_PROFILES.md", "src/App.jsx"].filter(existsSync);
+const files = [...walk("public"), ...walk("civilian-site"), ...walk("content"), "index.html", "MARKETING_KIT.md", "AGGREGATOR_PROFILES.md", "src/App.jsx"].filter(existsSync);
 let totalSubs = 0;
 const report = [];
 

@@ -86,10 +86,23 @@ for (const n of NEIGHBORHOODS) built.push(await build(n));
 console.log(built.map((b) => `${b.path} (${b.words} words)`).join("\n"));
 
 // ---- hub cards + homepage chips -> internal pages ----
+// Retarget by CARD, not by regex across the whole file. The earlier version also tried a
+// "link before image" pattern, which matched the PREVIOUS card's anchor and silently pointed
+// Midtown at Pace, Navarre at Cordova Park and Cordova Park at Beulah. Slice each card and
+// rewrite only the anchor inside it, then assert every card links to its own slug.
 let h = hub, hubChanged = 0;
-for (const n of NEIGHBORHOODS) {
-  h = h.replace(new RegExp(`(<img[^>]*src="${n.image.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"[\\s\\S]*?class="nb-link"[^>]*href=")[^"]+(")`), (m, a, b) => { hubChanged++; return `${a}/neighborhoods/${n.slug}${b}`; });
-  h = h.replace(new RegExp(`(<a[^>]*class="nb-link"[^>]*href=")[^"]+("[^>]*>[^<]*</a>[\\s\\S]{0,400}?<img[^>]*src="${n.image.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}")`), (m, a, b) => `${a}/neighborhoods/${n.slug}${b}`);
+const bySlug = Object.fromEntries(NEIGHBORHOODS.map((n) => [n.image, n]));
+h = h.replace(/class="nb-card"[\s\S]*?(?=class="nb-card"|<\/section>)/g, (card) => {
+  const img = (card.match(/<img[^>]*src="([^"]+)"/) || [])[1];
+  const n = bySlug[img];
+  if (!n) return card; // e.g. the Orange Beach card, which points at /gulf-shores-orange-beach
+  return card.replace(/(class="nb-link"[^>]*href=")[^"]+(")/, (m, a, b) => { hubChanged++; return `${a}/neighborhoods/${n.slug}${b}`; });
+});
+for (const m of h.matchAll(/class="nb-card"[\s\S]*?(?=class="nb-card"|<\/section>)/g)) {
+  const img = (m[0].match(/<img[^>]*src="([^"]+)"/) || [])[1];
+  const link = (m[0].match(/class="nb-link"[^>]*href="([^"]+)"/) || [])[1];
+  const n = bySlug[img];
+  if (n && link !== `/neighborhoods/${n.slug}`) throw new Error(`hub card for ${n.slug} links to ${link}`);
 }
 writeFileSync(`${SITE_DIR}/neighborhoods.html`, h);
 let idx = readFileSync(`${SITE_DIR}/index.html`, "utf8"), chips = 0;

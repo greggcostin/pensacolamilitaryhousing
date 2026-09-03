@@ -624,8 +624,9 @@
                           .hero-bg-image{order:2!important;position:static!important;top:auto!important;bottom:auto!important;width:100%!important;height:340px!important;background-size:cover!important;background-position:center 25%!important}
                           .hero-stats{order:3!important;position:static!important;bottom:auto!important}
                           .hero-gradient-h,.hero-gradient-v,.hero-glow{display:none!important}
-                          /* cro-01 (audit 2026-09-02): 4 stats in 2 columns instead of a 383px one-column stack */
-                          .hero-stats>div{grid-template-columns:repeat(2,1fr)!important;gap:14px 20px!important;padding:16px 20px!important}
+                          /* cro-01 (audit 2026-09-02): the stats row stays centred and compact instead of a 383px one-column stack */
+                          .hero-stats>div{gap:14px 22px!important;padding:16px 20px!important}
+                          .hero-stats>div>*{flex:0 1 auto;min-width:132px}
                           .hero-stats [style*="font-size: 32px"]{font-size:22px!important}
                           .hero-stats [style*="letter-spacing: 2.2px"]{font-size:10px!important;letter-spacing:1.4px!important;margin-top:5px!important}
                         }

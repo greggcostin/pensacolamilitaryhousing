@@ -377,6 +377,15 @@
       "creditRequired": true,
       "credit": "j2003af",
       "query": "Santa Rosa Sound Navarre"
+    },
+    "civilian-site/images/fl-insurance-2026.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "FEMA - 11336 - Photograph by Mark Wolfe taken on 09-27-2004 in Florida.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFEMA%20-%2011336%20-%20Photograph%20by%20Mark%20Wolfe%20taken%20on%2009-27-2004%20in%20Florida.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Mark Wolfe",
+      "query": "hurricane shutters Florida house"
     }
   }
 }

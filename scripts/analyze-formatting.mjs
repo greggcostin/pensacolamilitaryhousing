@@ -28,7 +28,7 @@ for (const file of pages) {
   const text = (s) => s.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   const words = (s) => (text(s) ? text(s).split(" ").length : 0);
 
-  const paras = [...main.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].map((m) => words(m[1]));
+  const paras = [...main.matchAll(/<p(?=[\s>])[^>]*>([\s\S]*?)<\/p>/g)].map((m) => words(m[1]));
   const totalWords = words(main);
   const headings = (main.match(/<h[23][^>]*>/g) || []).length;
   const lists = (main.match(/<[uo]l[^>]*>/g) || []).length;
@@ -63,9 +63,10 @@ const report = `# Sitewide formatting / scannability audit
 Generated ${new Date().toISOString().slice(0, 10)} by scripts/analyze-formatting.mjs.
 Score 100 = highly scannable. Penalties: wall-of-text paragraphs (>85 words),
 sparse headings (>220 words/section), sparse scan aids (>280 words per
-list/table/facts box/figure/FAQ). The blog engine's DECIDE step should treat
-the bottom of this table as refresh candidates: break up walls, add
-questions-as-headings, insert lists/tables where data hides in prose.
+list/table/facts box/figure/FAQ). Rows are sorted worst score first, so the
+blog engine's DECIDE step should treat the top of this table as refresh
+candidates: break up walls, add questions-as-headings, insert lists/tables
+where data hides in prose.
 
 | Page | Score | Words | Wall paragraphs | Headings | Scan aids |
 |---|---|---|---|---|---|

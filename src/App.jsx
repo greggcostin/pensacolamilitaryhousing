@@ -469,7 +469,16 @@ const Hero = ({ go }) => {
   const [inquiryOpen, setInquiryOpen] = useState(false);
   return (
   <section className="hero-section" style={{ position: "relative", minHeight: "100vh", background: C.ink, overflow: "hidden", display: "flex", alignItems: "center", paddingTop: 180 }}>
-    <div className="hero-bg-image" style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, backgroundSize: "auto 100%", backgroundPosition: "right top", backgroundRepeat: "no-repeat" }} />
+    <div className="hero-bg-image" style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0 }}>
+      {/* perf-08 / media-09: sizing and cropping live in src/index.css plus the index.html media queries.
+          Keep sizes identical to imagesizes on the index.html hero preload. This srcset is hand-written:
+          scripts/apply-responsive-images.mjs only rewrites HTML pages, never JSX. */}
+      <picture>
+        <source type="image/avif" srcSet="/images/hero-window-480.avif 480w, /images/hero-window-768.avif 768w, /images/hero-window-1200.avif 1200w, /images/hero-window.avif 2000w" sizes="(max-width: 900px) 100vw, 900px" />
+        <source type="image/webp" srcSet="/images/hero-window-480.webp 480w, /images/hero-window-768.webp 768w, /images/hero-window-1200.webp 1200w, /images/hero-window.webp 2000w" sizes="(max-width: 900px) 100vw, 900px" />
+        <img src="/images/hero-window.jpg" srcSet="/images/hero-window-480.jpg 480w, /images/hero-window-768.jpg 768w, /images/hero-window-1200.jpg 1200w, /images/hero-window.jpg 2000w" sizes="(max-width: 900px) 100vw, 900px" width="2000" height="2000" alt="Morning light through the front window of a Pensacola home" fetchPriority="high" decoding="async" />
+      </picture>
+    </div>
     <div className="hero-gradient-h" style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, background: `linear-gradient(90deg,${C.ink} 0%,${C.ink} 30%,rgba(10,15,26,0.75) 55%,rgba(10,15,26,0.25) 80%,rgba(10,15,26,0.1) 100%)` }} />
     <div className="hero-gradient-v" style={{ position: "absolute", top: 180, left: 0, right: 0, bottom: 0, background: `linear-gradient(180deg,transparent 0%,transparent 70%,${C.ink} 100%)` }} />
     <div className="hero-glow" style={{ position: "absolute", top: "20%", right: "5%", width: 500, height: 500, background: `radial-gradient(circle,${C.goldTint} 0%,transparent 70%)`, pointerEvents: "none" }} />
@@ -2470,7 +2479,8 @@ export default function App() {
     <div style={{ fontFamily: SS, margin: 0, padding: 0, background: C.ink, minHeight: "100vh" }}>
       <a href="#main" className="skip-link">Skip to main content</a>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+        /* perf-01: fonts are preloaded from the index.html head. Never re-add an @import here:
+           inside a React-rendered style block it is only discovered after the JS bundle executes. */
         .tabbar::-webkit-scrollbar { display: none; }
         .tabbar { -ms-overflow-style: none; scrollbar-width: none; }
         [id] { scroll-margin-top: 100px; }

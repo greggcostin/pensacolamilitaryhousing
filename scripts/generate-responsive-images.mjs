@@ -18,6 +18,9 @@ import { COMMUNITY_LINKS } from "../src/communitiesData.js";
 const FORCE = process.argv.includes("--force");
 const DRY = process.argv.includes("--dry");
 export const WIDTHS = [480, 768, 1200];
+// Images the SPA renders from JSX (src/App.jsx). The img scan below only reads .html files,
+// so without this the hero would silently lose its width variants on the next --force run.
+export const SPA_ONLY = ["public/images/hero-window.jpg"];
 export const AVATAR = { file: "public/images/gregg-portrait.jpg", widths: [120, 180] };
 const ENC = {
   avif: { quality: 50, effort: 6 },
@@ -65,6 +68,7 @@ export function referencedImages() {
     }
   }
   for (const local of appImages()) set.add(local);
+  for (const extra of SPA_ONLY) if (existsSync(extra)) set.add(extra);
   return [...set].sort();
 }
 export const variantPath = (src, w, fmt) => { const { dir, name } = parse(src); return join(dir, `${name}-${w}.${fmt === "jpeg" ? "jpg" : fmt}`).replace(/\\/g, "/"); };

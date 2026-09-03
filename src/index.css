@@ -4,15 +4,11 @@ body { font-family: 'Inter', 'DM Sans', system-ui, sans-serif; -webkit-font-smoo
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 button { font-family: inherit; }
-/* Hero background — modern formats with progressive fallback.
-   Browsers that don't support image-set() use the first (jpg) declaration;
-   modern browsers override with the second, preferring AVIF then WebP.
-   backgroundSize/Position/Repeat stay inline on the .hero-bg-image element. */
-.hero-bg-image {
-  background-image: url(/images/hero-window.jpg);
-  background-image: image-set(
-    url(/images/hero-window.avif) type("image/avif"),
-    url(/images/hero-window.webp) type("image/webp"),
-    url(/images/hero-window.jpg) type("image/jpeg")
-  );
-}
+/* Hero image (perf-08, media-09). The 2000x2000 asset is now a real img with srcset in
+   src/App.jsx, not a CSS background, so it gets alt text and a width-appropriate file.
+   object-fit:contain + object-position:right top reproduce the old desktop composition
+   (background-size:auto 100%; background-position:right top) exactly: the square bitmap is
+   scaled to the box height and pinned to the right edge, and the left half stays transparent
+   so .hero-gradient-h reads over the ink. Phone crops live in the index.html media queries. */
+.hero-bg-image picture { display: block; width: 100%; height: 100%; }
+.hero-bg-image img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: right top; }

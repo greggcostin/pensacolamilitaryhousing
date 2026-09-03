@@ -9,8 +9,17 @@
               <meta name="viewport" content="width=device-width, initial-scale=1.0" />
               <meta name="theme-color" content="#0A0F1A" />
 
-              <!-- LCP hint: warm the hero image (the SPA paints it as a CSS background after hydration) -->
-              <link rel="preload" as="image" href="/images/hero-window.avif" type="image/avif" fetchpriority="high" />
+              <!-- LCP hint: warm the hero image the SPA renders after hydration (perf-08).
+                   imagesizes must stay byte-identical to the img sizes in src/App.jsx or the browser fetches twice. -->
+              <link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesrcset="/images/hero-window-480.avif 480w, /images/hero-window-768.avif 768w, /images/hero-window-1200.avif 1200w, /images/hero-window.avif 2000w" imagesizes="(max-width: 900px) 100vw, 900px" />
+
+              <!-- perf-01: fonts are discovered in the HTML instead of after the JS bundle executes.
+                   Weight list matches what src/App.jsx actually renders: Inter 300/400/500/600/700,
+                   Playfair Display 400/500/600/700 roman plus 400/500 italic (the gold hero line). -->
+              <link rel="preconnect" href="https://fonts.googleapis.com" />
+              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+              <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+              <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" /></noscript>
 
               <!-- Search engine ownership verification -->
               <meta name="msvalidate.01" content="2FF04A4C930D811BF314EC1B4D8BE3FD" />
@@ -621,7 +630,8 @@
                         @media (max-width: 900px){
                           .hero-section{padding-top:120px!important;min-height:auto!important;display:flex!important;flex-direction:column!important;align-items:stretch!important}
                           .hero-content{order:1!important;padding:20px 24px 28px!important}
-                          .hero-bg-image{order:2!important;position:static!important;top:auto!important;bottom:auto!important;width:100%!important;height:340px!important;background-size:cover!important;background-position:center 25%!important}
+                          .hero-bg-image{order:2!important;position:static!important;top:auto!important;bottom:auto!important;width:100%!important;height:340px!important}
+                          .hero-bg-image img{object-fit:cover!important;object-position:center 25%!important}
                           .hero-stats{order:3!important;position:static!important;bottom:auto!important}
                           .hero-gradient-h,.hero-gradient-v,.hero-glow{display:none!important}
                           /* cro-01 (audit 2026-09-02): the stats row stays centred and compact instead of a 383px one-column stack */
@@ -643,13 +653,15 @@
                         @media (max-width: 640px){
                           .hero-section{padding-top:95px!important}
                           .hero-content{padding:16px 20px 24px!important}
-                          .hero-bg-image{height:300px!important;background-position:center 20%!important}
+                          .hero-bg-image{height:300px!important}
+                          .hero-bg-image img{object-position:center 20%!important}
                           section[style*="padding: \"100px 32px\""]{padding:60px 20px!important}
                           section[style*="padding: \"140px 32px 80px\""]{padding:100px 20px 50px!important}
                         }
                         @media (max-width: 480px){
                           .hero-content{padding:12px 18px 20px!important}
-                          .hero-bg-image{height:280px!important;background-position:center 15%!important}
+                          .hero-bg-image{height:280px!important}
+                          .hero-bg-image img{object-position:center 15%!important}
                         }
                         /* Prevent horizontal scroll from any stray wide element */
                         #root{overflow-x:hidden}

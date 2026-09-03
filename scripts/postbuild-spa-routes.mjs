@@ -144,7 +144,7 @@ for (const r of ROUTE_META.filter((e) => e.shell)) {
   html = swap(html, `name="twitter:image" content="${SITE}/og/home.png"`, `name="twitter:image" content="${SITE}/og/${r.file}.png"`, "twitter:image", r);
   // The homepage hero preload competes with each route's own LCP on shells that
   // never render the hero — strip it (audit 2.21). Kept on / (index.html itself).
-  html = swap(html, `<link rel="preload" as="image" href="/images/hero-window.avif" type="image/avif" fetchpriority="high" />`, ``, "hero-preload-strip", r);
+  html = swap(html, `<link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesrcset="/images/hero-window-480.avif 480w, /images/hero-window-768.avif 768w, /images/hero-window-1200.avif 1200w, /images/hero-window.avif 2000w" imagesizes="(max-width: 900px) 100vw, 900px" />`, ``, "hero-preload-strip", r);
 
   // ── per-page structured data: WebPage + BreadcrumbList (entity blocks untouched) ──
   const webPage = JSON.stringify({

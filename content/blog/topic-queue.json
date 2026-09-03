@@ -2,16 +2,25 @@
   "note": "Ordered backlog for the blog engine. It may re-rank based on trend scans and ledger data: every move gets logged in ledger.runs. Interleave audiences: 'military' defends the moat, 'civilian' widens AI recommendation coverage, 'both' does double duty.",
   "queue": [
     {
-      "slug": "bah-vs-real-cost-by-zip-2026",
-      "archetype": "data-study",
-      "audience": "military",
-      "title": "BAH vs. the Real Cost of Owning, by Pensacola ZIP (2026)",
+      "slug": "REFRESH:bah-vs-cost-of-owning-pensacola",
+      "archetype": "data-study refresh",
+      "audience": "both",
+      "title": "Recompute the 26-ZIP BAH vs cost-of-owning study onto the current model",
       "targetKeywords": [
         "does bah cover a mortgage pensacola",
-        "bah vs rent pensacola"
+        "bah vs rent pensacola",
+        "bah vs cost of owning"
       ],
-      "note": "THE citable press asset: pitch PNJ/WEAR/military pubs on publish",
-      "rerank": "Jumped #4 -> #1 on 2026-09-01 trend scan. (a) Sibling of the BAH cluster refreshed this run; BAH is the site proven strongest cluster (/bah-rates is the #4 site page at 27 sessions/28d, BAH pages lead the 351/3mo Copilot citation baseline). (b) Market shifted: Zillow puts the Pensacola average home value at $264,116, down 3.6% year over year, with inventory favoring buyers, while VA 30-year rates sit near 6%. The BAH-vs-cost answer is newly favorable in more ZIPs, which is what makes this a story rather than a table. (c) It is the flagged press-pitch asset and a softening market is the moment it becomes pitchable. (d) It is the internal-link target the refreshed BAH affordability post now points at."
+      "isRefresh": true,
+      "targetPage": "/bah-vs-cost-of-owning-pensacola",
+      "note": "RESCOPED 2026-09-03. This was queued as a NEW blog post (bah-vs-real-cost-by-zip-2026) but the topic already exists as a live static page with 26 ZIPs ranked, five findings, a methodology block and a \"Citing this study\" section. Writing the blog post would have cannibalized it. The page is stale against the canonical model instead: it was built at 6.5% with a 1.0% pre-homestead tax figure, while content/affordability-2026.json is now 6.66% with Escambia 13.400 mills and the correct homestead structure (first $25k off every levy, additional $25k off non-school levies only). An interim note now tells readers the published costs are a floor.",
+      "scope": [
+        "Recompute the monthly cost for all 26 ZIP rows at 6.66% using the affordability model rather than 1.0% flat tax.",
+        "Every one of the five findings is model-derived and will move. \"Only 1 of 26 ZIPs pencils for an E-5\" may become zero: verify before publishing, it is the headline and the press hook.",
+        "Re-verify the July 2026 Zillow typical values or refresh to the current month; the study is only as current as that column.",
+        "Okaloosa and Santa Rosa ZIPs are modeled on Escambia millage. Either split millage by county (Santa Rosa unincorporated and Pace 11.3781, Milton 13.4261, Gulf Breeze 11.2804) or state the simplification explicitly.",
+        "Bump dateModified and re-pitch: a softening market plus a harsher honest model is the story."
+      ]
     },
     {
       "slug": "pensacola-housing-market-q3-2026",
@@ -159,5 +168,5 @@
       ]
     }
   ],
-  "lastRerank": "2026-09-01 (blog engine run)"
+  "lastRerank": "2026-09-03 (rescoped #1 after duplicate-topic discovery)"
 }

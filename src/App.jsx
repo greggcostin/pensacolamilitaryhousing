@@ -1146,7 +1146,7 @@ const BaseGuide = ({ base, go }) => {
       ],
       bahMha: "FL023", bahLabel: "Eglin AFB", bahZip: "32542",
       bahNote: "Eglin falls under the FL023 Fort Walton Beach MHA, with meaningfully higher rates than Pensacola due to the Emerald Coast beach premium.",
-      tips: "Niceville (especially Bluewater Bay) is the gold standard for Eglin families with kids: top schools, safe neighborhoods, and a 10-minute commute. Crestview is where budget-conscious buyers go, with significantly lower prices and strong new construction inventory."
+      tips: "Niceville (especially Bluewater Bay) is the gold standard for Eglin families with kids: top schools, newer inventory, and a 10-minute commute. Crestview is where budget-conscious buyers go, with significantly lower prices and strong new construction inventory."
     },
     hurlburt: {
       title: "Hurlburt Field Housing Guide",
@@ -2061,7 +2061,7 @@ const LoanCalculator = () => {
 
         <div style={{ background: "rgba(201,168,76,0.08)", border: `2px solid ${GOLD}55`, borderRadius: 12, padding: "18px 22px", margin: "16px 0 24px" }}>
           <p style={{ color: GOLD, fontSize: 28, fontWeight: 800, margin: "0 0 12px", letterSpacing: 0.5 }}>⚠️ BAH IS A FOUNDATION, NOT A CEILING</p>
-          <p style={{ color: "#ddd", fontSize: 14, lineHeight: 1.75, margin: 0 }}>The purchase-price estimates above assume BAH covers 100% of your PITI payment. In reality, many military families invest $200-$500/month above BAH to secure a home in a better school district, safer neighborhood, or closer to base. I model specific scenarios for every buyer. Call <a href="tel:+18502665005" style={{ color: GOLD, fontWeight: 600 }}>(850) 266-5005</a> and we will run your numbers together.</p>
+          <p style={{ color: "#ddd", fontSize: 14, lineHeight: 1.75, margin: 0 }}>The purchase-price estimates above assume BAH covers 100% of your PITI payment. In reality, many military families invest $200-$500/month above BAH to secure a home in a better-graded school zone, newer construction, or a shorter drive to base. I model specific scenarios for every buyer. Call <a href="tel:+18502665005" style={{ color: GOLD, fontWeight: 600 }}>(850) 266-5005</a> and we will run your numbers together.</p>
         </div>
 
         <InfoBox title="Estimates Only: Confirm With a Lender">

@@ -155,7 +155,7 @@ export const NEIGHBORHOODS = [
     keywords: "East Pensacola Heights homes for sale, Midtown Pensacola real estate, Bayou Texar homes, Pensacola bungalows",
     h1: "Midtown and East Pensacola Heights",
     lead: "Between downtown and the bayous, anchored by the ever-repainted Graffiti Bridge. Smaller lots and older housing stock, but walkable pockets, water access and prices that East Hill left behind.",
-    fit: "Up-and-coming blocks, bayou access, older homes",
+    fit: "Bayou access, 1920s to 1950s bungalows, smaller lots",
     image: "/images/graffiti-bridge.jpg", alt: "Pensacola's Graffiti Bridge at night with light trails",
     pmh: "/communities/east-pensacola-heights", zip: null,
     sections: [

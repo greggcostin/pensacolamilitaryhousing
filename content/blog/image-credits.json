@@ -323,6 +323,42 @@
       "creditRequired": true,
       "credit": "Ebyabe",
       "query": "Milton Florida Santa Rosa County houses"
+    },
+    "civilian-site/images/destin.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "View of Destin, Florida from the Destin Harbor.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AView%20of%20Destin%2C%20Florida%20from%20the%20Destin%20Harbor.jpg",
+      "license": "CC BY 2.0",
+      "creditRequired": true,
+      "credit": "Destin Vacation Boat Rentals",
+      "query": "Destin Florida harbor boats"
+    },
+    "civilian-site/images/niceville-cand1.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "U.S. Air Force Airmen from the 720th Special Tactics Group out of Hurlburt Field, Fla., jump out of a C-130J Hercules aircraft during water rescue training above Choctawhatchee Bay.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AU.S.%20Air%20Force%20Airmen%20from%20the%20720th%20Special%20Tactics%20Group%20out%20of%20Hurlburt%20Field%2C%20Fla.%2C%20jump%20out%20of%20a%20C-130J%20Hercules%20aircraft%20during%20water%20rescue%20training%20above%20Choctawhatchee%20Bay.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "U.S. Air Force photo by Senior Airman Julianne Showalter",
+      "query": "Choctawhatchee Bay"
+    },
+    "civilian-site/images/niceville-cand2.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "720th Special Tactics Group airmen jump 20071003.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3A720th%20Special%20Tactics%20Group%20airmen%20jump%2020071003.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "U.S. Air Force Airmen from the 720th Special Tactics Group out of Hurlburt Field, Fla., jump out of a C-130J Hercules ai",
+      "query": "Choctawhatchee Bay"
+    },
+    "civilian-site/images/niceville-cand3.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Choctawhatchee Bay.JPG",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AChoctawhatchee%20Bay.JPG",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Skye Marthaler",
+      "query": "Choctawhatchee Bay"
     }
   }
 }

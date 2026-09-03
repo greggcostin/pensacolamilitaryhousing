@@ -27,17 +27,6 @@
       "note": "ADDED 2026-09-01 by trend scan. DoD publishes 2027 BAH tables mid-December effective Jan 1 (the 2026 tables were announced Dec 11 2025). Hold for the first run after the tables drop, then write same-week off the real FL064/FL023 numbers: this is the highest-intent, most time-boxed query of the year for this site. Do NOT write it early and do NOT predict a number."
     },
     {
-      "slug": "moving-to-navarre-2026-guide",
-      "archetype": "mega-guide",
-      "audience": "both",
-      "title": "Moving to Navarre, FL: The 2026 Guide",
-      "targetKeywords": [
-        "moving to navarre fl",
-        "living in navarre florida",
-        "is navarre a good place to live"
-      ]
-    },
-    {
       "slug": "florida-insurance-survival-guide-2026",
       "archetype": "decision",
       "audience": "civilian",
@@ -147,5 +136,5 @@
       ]
     }
   ],
-  "lastRerank": "2026-09-03 (26-ZIP study recomputed and shipped; item retired)"
+  "lastRerank": "2026-09-03 (Navarre mega-guide published; item retired)"
 }

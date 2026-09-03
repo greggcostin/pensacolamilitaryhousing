@@ -359,6 +359,24 @@
       "creditRequired": true,
       "credit": "Skye Marthaler",
       "query": "Choctawhatchee Bay"
+    },
+    "/images/blog/moving-to-navarre-2026-guide-hero.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Navarre Beach Pier IGP2095.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ANavarre%20Beach%20Pier%20IGP2095.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Taminar",
+      "query": "Navarre Beach Pier"
+    },
+    "/images/blog/moving-to-navarre-2026-guide-inline.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Navarre Sound Shore - panoramio.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ANavarre%20Sound%20Shore%20-%20panoramio.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "j2003af",
+      "query": "Santa Rosa Sound Navarre"
     }
   }
 }

@@ -230,45 +230,31 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 .imodal .ifine a{color:var(--gold);text-decoration:underline}
 
 /* MOBILE_DRAWER_START */
-.nav-toggle{display:none}
-@media(max-width:900px){
-  .main-banner{position:sticky;top:0}
-  .banner-row{grid-template-columns:auto 1fr auto auto!important;padding:6px 12px!important;gap:10px!important;min-height:56px;align-items:center}
-  .banner-lrr{display:none!important}
-  .banner-logo{justify-self:start}
-  .banner-logo img{height:40px!important}
-  .banner-contact{justify-self:end;flex-direction:row;gap:0}
-  .banner-email{display:none!important}
-  .banner-phone{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;font-size:15px!important;white-space:nowrap}
-  @media(max-width:340px){.banner-phone{font-size:13px!important;padding:0 4px}}
-  .nav-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--gold-line);border-radius:8px;background:transparent;color:var(--gold);cursor:pointer;padding:0}
-  .nav-toggle svg{width:22px;height:22px}
-  .site-drawer{display:none;position:fixed;top:56px;left:0;right:0;bottom:0;background:var(--ink);overflow-y:auto;padding:8px 12px calc(88px + env(safe-area-inset-bottom));z-index:1001}
-  .site-drawer.open{display:block}
-  .banner-tabs{flex-direction:column;align-items:stretch;gap:0!important;padding:0!important}
-  .banner-tabs>a,.banner-tabs .dropdown>button,.banner-tabs .banner-search{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 12px!important;font-size:15px!important;letter-spacing:.3px!important;border-bottom:1px solid var(--hair);border-radius:0;width:100%;text-align:left;text-transform:none;margin:0!important}
-  .banner-tabs>a.mil-link{border:1px solid var(--gold-line);border-radius:8px;margin:10px 0 0!important;justify-content:center}
-  .banner-tabs .dropdown{padding:0}
-  .banner-tabs .dropdown>button[aria-expanded="true"]{color:var(--gold)}
-  .dropdown-menu{position:static!important;display:none;box-shadow:none;border:0;padding:0 0 6px 14px;max-height:none!important;min-width:0;background:transparent}
-  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{display:none}
-  .dropdown.open .dropdown-menu{display:block}
-  .dropdown-menu a{min-height:44px;display:flex;align-items:center;font-size:14px;padding:0 10px}
-  body.drawer-open{overflow:hidden}
-  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
-  .sticky-mobile-cta{bottom:calc(12px + env(safe-area-inset-bottom))}
-  footer a{display:inline-block;padding:10px 6px;min-height:44px;line-height:24px}
-  .chips a{min-height:44px;display:inline-flex;align-items:center}
-  .explore .related a,.related a{min-height:44px;display:flex;align-items:center;padding:8px 0}
-  .imodal .ifine{font-size:12px}
+/* The drawer markup stays in the page but is never shown; the toggle must be hidden at EVERY width. */
+.nav-toggle{display:none!important}
+.main-banner{position:sticky;top:0}
+/* Phones: keep every top-level tab visible (owner preference). */
+@media (max-width: 900px){
+  .nav-toggle{display:none!important}
+  .site-drawer{display:block!important;position:static!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;background:none!important;padding:0!important;overflow:visible!important;z-index:auto!important}
+  .banner-row{grid-template-columns:auto 1fr auto!important;padding:6px 12px 0!important;gap:10px!important;min-height:0!important;align-items:center}
+  .banner-lrr{display:block!important;justify-self:start}
+  .banner-logo{justify-self:center}
+  .banner-lrr img,.banner-logo img{height:38px!important}
+  .banner-tabs{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;gap:2px!important;padding:4px 6px 8px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button,.main-banner .banner-tabs .banner-search{display:inline-flex!important;align-items:center;justify-content:center;width:auto!important;min-height:30px;margin:0!important;padding:5px 8px!important;font-size:11px!important;letter-spacing:.3px!important;line-height:1.1;text-align:center!important;text-transform:uppercase!important;border-bottom:none!important;border-radius:6px!important}
+  .banner-tabs>a.mil-link{border:1px solid var(--gold-line);margin:0!important}
+  .banner-tabs .dropdown{padding:0;position:relative}
+  body.drawer-open{overflow:auto!important}
 }
-@media(max-width:640px){
-  .imodal-overlay{padding:16px 12px calc(24px + env(safe-area-inset-bottom));align-items:flex-start}
-  .imodal{padding:44px 18px 22px;border-radius:12px}
-  .imodal-close{width:44px;height:44px;top:6px;right:6px;padding:0;display:flex;align-items:center;justify-content:center}
-  .imodal input,.imodal select,.imodal textarea{font-size:16px;padding:12px 14px}
-  .imodal .isubmit{width:100%;min-height:48px}
-  main table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width: 360px){
+  /* the sticky bottom bar already carries Email; the header copy overflows below 360px */
+  .main-banner .banner-email{display:none!important}
+}
+@media (max-width: 480px){
+  .banner-lrr img,.banner-logo img{height:32px!important}
+  .banner-tabs{gap:1px!important;padding:3px 4px 7px!important}
+  .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button,.main-banner .banner-tabs .banner-search{padding:5px 6px!important;font-size:10.5px!important;letter-spacing:.2px!important}
 }
 /* MOBILE_DRAWER_END */
 .tbl-scroll{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch;margin:0 0 1rem}.tbl-scroll>table{margin:0;min-width:100%}</style>

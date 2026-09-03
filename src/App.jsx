@@ -2436,27 +2436,25 @@ export default function App() {
         /* ── mobile header: 57px bar + hamburger drawer (<=900px), audit 2026-09-02 ── */
         .nav-toggle { display: none; }
         @media (max-width: 900px) {
-          .spa-nav > div:first-of-type { grid-template-columns: auto 1fr auto auto !important; padding: 6px 12px !important; gap: 10px !important; min-height: 57px; align-items: center; }
+          .spa-nav > div:first-of-type { grid-template-columns: auto 1fr auto !important; padding: 6px 12px !important; gap: 10px !important; min-height: 57px; align-items: center; }
           .spa-nav > div:first-of-type > div:nth-child(1) { display: none !important; }
           .spa-nav > div:first-of-type > div:nth-child(2) { justify-self: start !important; }
           .spa-nav img { height: 40px !important; }
           .spa-nav > div:first-of-type > div:nth-child(3) { flex-direction: row !important; justify-self: end !important; gap: 0 !important; }
           .spa-nav a[href^="tel:"] { display: inline-flex !important; align-items: center; min-height: 44px; padding: 0 8px; font-size: 15px !important; white-space: nowrap; }
           .spa-nav a[href^="mailto:"] { display: none !important; }
-          .nav-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(201,168,76,0.35); border-radius: 8px; background: transparent; color: #C9A84C; cursor: pointer; padding: 0; }
-          .nav-toggle svg { width: 22px; height: 22px; }
-          .spa-drawer { display: none; position: fixed; top: 57px; left: 0; right: 0; bottom: 0; background: #0A0F1A; overflow-y: auto; padding: 8px 12px calc(88px + env(safe-area-inset-bottom)); z-index: 1001; }
-          .spa-drawer.open { display: block; }
-          .spa-nav .tabbar { flex-direction: column !important; align-items: stretch !important; gap: 0 !important; padding: 0 !important; }
-          .spa-nav .tabbar > button, .spa-nav .tabbar > a, .spa-nav .tabbar .spa-drop > button, .spa-nav .tabbar .spa-drop > a { display: flex !important; align-items: center; min-height: 48px; width: 100%; text-align: left; padding: 0 12px !important; font-size: 15px !important; letter-spacing: 0.3px !important; text-transform: none !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; border-radius: 0 !important; background: transparent !important; }
-          .spa-nav .tabbar button[aria-label="Search the site"] { justify-content: flex-start; }
-          .spa-nav .spa-drop { position: static !important; padding: 0 !important; width: 100%; }
-          .spa-nav .spa-dropmenu { position: static !important; box-shadow: none !important; border: 0 !important; padding: 0 0 6px 14px !important; max-height: none !important; min-width: 0 !important; background: transparent !important; }
-          .spa-nav .spa-dropmenu a, .spa-nav .spa-dropmenu button { min-height: 44px !important; display: flex !important; align-items: center; font-size: 14px !important; padding: 0 10px !important; }
-          body.drawer-open { overflow: hidden; }
-          .hero-section { min-height: auto !important; padding-top: 64px !important; }
-          .page-wrap { padding-top: 72px !important; }
-          .hero-bg-image, .hero-gradient-h, .hero-gradient-v { top: 64px !important; }
+          /* Phones: every tab stays visible on phones (owner preference, Sep 2026); the drawer markup stays but is inert. */
+          .spa-nav { position: sticky !important; top: 0 !important; }
+          .nav-toggle { display: none !important; }
+          .spa-drawer { display: block !important; position: static !important; top: auto !important; background: none !important; padding: 0 !important; overflow: visible !important; z-index: auto !important; }
+          .spa-nav .tabbar { flex-direction: row !important; flex-wrap: wrap !important; align-items: center !important; justify-content: center !important; gap: 2px !important; padding: 4px 6px 8px !important; overflow: visible !important; }
+          .spa-nav .tabbar > button, .spa-nav .tabbar > a, .spa-nav .tabbar .spa-drop > button, .spa-nav .tabbar .spa-drop > a { display: inline-flex !important; align-items: center; justify-content: center; width: auto !important; min-height: 30px; margin: 0 !important; padding: 5px 8px !important; font-size: 11px !important; letter-spacing: .3px !important; line-height: 1.1; text-align: center !important; border-bottom: none !important; border-radius: 6px !important; }
+          .spa-nav .spa-drop { position: relative !important; padding: 0 !important; width: auto !important; }
+          .spa-nav .spa-dropmenu { position: absolute !important; padding: 6px 0 !important; min-width: 200px !important; }
+          body.drawer-open { overflow: auto !important; }
+          .hero-section { min-height: auto !important; padding-top: 0 !important; }
+          .page-wrap { padding-top: 0 !important; }
+          .hero-bg-image, .hero-gradient-h, .hero-gradient-v { top: 0 !important; }
           .hero-gradient-h { background: linear-gradient(90deg, #0A0F1A 0%, rgba(10,15,26,0.85) 55%, rgba(10,15,26,0.6) 100%) !important; }
           .hero-content { padding: 24px 20px 64px !important; }
           [id] { scroll-margin-top: 72px; }

@@ -1,0 +1,9 @@
+# Keep the pages.dev twin out of the index; the custom domain is canonical.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.pdf
+  Cache-Control: public, max-age=86400

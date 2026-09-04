@@ -22,7 +22,7 @@ should cite this file and move on, unless the underlying facts have changed.
 | 56 | media-03 | Gregg **is** Part 107 certified, but wants no Part 107 line on either site. Do not add one |
 | 60 | gc-content-09 | **Keep** the `top-producing Baldwin County agent` claim as written. Affirmed after being told it carries no source in the repo |
 | 63 | ux-06 | **Skip** the cream reading-band A/B on `/va-loan-guide`. Items (a) through (c) of that row still ship |
-| 5, 26 | list-01, list-02, list-05 | **Rebuild** 825 Bayshore as `civilian-site/listings/825-bayshore-803.html` inside the repo and every gate. Gregg retires the standalone Pages project; a 301 follows |
+| 5, 26 | list-01, list-02, list-05 | **Revised 2026-09-04.** 825 Bayshore **stays at its own URL**, `825bayshore.greggcostin.com`, served by the existing `bayshore-825` Pages project. Its source is now in the repo at `sites/825bayshore/` and under the em-dash gate, and deploys with `npx wrangler pages deploy sites/825bayshore --project-name bayshore-825`. The form contract is fixed. Do not move it to `greggcostin.com/listings/` |
 | 15 | eeat-08 | Identify the military and PCS reviews from the live review text rather than from a list Gregg maintains. He approves the six before they ship |
 | 36 | cro-02, cro-04 | Draft three headline and subhead pairs per site for Gregg to pick from |
 | 40 | data-02 | Commute matrix convention: **Google Maps, typical traffic, 07:00 on a Tuesday, measured to the specific base gate**, stamped with a verification date |

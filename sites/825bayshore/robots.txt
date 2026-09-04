@@ -1,0 +1,5 @@
+# 825 Bayshore Dr #803, Pensacola FL - listing site
+User-agent: *
+Allow: /
+
+Sitemap: https://825bayshore.greggcostin.com/sitemap.xml

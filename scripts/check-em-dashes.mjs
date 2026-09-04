@@ -19,7 +19,7 @@ const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
 // (e.g. data-inquiry-type attributes) — allow both forms.
 const CONTRACT = /PCS \/ Relocation (?:—|&mdash;) (?:Buying|Selling)/g;
 
-const htmlFiles = ["public", "public/bases", "public/communities", "public/blog"]
+const htmlFiles = ["public", "public/bases", "public/communities", "public/blog", "sites/825bayshore"]
   .flatMap((d) => readdirSync(join(ROOT, d)).filter((f) => f.endsWith(".html")).map((f) => join(ROOT, d, f)));
 htmlFiles.push(join(ROOT, "index.html"));
 

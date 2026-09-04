@@ -1,0 +1,6 @@
+# 825 Bayshore Dr #803. Single-page listing site.
+# No "/* /index.html 200" wildcard: it made every unknown URL a 200 duplicate of the
+# listing page, which is the idx-01 soft-404 defect the September 2026 audit raised on
+# the main site. Unknown paths now fall through to 404.html with a real 404.
+/index.html                    /                     301
+/825-bayshore-803              /                     301

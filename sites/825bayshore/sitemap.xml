@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://825bayshore.greggcostin.com/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://825bayshore.greggcostin.com/images/aerial.jpg</image:loc><image:title>Aerial view of The Bayshore condominium, 825 Bayshore Dr, Pensacola FL</image:title></image:image>
+    <image:image><image:loc>https://825bayshore.greggcostin.com/images/living.jpg</image:loc><image:title>Living room of Unit 803 with balcony over Pensacola Bay</image:title></image:image>
+    <image:image><image:loc>https://825bayshore.greggcostin.com/images/kitchen.jpg</image:loc><image:title>Galley kitchen with granite counters and cobalt tile</image:title></image:image>
+    <image:image><image:loc>https://825bayshore.greggcostin.com/images/bedroom.jpg</image:loc><image:title>Primary bedroom of Unit 803 overlooking the water</image:title></image:image>
+    <image:image><image:loc>https://825bayshore.greggcostin.com/images/pier.jpg</image:loc><image:title>Private 300-foot pier into Pensacola Bay at The Bayshore</image:title></image:image>
+  </url>
+</urlset>

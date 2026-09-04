@@ -884,7 +884,7 @@ const AboutPage = ({ go }) => (
           <Eyebrow>Family Man</Eyebrow>
           <H2>11 PCS moves. I get it.</H2>
           <Body>When I say I understand the stress of a PCS move, I mean it. My family and I have lived it: packing up, finding homes from overseas, navigating schools and neighborhoods sight-unseen. Now I channel that experience into making your transition as smooth as possible.</Body>
-          <Body>I am the preferred real estate agent for VeteranPCS, TIER 1 PCS, and the M.O.R.E. Network, three of the most respected military relocation organizations in the country. I'm also recognized as a Zillow Premier Agent in the top 5% of Pensacola-area Realtors with a perfect 5-star rating.</Body>
+          <Body>I am the preferred real estate agent for VeteranPCS, TIER 1 PCS, and the M.O.R.E. Network, three of the most respected military relocation organizations in the country. I'm also recognized as a Zillow Premier Agent in the top 0.8% of Pensacola-area Realtors with a perfect 5-star rating.</Body>
         </div>
       </div>
     </Section>

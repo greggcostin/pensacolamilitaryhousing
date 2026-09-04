@@ -97,8 +97,11 @@ for (const f of files) {
     const ctx = contextFor(h, j.idx, site, src);
     const avif = candidates(local, src, "avif", m.width), webp = candidates(local, src, "webp", m.width), jpg = candidates(local, src, "jpeg", m.width);
     const sources = [];
-    if (avif.length) sources.push(`<source type="image/avif" srcset="${avif.join(", ")}" sizes="${SIZES[ctx]}">`);
-    if (webp.length) sources.push(`<source type="image/webp" srcset="${webp.join(", ")}" sizes="${SIZES[ctx]}">`);
+    // A modern-format source with a single candidate is worse than no source at all: the browser
+    // picks that source and downloads the one width it offers, whatever the viewport. That is how a
+    // 340px card ended up serving a 566 KB full-size file. Emit a source only with a real ladder.
+    if (avif.length > 1) sources.push(`<source type="image/avif" srcset="${avif.join(", ")}" sizes="${SIZES[ctx]}">`);
+    if (webp.length > 1) sources.push(`<source type="image/webp" srcset="${webp.join(", ")}" sizes="${SIZES[ctx]}">`);
     const next = `<picture>${sources.join("")}${buildImg(a, src, m, ctx, jpg)}</picture>`;
     if (next !== j.whole) { h = h.split(j.whole).join(next); pictures++; }
   }

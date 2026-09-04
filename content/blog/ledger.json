@@ -354,7 +354,7 @@
         "research": "opus",
         "write": "fable"
       },
-      "notes": "Research pack included SEARCH LANDSCAPE section (new SEO architecture); surfaced 7 live-site factual errors (Deer Point pricing, 15-min commute claim incl JSON-LD, stale Garcon toll, wrong E-6 BAH, Whisper Bay dating, Tiger Point Elementary unverifiable, Navarre all-A-rated outdated) — all corrected this run. Soundside High School (opens Aug 2026) folded in from supplementary research.",
+      "notes": "Research pack included SEARCH LANDSCAPE section (new SEO architecture); surfaced 7 live-site factual errors (Deer Point pricing, 15-min commute claim incl JSON-LD, stale Garcon toll, wrong E-6 BAH, Whisper Bay dating, Tiger Point Elementary unverifiable, Navarre all-A-rated outdated); all corrected this run. Soundside High School (opens Aug 2026) folded in from supplementary research.",
       "published": true
     },
     {
@@ -393,7 +393,7 @@
         "research": "opus",
         "write": "fable"
       },
-      "images": "hero+inline reuse from topics library (assumable-va-loans.jpg, va-loan-guide.jpg) after 4 fetch queries failed the eye test (wrong subjects: cemetery, hurricane wreckage) — substitution logged per fetch-new-first standing order",
+      "images": "hero+inline reuse from topics library (assumable-va-loans.jpg, va-loan-guide.jpg) after 4 fetch queries failed the eye test (wrong subjects: cemetery, hurricane wreckage); substitution logged per fetch-new-first standing order",
       "canonFixes": [
         "va-funding-fee-2026: assumption 0.50% row added w/ cash-at-close caveat (38 USC 3729(b)(2), Circ 26-23-10); exemption reframed to statutory compensation test",
         "assumable-va-loans-pensacola: FL $404 locality variance added, $704 servicer ceiling (Circ 26-24-5), $250 prior-approval tier"

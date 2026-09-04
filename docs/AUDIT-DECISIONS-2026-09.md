@@ -51,7 +51,8 @@ one home.
   whether the `GT-WVGM66XS` container is still used by Google Ads
 - Cloudflare: Email Address Obfuscation **off** in both zones, review Bot Fight Mode on
   pensacolamilitaryhousing.com, Speed Brain **on** for greggcostin.com
-- Retire the standalone 825bayshore Pages project once the in-repo page ships
+- Cloudflare Email Address Obfuscation is what still mangles the 825 Bayshore email address on
+  serve; the repo source is already correct, so that toggle is the only thing left on it
 - Bing Webmaster Tools keyword exports, for the position baselines on the BAH and
   homes-for-sale clusters
 - Website field set to greggcostin.com on Zillow, Homes.com, LinkedIn, Realtor.com, Facebook,

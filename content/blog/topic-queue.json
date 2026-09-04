@@ -24,19 +24,79 @@
         "2027 BAH rates",
         "did BAH go up 2027"
       ],
-      "note": "ADDED 2026-09-01 by trend scan. DoD publishes 2027 BAH tables mid-December effective Jan 1 (the 2026 tables were announced Dec 11 2025). Hold for the first run after the tables drop, then write same-week off the real FL064/FL023 numbers: this is the highest-intent, most time-boxed query of the year for this site. Do NOT write it early and do NOT predict a number."
+      "note": "ADDED 2026-09-01 by trend scan. DoD publishes 2027 BAH tables mid-December effective Jan 1 (the 2026 tables were announced Dec 11 2025). Hold for the first run after the tables drop, then write same-week off the real FL064/FL023 numbers: this is the highest-intent, most time-boxed query of the year for this site. Do NOT write it early and do NOT predict a number.",
+      "dedup": "Dedup gate 2026-09-04 (scripts/blog-dedup-check.mjs, lesson L003): DUPLICATE against /blog/bah-2026-pensacola-what-can-you-afford because that post now targets \"2027 BAH Pensacola\" on purpose (Sep 2 refresh). By design: the December run decides between (a) a short news-reaction post that links to the retitled 2026 post and (b) retitling the 2026 post as the 2027 anchor. Do not write both."
     },
     {
-      "slug": "florida-insurance-survival-guide-2026",
+      "slug": "nas-pensacola-student-housing-dorms-bah-off-base",
       "archetype": "decision",
+      "audience": "military",
+      "title": "Student at NAS Pensacola or Corry Station? Dorms, BAH, and When You Can Live Off Base",
+      "targetKeywords": [
+        "nas pensacola student housing",
+        "corry station dorms",
+        "flight school pensacola housing",
+        "training air wing five",
+        "cso students nas pensacola housing"
+      ],
+      "evidence": "Evidence: Bing Webmaster Tools keyword export, 3-month window ending Aug 22 2026 (docs/seo-baselines/bing-keywords-2026-08-22.csv). The site already earns impressions on these queries with no page that answers them. Queries: \"training air wing five\" (15 imp, pos 9.7), \"nas pensacola base housing office for air force cso students\" (4, pos 7.0), \"is the corry station tech school dorm at nas pensacola similar to the goodfellow dorms\" (4, pos 5.3), \"best place to live for flight school milton florida\" (3, pos 1.0, 1 click), \"hurlburt field afb dorms spec ops\" (3). A training-pipeline audience the queue never served: student aviators, CSO students, Corry A-school, 7th SFG. Ground truth to verify: single/unaccompanied BAH rules by pay grade and student status, TAW-5/TAW-6 student status, Corry unaccompanied housing policy, dual-status spouse rules.",
+      "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009). Placed #3: it is the only new-post candidate with observed demand behind it."
+    },
+    {
+      "slug": "pca-vs-pcs-pensacola-eglin-hurlburt",
+      "archetype": "decision",
+      "audience": "military",
+      "title": "PCA or PCS? Moving Between NAS Pensacola, Eglin and Hurlburt Without Losing Your BAH or Your House",
+      "targetKeywords": [
+        "pca vs pcs",
+        "pensacola to hurlburt pca or pcs",
+        "bah rate protection pcs",
+        "same house new duty station bah"
+      ],
+      "evidence": "Evidence: Bing Webmaster Tools keyword export, 3-month window ending Aug 22 2026 (docs/seo-baselines/bing-keywords-2026-08-22.csv). The site already earns impressions on these queries with no page that answers them. Query: \"does pensacola to hurlburt field count as a pca or pcs\" (3 imp, pos 4.3) with no page on the site or, from the Sep 2 research, any competitor answering it. Sits on the rate-protection finding from the BAH refresh: FL064 to FL023 is a 25-31% BAH jump for the same house in Navarre or Milton. Ground truth to verify: JTR PCA definition and the 50-mile / commuting-area rule, DTMO rate protection on PCA vs PCS, whether an intra-area move triggers a new BAH determination.",
+      "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009)."
+    },
+    {
+      "slug": "military-rentals-fort-walton-beach-hurlburt-tour",
+      "archetype": "decision",
+      "audience": "military",
+      "title": "Renting Near Hurlburt and Eglin: Military Rentals in Fort Walton Beach, Navarre and Crestview (and When Buying Beats It)",
+      "targetKeywords": [
+        "houses for rent military fort walton beach",
+        "military rentals hurlburt field",
+        "rent vs buy hurlburt 3 year tour",
+        "army bah crestview"
+      ],
+      "evidence": "Evidence: Bing Webmaster Tools keyword export, 3-month window ending Aug 22 2026 (docs/seo-baselines/bing-keywords-2026-08-22.csv). The site already earns impressions on these queries with no page that answers them. Queries: \"houses for rent military in fwb florida\" (4, pos 7.0), \"army bah crestview\" (3, pos 4.0), \"duke field housing\" (3, pos 6.0). Renter intent the site captures nothing from; the strategy names Navy to Navy as a renter-pipeline threat. The honest angle is the 3-year rule from the BAH post: rent at or under BAH unless the hold clears 3 years.",
+      "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009)."
+    },
+    {
+      "slug": "florida-property-tax-100-percent-disabled-veteran-part-year",
+      "archetype": "decision",
+      "audience": "both",
+      "title": "100% P&T and Only in Florida Half the Year: What the Disabled Veteran Property Tax Exemption Actually Requires",
+      "targetKeywords": [
+        "100 percent disabled veteran property tax florida part time resident",
+        "florida veteran property tax exemption second home",
+        "permanent residency homestead disabled veteran florida"
+      ],
+      "evidence": "Evidence: Bing Webmaster Tools keyword export, 3-month window ending Aug 22 2026 (docs/seo-baselines/bing-keywords-2026-08-22.csv). The site already earns impressions on these queries with no page that answers them. Query, verbatim: \"if i buy a home in florida and are 100% va p&t disabled do i need to pay property tax? what about if it is my part time home and i live in nc half of the year?\" (6 imp, pos 8.0). A real person typed that, and the honest answer (permanent residency and homestead are prerequisites under s. 196.081, so a part-year NC resident does not qualify) is on no page. Sibling of the county guide; route the FAQ answer there too.",
+      "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009)."
+    },
+    {
+      "slug": "REFRESH:florida-home-insurance-military",
+      "archetype": "decision refresh",
       "audience": "civilian",
-      "title": "Florida Home Insurance in 2026: What Pensacola Buyers Actually Pay",
+      "title": "Refresh: Florida Home Insurance for Military Families with 2026 Citizens and Insurify data",
       "targetKeywords": [
         "florida home insurance cost 2026",
         "pensacola homeowners insurance",
         "citizens insurance florida"
       ],
-      "rerank": "Moved #10 -> #4 on 2026-09-01. Insurance is the recurring affordability breaker in both the market coverage and the BAH math: it is the line item that decides whether BAH covers PITI, so it feeds the whole BAH cluster."
+      "rerank": "Moved #10 -> #4 on 2026-09-01. Insurance is the recurring affordability breaker in both the market coverage and the BAH math: it is the line item that decides whether BAH covers PITI, so it feeds the whole BAH cluster.",
+      "isRefresh": true,
+      "targetPage": "/florida-home-insurance-military",
+      "dedup": "Dedup gate 2026-09-04 (scripts/blog-dedup-check.mjs, lesson L003): DUPLICATE of /florida-home-insurance-military (title + keyword hit). Converted to a refresh: add the Citizens 8.7% 2026 rate-cut filing and 546,000-policy depopulation, the Insurify Pensacola $6,198 figure, a quick answer, and the insurance line from the BAH post. The old new-post angle (\"what Pensacola buyers actually pay\") becomes an H2 on that page."
     },
     {
       "slug": "pensacola-cost-of-living-2026",
@@ -47,7 +107,8 @@
         "pensacola cost of living",
         "how expensive is pensacola",
         "pensacola vs national cost of living"
-      ]
+      ],
+      "dedup": "Dedup gate 2026-09-04 (scripts/blog-dedup-check.mjs, lesson L003): DUPLICATE against /blog/moving-to-pensacola-2026-guide, which already carries a cost-of-living section. Only write this as a data-study (archetype 5) with original numbers the guide does not have (per-category index vs national, dated, sourced) and cross-link both ways; otherwise fold new numbers into the guide as a refresh."
     },
     {
       "slug": "retiring-in-pensacola-guide",
@@ -93,14 +154,17 @@
       ]
     },
     {
-      "slug": "moving-to-crestview-2026-guide",
-      "archetype": "mega-guide",
+      "slug": "REFRESH:crestview-military-relocation",
+      "archetype": "mega-guide refresh",
       "audience": "both",
-      "title": "Moving to Crestview, FL: The 2026 Guide",
+      "title": "Refresh: Crestview Military Relocation into a full moving-to guide",
       "targetKeywords": [
         "moving to crestview fl",
         "living in crestview florida"
-      ]
+      ],
+      "isRefresh": true,
+      "targetPage": "/crestview-military-relocation",
+      "dedup": "Dedup gate 2026-09-04 (scripts/blog-dedup-check.mjs, lesson L003): DUPLICATE of /crestview-military-relocation (title hit on \"moving to crestview\"). Converted to a refresh: grow that page toward the mega-guide archetype (question H2s, the 32536 city vs 32539 county millage split of 15.8751 vs 9.5165 from the ZIP study, 7th SFG and Duke Field housing, quick answer) instead of a competing URL."
     },
     {
       "slug": "pensacola-vs-destin-vs-fort-walton",
@@ -111,7 +175,8 @@
         "pensacola vs destin",
         "pensacola vs fort walton beach",
         "emerald coast where to live"
-      ]
+      ],
+      "dedup": "Dedup gate 2026-09-04 (scripts/blog-dedup-check.mjs, lesson L003): DUPLICATE against /nas-pensacola-vs-hurlburt-field on the \"pensacola vs fort walton beach\" phrase. That page is the military duty-station comparison; this item is the civilian Destin/FWB/Pensacola lifestyle comparison. Keep it only with an explicitly civilian frame, a different H1 and reciprocal links; the research brief must name the differentiation."
     },
     {
       "slug": "remote-workers-moving-to-pensacola",
@@ -136,5 +201,5 @@
       ]
     }
   ],
-  "lastRerank": "2026-09-03 (Navarre mega-guide published; item retired)"
+  "lastRerank": "2026-09-04 (dedup gate: 2 items converted to refreshes, 3 annotated as by-design or differentiate)"
 }

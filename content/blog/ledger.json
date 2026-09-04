@@ -27,6 +27,21 @@
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
         }
+      ],
+      "search": [
+        {
+          "slug": "bah-2026-pensacola-what-can-you-afford",
+          "source": "bing-keywords",
+          "date": "2026-08-22",
+          "kind": "keywordDemand",
+          "queries": 1,
+          "impressions": 4,
+          "clicks": 0,
+          "position": 9,
+          "sample": [
+            "bah pensacola"
+          ]
+        }
       ]
     },
     "best-neighborhoods-eglin-afb-families": {
@@ -528,6 +543,26 @@
         "BASE_PAY E-9 and O-6 in build-affordability.mjs remain unconfirmed against the DFAS 2026 table."
       ],
       "staged": false
+    },
+    {
+      "date": "2026-09-04",
+      "type": "engine audit and rebuild (user-directed)",
+      "action": "self-improvement loop installed",
+      "changes": [
+        "content/blog/learnings.json created with 13 evidence-backed lessons; the skill now reads it first (STEP 0) and appends to it last (STEP 7).",
+        "scripts/blog-factory.mjs: scannability gate (refuse any paragraph over 110 words, warn over 85) and GEO gate (quickAnswer required, 2-4 sentences with a figure, on every post modified on or after 2026-09-04; dated with the post dateModified).",
+        "scripts/blog-dedup-check.mjs: cannibalization gate over queue items vs every static page title/h1/h2/keywords; --strict for the build. First run: 5 of 16 queue items collided with live pages.",
+        "scripts/blog-measure.mjs: ingests GSC/Bing exports from docs/seo-baselines into per-post search snapshots with WINNER/flat/DECAYED hints; keyword-only exports produce keywordDemand.",
+        "BLOG-CONTRACT.md: quickAnswer + shareHook fields; rules 11 (no walls), 12 (correct errors, not brands), 13 (quick answer first).",
+        "SKILL.md rewritten: STEP 0 LEARN, STEP 3.5 VERIFY (independently fetch every load-bearing figure), STEP 4.3 SCANNABILITY PASS, demand mining before trend scan, dedup gate in DECIDE, unmerged-draft check, lessons in the report.",
+        "Queue: 4 evidence-backed topics from Bing demand mining (training-base student housing, PCA vs PCS, Hurlburt-area rentals, part-year 100% P&T homestead); 2 dupes converted to refreshes, 3 annotated.",
+        "Posts: quick answers + share hooks on the BAH post and the Navarre guide; two wall paragraphs split in best-pensacola-neighborhoods-by-rank-bah (115w and 94w), score 76 to 88."
+      ],
+      "models": {
+        "research": "none (audit run)",
+        "write": "in-session"
+      },
+      "staged": false
     }
   ],
   "config": {
@@ -539,6 +574,13 @@
       "write": "fable",
       "note": "Standing order Aug 13 2026: Opus researches (rigor, source discipline), Fable writes from the pack (prose). Set by Gregg after A/B testing."
     },
-    "canonFixes": "staged"
+    "canonFixes": "staged",
+    "learnings": "content/blog/learnings.json (STEP 0 reads, STEP 7 appends)",
+    "gates": {
+      "wallWordsHardFail": 110,
+      "wallWordsWarn": 85,
+      "quickAnswerRequiredSince": "2026-09-04",
+      "dedupStrict": "scripts/blog-dedup-check.mjs <slug> --strict before any NEW post"
+    }
   }
 }

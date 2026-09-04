@@ -1,0 +1,144 @@
+{
+  "note": "The engine's memory. STEP 0 of the blog-engine skill reads this file and injects every ACTIVE lesson into the research and writing briefs; STEP 7 appends 1-3 new lessons per run with evidence. A lesson is a rule the machine learned from a measured result or a caught error, never an opinion. Retire a lesson (status: retired, retiredWhy) when evidence overturns it; never delete.",
+  "lessons": [
+    {
+      "id": "L001",
+      "date": "2026-09-02",
+      "appliesTo": [
+        "research",
+        "orchestrate"
+      ],
+      "status": "active",
+      "rule": "A research pack's load-bearing numbers get independently verified before anything is written. The pack lists its five most load-bearing figures; the orchestrator fetches a primary source for each one itself.",
+      "evidence": "The Sep 2 pack reported unincorporated Escambia at 19.0080 mills and a $100/mo tax understatement. The Tax Collector's own components sum to 13.4035. The pack had flagged it uncertain; without a second fetch the wrong figure ships into a post whose whole point is real tax math."
+    },
+    {
+      "id": "L002",
+      "date": "2026-09-03",
+      "appliesTo": [
+        "research",
+        "canon"
+      ],
+      "status": "active",
+      "rule": "Any figure the site calls canonical (BAH, millage, homestead, funding fee, residual income, PMMS) is re-verified against its primary source every time a post touches it, not carried forward from the site. Statutory figures can be indexed; ask whether they are.",
+      "evidence": "The additional Florida homestead exemption was carried as a flat $25,000 across the model, /bah-to-mortgage-guide and a freshly shipped post. Fla. Stat. 196.031(1)(b) indexes it to CPI; the DOR publishes $26,411 for 2026. Found only on a second research pass."
+    },
+    {
+      "id": "L003",
+      "date": "2026-09-03",
+      "appliesTo": [
+        "decide"
+      ],
+      "status": "active",
+      "rule": "Before a queue item is written as a NEW post, run scripts/blog-dedup-check.mjs. If a live page already owns the topic, the item becomes a refresh of that page. New posts never cannibalize.",
+      "evidence": "Queue #1 (bah-vs-real-cost-by-zip-2026) was already live as /bah-vs-cost-of-owning-pensacola with a Citing-this-study block. Writing it would have split the site's own press asset."
+    },
+    {
+      "id": "L004",
+      "date": "2026-09-01",
+      "appliesTo": [
+        "write",
+        "build"
+      ],
+      "status": "active",
+      "rule": "Score every NEW post with scripts/analyze-formatting.mjs before staging and require 90+. Long Fable prose is accurate and defaults to dense paragraphs; the factory now refuses any paragraph over 110 words and warns over 85. Send structure-only revisions back to the writer with the measured list.",
+      "evidence": "The Navarre mega-guide passed every factory gate and scored 65, the worst page on the site: 18 wall paragraphs, zero h3s. One structure-only pass took it to 100 with no fact changes."
+    },
+    {
+      "id": "L005",
+      "date": "2026-09-02",
+      "appliesTo": [
+        "write"
+      ],
+      "status": "active",
+      "rule": "Correct a third party's error without naming the third party. Describe the wrong figure and the right source; the brand stays out unless Gregg puts it back in.",
+      "evidence": "The BAH refresh named a forecast site as unreliable. Accurate, but a public swipe at a competitor is Gregg's call, not the machine's. Softened to 'one AI-generated forecast site'."
+    },
+    {
+      "id": "L006",
+      "date": "2026-09-03",
+      "appliesTo": [
+        "decide",
+        "measure"
+      ],
+      "status": "active",
+      "rule": "docs/formatting-audit.md is only trustworthy after the Sep 3 analyzer fix. Regenerate it in every run before DECIDE reads it.",
+      "evidence": "The paragraph regex also matched <picture>, faking wall paragraphs on 95 pages. DECIDE had been ranking refresh candidates off a corrupted table since the figure standing order landed."
+    },
+    {
+      "id": "L007",
+      "date": "2026-09-03",
+      "appliesTo": [
+        "research",
+        "data-study"
+      ],
+      "status": "active",
+      "rule": "For anything modeled by jurisdiction (tax, insurance zone, school zone), assign from a parcel roll or GIS boundary, never from geography or ZIP. The Florida DOR NAL roll gives every parcel's taxing authority and is downloadable per county.",
+      "evidence": "The uniform-unincorporated model was right for exactly 13 of 26 ZIPs. The 'Okaloosa is the cheap county' finding was wrong: only 19.5% of its single-family parcels pay the unincorporated rate. Counting all 407,635 parcels settled every ZIP at high confidence."
+    },
+    {
+      "id": "L008",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "measure"
+      ],
+      "status": "active",
+      "rule": "Semrush is exhausted and the Bing keyword export carries no URLs, so per-post organic signal comes from two places only: Clarity queried per URL, and page-level GSC or Bing exports ingested by scripts/blog-measure.mjs. Record 'unavailable' honestly and classify on what exists; never infer a winner from zero data.",
+      "evidence": "Every post read 0-3 Clarity sessions over 28 days and the ledger held one Semrush snapshot from Aug 22. DECIDE could not tell a winner from a loser; it defaulted everything to 'stalled'."
+    },
+    {
+      "id": "L009",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "decide",
+        "topics"
+      ],
+      "status": "active",
+      "rule": "Mine the newest Bing/GSC export for queries the site already ranks for but has no page answering, before trend-scanning. Demand the site is already earning impressions on beats a topic the queue guessed at.",
+      "evidence": "The Aug 22 Bing export shows a training-base audience the queue never served: 'training air wing five' (15 imp), Corry tech-school dorm questions, 'flight school milton' at position 1, 'pensacola to hurlburt PCA or PCS' at 4.3, 'army bah crestview', 'duke field housing'. None map to a queue item."
+    },
+    {
+      "id": "L010",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "stage",
+        "report"
+      ],
+      "status": "active",
+      "rule": "A staged draft older than 7 days is a defect. Every run lists unmerged blog/* branches with their age in the report, and the standing 'ship each batch' rule means the run offers to merge them.",
+      "evidence": "The Navarre mega-guide sat staged from Sep 1 to Sep 3 and its ledger/queue edits had drifted into 21 merge conflicts by the time it shipped."
+    },
+    {
+      "id": "L011",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "decide"
+      ],
+      "status": "active",
+      "rule": "Run the dedup gate over the WHOLE queue at every re-rank, not just the item about to be written. Collisions accumulate silently as pages get built by other routines.",
+      "evidence": "First full run of scripts/blog-dedup-check.mjs on the 16-item queue found 5 DUPLICATEs: the insurance guide and the Crestview guide already existed as static pages, the cost-of-living post collided with the Pensacola mega-guide, the Destin comparison with the duty-station vs-page, and the 2027 BAH item with the 2026 post that now targets the 2027 keyword on purpose. Two converted to refreshes, three annotated."
+    },
+    {
+      "id": "L012",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "write",
+        "build"
+      ],
+      "status": "active",
+      "rule": "A quickAnswer is 2-4 sentences AND under 85 words. It renders as a paragraph, so a long one is a wall at the top of the page and scores as one.",
+      "evidence": "The first two quick answers written under the GEO gate ran 90 and 94 words and dropped the BAH post to 88 and Navarre to 94 in the scannability report on rebuild. Both were tightened to about 75 words without losing a figure."
+    },
+    {
+      "id": "L013",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "measure",
+        "topics"
+      ],
+      "status": "active",
+      "rule": "The site is invisible to itself on search: no export in docs/seo-baselines carries a URL column, so page-level clicks and positions do not exist for any post. Until Gregg drops a GSC Pages export (gsc-pages-YYYY-MM-DD.csv), keywordDemand from the Bing keyword file is the only search signal and it only matches on target keywords.",
+      "evidence": "scripts/blog-measure.mjs joined 12 posts to one export and produced one keyword-demand snapshot (the BAH post, 1 query, 4 impressions). Every other post: no search data."
+    }
+  ]
+}

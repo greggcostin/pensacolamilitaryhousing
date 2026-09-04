@@ -23,6 +23,8 @@ registers it in `ledger.json`. Run `npm run og-images` after building new posts.
   "targetKeywords": ["primary query", "secondary query"],   // the engine measures these
   "faq": [{"q": "...", "a": "2-4 sentences, may contain one <a> link"}],
   "related": [{"href": "/...", "label": "..."}],             // 5-7 existing pages
+  "quickAnswer": "2-4 dated declarative sentences that restate a figure already in the post, with its source. REQUIRED on every post modified on or after 2026-09-04 (GEO standing rule); the factory renders it as the first block after the lead so AI engines quote it.",
+  "shareHook": "optional: one sentence a reader would paste when sharing this, and who it is for (press, base FB groups, a client). Surfaces in the run report.",
   "figure": {                                    // REQUIRED — factory refuses to build without it
     "src": "/images/blog/....jpg",               // must exist on disk (fetch-stock-image.mjs or reuse /images/topics|blog|bases|communities)
     "alt": "literal description of what the photo shows",
@@ -84,6 +86,17 @@ PAGE-->
     `data-inquiry-type="..."` attribute value must match the contact worker's exact
     strings, which contain an em dash (e.g. "PCS / Relocation — Buying"); write the
     literal character there, never an entity workaround.
+11. **No wall paragraphs (standing rule, Sep 2026).** The factory refuses any paragraph
+    over 110 words and warns over 85. Target zero over 85 and a 90+ score in
+    `scripts/analyze-formatting.mjs` before staging. Split by idea, convert data-bearing
+    prose to a list or `.bah-table`, add a question-shaped h3 so no section runs 250+
+    words unbroken. Structure-only edits never change facts, hedges, H2s, FAQ or links.
+12. **Correct errors, not brands.** When the research shows a third party publishing a
+    wrong figure, state the wrong figure and the right source; do not name the site or
+    company. Naming a competitor is Gregg's call in review, never the machine's.
+13. **Quick answer first.** Every new or refreshed post opens with the `quickAnswer`
+    block: the one number a searcher came for, dated, attributed, in plain declarative
+    sentences. If the post cannot state its key figure in two sentences it is not ready.
 
 ## SEO checklist — standing rule, every post (factory enforces the starred items)
 

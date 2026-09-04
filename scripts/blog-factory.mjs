@@ -162,6 +162,23 @@ function loadFragment(path) {
     throw new Error(`${path}: figure {src, alt, caption} required (standing rule: every post has a licensed hero image — fetch via scripts/fetch-stock-image.mjs)`);
   }
   spec.dateModified = spec.dateModified || spec.datePublished;
+  // SCANNABILITY gate (standing rule, Sep 2026, lesson L004): long prose walls up. AI engines
+  // retrieve passages and readers skim, so no paragraph may run past 110 words; over 85 warns.
+  const wc = (t) => String(t).replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+  // FAQ answers render as paragraphs too (contract: 2-4 sentences), so they count.
+  const paraWords = [...spec.body.matchAll(/<p(?=[\s>])[^>]*>([\s\S]*?)<\/p>/g)].map((m) => wc(m[1])).concat((spec.faq || []).map((f) => wc(f.a)));
+  const walls = paraWords.filter((w) => w > 85), hardWalls = paraWords.filter((w) => w > 110);
+  if (hardWalls.length) throw new Error(`${path}: ${hardWalls.length} paragraph(s) over 110 words (longest ${Math.max(...hardWalls)}). Standing rule: split walls into shorter paragraphs, lists or a table before building.`);
+  if (walls.length) console.warn(`  WARN ${spec.slug}: ${walls.length} paragraph(s) over 85 words (longest ${Math.max(...walls)}w); target 0, then confirm 90+ with scripts/analyze-formatting.mjs`);
+  // GEO gate (standing rule, Sep 2026): every post modified on or after GEO_SINCE carries a
+  // dated quick-answer block, 2-4 declarative sentences restating a figure already in the post,
+  // so AI engines meet the quotable statement first. Older posts warn until their next refresh.
+  const GEO_SINCE = "2026-09-04";
+  if (spec.dateModified >= GEO_SINCE) {
+    if (!spec.quickAnswer || !/\d/.test(spec.quickAnswer)) throw new Error(`${path}: quickAnswer required (GEO standing rule): 2-4 dated declarative sentences that restate a figure already in the post`);
+    const sentences = spec.quickAnswer.split(/(?<=[.!?])\s+/).filter(Boolean).length;
+    if (sentences < 2 || sentences > 4) throw new Error(`${path}: quickAnswer must be 2-4 sentences (found ${sentences})`);
+  } else if (!spec.quickAnswer) console.warn(`  WARN ${spec.slug}: no quickAnswer yet (GEO standing rule applies on its next refresh)`);
   return spec;
 }
 
@@ -236,7 +253,7 @@ function buildPost(spec, template) {
   html = html.slice(0, mainStart + "<main data-pagefind-body>".length) + newMain + html.slice(mainEnd);
   // geo-03: optional dated quick-answer block right after the lead (spec.quickAnswer, 2-4 sentences with the post's key figure)
   html = html.replace(/<div class="quick-answer" data-quick-answer>[\s\S]*?<\/div>\n?/, "");
-  if (spec.quickAnswer) html = placeQuickAnswer(html, { text: spec.quickAnswer });
+  if (spec.quickAnswer) html = placeQuickAnswer(html, { text: spec.quickAnswer, date: monthYear(spec.dateModified) });
 
   html = html.replace(/Last updated: [A-Za-z]+ \d{1,2}, \d{4}/, `Last updated: ${longDate(spec.dateModified)}`);
   html = html.replace(/Content last verified: [A-Za-z]+ \d{4}/, `Content last verified: ${monthYear(spec.dateModified)}`);

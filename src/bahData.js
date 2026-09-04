@@ -5,7 +5,7 @@
 // (see docs/ANNUAL-UPDATE.md). Rows are [grade, withDependents, withoutDependents].
 export const BAH_DATA = {
   FL064: {
-    mhaCode: "FL064", mhaName: "Pensacola, FL", yoyChange: "+0.5% from 2025",
+    mhaCode: "FL064", mhaName: "Pensacola, FL", yoyChange: "2026 rates, effective January 1",
     installations: "NAS Pensacola • NTTC Corry Station • NAS Whiting Field",
     enlisted: [
       ["E-1",1794,1521],["E-2",1794,1521],["E-3",1794,1521],["E-4",1794,1521],
@@ -21,7 +21,7 @@ export const BAH_DATA = {
     ],
   },
   FL023: {
-    mhaCode: "FL023", mhaName: "Fort Walton Beach, FL", yoyChange: "+0.4% from 2025",
+    mhaCode: "FL023", mhaName: "Fort Walton Beach, FL", yoyChange: "2026 rates, effective January 1",
     installations: "Eglin AFB • Hurlburt Field",
     enlisted: [
       ["E-1",2340,2007],["E-2",2340,2007],["E-3",2340,2007],["E-4",2340,2007],

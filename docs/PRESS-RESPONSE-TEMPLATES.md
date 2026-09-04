@@ -22,7 +22,7 @@ page it cites, so nothing needs re-checking before you paste.
 > Gregg Costin is a retired U.S. Air Force Combat Systems Officer and Realtor with
 > Levin Rinke Realty in Pensacola, Florida, specializing in military relocation and
 > VA loans across the Florida Panhandle. He has made 11 PCS moves himself.
-> Site: https://pensacolamilitaryhousing.com | (850) 266-5005 | Wikidata: Q140446886
+> Site: https://pensacolamilitaryhousing.com | (850) 266-5005
 
 ---
 

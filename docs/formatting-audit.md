@@ -10,9 +10,12 @@ where data hides in prose.
 
 | Page | Score | Words | Wall paragraphs | Headings | Scan aids |
 |---|---|---|---|---|---|
+| gc:/team | 59 | 990 | 1 (max 233w) | 7 (141w/ea) | 1 (990w/ea) |
 | /privacy | 65 | 844 | 0 (max 73w) | 17 (50w/ea) | 1 (844w/ea) |
+| gc:/schools | 65 | 1264 | 0 (max 62w) | 8 (158w/ea) | 1 (1264w/ea) |
+| gc:/privacy | 68 | 724 | 0 (max 73w) | 11 (66w/ea) | 1 (724w/ea) |
 | /bah-to-mortgage-guide | 70 | 3061 | 8 (max 182w) | 32 (96w/ea) | 20 (153w/ea) |
-| /bah-rates | 82 | 2636 | 3 (max 134w) | 15 (176w/ea) | 22 (120w/ea) |
+| /bah-rates | 82 | 2651 | 3 (max 134w) | 15 (177w/ea) | 22 (121w/ea) |
 | /rent-vs-buy-military-pensacola | 82 | 1233 | 3 (max 125w) | 12 (103w/ea) | 8 (154w/ea) |
 | /bases/corry-station | 82 | 2595 | 3 (max 103w) | 18 (144w/ea) | 10 (260w/ea) |
 | /communities/crestview | 82 | 1159 | 3 (max 116w) | 16 (72w/ea) | 7 (166w/ea) |
@@ -32,6 +35,7 @@ where data hides in prose.
 | /communities/navarre | 88 | 1178 | 2 (max 103w) | 16 (74w/ea) | 6 (196w/ea) |
 | /blog/best-pensacola-neighborhoods-by-rank-bah | 88 | 3556 | 2 (max 110w) | 17 (209w/ea) | 15 (237w/ea) |
 | /accessibility | 90 | 418 | 0 (max 64w) | 10 (42w/ea) | 1 (418w/ea) |
+| gc:/reviews | 91 | 411 | 0 (max 55w) | 3 (137w/ea) | 0 (411w/ea) |
 | /bah-vs-cost-of-owning-pensacola | 93 | 2024 | 1 (max 126w) | 13 (156w/ea) | 7 (289w/ea) |
 | /bases/nas-pensacola | 93 | 3819 | 1 (max 102w) | 26 (147w/ea) | 13 (294w/ea) |
 | /buy | 94 | 1432 | 1 (max 106w) | 20 (72w/ea) | 8 (179w/ea) |
@@ -51,7 +55,13 @@ where data hides in prose.
 | /bases/hurlburt-field | 94 | 2640 | 1 (max 86w) | 18 (147w/ea) | 12 (220w/ea) |
 | /communities/perdido-key | 94 | 1877 | 1 (max 101w) | 18 (104w/ea) | 9 (209w/ea) |
 | /blog/bah-2026-pensacola-what-can-you-afford | 94 | 4438 | 1 (max 86w) | 26 (171w/ea) | 17 (261w/ea) |
+| gc:/faq | 94 | 1486 | 0 (max 68w) | 5 (297w/ea) | 22 (68w/ea) |
+| gc:/resources/useful-links | 95 | 354 | 0 (max 31w) | 5 (71w/ea) | 0 (354w/ea) |
+| gc:/blog/florida-insurance-relief-2026 | 95 | 2538 | 0 (max 82w) | 9 (282w/ea) | 11 (231w/ea) |
+| gc:/accessibility | 98 | 307 | 0 (max 60w) | 4 (77w/ea) | 1 (307w/ea) |
+| gc:/blog/fed-rate-hike-what-it-means | 98 | 2239 | 0 (max 82w) | 9 (249w/ea) | 10 (224w/ea) |
 | /blog/florida-veteran-property-tax-county-guide | 99 | 5216 | 0 (max 84w) | 27 (193w/ea) | 18 (290w/ea) |
+| gc:/blog/closing-costs-florida-buyers | 99 | 2318 | 0 (max 80w) | 10 (232w/ea) | 10 (232w/ea) |
 | /assumable-va-loans-pensacola | 100 | 2197 | 0 (max 80w) | 16 (137w/ea) | 13 (169w/ea) |
 | /buying-sight-unseen-pcs-pensacola | 100 | 3057 | 0 (max 84w) | 19 (161w/ea) | 16 (191w/ea) |
 | /cash-offer-pensacola | 100 | 2602 | 0 (max 85w) | 15 (173w/ea) | 13 (200w/ea) |
@@ -104,6 +114,33 @@ where data hides in prose.
 | /blog/personal-property-activity-pcs-2026 | 100 | 3137 | 0 (max 80w) | 17 (185w/ea) | 17 (185w/ea) |
 | /blog/va-loan-assumption-buyers-guide | 100 | 4608 | 0 (max 81w) | 23 (200w/ea) | 17 (271w/ea) |
 | /blog/va-loan-seller-concessions-truth | 100 | 3546 | 0 (max 83w) | 18 (197w/ea) | 17 (209w/ea) |
+| gc:/buy | 100 | 976 | 0 (max 47w) | 8 (122w/ea) | 8 (122w/ea) |
+| gc:/contact | 100 | 267 | 0 (max 47w) | 6 (45w/ea) | 1 (267w/ea) |
+| gc:/gulf-shores-orange-beach | 100 | 955 | 0 (max 77w) | 7 (136w/ea) | 5 (191w/ea) |
+| gc:/index | 100 | 949 | 0 (max 76w) | 9 (105w/ea) | 6 (158w/ea) |
+| gc:/neighborhoods | 100 | 1275 | 0 (max 74w) | 17 (75w/ea) | 6 (213w/ea) |
+| gc:/resources | 100 | 253 | 0 (max 29w) | 8 (32w/ea) | 0 (253w/ea) |
+| gc:/sell | 100 | 849 | 0 (max 53w) | 8 (106w/ea) | 6 (142w/ea) |
+| gc:/resources/first-time-home-buyer | 100 | 985 | 0 (max 62w) | 5 (197w/ea) | 9 (109w/ea) |
+| gc:/resources/florida-home-insurance | 100 | 2499 | 0 (max 76w) | 18 (139w/ea) | 14 (179w/ea) |
+| gc:/resources/florida-homestead-exemption | 100 | 2192 | 0 (max 79w) | 14 (157w/ea) | 15 (146w/ea) |
+| gc:/neighborhoods/beulah | 100 | 642 | 0 (max 50w) | 9 (71w/ea) | 6 (107w/ea) |
+| gc:/neighborhoods/cantonment | 100 | 629 | 0 (max 47w) | 9 (70w/ea) | 6 (105w/ea) |
+| gc:/neighborhoods/cordova-park-northeast | 100 | 624 | 0 (max 47w) | 9 (69w/ea) | 6 (104w/ea) |
+| gc:/neighborhoods/crestview | 100 | 1180 | 0 (max 85w) | 9 (131w/ea) | 5 (236w/ea) |
+| gc:/neighborhoods/destin | 100 | 1328 | 0 (max 84w) | 9 (148w/ea) | 5 (266w/ea) |
+| gc:/neighborhoods/east-hill-downtown | 100 | 810 | 0 (max 62w) | 9 (90w/ea) | 6 (135w/ea) |
+| gc:/neighborhoods/foley | 100 | 1312 | 0 (max 84w) | 8 (164w/ea) | 5 (262w/ea) |
+| gc:/neighborhoods/fort-walton-beach | 100 | 649 | 0 (max 62w) | 9 (72w/ea) | 5 (130w/ea) |
+| gc:/neighborhoods/gulf-breeze | 100 | 770 | 0 (max 58w) | 9 (86w/ea) | 6 (128w/ea) |
+| gc:/neighborhoods/midtown-east-pensacola-heights | 100 | 645 | 0 (max 58w) | 9 (72w/ea) | 6 (108w/ea) |
+| gc:/neighborhoods/navarre | 100 | 644 | 0 (max 55w) | 9 (72w/ea) | 6 (107w/ea) |
+| gc:/neighborhoods/niceville | 100 | 1214 | 0 (max 80w) | 9 (135w/ea) | 5 (243w/ea) |
+| gc:/neighborhoods/pace-milton | 100 | 680 | 0 (max 55w) | 9 (76w/ea) | 6 (113w/ea) |
+| gc:/neighborhoods/pensacola-beach | 100 | 708 | 0 (max 64w) | 9 (79w/ea) | 6 (118w/ea) |
+| gc:/neighborhoods/perdido-key | 100 | 717 | 0 (max 61w) | 9 (80w/ea) | 6 (120w/ea) |
+| gc:/blog/property-taxes-escambia-santa-rosa | 100 | 2717 | 0 (max 73w) | 14 (194w/ea) | 14 (194w/ea) |
+| gc:/blog/what-moves-mortgage-rates | 100 | 1936 | 0 (max 77w) | 13 (149w/ea) | 15 (129w/ea) |
 
 ## Reading the numbers
 - **Wall paragraphs**: paragraphs over 85 words; "max" is the single longest.

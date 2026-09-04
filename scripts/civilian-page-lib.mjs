@@ -2,7 +2,7 @@
 // Extracts the live chrome (trackers/CSS/nav/footer/modal) from civilian-site/index.html
 // at build time so generated pages always match the current design, then emits
 // self-contained pages in the same convention as the hand-built ones.
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 export const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
@@ -95,7 +95,10 @@ ${nav}
 ${spec.main}
 </main>
 ${tail}`;
-  writeFileSync(`${SITE_DIR}/${spec.file}`, html);
+  // spec.outDir lets a factory write a preview build somewhere other than the live site tree
+  const outDir = spec.outDir || SITE_DIR;
+  if (spec.outDir) mkdirSync(`${outDir}/${spec.file}`.replace(/\/[^/]+$/, ""), { recursive: true });
+  writeFileSync(`${outDir}/${spec.file}`, html);
   return html;
 }
 

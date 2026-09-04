@@ -26,6 +26,7 @@ mkdirSync(SITE_DIR + "/og", { recursive: true });
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const longDate = (iso) => { const [y, m, d] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
+const monthYear = (iso) => { const [y, m] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${y}`; };
 
 function loadFragment(path) {
   const raw = readFileSync(path, "utf8");
@@ -59,12 +60,42 @@ function buildPost(spec) {
   if (links < 4) errs.push(`needs 4+ links, has ${links}`);
   const words = (spec.body.replace(/<[^>]+>/g, " ").match(/\S+/g) || []).length;
   if (words < 1100) errs.push(`body ${words} words < 1100`);
+  // Parity with the military factory (Sep 2026): scannability, measurability and GEO gates.
+  // Posts dated on or after PARITY_SINCE carry targetKeywords, a quickAnswer and takeaways;
+  // older posts warn until their next refresh so a rebuild never breaks a live page.
+  const PARITY_SINCE = "2026-09-07";
+  const isNew = spec.datePublished >= PARITY_SINCE;
+  const paraWords = [...spec.body.matchAll(/<p(?=[\s>])[^>]*>([\s\S]*?)<\/p>/g)].map((m) => m[1].replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length);
+  const hardWalls = paraWords.filter((w) => w > 110), walls = paraWords.filter((w) => w > 85);
+  if (hardWalls.length) errs.push(`${hardWalls.length} paragraph(s) over 110 words (longest ${Math.max(...hardWalls)}); split walls into shorter paragraphs, lists or a table`);
+  const qaSentences = spec.quickAnswer ? spec.quickAnswer.split(/(?<=[.!?])\s+/).filter(Boolean).length : 0;
+  const qaWords = spec.quickAnswer ? spec.quickAnswer.split(/\s+/).length : 0;
+  if (isNew) {
+    if (!spec.targetKeywords || !spec.targetKeywords.length) errs.push("targetKeywords required (the engine measures posts by them)");
+    if (!spec.quickAnswer || !/\d/.test(spec.quickAnswer)) errs.push("quickAnswer required: 2-4 dated declarative sentences restating a figure already in the post");
+    else if (qaSentences < 2 || qaSentences > 4 || qaWords > 85) errs.push(`quickAnswer must be 2-4 sentences and under 85 words (found ${qaSentences} sentences, ${qaWords} words)`);
+    if (!spec.takeaways || spec.takeaways.length < 3) errs.push("takeaways required: 3-5 one-line bullets (rendered as Key takeaways)");
+  } else {
+    if (!spec.targetKeywords || !spec.targetKeywords.length) console.warn(`  WARN ${spec.slug}: no targetKeywords (required on posts dated ${PARITY_SINCE}+; add on next refresh)`);
+    if (!spec.quickAnswer) console.warn(`  WARN ${spec.slug}: no quickAnswer (required on posts dated ${PARITY_SINCE}+; add on next refresh)`);
+  }
+  const h2s = [...spec.body.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)].map((m) => m[1].replace(/<[^>]+>/g, "").trim()).filter((t) => !/^(sources|frequently|related|key takeaways)/i.test(t));
+  const qH2 = h2s.filter((t) => /^(what|why|how|is|are|do|does|can|should|when|where|which|who|will)\b/i.test(t) || t.endsWith("?")).length;
+  if (h2s.length && qH2 / h2s.length < 0.6) console.warn(`  WARN ${spec.slug}: ${qH2}/${h2s.length} H2s are question-shaped (target 60%+; scripts/score-post.mjs gates new posts at 80)`);
+  if (walls.length) console.warn(`  WARN ${spec.slug}: ${walls.length} paragraph(s) over 85 words (longest ${Math.max(...walls)}w); audit-civilian flags 80+`);
   if (errs.length) throw new Error(`${spec.slug}: GATE FAIL\n  - ` + errs.join("\n  - "));
 
   const faqsHtml = spec.faqs.map((f, i) => `<details${i === 0 ? " open" : ""}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("\n");
+  // Visible byline + freshness line (E-E-A-T and the "Updated [Month Year]" signal non-Google AI
+  // crawlers read from HTML, not JSON-LD), and the optional Key takeaways block after the hero.
+  const takeawaysHtml = spec.takeaways && spec.takeaways.length
+    ? `<style>.takeaways{max-width:760px;margin:0 auto 22px;padding:16px 20px;border:1px solid var(--gold-line);border-left:4px solid var(--gold);border-radius:10px;background:var(--panel)}.takeaways .tk-label{margin:0 0 6px;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600}.takeaways ul{margin:0;padding-left:1.1rem}.takeaways li{margin:.3rem 0;font-size:15.5px}</style>
+<div class="takeaways"><p class="tk-label">Key takeaways</p><ul>${spec.takeaways.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>`
+    : "";
   const main = `
-<div style="max-width:760px;margin:0 auto 6px;color:var(--muted);font-size:13px;letter-spacing:.5px;text-transform:uppercase">${longDate(spec.datePublished)} &middot; The Costin Team Blog</div>
+<div style="max-width:760px;margin:0 auto 6px;color:var(--muted);font-size:13px;letter-spacing:.5px;text-transform:uppercase">${longDate(spec.datePublished)} &middot; By Gregg Costin, Realtor &middot; Reviewed and updated ${monthYear(spec.dateModified || spec.datePublished)}</div>
 ${figureBand({ ...spec.figure })}
+${takeawaysHtml}
 ${spec.body}
 
 <h2>Frequently asked questions</h2>
@@ -82,14 +113,20 @@ ${faqsHtml}
 <p style="max-width:760px;margin:1.5rem auto;text-align:center"><a href="/blog">&larr; Back to all posts</a></p>`;
 
   const pageSpec = {
+    outDir: spec.outDir,
     file: `blog/${spec.slug}.html`, path: `/blog/${spec.slug}`,
     title: spec.title, desc: spec.description, keywords: spec.keywords,
     ogSlug: `blog-${spec.slug}`, ogType: "article",
     h1: spec.h1, lead: spec.lead, main, dateISO: spec.datePublished, minWords: 1100,
     schemaBlocks: [articleSchema(spec), breadcrumbs([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: spec.h1, path: `/blog/${spec.slug}` }]), faqPage(spec.faqs)],
   };
-  // geo-03: optional dated quick-answer block after the lead (fragment field "quickAnswer", 2-4 sentences with the post's key figure)
-  const html = spec.quickAnswer ? placeQuickAnswer(buildPage(pageSpec), { text: spec.quickAnswer, by: "Gregg Costin, Realtor, The Costin Team at Levin Rinke Realty" }) : buildPage(pageSpec);
+  // geo-03: optional dated quick-answer block after the lead (fragment field "quickAnswer", 2-4 sentences with the post's key figure).
+  // buildPage writes the page; the quick-answer pass rewrites that file (fixed 2026-09-04: the block used to be discarded).
+  let html = buildPage(pageSpec);
+  if (spec.quickAnswer) {
+    html = placeQuickAnswer(html, { text: spec.quickAnswer, date: monthYear(spec.dateModified || spec.datePublished), by: "Gregg Costin, Realtor, The Costin Team at Levin Rinke Realty" });
+    writeFileSync(`${spec.outDir || SITE_DIR}/${pageSpec.file}`, html);
+  }
   const gateErrs = gate({ title: spec.title, desc: spec.description, minWords: 1100 }, html);
   if (gateErrs.length) throw new Error(`${spec.slug}: POST-BUILD GATE FAIL\n  - ` + gateErrs.join("\n  - "));
   return pageSpec;
@@ -157,19 +194,30 @@ function syncSitemapAndLlms(specs) {
   writeFileSync(llmsPath, llms);
 }
 
-/* ---- run ---- */
-const only = process.argv[2];
+/* ---- run ----
+   node scripts/civilian-blog-factory.mjs [slug]            build into civilian-site (index, sitemap, llms, OG cards)
+   node scripts/civilian-blog-factory.mjs <slug> --out DIR  preview build of one post into DIR/blog/<slug>.html only
+                                                            (no index/sitemap/llms/OG side effects; for gate checks
+                                                            and eye tests while another session works the site tree) */
+const argv = process.argv.slice(2);
+const OUT = argv.includes("--out") ? argv[argv.indexOf("--out") + 1].replace(/\\/g, "/").replace(/\/$/, "") : null;
+const only = argv.find((a) => !a.startsWith("--") && a !== OUT);
 const frags = readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".fragment.html")).map((f) => loadFragment(CONTENT_DIR + f));
 const targets = only ? frags.filter((f) => f.slug === only) : frags;
+if (only && !targets.length) throw new Error(`no fragment with slug "${only}"`);
 const built = [];
 for (const spec of targets) {
+  if (OUT) spec.outDir = OUT;
   buildPost(spec);
+  if (OUT) { console.log(`PREVIEW ${OUT}/blog/${spec.slug}.html`); continue; }
   const titleLines = spec.ogTitleLines || [spec.h1.length > 26 ? spec.h1.slice(0, spec.h1.lastIndexOf(" ", 26)) : spec.h1, spec.h1.length > 26 ? spec.h1.slice(spec.h1.lastIndexOf(" ", 26) + 1, 52) : ""].filter(Boolean);
   await makeOgCard(`blog-${spec.slug}`, titleLines, longDate(spec.datePublished) + " on the Costin Team blog");
   built.push(spec.slug);
   console.log(`BUILT /blog/${spec.slug}`);
 }
-buildIndex(frags);
-await makeOgCard("blog", ["The Costin Team", "Blog"], "Rates, the market, and Florida homeownership");
-syncSitemapAndLlms(frags);
-console.log(`INDEX rebuilt with ${frags.length} post(s); sitemap + llms synced`);
+if (!OUT) {
+  buildIndex(frags);
+  await makeOgCard("blog", ["The Costin Team", "Blog"], "Rates, the market, and Florida homeownership");
+  syncSitemapAndLlms(frags);
+  console.log(`INDEX rebuilt with ${frags.length} post(s); sitemap + llms synced`);
+}

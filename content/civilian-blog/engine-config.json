@@ -1,5 +1,19 @@
 {
  "autoPublish": false,
  "cadence": "Mon+Thu 6:04am",
- "maxWordsTarget": 1600
+ "maxWordsTarget": 1600,
+ "models": {
+  "research": "self",
+  "write": "self",
+  "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+ },
+ "learnings": "content/blog/learnings.json (shared with the military engine)",
+ "gates": {
+  "scorePostMin": 80,
+  "formattingMin": 90,
+  "wallWordsHardFail": 110,
+  "wallWordsWarn": 85,
+  "parityFieldsRequiredSince": "2026-09-07"
+ },
+ "measure": "scripts/blog-measure.mjs --site gc (Bing Webmaster API live); Clarity not instrumented for this domain"
 }

@@ -1,0 +1,331 @@
+{
+ "generated": "2026-09-04",
+ "note": "Ranked refresh candidates for BOTH sites from scripts/blog-retro.mjs. DECIDE reads the top entry before taking a new topic. Flags: DECAYED (Bing impressions fell 40%+), EXPIRED (a declared perishable passed its date), CTR-PROBLEM (top-6 position, zero clicks), STALLED (8+ weeks, under 5 impressions in 90d), STALE-CUES (120+ days unmodified with many dated figures), ORPHAN (under 3 inbound links), LOW-SCORE (score-post under 80). NEW posts (under 42 days) are half-weighted because Bing indexing lags.",
+ "queue": [
+  {
+   "site": "pmh",
+   "slug": "best-neighborhoods-eglin-afb-families",
+   "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
+   "priority": 100,
+   "flags": [
+    "STALLED",
+    "ORPHAN"
+   ],
+   "why": [
+    "160 days old, 0 Bing impressions in 90d",
+    "1 inbound internal link(s)"
+   ],
+   "actions": [
+    "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page",
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 80,
+   "inbound": 1
+  },
+  {
+   "site": "pmh",
+   "slug": "florida-homestead-exemption-military",
+   "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+   "priority": 100,
+   "flags": [
+    "STALLED",
+    "ORPHAN"
+   ],
+   "why": [
+    "152 days old, 0 Bing impressions in 90d",
+    "2 inbound internal link(s)"
+   ],
+   "actions": [
+    "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page",
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 83,
+   "inbound": 2
+  },
+  {
+   "site": "pmh",
+   "slug": "personal-property-activity-pcs-2026",
+   "url": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
+   "priority": 100,
+   "flags": [
+    "STALLED",
+    "ORPHAN"
+   ],
+   "why": [
+    "86 days old, 0 Bing impressions in 90d",
+    "2 inbound internal link(s)"
+   ],
+   "actions": [
+    "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page",
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 81,
+   "inbound": 2
+  },
+  {
+   "site": "pmh",
+   "slug": "va-loan-seller-concessions-truth",
+   "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+   "priority": 100,
+   "flags": [
+    "STALLED",
+    "ORPHAN"
+   ],
+   "why": [
+    "147 days old, 0 Bing impressions in 90d",
+    "2 inbound internal link(s)"
+   ],
+   "actions": [
+    "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page",
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 80,
+   "inbound": 2
+  },
+  {
+   "site": "pmh",
+   "slug": "bah-2026-pensacola-what-can-you-afford",
+   "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+   "priority": 60,
+   "flags": [
+    "STALLED"
+   ],
+   "why": [
+    "168 days old, 0 Bing impressions in 90d"
+   ],
+   "actions": [
+    "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page"
+   ],
+   "score": 82,
+   "inbound": 3
+  },
+  {
+   "site": "pmh",
+   "slug": "pcs-to-pensacola-2026-complete-guide",
+   "url": "https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide",
+   "priority": 60,
+   "flags": [
+    "STALLED"
+   ],
+   "why": [
+    "142 days old, 0 Bing impressions in 90d"
+   ],
+   "actions": [
+    "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page"
+   ],
+   "score": 81,
+   "inbound": 3
+  },
+  {
+   "site": "gc",
+   "slug": "fed-rate-hike-what-it-means",
+   "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+   "priority": 41,
+   "flags": [
+    "NEW",
+    "ORPHAN",
+    "LOW-SCORE"
+   ],
+   "why": [
+    "1 inbound internal link(s)",
+    "quality score 68/100"
+   ],
+   "actions": [
+    "add links from the hubs in inbound-link-plan.json",
+    "fix: structure: only 3/8 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+    "fix: structure: 3 scan aids for 1693 words (target one list/table/figure per 250 words)",
+    "fix: evidence: 10/30 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+    "fix: local: 2 Gulf Coast place/base mentions per 1693 words (target 8+ per 1,000): anchor examples to real places, ZIPs, bases"
+   ],
+   "score": 68,
+   "inbound": 1
+  },
+  {
+   "site": "gc",
+   "slug": "florida-insurance-relief-2026",
+   "url": "https://greggcostin.com/blog/florida-insurance-relief-2026",
+   "priority": 38,
+   "flags": [
+    "NEW",
+    "ORPHAN",
+    "LOW-SCORE"
+   ],
+   "why": [
+    "1 inbound internal link(s)",
+    "quality score 74/100"
+   ],
+   "actions": [
+    "add links from the hubs in inbound-link-plan.json",
+    "fix: structure: only 2/8 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+    "fix: structure: 5/8 sections open with a 15-90 word direct answer; put the answer sentence first under every H2",
+    "fix: structure: 4 scan aids for 1999 words (target one list/table/figure per 250 words)",
+    "fix: evidence: 12/23 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself"
+   ],
+   "score": 74,
+   "inbound": 1
+  },
+  {
+   "site": "pmh",
+   "slug": "va-loan-assumption-buyers-guide",
+   "url": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
+   "priority": 36,
+   "flags": [
+    "NEW",
+    "ORPHAN",
+    "LOW-SCORE"
+   ],
+   "why": [
+    "1 inbound internal link(s)",
+    "quality score 78/100"
+   ],
+   "actions": [
+    "add links from the hubs in inbound-link-plan.json",
+    "fix: structure: 2 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+    "fix: structure: 10 scan aids for 4008 words (target one list/table/figure per 250 words)",
+    "fix: evidence: 34/97 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+    "fix: evidence: 27/97 numeric sentences carry a vintage (month/year); date the perishable ones"
+   ],
+   "score": 78,
+   "inbound": 1
+  },
+  {
+   "site": "gc",
+   "slug": "what-moves-mortgage-rates",
+   "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+   "priority": 26,
+   "flags": [
+    "NEW",
+    "LOW-SCORE"
+   ],
+   "why": [
+    "quality score 59/100"
+   ],
+   "actions": [
+    "fix: structure: only 3/8 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+    "fix: evidence: 1/14 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+    "fix: evidence: 1/14 numeric sentences carry a vintage (month/year); date the perishable ones",
+    "fix: evidence: no Sources section or Sources line"
+   ],
+   "score": 59,
+   "inbound": 3
+  },
+  {
+   "site": "gc",
+   "slug": "closing-costs-florida-buyers",
+   "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+   "priority": 24,
+   "flags": [
+    "NEW",
+    "LOW-SCORE"
+   ],
+   "why": [
+    "quality score 63/100"
+   ],
+   "actions": [
+    "fix: structure: only 2/9 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+    "fix: structure: 3 scan aids for 1732 words (target one list/table/figure per 250 words)",
+    "fix: evidence: 5/13 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+    "fix: evidence: 1/13 numeric sentences carry a vintage (month/year); date the perishable ones"
+   ],
+   "score": 63,
+   "inbound": 3
+  },
+  {
+   "site": "pmh",
+   "slug": "florida-veteran-property-tax-county-guide",
+   "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+   "priority": 20,
+   "flags": [
+    "NEW",
+    "WINNER",
+    "ORPHAN"
+   ],
+   "why": [
+    "2 inbound internal link(s)"
+   ],
+   "actions": [
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 84,
+   "inbound": 2
+  },
+  {
+   "site": "pmh",
+   "slug": "living-in-gulf-breeze-pros-cons",
+   "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
+   "priority": 20,
+   "flags": [
+    "NEW",
+    "ORPHAN"
+   ],
+   "why": [
+    "2 inbound internal link(s)"
+   ],
+   "actions": [
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 80,
+   "inbound": 2
+  },
+  {
+   "site": "pmh",
+   "slug": "moving-to-navarre-2026-guide",
+   "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+   "priority": 20,
+   "flags": [
+    "NEW",
+    "ORPHAN"
+   ],
+   "why": [
+    "1 inbound internal link(s)"
+   ],
+   "actions": [
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 92,
+   "inbound": 1
+  },
+  {
+   "site": "pmh",
+   "slug": "best-pensacola-neighborhoods-by-rank-bah",
+   "url": "https://pensacolamilitaryhousing.com/blog/best-pensacola-neighborhoods-by-rank-bah",
+   "priority": 19,
+   "flags": [
+    "NEW",
+    "LOW-SCORE"
+   ],
+   "why": [
+    "quality score 72/100"
+   ],
+   "actions": [
+    "fix: structure: 1 paragraph(s) over 85 words; split them or convert to a list",
+    "fix: structure: 1 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+    "fix: structure: 6 scan aids for 2739 words (target one list/table/figure per 250 words)",
+    "fix: evidence: 10/70 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself"
+   ],
+   "score": 72,
+   "inbound": 4
+  },
+  {
+   "site": "gc",
+   "slug": "property-taxes-escambia-santa-rosa",
+   "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+   "priority": 18,
+   "flags": [
+    "NEW",
+    "LOW-SCORE"
+   ],
+   "why": [
+    "quality score 74/100"
+   ],
+   "actions": [
+    "fix: structure: only 4/11 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+    "fix: structure: 7 scan aids for 2153 words (target one list/table/figure per 250 words)",
+    "fix: evidence: 19/55 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+    "fix: evidence: 19/55 numeric sentences carry a vintage (month/year); date the perishable ones"
+   ],
+   "score": 74,
+   "inbound": 4
+  }
+ ]
+}

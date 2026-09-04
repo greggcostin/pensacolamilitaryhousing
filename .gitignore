@@ -20,3 +20,6 @@ REVIEW-PACK.md
 OUTREACH-PACK.md
 SPHERE-EMAIL-*.md
 REALTIME-AUDIT*.md
+
+# regenerable autosuggest pull for scripts/topic-miner.mjs (--from-cache)
+content/measure/suggest-cache.json

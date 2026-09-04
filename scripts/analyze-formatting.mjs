@@ -10,10 +10,12 @@
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const pages = [];
-for (const dir of ["public", "public/bases", "public/communities", "public/blog"]) {
+// Both sites: the civilian blog engine's L004 gate (90+ before staging) reads the same table.
+// civilian-site/schools is 82 templated FLDOE pages and is left out so it cannot swamp the ranking.
+for (const dir of ["public", "public/bases", "public/communities", "public/blog", "civilian-site", "civilian-site/resources", "civilian-site/neighborhoods", "civilian-site/blog"]) {
   for (const f of readdirSync(dir)) {
     if (!f.endsWith(".html")) continue;
-    if (["404.html", "search.html", "thanks.html", "blog.html", "book-pcs-call.html"].includes(f) && dir === "public") continue;
+    if (["404.html", "search.html", "thanks.html", "blog.html", "book-pcs-call.html"].includes(f) && (dir === "public" || dir === "civilian-site")) continue;
     pages.push(`${dir}/${f}`);
   }
 }
@@ -51,7 +53,7 @@ for (const file of pages) {
     Math.min(35, Math.max(0, wordsPerAid - 280) / 14)
   );
 
-  rows.push({ file: file.replace("public/", "/").replace(".html", ""), totalWords, paras: paras.length, walls, maxPara, headings, wordsPerHeading, scanAids, wordsPerAid, score });
+  rows.push({ file: file.replace("civilian-site/", "gc:/").replace("public/", "/").replace(".html", ""), totalWords, paras: paras.length, walls, maxPara, headings, wordsPerHeading, scanAids, wordsPerAid, score });
 }
 
 rows.sort((a, b) => a.score - b.score);

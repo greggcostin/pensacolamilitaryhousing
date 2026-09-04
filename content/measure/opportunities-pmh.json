@@ -1,0 +1,551 @@
+{
+ "site": "pmh",
+ "asOf": "2026-08-28",
+ "generated": "2026-09-04",
+ "site28": {
+  "imp": 749,
+  "clk": 13
+ },
+ "topPages": [
+  {
+   "page": "/va-disability-property-tax-florida",
+   "imp28": 132,
+   "clk28": 4,
+   "pos28": 6,
+   "imp90": 213,
+   "clk90": 5,
+   "pos90": 6.1
+  },
+  {
+   "page": "/bah-rates",
+   "imp28": 25,
+   "clk28": 0,
+   "pos28": 6.8,
+   "imp90": 184,
+   "clk90": 2,
+   "pos90": 6.5
+  },
+  {
+   "page": "/bases/whiting-field",
+   "imp28": 0,
+   "clk28": 0,
+   "pos28": null,
+   "imp90": 39,
+   "clk90": 3,
+   "pos90": 7.6
+  },
+  {
+   "page": "/bases/eglin-afb",
+   "imp28": 1,
+   "clk28": 0,
+   "pos28": 10,
+   "imp90": 37,
+   "clk90": 0,
+   "pos90": 6.2
+  },
+  {
+   "page": "/bases/hurlburt-field",
+   "imp28": 20,
+   "clk28": 0,
+   "pos28": 7,
+   "imp90": 33,
+   "clk90": 1,
+   "pos90": 7
+  },
+  {
+   "page": "/bases/nas-pensacola",
+   "imp28": 3,
+   "clk28": 0,
+   "pos28": 6,
+   "imp90": 32,
+   "clk90": 0,
+   "pos90": 5.5
+  },
+  {
+   "page": "/",
+   "imp28": 17,
+   "clk28": 0,
+   "pos28": 4.1,
+   "imp90": 27,
+   "clk90": 0,
+   "pos90": 3.9
+  },
+  {
+   "page": "/on-base-vs-off-base-hurlburt-field",
+   "imp28": 10,
+   "clk28": 2,
+   "pos28": 5.8,
+   "imp90": 25,
+   "clk90": 3,
+   "pos90": 5.8
+  },
+  {
+   "page": "/bases/saufley-field",
+   "imp28": 4,
+   "clk28": 0,
+   "pos28": 4,
+   "imp90": 19,
+   "clk90": 1,
+   "pos90": 7.6
+  },
+  {
+   "page": "/bases/corry-station",
+   "imp28": 5,
+   "clk28": 0,
+   "pos28": 6.6,
+   "imp90": 18,
+   "clk90": 1,
+   "pos90": 5.8
+  },
+  {
+   "page": "/communities/crestview",
+   "imp28": 10,
+   "clk28": 0,
+   "pos28": 5.4,
+   "imp90": 17,
+   "clk90": 1,
+   "pos90": 4.8
+  },
+  {
+   "page": "/homes-for-sale-nas-pensacola",
+   "imp28": 0,
+   "clk28": 0,
+   "pos28": null,
+   "imp90": 17,
+   "clk90": 1,
+   "pos90": 3.4
+  },
+  {
+   "page": "/communities/fort-walton-beach",
+   "imp28": 6,
+   "clk28": 0,
+   "pos28": 5.8,
+   "imp90": 14,
+   "clk90": 1,
+   "pos90": 4.9
+  },
+  {
+   "page": "/on-base-vs-off-base-nas-pensacola",
+   "imp28": 11,
+   "clk28": 0,
+   "pos28": 5.3,
+   "imp90": 14,
+   "clk90": 2,
+   "pos90": 5.1
+  },
+  {
+   "page": "/on-base-vs-off-base-corry-station",
+   "imp28": 8,
+   "clk28": 0,
+   "pos28": 4,
+   "imp90": 13,
+   "clk90": 0,
+   "pos90": 4.1
+  },
+  {
+   "page": "/bases/duke-field",
+   "imp28": 0,
+   "clk28": 0,
+   "pos28": null,
+   "imp90": 11,
+   "clk90": 1,
+   "pos90": 6.5
+  },
+  {
+   "page": "/communities/destin",
+   "imp28": 1,
+   "clk28": 0,
+   "pos28": 9,
+   "imp90": 9,
+   "clk90": 0,
+   "pos90": 3.9
+  },
+  {
+   "page": "/florida-homestead-exemption-military",
+   "imp28": 5,
+   "clk28": 0,
+   "pos28": 5.2,
+   "imp90": 9,
+   "clk90": 0,
+   "pos90": 4.6
+  },
+  {
+   "page": "/assumable-va-loans-pensacola",
+   "imp28": 0,
+   "clk28": 0,
+   "pos28": null,
+   "imp90": 9,
+   "clk90": 1,
+   "pos90": 2.7
+  },
+  {
+   "page": "/nas-pensacola-gates",
+   "imp28": 9,
+   "clk28": 1,
+   "pos28": 4.9,
+   "imp90": 9,
+   "clk90": 1,
+   "pos90": 4.9
+  },
+  {
+   "page": "/flight-school-housing-pensacola",
+   "imp28": 3,
+   "clk28": 1,
+   "pos28": 6.3,
+   "imp90": 7,
+   "clk90": 1,
+   "pos90": 6.1
+  },
+  {
+   "page": "/pensacola-flood-zones-homebuyers",
+   "imp28": 4,
+   "clk28": 0,
+   "pos28": 6,
+   "imp90": 7,
+   "clk90": 0,
+   "pos90": 5.1
+  },
+  {
+   "page": "/military-lodging-pensacola",
+   "imp28": 7,
+   "clk28": 0,
+   "pos28": 6.6,
+   "imp90": 7,
+   "clk90": 0,
+   "pos90": 6.6
+  },
+  {
+   "page": "/on-base-vs-off-base-eglin-afb",
+   "imp28": 1,
+   "clk28": 0,
+   "pos28": 10,
+   "imp90": 5,
+   "clk90": 0,
+   "pos90": 8.8
+  },
+  {
+   "page": "/first-time-military-homebuyer",
+   "imp28": 1,
+   "clk28": 0,
+   "pos28": 2,
+   "imp90": 5,
+   "clk90": 0,
+   "pos90": 2.2
+  },
+  {
+   "page": "/disabled-veteran-benefits-florida",
+   "imp28": 5,
+   "clk28": 1,
+   "pos28": 5.6,
+   "imp90": 5,
+   "clk90": 1,
+   "pos90": 5.6
+  },
+  {
+   "page": "/on-base-vs-off-base-duke-field",
+   "imp28": 4,
+   "clk28": 0,
+   "pos28": 6,
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 6
+  },
+  {
+   "page": "/reviews",
+   "imp28": 1,
+   "clk28": 0,
+   "pos28": 4,
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 4.8
+  },
+  {
+   "page": "/blog/florida-veteran-property-tax-county-guide",
+   "imp28": 4,
+   "clk28": 0,
+   "pos28": 6,
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 6
+  },
+  {
+   "page": "/communities/niceville",
+   "imp28": 1,
+   "clk28": 1,
+   "pos28": 1,
+   "imp90": 3,
+   "clk90": 1,
+   "pos90": 5.3
+  }
+ ],
+ "strikingDistance": [
+  {
+   "query": "training air wing five",
+   "imp90": 15,
+   "clk90": 0,
+   "pos90": 9.7,
+   "imp28": 0
+  },
+  {
+   "query": "bah hurlburt field",
+   "imp90": 8,
+   "clk90": 0,
+   "pos90": 6.5,
+   "imp28": 0
+  },
+  {
+   "query": "buying a home near nas pensacola",
+   "imp90": 8,
+   "clk90": 0,
+   "pos90": 5.4,
+   "imp28": 4
+  },
+  {
+   "query": "nas pensacola bah",
+   "imp90": 7,
+   "clk90": 0,
+   "pos90": 6.1,
+   "imp28": 3
+  },
+  {
+   "query": "hurlburt field bah",
+   "imp90": 6,
+   "clk90": 0,
+   "pos90": 9.3,
+   "imp28": 0
+  },
+  {
+   "query": "if i buy a home in florida and are 100% va p&t disabled do i need to pay property tax? what about if it is my part time home and i live in nc half of the year?",
+   "imp90": 6,
+   "clk90": 0,
+   "pos90": 8,
+   "imp28": 3
+  },
+  {
+   "query": "santa rosa business taxes exemption for veterans",
+   "imp90": 5,
+   "clk90": 0,
+   "pos90": 7,
+   "imp28": 0
+  },
+  {
+   "query": "nas pensacola realtor",
+   "imp90": 5,
+   "clk90": 0,
+   "pos90": 4,
+   "imp28": 5
+  },
+  {
+   "query": "pensacola bah",
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 10,
+   "imp28": 0
+  },
+  {
+   "query": "nas pensacola base housing office for air force cso students",
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 7,
+   "imp28": 0
+  },
+  {
+   "query": "property for sale near nas pensacola",
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 4,
+   "imp28": 0
+  },
+  {
+   "query": "military friendly realtor pensacola fl",
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 5.5,
+   "imp28": 2
+  },
+  {
+   "query": "nas corry station bah",
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 4,
+   "imp28": 0
+  },
+  {
+   "query": "usaf bah fort walton beach fl",
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 4,
+   "imp28": 0
+  },
+  {
+   "query": "is the corry station tech school dorm at nas pensacola similar to the goodfellow air force base dorms?",
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 5,
+   "imp28": 4
+  },
+  {
+   "query": "houses for rent military in fwb florida",
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 7,
+   "imp28": 4
+  },
+  {
+   "query": "florida escambia county tax exemptions for veterans",
+   "imp90": 4,
+   "clk90": 0,
+   "pos90": 8,
+   "imp28": 4
+  }
+ ],
+ "ctrProblems": [
+  {
+   "page": "/",
+   "imp28": 17,
+   "pos28": 4.1
+  },
+  {
+   "page": "/communities/crestview",
+   "imp28": 10,
+   "pos28": 5.4
+  },
+  {
+   "page": "/on-base-vs-off-base-nas-pensacola",
+   "imp28": 11,
+   "pos28": 5.3
+  },
+  {
+   "page": "/on-base-vs-off-base-corry-station",
+   "imp28": 8,
+   "pos28": 4
+  },
+  {
+   "query": "pensacola fl military home buyer va",
+   "imp28": 8,
+   "pos28": 2.8
+  }
+ ],
+ "rising": [
+  {
+   "query": "nas pensacola realtor",
+   "imp28": 5,
+   "impPrior28": 0,
+   "pos28": 4
+  },
+  {
+   "query": "is the corry station tech school dorm at nas pensacola similar to the goodfellow air force base dorms?",
+   "imp28": 4,
+   "impPrior28": 0,
+   "pos28": 5
+  },
+  {
+   "query": "houses for rent military in fwb florida",
+   "imp28": 4,
+   "impPrior28": 0,
+   "pos28": 7
+  },
+  {
+   "query": "florida escambia county tax exemptions for veterans",
+   "imp28": 4,
+   "impPrior28": 0,
+   "pos28": 8
+  }
+ ],
+ "declining": [
+  {
+   "page": "/bases/whiting-field",
+   "imp28": 0,
+   "impPrior28": 16,
+   "pos28": null
+  },
+  {
+   "page": "/bases/eglin-afb",
+   "imp28": 1,
+   "impPrior28": 11,
+   "pos28": 10
+  }
+ ],
+ "uncoveredDemand": [
+  {
+   "query": "training air wing five",
+   "imp90": 15,
+   "pos90": 9.7
+  },
+  {
+   "query": "bah hurlburt field",
+   "imp90": 8,
+   "pos90": 6.5
+  },
+  {
+   "query": "hurlburt field bah",
+   "imp90": 6,
+   "pos90": 9.3
+  },
+  {
+   "query": "if i buy a home in florida and are 100% va p&t disabled do i need to pay property tax? what about if it is my part time home and i live in nc half of the year?",
+   "imp90": 6,
+   "pos90": 8
+  },
+  {
+   "query": "santa rosa business taxes exemption for veterans",
+   "imp90": 5,
+   "pos90": 7
+  },
+  {
+   "query": "nas pensacola base housing office for air force cso students",
+   "imp90": 4,
+   "pos90": 7
+  },
+  {
+   "query": "is the corry station tech school dorm at nas pensacola similar to the goodfellow air force base dorms?",
+   "imp90": 4,
+   "pos90": 5
+  },
+  {
+   "query": "houses for rent military in fwb florida",
+   "imp90": 4,
+   "pos90": 7
+  },
+  {
+   "query": "gregg costin",
+   "imp90": 3,
+   "pos90": 7.7
+  },
+  {
+   "query": "jcac \"a\" school address pensacola, fl",
+   "imp90": 3,
+   "pos90": 4
+  },
+  {
+   "query": "hurlburt field afb dorms spec ops",
+   "imp90": 3,
+   "pos90": 9
+  },
+  {
+   "query": "best palce to live for flight school milton florida",
+   "imp90": 3,
+   "pos90": 1
+  },
+  {
+   "query": "does penscaola to hurlburt field count as a pca or pcs",
+   "imp90": 3,
+   "pos90": 4
+  },
+  {
+   "query": "does a 40% va disability qualify for property tax discount in florida",
+   "imp90": 3,
+   "pos90": 5
+  },
+  {
+   "query": "duke field housing",
+   "imp90": 3,
+   "pos90": 6
+  },
+  {
+   "query": "what is the mound at saufley field road",
+   "imp90": 3,
+   "pos90": 4
+  }
+ ]
+}

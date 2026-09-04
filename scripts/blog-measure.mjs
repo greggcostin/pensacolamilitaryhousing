@@ -27,7 +27,7 @@ loadEnv();
 const args = process.argv.slice(2);
 const DRY = args.includes("--dry");
 const NO_API = args.includes("--no-api");
-const siteArg = (args[args.indexOf("--site") + 1] || "both");
+const siteArg = args.includes("--site") ? args[args.indexOf("--site") + 1] : "both";
 const siteKeys = siteArg === "both" ? ["pmh", "gc"] : [siteArg];
 
 const csv = (t) => t.replace(/^﻿/, "").trim().split(/\r?\n/).map((l) => (l.match(/("([^"]|"")*"|[^,]*)(,|$)/g) || []).map((c) => c.replace(/,$/, "").replace(/^"|"$/g, "").replace(/""/g, '"')).filter((_, i, a) => i < a.length - 1 || a[i] !== ""));

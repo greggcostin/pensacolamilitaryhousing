@@ -1,0 +1,308 @@
+{
+ "generated": "2026-09-04",
+ "note": "Every post with fewer than 3 inbound internal links, with the hub pages whose titles/H2s overlap it most. Military hubs carry a RELATED_GUIDES block the retro can insert into (--apply-links N); civilian hubs need a sentence-level link placed by the engine.",
+ "plan": [
+  {
+   "site": "pmh",
+   "post": "/blog/best-neighborhoods-eglin-afb-families",
+   "label": "Best Neighborhoods for Eglin AFB Families in 2026: Niceville, Crestview, or Fort Walton Beach?",
+   "inbound": 1,
+   "from": [
+    {
+     "hub": "/bases/eglin-afb",
+     "hubTitle": "Eglin AFB: Your Complete PCS & Housing Guide",
+     "match": 0.79,
+     "anchor": "<a href=\"/blog/best-neighborhoods-eglin-afb-families\">Best Neighborhoods for Eglin AFB Families in 2026: Niceville, Crestview, or Fort Walton Beach?</a>"
+    },
+    {
+     "hub": "/faq",
+     "hubTitle": "Pensacola Military PCS & Housing FAQ",
+     "match": 0.71,
+     "anchor": "<a href=\"/blog/best-neighborhoods-eglin-afb-families\">Best Neighborhoods for Eglin AFB Families in 2026: Niceville, Crestview, or Fort Walton Beach?</a>"
+    },
+    {
+     "hub": "/communities/fort-walton-beach",
+     "hubTitle": "Fort Walton Beach & Shalimar: Eglin West Gate Housing for Military Families",
+     "match": 0.64,
+     "anchor": "<a href=\"/blog/best-neighborhoods-eglin-afb-families\">Best Neighborhoods for Eglin AFB Families in 2026: Niceville, Crestview, or Fort Walton Beach?</a>"
+    },
+    {
+     "hub": "/bases/duke-field",
+     "hubTitle": "Duke Field: 919th Special Operations Wing PCS & Housing Guide",
+     "match": 0.57,
+     "anchor": "<a href=\"/blog/best-neighborhoods-eglin-afb-families\">Best Neighborhoods for Eglin AFB Families in 2026: Niceville, Crestview, or Fort Walton Beach?</a>"
+    }
+   ]
+  },
+  {
+   "site": "pmh",
+   "post": "/blog/florida-homestead-exemption-military",
+   "label": "Florida Homestead Exemption: The Military Family's Guide to Saving Thousands on Property Taxes",
+   "inbound": 2,
+   "from": [
+    {
+     "hub": "/faq",
+     "hubTitle": "Pensacola Military PCS & Housing FAQ",
+     "match": 0.7,
+     "anchor": "<a href=\"/blog/florida-homestead-exemption-military\">Florida Homestead Exemption: The Military Family's Guide to Saving Thousands on Property Taxes</a>"
+    },
+    {
+     "hub": "/florida-homestead-exemption-military",
+     "hubTitle": "Florida Homestead Exemption for Military Families: 2026 Filing, Stacking, PCS Rules",
+     "match": 0.6,
+     "anchor": "<a href=\"/blog/florida-homestead-exemption-military\">Florida Homestead Exemption: The Military Family's Guide to Saving Thousands on Property Taxes</a>"
+    },
+    {
+     "hub": "/rent-or-sell-pcs-pensacola",
+     "hubTitle": "Rent It or Sell It? The PCS Decision for Pensacola Military Homeowners",
+     "match": 0.4,
+     "anchor": "<a href=\"/blog/florida-homestead-exemption-military\">Florida Homestead Exemption: The Military Family's Guide to Saving Thousands on Property Taxes</a>"
+    },
+    {
+     "hub": "/disabled-veteran-benefits-florida",
+     "hubTitle": "Disabled Veteran Benefits in Florida (2026): How to Stack Federal + State Savings",
+     "match": 0.3,
+     "anchor": "<a href=\"/blog/florida-homestead-exemption-military\">Florida Homestead Exemption: The Military Family's Guide to Saving Thousands on Property Taxes</a>"
+    }
+   ]
+  },
+  {
+   "site": "pmh",
+   "post": "/blog/florida-veteran-property-tax-county-guide",
+   "label": "Florida Disabled Veteran Property Tax Exemptions: The County-by-County Filing Guide for Escambia, Santa Rosa, and Okaloosa",
+   "inbound": 2,
+   "from": [
+    {
+     "hub": "/va-disability-property-tax-florida",
+     "hubTitle": "Florida Property Tax Exemptions for Disabled Veterans",
+     "match": 0.87,
+     "anchor": "<a href=\"/blog/florida-veteran-property-tax-county-guide\">Florida Disabled Veteran Property Tax Exemptions: The County-by-County Filing Guide for Escambia, Santa Rosa, and Okaloosa</a>"
+    },
+    {
+     "hub": "/florida-homestead-exemption-military",
+     "hubTitle": "Florida Homestead Exemption for Military Families: 2026 Filing, Stacking, PCS Rules",
+     "match": 0.67,
+     "anchor": "<a href=\"/blog/florida-veteran-property-tax-county-guide\">Florida Disabled Veteran Property Tax Exemptions: The County-by-County Filing Guide for Escambia, Santa Rosa, and Okaloosa</a>"
+    },
+    {
+     "hub": "/disabled-veteran-benefits-florida",
+     "hubTitle": "Disabled Veteran Benefits in Florida (2026): How to Stack Federal + State Savings",
+     "match": 0.47,
+     "anchor": "<a href=\"/blog/florida-veteran-property-tax-county-guide\">Florida Disabled Veteran Property Tax Exemptions: The County-by-County Filing Guide for Escambia, Santa Rosa, and Okaloosa</a>"
+    },
+    {
+     "hub": "/va-funding-fee-2026",
+     "hubTitle": "VA Funding Fee 2026: Tables, Waivers, and the Numbers That Actually Hit Your Closing",
+     "match": 0.47,
+     "anchor": "<a href=\"/blog/florida-veteran-property-tax-county-guide\">Florida Disabled Veteran Property Tax Exemptions: The County-by-County Filing Guide for Escambia, Santa Rosa, and Okaloosa</a>"
+    }
+   ]
+  },
+  {
+   "site": "pmh",
+   "post": "/blog/living-in-gulf-breeze-pros-cons",
+   "label": "Living in Gulf Breeze, FL: Pros, Cons, and the Numbers Nobody Prints",
+   "inbound": 2,
+   "from": [
+    {
+     "hub": "/faq",
+     "hubTitle": "Pensacola Military PCS & Housing FAQ",
+     "match": 0.5,
+     "anchor": "<a href=\"/blog/living-in-gulf-breeze-pros-cons\">Living in Gulf Breeze, FL: Pros, Cons, and the Numbers Nobody Prints</a>"
+    },
+    {
+     "hub": "/communities/perdido-key",
+     "hubTitle": "Perdido Key, FL: Gulf-Front Barrier Island Living, 20-25 Minutes from NAS Pensacola",
+     "match": 0.33,
+     "anchor": "<a href=\"/blog/living-in-gulf-breeze-pros-cons\">Living in Gulf Breeze, FL: Pros, Cons, and the Numbers Nobody Prints</a>"
+    }
+   ]
+  },
+  {
+   "site": "pmh",
+   "post": "/blog/moving-to-navarre-2026-guide",
+   "label": "Moving to Navarre, FL: The 2026 Guide to a Town on Three Seams",
+   "inbound": 1,
+   "from": [
+    {
+     "hub": "/faq",
+     "hubTitle": "Pensacola Military PCS & Housing FAQ",
+     "match": 0.38,
+     "anchor": "<a href=\"/blog/moving-to-navarre-2026-guide\">Moving to Navarre, FL: The 2026 Guide to a Town on Three Seams</a>"
+    },
+    {
+     "hub": "/communities/mary-esther",
+     "hubTitle": "Mary Esther, FL: The Closest Town to Hurlburt Field's Main Gate",
+     "match": 0.38,
+     "anchor": "<a href=\"/blog/moving-to-navarre-2026-guide\">Moving to Navarre, FL: The 2026 Guide to a Town on Three Seams</a>"
+    },
+    {
+     "hub": "/gulf-breeze-vs-navarre",
+     "hubTitle": "Gulf Breeze vs Navarre: Which Santa Rosa County Town Fits Your PCS?",
+     "match": 0.33,
+     "anchor": "<a href=\"/blog/moving-to-navarre-2026-guide\">Moving to Navarre, FL: The 2026 Guide to a Town on Three Seams</a>"
+    },
+    {
+     "hub": "/communities/shalimar",
+     "hubTitle": "Shalimar, FL: The Quiet Bayou Town Two Miles from Eglin's West Gate",
+     "match": 0.33,
+     "anchor": "<a href=\"/blog/moving-to-navarre-2026-guide\">Moving to Navarre, FL: The 2026 Guide to a Town on Three Seams</a>"
+    }
+   ]
+  },
+  {
+   "site": "pmh",
+   "post": "/blog/personal-property-activity-pcs-2026",
+   "label": "What the New Personal Property Activity (PPA) Means for Your 2026 PCS to Pensacola",
+   "inbound": 2,
+   "from": [
+    {
+     "hub": "/faq",
+     "hubTitle": "Pensacola Military PCS & Housing FAQ",
+     "match": 0.59,
+     "anchor": "<a href=\"/blog/personal-property-activity-pcs-2026\">What the New Personal Property Activity (PPA) Means for Your 2026 PCS to Pensacola</a>"
+    },
+    {
+     "hub": "/military-pcs-tax-deductions",
+     "hubTitle": "Military PCS Tax Deductions: What You Can Actually Claim in 2026",
+     "match": 0.29,
+     "anchor": "<a href=\"/blog/personal-property-activity-pcs-2026\">What the New Personal Property Activity (PPA) Means for Your 2026 PCS to Pensacola</a>"
+    },
+    {
+     "hub": "/pcs-checklist",
+     "hubTitle": "PCS Checklist: 60/30/7 Day Timeline for Military Families",
+     "match": 0.29,
+     "anchor": "<a href=\"/blog/personal-property-activity-pcs-2026\">What the New Personal Property Activity (PPA) Means for Your 2026 PCS to Pensacola</a>"
+    }
+   ]
+  },
+  {
+   "site": "pmh",
+   "post": "/blog/va-loan-assumption-buyers-guide",
+   "label": "How to Assume a VA Loan in 2026: The Step-by-Step Playbook for Veterans and Civilians",
+   "inbound": 1,
+   "from": [
+    {
+     "hub": "/assumable-va-loans-pensacola",
+     "hubTitle": "Assumable VA Loans in Pensacola: How to Buy a 2.75% Rate in 2026",
+     "match": 0.57,
+     "anchor": "<a href=\"/blog/va-loan-assumption-buyers-guide\">How to Assume a VA Loan in 2026: The Step-by-Step Playbook for Veterans and Civilians</a>"
+    },
+    {
+     "hub": "/faq",
+     "hubTitle": "Pensacola Military PCS & Housing FAQ",
+     "match": 0.43,
+     "anchor": "<a href=\"/blog/va-loan-assumption-buyers-guide\">How to Assume a VA Loan in 2026: The Step-by-Step Playbook for Veterans and Civilians</a>"
+    },
+    {
+     "hub": "/dual-military-homes",
+     "hubTitle": "Dual-Military and Joint-Entitlement Homes: Dual-BAH, Joint VA, and the Exit Planning Nobody Mentions",
+     "match": 0.36,
+     "anchor": "<a href=\"/blog/va-loan-assumption-buyers-guide\">How to Assume a VA Loan in 2026: The Step-by-Step Playbook for Veterans and Civilians</a>"
+    },
+    {
+     "hub": "/first-time-military-homebuyer",
+     "hubTitle": "First-Time Military Homebuyer: A Step-by-Step Playbook for Your First Pensacola Purchase",
+     "match": 0.36,
+     "anchor": "<a href=\"/blog/va-loan-assumption-buyers-guide\">How to Assume a VA Loan in 2026: The Step-by-Step Playbook for Veterans and Civilians</a>"
+    }
+   ]
+  },
+  {
+   "site": "pmh",
+   "post": "/blog/va-loan-seller-concessions-truth",
+   "label": "The VA Loan Seller Concessions Myth That's Costing Military Buyers Thousands",
+   "inbound": 2,
+   "from": [
+    {
+     "hub": "/faq",
+     "hubTitle": "Pensacola Military PCS & Housing FAQ",
+     "match": 0.53,
+     "anchor": "<a href=\"/blog/va-loan-seller-concessions-truth\">The VA Loan Seller Concessions Myth That's Costing Military Buyers Thousands</a>"
+    },
+    {
+     "hub": "/va-loan-closing-costs-florida",
+     "hubTitle": "VA Loan Closing Costs in Florida: What You Actually Pay",
+     "match": 0.47,
+     "anchor": "<a href=\"/blog/va-loan-seller-concessions-truth\">The VA Loan Seller Concessions Myth That's Costing Military Buyers Thousands</a>"
+    },
+    {
+     "hub": "/buy",
+     "hubTitle": "Buy a Home on the Emerald Coast with a Realtor Who Has Helped Hundreds of Clients in Florida and Alabama",
+     "match": 0.29,
+     "anchor": "<a href=\"/blog/va-loan-seller-concessions-truth\">The VA Loan Seller Concessions Myth That's Costing Military Buyers Thousands</a>"
+    },
+    {
+     "hub": "/buying-sight-unseen-pcs-pensacola",
+     "hubTitle": "Buying a Pensacola Home Sight Unseen: The PCS Remote-Purchase Playbook",
+     "match": 0.29,
+     "anchor": "<a href=\"/blog/va-loan-seller-concessions-truth\">The VA Loan Seller Concessions Myth That's Costing Military Buyers Thousands</a>"
+    }
+   ]
+  },
+  {
+   "site": "gc",
+   "post": "/blog/fed-rate-hike-what-it-means",
+   "label": "A Fed Rate Hike Is Back on the Table. Here Is What It Means.",
+   "inbound": 1,
+   "from": [
+    {
+     "hub": "/resources",
+     "hubTitle": "Florida homeowner resources",
+     "match": 0.33,
+     "anchor": "<a href=\"/blog/fed-rate-hike-what-it-means\">A Fed Rate Hike Is Back on the Table. Here Is What It Means.</a>"
+    },
+    {
+     "hub": "/reviews",
+     "hubTitle": "Five stars, every time",
+     "match": 0.27,
+     "anchor": "<a href=\"/blog/fed-rate-hike-what-it-means\">A Fed Rate Hike Is Back on the Table. Here Is What It Means.</a>"
+    },
+    {
+     "hub": "/faq",
+     "hubTitle": "Pensacola Real Estate, Answered Straight",
+     "match": 0.26,
+     "anchor": "<a href=\"/blog/fed-rate-hike-what-it-means\">A Fed Rate Hike Is Back on the Table. Here Is What It Means.</a>"
+    },
+    {
+     "hub": "/team",
+     "hubTitle": "The Costin Team",
+     "match": 0.26,
+     "anchor": "<a href=\"/blog/fed-rate-hike-what-it-means\">A Fed Rate Hike Is Back on the Table. Here Is What It Means.</a>"
+    }
+   ]
+  },
+  {
+   "site": "gc",
+   "post": "/blog/florida-insurance-relief-2026",
+   "label": "Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.",
+   "inbound": 1,
+   "from": [
+    {
+     "hub": "/resources",
+     "hubTitle": "Florida homeowner resources",
+     "match": 0.44,
+     "anchor": "<a href=\"/blog/florida-insurance-relief-2026\">Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.</a>"
+    },
+    {
+     "hub": "/resources/florida-home-insurance",
+     "hubTitle": "Florida Home Insurance: What Every Buyer and Owner Should Know",
+     "match": 0.38,
+     "anchor": "<a href=\"/blog/florida-insurance-relief-2026\">Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.</a>"
+    },
+    {
+     "hub": "/resources/useful-links",
+     "hubTitle": "Useful links for Florida homeowners",
+     "match": 0.37,
+     "anchor": "<a href=\"/blog/florida-insurance-relief-2026\">Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.</a>"
+    },
+    {
+     "hub": "/neighborhoods/pensacola-beach",
+     "hubTitle": "Pensacola Beach",
+     "match": 0.33,
+     "anchor": "<a href=\"/blog/florida-insurance-relief-2026\">Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.</a>"
+    }
+   ]
+  }
+ ]
+}

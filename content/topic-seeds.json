@@ -1,0 +1,37 @@
+{
+  "note": "Seeds for scripts/topic-miner.mjs. Each seed fans out across the prefixes and suffixes against Google and Bing autosuggest, then Bing's related-keyword report and the site's own Bing query log are merged in. Add a seed when a new place, base or money topic enters the strategy; the miner tags audience from the keyword lists below and scores novelty against every live title, H1 and H2 on both sites.",
+  "seeds": {
+    "military": ["nas pensacola", "corry station", "whiting field", "saufley field", "eglin afb", "hurlburt field", "duke field", "bah pensacola", "bah fort walton beach", "pcs to pensacola", "va loan pensacola", "military housing pensacola", "flight school pensacola", "training air wing five", "7th special forces group crestview", "hurlburt field housing", "eglin afb housing", "pensacola military retirement"],
+    "civilian": ["pensacola", "pensacola fl", "gulf breeze fl", "navarre fl", "pace fl", "milton fl", "cantonment fl", "perdido key", "pensacola beach", "orange beach al", "gulf shores al", "foley al", "fort walton beach", "destin fl", "niceville fl", "crestview fl", "florida home insurance", "florida property tax", "florida homestead exemption", "pensacola real estate", "pensacola housing market", "moving to pensacola", "living in pensacola", "retire in pensacola", "pensacola new construction", "pensacola hoa", "pensacola flood zone", "pensacola cost of living", "pensacola rent vs buy", "pensacola condo", "pensacola waterfront homes", "escambia county property tax", "santa rosa county property tax", "baldwin county property tax", "alabama vs florida property tax", "citizens insurance florida", "mortgage rates florida", "home appraisal florida", "title insurance florida", "closing costs florida"]
+  },
+  "prefixes": ["", "is ", "how much ", "how to ", "why ", "best ", "can i ", "should i ", "what is ", "when ", "do i need ", "cost of ", "cheapest ", "average ", "does "],
+  "suffixes": ["", " vs", " cost", " 2026", " worth it", " pros and cons", " near", " for families", " for retirees", " reddit", " calculator", " requirements"],
+  "audienceCues": {
+    "military": ["bah", "pcs", "va loan", "va ", "military", "nas ", "afb", "hurlburt", "eglin", "whiting", "corry", "saufley", "duke field", "flight school", "cso", "dorm", "tricare", "veteran", "disabled veteran", "retiree", "commissary", "base housing", "orders", "deployment", "special forces", "7th sfg"],
+    "civilian": ["insurance", "property tax", "homestead", "hoa", "condo", "retire", "cost of living", "mortgage rate", "refinance", "appraisal", "title", "closing cost", "new construction", "builder", "waterfront", "beach", "vacation rental", "airbnb", "investment", "rental", "first time", "down payment", "school", "safe", "crime", "commute", "hurricane", "flood", "wind mitigation"]
+  },
+  "intentWeights": {
+    "question": 1.35,
+    "decision": 1.3,
+    "cost": 1.25,
+    "comparison": 1.25,
+    "howto": 1.15,
+    "informational": 1.0,
+    "navigational": 0.4
+  },
+  "hubMap": {
+    "bah": ["/bah-rates", "/bah-to-mortgage-guide"],
+    "va loan": ["/va-loan-guide", "/va-coe-guide"],
+    "insurance": ["/resources/florida-home-insurance", "/florida-home-insurance-military"],
+    "property tax": ["/blog/property-taxes-escambia-santa-rosa", "/va-disability-property-tax-florida"],
+    "homestead": ["/resources/florida-homestead-exemption", "/florida-homestead-exemption-military"],
+    "flood": ["/pensacola-flood-zones-homebuyers"],
+    "school": ["/schools", "/school-zones-military-families"],
+    "gulf shores": ["/gulf-shores-orange-beach"],
+    "orange beach": ["/gulf-shores-orange-beach"],
+    "sell": ["/sell", "/whats-my-home-worth"],
+    "buy": ["/buy", "/pcs-home-search", "/search"]
+  },
+  "ignoreNote": "Two kinds of exclusions. Noise: navigational, travel, weather, directory brands. Policy: both sites follow a fair-housing content design (housing stock, prices, commute, official school grades, flood and insurance only), so safety, crime and demographic framings are never topics, however much demand they show.",
+  "ignore": ["hotel", "hotels", "weather", "radar", "airport code", "zip code", "map", "restaurant", "restaurants", "things to do", "vacation", "vacations", "flights", "fishing", "beach cam", "webcam", "jobs", "obituaries", "news", "football", "concert", "events", "population", "time zone", "central time", "eastern time", "how far", "distance", "directions", "hurricane season", "tide", "rentals by owner", "craigslist", "zillow", "trulia", "redfin", "movoto", "realtor.com", "apartments.com", "for rent by owner", "college", "university", "christian school", "pace program", "pace calculator", "pace university", "records search", "tax records", "property records", "login", "phone number", "address", "hours", "safe", "safest", "safety", "crime", "dangerous", "ghetto", "sketchy", "demographics", "racial", "ethnic", "religious", "church", "nightlife", "dating", "singles", "bars", "casino", "hospital", "doctor", "dentist", "lawyer", "attorney", "plumber", "roofer", "contractor", "insurance companies", "insurance company", "insurance agents", "insurance agent", "insurance quote", "quotes", "rate today", "rates today", "today's", "current mortgage rates", "mortgage rates today", "refinance rates", "30 year", "15 year"]
+}

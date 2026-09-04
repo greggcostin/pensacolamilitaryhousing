@@ -41,6 +41,21 @@
           "sample": [
             "bah pensacola"
           ]
+        },
+        {
+          "slug": "bah-2026-pensacola-what-can-you-afford",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 0,
+          "clicks90": 0,
+          "position90": null,
+          "note": "no Bing rows for this URL"
         }
       ]
     },
@@ -69,6 +84,23 @@
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
         }
+      ],
+      "search": [
+        {
+          "slug": "best-neighborhoods-eglin-afb-families",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 0,
+          "clicks90": 0,
+          "position90": null,
+          "note": "no Bing rows for this URL"
+        }
       ]
     },
     "florida-homestead-exemption-military": {
@@ -95,6 +127,23 @@
           "avgScroll": null,
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
+        }
+      ],
+      "search": [
+        {
+          "slug": "florida-homestead-exemption-military",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 0,
+          "clicks90": 0,
+          "position90": null,
+          "note": "no Bing rows for this URL"
         }
       ]
     },
@@ -123,6 +172,23 @@
           "avgScroll": null,
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
+        }
+      ],
+      "search": [
+        {
+          "slug": "pcs-to-pensacola-2026-complete-guide",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 0,
+          "clicks90": 0,
+          "position90": null,
+          "note": "no Bing rows for this URL"
         }
       ]
     },
@@ -158,6 +224,23 @@
           "avgScroll": null,
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
+        }
+      ],
+      "search": [
+        {
+          "slug": "personal-property-activity-pcs-2026",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 0,
+          "clicks90": 0,
+          "position90": null,
+          "note": "no Bing rows for this URL"
         }
       ]
     },
@@ -208,6 +291,23 @@
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
         }
+      ],
+      "search": [
+        {
+          "slug": "va-loan-seller-concessions-truth",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 0,
+          "clicks90": 0,
+          "position90": null,
+          "note": "no Bing rows for this URL"
+        }
       ]
     },
     "moving-to-pensacola-2026-guide": {
@@ -235,6 +335,23 @@
           "avgScroll": null,
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
+        }
+      ],
+      "search": [
+        {
+          "slug": "moving-to-pensacola-2026-guide",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 0,
+          "clicks90": 0,
+          "position90": null,
+          "note": "no Bing rows for this URL"
         }
       ]
     },
@@ -264,6 +381,23 @@
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
         }
+      ],
+      "search": [
+        {
+          "slug": "best-pensacola-neighborhoods-by-rank-bah",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 0,
+          "clicks90": 0,
+          "position90": null,
+          "note": "no Bing rows for this URL"
+        }
       ]
     },
     "living-in-gulf-breeze-pros-cons": {
@@ -291,6 +425,23 @@
           "avgScroll": null,
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
+        }
+      ],
+      "search": [
+        {
+          "slug": "living-in-gulf-breeze-pros-cons",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 0,
+          "clicks90": 0,
+          "position90": null,
+          "note": "no Bing rows for this URL"
         }
       ]
     },
@@ -321,6 +472,22 @@
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
         }
+      ],
+      "search": [
+        {
+          "slug": "florida-veteran-property-tax-county-guide",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 6,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 4,
+          "clicks90": 0,
+          "position90": 6
+        }
       ]
     },
     "va-loan-assumption-buyers-guide": {
@@ -342,6 +509,23 @@
           "avgScroll": null,
           "semrushKeywords": "unavailable",
           "notes": "Clarity 28d (Aug 4 - Sep 1). Site 396 sessions / 717 pageviews, avg scroll 25.19%; /blog/ aggregate avg scroll 40.56%, 0.22 dead clicks/pageview (blog reads deeper than the site average). Semrush unavailable this run: API units exhausted, so no position data and no decay verification."
+        }
+      ],
+      "search": [
+        {
+          "slug": "va-loan-assumption-buyers-guide",
+          "source": "bing-api",
+          "date": "2026-08-28",
+          "kind": "page",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 0,
+          "clicks90": 0,
+          "position90": null,
+          "note": "no Bing rows for this URL"
         }
       ]
     },
@@ -580,7 +764,11 @@
       "wallWordsHardFail": 110,
       "wallWordsWarn": 85,
       "quickAnswerRequiredSince": "2026-09-04",
-      "dedupStrict": "scripts/blog-dedup-check.mjs <slug> --strict before any NEW post"
-    }
+      "dedupStrict": "scripts/blog-dedup-check.mjs <slug> --strict before any NEW post",
+      "scorePostMin": 80,
+      "formattingMin": 90
+    },
+    "measure": "scripts/blog-measure.mjs: Bing Webmaster API live (both sites) + docs/seo-baselines exports; opportunities in content/measure/",
+    "decide": "content/blog/refresh-queue.json (scripts/blog-retro.mjs) outranks topic-queue.json; docs/topic-radar.md (scripts/topic-miner.mjs) outranks guessed topics"
   }
 }

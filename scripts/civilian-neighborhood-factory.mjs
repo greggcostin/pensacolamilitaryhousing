@@ -11,7 +11,8 @@ import { NEIGHBORHOODS } from "./civilian-neighborhoods-data.mjs";
 
 const DATE_ISO = "2026-09-02";
 const PMH = "https://pensacolamilitaryhousing.com";
-const COUNTY = { "east-hill-downtown": "Escambia County", "pensacola-beach": "Escambia County", "perdido-key": "Escambia County", "midtown-east-pensacola-heights": "Escambia County", "cordova-park-northeast": "Escambia County", "beulah": "Escambia County", "cantonment": "Escambia County", "gulf-breeze": "Santa Rosa County", "pace-milton": "Santa Rosa County", "navarre": "Santa Rosa County", "fort-walton-beach": "Okaloosa County" };
+const COUNTY = { "east-hill-downtown": "Escambia County", "pensacola-beach": "Escambia County", "perdido-key": "Escambia County", "midtown-east-pensacola-heights": "Escambia County", "cordova-park-northeast": "Escambia County", "beulah": "Escambia County", "cantonment": "Escambia County", "gulf-breeze": "Santa Rosa County", "pace-milton": "Santa Rosa County", "navarre": "Santa Rosa County", "fort-walton-beach": "Okaloosa County", "destin": "Okaloosa County", "niceville": "Okaloosa County", "crestview": "Okaloosa County", "foley": "Baldwin County" };
+const STATE = { foley: "Alabama" };
 
 // school grades + names from the FLDOE data, keyed by the civilian school-page slug
 const schoolsJson = JSON.parse(readFileSync("content/schools/school-grades-2026.json", "utf8"));
@@ -34,7 +35,7 @@ const details = (faqs) => faqs.map((f, i) => `<details${i === 0 ? " open" : ""}>
 async function build(n) {
   const path = `/neighborhoods/${n.slug}`;
   const meta = await sharp(`${SITE_DIR}${n.image}`).metadata();
-  const credit = credits[n.image] || "Photo: The Costin Team";
+  const credit = n.credit || credits[n.image] || "Photo: The Costin Team";
   const figure = figureBand({ src: n.image, webp: n.image.replace(/\.jpg$/, ".webp"), alt: n.alt, caption: `${n.short}. ${credit}`, width: meta.width, height: meta.height });
   const schoolItems = n.schools.filter((s) => SCHOOLS[s] && existsSync(`${SITE_DIR}/schools/${s}.html`)).map((s) => `<li><a href="/schools/${s}">${esc(SCHOOLS[s].name)}</a> <span class="grade">2026 grade: ${esc(SCHOOLS[s].grade)}</span></li>`);
   const main = `
@@ -52,8 +53,9 @@ ${schoolItems.length ? `<ul class="school-list">\n${schoolItems.join("\n")}\n</u
 <p>${esc(n.flood)}</p>
 <p>Florida homeowners insurance is priced on roof age, wind mitigation and the flood zone, so we pull both quotes during the inspection period, never after closing. Read our <a href="/resources/florida-home-insurance">Florida home insurance guide</a> for the details.</p>
 
-<h2>Moving here on military orders?</h2>
+${n.pmh ? `<h2>Moving here on military orders?</h2>
 <p>${esc(n.short)} has a second guide written for PCS families, with BAH price bands by pay grade, commute times to each gate and the VA loan specifics: <a href="${PMH}${n.pmh}">${esc(n.short)} for military families</a> on PensacolaMilitaryHousing.com, the military division of the same team.</p>
+` : ""}
 
 <h2>Start your search</h2>
 <p>Tell us what you are looking for in ${esc(n.short)} and your timeline, and you will have a plain-language plan within one business day: current inventory, the streets that fit, what to inspect, and the insurance picture before you write an offer.</p>
@@ -69,7 +71,7 @@ ${details(n.faqs)}
   };
   spec.schemaBlocks = [
     webPage("WebPage", spec),
-    { "@context": "https://schema.org", "@type": "Place", "@id": `${SITE}${path}#place`, name: n.name, description: n.desc, url: `${SITE}${path}`, containedInPlace: { "@type": "AdministrativeArea", name: `${COUNTY[n.slug]}, Florida` }, image: `${SITE}${n.image}` },
+    { "@context": "https://schema.org", "@type": "Place", "@id": `${SITE}${path}#place`, name: n.name, description: n.desc, url: `${SITE}${path}`, containedInPlace: { "@type": "AdministrativeArea", name: `${COUNTY[n.slug]}, ${STATE[n.slug] || "Florida"}` }, image: `${SITE}${n.image}` },
     breadcrumbs([{ name: "Home", path: "/" }, { name: "Neighborhoods", path: "/neighborhoods" }, { name: n.short, path }]),
     faqPage(n.faqs),
   ];

@@ -1,2 +1,4 @@
 # greggcostin.com redirects (Cloudflare Pages)
 /about /team 301
+/about/ /team 301
+/about.html /team 301

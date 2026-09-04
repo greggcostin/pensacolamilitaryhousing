@@ -386,4 +386,251 @@ export const NEIGHBORHOODS = [
       { q: "Fort Walton Beach or Destin?", a: "Fort Walton Beach wins on price stability, established neighborhoods and the commute to Eglin and Hurlburt. Destin wins on Gulf-front resort inventory and rental demand, at higher prices and higher insurance." },
     ],
   },
+  {
+    "slug": "destin",
+    "name": "Destin",
+    "short": "Destin",
+    "title": "Destin FL Condos & Homes Guide | The Costin Team",
+    "desc": "Destin FL real estate: Gulf-front and harbor condos, golf-community homes, 2026 ZIP values, A-rated Destin schools, flood zones and insurance. The Costin Team.",
+    "keywords": "Destin FL homes for sale, Destin condos for sale, Destin real estate, living in Destin Florida, Destin short term rental rules",
+    "h1": "Destin",
+    "lead": "Destin occupies a peninsula between the Gulf of Mexico and Choctawhatchee Bay, and the housing stock follows the geography: condominium buildings along the Gulf and the harbor, beach cottages and single-family homes south of US-98, and gated golf communities on the bay side.",
+    "fit": "Gulf front, condo market, Okaloosa schools",
+    "image": "/images/destin.jpg",
+    "alt": "Boats in Destin Harbor with waterfront condo buildings and a white sand spit at the pass",
+    "pmh": "/communities/destin",
+    "zip": "32541",
+    "sections": [
+      {
+        "h2": "Where it is",
+        "p": ["Destin is a city of 7.49 square miles of land in Okaloosa County, incorporated in 1984, with the Gulf of Mexico on the south side and Choctawhatchee Bay on the north. East Pass, also called Destin Pass, separates the peninsula from Santa Rosa Island and is the only outlet from Choctawhatchee Bay to the Gulf, which is why the harbor and the charter fleet sit where they do.",
+        "US-98 runs the length of the city and crosses East Pass to the west onto Okaloosa Island and on to Fort Walton Beach. Henderson Beach State Park holds 208 acres of coastal dune and scrub on the Gulf side, and Miramar Beach and Walton County begin a few minutes east."]
+      },
+      {
+        "h2": "Homes and prices",
+        "p": ["Zillow Research put the typical 32541 home at $627,422 on July 31, 2026, up 0.7% year over year. Split by type, the single-family series stood at $670,515 and the condominium and co-op series at $596,609. For comparison, the Fort Walton Beach 32547 ZIP was $316,555 on the same date, so Destin runs close to twice the price of the nearest inland market.",
+        "The inventory is genuinely mixed. Gulf-front and harbor-front condominium buildings carry the bulk of the unit count, Crystal Beach south of US-98 holds older beach cottages and single-family homes, and gated golf communities such as Kelly Plantation and Regatta Bay sit north of US-98 toward the bay.",
+        "8% of listings taking a price cut, so there is usually room to negotiate and time to do the diligence."]
+      },
+      {
+        "h2": "Getting around",
+        "p": ["US-98 is the spine and the only continuous east-west route through the city, so the hour you drive matters more here than the mileage. The Mid-Bay Bridge, toll State Road 293, crosses Choctawhatchee Bay from US-98 in Destin to State Road 20 in Niceville; the two-axle toll is $4.00 cash, $3.00 with SunPass and $2.00 for SunPass frequent customers.",
+        "Destin-Fort Walton Beach Airport (VPS) is the commercial airport, about 16 miles and roughly 25 minutes away, sited on Eglin Air Force Base next to Valparaiso and operated by the Air Force as a joint civil and military field. Destin Executive Airport (DTS) sits about one nautical mile east of the Destin business district and handles general aviation. Drive your actual route at your actual hour before you commit to a street, because the corridor carries visitor traffic through the spring and summer season."]
+      },
+      {
+        "h2": "What to verify before you write an offer",
+        "p": ["On a condominium the building file matters as much as the unit. Florida requires a milestone inspection for residential condominium buildings of three or more habitable stories, first at 30 years of age and every 10 years after, or at 25 years where the local enforcement agency determines that local circumstances such as proximity to salt water warrant it, plus a structural integrity reserve study on the same class of buildings at least every 10 years.",
+        "Ask for the milestone report, the reserve study, the current budget and any pending special assessment before you go under contract, not late in the inspection period.",
+        "Three more items are specific to this market. Pull the FEMA flood determination and the elevation certificate; the city runs an interactive floodplain platform for parcel-level flood data.",
+        "If you plan to rent the property short term, City of Destin Code Chapter 13, Article VI requires annual registration of single-family dwelling units used as short-term rentals, and the code defines single-family to include townhomes, duplexes and triplexes; registrations expire the last day of February, renew between January 1 and March 1, carry a $50 late fee after March 1, and require a state DBPR vacation rental dwelling license, a Florida Department of Revenue annual resale certificate and a city business tax receipt.",
+        "Finally, a property that is not your permanent residence gets no homestead exemption and no 3% Save Our Homes cap; assessment increases are limited to 10% a year under the non-homestead cap, that cap does not apply to school district levies, and it resets on a change of ownership."]
+      }
+    ],
+    "schools": [],
+    "schoolsNote": "Okaloosa County Schools serve Destin, and on the 2026 Florida school grades Destin Elementary and Destin Middle each earned an A, their 25th consecutive A, while Destin High School, the public charter that opened in 2021, earned a B and the district earned an A. Destin Middle feeds Fort Walton Beach High, the zoned public high school; our school report pages cover Escambia and Santa Rosa counties only, so confirm campus grades and zoning with the Okaloosa district.",
+    "flood": "Destin is a peninsula, so Gulf-front, harbor-front and bay-front parcels fall inside Special Flood Hazard Areas, which the city identifies as Zones A and V, and flood insurance is mandatory there on a federally backed mortgage. The City of Destin holds a Community Rating System Class 6, which the city states is worth up to a 20% discount on standard flood insurance policies.",
+    "faqs": [
+      {
+        "q": "What do homes and condos cost in Destin?",
+        "a": "Zillow Research put the typical 32541 home at $627,422 on July 31, 2026, up 0.7% year over year, with the single-family series at $670,515 and the condominium and co-op series at $596,609. The same ZIP took a median 73 days to pending in July 2026, and 21.8% of listings took a price cut."
+      },
+      {
+        "q": "Can I use a Destin home as a short-term rental?",
+        "a": "Often yes, but the paperwork is real. City of Destin Code Chapter 13, Article VI requires annual registration of single-family dwelling units used as short-term rentals, and the code counts townhomes, duplexes and triplexes as single-family. Registrations expire the last day of February and renew between January 1 and March 1, with a $50 late fee after March 1, and the application requires a state DBPR vacation rental dwelling license, a Florida Department of Revenue annual resale certificate and a city business tax receipt."
+      },
+      {
+        "q": "Is flood insurance required in Destin?",
+        "a": "It is mandatory on a federally backed mortgage when the parcel sits in a Special Flood Hazard Area, which the city identifies as Zones A and V. The City of Destin holds a Community Rating System Class 6, which the city states is worth up to a 20% discount on standard flood insurance policies. Pull the flood determination and the elevation certificate before you write, not after."
+      },
+      {
+        "q": "What schools serve Destin?",
+        "a": "Okaloosa County Schools. On the 2026 Florida school grades Destin Elementary and Destin Middle each earned an A, their 25th consecutive A, and Destin High School, the public charter that opened in 2021, earned a B; the district earned an A. Destin Middle feeds Fort Walton Beach High, the zoned public high school. Confirm the assigned schools for a specific address with the district."
+      }
+    ]
+  },
+  {
+    "slug": "niceville",
+    "name": "Niceville and Bluewater Bay",
+    "short": "Niceville & Bluewater Bay",
+    "title": "Niceville FL Homes for Sale Guide | The Costin Team",
+    "desc": "Niceville and Bluewater Bay real estate: 2026 ZIP 32578 values, A-rated Okaloosa schools, Eglin adjacency, Mid-Bay Bridge tolls, flood zones. The Costin Team.",
+    "keywords": "Niceville FL homes for sale, Bluewater Bay homes for sale, Niceville real estate, living in Niceville Florida",
+    "h1": "Niceville",
+    "lead": "Niceville wraps around Boggy Bayou on the northeast corner of the Eglin Air Force Base reservation, and the market splits in two: 1980s through 2000s subdivisions inside the city, and the 2,000-acre Bluewater Bay development next door in unincorporated Okaloosa County. Prices sit above Crestview and Fort Walton Beach and below Destin, and the elementary, middle and high schools most Niceville addresses feed into all hold Florida A grades for 2026.",
+    "fit": "A-rated schools, Bluewater Bay, Eglin adjacent",
+    "image": "/images/niceville.jpg",
+    "alt": "Sunrise over Choctawhatchee Bay with oaks and pines silhouetted along the shoreline near Niceville",
+    "credit": "Photo: U.S. Air Force (public domain)",
+    "pmh": "/communities/niceville",
+    "zip": "32578",
+    "sections": [
+      {
+        "h2": "Where it is",
+        "p": ["Niceville sits on the north shore of Choctawhatchee Bay, wrapped around Boggy Bayou, with Rocky Bayou and Fred Gannon Rocky Bayou State Park on its eastern edge. The Eglin Air Force Base reservation forms the southern and western boundary, and the small city of Valparaiso sits between Niceville and the base. Bluewater Bay, a roughly 2,000-acre planned development begun in 1978 with first home sales in the early 1980s and more than 10,000 residents today, lies southeast of the city.",
+        "That last point matters when you buy. Bluewater Bay carries a Niceville mailing address and ZIP 32578, but it is unincorporated Okaloosa County, not inside the city limits, and it is administered through a county Municipal Services Benefit Unit established January 1, 2004. Which side of that line an address falls on changes the permitting office, the code that applies and the floodplain program that covers it."]
+      },
+      {
+        "h2": "Homes and prices",
+        "p": ["Zillow Research put the typical home value in ZIP 32578 at $440,990 as of July 31, 2026, up 0.3% year over year. On the same date Crestview's 32536 sat at $295,931 and Destin's 32541 at $627,422, which is the position Niceville has held for years: well above the inland Okaloosa towns, well below the beach.",
+        "The median year built in ZIP 32578 is 1989, and roughly 62% of its housing units went up between 1980 and 2009, with another 14% dating from 2010 or later, per Census ACS 2020-2024 five-year estimates. Niceville city listings generally run in the $425,000 to $650,000 band, with the newer construction filling in north of College Boulevard.",
+        "Bluewater Bay is a wooded, low-density plan of separate subdivisions, several of them gated, with a golf club running two courses, a tennis center, pools and a marina; homes there start around $450,000, and the Rocky Bayou waterfront streets sit well above the rest."]
+      },
+      {
+        "h2": "Getting around",
+        "p": ["John Sims Parkway is the main street through town, carrying State Road 85 east and west and meeting the west end of State Road 20 on the Rocky Bayou side. SR-85 runs south past Valparaiso and Eglin toward Fort Walton Beach and north to Crestview and I-10. Destin-Fort Walton Beach Airport (VPS) sits on the Eglin reservation next to Valparaiso, so Niceville buyers get a commercial airport a few miles away rather than an hour off.",
+        "The Mid-Bay Bridge on SR-293 crosses Choctawhatchee Bay from the east side of Niceville into Destin. For a two-axle vehicle the toll each way is $4.00 cash, $3.00 with SunPass, and $2.00 for SunPass accounts that clear 32 trips in a month at that plaza. If anyone in the household works in Destin, put the bridge in the monthly budget before you fall for a floor plan."]
+      },
+      {
+        "h2": "What to verify before you write",
+        "p": ["Start with jurisdiction. Confirm on the parcel record whether the address is inside Niceville city limits or in unincorporated Okaloosa County, because that one line drives permitting, code and floodplain administration. Okaloosa County's public GIS map viewer will show you the parcel, and the county Growth Management office answers what the listing sheet cannot.",
+        "Then stack the carrying costs, which in Bluewater Bay arrive in three separate layers: the MSBU assessment that rides on the annual tax bill and funds common-area grounds, irrigation, signage and streetlights; the individual subdivision HOA on top of that; and golf, tennis or marina memberships, which are separate again.",
+        "Last, school zoning is set street by street by Okaloosa County Schools and can change, so confirm the assigned elementary, middle and high school for the exact address rather than the subdivision name. We pull the FEMA flood determination and the wind mitigation form on every Niceville showing before an offer goes out."]
+      }
+    ],
+    "schools": [],
+    "schoolsNote": "On the Florida Department of Education's 2026 school grades, Niceville Senior High School, C.W. Ruckel Middle, Bluewater Elementary and Lula J. Edge Elementary all earned A grades, as did James E. Plew Elementary and the Addie R. Lewis K-8 school in neighboring Valparaiso, and Niceville Senior High reported a 99% graduation rate for 2024-25. Our school report pages cover Escambia and Santa Rosa counties only, so confirm Okaloosa grades and zoning with the district.",
+    "flood": "The City of Niceville participates in the NFIP Community Rating System at Class 6, which discounts flood policies on properties in Special Flood Hazard Areas by 20%, and city permit review covers A, AE, V and VE zones. Bluewater Bay and other unincorporated addresses fall under Okaloosa County's floodplain program instead, so confirm which rating and which zone letter apply to the specific parcel.",
+    "faqs": [
+      {
+        "q": "What is the typical home value in Niceville?",
+        "a": "Zillow Research put ZIP 32578 at $440,990 as of July 31, 2026, up 0.3% year over year. On the same date Crestview's 32536 was $295,931 and Destin's 32541 was $627,422. Niceville city listings generally run $425,000 to $650,000, with Bluewater Bay starting around $450,000 and Rocky Bayou waterfront above that."
+      },
+      {
+        "q": "Are Niceville schools A-rated?",
+        "a": "Yes. On the 2026 Florida Department of Education grades, Niceville Senior High School, C.W. Ruckel Middle, Bluewater Elementary and Lula J. Edge Elementary all earned A grades, and Niceville Senior High reported a 99% graduation rate for 2024-25. Zoning is set by address, so confirm the assigned schools with Okaloosa County Schools."
+      },
+      {
+        "q": "Is Bluewater Bay part of the City of Niceville?",
+        "a": "No. It carries a Niceville mailing address and ZIP 32578 but sits in unincorporated Okaloosa County, administered through a county Municipal Services Benefit Unit established January 1, 2004. That affects permitting, the code that applies and which floodplain program covers the address, so check the parcel record rather than the mailing address."
+      },
+      {
+        "q": "How do you get from Niceville to Destin, and what does it cost?",
+        "a": "The Mid-Bay Bridge on SR-293 crosses Choctawhatchee Bay directly into Destin. The two-axle toll each way is $4.00 cash, $3.00 with SunPass, and $2.00 once a SunPass account clears 32 trips in a month at that plaza."
+      }
+    ]
+  },
+  {
+    "slug": "crestview",
+    "name": "Crestview",
+    "short": "Crestview",
+    "title": "Crestview FL Homes for Sale Guide | The Costin Team",
+    "desc": "Crestview real estate in north Okaloosa County: new construction, larger lots, 2026 price bands, the new bypass, flood zones and city limits. The Costin Team.",
+    "keywords": "Crestview FL homes for sale, Crestview real estate, new construction Crestview FL, living in Crestview Florida",
+    "h1": "Crestview",
+    "lead": "Crestview is the Okaloosa County seat, sitting inland on the ridge where the Shoal River joins the Yellow River, and it carries the lowest price bands in the county. New subdivisions and larger lots are what this market is built on, and the trade for the price is a drive south on SR-85 to reach the coast side of Okaloosa.",
+    "fit": "New construction, acreage, inland prices",
+    "image": "/images/crestview.jpg",
+    "alt": "An AC-130J gunship on static display at Bob Sikes Airport in Crestview, Florida",
+    "credit": "Photo: U.S. Air Force (public domain)",
+    "pmh": "/communities/crestview",
+    "zip": "32536",
+    "sections": [
+      {
+        "h2": "Where it is",
+        "p": ["Crestview is the county seat and, at 27,134 residents in the 2020 census, the largest city in Okaloosa County. It sits about 25 miles inland on the ridge between the Yellow River and the Shoal River, which joins the Yellow just outside town. US-90 runs east and west through the middle of the city, SR-85 (Ferdon Boulevard) runs north and south, and the two reach I-10 at exit 56 on the south side.",
+        "Most of what a household needs day to day is inside the city rather than down on the coast: North Okaloosa Medical Center on Redstone Avenue, the county seat offices, and the retail and grocery strip along Ferdon Boulevard. Bob Sikes Airport, a public-use general aviation field established in 1941, is three miles northeast of downtown, and Duke Field sits three miles south on SR-85."]
+      },
+      {
+        "h2": "Homes and prices",
+        "p": ["Crestview carries the least expensive bands on the Okaloosa map. Zillow's Home Value Index put the typical home at $295,931 in 32536 on the west side and $284,748 in 32539 on the east side, July 2026 vintage. The Census Bureau's 2020 to 2024 American Community Survey put the median value of an owner-occupied home in the city at $277,900 across 11,554 housing units.",
+        "Working bands run roughly $275,000 to $375,000 for established west-side homes and newer infill around Antioch, $325,000 to $425,000 in the newer subdivisions south along SR-85, $350,000 to $475,000 in master-planned inventory such as Shoal River Landing and Patriot Ridge, and $300,000 to $500,000 on the half-acre to two-acre lots out toward Old Bethel and north Crestview.",
+        "J. Adams Parkway or Brookmeade Drive here."]
+      },
+      {
+        "h2": "Getting around",
+        "p": ["SR-85 is the spine. Duke Field is 10 to 15 minutes south, the main Eglin complex about 30 minutes with the SR-123 bypass skirting Niceville, and Hurlburt Field 40 to 45 minutes. I-10 at exit 56 carries the east and west trips, toward Pensacola in one direction and Tallahassee in the other.",
+        "Two road projects are reshaping the local drive. J. Adams Parkway is scheduled to finish in late 2026 and connect to it. J. Adams Parkway sits in FDOT's draft five-year work program for fiscal year 2028, which begins July 1, 2027.",
+        "Which corridor a house sits on decides how much of that actually shortens the drive."]
+      },
+      {
+        "h2": "What to verify on a Crestview address",
+        "p": ["Start with city limits. On our count of the Florida Department of Revenue 2026 certified parcel roll, about 63% of the single-family stock in 32536 is inside the City of Crestview and 37% is unincorporated Okaloosa County, and that line moves the tax bill.",
+        "It also moves flood insurance: Okaloosa County holds NFIP Community Rating System Class 5, worth a 25% discount on policies inside the Special Flood Hazard Area, but the county administers that program for the unincorporated area, and the City of Crestview does not appear on FEMA's CRS eligible communities list effective April 1, 2026.",
+        "Then the parcel itself. Get the flood determination off the Okaloosa FIRM panel, confirm the zoned schools with the district rather than the listing sheet, check whether the lot is on septic or sewer, and read the builder's contract and warranty on anything new. We pull the flood determination, the insurance quote and the school zone during the inspection period, never after closing."]
+      }
+    ],
+    "schools": [],
+    "schoolsNote": "Okaloosa County Schools serve Crestview, and the district earned an A from the Florida Department of Education for 2026. On the 2026 school grades Crestview High School earned a B (B in 2025 and 2024), Davidson Middle and Shoal River Middle each earned an A, and among the elementary campuses Antioch, Northwood, Riverside and Walker earned A grades while Bob Sikes earned a B. Our school report pages cover Escambia and Santa Rosa counties only, so confirm zoning for a specific address with the district.",
+    "flood": "Crestview sits on high ground between two rivers, and Okaloosa County names the Blackwater, Yellow and Shoal rivers as the primary riverine flooding sources north of the Eglin reservation. Special Flood Hazard Areas follow those river bottoms and the creeks feeding them, so pull the FIRM panel on any lot near water; when Hurricane Georges dropped more than 16 inches of rain in 1998, flooding on the Shoal and Yellow closed SR-85 from the south and US-90 from both directions.",
+    "faqs": [
+      {
+        "q": "What do homes cost in Crestview?",
+        "a": "Zillow's Home Value Index put the typical home at $295,931 in 32536 and $284,748 in 32539, July 2026 vintage. Working bands run about $275,000 to $375,000 for established west-side homes, $325,000 to $475,000 across the newer subdivisions, and $300,000 to $500,000 on half-acre to two-acre lots north of town."
+      },
+      {
+        "q": "How long is the drive from Crestview to the coast side of Okaloosa County?",
+        "a": "About 30 minutes south on SR-85 to the main Eglin complex, with the SR-123 bypass skirting Niceville, and 40 to 45 minutes to Hurlburt Field. Duke Field is 10 to 15 minutes south of town. I-10 at exit 56 handles the east and west trips."
+      },
+      {
+        "q": "What schools serve Crestview?",
+        "a": "Okaloosa County Schools, an A district on the 2026 Florida grades. Crestview High earned a B for 2026, Davidson Middle and Shoal River Middle earned A grades, and Antioch, Northwood, Riverside and Walker Elementary earned A grades with Bob Sikes Elementary at a B. Confirm the zoned campus for any specific address with the district before you buy."
+      },
+      {
+        "q": "Do Crestview homes get the county flood insurance discount?",
+        "a": "Only outside the city. Okaloosa County holds NFIP Community Rating System Class 5, a 25% discount on flood policies inside the Special Flood Hazard Area, but that applies to unincorporated county addresses; the City of Crestview is not on FEMA's CRS eligible communities list effective April 1, 2026. Check which side of the line an address falls on before you budget the premium."
+      }
+    ]
+  },
+  {
+    "slug": "foley",
+    "name": "Foley, Alabama",
+    "short": "Foley, AL",
+    "title": "Foley AL Homes for Sale Guide | The Costin Team",
+    "desc": "Foley AL real estate guide: ZIP 36535 home values, Alabama report card school grades, Baldwin County property taxes, flood zones and the Beach Express run.",
+    "keywords": "Foley AL homes for sale, Foley Alabama real estate, living in Foley Alabama, new construction Foley AL, Baldwin County homes for sale",
+    "h1": "Foley, Alabama",
+    "lead": "Foley sits about ten miles inland from the Gulf Shores public beach, and those ten miles are the whole price argument: Zillow Research put ZIP 36535 at $306,621 on July 31, 2026, against $459,465 in Gulf Shores and $688,173 in Orange Beach. It is also the year-round population center of south Baldwin County, with more residents than Gulf Shores and Orange Beach combined.",
+    "fit": "Inland value, new construction, Baldwin County",
+    "image": "/images/gulf-shores.jpg",
+    "alt": "Stilted beach cottages among palms in Gulf Shores, Alabama, the beach town a short drive south of Foley",
+    "pmh": null,
+    "zip": "36535",
+    "sections": [
+      {
+        "h2": "Where it is",
+        "p": ["Foley is the inland town of south Baldwin County, Alabama, roughly ten miles north of the Gulf Shores public beach. State Route 59 runs through the middle of it as McKenzie Street and continues south to the sand; US-98 crosses east to west toward Elberta, Lillian and the Lillian Bridge over Perdido Bay into Florida.",
+        "It is also where most of this end of the county actually lives. The Census Bureau estimated 28,043 residents in Foley on July 1, 2024, against 17,431 in Gulf Shores and 8,599 in Orange Beach, and Foley has grown about 36% from its 2020 census base. One caution on the ZIP: 36535 reaches well past the city limits, so a Foley mailing address is not proof that a parcel sits inside the City of Foley."]
+      },
+      {
+        "h2": "Homes and prices",
+        "p": ["Zillow Research put the typical home value in ZIP 36535 at $306,621 on July 31, 2026, down 1.8% over the year. On the same date Gulf Shores (36542) stood at $459,465 and Orange Beach (36561) at $688,173. That gap is why buyers who want a house and a yard rather than a condo and a rental calendar start their search here.",
+        "The stock splits in two. Around the old downtown grid on McKenzie Street you get mid-century and older houses on platted town lots; out toward the edges you get production subdivisions built through the last decade, with D.R. Horton alone listing Foley communities including Rosewood, Magnolia Pines, Hadley Village and Robert's Cove. Waterfront in Foley means a creek or a bayou, not the Gulf, so most of the inventory is dry-lot inland housing priced accordingly."]
+      },
+      {
+        "h2": "Getting around",
+        "p": ["Two roads carry Foley. State Route 59 is the direct run south to Gulf Shores and the one that stacks up on summer weekends. The Foley Beach Express is the alternative, 14 miles from north Foley down to Canal Road in Orange Beach, and its Gulf Intracoastal Waterway bridge has been free since the Alabama Department of Transportation bought it and ended tolls on May 23, 2024.",
+        "North of town the Baldwin Beach Express continues 12.8 miles to Interstate 10 at Exit 49 near Loxley, complete since August 15, 2014. That is the route toward Mobile, Pensacola and the airports without touching the SR 59 corridor.",
+        "Inside the city you have Baldwin Health, the hospital formerly named South Baldwin Regional Medical Center, which opened a $250 million five-story tower on North McKenzie Street in October 2024. OWA Parks and Resort, owned and operated by the Poarch Band of Creek Indians, sits on a 520-acre property here, as do the Foley Sports Tourism Complex with its 90,000 square foot event center and the city's Graham Creek Nature Preserve with 10 miles of trail and a kayak launch."]
+      },
+      {
+        "h2": "What to verify before you write in Alabama",
+        "p": ["Alabama is not Florida, and the differences are procedural rather than cosmetic. Closings run under Alabama law, usually through an attorney or a title company. Owner-occupied Class III property is assessed at 10% of market value, and the regular H-1 homestead exemption is not automatic: you have to occupy the home on October 1 and file once with the Baldwin County Revenue Commission before December 31 of the year you buy.",
+        "The seller's current tax bill reflects the seller's exemptions, not yours, so we run the county's own property tax calculator on the parcel instead of trusting the listing remarks.",
+        "Two more items are address-specific rather than town-wide. First, jurisdiction: pull the parcel record to see whether the property is inside the city or in unincorporated Baldwin County, because that decides services, sewer versus septic, and which floodplain ordinance applies. Second, wind coverage, which is quoted separately on this coast.",
+        "Eligibility for the Alabama Insurance Underwriting Association, the Beach Pool, is limited to the designated Gulf Front, Beach and Seacoast territories of Baldwin and Mobile counties, so whether a given Foley address qualifies is a question for the agent writing the quote rather than a rule of thumb.",
+        "On new construction the builder writes the contract and often ties its incentives to its own lender. We read the contract before you sign, price the incentive against the real rate, and order independent inspections at pre-drywall and final."]
+      }
+    ],
+    "schools": [],
+    "schoolsNote": "Alabama grades its schools through the Alabama State Department of Education, not Florida's FLDOE system, on a 100-point scale where 90 and above is an A and 80 to 89 is a B. On the 2025 state report card, which covers the 2024-2025 school year and is the most recent published, the Baldwin County public schools serving Foley (Foley High, Foley Middle, Foley Elementary, Florence B. Mathis Elementary, Magnolia School and Swift Elementary) each earned a B.",
+    "flood": "Foley sits about ten miles inland, so its Special Flood Hazard Areas follow creek and river bottoms rather than a shoreline: Graham Creek and Wolf Creek head in and around the city and drain toward Wolf Bay, and the Bon Secour River runs past the west side of town. Plenty of Foley sits outside the mapped hazard area, but the City of Foley administers its own flood ordinance and issues flood determination letters, so pull the determination on the specific parcel before you offer.",
+    "faqs": [
+      {
+        "q": "What do homes cost in Foley, Alabama?",
+        "a": "Zillow Research put the typical home value in ZIP 36535 at $306,621 on July 31, 2026, down 1.8% year over year. On the same date Gulf Shores (36542) was $459,465 and Orange Beach (36561) was $688,173, which is the reason buyers who want a house rather than a Gulf-front condo look inland."
+      },
+      {
+        "q": "How far is Foley from the beach?",
+        "a": "About ten miles. State Route 59 runs straight south to the Gulf Shores public beach, and the Foley Beach Express covers 14 miles from north Foley to Canal Road in Orange Beach. Its Gulf Intracoastal Waterway bridge has been toll free since the Alabama Department of Transportation bought it on May 23, 2024."
+      },
+      {
+        "q": "What are Foley schools rated?",
+        "a": "Baldwin County Public Schools. On the Alabama State Department of Education's 2025 report card, covering 2024-2025, Foley High, Foley Middle, Foley Elementary, Florence B. Mathis Elementary, Magnolia School and Swift Elementary each earned a B. These are Alabama grades on a 100-point scale, not Florida FLDOE grades, and zoning should be confirmed with the district."
+      },
+      {
+        "q": "What is different about buying in Alabama instead of Florida?",
+        "a": "Closings run under Alabama law, usually through an attorney or a title company. Owner-occupied property is assessed at 10% of market value as Class III, and the homestead exemption must be claimed with the Baldwin County Revenue Commission before December 31 of the year you buy; it does not carry over from the seller. Wind and flood are quoted separately. Gregg is licensed in Alabama as well as Florida and is a Baldwin REALTORS member, so this is not a referral."
+      }
+    ]
+  },
 ];

@@ -64,3 +64,17 @@ one home.
 - Drone imagery for the waterfront page, and the list of builders and communities actually sold in
 - Closed-sale addresses, photos and permission for the sold gallery, plus featured inventory detail
 - The weekly VA-assumable listing feed: address, list price, assumed rate
+
+## Closed on 2026-09-04
+
+Rows whose remaining work was code, done and deployed on both sites:
+
+- **1** (url-06, analytics-11): `/about/` and `/about.html` 301 on greggcostin.com; civilian 404 carries GA4 and fires `page_not_found`
+- **3** (synergy-01): the deleted Wikidata item is gone from the press bio block and the market-engine skill
+- **7** (eeat-03): AreaVibes removed everywhere; commute re-sourced to Census ACS 2020-2024, cost index to ERI
+- **8** (mil-04, eeat-06): /bah-rates states the DoD +4.2% national average with its date; the unsourced per-MHA percentages are gone; Zillow standing unified to 0.8%
+- **16**: CLAUDE.md corrected
+- **33** (perf-08): the single-candidate modern-format source bug fixed in the generator, 10 images
+- **39** (schema-08): Okaloosa 2026 grades added from the FLDOE release; 23 wrong grade tokens corrected, including Choctawhatchee High (C, not A) and Crestview High (B, not A)
+- **44, 53**: Destin, Niceville, Crestview and Foley civilian guides live; every areaServed city has a page
+- **36**: hero options drafted in `docs/HERO-OPTIONS-2026-09.md`, awaiting a pick

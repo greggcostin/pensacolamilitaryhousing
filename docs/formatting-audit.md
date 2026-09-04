@@ -32,8 +32,8 @@ where data hides in prose.
 | /communities/milton | 88 | 1083 | 2 (max 92w) | 16 (68w/ea) | 7 (155w/ea) |
 | /communities/navarre | 88 | 1178 | 2 (max 103w) | 16 (74w/ea) | 6 (196w/ea) |
 | /accessibility | 90 | 418 | 0 (max 64w) | 10 (42w/ea) | 1 (418w/ea) |
+| /bah-vs-cost-of-owning-pensacola | 93 | 2024 | 1 (max 126w) | 13 (156w/ea) | 7 (289w/ea) |
 | /bases/nas-pensacola | 93 | 3819 | 1 (max 102w) | 26 (147w/ea) | 13 (294w/ea) |
-| /bah-vs-cost-of-owning-pensacola | 94 | 1734 | 1 (max 126w) | 13 (133w/ea) | 7 (248w/ea) |
 | /buy | 94 | 1432 | 1 (max 106w) | 20 (72w/ea) | 8 (179w/ea) |
 | /crestview-military-relocation | 94 | 3099 | 1 (max 88w) | 19 (163w/ea) | 20 (155w/ea) |
 | /disabled-veteran-benefits-florida | 94 | 2148 | 1 (max 87w) | 32 (67w/ea) | 15 (143w/ea) |

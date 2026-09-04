@@ -505,6 +505,29 @@
         "BASE_PAY E-9 and O-6 in build-affordability.mjs are still flagged in-file as unconfirmed against the DFAS 2026 table."
       ],
       "staged": true
+    },
+    {
+      "date": "2026-09-03b",
+      "type": "user-directed follow-up",
+      "action": "per-ZIP jurisdiction resolution + analyzer fix",
+      "slug": "bah-vs-cost-of-owning-pensacola",
+      "models": {
+        "research": "opus",
+        "write": "in-session (numeric recompute)"
+      },
+      "method": "Jurisdiction assigned from the Florida DOR 2026 preliminary certified NAL real property roll: all 407,635 parcels across Escambia, Santa Rosa and Okaloosa counted (not sampled), filtered to single-family use code 001, grouped by taxing authority and ZIP. Validated by resolving every taxing-authority code against a live parcel record by real address at each county appraiser, and cross-checked against 2020 Census block housing units joined to municipal boundaries (agrees within ~5 points on 24 of 26 ZIPs).",
+      "outcome": "13 of 26 rows changed, 13 unchanged: the previous uniform-unincorporated model was already right for exactly half the set. Headline survived a second rebuild: still only 32505 covered by an FL064 E-5. No-grade FL064 went 12 -> 13, FL023 E-5 coverage 11 -> 10 of 26, median $2,582 -> $2,639.",
+      "keyFinding": "The prior run’s \"Okaloosa is the cheap county\" finding was wrong and has been replaced. Only 19.5% of Okaloosa single-family parcels actually pay the 9.5165 unincorporated rate; most populated unincorporated area sits in a fire-district MSTU at 11.79-12.27, and two of those districts (North Bay 11.7865, Florosa 11.9042) were missing from the millage table entirely. The new finding is that the city line matters more than the county line: 32502 inside Pensacola city limits pays $412/mo in tax on a $333,763 home while Pace pays $277 on a $330,382 home, $135/mo apart on a municipal boundary.",
+      "blendedRows": "32536 Crestview (63% city / 37% county) at 13.5475 and 32578 Niceville (46% city / 54% split between North Bay and East Niceville FDs) at 12.8464, rather than a single city rate that would overstate them by $48 and $29 a month.",
+      "caveatAdded": "32561 now carries an explicit caution: it splits ~60/40 between the City of Gulf Breeze and Pensacola Beach, which is in ESCAMBIA county, and Pensacola Beach land is leasehold on Santa Rosa Island rather than fee simple, so its ownership economics are not comparable to the rest of the table.",
+      "alsoShipped": "scripts/analyze-formatting.mjs paragraph regex fixed (<p[^>]*> also matched <picture>, faking wall paragraphs on all 95 pages carrying a photo). Regenerating on current content surfaced two genuine refresh candidates the phantom walls had been masking: /bah-to-mortgage-guide at 70 with 8 real walls and /blog/best-pensacola-neighborhoods-by-rank-bah at 76 with 4.",
+      "openItems": [
+        "Zillow typical values are still July 2026; only jurisdiction and the cost model have been rebuilt.",
+        "Santa Rosa 2026 millage is preliminary until October 2026.",
+        "/bah-to-mortgage-guide (70) and /blog/best-pensacola-neighborhoods-by-rank-bah (76) now rank as the worst content pages on real wall paragraphs and are the honest next refresh targets.",
+        "BASE_PAY E-9 and O-6 in build-affordability.mjs remain unconfirmed against the DFAS 2026 table."
+      ],
+      "staged": false
     }
   ],
   "config": {

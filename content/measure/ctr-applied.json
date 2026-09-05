@@ -1,0 +1,33 @@
+{
+  "note": "Snippet changes applied from docs/ctr-proposals-2026-09.md. The next gsc-pages export compares against these baselines; the delta becomes a lesson.",
+  "applied": [
+    {
+      "date": "2026-09-04",
+      "page": "/bah-rates",
+      "field": "title",
+      "old": "BAH Calculator & 2026 Rates: Pensacola & Fort Walton Beach",
+      "new": "2026 BAH Pensacola: $1,794-$2,631 by Rank, Plus Calculator",
+      "baseline": {
+        "source": "gsc-pages-2026-09-04",
+        "clicks": 48,
+        "impressions": 9117,
+        "ctr": 0.005,
+        "position": 8.5
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "page": "/blog/living-in-gulf-breeze-pros-cons",
+      "field": "description",
+      "old": "Living in Gulf Breeze FL: honest pros and cons with 2026 numbers. Which Gulf Breeze costs what, taxes, schools, flood insurance, and the bridge story.",
+      "new": "Living in Gulf Breeze FL: why 32561's $691,087 typical value overstates Gulf Breeze proper, flood zones, the bridge that failed once, honest 2026 pros and cons.",
+      "baseline": {
+        "source": "gsc-pages-2026-09-04",
+        "clicks": 0,
+        "impressions": 53,
+        "ctr": 0,
+        "position": 4.4
+      }
+    }
+  ]
+}

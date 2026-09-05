@@ -68,12 +68,17 @@ LEARN ─▶ MEASURE ─▶ DECIDE ─▶ RESEARCH ─▶ WRITE ─▶ SCORE ─
   10+ before. CTR-PROBLEM = position 6 or better, 8+ impressions, 0 clicks.
 
 ## What only Gregg can do
-- Create a Microsoft Clarity project for greggcostin.com and paste its tag into the civilian
-  chrome (`scripts/civilian-page-lib.mjs`, `chrome()`), or the civilian engine stays blind to
-  on-page behavior.
+- Clarity for greggcostin.com is live (project `ydd39cyp64`, tagged Sep 4 2026 via
+  `scripts/rollout-clarity-civilian.mjs`). It sits under the Microsoft sign-in; the military
+  project `wm7ddbciup` sits under another Clarity identity. To see both in one login and
+  through the MCP connector, invite the other identity as a team member on the new project
+  (Clarity > Settings > Team), or re-authorize the connector for the account that should own both.
 - Drop a GSC Pages export monthly: `docs/seo-baselines/gsc-pages-YYYY-MM-DD.csv` (military)
   and `gsc-pages-gc-YYYY-MM-DD.csv` (civilian). Google is 90%+ of real traffic; Bing is the
   free proxy the engine can pull itself.
-- Confirm greggcostin.com is verified in Bing Webmaster Tools and its sitemap submitted (the
-  API shows the domain but zero indexed pages as of Sep 4 2026).
+- greggcostin.com indexing (checked Sep 4 2026): Bing has the sitemap since Aug 24 (116 URLs,
+  no crawl issues, 100-URL/day submission quota, pushed daily by the engine). Google had last
+  read the sitemap on Aug 24 when it held 6 URLs; resubmitted Sep 4 (121 discovered) and
+  indexing requested for /, /buy, /blog and the insurance guide. Expect Google impressions to
+  appear over the following weeks; the engine reports the count each run.
 - Tune `content/topic-seeds.json` when a new place, base or money topic enters the strategy.

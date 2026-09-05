@@ -1,0 +1,227 @@
+{
+  "source": "gsc-pages-2026-09-04.csv",
+  "date": "2026-09-04",
+  "benchmark": "expected CTR by position, public curve",
+  "pages": [
+    {
+      "url": "/bah-rates",
+      "clicks": 48,
+      "imp": 9117,
+      "ctr": 0.005,
+      "pos": 8.5,
+      "expected": 0.025,
+      "lostClicks": 182,
+      "title": "BAH Calculator & 2026 Rates: Pensacola & Fort Walton Beach",
+      "desc": "2026 BAH rates for Pensacola (FL064) and Fort Walton Beach (FL023) by rank, with and without dependents, plus a calculator that turns BAH into a VA budget."
+    },
+    {
+      "url": "/bases/corry-station",
+      "clicks": 9,
+      "imp": 1320,
+      "ctr": 0.006999999999999999,
+      "pos": 9.8,
+      "expected": 0.025,
+      "lostClicks": 24,
+      "title": "Corry Station Housing &amp; 2026 BAH | Off-Base Guide",
+      "desc": "Corry Station 2026 BAH (FL064: E-5 w/deps $1,863) and where IW, crypto, and cyber sailors actually live: Bellview, Myrtle Grove, East Hill. Commutes and schools."
+    },
+    {
+      "url": "/communities/fort-walton-beach",
+      "clicks": 1,
+      "imp": 638,
+      "ctr": 0.002,
+      "pos": 9.9,
+      "expected": 0.025,
+      "lostClicks": 15,
+      "title": "Fort Walton Beach & Shalimar Military Homes | Eglin PCS",
+      "desc": "Fort Walton Beach & Shalimar military homes for Eglin and Hurlburt. 5-15 min to Eglin, Okaloosa schools, wide price range."
+    },
+    {
+      "url": "/communities/navarre",
+      "clicks": 1,
+      "imp": 322,
+      "ctr": 0.003,
+      "pos": 9.2,
+      "expected": 0.025,
+      "lostClicks": 7,
+      "title": "Navarre, FL Military Homes | Hurlburt & NAS Pensacola",
+      "desc": "Navarre, FL military homes for Hurlburt, NAS Pensacola, and Eglin. A-rated schools, beach access, lower cost per sq ft. Gregg Costin."
+    },
+    {
+      "url": "/communities/crestview",
+      "clicks": 1,
+      "imp": 320,
+      "ctr": 0.003,
+      "pos": 9,
+      "expected": 0.025,
+      "lostClicks": 7,
+      "title": "Crestview, FL Military Homes | Eglin & Duke Field",
+      "desc": "Crestview, FL military homes for Eglin AFB, Duke Field, and 7th SFG families. Strong BAH-to-price ratio, new construction. Gregg Costin."
+    },
+    {
+      "url": "/communities/niceville",
+      "clicks": 1,
+      "imp": 316,
+      "ctr": 0.003,
+      "pos": 9.8,
+      "expected": 0.025,
+      "lostClicks": 7,
+      "title": "Niceville, Valparaiso & Bluewater Bay Homes | Eglin AFB",
+      "desc": "Niceville, Valparaiso, Bluewater Bay homes for Eglin AFB. 10 min to East Gate, top-ranked Niceville HS, master-planned. Gregg Costin."
+    },
+    {
+      "url": "/pensacola-flood-zones-homebuyers",
+      "clicks": 11,
+      "imp": 479,
+      "ctr": 0.023,
+      "pos": 8,
+      "expected": 0.035,
+      "lostClicks": 6,
+      "title": "Pensacola Flood Zones for Homebuyers | 2025 FEMA Maps",
+      "desc": "What flood zones X, A, AE, and VE mean for Pensacola homebuyers, the August 2025 FEMA map update, NFIP limits, CRS discounts, and how to check any address."
+    },
+    {
+      "url": "/bases/duke-field",
+      "clicks": 1,
+      "imp": 488,
+      "ctr": 0.002,
+      "pos": 11.3,
+      "expected": 0.015,
+      "lostClicks": 6,
+      "title": "Duke Field, FL: 919th SOW Base Guide, Housing &amp; BAH",
+      "desc": "Duke Field (Eglin Auxiliary Field 3), home of the 919th Special Operations Wing: what is there, 2026 FL023 BAH, and Crestview and Niceville housing that fits it."
+    },
+    {
+      "url": "/blog/living-in-gulf-breeze-pros-cons",
+      "clicks": 0,
+      "imp": 53,
+      "ctr": 0,
+      "pos": 4.4,
+      "expected": 0.06,
+      "lostClicks": 3,
+      "title": "Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers",
+      "desc": "Living in Gulf Breeze FL: honest pros and cons with 2026 numbers. Which Gulf Breeze costs what, taxes, schools, flood insurance, and the bridge story."
+    },
+    {
+      "url": "/communities/mary-esther",
+      "clicks": 0,
+      "imp": 123,
+      "ctr": 0,
+      "pos": 13.5,
+      "expected": 0.015,
+      "lostClicks": 2,
+      "title": "Mary Esther, FL Homes | Closest Town to Hurlburt Field",
+      "desc": "Mary Esther, FL homes minutes from Hurlburt Field's main gate. FL023 BAH, the 2026-27 school rezoning, prices, and commutes. Gregg Costin, military Realtor."
+    },
+    {
+      "url": "/communities/destin",
+      "clicks": 0,
+      "imp": 103,
+      "ctr": 0,
+      "pos": 12,
+      "expected": 0.015,
+      "lostClicks": 2,
+      "title": "Destin, FL Military Homes | Eglin & Hurlburt PCS",
+      "desc": "Destin, FL military homes for Eglin and Hurlburt families. Gulf-front, beach lifestyle, 20 min to Eglin, strong rental-investment market."
+    },
+    {
+      "url": "/gulf-breeze-vs-navarre",
+      "clicks": 0,
+      "imp": 50,
+      "ctr": 0,
+      "pos": 7.1,
+      "expected": 0.035,
+      "lostClicks": 2,
+      "title": "Gulf Breeze vs Navarre | Military Family Comparison",
+      "desc": "Gulf Breeze vs Navarre head-to-head: schools, commute to base, cost, beach, BAH math. Which is right for your PCS family?"
+    },
+    {
+      "url": "/military-pcs-tax-deductions",
+      "clicks": 0,
+      "imp": 99,
+      "ctr": 0,
+      "pos": 12.1,
+      "expected": 0.015,
+      "lostClicks": 1,
+      "title": "Military PCS Tax Deductions 2026 | Gregg Costin",
+      "desc": "Active-duty PCS moving expense tax deduction (Form 3903), DITY / PPM gain treatment, Florida residency advantages, TSP and housing impacts for 2026 returns."
+    },
+    {
+      "url": "/communities/gulf-breeze",
+      "clicks": 0,
+      "imp": 97,
+      "ctr": 0,
+      "pos": 11.3,
+      "expected": 0.015,
+      "lostClicks": 1,
+      "title": "Gulf Breeze, FL Military Homes | NAS Pensacola | Gregg Costin",
+      "desc": "Gulf Breeze, FL military homes for NAS Pensacola. Top-rated Santa Rosa schools, 20-30 min commute, premium family choice. Gregg Costin."
+    },
+    {
+      "url": "/on-base-vs-off-base-eglin-afb",
+      "clicks": 0,
+      "imp": 53,
+      "ctr": 0,
+      "pos": 13.7,
+      "expected": 0.015,
+      "lostClicks": 1,
+      "title": "On-Base vs Off-Base: Eglin AFB 2026 | Gregg Costin",
+      "desc": "Eglin AFB on-base housing is Corvias-run Eglin Family Housing; waits are not published. Compare the BAH forfeit against Niceville or Valparaiso, 8-15 minutes out."
+    },
+    {
+      "url": "/blog/personal-property-activity-pcs-2026",
+      "clicks": 0,
+      "imp": 41,
+      "ctr": 0,
+      "pos": 7.9,
+      "expected": 0.035,
+      "lostClicks": 1,
+      "title": "Personal Property Activity: What the PPA Means for Your PCS",
+      "desc": "The Personal Property Activity now runs military PCS moves. Here is what the PPA means for your 2026 HHG shipment, PPM payout, claims, and housing timeline."
+    },
+    {
+      "url": "/niceville-vs-crestview",
+      "clicks": 0,
+      "imp": 39,
+      "ctr": 0,
+      "pos": 8.5,
+      "expected": 0.025,
+      "lostClicks": 1,
+      "title": "Niceville vs Crestview | Eglin Area Housing | Gregg Costin",
+      "desc": "Niceville vs Crestview for Eglin, Hurlburt, and Duke Field families: schools, commute, cost, community. Which Okaloosa town fits your PCS?"
+    },
+    {
+      "url": "/blog/florida-homestead-exemption-military",
+      "clicks": 0,
+      "imp": 39,
+      "ctr": 0,
+      "pos": 11.1,
+      "expected": 0.015,
+      "lostClicks": 1,
+      "title": "Florida Homestead Exemption for Military: Save Thousands",
+      "desc": "Florida homestead exemption for military in 2026: up to $51,411 off assessed value, the March 1 deadline, PCS rental rules, and veteran exemptions worth thousands."
+    },
+    {
+      "url": "/military-rental-property-management",
+      "clicks": 0,
+      "imp": 33,
+      "ctr": 0,
+      "pos": 9.3,
+      "expected": 0.025,
+      "lostClicks": 1,
+      "title": "Military Rental Property Management Pensacola | PCS Rental",
+      "desc": "Converting your PCS home into a rental: VA loan rules, property management vs self-managing, SCRA tenant protections, Florida landlord basics."
+    },
+    {
+      "url": "/homes-for-sale-corry-station",
+      "clicks": 0,
+      "imp": 31,
+      "ctr": 0,
+      "pos": 8.5,
+      "expected": 0.025,
+      "lostClicks": 1,
+      "title": "(spa or missing)",
+      "desc": ""
+    }
+  ]
+}

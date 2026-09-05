@@ -148,8 +148,10 @@ for (const key of siteKeys) {
       if (b.position != null && b.position <= 6 && b.impressions >= 8 && b.clicks === 0) return "CTR PROBLEM";
       return "flat";
     }
-    if (pg.length < 2) return "one snapshot";
-    const [a, c] = pg.slice(-2);
+    // Compare only within the latest snapshot's source: a Bing snapshot against a GSC one reads as movement that never happened (L015).
+    const same = pg.filter((s) => s.source === b.source);
+    if (same.length < 2) return `one ${b.source} snapshot`;
+    const [a, c] = same.slice(-2);
     const up = (c.clicks ?? 0) > (a.clicks ?? 0) || ((c.position ?? 99) < (a.position ?? 99) - 1);
     const down = (c.impressions ?? 0) < (a.impressions ?? 0) * 0.6 || ((c.position ?? 99) > (a.position ?? 99) + 3);
     return up ? "WINNER" : down ? "DECAYED" : "flat";

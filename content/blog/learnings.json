@@ -136,9 +136,43 @@
         "measure",
         "topics"
       ],
-      "status": "active",
+      "status": "retired",
       "rule": "The site is invisible to itself on search: no export in docs/seo-baselines carries a URL column, so page-level clicks and positions do not exist for any post. Until Gregg drops a GSC Pages export (gsc-pages-YYYY-MM-DD.csv), keywordDemand from the Bing keyword file is the only search signal and it only matches on target keywords.",
-      "evidence": "scripts/blog-measure.mjs joined 12 posts to one export and produced one keyword-demand snapshot (the BAH post, 1 query, 4 impressions). Every other post: no search data."
+      "evidence": "scripts/blog-measure.mjs joined 12 posts to one export and produced one keyword-demand snapshot (the BAH post, 1 query, 4 impressions). Every other post: no search data.",
+      "retiredWhy": "2026-09-04: Bing Webmaster API page stats work for the military domain (other session), and the first GSC Pages export arrived the same day. Per-post page-level signal exists; keep the rule about recording unavailable honestly (L008)."
+    },
+    {
+      "id": "L014",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "measure",
+        "decide",
+        "write"
+      ],
+      "status": "active",
+      "rule": "Click-through is the bottleneck, not content volume. When a page already ranks on page one and converts under the position benchmark, the title and description are the work item, and it outranks writing anything new. Put the one concrete figure the page states into the title.",
+      "evidence": "First GSC Pages export (2026-09-04): about 20,000 impressions a month at roughly 0.7% CTR. /bah-rates: 9,117 impressions, 48 clicks, position 8.5, about 182 clicks a month below benchmark. The whole blog earned 4 clicks. The one page that converts, /assumable-va-loans-pensacola at 25.9%, has a number in its title (2.75%). Position 4.4 with zero clicks (Gulf Breeze post, 53 impressions) is a snippet problem."
+    },
+    {
+      "id": "L015",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "measure"
+      ],
+      "status": "active",
+      "rule": "Never compare search snapshots across sources. A Bing page snapshot against a GSC one reads as movement that never happened; classify within one source and say which.",
+      "evidence": "After the Bing API pipe and the GSC export both landed, scripts/blog-measure.mjs labeled all ten posts WINNER by comparing a Bing 0-click snapshot to a GSC snapshot. Fixed to compare only within a source."
+    },
+    {
+      "id": "L016",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "topics"
+      ],
+      "status": "retired",
+      "retiredWhy": "Superseded the same day: the Bing Webmaster API (GetPageStats) does give per-URL data for pensacolamilitaryhousing.com, and a GSC Pages export landed. L013 is retired for the same reason; page-level signal now exists from two sources.",
+      "rule": "(retired) The site is invisible to itself on search.",
+      "evidence": "See L013."
     }
   ]
 }

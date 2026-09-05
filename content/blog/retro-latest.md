@@ -1,21 +1,21 @@
-# Blog retro, 2026-09-04
+# Blog retro, 2026-09-05
 
 ## pensacolamilitaryhousing.com
 
-| Post | Age | Score | Inbound | Bing 28d imp/clk/pos | Flags | Priority |
-|---|---|---|---|---|---|---|
-| best-neighborhoods-eglin-afb-families | 160 | 80 B | 1 | 0/0/- | STALLED ORPHAN | 100 |
-| florida-homestead-exemption-military | 152 | 83 B | 2 | 0/0/- | STALLED ORPHAN | 100 |
-| personal-property-activity-pcs-2026 | 86 | 81 B | 2 | 0/0/- | STALLED ORPHAN | 100 |
-| va-loan-seller-concessions-truth | 147 | 80 B | 2 | 0/0/- | STALLED ORPHAN | 100 |
-| bah-2026-pensacola-what-can-you-afford | 168 | 82 B | 3 | 0/0/- | STALLED | 60 |
-| pcs-to-pensacola-2026-complete-guide | 142 | 81 B | 3 | 0/0/- | STALLED | 60 |
-| va-loan-assumption-buyers-guide | 12 | 78 C | 1 | 0/0/- | NEW ORPHAN LOW-SCORE | 36 |
-| florida-veteran-property-tax-county-guide | 13 | 84 B | 2 | 4/0/6 | NEW WINNER ORPHAN | 20 |
-| living-in-gulf-breeze-pros-cons | 22 | 80 B | 2 | 0/0/- | NEW ORPHAN | 20 |
-| moving-to-navarre-2026-guide | 3 | 92 A | 1 | none | NEW ORPHAN | 20 |
-| best-pensacola-neighborhoods-by-rank-bah | 23 | 72 C | 4 | 0/0/- | NEW LOW-SCORE | 19 |
-| moving-to-pensacola-2026-guide | 23 | 83 B | 4 | 0/0/- | NEW | 0 |
+| Post | Age | Score | Inbound | Google 3mo imp/clk/pos | Bing 28d imp/clk/pos | Flags | Priority |
+|---|---|---|---|---|---|---|---|
+| personal-property-activity-pcs-2026 | 87 | 81 B | 2 | 41/0/7.9 | 0/0/- | CTR-PROBLEM ORPHAN | 120 |
+| bah-2026-pensacola-what-can-you-afford | 169 | 82 B | 3 | none | 0/0/- | STALLED | 60 |
+| living-in-gulf-breeze-pros-cons | 23 | 80 B | 2 | 53/0/4.4 | 0/0/- | NEW CTR-PROBLEM ORPHAN | 60 |
+| pcs-to-pensacola-2026-complete-guide | 143 | 81 B | 3 | 19/0/6.3 | 0/0/- | STALLED | 60 |
+| best-neighborhoods-eglin-afb-families | 161 | 80 B | 1 | 23/0/9.7 | 0/0/- | ORPHAN | 40 |
+| florida-homestead-exemption-military | 153 | 83 B | 2 | 39/0/11.1 | 0/0/- | ORPHAN | 40 |
+| va-loan-seller-concessions-truth | 148 | 80 B | 2 | 226/0/22.1 | 0/0/- | ORPHAN | 40 |
+| va-loan-assumption-buyers-guide | 13 | 78 C | 1 | 13/0/7 | 0/0/- | NEW ORPHAN LOW-SCORE | 36 |
+| florida-veteran-property-tax-county-guide | 14 | 84 B | 2 | 130/3/20.2 | 4/0/6 | NEW WINNER ORPHAN | 20 |
+| moving-to-navarre-2026-guide | 4 | 92 A | 1 | none | none | NEW ORPHAN | 20 |
+| best-pensacola-neighborhoods-by-rank-bah | 24 | 72 C | 4 | 29/1/10.5 | 0/0/- | NEW LOW-SCORE | 19 |
+| moving-to-pensacola-2026-guide | 24 | 83 B | 4 | 15/0/6 | 0/0/- | NEW | 0 |
 
 Site (Bing, data through 2026-08-28): 749 impressions / 13 clicks in 28d. Top pages by 28d impressions: /va-disability-property-tax-florida (132, pos 6); /bah-rates (25, pos 6.8); /bases/whiting-field (0, pos -); /bases/eglin-afb (1, pos 10); /bases/hurlburt-field (20, pos 7); /bases/nas-pensacola (3, pos 6).
 
@@ -29,13 +29,13 @@ Uncovered demand (queries earning impressions with no matching target keyword): 
 
 ## greggcostin.com
 
-| Post | Age | Score | Inbound | Bing 28d imp/clk/pos | Flags | Priority |
-|---|---|---|---|---|---|---|
-| fed-rate-hike-what-it-means | 3 | 68 D | 1 | none | NEW ORPHAN LOW-SCORE | 41 |
-| florida-insurance-relief-2026 | 1 | 74 C | 1 | none | NEW ORPHAN LOW-SCORE | 38 |
-| what-moves-mortgage-rates | 11 | 59 D | 3 | none | NEW LOW-SCORE | 26 |
-| closing-costs-florida-buyers | 4 | 63 D | 3 | none | NEW LOW-SCORE | 24 |
-| property-taxes-escambia-santa-rosa | 8 | 74 C | 4 | none | NEW LOW-SCORE | 18 |
+| Post | Age | Score | Inbound | Google 3mo imp/clk/pos | Bing 28d imp/clk/pos | Flags | Priority |
+|---|---|---|---|---|---|---|---|
+| fed-rate-hike-what-it-means | 4 | 68 D | 1 | none | none | NEW ORPHAN LOW-SCORE | 41 |
+| florida-insurance-relief-2026 | 2 | 74 C | 1 | none | none | NEW ORPHAN LOW-SCORE | 38 |
+| what-moves-mortgage-rates | 12 | 59 D | 3 | none | none | NEW LOW-SCORE | 26 |
+| closing-costs-florida-buyers | 5 | 63 D | 3 | none | none | NEW LOW-SCORE | 24 |
+| property-taxes-escambia-santa-rosa | 9 | 74 C | 4 | none | none | NEW LOW-SCORE | 18 |
 
 Site (Bing, data through 0000-00-00): 0 impressions / 0 clicks in 28d. Top pages by 28d impressions: .
 
@@ -45,19 +45,19 @@ Site (Bing, data through 0000-00-00): 0 impressions / 0 clicks in 28d. Top pages
 
 ## Refresh queue (both sites, ranked)
 
-100  pmh:best-neighborhoods-eglin-afb-families  [STALLED ORPHAN]  160 days old, 0 Bing impressions in 90d; 1 inbound internal link(s)
-100  pmh:florida-homestead-exemption-military  [STALLED ORPHAN]  152 days old, 0 Bing impressions in 90d; 2 inbound internal link(s)
-100  pmh:personal-property-activity-pcs-2026  [STALLED ORPHAN]  86 days old, 0 Bing impressions in 90d; 2 inbound internal link(s)
-100  pmh:va-loan-seller-concessions-truth  [STALLED ORPHAN]  147 days old, 0 Bing impressions in 90d; 2 inbound internal link(s)
-60  pmh:bah-2026-pensacola-what-can-you-afford  [STALLED]  168 days old, 0 Bing impressions in 90d
-60  pmh:pcs-to-pensacola-2026-complete-guide  [STALLED]  142 days old, 0 Bing impressions in 90d
+120  pmh:personal-property-activity-pcs-2026  [CTR-PROBLEM ORPHAN]  ranks 7.9 with 41 Google (3-month) impressions and 0 clicks; 2 inbound internal link(s)
+60  pmh:bah-2026-pensacola-what-can-you-afford  [STALLED]  169 days old, 0 Bing impressions in 90d
+60  pmh:living-in-gulf-breeze-pros-cons  [NEW CTR-PROBLEM ORPHAN]  ranks 4.4 with 53 Google (3-month) impressions and 0 clicks; 2 inbound internal link(s)
+60  pmh:pcs-to-pensacola-2026-complete-guide  [STALLED]  143 days old, 19 Google impressions in 3 months (pos 6.3)
 41  gc:fed-rate-hike-what-it-means  [NEW ORPHAN LOW-SCORE]  1 inbound internal link(s); quality score 68/100
+40  pmh:best-neighborhoods-eglin-afb-families  [ORPHAN]  1 inbound internal link(s)
+40  pmh:florida-homestead-exemption-military  [ORPHAN]  2 inbound internal link(s)
+40  pmh:va-loan-seller-concessions-truth  [ORPHAN]  2 inbound internal link(s)
 38  gc:florida-insurance-relief-2026  [NEW ORPHAN LOW-SCORE]  1 inbound internal link(s); quality score 74/100
 36  pmh:va-loan-assumption-buyers-guide  [NEW ORPHAN LOW-SCORE]  1 inbound internal link(s); quality score 78/100
 26  gc:what-moves-mortgage-rates  [NEW LOW-SCORE]  quality score 59/100
 24  gc:closing-costs-florida-buyers  [NEW LOW-SCORE]  quality score 63/100
 20  pmh:florida-veteran-property-tax-county-guide  [NEW WINNER ORPHAN]  2 inbound internal link(s)
-20  pmh:living-in-gulf-breeze-pros-cons  [NEW ORPHAN]  2 inbound internal link(s)
 20  pmh:moving-to-navarre-2026-guide  [NEW ORPHAN]  1 inbound internal link(s)
 19  pmh:best-pensacola-neighborhoods-by-rank-bah  [NEW LOW-SCORE]  quality score 72/100
 

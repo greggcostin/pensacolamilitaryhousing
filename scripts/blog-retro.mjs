@@ -41,8 +41,12 @@ for (const key of siteKeys) {
     const modified = f.spec.dateModified || published;
     const age = published ? daysBetween(published, TODAY) : null;
     const sinceMod = modified ? daysBetween(modified, TODAY) : null;
+    // Two page-level sources: Bing (live API, 28d windows with a prior-28 trend) and Google Search
+    // Console page exports (3-month totals, no trend). Google is 90%+ of real traffic, so GSC decides
+    // STALLED and CTR-PROBLEM when present; Bing decides DECAYED (the only source with a trend).
     const search = (e.search || []).filter((s) => s.kind === "page");
-    const last = search[search.length - 1] || null;
+    const last = search.filter((s) => s.source === "bing-api").slice(-1)[0] || search[search.length - 1] || null;
+    const gsc = search.filter((s) => /^gsc-pages/.test(s.source)).slice(-1)[0] || null;
     const q = scorePost(f.spec, f.body, key);
     const inb = inbound.get(`/blog/${f.slug}`) || 0;
     const perish = f.spec.perishables || [];
@@ -53,9 +57,14 @@ for (const key of siteKeys) {
 
     const flags = [];
     if (age != null && age < 42) flags.push("NEW");
-    if (last) {
+    if (last && last.source === "bing-api") {
       if (last.impressionsPrior28 >= 10 && last.impressions < 0.6 * last.impressionsPrior28) flags.push("DECAYED");
       else if (last.impressions >= 4 && last.impressions >= 2 * Math.max(1, last.impressionsPrior28)) flags.push("WINNER");
+    }
+    if (gsc) {
+      if (gsc.position != null && gsc.position <= 8 && (gsc.impressions ?? 0) >= 40 && (gsc.clicks ?? 0) === 0) flags.push("CTR-PROBLEM");
+      if (age != null && age >= 56 && (gsc.impressions ?? 0) < 20 && !flags.includes("NEW")) flags.push("STALLED");
+    } else if (last) {
       if (last.position != null && last.position <= 6 && last.impressions >= 8 && last.clicks === 0) flags.push("CTR-PROBLEM");
       if (age != null && age >= 56 && (last.impressions90 ?? last.impressions) < 5 && !flags.includes("NEW")) flags.push("STALLED");
     } else if (age != null && age >= 56) flags.push("STALLED");
@@ -67,8 +76,8 @@ for (const key of siteKeys) {
     let priority = 0, why = [], actions = [];
     if (flags.includes("DECAYED")) { priority += 100; why.push(`impressions fell from ${last.impressionsPrior28} to ${last.impressions} (28d vs prior 28d)`); actions.push("re-verify every figure, add the newest data, a quick answer and 2+ new FAQs; bump dateModified only on real change"); }
     if (flags.includes("EXPIRED")) { priority += 90; why.push(`${expired.length} declared perishable(s) expired: ${expired.map((p) => `"${p.claim}" (${p.expires})`).join("; ")}`); actions.push("replace each expired claim with the current figure and its source, then update perishables[]"); }
-    if (flags.includes("CTR-PROBLEM")) { priority += 80; why.push(`ranks ${last.position} with ${last.impressions} impressions and 0 clicks`); actions.push("rewrite title and description around the exact query (number, year, place); keep the slug"); }
-    if (flags.includes("STALLED")) { priority += 60; why.push(`${age} days old, ${last ? `${last.impressions90 ?? last.impressions} Bing impressions in 90d` : "no search data"}`); actions.push("check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page"); }
+    if (flags.includes("CTR-PROBLEM")) { const s = gsc || last; priority += 80; why.push(`ranks ${s.position} with ${s.impressions} ${gsc ? "Google (3-month)" : "Bing (28d)"} impressions and 0 clicks`); actions.push("rewrite title and description around the exact query (number, year, place); keep the slug"); }
+    if (flags.includes("STALLED")) { priority += 60; why.push(`${age} days old, ${gsc ? `${gsc.impressions} Google impressions in 3 months (pos ${gsc.position ?? "-"})` : last ? `${last.impressions90 ?? last.impressions} Bing impressions in 90d` : "no search data"}`); actions.push("check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page"); }
     if (flags.includes("STALE-CUES")) { priority += 40; why.push(`last modified ${sinceMod} days ago with ${cues} perishable cues in the body`); actions.push("re-verify the dated figures against primary sources"); }
     if (flags.includes("ORPHAN")) { priority += 40; why.push(`${inb} inbound internal link(s)`); actions.push("add links from the hubs in inbound-link-plan.json"); }
     if (flags.includes("LOW-SCORE")) { priority += 30 + (80 - q.score); why.push(`quality score ${q.score}/100`); actions.push(...q.fails.slice(0, 4).map((x) => "fix: " + x)); }
@@ -84,14 +93,14 @@ for (const key of siteKeys) {
       linkPlan.push({ site: key, post: `/blog/${f.slug}`, label: f.spec.h1, inbound: inb, from: plan.map((p) => ({ hub: p.path, hubTitle: p.title, match: p.score, anchor: `<a href="/blog/${f.slug}">${f.spec.h1.replace(/"/g, "&quot;")}</a>` })) });
     }
 
-    const row = { site: key, slug: f.slug, published, modified, ageDays: age, score: q.score, grade: q.grade, inbound: inb, bing: last ? { date: last.date, imp28: last.impressions, clk28: last.clicks, pos28: last.position, impPrior28: last.impressionsPrior28, imp90: last.impressions90 } : null, clarity: clarity ? { sessions: clarity.claritySessions, scroll: clarity.avgScroll, date: clarity.date } : null, perishables: perish.length, expired: expired.length, flags, priority, why, actions, facts: q.facts };
+    const row = { site: key, slug: f.slug, published, modified, ageDays: age, score: q.score, grade: q.grade, inbound: inb, bing: last && last.source === "bing-api" ? { date: last.date, imp28: last.impressions, clk28: last.clicks, pos28: last.position, impPrior28: last.impressionsPrior28, imp90: last.impressions90 } : null, gsc: gsc ? { date: gsc.date, impressions: gsc.impressions, clicks: gsc.clicks, position: gsc.position } : null, clarity: clarity ? { sessions: clarity.claritySessions, scroll: clarity.avgScroll, date: clarity.date } : null, perishables: perish.length, expired: expired.length, flags, priority, why, actions, facts: q.facts };
     rows.push(row); all.push(row);
     if (priority > 0 && !flags.every((x) => x === "NEW")) refresh.push({ site: key, slug: f.slug, url: `${site.origin}/blog/${f.slug}`, priority, flags, why, actions, score: q.score, inbound: inb });
   }
 
   rows.sort((a, b) => b.priority - a.priority);
-  digest.push(`## ${site.name}`, "", `| Post | Age | Score | Inbound | Bing 28d imp/clk/pos | Flags | Priority |`, `|---|---|---|---|---|---|---|`,
-    ...rows.map((r) => `| ${r.slug} | ${r.ageDays ?? "-"} | ${r.score} ${r.grade} | ${r.inbound} | ${r.bing ? `${r.bing.imp28}/${r.bing.clk28}/${r.bing.pos28 ?? "-"}` : "none"} | ${r.flags.join(" ") || "-"} | ${r.priority} |`), "");
+  digest.push(`## ${site.name}`, "", `| Post | Age | Score | Inbound | Google 3mo imp/clk/pos | Bing 28d imp/clk/pos | Flags | Priority |`, `|---|---|---|---|---|---|---|---|`,
+    ...rows.map((r) => `| ${r.slug} | ${r.ageDays ?? "-"} | ${r.score} ${r.grade} | ${r.inbound} | ${r.gsc ? `${r.gsc.impressions}/${r.gsc.clicks}/${r.gsc.position ?? "-"}` : "none"} | ${r.bing ? `${r.bing.imp28}/${r.bing.clk28}/${r.bing.pos28 ?? "-"}` : "none"} | ${r.flags.join(" ") || "-"} | ${r.priority} |`), "");
 
   // site-level evidence from the opportunities file
   if (opp) {

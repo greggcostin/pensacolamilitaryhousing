@@ -1,85 +1,25 @@
 {
- "generated": "2026-09-04",
+ "generated": "2026-09-05",
  "note": "Ranked refresh candidates for BOTH sites from scripts/blog-retro.mjs. DECIDE reads the top entry before taking a new topic. Flags: DECAYED (Bing impressions fell 40%+), EXPIRED (a declared perishable passed its date), CTR-PROBLEM (top-6 position, zero clicks), STALLED (8+ weeks, under 5 impressions in 90d), STALE-CUES (120+ days unmodified with many dated figures), ORPHAN (under 3 inbound links), LOW-SCORE (score-post under 80). NEW posts (under 42 days) are half-weighted because Bing indexing lags.",
  "queue": [
   {
    "site": "pmh",
-   "slug": "best-neighborhoods-eglin-afb-families",
-   "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
-   "priority": 100,
-   "flags": [
-    "STALLED",
-    "ORPHAN"
-   ],
-   "why": [
-    "160 days old, 0 Bing impressions in 90d",
-    "1 inbound internal link(s)"
-   ],
-   "actions": [
-    "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page",
-    "add links from the hubs in inbound-link-plan.json"
-   ],
-   "score": 80,
-   "inbound": 1
-  },
-  {
-   "site": "pmh",
-   "slug": "florida-homestead-exemption-military",
-   "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
-   "priority": 100,
-   "flags": [
-    "STALLED",
-    "ORPHAN"
-   ],
-   "why": [
-    "152 days old, 0 Bing impressions in 90d",
-    "2 inbound internal link(s)"
-   ],
-   "actions": [
-    "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page",
-    "add links from the hubs in inbound-link-plan.json"
-   ],
-   "score": 83,
-   "inbound": 2
-  },
-  {
-   "site": "pmh",
    "slug": "personal-property-activity-pcs-2026",
    "url": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
-   "priority": 100,
+   "priority": 120,
    "flags": [
-    "STALLED",
+    "CTR-PROBLEM",
     "ORPHAN"
    ],
    "why": [
-    "86 days old, 0 Bing impressions in 90d",
+    "ranks 7.9 with 41 Google (3-month) impressions and 0 clicks",
     "2 inbound internal link(s)"
    ],
    "actions": [
-    "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page",
+    "rewrite title and description around the exact query (number, year, place); keep the slug",
     "add links from the hubs in inbound-link-plan.json"
    ],
    "score": 81,
-   "inbound": 2
-  },
-  {
-   "site": "pmh",
-   "slug": "va-loan-seller-concessions-truth",
-   "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
-   "priority": 100,
-   "flags": [
-    "STALLED",
-    "ORPHAN"
-   ],
-   "why": [
-    "147 days old, 0 Bing impressions in 90d",
-    "2 inbound internal link(s)"
-   ],
-   "actions": [
-    "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page",
-    "add links from the hubs in inbound-link-plan.json"
-   ],
-   "score": 80,
    "inbound": 2
   },
   {
@@ -91,13 +31,34 @@
     "STALLED"
    ],
    "why": [
-    "168 days old, 0 Bing impressions in 90d"
+    "169 days old, 0 Bing impressions in 90d"
    ],
    "actions": [
     "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page"
    ],
    "score": 82,
    "inbound": 3
+  },
+  {
+   "site": "pmh",
+   "slug": "living-in-gulf-breeze-pros-cons",
+   "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
+   "priority": 60,
+   "flags": [
+    "NEW",
+    "CTR-PROBLEM",
+    "ORPHAN"
+   ],
+   "why": [
+    "ranks 4.4 with 53 Google (3-month) impressions and 0 clicks",
+    "2 inbound internal link(s)"
+   ],
+   "actions": [
+    "rewrite title and description around the exact query (number, year, place); keep the slug",
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 80,
+   "inbound": 2
   },
   {
    "site": "pmh",
@@ -108,7 +69,7 @@
     "STALLED"
    ],
    "why": [
-    "142 days old, 0 Bing impressions in 90d"
+    "143 days old, 19 Google impressions in 3 months (pos 6.3)"
    ],
    "actions": [
     "check demand in docs/topic-radar.md; if the query space is real, deepen (table, worked example, question H2s, inbound hub links); if not, merge into a stronger page"
@@ -139,6 +100,57 @@
    ],
    "score": 68,
    "inbound": 1
+  },
+  {
+   "site": "pmh",
+   "slug": "best-neighborhoods-eglin-afb-families",
+   "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
+   "priority": 40,
+   "flags": [
+    "ORPHAN"
+   ],
+   "why": [
+    "1 inbound internal link(s)"
+   ],
+   "actions": [
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 80,
+   "inbound": 1
+  },
+  {
+   "site": "pmh",
+   "slug": "florida-homestead-exemption-military",
+   "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+   "priority": 40,
+   "flags": [
+    "ORPHAN"
+   ],
+   "why": [
+    "2 inbound internal link(s)"
+   ],
+   "actions": [
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 83,
+   "inbound": 2
+  },
+  {
+   "site": "pmh",
+   "slug": "va-loan-seller-concessions-truth",
+   "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+   "priority": 40,
+   "flags": [
+    "ORPHAN"
+   ],
+   "why": [
+    "2 inbound internal link(s)"
+   ],
+   "actions": [
+    "add links from the hubs in inbound-link-plan.json"
+   ],
+   "score": 80,
+   "inbound": 2
   },
   {
    "site": "gc",
@@ -247,24 +259,6 @@
     "add links from the hubs in inbound-link-plan.json"
    ],
    "score": 84,
-   "inbound": 2
-  },
-  {
-   "site": "pmh",
-   "slug": "living-in-gulf-breeze-pros-cons",
-   "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
-   "priority": 20,
-   "flags": [
-    "NEW",
-    "ORPHAN"
-   ],
-   "why": [
-    "2 inbound internal link(s)"
-   ],
-   "actions": [
-    "add links from the hubs in inbound-link-plan.json"
-   ],
-   "score": 80,
    "inbound": 2
   },
   {

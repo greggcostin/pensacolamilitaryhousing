@@ -9,17 +9,20 @@
   {
    "slug": "home-appraisals-explained",
    "topic": "How home appraisals work: who hires the appraiser, what they compare, what happens when the number comes in low",
-   "type": "evergreen"
+   "type": "evergreen",
+   "evidence": "Radar 2026-09-04: how much is a home appraisal in Florida (Bing demand 67, 12 queries). Open with the fee range and who pays."
   },
   {
    "slug": "refinance-break-even-math",
    "topic": "When refinancing actually makes sense: the break-even math, costs people forget, and the reset-clock problem",
-   "type": "evergreen"
+   "type": "evergreen",
+   "evidence": "Radar 2026-09-04: how much are closing costs in Florida to refinance (8 queries). Add a refinance closing-cost table beside the break-even math."
   },
   {
    "slug": "title-insurance-explained",
    "topic": "What title insurance is, why lenders require it, and what an owner policy protects in Florida",
-   "type": "evergreen"
+   "type": "evergreen",
+   "evidence": "Radar 2026-09-04: cost of title policy in Florida (5 queries), title policy calculator (Bing demand 366), owner title insurance cost Florida (529). Lead with the rate table (FAC 69O-186.003) and a worked example."
   },
   {
    "slug": "new-construction-vs-resale",
@@ -40,6 +43,77 @@
    "slug": "rate-news-reaction",
    "topic": "TEMPLATE: when a Fed meeting or big rate move happens, a same-week plain-English reaction post with cited sources",
    "type": "current-events"
+  },
+  {
+   "slug": "baldwin-county-property-taxes",
+   "topic": "Baldwin County property taxes for Orange Beach, Gulf Shores, Foley and Fairhope buyers: millage by city, the Alabama homestead exemption, Class III assessment, and a side-by-side with Escambia and Santa Rosa (Gregg is licensed in both states)",
+   "type": "evergreen",
+   "archetype": "data-study",
+   "targetKeywords": [
+    "baldwin county property tax rate",
+    "how much is property tax in baldwin county alabama",
+    "orange beach alabama property tax",
+    "alabama vs florida property tax"
+   ],
+   "source": "topic-miner 2026-09-04",
+   "evidence": "Radar #1 (score 19.6, 12 related queries from Google + Bing autosuggest) plus #5 and #12 (Orange Beach tax-rate cluster). No page on either site answers Baldwin County taxes; the Gulf Shores/Orange Beach page mentions them in passing. Research from the Baldwin County Revenue Commissioner millage tables and Ala. Code 40-9-19 (homestead), never aggregators."
+  },
+  {
+   "slug": "florida-homestead-exemption-how-to-apply-2027",
+   "topic": "How to apply for the Florida homestead exemption for 2027: the March 1 deadline, what counts as permanent residence, the Escambia and Santa Rosa online portals, portability, and what a missed deadline costs",
+   "type": "seasonal",
+   "archetype": "howto",
+   "targetKeywords": [
+    "florida homestead exemption application 2026",
+    "how to apply for homestead exemption florida",
+    "homestead exemption deadline florida",
+    "escambia county homestead exemption"
+   ],
+   "source": "topic-miner 2026-09-04",
+   "gate": "write in the first January run (2027 applications open then; deadline March 1 2027)",
+   "evidence": "Radar #3 (Bing related-keyword demand 697, 6 queries) and #8 (how-to cluster, 7 queries: online, when, what do I need). The resource guide explains the exemption; nothing on either site walks the application itself. Seasonal: the query pays in January and February."
+  },
+  {
+   "slug": "florida-property-tax-elimination-what-it-means",
+   "topic": "CURRENT-EVENTS TEMPLATE: the Florida property-tax elimination push (what has actually been proposed, what a ballot measure would need, what it would do to a homesteaded Pensacola bill vs a non-homestead one, and the school-funding question)",
+   "type": "current-events",
+   "archetype": "news-reaction",
+   "targetKeywords": [
+    "florida property tax elimination update",
+    "florida property tax elimination",
+    "will florida eliminate property taxes",
+    "florida property tax amendment 2026"
+   ],
+   "source": "topic-miner 2026-09-04",
+   "evidence": "Radar #4 (Bing related-keyword demand 874, 5 queries incl. pros and cons and calculator). The property-taxes post mentions Amendment 5 only. Run it the week a real development lands (a filed joint resolution, ballot placement, a Revenue Estimating Conference study); cite the resolution text, never a headline."
+  },
+  {
+   "slug": "hurricane-and-flood-history-by-gulf-coast-town",
+   "topic": "Hurricane and flood history by Gulf Coast town, Pensacola to Destin: which areas took surge in Ivan, Sally and Michael, FEMA zone shares by town, wind vs water, and what that means for insurance and where to buy (flood and insurance framing only, per the fair-housing content design)",
+   "type": "evergreen",
+   "archetype": "data-study",
+   "targetKeywords": [
+    "does destin florida get hurricanes",
+    "does milton florida get hurricanes",
+    "pensacola hurricane history",
+    "gulf breeze flood zone"
+   ],
+   "source": "topic-miner 2026-09-04",
+   "evidence": "Radar #6 and #24 (does Destin / Milton get hurricanes) plus Clarity: /pensacola-flood-zones-homebuyers is the deepest read on the military site (165 s average engagement). A town-by-town table from NOAA landfall records and FEMA zone shares is the shareable asset neither site has."
+  },
+  {
+   "slug": "buying-on-pensacola-beach-leasehold",
+   "topic": "Buying a home or condo on Pensacola Beach: Santa Rosa Island Authority leasehold land (you lease, you do not own), how the lease fee and term affect financing and resale, wind and flood insurance on the barrier island, HOA and rental rules, and the Navarre Beach comparison",
+   "type": "evergreen",
+   "archetype": "decision",
+   "targetKeywords": [
+    "pensacola beach properties",
+    "pensacola beach real estate",
+    "pensacola beach leasehold",
+    "buying a condo on pensacola beach"
+   ],
+   "source": "topic-miner 2026-09-04",
+   "evidence": "Radar #11 (Bing related-keyword demand 400) and #18 (oceanfront condos in Pensacola with pool). The SRIA leasehold structure is the most misunderstood fact about buying on the beach and no page on either site explains it; the Navarre guide covers Navarre Beach leases, so cross-link and differentiate."
   }
  ]
 }

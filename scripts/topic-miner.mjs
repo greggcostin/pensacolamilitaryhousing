@@ -129,17 +129,29 @@ const queueTokens = bothQueues.map((t) => new Set(tokens(`${t.slug.replace(/-/g,
 const coverage = (qTokens, set) => qTokens.filter((w) => set.has(w)).length / qTokens.length;
 const PLACE_ONLY = (t) => t.every((w) => PLACES.test(w) && !PLACES.lastIndex-- || /^(fl|al|florida|alabama|county|beach|city|area)$/.test(w));
 
+const GENERIC = new Set(["cost", "much", "how", "best", "good", "place", "live", "living", "moving", "move", "average", "worth", "pros", "cons", "requirements", "calculator", "2026", "guide", "near", "families", "retirees", "reddit", "many", "top", "really", "actually", "still", "new"]);
+const inDomain = (q) => cfg.domain.some((w) => q.includes(w));
+const offRegion = (q) => (cfg.offRegion || []).some((w) => q.includes(w));
+const STATEWIDE = /\b(florida|alabama|fl\b|al\b|panhandle|gulf coast|emerald coast)/;
+
 const scored = [];
 for (const c of cands.values()) {
   const t = tokens(c.q);
   if (t.length < 2) continue;
+  if (!inDomain(c.q)) continue; // not a homeownership question (resorts, banks, shopping)
   const hasPlace = PLACES.test(c.q); PLACES.lastIndex = 0;
+  // geography gate: a Gulf Coast place, or a statewide Florida/Alabama topic with no off-region place
+  if (!hasPlace && (offRegion(c.q) || !STATEWIDE.test(c.q))) continue;
+  if (hasPlace && offRegion(c.q)) continue;
   const contentTokens = t.filter((w) => { const m = PLACES.test(w); PLACES.lastIndex = 0; return !m && !/^(fl|al|florida|alabama|county|beach|city|area)$/.test(w); });
   if (!contentTokens.length) continue; // a bare place name is a hub, not a post
   const intent = intentOf(c.q);
   if (intent === "navigational") continue;
+  // novelty on the query's specific tokens only: "is pace florida a good place to live" resolves to the Pace page
+  const specific = t.filter((w) => !GENERIC.has(w));
+  const covQ = specific.length ? specific : t;
   let best = 0, coveredBy = null;
-  for (const { p, set } of covTokens) { const o = coverage(t, set); if (o > best) { best = o; coveredBy = `${p.site}:${p.path}`; } }
+  for (const { p, set } of covTokens) { const o = coverage(covQ, set); if (o > best) { best = o; coveredBy = `${p.site}:${p.path}`; } }
   const novelty = 1 - best;
   const engines = (c.sources.has("google") ? 1 : 0) + (c.sources.has("bing") ? 1 : 0);
   const demand = engines + 2 * Math.log1p(c.imp) + 0.5 * Math.log1p(c.vol);
@@ -151,7 +163,6 @@ for (const c of cands.values()) {
 scored.sort((a, b) => b.score - a.score);
 
 // ---- 3. clustering -------------------------------------------------------------------------
-const GENERIC = new Set(["cost", "much", "how", "best", "good", "place", "live", "living", "moving", "move", "average", "worth", "pros", "cons", "safe", "requirements", "calculator", "2026", "guide", "near", "families", "retirees", "reddit"]);
 const clusterKey = (q) => { const t = tokens(q).filter((w) => !GENERIC.has(w)).sort(); return t.slice(0, 3).join(" ") || tokens(q).sort().slice(0, 2).join(" "); };
 const clusters = new Map();
 for (const s of scored) {
@@ -168,13 +179,14 @@ const ranked = [...clusters.values()].map((c) => {
   const novelty = Math.max(...c.members.map((m) => m.novelty));
   const covered = c.members.filter((m) => m.coveredBy).map((m) => m.coveredBy);
   const coveredBy = covered.length ? [...new Set(covered)].slice(0, 2) : [];
-  const repTokens = tokens(rep.q);
-  const inQueue = queueTokens.some((set) => coverage(repTokens, set) >= 0.8);
+  const repTokens = tokens(rep.q).filter((w) => !GENERIC.has(w));
+  const inQueue = queueTokens.some((set) => coverage(repTokens.length ? repTokens : tokens(rep.q), set) >= 0.8);
   const archetype = /\b(moving to|living in|relocat)/.test(rep.q) ? "mega-guide" : ["decision", "comparison", "question"].includes(rep.intent) ? "decision" : rep.intent === "cost" ? "data-study" : "decision";
   return { key: c.key, score: +c.score.toFixed(1), representative: rep.q, intent: rep.intent, audience: aud, archetype, novelty: +novelty.toFixed(2), coveredBy, inQueue, impressions: c.imp, bingVolume: c.vol, hubs: [...new Set(c.members.flatMap((m) => m.hubs))].slice(0, 3), members: c.members.slice(0, 12).map((m) => m.q), questions: [...new Set(c.questions)].slice(0, 12) };
 }).sort((a, b) => b.score - a.score);
 
-const radar = ranked.filter((c) => c.novelty >= 0.35 && !c.inQueue).slice(0, LIMIT);
+// one-member clusters that exist only because Bing's related feed carries a volume number are brand/venue noise, not topics
+const radar = ranked.filter((c) => c.novelty >= 0.35 && !c.inQueue && (c.members.length >= 2 || c.impressions > 0)).slice(0, LIMIT);
 const covered = ranked.filter((c) => c.coveredBy.length && c.novelty < 0.35).slice(0, 25);
 writeJson("content/topic-candidates.json", { generated: TODAY, candidates: scored.length, clusters: ranked.length, radar, covered, queued: ranked.filter((c) => c.inQueue).slice(0, 25) }, 1);
 

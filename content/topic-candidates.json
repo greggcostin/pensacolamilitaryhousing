@@ -1,0 +1,2688 @@
+{
+ "generated": "2026-09-05",
+ "candidates": 3102,
+ "clusters": 1762,
+ "radar": [
+  {
+   "key": "communities pensacola retirement",
+   "score": 6.1,
+   "representative": "best retirement communities in pensacola fl for seniors",
+   "intent": "decision",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/faq"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "best retirement communities in pensacola fl for seniors",
+    "best retirement communities in pensacola fl",
+    "pensacola florida retirement communities",
+    "retirement communities near pensacola fl",
+    "retirement communities pensacola fl",
+    "retirement communities in pensacola florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "insurance mobile",
+   "score": 6,
+   "representative": "how much is mobile home insurance florida",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "how much is mobile home insurance florida",
+    "how much is mobile home insurance in florida",
+    "cost of mobile home insurance in florida",
+    "florida mobile home insurance average cost",
+    "florida mobile home insurance calculator",
+    "florida mobile home insurance requirements",
+    "mobile home insurance in florida requirements"
+   ],
+   "questions": [
+    "how much is mobile home insurance florida",
+    "how much is mobile home insurance in florida"
+   ]
+  },
+  {
+   "key": "closing costs refinance",
+   "score": 5.6,
+   "representative": "how much are closing costs in florida to refinance",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/faq"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "how much are closing costs in florida to refinance",
+    "closing costs florida refinance average",
+    "average closing costs for refinance in florida",
+    "closing costs florida refinance tips",
+    "closing costs florida refinance rules",
+    "closing costs florida refinance calculator",
+    "closing costs florida refinance",
+    "refinance closing costs florida"
+   ],
+   "questions": [
+    "how much are closing costs in florida to refinance"
+   ]
+  },
+  {
+   "key": "cheap insurance",
+   "score": 5.4,
+   "representative": "why florida home insurance is cheap",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "why florida home insurance is cheap",
+    "florida cheap home insurance calculator",
+    "cheap house insurance florida calculator",
+    "cheap home insurance in florida requirements",
+    "cheap florida home insurance",
+    "cheap insurance in florida",
+    "cheap insurance in fl"
+   ],
+   "questions": [
+    "why florida home insurance is cheap"
+   ]
+  },
+  {
+   "key": "cheapest insurance",
+   "score": 4.4,
+   "representative": "cheapest florida home insurance",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "cheapest florida home insurance",
+    "cheapest home insurance florida calculator",
+    "cheapest insurance in florida",
+    "cheapest insurance in fl"
+   ],
+   "questions": []
+  },
+  {
+   "key": "alabama beach condo",
+   "score": 4.2,
+   "representative": "orange beach alabama condo rates",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.4,
+   "coveredBy": [
+    "gc:/gulf-shores-orange-beach",
+    "pmh:/va-approved-condos-pensacola"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/gulf-shores-orange-beach"
+   ],
+   "members": [
+    "orange beach alabama condo rates",
+    "average cost of condo in orange beach alabama",
+    "orange beach alabama condo reviews",
+    "orange beach alabama condo rules"
+   ],
+   "questions": []
+  },
+  {
+   "key": "policy title",
+   "score": 4.1,
+   "representative": "cost of title policy in florida",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "cost of title policy in florida",
+    "title policy cost florida",
+    "title policy calculator florida",
+    "florida title policy calculator",
+    "title policy florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "count field hurlburt",
+   "score": 3.9,
+   "representative": "does penscaola to hurlburt field count as a pca or pcs",
+   "intent": "question",
+   "audience": "military",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 3,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "does penscaola to hurlburt field count as a pca or pcs"
+   ],
+   "questions": [
+    "does penscaola to hurlburt field count as a pca or pcs"
+   ]
+  },
+  {
+   "key": "condos oceanfront pensacola",
+   "score": 3.8,
+   "representative": "oceanfront condos in pensacola with pool",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/va-approved-condos-pensacola"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "oceanfront condos in pensacola with pool",
+    "pensacola florida oceanfront condos",
+    "oceanfront condos in pensacola area",
+    "oceanfront condos in pensacola"
+   ],
+   "questions": []
+  },
+  {
+   "key": "afb dorms field",
+   "score": 3.7,
+   "representative": "hurlburt field afb dorms spec ops",
+   "intent": "informational",
+   "audience": "military",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": false,
+   "impressions": 3,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "hurlburt field afb dorms spec ops",
+    "hurlburt field afb dorms"
+   ],
+   "questions": []
+  },
+  {
+   "key": "beach fort indeed",
+   "score": 3.7,
+   "representative": "indeed fort walton beach part time",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "indeed fort walton beach part time",
+    "indeed fort walton beach medical",
+    "indeed fort walton beach",
+    "indeed fort walton beach area"
+   ],
+   "questions": []
+  },
+  {
+   "key": "car insurance",
+   "score": 3.4,
+   "representative": "average car insurance florida",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "average car insurance florida",
+    "average car insurance in fl",
+    "car insurance calculator florida",
+    "fl car insurance requirements"
+   ],
+   "questions": []
+  },
+  {
+   "key": "insurance owner rate",
+   "score": 3.3,
+   "representative": "florida home insurance owner rate review",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/blog/bah-2026-pensacola-what-can-you-afford"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "florida home insurance owner rate review",
+    "florida home insurance owner rate trends",
+    "florida home insurance owner rate",
+    "florida home insurance owner rate calculator"
+   ],
+   "questions": []
+  },
+  {
+   "key": "beach condo orange",
+   "score": 3.2,
+   "representative": "orange beach al condo rates",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/va-approved-condos-pensacola"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/gulf-shores-orange-beach"
+   ],
+   "members": [
+    "orange beach al condo rates",
+    "orange beach al condo rules",
+    "orange beach al condo reviews"
+   ],
+   "questions": []
+  },
+  {
+   "key": "pensacola senior",
+   "score": 3.2,
+   "representative": "senior living in pensacola fl",
+   "intent": "informational",
+   "audience": "both",
+   "archetype": "mega-guide",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "senior living in pensacola fl",
+    "senior living in pensacola florida",
+    "senior living in pensacola"
+   ],
+   "questions": []
+  },
+  {
+   "key": "indeed pensacola",
+   "score": 3.2,
+   "representative": "indeed pensacola",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "indeed pensacola",
+    "indeed pensacola fl",
+    "indeed pensacola florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "communities gulf retirement",
+   "score": 3.2,
+   "representative": "retirement communities gulf shores al",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/gulf-shores-orange-beach"
+   ],
+   "members": [
+    "retirement communities gulf shores al",
+    "gulf shores retirement communities",
+    "gulf shores 55+ retirement communities"
+   ],
+   "questions": []
+  },
+  {
+   "key": "affordable crestview",
+   "score": 3.2,
+   "representative": "affordable homes of crestview fl",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "affordable homes of crestview fl",
+    "affordable homes crestview florida",
+    "affordable homes of crestview"
+   ],
+   "questions": []
+  },
+  {
+   "key": "army eglin forces",
+   "score": 3.1,
+   "representative": "do army special forces units have personal housing at eglin",
+   "intent": "question",
+   "audience": "military",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 2,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "do army special forces units have personal housing at eglin"
+   ],
+   "questions": [
+    "do army special forces units have personal housing at eglin"
+   ]
+  },
+  {
+   "key": "bay bluewater commute",
+   "score": 3.1,
+   "representative": "what is average commute from niceville/bluewater bay to hulburt feild",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 2,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "what is average commute from niceville/bluewater bay to hulburt feild"
+   ],
+   "questions": [
+    "what is average commute from niceville/bluewater bay to hulburt feild"
+   ]
+  },
+  {
+   "key": "bill electric milton",
+   "score": 3,
+   "representative": "average electric bill milton fl",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.67,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "average electric bill milton fl",
+    "average electric bill in milton fl"
+   ],
+   "questions": []
+  },
+  {
+   "key": "beach cottage fort",
+   "score": 3,
+   "representative": "fort walton beach cottage rental offers",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "fort walton beach cottage rental offers",
+    "fort walton beach cottage rentals",
+    "fort walton beach cottage rentals florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "cheap pensacola rentals",
+   "score": 2.9,
+   "representative": "cheap weekly rentals pensacola fl",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/flight-school-housing-pensacola"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "cheap weekly rentals pensacola fl",
+    "cheap rentals pensacola florida",
+    "cheap rentals in pensacola florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "beach monthly pensacola",
+   "score": 2.9,
+   "representative": "monthly rentals pensacola beach",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/va-approved-condos-pensacola"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "monthly rentals pensacola beach",
+    "pensacola beach monthly rentals",
+    "pensacola fl beach rental monthly"
+   ],
+   "questions": []
+  },
+  {
+   "key": "cheap condos pensacola",
+   "score": 2.9,
+   "representative": "condos for rent in pensacola cheap",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "gc:/gulf-shores-orange-beach"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "condos for rent in pensacola cheap",
+    "condos for rent pensacola fl cheap",
+    "cheap condos in pensacola florida for sale"
+   ],
+   "questions": []
+  },
+  {
+   "key": "get hurricanes lot",
+   "score": 2.8,
+   "representative": "does pensacola get a lot of hurricanes",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "does pensacola get a lot of hurricanes",
+    "does pensacola florida get a lot of hurricanes"
+   ],
+   "questions": [
+    "does pensacola get a lot of hurricanes",
+    "does pensacola florida get a lot of hurricanes"
+   ]
+  },
+  {
+   "key": "milton people",
+   "score": 2.8,
+   "representative": "how many people live in milton fl",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "how many people live in milton fl",
+    "how many people live in milton florida"
+   ],
+   "questions": [
+    "how many people live in milton fl",
+    "how many people live in milton florida"
+   ]
+  },
+  {
+   "key": "beach beachfront pensacola",
+   "score": 2.7,
+   "representative": "pensacola beach house rentals beachfront",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "gc:/gulf-shores-orange-beach"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "pensacola beach house rentals beachfront",
+    "beachfront homes for sale in pensacola beach",
+    "pensacola beach homes for sale beachfront"
+   ],
+   "questions": []
+  },
+  {
+   "key": "buy fluid milton",
+   "score": 2.6,
+   "representative": "where can i buy milton sterilizing fluid",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/flight-school-housing-pensacola"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/buy",
+    "/pcs-home-search",
+    "/search"
+   ],
+   "members": [
+    "where can i buy milton sterilizing fluid",
+    "where can i buy milton fluid"
+   ],
+   "questions": [
+    "where can i buy milton sterilizing fluid",
+    "where can i buy milton fluid"
+   ]
+  },
+  {
+   "key": "index pensacola",
+   "score": 2.6,
+   "representative": "cost of living index pensacola fl",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "mega-guide",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "cost of living index pensacola fl",
+    "pensacola cost of living index"
+   ],
+   "questions": []
+  },
+  {
+   "key": "insurance required",
+   "score": 2.6,
+   "representative": "is home insurance required in florida",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "is home insurance required in florida",
+    "is insurance required in florida",
+    "required insurance in florida"
+   ],
+   "questions": [
+    "is home insurance required in florida",
+    "is insurance required in florida"
+   ]
+  },
+  {
+   "key": "car cheap insurance",
+   "score": 2.5,
+   "representative": "cheap car insurance for florida residents",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.75,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "cheap car insurance for florida residents",
+    "cheap car insurance florida",
+    "cheap car insurance fl"
+   ],
+   "questions": []
+  },
+  {
+   "key": "communities foley retirement",
+   "score": 2.4,
+   "representative": "retirement communities foley al",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.67,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "retirement communities foley al",
+    "foley al retirement communities"
+   ],
+   "questions": []
+  },
+  {
+   "key": "communities destin retirement",
+   "score": 2.4,
+   "representative": "destin fl retirement communities",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.67,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "destin fl retirement communities",
+    "destin florida retirement communities"
+   ],
+   "questions": []
+  },
+  {
+   "key": "beach orange rate",
+   "score": 2.3,
+   "representative": "orange beach title rate calculator",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/blog/bah-2026-pensacola-what-can-you-afford"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/gulf-shores-orange-beach"
+   ],
+   "members": [
+    "orange beach title rate calculator",
+    "orange beach al tax rate"
+   ],
+   "questions": []
+  },
+  {
+   "key": "lenders",
+   "score": 2.3,
+   "representative": "va lenders florida calculator",
+   "intent": "howto",
+   "audience": "military",
+   "archetype": "decision",
+   "novelty": 1,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "va lenders florida calculator",
+    "va lenders florida requirements"
+   ],
+   "questions": []
+  },
+  {
+   "key": "insurance reviews",
+   "score": 2.3,
+   "representative": "best florida home insurance reviews",
+   "intent": "decision",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "best florida home insurance reviews",
+    "florida home insurance reviews",
+    "insurance home fl reviews"
+   ],
+   "questions": []
+  },
+  {
+   "key": "citizens customer insurance",
+   "score": 2.2,
+   "representative": "citizens insurance florida customer service",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.6,
+   "coveredBy": [],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "citizens insurance florida customer service",
+    "citizens insurance florida customer service number"
+   ],
+   "questions": []
+  },
+  {
+   "key": "alabama gulf houses",
+   "score": 2.2,
+   "representative": "gulf shores alabama houses prices",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.4,
+   "coveredBy": [
+    "gc:/gulf-shores-orange-beach"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/gulf-shores-orange-beach"
+   ],
+   "members": [
+    "gulf shores alabama houses prices",
+    "gulf shores alabama houses reviews"
+   ],
+   "questions": []
+  },
+  {
+   "key": "comparison current mortgage",
+   "score": 2.2,
+   "representative": "current mortgage rate in florida comparison",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/zero-down-home-loans"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "current mortgage rate in florida comparison",
+    "current florida mortgage rates comparison",
+    "florida current mortgage comparison"
+   ],
+   "questions": []
+  }
+ ],
+ "covered": [
+  {
+   "key": "pensacola",
+   "score": 51.5,
+   "representative": "should i move to pensacola florida",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/404"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "should i move to pensacola florida",
+    "where to live in pensacola",
+    "pros and cons of moving to pensacola fl",
+    "living in pensacola fl pros and cons",
+    "cost of living pensacola fl",
+    "pensacola cost of living",
+    "pensacola fl cost of living",
+    "pensacola average cost of living",
+    "average cost of living in pensacola florida",
+    "cost of living in pensacola florida",
+    "living in pensacola fl",
+    "moving to pensacola"
+   ],
+   "questions": [
+    "should i move to pensacola florida",
+    "where to live in pensacola",
+    "is pensacola good for retirees",
+    "how is it living in pensacola",
+    "is it worth moving to pensacola",
+    "how to move to pensacola florida",
+    "why move to pensacola fl",
+    "how is living in pensacola florida",
+    "what is the cost of living in pensacola fl",
+    "where to live in pensacola florida",
+    "how much is the cost of living in pensacola florida",
+    "what is the cost of living in pensacola florida"
+   ]
+  },
+  {
+   "key": "bah pensacola",
+   "score": 22.7,
+   "representative": "bah pensacola 2026",
+   "intent": "informational",
+   "audience": "military",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": true,
+   "impressions": 12,
+   "bingVolume": 0,
+   "hubs": [
+    "/bah-rates",
+    "/bah-to-mortgage-guide"
+   ],
+   "members": [
+    "bah pensacola 2026",
+    "pensacola bah",
+    "pensacola bah 2026",
+    "what is bah for pensacola fl",
+    "how much is bah in pensacola",
+    "pensacola bah calculator",
+    "bah pensacola fl",
+    "bah pensacola",
+    "what is pensacola bah",
+    "how much is pensacola bah",
+    "bah calculator 2026 pensacola fl",
+    "bah calculator pensacola florida"
+   ],
+   "questions": [
+    "what is bah for pensacola fl",
+    "how much is bah in pensacola",
+    "what is pensacola bah",
+    "how much is pensacola bah"
+   ]
+  },
+  {
+   "key": "property tax",
+   "score": 20.8,
+   "representative": "property tax florida",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 300,
+   "hubs": [
+    "/blog/property-taxes-escambia-santa-rosa",
+    "/va-disability-property-tax-florida"
+   ],
+   "members": [
+    "property tax florida",
+    "how much is fl property tax",
+    "how much is property tax in florida",
+    "does florida property tax",
+    "what is florida property tax",
+    "property tax in florida",
+    "florida property tax cost",
+    "average florida property tax",
+    "florida property tax calculator",
+    "florida property tax calculator 2026",
+    "florida property tax",
+    "florida property tax 2026"
+   ],
+   "questions": [
+    "how much is fl property tax",
+    "how much is property tax in florida",
+    "does florida property tax",
+    "what is florida property tax",
+    "is florida property tax",
+    "how much florida property tax",
+    "how much is florida property tax"
+   ]
+  },
+  {
+   "key": "pensacola sale",
+   "score": 19.9,
+   "representative": "pensacola florida homes for sale",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/cash-offer-pensacola"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 705,
+   "hubs": [],
+   "members": [
+    "pensacola florida homes for sale",
+    "homes for sale in pensacola florida",
+    "homes for sale pensacola fl",
+    "pensacola real estate for sale",
+    "pensacola fl real estate for sale",
+    "homes for sale in the pensacola area",
+    "real estate for sale in pensacola florida",
+    "real estate for sale in pensacola fl",
+    "homes for sale in pensacola area",
+    "pensacola home for sale",
+    "pensacola florida real estate for sale",
+    "home sale pensacola fl"
+   ],
+   "questions": []
+  },
+  {
+   "key": "county escambia property",
+   "score": 18.5,
+   "representative": "escambia county property tax rate",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.2,
+   "coveredBy": [
+    "pmh:/blog/bah-2026-pensacola-what-can-you-afford",
+    "pmh:/florida-homestead-exemption-military"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/blog/property-taxes-escambia-santa-rosa",
+    "/va-disability-property-tax-florida"
+   ],
+   "members": [
+    "escambia county property tax rate",
+    "escambia county property tax calculator",
+    "escambia county property tax",
+    "escambia county property tax search",
+    "how much is property tax in escambia county florida",
+    "how much are property taxes in escambia county",
+    "escambia county property tax website",
+    "escambia county tangible property tax",
+    "escambia county property tax statement",
+    "escambia county fl property tax rate",
+    "escambia county florida property tax calculator",
+    "escambia county property tax search fl"
+   ],
+   "questions": [
+    "how much is property tax in escambia county florida",
+    "how much are property taxes in escambia county"
+   ]
+  },
+  {
+   "key": "exemption homestead",
+   "score": 18.1,
+   "representative": "homestead exemption florida",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 622,
+   "hubs": [
+    "/resources/florida-homestead-exemption",
+    "/florida-homestead-exemption-military"
+   ],
+   "members": [
+    "homestead exemption florida",
+    "what is florida homestead exemption",
+    "how much is florida homestead exemption",
+    "how much is homestead exemption in florida",
+    "florida homestead exemption calculator",
+    "florida homestead exemption requirements",
+    "florida homestead exemption",
+    "florida homestead exemption 2026",
+    "is florida homestead exemption",
+    "what is fl homestead exemption",
+    "how much is the florida homestead exemption worth",
+    "how much is homestead exemption in florida calculator"
+   ],
+   "questions": [
+    "what is florida homestead exemption",
+    "how much is florida homestead exemption",
+    "how much is homestead exemption in florida",
+    "is florida homestead exemption",
+    "what is fl homestead exemption",
+    "how much is the florida homestead exemption worth",
+    "how much is homestead exemption in florida calculator",
+    "what is a florida homestead exemption",
+    "how to florida homestead exemption",
+    "what is the florida homestead exemption",
+    "what does florida homestead exemption do",
+    "how to do homestead exemption in florida"
+   ]
+  },
+  {
+   "key": "insurance title",
+   "score": 16.8,
+   "representative": "what is title insurance florida",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/va-loan-closing-costs-florida"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "what is title insurance florida",
+    "how much is title insurance in florida",
+    "florida title insurance cost calculator",
+    "cost of title insurance florida",
+    "average cost of title insurance in florida",
+    "title insurance florida calculator",
+    "title insurance florida",
+    "how much is title insurance in florida for a house",
+    "how much is title insurance florida",
+    "how much is title insurance in florida calculator",
+    "how much should title insurance cost in florida",
+    "how much does title insurance cost in florida"
+   ],
+   "questions": [
+    "what is title insurance florida",
+    "how much is title insurance in florida",
+    "how much is title insurance in florida for a house",
+    "how much is title insurance florida",
+    "how much is title insurance in florida calculator",
+    "how much should title insurance cost in florida",
+    "how much does title insurance cost in florida",
+    "what is the average cost of title insurance in florida",
+    "what does title insurance cost in florida"
+   ]
+  },
+  {
+   "key": "insurance",
+   "score": 16.1,
+   "representative": "how much is florida home insurance",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/crestview-military-relocation"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "how much is florida home insurance",
+    "how much is home insurance in florida",
+    "florida home insurance cost",
+    "average florida home insurance cost",
+    "average florida home insurance",
+    "florida home insurance calculator",
+    "florida home insurance requirements",
+    "how much does florida home insurance cost",
+    "how much is average home insurance florida",
+    "how much does home insurance in florida",
+    "how much is home insurance in florida calculator",
+    "how much does home insurance cost in florida"
+   ],
+   "questions": [
+    "how much is florida home insurance",
+    "how much is home insurance in florida",
+    "how much does florida home insurance cost",
+    "how much is average home insurance florida",
+    "how much does home insurance in florida",
+    "how much is home insurance in florida calculator",
+    "how much does home insurance cost in florida",
+    "how much is home insurance in florida average",
+    "why florida home insurance is worth it"
+   ]
+  },
+  {
+   "key": "afb eglin housing",
+   "score": 14.1,
+   "representative": "eglin afb housing office",
+   "intent": "informational",
+   "audience": "military",
+   "archetype": "decision",
+   "novelty": 0.25,
+   "coveredBy": [
+    "pmh:/bah-rates",
+    "pmh:/blog"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "eglin afb housing office",
+    "eglin afb housing",
+    "housing near eglin afb",
+    "eglin afb housing photos",
+    "eglin afb housing mayroad",
+    "eglin afb mayroad housing",
+    "eglin afb privatized housing",
+    "eglin afb officer housing",
+    "eglin afb military housing office",
+    "military housing office eglin afb",
+    "eglin afb housing cost",
+    "housing on eglin afb"
+   ],
+   "questions": []
+  },
+  {
+   "key": "bah field hurlburt",
+   "score": 12.6,
+   "representative": "bah hurlburt field",
+   "intent": "informational",
+   "audience": "military",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": true,
+   "impressions": 20,
+   "bingVolume": 0,
+   "hubs": [
+    "/bah-rates",
+    "/bah-to-mortgage-guide"
+   ],
+   "members": [
+    "bah hurlburt field",
+    "hurlburt field bah",
+    "hurlburt field bah 2026",
+    "hurlburt field bah rates",
+    "hurlburt field bah calculator",
+    "e-5 bah in hurlburt field fl",
+    "hurlburt field bah rates 2026",
+    "hurlburt field 2026 bah"
+   ],
+   "questions": []
+  },
+  {
+   "key": "closing costs",
+   "score": 12.3,
+   "representative": "how much are closing costs in florida",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/faq"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "how much are closing costs in florida",
+    "what is closing costs in florida",
+    "closing costs florida",
+    "what are closing costs florida",
+    "how much are closing costs florida",
+    "how much are closing costs in florida calculator",
+    "how much are average closing costs in florida",
+    "what are closing costs in florida",
+    "what are closing costs in fl",
+    "how much are closing costs in fl",
+    "average closing costs florida",
+    "average closing costs in florida"
+   ],
+   "questions": [
+    "how much are closing costs in florida",
+    "what is closing costs in florida",
+    "what are closing costs florida",
+    "how much are closing costs florida",
+    "how much are closing costs in florida calculator",
+    "how much are average closing costs in florida",
+    "what are closing costs in florida",
+    "what are closing costs in fl",
+    "how much are closing costs in fl"
+   ]
+  },
+  {
+   "key": "mortgage rates",
+   "score": 11.7,
+   "representative": "mortgage rates florida",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/assumable-va-loans-pensacola"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "mortgage rates florida",
+    "best mortgage rates florida",
+    "average mortgage rates florida",
+    "how much are mortgage rates in florida",
+    "what is mortgage rates in florida",
+    "what are florida mortgage rates",
+    "what is florida mortgage rates",
+    "mortgage rates florida 2026",
+    "florida mortgage rates",
+    "mortgage rates in florida",
+    "home mortgage rates florida",
+    "mortgage rates in fl"
+   ],
+   "questions": [
+    "how much are mortgage rates in florida",
+    "what is mortgage rates in florida",
+    "what are florida mortgage rates",
+    "what is florida mortgage rates"
+   ]
+  },
+  {
+   "key": "county property rosa",
+   "score": 11.2,
+   "representative": "santa rosa county property taxes",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/blog/bah-2026-pensacola-what-can-you-afford",
+    "pmh:/florida-homestead-exemption-military"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/blog/property-taxes-escambia-santa-rosa",
+    "/va-disability-property-tax-florida"
+   ],
+   "members": [
+    "santa rosa county property taxes",
+    "santa rosa county property tax search",
+    "how much is property tax in santa rosa county florida",
+    "average property tax in santa rosa county florida",
+    "santa rosa county property tax calculator",
+    "santa rosa county property tax",
+    "santa rosa county property tax fl",
+    "santa rosa county fl property tax",
+    "santa rosa county florida property tax search",
+    "santa rosa county florida property tax",
+    "santa rosa county fl property tax search",
+    "santa rosa fl county property tax"
+   ],
+   "questions": [
+    "how much is property tax in santa rosa county florida"
+   ]
+  },
+  {
+   "key": "destin",
+   "score": 10.3,
+   "representative": "destin fl cost of living",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/va-approved-condos-pensacola"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "destin fl cost of living",
+    "living in destin fl pros and cons",
+    "pros and cons of living in destin florida",
+    "pros and cons of living in destin fl",
+    "destin florida cost of living",
+    "cost of living destin fl",
+    "cost of living destin fl calculator",
+    "cost of homes in destin florida",
+    "cost of living near destin florida",
+    "destin florida cost of living calculator",
+    "destin florida average cost of living",
+    "living in destin fl"
+   ],
+   "questions": []
+  },
+  {
+   "key": "citizens insurance",
+   "score": 10.3,
+   "representative": "citizens florida insurance",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/florida-home-insurance-military"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 48,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "citizens florida insurance",
+    "what is citizens insurance florida",
+    "citizens insurance florida",
+    "is citizens insurance in florida good",
+    "is citizens insurance still in florida",
+    "is citizens home insurance in florida good",
+    "is citizens insurance florida good",
+    "how much is citizens insurance in florida",
+    "what is citizens insurance in florida",
+    "citizens insurance in florida",
+    "citizens insurance in fl",
+    "florida citizens home insurance"
+   ],
+   "questions": [
+    "what is citizens insurance florida",
+    "is citizens insurance in florida good",
+    "is citizens insurance still in florida",
+    "is citizens home insurance in florida good",
+    "is citizens insurance florida good",
+    "how much is citizens insurance in florida",
+    "what is citizens insurance in florida"
+   ]
+  },
+  {
+   "key": "beach condos pensacola",
+   "score": 10,
+   "representative": "pensacola condos on the beach",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.25,
+   "coveredBy": [
+    "pmh:/va-approved-condos-pensacola"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "pensacola condos on the beach",
+    "pensacola beach florida condos prices",
+    "pensacola condos on the beach for rent",
+    "pensacola condos for rent on the beach",
+    "best pensacola beach condos",
+    "best condos pensacola beach",
+    "best condos in pensacola beach fl",
+    "best condos on pensacola beach",
+    "pensacola beach florida condos reviews",
+    "pensacola florida beach condos",
+    "condos in pensacola beach",
+    "condos on pensacola beach"
+   ],
+   "questions": []
+  },
+  {
+   "key": "pensacola rent",
+   "score": 10,
+   "representative": "average pensacola rent",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/faq"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "average pensacola rent",
+    "pensacola florida average rent",
+    "cost of rent in pensacola florida",
+    "average rent pensacola fl",
+    "average rent in pensacola",
+    "average rent in pensacola fl",
+    "average rent in pensacola florida",
+    "pensacola homes for rent",
+    "pensacola florida for rent",
+    "pensacola home for rent",
+    "rent in pensacola fl",
+    "homes to rent in pensacola florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "construction pensacola",
+   "score": 9.6,
+   "representative": "pensacola new construction",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/new-construction-pensacola"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "pensacola new construction",
+    "new construction near pensacola fl",
+    "new construction homes near pensacola fl",
+    "pensacola new construction homes",
+    "new construction homes pensacola fl",
+    "new home construction pensacola florida",
+    "new construction pensacola fl",
+    "new construction homes pensacola",
+    "pensacola florida new construction homes",
+    "new home construction pensacola fl",
+    "new construction in pensacola florida",
+    "new construction homes in pensacola florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "homeowners insurance",
+   "score": 8.9,
+   "representative": "homeowners insurance in florida",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/faq"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 649,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "homeowners insurance in florida",
+    "best homeowners insurance florida",
+    "homeowners insurance florida",
+    "florida homeowners insurance",
+    "florida homeowners insurance pros and cons",
+    "florida homeowners insurance cost",
+    "homeowners insurance cost calculator florida",
+    "florida homeowners insurance calculator",
+    "florida homeowners insurance requirements",
+    "home insurance for florida homeowners",
+    "florida insurance for homeowners",
+    "florida homeowners insurance near me"
+   ],
+   "questions": []
+  },
+  {
+   "key": "have property tax",
+   "score": 8.7,
+   "representative": "does florida have property tax",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.25,
+   "coveredBy": [
+    "pmh:/faq"
+   ],
+   "inQueue": false,
+   "impressions": 0,
+   "bingVolume": 291,
+   "hubs": [
+    "/blog/property-taxes-escambia-santa-rosa",
+    "/va-disability-property-tax-florida"
+   ],
+   "members": [
+    "does florida have property tax",
+    "do they have property tax in florida",
+    "does florida have property tax on vehicles",
+    "does florida have property tax on homes",
+    "does florida still have property tax",
+    "does fl have property tax",
+    "do florida have property tax",
+    "does florida have property tax still",
+    "does florida have a property tax",
+    "fl have property tax"
+   ],
+   "questions": [
+    "does florida have property tax",
+    "do they have property tax in florida",
+    "does florida have property tax on vehicles",
+    "does florida have property tax on homes",
+    "does florida still have property tax",
+    "does fl have property tax",
+    "do florida have property tax",
+    "does florida have property tax still",
+    "does florida have a property tax"
+   ]
+  },
+  {
+   "key": "beach fort walton",
+   "score": 8.7,
+   "representative": "fort walton beach cost of living",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "fort walton beach cost of living",
+    "pros and cons of living in fort walton beach florida",
+    "cost of living fort walton beach",
+    "cost of living fort walton beach fl",
+    "fort walton beach florida cost of living",
+    "fort walton beach house",
+    "va fort walton beach",
+    "home 2 fort walton beach",
+    "fort walton beach real estate",
+    "fort walton beach florida real estate",
+    "living in fort walton beach",
+    "living in fort walton beach florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "crestview",
+   "score": 7.8,
+   "representative": "cost of living crestview florida",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "cost of living crestview florida",
+    "crestview fl cost of living",
+    "pros and cons of living in crestview fl",
+    "cost of living in crestview fl",
+    "average cost of living in crestview florida",
+    "cost of living in crestview florida",
+    "living in crestview fl",
+    "living in crestview florida",
+    "moving to crestview florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "breeze gulf",
+   "score": 7.4,
+   "representative": "living in gulf breeze fl pros and cons",
+   "intent": "decision",
+   "audience": "civilian",
+   "archetype": "mega-guide",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "living in gulf breeze fl pros and cons",
+    "cost of living in gulf breeze florida",
+    "cost of living gulf breeze fl",
+    "gulf breeze florida cost of living",
+    "gulf breeze fl cost of living",
+    "living in gulf breeze fl",
+    "home 2 gulf breeze fl",
+    "gulf breeze real estate",
+    "gulf breeze florida real estate",
+    "gulf breeze fl real estate",
+    "gulf breeze fl homes"
+   ],
+   "questions": []
+  },
+  {
+   "key": "bah beach fort",
+   "score": 7.2,
+   "representative": "usaf bah fort walton beach fl",
+   "intent": "informational",
+   "audience": "both",
+   "archetype": "decision",
+   "novelty": 0.2,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": true,
+   "impressions": 6,
+   "bingVolume": 0,
+   "hubs": [
+    "/bah-rates",
+    "/bah-to-mortgage-guide"
+   ],
+   "members": [
+    "usaf bah fort walton beach fl",
+    "fort walton beach bah",
+    "what is bah in fort walton beach florida",
+    "fort walton beach bah rate",
+    "bah fort walton beach",
+    "fort walton beach florida bah"
+   ],
+   "questions": [
+    "what is bah in fort walton beach florida"
+   ]
+  },
+  {
+   "key": "flight pensacola school",
+   "score": 6.5,
+   "representative": "flight school pensacola",
+   "intent": "informational",
+   "audience": "both",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/faq"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/schools",
+    "/school-zones-military-families"
+   ],
+   "members": [
+    "flight school pensacola",
+    "what flight school is in pensacola",
+    "best flight school in pensacola",
+    "pensacola flight school cost",
+    "flight school pensacola fl",
+    "pensacola flight school",
+    "flight school in pensacola",
+    "flight school near pensacola fl",
+    "flight school near pensacola"
+   ],
+   "questions": [
+    "what flight school is in pensacola"
+   ]
+  }
+ ],
+ "queued": [
+  {
+   "key": "pensacola",
+   "score": 51.5,
+   "representative": "should i move to pensacola florida",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/404"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "should i move to pensacola florida",
+    "where to live in pensacola",
+    "pros and cons of moving to pensacola fl",
+    "living in pensacola fl pros and cons",
+    "cost of living pensacola fl",
+    "pensacola cost of living",
+    "pensacola fl cost of living",
+    "pensacola average cost of living",
+    "average cost of living in pensacola florida",
+    "cost of living in pensacola florida",
+    "living in pensacola fl",
+    "moving to pensacola"
+   ],
+   "questions": [
+    "should i move to pensacola florida",
+    "where to live in pensacola",
+    "is pensacola good for retirees",
+    "how is it living in pensacola",
+    "is it worth moving to pensacola",
+    "how to move to pensacola florida",
+    "why move to pensacola fl",
+    "how is living in pensacola florida",
+    "what is the cost of living in pensacola fl",
+    "where to live in pensacola florida",
+    "how much is the cost of living in pensacola florida",
+    "what is the cost of living in pensacola florida"
+   ]
+  },
+  {
+   "key": "bah pensacola",
+   "score": 22.7,
+   "representative": "bah pensacola 2026",
+   "intent": "informational",
+   "audience": "military",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": true,
+   "impressions": 12,
+   "bingVolume": 0,
+   "hubs": [
+    "/bah-rates",
+    "/bah-to-mortgage-guide"
+   ],
+   "members": [
+    "bah pensacola 2026",
+    "pensacola bah",
+    "pensacola bah 2026",
+    "what is bah for pensacola fl",
+    "how much is bah in pensacola",
+    "pensacola bah calculator",
+    "bah pensacola fl",
+    "bah pensacola",
+    "what is pensacola bah",
+    "how much is pensacola bah",
+    "bah calculator 2026 pensacola fl",
+    "bah calculator pensacola florida"
+   ],
+   "questions": [
+    "what is bah for pensacola fl",
+    "how much is bah in pensacola",
+    "what is pensacola bah",
+    "how much is pensacola bah"
+   ]
+  },
+  {
+   "key": "property tax",
+   "score": 20.8,
+   "representative": "property tax florida",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 300,
+   "hubs": [
+    "/blog/property-taxes-escambia-santa-rosa",
+    "/va-disability-property-tax-florida"
+   ],
+   "members": [
+    "property tax florida",
+    "how much is fl property tax",
+    "how much is property tax in florida",
+    "does florida property tax",
+    "what is florida property tax",
+    "property tax in florida",
+    "florida property tax cost",
+    "average florida property tax",
+    "florida property tax calculator",
+    "florida property tax calculator 2026",
+    "florida property tax",
+    "florida property tax 2026"
+   ],
+   "questions": [
+    "how much is fl property tax",
+    "how much is property tax in florida",
+    "does florida property tax",
+    "what is florida property tax",
+    "is florida property tax",
+    "how much florida property tax",
+    "how much is florida property tax"
+   ]
+  },
+  {
+   "key": "baldwin county property",
+   "score": 19.6,
+   "representative": "baldwin county property tax rate",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.4,
+   "coveredBy": [
+    "pmh:/blog/bah-2026-pensacola-what-can-you-afford",
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/blog/property-taxes-escambia-santa-rosa",
+    "/va-disability-property-tax-florida"
+   ],
+   "members": [
+    "baldwin county property tax rate",
+    "baldwin county property tax calculator",
+    "baldwin county al property tax calculator",
+    "baldwin county property tax",
+    "baldwin county property tax search",
+    "baldwin county al property tax rate",
+    "baldwin county property tax website",
+    "baldwin county property tax sale",
+    "baldwin county revenue property tax",
+    "baldwin county revenue property taxes",
+    "baldwin county property tax for seniors",
+    "baldwin county property taxes"
+   ],
+   "questions": []
+  },
+  {
+   "key": "county escambia property",
+   "score": 18.5,
+   "representative": "escambia county property tax rate",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0.2,
+   "coveredBy": [
+    "pmh:/blog/bah-2026-pensacola-what-can-you-afford",
+    "pmh:/florida-homestead-exemption-military"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/blog/property-taxes-escambia-santa-rosa",
+    "/va-disability-property-tax-florida"
+   ],
+   "members": [
+    "escambia county property tax rate",
+    "escambia county property tax calculator",
+    "escambia county property tax",
+    "escambia county property tax search",
+    "how much is property tax in escambia county florida",
+    "how much are property taxes in escambia county",
+    "escambia county property tax website",
+    "escambia county tangible property tax",
+    "escambia county property tax statement",
+    "escambia county fl property tax rate",
+    "escambia county florida property tax calculator",
+    "escambia county property tax search fl"
+   ],
+   "questions": [
+    "how much is property tax in escambia county florida",
+    "how much are property taxes in escambia county"
+   ]
+  },
+  {
+   "key": "exemption homestead",
+   "score": 18.1,
+   "representative": "homestead exemption florida",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 622,
+   "hubs": [
+    "/resources/florida-homestead-exemption",
+    "/florida-homestead-exemption-military"
+   ],
+   "members": [
+    "homestead exemption florida",
+    "what is florida homestead exemption",
+    "how much is florida homestead exemption",
+    "how much is homestead exemption in florida",
+    "florida homestead exemption calculator",
+    "florida homestead exemption requirements",
+    "florida homestead exemption",
+    "florida homestead exemption 2026",
+    "is florida homestead exemption",
+    "what is fl homestead exemption",
+    "how much is the florida homestead exemption worth",
+    "how much is homestead exemption in florida calculator"
+   ],
+   "questions": [
+    "what is florida homestead exemption",
+    "how much is florida homestead exemption",
+    "how much is homestead exemption in florida",
+    "is florida homestead exemption",
+    "what is fl homestead exemption",
+    "how much is the florida homestead exemption worth",
+    "how much is homestead exemption in florida calculator",
+    "what is a florida homestead exemption",
+    "how to florida homestead exemption",
+    "what is the florida homestead exemption",
+    "what does florida homestead exemption do",
+    "how to do homestead exemption in florida"
+   ]
+  },
+  {
+   "key": "insurance title",
+   "score": 16.8,
+   "representative": "what is title insurance florida",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/va-loan-closing-costs-florida"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "what is title insurance florida",
+    "how much is title insurance in florida",
+    "florida title insurance cost calculator",
+    "cost of title insurance florida",
+    "average cost of title insurance in florida",
+    "title insurance florida calculator",
+    "title insurance florida",
+    "how much is title insurance in florida for a house",
+    "how much is title insurance florida",
+    "how much is title insurance in florida calculator",
+    "how much should title insurance cost in florida",
+    "how much does title insurance cost in florida"
+   ],
+   "questions": [
+    "what is title insurance florida",
+    "how much is title insurance in florida",
+    "how much is title insurance in florida for a house",
+    "how much is title insurance florida",
+    "how much is title insurance in florida calculator",
+    "how much should title insurance cost in florida",
+    "how much does title insurance cost in florida",
+    "what is the average cost of title insurance in florida",
+    "what does title insurance cost in florida"
+   ]
+  },
+  {
+   "key": "insurance",
+   "score": 16.1,
+   "representative": "how much is florida home insurance",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/crestview-military-relocation"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "how much is florida home insurance",
+    "how much is home insurance in florida",
+    "florida home insurance cost",
+    "average florida home insurance cost",
+    "average florida home insurance",
+    "florida home insurance calculator",
+    "florida home insurance requirements",
+    "how much does florida home insurance cost",
+    "how much is average home insurance florida",
+    "how much does home insurance in florida",
+    "how much is home insurance in florida calculator",
+    "how much does home insurance cost in florida"
+   ],
+   "questions": [
+    "how much is florida home insurance",
+    "how much is home insurance in florida",
+    "how much does florida home insurance cost",
+    "how much is average home insurance florida",
+    "how much does home insurance in florida",
+    "how much is home insurance in florida calculator",
+    "how much does home insurance cost in florida",
+    "how much is home insurance in florida average",
+    "why florida home insurance is worth it"
+   ]
+  },
+  {
+   "key": "field housing hurlburt",
+   "score": 14.7,
+   "representative": "hurlburt field housing waitlist stats",
+   "intent": "informational",
+   "audience": "military",
+   "archetype": "decision",
+   "novelty": 0.4,
+   "coveredBy": [
+    "pmh:/bah-rates",
+    "pmh:/on-base-vs-off-base-hurlburt-field"
+   ],
+   "inQueue": true,
+   "impressions": 2,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "hurlburt field housing waitlist stats",
+    "hurlburt field housing office",
+    "hurlburt field housing",
+    "hurlburt field housing pictures",
+    "hurlburt field housing maintenance",
+    "hurlburt field housing pool",
+    "hurlburt field housing mayroad",
+    "hurlburt field temporary housing",
+    "mayroad housing hurlburt field",
+    "housing office hurlburt field",
+    "hurlburt field housing waiting list",
+    "hurlburt field military housing office"
+   ],
+   "questions": []
+  },
+  {
+   "key": "bah field hurlburt",
+   "score": 12.6,
+   "representative": "bah hurlburt field",
+   "intent": "informational",
+   "audience": "military",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": true,
+   "impressions": 20,
+   "bingVolume": 0,
+   "hubs": [
+    "/bah-rates",
+    "/bah-to-mortgage-guide"
+   ],
+   "members": [
+    "bah hurlburt field",
+    "hurlburt field bah",
+    "hurlburt field bah 2026",
+    "hurlburt field bah rates",
+    "hurlburt field bah calculator",
+    "e-5 bah in hurlburt field fl",
+    "hurlburt field bah rates 2026",
+    "hurlburt field 2026 bah"
+   ],
+   "questions": []
+  },
+  {
+   "key": "destin",
+   "score": 10.3,
+   "representative": "destin fl cost of living",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/va-approved-condos-pensacola"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "destin fl cost of living",
+    "living in destin fl pros and cons",
+    "pros and cons of living in destin florida",
+    "pros and cons of living in destin fl",
+    "destin florida cost of living",
+    "cost of living destin fl",
+    "cost of living destin fl calculator",
+    "cost of homes in destin florida",
+    "cost of living near destin florida",
+    "destin florida cost of living calculator",
+    "destin florida average cost of living",
+    "living in destin fl"
+   ],
+   "questions": []
+  },
+  {
+   "key": "citizens insurance",
+   "score": 10.3,
+   "representative": "citizens florida insurance",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/florida-home-insurance-military"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 48,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "citizens florida insurance",
+    "what is citizens insurance florida",
+    "citizens insurance florida",
+    "is citizens insurance in florida good",
+    "is citizens insurance still in florida",
+    "is citizens home insurance in florida good",
+    "is citizens insurance florida good",
+    "how much is citizens insurance in florida",
+    "what is citizens insurance in florida",
+    "citizens insurance in florida",
+    "citizens insurance in fl",
+    "florida citizens home insurance"
+   ],
+   "questions": [
+    "what is citizens insurance florida",
+    "is citizens insurance in florida good",
+    "is citizens insurance still in florida",
+    "is citizens home insurance in florida good",
+    "is citizens insurance florida good",
+    "how much is citizens insurance in florida",
+    "what is citizens insurance in florida"
+   ]
+  },
+  {
+   "key": "pensacola rent",
+   "score": 10,
+   "representative": "average pensacola rent",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/faq"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "average pensacola rent",
+    "pensacola florida average rent",
+    "cost of rent in pensacola florida",
+    "average rent pensacola fl",
+    "average rent in pensacola",
+    "average rent in pensacola fl",
+    "average rent in pensacola florida",
+    "pensacola homes for rent",
+    "pensacola florida for rent",
+    "pensacola home for rent",
+    "rent in pensacola fl",
+    "homes to rent in pensacola florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "homeowners insurance",
+   "score": 8.9,
+   "representative": "homeowners insurance in florida",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/faq"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 649,
+   "hubs": [
+    "/resources/florida-home-insurance",
+    "/florida-home-insurance-military"
+   ],
+   "members": [
+    "homeowners insurance in florida",
+    "best homeowners insurance florida",
+    "homeowners insurance florida",
+    "florida homeowners insurance",
+    "florida homeowners insurance pros and cons",
+    "florida homeowners insurance cost",
+    "homeowners insurance cost calculator florida",
+    "florida homeowners insurance calculator",
+    "florida homeowners insurance requirements",
+    "home insurance for florida homeowners",
+    "florida insurance for homeowners",
+    "florida homeowners insurance near me"
+   ],
+   "questions": []
+  },
+  {
+   "key": "beach fort walton",
+   "score": 8.7,
+   "representative": "fort walton beach cost of living",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "fort walton beach cost of living",
+    "pros and cons of living in fort walton beach florida",
+    "cost of living fort walton beach",
+    "cost of living fort walton beach fl",
+    "fort walton beach florida cost of living",
+    "fort walton beach house",
+    "va fort walton beach",
+    "home 2 fort walton beach",
+    "fort walton beach real estate",
+    "fort walton beach florida real estate",
+    "living in fort walton beach",
+    "living in fort walton beach florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "application exemption homestead",
+   "score": 8.3,
+   "representative": "florida homestead exemption application 2026",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.6,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 697,
+   "hubs": [
+    "/resources/florida-homestead-exemption",
+    "/florida-homestead-exemption-military"
+   ],
+   "members": [
+    "florida homestead exemption application 2026",
+    "homestead exemption florida application 2026",
+    "florida homestead exemption application",
+    "florida homestead exemption application online pdf",
+    "florida homestead exemption application online",
+    "florida homestead exemption application 2027"
+   ],
+   "questions": []
+  },
+  {
+   "key": "crestview",
+   "score": 7.8,
+   "representative": "cost of living crestview florida",
+   "intent": "cost",
+   "audience": "civilian",
+   "archetype": "data-study",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "cost of living crestview florida",
+    "crestview fl cost of living",
+    "pros and cons of living in crestview fl",
+    "cost of living in crestview fl",
+    "average cost of living in crestview florida",
+    "cost of living in crestview florida",
+    "living in crestview fl",
+    "living in crestview florida",
+    "moving to crestview florida"
+   ],
+   "questions": []
+  },
+  {
+   "key": "elimination property tax",
+   "score": 7.7,
+   "representative": "florida property tax elimination update",
+   "intent": "informational",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 874,
+   "hubs": [
+    "/blog/property-taxes-escambia-santa-rosa",
+    "/va-disability-property-tax-florida"
+   ],
+   "members": [
+    "florida property tax elimination update",
+    "florida property tax elimination",
+    "florida property tax elimination pros and cons",
+    "florida property tax elimination calculator",
+    "florida property tax elimination 2026"
+   ],
+   "questions": []
+  },
+  {
+   "key": "breeze gulf",
+   "score": 7.4,
+   "representative": "living in gulf breeze fl pros and cons",
+   "intent": "decision",
+   "audience": "civilian",
+   "archetype": "mega-guide",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "living in gulf breeze fl pros and cons",
+    "cost of living in gulf breeze florida",
+    "cost of living gulf breeze fl",
+    "gulf breeze florida cost of living",
+    "gulf breeze fl cost of living",
+    "living in gulf breeze fl",
+    "home 2 gulf breeze fl",
+    "gulf breeze real estate",
+    "gulf breeze florida real estate",
+    "gulf breeze fl real estate",
+    "gulf breeze fl homes"
+   ],
+   "questions": []
+  },
+  {
+   "key": "bah beach fort",
+   "score": 7.2,
+   "representative": "usaf bah fort walton beach fl",
+   "intent": "informational",
+   "audience": "both",
+   "archetype": "decision",
+   "novelty": 0.2,
+   "coveredBy": [
+    "pmh:/bah-rates"
+   ],
+   "inQueue": true,
+   "impressions": 6,
+   "bingVolume": 0,
+   "hubs": [
+    "/bah-rates",
+    "/bah-to-mortgage-guide"
+   ],
+   "members": [
+    "usaf bah fort walton beach fl",
+    "fort walton beach bah",
+    "what is bah in fort walton beach florida",
+    "fort walton beach bah rate",
+    "bah fort walton beach",
+    "fort walton beach florida bah"
+   ],
+   "questions": [
+    "what is bah in fort walton beach florida"
+   ]
+  },
+  {
+   "key": "alabama baldwin county",
+   "score": 7.1,
+   "representative": "how much is property tax in baldwin county alabama",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.4,
+   "coveredBy": [
+    "pmh:/blog",
+    "pmh:/blog/bah-2026-pensacola-what-can-you-afford"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/blog/property-taxes-escambia-santa-rosa",
+    "/va-disability-property-tax-florida"
+   ],
+   "members": [
+    "how much is property tax in baldwin county alabama",
+    "baldwin county alabama property tax rate",
+    "baldwin county property tax alabama",
+    "baldwin county alabama property tax",
+    "baldwin county property taxes alabama",
+    "baldwin county alabama property tax search",
+    "baldwin county property tax search alabama"
+   ],
+   "questions": [
+    "how much is property tax in baldwin county alabama"
+   ]
+  },
+  {
+   "key": "destin get hurricanes",
+   "score": 6.6,
+   "representative": "does destin florida get hurricanes",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.75,
+   "coveredBy": [],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [],
+   "members": [
+    "does destin florida get hurricanes",
+    "does destin fl get a lot of hurricanes",
+    "does destin fl get hurricanes"
+   ],
+   "questions": [
+    "does destin florida get hurricanes",
+    "does destin fl get a lot of hurricanes",
+    "does destin fl get hurricanes"
+   ]
+  },
+  {
+   "key": "flight pensacola school",
+   "score": 6.5,
+   "representative": "flight school pensacola",
+   "intent": "informational",
+   "audience": "both",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/faq"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/schools",
+    "/school-zones-military-families"
+   ],
+   "members": [
+    "flight school pensacola",
+    "what flight school is in pensacola",
+    "best flight school in pensacola",
+    "pensacola flight school cost",
+    "flight school pensacola fl",
+    "pensacola flight school",
+    "flight school in pensacola",
+    "flight school near pensacola fl",
+    "flight school near pensacola"
+   ],
+   "questions": [
+    "what flight school is in pensacola"
+   ]
+  },
+  {
+   "key": "exemption homestead tax",
+   "score": 6.3,
+   "representative": "florida homestead tax exemption calculator",
+   "intent": "howto",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 0,
+   "hubs": [
+    "/resources/florida-homestead-exemption",
+    "/florida-homestead-exemption-military"
+   ],
+   "members": [
+    "florida homestead tax exemption calculator",
+    "how much is the florida homestead tax exemption",
+    "how much is florida homestead tax exemption",
+    "what is florida homestead tax exemption",
+    "what is the florida homestead tax exemption",
+    "florida homestead tax exemption requirements",
+    "homestead tax exemption florida",
+    "fl homestead tax exemption",
+    "homestead tax exemption fl",
+    "florida homestead tax exemption",
+    "florida homestead tax exemption 2026",
+    "homestead tax exemption in florida"
+   ],
+   "questions": [
+    "how much is the florida homestead tax exemption",
+    "how much is florida homestead tax exemption",
+    "what is florida homestead tax exemption",
+    "what is the florida homestead tax exemption"
+   ]
+  },
+  {
+   "key": "apply exemption homestead",
+   "score": 6,
+   "representative": "how to apply for homestead exemption florida",
+   "intent": "question",
+   "audience": "civilian",
+   "archetype": "decision",
+   "novelty": 0.5,
+   "coveredBy": [
+    "pmh:/blog"
+   ],
+   "inQueue": true,
+   "impressions": 0,
+   "bingVolume": 23,
+   "hubs": [
+    "/resources/florida-homestead-exemption",
+    "/florida-homestead-exemption-military"
+   ],
+   "members": [
+    "how to apply for homestead exemption florida",
+    "can i apply for florida homestead exemption online",
+    "how to apply florida homestead exemption",
+    "how to apply for florida homestead exemption",
+    "when can i apply for florida homestead exemption",
+    "what do i need to apply for florida homestead exemption",
+    "homestead tax exemption florida how to apply"
+   ],
+   "questions": [
+    "how to apply for homestead exemption florida",
+    "can i apply for florida homestead exemption online",
+    "how to apply florida homestead exemption",
+    "how to apply for florida homestead exemption",
+    "when can i apply for florida homestead exemption",
+    "what do i need to apply for florida homestead exemption"
+   ]
+  }
+ ]
+}

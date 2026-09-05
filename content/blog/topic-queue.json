@@ -119,7 +119,8 @@
         "retiring in pensacola",
         "is pensacola good for retirees",
         "best places to retire florida panhandle"
-      ]
+      ],
+      "evidence": "Radar 2026-09-04: best retirement communities in Pensacola for seniors (6 queries), senior living in Pensacola (3), retirement communities Gulf Shores AL (3). Include a 55+ community table with HOA ranges and a Gulf Shores/Orange Beach section."
     },
     {
       "slug": "pensacola-first-time-homebuyer-2026",
@@ -199,6 +200,20 @@
         "pensacola rental property roi",
         "military town rental investing"
       ]
+    },
+    {
+      "slug": "base-housing-waitlists-hurlburt-eglin-nas-pensacola",
+      "archetype": "decision",
+      "audience": "military",
+      "title": "Base Housing Waitlists at Hurlburt, Eglin and NAS Pensacola: What the Wait Means for Your Housing Decision",
+      "targetKeywords": [
+        "hurlburt field housing waitlist",
+        "eglin afb housing waitlist",
+        "nas pensacola housing waitlist",
+        "base housing waitlist by rank"
+      ],
+      "evidence": "Radar 2026-09-04 #2 (12 related queries: housing office, waitlist, Mayroad, temporary housing; 2 Bing impressions already on the site with no page answering them). Run scripts/blog-dedup-check.mjs first: the on-base-vs-off-base pages may own this, in which case it becomes a waitlist section refreshed on each of them with the PPV housing office contacts and published wait ranges.",
+      "rerank": "ADDED 2026-09-04 by scripts/topic-miner.mjs from observed demand."
     }
   ],
   "lastRerank": "2026-09-04 (dedup gate: 2 items converted to refreshes, 3 annotated as by-design or differentiate)"

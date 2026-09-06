@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-06T07:47:22.354Z",
+  "at": "2026-09-06T19:26:37.792Z",
   "checks": [
     {
       "name": "Both military campaign pages require affirmative Meta consent",
@@ -34,11 +34,11 @@
       "pass": true
     },
     {
-      "name": "GPC, unknown query data and the privacy page do not send Meta events",
+      "name": "GPC and unknown query data do not send Meta events",
       "pass": true
     },
     {
-      "name": "A visit from a benefits article does not leak its referrer through the campaign Pixel",
+      "name": "An opted-in guide reader is measured on both the guide and the campaign destination",
       "pass": true
     }
   ],

@@ -189,12 +189,10 @@
     "tracking": {
       "consent": "Meta opt-in with 180-day expiry and GPC respected",
       "previewHosts": "all production trackers blocked on preview hosts",
-      "pmhPages": [
-        "/pcs-checklist",
-        "/book-pcs-call"
-      ],
+      "pmhPages": "Sitewide: 98 HTML sources, 103 built pages including six interactive routes and 12 blog posts",
       "civilianPages": "sitewide optional Meta",
-      "eventRules": "PageView once per document; Lead only after the contact service explicitly accepts a form; Contact for call/text intent; no automatic matching or contact field parameters"
+      "eventRules": "PageView once per document or interactive path change, with duplicate SDK history tracking disabled; Lead only after HTTP success and boolean success:true from the contact service; Contact for call/text intent; no automatic matching or contact field parameters",
+      "militarySitewideVerified": "103 built pages and 11 browser checks; Meta and CRM requests mocked. Actual production event receipt remains unverified."
     }
   }
 }

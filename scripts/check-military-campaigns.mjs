@@ -80,14 +80,16 @@ try{
   await f.page.locator('#book-body .vf-ok').waitFor({state:'visible'});assert.equal((await f.meta()).filter(e=>e[2]==='Lead').length,1);
   assert.equal((await f.meta()).filter(e=>e[2]==='Schedule').length,0);
  });
- await check('GPC, unknown query data and the privacy page do not send Meta events',async()=>{
-  for(const item of [{path:'/pcs-checklist',gpc:true},{path:'/pcs-checklist?email=private@example.invalid'},{path:'/privacy'}]){
+ await check('GPC and unknown query data do not send Meta events',async()=>{
+  for(const item of [{path:'/pcs-checklist',gpc:true},{path:'/pcs-checklist?email=private@example.invalid'}]){
    const f=await fixture({consent:true,gpc:item.gpc});await f.page.goto(origin+item.path);assert.equal(f.sdk.length,0);
   }
  });
- await check('A visit from a benefits article does not leak its referrer through the campaign Pixel',async()=>{
-  const f=await fixture({consent:true});await f.page.goto(origin+'/disabled-veteran-benefits-florida');assert.equal(f.sdk.length,0);
-  await f.page.locator('.explore-col a[href="/pcs-checklist"]').click();await f.page.waitForURL('**/pcs-checklist');assert.equal(f.sdk.length,0);
+ await check('An opted-in guide reader is measured on both the guide and the campaign destination',async()=>{
+  const f=await fixture({consent:true});await f.page.goto(origin+'/disabled-veteran-benefits-florida');assert.equal(f.sdk.length,1);
+  assert.equal((await f.meta()).filter(e=>e[2]==='PageView').length,1);
+  await f.page.locator('.explore-col a[href="/pcs-checklist"]').click();await f.page.waitForURL('**/pcs-checklist');await f.page.waitForFunction(()=>window.__meta?.some(e=>e[2]==='PageView'));
+  assert.equal(f.sdk.length,2);assert.equal((await f.meta()).filter(e=>e[2]==='PageView').length,1);
  });
 }finally{await browser.close();}
 writeFileSync('docs/site-growth-2026-09-06/military-campaign-checks.json',JSON.stringify({at:new Date().toISOString(),checks,delivery:'CRM and Meta SDK mocked; no live lead or analytics sent.'},null,2)+'\n');

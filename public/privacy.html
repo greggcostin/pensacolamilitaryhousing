@@ -389,7 +389,7 @@ main details p{font-size:16px}
 <p>We ask for your permission before loading the Meta Pixel for Facebook and Instagram advertising measurement and remarketing. You can decline and still use our guides and inquiry forms. The Facebook &amp; Instagram ad preferences button in the footer lets you change your choice. We remember that choice for up to 180 days. A browser Global Privacy Control signal keeps Meta advertising off.</p>
 <p>With permission, Meta receives page views and selected actions, such as a call-button click or a successfully submitted inquiry, to measure ads and support remarketing. We do not add your name, email address, phone number, or inquiry message to those events. Meta may receive technical information, including your IP address and browser information, through its Pixel.</p>
 <p>These controls apply to Meta advertising. They do not change the separate Google Analytics, Microsoft Clarity, or Follow Up Boss settings described above.</p>
-<p>Meta measurement is limited to the PCS checklist and call-request pages. Other military guides do not load this Pixel. You can change your advertising choice using the button at the bottom of this privacy page.</p>
+<p>With your permission, Meta measurement applies throughout PensacolaMilitaryHousing.com, including our articles, base and community guides, calculators, and inquiry pages. You can change your advertising choice using the Facebook &amp; Instagram ad preferences button in the footer of any page.</p>
 <p>Some pages embed tools from other companies: RealScout (home search), Calendly (appointment booking), and Pagefind (on-site search, which runs in your browser and sends nothing to a server). When you use them, those companies collect information under their own privacy policies. Links to government, school, and industry sources open sites we do not control.</p>
 
 <h2>How long we keep information</h2>
@@ -471,7 +471,7 @@ MRP &middot; ABR &middot; SRS &middot; RENE &middot; FMS &middot; Pursuing GRI</
 <p data-last-updated="true" style="text-align:center;font-size:.75rem;color:var(--mutedD,#6B7280);margin:.5rem auto 0;letter-spacing:.5px;text-transform:uppercase">Last updated: September 6, 2026</p>
 <p style="text-align:center;color:var(--mutedD,#6f6e65);font-size:.75rem;margin:.5rem 0 0;letter-spacing:.5px;text-transform:uppercase">Content last verified: September 2026</p>
 <p data-legal="disclaimer" style="color:var(--mutedD,#6f6e65);font-size:.7rem;font-style:italic;line-height:1.6;margin:1rem auto 0;text-align:center;max-width:820px"><strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (220 W. Garden Street, Pensacola, FL 32502). Information on this site, including BAH figures, VA loan terms, funding fees, tax rules, homestead and disability benefits, school zoning, and rental/investment commentary, is provided for general informational purposes only and is not legal, tax, financial, mortgage, lending, or investment advice. Real estate, lending, tax, and benefits rules change frequently and depend on individual circumstances; verify current figures with official sources (DoD BAH calculator, VA, IRS, your county property appraiser) and consult a licensed attorney, CPA, or NMLS-licensed loan officer for guidance specific to your situation. Gregg Costin is not a mortgage lender, attorney, tax professional, or financial advisor, and is not affiliated with, endorsed by, or representing the U.S. Department of Defense, Department of Veterans Affairs, or any branch of the U.S. military. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.</p>
-<p><button type="button" data-meta-settings hidden>Facebook &amp; Instagram ad preferences</button></p>
+<p><button type="button" data-meta-settings>Facebook &amp; Instagram ad preferences</button></p>
 </footer>
 
 
@@ -598,15 +598,16 @@ overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
 document.querySelectorAll('[data-inquiry-close]').forEach(function(b){b.addEventListener('click',close);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 form.addEventListener('submit',function(e){
-e.preventDefault();errBox.style.display='none';
+e.preventDefault();errBox.style.display='none';if(!form.reportValidity())return;
 var btn=form.querySelector('.isubmit');
 var data={name:get('name').trim(),email:get('email').trim(),phone:get('phone').trim(),inquiryType:get('inquiryType'),message:get('message').trim()||('Inquiry from '+location.pathname+' (no message text)'),_gotcha:get('website')};try{var __a=JSON.parse(localStorage.getItem('costin_attr')||'{}');for(var __k in __a){if(!(__k in data))data[__k]=__a[__k];}var __m=document.cookie.match(/(?:^|; )_ga=GA\d\.\d\.(\d+\.\d+)/);if(__m)data.ga_client_id=__m[1];data.page_path=location.pathname;data.sourceUrl=location.href;}catch(e){}
+if(data._gotcha)return;
 if(!data.name||!data.email){errBox.textContent='\u26a0 Name and email are required.';errBox.style.display='block';return;}
 btn.disabled=true;btn.textContent='Sending...';
 fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
 .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
 .then(function(res){
-if(res.ok&&res.j.success){body.innerHTML='<div class="iok"><div style="font-size:40px;margin-bottom:12px">\u2713</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. I will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('pmh-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
+if(res.ok&&res.j.success===true){document.dispatchEvent(new CustomEvent('costin:lead-success',{detail:{form_id:form.id}}));body.innerHTML='<div class="iok"><div style="font-size:40px;margin-bottom:12px">\u2713</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. I will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('pmh-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
 else{errBox.textContent='\u26a0 '+(res.j.error||'Something went wrong. Please call (850) 266-5005.');errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';}
 })
 .catch(function(){errBox.textContent='\u26a0 Connection error. Please call (850) 266-5005 directly.';errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';});

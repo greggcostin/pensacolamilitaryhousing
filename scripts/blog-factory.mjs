@@ -1,4 +1,5 @@
 import { guardAnalytics } from "./analytics-host-guard.mjs";
+import { applyMilitaryMeta } from "./military-meta-lib.mjs";
 import { evidenceGate } from "./article-evidence.mjs";
 import { journeyHtml, wireJourney } from "./blog-journey.mjs";
 // Blog factory: builds /blog/<slug> static post pages from content/blog/*.fragment.html,
@@ -284,7 +285,7 @@ function buildPost(spec, template) {
   if (o !== c) throw new Error(`${spec.slug}: unbalanced divs (${o} vs ${c}) — refusing to write`);
 
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
-  writeFileSync(OUT_DIR + spec.slug + ".html", guardAnalytics(html));
+  writeFileSync(OUT_DIR + spec.slug + ".html", guardAnalytics(applyMilitaryMeta(html)));
   console.log("POST:", spec.slug, `(${Math.round(html.length / 1024)}KB)`);
 }
 
@@ -311,7 +312,7 @@ function rebuildIndex(specs) {
 </article>`).join("\n\n");
   html = html.slice(0, first) + cards + html.slice(last + "</article>".length);
 
-  writeFileSync(INDEX_PATH, guardAnalytics(html));
+  writeFileSync(INDEX_PATH, guardAnalytics(applyMilitaryMeta(html)));
   console.log(`INDEX: ${sorted.length} cards rebuilt`);
 }
 

@@ -803,6 +803,7 @@ const Footer = ({ go }) => {
         <div style={{ borderTop: `1px solid ${C.hairline}`, paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
           <p data-costin-sites style={{ color: C.mutedD, fontSize: 11 }}>© 2026 The Costin Team. All rights reserved. | PensacolaMilitaryHousing.com for military &amp; PCS families · <a href="https://greggcostin.com" style={{ color: C.mutedD }}>GreggCostin.com</a> for civilian buying &amp; selling</p>
           <p style={{ color: C.mutedD, fontSize: 11 }}>Gregg Costin, Realtor® · MRP® · ABR® · SRS® · RENE® · FMS® · <a href="/privacy" style={{ color: C.mutedD }}>Privacy</a> · <a href="/accessibility" style={{ color: C.mutedD }}>Accessibility</a></p>
+          <p style={{ color: C.mutedD, fontSize: 12 }}><button type="button" data-meta-settings>Facebook &amp; Instagram ad preferences</button></p>
         </div>
         <p style={{ color: C.mutedD, fontSize: 10.5, fontStyle: "italic", lineHeight: 1.6, marginTop: 16, textAlign: "center", maxWidth: 1100, marginLeft: "auto", marginRight: "auto" }}>
           <strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (220 W. Garden St., Pensacola, FL 32502). Information on this site (including BAH figures, VA loan terms, funding fees, tax rules, homestead and disability benefits, school zoning, and rental/investment commentary) is provided for general informational purposes only and is not legal, tax, financial, mortgage, lending, or investment advice. Real estate, lending, tax, and benefits rules change frequently and depend on individual circumstances; verify current figures with official sources (DoD BAH calculator, VA, IRS, your county property appraiser) and consult a licensed attorney, CPA, or NMLS-licensed loan officer for guidance specific to your situation. Gregg Costin is not a mortgage lender, attorney, tax professional, or financial advisor, and is not affiliated with, endorsed by, or representing the U.S. Department of Defense, Department of Veterans Affairs, or any branch of the U.S. military. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.
@@ -931,6 +932,7 @@ const InquiryForm = () => {
   const handleChange = (field) => (e) => setFormData({ ...formData, [field]: e.target.value });
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (status === "submitting" || formData.honeypot || !e.currentTarget.reportValidity()) return;
     setStatus("submitting");
     setErrorMsg("");
     if (!formData.name.trim() || !formData.email.trim()) { setStatus("error"); setErrorMsg("Name and email are required."); return; }
@@ -939,9 +941,10 @@ const InquiryForm = () => {
       const payload = withAttribution({ name: formData.name, email: formData.email, phone: formData.phone, inquiryType: formData.inquiryType, message: formData.message.trim() || `Inquiry from ${window.location.pathname} (no message text)`, _gotcha: formData.honeypot });
       const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       const data = await response.json();
-      if (response.ok && data.success) {
+      if (response.ok && data.success === true) {
         setStatus("success");
         markInquirySubmitted();
+        document.dispatchEvent(new CustomEvent("costin:lead-success", { detail: { form_id: "spa-inquiry-form" } }));
         track("inquiry_submit", { inquiry_type: formData.inquiryType, cta_location: "spa-inquiry-form", page_path: window.location.pathname });
         setFormData({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
       } else { setStatus("error"); setErrorMsg(data.error || "Something went wrong. Please call (850) 266-5005."); }
@@ -2232,6 +2235,7 @@ const ContactPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (status === "submitting" || formData.honeypot || !e.currentTarget.reportValidity()) return;
     setStatus("submitting");
     setErrorMsg("");
     if (!formData.name.trim() || !formData.email.trim()) { setStatus("error"); setErrorMsg("Name and email are required."); return; }
@@ -2240,8 +2244,9 @@ const ContactPage = () => {
       const payload = withAttribution({ name: formData.name, email: formData.email, phone: formData.phone, inquiryType: formData.inquiryType, message: formData.message.trim() || `Inquiry from ${window.location.pathname} (no message text)`, _gotcha: formData.honeypot });
       const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       const data = await response.json();
-      if (response.ok && data.success) {
+      if (response.ok && data.success === true) {
         setStatus("success");
+        document.dispatchEvent(new CustomEvent("costin:lead-success", { detail: { form_id: "spa-contact-page" } }));
         track("inquiry_submit", { inquiry_type: formData.inquiryType, cta_location: "spa-contact-page", page_path: window.location.pathname });
         setFormData({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
       } else { setStatus("error"); setErrorMsg(data.error || "Something went wrong. Please call (850) 266-5005."); }
@@ -2448,6 +2453,7 @@ export default function App() {
     const og = m.shell ? `${SITE}/og/${m.file}.png` : `${SITE}/og/home.png`;
     set('meta[property="og:image"]', "content", og);
     set('meta[name="twitter:image"]', "content", og);
+    document.dispatchEvent(new CustomEvent("costin:page-view"));
   }, [page]);
 
   useEffect(() => {

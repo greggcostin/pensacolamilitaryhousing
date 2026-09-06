@@ -4,6 +4,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import vm from 'node:vm';
 import { analyticsGuardFindings, guardAnalytics, isProductionLocation } from '../analytics-host-guard.mjs';
+import { applyMilitaryMeta } from '../military-meta-lib.mjs';
 const read = file => readFileSync(file, 'utf8');
 const walk = dir => readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(dir+'/'+e.name):e.name.endsWith('.html')?[dir+'/'+e.name]:[]);
 const productionPages=['index.html',...walk('public'),...walk('civilian-site')];
@@ -67,5 +68,25 @@ test('Meta cannot activate on a preview even with real enabled configuration and
   assert.equal(ctx.window.COSTIN_META.enabled,true);
   vm.runInNewContext(read('civilian-site/assets/costin-meta.js'),ctx);
   assert.equal(ctx.window.fbq,undefined);assert.equal(ctx.window.costinMeta,undefined);
+ }
+});
+
+test('Every military source and built page has one shared Pixel loader and an ad-preferences control',()=>{
+ for(const file of ['index.html',...walk('public'),...walk('dist')]){
+  const html=read(file);
+  for(const asset of ['costin-meta.js','costin-meta-config.js','costin-meta.css'])assert.equal(html.split('/assets/'+asset+'"').length-1,1,file+' '+asset);
+  assert.equal((html.match(/<button\b[^>]*data-meta-settings/g)||[]).length,1,file+' preferences');
+ }
+ const ctx={window:{}};vm.runInNewContext(read('public/assets/costin-meta-config.js'),ctx);
+ assert.equal(ctx.window.COSTIN_META.pixelId,'960230270427179');
+ assert.equal(ctx.window.COSTIN_META.allowedPaths,undefined);
+ for(const id of ['lm-form','book-form','val-form','inquiry-form','spa-inquiry-form','spa-contact-page'])assert.ok(ctx.window.COSTIN_META.acceptedLeadForms.includes(id),id);
+});
+
+test('Military rollout is idempotent with LF and CRLF sources',()=>{
+ for(const file of ['index.html',...walk('public')]){
+  for(const newline of ['\n','\r\n']){
+   const html=read(file).replace(/\r?\n/g,newline);assert.equal(applyMilitaryMeta(html),html,file+' '+JSON.stringify(newline));
+  }
  }
 });

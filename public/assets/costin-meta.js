@@ -2,20 +2,14 @@
 (() => {
   'use strict';
   // Fail closed on every preview host, even when production configuration is copied locally.
-  if (window.costinProduction !== true) return;
+  if (window.costinProduction !== true || window.costinMeta) return;
   const config = window.COSTIN_META || {};
   const key = 'costin_meta_consent_v1';
   const lifetime = 180 * 24 * 60 * 60 * 1000;
   const configured = config.enabled === true && /^\d{5,20}$/.test(config.pixelId || '');
   const normalizedPath = path => path.replace(/\.html$/, '').replace(/\/$/, '') || '/';
-  const routeAllowed = () => !config.allowedPaths || config.allowedPaths.includes(normalizedPath(location.pathname));
-  // A limited campaign deployment must not send the previous page's sensitive topic either.
-  const referrerAllowed = () => {
-    if (!config.allowedPaths || !document.referrer) return true;
-    try { const previous = new URL(document.referrer); return previous.origin !== location.origin || (!previous.search && !previous.hash && config.allowedPaths.includes(normalizedPath(previous.pathname))); }
-    catch { return false; }
-  };
   let choice = null, initialized = false, sentPageView = false, panel, opener;
+  let currentPath = normalizedPath(location.pathname);
   const validChoice = saved => saved && ['granted','denied'].includes(saved.choice) && Number.isFinite(saved.at) && Date.now() - saved.at < lifetime && saved.at <= Date.now() ? saved.choice : null;
   try {
     const saved = JSON.parse(localStorage.getItem(key) || 'null');
@@ -23,10 +17,17 @@
   } catch {}
   const gpc = () => navigator.globalPrivacyControl === true;
   // Avoid loading the SDK on URLs with form data or other unknown parameters.
-  const safeUrl = () => !location.hash && [...new URLSearchParams(location.search)].every(([name,value]) => /^(utm_(source|medium|campaign|content|term)|fbclid|gclid|_gl)$/.test(name) && /^[a-zA-Z0-9_.~* -]{1,240}$/.test(value));
-  const allowed = () => configured && routeAllowed() && referrerAllowed() && choice === 'granted' && !gpc() && safeUrl();
+  const safeUrl = (url = location) => !url.hash && [...new URLSearchParams(url.search)].every(([name,value]) => /^(utm_(source|medium|campaign|content|term)|fbclid|gclid|_gl)$/.test(name) && /^[a-zA-Z0-9_.~* -]{1,240}$/.test(value));
+  const safeReferrer = () => {
+    if (!document.referrer) return true;
+    try { const previous = new URL(document.referrer); return previous.origin !== location.origin || safeUrl(previous); }
+    catch { return false; }
+  };
+  const allowed = () => configured && choice === 'granted' && !gpc() && safeUrl() && safeReferrer();
   const load = () => {
-    if (!allowed()) return false;
+    const path = normalizedPath(location.pathname);
+    if (path !== currentPath) { currentPath = path; sentPageView = false; }
+    if (!allowed()) { if (initialized) window.fbq('consent','revoke'); return false; }
     if (!initialized) {
       initialized = true;
       if (!window.fbq) {
@@ -34,6 +35,8 @@
         fbq.push = fbq; fbq.loaded = true; fbq.version = '2.0'; fbq.queue = [];
         window.fbq = fbq; if (!window._fbq) window._fbq = fbq;
       }
+      // Our router emits one explicit PageView per navigation. Suppress SDK history tracking.
+      window.fbq.disablePushState = true;
       window.fbq('consent','grant');
       window.fbq('set','autoConfig',false,config.pixelId);
       window.fbq('init',config.pixelId);
@@ -64,16 +67,23 @@
   };
   window.costinMeta = Object.freeze({ track(event) { if (!['Lead','Contact'].includes(event) || !allowed() || !load()) return false; window.fbq('trackSingle',config.pixelId,event); return true; }, showSettings: show });
   if (!configured) return;
-  document.querySelectorAll('[data-meta-settings]').forEach(button => { button.hidden = false; button.addEventListener('click', () => show(button)); });
+  document.documentElement.classList.add('costin-meta-ready');
+  document.querySelectorAll('[data-meta-settings]').forEach(button => { button.hidden = false; });
   if (gpc()) { choice = 'denied'; clearCookies(); }
-  if (choice === 'granted') load(); else if (choice === null && routeAllowed()) show();
+  if (choice === 'granted') load(); else if (choice === null) show();
+  // React calls this after route metadata is current. Repeated mounts do not repeat PageView.
+  document.addEventListener('costin:page-view', load);
   window.addEventListener('storage', event => {
     if (event.key !== key) return;
     try { choice = validChoice(JSON.parse(event.newValue || 'null')); } catch { choice = null; }
     if (!allowed() && initialized) window.fbq('consent','revoke');
     if (allowed()) load(); else clearCookies();
   });
-  document.addEventListener('click', event => { if (event.target.closest('a[href^="tel:"],a[href^="sms:"]')) window.costinMeta.track('Contact'); });
+  document.addEventListener('click', event => {
+    const button = event.target.closest('[data-meta-settings]');
+    if (button) show(button);
+    if (event.target.closest('a[href^="tel:"],a[href^="sms:"]')) window.costinMeta.track('Contact');
+  });
   // Civilian forms already use the experience layer. Only configured military forms use this listener.
   document.addEventListener('costin:lead-success', event => {
     if (config.acceptedLeadForms?.includes(event.detail?.form_id)) window.costinMeta.track('Lead');

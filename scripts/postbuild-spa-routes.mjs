@@ -18,6 +18,7 @@
 // entities are meant to repeat across URLs).
 
 import { readFileSync, writeFileSync } from "node:fs";
+import { applyMilitaryMeta } from "./military-meta-lib.mjs";
 import { ROUTE_META, SITE, HOME_TITLE, HOME_DESC } from "../src/routeMeta.js";
 import { BAH_DATA } from "../src/bahData.js";
 import { INSTALLATIONS_HEADERS, INSTALLATIONS, NEIGHBORHOOD_HEADERS, NEIGHBORHOOD_ROWS, PCS_CHECKLIST, FL_BENEFITS, PCS_FAQS } from "../src/pcsGuideData.js";
@@ -186,7 +187,7 @@ for (const r of ROUTE_META.filter((e) => e.shell)) {
     console.log(`postbuild geo-01: /pcs-guide shell carries ${words} words + FAQPage JSON-LD`);
   }
 
-  writeFileSync(`dist/${r.file}.html`, html, "utf8");
+  writeFileSync(`dist/${r.file}.html`, applyMilitaryMeta(html), "utf8");
   count++;
   console.log(`postbuild 2.15: wrote dist/${r.file}.html  title="${r.title}"  canonical=${canon}`);
 }

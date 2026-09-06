@@ -1,0 +1,567 @@
+{
+  "at": "2026-09-06T19:28:57.644Z",
+  "checks": [
+    {
+      "name": "All built military pages load the shared Pixel once after consent",
+      "pass": true
+    },
+    {
+      "name": "SPA consent and preferences survive React rendering; navigation and history count exactly once",
+      "pass": true
+    },
+    {
+      "name": "Local previews, GPC and unsafe URL/referrer data send no Meta events",
+      "pass": true
+    },
+    {
+      "name": "SPA inquiry /pcs-guide {\"status\":200,\"body\":{\"success\":true},\"leads\":1}",
+      "pass": true
+    },
+    {
+      "name": "SPA inquiry /pcs-guide {\"status\":200,\"body\":{\"success\":\"false\"},\"leads\":0}",
+      "pass": true
+    },
+    {
+      "name": "SPA inquiry /pcs-guide {\"status\":503,\"body\":{\"success\":true},\"leads\":0}",
+      "pass": true
+    },
+    {
+      "name": "SPA inquiry /contact {\"status\":200,\"body\":{\"success\":true},\"leads\":1}",
+      "pass": true
+    },
+    {
+      "name": "SPA inquiry /contact {\"status\":200,\"body\":{\"success\":\"false\"},\"leads\":0}",
+      "pass": true
+    },
+    {
+      "name": "SPA inquiry /contact {\"status\":503,\"body\":{\"success\":true},\"leads\":0}",
+      "pass": true
+    },
+    {
+      "name": "Static guide modal counts only accepted inquiries and rejects invalid input",
+      "pass": true
+    },
+    {
+      "name": "Home valuation request counts one accepted Lead with no form-field parameters",
+      "pass": true
+    }
+  ],
+  "coverage": [
+    {
+      "path": "/404",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/about",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/accessibility",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/assumable-va-loans-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/bah-rates",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/bah-to-mortgage-guide",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/bah-vs-cost-of-owning-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/bases/corry-station",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/bases/duke-field",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/bases/eglin-afb",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/bases/hurlburt-field",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/bases/nas-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/bases/saufley-field",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/bases/whiting-field",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/bah-2026-pensacola-what-can-you-afford",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/best-neighborhoods-eglin-afb-families",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/best-pensacola-neighborhoods-by-rank-bah",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/florida-homestead-exemption-military",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/florida-veteran-property-tax-county-guide",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/living-in-gulf-breeze-pros-cons",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/moving-to-navarre-2026-guide",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/moving-to-pensacola-2026-guide",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/pcs-to-pensacola-2026-complete-guide",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/personal-property-activity-pcs-2026",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/va-loan-assumption-buyers-guide",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog/va-loan-seller-concessions-truth",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/blog",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/book-pcs-call",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/buy",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/buying-sight-unseen-pcs-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/cash-offer-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/bellview-myrtle-grove",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/beulah",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/cantonment",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/cordova-park",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/crestview",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/destin",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/east-hill",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/east-pensacola-heights",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/ferry-pass",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/fort-walton-beach",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/gulf-breeze",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/mary-esther",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/milton",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/navarre",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/navy-point-warrington",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/niceville",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/pace",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/perdido-key",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities/shalimar",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/communities",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/contact",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/crestview-military-relocation",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/disabled-veteran-benefits-florida",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/dual-military-homes",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/faq",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/first-time-military-homebuyer",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/flight-school-housing-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/florida-home-insurance-military",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/florida-homestead-exemption-military",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/gulf-breeze-vs-navarre",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/military-divorce-housing",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/military-lodging-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/military-pcs-tax-deductions",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/military-realtor-hurlburt-field",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/military-realtor-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/military-rental-property-management",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/mortgage-calculators",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/nas-pensacola-gates",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/nas-pensacola-vs-hurlburt-field",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/nas-whiting-field-off-base-housing",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/new-construction-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/niceville-vs-crestview",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/on-base-vs-off-base-corry-station",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/on-base-vs-off-base-duke-field",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/on-base-vs-off-base-eglin-afb",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/on-base-vs-off-base-hurlburt-field",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/on-base-vs-off-base-nas-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/on-base-vs-off-base-nas-whiting-field",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/on-base-vs-off-base-saufley-field",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/pcs-checklist",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/pcs-guide",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/pcs-home-search",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/pcs-schools-by-base",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/pensacola-flood-zones-homebuyers",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/privacy",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/rent-or-sell-pcs-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/rent-vs-buy-military-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/renting-on-bah-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/reviews",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/school-zones-military-families",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/sell",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/va-approved-condos-pensacola",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/va-coe-guide",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/va-disability-property-tax-florida",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/va-funding-fee-2026",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/va-irrrl-guide",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/va-loan-closing-costs-florida",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/va-loan-guide",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/veteran-realtor-destin",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/whats-my-home-worth",
+      "pageViews": 1,
+      "settings": true
+    },
+    {
+      "path": "/zero-down-home-loans",
+      "pageViews": 1,
+      "settings": true
+    }
+  ],
+  "delivery": "All external requests mocked or blocked; no real Meta event or CRM contact created."
+}

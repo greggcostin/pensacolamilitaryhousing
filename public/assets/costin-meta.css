@@ -6,5 +6,5 @@
 .gc-ad-panel button{min-height:44px;padding:10px 15px;font:600 13px var(--sans);border:1px solid #8aa09e;background:transparent;color:#fff;cursor:pointer;border-radius:2px}
 .gc-ad-panel button[data-meta-accept]{background:#d4b768;border-color:#d4b768;color:#10232c}
 .gc-ad-panel button:disabled{opacity:.5;cursor:not-allowed}
-[data-meta-settings]{border:0;background:transparent;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;padding:8px}
+[data-meta-settings]{display:none;border:0;background:transparent;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;padding:8px}.costin-meta-ready [data-meta-settings]{display:inline-block}
 @media(max-width:640px){footer{padding-bottom:140px!important}.gc-ad-panel{bottom:90px;max-height:65vh;overflow:auto}}

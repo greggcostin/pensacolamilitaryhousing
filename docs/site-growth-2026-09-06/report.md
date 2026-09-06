@@ -43,8 +43,10 @@ The [distribution plan](social-plan.md) contains two complete creative concepts 
 - All **six military SPA routes** have a main landmark and civilian-site cross-link in their initially returned HTML.
 - The prepared civilian redesign is integrated with responsive navigation, clear buyer/seller/PCS paths, accessible inquiry dialogs, valid email checks, readable guide navigation, self-hosted fonts and stable image space.
 - Both sites block GA4, Clarity, FUB and Meta on localhost, 127.0.0.1, preview hosts and other non-production origins. The civilian preview also strips production analytics loaders. Historical preview records were not deleted; the production-host filter excludes them from the inspected Clarity view.
-- Optional Meta tracking is configured on the civilian site and on the military **PCS checklist** and **call-request** pages. The military privacy page exposes preferences without recording a PageView; benefits, disability, tax and divorce guides do not contain the Meta loader.
-- Meta requires affirmative consent, respects Global Privacy Control, expires consent after 180 days and stops events after withdrawal, including withdrawal in another tab. The loader rejects unsafe URL parameters and, for the limited military integration, sensitive internal referrers. No form contact details are sent as Meta event parameters.
+- At Gregg's request, optional Meta tracking now covers the entire military site as well as the civilian site. The military rollout covers **98 HTML sources and all 103 built pages**, including all 12 blog posts, base and community guides, benefits guides, calculators, privacy/404 pages and all six interactive routes. Both sites use dataset **960230270427179**. There is no military route allowlist.
+- Meta requires affirmative consent, respects Global Privacy Control, expires consent after 180 days and stops events after withdrawal, including withdrawal in another tab. The loader rejects unknown URL parameters or fragments and unsafe internal referrer URLs. No form contact details are sent as Meta event parameters.
+- Interactive navigation emits one PageView after route metadata updates. Initial React rendering, repeated clicks on the current page and preference changes do not duplicate that view; back/forward navigation records the newly displayed page. Preferences continue to work when React replaces the initial HTML. New military pages and blog posts inherit the integration from their factories; prebuild checks flag any missing coverage.
+- Lead events cover the checklist, call request, home valuation, static inquiry modal and both interactive inquiry forms. They require an HTTP success and an explicit boolean success:true response from the contact service. Invalid fields and populated honeypots are rejected before sending. Calls and texts count as Contact intent, not confirmed conversations or appointments.
 - Accepted inquiries produce one Lead event. Downloads, call/text clicks and requests for appointments remain distinct actions. A request is not reported as a confirmed appointment.
 - The PCS checklist now retains the free PDF when the contact service fails and explicitly says the contact request was not delivered. HTTP errors, a success:false body and network failures no longer earn lead credit. The call page accurately describes a request that Gregg must confirm.
 - The link audit now recognizes real CSS/assets instead of flagging existing files as broken and fails when a genuine broken link exists. A relevant Destin guide link resolves the remaining orphan page.
@@ -82,9 +84,11 @@ Business Page Insights, August 9–September 5, showed **160 views, 22 viewers, 
 ## Validation
 
 - Military production build passed.
-- 31 automated checks passed for the engine/site behavior.
+- 33 automated checks passed for the engine/site behavior, including complete source/build Pixel coverage and an idempotent rollout.
 - 19 civilian browser checks passed, including all 121 content pages at mobile and desktop widths.
-- 10 military campaign checks passed, including consent, attribution, invalid form input, network failures, accepted leads and referrer handling.
+- 10 military campaign checks passed, including consent, attribution, invalid form input, network failures, accepted leads and navigation from guide pages.
+- 11 sitewide military Pixel browser checks passed. The coverage sweep visited all 103 built pages; each produced one opted-in PageView and one working preferences control. Additional checks exercised interactive back/forward navigation, decline/accept/withdrawal, local hosts, GPC, unsafe URL/referrer data, strict service acceptance and home valuations. See [military-meta-checks.json](military-meta-checks.json) and the [mobile consent preview](military-meta-consent-mobile.png).
+- All 19 civilian browser checks passed again after the shared runtime change, including consent expiry and cross-tab withdrawal. See [pixel-civilian-regression.json](pixel-civilian-regression.json).
 - The earlier two blog journey browser checks passed.
 - Civilian audit: **121 pages, 0 findings**. Military audit: **97 source pages, 104 sitemap URLs, 103 share cards, 0 findings**. Shared entity audit: **218 pages, 0 findings**.
 - Internal link audit: **0 broken links, 0 orphan pages**.
@@ -95,7 +99,7 @@ Local Lighthouse used simulated mobile conditions and disabled production tracke
 ## Release and first-live checks
 
 1. Publish the reviewed website changes, verify the homepage domain tags and finish Meta domain verification.
-2. Inspect actual Meta events after consent on an ordinary production visit. Confirm no events on local previews or excluded military routes. Do not mix test activity into the conversion baseline.
+2. Inspect actual Meta events after consent on ordinary production visits to a military article and an interactive route. Confirm no events before consent, after withdrawal, with GPC, or on local previews. There are no excluded military content routes. Do not mix test activity into the conversion baseline.
 3. Confirm one controlled production inquiry reaches FUB once with the correct source and stage. FUB pixel form capture was last observed ON while the forms also use the contact worker. After primary delivery is verified, disable redundant pixel form capture while preserving activity tracking. This global FUB setting was not changed in this work.
 4. Complete the image upload/crop review, verify the final advertising identity, audience, Pixel, payment summary and new dates. Paid launch requires the specific budget approval; website publication does not approve advertising spend.
 5. Record exact production cohorts and genuinely qualified inquiries/confirmed appointments. Review at an appropriate collection interval before treating an article or campaign as a winner.

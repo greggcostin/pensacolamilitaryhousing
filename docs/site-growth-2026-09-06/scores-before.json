@@ -1,0 +1,140 @@
+[
+ {
+  "site": "gc",
+  "slug": "closing-costs-florida-buyers",
+  "score": 53,
+  "grade": "D",
+  "components": {
+   "structure": 17.1,
+   "evidence": 0,
+   "local": 10,
+   "seo": 18.5,
+   "geo": 3.3,
+   "share": 4
+  },
+  "fails": [
+   "structure: only 2/9 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+   "structure: 3 scan aids for 1732 words (target one list/table/figure per 250 words)",
+   "evidence: 5/13 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 1/13 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "evidence: 0 distinct linked source domain(s); verify relevant primary sources and their claim support",
+   "evidence: no Sources section or Sources line",
+   "seo: 5 internal links (target 8+; hubs, money pages, sibling posts)",
+   "geo: quickAnswer missing or not 2-4 concise sentences under 85 words; answer the actual question and source any factual claims",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: 1 quotable sentence(s) (a figure + a named source + a date in under 35 words); verify the claims, and do not add figures merely for points",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no comparison table; add one only if it helps the reader compare real options",
+   "share: 0 imperative action items (target 3+ concrete things to do)"
+  ]
+ },
+ {
+  "site": "gc",
+  "slug": "fed-rate-hike-what-it-means",
+  "score": 56,
+  "grade": "D",
+  "components": {
+   "structure": 19.4,
+   "evidence": 0,
+   "local": 6.7,
+   "seo": 18,
+   "geo": 6,
+   "share": 6
+  },
+  "fails": [
+   "structure: only 3/8 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+   "structure: 3 scan aids for 1693 words (target one list/table/figure per 250 words)",
+   "evidence: 10/30 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 0 distinct linked source domain(s); verify relevant primary sources and their claim support",
+   "seo: primary keyword not in the lead or first 100 words",
+   "geo: quickAnswer missing or not 2-4 concise sentences under 85 words; answer the actual question and source any factual claims",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no comparison table; add one only if it helps the reader compare real options"
+  ]
+ },
+ {
+  "site": "gc",
+  "slug": "florida-insurance-relief-2026",
+  "score": 59,
+  "grade": "D",
+  "components": {
+   "structure": 17,
+   "evidence": 0,
+   "local": 10,
+   "seo": 20,
+   "geo": 6,
+   "share": 6
+  },
+  "fails": [
+   "structure: only 2/8 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+   "structure: 5/8 sections open with a 15-90 word direct answer; put the answer sentence first under every H2",
+   "structure: 4 scan aids for 1999 words (target one list/table/figure per 250 words)",
+   "evidence: 12/23 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 0 distinct linked source domain(s); verify relevant primary sources and their claim support",
+   "geo: quickAnswer missing or not 2-4 concise sentences under 85 words; answer the actual question and source any factual claims",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no comparison table; add one only if it helps the reader compare real options"
+  ]
+ },
+ {
+  "site": "gc",
+  "slug": "what-moves-mortgage-rates",
+  "score": 62,
+  "grade": "D",
+  "components": {
+   "structure": 21.6,
+   "evidence": 4.4,
+   "local": 10,
+   "seo": 18.2,
+   "geo": 2,
+   "share": 6
+  },
+  "fails": [
+   "structure: only 3/8 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+   "evidence: 1/14 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 1/14 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "evidence: 1 distinct linked source domain(s); verify relevant primary sources and their claim support",
+   "evidence: no Sources section or Sources line",
+   "seo: 5 internal links (target 8+; hubs, money pages, sibling posts)",
+   "seo: 5 FAQs (target 6+ People-Also-Ask questions)",
+   "geo: quickAnswer missing or not 2-4 concise sentences under 85 words; answer the actual question and source any factual claims",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: 0 quotable sentence(s) (a figure + a named source + a date in under 35 words); verify the claims, and do not add figures merely for points",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no comparison table; add one only if it helps the reader compare real options"
+  ]
+ },
+ {
+  "site": "gc",
+  "slug": "property-taxes-escambia-santa-rosa",
+  "score": 76,
+  "grade": "C",
+  "components": {
+   "structure": 20.7,
+   "evidence": 15.5,
+   "local": 10,
+   "seo": 18,
+   "geo": 6,
+   "share": 6
+  },
+  "fails": [
+   "structure: only 4/11 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+   "structure: 7 scan aids for 2153 words (target one list/table/figure per 250 words)",
+   "evidence: 19/55 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 19/55 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "evidence: no Sources section or Sources line",
+   "seo: primary keyword not in the lead or first 100 words",
+   "geo: quickAnswer missing or not 2-4 concise sentences under 85 words; answer the actual question and source any factual claims",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no comparison table; add one only if it helps the reader compare real options"
+  ]
+ }
+]

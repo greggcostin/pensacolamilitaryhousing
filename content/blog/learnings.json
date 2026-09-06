@@ -204,6 +204,48 @@
       "status": "active",
       "rule": "Use evidence policy v2 from scripts/blog-weekly-plan.mjs. No automatic snippet rewrites from small samples, no promotion of attribute correlations to performance rules, and no fabricated first-person anecdotes to satisfy a content score. A source-cue word is not evidence.",
       "evidence": "Reproduced the prior missing-row zero, 0/41 CTR diagnosis and benchmark-as-monthly-traffic output at baseline a621c4c. Regression fixtures and current replay live in docs/blog-engine-audit-2026-09-05/."
+    },
+    {
+      "id": "L018",
+      "rule": "An aggregate insurance or market figure is not an individual property quote. Record who commissioned the source, the population and vintage, and check for a newer authoritative bulletin before using a figure.",
+      "evidence": "The three Sep 6 civilian research packs distinguish fixed state charges from contract choices, Fed policy from mortgage pricing, and insurance-industry totals from household premiums. The insurance refresh uses the newer Citizens wind-only figure.",
+      "date": "2026-09-06",
+      "type": "operational",
+      "appliesTo": [
+        "research",
+        "measure",
+        "decide",
+        "distribute"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "L019",
+      "rule": "Measure only production-hostname traffic and accepted submissions. A delivered download is not a captured lead, and a requested call is not a confirmed appointment. Keep article, social and paid cohorts separate.",
+      "evidence": "One 127.0.0.1 Clarity session changed the initial six-session picture. The military checklist previously called every JSON response a conversion. Host guards and mocked 400/503/200-false/network-failure tests now exclude those events.",
+      "date": "2026-09-06",
+      "type": "operational",
+      "appliesTo": [
+        "research",
+        "measure",
+        "decide",
+        "distribute"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "L020",
+      "rule": "Choose research and writing policy for the actual site being worked on. Check final platform identity after switching ad accounts, since the UI can reset creative and targeting. Existing followers are not proof of campaign effectiveness.",
+      "evidence": "The weekly plan previously exposed only PMH model settings even for a civilian next item. Live personal-profile advertising supports Gregg Costin and account 467811675743449; changing the account reset the ad form. Campaigns remain unpublished.",
+      "date": "2026-09-06",
+      "type": "operational",
+      "appliesTo": [
+        "research",
+        "measure",
+        "decide",
+        "distribute"
+      ],
+      "status": "active"
     }
   ]
 }

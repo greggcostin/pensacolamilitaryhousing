@@ -1,0 +1,200 @@
+{
+  "date": "2026-09-06",
+  "portfolio": {
+    "id": "1024849632848424",
+    "name": "Gregg Costin",
+    "primaryPage": "630272863499288",
+    "detailsSaved": {
+      "legalName": "Gregg Costin, REALTOR®",
+      "address": "220 W Garden St, Pensacola, Florida 32502",
+      "phone": "+18502665005",
+      "website": "https://greggcostin.com",
+      "businessVerification": "Unverified"
+    }
+  },
+  "facebookPage": {
+    "id": "630272863499288",
+    "name": "Gregg Costin - Gulf Coast Realtor",
+    "connectedAssets": [
+      "Business asset group: Gregg Costin - Realtor"
+    ],
+    "zipCorrection": {
+      "before": "32053",
+      "after": "32502",
+      "verified": true
+    },
+    "bio": "Gregg Costin, REALTOR® | Levin Rinke Realty\nGulf Coast homes, PCS relocation & VA homebuying in FL & AL. Pensacola, Whiting Field, Eglin AFB & Hurlburt Field.\nGreggCostin.com | PensacolaMilitaryHousing.com\nPersonal: facebook.com/greggcostin",
+    "linkLabels": [
+      "Levin Rinke Realty | Property search",
+      "PCS & military housing | PensacolaMilitaryHousing.com",
+      "Gulf Coast homes & guides | GreggCostin.com"
+    ],
+    "actionButton": {
+      "label": "Contact us",
+      "url": "https://greggcostin.com/contact?utm_source=facebook&utm_medium=organic_social&utm_campaign=page_contact",
+      "verified": true
+    }
+  },
+  "instagram": {
+    "id": "17841466406446131",
+    "handle": "greggcostinrealtor",
+    "connectedAdAccount": "467811675743449",
+    "pageConnected": true,
+    "connectionVerified": "Meta confirmation: Instagram connected to Gregg Costin - Gulf Coast Realtor on 2026-09-06",
+    "followers": 933
+  },
+  "businessAdAccount": {
+    "id": "467811675743449",
+    "name": "467811675743449",
+    "opportunityScore": 100,
+    "performanceInterpretation": "An account recommendation score, not measured campaign performance or conversion proof",
+    "previousCampaign": {
+      "name": "[04/12/2025] Promoting www.fb.com/61558500253015",
+      "state": "Off",
+      "spend": 0,
+      "window": "2026-08-07 through 2026-09-05"
+    },
+    "preparedCampaign": {
+      "name": "DRAFT | PMH PCS planning | Approval required",
+      "state": "In draft, campaign and ad set off",
+      "objective": "Leads",
+      "category": "Housing",
+      "country": "United States",
+      "lifetimeBudgetProposalUSD": 140,
+      "dataset": "960230270427179",
+      "conversionLocation": "Website",
+      "blocker": "Lead is selected as an inactive event. No received website events yet; live delivery and event receipt remain unverified.",
+      "launchReady": false,
+      "conversionEvent": "Lead, selectable but inactive"
+    }
+  },
+  "personalPixel": {
+    "id": "2880952858970800",
+    "name": "GreggCostin.com Website",
+    "personalAdAccount": "1798787120723790",
+    "note": "Unused initial personal setup; business dataset replaces it. Never installed and no events."
+  },
+  "businessPixel": {
+    "id": "960230270427179",
+    "name": "The Costin Team | Website Leads",
+    "connectedAdAccount": "467811675743449",
+    "ownerPortfolio": "1024849632848424",
+    "events": "None yet; website changes staged",
+    "userAccess": "Use events dataset for Facebook Gregg Costin (You) only; full management not granted",
+    "allowList": [
+      "greggcostin.com",
+      "pensacolamilitaryhousing.com"
+    ],
+    "nameVerifiedInAdSet": true
+  },
+  "domains": [
+    {
+      "domain": "greggcostin.com",
+      "id": "1401792015492706",
+      "verification": "pending website publication",
+      "verificationTag": "wn1q8mit7hrgtjacxfffuq3l7gaqrf"
+    },
+    {
+      "domain": "pensacolamilitaryhousing.com",
+      "id": "1739244330622057",
+      "verification": "pending website publication",
+      "verificationTag": "473aaa6oqxk2y3y3ohmz4dsvs58k1l"
+    }
+  ],
+  "facebookInsights": {
+    "window": {
+      "start": "2026-08-09",
+      "end": "2026-09-05",
+      "label": "Last 28 days",
+      "timezone": "not explicitly verified"
+    },
+    "pageFollowers": 247,
+    "views": 160,
+    "viewers": 22,
+    "facebookVisits": 20,
+    "follows": 1,
+    "unfollows": 1,
+    "netFollows": 0,
+    "contentInteractions": 0,
+    "conversationsStarted": 0,
+    "source": "Facebook Page Insights, live authenticated UI",
+    "scope": "Business Page only; not personal profile or Instagram"
+  },
+  "personalProfile": {
+    "url": "https://www.facebook.com/greggcostin/",
+    "followersDisplay": "5.7K",
+    "professionalMode": "already enabled",
+    "advertise": "Create new ad and Boost Facebook content available; website visitors goal verified in live UI",
+    "defaultAdAccount": "1798787120723790",
+    "selectedAdAccount": "467811675743449",
+    "previewIdentity": "Gregg Costin",
+    "selectedPixel": "960230270427179",
+    "websiteTrafficGoalVerified": true,
+    "preview": {
+      "status": "unpublished preview; no paid launch",
+      "headline": "Pensacola PCS checklist",
+      "destination": "https://pensacolamilitaryhousing.com/pcs-checklist?utm_source=facebook&utm_medium=paid_social&utm_campaign=pcs_planning&utm_content=personal_profile",
+      "category": "Housing",
+      "location": "Pensacola, Florida +15 miles",
+      "ages": "18-65+",
+      "gender": "All; restricted controls disabled",
+      "followerTargeting": "Removed by the Housing category",
+      "placements": [
+        "Facebook"
+      ],
+      "budgetProposal": {
+        "dailyUSD": 10,
+        "durationDays": 14,
+        "displayedTotalUSD": 140,
+        "spendAuthorized": false
+      },
+      "remaining": [
+        "Publish and verify website changes",
+        "Verify real Meta event receipt and FUB delivery",
+        "PCS card upload blocked by Chrome extension file-URL access; enable that setting, retry and inspect crops",
+        "Review final creative and payment summary; reset dates before an approved launch"
+      ],
+      "savedCampaign": false
+    }
+  },
+  "integrations": {
+    "followUpBoss": {
+      "status": "Active",
+      "added": "2025-12-12",
+      "page": "Gregg Costin - Gulf Coast Realtor",
+      "leadAccess": true,
+      "source": "Facebook personal Business Integrations live permission dialog",
+      "endToEndTest": "not performed",
+      "pixelFormCapture": {
+        "lastObserved": "ON during earlier live audit on 2026-09-06",
+        "changed": false,
+        "remaining": "After one controlled production inquiry confirms worker delivery and CRM attribution, disable redundant pixel form capture while preserving activity tracking."
+      }
+    },
+    "existingPublishers": [
+      "Plann",
+      "Social Publishing",
+      "Delta Media Group Posting Tool",
+      "Buffer"
+    ],
+    "note": "Existing integrations retained; no new permissions granted. Buffer and Testimonial Tree show some expired permissions."
+  },
+  "websiteRelease": {
+    "status": "not deployed",
+    "sites": [
+      "greggcostin.com",
+      "pensacolamilitaryhousing.com"
+    ],
+    "review": "https://github.com/greggcostin/pensacolamilitaryhousing/pull/1",
+    "tracking": {
+      "consent": "Meta opt-in with 180-day expiry and GPC respected",
+      "previewHosts": "all production trackers blocked on preview hosts",
+      "pmhPages": [
+        "/pcs-checklist",
+        "/book-pcs-call"
+      ],
+      "civilianPages": "sitewide optional Meta",
+      "eventRules": "PageView once per document; Lead only after the contact service explicitly accepts a form; Contact for call/text intent; no automatic matching or contact field parameters"
+    }
+  }
+}

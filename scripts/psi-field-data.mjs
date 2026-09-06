@@ -10,6 +10,7 @@
 // Writes docs/seo-baselines/crux-<date>.json and prints a table. Field data appears only for
 // URLs and origins with enough Chrome traffic; "no field data" is a real answer, not an error.
 import { writeFileSync, mkdirSync } from "node:fs";
+import { dirname } from "node:path";
 
 const KEY = process.env.PSI_API_KEY;
 if (!KEY) {
@@ -18,7 +19,7 @@ if (!KEY) {
 }
 const args = process.argv.slice(2);
 const strategies = args.includes("--mobile") ? ["mobile"] : args.includes("--desktop") ? ["desktop"] : ["mobile", "desktop"];
-const URLS = [
+const ALL_URLS = [
   "https://pensacolamilitaryhousing.com/",
   "https://pensacolamilitaryhousing.com/pcs-guide",
   "https://pensacolamilitaryhousing.com/bah-rates",
@@ -29,6 +30,13 @@ const URLS = [
   "https://greggcostin.com/neighborhoods",
   "https://greggcostin.com/schools",
 ];
+const siteIndex = args.indexOf("--site");
+const selectedSite = siteIndex < 0 ? "both" : args[siteIndex + 1];
+if (!["both", "gc", "pmh"].includes(selectedSite)) throw new Error("--site must be gc, pmh, or both");
+const urlIndex = args.indexOf("--url");
+const selectedUrl = urlIndex < 0 ? null : args[urlIndex + 1];
+if (selectedUrl && !ALL_URLS.includes(selectedUrl)) throw new Error("--url must be one of the configured site URLs");
+const URLS = ALL_URLS.filter(url => (!selectedUrl || selectedUrl === url) && (selectedSite === "both" || url.includes(selectedSite === "gc" ? "greggcostin.com" : "pensacolamilitaryhousing.com")));
 
 const fmt = (m, k) => {
   const x = m && m[k];
@@ -44,7 +52,7 @@ for (const strategy of strategies) {
     const api = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&strategy=${strategy}&category=performance&key=${KEY}`;
     let j;
     try {
-      const r = await fetch(api);
+      const r = await fetch(api, { signal: AbortSignal.timeout(90000) });
       j = await r.json();
       if (j.error) throw new Error(j.error.message);
     } catch (e) {
@@ -71,6 +79,7 @@ for (const strategy of strategies) {
       labCLS: lab.audits && lab.audits["cumulative-layout-shift"] ? lab.audits["cumulative-layout-shift"].displayValue : "n/a",
     };
     results.push(row);
+    if (args.includes("--diagnostics")) row.diagnostics = Object.fromEntries(Object.entries(lab.audits || {}).filter(([id]) => /image|font|layout|lcp|render-block|third-party|long-tasks|unused|cls-culprits/.test(id)).map(([id,audit]) => [id, { title: audit.title, score: audit.score, displayValue: audit.displayValue, details: audit.details }]));
     console.log(`\n${strategy.toUpperCase()}  ${url}`);
     console.log(`  page  : ${row.pageOverall} | LCP ${row.pageLCP} | INP ${row.pageINP} | CLS ${row.pageCLS} | TTFB ${row.pageTTFB}`);
     console.log(`  origin: ${row.originOverall} | LCP ${row.originLCP} | INP ${row.originINP} | CLS ${row.originCLS}`);
@@ -79,6 +88,8 @@ for (const strategy of strategies) {
 }
 const date = new Date().toISOString().slice(0, 10);
 mkdirSync("docs/seo-baselines", { recursive: true });
-const out = `docs/seo-baselines/crux-${date}.json`;
+const outputIndex = args.indexOf("--output");
+const out = outputIndex < 0 ? `docs/seo-baselines/crux-${date}.json` : args[outputIndex + 1];
+mkdirSync(dirname(out), { recursive: true });
 writeFileSync(out, JSON.stringify({ date, results }, null, 2));
 console.log(`\nSaved ${out}`);

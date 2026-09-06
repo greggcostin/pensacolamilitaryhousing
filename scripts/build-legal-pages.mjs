@@ -10,6 +10,8 @@ import { buildPage, breadcrumbs, webPage, gate, makeOgCard, SITE_DIR, SITE } fro
 
 const DATE_ISO = "2026-09-02";
 const DATE_LONG = "September 2, 2026";
+const GC_PRIVACY_ISO = "2026-09-06";
+const GC_PRIVACY_LONG = "September 6, 2026";
 
 // ---------- shared copy ----------
 function privacyMain(site) {
@@ -18,12 +20,12 @@ function privacyMain(site) {
   const sister = isPMH ? "GreggCostin.com" : "PensacolaMilitaryHousing.com";
   const analytics = isPMH
     ? "Google Analytics 4, Microsoft Clarity (session replays and heatmaps), Cloudflare Web Analytics, and the Follow Up Boss website tracker"
-    : "Google Analytics 4, Cloudflare Web Analytics, and the Follow Up Boss website tracker";
+    : "Google Analytics 4, Microsoft Clarity (session replays and heatmaps), Cloudflare Web Analytics, and the Follow Up Boss website tracker";
   const embeds = isPMH
     ? "RealScout (home search), Calendly (appointment booking), and Pagefind (on-site search, which runs in your browser and sends nothing to a server)"
     : "RealScout (home search and home value alerts) and the Levin Rinke Realty MLS search";
   return `
-<p>Effective ${DATE_LONG}. This policy explains what ${brand} collects, why, and the choices you have. The site is operated by Gregg Costin, a Florida and Alabama licensed real estate agent with Levin Rinke Realty, 220 W. Garden Street, Pensacola, FL 32502. The same policy applies to our sister site, ${sister}.</p>
+<p>Effective ${GC_PRIVACY_LONG}. This policy explains what ${brand} collects, why, and the choices you have. The site is operated by Gregg Costin, a Florida and Alabama licensed real estate agent with Levin Rinke Realty, 220 W. Garden Street, Pensacola, FL 32502. Our sister site, ${sister}, publishes its own version of this policy.</p>
 
 <h2>What we collect</h2>
 <p><strong>Information you send us.</strong> When you use a contact or inquiry form, request the PCS checklist, ask for a home valuation, or book a call, we receive the details you enter: typically your name, email address, phone number, the type of help you want, and your message.</p>
@@ -45,6 +47,11 @@ function privacyMain(site) {
 <p>The analytics tools above set cookies or similar identifiers to tell repeat visits apart and to measure which pages lead to inquiries. They do not read your name or contact details from the site. You can block or clear cookies in your browser settings, install the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google Analytics opt-out add-on</a>, and clear the attribution memory by clearing site data for this domain.</p>
 
 <h2>Third-party services on the site</h2>
+<h3>Facebook and Instagram advertising</h3>
+<p>We ask for your permission before loading the Meta Pixel for Facebook and Instagram advertising measurement and remarketing. You can decline and still use our guides and inquiry forms. The Facebook &amp; Instagram ad preferences button in the footer lets you change your choice. We remember that choice for up to 180 days. A browser Global Privacy Control signal keeps Meta advertising off.</p>
+<p>With permission, Meta receives page views and selected actions, such as a call-button click or a successfully submitted inquiry, to measure ads and support remarketing. We do not add your name, email address, phone number, or inquiry message to those events. Meta may receive technical information, including your IP address and browser information, through its Pixel.</p>
+<p>These controls apply to Meta advertising. They do not change the separate Google Analytics, Microsoft Clarity, or Follow Up Boss settings described above.</p>
+${isPMH ? '<p>Meta measurement is limited to the PCS checklist and call-request pages. Other military guides do not load this Pixel. You can change your advertising choice using the button at the bottom of this privacy page.</p>' : ''}
 <p>Some pages embed tools from other companies: ${embeds}. When you use them, those companies collect information under their own privacy policies. Links to government, school, and industry sources open sites we do not control.</p>
 
 <h2>How long we keep information</h2>
@@ -128,6 +135,7 @@ for (const p of pmhPages) {
     .replace(/Last updated: [A-Za-z]+ \d{1,2}, \d{4}/, `Last updated: ${DATE_LONG}`).replace(/Reviewed &amp; updated &middot; [A-Za-z]+ \d{4}/, "Reviewed &amp; updated &middot; September 2026").replace(/Content last verified: [A-Za-z]+ \d{4}/, "Content last verified: September 2026");
   // utility pages are not articles for sharing purposes
   html = html.replace(/<meta property="og:type" content="article">/, '<meta property="og:type" content="website">');
+  if (p.slug === 'privacy') html = html.replace(/"dateModified":"[^"]*"/, `"dateModified":"${GC_PRIVACY_ISO}"`).replace(/article:modified_time" content="[^"]*"/, `article:modified_time" content="${GC_PRIVACY_ISO}T00:00:00Z"`).replace(`Last updated: ${DATE_LONG}`, `Last updated: ${GC_PRIVACY_LONG}`);
   writeFileSync(`public/${p.slug}.html`, html);
   console.log(`PMH /${p.slug} built`);
 }
@@ -148,6 +156,7 @@ const gcPages = [
 for (const p of gcPages) {
   const spec = { ...p, dateISO: DATE_ISO, schemaBlocks: [] };
   spec.schemaBlocks = [webPage("WebPage", spec), breadcrumbs([{ name: "Home", path: "/" }, { name: p.crumb, path: p.path }])];
+  if (p.path === '/privacy') spec.schemaBlocks[0].dateModified = GC_PRIVACY_ISO;
   const html = buildPage(spec);
   const errs = gate(spec, html);
   if (errs.length) throw new Error(`${p.path}: ${errs.join("; ")}`);
@@ -164,4 +173,5 @@ for (const p of gcPages) {
   }
   console.log(`GC ${p.path} built (${html.length} chars)`);
 }
+execSync("node scripts/military-meta.mjs", { stdio: "inherit" });
 console.log("legal pages: done");

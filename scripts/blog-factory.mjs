@@ -1,3 +1,4 @@
+import { guardAnalytics } from "./analytics-host-guard.mjs";
 import { evidenceGate } from "./article-evidence.mjs";
 import { journeyHtml, wireJourney } from "./blog-journey.mjs";
 // Blog factory: builds /blog/<slug> static post pages from content/blog/*.fragment.html,
@@ -211,6 +212,15 @@ function buildPost(spec, template) {
   html = html.replace(/<meta property="article:published_time" content="[^"]*"\s*\/>/, `<meta property="article:published_time" content="${spec.datePublished}T00:00:00Z" />`);
   html = html.replace(/<meta property="article:modified_time" content="[^"]*"\s*\/>/, `<meta property="article:modified_time" content="${spec.dateModified}T00:00:00Z" />`);
 
+  // Replace article-specific fields inherited from the page template.
+  html = html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (tag, json) => {
+    const node = JSON.parse(json);
+    if (node['@type'] !== 'BlogPosting') return tag;
+    node.image = new URL(spec.figure.src, SITE).href;
+    node.keywords = spec.keywords || spec.targetKeywords?.join(', ') || '';
+    return '<script type="application/ld+json">' + JSON.stringify(node) + '</script>';
+  });
+
   // Breadcrumb: Home > Blog > post
   html = html.replace(/\{"@context":"https:\/\/schema\.org","@type":"BreadcrumbList"[\s\S]*?\}\]\}/, () =>
     `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"${SITE}/"},{"@type":"ListItem","position":2,"name":"Blog","item":"${SITE}/blog"},{"@type":"ListItem","position":3,"name":${jesc(spec.title)},"item":"${NEW_URL}"}]}`);
@@ -274,7 +284,7 @@ function buildPost(spec, template) {
   if (o !== c) throw new Error(`${spec.slug}: unbalanced divs (${o} vs ${c}) — refusing to write`);
 
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
-  writeFileSync(OUT_DIR + spec.slug + ".html", html);
+  writeFileSync(OUT_DIR + spec.slug + ".html", guardAnalytics(html));
   console.log("POST:", spec.slug, `(${Math.round(html.length / 1024)}KB)`);
 }
 
@@ -284,7 +294,7 @@ function rebuildIndex(specs) {
 
   // head: replace every BlogPosting block with regenerated ones pointing at real URLs
   const postLd = sorted.map(s =>
-    `<script type="application/ld+json">\n{"@context":"https://schema.org","@type":"BlogPosting","headline":${jesc(s.title)},"description":${jesc(s.description)},"url":"${SITE}/blog/${s.slug}","datePublished":"${s.datePublished}","dateModified":"${s.dateModified}","author":{"@id":"${IDS.person}"},"mainEntityOfPage":"${SITE}/blog/${s.slug}"}\n</script>`).join("\n");
+    `<script type="application/ld+json">\n{"@context":"https://schema.org","@type":"BlogPosting","headline":${jesc(s.title)},"description":${jesc(s.description)},"url":"${SITE}/blog/${s.slug}","datePublished":"${s.datePublished}","dateModified":"${s.dateModified}","image":${jesc(new URL(s.figure.src,SITE).href)},"author":{"@id":"${IDS.person}"},"mainEntityOfPage":"${SITE}/blog/${s.slug}"}\n</script>`).join("\n");
   html = html.replace(/<script type="application\/ld\+json">\s*\{"@context":"https:\/\/schema\.org","@type":"BlogPosting"[\s\S]*?<\/script>/g, "");
   html = html.replace("</head>", postLd + "\n</head>").replace(/\n{3,}/g, "\n\n");
 
@@ -301,7 +311,7 @@ function rebuildIndex(specs) {
 </article>`).join("\n\n");
   html = html.slice(0, first) + cards + html.slice(last + "</article>".length);
 
-  writeFileSync(INDEX_PATH, html);
+  writeFileSync(INDEX_PATH, guardAnalytics(html));
   console.log(`INDEX: ${sorted.length} cards rebuilt`);
 }
 

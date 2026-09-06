@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 2,
+  "article": {
+    "site": "gc",
+    "slug": "florida-insurance-relief-2026"
+  },
+  "models": {
+    "research": "gpt-6-astra (in-session)",
+    "write": "gpt-6-astra (in-session)"
+  },
+  "readerTask": "Compare a renewal or purchase quote without mistaking statewide premium figures for personal savings.",
+  "originalValue": "Original coverage-and-deductible worksheet showing a $600 annual premium tradeoff against $12,000 additional hurricane-deductible exposure.",
+  "claims": [
+    {
+      "id": "premium-totals",
+      "kind": "fact",
+      "status": "verified",
+      "claim": "The August 2026 Moore-Lynch report states 2025 homeowners direct written premiums declined $1.29 billion/7% and private passenger auto declined $1.70 billion/5%; nearly $3 billion combines them.",
+      "sourceUrl": "https://api.apci.org/file/downloadnsfile?area=s&id=14026",
+      "accessed": "2026-09-06",
+      "asOf": "August 2026 report describing 2025 versus 2024",
+      "locator": "Printed page 12, premium-dollar discussion; cover date and Appendix I methods",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "Read the original PDF, separately identified homeowners and auto, and checked the research method. Aggregate dollars are not a universal personal rate reduction."
+      },
+      "sourceContext": "Report commissioned by APCIA, an insurance-industry trade association; authored by Dave Moore and James Lynch."
+    },
+    {
+      "id": "filed-rates",
+      "kind": "fact",
+      "status": "verified",
+      "claim": "The report lists a 0.9% homeowners rate increase for 2025; that is not a rate decrease.",
+      "sourceUrl": "https://api.apci.org/file/downloadnsfile?area=s&id=14026",
+      "accessed": "2026-09-06",
+      "asOf": "August 2026 report, 2025 rate changes",
+      "locator": "Printed page 13, homeowners filed rate-change discussion; Appendix I",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "Compared the positive rate-change percentage with the separate decline in aggregate written premiums; the article does not conflate the two."
+      }
+    },
+    {
+      "id": "citizens",
+      "kind": "fact",
+      "status": "verified",
+      "claim": "Citizens April 30 bulletin lists July 1 average decreases of 8.8% homeowners multiperil and 5.1% homeowners wind-only, for new and renewal policies.",
+      "sourceUrl": "https://www.citizensfla.com/-/20260430-july-2026-rate-rule-and-wind-loss-mitigation-updates",
+      "accessed": "2026-09-06",
+      "asOf": "April 30, 2026 bulletin, effective July 1, 2026",
+      "locator": "Opening effective-date paragraph and Rate Changes section",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "Compared the later implementation bulletin against the earlier March 4 release, which says 5.5% wind-only. Use the later 5.1%; no territory-specific or personal quote inferred."
+      }
+    },
+    {
+      "id": "deductible-example",
+      "kind": "calculation",
+      "status": "verified",
+      "claim": "Hypothetical $400,000 dwelling coverage gives $8,000 at 2% and $20,000 at 5%, a $12,000 difference; premiums of $4,200 and $3,600 differ by $600 annually or $50 monthly.",
+      "sourceUrl": "https://www.flsenate.gov/Laws/Statutes/2025/0627.701",
+      "accessed": "2026-09-06",
+      "asOf": "Original hypothetical example September 6, 2026",
+      "locator": "627.701(3)(a), dwelling limits; original illustrative quote table",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "Calculated 400000*0.02 and 400000*0.05 separately; 20000-8000=12000, 4200-3600=600 and 600/12=50. No claim probability or quote is implied."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          20000,
+          8000
+        ],
+        "result": 12000,
+        "units": "USD additional deductible exposure",
+        "inputSources": [
+          "Original article: $400,000 hypothetical dwelling limit at 5% and 2%",
+          "Florida statute bases percentage deductibles on policy dwelling limits"
+        ]
+      }
+    },
+    {
+      "id": "wind-form",
+      "kind": "fact",
+      "status": "verified",
+      "claim": "OIR says updated OIR-B1-1802 is effective April 1, 2026 and the inspection form can be valid up to five years absent material changes or inaccuracies.",
+      "sourceUrl": "https://floir.gov/consumers/wind-mitigation-resources",
+      "accessed": "2026-09-06",
+      "asOf": "OIR guidance checked September 6, 2026",
+      "locator": "Wind Mitigation Forms: new form row and paragraph immediately after table",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "Verified both the new effective date and the conditions attached to the five-year statement; do not guarantee credits for a specific property."
+      }
+    },
+    {
+      "id": "flood",
+      "kind": "fact",
+      "status": "verified",
+      "claim": "Homeowners insurance generally does not cover flood; NFIP usually has a thirty-day wait with exceptions including certain mortgage-related purchases.",
+      "sourceUrl": "https://www.floodsmart.gov/get-insured/buy-a-policy",
+      "accessed": "2026-09-06",
+      "asOf": "FloodSmart guidance checked September 6, 2026",
+      "locator": "When coverage starts and mortgage-related exception",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "Read exception language; article directs agent confirmation rather than representing the waiting period as universal."
+      }
+    }
+  ],
+  "uncertainFacts": [
+    {
+      "claim": "NFIP authorization expires September 30, 2026.",
+      "action": "Fresh FEMA reauthorization page unavailable to automated fetch; omitted the previous countdown and directs readers to confirm current authority and binding ability."
+    },
+    {
+      "claim": "All homeowners will see their bill decline by the reported statewide percentage.",
+      "action": "Rejected population and measure mismatch; reader must compare actual policies."
+    },
+    {
+      "claim": "Citizens wind-only decrease is 5.5%.",
+      "action": "Earlier March release conflicts with the later April 30 implementation bulletin. Published 5.1% with source date and logged the change."
+    },
+    {
+      "claim": "My Safe Florida Home funding, eligibility, and potential individual savings.",
+      "action": "No current numerical claim; link the official program for a fresh eligibility and availability check."
+    }
+  ],
+  "reviewNotes": "Research and prose completed in-session under the civilian engine self/self policy. Source meaning and arithmetic reviewed in a separate pass. Existing article photo retained; original publication date preserved. No measured traffic or conversion lift claimed."
+}

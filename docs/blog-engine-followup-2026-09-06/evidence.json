@@ -1,0 +1,849 @@
+{
+  "checkedAt": "2026-09-06T05:52:20.545Z",
+  "liveCrawlCheckedAt": "2026-09-06T05:43:42.948Z",
+  "method": "Read-only HTTP crawl of live sitemap HTML, plus robots, sitemap, llms and a nonexistent path. Static source checks; not rich-result validation or a browser performance score.",
+  "sites": {
+    "pensacolamilitaryhousing.com": {
+      "summary": {
+        "pages": 102,
+        "http200": 102,
+        "blogs": 12,
+        "schoolPages": 0,
+        "schemaCounts": {
+          "AdministrativeArea": 8,
+          "Answer": 94,
+          "Article": 84,
+          "Audience": 6,
+          "Blog": 1,
+          "BlogPosting": 13,
+          "BreadcrumbList": 101,
+          "City": 23,
+          "CollegeOrUniversity": 6,
+          "EducationalOccupationalCredential": 6,
+          "FAQPage": 94,
+          "GeoCoordinates": 32,
+          "GovernmentOrganization": 6,
+          "HowTo": 1,
+          "HowToStep": 1,
+          "ImageObject": 102,
+          "ListItem": 101,
+          "Offer": 7,
+          "OpeningHoursSpecification": 6,
+          "Organization": 102,
+          "Person": 102,
+          "Place": 26,
+          "PostalAddress": 33,
+          "Question": 94,
+          "RealEstateAgent": 102,
+          "Service": 6,
+          "SpeakableSpecification": 16,
+          "Thing": 1,
+          "WebApplication": 1,
+          "WebPage": 102,
+          "WebSite": 6
+        },
+        "tracking": {
+          "fubPresent": 102,
+          "fubDeferred": 102,
+          "crossDomainLinker": 102,
+          "metaPixel": 0,
+          "newMeta": 0,
+          "newUX": 0,
+          "newBlog": 0
+        },
+        "clarity": 102,
+        "issues": {
+          "http": 0,
+          "canonical": 0,
+          "h1": 0,
+          "main": 6,
+          "missingDescription": 0,
+          "noindex": 0,
+          "jsonErrors": 0,
+          "missingSchema": 0,
+          "missingOG": 0,
+          "missingTwitter": 0,
+          "missingCrossSiteLinks": 5,
+          "missingAlt": 0,
+          "duplicateIds": 0,
+          "duplicateTitles": 0,
+          "duplicateDescriptions": 0
+        }
+      },
+      "issues": {
+        "http": [],
+        "canonical": [],
+        "h1": [],
+        "main": [
+          {
+            "url": "https://pensacolamilitaryhousing.com/",
+            "count": 0
+          },
+          {
+            "url": "https://pensacolamilitaryhousing.com/about",
+            "count": 0
+          },
+          {
+            "url": "https://pensacolamilitaryhousing.com/communities",
+            "count": 0
+          },
+          {
+            "url": "https://pensacolamilitaryhousing.com/contact",
+            "count": 0
+          },
+          {
+            "url": "https://pensacolamilitaryhousing.com/mortgage-calculators",
+            "count": 0
+          },
+          {
+            "url": "https://pensacolamilitaryhousing.com/pcs-guide",
+            "count": 0
+          }
+        ],
+        "missingDescription": [],
+        "noindex": [],
+        "jsonErrors": [],
+        "missingSchema": [],
+        "missingOG": [],
+        "missingTwitter": [],
+        "missingCrossSiteLinks": [
+          "https://pensacolamilitaryhousing.com/",
+          "https://pensacolamilitaryhousing.com/communities",
+          "https://pensacolamilitaryhousing.com/contact",
+          "https://pensacolamilitaryhousing.com/mortgage-calculators",
+          "https://pensacolamilitaryhousing.com/pcs-guide"
+        ],
+        "missingAlt": [],
+        "duplicateIds": [],
+        "duplicateTitles": [],
+        "duplicateDescriptions": []
+      },
+      "resources": [
+        {
+          "url": "https://pensacolamilitaryhousing.com/sitemap.xml",
+          "status": 200
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/robots.txt",
+          "status": 200
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/llms.txt",
+          "status": 200
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/__owner_seo_audit_missing_20260906",
+          "status": 404
+        }
+      ],
+      "samplePages": [
+        {
+          "url": "https://pensacolamilitaryhousing.com/",
+          "title": "Pensacola Military Housing | Gregg Costin, Realtor® | PCS & VA Loan",
+          "description": "PCS-to-Pensacola Realtor specializing in VA loans and military relocation across NAS Pensacola, Corry, Whiting, Eglin, Hurlburt, and Duke Field.",
+          "schemaTypes": [
+            "AdministrativeArea",
+            "Audience",
+            "City",
+            "CollegeOrUniversity",
+            "EducationalOccupationalCredential",
+            "GeoCoordinates",
+            "GovernmentOrganization",
+            "ImageObject",
+            "Offer",
+            "OpeningHoursSpecification",
+            "Organization",
+            "Person",
+            "PostalAddress",
+            "RealEstateAgent",
+            "Service",
+            "SpeakableSpecification",
+            "WebPage",
+            "WebSite"
+          ],
+          "mainCount": 0,
+          "tracking": {
+            "fub": [
+              "widgetTracker(\"create\", \"WT-ZZMZHBMI"
+            ],
+            "fubPresent": true,
+            "fubDeferred": true,
+            "ga": [
+              "G-W29GHBK38M"
+            ],
+            "crossDomainLinker": true,
+            "clarityIds": [
+              "wm7ddbciup"
+            ],
+            "metaPixel": false,
+            "newMeta": false,
+            "newUX": false,
+            "newBlog": false
+          }
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+          "title": "Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98",
+          "description": "Moving to Navarre FL in 2026? Real prices, the Hurlburt BAH gap worth $585 a month, the Navarre Beach leasehold catch, schools, taxes, and US-98. All sourced.",
+          "schemaTypes": [
+            "Answer",
+            "BlogPosting",
+            "BreadcrumbList",
+            "FAQPage",
+            "ImageObject",
+            "ListItem",
+            "Organization",
+            "Person",
+            "Question",
+            "RealEstateAgent",
+            "WebPage"
+          ],
+          "mainCount": 1,
+          "tracking": {
+            "fub": [
+              "widgetTracker(\"create\", \"WT-ZZMZHBMI"
+            ],
+            "fubPresent": true,
+            "fubDeferred": true,
+            "ga": [
+              "G-W29GHBK38M"
+            ],
+            "crossDomainLinker": true,
+            "clarityIds": [
+              "wm7ddbciup"
+            ],
+            "metaPixel": false,
+            "newMeta": false,
+            "newUX": false,
+            "newBlog": false
+          }
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/buy",
+          "title": "Buy a Home in Pensacola | Military & VA Buyer Guide",
+          "description": "Buy a home in Pensacola: military PCS-aware search, VA loan strategy, base-commute and school guidance, offer-to-closing support from a retired USAF Captain.",
+          "schemaTypes": [
+            "Answer",
+            "Article",
+            "BreadcrumbList",
+            "FAQPage",
+            "ImageObject",
+            "ListItem",
+            "Organization",
+            "Person",
+            "Question",
+            "RealEstateAgent",
+            "WebPage"
+          ],
+          "mainCount": 1,
+          "tracking": {
+            "fub": [
+              "widgetTracker(\"create\", \"WT-ZZMZHBMI"
+            ],
+            "fubPresent": true,
+            "fubDeferred": true,
+            "ga": [
+              "G-W29GHBK38M"
+            ],
+            "crossDomainLinker": true,
+            "clarityIds": [
+              "wm7ddbciup"
+            ],
+            "metaPixel": false,
+            "newMeta": false,
+            "newUX": false,
+            "newBlog": false
+          }
+        }
+      ]
+    },
+    "greggcostin.com": {
+      "summary": {
+        "pages": 121,
+        "http200": 121,
+        "blogs": 5,
+        "schoolPages": 82,
+        "schemaCounts": {
+          "AboutPage": 1,
+          "AdministrativeArea": 17,
+          "Answer": 29,
+          "Article": 5,
+          "Blog": 1,
+          "BreadcrumbList": 120,
+          "City": 4,
+          "CollectionPage": 3,
+          "CollegeOrUniversity": 2,
+          "ContactPage": 1,
+          "EducationalOccupationalCredential": 2,
+          "FAQPage": 29,
+          "GeoCoordinates": 1,
+          "GovernmentOrganization": 2,
+          "ImageObject": 121,
+          "ItemList": 1,
+          "ListItem": 120,
+          "Offer": 2,
+          "OpeningHoursSpecification": 1,
+          "Organization": 121,
+          "Person": 121,
+          "Place": 16,
+          "PostalAddress": 83,
+          "Question": 29,
+          "RealEstateAgent": 121,
+          "School": 82,
+          "Service": 4,
+          "SpeakableSpecification": 1,
+          "WebPage": 115,
+          "WebSite": 115
+        },
+        "tracking": {
+          "fubPresent": 121,
+          "fubDeferred": 121,
+          "crossDomainLinker": 121,
+          "metaPixel": 0,
+          "newMeta": 0,
+          "newUX": 0,
+          "newBlog": 0
+        },
+        "clarity": 121,
+        "issues": {
+          "http": 0,
+          "canonical": 0,
+          "h1": 0,
+          "main": 0,
+          "missingDescription": 0,
+          "noindex": 0,
+          "jsonErrors": 0,
+          "missingSchema": 0,
+          "missingOG": 0,
+          "missingTwitter": 0,
+          "missingCrossSiteLinks": 0,
+          "missingAlt": 0,
+          "duplicateIds": 0,
+          "duplicateTitles": 0,
+          "duplicateDescriptions": 0
+        }
+      },
+      "issues": {
+        "http": [],
+        "canonical": [],
+        "h1": [],
+        "main": [],
+        "missingDescription": [],
+        "noindex": [],
+        "jsonErrors": [],
+        "missingSchema": [],
+        "missingOG": [],
+        "missingTwitter": [],
+        "missingCrossSiteLinks": [],
+        "missingAlt": [],
+        "duplicateIds": [],
+        "duplicateTitles": [],
+        "duplicateDescriptions": []
+      },
+      "resources": [
+        {
+          "url": "https://greggcostin.com/sitemap.xml",
+          "status": 200
+        },
+        {
+          "url": "https://greggcostin.com/robots.txt",
+          "status": 200
+        },
+        {
+          "url": "https://greggcostin.com/llms.txt",
+          "status": 200
+        },
+        {
+          "url": "https://greggcostin.com/__owner_seo_audit_missing_20260906",
+          "status": 404
+        }
+      ],
+      "samplePages": [
+        {
+          "url": "https://greggcostin.com/",
+          "title": "Gregg Costin, Pensacola Realtor | The Costin Team",
+          "description": "Buy or sell with confidence. Gregg Costin and The Costin Team at Levin Rinke Realty deliver 5.0-star service across Pensacola, Gulf Breeze, Pace, and Navarre.",
+          "schemaTypes": [
+            "AdministrativeArea",
+            "Answer",
+            "City",
+            "CollegeOrUniversity",
+            "EducationalOccupationalCredential",
+            "FAQPage",
+            "GeoCoordinates",
+            "GovernmentOrganization",
+            "ImageObject",
+            "Offer",
+            "OpeningHoursSpecification",
+            "Organization",
+            "Person",
+            "PostalAddress",
+            "Question",
+            "RealEstateAgent",
+            "Service",
+            "SpeakableSpecification",
+            "WebPage",
+            "WebSite"
+          ],
+          "mainCount": 1,
+          "tracking": {
+            "fub": [
+              "widgetTracker(\"create\", \"WT-ZZMZHBMI"
+            ],
+            "fubPresent": true,
+            "fubDeferred": true,
+            "ga": [
+              "G-W29GHBK38M"
+            ],
+            "crossDomainLinker": true,
+            "clarityIds": [
+              "ydd39cyp64"
+            ],
+            "metaPixel": false,
+            "newMeta": false,
+            "newUX": false,
+            "newBlog": false
+          }
+        },
+        {
+          "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+          "title": "Florida Closing Costs for Buyers: Every Line Item Explained",
+          "description": "What each line on a Florida closing statement actually is, who customarily pays it in Escambia and Santa Rosa County, and where a buyer has real room to negotiate.",
+          "schemaTypes": [
+            "Answer",
+            "Article",
+            "BreadcrumbList",
+            "FAQPage",
+            "ImageObject",
+            "ListItem",
+            "Organization",
+            "Person",
+            "Question",
+            "RealEstateAgent",
+            "WebPage"
+          ],
+          "mainCount": 1,
+          "tracking": {
+            "fub": [
+              "widgetTracker(\"create\", \"WT-ZZMZHBMI"
+            ],
+            "fubPresent": true,
+            "fubDeferred": true,
+            "ga": [
+              "G-W29GHBK38M"
+            ],
+            "crossDomainLinker": true,
+            "clarityIds": [
+              "ydd39cyp64"
+            ],
+            "metaPixel": false,
+            "newMeta": false,
+            "newUX": false,
+            "newBlog": false
+          }
+        },
+        {
+          "url": "https://greggcostin.com/buy",
+          "title": "Buy a Home in Pensacola, FL | The Costin Team",
+          "description": "Buyer representation across Pensacola, Gulf Breeze, Pace, Navarre, and Perdido Key. Search live MLS listings with an ABR-certified negotiator on your side.",
+          "schemaTypes": [
+            "Answer",
+            "BreadcrumbList",
+            "City",
+            "FAQPage",
+            "ImageObject",
+            "ListItem",
+            "Organization",
+            "Person",
+            "Question",
+            "RealEstateAgent",
+            "Service",
+            "WebPage",
+            "WebSite"
+          ],
+          "mainCount": 1,
+          "tracking": {
+            "fub": [
+              "widgetTracker(\"create\", \"WT-ZZMZHBMI"
+            ],
+            "fubPresent": true,
+            "fubDeferred": true,
+            "ga": [
+              "G-W29GHBK38M"
+            ],
+            "crossDomainLinker": true,
+            "clarityIds": [
+              "ydd39cyp64"
+            ],
+            "metaPixel": false,
+            "newMeta": false,
+            "newUX": false,
+            "newBlog": false
+          }
+        },
+        {
+          "url": "https://greggcostin.com/schools/gulf-breeze-high-school",
+          "title": "Gulf Breeze High School | FL DOE Grade",
+          "description": "Gulf Breeze High School (Santa Rosa County) earned an official Florida DOE grade of A for 2025-26. See the three-year grade history, achievement data, and how to eva",
+          "schemaTypes": [
+            "BreadcrumbList",
+            "ImageObject",
+            "ListItem",
+            "Organization",
+            "Person",
+            "PostalAddress",
+            "RealEstateAgent",
+            "School",
+            "WebPage",
+            "WebSite"
+          ],
+          "mainCount": 1,
+          "tracking": {
+            "fub": [
+              "widgetTracker(\"create\", \"WT-ZZMZHBMI"
+            ],
+            "fubPresent": true,
+            "fubDeferred": true,
+            "ga": [
+              "G-W29GHBK38M"
+            ],
+            "crossDomainLinker": true,
+            "clarityIds": [
+              "ydd39cyp64"
+            ],
+            "metaPixel": false,
+            "newMeta": false,
+            "newUX": false,
+            "newBlog": false
+          }
+        },
+        {
+          "url": "https://greggcostin.com/team",
+          "title": "Meet The Costin Team | Gregg Costin, Pensacola Realtor",
+          "description": "Meet The Costin Team at Levin Rinke Realty: Gregg Costin, Forbes Global Properties Rookie of the Year 2025, with licensed Realtors Rachel Ley and Nichole Sims.",
+          "schemaTypes": [
+            "AboutPage",
+            "BreadcrumbList",
+            "CollegeOrUniversity",
+            "EducationalOccupationalCredential",
+            "GovernmentOrganization",
+            "ImageObject",
+            "ListItem",
+            "Organization",
+            "Person",
+            "Place",
+            "RealEstateAgent",
+            "WebSite"
+          ],
+          "mainCount": 1,
+          "tracking": {
+            "fub": [
+              "widgetTracker(\"create\", \"WT-ZZMZHBMI"
+            ],
+            "fubPresent": true,
+            "fubDeferred": true,
+            "ga": [
+              "G-W29GHBK38M"
+            ],
+            "crossDomainLinker": true,
+            "clarityIds": [
+              "ydd39cyp64"
+            ],
+            "metaPixel": false,
+            "newMeta": false,
+            "newUX": false,
+            "newBlog": false
+          }
+        }
+      ]
+    }
+  },
+  "performance": {
+    "method": "One fresh Google PageSpeed Insights mobile lab run per URL. These are not content grades or a whole-site field-performance comparison.",
+    "results": [
+      {
+        "url": "https://greggcostin.com/buy",
+        "strategy": "mobile",
+        "pageOverall": "no field data",
+        "pageLCP": "no data",
+        "pageINP": "no data",
+        "pageCLS": "no data",
+        "pageTTFB": "no data",
+        "originOverall": "no field data",
+        "originLCP": "no data",
+        "originINP": "no data",
+        "originCLS": "no data",
+        "labPerf": 79,
+        "labLCP": "2.7 s",
+        "labCLS": "0.217"
+      },
+      {
+        "url": "https://greggcostin.com/",
+        "strategy": "mobile",
+        "pageOverall": "no field data",
+        "pageLCP": "no data",
+        "pageINP": "no data",
+        "pageCLS": "no data",
+        "pageTTFB": "no data",
+        "originOverall": "no field data",
+        "originLCP": "no data",
+        "originINP": "no data",
+        "originCLS": "no data",
+        "labPerf": 60,
+        "labLCP": "4.4 s",
+        "labCLS": "0"
+      },
+      {
+        "url": "https://pensacolamilitaryhousing.com/bah-rates",
+        "strategy": "mobile",
+        "pageOverall": "no field data",
+        "pageLCP": "no data",
+        "pageINP": "no data",
+        "pageCLS": "no data",
+        "pageTTFB": "no data",
+        "originOverall": "no field data",
+        "originLCP": "no data",
+        "originINP": "no data",
+        "originCLS": "no data",
+        "labPerf": 92,
+        "labLCP": "2.7 s",
+        "labCLS": "0.01"
+      },
+      {
+        "url": "https://pensacolamilitaryhousing.com/",
+        "strategy": "mobile",
+        "pageOverall": "no field data",
+        "pageLCP": "no data",
+        "pageINP": "no data",
+        "pageCLS": "no data",
+        "pageTTFB": "no data",
+        "originOverall": "no field data",
+        "originLCP": "no data",
+        "originINP": "no data",
+        "originCLS": "no data",
+        "labPerf": 65,
+        "labLCP": "6.7 s",
+        "labCLS": "0"
+      }
+    ]
+  },
+  "scoring": {
+    "method": "Same article fragments, old versus revised internal rubric. Multiple rubric definitions changed, so deltas are not improvements or losses in real performance.",
+    "articles": [
+      {
+        "site": "pmh",
+        "slug": "bah-2026-pensacola-what-can-you-afford",
+        "before": 82,
+        "after": 86,
+        "oldEvidence": 15,
+        "sourceDomains": 9
+      },
+      {
+        "site": "pmh",
+        "slug": "best-neighborhoods-eglin-afb-families",
+        "before": 80,
+        "after": 83,
+        "oldEvidence": 15.9,
+        "sourceDomains": 8
+      },
+      {
+        "site": "pmh",
+        "slug": "best-pensacola-neighborhoods-by-rank-bah",
+        "before": 72,
+        "after": 78,
+        "oldEvidence": 10.9,
+        "sourceDomains": 13
+      },
+      {
+        "site": "pmh",
+        "slug": "florida-homestead-exemption-military",
+        "before": 83,
+        "after": 87,
+        "oldEvidence": 16,
+        "sourceDomains": 7
+      },
+      {
+        "site": "pmh",
+        "slug": "florida-veteran-property-tax-county-guide",
+        "before": 84,
+        "after": 85,
+        "oldEvidence": 17.3,
+        "sourceDomains": 8
+      },
+      {
+        "site": "pmh",
+        "slug": "living-in-gulf-breeze-pros-cons",
+        "before": 80,
+        "after": 83,
+        "oldEvidence": 16,
+        "sourceDomains": 10
+      },
+      {
+        "site": "pmh",
+        "slug": "moving-to-navarre-2026-guide",
+        "before": 92,
+        "after": 95,
+        "oldEvidence": 16.4,
+        "sourceDomains": 11
+      },
+      {
+        "site": "pmh",
+        "slug": "moving-to-pensacola-2026-guide",
+        "before": 83,
+        "after": 86,
+        "oldEvidence": 16.7,
+        "sourceDomains": 28
+      },
+      {
+        "site": "pmh",
+        "slug": "pcs-to-pensacola-2026-complete-guide",
+        "before": 81,
+        "after": 82,
+        "oldEvidence": 16.3,
+        "sourceDomains": 7
+      },
+      {
+        "site": "pmh",
+        "slug": "personal-property-activity-pcs-2026",
+        "before": 81,
+        "after": 88,
+        "oldEvidence": 14.5,
+        "sourceDomains": 8
+      },
+      {
+        "site": "pmh",
+        "slug": "va-loan-assumption-buyers-guide",
+        "before": 78,
+        "after": 84,
+        "oldEvidence": 14.5,
+        "sourceDomains": 7
+      },
+      {
+        "site": "pmh",
+        "slug": "va-loan-seller-concessions-truth",
+        "before": 80,
+        "after": 84,
+        "oldEvidence": 17.3,
+        "sourceDomains": 6
+      },
+      {
+        "site": "gc",
+        "slug": "closing-costs-florida-buyers",
+        "before": 63,
+        "after": 53,
+        "oldEvidence": 9.9,
+        "sourceDomains": 0
+      },
+      {
+        "site": "gc",
+        "slug": "fed-rate-hike-what-it-means",
+        "before": 68,
+        "after": 56,
+        "oldEvidence": 16.4,
+        "sourceDomains": 0
+      },
+      {
+        "site": "gc",
+        "slug": "florida-insurance-relief-2026",
+        "before": 74,
+        "after": 59,
+        "oldEvidence": 19,
+        "sourceDomains": 0
+      },
+      {
+        "site": "gc",
+        "slug": "property-taxes-escambia-santa-rosa",
+        "before": 74,
+        "after": 76,
+        "oldEvidence": 12.1,
+        "sourceDomains": 5
+      },
+      {
+        "site": "gc",
+        "slug": "what-moves-mortgage-rates",
+        "before": 59,
+        "after": 62,
+        "oldEvidence": 5.7,
+        "sourceDomains": 1
+      }
+    ],
+    "firstPersonRule": {
+      "oldBonusPoints": 1,
+      "affectedArticles": [
+        "fed-rate-hike-what-it-means",
+        "florida-insurance-relief-2026",
+        "property-taxes-escambia-santa-rosa"
+      ],
+      "actualPhraseMatches": [
+        "we would",
+        "we have",
+        "We walk"
+      ],
+      "articleTextChanged": false
+    }
+  },
+  "clarity": {
+    "source": "Authenticated Chrome Clarity dashboard, observed live before this turn's PageSpeed runs.",
+    "project": "greggcostin.com",
+    "projectId": "ydd39cyp64",
+    "windowLabel": "Last 30 days",
+    "exactBoundsAndTimezone": "Not displayed/verified; label is not proof of 30 days of collection.",
+    "unfiltered": {
+      "sessions": 6,
+      "pagesPerSession": 3.83,
+      "scrollDepthPercent": 58.04,
+      "activeSecondsApprox": 240,
+      "excludedBots": 7,
+      "localPreviewURLsPresent": true
+    },
+    "productionFiltered": {
+      "filter": "Visited URL starts with https://greggcostin.com/",
+      "sessions": 5,
+      "uniqueUsers": 5,
+      "pagesPerSession": 1,
+      "scrollDepthPercent": 18,
+      "activeSeconds": 14,
+      "totalSeconds": 19,
+      "rageClickSessions": 0,
+      "deadClickSessions": 0,
+      "quickBackSessions": 0,
+      "jsErrors": 0,
+      "topPages": [
+        "https://greggcostin.com/"
+      ],
+      "smartEvents": "No data available",
+      "funnels": "Not configured"
+    },
+    "limits": [
+      "Not evidence of five independent prospects; owner/testing visits may remain.",
+      "Sample too small for conversion or redesign verdicts.",
+      "Only the civilian project appears under the current Clarity login."
+    ]
+  },
+  "fub": {
+    "source": "Authenticated Follow Up Boss Pixel Tracking settings",
+    "pixelId": "WT-ZZMZHBMI",
+    "installedDomains": [
+      "greggcostin.com",
+      "pensacolamilitaryhousing.com",
+      "127.0.0.1"
+    ],
+    "formCaptureAndCreateNewLeads": "ON",
+    "settingsChanged": false,
+    "leadDeliveryOrDuplicationTest": "Not performed",
+    "risk": "Existing site forms also POST to the contact worker; redundant pixel capture may create duplicate or inconsistent intake. FUB recommends capture OFF when API/email intake exists."
+  },
+  "meta": {
+    "livePixelDetected": false,
+    "localConfigFile": "civilian-site/assets/costin-meta-config.js",
+    "localEnabled": false,
+    "localPixelId": "",
+    "accountOwnershipAndDataset": "Not verified",
+    "externalChangesMade": false
+  },
+  "deployment": {
+    "blogReviewPanelsLive": false,
+    "civilianRedesignLive": false,
+    "changesMadeThisTurn": "Read-only website/account checks and local reports; no site deployment, tracker setting change or CRM message."
+  }
+}

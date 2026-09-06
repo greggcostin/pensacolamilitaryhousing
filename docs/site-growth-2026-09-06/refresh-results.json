@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "closing-costs-florida-buyers",
+    "date": "2026-09-06",
+    "kind": "substantive sourced refresh",
+    "models": {
+      "research": "gpt-6-astra",
+      "write": "gpt-6-astra"
+    },
+    "configuredModels": {
+      "research": "self",
+      "write": "self",
+      "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+    },
+    "evidenceFile": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
+    "readerTask": "Calculate cash to close and identify the unresolved contract and quote items.",
+    "datePublished": "2026-08-31",
+    "dateModified": "2026-09-06",
+    "scoreBefore": 53,
+    "scoreAfter": 95,
+    "formatting": 100,
+    "performanceChange": "not measured",
+    "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
+    "summary": "Added a reproducible cash-to-close worksheet, primary state and CFPB sources, and distinctions between legal charges, negotiated costs and provider quotes."
+  },
+  {
+    "slug": "fed-rate-hike-what-it-means",
+    "date": "2026-09-06",
+    "kind": "substantive sourced refresh",
+    "models": {
+      "research": "gpt-6-astra",
+      "write": "gpt-6-astra"
+    },
+    "configuredModels": {
+      "research": "self",
+      "write": "self",
+      "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+    },
+    "evidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
+    "readerTask": "Choose a rate-lock discussion and purchase budget using official information instead of a forecast.",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-06",
+    "scoreBefore": 56,
+    "scoreAfter": 100,
+    "formatting": 100,
+    "performanceChange": "not measured",
+    "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
+    "summary": "Replaced Fed-cut/mortgage-rate assumptions with verified dated context, lender comparison steps and a reproducible payment sensitivity table."
+  },
+  {
+    "slug": "florida-insurance-relief-2026",
+    "date": "2026-09-06",
+    "kind": "substantive sourced refresh",
+    "models": {
+      "research": "gpt-6-astra",
+      "write": "gpt-6-astra"
+    },
+    "configuredModels": {
+      "research": "self",
+      "write": "self",
+      "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+    },
+    "evidenceFile": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
+    "readerTask": "Compare a renewal or purchase quote without mistaking statewide premium figures for personal savings.",
+    "datePublished": "2026-09-03",
+    "dateModified": "2026-09-06",
+    "scoreBefore": 59,
+    "scoreAfter": 96,
+    "formatting": 100,
+    "performanceChange": "not measured",
+    "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
+    "summary": "Separated an industry-commissioned aggregate study from household quotes, checked the newer Citizens bulletin and added a premium/deductible comparison."
+  }
+]

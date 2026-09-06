@@ -47,9 +47,15 @@ const next = urgent ? { kind: "verify-expired-facts", site: urgent.site, target:
   sourceGap.length ? { kind: "source-and-usefulness-refresh", site: sourceGap[0].site, target: sourceGap[0].url,
     readerTask: "Give the reader a reproducible, sourced cost or decision checklist.", reason: "Existing financial guide has no external source links. Research before rewriting; a score alone is not verification." } :
     { kind: "research-intent-gap", site: briefs.find((b) => b.evidence.length)?.site || "pmh", brief: briefs.find((b) => b.evidence.length)?.id || briefs[0]?.id };
+const civilianConfig = readJson('content/civilian-blog/engine-config.json');
+const modelsBySite = {pmh: loadLedger('pmh').config.models, gc: civilianConfig.models};
+const distribution = existsSync(ROOT + 'content/social/launch-plan.json') ? readJson('content/social/launch-plan.json') : null;
 const state = {
   schemaVersion: 2, generated: TODAY, mode: "reviewable-plan", maximumArticleChanges: 1,
-  next, models: loadLedger("pmh").config.models, publication: { autoPublish: loadLedger("pmh").config.autoPublish, default: "stage branch, test, then report" },
+  next, models: modelsBySite[next.site || 'pmh'], modelsBySite,
+  publication: { autoPublish: next.site === 'gc' ? civilianConfig.autoPublish : loadLedger("pmh").config.autoPublish, default: "stage branch, test, then report" },
+  distribution: distribution ? {policyFile: 'content/social/launch-plan.json', mode: 'draft-only', preferredFacebookIdentity: distribution.preferredFacebookIdentity, measurement: distribution.measurement, drafts: distribution.campaigns.map(c => ({id:c.id,site:c.site,destination:c.destination,status:c.status})),
+    note: 'Prepare Facebook copy, an Instagram caption and a Story link from the verified article. A file or platform draft is not published distribution. Check prior post destinations and campaign IDs for duplicates; never auto-post, boost or increase spend.'} : {mode:'not-configured'},
   activeLessons: lessons.filter((l) => eligibleLesson(l, experiments)),
   excludedLessons: lessons.filter((l) => l.status === "active" && !eligibleLesson(l, experiments)).map((l) => ({ id: l.id, reason: "Unreviewed performance hypothesis or missing evidence metadata." })),
   experiments: experiments.map((e) => ({ id: e.id, page: e.page, outcome: e.outcome || "unknown", cooldown: !!recentExperiment([e], e.page, e.site || "pmh", TODAY), comparison: e.comparison })),
@@ -65,6 +71,8 @@ const state = {
     "Factory evidence gate, score gate, formatting and site audits must pass. Keep article dates tied to substantive changes.",
     "Use the article journey's first-party tool, relevant companion guide and one inquiry path. Plan two relevant inbound links; exclude sitewide furniture.",
     "Record actual models, exceptions, sources, revisions, one hypothesis and deployment status. Do not self-promote performance rules.",
+    "Draft platform-specific distribution from the sourced article, prioritizing Gregg's existing professional Facebook profile. Use a tagged link to the intent-owning domain and preserve the personal Facebook and Instagram identity. No publication or paid delivery without authorization.",
+    "Separate search, organic-social and paid-social cohorts. Record real accepted inquiries, separately confirmed qualified inquiries and appointments. A share button click is not a verified share or a client. Missing outcomes stay unknown.",
     "At 28+ days evaluate comparable page/query cohorts and accepted inquiry outcomes. If evidence is insufficient, keep collecting instead of rewriting again."
   ]
 };

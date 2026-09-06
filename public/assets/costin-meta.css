@@ -1,0 +1,10 @@
+.gc-ad-panel{position:fixed;bottom:20px;left:20px;z-index:25000;max-width:430px;width:calc(100% - 40px);padding:24px;background:#142832;color:#fff;border:1px solid #78908f;box-shadow:0 12px 50px #0005;border-radius:4px;font:14px/1.65 var(--sans)}
+.gc-ad-panel h2{font:500 24px var(--serif);margin:0 0 12px;color:#fff}
+.gc-ad-panel p{margin:8px 0 16px;color:#d2dcdb}
+.gc-ad-panel a{color:#e0c485;text-decoration:underline}
+.gc-ad-panel .gc-ad-actions{display:flex;gap:10px;flex-wrap:wrap}
+.gc-ad-panel button{min-height:44px;padding:10px 15px;font:600 13px var(--sans);border:1px solid #8aa09e;background:transparent;color:#fff;cursor:pointer;border-radius:2px}
+.gc-ad-panel button[data-meta-accept]{background:#d4b768;border-color:#d4b768;color:#10232c}
+.gc-ad-panel button:disabled{opacity:.5;cursor:not-allowed}
+[data-meta-settings]{border:0;background:transparent;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;padding:8px}
+@media(max-width:640px){footer{padding-bottom:140px!important}.gc-ad-panel{bottom:90px;max-height:65vh;overflow:auto}}

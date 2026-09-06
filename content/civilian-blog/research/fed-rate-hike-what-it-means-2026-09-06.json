@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 2,
+  "article": {
+    "site": "gc",
+    "slug": "fed-rate-hike-what-it-means"
+  },
+  "models": {
+    "research": "gpt-6-astra (in-session)",
+    "write": "gpt-6-astra (in-session)"
+  },
+  "readerTask": "Choose a rate-lock discussion and purchase budget using official information instead of a forecast.",
+  "originalValue": "Original $340,000 loan sensitivity table independently checked by a 360-payment balance simulation, plus a written-offer checklist.",
+  "claims": [
+    {
+      "id": "fed-decision",
+      "kind": "fact",
+      "status": "verified",
+      "claim": "The July 29, 2026 FOMC decision held the federal funds target at 3.50%-3.75%; three dissenters preferred a quarter-point increase.",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+      "accessed": "2026-09-06",
+      "asOf": "July 29, 2026 decision",
+      "locator": "Decision paragraph and voting record",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "Read the adopted decision and dissenters separately; a preference for an increase is not a subsequent policy decision."
+      }
+    },
+    {
+      "id": "fed-calendar",
+      "kind": "fact",
+      "status": "verified",
+      "claim": "The next scheduled 2026 FOMC meeting after the September 6 review is September 15-16.",
+      "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "accessed": "2026-09-06",
+      "asOf": "2026 calendar checked September 6",
+      "locator": "2026 meeting calendar: September",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "Calendar date checked against latest completed scheduled meeting; no statement that a hike is certain."
+      }
+    },
+    {
+      "id": "pmms",
+      "kind": "fact",
+      "status": "verified",
+      "claim": "Freddie Mac September 3, 2026 national 30-year fixed average was 6.71%, compared with 6.66% the prior week.",
+      "sourceUrl": "https://www.freddiemac.com/pmms",
+      "accessed": "2026-09-06",
+      "asOf": "September 3, 2026 weekly release",
+      "locator": "September 3, 2026 release: 30-year fixed panel",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "Confirmed the release date, product and prior-week comparison. It is a national weekly benchmark, not a local or same-day quote."
+      }
+    },
+    {
+      "id": "expectations",
+      "kind": "fact",
+      "status": "verified",
+      "claim": "Longer-term interest rates reflect expectations about future monetary policy and the economy as well as the current policy target.",
+      "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+      "accessed": "2026-09-06",
+      "asOf": "September 6, 2026 source review",
+      "locator": "Monetary policy transmission and longer-term interest rates",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "The source supports the mechanism; the article labels direction and timing as uncertain rather than predicting a quote."
+      }
+    },
+    {
+      "id": "rate-lock",
+      "kind": "fact",
+      "status": "verified",
+      "claim": "Mortgage rate-lock protection depends on its stated time period and qualifying application conditions; extension and float-down terms should be confirmed.",
+      "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
+      "accessed": "2026-09-06",
+      "asOf": "September 6, 2026 source review",
+      "locator": "Rate locks, expiration, changes to application",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "No universal lock duration, price, or float-down right is asserted."
+      }
+    },
+    {
+      "id": "payment-example",
+      "kind": "illustration",
+      "status": "verified",
+      "claim": "A hypothetical $340,000 thirty-year loan has monthly principal and interest of $2,149.03 at 6.50%, $2,205.23 at 6.75%, and $2,262.03 at 7.00%.",
+      "sourceUrl": "https://files.consumerfinance.gov/f/documents/cfpb_charm_booklet.pdf",
+      "accessed": "2026-09-06",
+      "asOf": "Hypothetical calculation September 6, 2026",
+      "locator": "Original article illustration, standard fixed-payment formula; CFPB loan-payment concepts",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "Astra source review separate from drafting",
+        "date": "2026-09-06",
+        "finding": "Recomputed P*r/(1-(1+r)^-360), then independently simulated all 360 monthly interest and payment transactions to a balance within $0.00001. Differences use unrounded payments before rounding."
+      },
+      "model": {
+        "principal": 340000,
+        "months": 360,
+        "annualRates": [
+          0.065,
+          0.0675,
+          0.07
+        ],
+        "formula": "P*r/(1-(1+r)^(-n)); r=annualRate/12",
+        "validation": "Separate iterative balance reconciliation; no future rate or actual loan offer represented."
+      }
+    }
+  ],
+  "uncertainFacts": [
+    {
+      "claim": "Specific September FedWatch hike probabilities and a particular Treasury high.",
+      "action": "Omitted volatile secondary-source snapshots rather than assert a current probability without a dated primary capture."
+    },
+    {
+      "claim": "A future refinance will make an otherwise unaffordable purchase workable.",
+      "action": "Rejected; article and FAQ require the purchase to fit at current terms."
+    },
+    {
+      "claim": "July Florida market figures, the Barr speech quotation, and daily mortgage trackers.",
+      "action": "Removed as unnecessary to the borrower decision; no current verification asserted."
+    }
+  ],
+  "reviewNotes": "Research and prose completed in-session under the civilian engine self/self policy. Source meaning and arithmetic reviewed in a separate pass. Existing article photo retained; original publication date preserved. No measured traffic or conversion lift claimed."
+}

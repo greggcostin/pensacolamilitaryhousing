@@ -1,0 +1,85 @@
+{
+  "at": "2026-09-06T07:49:49.340Z",
+  "checks": [
+    {
+      "name": "Local preview omits production analytics loaders and always disables Meta",
+      "pass": true
+    },
+    {
+      "name": "Original portrait and primary action are visible on the first desktop and mobile screen",
+      "pass": true
+    },
+    {
+      "name": "Homepage journeys work and preserve the chosen form topic",
+      "pass": true
+    },
+    {
+      "name": "Inquiry dialog contains keyboard focus and restores the opener",
+      "pass": true
+    },
+    {
+      "name": "Invalid email is blocked before the contact worker",
+      "pass": true
+    },
+    {
+      "name": "A server failure keeps the inquiry and never records a lead",
+      "pass": true
+    },
+    {
+      "name": "Confirmed inquiry records exactly one lead without contact details",
+      "pass": true
+    },
+    {
+      "name": "Contact page form also records one confirmed lead",
+      "pass": true
+    },
+    {
+      "name": "Long guides expose working section navigation",
+      "pass": true
+    },
+    {
+      "name": "Profile and service pages reserve the opening content for the visitor",
+      "pass": true
+    },
+    {
+      "name": "Delayed fonts do not shift the buyer guide after its first render",
+      "pass": true
+    },
+    {
+      "name": "All 121 content pages render without mobile or desktop overflow",
+      "pass": true
+    },
+    {
+      "name": "Homepage works at 320px and with all area guides expanded",
+      "pass": true
+    },
+    {
+      "name": "Meta stays inactive without a real configuration",
+      "pass": true
+    },
+    {
+      "name": "Meta declines load no SDK; acceptance sends one PageView; withdrawal blocks events",
+      "pass": true
+    },
+    {
+      "name": "GPC, expired consent, malformed ID and sensitive query strings never activate Meta",
+      "pass": true
+    },
+    {
+      "name": "Consent withdrawal in another tab blocks further Meta events",
+      "pass": true
+    },
+    {
+      "name": "No JavaScript still exposes search, guides, market sources and contact links",
+      "pass": true
+    },
+    {
+      "name": "No browser JavaScript errors",
+      "pass": true
+    }
+  ],
+  "issues": [],
+  "consoleErrors": [],
+  "workerRequests": "All intercepted with synthetic success or failure; no CRM records created.",
+  "limitations": "Chromium/Edge desktop emulation; external analytics blocked; not a screen-reader or real-device certification."
+}

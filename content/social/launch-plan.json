@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-09-06",
+  "status": "draft-only; no paid or organic publication authorized by this file",
+  "preferredFacebookIdentity": {
+    "name": "Gregg Costin",
+    "type": "existing professional-mode personal profile",
+    "url": "https://www.facebook.com/greggcostin/",
+    "followersDisplay": "5.7K",
+    "verified": "2026-09-06",
+    "sharedPixel": "960230270427179",
+    "adAccount": "467811675743449",
+    "note": "Live profile offers Create new ad and Boost Facebook content. Verify identity in the final preview; a business Page and the personal profile remain separate."
+  },
+  "instagram": "https://www.instagram.com/greggcostinrealtor/",
+  "businessPage": "https://www.facebook.com/greggcostinrealtor/",
+  "publication": {
+    "automaticPosting": false,
+    "automaticBoosting": false,
+    "automaticBudgetIncreases": false,
+    "requires": [
+      "Published and verified destination",
+      "Named advertising identity and placements",
+      "Housing category and permitted audience",
+      "Approved creative and budget with an end date",
+      "Meta event receipt checked when using website conversions",
+      "Confirmed lead delivery and campaign attribution in FUB"
+    ]
+  },
+  "audience": {
+    "category": "Housing",
+    "country": "United States",
+    "proposedServiceAreas": [
+      "Pensacola, Florida",
+      "Fort Walton Beach, Florida"
+    ],
+    "strategy": "Use the location options and minimum radii permitted by Meta's Housing controls. Keep all permitted ages and genders. Let useful PCS or buyer content explain relevance. Do not invent a military-affiliation flag or upload client lists.",
+    "personalProfile": "Housing selection removed the follower-only and similar-to-followers options in the live preview. Use organic posts to reach the existing follower community and the permitted Housing audience for paid delivery.",
+    "preparedPreview": {
+      "location": "Pensacola, Florida +15 miles",
+      "genders": "All",
+      "ages": "18-65+",
+      "detailedTargeting": [],
+      "placements": ["Facebook"],
+      "note": "Fort Walton Beach remains a proposed subsequent area; it is not configured in this preview."
+    },
+    "unverified": [
+      "No military-affiliation targeting option has been verified.",
+      "Retargeting eligibility and sufficient event volume have not been established."
+    ]
+  },
+  "measurement": {
+    "primary": [
+      "Website inquiries explicitly accepted by the contact service",
+      "Qualified inquiries confirmed in FUB",
+      "Appointments actually confirmed",
+      "Closed clients only when transaction evidence supports the attribution"
+    ],
+    "secondary": [
+      "Landing page sessions",
+      "Outbound clicks",
+      "Engaged reading",
+      "Shares and saves reported by the platform"
+    ],
+    "rules": [
+      "Keep organic search, organic social and paid social separate.",
+      "Exclude localhost, preview hosts, owner tests and synthetic leads.",
+      "A download remains a download; an appointment request is not a booked appointment.",
+      "No ranking or conversion gains are inferred from internal writing grades, setup scores or ad forecasts.",
+      "Record exact dates, time zone, property, placements, source and budget; use equal non-overlapping windows.",
+      "Review one hypothesis at a time; require two reviewed comparable experiments before promoting a performance lesson.",
+      "Never auto-increase spend. Keep missing outcomes null, not zero."
+    ],
+    "outcomesFile": "content/social/outcomes.json"
+  },
+  "budgetProposal": {
+    "currency": "USD",
+    "status": "not authorized to spend",
+    "totalForTwoTests": 280,
+    "perTestLifetimeCap": 140,
+    "proposedDurationDaysPerTest": 14,
+    "sequencing": "Start with the personal-profile PCS promotion; review delivery and lead quality before funding the civilian test. The business website-lead draft is an alternative test, not an extra $140 authorization.",
+    "warning": "A proposed cap does not activate ads. Recheck the final payment summary and end date before any approved launch."
+  },
+  "campaigns": [
+    {
+      "id": "pcs_planning",
+      "site": "pmh",
+      "status": "personal-profile Facebook preview prepared, unpublished; business website-lead alternative saved off as a draft",
+      "destination": "https://pensacolamilitaryhousing.com/pcs-checklist?utm_source=facebook&utm_medium=paid_social&utm_campaign=pcs_planning&utm_content=personal_profile",
+      "nextStep": "https://pensacolamilitaryhousing.com/book-pcs-call",
+      "headline": "Pensacola PCS checklist",
+      "primaryText": "A Gulf Coast PCS move brings a lot of deadlines. Start with a practical 60/30/7-day checklist for housing, household goods, schools and arrival planning. Read it free, then request a planning call if you need help with the home search. Gregg Costin, REALTOR® | Levin Rinke Realty. Equal Housing Opportunity.",
+      "callToAction": "Learn more",
+      "creative": "public/og/pcs-checklist.png",
+      "creativeStatus": "Final platform image/crop selection still pending. Local share card is available; the preview currently uses existing profile media. Do not launch before review.",
+      "testHypothesis": "A practical checklist creates more useful planning conversations than a generic Realtor introduction.",
+      "successClaim": "unproven",
+      "facebookOrganic": "A PCS checklist is easier to use when it tells you what to do next. This guide breaks planning into 60 days, 30 days and the last week: housing, household goods, schools and arrival details. Save it for your move, or send it to someone with orders. Gregg Costin, REALTOR® | Levin Rinke Realty.",
+      "instagramCaption": "A Gulf Coast PCS move has enough moving parts. Save a simple 60/30/7-day plan for housing, household goods, schools and arrival. The free PCS checklist is at PensacolaMilitaryHousing.com through my profile link. Need help with the home search? Request a planning call. Gregg Costin, REALTOR® | Levin Rinke Realty.",
+      "storyLink": "https://pensacolamilitaryhousing.com/pcs-checklist?utm_source=instagram&utm_medium=organic_social&utm_campaign=pcs_planning&utm_content=story",
+      "reelScript": "Before a PCS move, put three dates on your calendar: sixty days, thirty days and the final week. Use each checkpoint to confirm the next housing, household-goods, school and arrival tasks. I have a free printable Pensacola PCS checklist you can work through. Open the military housing link in my profile and start with the next deadline."
+    },
+    {
+      "id": "buyer_cash_to_close",
+      "site": "gc",
+      "status": "local creative draft; publish the sourced article refresh first",
+      "destination": "https://greggcostin.com/blog/closing-costs-florida-buyers?utm_source=facebook&utm_medium=paid_social&utm_campaign=buyer_cash_to_close&utm_content=personal_profile",
+      "nextStep": "https://greggcostin.com/contact",
+      "headline": "What will you bring to closing?",
+      "primaryText": "The down payment is only one part of cash to close. This Florida buyer guide walks through state charges, title costs, insurance, escrow, deposits and credits using a clearly labeled $350,000 purchase example. Use the worksheet with your own Loan Estimate and written quotes. Gregg Costin, REALTOR® | Levin Rinke Realty. Equal Housing Opportunity.",
+      "callToAction": "Learn more",
+      "creative": "civilian-site/og/blog-closing-costs-florida-buyers.png",
+      "creativeStatus": "Reviewed 1200x630 share card; confirm mobile ad crop at publication.",
+      "evidencePack": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
+      "testHypothesis": "An itemized cash-to-close worksheet attracts buyers seeking a concrete plan.",
+      "successClaim": "unproven",
+      "facebookOrganic": "Before wiring money for a home purchase, separate three numbers: the down payment, closing costs and the remaining cash to close. This guide works through a $350,000 hypothetical purchase and shows where deposits and approved credits fit. Replace the example's allowances with your written quotes. Save the worksheet for your Loan Estimate review. Gregg Costin, REALTOR® | Levin Rinke Realty.",
+      "instagramCaption": "The down payment is not the whole cash-to-close number. Save this checklist: loan and title fees; state charges; insurance and escrow; deposits already paid; approved credits. The full Florida closing-cost worksheet is in the buyer guides at GreggCostin.com through my profile link. The example is hypothetical; use your own written quotes. Gregg Costin, REALTOR® | Levin Rinke Realty.",
+      "storyLink": "https://greggcostin.com/blog/closing-costs-florida-buyers?utm_source=instagram&utm_medium=organic_social&utm_campaign=buyer_cash_to_close&utm_content=story",
+      "reelScript": "A down payment and cash to close are different numbers. Start with your down payment. Add the charges and prepaid amounts on your Loan Estimate. Then account for deposits already paid and any permitted credits. I put a worked Florida example and a checklist in the buyer guides at GreggCostin.com. Use your own written quotes to make it a plan for your purchase."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://about.fb.com/news/2023/06/helping-creators-get-discovered-and-earn-money-on-facebook/",
+      "supports": "Professional-mode profiles support creator advertising; live account controls were separately verified."
+    },
+    {
+      "url": "https://about.fb.com/news/2022/06/expanding-our-work-on-ads-fairness/",
+      "supports": "Housing audiences have restricted targeting. Apply the current Housing interface at launch."
+    }
+  ]
+}

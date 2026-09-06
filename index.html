@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en-US">
-      <head>
+<head>
+<script data-costin-host-guard>(function(){window.costinProduction=location.protocol==='https:'&&!location.port&&["pensacolamilitaryhousing.com","www.pensacolamilitaryhousing.com","greggcostin.com","www.greggcostin.com"].includes(location.hostname);if(!window.costinProduction){window.gtag=function(){};}})();</script>
+<meta name="facebook-domain-verification" content="473aaa6oqxk2y3y3ohmz4dsvs58k1l" />
 <script>if(location.hostname.indexOf('.pages.dev')>-1)location.replace('https://pensacolamilitaryhousing.com'+location.pathname+location.search);</script>
               <meta charset="UTF-8" />
               <link rel="icon" type="image/png" href="/images/favicon.png" />
@@ -16,20 +18,26 @@
               <!-- perf-01: fonts are discovered in the HTML instead of after the JS bundle executes.
                    Weight list matches what src/App.jsx actually renders: Inter 300/400/500/600/700,
                    Playfair Display 400/500/600/700 roman plus 400/500 italic (the gold hero line). -->
-              <link rel="preconnect" href="https://fonts.googleapis.com" />
-              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-              <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-              <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" /></noscript>
 
+              <link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+              <link rel="preload" href="/fonts/playfair-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+              <link rel="preload" href="/fonts/playfair-italic-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+              <style data-costin-fonts>/* Licensed under the SIL Open Font License. Sources and licenses: /fonts/.
+   Optional display prevents a late font swap from shifting a page already being read. */
+@font-face{font-family:'Inter';font-style:normal;font-weight:300 800;font-display:optional;src:url('/fonts/inter-latin-variable.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 700;font-display:optional;src:url('/fonts/playfair-latin-variable.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 700;font-display:optional;src:url('/fonts/playfair-italic-latin-variable.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}</style>
               <!-- Search engine ownership verification -->
               <meta name="msvalidate.01" content="2FF04A4C930D811BF314EC1B4D8BE3FD" />
               <meta name="google-site-verification" content="_oXKwQgswhLA_kUZNe28M1Phn5643EcYQEqrWWUlBlc" />
 
               <!-- Google tag (gtag.js) -->
-              <script async src="https://www.googletagmanager.com/gtag/js?id=G-W29GHBK38M"></script>
-              <script>
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
+              <script data-costin-tracker>(function(){if(!window.costinProduction)return;
+var s=document.createElement('script');s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-W29GHBK38M";document.head.appendChild(s);
+})();</script>
+              <script data-costin-tracker>(function(){if(!window.costinProduction)return;
+window.dataLayer = window.dataLayer || [];
+                        window.gtag=function(){window.dataLayer.push(arguments);};
                         gtag('js', new Date());
                         // Cross-domain linker (audit 2026-09-02, analytics-03): one GA4 user across both sites
                         gtag('config', 'G-W29GHBK38M', { linker: { domains: ['pensacolamilitaryhousing.com', 'greggcostin.com'], accept_incoming: true } });
@@ -65,7 +73,7 @@
                         });
                         // form_submit listener removed 2026-09-02 (audit analytics-01): it fired on every attempt,
                         // including spam and failures. Success-gated inquiry_submit is sent from App.jsx instead.
-              </script>
+})();</script>
 
               <title>Pensacola Military Housing | Gregg Costin, Realtor® | PCS & VA Loan</title>
           <meta name="description" content="PCS-to-Pensacola Realtor specializing in VA loans and military relocation across NAS Pensacola, Corry, Whiting, Eglin, Hurlburt, and Duke Field." />
@@ -699,15 +707,15 @@
                         }
               </style>
           <!-- Microsoft Clarity (heatmaps + session recordings) -->
-          <script type="text/javascript">
-              (function(c,l,a,r,i,t,y){
+          <script type="text/javascript" data-costin-tracker>(function(){if(!window.costinProduction)return;
+(function(c,l,a,r,i,t,y){
                   c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                   t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                   y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
               })(window, document, "clarity", "script", "wm7ddbciup");
-          </script>
+})();</script>
       <!-- FollowUpBoss Widget Tracker (deferred: keeps the ~525KB widget JS off the critical path) -->
-<script>
+<script data-costin-tracker>(function(){if(!window.costinProduction)return;
 (function(){
   function loadFUB(){
     if(window.__fubLoaded){return;} window.__fubLoaded=true;
@@ -715,15 +723,17 @@
     window.widgetTracker("create", "WT-ZZMZHBMI");
     window.widgetTracker("send", "pageview");
   }
-  if ('requestIdleCallback' in window) { requestIdleCallback(loadFUB, {timeout: 5000}); } else { setTimeout(loadFUB, 4000); }
+  function scheduleFUB(){ if ('requestIdleCallback' in window) { requestIdleCallback(loadFUB, {timeout: 5000}); } else { setTimeout(loadFUB, 1000); } }
+  if(document.readyState==='complete') scheduleFUB(); else window.addEventListener('load',scheduleFUB,{once:true});
 })();
-</script>
+})();</script>
 <!-- end FollowUpBoss Widget Tracker -->
 </head>
   <body>
           <div id="root">
             <!-- Static SEO content. React replaces this on hydration so users see the SPA. Non-JS crawlers (AI bots, social scrapers, older indexers) see this fully-rendered page. -->
             <div style="background:#0A0F1A;color:#E8E9EB;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh;padding:40px 24px;max-width:1100px;margin:0 auto">
+<main id="main">
               <header style="margin-bottom:40px">
                 <p style="color:#C4A75A;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;margin:0 0 8px">Pensacola Military Housing</p>
                 <h1 style="font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 16px;color:#fff;font-weight:500">Pensacola's #1 <em style="color:#C4A75A;font-style:italic">military relocation</em> Realtor<sup>&reg;</sup></h1>
@@ -807,6 +817,8 @@
               </section>
 
               <p style="margin-top:40px;font-size:12px;line-height:1.7;color:#8A8D94;font-style:italic"><strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (220 W. Garden St., Pensacola, FL 32502). Information on this site (including BAH figures, VA loan terms, funding fees, tax rules, homestead and disability benefits, school zoning, and rental/investment commentary) is provided for general informational purposes only and is not legal, tax, financial, mortgage, lending, or investment advice. Real estate, lending, tax, and benefits rules change frequently and depend on individual circumstances; verify current figures with official sources (DoD BAH calculator, VA, IRS, your county property appraiser) and consult a licensed attorney, CPA, or NMLS-licensed loan officer for guidance specific to your situation. Gregg Costin is not a mortgage lender, attorney, tax professional, or financial advisor, and is not affiliated with, endorsed by, or representing the U.S. Department of Defense, Department of Veterans Affairs, or any branch of the U.S. military. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.</p><noscript><p style="margin-top:40px;padding:16px;background:#1a1f2a;border-left:3px solid #C4A75A;color:#B8BAC0;font-size:13px">Enable JavaScript to view the full interactive experience, including the 2026 BAH calculator, mortgage calculators, amortization analyzer, and loan comparison tools. All content above is available as-is without JavaScript.</p></noscript>
+</main>
+<p data-costin-sites>For Florida and Alabama home buying and selling, visit <a href="https://greggcostin.com/">The Costin Team</a>.</p>
             </div>
           </div>
           <script type="module" src="/src/main.jsx"></script>
@@ -821,7 +833,8 @@
             </div>
             <div id="search"></div>
           </dialog>
-          <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+          <link href="/pagefind/pagefind-ui.css" rel="stylesheet" media="print" onload="this.media='all'">
+          <noscript><link href="/pagefind/pagefind-ui.css" rel="stylesheet"></noscript>
                     <style>
             .search-modal{border:1px solid rgba(201,168,76,0.35);background:#0A0F1A;color:#E8E6DF;padding:0;max-width:720px;width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.7);overflow:hidden;font-family:'Inter',system-ui,sans-serif}
             .search-modal::backdrop{background:rgba(0,0,0,0.78);backdrop-filter:blur(4px)}

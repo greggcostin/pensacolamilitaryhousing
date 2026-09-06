@@ -1,0 +1,223 @@
+- button "Skip to content"
+- banner:
+  - link "Microsoft Logo":
+    - /url: https://www.microsoft.com
+    - img "Microsoft Logo"
+  - link "Clarity":
+    - /url: /
+  - button "greggcostin.com":
+    - button "greggcostin.com":
+      - generic: greggcostin.com
+    - button "List of my projects":
+      - generic: 
+  - button "Header menu":
+    - generic: 
+- main:
+  - button [active]:
+  - button "Last 30 days Expand menu":
+    - generic: Last 30 days
+    - button "Expand menu":
+      - generic: 
+  - 'button "Visited URL starts with : https://greggcostin.com/ Cancel"':
+    - generic: Visited URL starts with
+    - generic: ":"
+    - generic: https://greggcostin.com/
+    - button "Cancel": 
+  - generic: Sessions
+  - button "Sessions Total sessions This is the number of visits to your site during the selected period of time. Bot sessions Clarity flagged these sessions as bot traffic. They are not included in the total session count.":
+  - generic: "5"
+  - generic: 7 bot sessions excluded
+  - button "View trends":
+  - generic: Pages per session
+  - generic: "1"
+  - generic: average
+  - button "View trends":
+  - generic: Scroll depth
+  - generic: 18%
+  - generic: average
+  - button "View trends":
+  - generic: Active time spent
+  - 'button "This is the average time spent in a session Active time: When a user''s attention was on your site Inactive time: When your site was hidden behind other tabs or windows"':
+  - generic: 14 sec
+  - generic: out of 19 sec total time
+  - button "View trends":
+  - button "Drag card":
+  - tab "Users overview" [selected]
+  - tab "All users"
+  - tab "User intent"
+  - 'img "Intent is a user categorization based on levels of engagement Low-intent sessions: Brief visits with minimal engagement Medium-intent sessions: Moderate engagement with users interacting through clicks or scrolls to achieve specific goals High-intent sessions: High engagement with time spent clicking and scrolling to achieve smart events goals"':
+    - img "info Bubble"
+  - button "Open Trends":
+  - button "$Users overview options":
+    - generic: 
+  - generic: "0"
+  - generic: Live users
+  - generic: 1.0 min ago
+  - generic: "5"
+  - generic: Unique users
+  - generic "Sessions with new users"
+  - generic "Sessions with returning users"
+  - generic "Sessions with new users"
+  - generic: 100%
+  - generic: "5"
+  - button "Set as filter and go to recordings":
+  - generic "Sessions with returning users"
+  - generic: 0%
+  - generic: "0"
+  - button "Set as filter and go to recordings":
+  - generic: Top user
+  - button "See all users"
+  - button "1 sessions"
+  - button "United States"
+  - button "Top user device Desktop":
+  - button "View visitor profile for visitor with 1 sessions, country United States and device PC":
+    - generic: View visitor profile for visitor with 1 sessions, country United States and device PC
+  - button "Drag card":
+  - heading "Insights" [level=2]
+  - button "Open Trends":
+  - button "$Insights options":
+    - generic: 
+  - heading "Rage clicks" [level=2]
+  - button "User rapidly clicked or tapped in the same small area":
+  - generic: 0%
+  - generic: 0 sessions
+  - heading "Dead clicks" [level=2]
+  - button "User clicked or tapped on a page with no effect":
+  - generic: 0%
+  - generic: 0 sessions
+  - heading "Excessive scrolling" [level=2]
+  - button "User scrolled through a page more than expected":
+  - generic: 0%
+  - generic: 0 sessions
+  - heading "Quick backs" [level=2]
+  - button "User navigated to a page then quickly returned to the previous one":
+  - generic: 0%
+  - generic: 0 sessions
+  - button "Drag card":
+  - heading "My watchlist" [level=2]
+  - img "Add specific segments, custom tags or labels to your watchlist for easy tracking. Your watchlist is unique to you and not shared across your team.":
+    - img "info Bubble"
+  - button "$My watchlist options":
+    - generic: 
+  - img "No data available":
+    - img "watchlist zero state"
+  - generic: Keep track of what you care about
+  - button "Add to watchlist":
+    - generic: Add to watchlist
+  - button "Drag card":
+  - heading [level=2]
+  - button:
+  - generic: Ready to deliver outstanding in-app experience?
+  - img "Ready to deliver outstanding in-app experience?"
+  - strong: Clarity is now available for Flutter apps!
+  - generic: Install Clarity Flutter SDK and start seeing how users interact with your app.
+  - button "Get it now":
+    - generic: Get it now
+  - button "No thanks"
+  - button:
+  - button "Drag card":
+  - heading "Smart events" [level=2]
+  - img "Smart events capture key user actions. Clarity automatically defines smart events, which you can edit. Or you can define your own.":
+    - img "info Bubble"
+  - button "Open Trends":
+  - button "$Smart events options":
+    - generic: 
+  - img "No data available":
+    - img "zero state finnick"
+  - generic: No data available
+  - button "Drag card":
+  - heading "Funnels" [level=2]
+  - button "$Funnels options":
+    - generic: 
+  - img "No data available":
+    - img "zero state bruno"
+  - generic: Set up funnels to find them here
+  - button "Drag card":
+  - tab "Referrer" [selected]
+  - tab "Channel"
+  - tab "Campaign"
+  - tab "Source"
+  - button "Open Trends":
+  - button "$Referrer options":
+    - generic: 
+  - img "No data available":
+    - img "zero state bruno"
+  - generic: No data available
+  - button "Drag card":
+  - tab "Browsers" [selected]
+  - tab "Devices"
+  - tab "OS"
+  - tab "Region"
+  - button "Open Trends":
+  - button "$Browsers options":
+    - generic: 
+  - generic "Chrome"
+  - generic: 100%
+  - generic: 5 sessions
+  - button "Set as filter and go to recordings":
+  - button "Drag card":
+  - tab "Performance overview" [selected]
+  - tab "URL performance"
+  - button "$Performance overview options":
+    - generic: 
+  - img "No data available":
+    - img "zero state finnick"
+  - generic: No data available
+  - button "Drag card":
+  - tab "Top pages" [selected]
+  - tab "Top entry pages"
+  - tab "Top exit pages"
+  - button "Open Trends":
+  - button "$Top pages options":
+    - generic: 
+  - generic: URL parameters
+  - switch "URL parameters"
+  - generic: "Off"
+  - 'button "Sort by: Most popular"':
+    - generic: 
+    - generic: "Sort by: Most popular"
+  - figure:
+    - button "https://greggcostin.com/"
+    - button "https://greggcostin.com/ 100% 5 sessions":
+      - generic "5 sessions": "5"
+    - button "Set as filter and go to recordings":
+  - button "Drag card":
+  - heading "JavaScript errors" [level=2]
+  - img "JavaScript errors occur while executing JavaScript on the browser. Click errors are JavaScript errors that occur after a user click.":
+    - img "info Bubble"
+  - button "Open Trends":
+  - button "$JavaScript errors options":
+    - generic: 
+  - generic: Only show click errors
+  - switch "Only show click errors"
+  - generic: "Off"
+  - img "Sessions with JavaScript errors"
+  - generic: 0%
+  - button "Recordings":
+    - generic: Recordings
+  - generic: 0 total JavaScript errors
+  - button "Drag card":
+  - heading "Bot traffic" [level=2]
+  - button "$Bot traffic options":
+    - generic: 
+  - img "zero state bruno"
+  - heading "No data available" [level=3]
+  - paragraph: Only the date filter can be applied to this card
+  - navigation "Project navigation":
+    - generic: Dashboard
+    - generic: Recordings
+    - generic: Heatmaps
+    - generic: Settings
+- status
+- region "Notifications-top"
+- region "Notifications-top-left"
+- region "Notifications-top-right"
+- region "Notifications-bottom-left"
+- region "Notifications-bottom"
+- region "Notifications-bottom-right"
+- region "Notifications-top"
+- region "Notifications-top-left"
+- region "Notifications-top-right"
+- region "Notifications-bottom-left"
+- region "Notifications-bottom"
+- region "Notifications-bottom-right"

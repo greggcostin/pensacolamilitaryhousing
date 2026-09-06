@@ -1,23 +1,86 @@
 {
   "schemaVersion": 2,
-  "generated": "2026-09-05",
+  "generated": "2026-09-06",
   "mode": "reviewable-plan",
   "maximumArticleChanges": 1,
   "next": {
-    "kind": "source-and-usefulness-refresh",
-    "site": "gc",
-    "target": "https://greggcostin.com/blog/closing-costs-florida-buyers",
-    "readerTask": "Give the reader a reproducible, sourced cost or decision checklist.",
-    "reason": "Existing financial guide has no external source links. Research before rewriting; a score alone is not verification."
+    "kind": "research-intent-gap",
+    "site": "pmh",
+    "brief": "full-payment"
   },
   "models": {
     "research": "opus",
     "write": "fable",
     "note": "Standing order Aug 13 2026: Opus researches (rigor, source discipline), Fable writes from the pack (prose). Set by Gregg after A/B testing."
   },
+  "modelsBySite": {
+    "pmh": {
+      "research": "opus",
+      "write": "fable",
+      "note": "Standing order Aug 13 2026: Opus researches (rigor, source discipline), Fable writes from the pack (prose). Set by Gregg after A/B testing."
+    },
+    "gc": {
+      "research": "self",
+      "write": "self",
+      "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+    }
+  },
   "publication": {
     "autoPublish": false,
     "default": "stage branch, test, then report"
+  },
+  "distribution": {
+    "policyFile": "content/social/launch-plan.json",
+    "mode": "draft-only",
+    "preferredFacebookIdentity": {
+      "name": "Gregg Costin",
+      "type": "existing professional-mode personal profile",
+      "url": "https://www.facebook.com/greggcostin/",
+      "followersDisplay": "5.7K",
+      "verified": "2026-09-06",
+      "sharedPixel": "960230270427179",
+      "adAccount": "467811675743449",
+      "note": "Live profile offers Create new ad and Boost Facebook content. Verify identity in the final preview; a business Page and the personal profile remain separate."
+    },
+    "measurement": {
+      "primary": [
+        "Website inquiries explicitly accepted by the contact service",
+        "Qualified inquiries confirmed in FUB",
+        "Appointments actually confirmed",
+        "Closed clients only when transaction evidence supports the attribution"
+      ],
+      "secondary": [
+        "Landing page sessions",
+        "Outbound clicks",
+        "Engaged reading",
+        "Shares and saves reported by the platform"
+      ],
+      "rules": [
+        "Keep organic search, organic social and paid social separate.",
+        "Exclude localhost, preview hosts, owner tests and synthetic leads.",
+        "A download remains a download; an appointment request is not a booked appointment.",
+        "No ranking or conversion gains are inferred from internal writing grades, setup scores or ad forecasts.",
+        "Record exact dates, time zone, property, placements, source and budget; use equal non-overlapping windows.",
+        "Review one hypothesis at a time; require two reviewed comparable experiments before promoting a performance lesson.",
+        "Never auto-increase spend. Keep missing outcomes null, not zero."
+      ],
+      "outcomesFile": "content/social/outcomes.json"
+    },
+    "drafts": [
+      {
+        "id": "pcs_planning",
+        "site": "pmh",
+        "destination": "https://pensacolamilitaryhousing.com/pcs-checklist?utm_source=facebook&utm_medium=paid_social&utm_campaign=pcs_planning&utm_content=personal_profile",
+        "status": "personal-profile Facebook preview prepared, unpublished; business website-lead alternative saved off as a draft"
+      },
+      {
+        "id": "buyer_cash_to_close",
+        "site": "gc",
+        "destination": "https://greggcostin.com/blog/closing-costs-florida-buyers?utm_source=facebook&utm_medium=paid_social&utm_campaign=buyer_cash_to_close&utm_content=personal_profile",
+        "status": "local creative draft; publish the sourced article refresh first"
+      }
+    ],
+    "note": "Prepare Facebook copy, an Instagram caption and a Story link from the verified article. A file or platform draft is not published distribution. Check prior post destinations and campaign IDs for duplicates; never auto-post, boost or increase spend."
   },
   "activeLessons": [
     {
@@ -184,6 +247,48 @@
       "status": "active",
       "rule": "Use evidence policy v2 from scripts/blog-weekly-plan.mjs. No automatic snippet rewrites from small samples, no promotion of attribute correlations to performance rules, and no fabricated first-person anecdotes to satisfy a content score. A source-cue word is not evidence.",
       "evidence": "Reproduced the prior missing-row zero, 0/41 CTR diagnosis and benchmark-as-monthly-traffic output at baseline a621c4c. Regression fixtures and current replay live in docs/blog-engine-audit-2026-09-05/."
+    },
+    {
+      "id": "L018",
+      "rule": "An aggregate insurance or market figure is not an individual property quote. Record who commissioned the source, the population and vintage, and check for a newer authoritative bulletin before using a figure.",
+      "evidence": "The three Sep 6 civilian research packs distinguish fixed state charges from contract choices, Fed policy from mortgage pricing, and insurance-industry totals from household premiums. The insurance refresh uses the newer Citizens wind-only figure.",
+      "date": "2026-09-06",
+      "type": "operational",
+      "appliesTo": [
+        "research",
+        "measure",
+        "decide",
+        "distribute"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "L019",
+      "rule": "Measure only production-hostname traffic and accepted submissions. A delivered download is not a captured lead, and a requested call is not a confirmed appointment. Keep article, social and paid cohorts separate.",
+      "evidence": "One 127.0.0.1 Clarity session changed the initial six-session picture. The military checklist previously called every JSON response a conversion. Host guards and mocked 400/503/200-false/network-failure tests now exclude those events.",
+      "date": "2026-09-06",
+      "type": "operational",
+      "appliesTo": [
+        "research",
+        "measure",
+        "decide",
+        "distribute"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "L020",
+      "rule": "Choose research and writing policy for the actual site being worked on. Check final platform identity after switching ad accounts, since the UI can reset creative and targeting. Existing followers are not proof of campaign effectiveness.",
+      "evidence": "The weekly plan previously exposed only PMH model settings even for a civilian next item. Live personal-profile advertising supports Gregg Costin and account 467811675743449; changing the account reset the ad form. Campaigns remain unpublished.",
+      "date": "2026-09-06",
+      "type": "operational",
+      "appliesTo": [
+        "research",
+        "measure",
+        "decide",
+        "distribute"
+      ],
+      "status": "active"
     }
   ],
   "excludedLessons": [],
@@ -213,20 +318,7 @@
       }
     }
   ],
-  "sourceGaps": [
-    {
-      "site": "gc",
-      "slug": "closing-costs-florida-buyers"
-    },
-    {
-      "site": "gc",
-      "slug": "fed-rate-hike-what-it-means"
-    },
-    {
-      "site": "gc",
-      "slug": "florida-insurance-relief-2026"
-    }
-  ],
+  "sourceGaps": [],
   "outcomeStatus": {
     "status": "unavailable",
     "comparisons": [],
@@ -621,11 +713,19 @@
       "site": "gc",
       "slug": "closing-costs-florida-buyers",
       "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
-      "linkedSourceDomains": 0,
-      "sourceUrls": [],
-      "contextualInbound": 2,
-      "evidencePack": null,
-      "readerTask": null,
+      "linkedSourceDomains": 3,
+      "sourceUrls": [
+        "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/",
+        "https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx",
+        "https://floridarevenue.com/taxes/taxesfees/Pages/nonrecurring_intangible_tax.aspx",
+        "https://myfloridacfo.com/division/consumers/understanding-insurance/title-insurance-overview",
+        "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/",
+        "https://www.consumerfinance.gov/rules-policy/regulations/1026/19/"
+      ],
+      "contextualInbound": 4,
+      "evidencePack": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
+      "readerTask": "Calculate cash to close and identify the unresolved contract and quote items.",
       "nextStep": {
         "goal": "buyer-planning",
         "prompt": "Use this guide to prepare the questions for your own purchase.",
@@ -639,11 +739,19 @@
       "site": "gc",
       "slug": "fed-rate-hike-what-it-means",
       "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-      "linkedSourceDomains": 0,
-      "sourceUrls": [],
-      "contextualInbound": 0,
-      "evidencePack": null,
-      "readerTask": null,
+      "linkedSourceDomains": 4,
+      "sourceUrls": [
+        "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "https://www.freddiemac.com/pmms",
+        "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+        "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
+        "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/",
+        "https://files.consumerfinance.gov/f/documents/cfpb_charm_booklet.pdf"
+      ],
+      "contextualInbound": 3,
+      "evidencePack": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
+      "readerTask": "Choose a rate-lock discussion and purchase budget using official information instead of a forecast.",
       "nextStep": {
         "goal": "buyer-planning",
         "prompt": "Use this guide to prepare the questions for your own purchase.",
@@ -657,11 +765,20 @@
       "site": "gc",
       "slug": "florida-insurance-relief-2026",
       "url": "https://greggcostin.com/blog/florida-insurance-relief-2026",
-      "linkedSourceDomains": 0,
-      "sourceUrls": [],
-      "contextualInbound": 0,
-      "evidencePack": null,
-      "readerTask": null,
+      "linkedSourceDomains": 7,
+      "sourceUrls": [
+        "https://api.apci.org/file/downloadnsfile?area=s&id=14026",
+        "https://www.citizensfla.com/-/20260430-july-2026-rate-rule-and-wind-loss-mitigation-updates",
+        "https://www.flsenate.gov/Laws/Statutes/2025/0627.701",
+        "https://floir.gov/consumers/wind-mitigation-resources",
+        "https://mysafeflhome.com/",
+        "https://www.floodsmart.gov/get-insured/buy-a-policy",
+        "https://www.floodsmart.gov/get-insured/eligibility",
+        "https://www.fema.gov/flood-insurance/rules-legislation/congressional-reauthorization"
+      ],
+      "contextualInbound": 3,
+      "evidencePack": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
+      "readerTask": "Compare a renewal or purchase quote without mistaking statewide premium figures for personal savings.",
       "nextStep": {
         "goal": "property-cost-review",
         "prompt": "Before comparing homes, collect insurance questions for each property.",
@@ -1627,6 +1744,8 @@
     "Factory evidence gate, score gate, formatting and site audits must pass. Keep article dates tied to substantive changes.",
     "Use the article journey's first-party tool, relevant companion guide and one inquiry path. Plan two relevant inbound links; exclude sitewide furniture.",
     "Record actual models, exceptions, sources, revisions, one hypothesis and deployment status. Do not self-promote performance rules.",
+    "Draft platform-specific distribution from the sourced article, prioritizing Gregg's existing professional Facebook profile. Use a tagged link to the intent-owning domain and preserve the personal Facebook and Instagram identity. No publication or paid delivery without authorization.",
+    "Separate search, organic-social and paid-social cohorts. Record real accepted inquiries, separately confirmed qualified inquiries and appointments. A share button click is not a verified share or a client. Missing outcomes stay unknown.",
     "At 28+ days evaluate comparable page/query cohorts and accepted inquiry outcomes. If evidence is insufficient, keep collecting instead of rewriting again."
   ]
 }

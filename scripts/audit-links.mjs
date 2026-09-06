@@ -5,14 +5,15 @@ function walk(dir, out = []) {
   for (const f of readdirSync(dir, { withFileTypes: true })) {
     const p = `${dir}/${f.name}`;
     if (f.isDirectory()) walk(p, out);
-    else if (/\.html$/.test(f.name)) out.push(p);
+    else out.push(p);
   }
   return out;
 }
 
-const files = walk("public");
+const publicFiles = walk("public");
+const files = publicFiles.filter(f => /\.html$/.test(f));
 const existingPages = new Set();
-for (const f of files) {
+for (const f of publicFiles) {
   const rel = "/" + f.replace("public/", "").replace(/\\/g, "/");
   existingPages.add(rel);
   existingPages.add(rel.replace(/\.html$/, ""));
@@ -51,6 +52,7 @@ broken.slice(0, 40).forEach(h => {
   console.log(`  ${h}  ← ${hrefs[h].length} refs, e.g. ${hrefs[h][0]}`);
 });
 console.log(`Total broken: ${broken.length}`);
+if (broken.length) process.exitCode = 1;
 
 console.log("\n=== ORPHAN PAGES (0 inbound internal links) ===");
 let orphans = 0;

@@ -109,7 +109,33 @@
      },
      "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
     }
-   ]
+   ],
+   "refreshHistory": [
+    {
+     "date": "2026-09-06",
+     "kind": "substantive sourced refresh",
+     "models": {
+      "research": "gpt-6-astra",
+      "write": "gpt-6-astra"
+     },
+     "configuredModels": {
+      "research": "self",
+      "write": "self",
+      "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+     },
+     "evidenceFile": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
+     "readerTask": "Calculate cash to close and identify the unresolved contract and quote items.",
+     "datePublished": "2026-08-31",
+     "dateModified": "2026-09-06",
+     "scoreBefore": 53,
+     "scoreAfter": 95,
+     "formatting": 100,
+     "performanceChange": "not measured",
+     "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
+     "summary": "Added a reproducible cash-to-close worksheet, primary state and CFPB sources, and distinctions between legal charges, negotiated costs and provider quotes."
+    }
+   ],
+   "currentEvidenceFile": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json"
   },
   {
    "slug": "fed-rate-hike-what-it-means",
@@ -150,7 +176,33 @@
      },
      "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
     }
-   ]
+   ],
+   "refreshHistory": [
+    {
+     "date": "2026-09-06",
+     "kind": "substantive sourced refresh",
+     "models": {
+      "research": "gpt-6-astra",
+      "write": "gpt-6-astra"
+     },
+     "configuredModels": {
+      "research": "self",
+      "write": "self",
+      "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+     },
+     "evidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
+     "readerTask": "Choose a rate-lock discussion and purchase budget using official information instead of a forecast.",
+     "datePublished": "2026-09-01",
+     "dateModified": "2026-09-06",
+     "scoreBefore": 56,
+     "scoreAfter": 100,
+     "formatting": 100,
+     "performanceChange": "not measured",
+     "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
+     "summary": "Replaced Fed-cut/mortgage-rate assumptions with verified dated context, lender comparison steps and a reproducible payment sensitivity table."
+    }
+   ],
+   "currentEvidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json"
   },
   {
    "slug": "florida-insurance-relief-2026",
@@ -189,7 +241,76 @@
      },
      "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
     }
-   ]
+   ],
+   "refreshHistory": [
+    {
+     "date": "2026-09-06",
+     "kind": "substantive sourced refresh",
+     "models": {
+      "research": "gpt-6-astra",
+      "write": "gpt-6-astra"
+     },
+     "configuredModels": {
+      "research": "self",
+      "write": "self",
+      "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+     },
+     "evidenceFile": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
+     "readerTask": "Compare a renewal or purchase quote without mistaking statewide premium figures for personal savings.",
+     "datePublished": "2026-09-03",
+     "dateModified": "2026-09-06",
+     "scoreBefore": 59,
+     "scoreAfter": 96,
+     "formatting": 100,
+     "performanceChange": "not measured",
+     "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
+     "summary": "Separated an industry-commissioned aggregate study from household quotes, checked the newer Citizens bulletin and added a premium/deductible comparison."
+    }
+   ],
+   "currentEvidenceFile": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json"
+  }
+ ],
+ "runs": [
+  {
+   "id": "growth-refresh-2026-09-06",
+   "date": "2026-09-06",
+   "models": {
+    "research": "gpt-6-astra",
+    "write": "gpt-6-astra"
+   },
+   "scope": "Three civilian sourcing refreshes explicitly requested by Gregg; not a normal one-article scheduled run.",
+   "changes": [
+    {
+     "slug": "closing-costs-florida-buyers",
+     "evidenceFile": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
+     "scoreBefore": 53,
+     "scoreAfter": 95
+    },
+    {
+     "slug": "fed-rate-hike-what-it-means",
+     "evidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
+     "scoreBefore": 56,
+     "scoreAfter": 100
+    },
+    {
+     "slug": "florida-insurance-relief-2026",
+     "evidenceFile": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
+     "scoreBefore": 59,
+     "scoreAfter": 96
+    }
+   ],
+   "measurement": {
+    "semrush": "unavailable: insufficient API units in the audit",
+    "clarity": "Civilian live read: 6 unfiltered sessions, 5 production-hostname sessions; exact window not verified, too small for performance conclusions. Local previews excluded in the new code.",
+    "search": "Saved September 4 exports have unverified coverage windows; no new ranking or conversion lift claimed.",
+    "meta": "Live baseline retained separately in docs/site-growth-2026-09-06/meta-setup.json"
+   },
+   "stage": {
+    "branch": "codex/blog-engine-evidence-loop",
+    "pullRequest": "https://github.com/greggcostin/pensacolamilitaryhousing/pull/1",
+    "published": false
+   },
+   "next": "Use the regenerated shared weekly plan; retain hypotheses until comparable outcomes exist."
   }
  ]
 }

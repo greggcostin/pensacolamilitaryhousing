@@ -7,6 +7,7 @@
 import { readdirSync, readFileSync, existsSync } from "node:fs";
 import sharp from "sharp";
 import { ROUTE_META } from "../src/routeMeta.js";
+import { analyticsGuardFindings } from "./analytics-host-guard.mjs";
 
 const SITE = "https://pensacolamilitaryhousing.com";
 const findings = [];
@@ -61,6 +62,7 @@ const REQUIRED_META = ["og:title", "og:description", "og:image", "og:image:width
 
 for (const file of files) {
   const html = readFileSync(file, "utf8");
+  for (const issue of analyticsGuardFindings(html)) f(file, issue);
   const slug = slugOf(file);
   const canonExpected = SITE + slug;
   const page = file;
@@ -127,7 +129,19 @@ for (const file of files) {
   if (words < 400) f(page, `only ${words} words`);
   // 7. JSON-LD parses; shared entity present; retired ids absent; Wikidata purge
   let blocks = 0;
-  for (const m of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) { blocks++; try { JSON.parse(m[1]); } catch (e) { f(page, `invalid JSON-LD: ${e.message.slice(0, 60)}`); } }
+  for (const m of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
+    blocks++;
+    try {
+      const node = JSON.parse(m[1]);
+      if (file.startsWith('public/blog/') && node['@type'] === 'BlogPosting') {
+        if (node.keywords !== decode(metas(html, 'keywords')[0])) f(page, 'BlogPosting keywords differ from article metadata');
+        const fragmentPath = file.replace('public/blog/', 'content/blog/').replace(/\.html$/, '.fragment.html');
+        const fragment = readFileSync(fragmentPath, 'utf8').match(/<!--PAGE\s*([\s\S]*?)\s*PAGE-->/);
+        const figure = fragment && JSON.parse(fragment[1]).figure;
+        if (!figure?.src || node.image !== new URL(figure.src, SITE).href) f(page, 'BlogPosting image differs from the article figure');
+      }
+    } catch (e) { f(page, `invalid schema or article metadata: ${e.message.slice(0, 100)}`); }
+  }
   if (!blocks) f(page, "no JSON-LD");
   if (!html.includes("https://greggcostin.com/#team")) f(page, "no reference to the shared business entity");
   for (const old of ["pensacolamilitaryhousing.com/#agent\"", "/#person-gregg", "/#localbusiness", "Q140446886", "RealEstateOrganization"]) if (html.includes(old)) f(page, `retired identifier ${old}`);

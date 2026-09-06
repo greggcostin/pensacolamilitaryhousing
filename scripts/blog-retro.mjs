@@ -14,7 +14,7 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { ROOT, TODAY, SITES, loadLedger, ledgerPosts, listFragments, inboundLinks, coverageIndex, overlap, tokens, strip, readJson, writeJson } from "./blog-lib.mjs";
 import { scorePost } from "./score-post.mjs";
-import { assessSearch, normalizeSnapshot } from "./search-evidence.mjs";
+import { assessSearch, normalizeSnapshot, isoDay } from "./search-evidence.mjs";
 
 const args = process.argv.slice(2);
 const siteArg = args.includes("--site") ? args[args.indexOf("--site") + 1] : "both";
@@ -95,13 +95,13 @@ for (const key of siteKeys) {
     ...rows.map((r) => `| ${r.slug} | ${r.ageDays ?? "-"} | ${r.score} ${r.grade} | ${r.inbound} | ${r.gsc ? `${r.gsc.impressions}/${r.gsc.clicks}/${r.gsc.position ?? "-"}` : "none"} | ${r.bing ? `${r.bing.imp28}/${r.bing.clk28}/${r.bing.pos28 ?? "-"}` : "none"} | ${r.flags.join(" ") || "-"} | ${r.priority} |`), "");
 
   // site-level evidence from the opportunities file
-  if (opp) {
+  if (opp && isoDay(opp.asOf) && opp.asOf <= TODAY && Number.isFinite(opp.site28?.imp) && Number.isFinite(opp.site28?.clk)) {
     digest.push(`Site (Bing, data through ${opp.asOf}): ${opp.site28.imp} impressions / ${opp.site28.clk} clicks in 28d. Top pages by 28d impressions: ${opp.topPages.slice(0, 6).map((p) => `${p.page} (${p.imp28}, pos ${p.pos28 ?? "-"})`).join("; ")}.`, "");
     if (opp.strikingDistance.length) digest.push(`Striking-distance queries (pos 4-20, 90d): ${opp.strikingDistance.slice(0, 12).map((q) => `"${q.query}" (${q.imp90} imp, pos ${q.pos90})`).join("; ")}.`, "");
-    if (opp.ctrProblems.length) digest.push(`CTR problems (top positions, zero clicks): ${opp.ctrProblems.slice(0, 8).map((q) => q.query ? `"${q.query}" (${q.imp28} imp, pos ${q.pos28})` : `${q.page} (${q.imp28} imp, pos ${q.pos28})`).join("; ")}.`, "");
-    if (opp.declining.length) digest.push(`Declining pages: ${opp.declining.map((p) => `${p.page} (${p.impPrior28} -> ${p.imp28})`).join("; ")}.`, "");
+    if (opp.ctrProblems.length) digest.push(`Legacy CTR candidates (not a diagnosis; sample and windows require validation): ${opp.ctrProblems.slice(0, 8).map((q) => q.query ? `"${q.query}" (${q.imp28} imp, pos ${q.pos28})` : `${q.page} (${q.imp28} imp, pos ${q.pos28})`).join("; ")}.`, "");
+    if (opp.declining.length) digest.push(`Cached prior-period differences (not a decay finding): ${opp.declining.map((p) => `${p.page} (${p.impPrior28} -> ${p.imp28})`).join("; ")}.`, "");
     if (opp.uncoveredDemand.length) digest.push(`Uncovered demand (queries earning impressions with no matching target keyword): ${opp.uncoveredDemand.slice(0, 12).map((q) => `"${q.query}" (${q.imp90})`).join("; ")}.`, "");
-  } else digest.push("No Bing opportunities file for this site yet (run blog-measure.mjs).", "");
+  } else digest.push("Bing site totals unavailable: no valid dated source window. Empty or undated exports are not evidence of zero impressions or clicks.", "");
 }
 
 // Cross-sectional attributes are confounded by age, topic, site and exposure.

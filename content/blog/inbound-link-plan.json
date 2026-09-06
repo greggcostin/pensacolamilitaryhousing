@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-05",
+ "generated": "2026-09-06",
  "note": "Every post with fewer than 3 inbound internal links, with the hub pages whose titles/H2s overlap it most. Military hubs carry a RELATED_GUIDES block the retro can insert into (--apply-links N); civilian hubs need a sentence-level link placed by the engine.",
  "plan": [
   {
@@ -306,112 +306,10 @@
   },
   {
    "site": "gc",
-   "post": "/blog/closing-costs-florida-buyers",
-   "label": "Florida Closing Costs, Line by Line: A Buyer's Guide",
-   "inbound": 2,
-   "from": [
-    {
-     "hub": "/resources",
-     "hubTitle": "Florida homeowner resources",
-     "match": 0.44,
-     "anchor": "<a href=\"/blog/closing-costs-florida-buyers\">Florida Closing Costs, Line by Line: A Buyer's Guide</a>"
-    },
-    {
-     "hub": "/reviews",
-     "hubTitle": "Five stars, every time",
-     "match": 0.32,
-     "anchor": "<a href=\"/blog/closing-costs-florida-buyers\">Florida Closing Costs, Line by Line: A Buyer's Guide</a>"
-    },
-    {
-     "hub": "/resources/useful-links",
-     "hubTitle": "Useful links for Florida homeowners",
-     "match": 0.3,
-     "anchor": "<a href=\"/blog/closing-costs-florida-buyers\">Florida Closing Costs, Line by Line: A Buyer's Guide</a>"
-    },
-    {
-     "hub": "/resources/florida-homestead-exemption",
-     "hubTitle": "Florida Homestead Exemption: What Pensacola Area Homeowners Need to Know",
-     "match": 0.29,
-     "anchor": "<a href=\"/blog/closing-costs-florida-buyers\">Florida Closing Costs, Line by Line: A Buyer's Guide</a>"
-    }
-   ]
-  },
-  {
-   "site": "gc",
-   "post": "/blog/fed-rate-hike-what-it-means",
-   "label": "A Fed Rate Hike Is Back on the Table. Here Is What It Means.",
-   "inbound": 0,
-   "from": [
-    {
-     "hub": "/resources",
-     "hubTitle": "Florida homeowner resources",
-     "match": 0.33,
-     "anchor": "<a href=\"/blog/fed-rate-hike-what-it-means\">A Fed Rate Hike Is Back on the Table. Here Is What It Means.</a>"
-    },
-    {
-     "hub": "/reviews",
-     "hubTitle": "Five stars, every time",
-     "match": 0.27,
-     "anchor": "<a href=\"/blog/fed-rate-hike-what-it-means\">A Fed Rate Hike Is Back on the Table. Here Is What It Means.</a>"
-    },
-    {
-     "hub": "/faq",
-     "hubTitle": "Pensacola Real Estate, Answered Straight",
-     "match": 0.26,
-     "anchor": "<a href=\"/blog/fed-rate-hike-what-it-means\">A Fed Rate Hike Is Back on the Table. Here Is What It Means.</a>"
-    },
-    {
-     "hub": "/team",
-     "hubTitle": "The Costin Team",
-     "match": 0.26,
-     "anchor": "<a href=\"/blog/fed-rate-hike-what-it-means\">A Fed Rate Hike Is Back on the Table. Here Is What It Means.</a>"
-    }
-   ]
-  },
-  {
-   "site": "gc",
-   "post": "/blog/florida-insurance-relief-2026",
-   "label": "Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.",
-   "inbound": 0,
-   "from": [
-    {
-     "hub": "/resources",
-     "hubTitle": "Florida homeowner resources",
-     "match": 0.44,
-     "anchor": "<a href=\"/blog/florida-insurance-relief-2026\">Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.</a>"
-    },
-    {
-     "hub": "/resources/florida-home-insurance",
-     "hubTitle": "Florida Home Insurance: What Every Buyer and Owner Should Know",
-     "match": 0.38,
-     "anchor": "<a href=\"/blog/florida-insurance-relief-2026\">Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.</a>"
-    },
-    {
-     "hub": "/resources/useful-links",
-     "hubTitle": "Useful links for Florida homeowners",
-     "match": 0.37,
-     "anchor": "<a href=\"/blog/florida-insurance-relief-2026\">Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.</a>"
-    },
-    {
-     "hub": "/neighborhoods/pensacola-beach",
-     "hubTitle": "Pensacola Beach",
-     "match": 0.33,
-     "anchor": "<a href=\"/blog/florida-insurance-relief-2026\">Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.</a>"
-    }
-   ]
-  },
-  {
-   "site": "gc",
    "post": "/blog/what-moves-mortgage-rates",
    "label": "What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers",
    "inbound": 2,
    "from": [
-    {
-     "hub": "/resources",
-     "hubTitle": "Florida homeowner resources",
-     "match": 0.33,
-     "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
-    },
     {
      "hub": "/resources/useful-links",
      "hubTitle": "Useful links for Florida homeowners",
@@ -428,6 +326,12 @@
      "hub": "/schools",
      "hubTitle": "Pensacola-area schools, graded",
      "match": 0.27,
+     "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
+    },
+    {
+     "hub": "/buy",
+     "hubTitle": "Buy a home in Pensacola",
+     "match": 0.26,
      "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
     }
    ]

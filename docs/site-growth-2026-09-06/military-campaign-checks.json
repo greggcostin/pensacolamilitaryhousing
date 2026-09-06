@@ -1,0 +1,46 @@
+{
+  "at": "2026-09-06T07:47:22.354Z",
+  "checks": [
+    {
+      "name": "Both military campaign pages require affirmative Meta consent",
+      "pass": true
+    },
+    {
+      "name": "Checklist failure gives the PDF but no lead: {\"status\":400,\"body\":{\"success\":true}}",
+      "pass": true
+    },
+    {
+      "name": "Checklist failure gives the PDF but no lead: {\"status\":200,\"body\":{\"success\":false}}",
+      "pass": true
+    },
+    {
+      "name": "Checklist failure gives the PDF but no lead: {\"status\":503,\"body\":{\"error\":\"Unavailable\"}}",
+      "pass": true
+    },
+    {
+      "name": "Checklist failure gives the PDF but no lead: {\"networkFailure\":true}",
+      "pass": true
+    },
+    {
+      "name": "Only accepted checklist submission produces one lead, retains campaign source, and uses the worker contract",
+      "pass": true
+    },
+    {
+      "name": "Invalid emails and honeypots never send a checklist request",
+      "pass": true
+    },
+    {
+      "name": "Accepted call request sends one Lead, not a booked-appointment event",
+      "pass": true
+    },
+    {
+      "name": "GPC, unknown query data and the privacy page do not send Meta events",
+      "pass": true
+    },
+    {
+      "name": "A visit from a benefits article does not leak its referrer through the campaign Pixel",
+      "pass": true
+    }
+  ],
+  "delivery": "CRM and Meta SDK mocked; no live lead or analytics sent."
+}

@@ -1,3 +1,4 @@
+import { guardAnalytics } from "./analytics-host-guard.mjs";
 // Page factory: assemble a new public/<slug>.html from the site's proven template
 // (nav, modal, sticky CTA, search, footer, analytics all inherited verbatim) plus a
 // per-page fragment file.
@@ -156,7 +157,7 @@ function buildPage(fragmentPath) {
   const totalClose = (html.match(/<\/div>/g) || []).length;
   if (totalOpen !== totalClose) throw new Error(`${spec.slug}: unbalanced divs (${totalOpen} open vs ${totalClose} close) — refusing to write`);
 
-  writeFileSync(ROOT + "public/" + spec.slug + ".html", html);
+  writeFileSync(ROOT + "public/" + spec.slug + ".html", guardAnalytics(html));
 
   const smPath = ROOT + "public/sitemap.xml";
   let sm = readFileSync(smPath, "utf8");

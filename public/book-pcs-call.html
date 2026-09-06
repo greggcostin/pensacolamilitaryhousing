@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script data-costin-host-guard>(function(){window.costinProduction=location.protocol==='https:'&&!location.port&&["pensacolamilitaryhousing.com","www.pensacolamilitaryhousing.com","greggcostin.com","www.greggcostin.com"].includes(location.hostname);if(!window.costinProduction){window.gtag=function(){};}})();</script>
 <script>if(location.hostname.indexOf('.pages.dev')>-1)location.replace('https://pensacolamilitaryhousing.com'+location.pathname+location.search);</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,14 +44,16 @@
 </script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W29GHBK38M"></script>
-<script>
+<script data-costin-tracker>(function(){if(!window.costinProduction)return;
+var s=document.createElement('script');s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-W29GHBK38M";document.head.appendChild(s);
+})();</script>
+<script data-costin-tracker>(function(){if(!window.costinProduction)return;
 window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
+window.gtag=function(){window.dataLayer.push(arguments);};
 gtag('js',new Date());
 gtag('config','G-W29GHBK38M',{linker:{domains:['pensacolamilitaryhousing.com','greggcostin.com'],accept_incoming:true}});gtag('config','GT-WVGM66XS');(function(){try{var p=new URLSearchParams(location.search),keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];var a=JSON.parse(localStorage.getItem('costin_attr')||'{}'),hit=false;keys.forEach(function(k){if(p.get(k)){a[k]=p.get(k);hit=true;}});if(!a.landing_page||hit){a.landing_page=location.pathname+location.search;a.referrer=document.referrer||'';a.first_seen=new Date().toISOString();}localStorage.setItem('costin_attr',JSON.stringify(a));}catch(e){}})();
 document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('tel:')===0){gtag('event','phone_call_click',{event_category:'conversion',event_label:h.replace('tel:','')});}else if(h.indexOf('mailto:')===0){gtag('event','email_click',{event_category:'conversion',event_label:h.replace('mailto:','')});}else if(h.indexOf('google.com/maps')>-1&&h.indexOf('Gregg')>-1){gtag('event','google_reviews_click',{event_category:'social_proof'});}else if(h.indexOf('zillow.com/profile')>-1){gtag('event','zillow_profile_click',{event_category:'social_proof'});}else if(h.indexOf('instagram.com/greggcostin')>-1){gtag('event','instagram_click',{event_category:'social'});}else if(h.indexOf('facebook.com/greggcostin')>-1){gtag('event','facebook_click',{event_category:'social'});}else if(h.indexOf('youtube.com/@Pensacola')>-1){gtag('event','youtube_click',{event_category:'social'});}else if(h.indexOf('linktr.ee/Greggcostin')>-1){gtag('event','linktree_click',{event_category:'social'});}else if(h.indexOf('greggc.levinrinkerealty.com')>-1){gtag('event','brokerage_profile_click',{event_category:'social_proof'});}else if(h.indexOf('sms:')===0){gtag('event','text_message_click',{event_category:'conversion'});}else if(h.indexOf('calendly')>-1){gtag('event','calendly_click',{event_category:'conversion'});}else if(h.indexOf('whats-my-home-worth')>-1){gtag('event','home_valuation_click',{event_category:'conversion'});}else if(h.indexOf('825bayshore')>-1){gtag('event','property_page_click',{event_category:'conversion'});}else if(h.indexOf('travel.dod.mil')>-1){gtag('event','dod_bah_calc_click',{event_category:'outbound'});}else if(h.indexOf('http')===0&&(h.indexOf('.gov')>-1||h.indexOf('.mil')>-1||h.indexOf('floridarevenue.com')>-1||h.indexOf('fldoe.org')>-1||h.indexOf('citizensfla.com')>-1)){gtag('event','authority_link_click',{event_category:'outbound',event_label:h.split('/')[2]||h});}});document.addEventListener('toggle',function(e){var t=e.target;if(t&&t.tagName==='DETAILS'&&t.open){var s=t.querySelector('summary');gtag('event','faq_expand',{event_category:'engagement',event_label:s?s.textContent.trim().slice(0,100):'faq'});}},true);
-</script>
+})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -277,15 +280,15 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
 /* MOBILE_DRAWER_END */
 </style>
 <!-- Microsoft Clarity (heatmaps + session recordings) -->
-<script type="text/javascript">
+<script type="text/javascript" data-costin-tracker>(function(){if(!window.costinProduction)return;
 (function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
     t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 })(window, document, "clarity", "script", "wm7ddbciup");
-</script>
+})();</script>
 <!-- FollowUpBoss Widget Tracker (deferred: keeps the ~525KB widget JS off the critical path) -->
-<script>
+<script data-costin-tracker>(function(){if(!window.costinProduction)return;
 (function(){
   function loadFUB(){
     if(window.__fubLoaded){return;} window.__fubLoaded=true;
@@ -293,9 +296,10 @@ main h3{font-size:clamp(17px,1.6vw,20px);margin:34px auto 12px}
     window.widgetTracker("create", "WT-ZZMZHBMI");
     window.widgetTracker("send", "pageview");
   }
-  if ('requestIdleCallback' in window) { requestIdleCallback(loadFUB, {timeout: 5000}); } else { setTimeout(loadFUB, 4000); }
+  function scheduleFUB(){ if ('requestIdleCallback' in window) { requestIdleCallback(loadFUB, {timeout: 5000}); } else { setTimeout(loadFUB, 1000); } }
+  if(document.readyState==='complete') scheduleFUB(); else window.addEventListener('load',scheduleFUB,{once:true});
 })();
-</script>
+})();</script>
 <!-- end FollowUpBoss Widget Tracker -->
 <style id="ddfix-css">@media(max-width:900px){
 .main-banner{position:sticky;top:0;z-index:1000}
@@ -404,7 +408,7 @@ if(e.origin&&e.origin.indexOf("calendly.com")>-1&&e.data&&e.data.event==="calend
 <div><strong>Who you talk to:</strong> Me. No assistant, no call center, no handoff</div>
 <div><strong>OCONUS friendly:</strong> evening and weekend slots for overseas clocks</div>
 <div><strong>Prep needed:</strong> none. Orders timeline helps if you have it</div>
-<div><strong>Booking:</strong> instant. Pick any open slot on the calendar</div>
+<div><strong>Booking:</strong> request your preferred window; Gregg confirms the appointment by text or email</div>
 </div>
 
 <script>
@@ -413,7 +417,7 @@ var form=document.getElementById('book-form');if(!form)return;
 var body=document.getElementById('book-body'),errBox=document.getElementById('book-err');
 function get(n){var el=form.querySelector('[name="'+n+'"]');return el?el.value:'';}
 form.addEventListener('submit',function(e){
-e.preventDefault();errBox.style.display='none';
+e.preventDefault();errBox.style.display='none';if(!form.reportValidity())return;
 var btn=form.querySelector('.vf-submit');
 var msg='STRATEGY CALL REQUEST\n'
 +'Time zone: '+get('btz')+'\n'
@@ -427,7 +431,7 @@ btn.disabled=true;btn.textContent='Sending...';
 fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
 .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
 .then(function(res){
-if(res.ok&&res.j.success){body.innerHTML='<div class="vf-ok"><div style="font-size:40px;margin-bottom:12px">✓</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Request Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">I’ll confirm your call slot by text or email within 2 business hours. Need it faster? Call or text (850) 266-5005 now.</p></div>';if(window.gtag)gtag('event','strategy_call_request',{event_category:'conversion'});}
+if(res.ok&&res.j.success===true){document.dispatchEvent(new CustomEvent('costin:lead-success',{detail:{form_id:form.id}}));body.innerHTML='<div class="vf-ok"><div style="font-size:40px;margin-bottom:12px">✓</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Request Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">I’ll confirm your call slot by text or email within 2 business hours. Need it faster? Call or text (850) 266-5005 now.</p></div>';if(window.gtag)gtag('event','strategy_call_request',{event_category:'conversion'});}
 else{errBox.textContent='⚠ '+(res.j.error||res.j.message||'Something went wrong. Please call (850) 266-5005.');errBox.style.display='block';btn.disabled=false;btn.textContent='Request My Call Slot →';}
 })
 .catch(function(){errBox.textContent='⚠ Connection error. Please call (850) 266-5005 directly.';errBox.style.display='block';btn.disabled=false;btn.textContent='Request My Call Slot →';});
@@ -506,6 +510,7 @@ MRP &middot; ABR &middot; SRS &middot; RENE &middot; FMS &middot; Pursuing GRI</
 <p data-last-updated="true" style="text-align:center;font-size:.75rem;color:var(--mutedD,#6B7280);margin:.5rem auto 0;letter-spacing:.5px;text-transform:uppercase">Last updated: August 12, 2026</p>
 <p style="text-align:center;color:var(--mutedD,#6f6e65);font-size:.75rem;margin:.5rem 0 0;letter-spacing:.5px;text-transform:uppercase">Content last verified: August 2026</p>
 <p data-legal="disclaimer" style="color:var(--mutedD,#6f6e65);font-size:.7rem;font-style:italic;line-height:1.6;margin:1rem auto 0;text-align:center;max-width:820px"><strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (220 W. Garden Street, Pensacola, FL 32502). Information on this site, including BAH figures, VA loan terms, funding fees, tax rules, homestead and disability benefits, school zoning, and rental/investment commentary, is provided for general informational purposes only and is not legal, tax, financial, mortgage, lending, or investment advice. Real estate, lending, tax, and benefits rules change frequently and depend on individual circumstances; verify current figures with official sources (DoD BAH calculator, VA, IRS, your county property appraiser) and consult a licensed attorney, CPA, or NMLS-licensed loan officer for guidance specific to your situation. Gregg Costin is not a mortgage lender, attorney, tax professional, or financial advisor, and is not affiliated with, endorsed by, or representing the U.S. Department of Defense, Department of Veterans Affairs, or any branch of the U.S. military. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.</p>
+<p><button type="button" data-meta-settings hidden>Facebook &amp; Instagram ad preferences</button></p>
 </footer>
 
 
@@ -632,7 +637,7 @@ overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
 document.querySelectorAll('[data-inquiry-close]').forEach(function(b){b.addEventListener('click',close);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 form.addEventListener('submit',function(e){
-e.preventDefault();errBox.style.display='none';
+e.preventDefault();errBox.style.display='none';if(!form.reportValidity())return;
 var btn=form.querySelector('.isubmit');
 var data={name:get('name').trim(),email:get('email').trim(),phone:get('phone').trim(),inquiryType:get('inquiryType'),message:get('message').trim()||('Inquiry from '+location.pathname+' (no message text)'),_gotcha:get('website')};try{var __a=JSON.parse(localStorage.getItem('costin_attr')||'{}');for(var __k in __a){if(!(__k in data))data[__k]=__a[__k];}var __m=document.cookie.match(/(?:^|; )_ga=GA\d\.\d\.(\d+\.\d+)/);if(__m)data.ga_client_id=__m[1];data.page_path=location.pathname;data.sourceUrl=location.href;}catch(e){}
 if(!data.name||!data.email){errBox.textContent='\u26a0 Name and email are required.';errBox.style.display='block';return;}
@@ -640,7 +645,7 @@ btn.disabled=true;btn.textContent='Sending...';
 fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
 .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
 .then(function(res){
-if(res.ok&&res.j.success){body.innerHTML='<div class="iok"><div style="font-size:40px;margin-bottom:12px">\u2713</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. I will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('pmh-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
+if(res.ok&&res.j.success===true){document.dispatchEvent(new CustomEvent('costin:lead-success',{detail:{form_id:form.id}}));body.innerHTML='<div class="iok"><div style="font-size:40px;margin-bottom:12px">\u2713</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. I will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('pmh-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
 else{errBox.textContent='\u26a0 '+(res.j.error||'Something went wrong. Please call (850) 266-5005.');errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';}
 })
 .catch(function(){errBox.textContent='\u26a0 Connection error. Please call (850) 266-5005 directly.';errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';});
@@ -656,5 +661,8 @@ b.addEventListener('click',function(e){if(mq.matches){e.preventDefault();var ope
 d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(mq.matches)setOpen(false);});});
 if(mq.addEventListener)mq.addEventListener('change',function(){if(!mq.matches)setOpen(false);});
 if(/[?&]drawer=open/.test(location.search))setOpen(true);})();</script>
+<link rel="stylesheet" href="/assets/costin-meta.css">
+<script defer src="/assets/costin-meta-config.js"></script>
+<script defer src="/assets/costin-meta.js"></script>
 </body>
 </html>

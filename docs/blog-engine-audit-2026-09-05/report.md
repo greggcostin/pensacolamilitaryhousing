@@ -1,5 +1,7 @@
 # Blog engine computational audit
 
+> This records the initial computational audit. The [subsequent release review](../site-growth-2026-09-06/report.md) documents the three completed sourced refreshes, website repairs and live Meta setup. Initial statements about missing claim packs describe the earlier baseline.
+
 Started September 5; completed September 6, 2026. Baseline: repository commit a621c4c, containing the earlier Fable audit. Scope: 12 military blog articles, 5 civilian articles, their generators, measurement and learning scripts, topic queues and connected reader paths.
 
 ## Finding

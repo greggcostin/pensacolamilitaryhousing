@@ -20,6 +20,10 @@ const LOGOS = { "logo-lrr.png": { w: 834, h: 472 }, "logo-08-sm.png": { w: 480, 
 
 // sizes presets keyed by the rendering context (the nearest class on the picture's ancestors)
 const SIZES = {
+  "gc-hero-image": "100vw",
+  "gc-hero-portrait": "(max-width: 360px) 173px, (max-width: 640px) 203px, (max-width: 1100px) 34vw, 390px",
+  "gc-region-card": "(max-width: 640px) 45vw, (max-width: 1100px) 46vw, 520px",
+  "gc-person-image": "(max-width: 640px) 88vw, 480px",
   avatar: "60px",
   "hero-portrait": "(max-width: 640px) 90vw, 380px",
   "nb-photo": "(max-width: 640px) 94vw, (max-width: 1100px) 46vw, 340px",
@@ -33,7 +37,7 @@ function contextFor(html, idx, site, src) {
   if (src.endsWith("gregg-portrait.jpg")) return "avatar";
   const before = html.slice(Math.max(0, idx - 600), idx);
   const classes = [...before.matchAll(/class="([^"]+)"/g)].map((m) => m[1]).reverse().join(" ");
-  for (const k of ["hero-portrait", "nb-photo", "cc-photo", "hero-band"]) if (classes.split(/\s+/).includes(k)) return k;
+  for (const k of ["gc-hero-portrait", "gc-hero-image", "gc-region-card", "gc-person-image", "hero-portrait", "nb-photo", "cc-photo", "hero-band"]) if (classes.split(/\s+/).includes(k)) return k;
   if (/\bfigure-band\b/.test(classes)) return site === "gc" ? "figure-band-gc" : "figure-band-pmh";
   return "default";
 }
@@ -63,6 +67,10 @@ function candidates(local, src, fmt, origWidth) {
 }
 function buildImg(a, src, m, ctx, srcsetJpg) {
   const isAvatar = ctx === "avatar";
+  if (ctx.startsWith('figure-band')) {
+    const style = (a.style || '').replace(/(?:^|;)\s*--image-aspect\s*:[^;]*/g,'').replace(/^;|;$/g,'');
+    a.style = (style ? style + ';' : '') + `--image-aspect:${m.width}/${m.height}`;
+  }
   const keep = ["alt", "loading", "fetchpriority", "class", "style", "id", "title", "data-credit"];
   const parts = [`src="${src}"`];
   if (srcsetJpg.length) parts.push(`srcset="${srcsetJpg.join(", ")}"`, `sizes="${SIZES[ctx]}"`);
@@ -87,14 +95,16 @@ for (const f of files) {
   });
   // 2. content pictures
   const jobs = [];
-  h.replace(/<picture>\s*((?:<source\b[^>]*>\s*)*)(<img\b[^>]*>)\s*<\/picture>/g, (whole, _sources, img, idx) => { jobs.push({ whole, img, idx }); return whole; });
+  const pictureHtml = h;
+  pictureHtml.replace(/<picture>\s*((?:<source\b[^>]*>\s*)*)(<img\b[^>]*>)\s*<\/picture>/g, (whole, _sources, img, idx) => { jobs.push({ whole, img, idx }); return whole; });
   for (const j of jobs) {
     const a = attrs(j.img); const src = a.src || "";
     if (!/\.(jpe?g|png)$/i.test(src) || SKIP.test(src) || /logo/.test(src)) continue;
     const local = localFor(src, site);
     if (!local || !existsSync(local)) { missing.add(src); continue; }
     const m = await meta(local);
-    const ctx = contextFor(h, j.idx, site, src);
+    // Offsets belong to the captured HTML; earlier replacements can change its length.
+    const ctx = contextFor(pictureHtml, j.idx, site, src);
     const avif = candidates(local, src, "avif", m.width), webp = candidates(local, src, "webp", m.width), jpg = candidates(local, src, "jpeg", m.width);
     const sources = [];
     // A modern-format source with a single candidate is worse than no source at all: the browser

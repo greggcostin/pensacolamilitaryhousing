@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "note": "Aggregate verified outcomes only. No names, contact records or audience lists. Empty means unavailable, not zero results. Do not join platform event counts to unique clients without evidence.",
+  "windows": []
+}

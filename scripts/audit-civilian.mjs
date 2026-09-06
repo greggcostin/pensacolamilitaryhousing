@@ -4,11 +4,19 @@
 // this file is the quality gate for the civilian site the same way blog-factory's
 // gates protect the blog.
 import { readFileSync, readdirSync, existsSync } from "node:fs";
+import { analyticsGuardFindings } from "./analytics-host-guard.mjs";
 
 const ROOT = "civilian-site";
 const SITE = "https://greggcostin.com";
 const findings = [];
 const f = (page, msg) => findings.push(`${page}: ${msg}`);
+if (existsSync(`${ROOT}/assets/costin-meta-config.js`)) {
+  const config = readFileSync(`${ROOT}/assets/costin-meta-config.js`, 'utf8');
+  if (/enabled:\s*true/.test(config)) {
+    if (!/pixelId:\s*['"]\d{5,20}['"]/.test(config)) f('Meta configuration', 'enabled without a numeric Pixel ID');
+    if (readFileSync(`${ROOT}/privacy.html`, 'utf8').includes('Optional Meta advertising is currently inactive.')) f('privacy.html', 'Meta is enabled but the policy still says it is inactive');
+  }
+}
 let LEDGER = {};
 try { LEDGER = JSON.parse(readFileSync("content/blog/image-credits.json", "utf8")).images; } catch {}
 
@@ -21,6 +29,7 @@ const titles = new Map(), descs = new Map();
 
 for (const file of pages) {
   const h = readFileSync(`${ROOT}/${file}`, "utf8");
+  for (const issue of analyticsGuardFindings(h)) f(file, issue);
   const slug = slugOf(file);
   const url = SITE + (slug === "/" ? "/" : slug);
 
@@ -98,6 +107,14 @@ for (const file of pages) {
     if (w > 85) f(file, `wall of text: ${w}-word paragraph ("${m[1].replace(/<[^>]+>/g, "").trim().slice(0, 40)}...")`);
   }
   const stripped = h.replace(/PCS \/ Relocation — (Buying|Selling)/g, "");
+  if (!h.includes('class="skip-link" href="#main-content"') || !/<main[^>]*id="main-content"/.test(h)) f(file, "missing usable skip-to-content target");
+  const inlineFonts = h.match(/<style data-costin-fonts>([\s\S]*?)<\/style>/)?.[1]?.trim();
+  if (inlineFonts !== readFileSync(`${ROOT}/assets/costin-fonts.css`, 'utf8').trim()) f(file, "missing or stale inline copy of pinned font declarations");
+  for (const asset of ["costin-experience.css", "costin-experience.js", "costin-meta-config.js", "costin-meta.js"]) {
+    if (!h.includes(`/assets/${asset}`) || !existsSync(`${ROOT}/assets/${asset}`)) f(file, `missing shared experience asset ${asset}`);
+  }
+  if (/href="https:\/\/fonts\.(googleapis|gstatic)\.com/.test(h)) f(file, "remote font loading reintroduced; use the pinned local fonts");
+  if (h.includes('id="inquiry-form"') && !h.includes("costin:lead-success")) f(file, "inquiry form lacks confirmed-lead event");
   if (stripped.includes("—")) f(file, "em dash outside worker inquiryType string");
   if (h.includes("Q140446886") || h.includes("g.co/kgs/gregg-costin")) f(file, "cites the deleted Wikidata item or dead g.co/kgs link");
   const dOpen = (h.match(/<div\b/g) || []).length, dClose = (h.match(/<\/div>/g) || []).length;
@@ -107,7 +124,7 @@ for (const file of pages) {
   for (const m of h.matchAll(/href="(\/[^"#]*)"/g)) {
     const p = m[1];
     if (p.startsWith("/images/") || p.startsWith("/og/")) { if (!existsSync(ROOT + p)) f(file, `broken asset link ${p}`); continue; }
-    if ([".xml", ".txt", ".webmanifest", ".json", ".png"].some((e) => p.endsWith(e))) { if (!existsSync(ROOT + p)) f(file, `broken file link ${p}`); continue; }
+    if ([".xml", ".txt", ".webmanifest", ".json", ".png", ".css", ".js", ".woff2"].some((e) => p.endsWith(e))) { if (!existsSync(ROOT + p)) f(file, `broken file link ${p}`); continue; }
     const target = p === "/" ? "index.html" : p.slice(1) + ".html";
     if (p === "/about") continue; // _redirects alias
     if (!existsSync(`${ROOT}/${target}`)) f(file, `broken internal link ${p}`);

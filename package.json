@@ -5,7 +5,9 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "prebuild": "node scripts/check-em-dashes.mjs && node scripts/audit-military.mjs && node scripts/audit-entity.mjs && node scripts/bump-dates.mjs",
+        "dev:civilian": "node scripts/preview-civilian.mjs",
+        "audit:civilian:experience": "node scripts/audit-civilian-experience.mjs",
+        "prebuild": "node scripts/military-meta.mjs --check && node scripts/rollout-analytics-guard.mjs --check && node scripts/check-em-dashes.mjs && node scripts/audit-military.mjs && node scripts/audit-entity.mjs && node scripts/bump-dates.mjs",
         "lint:emdash": "node scripts/check-em-dashes.mjs",
         "audit:military": "node scripts/audit-military.mjs",
         "audit:civilian": "node scripts/audit-civilian.mjs",

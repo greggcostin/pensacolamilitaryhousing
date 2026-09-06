@@ -1,9 +1,11 @@
+import { guardAnalytics } from "./analytics-host-guard.mjs";
 // Shared page-assembly library for greggcostin.com (civilian-site/).
 // Extracts the live chrome (trackers/CSS/nav/footer/modal) from civilian-site/index.html
 // at build time so generated pages always match the current design, then emits
 // self-contained pages in the same convention as the hand-built ones.
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import { withGuideNavigation } from './civilian-experience-lib.mjs';
 
 export const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
 export const SITE_DIR = ROOT + "civilian-site";
@@ -23,13 +25,13 @@ export function creditFor(srcPath) {
 
 export function chrome() {
   const idx = readFileSync(`${SITE_DIR}/index.html`, "utf8");
-  const headStart = idx.indexOf('<script async src="https://www.googletagmanager.com');
+  const headStart = idx.search(/<script\b[^>]*data-costin-tracker/);
   const headEnd = idx.indexOf("</head>");
   const navStart = idx.indexOf('<nav class="main-banner"');
   const navEnd = idx.indexOf("</nav>") + 6;
   const tail = idx.slice(idx.indexOf("<footer>"));
   if (headStart < 0 || navStart < 0 || tail.length < 100) throw new Error("chrome extraction failed on index.html");
-  return { sharedHead: idx.slice(headStart, headEnd), nav: idx.slice(navStart, navEnd), tail };
+  return { sharedHead: idx.slice(headStart, headEnd), nav: '<a class="skip-link" href="#main-content">Skip to content</a>\n' + idx.slice(navStart, navEnd), tail };
 }
 
 export function figureBand({ src, webp, alt, caption, width, height, tall = false, ratio43 = false }) {
@@ -39,7 +41,7 @@ export function figureBand({ src, webp, alt, caption, width, height, tall = fals
     cap += `${cap ? " " : ""}Photo: <a href="${esc(cr.pageUrl)}" rel="noopener nofollow" target="_blank">${esc(cr.credit)}</a>, ${esc(cr.license)}`;
   }
   const cls = "figure-band" + (tall ? " figure-band--tall" : "") + (ratio43 ? " figure-band--43" : "");
-  return `<figure class="${cls}"><picture>${webp ? `<source srcset="${webp}" type="image/webp">` : ""}<img src="${src}" width="${width}" height="${height}" alt="${esc(alt)}" loading="lazy" decoding="async"></picture>${cap ? `<figcaption>${cap}</figcaption>` : ""}</figure>`;
+  return `<figure class="${cls}"><picture>${webp ? `<source srcset="${webp}" type="image/webp">` : ""}<img src="${src}" width="${width}" height="${height}" style="--image-aspect:${width}/${height}" alt="${esc(alt)}" loading="lazy" decoding="async"></picture>${cap ? `<figcaption>${cap}</figcaption>` : ""}</figure>`;
 }
 
 // Assemble and write a page. spec: {file, path, title, desc, keywords, ogSlug, h1, lead, main, schemaBlocks[], dateISO}
@@ -47,7 +49,7 @@ export function buildPage(spec) {
   const { sharedHead, nav, tail } = chrome();
   const url = SITE + spec.path;
   const og = `${SITE}/og/${spec.ogSlug}.png`;
-  const html = `<!doctype html>
+  const html = withGuideNavigation(`<!doctype html>
 <html lang="en">
 <head>
 <script>if(location.hostname.indexOf('.pages.dev')>-1)location.replace('https://greggcostin.com'+location.pathname+location.search);</script>
@@ -85,21 +87,21 @@ export function buildPage(spec) {
 <meta name="twitter:image" content="${og}">
 ${(spec.schemaBlocks || []).map((b) => `<script type="application/ld+json">${JSON.stringify(b)}</script>`).join("\n")}
 ${sharedHead}</head>
-<body>
+<body class="gc-page">
 ${nav}
 <header>
 <h1>${esc(spec.h1)}</h1>
 <p class="lead">${spec.lead}</p>
 </header>
-<main>
+<main id="main-content">
 ${spec.main}
 </main>
-${tail}`;
+${tail}`);
   // spec.outDir lets a factory write a preview build somewhere other than the live site tree
   const outDir = spec.outDir || SITE_DIR;
   if (spec.outDir) mkdirSync(`${outDir}/${spec.file}`.replace(/\/[^/]+$/, ""), { recursive: true });
-  writeFileSync(`${outDir}/${spec.file}`, html);
-  return html;
+  writeFileSync(`${outDir}/${spec.file}`, guardAnalytics(html));
+  return guardAnalytics(html);
 }
 
 export function breadcrumbs(items) {

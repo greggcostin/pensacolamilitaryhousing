@@ -8,6 +8,7 @@
 import { readFileSync, mkdirSync } from "node:fs";
 import { SITE_DIR, SITE, esc, buildPage, breadcrumbs, webPage, makeOgCard, gate } from "./civilian-page-lib.mjs";
 import { fileURLToPath } from "node:url";
+import { schoolDescription } from "./school-description.mjs";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
 const DATA = JSON.parse(readFileSync(ROOT + "content/schools/school-grades-2026.json", "utf8"));
@@ -48,13 +49,15 @@ const FRAMEWORK = `
 </ul>`;
 
 /* ---------- per-school pages ---------- */
-const schools = DATA.schools.map((s) => ({ ...s, display: titleCase(s.name), slug: slugOf(s) }));
+// The shared dataset also covers Okaloosa for military guides. This civilian section
+// currently publishes the two districts defined above; do not emit "undefined" counties.
+const schools = DATA.schools.filter((s) => DISTRICT[s.district]).map((s) => ({ ...s, display: titleCase(s.name), slug: slugOf(s) }));
 let built = 0;
 for (const s of schools) {
   const level = TYPE_LABEL[s.type] || "School";
   const county = DISTRICT[s.district];
   const title = (`${s.display} | FL DOE Grade`.length <= 65 ? `${s.display} | FL DOE Grade` : `${s.display}`).slice(0, 65);
-  const desc = `${s.display} (${county}) earned an official Florida DOE grade of ${s.g2026 || "N/A"} for 2025-26. See the three-year grade history, achievement data, and how to evaluate it for your family.`.slice(0, 165);
+  const desc = schoolDescription(s, county);
   const componentBars = [
     bar("English Language Arts achievement", s.ela),
     bar("Mathematics achievement", s.math),

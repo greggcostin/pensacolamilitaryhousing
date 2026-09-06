@@ -65,13 +65,7 @@ main details p{font-size:16px}
 @media(max-width:640px){main p{font-size:16.5px}main ul,main ol{font-size:16px}}
 `;
 
-function buildPage(fragmentPath) {
-  const frag = readFileSync(fragmentPath, "utf8");
-  const m = /<!--PAGE\s*([\s\S]*?)\s*PAGE-->/m.exec(frag);
-  if (!m) throw new Error("No PAGE json block in " + fragmentPath);
-  const spec = JSON.parse(m[1]);
-  const mainHTML = frag.slice(m.index + m[0].length).trim();
-
+export function renderMilitaryPage(spec, mainHTML) {
   let html = readFileSync(TEMPLATE_PATH, "utf8");
 
   for (const marker of ["<main data-pagefind-body>", "</main>", "<!-- EXPLORE_V2 -->", "inquiry-modal", "sticky-mobile-cta"]) {
@@ -158,7 +152,17 @@ function buildPage(fragmentPath) {
   const totalClose = (html.match(/<\/div>/g) || []).length;
   if (totalOpen !== totalClose) throw new Error(`${spec.slug}: unbalanced divs (${totalOpen} open vs ${totalClose} close) — refusing to write`);
 
-  writeFileSync(ROOT + "public/" + spec.slug + ".html", guardAnalytics(applyMilitaryMeta(html)));
+  return guardAnalytics(applyMilitaryMeta(html));
+}
+
+function buildPage(fragmentPath) {
+  const frag = readFileSync(fragmentPath, "utf8");
+  const m = /<!--PAGE\s*([\s\S]*?)\s*PAGE-->/m.exec(frag);
+  if (!m) throw new Error("No PAGE json block in " + fragmentPath);
+  const spec = JSON.parse(m[1]);
+  const html = renderMilitaryPage(spec, frag.slice(m.index + m[0].length).trim());
+  const NEW_URL = "https://pensacolamilitaryhousing.com/" + spec.slug;
+  writeFileSync(ROOT + "public/" + spec.slug + ".html", html);
 
   const smPath = ROOT + "public/sitemap.xml";
   let sm = readFileSync(smPath, "utf8");
@@ -169,4 +173,6 @@ function buildPage(fragmentPath) {
   console.log("BUILT:", spec.slug, `(${Math.round(html.length / 1024)}KB)`);
 }
 
-for (const f of process.argv.slice(2)) buildPage(f);
+if (process.argv[1] && fileURLToPath(import.meta.url).replace(/\\/g, '/') === process.argv[1].replace(/\\/g, '/')) {
+  for (const f of process.argv.slice(2)) buildPage(f);
+}

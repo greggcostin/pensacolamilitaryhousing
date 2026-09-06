@@ -77,6 +77,7 @@ export const ROUTE_LINKS = {
   ],
   communities: [
     ["Best neighborhoods by rank and BAH", "/blog/best-pensacola-neighborhoods-by-rank-bah"],
+    ["School finder: map, private schools and individual guides", "/schools"],
     ["School zones for military families", "/school-zones-military-families"],
     ["Pensacola flood zones for homebuyers", "/pensacola-flood-zones-homebuyers"],
     ["BAH vs. the cost of owning, by ZIP", "/bah-vs-cost-of-owning-pensacola"],
@@ -92,6 +93,7 @@ export const ROUTE_LINKS = {
     ["Assumable VA loans in Pensacola", "/assumable-va-loans-pensacola"],
   ],
   "pcs-guide": [
+    ["School finder: compare schools near your next home", "/schools"],
     ["Selling your house before a PCS (rent-or-sell calculator)", "/rent-or-sell-pcs-pensacola"],
     ["Got a cash offer? What investors really pay", "/cash-offer-pensacola"],
     ["PCS checklist: 60 / 30 / 7-day timeline", "/pcs-checklist"],

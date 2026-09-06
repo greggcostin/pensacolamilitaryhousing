@@ -43,3 +43,7 @@ https://pensacolamilitaryhousing.pages.dev/*
   Cache-Control: public, max-age=0, must-revalidate
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Shared school data and map modules use stable filenames. Revalidate after updates.
+/school-assets/*
+  Cache-Control: public, max-age=0, must-revalidate

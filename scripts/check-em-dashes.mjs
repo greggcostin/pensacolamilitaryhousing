@@ -10,7 +10,7 @@
 //
 // Usage: node scripts/check-em-dashes.mjs   (exit 1 on violations)
 
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -19,7 +19,8 @@ const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
 // (e.g. data-inquiry-type attributes) — allow both forms.
 const CONTRACT = /PCS \/ Relocation (?:—|&mdash;) (?:Buying|Selling)/g;
 
-const htmlFiles = ["public", "public/bases", "public/communities", "public/blog", "sites/825bayshore"]
+const htmlFiles = ["public", "public/bases", "public/communities", "public/blog", "public/schools", "sites/825bayshore"]
+  .filter((d) => existsSync(join(ROOT, d)))
   .flatMap((d) => readdirSync(join(ROOT, d)).filter((f) => f.endsWith(".html")).map((f) => join(ROOT, d, f)));
 htmlFiles.push(join(ROOT, "index.html"));
 

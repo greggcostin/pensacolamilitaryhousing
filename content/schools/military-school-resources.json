@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-09-06",
+  "purpose": "Primary-source evidence for the additive military-school-context.mjs renderer. Links select local resources, not a family's assigned installation or school attendance zone. Current school facts remain in the shared school dataset.",
+  "resources": [
+    {
+      "key": "pensacola",
+      "url": "https://www.navymwrpensacola.com/programs/ddab9fec-1223-46aa-9705-d8e175ed0915",
+      "publisher": "NAS Pensacola Navy MWR",
+      "evidence": "School Liaison connects military families, command and educators for school transitions and education-system navigation; service spans military branches. The renderer does not promise availability of any named program at an individual school."
+    },
+    {
+      "key": "whiting",
+      "url": "https://www.navymwrwhitingfield.com/child-youth/school-liaison",
+      "publisher": "NAS Whiting Field Navy MWR",
+      "evidence": "Official page describes PCS transition support, deployment support, homeschool links, postsecondary preparation and special-needs navigation. It says residence and grade-level capacity matter and directs families to clarify military school-choice policies. No counts, staffing names or individual school designations were copied."
+    },
+    {
+      "key": "eglin",
+      "url": "https://eglin96fss.com/slo/",
+      "publisher": "Eglin 96th Force Support Squadron",
+      "evidence": "School Liaison Office publishes transition, youth sponsorship, counseling and education resource links and offers communication between military families and schools. Old outbound links and promotional claims about specific schools were not reused."
+    },
+    {
+      "key": "hurlburt",
+      "url": "https://myhurlburt.com/school-liaison/",
+      "publisher": "Hurlburt Field Force Support Squadron",
+      "evidence": "Official school liaison page describes educational transition and military-family support resources. The renderer presents this contact alongside Eglin or Whiting where useful but tells families to choose the liaison for their actual assignment."
+    },
+    {
+      "key": "escambia",
+      "url": "https://www.escambiaschools.org/families/military-families/military-families",
+      "publisher": "Escambia County Public Schools",
+      "evidence": "District military-family guidance covers enrollment before arrival with orders, school-zone verification, enrollment documents and direct contact with charter/private schools. The renderer asks families to verify the route into the particular school and does not promise a choice seat."
+    },
+    {
+      "key": "santaRosa",
+      "url": "https://www.santarosaschools.org/page/student-registration",
+      "publisher": "Santa Rosa County District Schools",
+      "evidence": "This is the Student Registration destination linked by the current official district navigation. The district homepage also separately links FOCUS, the school-zone locator and school choice/transfer requests. The renderer links registration and asks families to verify the exact address and any choice application separately."
+    },
+    {
+      "key": "santaRosaMilitary",
+      "url": "https://www.santarosaschools.org/o/srcds/page/military-school-liaisons",
+      "publisher": "Santa Rosa County District Schools",
+      "evidence": "District resource lists liaison contacts for Whiting, Pensacola, Eglin and Hurlburt. Individual contact names and street addresses can differ from installation pages, so the renderer uses installation-owned program links and omits staffing details."
+    },
+    {
+      "key": "okaloosa",
+      "url": "https://www2.okaloosaschools.com/page/registration",
+      "publisher": "Okaloosa County School District",
+      "evidence": "Current 2026-27 registration page separates FOCUS registration, the school locator and controlled open enrollment. The renderer does not infer an available seat from a map result or treat choice enrollment as residential assignment."
+    },
+    {
+      "key": "okaloosaMilitary",
+      "url": "https://www.okaloosaschools.com/page/military-families",
+      "publisher": "Okaloosa County School District",
+      "evidence": "Military-family page identifies Eglin's liaison for Eglin, Duke Field and 7th Special Forces Group and provides Hurlburt resources. The renderer avoids repeating the page's older registration-brochure year and uses the current registration page separately."
+    },
+    {
+      "key": "baldwin",
+      "url": "https://www.bcbe.org/departments/communications/registration/registration-new-returning",
+      "publisher": "Baldwin County Public Schools",
+      "evidence": "Official new/returning registration page publishes 2026-27 information and separate school-zone and transfer resources. It is not the registration authority for the separate Gulf Shores and Orange Beach city systems. Private-school pages label district links only as a public-school alternative."
+    },
+    {
+      "key": "gulfShores",
+      "url": "https://www.gsboe.org/login/enrollment-registration",
+      "publisher": "Gulf Shores City Schools",
+      "evidence": "Current 2026-27 enrollment page distinguishes new, returning, residency verification and nonresident processes. Nonresident approval is separate from funding approval. No tuition amounts, application dates or acceptance assumptions were repeated."
+    },
+    {
+      "key": "orangeBeach",
+      "url": "https://www.orangebeachboe.org/families/registration",
+      "publisher": "Orange Beach City Schools",
+      "evidence": "District-wide registration destination reached through the official Orange Beach Middle and High School registrar page. The registrar also distinguishes resident/preapproved registration from nonresident transfer applications. District-wide URL is used so elementary families are not directed only to the secondary registrar."
+    },
+    {
+      "key": "records",
+      "url": "https://www.militaryonesource.mil/resources/millife-guides/changing-schools/",
+      "publisher": "Military OneSource",
+      "evidence": "Official guide supports carrying unofficial school records, reviewing credits and graduation requirements, coordinating learning-plan transitions and consulting school liaisons. It states the Interstate Compact does not apply to private schools. Public pages ask about individual eligibility rather than asserting it."
+    },
+    {
+      "key": "liaison",
+      "url": "https://www.militaryonesource.mil/benefits/school-liaison-program/",
+      "publisher": "Military OneSource",
+      "evidence": "Official service description includes support with transitions, educational options, credits and youth sponsorship referrals. Used as a nonlocal fallback when the input record does not match a verified regional resource mapping."
+    }
+  ]
+}

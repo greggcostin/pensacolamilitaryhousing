@@ -285,6 +285,7 @@ const Nav = ({ current, go }) => {
         <ExtTab href="/buy" label="Buy" />
         <ExtTab href="/sell" label="Sell" />
         <ExtTab href="/pcs-home-search" label="Search Homes" />
+        <ExtTab href="/schools" label="School Finder" />
 
         <div className="spa-drop" style={{ position: "relative", paddingBottom: 4 }}
           onMouseEnter={() => { if (!isPhone()) setPcsOpen(true); }}

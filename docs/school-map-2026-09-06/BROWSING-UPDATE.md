@@ -8,6 +8,7 @@ The school hub now presents the existing public-grade card browser immediately a
 - Cards provide names, locality, reported grade levels, affiliations/programs, and existing canonical guide links.
 - Static private resources now deduplicate the three known duplicate source identities and retain the primary record's information. All 271 guide links remain in the complete directory.
 - `withSchoolFinder` integrates the repeatable transformation for both current HTML and future factory rebuilds.
+- The school stylesheet URL includes its content hash so returning browsers receive updated card styles; the file-link audit checks the actual path before any cache-version query string.
 
 Validation: seven new source-derived browsing checks; 29 finder check groups; civilian audit 310 pages with zero findings; entity audit 407 pages clean; analytics guard 409 HTML files with zero failures. Independent baseline comparison preserved all 15 script blocks, finder HTML, and all 87 existing grade-card links (82 schools plus five charter repeats).
 

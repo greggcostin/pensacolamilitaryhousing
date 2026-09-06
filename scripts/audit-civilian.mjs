@@ -123,7 +123,8 @@ for (const file of pages) {
 
   /* ---------- links + images ---------- */
   for (const m of h.matchAll(/href="(\/[^"#]*)"/g)) {
-    const p = m[1];
+    // Cache-version query strings do not change the backing file path.
+    const p = m[1].split('?')[0];
     if (p.startsWith("/images/") || p.startsWith("/og/")) { if (!existsSync(ROOT + p)) f(file, `broken asset link ${p}`); continue; }
     if ([".xml", ".txt", ".webmanifest", ".json", ".png", ".css", ".js", ".woff2"].some((e) => p.endsWith(e))) { if (!existsSync(ROOT + p)) f(file, `broken file link ${p}`); continue; }
     const target = p === "/" ? "index.html" : p.slice(1) + ".html";

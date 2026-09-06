@@ -1,5 +1,6 @@
 // Progressive school finder; existing static school reports remain below it.
 import { readFileSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { uniqueSchoolGuides, withSchoolBrowse } from './school-browse-lib.mjs';
 export const finderMarkup = `
 <!-- SCHOOL_FINDER_START -->
@@ -66,7 +67,9 @@ export function withSchoolFinder(html, path, data) {
   html=html.replace(/<h1>[^<]*<\/h1>/,'<h1>Explore schools. Find your fit.</h1>').replace('Every graded public and charter school in Escambia and Santa Rosa County, with official state grades, trends, and the data behind them.','Public, private, Christian and other school options across the region, with a guide for every school and practical information for your next move.');
   html=html.replace('Florida does not issue accountability grades to private schools, so they are not listed above.','Private schools have their own guides and resources above. Florida does not issue public-school accountability grades to private schools.');
   if(!html.includes('data-school-finder-link')) html=html.replace(/<div class="gc-interior-hero-actions">([\s\S]*?)<\/div>/,(_,actions)=>'<div class="gc-interior-hero-actions"><a class="gc-interior-action gc-interior-action--primary" href="#school-finder" data-school-finder-link>Open school finder <span aria-hidden="true">↗</span></a>'+actions.replace(' gc-interior-action--primary','')+'</div>');
-  html=html.replace(/<link rel="stylesheet" href="\/assets\/school-finder.css">\s*/g,'').replace(/<script type="module" src="\/assets\/school-finder.js"><\/script>\s*/g,'').replace('</head>','<link rel="stylesheet" href="/assets/school-finder.css">\n<script type="module" src="/assets/school-finder.js"></script>\n</head>');
+  const stylesheetPath='civilian-site/assets/school-finder.css';
+  const stylesheetVersion=existsSync(stylesheetPath)?createHash('sha256').update(readFileSync(stylesheetPath)).digest('hex').slice(0,12):'1';
+  html=html.replace(/<link rel="stylesheet" href="\/assets\/school-finder\.css(?:\?[^\"]*)?">\s*/g,'').replace(/<script type="module" src="\/assets\/school-finder.js"><\/script>\s*/g,'').replace('</head>',`<link rel="stylesheet" href="/assets/school-finder.css?v=${stylesheetVersion}">\n<script type="module" src="/assets/school-finder.js"></script>\n</head>`);
   html=html.includes('<!-- SCHOOL_FINDER_START -->')?html.replace(/<!-- SCHOOL_FINDER_START -->[\s\S]*?<!-- SCHOOL_FINDER_END -->/,finderMarkup.trim()):html.replace(/(<main\b[^>]*>)/,'$1'+finderMarkup);
   const dataset=data||(existsSync('civilian-site/assets/school-finder-data.json')?JSON.parse(readFileSync('civilian-site/assets/school-finder-data.json','utf8')):null);
   if(dataset){const resources=privateResourceMarkup(dataset);html=html.includes('<!-- PRIVATE_SCHOOL_RESOURCES_START -->')?html.replace(/<!-- PRIVATE_SCHOOL_RESOURCES_START -->[\s\S]*?<!-- PRIVATE_SCHOOL_RESOURCES_END -->/,resources):html.replace('<!-- SCHOOL_FINDER_END -->','<!-- SCHOOL_FINDER_END -->'+resources);

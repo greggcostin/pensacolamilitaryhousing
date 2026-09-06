@@ -3,6 +3,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 import {withSchoolFinder} from './school-finder-lib.mjs';
+import {withSchoolBrowse} from './school-browse-lib.mjs';
 
 const data=JSON.parse(readFileSync('civilian-site/assets/school-finder-data.json','utf8'));
 const hub=readFileSync('civilian-site/schools.html','utf8');
@@ -13,6 +14,7 @@ for(const school of data.schools){if(school.reportUrl&&!seen.has(school.reportUr
 const privateSchools=canonical.filter(s=>s.sector==='private');
 const christianSchools=privateSchools.filter(s=>s.christian===true);
 const magnetSchools=canonical.filter(s=>s.sector==='public'&&s.magnet===true);
+const alabamaSchools=canonical.filter(s=>s.sector==='public'&&s.state==='AL');
 const decode=value=>String(value).replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&nbsp;/g,' ').replace(/&middot;/g,'·').replace(/&rarr;/g,'→').replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(Number(n)));
 const text=html=>decode(html.replace(/<[^>]*>/g,' ')).replace(/\s+/g,' ').trim();
 const anchors=html=>[...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)].map(m=>({html:m[0],attrs:m[1],body:m[2],href:decode(m[1].match(/\bhref="([^"]*)"/)?.[1]||''),text:text(m[2]),index:m.index}));
@@ -24,12 +26,12 @@ function elementAtId(html,id){
   while((match=tokens.exec(html))){depth+=match[1]?-1:1;if(!depth)return html.slice(opening.index,tokens.lastIndex);}
   assert.fail('Unclosed #'+id);
 }
-function category(label){
-  const jump=anchors(generated).find(a=>a.href.startsWith('#')&&new RegExp('^'+label+'(?: schools)? \\(' ,'i').test(a.text));
+function category(label,html=generated){
+  const jump=anchors(html).find(a=>a.href.startsWith('#')&&new RegExp('^'+label+'(?: schools)? \\(' ,'i').test(a.text));
   assert(jump,'Missing '+label+' category jump');
   const id=jump.href.slice(1);
-  const labelledSection=new RegExp('<section\\b[^>]*aria-labelledby="'+id+'"[^>]*>[\\s\\S]*?<\\/section>').exec(generated);
-  const section=labelledSection?.[0]||elementAtId(generated,id);
+  const labelledSection=new RegExp('<section\\b[^>]*aria-labelledby="'+id+'"[^>]*>[\\s\\S]*?<\\/section>').exec(html);
+  const section=labelledSection?.[0]||elementAtId(html,id);
   return {jump,id,section,cards:anchors(section).filter(a=>a.href.startsWith('/schools/'))};
 }
 let passed=0,failed=0;
@@ -37,7 +39,7 @@ function check(name,run){try{run();passed++;console.log('PASS '+name);}catch(err
 
 check('Private and Christian category counts use canonical schools and sourced affiliation',()=>{
   assert(privateSchools.length>0);assert(christianSchools.length>0&&christianSchools.length<privateSchools.length);
-  for(const [label,expected] of [['Private',privateSchools],['Christian',christianSchools],['Magnet',magnetSchools]]){
+  for(const [label,expected] of [['Alabama Public',alabamaSchools],['Private',privateSchools],['Christian',christianSchools],['Magnet',magnetSchools]]){
     const group=category(label);assert(group.jump.text.includes('('+expected.length+')'),group.jump.text);
     assert.deepEqual(group.cards.map(a=>a.href).sort(),expected.map(s=>s.reportUrl).sort(),label+' coverage');
     assert.equal(new Set(group.cards.map(a=>a.href)).size,group.cards.length,label+' duplicate school cards');
@@ -63,15 +65,50 @@ check('Private badges cannot be mistaken for invented accountability letters',()
       assert(!/<span\b[^>]*(?:badge|grade)[^>]*>\s*[ABCDF]\s*<\/span>/.test(card.html),card.href+': private letter badge');
       assert(/(?:aria-label|title)="[^"]*(?:Private|Christian|type)/i.test(card.html),card.href+': badge meaning');
       assert(/(?:aria-label|title)="[^"]*not an? (?:accountability|academic) grade/i.test(card.html),card.href+': grade explanation');
+      const school=privateSchools.find(s=>s.reportUrl===card.href),christian=school.christian===true;
+      assert(card.html.includes(christian?'school-browse-badge--christian':'school-browse-badge--private'),card.href+': school-type color');
+      assert(new RegExp('>\\s*'+(christian?'CP':'P')+'\\s*<\\/span>').test(card.body),card.href+': school-type glyph');
     }
   }
 });
+check('All Alabama public cards show their own dated official result or an explicit unavailable state',()=>{
+  const group=category('Alabama Public');assert.equal(alabamaSchools.length,50);
+  let graded=0,waived=0,unpublished=0;
+  for(const school of alabamaSchools){
+    const card=group.cards.find(a=>a.href===school.reportUrl),published=school.alabamaAccountability;
+    assert(published,school.name+': shared Alabama accountability record');
+    assert(card.text.includes('Alabama 2024–25'),school.name+': state and source year');
+    if(published.grade){graded++;assert(card.html.includes('school-browse-badge--'+published.grade),school.name+': official letter badge');assert(card.text.includes('official grade '+published.grade),school.name+': grade label');assert(card.text.includes('Overall score '+published.score+'/100'),school.name+': overall score');}
+    else{assert(/grade unavailable/.test(card.text),school.name+': unavailable result');assert(!/(?:school-browse-badge)--[ABCDF](?:[\s"])/.test(card.html),school.name+': no invented letter');if(published.gradeStatus==='approved-waiver'){waived++;assert(card.text.includes('approved waiver (AW)'));}else unpublished++;}
+    if(school.magnet!==true){assert(!/>\s*M\s*<\/span>/.test(card.body),school.name+': unrelated magnet badge');assert(!/Public magnet school/.test(card.text),school.name+': unrelated magnet label');}
+  }
+  assert.equal(graded,46);assert.equal(waived,1);assert.equal(unpublished,3);
+  assert(group.section.includes('different accountability systems and school years'));
+});
+check('School-type badges never infer Christianity from a name or label an ungraded public school as magnet',()=>{
+  const base={city:'Test City',state:'AL',county:'Baldwin',gradeSpan:'K–12',levels:['combined'],gradeYear:'2024–25',sector:'public',magnet:false};
+  const rows=[
+    {...base,name:'Published Alabama C',reportUrl:'/schools/test-c',christian:true,grade:'C',alabamaAccountability:{grade:'C',score:73,schoolYear:'2024-2025',gradeStatus:'graded'}},
+    {...base,name:'Grade unavailable',reportUrl:'/schools/test-none',grade:null,alabamaAccountability:{grade:null,score:null,schoolYear:'2024-2025',gradeStatus:'not-published'}},
+    {...base,name:'Christian in the name only',reportUrl:'/schools/test-private',sector:'private',christian:null,grade:null},
+    {...base,name:'Documented Catholic affiliation',reportUrl:'/schools/test-christian',sector:'private',christian:true,grade:null,religiousOrientation:'Roman Catholic'}
+  ];
+  const fixture=withSchoolBrowse('<main><div><a class="btn-g" href="#charter-schools">Charters (0)</a></div><h2>Enrollment &amp; school-choice resources</h2></main>',{schools:rows});
+  const al=category('Alabama Public',fixture).cards,privateCards=category('Private',fixture).cards;
+  const c=al.find(a=>a.href==='/schools/test-c'),none=al.find(a=>a.href==='/schools/test-none');
+  assert(/>C<\/span>/.test(c.body));assert(c.text.includes('Alabama 2024–25: official grade C'));assert(!c.body.includes('school-browse-badge--christian'));
+  assert(/>•<\/span>/.test(none.body));assert(none.text.includes('official grade unavailable'));assert(!none.text.includes('magnet'));
+  assert(/>P<\/span>/.test(privateCards.find(a=>a.href==='/schools/test-private').body));
+  assert(/>CP<\/span>/.test(privateCards.find(a=>a.href==='/schools/test-christian').body));
+  assert.equal(category('Christian',fixture).cards.length,1);
+});
 check('Grade-card browsing precedes the two long resource directories',()=>{
-  const positions=['elementary','middle','high','combination-k-8','charter-schools',category('Private').id,category('Christian').id,category('Magnet').id].map(id=>generated.indexOf('id="'+id+'"'));
+  const positions=['elementary','middle','high','combination-k-8','charter-schools',category('Alabama Public').id,category('Private').id,category('Christian').id,category('Magnet').id].map(id=>generated.indexOf('id="'+id+'"'));
   const privateDirectory=generated.indexOf('id="private-school-resources"'),allDirectory=generated.indexOf('id="all-school-guides"');
   assert(positions.every(n=>n>=0));assert(privateDirectory>Math.max(...positions));assert(allDirectory>Math.max(...positions));
   assert(generated.indexOf('id="school-finder"')<Math.min(...positions));
-  for(const id of ['private-school-resources','all-school-guides',category('Private').id,category('Christian').id,category('Magnet').id])assert.equal(generated.split('id="'+id+'"').length-1,1,id+' appears once');
+  assert(positions.every((p,i)=>i===0||p>positions[i-1]),'Approved category order');
+  for(const id of ['private-school-resources','all-school-guides',category('Alabama Public').id,category('Private').id,category('Christian').id,category('Magnet').id])assert.equal(generated.split('id="'+id+'"').length-1,1,id+' appears once');
 });
 check('Every canonical guide remains statically discoverable after moving the directories',()=>{
   const directory=elementAtId(generated,'all-school-guides');
@@ -94,5 +131,5 @@ check('Hub transform is repeatable and leaves unrelated pages and source data un
   assert.equal(withSchoolFinder('<html><main>Existing school report</main></html>','/schools/example',data),'<html><main>Existing school report</main></html>');
   assert.equal(JSON.stringify(data),before,'Source data mutated');
 });
-console.log(`School browse: ${passed}/${passed+failed} groups passed; ${privateSchools.length} private, ${christianSchools.length} Christian, ${magnetSchools.length} magnet guides.`);
+console.log(`School browse: ${passed}/${passed+failed} groups passed; ${alabamaSchools.length} Alabama public, ${privateSchools.length} private, ${christianSchools.length} Christian, ${magnetSchools.length} magnet guides.`);
 if(failed)process.exitCode=1;

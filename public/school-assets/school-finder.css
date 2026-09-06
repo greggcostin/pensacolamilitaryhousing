@@ -8,6 +8,8 @@
 .school-browse-card:hover,.school-browse-card:focus-visible{border-color:#ad893e!important;box-shadow:0 4px 15px #101b3009}
 .school-browse-badge{display:flex;align-items:center;justify-content:center;width:40px;height:40px;flex:0 0 40px;border-radius:2px;color:#101b30;font:700 20px/1 var(--sans)}
 .school-browse-badge--type{background:#101b30;color:#d4b45a;border:1px solid #ad893e}
+.school-browse-badge--private{background:#f1e4c2;color:#624817;border:1px solid #b18b42}
+.school-browse-badge--christian{background:#17243d;color:#f6d98b;border:1px solid #b6974d;font-size:15px;letter-spacing:.2px}
 .school-browse-badge--A{background:#39a05b}.school-browse-badge--B{background:#84b83a}.school-browse-badge--C{background:#e5a523}.school-browse-badge--D{background:#ed8c51}.school-browse-badge--F{background:#db6363}
 .school-browse-details{flex:1;min-width:0}
 .school-browse-name{display:block;font:500 15.5px/1.5 var(--sans);color:#101b30}
@@ -73,6 +75,7 @@
 .sf-grade--A{background:#dbe9dc;color:#234c32;border-color:#85aa8d}.sf-grade--B{background:#e7edcf;color:#415025;border-color:#a7b770}.sf-grade--C{background:#f5e9c8;color:#664d17;border-color:#c7a75c}.sf-grade--D{background:#f4ddcf;color:#743c1e;border-color:#c59a7c}.sf-grade--F{background:#efd9da;color:#84282d;border-color:#c28e92}
 .sf-grade--none{color:#536073;background:#e9edf1}
 .sf-grade--private{color:#624817;background:#f1e4c2;border-color:#b18b42}
+.sf-grade--christian{color:#f6d98b;background:#17243d;border-color:#b6974d;font-size:15px;letter-spacing:.2px}
 .sf-type-shortcuts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
 .gc-interior main .sf .sf-type-shortcut{font:600 12px/1.5 var(--sans);padding:10px 17px;min-height:44px;border:1px solid #b9c2cd;border-radius:2px;background:#fff;color:#35445b;cursor:pointer}
 .gc-interior main .sf .sf-type-shortcut[aria-pressed=true]{background:#101b30;color:#ecd38f;border-color:#101b30}
@@ -105,6 +108,7 @@
 .sf-marker{background:transparent;border:0}
 .sf-marker .sf-grade{width:32px;height:34px;box-shadow:0 2px 5px #0003;border:2px solid #fff;font-size:16px;border-radius:7px 7px 7px 0;transform:rotate(-45deg)}
 .sf-marker .sf-grade b{transform:rotate(45deg);font-weight:700}
+.sf-marker .sf-grade--christian{font-size:12px;letter-spacing:0}
 .sf .leaflet-marker-icon.sf-marker-cluster{background:#101b30;color:#efd58e;border:2px solid #cfb468;border-radius:50%;box-shadow:0 2px 8px #101b3040;display:flex;align-items:center;justify-content:center;font:bold 13px/1 var(--sans)}
 .sf .leaflet-container .leaflet-control-attribution{background:#fff;color:#35445b;font-size:9px;max-width:100%;white-space:normal}
 .sf .leaflet-container .leaflet-control-attribution a{color:#35445b}
@@ -112,6 +116,8 @@
 .sf .leaflet-popup-content-wrapper{border-radius:3px;box-shadow:0 5px 25px #101b3030}
 .sf .leaflet-popup-content{margin:18px;max-width:245px!important;font-size:12px;line-height:1.7}
 .sf .leaflet-popup-content h3{font:400 23px/1.3 var(--serif);margin:0 0 10px}
+.sf-popup-school-heading{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+.sf .leaflet-popup-content .sf-popup-school-heading h3{flex:1;min-width:0;margin:0}
 .sf .leaflet-popup-content p{font-size:12px!important;line-height:1.65;margin:0 0 12px}
 .sf .leaflet-popup-content a{color:#785421}
 .sf .leaflet-popup-close-button{color:#536073!important}

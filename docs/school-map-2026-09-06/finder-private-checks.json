@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-06T20:46:27.120Z",
-  "datasetBuiltAt": "2026-09-06T20:44:00.404Z",
-  "datasetSha256": "a58ae030b22301da4d161bebe1a153d5b4cd00119cd4667adaa06378ab69d900",
+  "checkedAt": "2026-09-06T22:18:39.151Z",
+  "datasetBuiltAt": "2026-09-06T22:18:00.323Z",
+  "datasetSha256": "482ba5bf014d9a22332c4237f98eb7c949a0b2d8a9715d702fce8d9b15aacba1",
   "counts": {
     "private": 66,
     "christian": 47,
@@ -50,7 +50,7 @@
       "passed": true
     },
     {
-      "name": "Actual client cards and map markers distinguish private P from public A-F grades",
+      "name": "Actual client cards, popups and accessible map markers distinguish Christian CP, other private P and public C",
       "passed": true
     }
   ]

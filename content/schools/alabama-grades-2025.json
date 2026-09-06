@@ -1,0 +1,2321 @@
+{
+  "schemaVersion": 1,
+  "state": "AL",
+  "authority": "Alabama State Department of Education",
+  "system": "Alabama State Accountability",
+  "schoolYear": "2024-2025",
+  "releaseYear": 2025,
+  "checkedAt": "2026-09-06",
+  "sourcePage": "https://www.alabamaachieves.org/reports-data/school-performance/",
+  "technicalGuide": "https://www.alabamaachieves.org/wp-content/uploads/2025/10/RD_SP_20251021_Fall2025StateTechnicalGuide_v1.pdf",
+  "sources": {
+    "letters": {
+      "file": "letter-grades.xlsx",
+      "url": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "sheet": "State Letter Grades",
+      "sha256": "083721bbf9887bd82250ef0fdfcaae19793b9c9e7a2f1f4c01c9023e0772272f",
+      "bytes": 117499,
+      "localPath": "content/schools/sources/alabama-2025/letter-grades.xlsx"
+    },
+    "indicators": {
+      "file": "indicator-scores.xlsx",
+      "url": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx",
+      "sheet": "State Indicators Scores",
+      "sha256": "c8cc3d884387a97f0f2ce9d91f83cb7d29f9aa13d06bbe9287545eb206fc52df",
+      "bytes": 1186005,
+      "localPath": "content/schools/sources/alabama-2025/indicator-scores.xlsx"
+    }
+  },
+  "methodology": {
+    "matching": "Only exact Alabama system and school codes are matched, with a normalized name agreement check. System/state summary rows and private schools are excluded.",
+    "scores": "Total points and letter grades are copied from the official school row. AW and ID remain ungraded. Indicator values are copied only for the All Students group.",
+    "comparison": "Alabama and Florida use different accountability calculations. These grades and indicator scores must not be represented as a single interstate school ranking.",
+    "indicatorMeaning": "Indicator scores are not all proficiency percentages. Graduation and college/career indicators use 2023-2024 cohort data in this 2024-2025 report; see the state technical guide."
+  },
+  "counts": {
+    "directoryPublicSchools": 50,
+    "matchedSchoolRows": 47,
+    "graded": 46,
+    "approvedWaiver": 1,
+    "insufficientData": 0,
+    "notPublished": 3
+  },
+  "missingFromDirectory": [],
+  "schools": [
+    {
+      "id": "public-nces-010027001810",
+      "ncesId": "010027001810",
+      "reportUrl": "/schools/baldwin-county-high-school",
+      "name": "Baldwin County High School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0005",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 83,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Baldwin County High School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 22,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 50.67,
+          "subpopulation": "All Students",
+          "sourceRow": 112,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22292,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 20.63,
+          "subpopulation": "All Students",
+          "sourceRow": 8021,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "College and Career Readiness",
+          "value": 85.29,
+          "subpopulation": "All Students",
+          "sourceRow": 17993,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Graduation Rate",
+          "value": 86.55,
+          "subpopulation": "All Students",
+          "sourceRow": 20110,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027002443",
+      "ncesId": "010027002443",
+      "reportUrl": "/schools/baldwin-county-virtual-school",
+      "name": "Baldwin County Virtual School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0185",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 84,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Baldwin County Virtual School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 62,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 73.03,
+          "subpopulation": "All Students",
+          "sourceRow": 354,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22546,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 1.13,
+          "subpopulation": "All Students",
+          "sourceRow": 8322,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "College and Career Readiness",
+          "value": 74.74,
+          "subpopulation": "All Students",
+          "sourceRow": 18036,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Graduation Rate",
+          "value": 74.74,
+          "subpopulation": "All Students",
+          "sourceRow": 20153,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027002701",
+      "ncesId": "010027002701",
+      "reportUrl": "/schools/baldwin-preparatory-academy",
+      "name": "Baldwin Preparatory Academy",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0190",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": null,
+      "score": null,
+      "gradeStatus": "approved-waiver",
+      "officialGrade": "AW",
+      "officialName": "Baldwin Preparatory Academy",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 63,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [],
+      "reason": "ALSDE reports AW (Approved Waiver) for both total points and letter grade. No numeric score or letter grade is assigned."
+    },
+    {
+      "id": "public-nces-010027001708",
+      "ncesId": "010027001708",
+      "reportUrl": "/schools/bay-minette-elementary-school",
+      "name": "Bay Minette Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0015",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "C",
+      "score": 77,
+      "gradeStatus": "graded",
+      "officialGrade": "C",
+      "officialName": "Bay Minette Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 24,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 61.78,
+          "subpopulation": "All Students",
+          "sourceRow": 123,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 87.99,
+          "subpopulation": "All Students",
+          "sourceRow": 22303,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 14.39,
+          "subpopulation": "All Students",
+          "sourceRow": 8034,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001859",
+      "ncesId": "010027001859",
+      "reportUrl": "/schools/bay-minette-middle-school",
+      "name": "Bay Minette Middle School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0012",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 83,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Bay Minette Middle School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 23,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 63.09,
+          "subpopulation": "All Students",
+          "sourceRow": 117,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 99.17,
+          "subpopulation": "All Students",
+          "sourceRow": 22297,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 15.29,
+          "subpopulation": "All Students",
+          "sourceRow": 8028,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027002492",
+      "ncesId": "010027002492",
+      "reportUrl": "/schools/belforest-elementary-school",
+      "name": "Belforest Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0043",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 95,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Belforest Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 31,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 90.32,
+          "subpopulation": "All Students",
+          "sourceRow": 168,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22351,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 7.21,
+          "subpopulation": "All Students",
+          "sourceRow": 8091,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000162",
+      "ncesId": "010027000162",
+      "reportUrl": "/schools/central-baldwin-middle-school",
+      "name": "Central Baldwin Middle School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0025",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 83,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Central Baldwin Middle School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 25,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 68.38,
+          "subpopulation": "All Students",
+          "sourceRow": 129,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22309,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 16.08,
+          "subpopulation": "All Students",
+          "sourceRow": 8041,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 30.3,
+          "subpopulation": "All Students",
+          "sourceRow": 30348,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027002180",
+      "ncesId": "010027002180",
+      "reportUrl": "/schools/cf-taylor-alternative-school",
+      "name": "Cf Taylor Alternative School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0027",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": null,
+      "score": null,
+      "gradeStatus": "not-published",
+      "officialGrade": null,
+      "officialName": null,
+      "matchMethod": null,
+      "sourceRow": null,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [],
+      "reason": "No school-level record with this district and school code appears in the official 2024-2025 letter-grade workbook. No district result has been substituted."
+    },
+    {
+      "id": "public-nces-010027002072",
+      "ncesId": "010027002072",
+      "reportUrl": "/schools/daphne-east-elementary-school",
+      "name": "Daphne East Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0042",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 94,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Daphne East Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 30,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 88.05,
+          "subpopulation": "All Students",
+          "sourceRow": 161,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22343,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 6.83,
+          "subpopulation": "All Students",
+          "sourceRow": 8082,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 55,
+          "subpopulation": "All Students",
+          "sourceRow": 30350,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001709",
+      "ncesId": "010027001709",
+      "reportUrl": "/schools/daphne-elementary-school",
+      "name": "Daphne Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0041",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 93,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Daphne Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 29,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 84.96,
+          "subpopulation": "All Students",
+          "sourceRow": 156,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22338,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 6.91,
+          "subpopulation": "All Students",
+          "sourceRow": 8074,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001759",
+      "ncesId": "010027001759",
+      "reportUrl": "/schools/daphne-high-school",
+      "name": "Daphne High School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0035",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 89,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Daphne High School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 26,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 74.03,
+          "subpopulation": "All Students",
+          "sourceRow": 137,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22317,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 15.37,
+          "subpopulation": "All Students",
+          "sourceRow": 8049,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "College and Career Readiness",
+          "value": 86.63,
+          "subpopulation": "All Students",
+          "sourceRow": 17999,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Graduation Rate",
+          "value": 88.78,
+          "subpopulation": "All Students",
+          "sourceRow": 20116,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000013",
+      "ncesId": "010027000013",
+      "reportUrl": "/schools/daphne-middle-school",
+      "name": "Daphne Middle School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0037",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 87,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Daphne Middle School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 27,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 75.99,
+          "subpopulation": "All Students",
+          "sourceRow": 143,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 97.05,
+          "subpopulation": "All Students",
+          "sourceRow": 22323,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 8,
+          "subpopulation": "All Students",
+          "sourceRow": 8058,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 47.62,
+          "subpopulation": "All Students",
+          "sourceRow": 30349,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001783",
+      "ncesId": "010027001783",
+      "reportUrl": "/schools/delta-elementary-school",
+      "name": "Delta Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0045",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 86,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Delta Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 32,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 72.2,
+          "subpopulation": "All Students",
+          "sourceRow": 175,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 96.33,
+          "subpopulation": "All Students",
+          "sourceRow": 22358,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 10.48,
+          "subpopulation": "All Students",
+          "sourceRow": 8100,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000625",
+      "ncesId": "010027000625",
+      "reportUrl": "/schools/elberta-elementary-school",
+      "name": "Elberta Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0047",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 92,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Elberta Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 33,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 85.73,
+          "subpopulation": "All Students",
+          "sourceRow": 178,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22361,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 13.25,
+          "subpopulation": "All Students",
+          "sourceRow": 8105,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000057",
+      "ncesId": "010027000057",
+      "reportUrl": "/schools/elberta-high-school",
+      "name": "Elberta High School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0050",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 87,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Elberta High School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 34,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 62.8,
+          "subpopulation": "All Students",
+          "sourceRow": 184,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22368,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 16.08,
+          "subpopulation": "All Students",
+          "sourceRow": 8112,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "College and Career Readiness",
+          "value": 90,
+          "subpopulation": "All Students",
+          "sourceRow": 18006,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Graduation Rate",
+          "value": 90.59,
+          "subpopulation": "All Students",
+          "sourceRow": 20123,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027002490",
+      "ncesId": "010027002490",
+      "reportUrl": "/schools/elberta-middle-school",
+      "name": "Elberta Middle School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0055",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 92,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Elberta Middle School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 35,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 84.41,
+          "subpopulation": "All Students",
+          "sourceRow": 189,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22373,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 11.88,
+          "subpopulation": "All Students",
+          "sourceRow": 8120,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000058",
+      "ncesId": "010027000058",
+      "reportUrl": "/schools/elsanor-school",
+      "name": "Elsanor School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0060",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 88,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Elsanor School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 36,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 78.42,
+          "subpopulation": "All Students",
+          "sourceRow": 194,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 96.83,
+          "subpopulation": "All Students",
+          "sourceRow": 22378,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 10.86,
+          "subpopulation": "All Students",
+          "sourceRow": 8126,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 50,
+          "subpopulation": "All Students",
+          "sourceRow": 30351,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001710",
+      "ncesId": "010027001710",
+      "reportUrl": "/schools/fairhope-east-elementary",
+      "name": "Fairhope East Elementary",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0071",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 95,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Fairhope East Elementary",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 39,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 95.18,
+          "subpopulation": "All Students",
+          "sourceRow": 213,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22399,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 5.35,
+          "subpopulation": "All Students",
+          "sourceRow": 8148,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 28.57,
+          "subpopulation": "All Students",
+          "sourceRow": 30353,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000100",
+      "ncesId": "010027000100",
+      "reportUrl": "/schools/fairhope-high-school",
+      "name": "Fairhope High School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0065",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 92,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Fairhope High School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 37,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 86.3,
+          "subpopulation": "All Students",
+          "sourceRow": 199,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22384,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 13.38,
+          "subpopulation": "All Students",
+          "sourceRow": 8132,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "College and Career Readiness",
+          "value": 91.58,
+          "subpopulation": "All Students",
+          "sourceRow": 18009,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Graduation Rate",
+          "value": 91.07,
+          "subpopulation": "All Students",
+          "sourceRow": 20126,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000059",
+      "ncesId": "010027000059",
+      "reportUrl": "/schools/fairhope-middle-school",
+      "name": "Fairhope Middle School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0070",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 93,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Fairhope Middle School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 38,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 93.23,
+          "subpopulation": "All Students",
+          "sourceRow": 206,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22391,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 11.59,
+          "subpopulation": "All Students",
+          "sourceRow": 8140,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 30.3,
+          "subpopulation": "All Students",
+          "sourceRow": 30352,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001711",
+      "ncesId": "010027001711",
+      "reportUrl": "/schools/fairhope-west-elementary",
+      "name": "Fairhope West Elementary",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0073",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 99,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Fairhope West Elementary",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 40,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 98.98,
+          "subpopulation": "All Students",
+          "sourceRow": 219,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22406,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 5.46,
+          "subpopulation": "All Students",
+          "sourceRow": 8157,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 57.69,
+          "subpopulation": "All Students",
+          "sourceRow": 30354,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001713",
+      "ncesId": "010027001713",
+      "reportUrl": "/schools/florence-b-mathis-elementary",
+      "name": "Florence B Mathis Elementary",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0085",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 83,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Florence B Mathis Elementary",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 44,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 66.13,
+          "subpopulation": "All Students",
+          "sourceRow": 249,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 95.72,
+          "subpopulation": "All Students",
+          "sourceRow": 22438,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 9.67,
+          "subpopulation": "All Students",
+          "sourceRow": 8189,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 59.09,
+          "subpopulation": "All Students",
+          "sourceRow": 30358,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001712",
+      "ncesId": "010027001712",
+      "reportUrl": "/schools/foley-elementary-school",
+      "name": "Foley Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0078",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 85,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Foley Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 41,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 67.69,
+          "subpopulation": "All Students",
+          "sourceRow": 225,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22414,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 9.5,
+          "subpopulation": "All Students",
+          "sourceRow": 8165,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 50,
+          "subpopulation": "All Students",
+          "sourceRow": 30355,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001784",
+      "ncesId": "010027001784",
+      "reportUrl": "/schools/foley-high-school",
+      "name": "Foley High School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0083",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 80,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Foley High School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 43,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 47.28,
+          "subpopulation": "All Students",
+          "sourceRow": 241,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22430,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 21.55,
+          "subpopulation": "All Students",
+          "sourceRow": 8181,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "College and Career Readiness",
+          "value": 82.02,
+          "subpopulation": "All Students",
+          "sourceRow": 18016,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Graduation Rate",
+          "value": 86.38,
+          "subpopulation": "All Students",
+          "sourceRow": 20133,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 39.22,
+          "subpopulation": "All Students",
+          "sourceRow": 30357,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000060",
+      "ncesId": "010027000060",
+      "reportUrl": "/schools/foley-middle-school",
+      "name": "Foley Middle School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0080",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 81,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Foley Middle School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 42,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 63.79,
+          "subpopulation": "All Students",
+          "sourceRow": 233,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22422,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 14.54,
+          "subpopulation": "All Students",
+          "sourceRow": 8173,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 28.4,
+          "subpopulation": "All Students",
+          "sourceRow": 30356,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010020202469",
+      "ncesId": "010020202469",
+      "reportUrl": "/schools/gulf-shores-elementary-school",
+      "name": "Gulf Shores Elementary School",
+      "state": "AL",
+      "districtId": "152",
+      "schoolId": "0010",
+      "districtName": "Gulf Shores City",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 95,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Gulf Shores Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 1179,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 89.25,
+          "subpopulation": "All Students",
+          "sourceRow": 5978,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 28361,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 6.15,
+          "subpopulation": "All Students",
+          "sourceRow": 15514,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010020202473",
+      "ncesId": "010020202473",
+      "reportUrl": "/schools/gulf-shores-high-school",
+      "name": "Gulf Shores High School",
+      "state": "AL",
+      "districtId": "152",
+      "schoolId": "0030",
+      "districtName": "Gulf Shores City",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 93,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Gulf Shores High School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 1181,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 69.81,
+          "subpopulation": "All Students",
+          "sourceRow": 5991,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 28373,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 6.54,
+          "subpopulation": "All Students",
+          "sourceRow": 15529,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "College and Career Readiness",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 19595,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Graduation Rate",
+          "value": 98.97,
+          "subpopulation": "All Students",
+          "sourceRow": 21712,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010020202471",
+      "ncesId": "010020202471",
+      "reportUrl": "/schools/gulf-shores-middle-school",
+      "name": "Gulf Shores Middle School",
+      "state": "AL",
+      "districtId": "152",
+      "schoolId": "0020",
+      "districtName": "Gulf Shores City",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 95,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Gulf Shores Middle School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 1180,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 89.81,
+          "subpopulation": "All Students",
+          "sourceRow": 5984,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 28367,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 3.66,
+          "subpopulation": "All Students",
+          "sourceRow": 15522,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000660",
+      "ncesId": "010027000660",
+      "reportUrl": "/schools/j-larry-newton-school",
+      "name": "J Larry Newton School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0135",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 99,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "J Larry Newton School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 54,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 98.77,
+          "subpopulation": "All Students",
+          "sourceRow": 310,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22502,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 5.25,
+          "subpopulation": "All Students",
+          "sourceRow": 8264,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 58.82,
+          "subpopulation": "All Students",
+          "sourceRow": 30363,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001714",
+      "ncesId": "010027001714",
+      "reportUrl": "/schools/loxley-elementary-school",
+      "name": "Loxley Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0088",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 88,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Loxley Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 45,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 73.44,
+          "subpopulation": "All Students",
+          "sourceRow": 257,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 99.68,
+          "subpopulation": "All Students",
+          "sourceRow": 22446,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 7.98,
+          "subpopulation": "All Students",
+          "sourceRow": 8198,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000648",
+      "ncesId": "010027000648",
+      "reportUrl": "/schools/magnolia-school",
+      "name": "Magnolia School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0093",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 83,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Magnolia School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 46,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 69.59,
+          "subpopulation": "All Students",
+          "sourceRow": 263,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 95.62,
+          "subpopulation": "All Students",
+          "sourceRow": 22453,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 11.81,
+          "subpopulation": "All Students",
+          "sourceRow": 8206,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 40.39,
+          "subpopulation": "All Students",
+          "sourceRow": 30359,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000664",
+      "ncesId": "010027000664",
+      "reportUrl": "/schools/north-baldwin-center-for-technology",
+      "name": "North Baldwin Center For Technology",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "6000",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": null,
+      "score": null,
+      "gradeStatus": "not-published",
+      "officialGrade": null,
+      "officialName": null,
+      "matchMethod": null,
+      "sourceRow": null,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [],
+      "reason": "No school-level record with this district and school code appears in the official 2024-2025 letter-grade workbook. No district result has been substituted."
+    },
+    {
+      "id": "public-nces-010358102554",
+      "ncesId": "010358102554",
+      "reportUrl": "/schools/orange-beach-elementary-school",
+      "name": "Orange Beach Elementary School",
+      "state": "AL",
+      "districtId": "174",
+      "schoolId": "0010",
+      "districtName": "Orange Beach City",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 99,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Orange Beach Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 1306,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 6741,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 29164,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 4.14,
+          "subpopulation": "All Students",
+          "sourceRow": 16486,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010358102555",
+      "ncesId": "010358102555",
+      "reportUrl": "/schools/orange-beach-middlehigh-school",
+      "name": "Orange Beach Middlehigh School",
+      "state": "AL",
+      "districtId": "174",
+      "schoolId": "0020",
+      "districtName": "Orange Beach City",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 95,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Orange Beach Middle/High School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 1307,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 83.92,
+          "subpopulation": "All Students",
+          "sourceRow": 6745,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 29168,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 11.64,
+          "subpopulation": "All Students",
+          "sourceRow": 16491,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "College and Career Readiness",
+          "value": 97.22,
+          "subpopulation": "All Students",
+          "sourceRow": 19763,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Graduation Rate",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 21880,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000062",
+      "ncesId": "010027000062",
+      "reportUrl": "/schools/perdido-elementary-school",
+      "name": "Perdido Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0100",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 87,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Perdido Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 47,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 72.62,
+          "subpopulation": "All Students",
+          "sourceRow": 271,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22461,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 11.82,
+          "subpopulation": "All Students",
+          "sourceRow": 8214,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001715",
+      "ncesId": "010027001715",
+      "reportUrl": "/schools/pine-grove-elementary-school",
+      "name": "Pine Grove Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0105",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 80,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Pine Grove Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 48,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 58.31,
+          "subpopulation": "All Students",
+          "sourceRow": 276,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 95.89,
+          "subpopulation": "All Students",
+          "sourceRow": 22466,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 11.28,
+          "subpopulation": "All Students",
+          "sourceRow": 8220,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001716",
+      "ncesId": "010027001716",
+      "reportUrl": "/schools/robertsdale-elementary-school",
+      "name": "Robertsdale Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0115",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 85,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Robertsdale Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 49,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 69.66,
+          "subpopulation": "All Students",
+          "sourceRow": 281,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 96.59,
+          "subpopulation": "All Students",
+          "sourceRow": 22471,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 9.51,
+          "subpopulation": "All Students",
+          "sourceRow": 8227,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 57.81,
+          "subpopulation": "All Students",
+          "sourceRow": 30360,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000024",
+      "ncesId": "010027000024",
+      "reportUrl": "/schools/robertsdale-high-school",
+      "name": "Robertsdale High School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0117",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 81,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Robertsdale High School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 50,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 56.75,
+          "subpopulation": "All Students",
+          "sourceRow": 289,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 96.7,
+          "subpopulation": "All Students",
+          "sourceRow": 22479,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 16.43,
+          "subpopulation": "All Students",
+          "sourceRow": 8235,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "College and Career Readiness",
+          "value": 81.25,
+          "subpopulation": "All Students",
+          "sourceRow": 18024,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Graduation Rate",
+          "value": 92.33,
+          "subpopulation": "All Students",
+          "sourceRow": 20141,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 16.67,
+          "subpopulation": "All Students",
+          "sourceRow": 30361,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000550",
+      "ncesId": "010027000550",
+      "reportUrl": "/schools/rockwell-elementary-school",
+      "name": "Rockwell Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0119",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 98,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Rockwell Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 51,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 96.55,
+          "subpopulation": "All Students",
+          "sourceRow": 294,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22485,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 4.73,
+          "subpopulation": "All Students",
+          "sourceRow": 8243,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000065",
+      "ncesId": "010027000065",
+      "reportUrl": "/schools/rosinton-school",
+      "name": "Rosinton School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0120",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 92,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Rosinton School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 52,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 82.2,
+          "subpopulation": "All Students",
+          "sourceRow": 301,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22492,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 7.06,
+          "subpopulation": "All Students",
+          "sourceRow": 8251,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000066",
+      "ncesId": "010027000066",
+      "reportUrl": "/schools/silverhill-school",
+      "name": "Silverhill School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0130",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 83,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Silverhill School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 53,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 68.61,
+          "subpopulation": "All Students",
+          "sourceRow": 305,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 94.07,
+          "subpopulation": "All Students",
+          "sourceRow": 22496,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 8.7,
+          "subpopulation": "All Students",
+          "sourceRow": 8257,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 46.03,
+          "subpopulation": "All Students",
+          "sourceRow": 30362,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000665",
+      "ncesId": "010027000665",
+      "reportUrl": "/schools/south-baldwin-center-for-technology",
+      "name": "South Baldwin Center For Technology",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "6010",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": null,
+      "score": null,
+      "gradeStatus": "not-published",
+      "officialGrade": null,
+      "officialName": null,
+      "matchMethod": null,
+      "sourceRow": null,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [],
+      "reason": "No school-level record with this district and school code appears in the official 2024-2025 letter-grade workbook. No district result has been substituted."
+    },
+    {
+      "id": "public-nces-010027000067",
+      "ncesId": "010027000067",
+      "reportUrl": "/schools/spanish-fort-elementary-school",
+      "name": "Spanish Fort Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0140",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 97,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Spanish Fort Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 55,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 94.34,
+          "subpopulation": "All Students",
+          "sourceRow": 316,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22509,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 7.08,
+          "subpopulation": "All Students",
+          "sourceRow": 8272,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027002073",
+      "ncesId": "010027002073",
+      "reportUrl": "/schools/spanish-fort-high-school",
+      "name": "Spanish Fort High School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0145",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 94,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Spanish Fort High School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 58,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 78.57,
+          "subpopulation": "All Students",
+          "sourceRow": 336,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22529,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 7.34,
+          "subpopulation": "All Students",
+          "sourceRow": 8296,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "College and Career Readiness",
+          "value": 97.28,
+          "subpopulation": "All Students",
+          "sourceRow": 18031,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Graduation Rate",
+          "value": 96.6,
+          "subpopulation": "All Students",
+          "sourceRow": 20148,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027001888",
+      "ncesId": "010027001888",
+      "reportUrl": "/schools/spanish-fort-middle-school",
+      "name": "Spanish Fort Middle School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0142",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 94,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Spanish Fort Middle School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 57,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 88.35,
+          "subpopulation": "All Students",
+          "sourceRow": 329,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22522,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 6.47,
+          "subpopulation": "All Students",
+          "sourceRow": 8288,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000068",
+      "ncesId": "010027000068",
+      "reportUrl": "/schools/stapleton-school",
+      "name": "Stapleton School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0150",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 92,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Stapleton School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 59,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 84.83,
+          "subpopulation": "All Students",
+          "sourceRow": 340,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22532,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 9.74,
+          "subpopulation": "All Students",
+          "sourceRow": 8304,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027002544",
+      "ncesId": "010027002544",
+      "reportUrl": "/schools/stonebridge-elementary",
+      "name": "Stonebridge Elementary",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0141",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 95,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "Stonebridge Elementary",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 56,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 88.96,
+          "subpopulation": "All Students",
+          "sourceRow": 323,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22516,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 3.61,
+          "subpopulation": "All Students",
+          "sourceRow": 8279,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000069",
+      "ncesId": "010027000069",
+      "reportUrl": "/schools/summerdale-school",
+      "name": "Summerdale School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0160",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 80,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Summerdale School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 60,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 66.63,
+          "subpopulation": "All Students",
+          "sourceRow": 344,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 92.72,
+          "subpopulation": "All Students",
+          "sourceRow": 22536,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 10.93,
+          "subpopulation": "All Students",
+          "sourceRow": 8308,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Progress in English Language Proficiency",
+          "value": 39.06,
+          "subpopulation": "All Students",
+          "sourceRow": 30364,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000070",
+      "ncesId": "010027000070",
+      "reportUrl": "/schools/swift-elementary-school",
+      "name": "Swift Elementary School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0170",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "B",
+      "score": 82,
+      "gradeStatus": "graded",
+      "officialGrade": "B",
+      "officialName": "Swift Elementary School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 61,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 62.73,
+          "subpopulation": "All Students",
+          "sourceRow": 351,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22543,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 18.34,
+          "subpopulation": "All Students",
+          "sourceRow": 8316,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    },
+    {
+      "id": "public-nces-010027000056",
+      "ncesId": "010027000056",
+      "reportUrl": "/schools/w-j-carroll-intermediate-school",
+      "name": "W J Carroll Intermediate School",
+      "state": "AL",
+      "districtId": "002",
+      "schoolId": "0040",
+      "districtName": "Baldwin County",
+      "schoolYear": "2024-2025",
+      "grade": "A",
+      "score": 91,
+      "gradeStatus": "graded",
+      "officialGrade": "A",
+      "officialName": "W J Carroll Intermediate School",
+      "matchMethod": "exact-district-and-school-code-with-normalized-name-check",
+      "sourceRow": 28,
+      "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityLetterGrades_v1.xlsx",
+      "indicators": [
+        {
+          "name": "Academic Achievement",
+          "value": 81.69,
+          "subpopulation": "All Students",
+          "sourceRow": 150,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Academic Growth",
+          "value": 100,
+          "subpopulation": "All Students",
+          "sourceRow": 22331,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        },
+        {
+          "name": "Chronic Absenteeism",
+          "value": 8.88,
+          "subpopulation": "All Students",
+          "sourceRow": 8066,
+          "sourceUrl": "https://www.alabamaachieves.org/wp-content/uploads/2025/11/RD_SP_20251113_2024-2025StateAccountabilityIndicatorScores_v1.xlsx"
+        }
+      ]
+    }
+  ]
+}

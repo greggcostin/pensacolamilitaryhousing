@@ -34,6 +34,7 @@ export function findSchools(schools, filters = {}, zipCenters = {}) {
     if (filters.program === 'magnet' && school.magnet !== true) return [];
     if (filters.program === 'virtual' && school.virtual !== true) return [];
     if (filters.program === 'campus' && !hasCampus(school)) return [];
+    if (filters.gradeState && filters.gradeState !== 'all' && school.state !== filters.gradeState) return [];
     if (filters.grade === 'none' && school.grade) return [];
     if (filters.grade && !['all','none'].includes(filters.grade) && school.grade !== filters.grade) return [];
     let distance = null;

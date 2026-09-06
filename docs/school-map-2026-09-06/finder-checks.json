@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-06T21:07:37.525Z",
-  "datasetBuiltAt": "2026-09-06T20:44:00.404Z",
-  "datasetSha256": "a58ae030b22301da4d161bebe1a153d5b4cd00119cd4667adaa06378ab69d900",
+  "checkedAt": "2026-09-06T22:18:39.186Z",
+  "datasetBuiltAt": "2026-09-06T22:18:00.323Z",
+  "datasetSha256": "482ba5bf014d9a22332c4237f98eb7c949a0b2d8a9715d702fce8d9b15aacba1",
   "counts": {
     "total": 274,
     "public": 208,
@@ -13,7 +13,7 @@
     "christian": 47,
     "privateLocationUpdates": 6,
     "floridaIds": 120,
-    "letterGrades": 119,
+    "letterGrades": 165,
     "reports": 271,
     "zipCenters": 64
   },
@@ -113,7 +113,7 @@
       "passed": true
     },
     {
-      "name": "No private, Alabama or unmatched school receives an invented Florida grade",
+      "name": "No private or unmatched school receives an invented grade; state filters stay distinct",
       "passed": true
     },
     {

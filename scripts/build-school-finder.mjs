@@ -26,6 +26,8 @@ const supplemental=resourceSources.flatMap(s=>s.supplementalSchools||[]).map(s=>
 const programs=existsSync('content/schools/map-programs-source.json')?read('content/schools/map-programs-source.json'):null;
 const zipRows=read('content/schools/map-zip-centers.json');
 const grades=read('content/schools/school-grades-2026.json');
+const alabamaGrades=read('content/schools/alabama-grades-2025.json');
+const alabamaGradeMap=new Map(alabamaGrades.schools.map(s=>[s.ncesId,s]));
 const gradeKey=s=>`${String(s.district).padStart(2,'0')}-${String(s.num).padStart(4,'0')}`;
 const gradeMap=new Map(grades.schools.map(s=>[gradeKey(s),s]));
 const rawRows=[...publicData.schools,...privateData.schools,...supplemental];
@@ -57,6 +59,8 @@ const schools=rawRows.map(record=>{
   const grade=record.state==='FL'?gradeMap.get(`${String(record.districtId).padStart(2,'0')}-${String(record.schoolId).padStart(4,'0')}`):null;
   const program=record.state==='FL'?programMap.get(`${String(record.districtId).padStart(2,'0')}-${String(record.schoolId).padStart(4,'0')}`):null;
   const id=`${record.sector}-${record.id||record.ncesId}`;
+  const alabamaAccountability=record.state==='AL'&&record.sector==='public'?alabamaGradeMap.get(record.ncesId):null;
+  if(record.state==='AL'&&record.sector==='public'&&(!alabamaAccountability||alabamaAccountability.id!==id))throw Error('Missing Alabama accountability source identity '+id);
   if(seen.has(id))throw Error('Duplicate school identifier '+id);seen.add(id);
   const countyRaw=String(record.county||countyNames[record.countyFips]||'').replace(/ County.*$/i,'').replace(/,.*$/,'');
   const county=titleCase(countyRaw);
@@ -77,7 +81,8 @@ const schools=rawRows.map(record=>{
     lat:Number.isFinite(lat)?lat:null,lng:Number.isFinite(lng)?lng:null,
     levels:record.levels||[],gradeSpan:record.lowGrade&&record.highGrade?`${record.lowGrade}–${record.highGrade}`:'',
     sector:record.sector,charter:grade?grade.charter==='YES':record.charter,magnet:program?.magnet===true?true:record.magnet,
-    virtual,grade:grade&&/^[ABCDF]$/.test(grade.g2026)?grade.g2026:null,gradeStatus:grade?.g2026||null,gradeYear:grade?'2025–26':null,
+    virtual,grade:grade&&/^[ABCDF]$/.test(grade.g2026)?grade.g2026:alabamaAccountability?.grade||null,gradeStatus:grade?.g2026||alabamaAccountability?.officialGrade||null,gradeYear:grade?'2025–26':alabamaAccountability?'2024–25':null,
+    alabamaAccountability:alabamaAccountability||null,
     reportUrl,website:safeUrl(resource?.website||record.website),admissionsUrl:safeUrl(resource?.admissionsUrl),sourceUrl,sourceYear:record.sourceYear|| (record.sector==='private'?privateData.sourceYear:publicData.sourceYear),
     christian:affiliation?.christian===true?true:affiliation?.christian===false?false:null,
     religiousOrientation:affiliation?.religiousOrientation||null,
@@ -93,22 +98,24 @@ const schools=rawRows.map(record=>{
 const schoolInsights=loadSchoolInsights({required:true});
 const privateInsights=loadPrivatePerspectives();
 for(const school of schools)school.insight=schoolDirectoryInsight(school,schoolInsights[school.reportUrl]||privateInsights[school.id]);
-if(schools.filter(s=>s.grade).length!==grades.schools.filter(s=>/^[ABCDF]$/.test(s.g2026)).length)throw Error('Not every existing Florida grade joined exactly once.');
+if(schools.filter(s=>s.state==='FL'&&s.grade).length!==grades.schools.filter(s=>/^[ABCDF]$/.test(s.g2026)).length)throw Error('Not every existing Florida grade joined exactly once.');
+if(schools.filter(s=>s.state==='AL'&&s.grade).length!==alabamaGrades.counts.graded)throw Error('Not every Alabama grade joined exactly once.');
 const sources=[
   {name:'NCES public school locations and CCD directory',url:'https://nces.ed.gov/ccd/files.asp',year:'2024–25'},
   {name:'NCES private school locations and PSS directory',url:'https://nces.ed.gov/surveys/pss/privateschoolsearch/',year:'2023–24'},
   {name:'Florida DOE school accountability grades',url:grades.url,year:'2025–26'},
+  {name:'Alabama State Department of Education school grades and indicator scores',url:alabamaGrades.sourcePage,year:'2024–25'},
   {name:'U.S. Census ZIP Code Tabulation Area reference points',url:'https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html',year:'2025'}
 ];
 if(programRows.length)sources.push({name:'Florida DOE magnet school and program directory',url:'https://web09.fldoe.org/MagnetSchools/',year:'retrieved September 2026'});
 sources.push({name:'NCES private-school reported religious affiliations',url:'https://nces.ed.gov/surveys/pss/privateschoolsearch/',year:'2023–24'});
 if(supplemental.length)sources.push({name:'School-published additions and campus resources',url:'/schools#private-school-resources',year:'verified September 2026; individual sources linked below'});
 const result={version:1,builtAt:new Date().toISOString(),schools,zipCenters:Object.fromEntries(zipRows.map(s=>[s.zip,{lat:s.lat,lng:s.lng}])),counties:[{key:'FL|Escambia',label:'Escambia County, FL'},{key:'FL|Santa Rosa',label:'Santa Rosa County, FL'},{key:'FL|Okaloosa',label:'Okaloosa County, FL'},{key:'AL|Baldwin',label:'Baldwin County, AL'}],sources,choiceResources:(programs?.choiceResources||[]).map(s=>({label:s.label,url:safeUrl(s.url)})).filter(s=>s.url),
-  coverageNote:`Coverage: ${schools.length} public and private school records in Escambia, Santa Rosa and Okaloosa counties in Florida, and Baldwin County in Alabama. ${supplemental.length} school-published campus additions supplement the dated federal directory. ${schools.filter(s=>s.grade).length} Florida grades are linked by state district and school identifiers. Existing detailed school reports remain below. Federal directory years and state accountability years differ.`};
+  coverageNote:`Coverage: ${schools.length} public and private school records in Escambia, Santa Rosa and Okaloosa counties in Florida, and Baldwin County in Alabama. ${supplemental.length} school-published campus additions supplement the dated federal directory. ${schools.filter(s=>s.state==='FL'&&s.grade).length} Florida grades (2025–26) and ${alabamaGrades.counts.graded} Alabama grades (2024–25) are linked by state district and school identifiers. Alabama also reports ${alabamaGrades.counts.approvedWaiver} approved waiver; ${alabamaGrades.counts.notPublished} directory schools have no school-level result in that release. The two states use different accountability systems; letters are not an interstate ranking. Federal directory years and state accountability years differ.`};
 mkdirSync('civilian-site/assets',{recursive:true});
 const output='civilian-site/assets/school-finder-data.json';
 const old=existsSync(output)?read(output):null;
 if(old){old.builtAt=result.builtAt;if(JSON.stringify(old)===JSON.stringify(result))result.builtAt=read(output).builtAt;}
 writeFileSync(output,JSON.stringify(result)+'\n');
 const hub='civilian-site/schools.html';writeFileSync(hub,withSchoolFinder(readFileSync(hub,'utf8'),'/schools',result));
-console.log(JSON.stringify({records:schools.length,mapped:schools.filter(s=>s.lat!==null&&s.virtual!==true).length,flGrades:schools.filter(s=>s.grade).length,private:schools.filter(s=>s.sector==='private').length,charter:schools.filter(s=>s.charter===true).length,magnet:schools.filter(s=>s.magnet===true).length,reportLinks:reportPaths.size,zipCenters:zipRows.length},null,2));
+console.log(JSON.stringify({records:schools.length,mapped:schools.filter(s=>s.lat!==null&&s.virtual!==true).length,flGrades:schools.filter(s=>s.state==='FL'&&s.grade).length,alGrades:schools.filter(s=>s.state==='AL'&&s.grade).length,private:schools.filter(s=>s.sector==='private').length,charter:schools.filter(s=>s.charter===true).length,magnet:schools.filter(s=>s.magnet===true).length,reportLinks:reportPaths.size,zipCenters:zipRows.length},null,2));

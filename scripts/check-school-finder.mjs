@@ -451,18 +451,20 @@ check('All 120 Florida district/school IDs join exactly once; 119 letters are so
     if (expected) letters++;
   }
   assert.equal(letters, 119);
-  assert.equal(schools.filter(s => s.grade !== null).length, letters);
+  assert.equal(schools.filter(s => s.state === 'FL' && s.grade !== null).length, letters);
 });
-check('No private, Alabama or unmatched school receives an invented Florida grade', () => {
+check('No private or unmatched school receives an invented grade; state filters stay distinct', () => {
   for (const school of schools) {
     const grade = school.state === 'FL' && school.sector === 'public' ? gradesById.get(stateKey(school.districtId, school.schoolId)) : null;
-    if (!grade) { assert.equal(school.grade, null, school.name); assert.equal(school.gradeYear, null, school.name); assert(school.reportUrl?.startsWith("/schools/"),school.name); }
+    if (school.state === 'AL' && school.sector === 'public') { assert.deepEqual(school.alabamaAccountability, read('content/schools/alabama-grades-2025.json').schools.find(s => s.ncesId === school.ncesId)); assert.equal(school.grade, school.alabamaAccountability.grade); assert.equal(school.gradeYear, '2024–25'); }
+    else if (!grade) { assert.equal(school.grade, null, school.name); assert.equal(school.gradeYear, null, school.name); assert(school.reportUrl?.startsWith("/schools/"),school.name); }
     assert(school.grade === null || /^[ABCDF]$/.test(school.grade), school.name);
   }
-  for (const grade of ['A', 'B', 'C', 'D', 'F']) assert(findSchools(schools, { grade }).every(s => s.state === 'FL' && s.sector === 'public' && s.grade === grade));
-  assert.equal(findSchools(schools, { grade: 'none' }).length, 155);
+  for (const grade of ['A', 'B', 'C', 'D', 'F']) assert(findSchools(schools, { grade, gradeState:'FL' }).every(s => s.state === 'FL' && s.sector === 'public' && s.grade === grade));
+  assert.equal(findSchools(schools, { grade: 'none' }).length, 109);
   assert.deepEqual(findSchools(schools, { type: 'private', grade: 'A' }), []);
-  assert.deepEqual(findSchools(schools, { area: 'county:AL|Baldwin', grade: 'A' }), []);
+  assert.equal(findSchools(schools, { area: 'county:AL|Baldwin', grade: 'A' }).length, 23);
+  assert.deepEqual(findSchools(schools, { area: 'county:AL|Baldwin', gradeState:'FL' }), []);
 });
 check('Five magnet matches retain exact official IDs, program scope and source provenance', () => {
   assert.equal(programs.length, 5);
@@ -505,9 +507,9 @@ check('All 64 ZIP centers exactly match dated Census source records', () => {
 check('Dataset provenance identifies official sources and distinct directory/grade vintages', () => {
   assert.equal(dataset.version, 1);
   assert(Number.isFinite(Date.parse(dataset.builtAt)));
-  assert.equal(dataset.sources.length, 7);
+  assert.equal(dataset.sources.length, 8);
   const externalSources = dataset.sources.filter(s => /^https?:/.test(s.url));
-  assert.equal(externalSources.length, 6);
+  assert.equal(externalSources.length, 7);
   const domains = new Set(externalSources.map(s => new URL(s.url).hostname));
   for (const domain of ['nces.ed.gov', 'www.fldoe.org', 'www.census.gov', 'web09.fldoe.org']) assert(domains.has(domain), domain);
   for (const year of ['2024–25', '2023–24', '2025–26', '2025']) assert(dataset.sources.some(s => s.year === year), year);
@@ -521,7 +523,7 @@ check('School-finder integration is idempotent and scoped to the hub', () => {
   const applied = withSchoolFinder(hub, '/schools');
   assert.equal(withSchoolFinder(applied, '/schools'), applied);
   assert.equal((applied.match(/id="school-finder"/g) || []).length, 1);
-  assert.equal((applied.match(/src="\/assets\/school-finder.js"/g) || []).length, 1);
+  assert.equal((applied.match(/src="\/assets\/school-finder.js\?v=[a-f0-9]+"/g) || []).length, 1);
   assert.equal(withSchoolFinder('<html>Unrelated school report</html>', '/schools/a-k-suter-elementary-school'), '<html>Unrelated school report</html>');
   assert(applied.includes('A nearby school does not establish attendance eligibility.'));
   assert(applied.includes('Markers show recorded locations, not attendance boundaries.'));

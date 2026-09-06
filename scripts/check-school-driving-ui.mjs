@@ -119,7 +119,16 @@ async function browser() {
     editAddress() { get('#sf-home-address').value = 'A new address'; get('#sf-home-address').listeners.input(); },
     clearHome() { get('[data-sf-clear-home]').listeners.click(); },
     filter(name, value) { get('#sf-' + filterNames[name]).value = value; form.listeners.change({ target: get('#sf-' + filterNames[name]) }); },
-    popup(id) { const marker = markerRecords.find(n => n.options.alt === id); assert(marker, 'Missing marker ' + id); return marker.openPopup(); },
+    popup(id) {
+      const fixture = rows.find(school => school.id === id);
+      assert(fixture, 'Missing school fixture ' + id);
+      // These fixtures use distinct mapped campuses. Accessible marker labels are
+      // descriptive prose, not identifiers, so resolve the campus independently.
+      const matches = markerRecords.filter(marker => marker.location[0] === fixture.lat && marker.location[1] === fixture.lng);
+      assert.equal(matches.length, 1, 'Expected one mapped campus for ' + id);
+      assert(matches[0].options.title.includes(fixture.name), 'Marker title must identify ' + id);
+      return matches[0].openPopup();
+    },
     guard: context.guardCalculateDrive
   };
 }

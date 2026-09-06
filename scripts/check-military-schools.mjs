@@ -110,9 +110,9 @@ check('Every guide is discoverable in static HTML, the PMH sitemap and PMH AI di
   }
 });
 check('The map precedes letter-grade and private cards, which precede both long directories',()=>{
-  const ids=['school-finder','elementary','middle','high','combination-k-8','charter-schools','private-schools','christian-schools','magnet-schools','private-school-resources','all-school-guides'];
+  const ids=['school-finder','elementary','middle','high','combination-k-8','charter-schools','alabama-public-schools','private-schools','christian-schools','magnet-schools','private-school-resources','all-school-guides'];
   let previous=-1;for(const id of ids){const position=hub.indexOf('id="'+id+'"');assert(position>previous,id+': wrong order');assert.equal(hub.split('id="'+id+'"').length-1,1,id+': duplicated');previous=position;}
-  for(const id of ids.slice(1,9))assert(hub.includes('href="#'+id+'"'),id+': missing category jump');
+  for(const id of ids.slice(1,-2))assert(hub.includes('href="#'+id+'"'),id+': missing category jump');
   const privateSection=elementAtId(hub,'private-schools');assert(!/<span\b[^>]*(?:badge|grade)[^>]*>\s*[ABCDF]\s*<\/span>/.test(privateSection));
 });
 check('Native PMH inquiry form and guarded analytics are retained independently of school-address search',()=>{

@@ -224,7 +224,7 @@ async function renderClient(rows) {
   const markerCalls=[];
   const map={setView(){return this;},addLayer(){},fitBounds(){},invalidateSize(){},remove(){}};
   const clusters={clearLayers(){markerCalls.length=0;},addLayer(marker){markerCalls.push(marker);},zoomToShowLayer(marker,callback){callback();}};
-  const L={map:()=>map,tileLayer:()=>({addTo(){return this;},on(){}}),markerClusterGroup:()=>clusters,control:{scale:()=>({addTo(){}})},divIcon:options=>options,
+  const L={map:()=>map,tileLayer:()=>({addTo(){return this;},on(){}}),markerClusterGroup:()=>clusters,control:{scale:()=>({addTo(){}})},divIcon:options=>({...options,createIcon:()=>new Node()}),
     marker:(location,options)=>({location,options,bindPopup(content){this.popup=content;return this;},on(){return this;},getLatLng(){return location;},openPopup(){}}),latLngBounds:points=>points};
   const warnings=[];
   const context={document,window:{L},findSchools,hasCampus,validateLocation,validateHomeAddress,
@@ -245,22 +245,25 @@ async function renderClient(rows) {
   return {get,shortcuts,markerCalls,warnings,async openMap(){await get('[data-sf-load-map]').listeners.click();assert.deepEqual(warnings,[]);assert.equal(get('#sf-map').hidden,false,'Map initialized');},
     selectType(value){get('#sf-type').value=value;form.listeners.change({target:get('#sf-type')});}};
 }
-await check('Actual client cards and map markers distinguish private P from public A-F grades', async () => {
-  const client=await renderClient([fixtures[0],fixtures[3],fixtures[4],fixtures[7],fixtures[8]]);
+await check('Actual client cards, popups and accessible map markers distinguish Christian CP, other private P and public C', async () => {
+  const publicC=fixture('Public C school',{sector:'public',grade:'C',gradeYear:'2025-26'});
+  const rows=[fixtures[0],fixtures[1],fixtures[3],fixtures[4],fixtures[7],fixtures[8],fixtures[9],fixtures[10],publicC];
+  const client=await renderClient(rows);
   client.selectType('private');
   const cards=client.get('#sf-results').querySelectorAll('[data-school-id]');
-  assert.equal(cards.length,4);
-  for(const card of cards){const badge=card.children[0].children[0];assert.equal(badge.textContent,'P');assert(badge.className.includes('sf-grade--private'));assert.match(badge.attributes['aria-label'],/not a grade/);assert.match(card.textContent,/no state accountability grade/);}
+  assert.equal(cards.length,7);
+  for(const card of cards){const school=rows.find(s=>s.id===card.dataset.schoolId),badge=card.children[0].children[0],christian=school.christian===true;assert.equal(badge.textContent,christian?'CP':'P');assert(badge.className.includes(christian?'sf-grade--christian':'sf-grade--private'));assert.match(badge.attributes['aria-label'],/not a grade/);assert.equal(badge.title,badge.attributes['aria-label']);assert.match(card.textContent,/no state accountability grade/);}
   await client.openMap();
-  assert.equal(client.markerCalls.length,3,'Virtual private excluded from markers');
-  for(const marker of client.markerCalls){assert.match(marker.options.icon.html,/sf-grade--private/);assert.match(marker.options.icon.html,/>P</);assert(!/sf-grade--[ABCDF]\b/.test(marker.options.icon.html));}
+  assert.equal(client.markerCalls.length,5,'Virtual and unconfirmed private locations excluded from markers');
+  for(const marker of client.markerCalls){const school=rows.find(s=>marker.options.title.startsWith(s.name+':')),christian=school.christian===true,expected=christian?'CP':'P';assert.match(marker.options.icon.html,christian?/sf-grade--christian/:/sf-grade--private/);assert(marker.options.icon.html.includes('>'+expected+'<'));assert(!/sf-grade--[ABCDF]\b/.test(marker.options.icon.html));assert.match(marker.options.title,/not a grade/);assert.equal(marker.options.alt,marker.options.title);assert.equal(marker.options.icon.createIcon().attributes['aria-label'],marker.options.title);const popupBadge=marker.popup().children[0].children[0];assert.equal(popupBadge.textContent,expected);assert.equal(popupBadge.attributes['aria-label'],cards.find(c=>c.dataset.schoolId===school.id).children[0].children[0].attributes['aria-label']);}
   client.selectType('public');
-  assert.equal(client.markerCalls.length,1);
-  assert.match(client.markerCalls[0].options.icon.html,/sf-grade--A/);
-  assert.match(client.markerCalls[0].options.icon.html,/>A</);
+  assert.equal(client.markerCalls.length,2);
+  for(const letter of ['A','C']){const marker=client.markerCalls.find(m=>m.options.icon.html.includes('>'+letter+'<'));assert(marker,'Public '+letter+' grade marker remains');assert(marker.options.icon.html.includes('sf-grade--'+letter));assert(!marker.options.icon.html.includes('sf-grade--christian'));}
   client.selectType('christian');
-  assert.equal(client.get('#sf-results').querySelectorAll('[data-school-id]').length,2,'Christian public and unverified names excluded');
-  assert.equal(client.markerCalls.length,1,'Christian virtual is list-only');
+  assert.equal(client.get('#sf-results').querySelectorAll('[data-school-id]').length,5,'Catholic, Protestant and Alabama evidence included; public and unverified names excluded');
+  assert.equal(client.markerCalls.length,3,'Christian virtual and unconfirmed campuses remain list-only');
+  for(const marker of client.markerCalls)assert.match(marker.options.icon.html,/>CP</);
+  const markup=readFileSync('scripts/school-finder-lib.mjs','utf8');assert.match(markup,/sf-grade--christian[^>]*>CP<\/i> Christian private/);assert.match(markup,/sf-grade--private[^>]*>P<\/i> Other private/);assert.match(markup,/CP and P identify school types, not accountability grades/);
 });
 
 const failures=results.filter(r=>!r.passed);

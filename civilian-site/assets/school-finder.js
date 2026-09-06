@@ -192,13 +192,27 @@ async function start() {
   get('#sf-home-address').addEventListener('input',()=>{clearHome({message:'Address changed. Submit it to calculate new distances.'});bounds=null;apply({fit:false});});
   get('[data-sf-clear-home]').addEventListener('click',()=>{clearHome({clearInput:true,message:'Address cleared. You can search by ZIP or compare a different address.'});bounds=null;apply();get('#sf-home-address').focus();});
   function gradeNote(school) {
-    return school.grade ? `${school.grade} · Florida DOE ${school.gradeYear}` : school.gradeStatus ? `${school.gradeStatus} · Florida DOE ${school.gradeYear} (published status; no letter grade)` : school.sector==='private' ? 'Private · no state accountability grade' : school.state==='AL' ? 'Alabama · FL grade not applicable' : 'No FL letter grade in this dataset';
+    if(school.sector==='private')return 'Private · no state accountability grade';
+    if(school.state==='AL'){
+      const result=school.alabamaAccountability;
+      if(school.grade)return `${school.grade} · Alabama ${school.gradeYear}${Number.isFinite(result?.score)?` · ${result.score}/100 overall score`:''}`;
+      if(result?.gradeStatus==='approved-waiver')return `Alabama ${school.gradeYear} · Approved waiver (AW); no letter grade`;
+      return `Alabama ${school.gradeYear||''} · School-level grade unavailable in this release`;
+    }
+    return school.grade ? `${school.grade} · Florida DOE ${school.gradeYear}` : school.gradeStatus ? `${school.gradeStatus} · Florida DOE ${school.gradeYear} (published status; no letter grade)` : 'No Florida letter grade in this dataset';
+  }
+  function schoolBadgeDescriptor(school) {
+    if(school.sector==='private') {
+      // Affiliation comes from the sourced directory flag, never the school name.
+      const christian=school.christian===true;
+      return {tone:christian?'christian':'private',glyph:christian?'CP':'P',description:christian?'Christian private school; CP identifies school type, not a grade':'Private school; P identifies school type, not a grade'};
+    }
+    return {tone:school.grade||'none',glyph:school.grade||'•',description:gradeNote(school)};
   }
   function gradeBadge(school) {
-    const privateSchool=school.sector==='private';
-    const node=el('span','sf-grade sf-grade--'+(privateSchool?'private':school.grade||'none'),privateSchool?'P':school.grade||'•');
-    const description=privateSchool?`${school.christian===true?'Christian private school':'Private school'}; P identifies school type, not a grade`:gradeNote(school);
-    node.setAttribute('aria-label',description);node.title=description;return node;
+    const badge=schoolBadgeDescriptor(school);
+    const node=el('span','sf-grade sf-grade--'+badge.tone,badge.glyph);
+    node.setAttribute('aria-label',badge.description);node.title=badge.description;return node;
   }
   function tags(school) {
     const items=[];
@@ -317,7 +331,7 @@ async function start() {
     details.append(body);return details;
   }
   function popupFor(school) {
-    const content=el('div');content.append(el('h3','',school.name),el('p','',tags(school).join(' · ')),el('p','',gradeNote(school)),el('p','',[school.address,school.city,school.state,school.zip].filter(Boolean).join(', ')));
+    const content=el('div'),heading=el('div','sf-popup-school-heading');heading.append(gradeBadge(school),el('h3','',school.name));content.append(heading,el('p','',tags(school).join(' · ')),el('p','',gradeNote(school)),el('p','',[school.address,school.city,school.state,school.zip].filter(Boolean).join(', ')));
     if(school.religiousOrientation){const affiliation=el('p');affiliation.append(document.createTextNode('Reported affiliation: '),link(school.religiousOrientation,school.affiliationSourceUrl));content.append(affiliation);}
     if(school.campusNote)content.append(el('p','',school.campusNote));
     if(school.distance!==null)content.append(el('p','sf-popup-distance',distanceNote(school)));
@@ -350,8 +364,11 @@ async function start() {
     if(!map)return;const L=window.L;
     clusters.clearLayers();markers.clear();
     for(const school of current.filter(hasCampus)) {
-      const grade=school.sector==='private'?'private':school.grade||'none';const glyph=school.sector==='private'?'P':school.grade||'•';
-      const marker=L.marker([school.lat,school.lng],{title:`${school.name}: ${tags(school).join(' · ')}. ${gradeNote(school)}`,alt:school.name,keyboard:true,icon:L.divIcon({className:'sf-marker',html:`<span class="sf-grade sf-grade--${grade}"><b>${glyph}</b></span>`,iconSize:[32,36],iconAnchor:[16,32]})});
+      const badge=schoolBadgeDescriptor(school),markerLabel=`${school.name}: ${tags(school).join(' · ')}. ${badge.description}`;
+      const icon=L.divIcon({className:'sf-marker',html:`<span class="sf-grade sf-grade--${badge.tone}" aria-hidden="true"><b>${badge.glyph}</b></span>`,iconSize:[32,36],iconAnchor:[16,32]});
+      const createIcon=icon.createIcon;
+      if(typeof createIcon==='function')icon.createIcon=function(oldIcon){const node=createIcon.call(this,oldIcon);node.setAttribute('aria-label',markerLabel);return node;};
+      const marker=L.marker([school.lat,school.lng],{title:markerLabel,alt:markerLabel,keyboard:true,icon});
       marker.bindPopup(()=>popupFor(school));marker.on('click',()=>highlight(school));markers.set(school.id,marker);clusters.addLayer(marker);
     }
     if(radiusLayer){radiusLayer.remove();radiusLayer=null;}

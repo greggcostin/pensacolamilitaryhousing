@@ -25,6 +25,9 @@ function elementAtId(html,id){
   assert.fail('Unclosed #'+id);
 }
 const normalizeSchool=node=>JSON.parse(JSON.stringify(node).replaceAll(PMH+'/schools',GC+'/schools'));
+// Git checkouts may use CRLF on Windows and LF on Cloudflare's Linux builder.
+// Cache versions identify semantic text content rather than checkout line endings.
+const textVersion=(value,length=12)=>createHash('sha256').update(String(value).replaceAll('\r\n','\n')).digest('hex').slice(0,length);
 let passed=0,failed=0;
 function check(name,run){try{run();passed++;console.log('PASS '+name);}catch(error){failed++;console.error('FAIL '+name+': '+error.message);}}
 
@@ -80,9 +83,14 @@ check('School maps use an exact shared repository and locally served copies of t
     for(const match of script.matchAll(/from\s+['"](\.\/[^'"]+)['"]/g))assert(existsSync('public/school-assets/'+match[1].slice(2)),name+': missing module');
   }
   for(const match of hub.matchAll(/(?:href|src)="(\/school-assets\/[^"?]+)(?:\?v=([a-f0-9]+))?"/g)){
-    const bytes=readFileSync('public'+match[1]);if(match[2])assert.equal(createHash('sha256').update(bytes).digest('hex').slice(0,match[2].length),match[2],match[1]+': stale cache version');
+    const source=read('public'+match[1]);if(match[2])assert.equal(textVersion(source,match[2].length),match[2],match[1]+': stale cache version');
   }
   for(const name of ['leaflet.js','leaflet.css'])assert(existsSync('public/school-assets/vendor/leaflet/'+name));
+});
+check('Text cache versions remain identical across Windows and Linux checkouts and change with content',()=>{
+  const lf=read('public/school-assets/costin-experience.css').replaceAll('\r\n','\n');
+  assert(lf.includes('\n'));assert.equal(textVersion(lf),textVersion(lf.replaceAll('\n','\r\n')));
+  assert.notEqual(textVersion(lf),textVersion(lf+'\n.pmh-school-cache-regression{color:#c9a84c}\n'));
 });
 check('Corresponding school editions cross-link once in each direction without canonicalizing away either page',()=>{
   for(const [route,p]of pages){

@@ -41,7 +41,9 @@ const assets=['costin-experience.css','costin-interior.css','school-guides.css',
 for(const name of assets){let content=read('civilian-site/assets/'+name);if(name.endsWith('.js'))content=content.replaceAll('/assets/','/school-assets/');write('public/school-assets/'+name,content);}
 function copyTree(source,target){for(const e of readdirSync(source,{withFileTypes:true})){const from=source+'/'+e.name,to=target+'/'+e.name;if(e.isDirectory())copyTree(from,to);else write(to,readFileSync(from));}}
 copyTree('civilian-site/assets/vendor/leaflet','public/school-assets/vendor/leaflet');
-const version=name=>createHash('sha256').update(readFileSync('public/school-assets/'+name)).digest('hex').slice(0,12);
+// Git uses LF on Cloudflare and may check out CRLF on Windows. Version the
+// normalized text so cache keys and the prebuild gate agree on either host.
+const version=name=>createHash('sha256').update(read('public/school-assets/'+name).replace(/\r\n/g,'\n')).digest('hex').slice(0,12);
 function schoolStyles(source,hub){
   const inline=[...source.matchAll(/<style\b[^>]*>[\s\S]*?<\/style>/g)].map(m=>m[0]).join('\n');
   return inline+'\n'+['costin-experience.css','costin-interior.css',hub?'school-finder.css':'school-guides.css','military-schools.css'].map(name=>`<link rel="stylesheet" href="/school-assets/${name}?v=${version(name)}">`).join('\n');

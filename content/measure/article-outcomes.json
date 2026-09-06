@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "note": "Aggregate-only analytics exports. Empty means unavailable, never zero clients. Each row needs site, slug, source, property, sourceReference, attribution=landing-page-session, exact window metadata, landingSessions and sessionsWithAcceptedInquiry. Use unique sessions, not raw events. No contact details belong here.",
+  "windows": []
+}

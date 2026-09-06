@@ -1,0 +1,81 @@
+
+coastal-alabama-vs-panhandle  [clear]  kws:
+   ok         1.41  https://greggcostin.com/gulf-shores-orange-beach  (0 head, 0 body, jac 0.35)  Gulf Shores & Orange Beach, AL Realtor | The Costin Team
+   ok         1.18  https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford  (0 head, 0 body, jac 0.29)  2026 BAH Pensacola: What Can You Afford? | Gregg Costin
+   ok         0.94  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.24)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok         0.94  https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide  (0 head, 0 body, jac 0.24)  Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98
+
+home-appraisals-explained  [clear]  kws:
+   ok          0.8  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.2)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok          0.8  https://pensacolamilitaryhousing.com/zero-down-home-loans  (0 head, 0 body, jac 0.2)  Zero-Down Home Loans 2026 Pensacola | Gregg Costin
+   ok          0.8  https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families  (0 head, 0 body, jac 0.2)  Best Neighborhoods for Eglin AFB: Niceville vs Crestview vs
+   ok          0.8  https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide  (0 head, 0 body, jac 0.2)  Florida Disabled Veteran Property Tax: County Filing Guide 2
+
+refinance-break-even-math  [clear]  kws:
+   ok         1.23  https://pensacolamilitaryhousing.com/cash-offer-pensacola  (0 head, 0 body, jac 0.31)  Cash Offer on Your Pensacola Home? Read This First
+   ok         1.23  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.31)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok         1.23  https://pensacolamilitaryhousing.com/veteran-realtor-destin  (0 head, 0 body, jac 0.31)  Veteran Real Estate Agent Destin FL | Gregg Costin
+   ok         1.23  https://greggcostin.com/blog/what-moves-mortgage-rates  (0 head, 0 body, jac 0.31)  What Actually Moves Mortgage Rates: A Pensacola Buyer's Guid
+
+title-insurance-explained  [clear]  kws:
+   ok         1.14  https://pensacolamilitaryhousing.com/va-loan-closing-costs-florida  (0 head, 0 body, jac 0.29)  VA Loan Closing Costs in Florida: What You Actually Pay
+   ok         1.14  https://greggcostin.com/resources/florida-home-insurance  (0 head, 0 body, jac 0.29)  Florida Home Insurance Guide: Costs, Inspections, Flood Zone
+   ok         1.14  https://greggcostin.com/blog/closing-costs-florida-buyers  (0 head, 0 body, jac 0.29)  Florida Closing Costs for Buyers: Every Line Item Explained
+   ok         0.57  https://pensacolamilitaryhousing.com/buying-sight-unseen-pcs-pensacola  (0 head, 0 body, jac 0.14)  Buying a Home Sight Unseen for Your PCS to Pensacola
+
+new-construction-vs-resale  [clear]  kws:
+   ok            1  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.25)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok            1  https://pensacolamilitaryhousing.com/new-construction-pensacola  (0 head, 0 body, jac 0.25)  New Construction Homes in Pensacola FL: Military Guide
+   ok            1  https://greggcostin.com/resources/florida-home-insurance  (0 head, 0 body, jac 0.25)  Florida Home Insurance Guide: Costs, Inspections, Flood Zone
+   ok            1  https://greggcostin.com/blog/florida-insurance-relief-2026  (0 head, 0 body, jac 0.25)  Florida Home Insurance Is Falling: What the Report Says
+
+hoa-fees-gulf-coast  [clear]  kws:
+   ok         1.23  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.31)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok         1.23  https://pensacolamilitaryhousing.com/veteran-realtor-destin  (0 head, 0 body, jac 0.31)  Veteran Real Estate Agent Destin FL | Gregg Costin
+   ok         1.23  https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons  (0 head, 0 body, jac 0.31)  Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers
+   ok         0.92  https://pensacolamilitaryhousing.com/first-time-military-homebuyer  (0 head, 0 body, jac 0.23)  First-Time Military Homebuyer Guide Pensacola 2026
+
+market-check-monthly  [clear]  kws:
+   ok         1.07  https://pensacolamilitaryhousing.com/rent-or-sell-pcs-pensacola  (0 head, 0 body, jac 0.27)  Selling Your House Before a PCS: Rent or Sell in Pensacola
+   ok          0.8  https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola  (0 head, 0 body, jac 0.2)  Assumable VA Loans Pensacola | 2.75% Rates Still Available
+   ok          0.8  https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers  (0 head, 0 body, jac 0.2)  Pensacola Flood Zones for Homebuyers | 2025 FEMA Maps
+   ok          0.8  https://pensacolamilitaryhousing.com/communities/gulf-breeze  (0 head, 0 body, jac 0.2)  Gulf Breeze, FL Military Homes | NAS Pensacola | Gregg Costi
+
+rate-news-reaction  [clear]  kws:
+   ok         1.33  https://greggcostin.com/blog/what-moves-mortgage-rates  (0 head, 0 body, jac 0.33)  What Actually Moves Mortgage Rates: A Pensacola Buyer's Guid
+   ok         1.07  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.27)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok          0.8  https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola  (0 head, 0 body, jac 0.2)  Assumable VA Loans Pensacola | 2.75% Rates Still Available
+   ok          0.8  https://pensacolamilitaryhousing.com/va-irrrl-guide  (0 head, 0 body, jac 0.2)  VA IRRRL Guide 2026 | Streamline Refi for Pensacola Veterans
+
+baldwin-county-property-taxes  [clear]  kws: baldwin county property tax rate | how much is property tax in baldwin county alabama | orange beach alabama property tax | alabama vs florida property tax
+   ok         1.73  https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford  (0 head, 0 body, jac 0.43)  2026 BAH Pensacola: What Can You Afford? | Gregg Costin
+   ok          1.6  https://greggcostin.com/blog/property-taxes-escambia-santa-rosa  (0 head, 0 body, jac 0.4)  Property Taxes in Escambia and Santa Rosa County, Explained
+   ok          1.2  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.3)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok          1.2  https://pensacolamilitaryhousing.com/florida-homestead-exemption-military  (0 head, 0 body, jac 0.3)  Florida Homestead Exemption for Military 2026 | Gregg Costin
+
+florida-homestead-exemption-how-to-apply-2027  [INTENT-REVIEW]  kws: florida homestead exemption application 2026 | how to apply for homestead exemption florida | homestead exemption deadline florida | escambia county homestead exemption
+   INTENT-REVIEW     6  https://greggcostin.com/resources/florida-homestead-exemption  (1 head, 1 body, jac 0.5)  Florida Homestead Exemption Guide for Pensacola Homeowners
+   ok         1.78  https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide  (0 head, 0 body, jac 0.44)  Florida Disabled Veteran Property Tax: County Filing Guide 2
+   ok         1.56  https://pensacolamilitaryhousing.com/florida-homestead-exemption-military  (0 head, 0 body, jac 0.39)  Florida Homestead Exemption for Military 2026 | Gregg Costin
+   ok         1.56  https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military  (0 head, 0 body, jac 0.39)  Florida Homestead Exemption for Military: Save Thousands
+
+florida-property-tax-elimination-what-it-means  [INTENT-REVIEW]  kws: florida property tax elimination update | florida property tax elimination | will florida eliminate property taxes | florida property tax amendment 2026
+   INTENT-REVIEW  5.14  https://greggcostin.com/blog/property-taxes-escambia-santa-rosa  (1 head, 1 body, jac 0.29)  Property Taxes in Escambia and Santa Rosa County, Explained
+   ok         1.14  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.29)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok            1  https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military  (0 head, 0 body, jac 0.25)  Florida Homestead Exemption for Military: Save Thousands
+   ok         0.71  https://pensacolamilitaryhousing.com/florida-homestead-exemption-military  (0 head, 0 body, jac 0.18)  Florida Homestead Exemption for Military 2026 | Gregg Costin
+
+hurricane-and-flood-history-by-gulf-coast-town  [INTENT-REVIEW]  kws: does destin florida get hurricanes | does milton florida get hurricanes | pensacola hurricane history | gulf breeze flood zone
+   INTENT-REVIEW  4.71  https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons  (1 head, 1 body, jac 0.18)  Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers
+   ok         1.41  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.35)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok         0.94  https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers  (0 head, 0 body, jac 0.24)  Pensacola Flood Zones for Homebuyers | 2025 FEMA Maps
+   ok         0.94  https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide  (0 head, 0 body, jac 0.24)  Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98
+
+buying-on-pensacola-beach-leasehold  [clear]  kws: pensacola beach properties | pensacola beach real estate | pensacola beach leasehold | buying a condo on pensacola beach
+   ok         1.19  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.3)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok         1.19  https://pensacolamilitaryhousing.com/veteran-realtor-destin  (0 head, 0 body, jac 0.3)  Veteran Real Estate Agent Destin FL | Gregg Costin
+   ok         1.19  https://greggcostin.com/neighborhoods/pensacola-beach  (0 head, 0 body, jac 0.3)  Pensacola Beach Condos & Homes | The Costin Team
+   ok         1.04  https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide  (0 head, 0 body, jac 0.26)  Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98
+Token/phrase overlap proposes candidates. It does not establish actual search cannibalization; inspect reader intent before merging or writing.
+
+13 item(s) checked across both sites, 3 unresolved intent review(s)

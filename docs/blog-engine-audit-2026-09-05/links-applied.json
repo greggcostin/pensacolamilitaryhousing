@@ -1,0 +1,38 @@
+[
+  {
+    "from": "public/bases/eglin-afb.html",
+    "to": "/blog/best-neighborhoods-eglin-afb-families",
+    "label": "Compare Niceville, Crestview and Fort Walton Beach for an Eglin commute",
+    "rationale": "Manually matched reader intent; contextual link outside global navigation."
+  },
+  {
+    "from": "public/communities/crestview.html",
+    "to": "/blog/best-neighborhoods-eglin-afb-families",
+    "label": "Compare Crestview with Niceville and Fort Walton Beach for an Eglin commute",
+    "rationale": "Manually matched reader intent; contextual link outside global navigation."
+  },
+  {
+    "from": "public/communities/navarre.html",
+    "to": "/blog/moving-to-navarre-2026-guide",
+    "label": "Read the detailed Navarre moving guide: housing costs, BAH and US-98",
+    "rationale": "Manually matched reader intent; contextual link outside global navigation."
+  },
+  {
+    "from": "public/bases/hurlburt-field.html",
+    "to": "/blog/moving-to-navarre-2026-guide",
+    "label": "Compare Navarre housing costs and the Hurlburt commute",
+    "rationale": "Manually matched reader intent; contextual link outside global navigation."
+  },
+  {
+    "from": "public/assumable-va-loans-pensacola.html",
+    "to": "/blog/va-loan-assumption-buyers-guide",
+    "label": "Work through the buyer guide to a VA loan assumption",
+    "rationale": "Manually matched reader intent; contextual link outside global navigation."
+  },
+  {
+    "from": "public/va-loan-guide.html",
+    "to": "/blog/va-loan-assumption-buyers-guide",
+    "label": "Understand the cash gap and process when assuming a VA loan",
+    "rationale": "Manually matched reader intent; contextual link outside global navigation."
+  }
+]

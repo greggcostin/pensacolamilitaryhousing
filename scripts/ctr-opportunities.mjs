@@ -1,39 +1,34 @@
-// UNDERCLICKED pages from the newest GSC Pages export (lesson L014, 2026-09-04).
-// Google is where the impressions are; the Bing-API opportunities file cannot see them.
-// A page that already ranks on page one but converts under 1.5% of impressions is the
-// cheapest fix on the site: the title and description are the only variables.
-//
-//   node scripts/ctr-opportunities.mjs            # sitewide table, blog rows marked
-//   node scripts/ctr-opportunities.mjs --json     # write content/measure/ctr-pmh.json
-import { readFileSync, readdirSync, writeFileSync, existsSync } from "node:fs";
+// Snippet review candidates, with uncertainty and a real measurement window.
+// No generic position curve, recoverable-click forecast, or automatic rewrite.
+import { readFileSync, readdirSync, existsSync } from "node:fs";
+import { ROOT, TODAY, SITES, writeJson } from "./blog-lib.mjs";
+import { gscPages, assessSearch } from "./search-evidence.mjs";
 
-const files = readdirSync("docs/seo-baselines").filter((f) => /^gsc-pages-\d{4}-\d{2}-\d{2}\.csv$/.test(f)).sort();
-if (!files.length) { console.error("no gsc-pages-YYYY-MM-DD.csv in docs/seo-baselines"); process.exit(2); }
-const file = files.at(-1), date = file.match(/\d{4}-\d{2}-\d{2}/)[0];
-const rows = readFileSync(`docs/seo-baselines/${file}`, "utf8").replace(/^\uFEFF/, "").trim().split(/\r?\n/).slice(1)
-  .map((l) => (l.match(/("([^"]|"")*"|[^,]*)(,|$)/g) || []).map((c) => c.replace(/,$/, "").replace(/^"|"$/g, "")))
-  .map((c) => ({ url: c[0].replace(/^https?:\/\/[^/]+/, "") || "/", clicks: +c[1], imp: +c[2], ctr: parseFloat(c[3]) / 100, pos: +c[4] }))
-  .filter((r) => r.url && Number.isFinite(r.imp));
-
-// Expected CTR by position is a rough public-benchmark curve; the point is the gap, not the decimals.
-const expect = (pos) => pos <= 1 ? 0.28 : pos <= 2 ? 0.15 : pos <= 3 ? 0.10 : pos <= 5 ? 0.06 : pos <= 8 ? 0.035 : pos <= 10 ? 0.025 : pos <= 15 ? 0.015 : 0.008;
-const meta = (url) => {
-  const f = "public" + (url === "/" ? "/index" : url) + ".html";
-  if (!existsSync(f)) return { title: "(spa or missing)", desc: "" };
-  const h = readFileSync(f, "utf8");
-  return { title: ((/<title>([^<]*)<\/title>/.exec(h) || [])[1] || "").trim(), desc: ((/name="description" content="([^"]*)"/.exec(h) || [])[1] || "").trim() };
-};
-const out = rows
-  .filter((r) => r.imp >= 30 && r.pos <= 15)
-  .map((r) => { const e = expect(r.pos); const lost = Math.round(r.imp * Math.max(0, e - r.ctr)); return { ...r, expected: e, lostClicks: lost, ...meta(r.url) }; })
-  .filter((r) => r.lostClicks >= 5 || (r.clicks === 0 && r.imp >= 30))
-  .sort((a, b) => b.lostClicks - a.lostClicks);
-
-console.log(`UNDERCLICKED (GSC ${date}): impressions >= 30, position <= 15, CTR below the position benchmark\n`);
-console.log("lost/mo".padStart(7), "clk".padStart(4), "imp".padStart(6), "ctr".padStart(6), "pos".padStart(5), " url");
-for (const r of out) console.log(String(r.lostClicks).padStart(7), String(r.clicks).padStart(4), String(r.imp).padStart(6), (r.ctr * 100).toFixed(1).padStart(5) + "%", r.pos.toFixed(1).padStart(5), (r.url.startsWith("/blog/") ? " [blog] " : " ") + r.url);
-console.log(`\n${out.length} pages; ${out.reduce((a, r) => a + r.lostClicks, 0)} clicks/period left on the table vs benchmark`);
-if (process.argv.includes("--json")) {
-  writeFileSync("content/measure/ctr-pmh.json", JSON.stringify({ source: file, date, benchmark: "expected CTR by position, public curve", pages: out }, null, 2) + "\n");
-  console.log("wrote content/measure/ctr-pmh.json");
-}
+const args = process.argv.slice(2);
+const site = args.includes("--site") ? args[args.indexOf("--site") + 1] : "pmh";
+if (!SITES[site]) throw new Error("Use --site pmh or gc");
+const config = SITES[site], pattern = site === "gc" ? /^gsc-pages-gc-\d{4}-\d{2}-\d{2}\.csv$/ : /^gsc-pages-\d{4}-\d{2}-\d{2}\.csv$/;
+const files = readdirSync(ROOT + "docs/seo-baselines").filter((f) => pattern.test(f)).sort();
+if (!files.length) { console.error("No GSC Pages export for " + site); process.exit(2); }
+const file = files.at(-1);
+const experiments = JSON.parse(readFileSync(ROOT + "content/measure/ctr-applied.json", "utf8")).applied || [];
+const rows = gscPages(ROOT, file, config.origin);
+const pages = rows.filter((r) => r.status === "observed" && r.impressions >= 30 && r.position != null && r.position <= 15).map((r) => {
+  const a = assessSearch([r], { today: TODAY, url: r.url, site, experiments });
+  const local = ROOT + config.siteDir + (r.url === "/" ? "/index" : r.url) + ".html";
+  const html = existsSync(local) ? readFileSync(local, "utf8") : "";
+  return { ...r, ...a, latest: undefined, priority: 0, automaticRewrite: false,
+    title: /<title>([^<]*)<\/title>/.exec(html)?.[1] || "(SPA or missing)",
+    desc: /name="description" content="([^"]*)"/.exec(html)?.[1] || "",
+    nextAction: a.flags.includes("EXPERIMENT-RUNNING") ? "Leave the current variant in place; measure a separate post-change window." :
+      a.flags.includes("LOW-SAMPLE") ? "Collect more observations; inspect query intent without claiming a snippet failure." :
+      "Review page/query, country and device cohorts and search-result intent before proposing one test." };
+}).sort((a, b) => b.impressions - a.impressions);
+console.log("Snippet review, " + site + ", export " + file + ". Counts are per selected export period, never monthly estimates.");
+console.log("No traffic lift or causal title diagnosis is inferred from average position.");
+for (const r of pages) console.log(r.url + ": " + r.clicks + "/" + r.impressions + ", CTR " + (100 * r.ctr).toFixed(2) + "%, 95% interval " + (100 * r.interval.low).toFixed(2) + "-" + (100 * r.interval.high).toFixed(2) + "%; " + r.flags.join(", "));
+if (args.includes("--json")) writeJson("content/measure/ctr-" + site + ".json", {
+  schemaVersion: 2, source: file, generated: TODAY, window: rows[0]?.window,
+  note: "Review candidates only. Uncertainty intervals do not control for query mix or prove a title caused clicks. Exact dates, filters and comparable post-change data are required to evaluate experiments.",
+  pages,
+});

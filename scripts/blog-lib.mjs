@@ -4,9 +4,10 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync, statSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { canonicalPath, operatingDate, isoDay } from "./search-evidence.mjs";
 
 export const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
-export const TODAY = new Date().toISOString().slice(0, 10);
+export const TODAY = operatingDate();
 
 /** Load .env.local into process.env without overwriting values already set. */
 export function loadEnv() {
@@ -104,16 +105,22 @@ export function bingClient(key = process.env.BING_WEBMASTER_API_KEY) {
     keywordStats: (siteUrl, q, country = "us", language = "en-US") => call("GetKeywordStats", { siteUrl, q, country, language }),
   };
 }
-export const bingDate = (s) => { const m = /\d+/.exec(String(s)); return m ? new Date(+m[0]).toISOString().slice(0, 10) : null; };
+export const bingDate = (value) => {
+  const s = String(value), match = /^\/Date\((-?\d+)(?:[+-]\d{4})?\)\/$/.exec(s);
+  if (match) { const d = new Date(Number(match[1])); return Number.isFinite(d.getTime()) ? d.toISOString().slice(0, 10) : null; }
+  if (isoDay(s.slice(0, 10))) return s.slice(0, 10);
+  return null;
+};
 
 /** Aggregate dated Bing rows into trailing windows ending at the newest row date. */
-export function windowize(rows, keyField) {
+export function windowize(rows, keyField, anchor = null) {
   const dated = rows.map((r) => ({ key: r[keyField], date: bingDate(r.Date), imp: r.Impressions || 0, clk: r.Clicks || 0, pos: r.AvgImpressionPosition || 0 })).filter((r) => r.date);
-  const asOf = dated.reduce((m, r) => (r.date > m ? r.date : m), "0000-00-00");
+  const asOf = anchor || dated.map((r) => r.date).sort().at(-1) || null;
   const day = (iso) => Math.round((new Date(asOf) - new Date(iso)) / 86400000);
   const out = new Map();
   for (const r of dated) {
     const d = day(r.date);
+    if (d < 0) continue;
     const a = out.get(r.key) || (out.set(r.key, { key: r.key, imp28: 0, clk28: 0, posW28: 0, impPrior28: 0, clkPrior28: 0, imp90: 0, clk90: 0, posW90: 0, first: r.date, last: r.date }), out.get(r.key));
     if (d <= 27) { a.imp28 += r.imp; a.clk28 += r.clk; a.posW28 += r.pos * r.imp; }
     else if (d <= 55) { a.impPrior28 += r.imp; a.clkPrior28 += r.clk; }
@@ -140,19 +147,24 @@ export function walkHtml(dirs) {
   return out;
 }
 
-/** Inbound internal links per /blog/<slug> from every html page of the site (excluding the post itself). */
+/** Article-context links exclude page furniture and the directory index. */
+export function contentRegion(html) {
+  return (/<main\b[^>]*>([\s\S]*?)<\/main>/i.exec(html)?.[1] || "")
+    .replace(/<!-- EXPLORE_V2 -->[\s\S]*?<!-- \/EXPLORE_V2 -->/g, "")
+    .replace(/<(nav|footer|header|script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, "");
+}
+export function contextualLinks(html, origin) {
+  return [...new Set([...contentRegion(html).matchAll(/<a\b[^>]*href=["']([^"']+)["']/gi)]
+    .map((m) => canonicalPath(m[1], origin)).filter(Boolean))];
+}
 export function inboundLinks(siteKey) {
-  const s = siteOf(siteKey);
-  const pages = walkHtml([...s.hubDirs, s.blogDir]);
-  const counts = new Map();
-  for (const p of pages) {
-    const h = readFileSync(p, "utf8");
-    const self = p.endsWith(".html") ? "/blog/" + p.split("/").pop().replace(".html", "") : "";
-    const seen = new Set();
-    for (const m of h.matchAll(/href="(\/blog\/[a-z0-9-]+)"/g)) {
-      if (m[1] === self || seen.has(m[1])) continue;
-      seen.add(m[1]);
-      counts.set(m[1], (counts.get(m[1]) || 0) + 1);
+  const s = siteOf(siteKey), counts = new Map();
+  for (const p of walkHtml([...s.hubDirs, s.blogDir])) {
+    if (p === ROOT + s.siteDir + "/blog.html") continue;
+    const self = p.replace(ROOT + s.siteDir, "").replace(/\.html$/, "");
+    for (const path of contextualLinks(readFileSync(p, "utf8"), s.origin)) {
+      if (!path.startsWith("/blog/") || path === self) continue;
+      counts.set(path, (counts.get(path) || 0) + 1);
     }
   }
   return counts;

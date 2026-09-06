@@ -40,7 +40,14 @@
         "cso students nas pensacola housing"
       ],
       "evidence": "Evidence: Bing Webmaster Tools keyword export, 3-month window ending Aug 22 2026 (docs/seo-baselines/bing-keywords-2026-08-22.csv). The site already earns impressions on these queries with no page that answers them. Queries: \"training air wing five\" (15 imp, pos 9.7), \"nas pensacola base housing office for air force cso students\" (4, pos 7.0), \"is the corry station tech school dorm at nas pensacola similar to the goodfellow dorms\" (4, pos 5.3), \"best place to live for flight school milton florida\" (3, pos 1.0, 1 click), \"hurlburt field afb dorms spec ops\" (3). A training-pipeline audience the queue never served: student aviators, CSO students, Corry A-school, 7th SFG. Ground truth to verify: single/unaccompanied BAH rules by pay grade and student status, TAW-5/TAW-6 student status, Corry unaccompanied housing policy, dual-status spouse rules.",
-      "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009). Placed #3: it is the only new-post candidate with observed demand behind it."
+      "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009). Placed #3: it is the only new-post candidate with observed demand behind it.",
+      "growthBriefId": "training-housing",
+      "intentOwner": "/flight-school-housing-pensacola",
+      "workflowStatus": "review-owner-before-new-post",
+      "researchRisks": [
+        "Do not apply permanent-party allowances or dorm policy to all students.",
+        "Queries mention Whiting housing as well as training; inspect intent before grouping them."
+      ]
     },
     {
       "slug": "pca-vs-pcs-pensacola-eglin-hurlburt",
@@ -67,8 +74,16 @@
         "rent vs buy hurlburt 3 year tour",
         "army bah crestview"
       ],
-      "evidence": "Evidence: Bing Webmaster Tools keyword export, 3-month window ending Aug 22 2026 (docs/seo-baselines/bing-keywords-2026-08-22.csv). The site already earns impressions on these queries with no page that answers them. Queries: \"houses for rent military in fwb florida\" (4, pos 7.0), \"army bah crestview\" (3, pos 4.0), \"duke field housing\" (3, pos 6.0). Renter intent the site captures nothing from; the strategy names Navy to Navy as a renter-pipeline threat. The honest angle is the 3-year rule from the BAH post: rent at or under BAH unless the hold clears 3 years.",
-      "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009)."
+      "evidence": "Historical exports include local rental and off-base housing queries. Test holding-period scenarios with explicit assumptions; no universal three-year threshold or appreciation promise.",
+      "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009).",
+      "growthBriefId": "rent-buy-hold",
+      "intentOwner": "/on-base-vs-off-base-eglin-afb",
+      "workflowStatus": "review-owner-before-new-post",
+      "researchRisks": [
+        "No universal three-year buy rule.",
+        "Do not promise appreciation or ability to rent the home.",
+        "Do not treat scattered rental listings as market averages."
+      ]
     },
     {
       "slug": "florida-property-tax-100-percent-disabled-veteran-part-year",
@@ -80,8 +95,15 @@
         "florida veteran property tax exemption second home",
         "permanent residency homestead disabled veteran florida"
       ],
-      "evidence": "Evidence: Bing Webmaster Tools keyword export, 3-month window ending Aug 22 2026 (docs/seo-baselines/bing-keywords-2026-08-22.csv). The site already earns impressions on these queries with no page that answers them. Query, verbatim: \"if i buy a home in florida and are 100% va p&t disabled do i need to pay property tax? what about if it is my part time home and i live in nc half of the year?\" (6 imp, pos 8.0). A real person typed that, and the honest answer (permanent residency and homestead are prerequisites under s. 196.081, so a part-year NC resident does not qualify) is on no page. Sibling of the county guide; route the FAQ answer there too.",
-      "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009)."
+      "evidence": "Historical Bing export includes a part-year residency question. The query is demand evidence only, not enough facts to decide eligibility. Verify permanent residence and any military-absence rules from primary sources.",
+      "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009).",
+      "growthBriefId": "part-year-homestead",
+      "intentOwner": "/blog/florida-veteran-property-tax-county-guide",
+      "workflowStatus": "review-owner-before-new-post",
+      "researchRisks": [
+        "Months spent in Florida alone do not establish or disprove permanent residency.",
+        "Do not make a blanket eligibility ruling from a search query."
+      ]
     },
     {
       "slug": "REFRESH:florida-home-insurance-military",

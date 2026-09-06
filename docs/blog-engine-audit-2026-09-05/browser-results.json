@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "site": "pmh",
+      "width": 390,
+      "nextStepLinks": 3,
+      "horizontalOverflow": false,
+      "mockedRejectedRequestCountedAsLead": false,
+      "mockedSuccessfulInquiries": 1,
+      "interceptedRequests": 2,
+      "externalRequestsSent": 0
+    },
+    {
+      "site": "gc",
+      "width": 390,
+      "nextStepLinks": 3,
+      "horizontalOverflow": false,
+      "mockedRejectedRequestCountedAsLead": false,
+      "mockedSuccessfulInquiries": 1,
+      "interceptedRequests": 2,
+      "externalRequestsSent": 0
+    }
+  ],
+  "note": "All external requests blocked. Contact responses were locally simulated; no real lead or production analytics event was sent."
+}

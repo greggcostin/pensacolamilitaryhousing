@@ -1,0 +1,1632 @@
+{
+  "schemaVersion": 2,
+  "generated": "2026-09-05",
+  "mode": "reviewable-plan",
+  "maximumArticleChanges": 1,
+  "next": {
+    "kind": "source-and-usefulness-refresh",
+    "site": "gc",
+    "target": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+    "readerTask": "Give the reader a reproducible, sourced cost or decision checklist.",
+    "reason": "Existing financial guide has no external source links. Research before rewriting; a score alone is not verification."
+  },
+  "models": {
+    "research": "opus",
+    "write": "fable",
+    "note": "Standing order Aug 13 2026: Opus researches (rigor, source discipline), Fable writes from the pack (prose). Set by Gregg after A/B testing."
+  },
+  "publication": {
+    "autoPublish": false,
+    "default": "stage branch, test, then report"
+  },
+  "activeLessons": [
+    {
+      "id": "L001",
+      "date": "2026-09-02",
+      "appliesTo": [
+        "research",
+        "orchestrate"
+      ],
+      "status": "active",
+      "rule": "A research pack's load-bearing numbers get independently verified before anything is written. The pack lists its five most load-bearing figures; the orchestrator fetches a primary source for each one itself.",
+      "evidence": "The Sep 2 pack reported unincorporated Escambia at 19.0080 mills and a $100/mo tax understatement. The Tax Collector's own components sum to 13.4035. The pack had flagged it uncertain; without a second fetch the wrong figure ships into a post whose whole point is real tax math.",
+      "type": "operational"
+    },
+    {
+      "id": "L002",
+      "date": "2026-09-03",
+      "appliesTo": [
+        "research",
+        "canon"
+      ],
+      "status": "active",
+      "rule": "Any figure the site calls canonical (BAH, millage, homestead, funding fee, residual income, PMMS) is re-verified against its primary source every time a post touches it, not carried forward from the site. Statutory figures can be indexed; ask whether they are.",
+      "evidence": "The additional Florida homestead exemption was carried as a flat $25,000 across the model, /bah-to-mortgage-guide and a freshly shipped post. Fla. Stat. 196.031(1)(b) indexes it to CPI; the DOR publishes $26,411 for 2026. Found only on a second research pass.",
+      "type": "operational"
+    },
+    {
+      "id": "L003",
+      "date": "2026-09-03",
+      "appliesTo": [
+        "decide"
+      ],
+      "status": "active",
+      "rule": "Before a queue item is written as a NEW post, run scripts/blog-dedup-check.mjs. If a live page already owns the topic, the item becomes a refresh of that page. New posts never cannibalize.",
+      "evidence": "Queue #1 (bah-vs-real-cost-by-zip-2026) was already live as /bah-vs-cost-of-owning-pensacola with a Citing-this-study block. Writing it would have split the site's own press asset.",
+      "type": "operational"
+    },
+    {
+      "id": "L004",
+      "date": "2026-09-01",
+      "appliesTo": [
+        "write",
+        "build"
+      ],
+      "status": "active",
+      "rule": "Score every NEW post with scripts/analyze-formatting.mjs before staging and require 90+. Long Fable prose is accurate and defaults to dense paragraphs; the factory now refuses any paragraph over 110 words and warns over 85. Send structure-only revisions back to the writer with the measured list.",
+      "evidence": "The Navarre mega-guide passed every factory gate and scored 65, the worst page on the site: 18 wall paragraphs, zero h3s. One structure-only pass took it to 100 with no fact changes.",
+      "type": "operational"
+    },
+    {
+      "id": "L005",
+      "date": "2026-09-02",
+      "appliesTo": [
+        "write"
+      ],
+      "status": "active",
+      "rule": "Correct a third party's error without naming the third party. Describe the wrong figure and the right source; the brand stays out unless Gregg puts it back in.",
+      "evidence": "The BAH refresh named a forecast site as unreliable. Accurate, but a public swipe at a competitor is Gregg's call, not the machine's. Softened to 'one AI-generated forecast site'.",
+      "type": "operational"
+    },
+    {
+      "id": "L006",
+      "date": "2026-09-03",
+      "appliesTo": [
+        "decide",
+        "measure"
+      ],
+      "status": "active",
+      "rule": "docs/formatting-audit.md is only trustworthy after the Sep 3 analyzer fix. Regenerate it in every run before DECIDE reads it.",
+      "evidence": "The paragraph regex also matched <picture>, faking wall paragraphs on 95 pages. DECIDE had been ranking refresh candidates off a corrupted table since the figure standing order landed.",
+      "type": "operational"
+    },
+    {
+      "id": "L007",
+      "date": "2026-09-03",
+      "appliesTo": [
+        "research",
+        "data-study"
+      ],
+      "status": "active",
+      "rule": "For anything modeled by jurisdiction (tax, insurance zone, school zone), assign from a parcel roll or GIS boundary, never from geography or ZIP. The Florida DOR NAL roll gives every parcel's taxing authority and is downloadable per county.",
+      "evidence": "The uniform-unincorporated model was right for exactly 13 of 26 ZIPs. The 'Okaloosa is the cheap county' finding was wrong: only 19.5% of its single-family parcels pay the unincorporated rate. Counting all 407,635 parcels settled every ZIP at high confidence.",
+      "type": "operational",
+      "qualification": "The research identified mixed-jurisdiction ZIPs with Medium confidence in a representative single rate. Parcel coverage does not remove population, geography or year mismatches. Match SF parcels to SF price data and retain blended-rate assumptions."
+    },
+    {
+      "id": "L008",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "measure"
+      ],
+      "status": "active",
+      "rule": "Probe configured measurement sources each run. Record unavailable sources and missing URL rows as unknown; never infer a winner, stalled article or zero traffic from missing data. Tool availability is current state, not a permanent lesson.",
+      "evidence": "Every post read 0-3 Clarity sessions over 28 days and the ledger held one Semrush snapshot from Aug 22. DECIDE could not tell a winner from a loser; it defaulted everything to 'stalled'.",
+      "type": "operational"
+    },
+    {
+      "id": "L009",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "decide",
+        "topics"
+      ],
+      "status": "active",
+      "rule": "Mine the newest Bing/GSC export for queries the site already ranks for but has no page answering, before trend-scanning. Demand the site is already earning impressions on beats a topic the queue guessed at.",
+      "evidence": "The Aug 22 Bing export shows a training-base audience the queue never served: 'training air wing five' (15 imp), Corry tech-school dorm questions, 'flight school milton' at position 1, 'pensacola to hurlburt PCA or PCS' at 4.3, 'army bah crestview', 'duke field housing'. None map to a queue item.",
+      "type": "operational"
+    },
+    {
+      "id": "L010",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "stage",
+        "report"
+      ],
+      "status": "active",
+      "rule": "A staged draft older than 7 days is a defect. Every run lists unmerged blog/* branches with their age in the report, and the standing 'ship each batch' rule means the run offers to merge them.",
+      "evidence": "The Navarre mega-guide sat staged from Sep 1 to Sep 3 and its ledger/queue edits had drifted into 21 merge conflicts by the time it shipped.",
+      "type": "operational"
+    },
+    {
+      "id": "L011",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "decide"
+      ],
+      "status": "active",
+      "rule": "Run the dedup gate over the WHOLE queue at every re-rank, not just the item about to be written. Collisions accumulate silently as pages get built by other routines.",
+      "evidence": "First full run of scripts/blog-dedup-check.mjs on the 16-item queue found 5 DUPLICATEs: the insurance guide and the Crestview guide already existed as static pages, the cost-of-living post collided with the Pensacola mega-guide, the Destin comparison with the duty-station vs-page, and the 2027 BAH item with the 2026 post that now targets the 2027 keyword on purpose. Two converted to refreshes, three annotated.",
+      "type": "operational"
+    },
+    {
+      "id": "L012",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "write",
+        "build"
+      ],
+      "status": "active",
+      "rule": "A quickAnswer is 2-4 sentences AND under 85 words. It renders as a paragraph, so a long one is a wall at the top of the page and scores as one.",
+      "evidence": "The first two quick answers written under the GEO gate ran 90 and 94 words and dropped the BAH post to 88 and Navarre to 94 in the scannability report on rebuild. Both were tightened to about 75 words without losing a figure.",
+      "type": "operational"
+    },
+    {
+      "id": "L015",
+      "date": "2026-09-04",
+      "appliesTo": [
+        "measure"
+      ],
+      "status": "active",
+      "rule": "Compare only the same property, source, URL or query cohort, search type, filters and equal non-overlapping confirmed windows. Export timestamps are not coverage dates. Record uncertainty and sample size.",
+      "evidence": "After the Bing API pipe and the GSC export both landed, scripts/blog-measure.mjs labeled all ten posts WINNER by comparing a Bing 0-click snapshot to a GSC snapshot. Fixed to compare only within a source.",
+      "type": "operational"
+    },
+    {
+      "id": "L017",
+      "date": "2026-09-05",
+      "type": "operational",
+      "appliesTo": [
+        "measure",
+        "decide",
+        "write"
+      ],
+      "status": "active",
+      "rule": "Use evidence policy v2 from scripts/blog-weekly-plan.mjs. No automatic snippet rewrites from small samples, no promotion of attribute correlations to performance rules, and no fabricated first-person anecdotes to satisfy a content score. A source-cue word is not evidence.",
+      "evidence": "Reproduced the prior missing-row zero, 0/41 CTR diagnosis and benchmark-as-monthly-traffic output at baseline a621c4c. Regression fixtures and current replay live in docs/blog-engine-audit-2026-09-05/."
+    }
+  ],
+  "excludedLessons": [],
+  "experiments": [
+    {
+      "id": "pmh-snippet-2026-09-04-1",
+      "page": "/bah-rates",
+      "outcome": "unknown",
+      "cooldown": true,
+      "comparison": {
+        "comparable": false,
+        "reasons": [
+          "Exact baseline date range and filters are unknown; no separate post-change window yet."
+        ]
+      }
+    },
+    {
+      "id": "pmh-snippet-2026-09-04-2",
+      "page": "/blog/living-in-gulf-breeze-pros-cons",
+      "outcome": "unknown",
+      "cooldown": true,
+      "comparison": {
+        "comparable": false,
+        "reasons": [
+          "Exact baseline date range and filters are unknown; no separate post-change window yet."
+        ]
+      }
+    }
+  ],
+  "sourceGaps": [
+    {
+      "site": "gc",
+      "slug": "closing-costs-florida-buyers"
+    },
+    {
+      "site": "gc",
+      "slug": "fed-rate-hike-what-it-means"
+    },
+    {
+      "site": "gc",
+      "slug": "florida-insurance-relief-2026"
+    }
+  ],
+  "outcomeStatus": {
+    "status": "unavailable",
+    "comparisons": [],
+    "errors": [],
+    "note": "No client count, revenue or conversion lift is inferred from clicks. Cross-domain assisted journeys and qualified clients require separately matched analytics/CRM evidence. Do not double-count legacy inquiry_submit and blog_inquiry_success."
+  },
+  "articles": [
+    {
+      "site": "pmh",
+      "slug": "bah-2026-pensacola-what-can-you-afford",
+      "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+      "linkedSourceDomains": 9,
+      "sourceUrls": [
+        "https://www.freddiemac.com/pmms",
+        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
+        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/",
+        "https://www.defense.gov/News/Releases/",
+        "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+        "https://www.benefits.va.gov/warms/pam26_7.asp",
+        "https://escambiataxcollector.com/",
+        "https://srcpa.gov/",
+        "https://www.citizensfla.com/",
+        "https://insurify.com/homeowners-insurance/florida/"
+      ],
+      "contextualInbound": 2,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "purchase-budget",
+        "prompt": "Compare the full payment, cash needed and ownership plan for the home you are considering.",
+        "tool": "/mortgage-calculators",
+        "toolLabel": "Work through a purchase budget",
+        "bridge": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+        "bridgeLabel": "Include Florida closing costs in your plan"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "best-neighborhoods-eglin-afb-families",
+      "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
+      "linkedSourceDomains": 8,
+      "sourceUrls": [
+        "https://www.zillow.com/home-values/40018/niceville-fl/",
+        "https://www.zillow.com/home-values/24265/crestview-fl/",
+        "https://www.zillow.com/home-values/52082/fort-walton-beach-fl/",
+        "https://www.zillow.com/home-values/22742/shalimar-fl/",
+        "https://www.zillow.com/home-values/42657/navarre-fl/",
+        "https://www.redfin.com/city/12482/FL/Niceville/housing-market",
+        "https://www.redfin.com/city/4016/FL/Crestview/housing-market",
+        "https://www.okaloosaschools.com/article/3019144",
+        "https://www.santarosaschools.org/article/2299751",
+        "https://www.fldoe.org/accountability/accountability-reporting/school-grades/",
+        "https://www.freddiemac.com/pmms",
+        "https://www.newhomesource.com/communities/fl/destin-fort-walton-beach-area/crestview",
+        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/"
+      ],
+      "contextualInbound": 2,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "home-shortlist",
+        "prompt": "Build a shortlist around your commute, property costs and housing needs.",
+        "tool": "/pcs-home-search",
+        "toolLabel": "Plan a local home search",
+        "bridge": "https://greggcostin.com/neighborhoods",
+        "bridgeLabel": "Compare the local community guides"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "best-pensacola-neighborhoods-by-rank-bah",
+      "url": "https://pensacolamilitaryhousing.com/blog/best-pensacola-neighborhoods-by-rank-bah",
+      "linkedSourceDomains": 13,
+      "sourceUrls": [
+        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
+        "https://www.freddiemac.com/pmms",
+        "https://www.cnbc.com/select/what-are-va-loan-rates-today-august-12-2026/",
+        "https://movewithmomentum.com/data/fl/32506-housing-scorecard",
+        "https://weartv.com/news/local/escambia-santa-rosa-and-okaloosa-school-districts-all-receive-a-for-2025-26",
+        "https://www.ownwell.com/trends/florida/escambia-county",
+        "https://www.ownwell.com/trends/florida/santa-rosa-county",
+        "https://www.insure.com/home-insurance/how-much-is-homeowners-insurance-in-pensacola-fl/",
+        "https://insurify.com/homeowners-insurance/florida/pensacola/",
+        "https://harbourinsuranceagency.com/blog/how-much-is-flood-insurance-in-florida-real-averages-by-county-home-type-risk-rating-2-0/",
+        "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+        "https://floridarevenue.com/property/Pages/Taxpayers_Exemptions.aspx",
+        "https://www.escpa.org/",
+        "https://srcpa.gov/"
+      ],
+      "contextualInbound": 3,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "purchase-budget",
+        "prompt": "Compare the full payment, cash needed and ownership plan for the home you are considering.",
+        "tool": "/mortgage-calculators",
+        "toolLabel": "Work through a purchase budget",
+        "bridge": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+        "bridgeLabel": "Include Florida closing costs in your plan"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "florida-homestead-exemption-military",
+      "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+      "linkedSourceDomains": 7,
+      "sourceUrls": [
+        "https://floridarevenue.com/property/Pages/Taxpayers_Exemptions.aspx",
+        "https://floridarevenue.com/property/Documents/SaveOurHomes.pdf",
+        "https://floridarevenue.com/property/Documents/pt109.pdf",
+        "https://floridarevenue.com/property/Documents/dr501m.pdf",
+        "https://www.flsenate.gov/Laws/Statutes/2024/196.081",
+        "https://www.escpa.org/",
+        "https://escambiataxcollector.com/property-tax/millage-rate-detail/",
+        "https://srcpa.gov/exemptions/",
+        "https://www.santarosa.fl.gov/CivicAlerts.aspx?AID=1472",
+        "https://www.okaloosapa.com/"
+      ],
+      "contextualInbound": 1,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "property-cost-review",
+        "prompt": "Apply the checklist to a specific address before relying on an advertised monthly payment.",
+        "tool": "/va-disability-property-tax-florida",
+        "toolLabel": "Review veteran property-tax rules",
+        "bridge": "https://greggcostin.com/resources/florida-homestead-exemption",
+        "bridgeLabel": "Compare Florida homestead requirements"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "florida-veteran-property-tax-county-guide",
+      "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+      "linkedSourceDomains": 8,
+      "sourceUrls": [
+        "https://floridarevenue.com/property/Pages/Taxpayers_Exemptions.aspx",
+        "https://floridarevenue.com/property/Documents/pt109.pdf",
+        "https://floridarevenue.com/property/Documents/dr501.pdf",
+        "https://floridarevenue.com/property/Documents/dr501dv.pdf",
+        "https://www.flsenate.gov/Laws/Statutes/2026/196.081",
+        "https://www.escpa.org/",
+        "https://escambiataxcollector.com/property-tax/millage-rate-detail/",
+        "https://srcpa.gov/exemptions/",
+        "https://www.okaloosapa.com/",
+        "https://www.irs.gov/taxtopics/tc701",
+        "https://www.irs.gov/publications/p523",
+        "https://www.ecfr.gov/current/title-12/chapter-X/part-1024"
+      ],
+      "contextualInbound": 1,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "property-cost-review",
+        "prompt": "Apply the checklist to a specific address before relying on an advertised monthly payment.",
+        "tool": "/va-disability-property-tax-florida",
+        "toolLabel": "Review veteran property-tax rules",
+        "bridge": "https://greggcostin.com/resources/florida-homestead-exemption",
+        "bridgeLabel": "Compare Florida homestead requirements"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "living-in-gulf-breeze-pros-cons",
+      "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
+      "linkedSourceDomains": 10,
+      "sourceUrls": [
+        "https://srcpa.gov/millage-rates",
+        "https://www.fldoe.org/accountability/accountability-reporting/school-grades/",
+        "https://www.usnews.com/education/best-high-schools/florida",
+        "https://movewithmomentum.com/data/fl/32561-housing-scorecard",
+        "https://www.fema.gov/floodplain-management/community-rating-system",
+        "https://cityofgulfbreeze.us/flood-information",
+        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
+        "https://www.census.gov/quickfacts/gulfbreezecityflorida",
+        "https://en.wikipedia.org/wiki/Gulf_Breeze,_Florida",
+        "https://en.wikipedia.org/wiki/Garcon_Point_Bridge",
+        "https://myescambia.com/",
+        "https://www.census.gov/quickfacts/fact/table/gulfbreezecityflorida/PST045224"
+      ],
+      "contextualInbound": 1,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "home-shortlist",
+        "prompt": "Build a shortlist around your commute, property costs and housing needs.",
+        "tool": "/pcs-home-search",
+        "toolLabel": "Plan a local home search",
+        "bridge": "https://greggcostin.com/neighborhoods",
+        "bridgeLabel": "Compare the local community guides"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "moving-to-navarre-2026-guide",
+      "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+      "linkedSourceDomains": 11,
+      "sourceUrls": [
+        "https://corpweb1.dfas.mil/askDFAS/faqView?faq.faqId=237&pgModId=4",
+        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
+        "https://srcpa.gov/millage-rates/",
+        "https://taxestimator.srcpa.gov/",
+        "https://www.citizensfla.com/-/20260304-citizens-2026-multiperil-rates-to-drop-statewide",
+        "https://www.fema.gov/floodplain-management/community-rating-system",
+        "https://www.santarosa.fl.gov/162/Floodplain-Management",
+        "https://www.santarosa.fl.gov/272/Flood-Zones-Versus-Evacuation-Zones",
+        "https://www.santarosa.fl.gov/1033/Navarre-Community-Access-Road",
+        "https://www.santarosaschools.org/o/shs/article/2605423",
+        "https://www.wuwf.org/local-news/2025-08-27/us-98-traffic-congestion-threatens-special-ops-mission-at-hurlburt-field-base-official-says",
+        "https://broadbandnow.com/Florida/Navarre",
+        "https://www.fdot.gov/docs/default-source/info/d3/news/newsreleases/091616-US98ProjectDevMtgs.pdf"
+      ],
+      "contextualInbound": 2,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "home-shortlist",
+        "prompt": "Build a shortlist around your commute, property costs and housing needs.",
+        "tool": "/pcs-home-search",
+        "toolLabel": "Plan a local home search",
+        "bridge": "https://greggcostin.com/neighborhoods",
+        "bridgeLabel": "Compare the local community guides"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "moving-to-pensacola-2026-guide",
+      "url": "https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide",
+      "linkedSourceDomains": 28,
+      "sourceUrls": [
+        "https://usafacts.org/answers/how-many-people-live-in-the-us/metro-area/pensacola-fl/",
+        "https://worldpopulationreview.com/us-counties/florida/santa-rosa-county",
+        "https://www.bls.gov/regions/southeast/news-release/occupationalemploymentandwages_pensacola.htm",
+        "https://www.zillow.com/home-values/53856/pensacola-fl/",
+        "https://www.zillow.com/home-values/5013/gulf-breeze-fl/",
+        "https://www.zillow.com/home-values/42657/navarre-fl/",
+        "https://www.houzeo.com/housing-market/florida/pensacola",
+        "https://www.movoto.com/pensacola-fl/market-trends/",
+        "https://www.redfin.com/city/7162/FL/Gulf-Breeze/housing-market",
+        "https://www.rentcafe.com/average-rent-market-trends/us/fl/pensacola/",
+        "https://www.salary.com/research/cost-of-living/pensacola-fl",
+        "https://www.erieri.com/cost-of-living/united-states/florida/pensacola",
+        "https://srcpa.gov/exemptions/",
+        "https://insurify.com/homeowners-insurance/florida/pensacola/",
+        "https://www.insure.com/home-insurance/how-much-is-homeowners-insurance-in-pensacola-fl/",
+        "https://www.citizensfla.com/-/20260304-citizens-2026-multiperil-rates-to-drop-statewide",
+        "https://firststreet.org/city/pensacola/1255925_fsid/flood",
+        "https://www.fldoe.org/core/fileparse.php/18534/urlt/SchoolGradesResultsPacket25.pdf",
+        "https://news.uwf.edu/uwf-enrollment-exceeds-15000-students/",
+        "https://www.wuwf.org/local-news/2023-09-21/the-new-baptist-hospital-is-ready-to-start-a-new-healthcare-chapter-in-pensacola",
+        "https://weartv.com/news/local/st-engineering-launches-expansion-at-pensacola-airport-set-to-create-1700-jobs",
+        "https://www.studeri.org/news-detail/post_detail/navy-federals-boom-is-just-beginning",
+        "https://www.nhc.noaa.gov/data/tcr/AL192020_Sally.pdf",
+        "https://www.weather.gov/bmx/event_ivan2004paper",
+        "https://hurricanecity.com/city/pensacola.htm",
+        "https://flypensacola.com/pensacolas-airport-has-record-breaking-year-and-lowest-fares-in-the-u-s/",
+        "https://www.blueangels.navy.mil/show/",
+        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/",
+        "https://www.militaryfriendlynwf.com/economic-impact/",
+        "https://www.bestplaces.net/climate/city/florida/pensacola"
+      ],
+      "contextualInbound": 3,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "home-shortlist",
+        "prompt": "Build a shortlist around your commute, property costs and housing needs.",
+        "tool": "/pcs-home-search",
+        "toolLabel": "Plan a local home search",
+        "bridge": "https://greggcostin.com/neighborhoods",
+        "bridgeLabel": "Compare the local community guides"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "pcs-to-pensacola-2026-complete-guide",
+      "url": "https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide",
+      "linkedSourceDomains": 7,
+      "sourceUrls": [
+        "https://www.travel.dod.mil/About/News/Article/Article/3981433/dod-authorizes-additional-7-days-to-conus-temporary-lodging-expense/",
+        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/",
+        "https://www.militaryonesource.mil/education-employment/for-children-youth/interstate-compact-for-military-children/",
+        "https://mic3.net/",
+        "https://www.defense.gov/",
+        "https://www.militaryonesource.mil/resources/millife-guides/household-goods-claims/",
+        "https://floridarevenue.com/property/Pages/Taxpayers_Exemptions.aspx",
+        "https://www.fldoe.org/accountability/accountability-reporting/school-grades/",
+        "https://myairforcebenefits.us.af.mil/"
+      ],
+      "contextualInbound": 2,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "relocation-planning",
+        "prompt": "Turn your moving timeline into a housing search plan.",
+        "tool": "/pcs-guide",
+        "toolLabel": "Use the PCS planning guide",
+        "bridge": "https://greggcostin.com/neighborhoods",
+        "bridgeLabel": "Explore local community guides for the whole household"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "personal-property-activity-pcs-2026",
+      "url": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
+      "linkedSourceDomains": 8,
+      "sourceUrls": [
+        "https://www.ppa.mil/",
+        "https://media.defense.gov/2026/Jan/23/2003860547/-1/-1/1/PERSONAL-PROPERTY-ACTIVITY-IMPLEMENTATION-MEMORANDUM.PDF",
+        "https://www.army.mil/article/292127/department_of_war_personal_property_activity_launches_official_website",
+        "https://www.army.mil/article/293337/navigating_your_next_pcs_inside_the_dows_personal_property_activity",
+        "https://www.travel.dod.mil/",
+        "https://media.defense.gov/2025/May/27/2003723373/-1/-1/0/UTD_for_MAP_42-25(R)_Temporarily_Increase_Personally_Procured_Move_Reimbursement_and_Attachments.PDF",
+        "https://www.travel.dod.mil/About/News/Article/Article/3981433/dod-authorizes-additional-7-days-to-conus-temporary-lodging-expense/",
+        "https://www.militaryonesource.mil/resources/millife-guides/moving-claims/",
+        "https://download.militaryonesource.mil/12038/MOS/Factsheets/PPM%20and%20Rogue%20Operators_Fact%20Sheet.pdf",
+        "https://www.armytimes.com/pay-benefits/2026/07/01/dod-movers-try-to-ease-the-heavy-lift-for-troops-moving-this-summer/",
+        "https://www.military.com/spouse/military-relocation/pcs-moves/3-big-pcs-changes-are-coming-once-heres-what-service-members-need-know-peak-season.html"
+      ],
+      "contextualInbound": 1,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "relocation-planning",
+        "prompt": "Turn your moving timeline into a housing search plan.",
+        "tool": "/pcs-guide",
+        "toolLabel": "Use the PCS planning guide",
+        "bridge": "https://greggcostin.com/neighborhoods",
+        "bridgeLabel": "Explore local community guides for the whole household"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "va-loan-assumption-buyers-guide",
+      "url": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
+      "linkedSourceDomains": 7,
+      "sourceUrls": [
+        "https://www.law.cornell.edu/uscode/text/38/3714",
+        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-23-10.pdf",
+        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-23-27.pdf",
+        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-5.pdf",
+        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-17.pdf",
+        "https://www.ecfr.gov/current/title-38/section-36.4303",
+        "https://www.benefits.va.gov/warms/pam26_7.asp",
+        "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+        "https://www.freddiemac.com/pmms",
+        "https://www.fhfa.gov/data/nmdb-aggregate-statistics",
+        "https://www.benefits.va.gov/HOMELOANS/lender_statistics.asp",
+        "https://www.flsenate.gov/Laws/Statutes/2025/193.155",
+        "https://www.flsenate.gov/Laws/Statutes/2025/196.011"
+      ],
+      "contextualInbound": 2,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "purchase-budget",
+        "prompt": "Compare the full payment, cash needed and ownership plan for the home you are considering.",
+        "tool": "/mortgage-calculators",
+        "toolLabel": "Work through a purchase budget",
+        "bridge": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+        "bridgeLabel": "Include Florida closing costs in your plan"
+      }
+    },
+    {
+      "site": "pmh",
+      "slug": "va-loan-seller-concessions-truth",
+      "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+      "linkedSourceDomains": 6,
+      "sourceUrls": [
+        "https://www.benefits.va.gov/warms/pam26_7.asp",
+        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-14.pdf",
+        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-14-change1.pdf",
+        "https://benefits.va.gov/HOMELOANS/resources_circulars.asp",
+        "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+        "https://www.ecfr.gov/current/title-38/chapter-I/part-36/subject-group-ECFR40dddd48c9a4ff8/section-36.4313",
+        "https://selling-guide.fanniemae.com/sel/b3-4.1-02/interested-party-contributions-ipcs",
+        "https://www.nar.realtor/the-facts"
+      ],
+      "contextualInbound": 1,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "purchase-budget",
+        "prompt": "Compare the full payment, cash needed and ownership plan for the home you are considering.",
+        "tool": "/mortgage-calculators",
+        "toolLabel": "Work through a purchase budget",
+        "bridge": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+        "bridgeLabel": "Include Florida closing costs in your plan"
+      }
+    },
+    {
+      "site": "gc",
+      "slug": "closing-costs-florida-buyers",
+      "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+      "linkedSourceDomains": 0,
+      "sourceUrls": [],
+      "contextualInbound": 2,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "buyer-planning",
+        "prompt": "Use this guide to prepare the questions for your own purchase.",
+        "tool": "/resources/first-time-home-buyer",
+        "toolLabel": "Plan your next home purchase",
+        "bridge": "https://pensacolamilitaryhousing.com/va-loan-guide",
+        "bridgeLabel": "Using a VA loan? Review the VA buyer guide"
+      }
+    },
+    {
+      "site": "gc",
+      "slug": "fed-rate-hike-what-it-means",
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "linkedSourceDomains": 0,
+      "sourceUrls": [],
+      "contextualInbound": 0,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "buyer-planning",
+        "prompt": "Use this guide to prepare the questions for your own purchase.",
+        "tool": "/resources/first-time-home-buyer",
+        "toolLabel": "Plan your next home purchase",
+        "bridge": "https://pensacolamilitaryhousing.com/va-loan-guide",
+        "bridgeLabel": "Using a VA loan? Review the VA buyer guide"
+      }
+    },
+    {
+      "site": "gc",
+      "slug": "florida-insurance-relief-2026",
+      "url": "https://greggcostin.com/blog/florida-insurance-relief-2026",
+      "linkedSourceDomains": 0,
+      "sourceUrls": [],
+      "contextualInbound": 0,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "property-cost-review",
+        "prompt": "Before comparing homes, collect insurance questions for each property.",
+        "tool": "/resources/florida-home-insurance",
+        "toolLabel": "Use the Florida insurance guide",
+        "bridge": "https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers",
+        "bridgeLabel": "Check flood-zone questions before you make an offer"
+      }
+    },
+    {
+      "site": "gc",
+      "slug": "property-taxes-escambia-santa-rosa",
+      "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+      "linkedSourceDomains": 5,
+      "sourceUrls": [
+        "https://escambiataxcollector.com/property-tax/millage-rate-detail/",
+        "https://srcpa.gov/millage-rates/",
+        "https://escpa.org/",
+        "https://santarosaclerk.com/other-services/value-adjustment-board-public-notice/",
+        "https://taxfoundation.org/blog/florida-property-tax-proposal/"
+      ],
+      "contextualInbound": 3,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "property-cost-review",
+        "prompt": "Compare tax rules with the address and ownership plan you are considering.",
+        "tool": "/resources/florida-homestead-exemption",
+        "toolLabel": "Review homestead requirements",
+        "bridge": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+        "bridgeLabel": "Veteran buyer? See the county tax guide"
+      }
+    },
+    {
+      "site": "gc",
+      "slug": "what-moves-mortgage-rates",
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "linkedSourceDomains": 1,
+      "sourceUrls": [
+        "https://greggcostin.realscout.com/onboarding"
+      ],
+      "contextualInbound": 2,
+      "evidencePack": null,
+      "readerTask": null,
+      "nextStep": {
+        "goal": "buyer-planning",
+        "prompt": "Use this guide to prepare the questions for your own purchase.",
+        "tool": "/resources/first-time-home-buyer",
+        "toolLabel": "Plan your next home purchase",
+        "bridge": "https://pensacolamilitaryhousing.com/va-loan-guide",
+        "bridgeLabel": "Using a VA loan? Review the VA buyer guide"
+      }
+    }
+  ],
+  "briefs": [
+    {
+      "id": "full-payment",
+      "site": "pmh",
+      "workingTitle": "Your BAH budget after insurance, taxes and cash to close",
+      "action": "refresh",
+      "owner": "/blog/bah-2026-pensacola-what-can-you-afford",
+      "queryContains": [
+        "pensacola bah",
+        "bah pensacola",
+        "bah in pensacola"
+      ],
+      "readerTask": "Decide whether an actual property fits a military household's full budget.",
+      "originalValue": "A reusable property comparison worksheet, with an itemized example and sensitivity to insurance and holding period.",
+      "questions": [
+        "Which allowance applies to my orders?",
+        "What is outside principal and interest?",
+        "Which inputs need property-specific quotes?",
+        "How does a short hold change the decision?"
+      ],
+      "sourcePlan": [
+        "DTMO allowance tables and eligibility",
+        "VA loan rules",
+        "County taxing authorities",
+        "Dated property-specific insurance quotes if available; otherwise labeled scenarios"
+      ],
+      "sourceRisks": [
+        "Do not mix single-family parcel weights with an all-home price index.",
+        "Never turn a ZIP average into a parcel-specific tax or insurance quote."
+      ],
+      "inboundFrom": [
+        "/bah-rates",
+        "/bah-to-mortgage-guide"
+      ],
+      "outboundTo": [
+        "/mortgage-calculators",
+        "https://greggcostin.com/blog/closing-costs-florida-buyers"
+      ],
+      "conversionGoal": "purchase-budget",
+      "evidenceTier": "observed-query-intent-unconfirmed",
+      "evidenceGroups": [
+        {
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "observedQueryImpressions": 1305,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "observedQueryImpressions": 33,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "site": "pmh",
+          "query": "pensacola bah",
+          "impressions": 483,
+          "clicks": 1,
+          "position": 11.8,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "bah pensacola fl",
+          "impressions": 198,
+          "clicks": 1,
+          "position": 11.8,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "bah pensacola",
+          "impressions": 158,
+          "clicks": 0,
+          "position": 12.9,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "pensacola bah 2026",
+          "impressions": 127,
+          "clicks": 0,
+          "position": 7.4,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "nas pensacola bah",
+          "impressions": 75,
+          "clicks": 1,
+          "position": 6.1,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "bah pensacola fl 2026",
+          "impressions": 68,
+          "clicks": 1,
+          "position": 6.9,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "bah in pensacola fl",
+          "impressions": 67,
+          "clicks": 1,
+          "position": 9,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "pensacola bah rates",
+          "impressions": 44,
+          "clicks": 0,
+          "position": 8.2,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "bah in pensacola",
+          "impressions": 24,
+          "clicks": 0,
+          "position": 9.4,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "pensacola bah rate",
+          "impressions": 20,
+          "clicks": 0,
+          "position": 8.3,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "bah pensacola florida",
+          "impressions": 13,
+          "clicks": 0,
+          "position": 13,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "2025 bah pensacola o-3 with dependents official",
+          "impressions": 12,
+          "clicks": 0,
+          "position": 9.7,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        }
+      ],
+      "note": "Query totals describe these exported rows, not a page's traffic or market search volume. Groups from different sources are never added together."
+    },
+    {
+      "id": "training-housing",
+      "site": "pmh",
+      "workingTitle": "Student housing at Pensacola and Whiting: what to confirm before signing",
+      "action": "refresh",
+      "owner": "/flight-school-housing-pensacola",
+      "queueSlug": "nas-pensacola-student-housing-dorms-bah-off-base",
+      "queryContains": [
+        "navy a school",
+        "training air wing",
+        "flight school",
+        "corry station housing",
+        "whiting"
+      ],
+      "readerTask": "Confirm student housing eligibility and lease timing before committing to an off-base home.",
+      "originalValue": "A status-based decision tree and a printable list of questions for the housing office.",
+      "questions": [
+        "Which student status and orders matter?",
+        "Who confirms permission to live off base?",
+        "What should a spouse confirm?",
+        "What belongs in a short-notice lease plan?"
+      ],
+      "sourcePlan": [
+        "Official installation housing offices",
+        "Current training command reporting guidance",
+        "DTMO or service rules tied to the student's actual status"
+      ],
+      "sourceRisks": [
+        "Do not apply permanent-party allowances or dorm policy to all students.",
+        "Queries mention Whiting housing as well as training; inspect intent before grouping them."
+      ],
+      "inboundFrom": [
+        "/bases/corry-station",
+        "/bases/whiting-field"
+      ],
+      "outboundTo": [
+        "/military-lodging-pensacola",
+        "/pcs-guide"
+      ],
+      "conversionGoal": "relocation-planning",
+      "evidenceTier": "observed-query-intent-unconfirmed",
+      "evidenceGroups": [
+        {
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "observedQueryImpressions": 544,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "observedQueryImpressions": 33,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "site": "pmh",
+          "query": "nas whiting field housing",
+          "impressions": 125,
+          "clicks": 0,
+          "position": 36.2,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "whiting field base housing",
+          "impressions": 114,
+          "clicks": 0,
+          "position": 34.7,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "whiting pines military housing",
+          "impressions": 105,
+          "clicks": 0,
+          "position": 36.5,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "new homes near nas whiting field",
+          "impressions": 37,
+          "clicks": 0,
+          "position": 12.8,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "va loan whiting field",
+          "impressions": 18,
+          "clicks": 0,
+          "position": 10.3,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "training air wing five",
+          "impressions": 15,
+          "clicks": 0,
+          "position": 9.666666666666666,
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "whiting field va loans",
+          "impressions": 13,
+          "clicks": 0,
+          "position": 12.5,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "whiting field va loan",
+          "impressions": 13,
+          "clicks": 0,
+          "position": 13,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "va loans nas whiting field",
+          "impressions": 12,
+          "clicks": 0,
+          "position": 9.7,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "va loans near nas whiting field",
+          "impressions": 11,
+          "clicks": 0,
+          "position": 11.4,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "whiting field nas housing",
+          "impressions": 11,
+          "clicks": 0,
+          "position": 35.4,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "whiting field",
+          "impressions": 11,
+          "clicks": 0,
+          "position": 44.9,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        }
+      ],
+      "note": "Query totals describe these exported rows, not a page's traffic or market search volume. Groups from different sources are never added together."
+    },
+    {
+      "id": "rent-buy-hold",
+      "site": "pmh",
+      "workingTitle": "Rent or buy near Hurlburt and Eglin: compare a two-, three- and five-year hold",
+      "action": "intent-review",
+      "owner": "/on-base-vs-off-base-eglin-afb",
+      "queueSlug": "military-rentals-fort-walton-beach-hurlburt-tour",
+      "queryContains": [
+        "houses for rent military",
+        "hurlburt field off base",
+        "eglin afb off base"
+      ],
+      "readerTask": "Compare cash, flexibility and exit costs across realistic housing options.",
+      "originalValue": "An editable break-even table with separately labeled resale, maintenance, vacancy and selling-cost assumptions.",
+      "questions": [
+        "What cash is tied up?",
+        "What happens if orders change?",
+        "Which expenses remain after moving out?",
+        "When is renting the more practical choice?"
+      ],
+      "sourcePlan": [
+        "Current local rental observations with dates and selection method",
+        "VA rules",
+        "Documented loan and cost assumptions"
+      ],
+      "sourceRisks": [
+        "No universal three-year buy rule.",
+        "Do not promise appreciation or ability to rent the home.",
+        "Do not treat scattered rental listings as market averages."
+      ],
+      "inboundFrom": [
+        "/bases/hurlburt-field",
+        "/bases/eglin-afb"
+      ],
+      "outboundTo": [
+        "/mortgage-calculators",
+        "https://greggcostin.com/resources/florida-home-insurance"
+      ],
+      "conversionGoal": "purchase-budget",
+      "evidenceTier": "observed-query-intent-unconfirmed",
+      "evidenceGroups": [
+        {
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "observedQueryImpressions": 211,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "observedQueryImpressions": 5,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "site": "pmh",
+          "query": "eglin afb off base housing",
+          "impressions": 109,
+          "clicks": 0,
+          "position": 33.3,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "hurlburt field off base housing",
+          "impressions": 102,
+          "clicks": 0,
+          "position": 32.6,
+          "sourceFile": "gsc-queries-2026-09-04.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "query"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "houses for rent military in fwb florida",
+          "impressions": 4,
+          "clicks": 0,
+          "position": 7,
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "hurlburt field off base free military weight pcs",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 1,
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
+        }
+      ],
+      "note": "Query totals describe these exported rows, not a page's traffic or market search volume. Groups from different sources are never added together."
+    },
+    {
+      "id": "property-insurance-packet",
+      "site": "gc",
+      "workingTitle": "Before you offer: the roof, flood and insurance documents to request",
+      "action": "refresh",
+      "owner": "/resources/florida-home-insurance",
+      "queryContains": [
+        "pensacola homeowners insurance",
+        "florida home insurance",
+        "pensacola flood"
+      ],
+      "readerTask": "Gather the information needed for a property-specific insurance quote before an offer deadline.",
+      "originalValue": "A buyer's document-request checklist separating homeowner, wind and flood coverage questions.",
+      "questions": [
+        "Which roof records does the insurer need?",
+        "Which inspections may help?",
+        "What does a flood map answer?",
+        "Which exclusions and deductibles need a written quote?"
+      ],
+      "sourcePlan": [
+        "Florida Office of Insurance Regulation",
+        "FEMA and NFIP",
+        "Insurer underwriting documents where available"
+      ],
+      "sourceRisks": [
+        "No county average represented as a personal quote.",
+        "Rate filings do not guarantee a particular renewal premium."
+      ],
+      "inboundFrom": [
+        "/blog/florida-insurance-relief-2026",
+        "/buy"
+      ],
+      "outboundTo": [
+        "/resources/first-time-home-buyer",
+        "https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers"
+      ],
+      "conversionGoal": "property-cost-review",
+      "evidenceTier": "editorial-hypothesis",
+      "evidenceGroups": [],
+      "evidence": [],
+      "note": "Query totals describe these exported rows, not a page's traffic or market search volume. Groups from different sources are never added together."
+    },
+    {
+      "id": "part-year-homestead",
+      "site": "pmh",
+      "workingTitle": "Veteran homestead eligibility with two homes: questions to resolve before buying",
+      "action": "refresh",
+      "owner": "/blog/florida-veteran-property-tax-county-guide",
+      "queueSlug": "florida-property-tax-100-percent-disabled-veteran-part-year",
+      "queryContains": [
+        "part time home",
+        "100% va",
+        "disabled veteran property tax",
+        "florida veteran property tax"
+      ],
+      "readerTask": "Identify the residency, ownership and application questions to take to the property appraiser.",
+      "originalValue": "A documented eligibility checklist with examples clearly separated from eligibility determinations.",
+      "questions": [
+        "Which home is the permanent residence?",
+        "What evidence does the appraiser request?",
+        "Which dates apply?",
+        "How do military absence rules affect the answer?"
+      ],
+      "sourcePlan": [
+        "Current Florida statutes",
+        "Florida Department of Revenue",
+        "County property appraiser instructions"
+      ],
+      "sourceRisks": [
+        "Months spent in Florida alone do not establish or disprove permanent residency.",
+        "Do not make a blanket eligibility ruling from a search query."
+      ],
+      "inboundFrom": [
+        "/va-disability-property-tax-florida",
+        "/florida-homestead-exemption-military"
+      ],
+      "outboundTo": [
+        "/va-disability-property-tax-florida",
+        "https://greggcostin.com/resources/florida-homestead-exemption"
+      ],
+      "conversionGoal": "property-cost-review",
+      "evidenceTier": "observed-query-intent-unconfirmed",
+      "evidenceGroups": [
+        {
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "observedQueryImpressions": 8,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "site": "pmh",
+          "query": "if i buy a home in florida and are 100% va p&t disabled do i need to pay property tax? what about if it is my part time home and i live in nc half of the year?",
+          "impressions": 6,
+          "clicks": 0,
+          "position": 8,
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "does 100% va homestead exemption apply if only one of the two on deed is fully disabled florida",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 6,
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
+        },
+        {
+          "site": "pmh",
+          "query": "what is the florida property tax rate for 100% va disability",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 7,
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
+        }
+      ],
+      "note": "Query totals describe these exported rows, not a page's traffic or market search volume. Groups from different sources are never added together."
+    }
+  ],
+  "runChecklist": [
+    "Read this plan and current source-availability records. Complete at most one article or substantive refresh.",
+    "Resolve actual intent ownership against both sites; a token match is not proof of duplication or a content gap.",
+    "Persist the configured research model's sourced pack and uncertain facts. Independently verify load-bearing claims before writing.",
+    "The configured writer answers the reader task, provides a reusable checklist/table/calculation, and follows BLOG-CONTRACT.md. Never invent personal experience.",
+    "New imagery follows the existing fetch, view, license and responsive-variant workflow.",
+    "Factory evidence gate, score gate, formatting and site audits must pass. Keep article dates tied to substantive changes.",
+    "Use the article journey's first-party tool, relevant companion guide and one inquiry path. Plan two relevant inbound links; exclude sitewide furniture.",
+    "Record actual models, exceptions, sources, revisions, one hypothesis and deployment status. Do not self-promote performance rules.",
+    "At 28+ days evaluate comparable page/query cohorts and accepted inquiry outcomes. If evidence is insufficient, keep collecting instead of rewriting again."
+  ]
+}

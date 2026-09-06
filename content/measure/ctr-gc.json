@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 2,
+  "source": "gsc-pages-gc-2026-09-04.csv",
+  "generated": "2026-09-05",
+  "window": {
+    "start": null,
+    "end": null,
+    "searchType": null,
+    "dimensions": [
+      "page"
+    ],
+    "filters": null,
+    "complete": false,
+    "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+  },
+  "note": "Review candidates only. Uncertainty intervals do not control for query mix or prove a title caused clicks. Exact dates, filters and comparable post-change data are required to evaluate experiments.",
+  "pages": []
+}

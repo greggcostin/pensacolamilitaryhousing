@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "templateOnly": true,
+  "article": {
+    "site": "pmh",
+    "slug": "replace-with-article-slug"
+  },
+  "models": {
+    "research": "record-actual-model",
+    "write": "record-actual-model-after-writing"
+  },
+  "readerTask": "",
+  "originalValue": "",
+  "claims": [
+    {
+      "id": "claim-1",
+      "claim": "",
+      "kind": "fact",
+      "status": "uncertain",
+      "sourceUrl": "",
+      "accessed": "",
+      "asOf": "",
+      "locator": "",
+      "loadBearing": true,
+      "independentCheck": {
+        "reviewer": "",
+        "date": "",
+        "finding": ""
+      }
+    }
+  ],
+  "uncertainFacts": [],
+  "reviewNotes": "Placeholders are not evidence. Independently review claims before declaring them verified. Hypothetical calculations must stay illustrations, never client stories."
+}

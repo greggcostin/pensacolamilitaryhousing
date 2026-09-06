@@ -1,0 +1,27 @@
+ARCHIVED BASELINE OUTPUT, a621c4c. Contains known decision errors; not current guidance. See report.md.
+
+UNDERCLICKED (GSC 2026-09-04): impressions >= 30, position <= 15, CTR below the position benchmark
+
+lost/mo  clk    imp    ctr   pos  url
+    182   48   9117   0.5%   8.5  /bah-rates
+     24    9   1320   0.7%   9.8  /bases/corry-station
+     15    1    638   0.2%   9.9  /communities/fort-walton-beach
+      7    1    322   0.3%   9.2  /communities/navarre
+      7    1    320   0.3%   9.0  /communities/crestview
+      7    1    316   0.3%   9.8  /communities/niceville
+      6   11    479   2.3%   8.0  /pensacola-flood-zones-homebuyers
+      6    1    488   0.2%  11.3  /bases/duke-field
+      3    0     53   0.0%   4.4  [blog] /blog/living-in-gulf-breeze-pros-cons
+      2    0    123   0.0%  13.5  /communities/mary-esther
+      2    0    103   0.0%  12.0  /communities/destin
+      2    0     50   0.0%   7.1  /gulf-breeze-vs-navarre
+      1    0     99   0.0%  12.1  /military-pcs-tax-deductions
+      1    0     97   0.0%  11.3  /communities/gulf-breeze
+      1    0     53   0.0%  13.7  /on-base-vs-off-base-eglin-afb
+      1    0     41   0.0%   7.9  [blog] /blog/personal-property-activity-pcs-2026
+      1    0     39   0.0%   8.5  /niceville-vs-crestview
+      1    0     39   0.0%  11.1  [blog] /blog/florida-homestead-exemption-military
+      1    0     33   0.0%   9.3  /military-rental-property-management
+      1    0     31   0.0%   8.5  /homes-for-sale-corry-station
+
+20 pages; 271 clicks/period left on the table vs benchmark

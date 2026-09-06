@@ -1,13 +1,14 @@
 // Pre-publish quality scorer for BOTH blog engines: content depth, evidence discipline,
 // local specificity, SEO basics, GEO (AI-citation) shape, and share-worthiness. The factories
 // gate the floor (words, links, FAQs, em dashes, walls); this scores the ceiling and tells the
-// writer exactly what to fix. The engines require 80+ on every NEW post before staging and
+// writer exactly what to fix. The engines use 80+ as a house editorial check on every NEW post before staging and
 // record the score in the ledger so blog-retro.mjs can learn which components move search.
 //
 //   node scripts/score-post.mjs <slug|fragment path> [--site pmh|gc]   # one post, itemized
 //   node scripts/score-post.mjs --all [--site pmh|gc]                  # table for every post
 //   add --json for machine output, --gate [--min 80] to exit 1 below the bar
 import { existsSync } from "node:fs";
+import { externalSources, evidenceGate } from "./article-evidence.mjs";
 import { ROOT, SITES, siteOf, parseFragment, listFragments, strip, words, sentences, tokens, overlap, PLACES, SOURCE_CUE, VINTAGE, QWORDS } from "./blog-lib.mjs";
 
 const IMPERATIVE = /^(ask|get|check|shop|call|pull|verify|budget|compare|lock|price|confirm|know|run|order|request|schedule|review|start|set|have|keep|use|read|walk|treat|document|file|apply|negotiate|avoid|plan|expect|bring|book|measure|write|list|test|inspect|hire|talk|visit|drive|tour|photograph|save|skip|wait|watch|decide|pick|choose|add|remove|update|refresh|replace|install|fix|gather|prepare|submit|sign|close)\b/i;
@@ -19,7 +20,7 @@ export function scorePost(spec, body, siteKey) {
   const text = strip(body);
   const total = words(body);
   const fails = [];
-  const notes = [];
+  const notes = ["This is an editorial lint score, not a prediction of rankings, AI citations, shares or leads."];
   const pct = (n, d) => (d ? n / d : 0);
   const clamp = (v, max) => Math.max(0, Math.min(max, v));
 
@@ -57,24 +58,26 @@ export function scorePost(spec, body, siteKey) {
   const sourced = numeric.filter((s) => SOURCE_CUE.test(s));
   const dated = numeric.filter((s) => VINTAGE.test(s));
   const quotable = sourced.filter((s) => s.split(" ").length <= 35 && VINTAGE.test(s));
-  const distinctSources = new Set(sents.flatMap((s) => (s.match(SOURCE_CUE) || []).map((m) => m.toLowerCase().trim()))).size;
+  const sourceUrls = externalSources(body);
+  const distinctSources = new Set(sourceUrls.map((u) => new URL(u).hostname)).size;
   const sourcesSection = /<h2[^>]*>\s*sources/i.test(body) || /\bSources:/i.test(text);
   let evidence = 0;
-  evidence += clamp(pct(sourced.length, numeric.length) / 0.6, 1) * 8;
-  evidence += clamp(pct(dated.length, numeric.length) / 0.5, 1) * 5;
+  evidence += clamp(distinctSources / 3, 1) * 8;
+  evidence += sourceUrls.length ? clamp(pct(dated.length, numeric.length) / 0.5, 1) * 5 : 0;
   evidence += clamp(distinctSources / 4, 1) * 4;
-  evidence += sourcesSection ? 3 : 0;
+  evidence += sourcesSection && sourceUrls.length ? 3 : 0;
   if (numeric.length && pct(sourced.length, numeric.length) < 0.6) fails.push(`evidence: ${sourced.length}/${numeric.length} numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself`);
   if (numeric.length && pct(dated.length, numeric.length) < 0.5) fails.push(`evidence: ${dated.length}/${numeric.length} numeric sentences carry a vintage (month/year); date the perishable ones`);
-  if (distinctSources < 4) fails.push(`evidence: ${distinctSources} distinct source cue(s); real depth cites 4+ named sources`);
+  if (distinctSources < 4) fails.push(`evidence: ${distinctSources} distinct linked source domain(s); verify relevant primary sources and their claim support`);
   if (!sourcesSection) fails.push("evidence: no Sources section or Sources line");
-  if (!numeric.length) fails.push("evidence: no numeric sentences at all; a post with no figures cannot be cited");
+  if (!numeric.length) notes.push("No numerical claims: answer the reader accurately; do not add numbers to earn points.");
 
   // ---- local specificity (10) ------------------------------------------------------------
   const places = (text.match(PLACES) || []).length;
   const placesPerK = pct(places, total / 1000);
-  const local = clamp(placesPerK / 8, 1) * 10;
-  if (placesPerK < 8) fails.push(`local: ${places} Gulf Coast place/base mentions per ${total} words (target 8+ per 1,000): anchor examples to real places, ZIPs, bases`);
+  const distinctPlaces = new Set((text.match(PLACES) || []).map((x) => x.toLowerCase())).size;
+  const local = clamp(distinctPlaces / 3, 1) * 10;
+  if (!distinctPlaces) fails.push("local: explain how the advice applies to this service area; never repeat place names just to raise the score");
 
   // ---- SEO (20) --------------------------------------------------------------------------
   const kws = spec.targetKeywords && spec.targetKeywords.length ? spec.targetKeywords : String(spec.keywords || "").split(",").map((s) => s.trim()).filter(Boolean);
@@ -105,7 +108,7 @@ export function scorePost(spec, body, siteKey) {
   // ---- GEO (15) --------------------------------------------------------------------------
   const qa = spec.quickAnswer || "";
   const qaSent = qa ? qa.split(/(?<=[.!?])\s+/).filter(Boolean).length : 0;
-  const qaOk = qa && /\d/.test(qa) && qaSent >= 2 && qaSent <= 4;
+  const qaOk = qa && words(qa) <= 85 && qaSent >= 2 && qaSent <= 4;
   const takeaways = (spec.takeaways && spec.takeaways.length >= 3) || /key takeaways/i.test(text);
   let geo = 0;
   geo += qaOk ? 5 : 0;
@@ -115,9 +118,9 @@ export function scorePost(spec, body, siteKey) {
   geo += clamp(pct(faqQ, faqs.length), 1) * 1;
   geo += spec.dateModified || spec.datePublished ? 1 : 0;
   geo += (spec.perishables && spec.perishables.length) || !numeric.some((s) => /\b(rate|median|average|inventory|premium|deadline|expires)\b/i.test(s)) ? 1 : 0;
-  if (!qaOk) fails.push("geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)");
+  if (!qaOk) fails.push("geo: quickAnswer missing or not 2-4 concise sentences under 85 words; answer the actual question and source any factual claims");
   if (!takeaways) fails.push("geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)");
-  if (quotable.length < 3) fails.push(`geo: ${quotable.length} quotable sentence(s) (a figure + a named source + a date in under 35 words); write 3+`);
+  if (quotable.length < 3) fails.push(`geo: ${quotable.length} quotable sentence(s) (a figure + a named source + a date in under 35 words); verify the claims, and do not add figures merely for points`);
   if (!spec.shareHook) fails.push("geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)");
   if (!(spec.perishables && spec.perishables.length) && numeric.some((s) => /\b(rate|median|average|inventory|premium|deadline|expires)\b/i.test(s))) fails.push("geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop");
 
@@ -133,16 +136,19 @@ export function scorePost(spec, body, siteKey) {
   share += checklist ? 2 : 0;
   share += actionItems >= 3 ? 2 : 0;
   share += worked ? 2 : 0;
-  share += ownVoice ? 1 : 0;
-  if (!table) fails.push("share: no table (a comparison or numbers table is the most shared, most cited unit)");
+  share += spec.editorial?.originalValue ? 1 : 0;
+  if (!table) fails.push("share: no comparison table; add one only if it helps the reader compare real options");
   if (!checklist) fails.push("share: no checklist (an ordered list of 4+ steps, or a bold-led bullet set)");
   if (actionItems < 3) fails.push(`share: ${actionItems} imperative action items (target 3+ concrete things to do)`);
   if (!worked) fails.push("share: no worked example with real numbers");
-  if (!ownVoice) fails.push("share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)");
+  if (!spec.editorial?.originalValue) notes.push("Describe the original reader value in editorial.originalValue. A documented checklist or clearly labeled calculation is useful; first-person anecdotes are never required.");
 
   const score = Math.round(structure + evidence + local + seo + geo + share);
+  const review = evidenceGate(spec, body, siteKey, ROOT, new Date().toISOString().slice(0, 10));
+  fails.push(...review.errors.map((e) => "traceability: " + e));
+  notes.push(...review.warnings);
   return {
-    score, grade: score >= 90 ? "A" : score >= 80 ? "B" : score >= 70 ? "C" : "D",
+    evidenceErrors: review.errors, score, grade: score >= 90 ? "A" : score >= 80 ? "B" : score >= 70 ? "C" : "D",
     components: { structure: +structure.toFixed(1), evidence: +evidence.toFixed(1), local: +local.toFixed(1), seo: +seo.toFixed(1), geo: +geo.toFixed(1), share: +share.toFixed(1) },
     facts: { words: total, h2s: h2s.length, questionH2s: qH2, directAnswers: direct, walls, scanAids: aids, numericSentences: numeric.length, sourcedSentences: sourced.length, datedSentences: dated.length, quotable: quotable.length, distinctSources, placesPerK: +placesPerK.toFixed(1), links, faqs: faqs.length, table, checklist, actionItems, workedExample: worked, ownVoice, quickAnswer: !!qaOk, takeaways: !!takeaways, shareHook: !!spec.shareHook, perishables: (spec.perishables || []).length },
     fails, notes,
@@ -158,7 +164,7 @@ function resolve(arg, siteKey) {
   throw new Error(`no fragment for "${arg}"`);
 }
 
-if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, "/")}` || process.argv[1].endsWith("score-post.mjs")) {
+if (import.meta.url === `file:///${(process.argv[1] || "").replace(/\\/g, "/")}` || (process.argv[1] || "").endsWith("score-post.mjs")) {
   const args = process.argv.slice(2);
   const siteArg = args.includes("--site") ? args[args.indexOf("--site") + 1] : null;
   const min = args.includes("--min") ? +args[args.indexOf("--min") + 1] : 80;
@@ -174,6 +180,7 @@ if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, "/")}` || proc
       const avg = (rows.reduce((a, r) => a + r.score, 0) / rows.length).toFixed(1);
       console.log(`\n${rows.length} posts, average ${avg}; below ${min}: ${rows.filter((r) => r.score < min).map((r) => r.slug).join(", ") || "none"}`);
     }
+    if (gate && rows.some((r) => r.score < min || r.evidenceErrors.length)) { console.error("GATE: at least one article failed the score or evidence requirements"); process.exitCode = 1; }
   } else {
     const target = args.find((a) => !a.startsWith("--") && a !== siteArg && !/^\d+$/.test(a));
     if (!target) { console.error("usage: node scripts/score-post.mjs <slug|path> [--site pmh|gc] | --all"); process.exit(2); }
@@ -187,6 +194,6 @@ if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, "/")}` || proc
       console.log("facts:", JSON.stringify(r.facts));
       console.log(r.fails.length ? `\nfix list (${r.fails.length}):\n  - ` + r.fails.join("\n  - ") : "\nno fails");
     }
-    if (gate && r.score < min) { console.error(`\nGATE: ${r.score} < ${min}`); process.exit(1); }
+    if (gate && (r.score < min || r.evidenceErrors.length)) { console.error(`\nGATE: ${r.score} < ${min}`); process.exit(1); }
   }
 }

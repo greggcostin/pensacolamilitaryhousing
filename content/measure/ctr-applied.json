@@ -1,5 +1,5 @@
 {
-  "note": "Snippet changes applied from docs/ctr-proposals-2026-09.md. The next gsc-pages export compares against these baselines; the delta becomes a lesson.",
+  "note": "Sep 4 snippet changes are observational experiments, not established wins. Baseline date ranges and filters are unknown; a later overlapping rolling export cannot establish lift. Collect comparable pre/post cohorts and review confounds before interpreting.",
   "applied": [
     {
       "date": "2026-09-04",
@@ -11,8 +11,29 @@
         "source": "gsc-pages-2026-09-04",
         "clicks": 48,
         "impressions": 9117,
-        "ctr": 0.005,
-        "position": 8.5
+        "ctr": 0.0052648897663705166,
+        "position": 8.5,
+        "window": {
+          "start": null,
+          "end": null,
+          "filters": null,
+          "complete": false
+        }
+      },
+      "id": "pmh-snippet-2026-09-04-1",
+      "site": "pmh",
+      "status": "collecting",
+      "cooldownDays": 28,
+      "hypothesis": "A clearer, accurate snippet may attract more of the intended readers.",
+      "primaryMetric": "organic clicks in a comparable page/query cohort",
+      "guardrailMetric": "accepted inquiries per article landing session",
+      "minimumWindowDays": 28,
+      "outcome": "unknown",
+      "comparison": {
+        "comparable": false,
+        "reasons": [
+          "Exact baseline date range and filters are unknown; no separate post-change window yet."
+        ]
       }
     },
     {
@@ -25,9 +46,31 @@
         "source": "gsc-pages-2026-09-04",
         "clicks": 0,
         "impressions": 53,
-        "ctr": 0,
-        "position": 4.4
+        "ctr": 0.0,
+        "position": 4.4,
+        "window": {
+          "start": null,
+          "end": null,
+          "filters": null,
+          "complete": false
+        }
+      },
+      "id": "pmh-snippet-2026-09-04-2",
+      "site": "pmh",
+      "status": "collecting",
+      "cooldownDays": 28,
+      "hypothesis": "A clearer, accurate snippet may attract more of the intended readers.",
+      "primaryMetric": "organic clicks in a comparable page/query cohort",
+      "guardrailMetric": "accepted inquiries per article landing session",
+      "minimumWindowDays": 28,
+      "outcome": "unknown",
+      "comparison": {
+        "comparable": false,
+        "reasons": [
+          "Exact baseline date range and filters are unknown; no separate post-change window yet."
+        ]
       }
     }
-  ]
+  ],
+  "schemaVersion": 2
 }

@@ -1,0 +1,454 @@
+[
+ {
+  "site": "gc",
+  "slug": "what-moves-mortgage-rates",
+  "score": 59,
+  "grade": "D",
+  "components": {
+   "structure": 21.6,
+   "evidence": 5.7,
+   "local": 5.1,
+   "seo": 18.2,
+   "geo": 2,
+   "share": 6
+  },
+  "fails": [
+   "structure: only 3/8 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+   "evidence: 1/14 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 1/14 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "evidence: no Sources section or Sources line",
+   "local: 6 Gulf Coast place/base mentions per 1457 words (target 8+ per 1,000): anchor examples to real places, ZIPs, bases",
+   "seo: 5 internal links (target 8+; hubs, money pages, sibling posts)",
+   "seo: 5 FAQs (target 6+ People-Also-Ask questions)",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: 0 quotable sentence(s) (a figure + a named source + a date in under 35 words); write 3+",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no table (a comparison or numbers table is the most shared, most cited unit)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "gc",
+  "slug": "closing-costs-florida-buyers",
+  "score": 63,
+  "grade": "D",
+  "components": {
+   "structure": 17.1,
+   "evidence": 9.9,
+   "local": 10,
+   "seo": 18.5,
+   "geo": 3.3,
+   "share": 4
+  },
+  "fails": [
+   "structure: only 2/9 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+   "structure: 3 scan aids for 1732 words (target one list/table/figure per 250 words)",
+   "evidence: 5/13 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 1/13 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "evidence: no Sources section or Sources line",
+   "seo: 5 internal links (target 8+; hubs, money pages, sibling posts)",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: 1 quotable sentence(s) (a figure + a named source + a date in under 35 words); write 3+",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no table (a comparison or numbers table is the most shared, most cited unit)",
+   "share: 0 imperative action items (target 3+ concrete things to do)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "gc",
+  "slug": "fed-rate-hike-what-it-means",
+  "score": 68,
+  "grade": "D",
+  "components": {
+   "structure": 19.4,
+   "evidence": 16.4,
+   "local": 1.5,
+   "seo": 18,
+   "geo": 6,
+   "share": 7
+  },
+  "fails": [
+   "structure: only 3/8 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+   "structure: 3 scan aids for 1693 words (target one list/table/figure per 250 words)",
+   "evidence: 10/30 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "local: 2 Gulf Coast place/base mentions per 1693 words (target 8+ per 1,000): anchor examples to real places, ZIPs, bases",
+   "seo: primary keyword not in the lead or first 100 words",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no table (a comparison or numbers table is the most shared, most cited unit)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "best-pensacola-neighborhoods-by-rank-bah",
+  "score": 72,
+  "grade": "C",
+  "components": {
+   "structure": 20.2,
+   "evidence": 10.9,
+   "local": 10,
+   "seo": 19.8,
+   "geo": 6,
+   "share": 5
+  },
+  "fails": [
+   "structure: 1 paragraph(s) over 85 words; split them or convert to a list",
+   "structure: 1 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+   "structure: 6 scan aids for 2739 words (target one list/table/figure per 250 words)",
+   "evidence: 10/70 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 14/70 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "seo: 1 FAQ answer(s) outside 40-95 words",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no checklist (an ordered list of 4+ steps, or a bold-led bullet set)",
+   "share: 0 imperative action items (target 3+ concrete things to do)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "gc",
+  "slug": "florida-insurance-relief-2026",
+  "score": 74,
+  "grade": "C",
+  "components": {
+   "structure": 17,
+   "evidence": 19,
+   "local": 5,
+   "seo": 20,
+   "geo": 6,
+   "share": 7
+  },
+  "fails": [
+   "structure: only 2/8 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+   "structure: 5/8 sections open with a 15-90 word direct answer; put the answer sentence first under every H2",
+   "structure: 4 scan aids for 1999 words (target one list/table/figure per 250 words)",
+   "evidence: 12/23 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "local: 8 Gulf Coast place/base mentions per 1999 words (target 8+ per 1,000): anchor examples to real places, ZIPs, bases",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no table (a comparison or numbers table is the most shared, most cited unit)"
+  ]
+ },
+ {
+  "site": "gc",
+  "slug": "property-taxes-escambia-santa-rosa",
+  "score": 74,
+  "grade": "C",
+  "components": {
+   "structure": 20.7,
+   "evidence": 12.1,
+   "local": 10,
+   "seo": 18,
+   "geo": 6,
+   "share": 7
+  },
+  "fails": [
+   "structure: only 4/11 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
+   "structure: 7 scan aids for 2153 words (target one list/table/figure per 250 words)",
+   "evidence: 19/55 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 19/55 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "evidence: no Sources section or Sources line",
+   "seo: primary keyword not in the lead or first 100 words",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no table (a comparison or numbers table is the most shared, most cited unit)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "va-loan-assumption-buyers-guide",
+  "score": 78,
+  "grade": "C",
+  "components": {
+   "structure": 23.5,
+   "evidence": 14.5,
+   "local": 6.5,
+   "seo": 20,
+   "geo": 6,
+   "share": 7
+  },
+  "fails": [
+   "structure: 2 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+   "structure: 10 scan aids for 4008 words (target one list/table/figure per 250 words)",
+   "evidence: 34/97 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 27/97 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "local: 21 Gulf Coast place/base mentions per 4008 words (target 8+ per 1,000): anchor examples to real places, ZIPs, bases",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: 0 imperative action items (target 3+ concrete things to do)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "best-neighborhoods-eglin-afb-families",
+  "score": 80,
+  "grade": "B",
+  "components": {
+   "structure": 23.6,
+   "evidence": 15.9,
+   "local": 10,
+   "seo": 20,
+   "geo": 6,
+   "share": 5
+  },
+  "fails": [
+   "structure: 2 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+   "structure: 6 scan aids for 2348 words (target one list/table/figure per 250 words)",
+   "evidence: 16/42 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 16/42 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no checklist (an ordered list of 4+ steps, or a bold-led bullet set)",
+   "share: 1 imperative action items (target 3+ concrete things to do)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "living-in-gulf-breeze-pros-cons",
+  "score": 80,
+  "grade": "B",
+  "components": {
+   "structure": 23.3,
+   "evidence": 16,
+   "local": 10,
+   "seo": 20,
+   "geo": 6,
+   "share": 5
+  },
+  "fails": [
+   "structure: 6 scan aids for 2577 words (target one list/table/figure per 250 words)",
+   "evidence: 23/61 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 24/61 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no checklist (an ordered list of 4+ steps, or a bold-led bullet set)",
+   "share: 0 imperative action items (target 3+ concrete things to do)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "va-loan-seller-concessions-truth",
+  "score": 80,
+  "grade": "B",
+  "components": {
+   "structure": 23.7,
+   "evidence": 17.3,
+   "local": 6,
+   "seo": 20,
+   "geo": 6,
+   "share": 7
+  },
+  "fails": [
+   "structure: 2 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+   "structure: 8 scan aids for 2917 words (target one list/table/figure per 250 words)",
+   "evidence: 14/60 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "local: 14 Gulf Coast place/base mentions per 2917 words (target 8+ per 1,000): anchor examples to real places, ZIPs, bases",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: 0 imperative action items (target 3+ concrete things to do)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "pcs-to-pensacola-2026-complete-guide",
+  "score": 81,
+  "grade": "B",
+  "components": {
+   "structure": 22.7,
+   "evidence": 16.3,
+   "local": 10,
+   "seo": 20,
+   "geo": 4.7,
+   "share": 7
+  },
+  "fails": [
+   "structure: 5/8 sections open with a 15-90 word direct answer; put the answer sentence first under every H2",
+   "structure: 3 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+   "structure: 6 scan aids for 2412 words (target one list/table/figure per 250 words)",
+   "evidence: 21/43 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 12/43 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: 2 quotable sentence(s) (a figure + a named source + a date in under 35 words); write 3+",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no checklist (an ordered list of 4+ steps, or a bold-led bullet set)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "personal-property-activity-pcs-2026",
+  "score": 81,
+  "grade": "B",
+  "components": {
+   "structure": 24.3,
+   "evidence": 14.5,
+   "local": 8.2,
+   "seo": 20,
+   "geo": 4.7,
+   "share": 9
+  },
+  "fails": [
+   "structure: 1 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+   "structure: 8 scan aids for 2426 words (target one list/table/figure per 250 words)",
+   "evidence: 8/42 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "local: 16 Gulf Coast place/base mentions per 2426 words (target 8+ per 1,000): anchor examples to real places, ZIPs, bases",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: 2 quotable sentence(s) (a figure + a named source + a date in under 35 words); write 3+",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "bah-2026-pensacola-what-can-you-afford",
+  "score": 82,
+  "grade": "B",
+  "components": {
+   "structure": 20.2,
+   "evidence": 15,
+   "local": 10,
+   "seo": 20,
+   "geo": 12,
+   "share": 5
+  },
+  "fails": [
+   "structure: 1 paragraph(s) over 85 words; split them or convert to a list",
+   "structure: 2 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+   "structure: 8 scan aids for 3577 words (target one list/table/figure per 250 words)",
+   "evidence: 31/89 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 30/89 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no checklist (an ordered list of 4+ steps, or a bold-led bullet set)",
+   "share: 0 imperative action items (target 3+ concrete things to do)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "florida-homestead-exemption-military",
+  "score": 83,
+  "grade": "B",
+  "components": {
+   "structure": 23.9,
+   "evidence": 16,
+   "local": 10,
+   "seo": 20,
+   "geo": 6,
+   "share": 7
+  },
+  "fails": [
+   "structure: 1 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+   "structure: 7 scan aids for 2388 words (target one list/table/figure per 250 words)",
+   "evidence: 13/43 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: 0 imperative action items (target 3+ concrete things to do)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "moving-to-pensacola-2026-guide",
+  "score": 83,
+  "grade": "B",
+  "components": {
+   "structure": 23.1,
+   "evidence": 16.7,
+   "local": 10,
+   "seo": 18,
+   "geo": 6,
+   "share": 9
+  },
+  "fails": [
+   "structure: 1 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+   "structure: 9 scan aids for 4371 words (target one list/table/figure per 250 words)",
+   "evidence: 31/88 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "seo: primary keyword not in the lead or first 100 words",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "florida-veteran-property-tax-county-guide",
+  "score": 84,
+  "grade": "B",
+  "components": {
+   "structure": 23.4,
+   "evidence": 17.3,
+   "local": 10,
+   "seo": 20,
+   "geo": 6,
+   "share": 7
+  },
+  "fails": [
+   "structure: 3 section(s) run 250+ words with no list or table; add one or a question-shaped h3",
+   "structure: 11 scan aids for 4503 words (target one list/table/figure per 250 words)",
+   "evidence: 46/92 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 33/92 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "geo: quickAnswer missing or not 2-4 dated sentences with a figure (AI engines quote the first quotable block)",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: no checklist (an ordered list of 4+ steps, or a bold-led bullet set)",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ },
+ {
+  "site": "pmh",
+  "slug": "moving-to-navarre-2026-guide",
+  "score": 92,
+  "grade": "A",
+  "components": {
+   "structure": 24.4,
+   "evidence": 16.4,
+   "local": 10,
+   "seo": 20,
+   "geo": 12,
+   "share": 9
+  },
+  "fails": [
+   "structure: 17 scan aids for 5025 words (target one list/table/figure per 250 words)",
+   "evidence: 37/95 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
+   "evidence: 40/95 numeric sentences carry a vintage (month/year); date the perishable ones",
+   "geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)",
+   "geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop",
+   "share: nothing only this team can say (a scenario, a commute, a client outcome, what we would do)"
+  ]
+ }
+]

@@ -12,8 +12,10 @@
 //   node scripts/topic-miner.mjs --append-queue 5      # add the top 5 novel clusters to the queues
 //   node scripts/topic-miner.mjs --limit 60            # radar size (default 40)
 // Outputs: docs/topic-radar.md (human), content/topic-candidates.json (machine).
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { ROOT, TODAY, SITES, loadEnv, bingClient, coverageIndex, tokens, overlap, PLACES, QWORDS, readJson, writeJson } from "./blog-lib.mjs";
+
+import { parseCsv, numberOrNull, sourceWindow } from "./search-evidence.mjs";
 
 loadEnv();
 const args = process.argv.slice(2);
@@ -34,7 +36,7 @@ const add = (q, source, extra = {}) => {
   if (cfg.ignore.some((w) => q.includes(w))) return;
   const c = cands.get(q) || (cands.set(q, { q, sources: new Set(), imp: 0, pos: null, vol: 0, seeds: new Set() }), cands.get(q));
   c.sources.add(source);
-  if (extra.imp) c.imp += extra.imp;
+  if (extra.imp) c.imp = Math.max(c.imp, extra.imp); // ranking proxy only; never add Google/Bing or overlapping windows
   if (extra.pos != null) c.pos = c.pos == null ? extra.pos : Math.min(c.pos, extra.pos);
   if (extra.vol) c.vol = Math.max(c.vol, extra.vol);
   if (extra.seed) c.seeds.add(extra.seed);
@@ -76,6 +78,23 @@ for (const key of ["pmh", "gc"]) {
   if (!existsSync(p)) continue;
   const j = JSON.parse(readFileSync(p, "utf8"));
   for (const q of j.queries || []) if (q.imp90 >= 2) add(q.key, `wmt-${key}`, { imp: q.imp90, pos: q.pos90 });
+}
+
+// The latest query export is observed discovery evidence. It is not a page attribution
+// or monthly search-volume estimate; anonymized/omitted queries remain unavailable.
+const exportSources = [];
+for (const site of ["pmh", "gc"]) {
+  const pattern = site === "gc" ? /^gsc-queries-gc-\d{4}-\d{2}-\d{2}\.csv$/ : /^gsc-queries-\d{4}-\d{2}-\d{2}\.csv$/;
+  const file = readdirSync(ROOT + "docs/seo-baselines").filter((f) => pattern.test(f)).sort().at(-1);
+  if (!file) continue;
+  let parsed;
+  try { parsed = parseCsv(readFileSync(ROOT + "docs/seo-baselines/" + file, "utf8")); } catch (e) { console.warn(file + ": unavailable: " + e.message); continue; }
+  const [hdr, ...rows] = parsed;
+  const idx = (word) => hdr.findIndex((h) => h.toLowerCase().includes(word));
+  const iq = idx("quer"), ii = idx("impression"), ip = idx("position");
+  if (iq < 0 || ii < 0) continue;
+  for (const r of rows) if (numberOrNull(r[ii]) > 0) add(r[iq], "gsc-" + site, { imp: numberOrNull(r[ii]), pos: numberOrNull(r[ip]) });
+  exportSources.push({ site, file, window: sourceWindow(ROOT, file, SITES[site].origin) });
 }
 
 // Bing related keywords: real search demand per seed (one call per seed)
@@ -154,7 +173,7 @@ for (const c of cands.values()) {
   for (const { p, set } of covTokens) { const o = coverage(covQ, set); if (o > best) { best = o; coveredBy = `${p.site}:${p.path}`; } }
   const novelty = 1 - best;
   const engines = (c.sources.has("google") ? 1 : 0) + (c.sources.has("bing") ? 1 : 0);
-  const demand = engines + 2 * Math.log1p(c.imp) + 0.5 * Math.log1p(c.vol);
+  const demand = 0.25 * engines + 2 * Math.log1p(c.imp) + 0.5 * Math.log1p(c.vol); // suggestions are phrasing evidence, not measured demand
   // national generic queries (no place) are the failed archetype in content-strategy.md §2: heavy penalty unless Florida/Alabama is named
   const placeFactor = hasPlace ? 1.5 : /\b(florida|alabama|fl|al|panhandle|gulf coast|emerald coast)\b/.test(c.q) ? 1.0 : 0.45;
   const score = demand * (cfg.intentWeights[intent] || 1) * placeFactor * (0.4 + 0.6 * novelty);
@@ -168,7 +187,7 @@ const clusters = new Map();
 for (const s of scored) {
   const k = clusterKey(s.q);
   const c = clusters.get(k) || (clusters.set(k, { key: k, score: 0, members: [], questions: [], imp: 0, vol: 0, audiences: {} }), clusters.get(k));
-  c.score += s.score; c.imp += s.imp; c.vol = Math.max(c.vol, s.vol); c.members.push(s);
+  c.score += s.score; c.imp = Math.max(c.imp, s.imp); c.vol = Math.max(c.vol, s.vol); c.members.push(s);
   if (s.intent === "question") c.questions.push(s.q);
   c.audiences[s.audience] = (c.audiences[s.audience] || 0) + 1;
 }
@@ -188,13 +207,13 @@ const ranked = [...clusters.values()].map((c) => {
 // one-member clusters that exist only because Bing's related feed carries a volume number are brand/venue noise, not topics
 const radar = ranked.filter((c) => c.novelty >= 0.35 && !c.inQueue && (c.members.length >= 2 || c.impressions > 0)).slice(0, LIMIT);
 const covered = ranked.filter((c) => c.coveredBy.length && c.novelty < 0.35).slice(0, 25);
-writeJson("content/topic-candidates.json", { generated: TODAY, candidates: scored.length, clusters: ranked.length, radar, covered, queued: ranked.filter((c) => c.inQueue).slice(0, 25) }, 1);
+writeJson("content/topic-candidates.json", { generated: TODAY, schemaVersion: 2, collection: { suggestions: FROM_CACHE ? "cache" : NO_SUGGEST ? "not collected" : "attempted", bingRelated: NO_BING ? "not collected" : "attempted if configured" }, exportSources, scoringNote: "Editorial ranking proxy, not traffic or volume. Exposure is the maximum observed row across sources in the cluster, never summed overlapping windows. Suggestions supply wording only. Token overlap is a candidate match requiring intent review.", candidates: scored.length, clusters: ranked.length, radar, covered, queued: ranked.filter((c) => c.inQueue).slice(0, 25) }, 1);
 
 const md = [`# Topic radar, ${TODAY}`, "",
-  `Generated by scripts/topic-miner.mjs from ${scored.length} scored queries (${cands.size} raw) in ${ranked.length} clusters. Sources: Google + Bing autosuggest fan-out of ${allSeeds.length} seeds, Bing related-keyword demand, and the sites' own Bing query logs. Score = demand x intent x local x novelty; novelty is measured against every live title, H1 and H2 on both sites, so a high score means real demand the sites do not answer yet.`, "",
+  `Generated by scripts/topic-miner.mjs from ${scored.length} scored queries (${cands.size} raw) in ${ranked.length} clusters. Observed source labels: ${[...new Set(scored.flatMap((r) => r.sources))].join(", ")}. Suggestions: ${NO_SUGGEST ? "not collected" : FROM_CACHE ? "cached" : "requested"}. Counts retain their own source periods. Score = demand x intent x local x novelty; novelty is measured against every live title, H1 and H2 on both sites, so a high score suggests a cluster to investigate; inspect actual page coverage and reader intent before a new article.`, "",
   "## Top clusters not yet covered or queued", "",
   "| # | Score | Aud | Archetype | Representative query | Demand evidence | Members | Hubs |", "|---|---|---|---|---|---|---|---|",
-  ...radar.map((c, i) => `| ${i + 1} | ${c.score} | ${c.audience} | ${c.archetype} | ${c.representative} | ${c.impressions ? `${c.impressions} site imp` : ""}${c.bingVolume ? ` ${c.bingVolume} bing vol` : ""}${!c.impressions && !c.bingVolume ? "autosuggest" : ""} | ${c.members.length} | ${c.hubs.join(" ") || ""} |`),
+  ...radar.map((c, i) => `| ${i + 1} | ${c.score} | ${c.audience} | ${c.archetype} | ${c.representative} | ${c.impressions ? `${c.impressions} max observed row imp` : ""}${c.bingVolume ? ` ${c.bingVolume} bing vol` : ""}${!c.impressions && !c.bingVolume ? "autosuggest" : ""} | ${c.members.length} | ${c.hubs.join(" ") || ""} |`),
   "", "## Question skeletons for the top 15 (H2 / FAQ plans)", ""];
 for (const c of radar.slice(0, 15)) {
   md.push(`### ${c.representative}`, `Audience ${c.audience}, ${c.archetype}, novelty ${c.novelty}${c.coveredBy.length ? `, nearest live page ${c.coveredBy.join(", ")}` : ""}.`, "");
@@ -217,8 +236,11 @@ if (APPEND) {
     const slug = slugify(c.representative);
     if ((queue.queue || []).some((t) => t.slug === slug || coverage(tokens(c.representative), new Set(tokens(`${t.slug.replace(/-/g, " ")} ${t.title || t.topic || ""} ${(t.targetKeywords || []).join(" ")}`))) >= 0.8)) continue;
     const item = key === "gc"
-      ? { slug, topic: `${cap(c.representative)}: ${c.questions.slice(0, 3).join("; ") || c.members.slice(1, 4).join("; ")}`, type: "evergreen", targetKeywords: c.members.slice(0, 4), source: `topic-miner ${TODAY}`, evidence: `Real-demand mining: ${c.members.length} related queries from autosuggest${c.impressions ? `, ${c.impressions} site impressions in Bing WMT` : ""}${c.bingVolume ? `, Bing related-keyword demand ${c.bingVolume}` : ""}; novelty ${c.novelty} against every live title/H1/H2 on both sites.` }
-      : { slug, archetype: c.archetype, audience: c.audience, title: cap(c.representative), targetKeywords: c.members.slice(0, 4), evidence: `Real-demand mining (topic-miner ${TODAY}): ${c.members.length} related queries from autosuggest${c.impressions ? `, ${c.impressions} site impressions in Bing WMT` : ""}${c.bingVolume ? `, Bing related-keyword demand ${c.bingVolume}` : ""}; novelty ${c.novelty}. Question skeleton: ${c.questions.slice(0, 5).join(" | ")}`, rerank: `ADDED ${TODAY} by scripts/topic-miner.mjs; run blog-dedup-check before writing.` };
+      ? { slug, topic: `${cap(c.representative)}: ${c.questions.slice(0, 3).join("; ") || c.members.slice(1, 4).join("; ")}`, type: "evergreen", targetKeywords: c.members.slice(0, 4), source: `topic-miner ${TODAY}`, evidence: `Real-demand mining: ${c.members.length} related queries from autosuggest${c.impressions ? `, ${c.impressions} max observed row impressions in Bing WMT` : ""}${c.bingVolume ? `, Bing related-keyword demand ${c.bingVolume}` : ""}; novelty ${c.novelty} against every live title/H1/H2 on both sites.` }
+      : { slug, archetype: c.archetype, audience: c.audience, title: cap(c.representative), targetKeywords: c.members.slice(0, 4), evidence: `Real-demand mining (topic-miner ${TODAY}): ${c.members.length} related queries from autosuggest${c.impressions ? `, ${c.impressions} max observed row impressions in Bing WMT` : ""}${c.bingVolume ? `, Bing related-keyword demand ${c.bingVolume}` : ""}; novelty ${c.novelty}. Question skeleton: ${c.questions.slice(0, 5).join(" | ")}`, rerank: `ADDED ${TODAY} by scripts/topic-miner.mjs; run blog-dedup-check before writing.` };
+    item.evidenceTier = c.impressions ? "observed-query" : "suggestion-only";
+    item.workflowStatus = "needs-intent-review";
+    item.requiredBrief = ["existing intent owner", "reader decision", "original practical asset", "primary source plan", "relevant tool and inquiry path"];
     queue.queue.push(item);
     writeJson(SITES[key].queue, queue, key === "gc" ? 1 : 2);
     added[key]++;

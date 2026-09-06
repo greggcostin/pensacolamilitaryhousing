@@ -6,7 +6,34 @@
    "datePublished": "2026-08-24",
    "type": "evergreen",
    "image": "fed-building.jpg (Wikimedia, AgnosticPreachersKid, CC BY-SA 3.0)",
-   "metrics": "no GSC/Bing data available in-session"
+   "metrics": "no GSC/Bing data available in-session",
+   "search": [
+    {
+     "slug": "what-moves-mortgage-rates",
+     "url": "/blog/what-moves-mortgage-rates",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+     "date": "2026-09-04",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": null,
+      "end": null,
+      "searchType": null,
+      "dimensions": [
+       "page"
+      ],
+      "filters": null,
+      "complete": false,
+      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+    }
+   ]
   },
   {
    "slug": "property-taxes-escambia-santa-rosa",
@@ -16,7 +43,34 @@
    "image": "prop-tax-hist.jpg (Wikimedia, Ebyabe, CC BY-SA 3.0, Lear-Rocheblave House, Historic Pensacola)",
    "sources": "escpa.org 2026 important dates (TRIM Aug 14, VAB Sep 8); santarosaclerk.com VAB notice (Sep 14 4pm CST, $50); srcpa.gov ad-valorem (2026 SOH cap 2.7%); srcpa.gov/millage-rates table id=2026 (SR district millage); escambiataxcollector.com millage-rate-detail (2025 Escambia district millage, verbatim); FL Amendment 5 2026 additional exemption $26,411; taxfoundation.org HJR 1F analysis",
    "metrics": "no GSC/Bing data available in-session",
-   "millageVerified": "All district totals re-derived from published component rates and reconciled exactly (ESC beach 12.7185 / uninc 13.4035 / Century 13.6389 / Pensacola 17.0080 / Downtown 19.0080; SR 2026 Gulf Breeze 11.2804 / uninc 11.3781 / Milton 13.4261 / Jay 16.5481). Worked examples recomputed from these rates."
+   "millageVerified": "All district totals re-derived from published component rates and reconciled exactly (ESC beach 12.7185 / uninc 13.4035 / Century 13.6389 / Pensacola 17.0080 / Downtown 19.0080; SR 2026 Gulf Breeze 11.2804 / uninc 11.3781 / Milton 13.4261 / Jay 16.5481). Worked examples recomputed from these rates.",
+   "search": [
+    {
+     "slug": "property-taxes-escambia-santa-rosa",
+     "url": "/blog/property-taxes-escambia-santa-rosa",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+     "date": "2026-09-04",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": null,
+      "end": null,
+      "searchType": null,
+      "dimensions": [
+       "page"
+      ],
+      "filters": null,
+      "complete": false,
+      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+    }
+   ]
   },
   {
    "slug": "closing-costs-florida-buyers",
@@ -28,7 +82,34 @@
    "currentEventsCheck": "Aug 31 2026 sweep: 30-yr ~6.62-6.68%, Fed on hold at 3.50-3.75%, jobs report Friday; FL insurance stabilizing (Citizens 8.8% cut). Nothing broke big enough to override the queue head.",
    "metrics": "no GSC/Bing data available in-session",
    "mathVerified": "Worked example recomputed: 350k deed stamps 3500x0.70=2450; 315k note stamps 3150x0.35=1102.50; intangible 315000x0.002=630; owner policy 575+1250=1825.",
-   "published": "2026-08-31 deployed to greggcostin.com (Pages deploy ddef7164), verified 200 on post + image + OG card + sitemap + blog index; IndexNow ping 200"
+   "published": "2026-08-31 deployed to greggcostin.com (Pages deploy ddef7164), verified 200 on post + image + OG card + sitemap + blog index; IndexNow ping 200",
+   "search": [
+    {
+     "slug": "closing-costs-florida-buyers",
+     "url": "/blog/closing-costs-florida-buyers",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+     "date": "2026-09-04",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": null,
+      "end": null,
+      "searchType": null,
+      "dimensions": [
+       "page"
+      ],
+      "filters": null,
+      "complete": false,
+      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+    }
+   ]
   },
   {
    "slug": "fed-rate-hike-what-it-means",
@@ -42,7 +123,34 @@
    "metrics": "no GSC/Bing data available in-session",
    "engineFix": "Fixed a real bug in scripts/civilian-blog-factory.mjs: the llms.txt section-replace built its RegExp from the unescaped literal '## Blog Posts (auto-maintained)', so the parentheses compiled as a capture group and the pattern never matched. llms.txt had been frozen at the first post since Aug 24. Escaped the source and used a function replacer; all 4 posts now listed.",
    "published": "2026-09-01 approved by Gregg and deployed to greggcostin.com (Pages deploy 96187781); verified 200 on post + blog index + image + OG card + sitemap + llms.txt; IndexNow ping 200",
-   "reviewCountSync": "Same session: verified LIVE counts via browser (Google Maps 55 reviews all five-star, Zillow profile 27 team reviews) and corrected Zillow 25 -> 27 and the combined total 79/80 -> 82 across both sites. scripts/review-counts.mjs did not walk civilian-site and had no combined-total patterns, which is why greggcostin.com kept drifting; both gaps fixed in that script."
+   "reviewCountSync": "Same session: verified LIVE counts via browser (Google Maps 55 reviews all five-star, Zillow profile 27 team reviews) and corrected Zillow 25 -> 27 and the combined total 79/80 -> 82 across both sites. scripts/review-counts.mjs did not walk civilian-site and had no combined-total patterns, which is why greggcostin.com kept drifting; both gaps fixed in that script.",
+   "search": [
+    {
+     "slug": "fed-rate-hike-what-it-means",
+     "url": "/blog/fed-rate-hike-what-it-means",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+     "date": "2026-09-04",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": null,
+      "end": null,
+      "searchType": null,
+      "dimensions": [
+       "page"
+      ],
+      "filters": null,
+      "complete": false,
+      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+    }
+   ]
   },
   {
    "slug": "florida-insurance-relief-2026",
@@ -54,7 +162,34 @@
    "currentEventsCheck": "Sep 3 2026 sweep triggered an override: the APCIA/Moore-Lynch actuarial report landed THAT DAY quantifying Florida insurance relief for the first time, and the NFIP authorization lapse date (Sep 30) is 27 days out. Insurance is the top cost question for Gulf Coast civilian buyers and leads our Copilot citations, so this beat the evergreen queue head. Rates were checked (30-yr ~6.72-6.74% Sep 2, up on Middle East escalation) but the Sep 1 post already covered rates; no hurricane threat in the Gulf.",
    "sourcingNotes": "NAR FAQ page (last updated Feb 4 2026) carries a stale internal line saying the NFIP expires Dec 11 2026 while its own URL and every other source say Sep 30 2026. FEMA's official reauthorization page was treated as authoritative and the post cites FEMA for the date. Citizens county-level figures (Escambia +0.2%, Santa Rosa +5.5%, avg premiums 3,376 / 3,871) came from the DECEMBER 2025 recommended filing and conflict with the approved March 2026 statewide -8.8%; deliberately NOT published, the county point is made qualitatively instead. My Safe Florida Home eligibility numbers were only available from aggregators (mysafeflhome.com returned 403), so the post sends readers to the official site rather than stating a perishable rule.",
    "metrics": "no GSC/Bing data available in-session",
-   "published": "2026-09-03 approved by Gregg and deployed to greggcostin.com (Pages deploy 8711c156, 19 new files); verified 200 on post + blog index + hero image + OG card + sitemap + llms.txt, post listed on all three; IndexNow ping 200 for the post and /blog"
+   "published": "2026-09-03 approved by Gregg and deployed to greggcostin.com (Pages deploy 8711c156, 19 new files); verified 200 on post + blog index + hero image + OG card + sitemap + llms.txt, post listed on all three; IndexNow ping 200 for the post and /blog",
+   "search": [
+    {
+     "slug": "florida-insurance-relief-2026",
+     "url": "/blog/florida-insurance-relief-2026",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+     "date": "2026-09-04",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": null,
+      "end": null,
+      "searchType": null,
+      "dimensions": [
+       "page"
+      ],
+      "filters": null,
+      "complete": false,
+      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+    }
+   ]
   }
  ]
 }

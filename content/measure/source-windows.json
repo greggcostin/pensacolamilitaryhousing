@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "note": "Copy exact dates and filters from the source export. Null means unknown. Never replace an old baseline with a different window.",
+  "exports": {
+    "gsc-pages-2026-09-04.csv": {
+      "property": "https://pensacolamilitaryhousing.com",
+      "start": null,
+      "end": null,
+      "searchType": null,
+      "dimensions": [
+        "page"
+      ],
+      "filters": null,
+      "complete": false,
+      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+    },
+    "gsc-pages-gc-2026-09-04.csv": {
+      "property": "https://greggcostin.com",
+      "start": null,
+      "end": null,
+      "searchType": null,
+      "dimensions": [
+        "page"
+      ],
+      "filters": null,
+      "complete": false,
+      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+    },
+    "gsc-queries-2026-09-04.csv": {
+      "property": "https://pensacolamilitaryhousing.com",
+      "start": null,
+      "end": null,
+      "searchType": null,
+      "dimensions": [
+        "query"
+      ],
+      "filters": null,
+      "complete": false,
+      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+
+> pensacolamilitaryhousing@1.0.0 prebuild
+> node scripts/check-em-dashes.mjs && node scripts/audit-military.mjs && node scripts/audit-entity.mjs && node scripts/bump-dates.mjs
+
+OK: no em dashes in prose across 100 pages + App.jsx.
+MILITARY AUDIT CLEAN: 97 pages, 104 sitemap URLs, 103 share cards, 0 findings
+ENTITY AUDIT CLEAN: 218 pages; full nodes on 3/2/2 pages; every other definition is the canonical compact or publisher shape
+sitemap lastmod: 96 URLs from their page dateModified, 8 stamped 2026-09-06
+Bumped lastmod / Last updated to 2026-09-06
+
+> pensacolamilitaryhousing@1.0.0 build
+> vite build && node scripts/postbuild-spa-routes.mjs && pagefind --site dist --output-subdir pagefind
+
+vite v5.4.21 building for production...
+transforming...
+✓ 38 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  56.52 kB │ gzip: 13.40 kB
+dist/assets/index-BofzKYas.css    0.46 kB │ gzip:  0.28 kB
+dist/assets/index-DqxQ3ZkU.js   319.54 kB │ gzip: 92.70 kB
+✓ built in 1.30s
+postbuild 2.15: wrote dist/about.html  title="About Gregg Costin | Pensacola Military Realtor"  canonical=https://pensacolamilitaryhousing.com/about
+postbuild 2.15: wrote dist/contact.html  title="Contact Gregg Costin | Pensacola Military Realtor"  canonical=https://pensacolamilitaryhousing.com/contact
+postbuild geo-01: /pcs-guide shell carries 1751 words + FAQPage JSON-LD
+postbuild 2.15: wrote dist/pcs-guide.html  title="Moving to Pensacola: Military PCS Guide"  canonical=https://pensacolamilitaryhousing.com/pcs-guide
+postbuild 2.15: wrote dist/communities.html  title="Pensacola Military Community Guide by Base"  canonical=https://pensacolamilitaryhousing.com/communities
+postbuild 2.15: wrote dist/mortgage-calculators.html  title="Military Mortgage & BAH Calculators | Pensacola"  canonical=https://pensacolamilitaryhousing.com/mortgage-calculators
+postbuild 2.15: 5 route shells written (about, contact, pcs-guide, communities, mortgage-calculators)
+
+Running Pagefind v1.5.2 (Extended)
+Running from: "C:\\Users\\gregg\\pensacolamilitaryhousing\\node_modules\\.cache\\astra-blog-audit"
+Source:       "dist"
+Output:       "dist\\pagefind"
+
+[Walking source directory]
+Found 103 files matching **/*.{html}
+
+[Parsing files]
+Found a data-pagefind-body element on the site.
+↳ Ignoring pages without this tag.
+
+[Reading languages]
+Discovered 2 languages: en-us, en
+
+[Building search indexes]
+Total:
+  Indexed 2 languages
+  Indexed 96 pages
+  Indexed 13001 words
+  Indexed 0 filters
+  Indexed 0 sorts
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│  Pagefind found references to the Default UI (pagefind-ui.js)           │
+│  on your site. The Default UI is supported and will continue            │
+│  to work.                                                               │
+│                                                                         │
+│  As of 1.5.0, if you are setting up a new integration, use the          │
+│  Component UI instead. It includes a search modal, better               │
+│  accessibility and customization: https://pagefind.app/docs/search-ui/  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Finished in 0.215 seconds

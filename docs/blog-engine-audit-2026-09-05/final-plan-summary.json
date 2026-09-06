@@ -1,0 +1,77 @@
+{
+  "next": {
+    "kind": "source-and-usefulness-refresh",
+    "site": "gc",
+    "target": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+    "readerTask": "Give the reader a reproducible, sourced cost or decision checklist.",
+    "reason": "Existing financial guide has no external source links. Research before rewriting; a score alone is not verification."
+  },
+  "sourceGaps": [
+    {
+      "site": "gc",
+      "slug": "closing-costs-florida-buyers"
+    },
+    {
+      "site": "gc",
+      "slug": "fed-rate-hike-what-it-means"
+    },
+    {
+      "site": "gc",
+      "slug": "florida-insurance-relief-2026"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "pmh-snippet-2026-09-04-1",
+      "page": "/bah-rates",
+      "outcome": "unknown",
+      "cooldown": true,
+      "comparison": {
+        "comparable": false,
+        "reasons": [
+          "Exact baseline date range and filters are unknown; no separate post-change window yet."
+        ]
+      }
+    },
+    {
+      "id": "pmh-snippet-2026-09-04-2",
+      "page": "/blog/living-in-gulf-breeze-pros-cons",
+      "outcome": "unknown",
+      "cooldown": true,
+      "comparison": {
+        "comparable": false,
+        "reasons": [
+          "Exact baseline date range and filters are unknown; no separate post-change window yet."
+        ]
+      }
+    }
+  ],
+  "articles": 17,
+  "briefs": [
+    {
+      "id": "full-payment",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/blog/bah-2026-pensacola-what-can-you-afford"
+    },
+    {
+      "id": "training-housing",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/flight-school-housing-pensacola"
+    },
+    {
+      "id": "rent-buy-hold",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/on-base-vs-off-base-eglin-afb"
+    },
+    {
+      "id": "property-insurance-packet",
+      "evidence": "editorial-hypothesis",
+      "owner": "/resources/florida-home-insurance"
+    },
+    {
+      "id": "part-year-homestead",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/blog/florida-veteran-property-tax-county-guide"
+    }
+  ]
+}

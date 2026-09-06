@@ -333,7 +333,7 @@ main details p{font-size:16px}
 .main-banner .dropdown{position:static}
 .main-banner .dropdown-menu{left:12px;right:12px;top:100%;min-width:0!important;max-height:55vh!important;overflow-y:auto}
 }</style>
-</head>
+<style id="article-journey-style">.article-next{max-width:760px;margin:2rem auto;padding:1.2rem;border:1px solid var(--gold-line,#7c692f);border-radius:10px}.article-next h2{margin-top:0}.article-share{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.article-share button{padding:10px 14px;min-height:44px;border:1px solid #9b8445;border-radius:6px;color:inherit;background:transparent;font:inherit;cursor:pointer}.article-share [hidden]{display:none}.article-share button:focus-visible{outline:3px solid #C9A84C;outline-offset:3px}.article-share [role=status]{display:block;width:100%;font-size:14px}</style></head>
 <body>
 <nav class="main-banner" aria-label="Main site navigation">
 <div class="banner-row">
@@ -377,6 +377,7 @@ main details p{font-size:16px}
 <p style="text-align:center"><a class="backlink" href="/blog">&larr; All posts</a></p>
 <div class="post-topmeta"><span class="cat">VA Loans</span><span>April 10, 2026</span><span>11 min read</span><span>Updated August 12, 2026</span></div>
 <figure class="figure-band"><picture><source type="image/avif" srcset="/images/topics/va-loan-guide-480.avif 480w, /images/topics/va-loan-guide-768.avif 768w, /images/topics/va-loan-guide-1200.avif 1200w, /images/topics/va-loan-guide.avif 1600w" sizes="(max-width: 940px) 92vw, 900px"><img src="/images/topics/va-loan-guide.jpg" srcset="/images/topics/va-loan-guide-480.jpg 480w, /images/topics/va-loan-guide-768.jpg 768w, /images/topics/va-loan-guide-1200.jpg 1200w, /images/topics/va-loan-guide.jpg 1600w" sizes="(max-width: 940px) 92vw, 900px" width="1600" height="900" alt="Two-story craftsman style home with an American flag on the front porch" fetchpriority="high" decoding="async"></picture><figcaption>Seller concessions can cover closing costs, rate buydowns, and more on a VA purchase.</figcaption></figure>
+
 <p>Here is a conversation I have at least once a month. A military buyer, often a <a href="/first-time-military-homebuyer">first-time military homebuyer</a>, tells me their agent or lender said "the seller can only contribute 4% on a VA loan." They build the offer around that number, ask for less help than the rules allow, and leave thousands sitting on the table.</p>
 <p>The VA loan seller concessions rule does have a 4% cap. But the cap applies to a narrow, specifically defined category, and most of what a seller typically pays on a buyer's behalf is not in that category.</p>
 <p>I am going to walk through the actual rule by document and paragraph, because this is one of those arguments the primary source settles in about ninety seconds. Then I will put dollars on it with a Pensacola-priced example, show where the 2024 commission changes fit, and give you the exact language I put in offers. I flew as a Combat Systems Officer for 20 years; I do not accept "that's just how it works" as a source, and neither should you.</p>
@@ -522,7 +523,7 @@ main details p{font-size:16px}
 <details><summary>Can veterans pay their own buyer-agent commission in 2026?</summary><p>Yes. Under VA Circular 26-24-14, effective August 10, 2024 and still in effect as of August 2026, veterans may pay reasonable and customary buyer-broker charges. The charge cannot be financed into the loan amount and must be counted in your cash to close.</p></details>
 <details><summary>Do discount points count toward the VA seller concession cap?</summary><p>Only excess points do. Points appropriate to the market are excluded by name in the handbook. VA's own example: if market pricing calls for two points and the seller pays two, nothing counts toward the cap; if the seller pays five, the extra three count as concessions.</p></details>
 <details><summary>What happens if seller concessions exceed 4% on a VA loan?</summary><p>The handbook treats anything past 4% as excessive and unacceptable for a VA-guaranteed loan. In practice your lender flags it during underwriting and the contract gets restructured, usually by shifting money toward uncapped closing costs or trimming the price. Caught early, it almost never kills the deal.</p></details>
-<details><summary>Is it better to ask for a price reduction or seller concessions?</summary><p>If you are short on cash, take the credits. A $10,000 price cut saves roughly $63 a month at an illustrative 6.5% 30-year rate, while $10,000 in credits is cash you do not bring to closing. Most PCS buyers need the cash more; the <a href="/pcs-guide">PCS guide</a> covers the timeline math.</p></details>
+<details><summary>Is it better to ask for a price reduction or seller concessions?</summary><p>If you are short on cash, take the credits. A $10,000 price cut saves roughly $63 a month at an illustrative 6.5% 30-year rate, while $10,000 in credits is cash you do not bring to closing. Most PCS buyers need the cash more; the <a href="/pcs-guide">PCS guide</a> covers the timeline math.</p></details><section class="article-next" aria-labelledby="article-next-title" data-article-journey><h2 id="article-next-title">Put this guide to work</h2><p>Compare the full payment, cash needed and ownership plan for the home you are considering.</p><ul><li><a data-blog-next="tool" href="/mortgage-calculators">Work through a purchase budget</a></li><li><a data-blog-next="companion" href="https://greggcostin.com/blog/closing-costs-florida-buyers">Include Florida closing costs in your plan</a></li></ul><p><a href="/contact" data-inquiry-open data-inquiry-type="General Question" data-blog-next="inquiry">Ask Gregg about your own move</a></p><div class="article-share"><button type="button" data-blog-share hidden>Share this guide</button> <button type="button" data-blog-copy hidden>Copy guide link</button> <a href="https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth">Permanent link</a><span data-blog-share-status role="status" aria-live="polite"></span></div></section>
 <!-- RELATED_GUIDES_START -->
 <h2>Related Guides for This Page</h2>
 <div class="related">
@@ -724,7 +725,7 @@ btn.disabled=true;btn.textContent='Sending...';
 fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
 .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
 .then(function(res){
-if(res.ok&&res.j.success){body.innerHTML='<div class="iok"><div style="font-size:40px;margin-bottom:12px">\u2713</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. I will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('pmh-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
+if(res.ok&&res.j.success){document.dispatchEvent(new CustomEvent('costin:lead-success'));body.innerHTML='<div class="iok"><div style="font-size:40px;margin-bottom:12px">\u2713</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. I will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('pmh-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
 else{errBox.textContent='\u26a0 '+(res.j.error||'Something went wrong. Please call (850) 266-5005.');errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';}
 })
 .catch(function(){errBox.textContent='\u26a0 Connection error. Please call (850) 266-5005 directly.';errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';});
@@ -740,5 +741,55 @@ b.addEventListener('click',function(e){if(mq.matches){e.preventDefault();var ope
 d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(mq.matches)setOpen(false);});});
 if(mq.addEventListener)mq.addEventListener('change',function(){if(!mq.matches)setOpen(false);});
 if(/[?&]drawer=open/.test(location.search))setOpen(true);})();</script>
+<script id="costin-article-runtime">(function articleRuntime(config) {
+  if (window.__costinArticle) return;
+  window.__costinArticle = true;
+  const doc = document, nav = navigator, main = doc.querySelector("main");
+  const panel = doc.querySelector("[data-article-journey]");
+  if (!main || !panel) return;
+  const seen = new Set();
+  const emit = (name, data = {}, once = false) => {
+    if (nav.globalPrivacyControl === true || nav.doNotTrack === "1" || typeof window.gtag !== "function") return;
+    if (once && seen.has(name)) return;
+    if (once) seen.add(name);
+    window.gtag("event", name, { content_type: "article", content_id: config.slug, article_site: config.site, article_goal: config.goal, ...data });
+  };
+  doc.addEventListener("click", (e) => {
+    const a = e.target.closest?.("[data-blog-next]");
+    if (!a) return;
+    emit("blog_next_step", { step_type: a.getAttribute("data-blog-next") });
+  });
+  doc.addEventListener("costin:lead-success", () => emit("blog_inquiry_success", { method: "accepted_form" }, true));
+  const share = panel.querySelector("[data-blog-share]"), copy = panel.querySelector("[data-blog-copy]"), status = panel.querySelector("[data-blog-share-status]");
+  if (share && typeof nav.share === "function") {
+    share.hidden = false;
+    share.addEventListener("click", async () => {
+      try {
+        await nav.share({ title: config.title, url: config.url });
+        status.textContent = "Sharing finished.";
+        emit("share", { method: "native" });
+      } catch (e) { if (e.name !== "AbortError") status.textContent = "Use Copy guide link or the permanent link."; }
+    });
+  }
+  if (copy && nav.clipboard?.writeText) {
+    copy.hidden = false;
+    copy.addEventListener("click", async () => {
+      try { await nav.clipboard.writeText(config.url); status.textContent = "Guide link copied."; emit("blog_link_copy", { method: "clipboard" }); }
+      catch { status.textContent = "Use the permanent link to copy this guide's address."; }
+    });
+  }
+  let visibleSeconds = 0;
+  const timer = window.setInterval(() => {
+    if (doc.visibilityState === "hidden") return;
+    visibleSeconds += 5;
+    const rect = main.getBoundingClientRect();
+    const progress = Math.min(1, Math.max(0, (window.innerHeight - rect.top) / Math.max(1, rect.height)));
+    if (visibleSeconds >= 30 && progress >= 0.5) {
+      emit("blog_read", { active_seconds: visibleSeconds, depth_threshold: 50 }, true);
+      window.clearInterval(timer);
+    }
+  }, 5000);
+  window.addEventListener("pagehide", () => window.clearInterval(timer), { once: true });
+})({"slug":"va-loan-seller-concessions-truth","title":"The VA Loan Seller Concessions Myth That's Costing Military Buyers Thousands","site":"pmh","goal":"purchase-budget","url":"https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth"});</script>
 </body>
 </html>

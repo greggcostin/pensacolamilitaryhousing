@@ -10,6 +10,7 @@
 //   add --strict to fail the build on a DUPLICATE verdict
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
+import { ROOT, SITES, coverageIndex, listFragments } from "./blog-lib.mjs";
 
 const STOP = new Set("the a an and or of to in for on at by with vs versus is are your you what how why when where which who guide 2025 2026 2027 fl florida pensacola area near me best top real estate home homes house".split(" "));
 const tok = (s) => (s || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w));
@@ -23,19 +24,15 @@ function walk(dir, out = []) {
   }
   return out;
 }
-const corpus = walk("public").map((p) => {
-  const h = readFileSync(p, "utf8");
-  const title = strip((/<title>([\s\S]*?)<\/title>/.exec(h) || [])[1] || "");
-  const h1 = strip((/<h1[^>]*>([\s\S]*?)<\/h1>/.exec(h) || [])[1] || "");
-  const h2 = [...h.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)].map((m) => strip(m[1])).join(" ");
-  const kw = (/<meta name="keywords" content="([^"]*)"/.exec(h) || [])[1] || "";
-  const url = "/" + p.split(String.fromCharCode(92)).join("/").replace(/^public\//, "").replace(/\.html$/, "").replace(/\/index$/, "");
-  return { url, title, h1, head: `${title} ${h1} ${kw}`.toLowerCase(), body: `${title} ${h1} ${kw} ${h2}`.toLowerCase() };
-});
+const candidates = coverageIndex().filter((p) => !["/", "/blog", "/search", "/contact", "/reviews", "/privacy", "/accessibility"].includes(p.path));
+for (const site of ["pmh", "gc"]) for (const f of listFragments(site)) {
+  if (!candidates.some((p) => p.site === site && p.path === "/blog/" + f.slug)) candidates.push({ site, path: "/blog/" + f.slug, title: f.spec.title, h1: f.spec.h1, keywords: (f.spec.targetKeywords || []).join(" "), h2s: [] });
+}
+const corpus = candidates.map((p) => ({ url: SITES[p.site].origin + p.path, title: p.title, h1: p.h1, head: `${p.title} ${p.h1} ${p.keywords}`.toLowerCase(), body: `${p.title} ${p.h1} ${p.keywords} ${p.h2s.join(" ")}`.toLowerCase() }));
 
 function score(item) {
   const phrases = (item.targetKeywords || []).map((k) => k.toLowerCase());
-  const itemTok = new Set(tok([item.title, ...(item.targetKeywords || [])].join(" ")));
+  const itemTok = new Set(tok([item.title || item.topic || String(item.slug).replace(/-/g, " "), ...(item.targetKeywords || [])].join(" ")));
   const hits = corpus.map((pg) => {
     const headPhrase = phrases.filter((ph) => pg.head.includes(ph)).length;
     const bodyPhrase = phrases.filter((ph) => pg.body.includes(ph)).length;
@@ -44,23 +41,25 @@ function score(item) {
     const jac = itemTok.size ? overlap / itemTok.size : 0;
     const s = headPhrase * 3 + bodyPhrase * 1 + jac * 4;
     let verdict = "ok";
-    if (headPhrase >= 1 || (bodyPhrase >= 2 && jac >= 0.5)) verdict = "DUPLICATE";
+    if (headPhrase >= 1 || (bodyPhrase >= 2 && jac >= 0.5) || (itemTok.size >= 3 && jac >= 0.8)) verdict = "INTENT-REVIEW";
     else if (bodyPhrase >= 1 || jac >= 0.5) verdict = "overlap";
     return { url: pg.url, title: pg.title, s: +s.toFixed(2), headPhrase, bodyPhrase, jac: +jac.toFixed(2), verdict };
   }).filter((x) => x.s > 0).sort((a, b) => b.s - a.s).slice(0, 4);
-  const worst = hits.find((h) => h.verdict === "DUPLICATE") ? "DUPLICATE" : hits.find((h) => h.verdict === "overlap") ? "overlap" : "clear";
+  const worst = hits.find((h) => h.verdict === "INTENT-REVIEW") ? "INTENT-REVIEW" : hits.find((h) => h.verdict === "overlap") ? "overlap" : "clear";
   return { hits, worst };
 }
 
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
+const site = args.includes("--site") ? args[args.indexOf("--site") + 1] : "pmh";
+if (!SITES[site]) throw new Error("Use --site pmh or gc");
 let items;
 if (args.includes("--kw")) {
   const kws = args.flatMap((a, i) => (a === "--kw" ? [args[i + 1]] : []));
   items = [{ slug: "(ad hoc)", title: kws.join(" "), targetKeywords: kws }];
 } else {
-  const q = JSON.parse(readFileSync("content/blog/topic-queue.json", "utf8")).queue;
-  const one = args.find((a) => !a.startsWith("--"));
+  const q = JSON.parse(readFileSync(ROOT + SITES[site].queue, "utf8")).queue;
+  const one = args.find((a, i) => !a.startsWith("--") && args[i - 1] !== "--site");
   items = one ? q.filter((t) => t.slug === one) : q;
   if (!items.length) { console.error("no queue item matches", one); process.exit(2); }
 }
@@ -68,10 +67,14 @@ let dupes = 0;
 for (const it of items) {
   if (it.isRefresh || String(it.slug).startsWith("REFRESH:")) { console.log(`\n${it.slug}: refresh item, skipped`); continue; }
   const { hits, worst } = score(it);
-  if (worst === "DUPLICATE") dupes++;
+  const review = it.intentReview;
+  const resolved = review?.decision === "distinct-intent" && review.reviewedBy && review.readerTask && review.distinctValue && review.comparedTo?.length && hits.filter((h) => h.verdict === "INTENT-REVIEW").every((h) => review.comparedTo.includes(h.url));
+  if (worst === "INTENT-REVIEW" && !resolved) dupes++;
+  if (resolved) console.log("  Intent review documented; keep the reviewed reader task and distinct contribution in the research pack.");
   console.log(`\n${it.slug}  [${worst}]  kws: ${(it.targetKeywords || []).join(" | ")}`);
   for (const h of hits) console.log(`   ${h.verdict.padEnd(9)} ${String(h.s).padStart(5)}  ${h.url}  (${h.headPhrase} head, ${h.bodyPhrase} body, jac ${h.jac})  ${h.title.slice(0, 60)}`);
   if (!hits.length) console.log("   (no related pages)");
 }
-console.log(`\n${items.length} item(s) checked, ${dupes} DUPLICATE`);
+console.log("Token/phrase overlap proposes candidates. It does not establish actual search cannibalization; inspect reader intent before merging or writing.");
+console.log(`\n${items.length} item(s) checked across both sites, ${dupes} unresolved intent review(s)`);
 if (strict && dupes) process.exit(1);

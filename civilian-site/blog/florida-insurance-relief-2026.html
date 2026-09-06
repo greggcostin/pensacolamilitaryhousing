@@ -58,7 +58,6 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
   if ('requestIdleCallback' in window) { requestIdleCallback(loadFUB, {timeout: 5000}); } else { setTimeout(loadFUB, 4000); }
 })();
 </script>
-<script type="application/ld+json" data-entity="entity-graph:compact">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://greggcostin.com/#gregg","name":"Gregg Costin","jobTitle":"Realtor","honorificSuffix":"MRP, ABR, SRS, RENE, FMS","description":"Realtor with Levin Rinke Realty, licensed in Florida and Alabama; retired USAF Combat Systems Officer; serves Pensacola, the Florida Panhandle and Alabama's Gulf Shores and Orange Beach.","url":"https://greggcostin.com/team","image":"https://pensacolamilitaryhousing.com/images/gregg-portrait.jpg","worksFor":{"@id":"https://greggcostin.com/#brokerage"},"memberOf":{"@id":"https://greggcostin.com/#team"},"sameAs":["https://pensacolamilitaryhousing.com/about","https://www.zillow.com/profile/GreggCostin","https://www.linkedin.com/in/greggcostin"]},{"@type":"RealEstateAgent","@id":"https://greggcostin.com/#team","name":"Gregg Costin - The Costin Team","url":"https://greggcostin.com","telephone":"+1-850-266-5005","logo":{"@type":"ImageObject","url":"https://pensacolamilitaryhousing.com/images/logo-08-sm.png","width":480,"height":196},"parentOrganization":{"@id":"https://greggcostin.com/#brokerage"},"founder":{"@id":"https://greggcostin.com/#gregg"}},{"@type":"Organization","@id":"https://greggcostin.com/#brokerage","name":"Levin Rinke Realty","url":"https://www.levinrinkerealty.com/"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -250,7 +249,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 }
 /* MOBILE_DRAWER_END */
 </style>
-</head>
+<style id="article-journey-style">.article-next{max-width:760px;margin:2rem auto;padding:1.2rem;border:1px solid var(--gold-line,#7c692f);border-radius:10px}.article-next h2{margin-top:0}.article-share{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.article-share button{padding:10px 14px;min-height:44px;border:1px solid #9b8445;border-radius:6px;color:inherit;background:transparent;font:inherit;cursor:pointer}.article-share [hidden]{display:none}.article-share button:focus-visible{outline:3px solid #C9A84C;outline-offset:3px}.article-share [role=status]{display:block;width:100%;font-size:14px}</style></head>
 <body>
 <nav class="main-banner" aria-label="Main site navigation">
 <div class="banner-row">
@@ -286,8 +285,9 @@ figcaption a{color:var(--muted);text-decoration:underline}
 </header>
 <main>
 
-<div style="max-width:760px;margin:0 auto 6px;color:var(--muted);font-size:13px;letter-spacing:.5px;text-transform:uppercase">September 3, 2026 &middot; The Costin Team Blog</div>
+<div style="max-width:760px;margin:0 auto 6px;color:var(--muted);font-size:13px;letter-spacing:.5px;text-transform:uppercase">September 3, 2026 &middot; By Gregg Costin, Realtor &middot; Reviewed and updated September 2026</div>
 <figure class="figure-band"><picture><source type="image/avif" srcset="/images/fl-insurance-2026-480.avif 480w, /images/fl-insurance-2026-768.avif 768w, /images/fl-insurance-2026-1200.avif 1200w, /images/fl-insurance-2026.avif 1400w" sizes="(max-width: 800px) 92vw, 760px"><source type="image/webp" srcset="/images/fl-insurance-2026-480.webp 480w, /images/fl-insurance-2026-768.webp 768w, /images/fl-insurance-2026-1200.webp 1200w, /images/fl-insurance-2026.webp 1400w" sizes="(max-width: 800px) 92vw, 760px"><img src="/images/fl-insurance-2026.jpg" srcset="/images/fl-insurance-2026-480.jpg 480w, /images/fl-insurance-2026-768.jpg 768w, /images/fl-insurance-2026-1200.jpg 1200w, /images/fl-insurance-2026.jpg 1400w" sizes="(max-width: 800px) 92vw, 760px" width="1400" height="931" alt="A two-story Florida coastal home with metal storm panels and closed shutters covering its windows and doors, palm trees in the foreground under a clear blue sky" loading="lazy" decoding="async"></picture><figcaption>Documented storm protection is one of the few insurance variables a homeowner directly controls. Photo: Mark Wolfe, FEMA, public domain.</figcaption></figure>
+
 <p>For four years, the honest answer to what insurance would cost on a Florida house was a wince and a recommendation to get a quote fast. That is genuinely changing, and this week brought the clearest measurement of it so far.</p>
 <p>An actuarial study released September 3, 2026 found that Florida homeowners and drivers paid nearly 3 billion dollars less in premiums in 2025 than they did in 2024. That is a real number from real regulatory filings, and it matches what we have been seeing on individual quotes here on the Gulf Coast. It is also, as always, an average. Here is what it means and what it does not.</p>
 
@@ -369,15 +369,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <details><summary>Can I take over the seller's flood insurance policy?</summary><p>Often yes, and it is worth asking. The National Association of Realtors notes that insurers may assign a seller's NFIP policy to the buyer by substituting names, so coverage on the property continues and no new policy has to be issued. That matters most when the program's authorization is in question or when the seller's policy carries an older, cheaper rate than a new policy would.</p></details>
 <details><summary>What is the fastest way to lower my own Florida premium?</summary><p>A current wind mitigation inspection. Florida requires insurers to apply credits for documented features like roof shape, roof deck attachment, roof to wall connections and opening protection. The state's uniform form, OIR-B1-1802, was updated effective April 1, 2026 and is valid for up to five years absent material changes. After that, shop the renewal rather than letting it auto renew.</p></details>
 
-<!-- inq-cta --><div class="inq-cta">
-<div style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;5.0 on Google and Zillow &middot; <a href="/reviews" style="color:var(--gold)">Verified Reviews</a></div>
-<p class="ih">Questions about your own move?</p>
-<p class="is">Call or text (850) 266-5005, set up a live home search, or get a free valuation. No pressure, and a response within 2 hours during business hours.</p>
-<div class="ir">
-<a class="ip" href="https://greggcostin.realscout.com/onboarding">Start Your Home Search &rarr;</a>
-<a class="il" href="https://greggcostin.realscout.com/whats-my-home-worth">Get My Home Value</a>
-</div>
-</div>
+<section class="article-next" aria-labelledby="article-next-title" data-article-journey><h2 id="article-next-title">Put this guide to work</h2><p>Before comparing homes, collect insurance questions for each property.</p><ul><li><a data-blog-next="tool" href="/resources/florida-home-insurance">Use the Florida insurance guide</a></li><li><a data-blog-next="companion" href="https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers">Check flood-zone questions before you make an offer</a></li></ul><p><a href="/contact" data-inquiry-open data-inquiry-type="General Question" data-blog-next="inquiry">Ask Gregg about your own move</a></p><div class="article-share"><button type="button" data-blog-share hidden>Share this guide</button> <button type="button" data-blog-copy hidden>Copy guide link</button> <a href="https://greggcostin.com/blog/florida-insurance-relief-2026">Permanent link</a><span data-blog-share-status role="status" aria-live="polite"></span></div></section>
 <p style="max-width:760px;margin:1.5rem auto;text-align:center"><a href="/blog">&larr; Back to all posts</a></p>
 </main>
 <footer>
@@ -436,7 +428,7 @@ btn.disabled=true;btn.textContent='Sending...';
 fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
 .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
 .then(function(res){
-if(res.ok&&res.j.success){body.innerHTML='<div class="iok"><div style="font-size:40px;margin-bottom:12px">✓</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. We will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('gc-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
+if(res.ok&&res.j.success){document.dispatchEvent(new CustomEvent('costin:lead-success'));body.innerHTML='<div class="iok"><div style="font-size:40px;margin-bottom:12px">✓</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. We will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('gc-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
 else{errBox.textContent='⚠ '+(res.j.error||'Something went wrong. Please call (850) 266-5005.');errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';}
 })
 .catch(function(){errBox.textContent='⚠ Connection error. Please call (850) 266-5005 directly.';errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';});
@@ -452,5 +444,55 @@ b.addEventListener('click',function(e){if(mq.matches){e.preventDefault();var ope
 d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(mq.matches)setOpen(false);});});
 if(mq.addEventListener)mq.addEventListener('change',function(){if(!mq.matches)setOpen(false);});
 if(/[?&]drawer=open/.test(location.search))setOpen(true);})();</script>
+<script id="costin-article-runtime">(function articleRuntime(config) {
+  if (window.__costinArticle) return;
+  window.__costinArticle = true;
+  const doc = document, nav = navigator, main = doc.querySelector("main");
+  const panel = doc.querySelector("[data-article-journey]");
+  if (!main || !panel) return;
+  const seen = new Set();
+  const emit = (name, data = {}, once = false) => {
+    if (nav.globalPrivacyControl === true || nav.doNotTrack === "1" || typeof window.gtag !== "function") return;
+    if (once && seen.has(name)) return;
+    if (once) seen.add(name);
+    window.gtag("event", name, { content_type: "article", content_id: config.slug, article_site: config.site, article_goal: config.goal, ...data });
+  };
+  doc.addEventListener("click", (e) => {
+    const a = e.target.closest?.("[data-blog-next]");
+    if (!a) return;
+    emit("blog_next_step", { step_type: a.getAttribute("data-blog-next") });
+  });
+  doc.addEventListener("costin:lead-success", () => emit("blog_inquiry_success", { method: "accepted_form" }, true));
+  const share = panel.querySelector("[data-blog-share]"), copy = panel.querySelector("[data-blog-copy]"), status = panel.querySelector("[data-blog-share-status]");
+  if (share && typeof nav.share === "function") {
+    share.hidden = false;
+    share.addEventListener("click", async () => {
+      try {
+        await nav.share({ title: config.title, url: config.url });
+        status.textContent = "Sharing finished.";
+        emit("share", { method: "native" });
+      } catch (e) { if (e.name !== "AbortError") status.textContent = "Use Copy guide link or the permanent link."; }
+    });
+  }
+  if (copy && nav.clipboard?.writeText) {
+    copy.hidden = false;
+    copy.addEventListener("click", async () => {
+      try { await nav.clipboard.writeText(config.url); status.textContent = "Guide link copied."; emit("blog_link_copy", { method: "clipboard" }); }
+      catch { status.textContent = "Use the permanent link to copy this guide's address."; }
+    });
+  }
+  let visibleSeconds = 0;
+  const timer = window.setInterval(() => {
+    if (doc.visibilityState === "hidden") return;
+    visibleSeconds += 5;
+    const rect = main.getBoundingClientRect();
+    const progress = Math.min(1, Math.max(0, (window.innerHeight - rect.top) / Math.max(1, rect.height)));
+    if (visibleSeconds >= 30 && progress >= 0.5) {
+      emit("blog_read", { active_seconds: visibleSeconds, depth_threshold: 50 }, true);
+      window.clearInterval(timer);
+    }
+  }, 5000);
+  window.addEventListener("pagehide", () => window.clearInterval(timer), { once: true });
+})({"slug":"florida-insurance-relief-2026","title":"Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.","site":"gc","goal":"property-cost-review","url":"https://greggcostin.com/blog/florida-insurance-relief-2026"});</script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+✔ quoted CSV cells preserve commas, newlines, empty cells and escaped quotes (1.1682ms)
+✔ query strings and .html variants canonicalize without crossing properties (0.1229ms)
+✔ export date cannot silently become a measured monthly window (1.9286ms)
+✔ missing data never classifies an old post as stalled or decayed (0.1244ms)
+✔ a missing current export row does not revive an older observation (0.5921ms)
+✔ 0 clicks in 41 or 53 impressions is too uncertain for a snippet verdict (0.3441ms)
+✔ Wilson intervals distinguish real zero clicks from unavailable observations (0.0791ms)
+✔ incompatible, overlapping and stale windows cannot create a trend (0.2461ms)
+✔ valid large changes are observable while small-source noise remains unclassified (0.1483ms)
+✔ the Sep 4 snippet changes are not eligible for an immediate second rewrite (0.1513ms)
+✔ performance lessons cannot be promoted by an active label or one experiment (0.3839ms)
+✔ source-like words without source links earn no evidence points (1.7483ms)
+✔ the link graph excludes nav, footer, index furniture and script strings (0.3349ms)
+✔ calculation checks reject arithmetic errors, division by zero and code evaluation (0.1451ms)
+✔ a pack records lineage and refuses uncertainty, false math and absent citations (0.3631ms)
+✔ the inquiry event is inserted only in the confirmed-success branch and is idempotent (0.1787ms)
+✔ copy is not a share and canceled native sharing sends no share event (0.712ms)
+✔ successful inquiry is counted once; no click or form contents are accepted as a lead (0.4069ms)
+✔ privacy signals suppress analytics and hidden tabs cannot earn read engagement (1.0171ms)
+✔ every existing article gets verified first-party next steps with clean share URLs (0.4171ms)
+✔ outcome learning distinguishes missing clients, unique sessions and non-comparable windows (0.3521ms)
+✔ Bing ISO dates and epoch dates share one anchor; empty and future rows do not create traffic (0.2497ms)
+✔ a claimed observed snapshot with invalid counts cannot support a decision (0.078ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 96.5173

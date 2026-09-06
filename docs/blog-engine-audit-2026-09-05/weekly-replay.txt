@@ -1,0 +1,230 @@
+
+=== pensacolamilitaryhousing.com ===
+post                                           snaps latest                                   classification
+bah-2026-pensacola-what-can-you-afford           3    gsc-pages@2026-09-04 nullc/nulli pos -   DATA-UNAVAILABLE
+best-neighborhoods-eglin-afb-families            2    gsc-pages@2026-09-04 0c/23i pos 9.7      LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+florida-homestead-exemption-military             2    gsc-pages@2026-09-04 0c/39i pos 11.1     LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+pcs-to-pensacola-2026-complete-guide             2    gsc-pages@2026-09-04 0c/19i pos 6.3      LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+personal-property-activity-pcs-2026              2    gsc-pages@2026-09-04 0c/41i pos 7.9      LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+va-loan-seller-concessions-truth                 2    gsc-pages@2026-09-04 0c/226i pos 22.1    MEASUREMENT-INCOMPLETE
+moving-to-pensacola-2026-guide                   2    gsc-pages@2026-09-04 0c/15i pos 6        LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+best-pensacola-neighborhoods-by-rank-bah         2    gsc-pages@2026-09-04 1c/29i pos 10.5     LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+living-in-gulf-breeze-pros-cons                  2    gsc-pages@2026-09-04 0c/53i pos 4.4      EXPERIMENT-RUNNING, LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+florida-veteran-property-tax-county-guide        2    gsc-pages@2026-09-04 3c/130i pos 20.2    LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+va-loan-assumption-buyers-guide                  2    gsc-pages@2026-09-04 0c/13i pos 7        LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+moving-to-navarre-2026-guide                     1    gsc-pages@2026-09-04 nullc/nulli pos -   DATA-UNAVAILABLE
+0 snapshot(s) added to content/blog/ledger.json
+
+=== greggcostin.com ===
+post                                           snaps latest                                   classification
+what-moves-mortgage-rates                        1    gsc-pages@2026-09-04 nullc/nulli pos -   DATA-UNAVAILABLE
+property-taxes-escambia-santa-rosa               1    gsc-pages@2026-09-04 nullc/nulli pos -   DATA-UNAVAILABLE
+closing-costs-florida-buyers                     1    gsc-pages@2026-09-04 nullc/nulli pos -   DATA-UNAVAILABLE
+fed-rate-hike-what-it-means                      1    gsc-pages@2026-09-04 nullc/nulli pos -   DATA-UNAVAILABLE
+florida-insurance-relief-2026                    1    gsc-pages@2026-09-04 nullc/nulli pos -   DATA-UNAVAILABLE
+0 snapshot(s) added to content/civilian-blog/ledger.json
+Snippet review, pmh, export gsc-pages-2026-09-04.csv. Counts are per selected export period, never monthly estimates.
+No traffic lift or causal title diagnosis is inferred from average position.
+/bah-rates: 48/9117, CTR 0.53%, 95% interval 0.40-0.70%; EXPERIMENT-RUNNING, MEASUREMENT-INCOMPLETE
+/: 30/1576, CTR 1.90%, 95% interval 1.34-2.70%; MEASUREMENT-INCOMPLETE
+/bases/corry-station: 9/1320, CTR 0.68%, 95% interval 0.36-1.29%; MEASUREMENT-INCOMPLETE
+/communities/fort-walton-beach: 1/638, CTR 0.16%, 95% interval 0.03-0.88%; MEASUREMENT-INCOMPLETE
+/bases/duke-field: 1/488, CTR 0.20%, 95% interval 0.04-1.15%; MEASUREMENT-INCOMPLETE
+/pensacola-flood-zones-homebuyers: 11/479, CTR 2.30%, 95% interval 1.29-4.06%; MEASUREMENT-INCOMPLETE
+/bases/saufley-field: 3/391, CTR 0.77%, 95% interval 0.26-2.23%; MEASUREMENT-INCOMPLETE
+/communities/pace: 1/371, CTR 0.27%, 95% interval 0.05-1.51%; MEASUREMENT-INCOMPLETE
+/communities/navarre: 1/322, CTR 0.31%, 95% interval 0.05-1.74%; MEASUREMENT-INCOMPLETE
+/communities/crestview: 1/320, CTR 0.31%, 95% interval 0.06-1.75%; MEASUREMENT-INCOMPLETE
+/communities/niceville: 1/316, CTR 0.32%, 95% interval 0.06-1.77%; MEASUREMENT-INCOMPLETE
+/about: 1/250, CTR 0.40%, 95% interval 0.07-2.23%; MEASUREMENT-INCOMPLETE
+/communities/shalimar: 1/212, CTR 0.47%, 95% interval 0.08-2.62%; MEASUREMENT-INCOMPLETE
+/va-disability-property-tax-florida: 2/202, CTR 0.99%, 95% interval 0.27-3.54%; MEASUREMENT-INCOMPLETE
+/communities/beulah: 2/155, CTR 1.29%, 95% interval 0.35-4.58%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/communities/perdido-key: 3/134, CTR 2.24%, 95% interval 0.76-6.38%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/nas-pensacola-vs-hurlburt-field: 1/129, CTR 0.78%, 95% interval 0.14-4.26%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/communities/mary-esther: 0/123, CTR 0.00%, 95% interval 0.00-3.03%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/communities/destin: 0/103, CTR 0.00%, 95% interval 0.00-3.60%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/military-pcs-tax-deductions: 0/99, CTR 0.00%, 95% interval 0.00-3.74%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/communities/gulf-breeze: 0/97, CTR 0.00%, 95% interval 0.00-3.81%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/military-lodging-pensacola: 1/66, CTR 1.52%, 95% interval 0.27-8.10%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/assumable-va-loans-pensacola: 14/54, CTR 25.93%, 95% interval 16.12-38.93%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/blog/living-in-gulf-breeze-pros-cons: 0/53, CTR 0.00%, 95% interval 0.00-6.76%; EXPERIMENT-RUNNING, LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/on-base-vs-off-base-eglin-afb: 0/53, CTR 0.00%, 95% interval 0.00-6.76%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/gulf-breeze-vs-navarre: 0/50, CTR 0.00%, 95% interval 0.00-7.14%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/pcs-schools-by-base: 1/44, CTR 2.27%, 95% interval 0.40-11.81%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/flight-school-housing-pensacola: 2/42, CTR 4.76%, 95% interval 1.32-15.79%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/blog/personal-property-activity-pcs-2026: 0/41, CTR 0.00%, 95% interval 0.00-8.57%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/va-approved-condos-pensacola: 1/40, CTR 2.50%, 95% interval 0.44-12.88%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/on-base-vs-off-base-nas-pensacola: 3/39, CTR 7.69%, 95% interval 2.65-20.32%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/niceville-vs-crestview: 0/39, CTR 0.00%, 95% interval 0.00-8.97%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/blog/florida-homestead-exemption-military: 0/39, CTR 0.00%, 95% interval 0.00-8.97%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/military-rental-property-management: 0/33, CTR 0.00%, 95% interval 0.00-10.43%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+/homes-for-sale-corry-station: 0/31, CTR 0.00%, 95% interval 0.00-11.03%; LOW-SAMPLE, MEASUREMENT-INCOMPLETE
+Snippet review, gc, export gsc-pages-gc-2026-09-04.csv. Counts are per selected export period, never monthly estimates.
+No traffic lift or causal title diagnosis is inferred from average position.
+radar: 7 novel clusters, 25 covered, 34 already queued -> docs/topic-radar.md
+     4.8  both     decision   ferry pass fl houses for sale  [9 imp]
+     3.9  military decision   does penscaola to hurlburt field count as a pca or pcs  [3 imp]
+     3.1  military decision   do army special forces units have personal housing at eglin  [2 imp]
+     3.1  civilian decision   what is average commute from niceville/bluewater bay to hulburt feild  [2 imp]
+     2.9  military decision   hurlburt field afb dorms spec ops  [3 imp]
+     2.3  both     decision   real estate companies pensacola  [2 imp]
+     2.1  military decision   okaloosa tax exemption filing military total and permanent disability  [2 imp]
+# Blog retro, 2026-09-05
+
+## pensacolamilitaryhousing.com
+
+| Post | Age | Score | Inbound | Google export imp/clk/pos | Bing 28d imp/clk/pos | Flags | Priority |
+|---|---|---|---|---|---|---|---|
+| bah-2026-pensacola-what-can-you-afford | 169 | 86 B | 2 | null/null/- | null/null/- | DATA-UNAVAILABLE ORPHAN | 25 |
+| best-neighborhoods-eglin-afb-families | 161 | 83 B | 2 | 23/0/9.7 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE ORPHAN | 25 |
+| florida-homestead-exemption-military | 153 | 87 B | 1 | 39/0/11.1 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE ORPHAN | 25 |
+| pcs-to-pensacola-2026-complete-guide | 143 | 82 B | 2 | 19/0/6.3 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE ORPHAN | 25 |
+| personal-property-activity-pcs-2026 | 87 | 88 B | 1 | 41/0/7.9 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE ORPHAN | 25 |
+| va-loan-seller-concessions-truth | 148 | 84 B | 1 | 226/0/22.1 | null/null/- | MEASUREMENT-INCOMPLETE ORPHAN | 25 |
+| florida-veteran-property-tax-county-guide | 14 | 85 B | 1 | 130/3/20.2 | 4/0/6 | LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW ORPHAN | 13 |
+| living-in-gulf-breeze-pros-cons | 23 | 83 B | 1 | 53/0/4.4 | null/null/- | EXPERIMENT-RUNNING LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW ORPHAN | 13 |
+| moving-to-navarre-2026-guide | 4 | 95 A | 2 | null/null/- | none | DATA-UNAVAILABLE NEW ORPHAN | 13 |
+| va-loan-assumption-buyers-guide | 13 | 84 B | 2 | 13/0/7 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW ORPHAN | 13 |
+| best-pensacola-neighborhoods-by-rank-bah | 24 | 78 C | 3 | 29/1/10.5 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW LOW-SCORE | 5 |
+| moving-to-pensacola-2026-guide | 24 | 86 B | 3 | 15/0/6 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW | 0 |
+
+Site (Bing, data through 2026-08-28): 749 impressions / 13 clicks in 28d. Top pages by 28d impressions: /va-disability-property-tax-florida (132, pos 6); /bah-rates (25, pos 6.8); /bases/whiting-field (0, pos -); /bases/eglin-afb (1, pos 10); /bases/hurlburt-field (20, pos 7); /bases/nas-pensacola (3, pos 6).
+
+Striking-distance queries (pos 4-20, 90d): "training air wing five" (15 imp, pos 9.7); "bah hurlburt field" (8 imp, pos 6.5); "buying a home near nas pensacola" (8 imp, pos 5.4); "nas pensacola bah" (7 imp, pos 6.1); "hurlburt field bah" (6 imp, pos 9.3); "if i buy a home in florida and are 100% va p&t disabled do i need to pay property tax? what about if it is my part time home and i live in nc half of the year?" (6 imp, pos 8); "santa rosa business taxes exemption for veterans" (5 imp, pos 7); "nas pensacola realtor" (5 imp, pos 4); "pensacola bah" (4 imp, pos 10); "nas pensacola base housing office for air force cso students" (4 imp, pos 7); "property for sale near nas pensacola" (4 imp, pos 4); "military friendly realtor pensacola fl" (4 imp, pos 5.5).
+
+CTR problems (top positions, zero clicks): / (17 imp, pos 4.1); /communities/crestview (10 imp, pos 5.4); /on-base-vs-off-base-nas-pensacola (11 imp, pos 5.3); /on-base-vs-off-base-corry-station (8 imp, pos 4); "pensacola fl military home buyer va" (8 imp, pos 2.8).
+
+Declining pages: /bases/whiting-field (16 -> 0); /bases/eglin-afb (11 -> 1).
+
+Uncovered demand (queries earning impressions with no matching target keyword): "training air wing five" (15); "bah hurlburt field" (8); "hurlburt field bah" (6); "if i buy a home in florida and are 100% va p&t disabled do i need to pay property tax? what about if it is my part time home and i live in nc half of the year?" (6); "santa rosa business taxes exemption for veterans" (5); "nas pensacola base housing office for air force cso students" (4); "is the corry station tech school dorm at nas pensacola similar to the goodfellow air force base dorms?" (4); "houses for rent military in fwb florida" (4); "gregg costin" (3); "jcac "a" school address pensacola, fl" (3); "hurlburt field afb dorms spec ops" (3); "best palce to live for flight school milton florida" (3).
+
+## greggcostin.com
+
+| Post | Age | Score | Inbound | Google export imp/clk/pos | Bing 28d imp/clk/pos | Flags | Priority |
+|---|---|---|---|---|---|---|---|
+| closing-costs-florida-buyers | 5 | 53 D | 2 | null/null/- | none | DATA-UNAVAILABLE NEW ORPHAN LOW-SCORE | 18 |
+| fed-rate-hike-what-it-means | 4 | 56 D | 0 | null/null/- | none | DATA-UNAVAILABLE NEW ORPHAN LOW-SCORE | 18 |
+| florida-insurance-relief-2026 | 2 | 59 D | 0 | null/null/- | none | DATA-UNAVAILABLE NEW ORPHAN LOW-SCORE | 18 |
+| what-moves-mortgage-rates | 12 | 62 D | 2 | null/null/- | none | DATA-UNAVAILABLE NEW ORPHAN LOW-SCORE | 18 |
+| property-taxes-escambia-santa-rosa | 9 | 76 C | 3 | null/null/- | none | DATA-UNAVAILABLE NEW LOW-SCORE | 5 |
+
+Site (Bing, data through 0000-00-00): 0 impressions / 0 clicks in 28d. Top pages by 28d impressions: .
+
+## Learning status
+
+Attribute correlations are hypotheses only. A numeric quality score is a lint signal, not a ranking model. Performance rules require two reviewed, comparable experiments in the same scope; no automatic lesson promotion.
+
+
+## Refresh queue (both sites, ranked)
+
+25  pmh:bah-2026-pensacola-what-can-you-afford  [DATA-UNAVAILABLE ORPHAN]  2 contextual inbound internal link(s)
+25  pmh:best-neighborhoods-eglin-afb-families  [LOW-SAMPLE MEASUREMENT-INCOMPLETE ORPHAN]  2 contextual inbound internal link(s)
+25  pmh:florida-homestead-exemption-military  [LOW-SAMPLE MEASUREMENT-INCOMPLETE ORPHAN]  1 contextual inbound internal link(s)
+25  pmh:pcs-to-pensacola-2026-complete-guide  [LOW-SAMPLE MEASUREMENT-INCOMPLETE ORPHAN]  2 contextual inbound internal link(s)
+25  pmh:personal-property-activity-pcs-2026  [LOW-SAMPLE MEASUREMENT-INCOMPLETE ORPHAN]  1 contextual inbound internal link(s)
+25  pmh:va-loan-seller-concessions-truth  [MEASUREMENT-INCOMPLETE ORPHAN]  1 contextual inbound internal link(s)
+18  gc:closing-costs-florida-buyers  [DATA-UNAVAILABLE NEW ORPHAN LOW-SCORE]  2 contextual inbound internal link(s); quality score 53/100
+18  gc:fed-rate-hike-what-it-means  [DATA-UNAVAILABLE NEW ORPHAN LOW-SCORE]  0 contextual inbound internal link(s); quality score 56/100
+18  gc:florida-insurance-relief-2026  [DATA-UNAVAILABLE NEW ORPHAN LOW-SCORE]  0 contextual inbound internal link(s); quality score 59/100
+18  gc:what-moves-mortgage-rates  [DATA-UNAVAILABLE NEW ORPHAN LOW-SCORE]  2 contextual inbound internal link(s); quality score 62/100
+13  pmh:florida-veteran-property-tax-county-guide  [LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW ORPHAN]  1 contextual inbound internal link(s)
+13  pmh:living-in-gulf-breeze-pros-cons  [EXPERIMENT-RUNNING LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW ORPHAN]  1 contextual inbound internal link(s)
+13  pmh:moving-to-navarre-2026-guide  [DATA-UNAVAILABLE NEW ORPHAN]  2 contextual inbound internal link(s)
+13  pmh:va-loan-assumption-buyers-guide  [LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW ORPHAN]  2 contextual inbound internal link(s)
+5  pmh:best-pensacola-neighborhoods-by-rank-bah  [LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW LOW-SCORE]  quality score 78/100
+
+## Inbound link plan (posts with fewer than 3 inbound links)
+
+- pmh:/blog/bah-2026-pensacola-what-can-you-afford (2 inbound) <- /faq (0.7), /florida-homestead-exemption-military (0.6), /disabled-veteran-benefits-florida (0.5), /military-realtor-hurlburt-field (0.5)
+- pmh:/blog/best-neighborhoods-eglin-afb-families (2 inbound) <- /bases/eglin-afb (0.79), /faq (0.71), /communities/fort-walton-beach (0.64), /bases/duke-field (0.57)
+- pmh:/blog/florida-homestead-exemption-military (1 inbound) <- /faq (0.7), /florida-homestead-exemption-military (0.6), /rent-or-sell-pcs-pensacola (0.4), /disabled-veteran-benefits-florida (0.3)
+- pmh:/blog/florida-veteran-property-tax-county-guide (1 inbound) <- /va-disability-property-tax-florida (0.87), /florida-homestead-exemption-military (0.67), /disabled-veteran-benefits-florida (0.47), /va-funding-fee-2026 (0.47)
+- pmh:/blog/living-in-gulf-breeze-pros-cons (1 inbound) <- /faq (0.5), /communities/perdido-key (0.33)
+- pmh:/blog/moving-to-navarre-2026-guide (2 inbound) <- /faq (0.38), /communities/mary-esther (0.38), /gulf-breeze-vs-navarre (0.33), /communities/shalimar (0.33)
+- pmh:/blog/pcs-to-pensacola-2026-complete-guide (2 inbound) <- /faq (0.56), /military-realtor-pensacola (0.56), /buying-sight-unseen-pcs-pensacola (0.5), /military-lodging-pensacola (0.5)
+- pmh:/blog/personal-property-activity-pcs-2026 (1 inbound) <- /faq (0.59), /military-pcs-tax-deductions (0.29), /pcs-checklist (0.29)
+- pmh:/blog/va-loan-assumption-buyers-guide (2 inbound) <- /assumable-va-loans-pensacola (0.57), /faq (0.43), /dual-military-homes (0.36), /first-time-military-homebuyer (0.36)
+- pmh:/blog/va-loan-seller-concessions-truth (1 inbound) <- /faq (0.53), /va-loan-closing-costs-florida (0.47), /buy (0.29), /buying-sight-unseen-pcs-pensacola (0.29)
+- gc:/blog/closing-costs-florida-buyers (2 inbound) <- /resources (0.44), /reviews (0.32), /resources/useful-links (0.3), /resources/florida-homestead-exemption (0.29)
+- gc:/blog/fed-rate-hike-what-it-means (0 inbound) <- /resources (0.33), /reviews (0.27), /faq (0.26), /team (0.26)
+- gc:/blog/florida-insurance-relief-2026 (0 inbound) <- /resources (0.44), /resources/florida-home-insurance (0.38), /resources/useful-links (0.37), /neighborhoods/pensacola-beach (0.33)
+- gc:/blog/what-moves-mortgage-rates (2 inbound) <- /resources (0.33), /resources/useful-links (0.3), /reviews (0.27), /schools (0.27)
+
+{
+  "next": {
+    "kind": "source-and-usefulness-refresh",
+    "site": "gc",
+    "target": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+    "readerTask": "Give the reader a reproducible, sourced cost or decision checklist.",
+    "reason": "Existing financial guide has no external source links. Research before rewriting; a score alone is not verification."
+  },
+  "sourceGaps": [
+    {
+      "site": "gc",
+      "slug": "closing-costs-florida-buyers"
+    },
+    {
+      "site": "gc",
+      "slug": "fed-rate-hike-what-it-means"
+    },
+    {
+      "site": "gc",
+      "slug": "florida-insurance-relief-2026"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "pmh-snippet-2026-09-04-1",
+      "page": "/bah-rates",
+      "outcome": "unknown",
+      "cooldown": true,
+      "comparison": {
+        "comparable": false,
+        "reasons": [
+          "Exact baseline date range and filters are unknown; no separate post-change window yet."
+        ]
+      }
+    },
+    {
+      "id": "pmh-snippet-2026-09-04-2",
+      "page": "/blog/living-in-gulf-breeze-pros-cons",
+      "outcome": "unknown",
+      "cooldown": true,
+      "comparison": {
+        "comparable": false,
+        "reasons": [
+          "Exact baseline date range and filters are unknown; no separate post-change window yet."
+        ]
+      }
+    }
+  ],
+  "articles": 17,
+  "briefs": [
+    {
+      "id": "full-payment",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/blog/bah-2026-pensacola-what-can-you-afford"
+    },
+    {
+      "id": "training-housing",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/flight-school-housing-pensacola"
+    },
+    {
+      "id": "rent-buy-hold",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/on-base-vs-off-base-eglin-afb"
+    },
+    {
+      "id": "property-insurance-packet",
+      "evidence": "editorial-hypothesis",
+      "owner": "/resources/florida-home-insurance"
+    },
+    {
+      "id": "part-year-homestead",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/blog/florida-veteran-property-tax-county-guide"
+    }
+  ]
+}

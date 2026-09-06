@@ -4,9 +4,41 @@
  "plan": [
   {
    "site": "pmh",
+   "post": "/blog/bah-2026-pensacola-what-can-you-afford",
+   "label": "2026 BAH for Pensacola: What Can You Actually Afford?",
+   "inbound": 2,
+   "from": [
+    {
+     "hub": "/faq",
+     "hubTitle": "Pensacola Military PCS & Housing FAQ",
+     "match": 0.7,
+     "anchor": "<a href=\"/blog/bah-2026-pensacola-what-can-you-afford\">2026 BAH for Pensacola: What Can You Actually Afford?</a>"
+    },
+    {
+     "hub": "/florida-homestead-exemption-military",
+     "hubTitle": "Florida Homestead Exemption for Military Families: 2026 Filing, Stacking, PCS Rules",
+     "match": 0.6,
+     "anchor": "<a href=\"/blog/bah-2026-pensacola-what-can-you-afford\">2026 BAH for Pensacola: What Can You Actually Afford?</a>"
+    },
+    {
+     "hub": "/disabled-veteran-benefits-florida",
+     "hubTitle": "Disabled Veteran Benefits in Florida (2026): How to Stack Federal + State Savings",
+     "match": 0.5,
+     "anchor": "<a href=\"/blog/bah-2026-pensacola-what-can-you-afford\">2026 BAH for Pensacola: What Can You Actually Afford?</a>"
+    },
+    {
+     "hub": "/military-realtor-hurlburt-field",
+     "hubTitle": "Military Realtor for Hurlburt Field: Where AFSOC Families Buy",
+     "match": 0.5,
+     "anchor": "<a href=\"/blog/bah-2026-pensacola-what-can-you-afford\">2026 BAH for Pensacola: What Can You Actually Afford?</a>"
+    }
+   ]
+  },
+  {
+   "site": "pmh",
    "post": "/blog/best-neighborhoods-eglin-afb-families",
    "label": "Best Neighborhoods for Eglin AFB Families in 2026: Niceville, Crestview, or Fort Walton Beach?",
-   "inbound": 1,
+   "inbound": 2,
    "from": [
     {
      "hub": "/bases/eglin-afb",
@@ -38,7 +70,7 @@
    "site": "pmh",
    "post": "/blog/florida-homestead-exemption-military",
    "label": "Florida Homestead Exemption: The Military Family's Guide to Saving Thousands on Property Taxes",
-   "inbound": 2,
+   "inbound": 1,
    "from": [
     {
      "hub": "/faq",
@@ -70,7 +102,7 @@
    "site": "pmh",
    "post": "/blog/florida-veteran-property-tax-county-guide",
    "label": "Florida Disabled Veteran Property Tax Exemptions: The County-by-County Filing Guide for Escambia, Santa Rosa, and Okaloosa",
-   "inbound": 2,
+   "inbound": 1,
    "from": [
     {
      "hub": "/va-disability-property-tax-florida",
@@ -102,7 +134,7 @@
    "site": "pmh",
    "post": "/blog/living-in-gulf-breeze-pros-cons",
    "label": "Living in Gulf Breeze, FL: Pros, Cons, and the Numbers Nobody Prints",
-   "inbound": 2,
+   "inbound": 1,
    "from": [
     {
      "hub": "/faq",
@@ -122,7 +154,7 @@
    "site": "pmh",
    "post": "/blog/moving-to-navarre-2026-guide",
    "label": "Moving to Navarre, FL: The 2026 Guide to a Town on Three Seams",
-   "inbound": 1,
+   "inbound": 2,
    "from": [
     {
      "hub": "/faq",
@@ -152,9 +184,41 @@
   },
   {
    "site": "pmh",
+   "post": "/blog/pcs-to-pensacola-2026-complete-guide",
+   "label": "PCS to Pensacola in 2026: The Orders-in-Hand Playbook, 90 Days Out Through Your First 90",
+   "inbound": 2,
+   "from": [
+    {
+     "hub": "/faq",
+     "hubTitle": "Pensacola Military PCS & Housing FAQ",
+     "match": 0.56,
+     "anchor": "<a href=\"/blog/pcs-to-pensacola-2026-complete-guide\">PCS to Pensacola in 2026: The Orders-in-Hand Playbook, 90 Days Out Through Your First 90</a>"
+    },
+    {
+     "hub": "/military-realtor-pensacola",
+     "hubTitle": "Military Realtor in Pensacola: Work With Someone Who Has Lived Your Orders",
+     "match": 0.56,
+     "anchor": "<a href=\"/blog/pcs-to-pensacola-2026-complete-guide\">PCS to Pensacola in 2026: The Orders-in-Hand Playbook, 90 Days Out Through Your First 90</a>"
+    },
+    {
+     "hub": "/buying-sight-unseen-pcs-pensacola",
+     "hubTitle": "Buying a Pensacola Home Sight Unseen: The PCS Remote-Purchase Playbook",
+     "match": 0.5,
+     "anchor": "<a href=\"/blog/pcs-to-pensacola-2026-complete-guide\">PCS to Pensacola in 2026: The Orders-in-Hand Playbook, 90 Days Out Through Your First 90</a>"
+    },
+    {
+     "hub": "/military-lodging-pensacola",
+     "hubTitle": "Navy Lodge Pensacola & Military Lodging: The 2026 TLE Playbook",
+     "match": 0.5,
+     "anchor": "<a href=\"/blog/pcs-to-pensacola-2026-complete-guide\">PCS to Pensacola in 2026: The Orders-in-Hand Playbook, 90 Days Out Through Your First 90</a>"
+    }
+   ]
+  },
+  {
+   "site": "pmh",
    "post": "/blog/personal-property-activity-pcs-2026",
    "label": "What the New Personal Property Activity (PPA) Means for Your 2026 PCS to Pensacola",
-   "inbound": 2,
+   "inbound": 1,
    "from": [
     {
      "hub": "/faq",
@@ -180,7 +244,7 @@
    "site": "pmh",
    "post": "/blog/va-loan-assumption-buyers-guide",
    "label": "How to Assume a VA Loan in 2026: The Step-by-Step Playbook for Veterans and Civilians",
-   "inbound": 1,
+   "inbound": 2,
    "from": [
     {
      "hub": "/assumable-va-loans-pensacola",
@@ -212,7 +276,7 @@
    "site": "pmh",
    "post": "/blog/va-loan-seller-concessions-truth",
    "label": "The VA Loan Seller Concessions Myth That's Costing Military Buyers Thousands",
-   "inbound": 2,
+   "inbound": 1,
    "from": [
     {
      "hub": "/faq",
@@ -242,9 +306,41 @@
   },
   {
    "site": "gc",
+   "post": "/blog/closing-costs-florida-buyers",
+   "label": "Florida Closing Costs, Line by Line: A Buyer's Guide",
+   "inbound": 2,
+   "from": [
+    {
+     "hub": "/resources",
+     "hubTitle": "Florida homeowner resources",
+     "match": 0.44,
+     "anchor": "<a href=\"/blog/closing-costs-florida-buyers\">Florida Closing Costs, Line by Line: A Buyer's Guide</a>"
+    },
+    {
+     "hub": "/reviews",
+     "hubTitle": "Five stars, every time",
+     "match": 0.32,
+     "anchor": "<a href=\"/blog/closing-costs-florida-buyers\">Florida Closing Costs, Line by Line: A Buyer's Guide</a>"
+    },
+    {
+     "hub": "/resources/useful-links",
+     "hubTitle": "Useful links for Florida homeowners",
+     "match": 0.3,
+     "anchor": "<a href=\"/blog/closing-costs-florida-buyers\">Florida Closing Costs, Line by Line: A Buyer's Guide</a>"
+    },
+    {
+     "hub": "/resources/florida-homestead-exemption",
+     "hubTitle": "Florida Homestead Exemption: What Pensacola Area Homeowners Need to Know",
+     "match": 0.29,
+     "anchor": "<a href=\"/blog/closing-costs-florida-buyers\">Florida Closing Costs, Line by Line: A Buyer's Guide</a>"
+    }
+   ]
+  },
+  {
+   "site": "gc",
    "post": "/blog/fed-rate-hike-what-it-means",
    "label": "A Fed Rate Hike Is Back on the Table. Here Is What It Means.",
-   "inbound": 1,
+   "inbound": 0,
    "from": [
     {
      "hub": "/resources",
@@ -276,7 +372,7 @@
    "site": "gc",
    "post": "/blog/florida-insurance-relief-2026",
    "label": "Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.",
-   "inbound": 1,
+   "inbound": 0,
    "from": [
     {
      "hub": "/resources",
@@ -301,6 +397,38 @@
      "hubTitle": "Pensacola Beach",
      "match": 0.33,
      "anchor": "<a href=\"/blog/florida-insurance-relief-2026\">Florida Insurance Costs Are Finally Falling. Here Is the Fine Print.</a>"
+    }
+   ]
+  },
+  {
+   "site": "gc",
+   "post": "/blog/what-moves-mortgage-rates",
+   "label": "What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers",
+   "inbound": 2,
+   "from": [
+    {
+     "hub": "/resources",
+     "hubTitle": "Florida homeowner resources",
+     "match": 0.33,
+     "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
+    },
+    {
+     "hub": "/resources/useful-links",
+     "hubTitle": "Useful links for Florida homeowners",
+     "match": 0.3,
+     "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
+    },
+    {
+     "hub": "/reviews",
+     "hubTitle": "Five stars, every time",
+     "match": 0.27,
+     "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
+    },
+    {
+     "hub": "/schools",
+     "hubTitle": "Pensacola-area schools, graded",
+     "match": 0.27,
+     "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
     }
    ]
   }

@@ -1,3 +1,5 @@
+import { evidenceGate } from "./article-evidence.mjs";
+import { journeyHtml, wireJourney } from "./blog-journey.mjs";
 // Blog factory: builds /blog/<slug> static post pages from content/blog/*.fragment.html,
 // regenerates the /blog index (cards + head schema), appends sitemap entries, and
 // maintains content/blog/ledger.json (the blog engine's memory).
@@ -162,6 +164,8 @@ function loadFragment(path) {
     throw new Error(`${path}: figure {src, alt, caption} required (standing rule: every post has a licensed hero image — fetch via scripts/fetch-stock-image.mjs)`);
   }
   spec.dateModified = spec.dateModified || spec.datePublished;
+  const proof = evidenceGate(spec, spec.body, "pmh", ROOT, new Date().toISOString().slice(0,10));
+  if (proof.errors.length) throw new Error(spec.slug + ": evidence gate: " + proof.errors.join("; "));
   // SCANNABILITY gate (standing rule, Sep 2026, lesson L004): long prose walls up. AI engines
   // retrieve passages and readers skim, so no paragraph may run past 110 words; over 85 warns.
   const wc = (t) => String(t).replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
@@ -175,8 +179,9 @@ function loadFragment(path) {
   // so AI engines meet the quotable statement first. Older posts warn until their next refresh.
   const GEO_SINCE = "2026-09-04";
   if (spec.dateModified >= GEO_SINCE) {
-    if (!spec.quickAnswer || !/\d/.test(spec.quickAnswer)) throw new Error(`${path}: quickAnswer required (GEO standing rule): 2-4 dated declarative sentences that restate a figure already in the post`);
+    if (!spec.quickAnswer) throw new Error(`${path}: quickAnswer required (GEO standing rule): 2-4 dated declarative sentences that restate a figure already in the post`);
     const sentences = spec.quickAnswer.split(/(?<=[.!?])\s+/).filter(Boolean).length;
+    if (wc(spec.quickAnswer) > 85) throw new Error(`${path}: quickAnswer exceeds 85 words`);
     if (sentences < 2 || sentences > 4) throw new Error(`${path}: quickAnswer must be 2-4 sentences (found ${sentences})`);
   } else if (!spec.quickAnswer) console.warn(`  WARN ${spec.slug}: no quickAnswer yet (GEO standing rule applies on its next refresh)`);
   return spec;
@@ -249,15 +254,22 @@ function buildPost(spec, template) {
   const heroFigure = figureHTML(spec.figure, { hero: true });
   const body = upgradeBodyFigures(spec.body);
 
-  const newMain = `\n${authorCard}\n${topMeta}\n${heroFigure}\n${body}${faqVisible}${related}\n${explore}\n`;
+  const nextSteps = journeyHtml(spec, "pmh", ROOT);
+  const takeaways = spec.takeaways?.length ? `<div class="takeaways"><h2>Key takeaways</h2><ul>${spec.takeaways.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : "";
+  const newMain = `\n${authorCard}\n${topMeta}\n${heroFigure}\n${takeaways}\n${body}${faqVisible}${nextSteps}${related}\n${explore}\n`;
   html = html.slice(0, mainStart + "<main data-pagefind-body>".length) + newMain + html.slice(mainEnd);
   // geo-03: optional dated quick-answer block right after the lead (spec.quickAnswer, 2-4 sentences with the post's key figure)
   html = html.replace(/<div class="quick-answer" data-quick-answer>[\s\S]*?<\/div>\n?/, "");
   if (spec.quickAnswer) html = placeQuickAnswer(html, { text: spec.quickAnswer, date: monthYear(spec.dateModified) });
 
   html = html.replace(/Last updated: [A-Za-z]+ \d{1,2}, \d{4}/, `Last updated: ${longDate(spec.dateModified)}`);
-  html = html.replace(/Content last verified: [A-Za-z]+ \d{4}/, `Content last verified: ${monthYear(spec.dateModified)}`);
+  const existingPath = OUT_DIR + spec.slug + ".html";
+  const existingStamp = existsSync(existingPath) ? /Content last verified: [A-Za-z]+ \d{4}/.exec(readFileSync(existingPath, "utf8"))?.[0] : null;
+  if (spec.factVerifiedDate) html = html.replace(/Content last verified: [A-Za-z]+ \d{4}/, `Content last verified: ${monthYear(spec.factVerifiedDate)}`);
+  else if (existingStamp) html = html.replace(/Content last verified: [A-Za-z]+ \d{4}/, existingStamp);
+  else html = html.replace(/<p[^>]*>Content last verified: [^<]*<\/p>/, "");
 
+  html = wireJourney(html, spec, "pmh");
   const o = (html.match(/<div\b/g) || []).length, c = (html.match(/<\/div>/g) || []).length;
   if (o !== c) throw new Error(`${spec.slug}: unbalanced divs (${o} vs ${c}) — refusing to write`);
 
@@ -273,13 +285,8 @@ function rebuildIndex(specs) {
   // head: replace every BlogPosting block with regenerated ones pointing at real URLs
   const postLd = sorted.map(s =>
     `<script type="application/ld+json">\n{"@context":"https://schema.org","@type":"BlogPosting","headline":${jesc(s.title)},"description":${jesc(s.description)},"url":"${SITE}/blog/${s.slug}","datePublished":"${s.datePublished}","dateModified":"${s.dateModified}","author":{"@id":"${IDS.person}"},"mainEntityOfPage":"${SITE}/blog/${s.slug}"}\n</script>`).join("\n");
-  const ldBlocks = html.match(/<script type="application\/ld\+json">\s*\{"@context":"https:\/\/schema\.org","@type":"BlogPosting"[\s\S]*?<\/script>/g) || [];
-  if (ldBlocks.length) {
-    html = html.replace(ldBlocks[0], () => postLd);
-    for (let i = 1; i < ldBlocks.length; i++) html = html.replace(ldBlocks[i], "");
-  } else {
-    html = html.replace("</head>", postLd + "\n</head>");
-  }
+  html = html.replace(/<script type="application\/ld\+json">\s*\{"@context":"https:\/\/schema\.org","@type":"BlogPosting"[\s\S]*?<\/script>/g, "");
+  html = html.replace("</head>", postLd + "\n</head>").replace(/\n{3,}/g, "\n\n");
 
   // body: replace the article span with excerpt cards linking to post pages
   const first = html.indexOf('<article class="blog-card"');

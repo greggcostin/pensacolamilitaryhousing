@@ -1,0 +1,30 @@
+{
+  "generated": "2026-09-05",
+  "bingAttempt": "not attempted (offline)",
+  "exports": [
+    {
+      "site": "pmh",
+      "file": "bing-keywords-2026-08-22.csv",
+      "status": "parsed",
+      "rows": 334
+    },
+    {
+      "site": "pmh",
+      "file": "gsc-pages-2026-09-04.csv",
+      "status": "parsed",
+      "rows": 110
+    },
+    {
+      "site": "pmh",
+      "file": "gsc-queries-2026-09-04.csv",
+      "status": "parsed",
+      "rows": 486
+    },
+    {
+      "site": "gc",
+      "file": "gsc-pages-gc-2026-09-04.csv",
+      "status": "parsed",
+      "rows": 1
+    }
+  ]
+}

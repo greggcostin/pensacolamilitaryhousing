@@ -58,7 +58,6 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
   if ('requestIdleCallback' in window) { requestIdleCallback(loadFUB, {timeout: 5000}); } else { setTimeout(loadFUB, 4000); }
 })();
 </script>
-<script type="application/ld+json" data-entity="entity-graph:compact">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://greggcostin.com/#gregg","name":"Gregg Costin","jobTitle":"Realtor","honorificSuffix":"MRP, ABR, SRS, RENE, FMS","description":"Realtor with Levin Rinke Realty, licensed in Florida and Alabama; retired USAF Combat Systems Officer; serves Pensacola, the Florida Panhandle and Alabama's Gulf Shores and Orange Beach.","url":"https://greggcostin.com/team","image":"https://pensacolamilitaryhousing.com/images/gregg-portrait.jpg","worksFor":{"@id":"https://greggcostin.com/#brokerage"},"memberOf":{"@id":"https://greggcostin.com/#team"},"sameAs":["https://pensacolamilitaryhousing.com/about","https://www.zillow.com/profile/GreggCostin","https://www.linkedin.com/in/greggcostin"]},{"@type":"RealEstateAgent","@id":"https://greggcostin.com/#team","name":"Gregg Costin - The Costin Team","url":"https://greggcostin.com","telephone":"+1-850-266-5005","logo":{"@type":"ImageObject","url":"https://pensacolamilitaryhousing.com/images/logo-08-sm.png","width":480,"height":196},"parentOrganization":{"@id":"https://greggcostin.com/#brokerage"},"founder":{"@id":"https://greggcostin.com/#gregg"}},{"@type":"Organization","@id":"https://greggcostin.com/#brokerage","name":"Levin Rinke Realty","url":"https://www.levinrinkerealty.com/"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -249,8 +248,8 @@ figcaption a{color:var(--muted);text-decoration:underline}
   .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button,.main-banner .banner-tabs .banner-search{padding:5px 6px!important;font-size:10.5px!important;letter-spacing:.2px!important}
 }
 /* MOBILE_DRAWER_END */
-.quick-answer{max-width:760px;margin:6px auto 22px;padding:16px 20px;border:1px solid var(--gold-line,rgba(201,168,76,.35));border-left:4px solid var(--gold,#c9a84c);border-radius:10px;background:var(--panel,rgba(255,255,255,.03))}.quick-answer .qa-label{margin:0 0 6px;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold,#c9a84c);font-weight:600}.quick-answer .qa-text{margin:0;font-size:16px;line-height:1.65;color:var(--text,#e8e6df)}.quick-answer .qa-by{margin:8px 0 0;font-size:13px;color:var(--muted,#9aa0aa);font-style:italic}</style>
-</head>
+</style>
+<style id="article-journey-style">.article-next{max-width:760px;margin:2rem auto;padding:1.2rem;border:1px solid var(--gold-line,#7c692f);border-radius:10px}.article-next h2{margin-top:0}.article-share{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.article-share button{padding:10px 14px;min-height:44px;border:1px solid #9b8445;border-radius:6px;color:inherit;background:transparent;font:inherit;cursor:pointer}.article-share [hidden]{display:none}.article-share button:focus-visible{outline:3px solid #C9A84C;outline-offset:3px}.article-share [role=status]{display:block;width:100%;font-size:14px}</style></head>
 <body>
 <nav class="main-banner" aria-label="Main site navigation">
 <div class="banner-row">
@@ -283,12 +282,12 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <header>
 <h1>How Property Taxes Actually Work in Escambia and Santa Rosa County</h1>
 <p class="lead">Your TRIM notice is not a bill. Your neighbor's tax bill tells you almost nothing about yours. And there is a property tax amendment on the November ballot. Here is the whole machine in plain English, with the local dates that matter.</p>
-<div class="quick-answer" data-quick-answer><p class="qa-label">Quick answer, as of September 2026</p><p class="qa-text">A Florida TRIM notice is a proposal, not a bill: it lists market value, assessed value, exemptions and each taxing authority's proposed millage. Your bill will not match the seller's because the county reassesses at market value on the January 1 after your purchase, which resets the previous owner's Save Our Homes savings. File for homestead by March 1 to start your own 3% cap.</p><p class="qa-by">Gregg Costin, Realtor, The Costin Team at Levin Rinke Realty</p></div>
 </header>
 <main>
 
-<div style="max-width:760px;margin:0 auto 6px;color:var(--muted);font-size:13px;letter-spacing:.5px;text-transform:uppercase">August 27, 2026 &middot; The Costin Team Blog</div>
+<div style="max-width:760px;margin:0 auto 6px;color:var(--muted);font-size:13px;letter-spacing:.5px;text-transform:uppercase">August 27, 2026 &middot; By Gregg Costin, Realtor &middot; Reviewed and updated August 2026</div>
 <figure class="figure-band"><picture><source type="image/avif" srcset="/images/prop-tax-hist-480.avif 480w, /images/prop-tax-hist-768.avif 768w, /images/prop-tax-hist-1200.avif 1200w, /images/prop-tax-hist.avif 1400w" sizes="(max-width: 800px) 92vw, 760px"><source type="image/webp" srcset="/images/prop-tax-hist-480.webp 480w, /images/prop-tax-hist-768.webp 768w, /images/prop-tax-hist-1200.webp 1200w, /images/prop-tax-hist.webp 1400w" sizes="(max-width: 800px) 92vw, 760px"><img src="/images/prop-tax-hist.jpg" srcset="/images/prop-tax-hist-480.jpg 480w, /images/prop-tax-hist-768.jpg 768w, /images/prop-tax-hist-1200.jpg 1200w, /images/prop-tax-hist.jpg 1400w" sizes="(max-width: 800px) 92vw, 760px" width="1400" height="1050" alt="A restored two-story yellow Victorian house behind a white picket fence in the Pensacola Historic District" loading="lazy" decoding="async"></picture><figcaption>Every home in Escambia and Santa Rosa County gets a value, an exemption set, and a millage rate. Those three numbers are your tax bill. Photo: <a href="https://commons.wikimedia.org/wiki/File%3APensacola%20HD%20Lear-Rocheblave01.jpg" rel="noopener nofollow" target="_blank">Ebyabe</a>, CC BY-SA 3.0</figcaption></figure>
+
 <p>Property tax is the line item buyers underestimate most often on the Gulf Coast. Not because the rates are shocking, but because the way Florida calculates the number is genuinely unintuitive. Two identical houses on the same street can carry tax bills that differ by thousands of dollars a year, and both are correct.</p>
 <p>TRIM notices went out this month across both counties, so this is the season when the questions arrive. Here is how the system actually works, what the notice in your mailbox is telling you, the deadlines that are running right now, and the change Florida voters will decide in November.</p>
 
@@ -400,15 +399,7 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <details><summary>Do property taxes go down if home values fall?</summary><p>Not automatically. Taxing authorities set millage based on their budgets, so if the total assessed value of the county drops, they can raise the millage rate to collect a similar amount. Falling values usually help individual owners only when their own assessment drops relative to their neighbors. Watch both numbers on the TRIM notice, the value and the rate, because either one can move your bill.</p></details>
 <details><summary>Should I budget property taxes based on the listing's tax figure?</summary><p>No. The tax number shown on a listing reflects the current owner's assessment and exemptions. For budgeting, estimate the taxable value as the price you are paying, subtract the homestead exemption if the home will be your primary residence, and apply the millage rate for that parcel. Lenders often escrow using the old figure in year one, which is why escrow shortages surprise buyers in year two.</p></details>
 
-<!-- inq-cta --><div class="inq-cta">
-<div style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;5.0 on Google and Zillow &middot; <a href="/reviews" style="color:var(--gold)">Verified Reviews</a></div>
-<p class="ih">Questions about your own move?</p>
-<p class="is">Call or text (850) 266-5005, set up a live home search, or get a free valuation. No pressure, and a response within 2 hours during business hours.</p>
-<div class="ir">
-<a class="ip" href="https://greggcostin.realscout.com/onboarding">Start Your Home Search &rarr;</a>
-<a class="il" href="https://greggcostin.realscout.com/whats-my-home-worth">Get My Home Value</a>
-</div>
-</div>
+<section class="article-next" aria-labelledby="article-next-title" data-article-journey><h2 id="article-next-title">Put this guide to work</h2><p>Compare tax rules with the address and ownership plan you are considering.</p><ul><li><a data-blog-next="tool" href="/resources/florida-homestead-exemption">Review homestead requirements</a></li><li><a data-blog-next="companion" href="https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide">Veteran buyer? See the county tax guide</a></li></ul><p><a href="/contact" data-inquiry-open data-inquiry-type="General Question" data-blog-next="inquiry">Ask Gregg about your own move</a></p><div class="article-share"><button type="button" data-blog-share hidden>Share this guide</button> <button type="button" data-blog-copy hidden>Copy guide link</button> <a href="https://greggcostin.com/blog/property-taxes-escambia-santa-rosa">Permanent link</a><span data-blog-share-status role="status" aria-live="polite"></span></div></section>
 <p style="max-width:760px;margin:1.5rem auto;text-align:center"><a href="/blog">&larr; Back to all posts</a></p>
 </main>
 <footer>
@@ -467,7 +458,7 @@ btn.disabled=true;btn.textContent='Sending...';
 fetch('https://costin-contact.gregg-costin.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
 .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
 .then(function(res){
-if(res.ok&&res.j.success){body.innerHTML='<div class="iok"><div style="font-size:40px;margin-bottom:12px">✓</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. We will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('gc-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
+if(res.ok&&res.j.success){document.dispatchEvent(new CustomEvent('costin:lead-success'));body.innerHTML='<div class="iok"><div style="font-size:40px;margin-bottom:12px">✓</div><h4 style="color:#6adf6a;font-size:18px;font-weight:700;margin-bottom:12px">Message Received</h4><p style="color:#ccc;font-size:14px;line-height:1.7">Thanks for reaching out. We will respond within 2 hours during business hours.</p></div>';try{localStorage.setItem('gc-inquiry-submitted','1');}catch(e){}if(window.gtag)gtag('event','inquiry_submit',{event_category:'conversion'});}
 else{errBox.textContent='⚠ '+(res.j.error||'Something went wrong. Please call (850) 266-5005.');errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';}
 })
 .catch(function(){errBox.textContent='⚠ Connection error. Please call (850) 266-5005 directly.';errBox.style.display='block';btn.disabled=false;btn.textContent='Send Message';});
@@ -483,5 +474,55 @@ b.addEventListener('click',function(e){if(mq.matches){e.preventDefault();var ope
 d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(mq.matches)setOpen(false);});});
 if(mq.addEventListener)mq.addEventListener('change',function(){if(!mq.matches)setOpen(false);});
 if(/[?&]drawer=open/.test(location.search))setOpen(true);})();</script>
+<script id="costin-article-runtime">(function articleRuntime(config) {
+  if (window.__costinArticle) return;
+  window.__costinArticle = true;
+  const doc = document, nav = navigator, main = doc.querySelector("main");
+  const panel = doc.querySelector("[data-article-journey]");
+  if (!main || !panel) return;
+  const seen = new Set();
+  const emit = (name, data = {}, once = false) => {
+    if (nav.globalPrivacyControl === true || nav.doNotTrack === "1" || typeof window.gtag !== "function") return;
+    if (once && seen.has(name)) return;
+    if (once) seen.add(name);
+    window.gtag("event", name, { content_type: "article", content_id: config.slug, article_site: config.site, article_goal: config.goal, ...data });
+  };
+  doc.addEventListener("click", (e) => {
+    const a = e.target.closest?.("[data-blog-next]");
+    if (!a) return;
+    emit("blog_next_step", { step_type: a.getAttribute("data-blog-next") });
+  });
+  doc.addEventListener("costin:lead-success", () => emit("blog_inquiry_success", { method: "accepted_form" }, true));
+  const share = panel.querySelector("[data-blog-share]"), copy = panel.querySelector("[data-blog-copy]"), status = panel.querySelector("[data-blog-share-status]");
+  if (share && typeof nav.share === "function") {
+    share.hidden = false;
+    share.addEventListener("click", async () => {
+      try {
+        await nav.share({ title: config.title, url: config.url });
+        status.textContent = "Sharing finished.";
+        emit("share", { method: "native" });
+      } catch (e) { if (e.name !== "AbortError") status.textContent = "Use Copy guide link or the permanent link."; }
+    });
+  }
+  if (copy && nav.clipboard?.writeText) {
+    copy.hidden = false;
+    copy.addEventListener("click", async () => {
+      try { await nav.clipboard.writeText(config.url); status.textContent = "Guide link copied."; emit("blog_link_copy", { method: "clipboard" }); }
+      catch { status.textContent = "Use the permanent link to copy this guide's address."; }
+    });
+  }
+  let visibleSeconds = 0;
+  const timer = window.setInterval(() => {
+    if (doc.visibilityState === "hidden") return;
+    visibleSeconds += 5;
+    const rect = main.getBoundingClientRect();
+    const progress = Math.min(1, Math.max(0, (window.innerHeight - rect.top) / Math.max(1, rect.height)));
+    if (visibleSeconds >= 30 && progress >= 0.5) {
+      emit("blog_read", { active_seconds: visibleSeconds, depth_threshold: 50 }, true);
+      window.clearInterval(timer);
+    }
+  }, 5000);
+  window.addEventListener("pagehide", () => window.clearInterval(timer), { once: true });
+})({"slug":"property-taxes-escambia-santa-rosa","title":"How Property Taxes Actually Work in Escambia and Santa Rosa County","site":"gc","goal":"property-cost-review","url":"https://greggcostin.com/blog/property-taxes-escambia-santa-rosa"});</script>
 </body>
 </html>

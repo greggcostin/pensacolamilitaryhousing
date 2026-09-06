@@ -40,7 +40,18 @@
           "position": 9,
           "sample": [
             "bah pensacola"
-          ]
+          ],
+          "property": "https://pensacolamilitaryhousing.com",
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
         },
         {
           "slug": "bah-2026-pensacola-what-can-you-afford",
@@ -56,6 +67,31 @@
           "clicks90": 0,
           "position90": null,
           "note": "no Bing rows for this URL"
+        },
+        {
+          "slug": "bah-2026-pensacola-what-can-you-afford",
+          "url": "/blog/bah-2026-pensacola-what-can-you-afford",
+          "source": "gsc-pages",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "date": "2026-09-04",
+          "property": "https://pensacolamilitaryhousing.com",
+          "kind": "page",
+          "status": "not-observed",
+          "impressions": null,
+          "clicks": null,
+          "position": null,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          },
+          "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
         }
       ]
     },
@@ -108,7 +144,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 23,
-          "position": 9.7
+          "position": 9.7,
+          "url": "/blog/best-neighborhoods-eglin-afb-families",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         }
       ]
     },
@@ -161,7 +213,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 39,
-          "position": 11.1
+          "position": 11.1,
+          "url": "/blog/florida-homestead-exemption-military",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         }
       ]
     },
@@ -215,7 +283,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 19,
-          "position": 6.3
+          "position": 6.3,
+          "url": "/blog/pcs-to-pensacola-2026-complete-guide",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         }
       ]
     },
@@ -276,7 +360,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 41,
-          "position": 7.9
+          "position": 7.9,
+          "url": "/blog/personal-property-activity-pcs-2026",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         }
       ]
     },
@@ -351,7 +451,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 226,
-          "position": 22.1
+          "position": 22.1,
+          "url": "/blog/va-loan-seller-concessions-truth",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         }
       ]
     },
@@ -405,7 +521,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 15,
-          "position": 6
+          "position": 6,
+          "url": "/blog/moving-to-pensacola-2026-guide",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         }
       ]
     },
@@ -459,7 +591,23 @@
           "kind": "page",
           "clicks": 1,
           "impressions": 29,
-          "position": 10.5
+          "position": 10.5,
+          "url": "/blog/best-pensacola-neighborhoods-by-rank-bah",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0.034482758620689655,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         }
       ]
     },
@@ -513,7 +661,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 53,
-          "position": 4.4
+          "position": 4.4,
+          "url": "/blog/living-in-gulf-breeze-pros-cons",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         }
       ]
     },
@@ -567,7 +731,23 @@
           "kind": "page",
           "clicks": 3,
           "impressions": 130,
-          "position": 20.2
+          "position": 20.2,
+          "url": "/blog/florida-veteran-property-tax-county-guide",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0.023076923076923078,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         }
       ]
     },
@@ -615,7 +795,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 13,
-          "position": 7
+          "position": 7,
+          "url": "/blog/va-loan-assumption-buyers-guide",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         }
       ]
     },
@@ -630,7 +826,34 @@
         "is navarre a good place to live"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
-      "metrics": []
+      "metrics": [],
+      "search": [
+        {
+          "slug": "moving-to-navarre-2026-guide",
+          "url": "/blog/moving-to-navarre-2026-guide",
+          "source": "gsc-pages",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "date": "2026-09-04",
+          "property": "https://pensacolamilitaryhousing.com",
+          "kind": "page",
+          "status": "not-observed",
+          "impressions": null,
+          "clicks": null,
+          "position": null,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          },
+          "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+        }
+      ]
     }
   },
   "runs": [
@@ -761,7 +984,7 @@
         "bah-2026-pensacola-what-can-you-afford: mortgage rate refreshed from 6.69% (week of Aug 6 2026) to the verified 6.66% for the week ending Aug 27 2026 (Freddie Mac PMMS, fetched directly), with 15-yr 5.98%, prior week 6.65% and year-ago 6.56%. All payment math and the price-band table recomputed at 6.66%."
       ],
       "canonFixesNotApplied": [
-        "RESEARCH PACK CLAIM REJECTED: the pack reported Escambia unincorporated millage as 19.0080 and said the post understated tax by about $100/mo ($242 vs ~$340 on a $265K home). Independent cross-check contradicted this: the Tax Collector component list (county 6.6000 + school 5.3590 + Sheriff MSTU 0.6850 + library 0.3590 + Children’s Trust 0.3798 + NWFWMD 0.0207) sums to 13.4035, and a second source independently puts unincorporated Escambia at approximately 13.4 mills. The pack had flagged this as uncertain and asked for a human check. 19.0080 appears to be a stacked or maximum figure, not the unincorporated total. The 19.0080 and $340/mo figures were NOT written into the post.",
+        "RESEARCH PACK CLAIM REJECTED: the pack reported Escambia unincorporated millage as 19.0080 and said the post understated tax by about $100/mo ($242 vs ~$340 on a $265K home). Independent cross-check contradicted this: the Tax Collector component list (county 6.6000 + school 5.3590 + Sheriff MSTU 0.6850 + library 0.3590 + Children\u2019s Trust 0.3798 + NWFWMD 0.0207) sums to 13.4035, and a second source independently puts unincorporated Escambia at approximately 13.4 mills. The pack had flagged this as uncertain and asked for a human check. 19.0080 appears to be a stacked or maximum figure, not the unincorporated total. The 19.0080 and $340/mo figures were NOT written into the post.",
         "FALSE ALARM: the pack suspected /bah-rates mislabels the +0.5% FL064 change as a national figure. The string 0.5% does not appear in public/bah-rates.html at all. No fix needed.",
         "NOT APPLIED, needs Gregg: /bah-rates and /bah-to-mortgage-guide both use 6.5% as their illustrative mortgage rate while the refreshed post now uses the verified 6.66%. These are assumptions inside worked examples with derived price ranges, not simple factual claims, so correcting them means recomputing those outputs on two money pages. Left for a human-reviewed pass rather than an unattended run. RESOLVED 2026-09-03 in 24f0b7e (fix(canon): put the BAH-to-mortgage DTI examples on the site real model): both /bah-rates and /bah-to-mortgage-guide now carry the verified 6.66% and no 6.5% remains on either page; confirmed on the live site 2026-09-04."
       ],
@@ -806,7 +1029,7 @@
       },
       "method": "Jurisdiction assigned from the Florida DOR 2026 preliminary certified NAL real property roll: all 407,635 parcels across Escambia, Santa Rosa and Okaloosa counted (not sampled), filtered to single-family use code 001, grouped by taxing authority and ZIP. Validated by resolving every taxing-authority code against a live parcel record by real address at each county appraiser, and cross-checked against 2020 Census block housing units joined to municipal boundaries (agrees within ~5 points on 24 of 26 ZIPs).",
       "outcome": "13 of 26 rows changed, 13 unchanged: the previous uniform-unincorporated model was already right for exactly half the set. Headline survived a second rebuild: still only 32505 covered by an FL064 E-5. No-grade FL064 went 12 -> 13, FL023 E-5 coverage 11 -> 10 of 26, median $2,582 -> $2,639.",
-      "keyFinding": "The prior run’s \"Okaloosa is the cheap county\" finding was wrong and has been replaced. Only 19.5% of Okaloosa single-family parcels actually pay the 9.5165 unincorporated rate; most populated unincorporated area sits in a fire-district MSTU at 11.79-12.27, and two of those districts (North Bay 11.7865, Florosa 11.9042) were missing from the millage table entirely. The new finding is that the city line matters more than the county line: 32502 inside Pensacola city limits pays $412/mo in tax on a $333,763 home while Pace pays $277 on a $330,382 home, $135/mo apart on a municipal boundary.",
+      "keyFinding": "The prior run\u2019s \"Okaloosa is the cheap county\" finding was wrong and has been replaced. Only 19.5% of Okaloosa single-family parcels actually pay the 9.5165 unincorporated rate; most populated unincorporated area sits in a fire-district MSTU at 11.79-12.27, and two of those districts (North Bay 11.7865, Florosa 11.9042) were missing from the millage table entirely. The new finding is that the city line matters more than the county line: 32502 inside Pensacola city limits pays $412/mo in tax on a $333,763 home while Pace pays $277 on a $330,382 home, $135/mo apart on a municipal boundary.",
       "blendedRows": "32536 Crestview (63% city / 37% county) at 13.5475 and 32578 Niceville (46% city / 54% split between North Bay and East Niceville FDs) at 12.8464, rather than a single city rate that would overstate them by $48 and $29 a month.",
       "caveatAdded": "32561 now carries an explicit caution: it splits ~60/40 between the City of Gulf Breeze and Pensacola Beach, which is in ESCAMBIA county, and Pensacola Beach land is leasehold on Santa Rosa Island rather than fee simple, so its ownership economics are not comparable to the rest of the table.",
       "alsoShipped": "scripts/analyze-formatting.mjs paragraph regex fixed (<p[^>]*> also matched <picture>, faking wall paragraphs on all 95 pages carrying a photo). Regenerating on current content surfaced two genuine refresh candidates the phantom walls had been masking: /bah-to-mortgage-guide at 70 with 8 real walls and /blog/best-pensacola-neighborhoods-by-rank-bah at 76 with 4.",
@@ -837,6 +1060,42 @@
         "write": "in-session"
       },
       "staged": false
+    },
+    {
+      "date": "2026-09-05",
+      "type": "computational engine audit",
+      "action": "implemented evidence policy v2 and connected article reader paths",
+      "baselineCommit": "a621c4c",
+      "branch": "codex/blog-engine-evidence-loop",
+      "publication": "not deployed",
+      "newPosts": 0,
+      "substantiveArticleRefreshes": 0,
+      "articlesWithNewJourneyUI": 17,
+      "contextualHubLinksAdded": 6,
+      "models": {
+        "audit": "in-session Codex (GPT-6)",
+        "research": "not invoked; no article research run",
+        "write": "not invoked; no article commissioned"
+      },
+      "modelComparison": "Baseline implementation replay, not a blinded Fable rerun or verified performance benchmark. Requested audit: Astra at max effort; effort setting not independently exposed.",
+      "sources": {
+        "gsc": "saved Sep 4 exports; exact windows/filters unknown",
+        "bing": "saved data replay; not a fresh API pull",
+        "semrush": "unavailable: insufficient API units",
+        "clarity": "unavailable: no callable connector in this audit",
+        "ga4AndCrm": "unavailable: no live outcome cohort read"
+      },
+      "validation": {
+        "regressionTestsPassed": 23,
+        "mobileBrowserSitesPassed": 2,
+        "externalTestRequestsSent": 0,
+        "productionBuild": "passed",
+        "siteAndEntityAudits": "0 findings",
+        "brokenInternalLinks": 0
+      },
+      "next": "Source-and-usefulness refresh of civilian closing-costs-florida-buyers, under the configured model policy",
+      "report": "docs/blog-engine-audit-2026-09-05/report.md",
+      "completedDate": "2026-09-06"
     }
   ],
   "config": {
@@ -856,9 +1115,12 @@
       "quickAnswerRequiredSince": "2026-09-04",
       "dedupStrict": "scripts/blog-dedup-check.mjs <slug> --strict before any NEW post",
       "scorePostMin": 80,
-      "formattingMin": 90
+      "formattingMin": 90,
+      "researchPack": "scripts/article-evidence.mjs, schema v2, enforced by both factories for new or refreshed work dated 2026-09-06 onward or editorial.version=2"
     },
     "measure": "scripts/blog-measure.mjs: Bing Webmaster API live (both sites) + docs/seo-baselines exports; opportunities in content/measure/",
-    "decide": "content/blog/refresh-queue.json (scripts/blog-retro.mjs) outranks topic-queue.json; docs/topic-radar.md (scripts/topic-miner.mjs) outranks guessed topics"
+    "decide": "Read content/blog/weekly-plan.json. Verify expired claims and missing source support before speculative CTR work. Maximum one article; honor site ownership, models and autoPublish.",
+    "evidencePolicyVersion": 2,
+    "weeklyPreflight": "node scripts/blog-weekly.mjs (use --offline for saved exports; --refresh-suggestions for fresh discovery)"
   }
 }

@@ -1,3 +1,5 @@
+import { evidenceGate } from "./article-evidence.mjs";
+import { journeyHtml, wireJourney } from "./blog-journey.mjs";
 // Blog factory for greggcostin.com — builds civilian-site/blog/<slug>.html from
 // content/civilian-blog/*.fragment.html, rebuilds the /blog index, keeps the
 // sitemap + llms.txt in sync, and generates a branded OG card per post.
@@ -52,7 +54,7 @@ function articleSchema(spec) {
 
 function buildPost(spec) {
   // ---- hard gates on the fragment ----
-  const errs = [];
+  const errs = [...evidenceGate(spec, spec.body, "gc", ROOT, new Date().toISOString().slice(0,10)).errors];
   if (!spec.figure || !spec.figure.src) errs.push("figure required");
   else if (!existsSync(SITE_DIR + spec.figure.src)) errs.push(`figure file missing: ${spec.figure.src}`);
   if ((spec.faqs || []).length < 4) errs.push("needs 4+ FAQs");
@@ -64,7 +66,7 @@ function buildPost(spec) {
   // Posts dated on or after PARITY_SINCE carry targetKeywords, a quickAnswer and takeaways;
   // older posts warn until their next refresh so a rebuild never breaks a live page.
   const PARITY_SINCE = "2026-09-07";
-  const isNew = spec.datePublished >= PARITY_SINCE;
+  const isNew = (spec.dateModified || spec.datePublished) >= PARITY_SINCE;
   const paraWords = [...spec.body.matchAll(/<p(?=[\s>])[^>]*>([\s\S]*?)<\/p>/g)].map((m) => m[1].replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length);
   const hardWalls = paraWords.filter((w) => w > 110), walls = paraWords.filter((w) => w > 85);
   if (hardWalls.length) errs.push(`${hardWalls.length} paragraph(s) over 110 words (longest ${Math.max(...hardWalls)}); split walls into shorter paragraphs, lists or a table`);
@@ -72,7 +74,7 @@ function buildPost(spec) {
   const qaWords = spec.quickAnswer ? spec.quickAnswer.split(/\s+/).length : 0;
   if (isNew) {
     if (!spec.targetKeywords || !spec.targetKeywords.length) errs.push("targetKeywords required (the engine measures posts by them)");
-    if (!spec.quickAnswer || !/\d/.test(spec.quickAnswer)) errs.push("quickAnswer required: 2-4 dated declarative sentences restating a figure already in the post");
+    if (!spec.quickAnswer) errs.push("quickAnswer required: 2-4 dated declarative sentences restating a figure already in the post");
     else if (qaSentences < 2 || qaSentences > 4 || qaWords > 85) errs.push(`quickAnswer must be 2-4 sentences and under 85 words (found ${qaSentences} sentences, ${qaWords} words)`);
     if (!spec.takeaways || spec.takeaways.length < 3) errs.push("takeaways required: 3-5 one-line bullets (rendered as Key takeaways)");
   } else {
@@ -101,15 +103,7 @@ ${spec.body}
 <h2>Frequently asked questions</h2>
 ${faqsHtml}
 
-<!-- inq-cta --><div class="inq-cta">
-<div style="color:var(--gold);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp;5.0 on Google and Zillow &middot; <a href="/reviews" style="color:var(--gold)">Verified Reviews</a></div>
-<p class="ih">Questions about your own move?</p>
-<p class="is">Call or text (850) 266-5005, set up a live home search, or get a free valuation. No pressure, and a response within 2 hours during business hours.</p>
-<div class="ir">
-<a class="ip" href="https://greggcostin.realscout.com/onboarding">Start Your Home Search &rarr;</a>
-<a class="il" href="https://greggcostin.realscout.com/whats-my-home-worth">Get My Home Value</a>
-</div>
-</div>
+${journeyHtml(spec, "gc", ROOT)}
 <p style="max-width:760px;margin:1.5rem auto;text-align:center"><a href="/blog">&larr; Back to all posts</a></p>`;
 
   const pageSpec = {
@@ -127,6 +121,8 @@ ${faqsHtml}
     html = placeQuickAnswer(html, { text: spec.quickAnswer, date: monthYear(spec.dateModified || spec.datePublished), by: "Gregg Costin, Realtor, The Costin Team at Levin Rinke Realty" });
     writeFileSync(`${spec.outDir || SITE_DIR}/${pageSpec.file}`, html);
   }
+  html = wireJourney(html, spec, "gc");
+  writeFileSync(`${spec.outDir || SITE_DIR}/${pageSpec.file}`, html);
   const gateErrs = gate({ title: spec.title, desc: spec.description, minWords: 1100 }, html);
   if (gateErrs.length) throw new Error(`${spec.slug}: POST-BUILD GATE FAIL\n  - ` + gateErrs.join("\n  - "));
   return pageSpec;

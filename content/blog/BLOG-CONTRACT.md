@@ -1,3 +1,5 @@
+> Evidence policy v2: read docs/blog-engine-evidence-policy.md and content/blog/weekly-plan.json before commissioning a draft. New substantive work carries editorial.version=2, readerTask, originalValue, conversionGoal and evidenceFile. Both factories validate the sourced pack. Model and image standing orders remain in force. A passing score is not proof of accuracy or search performance.
+
 # Blog fragment contract — content/blog/<slug>.fragment.html
 
 Every post is a fragment file here; `node scripts/blog-factory.mjs` builds it into
@@ -56,15 +58,16 @@ PAGE-->
   form automatically — authors write the plain `<img>`.
 - Captions are prose: the no-em-dash rule applies.
 
-## Writing spec (non-negotiable — this is what makes posts rank AND get cited by AI)
+## Writing spec (house standards; search performance is measured separately)
 
 1. **Question-shaped H2s, each followed immediately by a 40–80 word direct answer**, then
    supporting detail. AI systems retrieve passages, not pages.
 2. **Every statistic carries a named source and a data vintage**: "median sale price in
    32571 was $348K in July 2026 (Pensacola MLS)". Never invent numbers.
-3. **Something only Gregg can say on every post**: a commute he's driven, client scenario
-   with real math, gate/neighborhood detail, original observation. "Information gain" is
-   what 2025-26 core updates reward.
+3. **An original, useful contribution on every post**: a sourced checklist, documented
+   local observation, reproducible calculation or comparison. Personal experience requires
+   a real record. Label hypothetical scenarios. Never invent a commute, client, result
+   or quotation to satisfy a style score.
 4. **1,200–5,000 words.** Mega-guides 4,000+; decision posts 1,500-2,500; news reactions 1,200+.
 5. **6–12 internal links** woven into prose — into base/community hubs, /bah-rates,
    /pcs-home-search, /whats-my-home-worth, /va-loan-guide, and sibling posts. No orphans.
@@ -115,3 +118,19 @@ PAGE-->
 - Stats carry named sources + vintage (both an E-E-A-T and an AI-citation signal).
 - Related links + hub links wired so the post is never an orphan.
 - After build: run `npm run og-images` so the post has its own social card.
+
+## Evidence and reader task, version 2
+
+The PAGE metadata includes:
+
+    "editorial": {
+      "version": 2,
+      "readerTask": "The concrete decision this reader needs to make",
+      "originalValue": "The reusable checklist, comparison or documented calculation",
+      "conversionGoal": "purchase-budget",
+      "evidenceFile": "content/blog/research/article-slug.json"
+    }
+
+Bind load-bearing prose with data-claim ids and visible source links. Record uncertain facts, population and eligibility limits, and the actual models. A source list alone does not validate claims. The validator never replaces independent reading of the original sources.
+
+The factory supplies accessible sharing controls and a topic-specific tool, companion guide and inquiry path. Keep the useful answer available before the inquiry. Do not promise savings, rankings or client results. New articles still follow the image, formatting and one-post rules.

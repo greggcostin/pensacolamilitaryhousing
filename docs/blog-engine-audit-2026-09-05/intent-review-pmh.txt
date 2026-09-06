@@ -1,0 +1,97 @@
+
+pensacola-housing-market-q3-2026  [clear]  kws: pensacola housing market | pensacola home prices 2026 | pensacola market forecast
+   ok          1.6  https://pensacolamilitaryhousing.com/bah-vs-cost-of-owning-pensacola  (0 head, 0 body, jac 0.4)  BAH vs. the Cost of Owning: 26 Pensacola ZIPs (2026)
+   ok          1.6  https://pensacolamilitaryhousing.com/crestview-military-relocation  (0 head, 0 body, jac 0.4)  Crestview Military Relocation: 7th SFG & Eglin | Gregg Costi
+   ok          1.6  https://pensacolamilitaryhousing.com/pcs-checklist  (0 head, 0 body, jac 0.4)  PCS Checklist for Military Families | 60/30/7 Day Timeline
+   ok          1.6  https://pensacolamilitaryhousing.com/rent-or-sell-pcs-pensacola  (0 head, 0 body, jac 0.4)  Selling Your House Before a PCS: Rent or Sell in Pensacola
+
+2027-bah-pensacola-what-changed  [INTENT-REVIEW]  kws: 2027 BAH Pensacola | 2027 BAH rates | did BAH go up 2027
+   INTENT-REVIEW   5.6  https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford  (1 head, 1 body, jac 0.4)  2026 BAH Pensacola: What Can You Afford? | Gregg Costin
+   overlap     2.4  https://pensacolamilitaryhousing.com/bah-rates  (0 head, 0 body, jac 0.6)  2026 BAH Pensacola: $1,794-$2,631 by Rank, Plus Calculator
+   overlap     2.4  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.6)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok          1.6  https://pensacolamilitaryhousing.com/bah-to-mortgage-guide  (0 head, 0 body, jac 0.4)  BAH to Mortgage Guide 2026: Pensacola & Fort Walton
+
+nas-pensacola-student-housing-dorms-bah-off-base  [overlap]  kws: nas pensacola student housing | corry station dorms | flight school pensacola housing | training air wing five | cso students nas pensacola housing
+   overlap    2.53  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.63)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   overlap    2.53  https://pensacolamilitaryhousing.com/bases/nas-pensacola  (0 head, 0 body, jac 0.63)  NAS Pensacola Housing & 2026 BAH | Homes Near Base
+   ok         1.89  https://pensacolamilitaryhousing.com/bases/corry-station  (0 head, 0 body, jac 0.47)  Corry Station Housing & 2026 BAH | Off-Base Guide
+   ok         1.68  https://pensacolamilitaryhousing.com/flight-school-housing-pensacola  (0 head, 0 body, jac 0.42)  Flight School Housing Pensacola | NIFE to Whiting Field
+
+pca-vs-pcs-pensacola-eglin-hurlburt  [overlap]  kws: pca vs pcs | pensacola to hurlburt pca or pcs | bah rate protection pcs | same house new duty station bah
+   overlap       2  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.5)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok         1.75  https://pensacolamilitaryhousing.com/bah-rates  (0 head, 0 body, jac 0.44)  2026 BAH Pensacola: $1,794-$2,631 by Rank, Plus Calculator
+   ok          1.5  https://pensacolamilitaryhousing.com/communities/navarre  (0 head, 0 body, jac 0.38)  Navarre, FL Military Homes | Hurlburt & NAS Pensacola
+   ok          1.5  https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide  (0 head, 0 body, jac 0.38)  PCS to Pensacola 2026: Military Housing Guide | Gregg Costin
+
+military-rentals-fort-walton-beach-hurlburt-tour  [overlap]  kws: houses for rent military fort walton beach | military rentals hurlburt field | rent vs buy hurlburt 3 year tour | army bah crestview
+   overlap     2.6  https://pensacolamilitaryhousing.com/military-realtor-hurlburt-field  (0 head, 0 body, jac 0.65)  Military Realtor Hurlburt Field: Homes & BAH | Gregg Costin
+   overlap     2.2  https://pensacolamilitaryhousing.com/communities/mary-esther  (0 head, 0 body, jac 0.55)  Mary Esther, FL Homes | Closest Town to Hurlburt Field
+   overlap       2  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.5)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok          1.8  https://pensacolamilitaryhousing.com/bah-to-mortgage-guide  (0 head, 0 body, jac 0.45)  BAH to Mortgage Guide 2026: Pensacola & Fort Walton
+
+florida-property-tax-100-percent-disabled-veteran-part-year  [clear]  kws: 100 percent disabled veteran property tax florida part time resident | florida veteran property tax exemption second home | permanent residency homestead disabled veteran florida
+   ok         1.89  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.47)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok         1.89  https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide  (0 head, 0 body, jac 0.47)  Florida Disabled Veteran Property Tax: County Filing Guide 2
+   ok         1.47  https://pensacolamilitaryhousing.com/va-disability-property-tax-florida  (0 head, 0 body, jac 0.37)  FL VA Disability Property Tax Exemption | Gregg Costin
+   ok         1.26  https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida  (0 head, 0 body, jac 0.32)  Disabled Veteran Benefits Florida 2026: VA + Tax Stack
+
+REFRESH:florida-home-insurance-military: refresh item, skipped
+
+pensacola-cost-of-living-2026  [INTENT-REVIEW]  kws: pensacola cost of living | how expensive is pensacola | pensacola vs national cost of living
+   INTENT-REVIEW   6.4  https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide  (1 head, 1 body, jac 0.6)  Moving to Pensacola, FL: The Complete 2026 Guide
+   overlap     3.2  https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons  (0 head, 0 body, jac 0.8)  Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers
+   ok          1.6  https://pensacolamilitaryhousing.com/communities/shalimar  (0 head, 0 body, jac 0.4)  Shalimar, FL Homes | 2 Miles to Eglin AFB West Gate
+   ok          1.6  https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford  (0 head, 0 body, jac 0.4)  2026 BAH Pensacola: What Can You Afford? | Gregg Costin
+
+retiring-in-pensacola-guide  [clear]  kws: retiring in pensacola | is pensacola good for retirees | best places to retire florida panhandle
+   ok         1.78  https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons  (0 head, 0 body, jac 0.44)  Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers
+   ok         1.78  https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide  (0 head, 0 body, jac 0.44)  Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98
+   ok         1.78  https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide  (0 head, 0 body, jac 0.44)  Moving to Pensacola, FL: The Complete 2026 Guide
+   ok         1.33  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.33)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+
+pensacola-first-time-homebuyer-2026  [INTENT-REVIEW]  kws: first time home buyer pensacola | pensacola down payment assistance | hometown heroes program pensacola
+   INTENT-REVIEW  5.09  https://greggcostin.com/buy  (1 head, 1 body, jac 0.27)  Buy a Home in Pensacola, FL | The Costin Team
+   overlap    2.91  https://pensacolamilitaryhousing.com/zero-down-home-loans  (0 head, 0 body, jac 0.73)  Zero-Down Home Loans 2026 Pensacola | Gregg Costin
+   ok         1.82  https://pensacolamilitaryhousing.com/first-time-military-homebuyer  (0 head, 0 body, jac 0.45)  First-Time Military Homebuyer Guide Pensacola 2026
+   ok         1.45  https://pensacolamilitaryhousing.com/buy  (0 head, 0 body, jac 0.36)  Buy a Home in Pensacola | Military & VA Buyer Guide
+
+moving-to-pace-2026-guide  [INTENT-REVIEW]  kws: moving to pace fl | living in pace florida | pace fl new construction
+   INTENT-REVIEW     8  https://greggcostin.com/neighborhoods/pace-milton  (1 head, 1 body, jac 1)  Pace & Milton Homes for Sale Guide | The Costin Team
+   overlap     3.2  https://greggcostin.com/neighborhoods/crestview  (0 head, 0 body, jac 0.8)  Crestview FL Homes for Sale Guide | The Costin Team
+   overlap     2.4  https://pensacolamilitaryhousing.com/crestview-military-relocation  (0 head, 0 body, jac 0.6)  Crestview Military Relocation: 7th SFG & Eglin | Gregg Costi
+   overlap     2.4  https://pensacolamilitaryhousing.com/nas-whiting-field-off-base-housing  (0 head, 0 body, jac 0.6)  NAS Whiting Field Off-Base Housing Guide | Gregg Costin
+
+moving-to-milton-2026-guide  [overlap]  kws: moving to milton fl | living in milton florida
+   overlap       4  https://greggcostin.com/neighborhoods/pace-milton  (0 head, 0 body, jac 1)  Pace & Milton Homes for Sale Guide | The Costin Team
+   overlap    2.67  https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons  (0 head, 0 body, jac 0.67)  Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers
+   overlap    2.67  https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide  (0 head, 0 body, jac 0.67)  Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98
+   overlap    2.67  https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide  (0 head, 0 body, jac 0.67)  Moving to Pensacola, FL: The Complete 2026 Guide
+
+REFRESH:crestview-military-relocation: refresh item, skipped
+
+pensacola-vs-destin-vs-fort-walton  [INTENT-REVIEW]  kws: pensacola vs destin | pensacola vs fort walton beach | emerald coast where to live
+   INTENT-REVIEW  5.33  https://pensacolamilitaryhousing.com/nas-pensacola-vs-hurlburt-field  (1 head, 1 body, jac 0.33)  NAS Pensacola vs Hurlburt Field | PCS Family Comparison
+   overlap    2.67  https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families  (0 head, 0 body, jac 0.67)  Best Neighborhoods for Eglin AFB: Niceville vs Crestview vs
+   overlap    2.22  https://pensacolamilitaryhousing.com/military-realtor-hurlburt-field  (0 head, 0 body, jac 0.56)  Military Realtor Hurlburt Field: Homes & BAH | Gregg Costin
+   overlap    2.22  https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford  (0 head, 0 body, jac 0.56)  2026 BAH Pensacola: What Can You Afford? | Gregg Costin
+
+remote-workers-moving-to-pensacola  [clear]  kws: remote work pensacola | moving to pensacola remote worker | cheapest florida beach towns remote work
+   ok         1.09  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.27)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+   ok         1.09  https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families  (0 head, 0 body, jac 0.27)  Best Neighborhoods for Eglin AFB: Niceville vs Crestview vs
+   ok         1.09  https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons  (0 head, 0 body, jac 0.27)  Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers
+   ok         1.09  https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide  (0 head, 0 body, jac 0.27)  Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98
+
+pensacola-investment-property-2026  [overlap]  kws: pensacola investment property | pensacola rental property roi | military town rental investing
+   overlap    2.18  https://pensacolamilitaryhousing.com/veteran-realtor-destin  (0 head, 0 body, jac 0.55)  Veteran Real Estate Agent Destin FL | Gregg Costin
+   ok         1.82  https://pensacolamilitaryhousing.com/military-rental-property-management  (0 head, 0 body, jac 0.45)  Military Rental Property Management Pensacola | PCS Rental
+   ok         1.82  https://pensacolamilitaryhousing.com/rent-or-sell-pcs-pensacola  (0 head, 0 body, jac 0.45)  Selling Your House Before a PCS: Rent or Sell in Pensacola
+   ok         1.45  https://pensacolamilitaryhousing.com/faq  (0 head, 0 body, jac 0.36)  Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola
+
+base-housing-waitlists-hurlburt-eglin-nas-pensacola  [overlap]  kws: hurlburt field housing waitlist | eglin afb housing waitlist | nas pensacola housing waitlist | base housing waitlist by rank
+   overlap    2.15  https://pensacolamilitaryhousing.com/bah-rates  (0 head, 0 body, jac 0.54)  2026 BAH Pensacola: $1,794-$2,631 by Rank, Plus Calculator
+   overlap    2.15  https://pensacolamilitaryhousing.com/on-base-vs-off-base-eglin-afb  (0 head, 0 body, jac 0.54)  On-Base vs Off-Base: Eglin AFB 2026 | Gregg Costin
+   overlap    2.15  https://pensacolamilitaryhousing.com/on-base-vs-off-base-hurlburt-field  (0 head, 0 body, jac 0.54)  On-Base vs Off-Base: Hurlburt Field 2026 | Gregg Costin
+   overlap    2.15  https://pensacolamilitaryhousing.com/on-base-vs-off-base-nas-whiting-field  (0 head, 0 body, jac 0.54)  On-Base vs Off-Base: NAS Whiting Field 2026 | Gregg Costin
+Token/phrase overlap proposes candidates. It does not establish actual search cannibalization; inspect reader intent before merging or writing.
+
+17 item(s) checked across both sites, 5 unresolved intent review(s)

@@ -1,0 +1,226 @@
+{
+  "baselineCommit": "a621c4c",
+  "auditDate": "2026-09-05",
+  "evaluation": "Targeted regression and repository replay; not a blinded model benchmark or traffic lift study.",
+  "gsc": {
+    "source": "gsc-pages-2026-09-04.csv",
+    "window": "Exact start/end and filters not retained; prior audit described three months.",
+    "pageRows": 110,
+    "allPageRows": {
+      "clicks": 179,
+      "impressions": 27118
+    },
+    "blogRows": {
+      "pages": 10,
+      "clicks": 4,
+      "impressions": 588
+    }
+  },
+  "articles": [
+    {
+      "site": "pmh",
+      "slug": "bah-2026-pensacola-what-can-you-afford",
+      "baselineScore": 82,
+      "baselineEvidence": 15,
+      "currentScore": 86,
+      "linkedSourceDomains": 9,
+      "contextualInbound": 2,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 2
+    },
+    {
+      "site": "pmh",
+      "slug": "best-neighborhoods-eglin-afb-families",
+      "baselineScore": 80,
+      "baselineEvidence": 15.9,
+      "currentScore": 83,
+      "linkedSourceDomains": 8,
+      "contextualInbound": 0,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 2
+    },
+    {
+      "site": "pmh",
+      "slug": "best-pensacola-neighborhoods-by-rank-bah",
+      "baselineScore": 72,
+      "baselineEvidence": 10.9,
+      "currentScore": 78,
+      "linkedSourceDomains": 13,
+      "contextualInbound": 3,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 3
+    },
+    {
+      "site": "pmh",
+      "slug": "florida-homestead-exemption-military",
+      "baselineScore": 83,
+      "baselineEvidence": 16,
+      "currentScore": 87,
+      "linkedSourceDomains": 7,
+      "contextualInbound": 1,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 1
+    },
+    {
+      "site": "pmh",
+      "slug": "florida-veteran-property-tax-county-guide",
+      "baselineScore": 84,
+      "baselineEvidence": 17.3,
+      "currentScore": 85,
+      "linkedSourceDomains": 8,
+      "contextualInbound": 1,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 1
+    },
+    {
+      "site": "pmh",
+      "slug": "living-in-gulf-breeze-pros-cons",
+      "baselineScore": 80,
+      "baselineEvidence": 16,
+      "currentScore": 83,
+      "linkedSourceDomains": 10,
+      "contextualInbound": 1,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 1
+    },
+    {
+      "site": "pmh",
+      "slug": "moving-to-navarre-2026-guide",
+      "baselineScore": 92,
+      "baselineEvidence": 16.4,
+      "currentScore": 95,
+      "linkedSourceDomains": 11,
+      "contextualInbound": 0,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 2
+    },
+    {
+      "site": "pmh",
+      "slug": "moving-to-pensacola-2026-guide",
+      "baselineScore": 83,
+      "baselineEvidence": 16.7,
+      "currentScore": 86,
+      "linkedSourceDomains": 28,
+      "contextualInbound": 3,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 3
+    },
+    {
+      "site": "pmh",
+      "slug": "pcs-to-pensacola-2026-complete-guide",
+      "baselineScore": 81,
+      "baselineEvidence": 16.3,
+      "currentScore": 82,
+      "linkedSourceDomains": 7,
+      "contextualInbound": 2,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 2
+    },
+    {
+      "site": "pmh",
+      "slug": "personal-property-activity-pcs-2026",
+      "baselineScore": 81,
+      "baselineEvidence": 14.5,
+      "currentScore": 88,
+      "linkedSourceDomains": 8,
+      "contextualInbound": 1,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 1
+    },
+    {
+      "site": "pmh",
+      "slug": "va-loan-assumption-buyers-guide",
+      "baselineScore": 78,
+      "baselineEvidence": 14.5,
+      "currentScore": 84,
+      "linkedSourceDomains": 7,
+      "contextualInbound": 0,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 2
+    },
+    {
+      "site": "pmh",
+      "slug": "va-loan-seller-concessions-truth",
+      "baselineScore": 80,
+      "baselineEvidence": 17.3,
+      "currentScore": 84,
+      "linkedSourceDomains": 6,
+      "contextualInbound": 1,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 1
+    },
+    {
+      "site": "gc",
+      "slug": "closing-costs-florida-buyers",
+      "baselineScore": 63,
+      "baselineEvidence": 9.9,
+      "currentScore": 53,
+      "linkedSourceDomains": 0,
+      "contextualInbound": 2,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 2
+    },
+    {
+      "site": "gc",
+      "slug": "fed-rate-hike-what-it-means",
+      "baselineScore": 68,
+      "baselineEvidence": 16.4,
+      "currentScore": 56,
+      "linkedSourceDomains": 0,
+      "contextualInbound": 0,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 0
+    },
+    {
+      "site": "gc",
+      "slug": "florida-insurance-relief-2026",
+      "baselineScore": 74,
+      "baselineEvidence": 19,
+      "currentScore": 59,
+      "linkedSourceDomains": 0,
+      "contextualInbound": 0,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 0
+    },
+    {
+      "site": "gc",
+      "slug": "property-taxes-escambia-santa-rosa",
+      "baselineScore": 74,
+      "baselineEvidence": 12.1,
+      "currentScore": 76,
+      "linkedSourceDomains": 5,
+      "contextualInbound": 3,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 3
+    },
+    {
+      "site": "gc",
+      "slug": "what-moves-mortgage-rates",
+      "baselineScore": 59,
+      "baselineEvidence": 5.7,
+      "currentScore": 62,
+      "linkedSourceDomains": 1,
+      "contextualInbound": 2,
+      "hasResearchPack": false,
+      "contextualInboundAfterRepairs": 2
+    }
+  ],
+  "validation": {
+    "regressionTests": 23,
+    "browserSites": 2,
+    "browserWidth": 390,
+    "externalTestRequestsSent": 0,
+    "militaryAuditPages": 97,
+    "civilianAuditPages": 121,
+    "entityAuditPages": 218,
+    "brokenInternalLinks": 0,
+    "productionBuild": "passed"
+  },
+  "limitations": [
+    "Not a blinded model comparison",
+    "No live traffic or client lift measured",
+    "Historical exact GSC windows and filters unavailable",
+    "No legacy article certified under the new research-pack policy",
+    "One pre-existing non-blog orphan reported by the general link audit"
+  ]
+}

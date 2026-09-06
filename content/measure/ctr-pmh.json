@@ -1,227 +1,1514 @@
 {
+  "schemaVersion": 2,
   "source": "gsc-pages-2026-09-04.csv",
-  "date": "2026-09-04",
-  "benchmark": "expected CTR by position, public curve",
+  "generated": "2026-09-05",
+  "window": {
+    "start": null,
+    "end": null,
+    "searchType": null,
+    "dimensions": [
+      "page"
+    ],
+    "filters": null,
+    "complete": false,
+    "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+  },
+  "note": "Review candidates only. Uncertainty intervals do not control for query mix or prove a title caused clicks. Exact dates, filters and comparable post-change data are required to evaluate experiments.",
   "pages": [
     {
       "url": "/bah-rates",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 48,
-      "imp": 9117,
-      "ctr": 0.005,
-      "pos": 8.5,
-      "expected": 0.025,
-      "lostClicks": 182,
-      "title": "BAH Calculator & 2026 Rates: Pensacola & Fort Walton Beach",
-      "desc": "2026 BAH rates for Pensacola (FL064) and Fort Walton Beach (FL023) by rank, with and without dependents, plus a calculator that turns BAH into a VA budget."
+      "impressions": 9117,
+      "ctr": 0.0052648897663705166,
+      "position": 8.5,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "EXPERIMENT-RUNNING",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "snippet changed 2026-09-04; collect a separate post-change window",
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.003973513285897989,
+        "high": 0.006973020419938981,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "2026 BAH Pensacola: $1,794-$2,631 by Rank, Plus Calculator",
+      "desc": "2026 BAH rates for Pensacola (FL064) and Fort Walton Beach (FL023) by rank, with and without dependents, plus a calculator that turns BAH into a VA budget.",
+      "nextAction": "Leave the current variant in place; measure a separate post-change window."
+    },
+    {
+      "url": "/",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 30,
+      "impressions": 1576,
+      "ctr": 0.01903553299492386,
+      "position": 13.5,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.013365898034110108,
+        "high": 0.027044229158388184,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "(SPA or missing)",
+      "desc": "",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
     },
     {
       "url": "/bases/corry-station",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 9,
-      "imp": 1320,
-      "ctr": 0.006999999999999999,
-      "pos": 9.8,
-      "expected": 0.025,
-      "lostClicks": 24,
+      "impressions": 1320,
+      "ctr": 0.006818181818181818,
+      "position": 9.8,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.0035911427156613603,
+        "high": 0.012907507878186118,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Corry Station Housing &amp; 2026 BAH | Off-Base Guide",
-      "desc": "Corry Station 2026 BAH (FL064: E-5 w/deps $1,863) and where IW, crypto, and cyber sailors actually live: Bellview, Myrtle Grove, East Hill. Commutes and schools."
+      "desc": "Corry Station 2026 BAH (FL064: E-5 w/deps $1,863) and where IW, crypto, and cyber sailors actually live: Bellview, Myrtle Grove, East Hill. Commutes and schools.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
     },
     {
       "url": "/communities/fort-walton-beach",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 1,
-      "imp": 638,
-      "ctr": 0.002,
-      "pos": 9.9,
-      "expected": 0.025,
-      "lostClicks": 15,
+      "impressions": 638,
+      "ctr": 0.001567398119122257,
+      "position": 9.9,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.00027673073917279176,
+        "high": 0.008824580238488986,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Fort Walton Beach & Shalimar Military Homes | Eglin PCS",
-      "desc": "Fort Walton Beach & Shalimar military homes for Eglin and Hurlburt. 5-15 min to Eglin, Okaloosa schools, wide price range."
-    },
-    {
-      "url": "/communities/navarre",
-      "clicks": 1,
-      "imp": 322,
-      "ctr": 0.003,
-      "pos": 9.2,
-      "expected": 0.025,
-      "lostClicks": 7,
-      "title": "Navarre, FL Military Homes | Hurlburt & NAS Pensacola",
-      "desc": "Navarre, FL military homes for Hurlburt, NAS Pensacola, and Eglin. A-rated schools, beach access, lower cost per sq ft. Gregg Costin."
-    },
-    {
-      "url": "/communities/crestview",
-      "clicks": 1,
-      "imp": 320,
-      "ctr": 0.003,
-      "pos": 9,
-      "expected": 0.025,
-      "lostClicks": 7,
-      "title": "Crestview, FL Military Homes | Eglin & Duke Field",
-      "desc": "Crestview, FL military homes for Eglin AFB, Duke Field, and 7th SFG families. Strong BAH-to-price ratio, new construction. Gregg Costin."
-    },
-    {
-      "url": "/communities/niceville",
-      "clicks": 1,
-      "imp": 316,
-      "ctr": 0.003,
-      "pos": 9.8,
-      "expected": 0.025,
-      "lostClicks": 7,
-      "title": "Niceville, Valparaiso & Bluewater Bay Homes | Eglin AFB",
-      "desc": "Niceville, Valparaiso, Bluewater Bay homes for Eglin AFB. 10 min to East Gate, top-ranked Niceville HS, master-planned. Gregg Costin."
-    },
-    {
-      "url": "/pensacola-flood-zones-homebuyers",
-      "clicks": 11,
-      "imp": 479,
-      "ctr": 0.023,
-      "pos": 8,
-      "expected": 0.035,
-      "lostClicks": 6,
-      "title": "Pensacola Flood Zones for Homebuyers | 2025 FEMA Maps",
-      "desc": "What flood zones X, A, AE, and VE mean for Pensacola homebuyers, the August 2025 FEMA map update, NFIP limits, CRS discounts, and how to check any address."
+      "desc": "Fort Walton Beach & Shalimar military homes for Eglin and Hurlburt. 5-15 min to Eglin, Okaloosa schools, wide price range.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
     },
     {
       "url": "/bases/duke-field",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 1,
-      "imp": 488,
-      "ctr": 0.002,
-      "pos": 11.3,
-      "expected": 0.015,
-      "lostClicks": 6,
+      "impressions": 488,
+      "ctr": 0.0020491803278688526,
+      "position": 11.3,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.000361812968180472,
+        "high": 0.011515181576404611,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Duke Field, FL: 919th SOW Base Guide, Housing &amp; BAH",
-      "desc": "Duke Field (Eglin Auxiliary Field 3), home of the 919th Special Operations Wing: what is there, 2026 FL023 BAH, and Crestview and Niceville housing that fits it."
+      "desc": "Duke Field (Eglin Auxiliary Field 3), home of the 919th Special Operations Wing: what is there, 2026 FL023 BAH, and Crestview and Niceville housing that fits it.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
     },
     {
-      "url": "/blog/living-in-gulf-breeze-pros-cons",
-      "clicks": 0,
-      "imp": 53,
-      "ctr": 0,
-      "pos": 4.4,
-      "expected": 0.06,
-      "lostClicks": 3,
-      "title": "Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers",
-      "desc": "Living in Gulf Breeze FL: honest pros and cons with 2026 numbers. Which Gulf Breeze costs what, taxes, schools, flood insurance, and the bridge story."
+      "url": "/pensacola-flood-zones-homebuyers",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 11,
+      "impressions": 479,
+      "ctr": 0.022964509394572025,
+      "position": 8,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.012870342736441779,
+        "high": 0.040649486540903015,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Pensacola Flood Zones for Homebuyers | 2025 FEMA Maps",
+      "desc": "What flood zones X, A, AE, and VE mean for Pensacola homebuyers, the August 2025 FEMA map update, NFIP limits, CRS discounts, and how to check any address.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
+    },
+    {
+      "url": "/bases/saufley-field",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 3,
+      "impressions": 391,
+      "ctr": 0.0076726342710997444,
+      "position": 12.1,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.0026127029225269695,
+        "high": 0.022312735531779777,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Saufley Field, Pensacola: Base Guide, Housing &amp; BAH",
+      "desc": "What Saufley Field is (NETPDC and the Navy Advancement Center), 2026 FL064 BAH, and the closest west Pensacola neighborhoods: Bellview, Beulah, Ferry Pass.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
+    },
+    {
+      "url": "/communities/pace",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 1,
+      "impressions": 371,
+      "ctr": 0.0026954177897574125,
+      "position": 14.2,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.00047595374464795386,
+        "high": 0.015108229014149363,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Pace, FL Military Homes | NAS Whiting Field | Gregg Costin",
+      "desc": "Pace, FL military homes for NAS Whiting Field, NAS Pensacola, Corry Station. A-rated schools, newer construction. Gregg Costin, Realtor.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
+    },
+    {
+      "url": "/communities/navarre",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 1,
+      "impressions": 322,
+      "ctr": 0.003105590062111801,
+      "position": 9.2,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.0005484093101857882,
+        "high": 0.01737931999141351,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Navarre, FL Military Homes | Hurlburt & NAS Pensacola",
+      "desc": "Navarre, FL military homes for Hurlburt, NAS Pensacola, and Eglin. A-rated schools, beach access, lower cost per sq ft. Gregg Costin.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
+    },
+    {
+      "url": "/communities/crestview",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 1,
+      "impressions": 320,
+      "ctr": 0.003125,
+      "position": 9,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.0005518381933127849,
+        "high": 0.017486610233325425,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Crestview, FL Military Homes | Eglin & Duke Field",
+      "desc": "Crestview, FL military homes for Eglin AFB, Duke Field, and 7th SFG families. Strong BAH-to-price ratio, new construction. Gregg Costin.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
+    },
+    {
+      "url": "/communities/niceville",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 1,
+      "impressions": 316,
+      "ctr": 0.0031645569620253164,
+      "position": 9.8,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.0005588262213099757,
+        "high": 0.017705214478836596,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Niceville, Valparaiso & Bluewater Bay Homes | Eglin AFB",
+      "desc": "Niceville, Valparaiso, Bluewater Bay homes for Eglin AFB. 10 min to East Gate, top-ranked Niceville HS, master-planned. Gregg Costin.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
+    },
+    {
+      "url": "/about",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 1,
+      "impressions": 250,
+      "ctr": 0.004,
+      "position": 14.1,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.0007064293567593388,
+        "high": 0.02230634711486706,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "(SPA or missing)",
+      "desc": "",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
+    },
+    {
+      "url": "/communities/shalimar",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 1,
+      "impressions": 212,
+      "ctr": 0.0047169811320754715,
+      "position": 14.5,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.0008331274072520493,
+        "high": 0.026231164184359577,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Shalimar, FL Homes | 2 Miles to Eglin AFB West Gate",
+      "desc": "Shalimar, FL military housing guide: 2 miles to Eglin AFB's West Gate, bayou waterfront on Choctawhatchee Bay, Okaloosa schools, FL023 BAH. Gregg Costin.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
+    },
+    {
+      "url": "/va-disability-property-tax-florida",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 2,
+      "impressions": 202,
+      "ctr": 0.009900990099009901,
+      "position": 9.8,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.002719364275706272,
+        "high": 0.035375947847790634,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "FL VA Disability Property Tax Exemption | Gregg Costin",
+      "desc": "Complete guide to Florida property tax exemptions for disabled veterans: $5,000 exemption at 10%+, full waiver at 100%, surviving spouse, county filing.",
+      "nextAction": "Review page/query, country and device cohorts and search-result intent before proposing one test."
+    },
+    {
+      "url": "/communities/beulah",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 2,
+      "impressions": 155,
+      "ctr": 0.012903225806451613,
+      "position": 13.4,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.003545617390420284,
+        "high": 0.045821802731260686,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Beulah, FL Military Homes | NAS Pensacola PCS | Gregg Costin",
+      "desc": "Beulah, FL military homes. Newer construction, A-rated Beulah schools, 18-22 min to NAS Pensacola, Navy Federal HQ adjacent. Gregg Costin, Realtor.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
+    },
+    {
+      "url": "/communities/perdido-key",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 3,
+      "impressions": 134,
+      "ctr": 0.022388059701492536,
+      "position": 12.7,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.007642600401146293,
+        "high": 0.06375529399357924,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Perdido Key, FL Military Homes | NAS Pensacola | Gregg Costin",
+      "desc": "Perdido Key, FL military homes and condos for NAS Pensacola and Corry Station. Beachfront, ~20-min commute, rental-investment market.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
+    },
+    {
+      "url": "/nas-pensacola-vs-hurlburt-field",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 1,
+      "impressions": 129,
+      "ctr": 0.007751937984496124,
+      "position": 6.9,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.0013696853368445096,
+        "high": 0.04260449142706077,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "NAS Pensacola vs Hurlburt Field | PCS Family Comparison",
+      "desc": "NAS Pensacola vs Hurlburt Field for military families: BAH FL064 vs FL023, schools, commute, cost of living. Which base works better for your family?",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
     },
     {
       "url": "/communities/mary-esther",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 0,
-      "imp": 123,
+      "impressions": 123,
       "ctr": 0,
-      "pos": 13.5,
-      "expected": 0.015,
-      "lostClicks": 2,
+      "position": 13.5,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.03028659367273828,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Mary Esther, FL Homes | Closest Town to Hurlburt Field",
-      "desc": "Mary Esther, FL homes minutes from Hurlburt Field's main gate. FL023 BAH, the 2026-27 school rezoning, prices, and commutes. Gregg Costin, military Realtor."
+      "desc": "Mary Esther, FL homes minutes from Hurlburt Field's main gate. FL023 BAH, the 2026-27 school rezoning, prices, and commutes. Gregg Costin, military Realtor.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
     },
     {
       "url": "/communities/destin",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 0,
-      "imp": 103,
+      "impressions": 103,
       "ctr": 0,
-      "pos": 12,
-      "expected": 0.015,
-      "lostClicks": 2,
+      "position": 12,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.03595603210734395,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Destin, FL Military Homes | Eglin & Hurlburt PCS",
-      "desc": "Destin, FL military homes for Eglin and Hurlburt families. Gulf-front, beach lifestyle, 20 min to Eglin, strong rental-investment market."
-    },
-    {
-      "url": "/gulf-breeze-vs-navarre",
-      "clicks": 0,
-      "imp": 50,
-      "ctr": 0,
-      "pos": 7.1,
-      "expected": 0.035,
-      "lostClicks": 2,
-      "title": "Gulf Breeze vs Navarre | Military Family Comparison",
-      "desc": "Gulf Breeze vs Navarre head-to-head: schools, commute to base, cost, beach, BAH math. Which is right for your PCS family?"
+      "desc": "Destin, FL military homes for Eglin and Hurlburt families. Gulf-front, beach lifestyle, 20 min to Eglin, strong rental-investment market.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
     },
     {
       "url": "/military-pcs-tax-deductions",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 0,
-      "imp": 99,
+      "impressions": 99,
       "ctr": 0,
-      "pos": 12.1,
-      "expected": 0.015,
-      "lostClicks": 1,
+      "position": 12.1,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.03735453357396229,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Military PCS Tax Deductions 2026 | Gregg Costin",
-      "desc": "Active-duty PCS moving expense tax deduction (Form 3903), DITY / PPM gain treatment, Florida residency advantages, TSP and housing impacts for 2026 returns."
+      "desc": "Active-duty PCS moving expense tax deduction (Form 3903), DITY / PPM gain treatment, Florida residency advantages, TSP and housing impacts for 2026 returns.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
     },
     {
       "url": "/communities/gulf-breeze",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 0,
-      "imp": 97,
+      "impressions": 97,
       "ctr": 0,
-      "pos": 11.3,
-      "expected": 0.015,
-      "lostClicks": 1,
+      "position": 11.3,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.03809538920445529,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Gulf Breeze, FL Military Homes | NAS Pensacola | Gregg Costin",
-      "desc": "Gulf Breeze, FL military homes for NAS Pensacola. Top-rated Santa Rosa schools, 20-30 min commute, premium family choice. Gregg Costin."
+      "desc": "Gulf Breeze, FL military homes for NAS Pensacola. Top-rated Santa Rosa schools, 20-30 min commute, premium family choice. Gregg Costin.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
+    },
+    {
+      "url": "/military-lodging-pensacola",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 1,
+      "impressions": 66,
+      "ctr": 0.015151515151515152,
+      "position": 8.8,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.0026795715344567483,
+        "high": 0.08096112398225534,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Navy Lodge Pensacola &amp; Military Lodging Guide | Gregg Costin",
+      "desc": "Navy Lodge Pensacola, NGIS, Air Force Inns at Eglin and Hurlburt, plus 2026 TLE rules (21 days, $290/day cap) and pet-friendly PCS lodging near every base.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
+    },
+    {
+      "url": "/assumable-va-loans-pensacola",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 14,
+      "impressions": 54,
+      "ctr": 0.25925925925925924,
+      "position": 4.4,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.16118507964793902,
+        "high": 0.38931144880217294,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Assumable VA Loans Pensacola | 2.75% Rates Still Available",
+      "desc": "How to find and assume a VA loan in Pensacola at the seller's original low rate. Substitution of entitlement, qualification, buyer-side strategy.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
+    },
+    {
+      "url": "/blog/living-in-gulf-breeze-pros-cons",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 0,
+      "impressions": 53,
+      "ctr": 0,
+      "position": 4.4,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "EXPERIMENT-RUNNING",
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "snippet changed 2026-09-04; collect a separate post-change window",
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.06758430445307662,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers",
+      "desc": "Living in Gulf Breeze FL: why 32561's $691,087 typical value overstates Gulf Breeze proper, flood zones, the bridge that failed once, honest 2026 pros and cons.",
+      "nextAction": "Leave the current variant in place; measure a separate post-change window."
     },
     {
       "url": "/on-base-vs-off-base-eglin-afb",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 0,
-      "imp": 53,
+      "impressions": 53,
       "ctr": 0,
-      "pos": 13.7,
-      "expected": 0.015,
-      "lostClicks": 1,
+      "position": 13.7,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.06758430445307662,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "On-Base vs Off-Base: Eglin AFB 2026 | Gregg Costin",
-      "desc": "Eglin AFB on-base housing is Corvias-run Eglin Family Housing; waits are not published. Compare the BAH forfeit against Niceville or Valparaiso, 8-15 minutes out."
+      "desc": "Eglin AFB on-base housing is Corvias-run Eglin Family Housing; waits are not published. Compare the BAH forfeit against Niceville or Valparaiso, 8-15 minutes out.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
+    },
+    {
+      "url": "/gulf-breeze-vs-navarre",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 0,
+      "impressions": 50,
+      "ctr": 0,
+      "position": 7.1,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.07135003417431873,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Gulf Breeze vs Navarre | Military Family Comparison",
+      "desc": "Gulf Breeze vs Navarre head-to-head: schools, commute to base, cost, beach, BAH math. Which is right for your PCS family?",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
+    },
+    {
+      "url": "/pcs-schools-by-base",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 1,
+      "impressions": 44,
+      "ctr": 0.022727272727272728,
+      "position": 8,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.004023148385637013,
+        "high": 0.11807979131537633,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "PCS Schools by Base 2026 | Panhandle Guide | Gregg Costin",
+      "desc": "The right Panhandle schools by base: NAS Pensacola, Eglin, Hurlburt, Whiting, Duke, Corry, Saufley. A-rated picks, IB, AP, Interstate Compact. Ask Gregg.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
+    },
+    {
+      "url": "/flight-school-housing-pensacola",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 2,
+      "impressions": 42,
+      "ctr": 0.047619047619047616,
+      "position": 8.6,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.013157248639206351,
+        "high": 0.1579013531547973,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "Flight School Housing Pensacola | NIFE to Whiting Field",
+      "desc": "Where student naval aviators live during NIFE and Whiting Field training: 2026 O-1 BAH, roommate math, Milton vs Pace vs East Hill, and rent vs buy.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
     },
     {
       "url": "/blog/personal-property-activity-pcs-2026",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 0,
-      "imp": 41,
+      "impressions": 41,
       "ctr": 0,
-      "pos": 7.9,
-      "expected": 0.035,
-      "lostClicks": 1,
+      "position": 7.9,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.08567044886890744,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Personal Property Activity: What the PPA Means for Your PCS",
-      "desc": "The Personal Property Activity now runs military PCS moves. Here is what the PPA means for your 2026 HHG shipment, PPM payout, claims, and housing timeline."
+      "desc": "The Personal Property Activity now runs military PCS moves. Here is what the PPA means for your 2026 HHG shipment, PPM payout, claims, and housing timeline.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
+    },
+    {
+      "url": "/va-approved-condos-pensacola",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 1,
+      "impressions": 40,
+      "ctr": 0.025,
+      "position": 5.3,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.0044267174077949195,
+        "high": 0.1288165948800778,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "VA Approved Condos Pensacola | Check the VA Condo List",
+      "desc": "Buying a condo with a VA loan in Pensacola: check any project at lgy.va.gov, what VA project approval requires, and your options when a building is not listed.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
+    },
+    {
+      "url": "/on-base-vs-off-base-nas-pensacola",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
+      "clicks": 3,
+      "impressions": 39,
+      "ctr": 0.07692307692307693,
+      "position": 7.7,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0.026506914073495688,
+        "high": 0.2032137312805527,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "On-Base vs Off-Base: NAS Pensacola 2026 | Gregg Costin",
+      "desc": "NAS Pensacola on-base housing (Balfour Beatty's NAS Pensacola Homes) vs off-base in Navy Point (5 min) or Gulf Breeze (15-20 min): the BAH forfeit math.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
     },
     {
       "url": "/niceville-vs-crestview",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 0,
-      "imp": 39,
+      "impressions": 39,
       "ctr": 0,
-      "pos": 8.5,
-      "expected": 0.025,
-      "lostClicks": 1,
+      "position": 8.5,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.08966985360023902,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Niceville vs Crestview | Eglin Area Housing | Gregg Costin",
-      "desc": "Niceville vs Crestview for Eglin, Hurlburt, and Duke Field families: schools, commute, cost, community. Which Okaloosa town fits your PCS?"
+      "desc": "Niceville vs Crestview for Eglin, Hurlburt, and Duke Field families: schools, commute, cost, community. Which Okaloosa town fits your PCS?",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
     },
     {
       "url": "/blog/florida-homestead-exemption-military",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 0,
-      "imp": 39,
+      "impressions": 39,
       "ctr": 0,
-      "pos": 11.1,
-      "expected": 0.015,
-      "lostClicks": 1,
+      "position": 11.1,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.08966985360023902,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Florida Homestead Exemption for Military: Save Thousands",
-      "desc": "Florida homestead exemption for military in 2026: up to $51,411 off assessed value, the March 1 deadline, PCS rental rules, and veteran exemptions worth thousands."
+      "desc": "Florida homestead exemption for military in 2026: up to $51,411 off assessed value, the March 1 deadline, PCS rental rules, and veteran exemptions worth thousands.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
     },
     {
       "url": "/military-rental-property-management",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 0,
-      "imp": 33,
+      "impressions": 33,
       "ctr": 0,
-      "pos": 9.3,
-      "expected": 0.025,
-      "lostClicks": 1,
+      "position": 9.3,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.10427343003561192,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
       "title": "Military Rental Property Management Pensacola | PCS Rental",
-      "desc": "Converting your PCS home into a rental: VA loan rules, property management vs self-managing, SCRA tenant protections, Florida landlord basics."
+      "desc": "Converting your PCS home into a rental: VA loan rules, property management vs self-managing, SCRA tenant protections, Florida landlord basics.",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
     },
     {
       "url": "/homes-for-sale-corry-station",
+      "source": "gsc-pages",
+      "sourceFile": "gsc-pages-2026-09-04.csv",
+      "property": "https://pensacolamilitaryhousing.com",
+      "kind": "page",
+      "date": "2026-09-04",
+      "status": "observed",
       "clicks": 0,
-      "imp": 31,
+      "impressions": 31,
       "ctr": 0,
-      "pos": 8.5,
-      "expected": 0.025,
-      "lostClicks": 1,
-      "title": "(spa or missing)",
-      "desc": ""
+      "position": 8.5,
+      "window": {
+        "start": null,
+        "end": null,
+        "searchType": null,
+        "dimensions": [
+          "page"
+        ],
+        "filters": null,
+        "complete": false,
+        "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+      },
+      "flags": [
+        "LOW-SAMPLE",
+        "MEASUREMENT-INCOMPLETE"
+      ],
+      "reasons": [
+        "exact measurement dates unknown or invalid",
+        "window coverage not confirmed",
+        "search type, dimensions or filters unknown"
+      ],
+      "interval": {
+        "low": 0,
+        "high": 0.11025900073475385,
+        "level": 0.95
+      },
+      "priority": 0,
+      "automaticRewrite": false,
+      "title": "(SPA or missing)",
+      "desc": "",
+      "nextAction": "Collect more observations; inspect query intent without claiming a snippet failure."
     }
   ]
 }

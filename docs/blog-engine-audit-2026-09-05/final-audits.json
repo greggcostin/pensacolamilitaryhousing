@@ -1,0 +1,32 @@
+[
+  {
+    "script": "audit-military.mjs",
+    "status": "passed",
+    "output": "MILITARY AUDIT CLEAN: 97 pages, 104 sitemap URLs, 103 share cards, 0 findings\n"
+  },
+  {
+    "script": "audit-civilian.mjs",
+    "status": "passed",
+    "output": "AUDIT CLEAN: 121 pages, 0 findings\n"
+  },
+  {
+    "script": "audit-entity.mjs",
+    "status": "passed",
+    "output": "ENTITY AUDIT CLEAN: 218 pages; full nodes on 3/2/2 pages; every other definition is the canonical compact or publisher shape\n"
+  },
+  {
+    "script": "check-em-dashes.mjs",
+    "status": "passed",
+    "output": "OK: no em dashes in prose across 100 pages + App.jsx.\n"
+  },
+  {
+    "script": "audit-links.mjs",
+    "status": "passed",
+    "output": "=== BROKEN INTERNAL LINKS ===\nTotal broken: 0\n\n=== ORPHAN PAGES (0 inbound internal links) ===\n  - /veteran-realtor-destin.html\nTotal orphans: 1\n\n=== TOP 10 MOST-LINKED PAGES ===\n  369  /reviews\n  307  /bah-rates\n  306  /va-loan-guide\n  288  /faq\n  245  /first-time-military-homebuyer\n  239  /bases/nas-pensacola\n  236  /florida-home-insurance-military\n  235  /pcs-checklist\n  234  /pcs-home-search\n  224  /bases/eglin-afb\n"
+  },
+  {
+    "script": "build-affordability.mjs",
+    "status": "passed",
+    "output": "affordability: 4 pages would change; no stale bands remain\n"
+  }
+]

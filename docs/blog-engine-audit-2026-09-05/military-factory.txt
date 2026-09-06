@@ -1,0 +1,17 @@
+POST: bah-2026-pensacola-what-can-you-afford (97KB)
+POST: best-neighborhoods-eglin-afb-families (87KB)
+POST: best-pensacola-neighborhoods-by-rank-bah (91KB)
+POST: florida-homestead-exemption-military (86KB)
+POST: florida-veteran-property-tax-county-guide (101KB)
+POST: living-in-gulf-breeze-pros-cons (89KB)
+POST: moving-to-navarre-2026-guide (111KB)
+POST: moving-to-pensacola-2026-guide (105KB)
+POST: pcs-to-pensacola-2026-complete-guide (87KB)
+POST: personal-property-activity-pcs-2026 (88KB)
+POST: va-loan-assumption-buyers-guide (96KB)
+POST: va-loan-seller-concessions-truth (89KB)
+INDEX: 12 cards rebuilt
+SITEMAP: +0 URLs
+LEDGER: 12 posts tracked
+MANIFEST: 12 posts -> public/blog/index.json
+LLMS: 12 posts synced -> public/llms.txt

@@ -1,0 +1,753 @@
+{
+  "checked": "2026-09-06",
+  "scope": "Official website and admissions resources for all 34 Escambia County and five Santa Rosa County records in the supplied NCES 2023-24 private-school dataset, plus three verified omitted campuses.",
+  "methodology": "Match exact NCES ID to the existing directory record, then verify school identity and city/address from an official school, denominational directory, or government source. Admissions URLs are observed page URLs, including unusual real paths. Null means an official resource was not verified, not that a school is closed. Existing NCES identifiers, grade ranges and raw coordinates remain unchanged by this resource supplement.",
+  "coverage": {
+    "existingRecords": 39,
+    "verifiedOfficialWebsites": 34,
+    "verifiedAdmissionsUrls": 31,
+    "supplementalSchools": 3
+  },
+  "byNcesId": {
+    "A9300270": {
+      "ncesId": "A9300270",
+      "name": "Aletheia Christian Academy",
+      "website": "https://www.acalions.org/",
+      "admissionsUrl": "https://www.acalions.org/admissions/how-to-apply",
+      "sourceUrl": "https://www.acalions.org/admissions/how-to-apply",
+      "checked": "2026-09-06",
+      "evidence": "Official application guide gives 1700 Woodchuck Avenue, Pensacola, matching NCES.",
+      "additionalSourceUrls": [
+        "https://www.acalions.org/",
+        "https://www.acalions.org/admissions/how-to-apply",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A9300270"
+      ]
+    },
+    "A1100508": {
+      "ncesId": "A1100508",
+      "name": "Bb C Christian Academy",
+      "website": null,
+      "admissionsUrl": null,
+      "sourceUrl": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults?Detail=FL.DOS.Corporations.Shared.Contracts.FilingRecord&InquiryDirectionType=PreviousRecord&InquiryType=EntityName&ListNameOrder=BBCCENTERPRISES+P960000912280&SearchNameOrder=BBCCINVESTMENTS+L190002532110",
+      "checked": "2026-09-06",
+      "evidence": "Florida corporate record confirms BB & C Christian Academy at 1520 West Avery Street; an official school website was not verified.",
+      "additionalSourceUrls": [
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1100508"
+      ]
+    },
+    "A0101775": {
+      "ncesId": "A0101775",
+      "name": "Blessed Star Montessori Christian School",
+      "website": "https://blessedstar.com/",
+      "admissionsUrl": null,
+      "sourceUrl": "https://blessedstar.com/",
+      "checked": "2026-09-06",
+      "evidence": "Official homepage gives 9151 N. Davis Hwy, Pensacola, matching NCES; a separate admissions URL was not verified.",
+      "additionalSourceUrls": [
+        "https://blessedstar.com/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0101775"
+      ]
+    },
+    "A1901040": {
+      "ncesId": "A1901040",
+      "name": "Carden Christian Academy",
+      "website": "https://cardenchristianacademy.com/",
+      "admissionsUrl": "https://cardenchristianacademy.com/",
+      "sourceUrl": "https://cardenchristianacademy.com/",
+      "checked": "2026-09-06",
+      "evidence": "Official homepage gives 3290 Bauer Road, Pensacola and links registration forms and tuition information.",
+      "additionalSourceUrls": [
+        "https://cardenchristianacademy.com/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1901040"
+      ]
+    },
+    "A1901072": {
+      "ncesId": "A1901072",
+      "name": "Christian Institute Of Arts And Sciences",
+      "website": "https://www.christianinstitute.com/",
+      "admissionsUrl": "https://www.christianinstitute.com/admissions",
+      "sourceUrl": "https://www.christianinstitute.com/",
+      "checked": "2026-09-06",
+      "evidence": "Official site gives 2007 North 61st Ave, Pensacola and links a campus school and separate homeschool umbrella program.",
+      "additionalSourceUrls": [
+        "https://www.christianinstitute.com/",
+        "https://www.christianinstitute.com/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1901072"
+      ]
+    },
+    "00261903": {
+      "ncesId": "00261903",
+      "name": "Creative Learning Academy",
+      "website": "https://www.creativelearningacademy.org/",
+      "admissionsUrl": "https://www.creativelearningacademy.org/admissions",
+      "sourceUrl": "https://www.creativelearningacademy.org/admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official homepage gives 3151 Hyde Park Road, Pensacola, matching NCES.",
+      "additionalSourceUrls": [
+        "https://www.creativelearningacademy.org/",
+        "https://www.creativelearningacademy.org/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=00261903"
+      ]
+    },
+    "A1500865": {
+      "ncesId": "A1500865",
+      "name": "Dixon School For Arts And Sciences",
+      "website": "https://dixonschoolota.org/",
+      "admissionsUrl": "https://dixonschoolota.org/enrollment-requirements/",
+      "sourceUrl": "https://dixonschoolota.org/enrollment-requirements/",
+      "checked": "2026-09-06",
+      "evidence": "Official enrollment requirements include the same 1201 N H Street, Pensacola address as this NCES record. Two source IDs share this campus and official website; both IDs are retained pending identity reconciliation.",
+      "additionalSourceUrls": [
+        "https://dixonschoolota.org/",
+        "https://dixonschoolota.org/enrollment-requirements/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1500865"
+      ]
+    },
+    "A1901242": {
+      "ncesId": "A1901242",
+      "name": "Dixon School Of Arts And Sciences",
+      "website": "https://dixonschoolota.org/",
+      "admissionsUrl": "https://dixonschoolota.org/enrollment-requirements/",
+      "sourceUrl": "https://dixonschoolota.org/enrollment-requirements/",
+      "checked": "2026-09-06",
+      "evidence": "Official enrollment requirements include the same 1201 N H Street, Pensacola address as this NCES record. Two source IDs share this campus and official website; both IDs are retained pending identity reconciliation.",
+      "additionalSourceUrls": [
+        "https://dixonschoolota.org/",
+        "https://dixonschoolota.org/enrollment-requirements/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1901242"
+      ]
+    },
+    "A1700853": {
+      "ncesId": "A1700853",
+      "name": "Dt Preparatory Academy",
+      "website": "https://www.dtprepacademy.org/",
+      "admissionsUrl": "https://www.dtprepacademy.org/admissions",
+      "sourceUrl": "https://www.dtprepacademy.org/",
+      "checked": "2026-09-06",
+      "evidence": "Official site gives 1780 W. Detroit Blvd, Pensacola, and current K-8 enrollment information.",
+      "additionalSourceUrls": [
+        "https://www.dtprepacademy.org/",
+        "https://www.dtprepacademy.org/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1700853"
+      ]
+    },
+    "A0301091": {
+      "ncesId": "A0301091",
+      "name": "East Hill Academy",
+      "website": "https://easthillacademy.org/",
+      "admissionsUrl": "https://easthillacademy.org/",
+      "sourceUrl": "https://easthillacademy.org/",
+      "checked": "2026-09-06",
+      "evidence": "Official site identifies its campus at 635 West Garden Street, Pensacola; enrollment inquiries use its linked intake form.",
+      "additionalSourceUrls": [
+        "https://easthillacademy.org/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0301091"
+      ]
+    },
+    "01927645": {
+      "ncesId": "01927645",
+      "name": "Episcopal Day School Of Christ Church Parish",
+      "website": "https://www.edscc.org/",
+      "admissionsUrl": "https://www.edscc.org/admissions/",
+      "sourceUrl": "https://www.edscc.org/",
+      "checked": "2026-09-06",
+      "evidence": "Official site lists South Campus at 223 N. Palafox Street, matching NCES, plus a separate Hilton-Green campus at 601 North Palafox.",
+      "additionalSourceUrls": [
+        "https://www.edscc.org/",
+        "https://www.edscc.org/admissions/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=01927645"
+      ]
+    },
+    "00260728": {
+      "ncesId": "00260728",
+      "name": "Escambia Christian School",
+      "website": "https://www.escambiachristian.org/",
+      "admissionsUrl": "https://www.escambiachristian.org/about1-c1z94",
+      "sourceUrl": "https://www.escambiachristian.org/about1-c1z94",
+      "checked": "2026-09-06",
+      "evidence": "Official registration page confirms 3311 W. Moreno Street, Pensacola.",
+      "additionalSourceUrls": [
+        "https://www.escambiachristian.org/",
+        "https://www.escambiachristian.org/about1-c1z94",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=00260728"
+      ]
+    },
+    "A2392082": {
+      "ncesId": "A2392082",
+      "name": "Hillcrest Private Academy",
+      "website": "https://hc-pa.com/",
+      "admissionsUrl": "https://hc-pa.com/enroll/",
+      "sourceUrl": "https://hc-pa.com/about/",
+      "checked": "2026-09-06",
+      "evidence": "Official about page explicitly prints NCES ID A2392082 and describes a private virtual cover school; current mailing address is 7150 Tippin Avenue #11456, Pensacola, not a classroom campus.",
+      "additionalSourceUrls": [
+        "https://hc-pa.com/about/",
+        "https://hc-pa.com/faq/",
+        "https://hc-pa.com/enroll/"
+      ],
+      "virtual": true,
+      "virtualSourceUrl": "https://hc-pa.com/faq/",
+      "locationNote": "Virtual homeschool cover school. Its address is for administration/mail and must not be presented as a classroom campus.",
+      "officialMailingAddress": {
+        "address": "7150 Tippin Avenue #11456",
+        "city": "Pensacola",
+        "state": "FL",
+        "zip": "32504"
+      }
+    },
+    "A0700499": {
+      "ncesId": "A0700499",
+      "name": "East Hill Christian School",
+      "website": "https://www.ehcs.org/",
+      "admissionsUrl": "https://www.ehcs.org/visit-ehcs/admissions/",
+      "sourceUrl": "https://www.ehcs.org/",
+      "checked": "2026-09-06",
+      "evidence": "Official Pensacola school site and admissions process match East Hill Christian at 1301 E. Gonzalez Street.",
+      "additionalSourceUrls": [
+        "https://www.ehcs.org/",
+        "https://www.ehcs.org/visit-ehcs/admissions/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0700499"
+      ]
+    },
+    "A9501231": {
+      "ncesId": "A9501231",
+      "name": "Jubilee Christian Academy",
+      "website": "https://jcakids.org/",
+      "admissionsUrl": "https://jcakids.org/admissions",
+      "sourceUrl": "https://jcakids.org/admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official admissions page confirms 5910 North W Street, Pensacola.",
+      "additionalSourceUrls": [
+        "https://jcakids.org/",
+        "https://jcakids.org/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A9501231"
+      ]
+    },
+    "00258253": {
+      "ncesId": "00258253",
+      "name": "Little Flower Catholic School",
+      "website": "https://www.ptlittleflowerschool.org/",
+      "admissionsUrl": "https://www.ptlittleflowerschool.org/admissions",
+      "sourceUrl": "https://www.ptlittleflowerschool.org/admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official admissions page confirms 6495 Lillian Hwy, Pensacola.",
+      "additionalSourceUrls": [
+        "https://www.ptlittleflowerschool.org/",
+        "https://www.ptlittleflowerschool.org/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=00258253"
+      ]
+    },
+    "A0501199": {
+      "ncesId": "A0501199",
+      "name": "Marcus Pointe Christian School",
+      "website": "https://marcuspointechristian.org/",
+      "admissionsUrl": "https://marcuspointechristian.org/elementary/",
+      "sourceUrl": "https://marcuspointechristian.org/",
+      "checked": "2026-09-06",
+      "evidence": "Official site identifies elementary/preschool campus at 6205 North W Street, matching NCES; Beulah is a separate preschool campus.",
+      "additionalSourceUrls": [
+        "https://marcuspointechristian.org/",
+        "https://marcuspointechristian.org/elementary/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0501199",
+        "https://marcuspointechristian.org/elementary/"
+      ]
+    },
+    "A0102328": {
+      "ncesId": "A0102328",
+      "name": "Montessori School Of Pensacola",
+      "website": "https://montessoripensacola.com/",
+      "admissionsUrl": "https://montessoripensacola.com/choose-msp/",
+      "sourceUrl": "https://montessoripensacola.com/choose-msp/",
+      "checked": "2026-09-06",
+      "evidence": "Official site confirms Montessori Drive East campus at 4100 Montessori Drive. It also lists 4101 Montessori Drive and a separate 12th Avenue admissions campus.",
+      "additionalSourceUrls": [
+        "https://montessoripensacola.com/",
+        "https://montessoripensacola.com/choose-msp/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0102328"
+      ]
+    },
+    "BB220221": {
+      "ncesId": "BB220221",
+      "name": "Mother Clelia Morning Star High School",
+      "website": "https://mshspensacola.org/",
+      "admissionsUrl": "https://mshspensacola.org/admissions",
+      "sourceUrl": "https://mshspensacola.org/admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official current admissions page confirms Mother Clelia Morning Star High School at 70 Hunter Avenue, Pensacola.",
+      "additionalSourceUrls": [
+        "https://mshspensacola.org/",
+        "https://mshspensacola.org/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=BB220221"
+      ]
+    },
+    "00258322": {
+      "ncesId": "00258322",
+      "name": "Pensacola Catholic High School",
+      "website": "https://pensacolachs.org/",
+      "admissionsUrl": "https://pensacolachs.org/admissions/",
+      "sourceUrl": "https://ptdiocese.org/schoolfinder",
+      "checked": "2026-09-06",
+      "evidence": "Official diocese identifies Pensacola Catholic High at 3043 West Scott Street; school admissions page gives freshman and transfer guidance.",
+      "additionalSourceUrls": [
+        "https://pensacolachs.org/",
+        "https://pensacolachs.org/admissions/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=00258322"
+      ]
+    },
+    "BB200503": {
+      "ncesId": "BB200503",
+      "name": "Pensacola Private School Of Liberal Arts",
+      "website": "https://pensacolasola.org/",
+      "admissionsUrl": "https://pensacolasola.org/admissions",
+      "sourceUrl": "https://pensacolasola.org/admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official SoLA admissions page confirms 301 E. Gadsden Street, Pensacola; NCES street spelling omits the second d.",
+      "additionalSourceUrls": [
+        "https://pensacolasola.org/",
+        "https://pensacolasola.org/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=BB200503"
+      ]
+    },
+    "A1901340": {
+      "ncesId": "A1901340",
+      "name": "Personalized Learning Kingdom Academy",
+      "website": "https://www.personalizedlearningka.org/",
+      "admissionsUrl": null,
+      "sourceUrl": "https://www.personalizedlearningka.org/",
+      "checked": "2026-09-06",
+      "evidence": "Official current school website lists 6675 Pine Forest Road Suite 8, Pensacola 32526, differing from the historical NCES address of 301 E. Winthrop Avenue.",
+      "additionalSourceUrls": [
+        "https://www.personalizedlearningka.org/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1901340"
+      ],
+      "officialAddress": {
+        "address": "6675 Pine Forest Road Suite 8",
+        "city": "Pensacola",
+        "state": "FL",
+        "zip": "32526"
+      },
+      "locationNote": "Official current website address differs from NCES 2023-24 location. Retain the raw NCES coordinates as historical evidence; obtain a verified geocode before mapping the current campus."
+    },
+    "A1701123": {
+      "ncesId": "A1701123",
+      "name": "Phoenix Learning Academy INC.",
+      "website": "https://www.phoenixlearningacademy.org/",
+      "admissionsUrl": "https://www.phoenixlearningacademy.org/admissions",
+      "sourceUrl": "https://www.phoenixlearningacademy.org/admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official homepage confirms 9608 North Palafox Street, Pensacola, matching NCES.",
+      "additionalSourceUrls": [
+        "https://www.phoenixlearningacademy.org/",
+        "https://www.phoenixlearningacademy.org/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1701123"
+      ]
+    },
+    "A1370429": {
+      "ncesId": "A1370429",
+      "name": "Precious Lil' Angels Learning Center Inc",
+      "website": null,
+      "admissionsUrl": null,
+      "sourceUrl": "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1370429",
+      "checked": "2026-09-06",
+      "evidence": "No official school website or admissions page was verified; retain the NCES directory resource.",
+      "additionalSourceUrls": [
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1370429"
+      ]
+    },
+    "00260218": {
+      "ncesId": "00260218",
+      "name": "Redeemer Lutheran School",
+      "website": "https://www.redeemerschoolpensacola.org/",
+      "admissionsUrl": "https://www.redeemerschoolpensacola.org/Admissions",
+      "sourceUrl": "https://www.redeemerschoolpensacola.org/Admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official admissions page gives 333 Commerce Street, Pensacola, matching NCES.",
+      "additionalSourceUrls": [
+        "https://www.redeemerschoolpensacola.org/",
+        "https://www.redeemerschoolpensacola.org/Admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=00260218"
+      ]
+    },
+    "00258286": {
+      "ncesId": "00258286",
+      "name": "Sacred Heart Cathedral School",
+      "website": "https://www.shcs.ptdiocese.org/",
+      "admissionsUrl": "https://www.shcs.ptdiocese.org/admission",
+      "sourceUrl": "https://www.shcs.ptdiocese.org/admission",
+      "checked": "2026-09-06",
+      "evidence": "Official Sacred Heart Cathedral School homepage gives 1603 North Twelfth Avenue, Pensacola, matching NCES.",
+      "additionalSourceUrls": [
+        "https://www.shcs.ptdiocese.org/",
+        "https://www.shcs.ptdiocese.org/admission",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=00258286"
+      ]
+    },
+    "02019042": {
+      "ncesId": "02019042",
+      "name": "Pensocola Mennonite Christian School",
+      "website": null,
+      "admissionsUrl": null,
+      "sourceUrl": "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?ID=02019042&Miles=10&Search=1&Zip=32560",
+      "checked": "2026-09-06",
+      "evidence": "Official NCES profile confirms the historical Pensacola campus; no official school-owned website was verified.",
+      "additionalSourceUrls": [
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=02019042"
+      ]
+    },
+    "00266264": {
+      "ncesId": "00266264",
+      "name": "Pensacola Junior Academy",
+      "website": "https://paak-12.org/",
+      "admissionsUrl": "https://paak-12.org/current-academic-year/",
+      "sourceUrl": "https://paak-12.org/current-academic-year/",
+      "checked": "2026-09-06",
+      "evidence": "The current official school is branded Pensacola Adventist Academy at the same 8751 University Parkway address and phone. Its admissions page links application and returning-student resources; the prior NCES name is retained for joining.",
+      "additionalSourceUrls": [
+        "https://paak-12.org/",
+        "https://paak-12.org/current-academic-year/",
+        "https://www.pncaa.net/",
+        "https://www.eadventist.net/search/iframe?locale=en&org=ANTG76",
+        "https://hub.adventisteducation.org/uploads/artifact-content/2024-25-schools_directory.pdf"
+      ],
+      "currentName": "Pensacola Adventist Academy",
+      "aliases": [
+        "Pensacola Junior Academy"
+      ]
+    },
+    "A0301074": {
+      "ncesId": "A0301074",
+      "name": "Sl Jones Christian Academy",
+      "website": null,
+      "admissionsUrl": null,
+      "sourceUrl": "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0301074",
+      "checked": "2026-09-06",
+      "evidence": "No official school-owned website was verified for the NCES campus at 100 Boeing Street.",
+      "additionalSourceUrls": [
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0301074"
+      ]
+    },
+    "00258297": {
+      "ncesId": "00258297",
+      "name": "St John The Evangelist Catholic School",
+      "website": "https://www.stjohnschoolpensacola.com/",
+      "admissionsUrl": null,
+      "sourceUrl": "https://ptdiocese.org/schoolfinder",
+      "checked": "2026-09-06",
+      "evidence": "Official diocese and parish link to this school website and confirm 325 South Navy Blvd, Pensacola.",
+      "additionalSourceUrls": [
+        "https://www.stjohnschoolpensacola.com/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=00258297"
+      ]
+    },
+    "00258231": {
+      "ncesId": "00258231",
+      "name": "St Paul Catholic School",
+      "website": "https://stpaulcatholicschool.net/",
+      "admissionsUrl": "https://stpaulcatholicschool.net/admissions/",
+      "sourceUrl": "https://stpaulcatholicschool.net/admissions/",
+      "checked": "2026-09-06",
+      "evidence": "Official admissions page confirms 3121 Hyde Park Road, Pensacola.",
+      "additionalSourceUrls": [
+        "https://stpaulcatholicschool.net/",
+        "https://stpaulcatholicschool.net/admissions/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=00258231"
+      ]
+    },
+    "A0102757": {
+      "ncesId": "A0102757",
+      "name": "Trinitas Christian School",
+      "website": "https://www.trinitaschristian.org/",
+      "admissionsUrl": "https://www.trinitaschristian.org/admissions/faqs/",
+      "sourceUrl": "https://www.trinitaschristian.org/about/",
+      "checked": "2026-09-06",
+      "evidence": "Official school about page gives 3301 E. Johnson Avenue, Pensacola, matching NCES; admissions FAQ explains the process.",
+      "additionalSourceUrls": [
+        "https://www.trinitaschristian.org/",
+        "https://www.trinitaschristian.org/admissions/faqs/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0102757"
+      ]
+    },
+    "A2300943": {
+      "ncesId": "A2300943",
+      "name": "Umbrella Learning Academy",
+      "website": "https://www.umbrellalearningacademy.com/home",
+      "admissionsUrl": "https://www.umbrellalearningacademy.com/admissions",
+      "sourceUrl": "https://www.umbrellalearningacademy.com/admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official admissions page confirms 4081 E. Olive Road Suite A, Pensacola. Same-address NCES records A2300943 and A2400041 retained separately.",
+      "additionalSourceUrls": [
+        "https://www.umbrellalearningacademy.com/home",
+        "https://www.umbrellalearningacademy.com/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A2300943"
+      ]
+    },
+    "A2400041": {
+      "ncesId": "A2400041",
+      "name": "UMBRELLA LEARNING ACADEMY",
+      "website": "https://www.umbrellalearningacademy.com/home",
+      "admissionsUrl": "https://www.umbrellalearningacademy.com/admissions",
+      "sourceUrl": "https://www.umbrellalearningacademy.com/admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official admissions page confirms 4081 E. Olive Road Suite A, Pensacola. Same-address NCES records A2300943 and A2400041 retained separately.",
+      "additionalSourceUrls": [
+        "https://www.umbrellalearningacademy.com/home",
+        "https://www.umbrellalearningacademy.com/admissions",
+        "https://nces.ed.gov/opengis/rest/services/K12_School_Locations/EDGE_GEOCODE_PRIVATESCH_2324/MapServer/0"
+      ]
+    },
+    "A2170037": {
+      "ncesId": "A2170037",
+      "name": "Coastline Christian Academy",
+      "website": "https://www.coastlinechristian.com/",
+      "admissionsUrl": "https://www.coastlinechristian.com/donate-index-impact",
+      "sourceUrl": "https://www.coastlinechristian.com/donate-index-impact",
+      "checked": "2026-09-06",
+      "evidence": "Official contact page confirms 1122 Oriole Beach Road, Gulf Breeze. The current Apply Here navigation opens donate-index-impact, whose content is HOW TO APPLY and links its TADS application guide; the unusual observed path is preserved.",
+      "additionalSourceUrls": [
+        "https://www.coastlinechristian.com/",
+        "https://www.coastlinechristian.com/donate-index-impact",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A2170037",
+        "https://www.coastlinechristian.com/contact-1"
+      ]
+    },
+    "A1300645": {
+      "ncesId": "A1300645",
+      "name": "Faith Christian Academy",
+      "website": "https://fcawarriors.com/",
+      "admissionsUrl": "https://fcawarriors.com/admissions/",
+      "sourceUrl": "https://fcawarriors.com/admissions/",
+      "checked": "2026-09-06",
+      "evidence": "Official admissions page confirms 13050 Hwy 89, Jay, matching NCES.",
+      "additionalSourceUrls": [
+        "https://fcawarriors.com/",
+        "https://fcawarriors.com/admissions/",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1300645"
+      ]
+    },
+    "A0102236": {
+      "ncesId": "A0102236",
+      "name": "Good Shepherd Lutheran School",
+      "website": null,
+      "admissionsUrl": null,
+      "sourceUrl": "https://locator.lcms.org/school/384688",
+      "checked": "2026-09-06",
+      "evidence": "Official LCMS directory gives 4237 Gulf Breeze Pkwy, matching NCES. Historical goodshepherdgb.com serves unrelated gambling content and is deliberately excluded.",
+      "additionalSourceUrls": [
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0102236"
+      ],
+      "websiteStatus": "unverified-current-domain",
+      "locationNote": "The official LCMS school directory is a safe source link. Do not use the historical school domain; it currently serves unrelated content."
+    },
+    "00264336": {
+      "ncesId": "00264336",
+      "name": "Santa Rosa Christian School",
+      "website": "https://www.santarosachristianschool.com/",
+      "admissionsUrl": "https://www.santarosachristianschool.com/admissions",
+      "sourceUrl": "https://www.santarosachristianschool.com/admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official school homepage confirms 6331 Chestnut Street, Milton, matching NCES.",
+      "additionalSourceUrls": [
+        "https://www.santarosachristianschool.com/",
+        "https://www.santarosachristianschool.com/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=00264336"
+      ]
+    },
+    "02020863": {
+      "ncesId": "02020863",
+      "name": "West Florida Baptist Academy",
+      "website": "https://www.wfbacademy.org/",
+      "admissionsUrl": "https://www.wfbacademy.org/admissions",
+      "sourceUrl": "https://www.wfbacademy.org/admissions",
+      "checked": "2026-09-06",
+      "evidence": "Official school admissions page confirms 5621 Hwy 90, Milton, matching NCES.",
+      "additionalSourceUrls": [
+        "https://www.wfbacademy.org/",
+        "https://www.wfbacademy.org/admissions",
+        "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=02020863"
+      ]
+    }
+  },
+  "supplementalSchools": [
+    {
+      "ncesId": null,
+      "state": "FL",
+      "sector": "private",
+      "charter": false,
+      "magnet": null,
+      "virtual": false,
+      "lat": null,
+      "lng": null,
+      "levels": [
+        "elementary",
+        "middle",
+        "high",
+        "combined"
+      ],
+      "highGrade": "12",
+      "checked": "2026-09-06",
+      "sourceYear": "2026",
+      "sourceType": "official school website",
+      "locationStatus": "requires-verified-geocode",
+      "christian": true,
+      "id": "official-pensacola-christian-academy",
+      "name": "Pensacola Christian Academy",
+      "address": "10 Brent Lane",
+      "city": "Pensacola",
+      "zip": "32503",
+      "county": "Escambia County",
+      "countyFips": "12033",
+      "lowGrade": "PK",
+      "gradeLabel": "K4 through grade 12",
+      "offeredGrades": [
+        "PK",
+        "KG",
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12"
+      ],
+      "religiousAffiliation": "Christian",
+      "website": "https://www.pensacolachristianacademy.com/",
+      "admissionsUrl": "https://www.pensacolachristianacademy.com/enrollment/",
+      "sourceUrl": "https://www.pensacolachristianacademy.com/",
+      "gradeSourceUrl": "https://www.pensacolachristianacademy.com/",
+      "affiliationSourceUrl": "https://www.pensacolachristianacademy.com/about/",
+      "addressSourceUrl": "https://www.pensacolachristianacademy.com/contact/visit-us.aspx",
+      "evidence": "Official site lists K4-K5, grades 1-6, and grades 7-12. Its visit page identifies 10 Brent Lane, Pensacola 32503, and its about page describes Christian education. Not found among the supplied 2023-24 NCES private records; no federal ID is invented.",
+      "additionalSourceUrls": [
+        "https://www.pensacolachristianacademy.com/about/",
+        "https://www.pensacolachristianacademy.com/enrollment/",
+        "https://www.pensacolachristianacademy.com/contact/visit-us.aspx"
+      ]
+    },
+    {
+      "ncesId": null,
+      "state": "FL",
+      "sector": "private",
+      "charter": false,
+      "magnet": null,
+      "virtual": false,
+      "lat": null,
+      "lng": null,
+      "levels": [
+        "elementary",
+        "middle",
+        "high",
+        "combined"
+      ],
+      "highGrade": "12",
+      "checked": "2026-09-06",
+      "sourceYear": "2026",
+      "sourceType": "official school website",
+      "locationStatus": "requires-verified-geocode",
+      "christian": true,
+      "id": "official-lighthouse-pensacola",
+      "name": "Lighthouse Private Christian Academy - Pensacola Campus",
+      "address": "1100 W. Scott Street",
+      "city": "Pensacola",
+      "zip": "32501",
+      "county": "Escambia County",
+      "countyFips": "12033",
+      "lowGrade": "KG",
+      "gradeLabel": "Kindergarten through grade 12",
+      "offeredGrades": [
+        "KG",
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12"
+      ],
+      "religiousAffiliation": "Christian (nondenominational)",
+      "website": "https://lighthousepca.com/pensacola-k-12th-campus/",
+      "admissionsUrl": "https://lighthousepca.com/enrollment/",
+      "sourceUrl": "https://lighthousepca.com/pensacola-k-12th-campus/",
+      "gradeSourceUrl": "https://lighthousepca.com/pensacola-k-12th-campus/",
+      "affiliationSourceUrl": "https://lighthousepca.com/pensacola-k-12th-campus/",
+      "addressSourceUrl": "https://lighthousepca.com/pensacola-k-12th-campus/",
+      "evidence": "Official Pensacola campus page identifies K-12 at 1100 W. Scott Street, Pensacola 32501. Site footer describes a nondenominational Christian school. This campus is absent from the supplied NCES private-school subset.",
+      "additionalSourceUrls": [
+        "https://lighthousepca.com/enrollment/"
+      ]
+    },
+    {
+      "ncesId": null,
+      "state": "FL",
+      "sector": "private",
+      "charter": false,
+      "magnet": null,
+      "virtual": false,
+      "lat": null,
+      "lng": null,
+      "levels": [
+        "elementary",
+        "middle",
+        "high",
+        "combined"
+      ],
+      "highGrade": "12",
+      "checked": "2026-09-06",
+      "sourceYear": "2026",
+      "sourceType": "official school website",
+      "locationStatus": "requires-verified-geocode",
+      "christian": true,
+      "id": "official-lighthouse-gulf-breeze",
+      "name": "Lighthouse Private Christian Academy - Gulf Breeze Campus",
+      "address": "1530 New Hope Road",
+      "city": "Gulf Breeze",
+      "zip": "32563",
+      "county": "Santa Rosa County",
+      "countyFips": "12113",
+      "lowGrade": "KG",
+      "gradeLabel": "Kindergarten through grade 12",
+      "offeredGrades": [
+        "KG",
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12"
+      ],
+      "religiousAffiliation": "Christian (nondenominational)",
+      "website": "https://lighthousepca.com/gulf-breeze-high-school/",
+      "admissionsUrl": "https://lighthousepca.com/enrollment/",
+      "sourceUrl": "https://lighthousepca.com/gulf-breeze-high-school/",
+      "gradeSourceUrl": "https://lighthousepca.com/gulf-breeze-high-school/",
+      "affiliationSourceUrl": "https://lighthousepca.com/gulf-breeze-high-school/",
+      "addressSourceUrl": "https://lighthousepca.com/gulf-breeze-high-school/",
+      "evidence": "Official Gulf Breeze campus page identifies K-12 at 1530 New Hope Road, Gulf Breeze 32563, despite the older high-school wording in its URL. Site footer describes a nondenominational Christian school. No NCES ID is invented.",
+      "additionalSourceUrls": [
+        "https://lighthousepca.com/enrollment/"
+      ]
+    }
+  ],
+  "limitations": [
+    "This is a dated link verification, not a guarantee of current openings, acceptance, tuition, accreditation or school quality.",
+    "A school address or admissions link does not establish an attendance zone.",
+    "Same-address NCES entries are preserved for explicit reconciliation; resource matching does not silently combine identifiers.",
+    "Supplemental sourceYear 2026 denotes the verification year of a current official website, not a newly published NCES survey. Supplemental coordinates remain null here; apply only independently verified geocodes.",
+    "Lighthouse Milton/Pace details differ across the official homepage and footer; no additional Milton campus is added without resolving addresses and grade spans."
+  ]
+}

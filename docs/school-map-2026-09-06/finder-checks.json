@@ -1,0 +1,140 @@
+{
+  "checkedAt": "2026-09-06T20:46:27.046Z",
+  "datasetBuiltAt": "2026-09-06T20:44:00.404Z",
+  "datasetSha256": "a58ae030b22301da4d161bebe1a153d5b4cd00119cd4667adaa06378ab69d900",
+  "counts": {
+    "total": 274,
+    "public": 208,
+    "private": 66,
+    "ncesPrivate": 63,
+    "officialSupplemental": 3,
+    "mapped": 264,
+    "virtual": 10,
+    "christian": 47,
+    "privateLocationUpdates": 6,
+    "floridaIds": 120,
+    "letterGrades": 119,
+    "reports": 271,
+    "zipCenters": 64
+  },
+  "checks": 29,
+  "failures": 0,
+  "results": [
+    {
+      "name": "Haversine: zero, known equatorial/long-distance values, symmetry and antipodes",
+      "passed": true
+    },
+    {
+      "name": "Exact ZIP keeps matching unmapped/virtual records and requires no ZIP center",
+      "passed": true
+    },
+    {
+      "name": "Radius search uses distance across ZIP boundaries and sorts nearest first",
+      "passed": true
+    },
+    {
+      "name": "Invalid and unknown ZIPs cannot silently run an unsupported radius search",
+      "passed": true
+    },
+    {
+      "name": "Text, area, ZIP/radius, level, type, program and grade combine with AND",
+      "passed": true
+    },
+    {
+      "name": "Multilevel schools match each reported level; unknown spans stay in Other",
+      "passed": true
+    },
+    {
+      "name": "Charter/magnet flags require confirmed true; private/public are distinct",
+      "passed": true
+    },
+    {
+      "name": "Christian and nonreligious filters require explicit sourced categories, never names",
+      "passed": true
+    },
+    {
+      "name": "Virtual and missing/non-numeric coordinates stay list-only",
+      "passed": true
+    },
+    {
+      "name": "Map bounds are inclusive and intersect existing filters",
+      "passed": true
+    },
+    {
+      "name": "Search normalizes accents/punctuation, respects every term, and does not mutate input",
+      "passed": true
+    },
+    {
+      "name": "The original 208 public and 63 private NCES source records remain immutable",
+      "passed": true
+    },
+    {
+      "name": "Exactly three verified supplemental campus IDs extend the 271 directory records",
+      "passed": true
+    },
+    {
+      "name": "Published counts match raw plus documented supplemental records without duplicate or omitted identities",
+      "passed": true
+    },
+    {
+      "name": "School locations, identities, reported levels and source URLs survive the build",
+      "passed": true
+    },
+    {
+      "name": "Campus updates require documented official addresses and finite, sourced coordinates",
+      "passed": true
+    },
+    {
+      "name": "PSC current campus override retains its NCES identity and the verified Census address match",
+      "passed": true
+    },
+    {
+      "name": "Current public program notes are sourced while historical spans and virtual mapping stay intact",
+      "passed": true
+    },
+    {
+      "name": "Official current school names retain NCES identities and searchable historical aliases",
+      "passed": true
+    },
+    {
+      "name": "Hillcrest official virtual status overrides its dated directory mailing point only",
+      "passed": true
+    },
+    {
+      "name": "All private affiliation flags match exact NCES or explicit official-school evidence",
+      "passed": true
+    },
+    {
+      "name": "Verified admissions, website and campus notes retain resource provenance without invented fallbacks",
+      "passed": true
+    },
+    {
+      "name": "All 120 Florida district/school IDs join exactly once; 119 letters are source-exact",
+      "passed": true
+    },
+    {
+      "name": "No private, Alabama or unmatched school receives an invented Florida grade",
+      "passed": true
+    },
+    {
+      "name": "Five magnet matches retain exact official IDs, program scope and source provenance",
+      "passed": true
+    },
+    {
+      "name": "All 82 original school-report destinations remain in HTML and finder results",
+      "passed": true
+    },
+    {
+      "name": "All 64 ZIP centers exactly match dated Census source records",
+      "passed": true
+    },
+    {
+      "name": "Dataset provenance identifies official sources and distinct directory/grade vintages",
+      "passed": true
+    },
+    {
+      "name": "School-finder integration is idempotent and scoped to the hub",
+      "passed": true
+    }
+  ]
+}

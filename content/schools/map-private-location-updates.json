@@ -1,0 +1,153 @@
+{
+  "retrieved": "2026-09-06T14:45:05.667Z",
+  "sourceKind": "official school address plus Census address geocoding",
+  "schools": [
+    {
+      "id": "official-pensacola-christian-academy",
+      "name": "Pensacola Christian Academy",
+      "address": "10 Brent Lane",
+      "city": "Pensacola",
+      "state": "FL",
+      "zip": "32503",
+      "sourceUrl": "https://www.pensacolachristianacademy.com/",
+      "lat": 30.466842260457,
+      "lng": -87.242165115525,
+      "geocoderUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10+Brent+Lane+Pensacola+FL+32503&benchmark=Public_AR_Current&format=json",
+      "matchedAddress": "10 BRENT LN, PENSACOLA, FL, 32503",
+      "tigerLine": {
+        "side": "L",
+        "tigerLineId": "656650352"
+      },
+      "benchmark": {
+        "isDefault": true,
+        "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+        "id": "4",
+        "benchmarkName": "Public_AR_Current"
+      },
+      "locationNote": "Approximate address point from the Census geocoder; confirm the campus entrance with the school."
+    },
+    {
+      "id": "official-lighthouse-pensacola",
+      "name": "Lighthouse Private Christian Academy - Pensacola",
+      "address": "1100 W Scott St",
+      "city": "Pensacola",
+      "state": "FL",
+      "zip": "32501",
+      "sourceUrl": "https://lighthousepca.com/pensacola-k-12th-campus/",
+      "lat": 30.437612393504,
+      "lng": -87.231349058845,
+      "geocoderUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1100+W+Scott+St+Pensacola+FL+32501&benchmark=Public_AR_Current&format=json",
+      "matchedAddress": "1100 W SCOTT ST, PENSACOLA, FL, 32501",
+      "tigerLine": {
+        "side": "R",
+        "tigerLineId": "93219482"
+      },
+      "benchmark": {
+        "isDefault": true,
+        "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+        "id": "4",
+        "benchmarkName": "Public_AR_Current"
+      },
+      "locationNote": "Approximate address point from the Census geocoder; confirm the campus entrance with the school."
+    },
+    {
+      "id": "official-lighthouse-gulf-breeze",
+      "name": "Lighthouse Private Christian Academy - Gulf Breeze",
+      "address": "1530 New Hope Rd",
+      "city": "Gulf Breeze",
+      "state": "FL",
+      "zip": "32563",
+      "sourceUrl": "https://lighthousepca.com/gulf-breeze-high-school/",
+      "lat": 30.392074144729,
+      "lng": -87.018839598384,
+      "geocoderUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1530+New+Hope+Rd+Gulf+Breeze+FL+32563&benchmark=Public_AR_Current&format=json",
+      "matchedAddress": "1530 NEW HOPE RD, GULF BREEZE, FL, 32563",
+      "tigerLine": {
+        "side": "R",
+        "tigerLineId": "74565989"
+      },
+      "benchmark": {
+        "isDefault": true,
+        "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+        "id": "4",
+        "benchmarkName": "Public_AR_Current"
+      },
+      "locationNote": "Approximate address point from the Census geocoder; confirm the campus entrance with the school."
+    },
+    {
+      "id": "A1990009",
+      "ncesId": "A1990009",
+      "name": "The Renaissance School Of The Eastern Shore",
+      "address": "10526 County Road 64",
+      "city": "Daphne",
+      "state": "AL",
+      "zip": "36526",
+      "sourceUrl": "https://rs.education/enrollment/",
+      "lat": 30.603731117303,
+      "lng": -87.843128102298,
+      "geocoderUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10526+County+Road+64+Daphne+AL+36526&benchmark=Public_AR_Current&format=json",
+      "matchedAddress": "10526 CO RD 64, DAPHNE, AL, 36526",
+      "tigerLine": {
+        "side": "L",
+        "tigerLineId": "131632668"
+      },
+      "benchmark": {
+        "isDefault": true,
+        "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+        "id": "4",
+        "benchmarkName": "Public_AR_Current"
+      },
+      "locationNote": "Approximate address point from the Census geocoder; confirm the campus entrance with the school."
+    },
+    {
+      "id": "BB200582",
+      "ncesId": "BB200582",
+      "name": "Lotus Learning & Arts Center",
+      "address": "74 3rd Street",
+      "city": "Shalimar",
+      "state": "FL",
+      "zip": "32579",
+      "sourceUrl": "https://www.discoverlotus.org/contact-us",
+      "lat": 30.446078120908,
+      "lng": -86.577942632794,
+      "geocoderUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=74+3rd+Street+Shalimar+FL+32579&benchmark=Public_AR_Current&format=json",
+      "matchedAddress": "74 3RD ST, SHALIMAR, FL, 32579",
+      "tigerLine": {
+        "side": "R",
+        "tigerLineId": "74407778"
+      },
+      "benchmark": {
+        "isDefault": true,
+        "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+        "id": "4",
+        "benchmarkName": "Public_AR_Current"
+      },
+      "locationNote": "Approximate address point from the Census geocoder; confirm the campus entrance with the school."
+    },
+    {
+      "id": "A1901340",
+      "ncesId": "A1901340",
+      "name": "Personalized Learning Kingdom Academy",
+      "address": "6675 Pine Forest Road Suite 8",
+      "city": "Pensacola",
+      "state": "FL",
+      "zip": "32526",
+      "sourceUrl": "https://www.personalizedlearningka.org/",
+      "lat": 30.475384409539,
+      "lng": -87.306886579114,
+      "geocoderUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=6675+Pine+Forest+Road+Suite+8+Pensacola+FL+32526&benchmark=Public_AR_Current&format=json",
+      "matchedAddress": "6675 PINE FOREST RD, PENSACOLA, FL, 32526",
+      "tigerLine": {
+        "side": "L",
+        "tigerLineId": "93211897"
+      },
+      "benchmark": {
+        "isDefault": true,
+        "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+        "id": "4",
+        "benchmarkName": "Public_AR_Current"
+      },
+      "locationNote": "Approximate address point from the Census geocoder; confirm the campus entrance with the school."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-09-06T20:46:04.807Z",
+  "checks": 14,
+  "failures": 0,
+  "results": [
+    {
+      "name": "Address validation rejects incomplete, oversized and control-character input without requesting a provider",
+      "passed": true
+    },
+    {
+      "name": "Census parsing accepts only finite points in the four covered counties and matching states",
+      "passed": true
+    },
+    {
+      "name": "Ambiguous matches remain selectable, duplicates collapse and out-of-coverage matches cannot become origins",
+      "passed": true
+    },
+    {
+      "name": "JSONP uses only the fixed HTTPS Census endpoint, explicit address and generated callback; success cleans up",
+      "passed": true
+    },
+    {
+      "name": "Invalid input and a pre-aborted request create no outgoing lookup",
+      "passed": true
+    },
+    {
+      "name": "Canceling a pending lookup removes script/callback and ignores a late captured callback",
+      "passed": true
+    },
+    {
+      "name": "Timeout, load error, malformed response and missing callback reject cleanly without raw-address error text",
+      "passed": true
+    },
+    {
+      "name": "Replacement lookups have isolated callbacks; canceling the first cannot settle the next request",
+      "passed": true
+    },
+    {
+      "name": "Address origin controls exact point distances across ZIPs, radius, AND filters and nearest sorting",
+      "passed": true
+    },
+    {
+      "name": "Any-distance retains list-only records without inventing their distance; nearest sorts them last",
+      "passed": true
+    },
+    {
+      "name": "Clearing the origin restores ZIP behavior and removes home distances without mutating data",
+      "passed": true
+    },
+    {
+      "name": "Automatic map initialization and Show on map share one pending load and retry after failure",
+      "passed": true
+    },
+    {
+      "name": "A later school selection or changed filters suppress a delayed map/cluster popup",
+      "passed": true
+    },
+    {
+      "name": "UI privacy contracts mask address displays and keep home lookup out of URL/history/storage/inquiry payloads",
+      "passed": true
+    }
+  ]
+}

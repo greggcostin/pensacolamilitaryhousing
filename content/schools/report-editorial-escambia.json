@@ -1,0 +1,2257 @@
+{
+  "checkedAt": "2026-09-06",
+  "countyKey": "FL|Escambia",
+  "expectedCount": 53,
+  "records": {
+    "/schools/a-k-suter-elementary-school": {
+      "name": "A. K. Suter Elementary School",
+      "schoolWebsite": "https://suteres.escambiaschools.org",
+      "overview": "A. K. Suter Elementary's published history dates the school to 1921 and the opening of its current building to January 2015. The kindergarten-through-fifth-grade campus is on Pickens Avenue in Pensacola.",
+      "highlights": [
+        {
+          "title": "A school with a long local history",
+          "text": "The school history describes earlier additions for library, art and music instruction before the replacement building opened in 2015.",
+          "sourceUrl": "https://suteres.escambiaschools.org/our-school/history"
+        },
+        {
+          "title": "Family participation",
+          "text": "Suter describes classroom tutoring and Math Superstars among its volunteer-supported learning activities; ask which opportunities are operating this year.",
+          "sourceUrl": "https://suteres.escambiaschools.org/our-school/history"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm your address assignment with Escambia Enrollment Services, then contact Suter about registration and the first-day routine.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How are art, music and library time arranged across the elementary grades?",
+        "Which classroom volunteering or Math Superstars opportunities are available this year?"
+      ],
+      "sources": [
+        {
+          "url": "https://suteres.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://suteres.escambiaschools.org/our-school/history",
+          "label": "School history",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/bellview-elementary-school": {
+      "name": "Bellview Elementary School",
+      "schoolWebsite": "https://bellviewes.escambiaschools.org",
+      "overview": "Bellview Elementary is the district elementary campus on Bellview Avenue, separate from Bellview Middle on Mobile Highway. Its school website brings together classroom links, family resources and the school improvement plan.",
+      "highlights": [
+        {
+          "title": "School-specific planning documents",
+          "text": "Bellview links its school improvement and Title I family information from the homepage, providing a starting point for discussing this year's classroom priorities.",
+          "sourceUrl": "https://bellviewes.escambiaschools.org/"
+        },
+        {
+          "title": "Keeping up with classwork",
+          "text": "The school provides direct access to FOCUS and Canvas alongside transportation and cafeteria resources. Ask teachers which channel they use for weekly classroom communication.",
+          "sourceUrl": "https://bellviewes.escambiaschools.org/"
+        }
+      ],
+      "enrollment": {
+        "text": "Use district Enrollment Services to verify the assigned elementary school for your address and current registration steps before arranging a visit to Bellview.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "What are the priorities in Bellview's current school improvement plan for my child's grade?",
+        "How do teachers use FOCUS and Canvas to share progress and assignments?"
+      ],
+      "sources": [
+        {
+          "url": "https://bellviewes.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/bellview-middle-school": {
+      "name": "Bellview Middle School",
+      "schoolWebsite": "https://bellviewms.escambiaschools.org",
+      "overview": "Bellview Middle serves grades six through eight at its Mobile Highway campus. Its current family information includes a 2026–27 uniform policy and school-specific guidance on phones, student devices and athletic paperwork.",
+      "highlights": [
+        {
+          "title": "Prepare for the school day",
+          "text": "The school posts its uniform and cell-phone policies so families can review expectations before the first day.",
+          "sourceUrl": "https://bellviewms.escambiaschools.org/"
+        },
+        {
+          "title": "Middle-school transition",
+          "text": "Bellview identifies a guidance team and publishes Chromebook and sports forms. Those contacts can help families organize course questions, device requirements and activity participation.",
+          "sourceUrl": "https://bellviewms.escambiaschools.org/"
+        }
+      ],
+      "enrollment": {
+        "text": "Start with district enrollment and address verification, then ask Bellview's guidance office to review records and course placement.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How will guidance place a transferring student into core courses and electives?",
+        "Which device, uniform and activity forms should we complete before the first day?"
+      ],
+      "sources": [
+        {
+          "url": "https://bellviewms.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/beulah-academy-of-science": {
+      "name": "Beulah Academy Of Science",
+      "schoolWebsite": "https://beulahacademycs.escambiaschools.org",
+      "overview": "Beulah Academy of Science is a public charter middle school serving grades six through eight on Beulah Road. Its website provides a separate student application and lottery procedures for families considering admission.",
+      "highlights": [
+        {
+          "title": "Charter application process",
+          "text": "The academy publishes its 2026–27 application and lottery rules; a nearby home address does not replace the application process.",
+          "sourceUrl": "https://beulahacademycs.escambiaschools.org/"
+        },
+        {
+          "title": "Grade-by-grade planning",
+          "text": "The school publishes a capacity of 110 students in each of grades six, seven and eight. This is a planning capacity, not a statement that seats are currently available.",
+          "sourceUrl": "https://beulahacademycs.escambiaschools.org/our-school"
+        }
+      ],
+      "enrollment": {
+        "text": "Contact the academy about its current application, lottery and waiting-list process, and confirm grade-level availability and transportation directly.",
+        "sourceUrl": "https://beulahacademycs.escambiaschools.org/"
+      },
+      "visitQuestions": [
+        "What is the current application or waiting-list process for our entry grade?",
+        "How are science activities incorporated into the weekly schedule, and which clubs are active this year?"
+      ],
+      "sources": [
+        {
+          "url": "https://beulahacademycs.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://beulahacademycs.escambiaschools.org/our-school",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/beulah-elementary-school": {
+      "name": "Beulah Elementary School",
+      "schoolWebsite": "https://beulahes.escambiaschools.org",
+      "overview": "Beulah Elementary's school history traces its beginnings to a log-cabin school associated with the Shelby family. The Helms Road campus opened for the 1980–81 school year, and the school's published description identifies its kindergarten-through-fifth-grade program.",
+      "highlights": [
+        {
+          "title": "Campus history",
+          "text": "The school explains how its earlier schoolhouse evolved into the present Helms Road location.",
+          "sourceUrl": "https://beulahes.escambiaschools.org/our-school/about-beulah"
+        },
+        {
+          "title": "Transportation communication",
+          "text": "Beulah asks families to send transportation changes in writing rather than by telephone. Its homepage also explains requests involving an alternate bus address.",
+          "sourceUrl": "https://beulahes.escambiaschools.org/"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify your address through district enrollment, then ask Beulah to confirm the current grade and pre-K options, required records and transportation arrangements.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How should we document a recurring change between bus and car pickup?",
+        "What are the classroom and special-area routines for our child's grade?"
+      ],
+      "sources": [
+        {
+          "url": "https://beulahes.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://beulahes.escambiaschools.org/our-school/about-beulah",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/beulah-middle-school": {
+      "name": "Beulah Middle School",
+      "schoolWebsite": "https://beulahms.escambiaschools.org",
+      "overview": "Beulah Middle's published workforce-education offerings include agriscience technology and pre-engineering. The school also provides a dedicated family entry point for athletics, student devices and transfers at its West Nine Mile Road campus.",
+      "highlights": [
+        {
+          "title": "Career exploration",
+          "text": "The school's program navigation identifies Agriscience Technology Academy and Pre-Engineering Academy; confirm the current courses and selection process with the school.",
+          "sourceUrl": "https://beulahms.escambiaschools.org/"
+        },
+        {
+          "title": "Academy enrollment is separate",
+          "text": "The district describes career academies as voluntary, application-based programs. School assignment alone does not establish acceptance into a particular academy.",
+          "sourceUrl": "https://www.escambiaschools.org/departments/workforce-education/career-academies"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm the school assignment or transfer process with Enrollment Services, then ask Beulah Middle about any separate academy application and prerequisites.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How do agriscience and pre-engineering fit into the sixth-grade elective schedule?",
+        "Does entry into an academy require a separate application, and what is the timeline?"
+      ],
+      "sources": [
+        {
+          "url": "https://beulahms.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/workforce-education/career-academies",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/blue-angels-elementary-school": {
+      "name": "Blue Angels Elementary School",
+      "schoolWebsite": "https://blueangelses.escambiaschools.org",
+      "overview": "Blue Angels Elementary opened for the 2000–01 school year and takes its name from the Navy's flight demonstration team. Its school history places the Dog Track Road campus near the back gate of Naval Air Station Pensacola.",
+      "highlights": [
+        {
+          "title": "A campus connected to its name",
+          "text": "The school explains its Blue Angels namesake and its opening at the start of the 2000s.",
+          "sourceUrl": "https://blueangelses.escambiaschools.org/our-school/our-school"
+        },
+        {
+          "title": "Learning approach",
+          "text": "The school describes child-centered instruction with connections to real-world learning; a visit is an opportunity to see how teachers apply that approach in a particular grade.",
+          "sourceUrl": "https://blueangelses.escambiaschools.org/our-school/our-school"
+        }
+      ],
+      "enrollment": {
+        "text": "Check the address assignment through district enrollment and contact Blue Angels about registration, records transfer and any military-family transition needs.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "What real-world projects are planned for our child's grade this year?",
+        "Who coordinates the first-week transition for a student arriving during the school year?"
+      ],
+      "sources": [
+        {
+          "url": "https://blueangelses.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://blueangelses.escambiaschools.org/our-school/our-school",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/bratt-elementary-school": {
+      "name": "Bratt Elementary School",
+      "schoolWebsite": "https://brattes.escambiaschools.org",
+      "overview": "Bratt Elementary is the Highway 99 elementary campus in northern Escambia County. Its school website includes a local history explaining the Bratt name and a family resource section linking enrollment, pre-K information and attendance tools.",
+      "highlights": [
+        {
+          "title": "A name with local history",
+          "text": "The school's history connects the Bratt community name to the location of an early post office.",
+          "sourceUrl": "https://brattes.escambiaschools.org/our-school/school-history"
+        },
+        {
+          "title": "Family preparation",
+          "text": "Bratt provides links for VPK information, enrollment services and uploading absence documentation through FOCUS. Confirm the current pre-K offering directly with the school.",
+          "sourceUrl": "https://brattes.escambiaschools.org/"
+        }
+      ],
+      "enrollment": {
+        "text": "Ask district Enrollment Services to confirm the assignment for your full address; contact Bratt separately about any pre-K application and school-day transportation.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "What is the current pre-K application process and availability at Bratt?",
+        "How should families submit absence notes and keep up with classroom updates?"
+      ],
+      "sources": [
+        {
+          "url": "https://brattes.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://brattes.escambiaschools.org/our-school/school-history",
+          "label": "School history",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/brentwood-elementary-school": {
+      "name": "Brentwood Elementary School",
+      "schoolWebsite": "https://brentwoodes.escambiaschools.org",
+      "overview": "Brentwood Elementary's curriculum page gives families grade-specific tools for following elementary learning at home. These include kindergarten progress checklists, writing rubrics and links to Florida subject standards.",
+      "highlights": [
+        {
+          "title": "See what progress looks like",
+          "text": "The school publishes kindergarten checklists organized by grading period and writing rubrics for elementary grades.",
+          "sourceUrl": "https://brentwoodes.escambiaschools.org/student-family-resources/curriculum-instruction"
+        },
+        {
+          "title": "Connect school and home",
+          "text": "Its curriculum resources include reading-at-home materials and instructions for accessing report cards through FOCUS.",
+          "sourceUrl": "https://brentwoodes.escambiaschools.org/student-family-resources/curriculum-instruction"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify the school assignment with district enrollment, then ask Brentwood which current curriculum and registration materials apply to your child's grade.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which rubric or progress checklist will the teacher use for our child's grade?",
+        "How can we use the school's reading-at-home resources alongside current classroom work?"
+      ],
+      "sources": [
+        {
+          "url": "https://brentwoodes.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://brentwoodes.escambiaschools.org/student-family-resources/curriculum-instruction",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/brown-barge-middle-school": {
+      "name": "Brown Barge Middle School",
+      "schoolWebsite": "https://brown-bargems.escambiaschools.org",
+      "overview": "Brown Barge is a public magnet middle school for grades six through eight. The school describes an integrative curriculum that combines subject learning with technology, individual work and cooperative projects.",
+      "highlights": [
+        {
+          "title": "Integrated learning",
+          "text": "Brown Barge's school overview explains an approach that connects disciplines and adjusts instruction to student progress.",
+          "sourceUrl": "https://brown-bargems.escambiaschools.org/our-school"
+        },
+        {
+          "title": "A shared family commitment",
+          "text": "The school's Success Triangle describes responsibilities shared by the school, students and guardians.",
+          "sourceUrl": "https://brown-bargems.escambiaschools.org/our-school"
+        }
+      ],
+      "enrollment": {
+        "text": "Use Escambia Enrollment Services for the magnet application process and ask Brown Barge about current admission steps, orientation and transportation options.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Can we see an example of an integrated unit and how each subject is assessed?",
+        "What commitments does the Success Triangle ask of students and guardians?"
+      ],
+      "sources": [
+        {
+          "url": "https://brown-bargems.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://brown-bargems.escambiaschools.org/our-school",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/byrneville-elementary-school": {
+      "name": "Byrneville Elementary School, Inc.",
+      "schoolWebsite": "https://byrnevillees.escambiaschools.org",
+      "overview": "Byrneville Elementary became a conversion charter school on July 1, 2002. Its published history describes a four-acre campus with a permanent school building dating to 1940.",
+      "highlights": [
+        {
+          "title": "Conversion-charter governance",
+          "text": "Byrneville explains its transition to charter operation and identifies its board of directors on the official site.",
+          "sourceUrl": "https://byrnevillees.escambiaschools.org/"
+        },
+        {
+          "title": "Historic campus",
+          "text": "The school's history describes the longstanding campus and its later classroom additions. Ask the office which spaces students use today.",
+          "sourceUrl": "https://byrnevillees.escambiaschools.org/"
+        }
+      ],
+      "enrollment": {
+        "text": "Contact Byrneville directly about charter enrollment, grade-level openings and transportation; district assignment information should not be treated as a guaranteed charter seat.",
+        "sourceUrl": "https://byrnevillees.escambiaschools.org/"
+      },
+      "visitQuestions": [
+        "What is the current process for an available seat or waiting list in our child's grade?",
+        "How are students grouped for instruction and special-area activities on the campus?"
+      ],
+      "sources": [
+        {
+          "url": "https://byrnevillees.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/c-a-weis-elementary-school": {
+      "name": "C. A. Weis Elementary School",
+      "schoolWebsite": "https://weises.escambiaschools.org",
+      "overview": "C. A. Weis is a Community Partnership School on North Q Street. Its published partners include Children's Home Society, Community Health Northwest Florida and the University of West Florida.",
+      "highlights": [
+        {
+          "title": "Learning beyond the classroom",
+          "text": "Weis describes SAIL Academy as an after-school and summer program combining academic support with STEM, mentoring and other activities.",
+          "sourceUrl": "https://weises.escambiaschools.org/community/community-partnership-school/sail-academy"
+        },
+        {
+          "title": "Coordinated community support",
+          "text": "The Community Partnership School model brings school, family and partner resources together. Ask the community-school office which services and activities are available now.",
+          "sourceUrl": "https://weises.escambiaschools.org/community/community-partnership-school"
+        }
+      ],
+      "enrollment": {
+        "text": "Weis directs new families to complete online registration and then bring the required records to campus. Check its current checklist and confirm your address assignment.",
+        "sourceUrl": "https://weises.escambiaschools.org/"
+      },
+      "visitQuestions": [
+        "How does a student apply for SAIL, and what transportation is available afterward?",
+        "Who coordinates communication between the classroom teacher and community-school programs?"
+      ],
+      "sources": [
+        {
+          "url": "https://weises.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://weises.escambiaschools.org/community/community-partnership-school/sail-academy",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://weises.escambiaschools.org/community/community-partnership-school",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://weises.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/cordova-park-elementary-school": {
+      "name": "Cordova Park Elementary School",
+      "schoolWebsite": "https://cordovaparkes.escambiaschools.org",
+      "overview": "Cordova Park Elementary is on Semur Road in Pensacola. Its published visual-arts curriculum includes making art, examining artworks and connecting artistic styles with history.",
+      "highlights": [
+        {
+          "title": "A range of art media",
+          "text": "The school describes drawing, painting, collage, printmaking, sculpture and other three-dimensional work.",
+          "sourceUrl": "https://cordovaparkes.escambiaschools.org/our-school/art"
+        },
+        {
+          "title": "Looking as well as creating",
+          "text": "Art instruction includes discussing visual details and interpreting both established artworks and students' own pieces.",
+          "sourceUrl": "https://cordovaparkes.escambiaschools.org/our-school/art"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm the current grade span and your address assignment with district enrollment, then contact Cordova Park for school registration and orientation information.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How often does our child's grade attend art, and what projects are planned?",
+        "How are student artworks shared with families during the year?"
+      ],
+      "sources": [
+        {
+          "url": "https://cordovaparkes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://cordovaparkes.escambiaschools.org/our-school/art",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/ensley-elementary-school": {
+      "name": "Ensley Elementary School",
+      "schoolWebsite": "https://ensleyes.escambiaschools.org",
+      "overview": "Ensley Elementary's published special-area offerings include art, music, physical education and the school library. Its transition guidance also describes pairing a newly enrolled child with a classroom student who helps explain routines.",
+      "highlights": [
+        {
+          "title": "Special-area learning",
+          "text": "The school identifies four special areas alongside core elementary subjects.",
+          "sourceUrl": "https://ensleyes.escambiaschools.org/classrooms/special-areas"
+        },
+        {
+          "title": "Help learning a new routine",
+          "text": "Ensley describes an adult introduction to the classroom followed by a student buddy, and provides military-family counseling information.",
+          "sourceUrl": "https://ensleyes.escambiaschools.org/student-family-resources/mfr"
+        }
+      ],
+      "enrollment": {
+        "text": "Use district Enrollment Services for registration requirements and address confirmation, then ask Ensley to arrange classroom placement and transition support.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How does the classroom buddy help a child during the first week?",
+        "What is the current rotation for art, music, P.E. and library?"
+      ],
+      "sources": [
+        {
+          "url": "https://ensleyes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://ensleyes.escambiaschools.org/classrooms/special-areas",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://ensleyes.escambiaschools.org/student-family-resources/mfr",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/ernest-ward-middle-school": {
+      "name": "Ernest Ward Middle School",
+      "schoolWebsite": "https://ernestwardms.escambiaschools.org",
+      "overview": "Ernest Ward Middle's published program directory combines middle-school academics with career exploration. Its listed academy areas include agriculture, culinary arts, fabrication and engineering, and digital discovery.",
+      "highlights": [
+        {
+          "title": "Explore several technical fields",
+          "text": "The school's directory provides separate program links for agriscience, culinary arts, engineering and digital work.",
+          "sourceUrl": "https://ernestwardms.escambiaschools.org/site-map"
+        },
+        {
+          "title": "Activities linked to interests",
+          "text": "Ernest Ward lists band/chorus, FFA, honor society and student government among its organizations. Confirm the current meeting schedule and participation requirements.",
+          "sourceUrl": "https://ernestwardms.escambiaschools.org/site-map"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify the address assignment with district enrollment and discuss course selection, academy access and transportation with Ernest Ward.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which career-exploration courses are available to an incoming sixth grader?",
+        "How do FFA or other organizations connect to the classes a student takes?"
+      ],
+      "sources": [
+        {
+          "url": "https://ernestwardms.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://ernestwardms.escambiaschools.org/site-map",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/escambia-high-school": {
+      "name": "Escambia High School",
+      "schoolWebsite": "https://escambiahs.escambiaschools.org",
+      "overview": "Escambia High opened in 1957, according to its school history. Its current academic information describes Advanced Placement, honors and dual-enrollment opportunities alongside career academies.",
+      "highlights": [
+        {
+          "title": "Career pathways",
+          "text": "The school lists criminal justice, culinary, finance, flight and multimedia communications academies.",
+          "sourceUrl": "https://escambiahs.escambiaschools.org/career-academies"
+        },
+        {
+          "title": "Support within the school day",
+          "text": "Escambia High describes an EXCEL period for targeted help and enrichment, with students and teachers arranging sessions through the school's scheduling system.",
+          "sourceUrl": "https://escambiahs.escambiaschools.org/our-school/mfr"
+        }
+      ],
+      "enrollment": {
+        "text": "Arrange a guidance review of transferred credits and graduation progress after confirming enrollment. Ask separately about academy applications and advanced-course prerequisites.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How will our student's existing credits fit the graduation plan and course sequence?",
+        "How can a student schedule EXCEL help or enrichment, and combine it with an academy?"
+      ],
+      "sources": [
+        {
+          "url": "https://escambiahs.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://escambiahs.escambiaschools.org/career-academies",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://escambiahs.escambiaschools.org/our-school/mfr",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://escambiahs.escambiaschools.org/our-school/about-us",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/escambia-virtual-academy-franchise": {
+      "name": "Escambia Virtual Academy Franchise",
+      "schoolWebsite": "https://escambiavirtualsc.escambiaschools.org",
+      "overview": "Escambia Virtual Academy uses online instruction with local district teachers. Its current full-time secondary program is semester-based, and the school describes an adult learning guide as part of the student's support structure.",
+      "highlights": [
+        {
+          "title": "Plan for independent work",
+          "text": "The full-time grades 6–12 page describes six courses per semester and a commitment through the semester or school year.",
+          "sourceUrl": "https://escambiavirtualsc.escambiaschools.org/registration/enrollment-options/eva-full-time-grades-6-12"
+        },
+        {
+          "title": "An advisor completes enrollment",
+          "text": "The academy requires a student and legal guardian to meet with an academic advisor; submitting an online interest form alone does not complete registration.",
+          "sourceUrl": "https://escambiavirtualsc.escambiaschools.org/registration/enrollment-options/eva-full-time-grades-6-12"
+        }
+      ],
+      "enrollment": {
+        "text": "Review the current program and entry requirements with EVA. Its published 2026–27 fall window ended September 1, 2026; ask an advisor about any later entry option or the next window.",
+        "sourceUrl": "https://escambiavirtualsc.escambiaschools.org/registration/enrollment-options/eva-full-time-grades-6-12"
+      },
+      "visitQuestions": [
+        "What daily work pace and adult learning-guide involvement are expected?",
+        "Where are required assessments or advisor meetings held, and which courses fit our student's records?"
+      ],
+      "sources": [
+        {
+          "url": "https://escambiavirtualsc.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://escambiavirtualsc.escambiaschools.org/registration/enrollment-options/eva-full-time-grades-6-12",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/ferry-pass-elementary-school": {
+      "name": "Ferry Pass Elementary School",
+      "schoolWebsite": "https://ferrypasses.escambiaschools.org",
+      "overview": "Ferry Pass Elementary's music department publishes grade-level performance information and classroom resources. Its music page documents school programs across several years, giving families an example of how music is shared beyond the classroom.",
+      "highlights": [
+        {
+          "title": "Grade-level performances",
+          "text": "The department's published 2025–26 schedule included performances by several elementary grades. Ask for the current year's schedule rather than relying on last year's dates.",
+          "sourceUrl": "https://ferrypasses.escambiaschools.org/classrooms/special-areas/music"
+        },
+        {
+          "title": "Visit the music classroom",
+          "text": "The music department invites families to arrange a classroom visit in advance and provides information about volunteering and activities.",
+          "sourceUrl": "https://ferrypasses.escambiaschools.org/classrooms/special-areas/music"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm your elementary-school assignment and registration requirements with district enrollment; contact Ferry Pass Elementary on North Davis Highway for campus details.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "What will our child's grade study and perform in music this year?",
+        "How can a parent arrange a classroom visit or assist with a performance?"
+      ],
+      "sources": [
+        {
+          "url": "https://ferrypasses.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://ferrypasses.escambiaschools.org/classrooms/special-areas/music",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/ferry-pass-middle-school": {
+      "name": "Ferry Pass Middle School",
+      "schoolWebsite": "https://ferrypassms.escambiaschools.org",
+      "overview": "Ferry Pass Middle describes student-led tours as part of welcoming new students. Its family guidance also lists activities including debate, Battle of the Books, Odyssey of the Mind and student government.",
+      "highlights": [
+        {
+          "title": "A guided start",
+          "text": "Selected student leaders work with the guidance office to show new students the campus and explain school life.",
+          "sourceUrl": "https://ferrypassms.escambiaschools.org/our-school/mfr"
+        },
+        {
+          "title": "Academic and athletic activities",
+          "text": "The school lists discussion, reading and problem-solving clubs alongside basketball, volleyball, swimming/diving and track. Confirm this year's openings and schedules.",
+          "sourceUrl": "https://ferrypassms.escambiaschools.org/our-school/mfr"
+        }
+      ],
+      "enrollment": {
+        "text": "The school directs families to apply online and finish school-year registration through guidance, with records requests and scheduling reviewed at the school.",
+        "sourceUrl": "https://ferrypassms.escambiaschools.org/our-school/mfr"
+      },
+      "visitQuestions": [
+        "Can our student have a guided campus tour before the first day?",
+        "Which of debate, Battle of the Books or Odyssey of the Mind is meeting this term?"
+      ],
+      "sources": [
+        {
+          "url": "https://ferrypassms.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://ferrypassms.escambiaschools.org/our-school/mfr",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/global-learning-academy": {
+      "name": "Global Learning Academy",
+      "schoolWebsite": "https://glaes.escambiaschools.org",
+      "overview": "Global Learning Academy describes a focus on science, technology and environmental learning for pre-K through fifth grade. Its kindergarten-through-fifth-grade classes visit a science lab and greenhouse for weekly lessons.",
+      "highlights": [
+        {
+          "title": "Science in dedicated spaces",
+          "text": "The school identifies a science lab, greenhouse and environmental-learning features in its program description.",
+          "sourceUrl": "https://glaes.escambiaschools.org/"
+        },
+        {
+          "title": "A global theme across grades",
+          "text": "GLA assigns continents to grade levels as a way to connect learning with different parts of the world.",
+          "sourceUrl": "https://glaes.escambiaschools.org/our-school/military-families"
+        }
+      ],
+      "enrollment": {
+        "text": "GLA asks families to verify the home address, establish a FOCUS account if needed and bring registration documents to school. Its registration page warns that school-choice attendance does not include bus transportation; confirm the arrangement before accepting a seat.",
+        "sourceUrl": "https://glaes.escambiaschools.org/our-school/important-links/gla-registration-information"
+      },
+      "visitQuestions": [
+        "What will our child's grade investigate in the greenhouse and science lab?",
+        "How does the grade's continent theme connect with reading, social studies and science?"
+      ],
+      "sources": [
+        {
+          "url": "https://glaes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://glaes.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://glaes.escambiaschools.org/our-school/military-families",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://glaes.escambiaschools.org/our-school/important-links/gla-registration-information",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/hellen-caro-elementary-school": {
+      "name": "Hellen Caro Elementary School",
+      "schoolWebsite": "https://hellencaroes.escambiaschools.org",
+      "overview": "Hellen Caro Elementary publishes a dedicated resource page for military-connected families. It identifies a Military Family Life Counselor and describes student and family participation in transition and service activities.",
+      "highlights": [
+        {
+          "title": "A contact for military transitions",
+          "text": "The school provides a specific counseling contact and links enrollment and exceptional-student resources in one place.",
+          "sourceUrl": "https://hellencaroes.escambiaschools.org/our-school/mfr"
+        },
+        {
+          "title": "Student service activities",
+          "text": "Its family page describes meetings with student team leaders and a community-service project involving students and families. Ask which activities are scheduled this year.",
+          "sourceUrl": "https://hellencaroes.escambiaschools.org/our-school/mfr"
+        }
+      ],
+      "enrollment": {
+        "text": "Check the address assignment through district enrollment, then ask Hellen Caro to coordinate records, classroom placement and any military-family transition support.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Who will coordinate our child's first-week transition and classroom introduction?",
+        "Which service or student-leadership activities are available in our child's grade?"
+      ],
+      "sources": [
+        {
+          "url": "https://hellencaroes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://hellencaroes.escambiaschools.org/our-school/mfr",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/j-h-workman-middle-school": {
+      "name": "J. H. Workman Middle School",
+      "schoolWebsite": "https://workmanms.escambiaschools.org",
+      "overview": "J. H. Workman Middle's current website highlights hands-on instruction and career preparation. Its published workforce-learning section names Digital Arts, NJROTC and We Build It Better.",
+      "highlights": [
+        {
+          "title": "Technical exploration",
+          "text": "Workman's current program list provides a starting point for asking about digital and practical technical electives. Confirm which are available in each grade.",
+          "sourceUrl": "https://workmanms.escambiaschools.org"
+        },
+        {
+          "title": "Orientation and family access",
+          "text": "The school publishes an orientation guide and a registration-appointment request, plus tutorials for using FOCUS to follow grades and school records.",
+          "sourceUrl": "https://workmanms.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify enrollment through the district and use Workman's official registration-appointment link to arrange records review and a course-planning conversation.",
+        "sourceUrl": "https://workmanms.escambiaschools.org/"
+      },
+      "visitQuestions": [
+        "Which Digital Arts or We Build It Better courses can our student take this year?",
+        "What does the orientation guide cover, and can we tour the classrooms before starting?"
+      ],
+      "sources": [
+        {
+          "url": "https://workmanms.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://workmanms.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/j-m-tate-senior-high-school": {
+      "name": "J. M. Tate Senior High School",
+      "schoolWebsite": "https://tatehs.escambiaschools.org",
+      "overview": "J. M. Tate High's published history dates its founding to 1878. Its current principal's overview describes six career academies together with Advanced Placement and dual-enrollment courses.",
+      "highlights": [
+        {
+          "title": "Agriculture and veterinary learning",
+          "text": "Tate's agriscience program combines classroom and laboratory work with supervised experience and FFA; veterinary science has its own academy page.",
+          "sourceUrl": "https://tatehs.escambiaschools.org/career-academies/agriscience"
+        },
+        {
+          "title": "Several career directions",
+          "text": "The school lists agriscience, early-childhood education, game simulation/animation, health science, multimedia and veterinary science.",
+          "sourceUrl": "https://tatehs.escambiaschools.org/career-academies"
+        }
+      ],
+      "enrollment": {
+        "text": "Ask guidance to review enrollment, credits and graduation planning. Academy participation has a separate application or eligibility process, so confirm it before building a course schedule.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How can a student combine a career academy with AP or dual-enrollment courses?",
+        "What supervised projects or practical experiences are available in the academy of interest?"
+      ],
+      "sources": [
+        {
+          "url": "https://tatehs.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://tatehs.escambiaschools.org/career-academies/agriscience",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://tatehs.escambiaschools.org/career-academies",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://tatehs.escambiaschools.org/our-school/principals-page",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/jim-allen-elementary-school": {
+      "name": "Jim Allen Elementary School",
+      "schoolWebsite": "https://jimallenes.escambiaschools.org",
+      "overview": "Jim Allen Elementary describes programs from pre-K through fifth grade, including VPK and enrichment. Its transition page explains that each new student is assigned a classroom buddy to help with the first day and school routines.",
+      "highlights": [
+        {
+          "title": "A student guide to the campus",
+          "text": "The buddy helps a newcomer find places such as the library, cafeteria, clinic, playgrounds and gym.",
+          "sourceUrl": "https://jimallenes.escambiaschools.org/our-school/mfr"
+        },
+        {
+          "title": "Collaborative classroom support",
+          "text": "The school describes additional teachers and assistants supporting students within general-education classrooms. Individual services should be discussed with the school team.",
+          "sourceUrl": "https://jimallenes.escambiaschools.org/our-school/mfr"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm address assignment and registration through Enrollment Services; ask Jim Allen separately about VPK eligibility, openings and transition arrangements.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How is the first-day buddy selected, and how long does that support continue?",
+        "Which enrichment or classroom supports are available for our child's learning needs?"
+      ],
+      "sources": [
+        {
+          "url": "https://jimallenes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://jimallenes.escambiaschools.org/our-school/mfr",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/jim-c-bailey-middle-school": {
+      "name": "Jim C. Bailey Middle School",
+      "schoolWebsite": "https://baileyms.escambiaschools.org",
+      "overview": "Jim C. Bailey Middle's workforce-education page lists culinary and computer-related learning options. Its family resources also describe a Student2Student group that helps newcomers connect with the school.",
+      "highlights": [
+        {
+          "title": "Practical electives",
+          "text": "The published CTE options include culinary arts, computer fundamentals, coding and computer applications, and business keyboarding.",
+          "sourceUrl": "https://baileyms.escambiaschools.org/workforce-education"
+        },
+        {
+          "title": "Support during a move",
+          "text": "Bailey's military-family guidance describes student-led welcome support and school contacts for enrollment and records transitions.",
+          "sourceUrl": "https://baileyms.escambiaschools.org/student-family-resources/mfr"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify the school assignment and arrange a guidance review. Ask Bailey which workforce courses fit the entry grade and whether Student2Student can assist with the transition.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which culinary or computing electives are available in our student's first semester?",
+        "How does the Student2Student group welcome students who arrive midyear?"
+      ],
+      "sources": [
+        {
+          "url": "https://baileyms.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://baileyms.escambiaschools.org/workforce-education",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://baileyms.escambiaschools.org/student-family-resources/mfr",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/kingsfield-elementary-school": {
+      "name": "Kingsfield Elementary School",
+      "schoolWebsite": "https://kingsfieldes.escambiaschools.org",
+      "overview": "Kingsfield Elementary's published mission emphasizes personalized learning and partnership with parents. The West Kingsfield Road school maintains separate school, classroom and PTA information for families.",
+      "highlights": [
+        {
+          "title": "Discuss individual learning goals",
+          "text": "Kingsfield's mission describes helping students identify strengths through personalized learning; ask how that appears in classroom planning.",
+          "sourceUrl": "https://kingsfieldes.escambiaschools.org/our-school/mission-and-vision"
+        },
+        {
+          "title": "Connect with the school community",
+          "text": "The school directory includes Kingsfield PTA and staff contacts, giving families a direct route to ask about current participation opportunities.",
+          "sourceUrl": "https://kingsfieldes.escambiaschools.org/our-school"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm the assigned campus for your address through district enrollment and contact Kingsfield about registration, any pre-K options and orientation.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How does the teacher identify and plan around a student's current strengths and needs?",
+        "What current PTA or classroom activities let families participate in learning?"
+      ],
+      "sources": [
+        {
+          "url": "https://kingsfieldes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://kingsfieldes.escambiaschools.org/our-school/mission-and-vision",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://kingsfieldes.escambiaschools.org/our-school",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/l-d-mcarthur-elementary-school": {
+      "name": "L. D. Mcarthur Elementary School",
+      "schoolWebsite": "https://mcarthures.escambiaschools.org",
+      "overview": "L. D. McArthur Elementary's library page combines reading resources with digital-citizenship guidance. Families can find the school reading list, library catalog and resources for following reading activity.",
+      "highlights": [
+        {
+          "title": "Reading beyond the classroom",
+          "text": "McArthur publishes Sunshine State Young Readers Award and Battle of the Books materials, along with Accelerated Reader tools. Its posted book lists are labeled by school year.",
+          "sourceUrl": "https://mcarthures.escambiaschools.org/library/school-library"
+        },
+        {
+          "title": "Digital literacy",
+          "text": "The library provides family resources about digital footprints, online conduct and using information responsibly.",
+          "sourceUrl": "https://mcarthures.escambiaschools.org/library/school-library"
+        }
+      ],
+      "enrollment": {
+        "text": "Use district enrollment to confirm the address assignment, then ask McArthur about registration and current reading materials for your child's grade.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which reading list and book activities are current for our child's grade?",
+        "How are library lessons and digital citizenship connected with classroom assignments?"
+      ],
+      "sources": [
+        {
+          "url": "https://mcarthures.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://mcarthures.escambiaschools.org/library/school-library",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/lincoln-park-elementary-school": {
+      "name": "Lincoln Park Elementary School",
+      "schoolWebsite": "https://lincolnparkes.escambiaschools.org",
+      "overview": "Lincoln Park Elementary's mission describes explicit instruction and universal design for learning. Its family-involvement plan names conferences, STEM nights and shared reading activities as ways to connect school and home.",
+      "highlights": [
+        {
+          "title": "Discuss classroom access",
+          "text": "The school says its staff-development focus includes explicit instruction and universal design, an approach intended to offer different ways to access learning.",
+          "sourceUrl": "https://lincolnparkes.escambiaschools.org"
+        },
+        {
+          "title": "Family learning activities",
+          "text": "Lincoln Park's published plan includes family STEM nights, parent conferences and a parent book club; confirm which activities are running this year.",
+          "sourceUrl": "https://lincolnparkes.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify your address and registration steps with district enrollment, then contact Lincoln Park's office to arrange a classroom and family-resources introduction.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How does universal design appear in the lessons for our child's grade?",
+        "Which family STEM nights or shared-reading activities are scheduled this year?"
+      ],
+      "sources": [
+        {
+          "url": "https://lincolnparkes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/longleaf-elementary-school": {
+      "name": "Longleaf Elementary School",
+      "schoolWebsite": "https://longleafes.escambiaschools.org",
+      "overview": "Longleaf's school history dates its opening to 1975–76 and links its Patriot identity to the U.S. bicentennial period. The official website now uses the Longleaf K-8 name, while this report retains the school identity used in its historical performance records.",
+      "highlights": [
+        {
+          "title": "How the campus evolved",
+          "text": "The school began with open-concept classrooms and describes a conversion to individual classrooms starting in 2002.",
+          "sourceUrl": "https://longleafes.escambiaschools.org/our-school/school-history"
+        },
+        {
+          "title": "Confirm the current grade configuration",
+          "text": "The current website's K-8 branding differs from older elementary directory records. Confirm the grades operating this year and the relevant enrollment process directly.",
+          "sourceUrl": "https://longleafes.escambiaschools.org/"
+        }
+      ],
+      "enrollment": {
+        "text": "Contact Longleaf and district Enrollment Services to confirm the current grade configuration, address assignment and entry arrangements; do not infer them from the historical report name.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which grades are operating on the campus this year, and how are their schedules organized?",
+        "How do current classroom spaces and support services differ across elementary and middle grades?"
+      ],
+      "sources": [
+        {
+          "url": "https://longleafes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://longleafes.escambiaschools.org/our-school/school-history",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://longleafes.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/molino-park-elementary": {
+      "name": "Molino Park Elementary",
+      "schoolWebsite": "https://molinoparkes.escambiaschools.org",
+      "overview": "Molino Park Elementary is the Highway 97 campus in Molino. Its official site organizes classroom contacts from pre-K through fifth grade and describes a Partners in Education program supporting school activities.",
+      "highlights": [
+        {
+          "title": "Find the right classroom contact",
+          "text": "The school provides grade-by-grade staff links plus separate special-area and resource-teacher listings.",
+          "sourceUrl": "https://molinoparkes.escambiaschools.org"
+        },
+        {
+          "title": "Community participation",
+          "text": "Molino Park describes partners contributing volunteer time, materials and skills. Ask how families can participate in the current year's activities.",
+          "sourceUrl": "https://molinoparkes.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm the school assignment and required records with district enrollment, then ask Molino Park about current pre-K availability, grade placement and transportation.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which special-area and resource teachers will work with our child's grade?",
+        "What volunteering or skill-sharing opportunities are planned through the school's partners?"
+      ],
+      "sources": [
+        {
+          "url": "https://molinoparkes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/montclair-elementary-school": {
+      "name": "Montclair Elementary School",
+      "schoolWebsite": "https://montclaires.escambiaschools.org",
+      "overview": "Montclair Elementary's published information includes an after-school option through the Boys & Girls Club. Its library description connects independent reading with information-literacy activities.",
+      "highlights": [
+        {
+          "title": "Plan for after-school care",
+          "text": "The school's information page identifies the Boys & Girls Club program; contact the school or provider for current enrollment, hours and transportation.",
+          "sourceUrl": "https://montclaires.escambiaschools.org/our-school/montclair-information"
+        },
+        {
+          "title": "Reading and research",
+          "text": "Montclair describes a library supporting the Accelerated Reader program and information-literacy learning.",
+          "sourceUrl": "https://montclaires.escambiaschools.org/library/school-library"
+        }
+      ],
+      "enrollment": {
+        "text": "Use Montclair's official registration checklist and confirm your assigned school through the district. After-school participation should be arranged separately.",
+        "sourceUrl": "https://montclaires.escambiaschools.org/our-school/montclair-information"
+      },
+      "visitQuestions": [
+        "How does the library help our child's grade choose books and learn research skills?",
+        "Is the listed after-school program operating this year, and what is its enrollment process?"
+      ],
+      "sources": [
+        {
+          "url": "https://montclaires.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://montclaires.escambiaschools.org/our-school/montclair-information",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://montclaires.escambiaschools.org/library/school-library",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/myrtle-grove-elementary-school": {
+      "name": "Myrtle Grove Elementary School",
+      "schoolWebsite": "https://myrtlegrovees.escambiaschools.org",
+      "overview": "Myrtle Grove Elementary's family resources include reading-at-home materials and a Canvas course for parents. Its school library provides a classroom-library connector and a published reading-list section.",
+      "highlights": [
+        {
+          "title": "Browse reading resources",
+          "text": "The library page brings together reading lists, collection information and a book-request log.",
+          "sourceUrl": "https://myrtlegrovees.escambiaschools.org/library"
+        },
+        {
+          "title": "Help shape family engagement",
+          "text": "Myrtle Grove publishes its school-family compact and family-engagement plan, with an opportunity for stakeholder input.",
+          "sourceUrl": "https://myrtlegrovees.escambiaschools.org/our-school/our-title-i-family"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm the assigned school and registration steps with the district. Contact Myrtle Grove's office about records and make sure the family's current address and phone number are recorded in FOCUS.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which reading-at-home materials should accompany our child's current classwork?",
+        "How can we review the school-family compact with the teacher and provide input?"
+      ],
+      "sources": [
+        {
+          "url": "https://myrtlegrovees.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://myrtlegrovees.escambiaschools.org/library",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://myrtlegrovees.escambiaschools.org/our-school/our-title-i-family",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/n-b-cook-elementary-school": {
+      "name": "N. B. Cook Elementary School",
+      "schoolWebsite": "https://cookes.escambiaschools.org",
+      "overview": "N. B. Cook Elementary School of the Arts integrates creative and performing arts with academic learning. Its school history dates the start of the arts magnet program to August 1991.",
+      "highlights": [
+        {
+          "title": "Arts integrated with academics",
+          "text": "The school describes singing, movement, drawing and dramatic play as ways to connect artistic development with classroom learning.",
+          "sourceUrl": "https://cookes.escambiaschools.org/our-school/administration/about-nb-cook"
+        },
+        {
+          "title": "Magnet admission",
+          "text": "N. B. Cook requires an application and describes district-run random selection. Its pages contain differing historical application dates, so use the current district application cycle.",
+          "sourceUrl": "https://cookes.escambiaschools.org/our-school/administration/about-nb-cook"
+        }
+      ],
+      "enrollment": {
+        "text": "Contact Escambia Enrollment Services for the current N. B. Cook application window and selection process. Do not assume an address nearby establishes admission or that a midyear opening is available.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How are performing and visual arts integrated into our child's academic day?",
+        "What is the next application window, and how are applicants notified of selection?"
+      ],
+      "sources": [
+        {
+          "url": "https://cookes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://cookes.escambiaschools.org/our-school/administration/about-nb-cook",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/navy-point-elementary-school": {
+      "name": "Navy Point Elementary School",
+      "schoolWebsite": "https://navypointes.escambiaschools.org",
+      "overview": "Navy Point Elementary publishes separate daily dismissal arrangements for pre-K, early elementary and upper elementary students. Its family page also identifies school partners including Naval Aviation Schools Command and Corry Station.",
+      "highlights": [
+        {
+          "title": "Plan the school-day routine",
+          "text": "The school distinguishes bus, car, daycare and walking arrangements, and asks families to keep the address on file current for transportation.",
+          "sourceUrl": "https://navypointes.escambiaschools.org"
+        },
+        {
+          "title": "Prepare for a campus visit",
+          "text": "Navy Point directs visitors to the front office with a state-issued ID and requires a visitor badge while on campus.",
+          "sourceUrl": "https://navypointes.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Navy Point's homepage provides a school registration checklist and current kindergarten information. Confirm assignment and required documents with the office before finalizing enrollment.",
+        "sourceUrl": "https://navypointes.escambiaschools.org/"
+      },
+      "visitQuestions": [
+        "Which arrival and dismissal arrangements apply to our child's grade and transportation plan?",
+        "How can we arrange a visit and connect with the appropriate school-family contact?"
+      ],
+      "sources": [
+        {
+          "url": "https://navypointes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://navypointes.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/northview-high-school": {
+      "name": "Northview High School",
+      "schoolWebsite": "https://northviewhs.escambiaschools.org",
+      "overview": "Northview High describes career academies that combine academic classes with a chosen career pathway. Its AgriTech page details a sequence beginning with Agriscience Foundations and continuing into agritechnology.",
+      "highlights": [
+        {
+          "title": "Agriculture in the lab and field",
+          "text": "The published program combines scientific concepts, laboratory activities and agricultural applications.",
+          "sourceUrl": "https://northviewhs.escambiaschools.org/career-academies/agritech"
+        },
+        {
+          "title": "Leadership connected to coursework",
+          "text": "Northview's agriculture program includes FFA, and the school publishes a 2026–27 FFA officer team and organization information.",
+          "sourceUrl": "https://northviewhs.escambiaschools.org/student-life/clubs/ffa"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm school assignment and registration, then ask Northview guidance to review transferred credits, the academy sequence and current entry requirements.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Where would a transferring student enter the agriscience or other academy course sequence?",
+        "What laboratory projects and FFA activities are available this year?"
+      ],
+      "sources": [
+        {
+          "url": "https://northviewhs.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://northviewhs.escambiaschools.org/career-academies/agritech",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://northviewhs.escambiaschools.org/student-life/clubs/ffa",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://northviewhs.escambiaschools.org/career-academies",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/o-j-semmes-elementary-school": {
+      "name": "O. J. Semmes Elementary School",
+      "schoolWebsite": "https://semmeses.escambiaschools.org",
+      "overview": "O. J. Semmes Elementary's official family information emphasizes its parent-engagement plan and reading support resources. Its website links a parent newsletter, school library search and the current school-supply list.",
+      "highlights": [
+        {
+          "title": "Family-school planning",
+          "text": "Semmes publishes its Parent and Family Engagement Plan and school improvement information, which families can use to frame questions about the year ahead.",
+          "sourceUrl": "https://semmeses.escambiaschools.org"
+        },
+        {
+          "title": "Reading support at home",
+          "text": "The school connects families with library search and the Florida reading-at-home plan, alongside tools for following progress in FOCUS.",
+          "sourceUrl": "https://semmeses.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify the assigned campus and enrollment requirements through the district, then use Semmes' official new-student registration link and confirm first-day arrangements with the office.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "What classroom priorities does the current family-engagement plan support in our child's grade?",
+        "Which reading-at-home resources will our child's teacher recommend and review with us?"
+      ],
+      "sources": [
+        {
+          "url": "https://semmeses.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/oakcrest-elementary-school": {
+      "name": "Oakcrest Elementary School",
+      "schoolWebsite": "https://oakcrestes.escambiaschools.org",
+      "overview": "Oakcrest Elementary identifies separate contacts for curriculum coordination, school counseling and student records on its homepage. Families can also find its school improvement plan and School Advisory Council information there.",
+      "highlights": [
+        {
+          "title": "Know whom to contact",
+          "text": "The school lists curriculum, counseling and records roles so families can direct learning, transition and enrollment questions to the appropriate staff.",
+          "sourceUrl": "https://oakcrestes.escambiaschools.org"
+        },
+        {
+          "title": "Review the school plan",
+          "text": "Oakcrest publishes a school improvement link and advisory-council information; ask for the current year's priorities and meeting dates.",
+          "sourceUrl": "https://oakcrestes.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm address assignment through the district and ask Oakcrest's records staff about required enrollment documents. Arrange course or learning-support questions with the curriculum coordinator or counselor.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How will the curriculum coordinator and classroom teacher review a transferring student's progress?",
+        "What are Oakcrest's current improvement priorities, and how can families participate in the advisory process?"
+      ],
+      "sources": [
+        {
+          "url": "https://oakcrestes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/pensacola-beach-elementary-school": {
+      "name": "Pensacola Beach Elementary School, Inc",
+      "schoolWebsite": "https://www.pbes.org/",
+      "overview": "Pensacola Beach Elementary is a kindergarten-through-fifth-grade charter school on Santa Rosa Island. Its official schedule distinguishes Monday-through-Thursday school days from an earlier Friday dismissal.",
+      "highlights": [
+        {
+          "title": "Plan around the weekly schedule",
+          "text": "The published schedule ends at 2:40 p.m. Monday through Thursday and 11:40 a.m. Friday. Confirm current times and after-school arrangements directly.",
+          "sourceUrl": "https://www.pbes.org/"
+        },
+        {
+          "title": "An independent transportation arrangement",
+          "text": "Escambia's transportation guidance states that Pensacola Beach Elementary provides its own school bus service, with details available from the school.",
+          "sourceUrl": "https://www.escambiaschools.org/departments/transportation/parent-resources/pensacola-beach"
+        }
+      ],
+      "enrollment": {
+        "text": "Review PBES's enrollment policy and submit the application and supporting documents through the school. Ask about current grade-level availability, any enrollment priorities and bus service.",
+        "sourceUrl": "https://www.pbes.org/registration-requirements"
+      },
+      "visitQuestions": [
+        "How does Friday's earlier dismissal affect after-school options and transportation?",
+        "What does the enrollment policy require for our child's grade and residential address?"
+      ],
+      "sources": [
+        {
+          "url": "https://www.pbes.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/transportation/parent-resources/pensacola-beach",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.pbes.org/registration-requirements",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.pbes.org/about-us",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/pensacola-high-school": {
+      "name": "Pensacola High School",
+      "schoolWebsite": "https://pensacolahs.escambiaschools.org",
+      "overview": "Pensacola High offers an International Baccalaureate pathway with its own application process. The published IB curriculum includes a broad subject program, Theory of Knowledge and independent research through the Extended Essay.",
+      "highlights": [
+        {
+          "title": "Understand the IB workload",
+          "text": "The curriculum page describes subject choices alongside the IB core, allowing families to discuss how research and course demands fit the student's interests.",
+          "sourceUrl": "https://pensacolahs.escambiaschools.org/international-baccalaureate/about-ib/the-ib-curriculum"
+        },
+        {
+          "title": "Separate program admission",
+          "text": "The IB office publishes entry criteria and welcomes applications from Escambia and Santa Rosa counties; admission is distinct from general enrollment at PHS.",
+          "sourceUrl": "https://pensacolahs.escambiaschools.org/international-baccalaureate/about-ib/application-process"
+        }
+      ],
+      "enrollment": {
+        "text": "For general enrollment, confirm assignment and credits with guidance. For IB, contact the program office about the next application cycle and record requirements; the posted 2026–27 application window has already passed.",
+        "sourceUrl": "https://pensacolahs.escambiaschools.org/international-baccalaureate/about-ib/application-process"
+      },
+      "visitQuestions": [
+        "How would our student's prior courses fit the IB sequence and available subject choices?",
+        "What research, advising and time-management support accompanies the IB core?"
+      ],
+      "sources": [
+        {
+          "url": "https://pensacolahs.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://pensacolahs.escambiaschools.org/international-baccalaureate/about-ib/the-ib-curriculum",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://pensacolahs.escambiaschools.org/international-baccalaureate/about-ib/application-process",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/pensacola-state-college-charter-academy": {
+      "name": "Pensacola State College Charter Academy",
+      "schoolWebsite": "https://charteracademy.pensacolastate.edu/",
+      "overview": "Pensacola State College Charter Academy combines high-school study with opportunities to earn college credit. The academy moved to renovated Building 11 on PSC's Pensacola Campus beginning in fall 2025 and now describes service to grades nine through twelve.",
+      "highlights": [
+        {
+          "title": "An individualized college pathway",
+          "text": "The academy says staff help students create an individual schedule and work toward high-school completion and the college credits appropriate to their goals.",
+          "sourceUrl": "https://charteracademy.pensacolastate.edu/about-us/faqs/"
+        },
+        {
+          "title": "College resources without tuition charges",
+          "text": "Its FAQ states that the application, college tuition, textbooks and a student laptop are provided without a charge to the family.",
+          "sourceUrl": "https://charteracademy.pensacolastate.edu/about-us/faqs/"
+        }
+      ],
+      "enrollment": {
+        "text": "Use the academy's application process and grade-specific requirements. An application is incomplete until official transcripts and required test results arrive, and eligible applicants may enter a lottery if capacity is exceeded.",
+        "sourceUrl": "https://charteracademy.pensacolastate.edu/application-process/"
+      },
+      "visitQuestions": [
+        "How would our student's credits and placement results translate into a first-year schedule?",
+        "What tutoring, college-course support and transportation arrangements are available?"
+      ],
+      "sources": [
+        {
+          "url": "https://charteracademy.pensacolastate.edu/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://charteracademy.pensacolastate.edu/about-us/faqs/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://charteracademy.pensacolastate.edu/application-process/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/pine-forest-high-school": {
+      "name": "Pine Forest High School",
+      "schoolWebsite": "https://pineforesths.escambiaschools.org",
+      "overview": "Pine Forest High's school history dates its opening to 1975. Its current website identifies career-academy options in culinary arts, educational pathways and health professions.",
+      "highlights": [
+        {
+          "title": "Career learning options",
+          "text": "The school's career-academy navigation provides separate pages for culinary arts, educational pathways and health professions. Ask which courses and entry points are available this year.",
+          "sourceUrl": "https://pineforesths.escambiaschools.org"
+        },
+        {
+          "title": "Build a graduation plan",
+          "text": "Pine Forest's counseling section separates enrollment, testing, scholarships, records requests and college/career exploration, giving families a clear set of topics for a guidance meeting.",
+          "sourceUrl": "https://pineforesths.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm assignment and registration through the district, then arrange a Pine Forest guidance review of credits, graduation requirements and any academy application.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which academy courses can our student enter without delaying required graduation courses?",
+        "How does guidance coordinate testing, scholarships and postsecondary planning?"
+      ],
+      "sources": [
+        {
+          "url": "https://pineforesths.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://pineforesths.escambiaschools.org/our-school/about-us/home",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/pine-meadow-elementary-school": {
+      "name": "Pine Meadow Elementary School",
+      "schoolWebsite": "https://pinemeadowes.escambiaschools.org",
+      "overview": "Pine Meadow Elementary publishes its Panther Tales family newsletter and provides office assistance with online registration. Its homepage also includes FOCUS, Canvas and Chromebook guidance for families.",
+      "highlights": [
+        {
+          "title": "Help with registration",
+          "text": "The school says a computer is available in the main office and staff can assist families who need help completing online enrollment.",
+          "sourceUrl": "https://pinemeadowes.escambiaschools.org"
+        },
+        {
+          "title": "A regular family update",
+          "text": "Panther Tales, parent-portal instructions and classroom-device resources give families several ways to follow school information and prepare for the year.",
+          "sourceUrl": "https://pinemeadowes.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify school assignment with the district, then contact Pine Meadow's office if you need access to a computer or help with the online registration process.",
+        "sourceUrl": "https://pinemeadowes.escambiaschools.org/"
+      },
+      "visitQuestions": [
+        "How do teachers' classroom updates connect with Panther Tales and the parent portals?",
+        "Which Chromebook agreements and account setup steps should be completed before classes begin?"
+      ],
+      "sources": [
+        {
+          "url": "https://pinemeadowes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://pinemeadowes.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/pleasant-grove-elementary-school": {
+      "name": "Pleasant Grove Elementary School",
+      "schoolWebsite": "https://pleasantgrovees.escambiaschools.org",
+      "overview": "Pleasant Grove Elementary's family information includes step-by-step parent-portal guidance and reading-at-home links. Its homepage also explains school-specific arrival, late check-in and pickup procedures.",
+      "highlights": [
+        {
+          "title": "Follow more than one student's progress",
+          "text": "The school explains how a FOCUS parent account can provide access to multiple children's school information without separate logins.",
+          "sourceUrl": "https://pleasantgrovees.escambiaschools.org"
+        },
+        {
+          "title": "Prepare the pickup plan",
+          "text": "Pleasant Grove asks families to keep authorized pickup adults in FOCUS and to use the front office for late check-in or pickup after the car line closes.",
+          "sourceUrl": "https://pleasantgrovees.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm the address assignment and enrollment requirements with the district. Ask Pleasant Grove to verify records, parent-portal access and the approved pickup list before the first day.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How can we link all of our enrolled children to the same FOCUS parent account?",
+        "What should we do if our normal pickup arrangements change during the day?"
+      ],
+      "sources": [
+        {
+          "url": "https://pleasantgrovees.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/r-c-lipscomb-elementary-school": {
+      "name": "R. C. Lipscomb Elementary School",
+      "schoolWebsite": "https://lipscombes.escambiaschools.org",
+      "overview": "R. C. Lipscomb Elementary's published mission uses its Lion identity to emphasize student leadership and goal setting. The school also provides a kindergarten-through-fifth-grade reading-at-home resource section.",
+      "highlights": [
+        {
+          "title": "Ask about leadership in practice",
+          "text": "Lipscomb's mission focuses on students pursuing goals and recognizing their strengths; a classroom visit can show how teachers put that into practice.",
+          "sourceUrl": "https://lipscombes.escambiaschools.org"
+        },
+        {
+          "title": "Coordinate reading support",
+          "text": "The school provides electronic reading-at-home materials and explains that printed resources are available on request in the circumstances described on its page.",
+          "sourceUrl": "https://lipscombes.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify the address assignment through district enrollment, then contact Lipscomb about registration and reading or other support plans that should transfer with the student.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How do students set and review learning goals in our child's grade?",
+        "Which reading activities should we use at home, and how will progress be discussed with the teacher?"
+      ],
+      "sources": [
+        {
+          "url": "https://lipscombes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/ransom-middle-school": {
+      "name": "Ransom Middle School",
+      "schoolWebsite": "https://ransomms.escambiaschools.org",
+      "overview": "Ransom Middle's published program list includes agriscience technology, digital discoveries, and technology education and manufacturing. Its homepage also provides tutoring information and family guides for Canvas and FOCUS.",
+      "highlights": [
+        {
+          "title": "Explore technical electives",
+          "text": "Ransom identifies three workforce-learning areas, giving students several directions to discuss when selecting electives.",
+          "sourceUrl": "https://ransomms.escambiaschools.org"
+        },
+        {
+          "title": "Access academic help",
+          "text": "The school publishes a tutoring permission form and schedule. Confirm the current subjects, dates and transportation before signing up.",
+          "sourceUrl": "https://ransomms.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm the school assignment and registration steps with the district, then ask Ransom guidance to review courses, elective availability and any tutoring needs.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which technical electives can our student take this year, and are there prerequisites?",
+        "How is tutoring scheduled, and how do families receive updates on progress?"
+      ],
+      "sources": [
+        {
+          "url": "https://ransomms.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/reinhardt-holm-elementary-school": {
+      "name": "Reinhardt Holm Elementary School",
+      "schoolWebsite": "https://holmes.escambiaschools.org",
+      "overview": "Reinhardt Holm Elementary publishes a school-family compact and invites parents to comment on it. Its current website also links reading resources and the 2026–27 school-day schedule.",
+      "highlights": [
+        {
+          "title": "A shared learning agreement",
+          "text": "Holm's compact is intended for discussion with families, and the school explicitly invites suggestions about what it should include.",
+          "sourceUrl": "https://holmes.escambiaschools.org"
+        },
+        {
+          "title": "Prepare learning at home",
+          "text": "The site connects families with reading resources, classroom information and the school improvement plan. Ask which materials match the child's current instruction.",
+          "sourceUrl": "https://holmes.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify assignment and required registration records with district enrollment, then ask Holm's office to arrange the classroom introduction and any support-plan transfer.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which commitments in the family compact are most relevant to our child's current learning goals?",
+        "How should we coordinate home reading with the classroom teacher?"
+      ],
+      "sources": [
+        {
+          "url": "https://holmes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/scenic-heights-elementary-school": {
+      "name": "Scenic Heights Elementary School",
+      "schoolWebsite": "https://scenicheightses.escambiaschools.org",
+      "overview": "Scenic Heights Elementary provides a parent handbook and a school-specific pickup/drop-off map. It also publishes volunteer training resources and grade-level program dates on its family information page.",
+      "highlights": [
+        {
+          "title": "Plan a campus visit",
+          "text": "The handbook and traffic map help families prepare for arrival, dismissal and school procedures before the first day.",
+          "sourceUrl": "https://scenicheightses.escambiaschools.org"
+        },
+        {
+          "title": "Take part in school activities",
+          "text": "The school links a volunteer training video and form. Ask which current-year requirements apply before joining a classroom or grade-level event.",
+          "sourceUrl": "https://scenicheightses.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Check the assigned school and enrollment requirements with the district, then contact Scenic Heights to confirm orientation, current handbook information and transportation.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "What should a new family know about the pickup/drop-off map and daily arrival routine?",
+        "Which classroom or grade-level activities welcome volunteers, and what training is required?"
+      ],
+      "sources": [
+        {
+          "url": "https://scenicheightses.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/sherwood-elementary-school": {
+      "name": "Sherwood Elementary School",
+      "schoolWebsite": "https://sherwoodes.escambiaschools.org",
+      "overview": "Sherwood Elementary identifies itself as a Leader in Me school. Its published program description emphasizes student leadership and connects that work with schoolwide goals.",
+      "highlights": [
+        {
+          "title": "Leadership throughout the day",
+          "text": "Sherwood describes teaching leadership to every student and uses the Seven Habits and Four Disciplines frameworks in its approach.",
+          "sourceUrl": "https://sherwoodes.escambiaschools.org/our-school/leader-in-me/leader-in-me-home"
+        },
+        {
+          "title": "Family participation",
+          "text": "The school invites families to leadership events and to support student roles, clubs or service-learning projects. Ask which opportunities are currently operating.",
+          "sourceUrl": "https://sherwoodes.escambiaschools.org/our-school/leader-in-me/leader-in-me-home"
+        }
+      ],
+      "enrollment": {
+        "text": "Confirm address assignment and registration through the district, then ask Sherwood about classroom placement and an introduction to its leadership approach.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which leadership roles can students hold in our child's grade?",
+        "How are learning goals and the leadership habits discussed with families?"
+      ],
+      "sources": [
+        {
+          "url": "https://sherwoodes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://sherwoodes.escambiaschools.org/our-school/leader-in-me/leader-in-me-home",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/warrington-elementary-school": {
+      "name": "Warrington Elementary School",
+      "schoolWebsite": "https://warringtones.escambiaschools.org",
+      "overview": "Warrington Elementary is the North Navy Boulevard elementary campus, separate from Warrington Preparatory Academy. Its published Wildcat pledge emphasizes responsibility, respect, kindness and being a role model.",
+      "highlights": [
+        {
+          "title": "Shared classroom expectations",
+          "text": "The Wildcat pledge gives families a starting point for asking how schoolwide expectations are taught and practiced.",
+          "sourceUrl": "https://warringtones.escambiaschools.org"
+        },
+        {
+          "title": "Separate early-learning registration",
+          "text": "The school provides distinct links for pre-K and K–5 enrollment. Some text on the page is from older years, so confirm current eligibility and deadlines with staff.",
+          "sourceUrl": "https://warringtones.escambiaschools.org"
+        }
+      ],
+      "enrollment": {
+        "text": "Use district enrollment and the school's appropriate pre-K or K–5 registration link. Confirm current-year requirements and the daily schedule directly, because the homepage contains mixed-year registration and dismissal details.",
+        "sourceUrl": "https://warringtones.escambiaschools.org/"
+      },
+      "visitQuestions": [
+        "How are the Wildcat expectations introduced to a student joining midyear?",
+        "Which registration steps and daily schedule apply to our child's grade this year?"
+      ],
+      "sources": [
+        {
+          "url": "https://warringtones.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://warringtones.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/warrington-preparatory-academy": {
+      "name": "Warrington Preparatory Academy",
+      "schoolWebsite": "https://www.warringtonprep.org/",
+      "overview": "Warrington Preparatory Academy currently describes itself as a tuition-free public charter school serving grades six through nine. Its curriculum page explains a Personal Learning Plan that is reviewed as a student's skills develop.",
+      "highlights": [
+        {
+          "title": "Individual learning plans",
+          "text": "The school describes assessing skills at entry, setting a growth path and involving families in progress discussions.",
+          "sourceUrl": "https://www.warringtonprep.org/apps/pages/index.jsp?pREC_ID=1065852&type=d&uREC_ID=556743"
+        },
+        {
+          "title": "Confirm the expanding grade span",
+          "text": "The current site announces ninth-grade enrollment for 2026–27; older directory and performance records may still describe the former middle-school configuration.",
+          "sourceUrl": "https://www.warringtonprep.org/"
+        }
+      ],
+      "enrollment": {
+        "text": "Use Warrington Prep's official enrollment link and ask staff about grade-level capacity, current entry requirements and the ninth-grade course plan. A neighborhood address does not by itself complete charter admission.",
+        "sourceUrl": "https://www.warringtonprep.org/enroll/index.jsp"
+      },
+      "visitQuestions": [
+        "How often is the Personal Learning Plan reviewed with students and parents?",
+        "For ninth grade, which courses and diploma pathways are operating now, and which are future plans?"
+      ],
+      "sources": [
+        {
+          "url": "https://www.warringtonprep.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.warringtonprep.org/apps/pages/index.jsp?pREC_ID=1065852&type=d&uREC_ID=556743",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.warringtonprep.org/enroll/index.jsp",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/washington-senior-high-school": {
+      "name": "Washington Senior High School",
+      "schoolWebsite": "https://washingtonhs.escambiaschools.org",
+      "overview": "Booker T. Washington High's Marine Science Academy describes laboratory, research and field-study learning. Its published projects examine local waterways and nearshore species, connecting classroom science with the Pensacola area.",
+      "highlights": [
+        {
+          "title": "Local research examples",
+          "text": "The academy page shares water-quality and species-study information for sites including Bayview Park, Project Greenshores, Sanders Beach and Morgan Park.",
+          "sourceUrl": "https://washingtonhs.escambiaschools.org/career-academies/marine-science"
+        },
+        {
+          "title": "Discuss current fieldwork",
+          "text": "The program describes collaboration with university and environmental-science partners. Some linked projects are historical, so ask which research and field activities are planned this year.",
+          "sourceUrl": "https://washingtonhs.escambiaschools.org/career-academies/marine-science"
+        }
+      ],
+      "enrollment": {
+        "text": "Arrange enrollment and a credit review through guidance, then ask about Marine Science Academy admission and how its sequence fits the student's graduation plan.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "Which marine-science field studies or laboratory projects are active this year?",
+        "How do academy courses fit with AP, dual enrollment and required graduation subjects?"
+      ],
+      "sources": [
+        {
+          "url": "https://washingtonhs.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://washingtonhs.escambiaschools.org/career-academies/marine-science",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/west-florida-high-school-technical": {
+      "name": "West Florida High School/Technical",
+      "schoolWebsite": "https://westfloridahs.escambiaschools.org",
+      "overview": "West Florida High School of Advanced Technology was established in 2001. Its school history describes a schoolwide career-academy model that combines core academic subjects with technical education.",
+      "highlights": [
+        {
+          "title": "A career pathway within high school",
+          "text": "The school says students belong to an academy that develops knowledge in a career area while continuing a traditional high-school program.",
+          "sourceUrl": "https://westfloridahs.escambiaschools.org/our-school/our-story"
+        },
+        {
+          "title": "Compare technical choices",
+          "text": "The current directory includes fields such as aerospace engineering, biomedical sciences, information technology, energy and telecommunications. Confirm available academy seats and course sequences.",
+          "sourceUrl": "https://westfloridahs.escambiaschools.org/"
+        }
+      ],
+      "enrollment": {
+        "text": "West Florida uses an application process; its homepage states that the 2026–27 application is closed. Contact the school or Enrollment Services about the next cycle or any approved later-entry options.",
+        "sourceUrl": "https://westfloridahs.escambiaschools.org/"
+      },
+      "visitQuestions": [
+        "How is a student's academy selected, and can that choice change later?",
+        "Which technical certifications, projects and academic prerequisites apply to the academy of interest?"
+      ],
+      "sources": [
+        {
+          "url": "https://westfloridahs.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://westfloridahs.escambiaschools.org/our-school/our-story",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://westfloridahs.escambiaschools.org/",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    },
+    "/schools/west-pensacola-elementary-school": {
+      "name": "West Pensacola Elementary School",
+      "schoolWebsite": "https://westpensacolaes.escambiaschools.org",
+      "overview": "West Pensacola Elementary's official website provides a Canvas parent-observer course alongside school-family resources. Its staff directory separates classroom teachers, guidance and special-area contacts.",
+      "highlights": [
+        {
+          "title": "Follow classroom learning",
+          "text": "The parent-observer course is a starting point for learning how Canvas is used to share assignments and classroom information.",
+          "sourceUrl": "https://westpensacolaes.escambiaschools.org"
+        },
+        {
+          "title": "Find the appropriate support contact",
+          "text": "The school's faculty and staff directory identifies guidance and special-area roles, helping families direct questions about a student's day.",
+          "sourceUrl": "https://westpensacolaes.escambiaschools.org/our-school"
+        }
+      ],
+      "enrollment": {
+        "text": "Verify the current grade span and address assignment with district enrollment, then contact West Pensacola about records, classroom placement and parent-portal setup.",
+        "sourceUrl": "https://www.escambiaschools.org/departments/enrollment-services"
+      },
+      "visitQuestions": [
+        "How does our child's teacher use Canvas, and what should parents check regularly?",
+        "Which guidance and special-area staff will work with our child's grade?"
+      ],
+      "sources": [
+        {
+          "url": "https://westpensacolaes.escambiaschools.org",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://westpensacolaes.escambiaschools.org/our-school",
+          "label": "Official school information",
+          "checkedAt": "2026-09-06"
+        },
+        {
+          "url": "https://www.escambiaschools.org/departments/enrollment-services",
+          "label": "District enrollment services",
+          "checkedAt": "2026-09-06"
+        }
+      ],
+      "checkedAt": "2026-09-06"
+    }
+  },
+  "completedCount": 53
+}

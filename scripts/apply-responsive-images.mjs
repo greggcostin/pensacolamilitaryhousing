@@ -12,6 +12,7 @@ import sharp from "sharp";
 import { WIDTHS, AVATAR, variantPath, modernPath } from "./generate-responsive-images.mjs";
 
 const DRY = process.argv.includes("--dry");
+const SCHOOLS = process.argv.includes("--schools");
 const onlyIdx = process.argv.indexOf("--only");
 const ONLY = onlyIdx > -1 ? process.argv[onlyIdx + 1].replace(/\\/g, "/") : null;
 const PMH = "https://pensacolamilitaryhousing.com";
@@ -20,6 +21,7 @@ const LOGOS = { "logo-lrr.png": { w: 834, h: 472 }, "logo-08-sm.png": { w: 480, 
 
 // sizes presets keyed by the rendering context (the nearest class on the picture's ancestors)
 const SIZES = {
+  "gc-support-person": "52px",
   "gc-hero-image": "100vw",
   "gc-hero-portrait": "(max-width: 360px) 173px, (max-width: 640px) 203px, (max-width: 1100px) 34vw, 390px",
   "gc-region-card": "(max-width: 640px) 45vw, (max-width: 1100px) 46vw, 520px",
@@ -37,7 +39,7 @@ function contextFor(html, idx, site, src) {
   if (src.endsWith("gregg-portrait.jpg")) return "avatar";
   const before = html.slice(Math.max(0, idx - 600), idx);
   const classes = [...before.matchAll(/class="([^"]+)"/g)].map((m) => m[1]).reverse().join(" ");
-  for (const k of ["gc-hero-portrait", "gc-hero-image", "gc-region-card", "gc-person-image", "hero-portrait", "nb-photo", "cc-photo", "hero-band"]) if (classes.split(/\s+/).includes(k)) return k;
+  for (const k of ["gc-support-person", "gc-hero-portrait", "gc-hero-image", "gc-region-card", "gc-person-image", "hero-portrait", "nb-photo", "cc-photo", "hero-band"]) if (classes.split(/\s+/).includes(k)) return k;
   if (/\bfigure-band\b/.test(classes)) return site === "gc" ? "figure-band-gc" : "figure-band-pmh";
   return "default";
 }
@@ -80,7 +82,7 @@ function buildImg(a, src, m, ctx, srcsetJpg) {
   return `<img ${parts.join(" ")}>`;
 }
 
-const files = ONLY ? [ONLY] : ["index.html", ...walkHtml("public"), ...walkHtml("civilian-site")];
+const files = ONLY ? [ONLY] : SCHOOLS ? ["civilian-site/schools.html", ...walkHtml("civilian-site/schools")] : ["index.html", ...walkHtml("public"), ...walkHtml("civilian-site")];
 let pages = 0, pictures = 0, bare = 0, logos = 0, missing = new Set();
 for (const f of files) {
   const site = f.startsWith("civilian-site") ? "gc" : "pmh";

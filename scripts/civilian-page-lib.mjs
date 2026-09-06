@@ -6,6 +6,9 @@ import { guardAnalytics } from "./analytics-host-guard.mjs";
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { withGuideNavigation } from './civilian-experience-lib.mjs';
+import { withInteriorDesign } from './civilian-interior-design.mjs';
+import { withSchoolFinder } from './school-finder-lib.mjs';
+import { withSchoolGuide } from './school-report-guide-lib.mjs';
 
 export const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
 export const SITE_DIR = ROOT + "civilian-site";
@@ -49,7 +52,7 @@ export function buildPage(spec) {
   const { sharedHead, nav, tail } = chrome();
   const url = SITE + spec.path;
   const og = `${SITE}/og/${spec.ogSlug}.png`;
-  const html = withGuideNavigation(`<!doctype html>
+  let html = withGuideNavigation(`<!doctype html>
 <html lang="en">
 <head>
 <script>if(location.hostname.indexOf('.pages.dev')>-1)location.replace('https://greggcostin.com'+location.pathname+location.search);</script>
@@ -100,6 +103,13 @@ ${tail}`);
   // spec.outDir lets a factory write a preview build somewhere other than the live site tree
   const outDir = spec.outDir || SITE_DIR;
   if (spec.outDir) mkdirSync(`${outDir}/${spec.file}`.replace(/\/[^/]+$/, ""), { recursive: true });
+  // The school release upgrades this collection only. Other factories retain
+  // their current presentation and the production analytics guard below.
+  if (spec.path === '/schools' || spec.path.startsWith('/schools/')) {
+    html = withInteriorDesign(html, spec.path);
+    html = withSchoolFinder(html, spec.path);
+    html = withSchoolGuide(html, spec.path);
+  }
   writeFileSync(`${outDir}/${spec.file}`, guardAnalytics(html));
   return guardAnalytics(html);
 }

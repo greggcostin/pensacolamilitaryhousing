@@ -386,6 +386,14 @@
       "creditRequired": false,
       "credit": "Mark Wolfe",
       "query": "hurricane shutters Florida house"
+    },
+    "civilian-site/images/gregg-navy-no-tie.jpg": {
+      "source": "The Costin Team (existing portrait asset)",
+      "title": "Gregg Costin in a navy jacket",
+      "license": "All rights reserved (owner: Gregg Costin)",
+      "creditRequired": false,
+      "credit": "The Costin Team",
+      "copiedFrom": "public/images/gregg-navy-no-tie.jpg"
     }
   }
 }

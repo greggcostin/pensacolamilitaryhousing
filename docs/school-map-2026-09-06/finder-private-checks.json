@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-09-06T20:46:27.120Z",
+  "datasetBuiltAt": "2026-09-06T20:44:00.404Z",
+  "datasetSha256": "a58ae030b22301da4d161bebe1a153d5b4cd00119cd4667adaa06378ab69d900",
+  "counts": {
+    "private": 66,
+    "christian": 47,
+    "nonreligious": 17,
+    "unknown": 2,
+    "originalNcesIds": 63
+  },
+  "sourceFiles": [
+    "map-private-location-updates.json",
+    "map-private-resources-east.json",
+    "map-private-resources-west.json"
+  ],
+  "checks": 9,
+  "failures": 0,
+  "results": [
+    {
+      "name": "Christian includes Catholic and Protestant evidence, never a name or a public-school flag",
+      "passed": true
+    },
+    {
+      "name": "Private type, county, grade level, affiliation text, campus, ZIP and grade filters intersect",
+      "passed": true
+    },
+    {
+      "name": "All 63 original private NCES identities remain, with no private public-accountability letters",
+      "passed": true
+    },
+    {
+      "name": "Every affiliation matches NCES or an explicitly sourced current school override",
+      "passed": true
+    },
+    {
+      "name": "Pensacola Christian Academy is separately sourced, mapped and never assigned a made-up NCES ID",
+      "passed": true
+    },
+    {
+      "name": "Hillcrest virtual evidence removes its point from campus, bounds and radius results but retains its listing",
+      "passed": true
+    },
+    {
+      "name": "Private campus positions come from their NCES record or a same-school documented update",
+      "passed": true
+    },
+    {
+      "name": "Resource and affiliation URLs are safe and occur on the same school source record",
+      "passed": true
+    },
+    {
+      "name": "Actual client cards and map markers distinguish private P from public A-F grades",
+      "passed": true
+    }
+  ]
+}

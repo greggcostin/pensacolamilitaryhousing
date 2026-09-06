@@ -1,0 +1,1152 @@
+{
+  "/schools/avalon-middle-school": {
+    "name": "Avalon Middle School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/ams",
+    "checkedAt": "2026-09-06",
+    "overview": "Avalon Middle School serves grades 6–8 at its Milton campus on King Arthurs Way. Its published activity roster combines music, student leadership and interest clubs, including band, jazz band, chorus, chess, Minecraft and the Knights Athletic Club.",
+    "highlights": [
+      {
+        "title": "Music and student interests",
+        "text": "The school lists band, jazz band and chorus alongside clubs for reading, chess, plants and Minecraft.",
+        "sourceUrl": "https://www.santarosaschools.org/o/ams"
+      },
+      {
+        "title": "New-student connections",
+        "text": "Anchored 4 Life appears in the school's activity roster, providing a starting point for asking about student transition support.",
+        "sourceUrl": "https://www.santarosaschools.org/o/ams"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/ams"
+    },
+    "visitQuestions": [
+      "Which music classes or clubs can a student join after the school year begins?",
+      "How does Anchored 4 Life welcome a student transferring into sixth, seventh or eighth grade?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/ams",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165003664",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/bagdad-elementary-school": {
+    "name": "Bagdad Elementary School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/bes",
+    "checkedAt": "2026-09-06",
+    "overview": "Bagdad Elementary serves elementary grades at 4512 Forsyth Street in Milton. Its school site highlights its centennial celebration, while the staff directory identifies reading/literacy coaching, elementary intervention, media and physical education roles.",
+    "highlights": [
+      {
+        "title": "A century of school history",
+        "text": "The school's own homepage links its centennial celebration, offering families a direct source for learning about Bagdad's history.",
+        "sourceUrl": "https://bes.santarosaschools.org/"
+      },
+      {
+        "title": "Reading and intervention contacts",
+        "text": "The published staff directory includes a reading/literacy coach and elementary intervention teacher; families can ask how these supports fit their child's learning plan.",
+        "sourceUrl": "https://www.obe.santarosaschools.org/o/bes/staff?page_no=2"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/bes"
+    },
+    "visitQuestions": [
+      "How are reading intervention and classroom instruction coordinated for my child's grade?",
+      "What does the daily schedule include for media, physical education and other special areas?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://bes.santarosaschools.org/",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Official school information",
+        "url": "https://www.obe.santarosaschools.org/o/bes/staff?page_no=2",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001815",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/bennett-c-russell-elementary-school": {
+    "name": "Bennett C. Russell Elementary School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/bre",
+    "checkedAt": "2026-09-06",
+    "overview": "Bennett C. Russell Elementary, also known as Benny Russell, is the Cardinals' campus on Excalibur Way in Milton. Its school news documents a fourth- and fifth-grade chorus performance, kindergarten welcome activities and a 2025 Purple Star recognition.",
+    "highlights": [
+      {
+        "title": "Upper-elementary chorus",
+        "text": "The school's December 2025 news announced a concert by its fourth- and fifth-grade chorus; ask about this year's participation and rehearsal schedule.",
+        "sourceUrl": "https://www.santarosaschools.org/o/bre/news/"
+      },
+      {
+        "title": "Starting kindergarten",
+        "text": "The school publicizes a Kindergarten Sneak Peek for registered incoming students and separate Meet the Teacher events for younger and older grades.",
+        "sourceUrl": "https://www.santarosaschools.org/o/bre/news/"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/bre"
+    },
+    "visitQuestions": [
+      "Can new fourth- or fifth-grade students join chorus during the year?",
+      "How are kindergarten screening results used to plan classroom support?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/bre/news/",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165005376",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/berryhill-elementary-school": {
+    "name": "Berryhill Elementary School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/bhe",
+    "checkedAt": "2026-09-06",
+    "overview": "Berryhill Elementary traces its history to 1926 and moved to its current Berryhill Road building for the 1990–91 school year. It serves pre-K through fifth grade and specifically describes AIMS, an art program incorporating math and science, among its learning opportunities.",
+    "highlights": [
+      {
+        "title": "Art connected with math and science",
+        "text": "Berryhill names AIMS, Art Incorporating Math and Science, alongside physical education, speech and exceptional student education.",
+        "sourceUrl": "https://www.santarosaschools.org/o/bhe/page/about-us"
+      },
+      {
+        "title": "A documented local history",
+        "text": "The school identifies itself as Milton's first school devoted exclusively to elementary education and publishes the story of its original and current campuses.",
+        "sourceUrl": "https://www.santarosaschools.org/o/bhe/page/about-us"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/bhe"
+    },
+    "visitQuestions": [
+      "How often does each grade participate in AIMS, and what projects are typical?",
+      "How do teachers use reading and math progress information to adjust instruction?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/bhe/page/about-us",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001814",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/central-school": {
+    "name": "Central School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/cs",
+    "checkedAt": "2026-09-06",
+    "overview": "Central School combines elementary, middle and high school grades at its Central School Road campus. Its published career options include agribusiness, digital design, culinary studies, ecology and conservation, entrepreneurship, and teaching.",
+    "highlights": [
+      {
+        "title": "Career pathways on campus",
+        "text": "The school lists Agribusiness, Digital Design, Sodexo Culinary and Teaching academies, plus Ecology, Conservation & Management and Entrepreneurship pathways.",
+        "sourceUrl": "https://www.santarosaschools.org/o/cs/page/career-academies"
+      },
+      {
+        "title": "Several age groups at one school",
+        "text": "Federal directory data identifies Central as a pre-K–12 school, making its grade configuration different from separate elementary, middle and high school campuses.",
+        "sourceUrl": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001813"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/cs"
+    },
+    "visitQuestions": [
+      "Which career pathways are currently accepting students in my child's grade?",
+      "How are elementary, middle and high school students grouped during the school day?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/cs/page/career-academies",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001813",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/chumuckla-elementary-school": {
+    "name": "Chumuckla Elementary School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/ces",
+    "checkedAt": "2026-09-06",
+    "overview": "Chumuckla Elementary's school introduction describes a kindergarten-through-sixth-grade campus on Highway 182 in Jay. Its published approach includes Positive Behavior Intervention Support and TRIBE expectations built around trustworthiness, responsibility, respect and excellence.",
+    "highlights": [
+      {
+        "title": "Elementary through sixth grade",
+        "text": "The school explicitly includes sixth grade, a useful distinction when comparing it with elementary campuses that end after fifth grade.",
+        "sourceUrl": "https://www.santarosaschools.org/o/ces"
+      },
+      {
+        "title": "Behavior and transition support",
+        "text": "Chumuckla describes its TRIBE expectations and Purple Star support for students transitioning between schools.",
+        "sourceUrl": "https://www.santarosaschools.org/o/ces"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/ces"
+    },
+    "visitQuestions": [
+      "How does sixth grade differ from the earlier elementary grades at Chumuckla?",
+      "How are TRIBE expectations taught and reinforced in daily classroom routines?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/ces",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001816",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/east-bay-k-8-school": {
+    "name": "East Bay K-8 School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/ebk8",
+    "checkedAt": "2026-09-06",
+    "overview": "East Bay K-8 brings elementary and middle school grades together on Elkhart Drive in Gulf Breeze. Its school updates describe STEAM students designing underwater remotely operated vehicles for SeaPerch, with a team progressing from a University of West Florida regional event to the 2026 international competition.",
+    "highlights": [
+      {
+        "title": "Applied engineering through SeaPerch",
+        "text": "A 2026 school update describes students designing, building and operating underwater vehicles through a STEAM class and SeaPerch competition.",
+        "sourceUrl": "https://www.ebs.santarosaschools.org/o/ebk8/live-feed?page_no=2"
+      },
+      {
+        "title": "A K–8 campus",
+        "text": "The combined elementary and middle school configuration offers continuity across grades; ask how schedules, spaces and electives change at the middle-school transition.",
+        "sourceUrl": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165008721"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/ebk8"
+    },
+    "visitQuestions": [
+      "Which grades can take STEAM or participate in SeaPerch, and are there prerequisites?",
+      "What changes when a student moves from elementary classes into middle school on the same campus?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.ebs.santarosaschools.org/o/ebk8/live-feed?page_no=2",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165008721",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/east-milton-elementary-school": {
+    "name": "East Milton Elementary School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/eme",
+    "checkedAt": "2026-09-06",
+    "overview": "East Milton Elementary is on Ward Basin Road in Milton. Its published school commitments emphasize student ownership of learning, technology-supported instruction and academic goals monitored jointly by students, teachers and families.",
+    "highlights": [
+      {
+        "title": "Student ownership of learning",
+        "text": "East Milton's school statement makes student participation in learning goals an explicit focus.",
+        "sourceUrl": "https://eme.santarosaschools.org/page/about-us"
+      },
+      {
+        "title": "Technology and progress monitoring",
+        "text": "The school describes technology-rich instruction and academic goals reviewed by students, teachers, administrators and parents.",
+        "sourceUrl": "https://eme.santarosaschools.org/page/about-us"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/eme"
+    },
+    "visitQuestions": [
+      "Can teachers show how students set and track their reading and math goals?",
+      "Which classroom technology supports instruction, and what access is expected at home?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://eme.santarosaschools.org/page/about-us",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001817",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/gulf-breeze-elementary-school": {
+    "name": "Gulf Breeze Elementary School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/gbe",
+    "checkedAt": "2026-09-06",
+    "overview": "Gulf Breeze Elementary serves pre-K through fifth grade on Gulf Breeze Parkway. Its school introduction emphasizes communication, collaboration, critical thinking and creativity, and describes an active PTA and Partners in Education program.",
+    "highlights": [
+      {
+        "title": "Learning approach",
+        "text": "The school describes using varied learning strategies to develop communication, collaboration, critical thinking and creativity.",
+        "sourceUrl": "https://www.santarosaschools.org/o/gbe/page/about-us"
+      },
+      {
+        "title": "Family participation",
+        "text": "The school publishes PTA and Partners in Education opportunities and credits volunteers with supporting classroom activities and resources.",
+        "sourceUrl": "https://www.santarosaschools.org/o/gbe/page/about-us"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/gbe"
+    },
+    "visitQuestions": [
+      "What does enrichment look like in my child's grade, and how are additional learning needs supported?",
+      "What opportunities can new families join through the PTA or classroom volunteer program?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/gbe/page/about-us",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001819",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/gulf-breeze-high-school": {
+    "name": "Gulf Breeze High School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/gbh",
+    "checkedAt": "2026-09-06",
+    "overview": "Gulf Breeze High School offers grades 9–12 on Gulf Breeze Parkway. Its 2026–27 course-planning page identifies three career academies: Health & Medical Professions, Hospitality & Tourism, and Multimedia Design & Technology.",
+    "highlights": [
+      {
+        "title": "Three named career academies",
+        "text": "The school publishes academy routes in healthcare, hospitality and tourism, and multimedia design and technology.",
+        "sourceUrl": "https://www.santarosaschools.org/o/gbh/page/courses-curriculum"
+      },
+      {
+        "title": "Course planning and online study",
+        "text": "The curriculum page provides four-year planning tools and a counselor-reviewed hybrid contract for students requesting FLVS or Santa Rosa Online courses within their schedule.",
+        "sourceUrl": "https://www.santarosaschools.org/o/gbh/page/courses-curriculum"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/gbh"
+    },
+    "visitQuestions": [
+      "Which academy courses fit my child's remaining graduation requirements and prerequisites?",
+      "How would transfer credits, advanced courses or a hybrid online course affect the four-year plan?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/gbh/page/courses-curriculum",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001821",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/gulf-breeze-middle-school": {
+    "name": "Gulf Breeze Middle School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/gbm",
+    "checkedAt": "2026-09-06",
+    "overview": "Gulf Breeze Middle School serves grades 6–8 on Gulf Breeze Parkway. Its family resource page describes Anchored 4 Life peer support for incoming students and lists HOPE Squad, Builder's Club, and running/track among ways students can get involved.",
+    "highlights": [
+      {
+        "title": "Peer support for new students",
+        "text": "Anchored 4 Life is described as a student-to-student transition program that helps newcomers learn their way around the school.",
+        "sourceUrl": "https://www.santarosaschools.org/o/gbm/page/military-resource-page"
+      },
+      {
+        "title": "Activities and student services",
+        "text": "The school lists HOPE Squad, Builder's Club and running/track, and identifies counseling and ESE support contacts.",
+        "sourceUrl": "https://www.santarosaschools.org/o/gbm/page/military-resource-page"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/gbm"
+    },
+    "visitQuestions": [
+      "How can a transferring student connect with Anchored 4 Life before the first day?",
+      "Which clubs and academic supports are available for my child's grade this year?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/gbm/page/military-resource-page",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001820",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/hobbs-middle-school": {
+    "name": "Hobbs Middle School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/hms",
+    "checkedAt": "2026-09-06",
+    "overview": "Hobbs Middle School opened in 1968 and identifies itself as Santa Rosa County's first middle school. Its current school introduction lists AVID, advanced coursework, intervention support and electives such as art, band, digital literacy and critical thinking.",
+    "highlights": [
+      {
+        "title": "Academic support and extension",
+        "text": "Hobbs describes AVID alongside advanced coursework, exceptional student education support and interventions for students who need additional help.",
+        "sourceUrl": "https://www.gbe.santarosaschools.org/o/hms"
+      },
+      {
+        "title": "Electives and connections",
+        "text": "The school's introduction lists art, band, digital literacy, theater, running and student government among its classes and activities.",
+        "sourceUrl": "https://www.gbe.santarosaschools.org/o/hms"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/hms"
+    },
+    "visitQuestions": [
+      "How are students placed in AVID, advanced coursework or intervention classes?",
+      "Which electives remain available for a student transferring midyear?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.gbe.santarosaschools.org/o/hms",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001832",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/holley-navarre-intermediate": {
+    "name": "Holley-Navarre Intermediate",
+    "schoolWebsite": "https://www.santarosaschools.org/o/hni",
+    "checkedAt": "2026-09-06",
+    "overview": "Holley-Navarre Intermediate is an upper-elementary campus serving third through fifth grade on Navarre School Road. Its published student activities include a school house system, art and ITV; school news also documents a House Cup and a student talent show.",
+    "highlights": [
+      {
+        "title": "Upper-elementary focus",
+        "text": "HNI serves grades 3–5, so families should plan for both the move from primary school and the later transition to middle school.",
+        "sourceUrl": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001834"
+      },
+      {
+        "title": "Houses and student activities",
+        "text": "The school's current navigation lists the HNIS House System, art and ITV, with 2026 school news documenting House Cup participation and a talent show.",
+        "sourceUrl": "https://www.santarosaschools.org/o/hni/live-feed?page_no=1"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/hni"
+    },
+    "visitQuestions": [
+      "How are new students introduced to the house system and its activities?",
+      "What support helps third graders adjust to the intermediate-school schedule?"
+    ],
+    "sources": [
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001834",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/hni/live-feed?page_no=1",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Holley-Navarre Intermediate activities",
+        "url": "https://www.santarosaschools.org/o/hni",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/holley-navarre-middle-school": {
+    "name": "Holley-Navarre Middle School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/hnm",
+    "checkedAt": "2026-09-06",
+    "overview": "Holley-Navarre Middle is the Bulldogs' grades 6–8 campus on Williams Creek Drive in Navarre. Its current updates advertise chess and Dungeons and Dragons clubs, while the school site provides dedicated academic planning, student transition and family support resources.",
+    "highlights": [
+      {
+        "title": "Clubs that welcome different interests",
+        "text": "The August 2026 school feed announces chess in the library and a Dungeons and Dragons club starting in September.",
+        "sourceUrl": "https://hnm.santarosaschools.org/o/hnm/live-feed"
+      },
+      {
+        "title": "Planning a school transition",
+        "text": "The school maintains separate resources for transition planning, academic planning and a student-led transition program.",
+        "sourceUrl": "https://www.santarosaschools.org/o/hnm"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/hnm"
+    },
+    "visitQuestions": [
+      "Can a new student join chess, band or another activity once classes have started?",
+      "How will the counselor compare transfer courses with this year's course sequence?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://hnm.santarosaschools.org/o/hnm/live-feed",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/hnm",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165002670",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/jay-elementary-school": {
+    "name": "Jay Elementary School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/jes",
+    "checkedAt": "2026-09-06",
+    "overview": "Jay Elementary serves pre-K through sixth grade at its Alabama Street campus in Jay. Published school updates document a sixth-grade band option, Junior Beta service activities and visiting arts experiences such as a Pensacola Opera performance.",
+    "highlights": [
+      {
+        "title": "Sixth grade stays in elementary",
+        "text": "The school's grade configuration includes sixth grade, and its updates reference sixth-grade band participation.",
+        "sourceUrl": "https://bes.santarosaschools.org/o/jes/live-feed?page_no=7"
+      },
+      {
+        "title": "Service and arts activities",
+        "text": "School updates describe Junior Beta collecting pop tabs for Ronald McDonald House and a Pensacola Opera visit for younger students.",
+        "sourceUrl": "https://bes.santarosaschools.org/o/jes/live-feed?page_no=7"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/jes"
+    },
+    "visitQuestions": [
+      "How do sixth-grade band scheduling and transportation work?",
+      "Which grades can participate in Junior Beta, and what selection criteria apply?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://bes.santarosaschools.org/o/jes/live-feed?page_no=7",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001824",
+        "checkedAt": "2026-09-06"
+      }
+    ],
+    "notes": "Official About Us page contained no substantive body in the retrievable view. Used official school activity updates and dated NCES grade configuration instead; no reputation claims inferred."
+  },
+  "/schools/jay-high-school": {
+    "name": "Jay High School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/jhs",
+    "checkedAt": "2026-09-06",
+    "overview": "Jay High School combines grades 7–12 at its School Street campus. Its student activity directory lists FFA, band, drama, art and student government, and a district spotlight documents building construction, culinary and agriculture career programs.",
+    "highlights": [
+      {
+        "title": "Middle and high school together",
+        "text": "Jay High's grades 7–12 configuration differs from a separate three-year middle school followed by high school.",
+        "sourceUrl": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001823"
+      },
+      {
+        "title": "Practical career programs",
+        "text": "A district school spotlight identifies Building Construction, Culinary and Agriculture among Jay High's CTE programs; confirm the current course sequence with guidance.",
+        "sourceUrl": "https://pdc.santarosaschools.org/live-feed/?page_no=28"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/jhs"
+    },
+    "visitQuestions": [
+      "How are seventh and eighth graders scheduled and supported within the 7–12 campus?",
+      "Which construction, culinary or agriculture courses can my child begin next year?"
+    ],
+    "sources": [
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001823",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Official school information",
+        "url": "https://pdc.santarosaschools.org/live-feed/?page_no=28",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Jay High student activity directory",
+        "url": "https://www.santarosaschools.org/o/jhs",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/martin-luther-king-middle-school": {
+    "name": "Martin Luther King Middle School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/kms",
+    "checkedAt": "2026-09-06",
+    "overview": "Martin Luther King Middle School serves grades 6–8 on Stewart Street in Milton. Its school updates document participation in the Amazing Shake program and an academic quiz team, with family notices covering sixth-grade orientation and the transition to high school.",
+    "highlights": [
+      {
+        "title": "Communication through Amazing Shake",
+        "text": "The school describes community mentors working with students in Navy Federal Credit Union's Amazing Shake program.",
+        "sourceUrl": "https://ebs.santarosaschools.org/o/kms/live-feed?page_no=1"
+      },
+      {
+        "title": "Academic team opportunities",
+        "text": "The school's recent updates report an academic team's participation in an NAQT tournament, giving families a specific enrichment option to discuss.",
+        "sourceUrl": "https://www.jes.santarosaschools.org/o/kms/live-feed"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/kms"
+    },
+    "visitQuestions": [
+      "How are students selected for Amazing Shake or the academic team?",
+      "What orientation and academic planning are available for a student entering sixth grade?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://ebs.santarosaschools.org/o/kms/live-feed?page_no=1",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Official school information",
+        "url": "https://www.jes.santarosaschools.org/o/kms/live-feed",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001833",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/milton-high-school": {
+    "name": "Milton High School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/mhs",
+    "checkedAt": "2026-09-06",
+    "overview": "Milton High School's Stewart Street campus offers grades 9–12 and publishes a broad selection of career pathways. Its guidance page lists aviation, advanced manufacturing, agritechnology, accounting and finance, computer systems, culinary arts, multimedia and television production.",
+    "highlights": [
+      {
+        "title": "Technical and creative pathways",
+        "text": "Milton's published CTE list includes Aviation, Advanced Manufacturing, Agritechnology, Computer Systems & Information Technology, Gaming & Simulation and Television Production.",
+        "sourceUrl": "https://mhs.santarosaschools.org/page/guidance/"
+      },
+      {
+        "title": "Course planning resources",
+        "text": "Guidance provides a 2026–27 curriculum guide, grade-specific registration cards and a math-course pathway to help plan a sequence.",
+        "sourceUrl": "https://mhs.santarosaschools.org/page/guidance/"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/mhs"
+    },
+    "visitQuestions": [
+      "Which academy sequences can a transferring student complete before graduation?",
+      "How do the math pathway, advanced courses and career electives fit into one schedule?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://mhs.santarosaschools.org/page/guidance/",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001826",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/navarre-high-school": {
+    "name": "Navarre High School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/nhs",
+    "checkedAt": "2026-09-06",
+    "overview": "Navarre High School serves grades 9–12 at its High School Boulevard campus. Its school introduction names Navy NJROTC, marine science, band, chorus, fine arts and career and technical education among the programs students can explore.",
+    "highlights": [
+      {
+        "title": "Marine science and Navy NJROTC",
+        "text": "Navarre explicitly highlights marine science and NJROTC in its school introduction, with program links available from its main website.",
+        "sourceUrl": "https://www.santarosaschools.org/o/nhs/page/about-us"
+      },
+      {
+        "title": "College and technical planning",
+        "text": "The school maintains guidance resources for AP courses, dual enrollment and Locklin Technical College options, alongside graduation and transfer enrollment information.",
+        "sourceUrl": "https://nhs.santarosaschools.org/"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/nhs"
+    },
+    "visitQuestions": [
+      "What are the entry requirements and time commitments for marine science or NJROTC?",
+      "Which AP, dual-enrollment or Locklin courses fit my child's transfer credits and goals?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/nhs/page/about-us",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Official school information",
+        "url": "https://nhs.santarosaschools.org/",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165003122",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/oriole-beach-elementary-school": {
+    "name": "Oriole Beach Elementary School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/obe",
+    "checkedAt": "2026-09-06",
+    "overview": "Oriole Beach Elementary serves pre-K through fifth grade on Oriole Beach Road in Gulf Breeze. Its published school vision emphasizes confident, responsible learners, and its homepage highlights a parent-teacher organization and past state recognition for community involvement.",
+    "highlights": [
+      {
+        "title": "Family involvement",
+        "text": "The school identifies an active parent-teacher organization and publishes volunteer information, creating direct ways for families to get involved.",
+        "sourceUrl": "https://www.santarosaschools.org/o/obe"
+      },
+      {
+        "title": "A school with published recognition",
+        "text": "The school's homepage lists Five Star status since 2018–19 and Florida DOE Golden School recognition. These acknowledgments are separate from the annual academic grade shown in this report.",
+        "sourceUrl": "https://www.santarosaschools.org/o/obe"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/obe"
+    },
+    "visitQuestions": [
+      "What classroom and enrichment activities support the school's goal of developing well-rounded learners?",
+      "How can a new family participate in the parent-teacher organization or volunteer program?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/obe",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165002258",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/pace-high-school": {
+    "name": "Pace High School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/phs",
+    "checkedAt": "2026-09-06",
+    "overview": "Pace High School serves grades 9–12 on Norris Road in Pace. Its career offerings span business and entrepreneurship, communication and graphic arts, computer systems, culinary arts, game and simulation design, industrial biotechnology, legal administration and teaching.",
+    "highlights": [
+      {
+        "title": "Technology and creative pathways",
+        "text": "Pace lists Computer Systems & Information Technology, Game and Simulation Design, Industrial Biotech, and Communication & Graphic Arts among its academy and pathway options.",
+        "sourceUrl": "https://www.santarosaschools.org/o/phs/page/career-technical-education"
+      },
+      {
+        "title": "Professional and applied study",
+        "text": "The same school resource lists business, culinary arts, legal administration, teaching and a DCT/OJT work-based pathway.",
+        "sourceUrl": "https://www.santarosaschools.org/o/phs/page/career-technical-education"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/phs"
+    },
+    "visitQuestions": [
+      "Which pathway best matches my child's interests, and what prerequisites determine the starting course?",
+      "Can a student combine a career pathway with dual enrollment or advanced academic classes?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/phs/page/career-technical-education",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165001830",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/pea-ridge-elementary-school": {
+    "name": "Pea Ridge Elementary School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/pre",
+    "checkedAt": "2026-09-06",
+    "overview": "Pea Ridge Elementary is on School Lane in Pace. Its family resource page identifies fifth-grade chorus and student government, chess, drama and garden clubs, along with a Community Schools program for before- and after-school care.",
+    "highlights": [
+      {
+        "title": "Arts, strategy and gardening",
+        "text": "The school lists chorus, chess, drama and gardening, offering several different kinds of activities to discuss when considering fit.",
+        "sourceUrl": "https://www.santarosaschools.org/o/pre/page/military-families"
+      },
+      {
+        "title": "Care and student leadership",
+        "text": "The school identifies campus-based before- and after-school care and fifth-grade student government; availability and registration should be confirmed directly.",
+        "sourceUrl": "https://www.santarosaschools.org/o/pre/page/military-families"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/pre"
+    },
+    "visitQuestions": [
+      "Which clubs are open to my child's grade, and when do sign-ups take place?",
+      "Are before- and after-school care places available, and what pickup times and fees apply?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/pre/page/military-families",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165002097",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/s-s-dixon-intermediate-school": {
+    "name": "S. S. Dixon Intermediate School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/ssdi",
+    "checkedAt": "2026-09-06",
+    "overview": "S. S. Dixon Intermediate opened on Education Drive when the original elementary school split into primary and intermediate campuses in 1994. It focuses on grades 3–5 and describes a campus tradition of ceramic tiles created by students and staff lining its main hallway.",
+    "highlights": [
+      {
+        "title": "Designed for grades 3–5",
+        "text": "The school's history explains why younger students remained at Dixon Primary while upper-elementary grades moved to the intermediate campus.",
+        "sourceUrl": "https://www.ssdi.santarosaschools.org/o/ssdi/page/about-us"
+      },
+      {
+        "title": "Student-created campus identity",
+        "text": "The school describes student and staff ceramic tiles as a permanent hallway display and names its four academic hallways after patriotic themes.",
+        "sourceUrl": "https://www.ssdi.santarosaschools.org/o/ssdi/page/about-us"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/ssdi"
+    },
+    "visitQuestions": [
+      "How do teachers support the move from second grade into the intermediate campus?",
+      "What gifted, resource or speech services apply to my child's needs and schedule?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.ssdi.santarosaschools.org/o/ssdi/page/about-us",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165002959",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/santa-rosa-virtual-franchise": {
+    "name": "Santa Rosa Virtual Franchise",
+    "schoolWebsite": "https://www.santarosaschools.org/o/sro",
+    "checkedAt": "2026-09-06",
+    "overview": "Santa Rosa Virtual Franchise provides district virtual-course options through Santa Rosa Online. The district's July 2026 announcement describes full-time Santa Rosa Online enrollment for grades 3–12, while separate part-time courses serve flex, hybrid, homeschool and other eligible students; this is more specific than the older K–12 federal directory listing.",
+    "highlights": [
+      {
+        "title": "Full-time online option",
+        "text": "The current district announcement requires a student and parent interest meeting for full-time enrollment in grades 3–12, followed by school registration steps.",
+        "sourceUrl": "https://www.santarosaschools.org/live_feeds/12620247"
+      },
+      {
+        "title": "Part-time courses are a separate choice",
+        "text": "The district advertises part-time franchise courses such as Driver's Education, Personal Finance, HOPE and world languages for several student enrollment arrangements.",
+        "sourceUrl": "https://www.santarosaschools.org/live-feed?page_no=4"
+      }
+    ],
+    "enrollment": {
+      "text": "Contact Santa Rosa Online to confirm current grade eligibility and the full-time or part-time route. The district's 2026–27 full-time announcement requires a student-and-parent interest meeting; ask about the next available session.",
+      "sourceUrl": "https://www.santarosaschools.org/live_feeds/12620247"
+    },
+    "visitQuestions": [
+      "Does my child need full-time enrollment or one part-time course, and which grade levels are currently eligible?",
+      "What weekly pacing, parent supervision, live teacher contact and in-person testing are required?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/live_feeds/12620247",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/live-feed?page_no=4",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165007684",
+        "checkedAt": "2026-09-06"
+      }
+    ],
+    "notes": "Current full-time published grade eligibility is 3–12; NCES 2024–25 record says K–12. Do not replace the dated federal source silently. The 6556 Firehouse Road address is administrative, not a daily attendance campus."
+  },
+  "/schools/thomas-l-sims-middle-school": {
+    "name": "Thomas L. Sims Middle School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/sms",
+    "checkedAt": "2026-09-06",
+    "overview": "Thomas L. Sims Middle School was dedicated in 1998 and is named for a longtime Pace educator. Its school introduction identifies Geometry and Digital Information Technology as courses that can earn high-school credit, alongside student organizations, band and chorus.",
+    "highlights": [
+      {
+        "title": "Credit before high school",
+        "text": "Sims explicitly names Geometry and Digital Information Technology as high-school-credit courses; placement depends on the student's preparation and school requirements.",
+        "sourceUrl": "https://www.santarosaschools.org/o/sms/page/about-sims"
+      },
+      {
+        "title": "Clubs and service",
+        "text": "The school lists chess, Hope Squad, Take A Stand, Junior Beta, student government and yearbook, with some groups requiring selection.",
+        "sourceUrl": "https://www.santarosaschools.org/o/sms/page/about-sims"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/sms"
+    },
+    "visitQuestions": [
+      "What prerequisites determine access to Geometry or Digital Information Technology?",
+      "Which clubs are open enrollment, and which require an application or selection?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/sms/page/about-sims",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165003504",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/w-h-rhodes-elementary-school": {
+    "name": "W. H. Rhodes Elementary School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/res",
+    "checkedAt": "2026-09-06",
+    "overview": "W. H. Rhodes Elementary serves pre-K through fifth grade on Byrom Street in Milton. Its family resources describe a Parent Resource Room where adults can borrow academic games, leveled books and learning materials to use at home.",
+    "highlights": [
+      {
+        "title": "Learning materials for home",
+        "text": "Rhodes invites families to check out academic games, leveled books and manipulatives from its Parent Resource Room.",
+        "sourceUrl": "https://ebs.santarosaschools.org/o/res/page/rhodes-elementary"
+      },
+      {
+        "title": "School-to-home support",
+        "text": "The school describes supplementary curriculum materials and family participation through conferences, classroom volunteering and its parent-teacher organization.",
+        "sourceUrl": "https://ebs.santarosaschools.org/o/res/page/rhodes-elementary"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/res"
+    },
+    "visitQuestions": [
+      "How can we choose Parent Resource Room materials that match my child's current reading and math goals?",
+      "How are classroom progress and additional support discussed at family conferences?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://ebs.santarosaschools.org/o/res/page/rhodes-elementary",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165002098",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/wallace-lake-k-8": {
+    "name": "Wallace Lake K-8",
+    "schoolWebsite": "https://www.santarosaschools.org/o/wlk8",
+    "checkedAt": "2026-09-06",
+    "overview": "Wallace Lake K-8 brings kindergarten through eighth grade together at its Wallace Lake Road campus in Pace. The school's own introduction organizes its approach around clarity, communication, consistency and celebration, with separate information for kindergarten entry and middle-school electives.",
+    "highlights": [
+      {
+        "title": "Continuity across K–8",
+        "text": "The school describes consistent instruction and character development from kindergarten through eighth grade.",
+        "sourceUrl": "https://wls.santarosaschools.org/o/wlk8/page/about-wlk8"
+      },
+      {
+        "title": "Planning for different grade stages",
+        "text": "Its published family information covers campus layout and transportation, kindergarten screening and middle-school elective procedures.",
+        "sourceUrl": "https://wls.santarosaschools.org/o/wlk8/page/about-wlk8"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/wlk8"
+    },
+    "visitQuestions": [
+      "How are middle-school electives and schedules separated from the elementary grades?",
+      "What support helps children entering at a later grade integrate into the K–8 school?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://wls.santarosaschools.org/o/wlk8/page/about-wlk8",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165009041",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  },
+  "/schools/west-navarre-intermediate-school": {
+    "name": "West Navarre Intermediate School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/wni",
+    "checkedAt": "2026-09-06",
+    "overview": "West Navarre Intermediate serves grades 3–5 on Cotton Bay Lane. Its student activity menu names the ACES Garden Club, Navigator Choir, student government and Running Club, while district updates describe its student communities and positive-behavior approach.",
+    "highlights": [
+      {
+        "title": "Named interest groups",
+        "text": "The school's own navigation lists the ACES Garden Club, Navigator Choir, SGA and Running Club.",
+        "sourceUrl": "https://www.santarosaschools.org/o/wni"
+      },
+      {
+        "title": "Student communities and behavior expectations",
+        "text": "An August 2025 district update describes Community Reveal Day and identifies West Navarre Intermediate as a model PBIS school.",
+        "sourceUrl": "https://www.santarosaschools.org/live-feed?page_no=25"
+      }
+    ],
+    "enrollment": {
+      "text": "Use the school's enrollment link and confirm your home address with Santa Rosa County's official school zone locator. Program places and transfer requests need school or district confirmation.",
+      "sourceUrl": "https://www.santarosaschools.org/o/wni"
+    },
+    "visitQuestions": [
+      "Which grades can join the garden club, choir or running club this year?",
+      "How do the student communities and PBIS expectations shape the school day?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/o/wni",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Official school information",
+        "url": "https://www.santarosaschools.org/live-feed?page_no=25",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165003665",
+        "checkedAt": "2026-09-06"
+      }
+    ],
+    "notes": "Individual garden-club and PBIS detail pages were not retrievable. Named activities verified from the official school navigation; PBIS Community Reveal detail verified in district news dated August 2025."
+  },
+  "/schools/woodlawn-beach-middle-school": {
+    "name": "Woodlawn Beach Middle School",
+    "schoolWebsite": "https://www.santarosaschools.org/o/wbm",
+    "checkedAt": "2026-09-06",
+    "overview": "Woodlawn Beach Middle serves grades 6–8 on Woodlawn Way in Gulf Breeze. Its published resources feature visual arts, band and Choir on Fire, with separate family resources for math acceleration and the transition into ninth grade.",
+    "highlights": [
+      {
+        "title": "Fine arts choices",
+        "text": "Woodlawn's student activity resources explicitly identify visual arts, band and Choir on Fire.",
+        "sourceUrl": "https://mhs.santarosaschools.org/o/wbm/documents"
+      },
+      {
+        "title": "Planning the next academic step",
+        "text": "The school's resource menu provides math-acceleration information, middle-school course registration and rising-ninth-grade guidance.",
+        "sourceUrl": "https://mhs.santarosaschools.org/o/wbm/documents"
+      }
+    ],
+    "enrollment": {
+      "text": "Woodlawn directs families to create or use a FOCUS parent account, upload enrollment documents and contact the registrar. Bring existing IEP or 504 information for planning, and verify your home's current attendance zone.",
+      "sourceUrl": "https://www.wbm.santarosaschools.org/page/enrollment"
+    },
+    "visitQuestions": [
+      "Which fine arts classes are available to beginners and which require previous experience?",
+      "How is math acceleration placement decided, and how does it affect high-school course options?"
+    ],
+    "sources": [
+      {
+        "title": "Official school information",
+        "url": "https://mhs.santarosaschools.org/o/wbm/documents",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "NCES school directory",
+        "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=120165004446",
+        "checkedAt": "2026-09-06"
+      },
+      {
+        "title": "Woodlawn enrollment instructions",
+        "url": "https://www.wbm.santarosaschools.org/page/enrollment",
+        "checkedAt": "2026-09-06"
+      }
+    ]
+  }
+}

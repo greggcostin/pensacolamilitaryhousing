@@ -62,6 +62,7 @@ for (const file of pages) {
   else if (!existsSync(`${ROOT}/og/${ogImg.split("/og/")[1]}`)) f(file, `og image file missing: ${ogImg}`);
   if (!h.includes('rel="icon"')) f(file, "missing favicon");
   for (const tag of ['name="twitter:title"', 'name="twitter:description"', 'name="twitter:url"', 'rel="apple-touch-icon"', 'rel="manifest"', 'name="theme-color"', 'name="ICBM"']) {
+    if (tag==='name="ICBM"' && h.includes('data-school-profile=') && !h.includes('"@type":"GeoCoordinates"')) continue; // No invented coordinates for virtual/unconfirmed campuses.
     if (!h.includes(tag)) f(file, `missing ${tag}`);
   }
   if (!h.includes("max-video-preview:-1")) f(file, "robots meta missing max-video-preview:-1");

@@ -1,0 +1,166 @@
+{
+  "retrieved": "2026-09-06T09:55:25.217Z",
+  "sources": [
+    {
+      "name": "Florida Department of Education Magnet Schools directory",
+      "url": "https://web09.fldoe.org/MagnetSchools/",
+      "sourceYear": null
+    },
+    {
+      "name": "Escambia County Public Schools 2026-27 magnet transportation instructions",
+      "url": "https://brown-bargems.escambiaschools.org/student-family-resources/transportation",
+      "sourceYear": "2026-27"
+    }
+  ],
+  "coverage": {
+    "confirmedMagnetSchoolsOrPrograms": 5,
+    "floridaDirectoryQueries": [
+      {
+        "districtId": "17",
+        "rowCount": 3,
+        "sourceUrl": "https://web09.fldoe.org/MagnetSchools/",
+        "sourceYear": null
+      },
+      {
+        "districtId": "46",
+        "rowCount": 1,
+        "sourceUrl": "https://web09.fldoe.org/MagnetSchools/",
+        "sourceYear": null
+      },
+      {
+        "districtId": "57",
+        "rowCount": 0,
+        "sourceUrl": "https://web09.fldoe.org/MagnetSchools/",
+        "sourceYear": null
+      }
+    ],
+    "scope": [
+      "Escambia FL",
+      "Santa Rosa FL",
+      "Okaloosa FL",
+      "Baldwin AL"
+    ],
+    "unmatchedIdentifiers": []
+  },
+  "limitations": [
+    "This is a positive-evidence supplement, not a complete inventory of every current choice option. Schools not listed remain magnet:null, never magnet:false.",
+    "FDOE search results do not identify a source school year. Their retrieval date is reported without assigning a year from the page copyright.",
+    "Magnet programs can operate within otherwise zoned schools. The magnetType/programName fields must accompany the flag so a program is not presented as a whole-school classification.",
+    "The Santa Rosa FDOE search returned no rows. That does not prove there are no district choice or specialized programs.",
+    "No unambiguous official magnet classification was established for a Baldwin County school in this pass. Baldwin Preparatory Academy describes itself as much like a magnet school; this analogy is not converted to magnet:true.",
+    "A school/program appearing here does not establish enrollment eligibility, transportation entitlement, current available seats, or admission to a program."
+  ],
+  "choiceResources": [
+    {
+      "state": "FL",
+      "county": "Escambia",
+      "url": "https://www.escambiaschools.org/departments/enrollment-services/controlled-open-enrollment",
+      "label": "Escambia controlled open enrollment"
+    },
+    {
+      "state": "FL",
+      "county": "Santa Rosa",
+      "url": "https://www.santarosaschools.org/documents/resources-%26-services/employees/documents-and-forms/p-s/s/16241306",
+      "label": "Santa Rosa school choice plan and transfer forms"
+    },
+    {
+      "state": "FL",
+      "county": "Okaloosa",
+      "url": "https://www.okaloosaschools.com/page/controlled-open-enrollment",
+      "label": "Okaloosa controlled open enrollment"
+    },
+    {
+      "state": "AL",
+      "county": "Baldwin",
+      "url": "https://www.baldwinprep.com/about-us",
+      "label": "Baldwin Preparatory Academy overview",
+      "classification": "specialized career-technical school; official site uses a magnet analogy, not a definitive classification"
+    },
+    {
+      "state": "AL",
+      "county": "Baldwin",
+      "url": "https://www.bcbe.org/departments/academics/secondary-education/international-baccalaureate-programme",
+      "label": "Baldwin County IB program admissions and feeder patterns"
+    }
+  ],
+  "programs": [
+    {
+      "districtId": "17",
+      "schoolId": "0671",
+      "ncesId": "120051000824",
+      "state": "FL",
+      "name": "BROWN BARGE MIDDLE SCHOOL",
+      "magnet": true,
+      "magnetType": "school",
+      "programName": null,
+      "specialty": "Other",
+      "reportedGrades": "6-8",
+      "reportedAddress": "201 HANCOCK LN PENSACOLA, FL 32503-7706",
+      "sourceUrl": "https://web09.fldoe.org/MagnetSchools/",
+      "sourceYear": null,
+      "sourceNote": "Current FDOE magnet directory retrieved below; directory does not state a school-year vintage."
+    },
+    {
+      "districtId": "17",
+      "schoolId": "0191",
+      "ncesId": "120051003581",
+      "state": "FL",
+      "name": "N. B. COOK ELEMENTARY SCHOOL",
+      "magnet": true,
+      "magnetType": "school",
+      "programName": null,
+      "specialty": "Performing Arts",
+      "reportedGrades": "K-5",
+      "reportedAddress": "1310 N 12TH AVE PENSACOLA, FL 32503-6006",
+      "sourceUrl": "https://web09.fldoe.org/MagnetSchools/",
+      "sourceYear": null,
+      "sourceNote": "Current FDOE magnet directory retrieved below; directory does not state a school-year vintage."
+    },
+    {
+      "districtId": "17",
+      "schoolId": "1251",
+      "ncesId": "120051003703",
+      "state": "FL",
+      "name": "WEST FLORIDA HIGH SCHOOL/TECHNICAL",
+      "magnet": true,
+      "magnetType": "school",
+      "programName": null,
+      "specialty": "Technology",
+      "reportedGrades": "9-12",
+      "reportedAddress": "150 E BURGESS RD PENSACOLA, FL 32503-7242",
+      "sourceUrl": "https://web09.fldoe.org/MagnetSchools/",
+      "sourceYear": null,
+      "sourceNote": "Current FDOE magnet directory retrieved below; directory does not state a school-year vintage."
+    },
+    {
+      "districtId": "46",
+      "schoolId": "0721",
+      "ncesId": "120138008072",
+      "state": "FL",
+      "name": "OKALOOSA STEMM CENTER",
+      "magnet": true,
+      "magnetType": "program",
+      "programName": null,
+      "specialty": "Science/Math",
+      "reportedGrades": "PK, 6-8",
+      "reportedAddress": "379 EDGE AVE VALPARAISO, FL 32580-1033",
+      "sourceUrl": "https://web09.fldoe.org/MagnetSchools/",
+      "sourceYear": null,
+      "sourceNote": "Current FDOE magnet directory retrieved below; directory does not state a school-year vintage."
+    },
+    {
+      "districtId": "17",
+      "schoolId": "0411",
+      "ncesId": "120051000805",
+      "state": "FL",
+      "name": "Pensacola High School",
+      "magnet": true,
+      "magnetType": "program",
+      "programName": "International Baccalaureate",
+      "specialty": "International Baccalaureate",
+      "sourceUrl": "https://brown-bargems.escambiaschools.org/student-family-resources/transportation",
+      "sourceYear": "2026-27",
+      "sourceNote": "District transportation page explicitly lists Pensacola High I.B. students among magnet students. This flag applies to a program, not every student at the school."
+    }
+  ]
+}

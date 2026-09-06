@@ -1,0 +1,450 @@
+[
+  {
+    "zip": "32501",
+    "lat": 30.428781,
+    "lng": -87.222515,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32502",
+    "lat": 30.408929,
+    "lng": -87.226813,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32503",
+    "lat": 30.459667,
+    "lng": -87.213643,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32504",
+    "lat": 30.473121,
+    "lng": -87.186316,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32505",
+    "lat": 30.454624,
+    "lng": -87.26065,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32506",
+    "lat": 30.391889,
+    "lng": -87.371994,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32507",
+    "lat": 30.337856,
+    "lng": -87.378363,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32508",
+    "lat": 30.350615,
+    "lng": -87.316902,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32509",
+    "lat": 30.469744,
+    "lng": -87.340363,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32511",
+    "lat": 30.40635,
+    "lng": -87.291321,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32512",
+    "lat": 30.398995,
+    "lng": -87.299246,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32514",
+    "lat": 30.53218,
+    "lng": -87.222539,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32526",
+    "lat": 30.499226,
+    "lng": -87.365573,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32530",
+    "lat": 30.597113,
+    "lng": -87.020019,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32531",
+    "lat": 30.898091,
+    "lng": -86.693071,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32533",
+    "lat": 30.612555,
+    "lng": -87.324338,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32534",
+    "lat": 30.528304,
+    "lng": -87.286197,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32535",
+    "lat": 30.963698,
+    "lng": -87.346175,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32536",
+    "lat": 30.750432,
+    "lng": -86.597598,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32539",
+    "lat": 30.778999,
+    "lng": -86.477169,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32541",
+    "lat": 30.395159,
+    "lng": -86.478784,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32542",
+    "lat": 30.507738,
+    "lng": -86.541443,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32544",
+    "lat": 30.426372,
+    "lng": -86.719287,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32547",
+    "lat": 30.466178,
+    "lng": -86.652985,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32548",
+    "lat": 30.413213,
+    "lng": -86.589259,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32561",
+    "lat": 30.340667,
+    "lng": -87.116593,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32563",
+    "lat": 30.390852,
+    "lng": -87.024785,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32564",
+    "lat": 30.728808,
+    "lng": -86.781915,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32565",
+    "lat": 30.89438,
+    "lng": -87.145454,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32566",
+    "lat": 30.425302,
+    "lng": -86.892346,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32567",
+    "lat": 30.921061,
+    "lng": -86.431503,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32568",
+    "lat": 30.877835,
+    "lng": -87.47486,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32569",
+    "lat": 30.41138,
+    "lng": -86.728401,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32570",
+    "lat": 30.791549,
+    "lng": -86.982974,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32571",
+    "lat": 30.673287,
+    "lng": -87.19585,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32577",
+    "lat": 30.740981,
+    "lng": -87.379367,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32578",
+    "lat": 30.50784,
+    "lng": -86.448375,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32579",
+    "lat": 30.445672,
+    "lng": -86.574308,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32580",
+    "lat": 30.506542,
+    "lng": -86.51469,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "32583",
+    "lat": 30.604882,
+    "lng": -86.972179,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36502",
+    "lat": 31.147733,
+    "lng": -87.494821,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36507",
+    "lat": 30.858609,
+    "lng": -87.742025,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36511",
+    "lat": 30.305228,
+    "lng": -87.742637,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36526",
+    "lat": 30.611145,
+    "lng": -87.864746,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36527",
+    "lat": 30.702075,
+    "lng": -87.881866,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36530",
+    "lat": 30.40821,
+    "lng": -87.555585,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36532",
+    "lat": 30.480713,
+    "lng": -87.861307,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36535",
+    "lat": 30.381175,
+    "lng": -87.72965,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36542",
+    "lat": 30.26965,
+    "lng": -87.750627,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36547",
+    "lat": 30.252206,
+    "lng": -87.654504,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36549",
+    "lat": 30.411162,
+    "lng": -87.451119,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36550",
+    "lat": 31.24943,
+    "lng": -87.730436,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36551",
+    "lat": 30.636677,
+    "lng": -87.74703,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36555",
+    "lat": 30.399667,
+    "lng": -87.773019,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36559",
+    "lat": 30.56904,
+    "lng": -87.903933,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36561",
+    "lat": 30.287622,
+    "lng": -87.571267,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36562",
+    "lat": 31.037057,
+    "lng": -87.670416,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36564",
+    "lat": 30.469787,
+    "lng": -87.914526,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36567",
+    "lat": 30.623536,
+    "lng": -87.55696,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36574",
+    "lat": 30.500977,
+    "lng": -87.478432,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36576",
+    "lat": 30.522939,
+    "lng": -87.763842,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36578",
+    "lat": 30.737389,
+    "lng": -87.771888,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36579",
+    "lat": 31.110476,
+    "lng": -87.786871,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  },
+  {
+    "zip": "36580",
+    "lat": 30.478898,
+    "lng": -87.703414,
+    "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2025_Gazetteer/2025_Gaz_zcta_national.zip",
+    "sourceYear": 2025
+  }
+]

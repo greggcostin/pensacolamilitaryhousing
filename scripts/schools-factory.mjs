@@ -2,8 +2,8 @@
 // /schools/<slug> (one page per school) from the official FLDOE dataset in
 // content/schools/school-grades-2026.json. Data-driven by design: every grade
 // shown is the school's official Florida DOE accountability grade with source
-// and year. NO editorial ratings, rankings, or pros/cons of named schools
-// (fair-housing safe: we present official data + a neutral evaluation framework).
+// and year. The shared page builder adds sourced school guides and transparent
+// comparisons; it never turns neighborhood or demographic data into school rankings.
 // Usage: node scripts/schools-factory.mjs
 import { readFileSync, mkdirSync } from "node:fs";
 import { SITE_DIR, SITE, esc, buildPage, breadcrumbs, webPage, makeOgCard, gate } from "./civilian-page-lib.mjs";

@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-09-06",
+  "sourceKind": "Official public-school campus and current-program supplements to the immutable 2024-25 NCES directory",
+  "scope": "Update only explicitly sourced addresses, map points and contextual campus notes. NCES identity, directory year, reported grade span, level filters and Florida accountability records retain their original sources.",
+  "schools": [
+    {
+      "ncesId": "120051010638",
+      "name": "Pensacola State Charter Academy",
+      "checkedAt": "2026-09-06",
+      "reason": "The school publishes a move to Pensacola Campus Building 11 beginning fall 2025. The 2024-25 NCES record still locates the academy at the former Warrington Campus address, 5555 W Highway 98.",
+      "sourceUrl": "https://charteracademy.pensacolastate.edu/application-process/",
+      "evidence": "The official application page identifies Building 11 on the Pensacola Campus beginning fall 2025, and gives 1000 College Boulevard, Building 11, Pensacola, FL 32504 for mailing and hand delivery of admissions documents.",
+      "address": "1000 College Boulevard, Building 11",
+      "city": "Pensacola",
+      "state": "FL",
+      "zip": "32504",
+      "lat": 30.480091553217,
+      "lng": -87.203352723374,
+      "campusNote": "The academy moved to Pensacola State College's Pensacola Campus, Building 11, beginning fall 2025. This pin is an approximate Census street-address point for 1000 College Boulevard, not the building entrance. Confirm Building 11 access with the school. Campus information checked September 6, 2026.",
+      "geocoderUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1000%20College%20Boulevard%20Pensacola%20FL%2032504&benchmark=Public_AR_Current&format=json",
+      "geocoderCheckedAt": "2026-09-06",
+      "matchedAddress": "1000 COLLEGE BLVD, PENSACOLA, FL, 32504",
+      "tigerLine": {
+        "side": "L",
+        "tigerLineId": "93269253"
+      },
+      "benchmark": {
+        "isDefault": true,
+        "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+        "id": "4",
+        "benchmarkName": "Public_AR_Current"
+      },
+      "addressComponents": {
+        "zip": "32504",
+        "streetName": "COLLEGE",
+        "preType": "",
+        "city": "PENSACOLA",
+        "preDirection": "",
+        "suffixDirection": "",
+        "fromAddress": "1000",
+        "state": "FL",
+        "suffixType": "BLVD",
+        "toAddress": "1098",
+        "suffixQualifier": "",
+        "preQualifier": ""
+      }
+    }
+  ],
+  "notes": [
+    {
+      "ncesId": "120051000815",
+      "name": "Warrington Preparatory Academy",
+      "checkedAt": "2026-09-06",
+      "reason": "The school's current enrollment information includes ninth grade, while the dated NCES directory reports grades 6 through 8. Preserve the historical span and DOE accountability category rather than silently replacing them.",
+      "sourceUrl": "https://www.warringtonprep.org/",
+      "evidence": "The official homepage states that the public charter school serves grades 6-9 and announces ninth-grade applications for the 2026-27 school year.",
+      "campusNote": "Warrington Prep currently publishes enrollment for grades 6 through 9. The directory span of 6 through 8 reflects its 2024-25 NCES record. Confirm current grade availability with the school. School information checked September 6, 2026."
+    },
+    {
+      "ncesId": "120165007684",
+      "name": "Santa Rosa Virtual Franchise / Santa Rosa Online",
+      "checkedAt": "2026-09-06",
+      "reason": "The district's 2026-27 full-time Santa Rosa Online announcement specifies grades 3 through 12, while the NCES virtual-franchise record reports kindergarten through grade 12. Full-time and part-time program eligibility must not be inferred from the historical directory span.",
+      "sourceUrl": "https://www.santarosaschools.org/live_feeds/12620247",
+      "additionalSourceUrls": [
+        "https://www.santarosaschools.org/o/sro/page/courses-available"
+      ],
+      "evidence": "The district announcement dated July 8, 2026 describes full-time Santa Rosa Online enrollment for grades 3-12 in 2026-27. The official school site lists 6556 Firehouse Road as its contact address. The NCES source separately marks this record as virtual.",
+      "campusNote": "Santa Rosa Online's published full-time program serves grades 3 through 12 for 2026-27; the kindergarten-through-12 span is from the 2024-25 NCES virtual-franchise record. Confirm full-time or individual-course eligibility with the school. The listed address is an administrative contact location, so no daily-attendance campus pin is shown. School information checked September 6, 2026."
+    }
+  ]
+}

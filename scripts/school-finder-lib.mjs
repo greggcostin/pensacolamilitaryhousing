@@ -1,5 +1,6 @@
 // Progressive school finder; existing static school reports remain below it.
 import { readFileSync, existsSync } from 'node:fs';
+import { uniqueSchoolGuides, withSchoolBrowse } from './school-browse-lib.mjs';
 export const finderMarkup = `
 <!-- SCHOOL_FINDER_START -->
 <section class="sf" id="school-finder" aria-labelledby="sf-heading">
@@ -50,7 +51,7 @@ export function privateResourceMarkup(data){
   const safe=value=>{try{const url=new URL(value);return ['https:','http:'].includes(url.protocol)?esc(url.href):null;}catch{return null;}};
   const link=(label,url)=>safe(url)?`<a href="${safe(url)}" target="_blank" rel="noopener">${esc(label)}</a>`:'';
   const groups=data.counties.map(county=>{
-    const rows=data.schools.filter(s=>s.sector==='private'&&s.countyKey===county.key);
+    const rows=uniqueSchoolGuides(data.schools.filter(s=>s.sector==='private'&&s.countyKey===county.key));
     return `<div class="sf-private-group"><h3>${esc(county.label)}</h3><ul>${rows.map(s=>`<li>${link(s.name,s.website||s.resourceSourceUrl||s.sourceUrl)}<span>${esc(s.city)} · ${esc(s.religiousOrientation||'Affiliation not reported')}</span><div><a href="#school-finder" data-sf-school-link="${esc(s.id)}">Find on map / list ↗</a>${s.admissionsUrl?link('Admissions ↗',s.admissionsUrl):''}</div></li>`).join('')}</ul></div>`;
   });
   return `<!-- PRIVATE_SCHOOL_RESOURCES_START --><section class="sf sf-private-directory" id="private-school-resources" aria-labelledby="private-schools-heading"><span class="sf-eyebrow">Explore your education options</span><h2 id="private-schools-heading">Private &amp; Christian<br>school resources.</h2><p class="sf-private-intro">Find school websites, reported affiliations and enrollment resources across the region. These links remain available without the interactive map. Schools set their own admissions requirements; confirm current programs, campuses and availability directly.</p><div class="sf-private-groups">${groups.join('')}</div></section><!-- PRIVATE_SCHOOL_RESOURCES_END -->`;
@@ -70,9 +71,9 @@ export function withSchoolFinder(html, path, data) {
   const dataset=data||(existsSync('civilian-site/assets/school-finder-data.json')?JSON.parse(readFileSync('civilian-site/assets/school-finder-data.json','utf8')):null);
   if(dataset){const resources=privateResourceMarkup(dataset);html=html.includes('<!-- PRIVATE_SCHOOL_RESOURCES_START -->')?html.replace(/<!-- PRIVATE_SCHOOL_RESOURCES_START -->[\s\S]*?<!-- PRIVATE_SCHOOL_RESOURCES_END -->/,resources):html.replace('<!-- SCHOOL_FINDER_END -->','<!-- SCHOOL_FINDER_END -->'+resources);
     const e=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
-    const pages=[...new Map(dataset.schools.filter(s=>s.reportUrl).map(s=>[s.reportUrl,s])).values()];
+    const pages=uniqueSchoolGuides(dataset.schools);
     const directory='<!-- ALL_SCHOOL_PAGES_START --><section class="sf sf-private-directory" id="all-school-guides"><span class="sf-eyebrow">A guide for every school</span><h2>Explore every school guide.</h2><p>Public, private, Christian, charter and online options. Every source record links to a guide; duplicate directory identities for the same school share one page. These links work without loading the interactive map.</p><div class="sf-private-groups">'+dataset.counties.map(c=>'<div class="sf-private-group"><h3>'+e(c.label)+'</h3><ul>'+pages.filter(s=>s.countyKey===c.key).map(s=>'<li><a href="'+e(s.reportUrl)+'">'+e(s.name)+'</a><span>'+e(s.city)+' · '+(s.sector==='private'?'Private'+(s.christian?' · Christian':''):s.charter?'Public charter':'Public')+'</span></li>').join('')+'</ul></div>').join('')+'</div></section><!-- ALL_SCHOOL_PAGES_END -->';
     html=html.includes('<!-- ALL_SCHOOL_PAGES_START -->')?html.replace(/<!-- ALL_SCHOOL_PAGES_START -->[\s\S]*?<!-- ALL_SCHOOL_PAGES_END -->/,directory):html.replace('<!-- PRIVATE_SCHOOL_RESOURCES_END -->','<!-- PRIVATE_SCHOOL_RESOURCES_END -->'+directory);
   }
-  return html;
+  return withSchoolBrowse(html,dataset);
 }

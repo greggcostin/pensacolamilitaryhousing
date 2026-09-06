@@ -1,4 +1,20 @@
 /* The map finder is an enhancement; existing server-rendered reports remain intact. */
+/* The static browser shares the public report-card proportions and works without JS. */
+.gc-interior [data-school-browse-nav]{max-width:none!important;justify-content:center;padding:14px 0;gap:10px!important}
+.gc-interior .school-browse-section h2{scroll-margin-top:155px}
+.gc-interior .school-browse-section .school-browse-note{max-width:900px;font-size:14px;line-height:1.8;color:#536073;margin:0 0 24px}
+.school-browse-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.gc-interior .school-browse-grid .school-browse-card{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #d5d9df;border-radius:2px;padding:18px;text-decoration:none;min-width:0}
+.school-browse-card:hover,.school-browse-card:focus-visible{border-color:#ad893e!important;box-shadow:0 4px 15px #101b3009}
+.school-browse-badge{display:flex;align-items:center;justify-content:center;width:40px;height:40px;flex:0 0 40px;border-radius:2px;color:#101b30;font:700 20px/1 var(--sans)}
+.school-browse-badge--type{background:#101b30;color:#d4b45a;border:1px solid #ad893e}
+.school-browse-badge--A{background:#39a05b}.school-browse-badge--B{background:#84b83a}.school-browse-badge--C{background:#e5a523}.school-browse-badge--D{background:#ed8c51}.school-browse-badge--F{background:#db6363}
+.school-browse-details{flex:1;min-width:0}
+.school-browse-name{display:block;font:500 15.5px/1.5 var(--sans);color:#101b30}
+.school-browse-location,.school-browse-facts{display:block;font:400 12.5px/1.7 var(--sans);color:#536073}
+.school-browse-facts{font-size:11.5px;margin-top:3px}
+.school-browse-link{font:700 13px/1.5 var(--sans);color:#82602a;white-space:nowrap}
+@media(max-width:700px){.school-browse-grid{grid-template-columns:1fr}.gc-interior .school-browse-grid .school-browse-card{gap:12px;padding:16px!important}.school-browse-name{font-size:14px}.school-browse-location,.school-browse-facts{font-size:11px}.school-browse-link{font-size:12px}}
 .gc-interior .sf{max-width:1240px;margin:0 auto;padding:62px 44px 12px;color:#101b30;--sf-navy:#101b30;--sf-gold:#c9a84c}
 .sf [hidden]{display:none!important}
 .sf{scroll-margin-top:150px}

@@ -1,136 +1,60 @@
-> Evidence policy v2: read docs/blog-engine-evidence-policy.md and content/blog/weekly-plan.json before commissioning a draft. New substantive work carries editorial.version=2, readerTask, originalValue, conversionGoal and evidenceFile. Both factories validate the sourced pack. Model and image standing orders remain in force. A passing score is not proof of accuracy or search performance.
+# Military blog fragment contract, version 2
 
-# Blog fragment contract — content/blog/<slug>.fragment.html
+Effective September 8, 2026 for every new article and substantive refresh. Read `EDITORIAL-PLAYBOOK.md` and `editorial-policy.json` with this contract. Existing unchanged articles retain their dates and legacy build checks; they are not certified against this standard until refreshed.
 
-Every post is a fragment file here; `node scripts/blog-factory.mjs` builds it into
-`public/blog/<slug>.html`, rebuilds the /blog index, appends the sitemap entry, and
-registers it in `ledger.json`. Run `npm run og-images` after building new posts.
+## Fragment and research file
 
-## File shape
+Write `content/blog/<slug>.fragment.html` with a `<!--PAGE ... PAGE-->` JSON block followed by body HTML. Military fragments use `faq` (the civilian spelling `faqs` remains separate). Keep the metadata and final research review consistent.
 
-```
-<!--PAGE
-{
-  "slug": "kebab-slug",
-  "title": "SEO title ≤62 chars, keyword front-loaded",
-  "description": "150-160 char meta description",
-  "keywords": "comma, separated",
-  "category": "PCS | VA Loans | Neighborhoods | Market | Buying | Selling | Living Here",
-  "datePublished": "YYYY-MM-DD",
-  "dateModified": "YYYY-MM-DD",   // == datePublished for new posts; bump ONLY on substantive updates
-  "readTime": "8 min",
-  "h1": "On-page headline (entities ok)",
-  "lead": "1-2 sentence standfirst",
-  "excerpt": "Card text for the /blog index (1-2 sentences)",
-  "targetKeywords": ["primary query", "secondary query"],   // the engine measures these
-  "faq": [{"q": "...", "a": "2-4 sentences, may contain one <a> link"}],
-  "related": [{"href": "/...", "label": "..."}],             // 5-7 existing pages
-  "quickAnswer": "2-4 dated declarative sentences that restate a figure already in the post, with its source. REQUIRED on every post modified on or after 2026-09-04 (GEO standing rule); the factory renders it as the first block after the lead so AI engines quote it.",
-  "shareHook": "optional: one sentence a reader would paste when sharing this, and who it is for (press, base FB groups, a client). Surfaces in the run report.",
-  "figure": {                                    // REQUIRED — factory refuses to build without it
-    "src": "/images/blog/....jpg",               // must exist on disk (fetch-stock-image.mjs or reuse /images/topics|blog|bases|communities)
-    "alt": "literal description of what the photo shows",
-    "caption": "one line tying the image to the post",
-    "pos": "center 30%"                          // optional object-position for the 16:9 crop
-  }
-}
-PAGE-->
-...body HTML...
-```
+Required PAGE fields:
 
-## Images (standing rule, Aug 2026)
+- `slug`, `title` (maximum 65 characters), `description` (120-165 characters), `h1`, `lead`, `excerpt`, `category`, `readTime`.
+- `datePublished` and `dateModified` as real ISO dates. Preserve original publication dates. Advance modification dates only for substantive changes, never for a rebuild, source visit, title-only test or metadata adjustment.
+- `editorialVersion: 2`, `targetKeywords` with 2-5 natural queries, `takeaways` with 3-5 useful points, and a natural one-sentence `shareHook`.
+- `quickAnswer`: 2-4 dated sentences under 85 words, restating a supported figure and the condition that matters. A number already used elsewhere in the article does not become verified merely by repetition.
+- `faq`: at least six distinct question/answer objects `{q,a}`. Give each answer 40-95 useful words. The factory mirrors the visible answer in FAQPage markup; no Google FAQ rich-result claim is made.
+- `related`: 5-7 relevant existing guide links `{href,label}`. Use descriptive labels. At least six unique internal guide links belong in the body, with at least eight unique useful guide/source links overall.
+- `perishables`: for each dated perishable fact, `{claimId,claim,expires,source}` matching its research claim, review deadline and supporting URL.
+- `figure`: `{src,alt,caption}` with a real image path under `/images/`, literal descriptive alt text, correct license/credit and an optional `pos` crop. A commercially reusable image is mandatory.
+- `editorial`: `{version:2,evidenceFile,readerTask,originalValue,conversionGoal,pillar}`. `evidenceFile` must point to the single matching research JSON inside `content/blog/`.
+- Optional `journey`: `{goal,prompt,tool,toolLabel,bridge,bridgeLabel}`. Both destinations must be existing clean first-party URLs. The normal inquiry path remains unchanged.
 
-- **Every post ships a hero photo** (`figure` above) that is genuinely relevant — the real
-  place, the real aircraft, the real subject. No generic decoration.
-- **Sourcing (standing order, Aug 22 2026): FETCH NEW imagery for every new post** —
-  `node scripts/fetch-stock-image.mjs "<query>" <slug>-hero --candidates 3
-  --dir public/images/blog` (commercial-safe licenses only; attribution recorded in
-  `content/blog/image-credits.json`). VIEW candidates with the Read tool before picking —
-  file titles lie. Finalize with `--finalize`, then `npm run modern-images`. Library
-  reuse (`/images/topics|blog|bases|communities/`) is the fallback only when 2-3 query
-  variants yield nothing that passes the eye test; log the substitution.
-- **Credits:** the factory auto-appends the license credit to the figcaption from the
-  ledger. CC-BY / CC-BY-SA images MUST keep that visible linked credit; public-domain DoD
-  imagery carries a courtesy "U.S. Navy photo" style line.
-- **Inline figures** for 2,500+ word posts: 1-2 of
-  `<figure class="figure-band"><img src="..." alt="..." loading="lazy"><figcaption>...</figcaption></figure>`
-  at natural section breaks. The factory rewrites them to `<picture>` (AVIF/WebP) + credit
-  form automatically — authors write the plain `<img>`.
-- Captions are prose: the no-em-dash rule applies.
+The single `content/blog/research/<slug>.json` carries the shared evidence schema and editorial fields:
 
-## Writing spec (house standards; search performance is measured separately)
+- `schemaVersion:2`, `version:2`, `slug`, `article:{slug,site:"pmh"}`, `sessionDate`, actual `models:{research,write}`, `uncertainFacts`, `readerTask`, `originalValue`, `reader`, `decision`, `pillar`, `changeReason`.
+- `sources`: `{id,publisher,title,url,primary,checkedAt,evidenceNote}`. Use HTTPS URLs and source reads from this session. Notes identify the relevant source section and limitations. Search snippets are not source verification.
+- `claims`: one record per load-bearing fact/calculation, with both `text` (the exact visible passage) and `claim` (the source claim), a unique `id`, `kind`, `status`, `sourceIds`, `sourceUrl`, `scope`, `asOf`, `accessed`, `locator`, `loadBearing`, `verification` and `independentCheck:{reviewer,date,finding}`. Link load-bearing body passages with `data-claim="id"`. Claims marked uncertain/omitted must not appear as established facts.
+- Facts use `kind:"fact"`; perishable facts also use `perishable:true` and `expires`. Keep source publication date, effective date, geography and population distinct. Refreshes re-verify retained facts.
+- Calculations use `kind:"calculation"`, explicit `assumptions`, a `method` and `calculation:{operation,inputs,result,units,inputSources,tolerance}`. Supported numeric operations are sum, product, difference, quotient and amortization. Tolerance cannot exceed 0.01. Do not put executable formulas in the record. Label illustrative scenarios rather than describing them as actual transactions.
+- `searchLandscape`: actual reviewed results, question wording with provenance and the specific information gap this article fills. Label editorial suggestions honestly; do not fabricate People Also Ask results or demand.
+- `localApplications`: two objects `{place,decision,passage}` describing an actual local implication in the final article. Location-name repetition does not qualify.
+- `military`: `{audience,readerSituation,dutyLocations,topics,limitations}` using the policy's audience and topic identifiers. Explain what the reader's orders, dependency/student status, property or household would change.
+- Military benefit facts additionally have `appliesTo` and `limitations`. Use official DoD/DFAS sources for BAH, official VA sources for VA benefits, and current official moving guidance for PCS entitlements.
+- A numeric BAH claim has `bahRate:{year,mha,grade,dependency,monthly}`. Dependency is `withDependents` or `withoutDependents`; the source-reviewed MHA mapping is FL064 for Pensacola and FL056 for Eglin/Hurlburt/Duke. Annual JSON/archive must be available and match provenance. Run `verify-bah-source.mjs` and independently read the official source. Never use assumed pay by rank.
+- `quickAnswerClaimIds`: the IDs of claims restated verbatim in the quick answer.
+- `answerPassages`: at least two `{question,answer,claimIds,scope,caveat}` objects. The answer must be the exact opening paragraph under that H2 or the exact FAQ answer. Keep the material caveat in that answer and its supporting claim text in the same passage.
+- `review`: after the final source and voice review, record `provider`, actual `model`, `checkedAt`, `notes`, `checks:{facts,calculations,voice,scope,sources,counterarguments}` and hashes from `contentHash(spec,body)` and `evidenceHash(research)` in `scripts/blog-editorial-lib.mjs`. Any content or evidence edit requires another review. Hashes prove what was reviewed, not whether the source is true or a specialist approved it.
 
-1. **Question-shaped H2s, each followed immediately by a 40–80 word direct answer**, then
-   supporting detail. AI systems retrieve passages, not pages.
-2. **Every statistic carries a named source and a data vintage**: "median sale price in
-   32571 was $348K in July 2026 (Pensacola MLS)". Never invent numbers.
-3. **An original, useful contribution on every post**: a sourced checklist, documented
-   local observation, reproducible calculation or comparison. Personal experience requires
-   a real record. Label hypothetical scenarios. Never invent a commute, client, result
-   or quotation to satisfy a style score.
-4. **1,200–5,000 words.** Mega-guides 4,000+; decision posts 1,500-2,500; news reactions 1,200+.
-5. **6–12 internal links** woven into prose — into base/community hubs, /bah-rates,
-   /pcs-home-search, /whats-my-home-worth, /va-loan-guide, and sibling posts. No orphans.
-6. **Audience**: military AND civilian. Military posts stay in Gregg's lane; civilian
-   posts (retirees, remote workers, first-time buyers, investors) widen the AI
-   recommendation surface — always with the local-expert angle, never generic national advice.
-7. Site CSS classes available: h2/h3/p/ul/ol/strong, `.facts` grid, `.bah-wrap > table.bah-table`,
-   `.cta`, `.inq-cta` (with `data-inquiry-open data-inquiry-type="..."` — exact worker strings only:
-   "PCS / Relocation — Buying", "PCS / Relocation — Selling", "Selling My Home",
-   "VA Loan Questions", "Investment Property", "General Question").
-8. End with a Sources and References section (`<h2>` + `<ul>` of official links) when the
-   post makes factual claims.
-9. **Never fabricate**: prices, rates, school grades, laws, or client stories. Hedge or omit.
-10. **NO EM DASHES: standing rule (Gregg, Aug 2026).** Never use the em dash character or
-    `&mdash;` anywhere in a post's prose: not in the title, lead, excerpt, FAQ answers,
-    or body. Rewrite with commas, colons, periods, or parentheses; use plain hyphens for
-    ranges ("$280K-$315K"). Do not substitute double hyphens or numeric entities. The
-    factory refuses to build any fragment containing one. SOLE EXCEPTION: the
-    `data-inquiry-type="..."` attribute value must match the contact worker's exact
-    strings, which contain an em dash (e.g. "PCS / Relocation — Buying"); write the
-    literal character there, never an entity workaround.
-11. **No wall paragraphs (standing rule, Sep 2026).** The factory refuses any paragraph
-    over 110 words and warns over 85. Target zero over 85 and a 90+ score in
-    `scripts/analyze-formatting.mjs` before staging. Split by idea, convert data-bearing
-    prose to a list or `.bah-table`, add a question-shaped h3 so no section runs 250+
-    words unbroken. Structure-only edits never change facts, hedges, H2s, FAQ or links.
-12. **Correct errors, not brands.** When the research shows a third party publishing a
-    wrong figure, state the wrong figure and the right source; do not name the site or
-    company. Naming a competitor is Gregg's call in review, never the machine's.
-13. **Quick answer first.** Every new or refreshed post opens with the `quickAnswer`
-    block: the one number a searcher came for, dated, attributed, in plain declarative
-    sentences. If the post cannot state its key figure in two sentences it is not ready.
+Use `research/TEMPLATE.json` for field shape only. It is explicitly nonpublishable. Do not mark checks verified or seal a review before doing them.
 
-## SEO checklist — standing rule, every post (factory enforces the starred items)
+## Writing and utility
 
-- ★ `targetKeywords` present; primary keyword appears in the title (front-loaded), in the
-  H1, in the first 100 words of the body, and reads naturally in the slug.
-- ★ Title ≤65 chars; meta description 120-165 chars containing the primary keyword.
-- ★ 6+ internal links minimum (spec above says 6-12; mega-guides 25+).
-- ★ Body 1,100+ words minimum (decision posts 1,500-2,500; mega-guides 4,000+). Depth means
-  covering the full question-space a searcher has, never padding.
-- ★ 4+ FAQ items minimum (6-10 for guides), phrased like People-Also-Ask questions.
-- H2s are question-shaped and match real search queries; each opens with a 40-80 word
-  direct answer (this is both the AI-citation format and the featured-snippet format).
-- Secondary keywords appear in at least one H2 each; no keyword stuffing — natural prose.
-- FAQ questions mirror People-Also-Ask phrasing for the topic.
-- Excerpt is click-worthy on the /blog index and in SERPs.
-- Stats carry named sources + vintage (both an E-E-A-T and an AI-citation signal).
-- Related links + hub links wired so the post is never an orphan.
-- After build: run `npm run og-images` so the post has its own social card.
+Answer the question first. Favor question-shaped H2s drawn from the actual research; their first paragraph answers the question before elaborating. Use 1,100+ body words without padding, one useful table, one actionable checklist and one worked example. Aim for no paragraphs over 85 words; paragraphs over 110 fail the factory. Length, FAQ and score thresholds are house standards, not Google ranking factors.
 
-## Evidence and reader task, version 2
+Write for the selected military reader. Explain general finance through that reader's real decision and link to the civilian site's fuller general explanation when appropriate. Never invent first-person service, local observations, client anecdotes, outcomes, school claims, prices, rates, eligibility or legal interpretations. Separate verified facts, hypothetical calculations and judgment. State the downside and what could reverse the conclusion.
 
-The PAGE metadata includes:
+No em dashes, en dashes, emojis, encoded substitutes, canned transitions or keyword padding in reader-facing prose, metadata, captions, FAQs or link labels. Preserve the exact technical `data-inquiry-type` string required by the contact worker; that attribute alone is exempt from the dash rule.
 
-    "editorial": {
-      "version": 2,
-      "readerTask": "The concrete decision this reader needs to make",
-      "originalValue": "The reusable checklist, comparison or documented calculation",
-      "conversionGoal": "purchase-budget",
-      "evidenceFile": "content/blog/research/article-slug.json"
-    }
+Use existing site classes: `.facts`, `.bah-wrap > table.bah-table`, `.table-wrap`, `.figure-band`, `.cta` and `.inq-cta`. Finish with a Sources and References section linking the actual primary sources. A table should have a caption and column headings; keep wide tables inside a scrollable wrapper.
 
-Bind load-bearing prose with data-claim ids and visible source links. Record uncertain facts, population and eligibility limits, and the actual models. A source list alone does not validate claims. The validator never replaces independent reading of the original sources.
+## Imagery, build and release
 
-The factory supplies accessible sharing controls and a topic-specific tool, companion guide and inquiry path. Keep the useful answer available before the inquiry. Do not promise savings, rankings or client results. New articles still follow the image, formatting and one-post rules.
+Fetch new imagery using `scripts/fetch-stock-image.mjs` into `public/images/blog`. View every candidate, reject misleading/low-quality imagery and record the license and credit. Reuse is a documented fallback after 2-3 unsuccessful searches. Finalize, generate modern/responsive variants, then apply responsive markup. Longer guides should use additional relevant imagery at natural breaks. Do not invent a srcset file that does not exist.
+
+Run `node scripts/blog-factory.mjs <slug> --out artifacts/military-preview` while editing. Pass `node scripts/score-post.mjs <slug> --site pmh --gate` at 80+ and `node scripts/analyze-formatting.mjs --file <rendered-page> --gate` at 90+. The builder also applies the shared evidence gate and military editorial gate. No score can compensate for a failed mandatory evidence check.
+
+After final review, build the selected slug normally, generate its OG card and inspect it, and run the military, entity, link and dash audits plus the relevant source checks. Use `npm run build` for the staged military release. Do not run a broad legacy affordability generator over the source-reviewed core guides. Their source data lives in `content/geo/` and `src/bahData.js`.
+
+Honor `content/blog/ledger.json` configuration. With `autoPublish:false`, commit only owned files on a review branch, push that branch and report the preview, score, shareHook and evidence gaps. Publication needs Gregg's authorization. Add two or three planned contextual inbound links to the staged release, preserve the civilian entries in shared retro files, and record actual deployment and later outcomes separately.
+
+The builder also checks `content/geo/financial-guide-data.mjs` when present. An article owned by that reviewed financial-guide source must use `scripts/financial-guide-lib.mjs` and its checks, rather than a legacy blog fragment. A mixed legacy checkout is not permission to overwrite a reviewed financial page.

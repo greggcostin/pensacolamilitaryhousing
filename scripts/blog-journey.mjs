@@ -6,7 +6,7 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&
 
 export function journeyFor(spec, site) {
   const slug = spec.slug, text = (slug + " " + spec.category).toLowerCase();
-  if (site === 'gc' && spec.journey) {
+  if (spec.journey) {
     const j=spec.journey;
     if (!/^[a-z][a-z-]{2,60}$/.test(j.goal || '') || ['prompt','tool','toolLabel','bridge','bridgeLabel'].some(k=>typeof j[k]!=='string' || !j[k].trim())) throw Error('A custom article journey requires a stable goal, prompt and two labeled first-party destinations');
     return j;
@@ -18,6 +18,8 @@ export function journeyFor(spec, site) {
     if (/tax/.test(text)) return { goal: "property-cost-review", prompt: "Compare tax rules with the address and ownership plan you are considering.", tool: "/resources/florida-homestead-exemption", toolLabel: "Review homestead requirements", bridge: "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide", bridgeLabel: "Veteran buyer? See the county tax guide" };
     return { goal: "buyer-planning", prompt: "Use this guide to prepare the questions for your own purchase.", tool: "/resources/first-time-home-buyer", toolLabel: "Plan your next home purchase", bridge: "https://pensacolamilitaryhousing.com/va-loan-guide", bridgeLabel: "Using a VA loan? Review the VA buyer guide" };
   }
+  if (spec.editorial?.pillar === 'sell-or-rent' || /rent.or.sell|sell.or.rent/.test(text)) return {goal:'pcs-exit-plan',prompt:'Compare sale proceeds with a conservative rental budget and the obligations that continue after your move.',tool:'/rent-or-sell-pcs-pensacola',toolLabel:'Compare your PCS exit options',bridge:'https://greggcostin.com/sell',bridgeLabel:'Build a local selling plan'};
+  if (spec.editorial?.pillar === 'training-housing') return {goal:'student-housing-plan',prompt:'Start with your orders, student status and housing-office instructions before signing a lease or choosing a purchase timeline.',tool:'/flight-school-housing-pensacola',toolLabel:'Review flight-school housing questions',bridge:'/pcs-guide',bridgeLabel:'Build your move checklist'};
   if (/tax|homestead/.test(text)) return { goal: "property-cost-review", prompt: "Apply the checklist to a specific address before relying on an advertised monthly payment.", tool: "/va-disability-property-tax-florida", toolLabel: "Review veteran property-tax rules", bridge: "https://greggcostin.com/resources/florida-homestead-exemption", bridgeLabel: "Compare Florida homestead requirements" };
   if (/bah|concession|assumption/.test(text)) return { goal: "purchase-budget", prompt: "Compare the full payment, cash needed and ownership plan for the home you are considering.", tool: "/mortgage-calculators", toolLabel: "Work through a purchase budget", bridge: "https://greggcostin.com/blog/closing-costs-florida-buyers", bridgeLabel: "Include Florida closing costs in your plan" };
   if (/personal-property|pcs-to/.test(text)) return { goal: "relocation-planning", prompt: "Turn your moving timeline into a housing search plan.", tool: "/pcs-guide", toolLabel: "Use the PCS planning guide", bridge: "https://greggcostin.com/neighborhoods", bridgeLabel: "Explore local community guides for the whole household" };
@@ -52,6 +54,18 @@ export function articleRuntime(config) {
   const doc = document, nav = navigator, main = doc.querySelector("main");
   const panel = doc.querySelector("[data-article-journey]");
   if (!main || !panel) return;
+  if (config.site === 'pmh' && doc.documentElement?.style?.setProperty) {
+    const banner = doc.querySelector('.main-banner');
+    if (banner) {
+      const updateGap = () => doc.documentElement.style.setProperty('--article-anchor-gap', Math.ceil(banner.getBoundingClientRect().height + 16) + 'px');
+      updateGap();
+      if (typeof window.ResizeObserver === 'function') {
+        const observer = new window.ResizeObserver(updateGap);
+        observer.observe(banner);
+        window.addEventListener('pagehide', () => observer.disconnect(), {once:true});
+      } else window.addEventListener('resize', updateGap);
+    }
+  }
   const seen = new Set();
   const emit = (name, data = {}, once = false) => {
     if (nav.globalPrivacyControl === true || nav.doNotTrack === "1" || typeof window.gtag !== "function") return;

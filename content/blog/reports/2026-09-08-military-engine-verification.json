@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-08",
+  "type": "generator-maintenance",
+  "provider": "codex",
+  "model": "gpt-6-astra",
+  "reasoningEffort": "max",
+  "baseCommit": "2ecb6e994d2ac49f9a3a9efb01eaf6c659bf321b",
+  "branch": "codex/military-blog-geo-upgrade",
+  "articleChanges": 0,
+  "productionDeployment": false,
+  "indexingSubmission": false,
+  "liveMeasurementRun": false,
+  "checks": {
+    "focusedTests": {
+      "total": 60,
+      "pass": 60,
+      "fail": 0,
+      "command": "node --test scripts/military-editorial.test.mjs scripts/civilian-editorial.test.mjs scripts/tests/blog-evidence.test.mjs"
+    },
+    "militaryAudit": {
+      "pages": 369,
+      "sitemapUrls": 376,
+      "shareCards": 375,
+      "findings": 0
+    },
+    "entityAudit": {
+      "pages": 679,
+      "findings": 0
+    },
+    "dashAudit": {
+      "pages": 372,
+      "app": true,
+      "findings": 0
+    },
+    "linkAudit": {
+      "broken": 0
+    },
+    "compatibilityRender": {
+      "slug": "personal-property-activity-pcs-2026",
+      "formattingScore": 100,
+      "newFactVerification": false,
+      "normalBuild": true,
+      "isolatedBuild": true,
+      "desktopWidth": 1280,
+      "mobileWidth": 390,
+      "mobileDocumentWidth": 375,
+      "tableWidth": 345.33,
+      "brokenImages": 0,
+      "consoleErrors": 0,
+      "contentsLinks": 8,
+      "faqExpanded": true,
+      "mobileHeadingTopAfterClick": 172.14,
+      "mobileBannerBottom": 155.23,
+      "ogVisuallyChecked": true
+    }
+  },
+  "legacyEditorialBaseline": {
+    "articles": 12,
+    "minimum": 78,
+    "maximum": 95,
+    "mean": 85.1
+  },
+  "nextEditorialProposal": {
+    "kind": "queued-refresh",
+    "slug": "nas-pensacola-student-housing-dorms-bah-off-base",
+    "owner": "https://pensacolamilitaryhousing.com/flight-school-housing-pensacola",
+    "observedDemand": false,
+    "note": "An editorial proposal requiring fresh official-source research and owner review, not a verified traffic opportunity."
+  },
+  "gaps": [
+    "No new live Bing, Clarity, GSC or citation measurements collected for this code maintenance task.",
+    "Existing articles have not been retroactively certified against the new evidence standard.",
+    "The shared checkout contains concurrent financial-guide work and is behind current main; the tested upgrade is isolated on its review branch.",
+    "No new article, public page, shared ledger or core BAH/financial source changes are included."
+  ],
+  "sourceGuidanceChecked": [
+    "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "https://developers.google.com/search/docs/appearance/ai-features",
+    "https://developers.google.com/search/docs/appearance/structured-data/article",
+    "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "https://developers.google.com/search/updates",
+    "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/",
+    "https://www.va.gov/housing-assistance/home-loans/eligibility/",
+    "https://www.travel.dod.mil/Policy-Regulations/Joint-Travel-Regulations/"
+  ]
+}

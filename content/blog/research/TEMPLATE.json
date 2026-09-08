@@ -1,0 +1,75 @@
+{
+  "templateOnly": true,
+  "schemaVersion": 2,
+  "version": 2,
+  "slug": "replace-with-article-slug",
+  "article": {"slug":"replace-with-article-slug","site":"pmh"},
+  "sessionDate": null,
+  "models": {"research":null,"write":null},
+  "readerTask": "Replace with the reader's concrete task",
+  "originalValue": "Replace with the reporting or calculation this article adds",
+  "reader": "Identify the actual reader",
+  "decision": "State the decision",
+  "pillar": "Use a military editorial-policy pillar",
+  "changeReason": "Explain why this work is useful now",
+  "military": {
+    "audience": "veteran",
+    "readerSituation": "Replace with the actual situation",
+    "dutyLocations": [],
+    "topics": [],
+    "limitations": []
+  },
+  "uncertainFacts": [],
+  "sources": [{
+    "id": "source-1",
+    "publisher": "Actual publisher",
+    "title": "Exact document title",
+    "url": "https://www.va.gov/housing-assistance/home-loans/eligibility/",
+    "primary": true,
+    "checkedAt": null,
+    "evidenceNote": "Record the section actually read, data vintage, population and limitation"
+  }],
+  "claims": [{
+    "id": "claim-1",
+    "kind": "fact",
+    "text": "Exact passage that will occur in the final article",
+    "claim": "Source claim and its qualifications",
+    "status": "unverified",
+    "sourceIds": ["source-1"],
+    "sourceUrl": "https://www.va.gov/housing-assistance/home-loans/eligibility/",
+    "scope": "Actual geography and population",
+    "asOf": null,
+    "accessed": null,
+    "locator": "Specific source section",
+    "loadBearing": true,
+    "verification": null,
+    "independentCheck": {"reviewer":null,"date":null,"finding":null},
+    "appliesTo": "Specific service, borrower or property status",
+    "limitations": "What changes the conclusion",
+    "perishable": true,
+    "expires": null
+  }],
+  "quickAnswerClaimIds": [],
+  "answerPassages": [{
+    "question": "Exact H2 or FAQ question",
+    "answer": "Exact opening paragraph or FAQ answer",
+    "claimIds": ["claim-1"],
+    "scope": "Who and where this applies",
+    "caveat": "Exact visible qualification in this answer"
+  }],
+  "localApplications": [{"place":"Actual location","decision":"How this changes the decision","passage":"Exact final-article passage"}],
+  "searchLandscape": {
+    "questions": [{"question":"Question to research","origin":"editorial"}],
+    "results": [],
+    "informationGain": "What the reviewed results miss and this article can verify"
+  },
+  "review": {
+    "provider": null,
+    "model": null,
+    "checkedAt": null,
+    "notes": "Complete the real source, writing and calculation review before sealing hashes",
+    "checks": {"facts":false,"calculations":false,"voice":false,"scope":false,"sources":false,"counterarguments":false},
+    "contentHash": null,
+    "evidenceHash": null
+  }
+}

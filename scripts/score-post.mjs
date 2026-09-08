@@ -8,7 +8,8 @@
 //   node scripts/score-post.mjs --all [--site pmh|gc]                  # table for every post
 //   add --json for machine output, --gate [--min 80] to exit 1 below the bar
 import { existsSync } from "node:fs";
-import { readResearch, isModern, validateEditorial, sentenceCount } from './civilian-editorial-lib.mjs';
+import { readResearch, isModern, validateEditorial, sentenceCount } from './blog-editorial-lib.mjs';
+import { validateMilitaryEditorial } from './military-editorial-lib.mjs';
 import { externalSources, evidenceGate } from "./article-evidence.mjs";
 import { ROOT, SITES, siteOf, parseFragment, listFragments, strip, words, sentences, tokens, overlap, PLACES, SOURCE_CUE, VINTAGE, QWORDS } from "./blog-lib.mjs";
 
@@ -18,9 +19,9 @@ const OWN_VOICE = /(we (have|see|saw|drove|showed|closed|priced|walk|tell|recomm
 
 export function scorePost(spec, body, siteKey) {
   const site = siteOf(siteKey);
-  const modernCivilian = siteKey === 'gc' && isModern(spec);
-  const research = modernCivilian ? readResearch(spec.slug) : null;
-  const editorial = modernCivilian ? validateEditorial(spec, body, research) : null;
+  const modern = isModern(spec);
+  const research = modern ? readResearch(spec.slug, siteKey) : null;
+  const editorial = modern ? (siteKey === 'pmh' ? validateMilitaryEditorial(spec, body, research) : validateEditorial(spec, body, research)) : null;
   const text = strip(body);
   const total = words(body);
   const fails = [];
@@ -70,10 +71,10 @@ export function scorePost(spec, body, siteKey) {
   evidence += sourceUrls.length ? clamp(pct(dated.length, numeric.length) / 0.5, 1) * 5 : 0;
   evidence += clamp(distinctSources / 4, 1) * 4;
   evidence += sourcesSection && sourceUrls.length ? 3 : 0;
-  if (!modernCivilian && numeric.length && pct(sourced.length, numeric.length) < 0.6) fails.push(`evidence: ${sourced.length}/${numeric.length} numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself`);
-  if (!modernCivilian && numeric.length && pct(dated.length, numeric.length) < 0.5) fails.push(`evidence: ${dated.length}/${numeric.length} numeric sentences carry a vintage (month/year); date the perishable ones`);
-  if (!modernCivilian && distinctSources < 4) fails.push(`evidence: ${distinctSources} distinct linked source domain(s); verify relevant primary sources and their claim support`);
-  if (modernCivilian) {
+  if (!modern && numeric.length && pct(sourced.length, numeric.length) < 0.6) fails.push(`evidence: ${sourced.length}/${numeric.length} numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself`);
+  if (!modern && numeric.length && pct(dated.length, numeric.length) < 0.5) fails.push(`evidence: ${dated.length}/${numeric.length} numeric sentences carry a vintage (month/year); date the perishable ones`);
+  if (!modern && distinctSources < 4) fails.push(`evidence: ${distinctSources} distinct linked source domain(s); verify relevant primary sources and their claim support`);
+  if (modern) {
     // A source cue such as "per month" or "county" is not evidence.
     evidence = editorial.errors.some(e => /^(source|claim|research|review)/.test(e)) ? 0 : 20;
     notes.push('Evidence is checked against the source/claim register and final review hash, not source-name density.');
@@ -85,9 +86,9 @@ export function scorePost(spec, body, siteKey) {
   const places = (text.match(PLACES) || []).length;
   const placesPerK = pct(places, total / 1000);
   const distinctPlaces = new Set((text.match(PLACES) || []).map((x) => x.toLowerCase())).size;
-  const local = modernCivilian ? clamp(editorial.localApplications / 2,1)*10 : clamp(distinctPlaces / 3, 1) * 10;
-  if (!modernCivilian && !distinctPlaces) fails.push("local: explain how the advice applies to this service area; never repeat place names just to raise the score");
-  if (modernCivilian && editorial.localApplications < 2) fails.push('local: connect two actual local decisions to their article passages');
+  const local = modern ? clamp(editorial.localApplications / 2,1)*10 : clamp(distinctPlaces / 3, 1) * 10;
+  if (!modern && !distinctPlaces) fails.push("local: explain how the advice applies to this service area; never repeat place names just to raise the score");
+  if (modern && editorial.localApplications < 2) fails.push('local: connect two actual local decisions to their article passages');
 
   // ---- SEO (20) --------------------------------------------------------------------------
   const kws = spec.targetKeywords && spec.targetKeywords.length ? spec.targetKeywords : String(spec.keywords || "").split(",").map((s) => s.trim()).filter(Boolean);
@@ -95,7 +96,7 @@ export function scorePost(spec, body, siteKey) {
   const first100 = text.split(" ").slice(0, 100).join(" ");
   const inTitle = overlap(primary, spec.title), inH1 = overlap(primary, spec.h1), inLead = overlap(primary, first100 + " " + (spec.lead || "")), inSlug = overlap(primary, (spec.slug || "").replace(/-/g, " ")), inDesc = overlap(primary, spec.description);
   const links = (body.match(/href="\//g) || []).length + (body.match(/href="https:\/\/(pensacolamilitaryhousing|greggcostin)\.com/g) || []).length;
-  const usefulLinks = modernCivilian ? new Set([...body.matchAll(/href="([^"]+)"/g)].map(m => m[1]).filter(u => !u.startsWith('#'))).size : links;
+  const usefulLinks = modern ? new Set([...body.matchAll(/href="([^"]+)"/g)].map(m => m[1]).filter(u => !u.startsWith('#'))).size : links;
   const faqs = spec.faq || spec.faqs || [];
   const faqLens = faqs.map((f) => words(f.a));
   const faqOk = faqLens.filter((n) => n >= 40 && n <= 95).length;
@@ -119,19 +120,19 @@ export function scorePost(spec, body, siteKey) {
   // ---- GEO (15) --------------------------------------------------------------------------
   const qa = spec.quickAnswer || "";
   const qaSent = sentenceCount(qa);
-  const qaOk = qa && (!modernCivilian || /\d/.test(qa)) && qaSent >= 2 && qaSent <= 4 && words(qa) < 85;
+  const qaOk = qa && (!modern || /\d/.test(qa)) && qaSent >= 2 && qaSent <= 4 && words(qa) < 85;
   const takeaways = (spec.takeaways && spec.takeaways.length >= 3) || /key takeaways/i.test(text);
   let geo = 0;
   geo += qaOk ? 5 : 0;
   geo += takeaways ? 2 : 0;
-  geo += modernCivilian ? (editorial.errors.length === 0 ? 4 : 0) : clamp(quotable.length / 3, 1) * 4;
+  geo += modern ? (editorial.errors.length === 0 ? 4 : 0) : clamp(quotable.length / 3, 1) * 4;
   geo += spec.shareHook ? 1 : 0;
   geo += clamp(pct(faqQ, faqs.length), 1) * 1;
   geo += spec.dateModified || spec.datePublished ? 1 : 0;
   geo += (spec.perishables && spec.perishables.length) || !numeric.some((s) => /\b(rate|median|average|inventory|premium|deadline|expires)\b/i.test(s)) ? 1 : 0;
   if (!qaOk) fails.push("geo: quickAnswer missing or not 2-4 concise sentences under 85 words; answer the actual question and source any factual claims");
   if (!takeaways) fails.push("geo: no takeaways (3-5 one-line bullets the factory renders as Key takeaways)");
-  if (!modernCivilian && quotable.length < 3) fails.push(`geo: ${quotable.length} quotable sentence(s) (a figure + a named source + a date in under 35 words); verify the claims, and do not add figures merely for points`);
+  if (!modern && quotable.length < 3) fails.push(`geo: ${quotable.length} quotable sentence(s) (a figure + a named source + a date in under 35 words); verify the claims, and do not add figures merely for points`);
   if (!spec.shareHook) fails.push("geo: no shareHook (the one sentence a reader pastes when sharing, and who it is for)");
   if (!(spec.perishables && spec.perishables.length) && numeric.some((s) => /\b(rate|median|average|inventory|premium|deadline|expires)\b/i.test(s))) fails.push("geo: post states perishable figures but declares no perishables [{claim, expires, source}] for the refresh loop");
 
@@ -147,7 +148,7 @@ export function scorePost(spec, body, siteKey) {
   share += checklist ? 2 : 0;
   share += actionItems >= 3 ? 2 : 0;
   share += worked ? 2 : 0;
-  share += modernCivilian ? (research?.searchLandscape?.informationGain && !editorial.errors.length ? 1 : 0) : (spec.editorial?.originalValue ? 1 : 0);
+  share += modern ? (research?.searchLandscape?.informationGain && !editorial.errors.length ? 1 : 0) : (spec.editorial?.originalValue ? 1 : 0);
   if (!table) fails.push("share: no comparison table; add one only if it helps the reader compare real options");
   if (!checklist) fails.push("share: no checklist (an ordered list of 4+ steps, or a bold-led bullet set)");
   if (actionItems < 3) fails.push(`share: ${actionItems} imperative action items (target 3+ concrete things to do)`);
@@ -161,7 +162,7 @@ export function scorePost(spec, body, siteKey) {
   notes.push(...review.warnings);
   return {
     purpose: "Editorial QA only; not a ranking prediction or verification of source truth",
-    version: modernCivilian ? 2 : 1,
+    version: modern ? 2 : 1,
     hardFails: [...(editorial?.errors || []),...review.errors],
     evidenceErrors: review.errors,
     score, grade: score >= 90 ? "A" : score >= 80 ? "B" : score >= 70 ? "C" : "D",

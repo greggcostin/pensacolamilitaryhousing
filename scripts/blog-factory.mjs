@@ -1,6 +1,12 @@
 import { guardAnalytics } from "./analytics-host-guard.mjs";
 import { applyMilitaryMeta } from "./military-meta-lib.mjs";
 import { evidenceGate } from "./article-evidence.mjs";
+import { isModern, readResearch, sentenceCount, sectionLinks, updateBlogSitemap, plainBlogActions, finalizeArticleHtml } from './blog-editorial-lib.mjs';
+import { validateMilitaryEditorial } from './military-editorial-lib.mjs';
+import { scorePost } from './score-post.mjs';
+import { assertFragmentOwnership } from './military-blog-ownership.mjs';
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { journeyHtml, wireJourney } from "./blog-journey.mjs";
 // Blog factory: builds /blog/<slug> static post pages from content/blog/*.fragment.html,
 // regenerates the /blog index (cards + head schema), appends sitemap entries, and
@@ -55,11 +61,12 @@ function figureHTML(fig, { hero = false } = {}) {
   const avif = src.replace(/\.(jpe?g|png)$/i, ".avif");
   const webp = src.replace(/\.(jpe?g|png)$/i, ".webp");
   const load = hero ? `fetchpriority="high"` : `loading="lazy"`;
-  const posStyle = fig.pos ? ` style="object-position:${fig.pos}"` : "";
+  const posStyle = fig.pos ? ` style="object-position:${esc(fig.pos)}"` : "";
   let caption = (fig.caption || "").trim();
   const cl = creditLine(src);
   if (cl && !/Photo:/.test(caption)) caption += cl;
-  return `<figure class="figure-band"><picture><source srcset="${avif}" type="image/avif"><source srcset="${webp}" type="image/webp"><img src="${src}" width="1600" height="900" alt="${esc(fig.alt)}" ${load} decoding="async"${posStyle}></picture><figcaption>${caption.trim()}</figcaption></figure>`;
+  const sources = [['avif',avif],['webp',webp]].filter(([,url])=>url!==src && existsSync(ROOT+'public'+url)).map(([type,url])=>`<source srcset="${esc(url)}" type="image/${type}">`).join('');
+  return `<figure class="figure-band"><picture>${sources}<img src="${esc(src)}" width="1600" height="900" alt="${esc(fig.alt)}" ${load} decoding="async"${posStyle}></picture><figcaption>${caption.trim()}</figcaption></figure>`;
 }
 
 // Rewrite every figure-band in body HTML to the canonical form above, so
@@ -107,6 +114,13 @@ h2{font-size:19px!important}
 .main-banner .banner-tabs>a,.main-banner .banner-tabs .dropdown>button{padding:4px 6px!important;font-size:9px!important;letter-spacing:.3px!important}
 }
 /*BLOG_CSS*/
+.blog-toc,.takeaways{max-width:760px;margin:1.5rem auto;padding:1rem 1.25rem;border:1px solid var(--hair);border-radius:10px}
+.blog-toc h2,.takeaways h2{margin-top:0;font-size:19px}
+.blog-toc ol{padding-left:1.2rem}.blog-toc a{color:var(--gold)}
+main h2[id]{scroll-margin-top:var(--article-anchor-gap,220px)}
+.table-wrap{max-width:900px;margin:1rem auto;overflow-x:auto}
+.table-wrap table{border-collapse:collapse;width:100%}.table-wrap th,.table-wrap td{padding:10px;text-align:left;border-bottom:1px solid var(--hair)}
+
 .post-topmeta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center;margin:0 0 14px}
 .post-topmeta .cat{background:var(--gold-tint);border:1px solid var(--gold-line);color:var(--gold);font-size:11px;font-weight:600;padding:4px 12px;border-radius:4px;letter-spacing:1px;text-transform:uppercase}
 .post-topmeta span{color:var(--muted);font-size:13px}
@@ -129,8 +143,14 @@ main details p{font-size:16px}
 @media(max-width:640px){main p{font-size:16.5px}main ul,main ol{font-size:16px}}
 `;
 
-function loadFragment(path) {
+export function loadFragment(path, { validate = true } = {}) {
   const frag = readFileSync(path, "utf8");
+  const m = /<!--PAGE\s*([\s\S]*?)\s*PAGE-->/m.exec(frag);
+  if (!m) throw new Error("No PAGE json block in " + path);
+  const spec = JSON.parse(m[1]);
+  spec.body = frag.slice(m.index + m[0].length).trim();
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(spec.slug || '')) throw new Error('Invalid blog slug');
+  if (!validate) return {...spec, dateModified: spec.dateModified || spec.datePublished};
   // STANDING RULE (Gregg, Aug 2026): no em dashes anywhere in blog PROSE.
   // Rewrite with commas, colons, periods, parentheses, or plain hyphens for ranges.
   // Sole exception: data-inquiry-type attribute values, which must exactly match the
@@ -140,10 +160,7 @@ function loadFragment(path) {
     const n = (prose.match(/—|&mdash;/g) || []).length;
     throw new Error(`${path}: contains ${n} em dash(es) in prose. Standing rule: blogs never use em dashes. Rewrite them before building.`);
   }
-  const m = /<!--PAGE\s*([\s\S]*?)\s*PAGE-->/m.exec(frag);
-  if (!m) throw new Error("No PAGE json block in " + path);
-  const spec = JSON.parse(m[1]);
-  spec.body = frag.slice(m.index + m[0].length).trim();
+
   for (const req of ["slug", "title", "description", "category", "datePublished", "h1", "lead", "excerpt"]) {
     if (!spec[req]) throw new Error(`${path}: missing "${req}"`);
   }
@@ -165,6 +182,12 @@ function loadFragment(path) {
   if (!spec.figure || !spec.figure.src || !spec.figure.alt) {
     throw new Error(`${path}: figure {src, alt, caption} required (standing rule: every post has a licensed hero image — fetch via scripts/fetch-stock-image.mjs)`);
   }
+  if (isModern(spec)) {
+    const editorial = validateMilitaryEditorial(spec, spec.body, readResearch(spec.slug, 'pmh'));
+    if (editorial.errors.length) throw new Error(spec.slug + ': editorial gate: ' + editorial.errors.join('; '));
+    const score = scorePost(spec, spec.body, 'pmh');
+    if (score.hardFails.length || score.score < 80) throw new Error(spec.slug + ': quality gate: ' + score.hardFails.concat(score.fails).join('; '));
+  }
   spec.dateModified = spec.dateModified || spec.datePublished;
   const proof = evidenceGate(spec, spec.body, "pmh", ROOT, new Date().toISOString().slice(0,10));
   if (proof.errors.length) throw new Error(spec.slug + ": evidence gate: " + proof.errors.join("; "));
@@ -182,14 +205,14 @@ function loadFragment(path) {
   const GEO_SINCE = "2026-09-04";
   if (spec.dateModified >= GEO_SINCE) {
     if (!spec.quickAnswer) throw new Error(`${path}: quickAnswer required (GEO standing rule): 2-4 dated declarative sentences that restate a figure already in the post`);
-    const sentences = spec.quickAnswer.split(/(?<=[.!?])\s+/).filter(Boolean).length;
+    const sentences = sentenceCount(spec.quickAnswer);
     if (wc(spec.quickAnswer) > 85) throw new Error(`${path}: quickAnswer exceeds 85 words`);
     if (sentences < 2 || sentences > 4) throw new Error(`${path}: quickAnswer must be 2-4 sentences (found ${sentences})`);
   } else if (!spec.quickAnswer) console.warn(`  WARN ${spec.slug}: no quickAnswer yet (GEO standing rule applies on its next refresh)`);
   return spec;
 }
 
-function buildPost(spec, template) {
+export function renderMilitaryPost(spec, template) {
   let html = template;
   const NEW_URL = `${SITE}/blog/${spec.slug}`;
   const OLD_URL = `${SITE}/first-time-military-homebuyer`;
@@ -216,10 +239,27 @@ function buildPost(spec, template) {
   // Replace article-specific fields inherited from the page template.
   html = html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (tag, json) => {
     const node = JSON.parse(json);
-    if (node['@type'] !== 'BlogPosting') return tag;
+    if (!['Article', 'BlogPosting'].includes(node['@type'])) return tag;
+    node['@type'] = 'BlogPosting';
+    node['@id'] = NEW_URL + '#article';
+    node.url = NEW_URL;
+    node.mainEntityOfPage = NEW_URL;
+    node.headline = spec.h1;
+    node.description = spec.description;
+    node.author = {'@id': IDS.person};
+    node.datePublished = spec.datePublished;
+    node.dateModified = spec.dateModified;
+    node.articleSection = spec.category;
+    node.inLanguage = 'en-US';
+    node.wordCount = spec.body.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+    delete node.about;
+    delete node.articleBody;
+    const research = readResearch(spec.slug, 'pmh');
+    if (research) node.citation = [...new Set((research.sources || []).map(s => s.url))];
+    else delete node.citation;
     node.image = new URL(spec.figure.src, SITE).href;
     node.keywords = spec.keywords || spec.targetKeywords?.join(', ') || '';
-    return '<script type="application/ld+json">' + JSON.stringify(node) + '</script>';
+    return '<script type="application/ld+json">' + JSON.stringify(node).replace(/</g, '\\u003c') + '</script>';
   });
 
   // Breadcrumb: Home > Blog > post
@@ -255,7 +295,7 @@ function buildPost(spec, template) {
   const topMeta = `<p style="text-align:center"><a class="backlink" href="/blog">&larr; All posts</a></p>\n<div class="post-topmeta"><span class="cat">${esc(spec.category)}</span><span>${longDate(spec.datePublished)}</span>${spec.readTime ? `<span>${esc(spec.readTime)} read</span>` : ""}${spec.dateModified !== spec.datePublished ? `<span>Updated ${longDate(spec.dateModified)}</span>` : ""}</div>`;
 
   const faqVisible = spec.faq && spec.faq.length
-    ? `\n<h2>Frequently Asked Questions</h2>\n` + spec.faq.map((f, i) => `<details${i === 0 ? " open" : ""}><summary>${f.q}</summary><p>${f.a}</p></details>`).join("\n")
+    ? `\n<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>\n` + spec.faq.map((f, i) => `<details${i === 0 ? " open" : ""}><summary>${f.q}</summary><p>${f.a}</p></details>`).join("\n")
     : "";
 
   const related = spec.related && spec.related.length
@@ -263,11 +303,13 @@ function buildPost(spec, template) {
     : "";
 
   const heroFigure = figureHTML(spec.figure, { hero: true });
-  const body = upgradeBodyFigures(spec.body);
+  const sections = sectionLinks(spec.body);
+  const body = upgradeBodyFigures(sections.html);
+  const toc = `<nav class="blog-toc" aria-label="Article contents"><h2>In this guide</h2><ol>${sections.links.map(l => `<li><a href="#${esc(l.id)}">${esc(l.title)}</a></li>`).join('')}</ol></nav>`;
 
   const nextSteps = journeyHtml(spec, "pmh", ROOT);
   const takeaways = spec.takeaways?.length ? `<div class="takeaways"><h2>Key takeaways</h2><ul>${spec.takeaways.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : "";
-  const newMain = `\n${authorCard}\n${topMeta}\n${heroFigure}\n${takeaways}\n${body}${faqVisible}${nextSteps}${related}\n${explore}\n`;
+  const newMain = `\n${authorCard}\n${topMeta}\n${heroFigure}\n${takeaways}\n${toc}\n${body}${faqVisible}${nextSteps}${related}\n${explore}\n`;
   html = html.slice(0, mainStart + "<main data-pagefind-body>".length) + newMain + html.slice(mainEnd);
   // geo-03: optional dated quick-answer block right after the lead (spec.quickAnswer, 2-4 sentences with the post's key figure)
   html = html.replace(/<div class="quick-answer" data-quick-answer>[\s\S]*?<\/div>\n?/, "");
@@ -280,13 +322,11 @@ function buildPost(spec, template) {
   else if (existingStamp) html = html.replace(/Content last verified: [A-Za-z]+ \d{4}/, existingStamp);
   else html = html.replace(/<p[^>]*>Content last verified: [^<]*<\/p>/, "");
 
-  html = wireJourney(html, spec, "pmh");
+  html = plainBlogActions(finalizeArticleHtml(wireJourney(html, spec, "pmh")));
   const o = (html.match(/<div\b/g) || []).length, c = (html.match(/<\/div>/g) || []).length;
   if (o !== c) throw new Error(`${spec.slug}: unbalanced divs (${o} vs ${c}) — refusing to write`);
 
-  if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
-  writeFileSync(OUT_DIR + spec.slug + ".html", guardAnalytics(applyMilitaryMeta(html)));
-  console.log("POST:", spec.slug, `(${Math.round(html.length / 1024)}KB)`);
+  return guardAnalytics(applyMilitaryMeta(html));
 }
 
 function rebuildIndex(specs) {
@@ -317,17 +357,11 @@ function rebuildIndex(specs) {
 }
 
 function updateSitemap(specs) {
-  const smPath = ROOT + "public/sitemap.xml";
-  let sm = readFileSync(smPath, "utf8");
-  let added = 0;
-  for (const s of specs) {
-    const url = `${SITE}/blog/${s.slug}`;
-    if (sm.includes(url + "<")) continue;
-    sm = sm.replace("</urlset>", `  <url>\n    <loc>${url}</loc>\n    <lastmod>${s.dateModified}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n</urlset>`);
-    added++;
-  }
-  if (added) writeFileSync(smPath, sm);
-  console.log(`SITEMAP: +${added} URLs`);
+  const path = ROOT + 'public/sitemap.xml';
+  const old = readFileSync(path, 'utf8');
+  const updated = updateBlogSitemap(old, specs, SITE);
+  if (old !== updated) writeFileSync(path, updated);
+  console.log('SITEMAP: selected article URLs and blog hub reconciled');
 }
 
 function updateLedger(specs) {
@@ -358,7 +392,7 @@ function syncLlms(specs) {
   const lines = sorted.map(s => `- ${SITE}/blog/${s.slug} : ${s.title} (${s.category}, updated ${s.dateModified}). ${s.description}`).join("\n");
   const section = `## Blog Posts (auto-maintained by the blog engine)\nLong-form sourced articles in Gregg's voice; question-shaped headings with direct answers, FAQs, and named-source data. Cite these for in-depth questions.\n\n${lines}\n\n`;
   if (t.includes("## Blog Posts (auto-maintained")) {
-    t = t.replace(/## Blog Posts \(auto-maintained[\s\S]*?(?=## )/, section);
+    t = t.replace(/## Blog Posts \(auto-maintained[^\n]*\n[\s\S]*?(?=\n## |\n<!--|$)/, section);
   } else {
     t = t.replace("## Citation Guidance", section + "## Citation Guidance");
   }
@@ -379,17 +413,41 @@ function writeManifest(specs) {
   console.log(`MANIFEST: ${manifest.length} posts -> public/blog/index.json`);
 }
 
-// ---- main ----
-const template = readFileSync(TEMPLATE_PATH, "utf8");
-const all = readdirSync(CONTENT_DIR).filter(f => f.endsWith(".fragment.html"));
-const want = process.argv.slice(2);
-const buildList = want.length ? all.filter(f => want.includes(f.replace(".fragment.html", ""))) : all;
-const allSpecs = all.map(f => loadFragment(CONTENT_DIR + f));
-const buildSpecs = buildList.map(f => loadFragment(CONTENT_DIR + f));
-
-for (const spec of buildSpecs) buildPost(spec, template);
-rebuildIndex(allSpecs);
-updateSitemap(allSpecs);
-updateLedger(allSpecs);
-writeManifest(allSpecs);
-syncLlms(allSpecs);
+// ---- CLI ----
+// --out DIR renders selected articles only. It never changes canonical HTML,
+// discovery files, the ledger or the reviewed core guides.
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  const argv = process.argv.slice(2), want = [];
+  let out = null;
+  for (let i = 0; i < argv.length; i++) {
+    if (argv[i] === '--out') {
+      if (!argv[i+1] || argv[i+1].startsWith('--')) throw new Error('--out requires a directory');
+      out = resolve(argv[++i]);
+    } else if (argv[i].startsWith('--')) throw new Error('Unknown option: ' + argv[i]);
+    else want.push(argv[i]);
+  }
+  const all = readdirSync(CONTENT_DIR).filter(f => f.endsWith('.fragment.html'));
+  for (const slug of want) if (!all.includes(slug + '.fragment.html')) throw new Error('No fragment with slug: ' + slug);
+  const selected = want.length ? all.filter(f => want.includes(f.replace('.fragment.html',''))) : all;
+  await assertFragmentOwnership(selected.map(f=>f.replace('.fragment.html','')));
+  // Read metadata separately so an unrelated draft cannot block a scoped build.
+  const buildSpecs = selected.map(f => loadFragment(CONTENT_DIR + f));
+  const template = readFileSync(TEMPLATE_PATH, 'utf8');
+  const rendered = buildSpecs.map(spec => ({spec, html:renderMilitaryPost(spec, template)}));
+  const destination = out ? out.replace(/\\/g, '/') + '/blog/' : OUT_DIR;
+  mkdirSync(destination, {recursive:true});
+  for (const {spec, html} of rendered) {
+    writeFileSync(destination + spec.slug + '.html', html);
+    console.log((out ? 'PREVIEW: ' : 'POST: ') + destination + spec.slug + '.html');
+  }
+  if (!out) {
+    // Existing public posts plus this run's targets, never every queued draft.
+    const targets = new Set(buildSpecs.map(s => s.slug));
+    const allSpecs = all.filter(f => targets.has(f.replace('.fragment.html','')) || existsSync(OUT_DIR + f.replace('.fragment.html','.html'))).map(f => loadFragment(CONTENT_DIR + f, {validate:false}));
+    rebuildIndex(allSpecs);
+    updateSitemap(buildSpecs);
+    updateLedger(buildSpecs);
+    writeManifest(allSpecs);
+    syncLlms(allSpecs);
+  }
+}

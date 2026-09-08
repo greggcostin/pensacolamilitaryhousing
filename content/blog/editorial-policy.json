@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "effective": "2026-09-08",
+  "mission": "Help a military household make a sound housing decision before, during or after a Gulf Coast move. Answer the decision with current official evidence and realistic household math.",
+  "audiences": ["active-duty", "student", "veteran", "guard-reserve", "surviving-spouse", "military-seller", "military-landlord"],
+  "coverageWindow": 12,
+  "topicGates": {
+    "pensacola-housing-market-q3-2026": {"notBefore":"2026-10-01","sourceGate":{"kind":"completed-market-period","periodEnd":"2026-09-30"},"gateReason":"Existing queue explicitly schedules this completed-quarter report for the first October run; actual quarter-end primary data is also required."},
+    "2027-bah-pensacola-what-changed": {"sourceGate":{"kind":"official-bah-release","year":2027},"gateReason":"Existing queue requires the official 2027 release before writing. A calendar date alone cannot open this item."}
+  },
+  "topicPillars": {
+    "pensacola-housing-market-q3-2026":"local-market",
+    "2027-bah-pensacola-what-changed":"bah",
+    "nas-pensacola-student-housing-dorms-bah-off-base":"training-housing",
+    "pca-vs-pcs-pensacola-eglin-hurlburt":"pcs-orders",
+    "military-rentals-fort-walton-beach-hurlburt-tour":"sell-or-rent"
+  },
+  "legacyPillars": {
+    "bah-2026-pensacola-what-can-you-afford": "bah",
+    "best-pensacola-neighborhoods-by-rank-bah": "bah",
+    "va-loan-assumption-buyers-guide": "va-loans",
+    "va-loan-seller-concessions-truth": "va-loans",
+    "personal-property-activity-pcs-2026": "pcs-orders",
+    "pcs-to-pensacola-2026-complete-guide": "pcs-orders",
+    "florida-homestead-exemption-military": "ownership-costs",
+    "florida-veteran-property-tax-county-guide": "ownership-costs",
+    "best-neighborhoods-eglin-afb-families": "local-market",
+    "living-in-gulf-breeze-pros-cons": "local-market",
+    "moving-to-navarre-2026-guide": "local-market",
+    "moving-to-pensacola-2026-guide": "local-market"
+  },
+  "pillars": [
+    {"id":"bah","decision":"Build a full household budget using actual entitlement, debts and reserves","owner":"/bah-to-mortgage-guide","primarySources":["DoD BAH archive and FMR volume 7A","DFAS","actual LES with private details omitted"]},
+    {"id":"va-loans","decision":"Separate eligibility, lender approval, occupancy, entitlement and cash needed","owner":"/va-loan-guide","primarySources":["VA home loan guidance","VA Lenders Handbook","current VA circulars","written lender terms"]},
+    {"id":"pcs-orders","decision":"Coordinate a move and housing timeline against actual orders","owner":"/pcs-guide","primarySources":["current Joint Travel Regulations","Military OneSource","installation transportation and finance offices"]},
+    {"id":"training-housing","decision":"Resolve student status and housing instructions before signing or buying","owner":"/flight-school-housing-pensacola","primarySources":["official installation housing office","training command reporting instructions","orders and current DoD rules"]},
+    {"id":"ownership-costs","decision":"Verify the property's taxes, insurance, flood exposure and exemption eligibility","owner":"/va-disability-property-tax-florida","primarySources":["county appraiser and tax collector","Florida or Alabama revenue department","FEMA","actual insurance quotes"]},
+    {"id":"sell-or-rent","decision":"Compare net sale proceeds with rental cash flow and a downside scenario before the next move","owner":"/rent-or-sell-pcs-pensacola","primarySources":["current local market evidence","documented operating costs","state statutes","lease and association documents","IRS"]},
+    {"id":"local-market","decision":"Translate rates and property-level market evidence into a military household decision","owner":"/communities","primarySources":["local Realtor association reports","Freddie Mac","CFPB","county records","official installation access information"]}
+  ],
+  "selectionOrder": ["verified consequential event with a known owner", "military refresh priority 60 or higher", "dated military search or documented client demand", "runnable queue with coverage gaps as tie-breakers"],
+  "militaryRules": [
+    "FL064 is Pensacola; FL056 is Eglin AFB including Hurlburt and Duke. Never carry the obsolete FL023 reference from old queue prose into a new article.",
+    "Verify the official annual source, then src/bahData.js and node scripts/verify-bah-source.mjs. A prior page is not primary evidence. Never predict unreleased BAH.",
+    "Use year, MHA, grade and dependency status for every numeric BAH comparison. Entitlement may differ from a current table; refer individual questions to the servicing finance office.",
+    "Use actual LES pay. Do not infer base pay from rank. BAH is not a home-price ceiling or loan approval.",
+    "Keep VA eligibility, remaining entitlement, lender underwriting, occupancy and property requirements distinct. Verify exceptions before describing them.",
+    "Separate student orders, permanent-party assignments, Guard/Reserve service and eligible surviving spouses. Do not generalize one category's rules to everyone.",
+    "Use dates, named duty locations and actual orders for PCS/PCA questions. Do not promise that a mileage shortcut determines an entitlement.",
+    "Model tax jurisdiction from the parcel, not a ZIP. State exemption eligibility and application limits. State tax rules do not transfer across Florida and Alabama.",
+    "For a rental exit include vacancy, management, repairs, insurance, taxes, HOA, debt service, reserves and sale costs. Do not promise appreciation or a future refinance."
+  ],
+  "protectedSources": ["src/bahData.js", "content/geo/", "scripts/geo-core-lib.mjs"],
+  "voice": ["Answer one reader's decision first", "No em dashes, en dashes or emojis in copy", "No fabricated client stories, service experience or local observations", "No repeated town lists or keyword padding", "Explain the useful exception and downside", "Read aloud and remove canned transitions"],
+  "measurement": "Use shared search-evidence.mjs and blog-weekly-plan.mjs. Scores are editorial lint. Unknown impressions, citations and qualified inquiries remain unknown. Record deployment separately from preparation, compare equivalent windows, and keep military and civilian cohorts separate.",
+  "searchGuidance": {
+    "checkedAt":"2026-09-08",
+    "principle":"Useful original reporting, readable crawlable HTML, correct entities, contextual links, accurate visible/schema dates and sources. No special AI markup, text file, word count or keyword pattern guarantees visibility.",
+    "faq":"Visible FAQs are for readers. Matching FAQPage markup is retained for semantic consistency, with no Google FAQ rich-result promise. Google reports the feature retired starting May 7, 2026.",
+    "sources":["https://developers.google.com/search/docs/fundamentals/ai-optimization-guide","https://developers.google.com/search/docs/appearance/ai-features","https://developers.google.com/search/docs/fundamentals/creating-helpful-content","https://developers.google.com/search/docs/appearance/structured-data/article","https://developers.google.com/search/updates"]
+  }
+}

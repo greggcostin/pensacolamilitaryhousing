@@ -1,0 +1,95 @@
+{
+  "date": "2026-09-08",
+  "site": "gc",
+  "article": "what-moves-mortgage-rates",
+  "provider": "codex",
+  "model": "gpt-6-astra",
+  "effort": "max",
+  "leaseId": "4471c1fc-77b5-4dfe-8588-44875bf48507",
+  "scope": "Engine upgrade and one substantive article refresh; prepared for publication approval.",
+  "tests": {
+    "command": "node --test scripts/civilian-editorial.test.mjs scripts/tests/blog-evidence.test.mjs",
+    "passed": 42,
+    "failed": 0,
+    "output": "✔ final article evidence record has no structural findings (3.9053ms)\n✔ required civilian elements cannot be traded away for a high score (1.6042ms)\n✔ refresh of old post activates the current standard (0.113ms)\n✔ build-only properties do not invalidate final source review (0.426ms)\n✔ changing content invalidates a previously sealed review (2.9752ms)\n✔ source mismatch, absent passage and expired figures block (2.8724ms)\n✔ incorrect recorded calculations cannot pass a sealed-looking evidence record (0.9069ms)\n✔ encoded dashes and emojis cannot evade the voice check (0.2488ms)\n✔ 85-word quick answer and future modification date block (1.7943ms)\n✔ local name repetition does not pass as local application (1.1256ms)\n✔ section anchors are stable and unique (0.3479ms)\n✔ sitemap refresh changes the target date and preserves unrelated entries (0.321ms)\n✔ dedup finds both civilian pages and unpublished military fragments (7.5447ms)\n✔ observed demand requires source, site and dates; headlines cannot trigger news override (0.3949ms)\n✔ payment math amortizes to zero and handles zero interest (0.2341ms)\n✔ demand import preserves actual windows and requires verified records (0.3141ms)\n✔ committed Bing aggregates preserve positive demand without inventing completeness (0.3405ms)\n✔ article finishing removes duplicate template navigation without removing content (0.2092ms)\n✔ blog discovery updates preserve other generators markers (0.0822ms)\n✔ quoted CSV cells preserve commas, newlines, empty cells and escaped quotes (1.1503ms)\n✔ query strings and .html variants canonicalize without crossing properties (0.1275ms)\n✔ export date cannot silently become a measured monthly window (1.5696ms)\n✔ missing data never classifies an old post as stalled or decayed (0.1288ms)\n✔ a missing current export row does not revive an older observation (0.6634ms)\n✔ 0 clicks in 41 or 53 impressions is too uncertain for a snippet verdict (0.396ms)\n✔ Wilson intervals distinguish real zero clicks from unavailable observations (0.0866ms)\n✔ incompatible, overlapping and stale windows cannot create a trend (0.303ms)\n✔ valid large changes are observable while small-source noise remains unclassified (0.1632ms)\n✔ the Sep 4 snippet changes are not eligible for an immediate second rewrite (0.1718ms)\n✔ performance lessons cannot be promoted by an active label or one experiment (0.405ms)\n✔ source-like words without source links earn no evidence points (2.5949ms)\n✔ the link graph excludes nav, footer, index furniture and script strings (0.382ms)\n✔ calculation checks reject arithmetic errors, division by zero and code evaluation (0.1704ms)\n✔ a pack records lineage and refuses uncertainty, false math and absent citations (0.4372ms)\n✔ the inquiry event is inserted only in the confirmed-success branch and is idempotent (0.2297ms)\n✔ copy is not a share and canceled native sharing sends no share event (0.7707ms)\n✔ successful inquiry is counted once; no click or form contents are accepted as a lead (0.4346ms)\n✔ privacy signals suppress analytics and hidden tabs cannot earn read engagement (1.0156ms)\n✔ every existing article gets verified first-party next steps with clean share URLs (0.5874ms)\n✔ outcome learning distinguishes missing clients, unique sessions and non-comparable windows (0.4017ms)\n✔ Bing ISO dates and epoch dates share one anchor; empty and future rows do not create traffic (0.263ms)\n✔ a claimed observed snapshot with invalid counts cannot support a decision (0.0774ms)\nℹ tests 42\nℹ suites 0\nℹ pass 42\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 104.1594\nwhat-moves-mortgage-rates (greggcostin.com): 100/100 A\ncomponents: structure 25 | evidence 20 | local 10 | seo 20 | geo 15 | share 10\nfacts: {\"words\":1635,\"h2s\":9,\"questionH2s\":9,\"directAnswers\":8,\"walls\":0,\"scanAids\":7,\"numericSentences\":13,\"sourcedSentences\":5,\"datedSentences\":3,\"quotable\":1,\"distinctSources\":4,\"placesPerK\":3.7,\"links\":7,\"faqs\":7,\"table\":true,\"checklist\":true,\"actionItems\":8,\"workedExample\":true,\"ownVoice\":false,\"quickAnswer\":true,\"takeaways\":true,\"shareHook\":true,\"perishables\":3}\n\nno fails\n"
+  },
+  "quality": {
+    "editorial": 100,
+    "formatting": 100,
+    "bodyWords": 1635,
+    "faqs": 7,
+    "primarySources": 7,
+    "claimRecords": 11,
+    "civilianPages": 310,
+    "civilianFindings": 0,
+    "entityPages": 679,
+    "entityFindings": 0,
+    "strictIntentGate": "clear",
+    "output": "what-moves-mortgage-rates (greggcostin.com): 100/100 A\ncomponents: structure 25 | evidence 20 | local 10 | seo 20 | geo 15 | share 10\nfacts: {\"words\":1635,\"h2s\":9,\"questionH2s\":9,\"directAnswers\":8,\"walls\":0,\"scanAids\":7,\"numericSentences\":13,\"sourcedSentences\":5,\"datedSentences\":3,\"quotable\":1,\"distinctSources\":4,\"placesPerK\":3.7,\"links\":7,\"faqs\":7,\"table\":true,\"checklist\":true,\"actionItems\":8,\"workedExample\":true,\"ownVoice\":false,\"quickAnswer\":true,\"takeaways\":true,\"shareHook\":true,\"perishables\":3}\n\nno fails\nanalyzed 1 pages (read-only single-page report)\n\nWorst 10:\n  100  gc:/blog/what-moves-mortgage-rates  (0 walls, 187w/heading, 125w/aid)\n\nBest 5:\n  100  gc:/blog/what-moves-mortgage-rates\nAUDIT CLEAN: 310 pages, 0 findings\nENTITY AUDIT CLEAN: 679 pages; full nodes on 3/2/2 pages; every other definition is the canonical compact or publisher shape\nOK: no em dashes in prose across 372 pages + App.jsx.\n(ad hoc): clear\n  ok: https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola | Assumable VA Loans Pensacola | 2.75% Rates Still Available\n  ok: https://pensacolamilitaryhousing.com/faq | Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola\n  ok: https://pensacolamilitaryhousing.com/florida-home-insurance-military | Florida Home Insurance for Military Families | Gregg Costin\n  ok: https://pensacolamilitaryhousing.com/rent-vs-buy-military-pensacola | Rent vs Buy: Military Pensacola Math by Tour Length (2026)\n  ok: https://pensacolamilitaryhousing.com/zero-down-home-loans | Zero-Down Home Loans 2026 Pensacola | Gregg Costin\n"
+  },
+  "sharedRetro": {
+    "preservedMilitaryEntries": true,
+    "preservedMilitaryDates": true,
+    "evidence": "Live --site gc execution followed by deep equality assertions against saved queue and inbound-plan records."
+  },
+  "browser": {
+    "preview": "http://127.0.0.1:43792/blog/what-moves-mortgage-rates",
+    "mobile": {
+      "viewport": 390,
+      "documentWidth": 375,
+      "bodyWidth": 375,
+      "tableWidth": 347.2,
+      "brokenImages": 0,
+      "forbiddenCharacters": 0,
+      "sectionTargetsValid": true
+    },
+    "desktop": {
+      "viewport": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "brokenImages": 0
+    },
+    "faq": "Discount point FAQ expanded with correct answer",
+    "copy": "Guide link copied confirmation",
+    "consoleErrors": 0,
+    "og": "1200x630 image personally inspected; readable dark/gold card",
+    "normalViewportRestored": true
+  },
+  "broaderChecks": {
+    "command": "node --test scripts/civilian-editorial.test.mjs scripts/tests/blog-evidence.test.mjs scripts/tests/site-growth.test.mjs",
+    "when": "Earlier integration check, before the final compatibility and hard-requirement regression tests were added",
+    "passed": 45,
+    "failed": 4,
+    "limitations": [
+      "Existing root-page host-guard idempotence test compares CRLF/LF bytes",
+      "Existing school test expects 82 pages; current main contains 271 school pages",
+      "Two military checks require dist/index.html, which is absent in this clean civilian-only checkout"
+    ],
+    "baseline": "git diff --quiet HEAD -- index.html civilian-site/schools scripts/tests/site-growth.test.mjs scripts/analytics-host-guard.mjs scripts/military-meta-lib.mjs returned 0; broader-test inputs were unchanged",
+    "interpretation": "Focused blog tests and required civilian/entity/voice gates pass. The entire repository test suite is not claimed clean."
+  },
+  "deployment": {
+    "autoPublish": false,
+    "deployed": false,
+    "indexNowSubmitted": false
+  },
+  "measurement": {
+    "collectedAt": "2026-09-08T06:21:25.553Z",
+    "windowStart": "2026-08-10",
+    "windowEnd": "2026-09-06",
+    "trafficDays": 13,
+    "bingPageRows": 0,
+    "bingQueryRows": 0,
+    "observedSiteImpressions": 0,
+    "observedSiteClicks": 0,
+    "indexedPages": "unknown; empty performance results do not establish indexing",
+    "clarity": "Project ydd39cyp64 installed; current query access unavailable",
+    "gsc": "Historical export lacks a currently verified reporting window; new comparable export needed",
+    "qualifiedInquiries": "unavailable",
+    "performanceEffect": "not measured; not deployed"
+  },
+  "learning": {
+    "canonical": "blog-weekly-plan.mjs discovers the new prepared experiment; outcomeStatus unavailable",
+    "compatibility": "Existing older shared checkout blog-learning.mjs reports the mortgage experiment awaiting_deployment"
+  }
+}

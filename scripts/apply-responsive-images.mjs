@@ -12,6 +12,7 @@ import sharp from "sharp";
 import { WIDTHS, AVATAR, variantPath, modernPath } from "./generate-responsive-images.mjs";
 
 const DRY = process.argv.includes("--dry");
+const CIVILIAN = process.argv.includes('--civilian');
 const SCHOOLS = process.argv.includes("--schools");
 const onlyIdx = process.argv.indexOf("--only");
 const ONLY = onlyIdx > -1 ? process.argv[onlyIdx + 1].replace(/\\/g, "/") : null;
@@ -82,10 +83,10 @@ function buildImg(a, src, m, ctx, srcsetJpg) {
   return `<img ${parts.join(" ")}>`;
 }
 
-const files = ONLY ? [ONLY] : SCHOOLS ? ["civilian-site/schools.html", ...walkHtml("civilian-site/schools")] : ["index.html", ...walkHtml("public"), ...walkHtml("civilian-site")];
+const files = ONLY ? [ONLY] : CIVILIAN ? walkHtml("civilian-site") : SCHOOLS ? ["civilian-site/schools.html", ...walkHtml("civilian-site/schools")] : ["index.html", ...walkHtml("public"), ...walkHtml("civilian-site")];
 let pages = 0, pictures = 0, bare = 0, logos = 0, missing = new Set();
 for (const f of files) {
-  const site = f.startsWith("civilian-site") ? "gc" : "pmh";
+  const site = CIVILIAN || f.startsWith("civilian-site") ? "gc" : "pmh";
   let h = readFileSync(f, "utf8");
   const before = h;
   // 1. header logos

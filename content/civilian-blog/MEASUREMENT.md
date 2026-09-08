@@ -1,0 +1,23 @@
+# Civilian blog measurement and learning
+
+This is the stable entry point for the civilian routine. The committed shared implementation is `scripts/search-evidence.mjs`, `scripts/blog-retro.mjs`, `scripts/blog-outcomes.mjs` and `scripts/blog-weekly-plan.mjs`. Read the active operational lessons in `content/blog/learnings.json`. A historical performance hypothesis cannot override verified source availability.
+
+Keep Bing, Google, analytics, accepted inquiries and qualified conversations separate. Missing, empty, unavailable, stale, legacy-unverified and observed zero are different states. Empty Bing page/query results do not establish the number of indexed pages. Use a URL inspection or crawl/indexing report for that question.
+
+Run `node scripts/blog-measure.mjs --site gc` live. Record collection time, endpoint results, actual reporting dates and the count of traffic days returned. The producer's trailing 28-day bin is not proof of 28 complete reporting days. Preserve failed attempts separately from successful retries. If a request fails, do not describe an old snapshot as current. The planner accepts positive query observations from the current committed Bing format and from the newer format with endpoint status; neither format establishes a ranking trend by itself.
+
+Use actual observed queries and verified anonymized recurring questions as demand evidence. The planner's editorial suggestions are not measured search volume. An unmatched observed query requires intent review before it becomes a new topic. Topic overlap is a review signal, not proof of harmful cannibalization.
+
+For Google, drop a civilian Pages or Queries export into `docs/seo-baselines/` using `gsc-pages-gc-YYYY-MM-DD.csv` or `gsc-queries-gc-YYYY-MM-DD.csv`. The committed importer reads exact property, start/end dates, search type, dimensions, filters and completeness from the filename's entry in `content/measure/source-windows.json`. An export date is not its reporting window. Keep unverified historic coverage unverified. If a newer shared contract is present, follow its documented import format without converting unknown dates into observed dates.
+
+Clarity project `ydd39cyp64` is installed for greggcostin.com. Query it only when the connector can verify the project, domain, permissions and dates. Otherwise record access as unavailable. Do not request another project merely because this runtime cannot query the existing one. Analytics comparisons must use the same production host filters, excluding localhost and preview deployments.
+
+Run `node scripts/blog-retro.mjs --site gc` and `node scripts/blog-weekly-plan.mjs` after the work. The weekly plan invokes the existing aggregate inquiry assessment in `blog-outcomes.mjs`. Empty `content/measure/article-outcomes.json` windows mean unavailable, not zero clients. An accepted contact submission, a qualified conversation and a sale are separate outcomes. Never substitute raw event counts, downloads, copy clicks or shares for unique sessions with accepted inquiries. Keep personal/contact information out of versioned measurement files.
+
+Register the change's hypothesis, affected URLs, preparation/deployment status, actual deployment date, primary outcome and review window in the run ledger before publishing. A prepared change has no measurable live effect. At least 28 complete days after deployment, compare the same property, source, landing-page cohort, event definitions and non-overlapping equal-duration windows. Apply the shared minimum-sample and uncertainty checks. Record inconclusive when there is insufficient evidence; do not promote an editorial score or one before/after comparison into a performance rule. Qualified outcomes require separate verified CRM attribution.
+
+AI citations or recommendations, when a provider makes them available, are a separate visibility observation. They do not prove an inquiry or client. Standard crawlable HTML, visible answers, accurate entities and primary sources support discovery, with no guarantee of inclusion or ranking.
+
+Only after approved deployment, submit exact new or materially changed live URLs with the existing submission tool and retain receipts. A received submission is not proof of indexing. Do not repeatedly submit the whole sitemap because performance data is empty.
+
+A deliberately preserved older shared checkout may still use `scripts/blog-learning.mjs`. If the committed weekly-plan implementation is absent there, run the existing compatibility path and identify it in the receipt. The isolated current-main release uses `blog-weekly-plan.mjs`; do not silently import unrelated unfinished code.

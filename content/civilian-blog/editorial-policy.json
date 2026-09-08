@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "mission": "Help a Florida Panhandle or coastal Alabama reader make a better property decision with verifiable reporting, clear math and practical judgment.",
+  "audiences": ["buyer", "seller", "homeowner", "long-term investor", "short-term rental owner", "mid-term rental owner", "vacation-home buyer"],
+  "coverageWindow": 12,
+  "legacyPillars": {"what-moves-mortgage-rates":"financing-macro","fed-rate-hike-what-it-means":"financing-macro","florida-insurance-relief-2026":"ownership-costs","property-taxes-escambia-santa-rosa":"ownership-costs","closing-costs-florida-buyers":"buying"},
+  "pillars": [
+    {"id":"financing-macro","name":"Financing and the economy","primarySources":["Freddie Mac PMMS","Federal Reserve","Treasury","BLS","BEA","CFPB","Fannie Mae"],"decisions":["lock or float","points or cash reserves","refinance break-even","what a data release changes locally"]},
+    {"id":"local-market","name":"Local market conditions","primarySources":["Pensacola Association of Realtors","Baldwin Realtors","Florida Realtors","Census","local permitting offices"],"decisions":["price an offer","price a listing","compare concessions","read inventory by property type and area"]},
+    {"id":"buying","name":"Buying and due diligence","primarySources":["CFPB","county records","lender guides","association documents"],"decisions":["appraisal gap","inspection priorities","condo project review","new construction incentives"]},
+    {"id":"selling","name":"Selling and equity","primarySources":["local MLS reports","CFPB","IRS","county records"],"decisions":["net proceeds","repairs before listing","price cut versus concession","sell or keep as a rental"]},
+    {"id":"ownership-costs","name":"Insurance, taxes and resilience","primarySources":["Florida OIR","Citizens","Florida DOR","Alabama DOR","county appraisers and revenue commissioners","FEMA","NOAA"],"decisions":["quote total carrying cost","review deductibles","verify parcel jurisdiction","evaluate reserves and assessments"]},
+    {"id":"rental-investing","name":"Rental underwriting","primarySources":["IRS","CFPB","Fannie Mae","actual redacted operating records","local market reports"],"decisions":["NOI versus cash flow","cap rate versus cash-on-cash","financing and reserves","exit assumptions and downside cases"]},
+    {"id":"str-vacation","name":"Short-term rentals and vacation homes","primarySources":["DBPR","city ordinances and zoning maps","county tax collectors","Alabama DOR","association rules","documented operating statements"],"decisions":["verify rental eligibility by address","seasonality and vacancy","management and turnover costs","insurance and hurricane downtime"]},
+    {"id":"mtr-landlord","name":"Mid-term rentals and ownership operations","primarySources":["state statutes","municipal ordinances","association documents","IRS","actual redacted leases and operating records"],"decisions":["furnished versus unfurnished economics","utilities and turnover","lease length and local rules","tenant demand evidence"]}
+  ],
+  "selectionOrder": ["verified consequential current event", "evidence-backed refresh priority 60 or higher", "dated observed search or recurring-client demand", "runnable editorial queue with coverage gaps as tie-breakers"],
+  "sourceRules": [
+    "Open the primary source this session. A search snippet or model summary is discovery, not verification.",
+    "Keep publication date, effective date, collection date, measurement window, geography and property type distinct.",
+    "Label reported facts, calculations, hypothetical scenarios, forecasts and judgment separately.",
+    "Document five load-bearing checks. Use fewer market statistics and more transparent hypothetical math if primary data is unavailable.",
+    "A law, proposal, adopted rule and effective rule are different states. An address and jurisdiction are required for rental eligibility claims.",
+    "Gross rental revenue is not profit. State occupancy denominator, owner-use nights, management, utilities, maintenance, insurance, taxes, debt service and reserves.",
+    "MTR or a longer stay is not an automatic exemption from licensing, taxes, zoning or association restrictions. Verify each applicable rule.",
+    "Use explicit downside assumptions; never promise appreciation, occupancy, rental income or a future refinancing opportunity."
+  ],
+  "voice": {
+    "style": "A capable local real estate adviser explaining one decision to one reader. Specific, calm and candid.",
+    "forbidden": ["em dashes", "en dashes", "emojis", "invented client stories", "unverified firsthand experience", "generic throat-clearing", "forced town lists", "keyword stuffing", "sales claims without evidence"],
+    "editPass": ["Does the opening answer the actual question?", "Can a reader use the example?", "What could change the conclusion?", "Does every local reference change the decision?", "Remove repetitive summaries, clichés and stock transitions.", "Read it aloud. Vary sentence length and remove anything a person would not say."]
+  },
+  "seoGeo": {
+    "principle": "Crawlable, useful HTML, accurate entities and schema, distinctive reporting, contextual links and clear answers. No ranking promises.",
+    "faq": "Useful visible questions and matching schema. Do not promise Google FAQ rich results for this business.",
+    "schema": "BlogPosting, canonical author/publisher references and BreadcrumbList. Never add fabricated reviews, credentials or unsupported property data.",
+    "titles": "Describe the decision honestly. Include a number only if it helps, is supported and will stay correct until review.",
+    "sources": ["https://developers.google.com/search/docs/appearance/ai-features", "https://developers.google.com/search/docs/fundamentals/creating-helpful-content", "https://developers.google.com/search/docs/appearance/structured-data/article"],
+    "checkedAt": "2026-09-08"
+  }
+}

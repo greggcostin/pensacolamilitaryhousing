@@ -20,6 +20,11 @@ const args = process.argv.slice(2);
 const siteArg = args.includes("--site") ? args[args.indexOf("--site") + 1] : "both";
 const APPLY = args.includes("--apply-links") ? +args[args.indexOf("--apply-links") + 1] : 0;
 const siteKeys = siteArg === "both" ? ["pmh", "gc"] : [siteArg];
+if (siteKeys.some(key => !SITES[key])) throw new Error("Unknown site");
+const priorRefresh = readJson("content/blog/refresh-queue.json");
+const priorLinks = readJson("content/blog/inbound-link-plan.json");
+const preserveOtherSites = (previous, fresh) => [...(previous || []).filter(row => !siteKeys.includes(row.site)), ...fresh];
+const siteDates = previous => ({ ...Object.fromEntries(["pmh", "gc"].map(key => [key, previous.generatedBySite?.[key] || previous.generated || null])), ...Object.fromEntries(siteKeys.map(key => [key, TODAY])) });
 const daysBetween = (a, b) => Math.round((new Date(b) - new Date(a)) / 86400000);
 const PERISHABLE_CUE = /\b(rate|rates|median|average|inventory|premium|deadline|expires|effective|as of|this (week|month|year))\b/gi;
 
@@ -96,7 +101,7 @@ for (const key of siteKeys) {
 
   // site-level evidence from the opportunities file
   if (opp && isoDay(opp.asOf) && opp.asOf <= TODAY && Number.isFinite(opp.site28?.imp) && Number.isFinite(opp.site28?.clk)) {
-    digest.push(`Site (Bing, data through ${opp.asOf}): ${opp.site28.imp} impressions / ${opp.site28.clk} clicks in 28d. Top pages by 28d impressions: ${opp.topPages.slice(0, 6).map((p) => `${p.page} (${p.imp28}, pos ${p.pos28 ?? "-"})`).join("; ")}.`, "");
+    digest.push(`Site (Bing, data through ${opp.asOf}): ${opp.site28.imp} impressions / ${opp.site28.clk} clicks in the trailing 28-day bin; ${Number.isFinite(opp.reportedTrafficDays) ? opp.reportedTrafficDays : "unrecorded"} reporting days returned. Completeness is not established. Top pages by 28d impressions: ${opp.topPages.slice(0, 6).map((p) => `${p.page} (${p.imp28}, pos ${p.pos28 ?? "-"})`).join("; ")}.`, "");
     if (opp.strikingDistance.length) digest.push(`Striking-distance queries (pos 4-20, 90d): ${opp.strikingDistance.slice(0, 12).map((q) => `"${q.query}" (${q.imp90} imp, pos ${q.pos90})`).join("; ")}.`, "");
     if (opp.ctrProblems.length) digest.push(`Legacy CTR candidates (not a diagnosis; sample and windows require validation): ${opp.ctrProblems.slice(0, 8).map((q) => q.query ? `"${q.query}" (${q.imp28} imp, pos ${q.pos28})` : `${q.page} (${q.imp28} imp, pos ${q.pos28})`).join("; ")}.`, "");
     if (opp.declining.length) digest.push(`Cached prior-period differences (not a decay finding): ${opp.declining.map((p) => `${p.page} (${p.impPrior28} -> ${p.imp28})`).join("; ")}.`, "");
@@ -107,13 +112,13 @@ for (const key of siteKeys) {
 // Cross-sectional attributes are confounded by age, topic, site and exposure.
 // Do not turn their means into rules, even with six posts. Experiments carry the evidence.
 digest.push("## Learning status", "", "Attribute correlations are hypotheses only. A numeric quality score is a lint signal, not a ranking model. Performance rules require two reviewed, comparable experiments in the same scope; no automatic lesson promotion.", "");
-digest.push("", "## Refresh queue (both sites, ranked)", "", ...refresh.sort((a, b) => b.priority - a.priority).slice(0, 15).map((r) => `${r.priority}  ${r.site}:${r.slug}  [${r.flags.join(" ")}]  ${r.why.join("; ")}`), "");
+digest.push("", "## Refresh queue (selected sites, ranked)", "", ...refresh.sort((a, b) => b.priority - a.priority).slice(0, 15).map((r) => `${r.priority}  ${r.site}:${r.slug}  [${r.flags.join(" ")}]  ${r.why.join("; ")}`), "");
 digest.push("## Inbound link plan (posts with fewer than 3 inbound links)", "", ...linkPlan.map((p) => `- ${p.site}:${p.post} (${p.inbound} inbound) <- ${p.from.map((f) => `${f.hub} (${f.match})`).join(", ") || "no hub with enough overlap; link from the blog index and the nearest sibling post"}`), "");
 
 refresh.sort((a, b) => b.priority - a.priority);
-writeJson("content/blog/refresh-queue.json", { generated: TODAY, note: "Evidence policy v2. Missing data and small samples never trigger a rewrite. Expired declared facts take priority; search reviews require valid comparable windows. Contextual links exclude navigation, footer and the global Explore grid. Quality scores flag editorial review, not ranking outcomes.", queue: refresh }, 1);
-writeJson("content/blog/inbound-link-plan.json", { generated: TODAY, note: "Every post with fewer than 3 inbound internal links, with the hub pages whose titles/H2s overlap it most. Military hubs carry a RELATED_GUIDES block the retro can insert into (--apply-links N); civilian hubs need a sentence-level link placed by the engine.", plan: linkPlan }, 1);
-writeFileSync(ROOT + "content/blog/retro-latest.md", digest.join("\n") + "\n");
+writeJson("content/blog/refresh-queue.json", { generated: TODAY, note: "Evidence policy v2. Missing data and small samples never trigger a rewrite. Expired declared facts take priority; search reviews require valid comparable windows. Contextual links exclude navigation, footer and the global Explore grid. Quality scores flag editorial review, not ranking outcomes.", generatedBySite: siteDates(priorRefresh), queue: preserveOtherSites(priorRefresh.queue, refresh).sort((a,b) => b.priority-a.priority) }, 1);
+writeJson("content/blog/inbound-link-plan.json", { generated: TODAY, note: "Every post with fewer than 3 inbound internal links, with the hub pages whose titles/H2s overlap it most. Military hubs carry a RELATED_GUIDES block the retro can insert into (--apply-links N); civilian hubs need a sentence-level link placed by the engine.", generatedBySite: siteDates(priorLinks), plan: preserveOtherSites(priorLinks.plan, linkPlan) }, 1);
+writeFileSync(ROOT + "content/blog/retro-latest.md", digest.join("\n").trimEnd() + "\n");
 console.log(digest.join("\n"));
 
 // ---- optional: apply inbound links into military hub Related Guides blocks ------------------

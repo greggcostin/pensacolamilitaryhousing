@@ -1,6 +1,10 @@
 {
- "generated": "2026-09-06",
+ "generated": "2026-09-08",
  "note": "Every post with fewer than 3 inbound internal links, with the hub pages whose titles/H2s overlap it most. Military hubs carry a RELATED_GUIDES block the retro can insert into (--apply-links N); civilian hubs need a sentence-level link placed by the engine.",
+ "generatedBySite": {
+  "pmh": "2026-09-06",
+  "gc": "2026-09-08"
+ },
  "plan": [
   {
    "site": "pmh",
@@ -301,38 +305,6 @@
      "hubTitle": "Buying a Pensacola Home Sight Unseen: The PCS Remote-Purchase Playbook",
      "match": 0.29,
      "anchor": "<a href=\"/blog/va-loan-seller-concessions-truth\">The VA Loan Seller Concessions Myth That's Costing Military Buyers Thousands</a>"
-    }
-   ]
-  },
-  {
-   "site": "gc",
-   "post": "/blog/what-moves-mortgage-rates",
-   "label": "What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers",
-   "inbound": 2,
-   "from": [
-    {
-     "hub": "/resources/useful-links",
-     "hubTitle": "Useful links for Florida homeowners",
-     "match": 0.3,
-     "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
-    },
-    {
-     "hub": "/reviews",
-     "hubTitle": "Five stars, every time",
-     "match": 0.27,
-     "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
-    },
-    {
-     "hub": "/schools",
-     "hubTitle": "Pensacola-area schools, graded",
-     "match": 0.27,
-     "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
-    },
-    {
-     "hub": "/buy",
-     "hubTitle": "Buy a home in Pensacola",
-     "match": 0.26,
-     "anchor": "<a href=\"/blog/what-moves-mortgage-rates\">What Actually Moves Mortgage Rates: A Plain-English Guide for Pensacola Buyers</a>"
     }
    ]
   }

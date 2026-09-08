@@ -246,6 +246,72 @@
         "distribute"
       ],
       "status": "active"
+    },
+    {
+      "id": "L021",
+      "date": "2026-09-07",
+      "appliesTo": [
+        "research",
+        "decide"
+      ],
+      "status": "active",
+      "rule": "A rate-move current-events override is only real after the weekly figure is checked against Freddie Mac PMMS itself. Syndicated rate coverage is not evidence of a move.",
+      "evidence": "Sep 7 2026: syndicated articles reported a 30-year rate of 6.89%, called rates \"much higher week over week\", and attributed the move to an oil shock. Freddie Mac PMMS for the week ending Sep 3 2026 showed 6.71% against a prior 6.66%, a 5 basis point change. The override was rejected and the run fell through to the refresh queue. The discrepancy itself became the post's information-gain section.",
+      "type": "operational",
+      "legacyId": "L016 (duplicate in uncommitted Sep 7 state)",
+      "migrationNote": "Historical lesson preserved with a unique ID; not a new performance finding."
+    },
+    {
+      "id": "L022",
+      "date": "2026-09-07",
+      "appliesTo": [
+        "build",
+        "stage"
+      ],
+      "status": "retired",
+      "rule": "When another session holds uncommitted changes to the built site tree, the blog engine stops at the fragment: preview-build with --out for the gates, commit only the fragment, and hand the site-tree build back with the exact command. Never commit files whose working-tree content is another session's work.",
+      "evidence": "Sep 7 2026: 607 files were dirty with an uncommitted civilian-site redesign (COSTIN_EXPERIENCE / gc-interior markers, untracked rollout scripts). civilian-blog-factory rebuilds blog.html, sitemap.xml and llms.txt on every non---out run, and content/civilian-blog/ledger.json already held the parallel session's Sep 6 measurement snapshot. Only the fragment was safely attributable.",
+      "type": "operational",
+      "legacyId": "L017 (uncommitted Sep 7 state)",
+      "retiredAt": "2026-09-08",
+      "retirementReason": "A complete isolated worktree build passed the gates while preserving parallel changes. L025 replaces the fragment-only stopping rule."
+    },
+    {
+      "id": "L023",
+      "date": "2026-09-08",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "research",
+        "finance"
+      ],
+      "rule": "When explaining mortgage pricing, define whether a spread already includes origination costs and margins. Do not add that margin twice or infer daily causality from mismatched weekly and daily observations.",
+      "evidence": "The interrupted mortgage fragment added a lender margin after the full mortgage-to-Treasury difference. This run re-read Federal Reserve FEDS 2021-048 pages 8-9 and replaced the decomposition; the 6.71/6.66 PMMS change is presented only as a weekly observation. Evidence: content/civilian-blog/research/what-moves-mortgage-rates.json."
+    },
+    {
+      "id": "L024",
+      "date": "2026-09-08",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "write",
+        "build"
+      ],
+      "rule": "Preserve both the shared claim/calculation gate and the civilian final-content/source-review hashes. A review record must match the exact final article; arithmetic is recomputed from numeric inputs, not trusted because a reviewer checked a box.",
+      "evidence": "Tests reproduced failures for a changed content hash, expired source, absent claim passage, source mismatch and incorrect recorded arithmetic. The complete article passes both validators and the payment model amortizes to zero. scripts/civilian-editorial.test.mjs and scripts/tests/blog-evidence.test.mjs."
+    },
+    {
+      "id": "L025",
+      "date": "2026-09-08",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "orchestrate",
+        "build",
+        "ship"
+      ],
+      "rule": "When the shared checkout has unfinished changes, build owned blog work in a clean worktree based on current main, reconcile newer evidence/privacy/journey code, and commit only owned files. A dirty shared checkout does not require stopping at an unbuilt fragment.",
+      "evidence": "The Sep 8 release integrated against main 5dc3822e while preserving the pre-existing working-tree changes. The isolated 310-page civilian audit and 679-page entity audit passed. Integration also caught and preserved the school llms marker and unchanged sitemap dates."
     }
   ]
 }

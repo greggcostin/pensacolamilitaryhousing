@@ -3,7 +3,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import { resolve, extname, sep } from 'node:path';
 const military = process.argv.includes('--military');
-const root = resolve(military ? (process.argv.includes('--built') ? 'dist' : 'public') : 'civilian-site');
+const root = resolve(process.env.CIVILIAN_PREVIEW_ROOT || (military ? (process.argv.includes('--built') ? 'dist' : 'public') : 'civilian-site'));
 const port = Number(process.env.CIVILIAN_PREVIEW_PORT || (military ? 4178 : 4174));
 const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.xml': 'application/xml', '.txt': 'text/plain', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.avif': 'image/avif', '.svg': 'image/svg+xml', '.woff2': 'font/woff2' };
 function previewHtml(html) {
@@ -13,6 +13,8 @@ function previewHtml(html) {
   });
 }
 createServer((req, res) => {
+  res.setHeader('Content-Security-Policy', "connect-src 'self'; form-action 'none'; frame-src 'none'");
+  if (!['GET','HEAD'].includes(req.method)) { res.writeHead(405,{Allow:'GET, HEAD'}).end(); return; }
   let pathname;
   try { pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname); }
   catch { res.writeHead(400).end(); return; }

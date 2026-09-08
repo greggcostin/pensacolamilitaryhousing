@@ -61,6 +61,7 @@ const state = {
   experiments: experiments.map((e) => ({ id: e.id, page: e.page, outcome: e.outcome || "unknown", cooldown: !!recentExperiment([e], e.page, e.site || "pmh", TODAY), comparison: e.comparison })),
   sourceGaps: sourceGap.map((a) => ({ site: a.site, slug: a.slug })),
   outcomeStatus: assessOutcomes(readJson("content/measure/article-outcomes.json"), TODAY),
+  contentExperiments: ["pmh", "gc"].flatMap(site => (loadLedger(site).runs || []).filter(run => run.experiment).map(run => ({site,slug:run.slug,runId:run.id,...run.experiment,source:SITES[site].ledger,note:"Prepared changes have no live effect. Record actual deployment and review comparable outcome windows; status is not a causal finding."}))),
   articles, briefs,
   runChecklist: [
     "Read this plan and current source-availability records. Complete at most one article or substantive refresh.",

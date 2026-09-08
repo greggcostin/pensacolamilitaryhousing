@@ -1,102 +1,56 @@
 # Civilian Blog Contract (greggcostin.com/blog)
 
-Every post is a `content/civilian-blog/<slug>.fragment.html` file: a `<!--PAGE {json} PAGE-->`
-header followed by body HTML. `node scripts/civilian-blog-factory.mjs [slug]` builds it into
-`civilian-site/blog/<slug>.html`, rebuilds the index, syncs sitemap + llms.txt, and generates
-the OG card. Deploy with `npx wrangler pages deploy civilian-site --project-name greggcostin --branch main --commit-dirty=true`.
+Version 2 applies to every new post or substantive refresh dated September 8, 2026 or later. Read `EDITORIAL-PLAYBOOK.md`, `editorial-policy.json` and `MEASUREMENT.md`. The audience is civilian buyers, sellers, owners and investors in the Florida Panhandle and coastal Alabama. Define one primary reader and one useful decision for each article. Keep the existing canonical URL when refreshing the same intent.
 
-This contract has parity with the military one (`content/blog/BLOG-CONTRACT.md`) as of
-Sep 2026: the same scannability, measurability and GEO gates, one shared lessons file
-(`content/blog/learnings.json`), one scorer (`scripts/score-post.mjs`), one retro
-(`scripts/blog-retro.mjs`). Only the audience and the link targets differ.
+A post is `content/civilian-blog/<slug>.fragment.html`: a `<!--PAGE {json} PAGE-->` header followed by body HTML. The factory builds the page, blog index, sitemap entry, llms section and OG card. Draft-first remains binding: `autoPublish=false` means stage the built work for Gregg's approval, with no deployment.
 
-## PAGE header fields
-Required on every post:
-- `title` (SEO title, 65 chars max, primary keyword front-loaded), `description` (120-165 chars,
-  contains the primary keyword), `slug`, `h1`, `lead`, `keywords`
-- `datePublished` "YYYY-MM-DD" (immutable once published); `dateModified` on real change only
-- `figure`: `{src, webp, alt, caption, width, height}`: src under `/images/`, file must exist in
-  `civilian-site/images/`, fetched via `scripts/fetch-stock-image.mjs --dir civilian-site/images`,
-  VIEWED (eye test) before use, credit recorded in the ledger
-- `faqs`: 4+ `{q, a}` (6+ preferred): questions phrased as People-Also-Ask, answers 40-90 words
-  plain text, mirrored into FAQPage schema
+## PAGE fields
 
-Required on posts dated 2026-09-07 or later (factory refuses without them):
-- `targetKeywords`: 2-5 real queries, primary first. The engine measures the post by these
-  (Bing Webmaster API page + query stats via `scripts/blog-measure.mjs`), so a post without
-  them is invisible to the loop.
-- `quickAnswer`: 2-4 dated declarative sentences, under 85 words, restating a figure already
-  in the post with its source. Rendered as the first block after the lead so AI engines quote
-  it (geo-03). If the post cannot state its key figure in two sentences it is not ready.
-- `takeaways`: 3-5 one-line bullets, rendered as a Key takeaways box after the hero image.
+- `title`: accurate SEO title, at most 65 characters. Use the primary phrase naturally. Include a number only when useful and supported.
+- `description`: 120-165 characters, describing the actual answer. Also include `slug`, `h1`, `lead`, `keywords` and `targetKeywords` (2-5 phrases, primary first).
+- `datePublished`: immutable after publication. `dateModified` changes only with substantive content changes. Dates must not be in the future.
+- `editorialVersion:2`, a useful `category`, and `editorial:{version:2,evidenceFile,pillar,readerTask,originalValue,conversionGoal}`. Use the policy's pillar identifiers.
+- `figure:{src,webp,alt,caption,width,height}`: a newly fetched, visually reviewed and licensed image under `/images/`, with the file in `civilian-site/images/`. Record the source and credit. Generate responsive variants with the existing scripts.
+- `quickAnswer`: 2-4 dated sentences, fewer than 85 words, restating a supported figure from the page and its named source. It must work as a useful answer without promising the reader a quote or outcome.
+- `takeaways`: 3-5 distinct practical takeaways. `shareHook`: one natural sentence a reader could use when forwarding the piece.
+- `faqs`: at least 6 useful reader questions, with 40-95 word answers. Visible answers and FAQPage schema must match. Questions need honest provenance in the research brief; do not label invented questions People Also Ask.
+- `perishables:[{claim,expires,source}]`: every time-sensitive figure or consequential dated rule. Mirror the claim ID, actual source URL and review deadline in the research record. Review deadlines are not automatically renewed.
+- Optional `ogTitleLines`: one or two short lines. Optional `journey:{goal,prompt,tool,toolLabel,bridge,bridgeLabel}`: useful first-party next steps with valid existing destinations. Use one primary inquiry path.
 
-Optional, strongly encouraged (the scorer rewards them):
-- `shareHook`: one sentence a reader would paste when sharing, and who it is for.
-- `perishables`: `[{claim, expires, source}]` for every dated figure that goes stale (a rate, a
-  deadline, a median, a premium). `scripts/blog-retro.mjs` flags the post for refresh the day
-  one expires. Declare the NFIP-style deadlines here, not just in prose.
-- `ogTitleLines`: 1-2 short lines for the OG card (default: h1 split).
+## Research and calculation record
 
-## Hard gates (factory throws; never bypass)
-- NO em dashes anywhere (no worker inquiryType strings appear on blog pages, so zero tolerance)
-- 1100+ body words; 4+ links (internal civilian paths and/or the two sites); 4+ FAQs
-- no paragraph over 110 words (warns over 85; `audit-civilian` flags 80+)
-- figure file exists; div balance; valid JSON-LD; title/desc lengths
-- posts dated 2026-09-07+: targetKeywords, quickAnswer (2-4 sentences, figure, under 85 words), takeaways (3+)
+Create `research/<slug>.json` before writing and complete it with the final review afterward. It must satisfy both the shared article-evidence gate and the civilian editorial validator. Follow the version 2 mortgage article's metadata structure, not its market figures.
 
-## Quality gate (engine enforces before staging; the factory only warns)
-`node scripts/score-post.mjs <slug> --site gc --gate` must report **80+**. It scores six things
-and prints the fix list:
-1. **Structure** (25): 60%+ of H2s are the question a searcher types, each followed by a
-   15-90 word direct answer; zero walls; a list, table, figure or FAQ every ~250 words.
-2. **Evidence** (20): 60%+ of numeric sentences name their source in the sentence, 50%+ carry
-   a vintage (month/year); 4+ distinct named sources; a Sources line.
-3. **Local specificity** (10): 8+ Gulf Coast place, county, base or ZIP mentions per 1,000
-   words. A civilian post about rates still lands on Pensacola, Gulf Breeze, Baldwin County.
-4. **SEO** (20): primary keyword in title, H1, first 100 words, slug and description; 8+ links;
-   6+ PAA-shaped FAQs with 40-95 word answers.
-5. **GEO** (15): quickAnswer, takeaways, 3+ quotable sentences (figure + source + date in under
-   35 words), shareHook, perishables declared when the post states perishable figures.
-6. **Shareability** (10): at least one table, a checklist (ordered steps or bold-led bullets),
-   3+ imperative action items, a worked example with real numbers, and something only this
-   team can say (a client scenario, a commute, what we would do).
-Then `node scripts/analyze-formatting.mjs` and confirm the post's row reads 90+ (lesson L004).
+Open primary sources this session. Record actual publisher, title, URL, checked date, reporting/effective date, geography, property type and scope. Exact article passages identify their source IDs. Mark consequential paragraphs, list items and table rows with `data-claim="<id>"`. A search snippet, source-like phrase or domain name is not verification.
 
-## Editorial rules
-- Audience: civilian FL + coastal AL buyers, sellers, owners. No BAH/PCS/VA framing
-  (one cross-link to a pensacolamilitaryhousing.com guide is welcome where genuinely relevant).
-- Topics: rates, economy, finance, Florida market and insurance, taxes, local Gulf Coast angles,
-  and current events that touch real estate. For current-events posts, research first (WebSearch)
-  and cite named sources in-text; NEVER state a perishable number (today's rate, this month's
-  median price) without a source found during that session. When in doubt, write mechanics, not
-  numbers. No invented statistics, people, or testimonials.
-- Every post ships one reusable asset a reader would screenshot or forward: a comparison table,
-  a numbers table, a checklist, a decision matrix, or a worked example. Text alone is not a post.
-- H2s are the questions people type (docs/topic-radar.md and the run's search landscape supply
-  them); the first sentence under each H2 answers it. FAQ questions mirror People-Also-Ask.
-- Scannability from birth: short paragraphs (under ~80 words), lists for enumerations, a table
-  for anything with three or more numbers.
-- Voice: plain-English expert, first-person-plural team voice. Correct a third party's error
-  without naming the third party (L005).
-- Every post links into the civilian money pages (/buy, /sell, /search, /contact, /resources/*,
-  the neighborhood pages) and at least one sibling post; the engine adds inbound links from the
-  matching hub page so no post is an orphan (`content/blog/inbound-link-plan.json`).
+Independently verify at least five load-bearing claims or calculations. Calculations record numeric inputs, source or hypothetical provenance, operation, output, units and tolerance. Clearly label illustrative offers and scenarios. A method source does not make hypothetical inputs an available lender offer. Reconcile conflicting figures and identify exceptions. Hold unsupported legal or tax interpretations for an appropriate professional; do not invent professional approval.
 
-## The loop this post lives in
-1. LEARN: `content/blog/learnings.json` (shared with the military engine) is read first; active
-   lessons are binding.
-2. MEASURE: `node scripts/blog-measure.mjs --site gc` pulls Bing Webmaster page + query data for
-   every post (greggcostin.com is verified in the same Bing account) and writes
-   `content/measure/opportunities-gc.json`.
-3. DECIDE: `content/blog/refresh-queue.json` (from `scripts/blog-retro.mjs`) outranks the topic
-   queue; `docs/topic-radar.md` (from `scripts/topic-miner.mjs`) outranks guessed topics;
-   a current-events override still wins the week it happens.
-4. WRITE to this contract, score 80+, format 90+, build, audit-civilian clean.
-5. RETRO: `node scripts/blog-retro.mjs --site gc` after every run; new lessons with evidence go
-   into learnings.json.
+The final review covers facts, calculations, source reading, scope, counterarguments and human voice. Record the actual provider/model and concrete findings. Seal the content and evidence hashes only after review. Any later change requires review again. The hashes protect consistency; they cannot prove source truth.
 
-## Cadence
-Two posts weekly: Monday and Thursday, 6:04am (scheduled task `civilian-blog-engine`).
-Draft-first: the engine writes the fragment + builds it locally and reports; publish = deploy
-after Gregg's approval, unless config in `content/civilian-blog/engine-config.json` sets
-`"autoPublish": true`.
+## Writing and hard gates
+
+- No em dashes, en dashes or emojis in prose, metadata or FAQs. No invented clients, experience, reviews, urgency or guaranteed results. Correct a third party's error without naming the party unless Gregg authorizes otherwise.
+- At least 1,100 body words, usually no more than the configured 1,800-word target. Do not pad a topic to meet the floor. Prefer paragraphs under 80 words; never exceed 110.
+- Question-shaped H2s with a direct answer first. One useful table, one checklist and one worked example. Use varied sentences and natural team judgment rather than canned introductions or repetitive summaries.
+- At least 8 unique useful links across primary sources, civilian buying/selling/resource pages and at least one sibling article. At most one relevant military guide; no BAH, PCS or VA framing in the article. Preserve the existing cross-site navigation/footer.
+- At least two real local applications documented against actual passages. Repeated town names do not count. National figures need a supported local decision, not an invented local statistic.
+- Accurate title, description, canonical, social metadata, BlogPosting and entity references. Match visible publication/modification dates to structured data and the changed URL's sitemap lastmod. Do not fabricate stars, awards, reviews or special AI schema.
+- All evidence and voice findings must be resolved. An old publication date does not exempt a newly refreshed article from current requirements.
+
+## Verification and staging
+
+`node scripts/score-post.mjs <slug> --site gc --gate` must pass at 80 or higher; aim for 90 without changing facts to earn points. The six scored areas are structure, evidence, local application, SEO, answer clarity and useful shareable material. Version 2 evidence is based on the claim/source record, not town density or source-cue counting. This is editorial QA, not a ranking forecast.
+
+Build with `node scripts/civilian-blog-factory.mjs <slug>`. For an isolated complete preview, use `--out <preview-root> --bundle` with a complete site copy. Run `node scripts/analyze-formatting.mjs --file <built-page> --gate` and require 90 or higher. The full formatting report remains part of the routine.
+
+`node scripts/audit-civilian.mjs` must report zero findings. Run the entity audit and em-dash check. Inspect the actual desktop/mobile page, FAQ behavior, source and section links, responsive table, imagery and OG card. Preview serving omits production analytics and blocks submissions. Preserve existing inquiry acceptance, privacy and analytics protections.
+
+Add 2-3 contextual inbound links from relevant existing hubs when needed, using the retro's plan and real reader relevance. An index or footer link does not replace a useful contextual link.
+
+Use an isolated checkout when the shared checkout contains other unfinished work. Reconcile against current main, keep other work intact, commit only owned files, and push the staged work without deploying. Do not bypass a gate or stop at an unbuilt fragment when an isolated build can complete it. Publication requires Gregg's approval under the current setting. Submit exact changed live URLs only after deployment and retain submission receipts.
+
+## Scheduled loop
+
+One article or substantive refresh per run, Monday and Thursday at 6:04am. Read active lessons and repository status first. Measure live. A verified consequential current event outranks a refresh with priority 60+, which outranks observed demand and then a runnable editorial proposal. Check the radar and both domains' existing and unpublished content before writing.
+
+After the work, run `node scripts/blog-retro.mjs --site gc` and `node scripts/blog-weekly-plan.mjs`. Preserve the other site's shared queue entries during a single-site run. Record sources, actual model, decisions, scores, image review, publication state, one specific hypothesis and measurement gaps in the ledger. Add only 1-3 evidenced operational lessons; performance conclusions need comparable observations and the shared evidence thresholds. Prepared work has no measured live effect.

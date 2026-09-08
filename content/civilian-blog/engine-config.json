@@ -1,7 +1,10 @@
 {
  "autoPublish": false,
  "cadence": "Mon+Thu 6:04am",
- "maxWordsTarget": 1600,
+ "maxWordsTarget": 1800,
+ "editorialPolicy": "content/civilian-blog/editorial-policy.json",
+ "editorialPlaybook": "content/civilian-blog/EDITORIAL-PLAYBOOK.md",
+ "planner": "node scripts/civilian-blog-plan.mjs",
  "models": {
   "research": "self",
   "write": "self",
@@ -10,6 +13,11 @@
  "learnings": "content/blog/learnings.json (shared with the military engine)",
  "gates": {
   "scorePostMin": 80,
+  "scorePostTarget": 90,
+  "editorialEvidenceRequiredSince": "2026-09-08",
+  "requireFinalReviewHash": true,
+  "noEmoji": true,
+  "noEnDash": true,
   "formattingMin": 90,
   "wallWordsHardFail": 110,
   "wallWordsWarn": 85,

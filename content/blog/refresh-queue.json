@@ -1,6 +1,10 @@
 {
- "generated": "2026-09-06",
+ "generated": "2026-09-08",
  "note": "Evidence policy v2. Missing data and small samples never trigger a rewrite. Expired declared facts take priority; search reviews require valid comparable windows. Contextual links exclude navigation, footer and the global Explore grid. Quality scores flag editorial review, not ranking outcomes.",
+ "generatedBySite": {
+  "pmh": "2026-09-06",
+  "gc": "2026-09-08"
+ },
  "queue": [
   {
    "site": "pmh",
@@ -113,31 +117,6 @@
    ],
    "score": 84,
    "inbound": 1
-  },
-  {
-   "site": "gc",
-   "slug": "what-moves-mortgage-rates",
-   "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
-   "priority": 18,
-   "flags": [
-    "DATA-UNAVAILABLE",
-    "NEW",
-    "UNDER-LINKED",
-    "LOW-SCORE"
-   ],
-   "why": [
-    "2 contextual inbound internal link(s)",
-    "quality score 62/100"
-   ],
-   "actions": [
-    "add links from the hubs in inbound-link-plan.json",
-    "fix: structure: only 3/8 H2s are question-shaped (target 60%+): rewrite H2s as the question a searcher types",
-    "fix: evidence: 1/14 numeric sentences carry a named source cue (target 60%+): attribute every figure in the sentence itself",
-    "fix: evidence: 1/14 numeric sentences carry a vintage (month/year); date the perishable ones",
-    "fix: evidence: 1 distinct linked source domain(s); verify relevant primary sources and their claim support"
-   ],
-   "score": 62,
-   "inbound": 2
   },
   {
    "site": "pmh",
@@ -262,7 +241,7 @@
     "fix: evidence: 19/55 numeric sentences carry a vintage (month/year); date the perishable ones"
    ],
    "score": 76,
-   "inbound": 3
+   "inbound": 4
   }
  ]
 }

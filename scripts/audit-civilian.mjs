@@ -6,7 +6,9 @@
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { analyticsGuardFindings } from "./analytics-host-guard.mjs";
 
-const ROOT = "civilian-site";
+const rootArg = process.argv.indexOf('--root');
+const ROOT = rootArg >= 0 ? process.argv[rootArg+1] : 'civilian-site';
+if (!ROOT) throw Error('--root requires a complete site directory');
 const SITE = "https://greggcostin.com";
 const findings = [];
 const f = (page, msg) => findings.push(`${page}: ${msg}`);
@@ -82,7 +84,7 @@ for (const file of pages) {
   } else {
     if (!types.includes("BreadcrumbList")) f(file, "missing BreadcrumbList");
     if (!parsed.some((p) => JSON.stringify(p).includes('"@id":"https://greggcostin.com/#team"'))) f(file, "schema not wired to #team entity");
-    const wp = parsed.find((p) => ["WebPage", "AboutPage", "ContactPage", "CollectionPage", "Blog", "Article"].includes(p["@type"]));
+    const wp = parsed.find((p) => ["WebPage", "AboutPage", "ContactPage", "CollectionPage", "Blog", "Article", "BlogPosting"].includes(p["@type"]));
     if (!wp) f(file, "missing WebPage-type schema");
     else if (!wp.dateModified && !wp.datePublished && wp["@type"] !== "Blog") f(file, "WebPage schema missing dateModified");
   }
@@ -93,6 +95,13 @@ for (const file of pages) {
     for (const q of faq.mainEntity) {
       const qEsc = q.name.replace(/&/g, "&amp;").replace(/'/g, "'");
       if (!h.includes(q.name) && !h.includes(qEsc)) f(file, `FAQ question not in visible HTML: "${q.name.slice(0, 40)}..."`);
+      if (file.startsWith('blog/')) {
+        const normalize = s => String(s || '').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/\s+/g, ' ').trim();
+        const details = [...h.matchAll(/<details\b[^>]*>([\s\S]*?)<\/details>/g)];
+        const matching = details.find(m => normalize(/<summary[^>]*>([\s\S]*?)<\/summary>/.exec(m[1])?.[1]) === normalize(q.name));
+        const answer = matching ? normalize(matching[1].replace(/<summary[^>]*>[\s\S]*?<\/summary>/, '')) : '';
+        if (answer !== normalize(q.acceptedAnswer?.text)) f(file, `FAQ answer does not match visible text: "${q.name.slice(0, 40)}..."`);
+      }
     }
   }
 

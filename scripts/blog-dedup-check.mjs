@@ -1,80 +1,79 @@
-// Cannibalization gate for the blog engine (lesson L003, 2026-09-03).
-// Before a topic-queue item is written as a NEW post, check whether a live page already
-// owns the topic. Compares the item's targetKeywords + title against every static page's
-// <title>, <h1>, <h2>s and meta keywords (the SEO surface), plus every blog fragment's
-// PAGE block. Reports the closest pages with a score; --strict exits 1 on any DUPLICATE.
-//
-//   node scripts/blog-dedup-check.mjs                 # every queue item
-//   node scripts/blog-dedup-check.mjs <queue-slug>    # one item
-//   node scripts/blog-dedup-check.mjs --kw "assume a va loan" --kw "va loan assumption"
-//   add --strict to fail the build on a DUPLICATE verdict
-import { readFileSync, readdirSync, statSync } from "node:fs";
-import { join } from "node:path";
-import { ROOT, SITES, coverageIndex, listFragments } from "./blog-lib.mjs";
+// Local ownership inventory across both page sources and unpublished fragments.
+// Similarity is an editorial review cue, never proof of live indexing.
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { join, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { ROOT, SITES, strip, tokens } from './blog-lib.mjs';
 
-const STOP = new Set("the a an and or of to in for on at by with vs versus is are your you what how why when where which who guide 2025 2026 2027 fl florida pensacola area near me best top real estate home homes house".split(" "));
-const tok = (s) => (s || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w));
-const strip = (h) => h.replace(/<[^>]+>/g, " ").replace(/&[a-z#0-9]+;/g, " ").replace(/\s+/g, " ").trim();
-
-function walk(dir, out = []) {
-  for (const f of readdirSync(dir)) {
-    const p = join(dir, f);
-    if (statSync(p).isDirectory()) { if (!/^(og|images|pagefind|fonts)$/.test(f)) walk(p, out); }
-    else if (f.endsWith(".html") && !/^(404|blog|index|search|reviews|privacy|terms|accessibility|thank-you)\.html$/.test(f)) out.push(p);
+function walk(dir) {
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir, { withFileTypes: true }).flatMap(e => {
+    if (e.isDirectory()) return /^(images|og|assets|pagefind|fonts|node_modules)$/.test(e.name) ? [] : walk(join(dir, e.name));
+    return e.name.endsWith('.html') ? [join(dir, e.name)] : [];
+  });
+}
+export function buildCorpus(root = ROOT) {
+  const rows = new Map();
+  for (const [site, config] of Object.entries(SITES)) {
+    for (const file of walk(join(root, config.siteDir))) {
+      const html = readFileSync(file, 'utf8');
+      const path = '/' + file.slice(join(root, config.siteDir).length + 1).replace(/\\/g, '/').replace(/\.html$/, '').replace(/index$/, '');
+      if (/^\/(?:404|search|privacy|accessibility|thanks|terms)$/.test(path)) continue;
+      const title = strip(/<title[^>]*>([\s\S]*?)<\/title>/i.exec(html)?.[1] || '');
+      const head = [title, /<meta name="keywords" content="([^"]*)"/.exec(html)?.[1] || '', ...[...html.matchAll(/<h[12][^>]*>([\s\S]*?)<\/h[12]>/gi)].map(m => strip(m[1]))].join(' ');
+      const url = config.origin + path;
+      rows.set(url, { site, url, title, head: head.toLowerCase(), file });
+    }
+    const dir = join(root, config.contentDir);
+    if (!existsSync(dir)) continue;
+    for (const file of readdirSync(dir).filter(f => f.endsWith('.fragment.html'))) {
+      const raw = readFileSync(join(dir, file), 'utf8');
+      const match = /<!--PAGE\s*([\s\S]*?)\s*PAGE-->/.exec(raw);
+      if (!match) continue;
+      const spec = JSON.parse(match[1]);
+      const slug = spec.slug || file.replace('.fragment.html', '');
+      const url = config.origin + '/blog/' + slug;
+      const head = [spec.title, spec.h1, ...(spec.targetKeywords || []), spec.keywords, ...[...raw.slice(match.index + match[0].length).matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)].map(m => strip(m[1]))].join(' ').toLowerCase();
+      rows.set(url, { site, url, title: spec.title || spec.h1 || slug, head, file: join(dir, file), hasFragment: true });
+    }
   }
-  return out;
+  return [...rows.values()];
 }
-const candidates = coverageIndex().filter((p) => !["/", "/blog", "/search", "/contact", "/reviews", "/privacy", "/accessibility"].includes(p.path));
-for (const site of ["pmh", "gc"]) for (const f of listFragments(site)) {
-  if (!candidates.some((p) => p.site === site && p.path === "/blog/" + f.slug)) candidates.push({ site, path: "/blog/" + f.slug, title: f.spec.title, h1: f.spec.h1, keywords: (f.spec.targetKeywords || []).join(" "), h2s: [] });
+export function compareTopic(item, corpus, { excludeUrl } = {}) {
+  const phrases = (item.targetKeywords || []).map(p => p.toLowerCase().trim()).filter(Boolean);
+  const itemTokens = new Set(tokens([item.title || item.topic || item.slug, ...phrases].join(' ')));
+  const hits = corpus.filter(p => p.url !== excludeUrl).map(page => {
+    const pageTokens = new Set(tokens(page.head));
+    const coverage = itemTokens.size ? [...itemTokens].filter(t => pageTokens.has(t)).length / itemTokens.size : 0;
+    const exact = phrases.filter(p => page.head.includes(p)).length;
+    const verdict = exact || coverage >= 0.82 ? 'INTENT-REVIEW' : coverage >= 0.55 ? 'overlap' : 'ok';
+    return { ...page, coverage: +coverage.toFixed(2), exact, score: exact * 3 + coverage * 4, verdict };
+  }).filter(p => p.coverage > 0.2 || p.exact).sort((a,b) => b.score - a.score).slice(0, 5);
+  return { slug: item.slug, verdict: hits.some(h => h.verdict === 'INTENT-REVIEW') ? 'INTENT-REVIEW' : hits.some(h => h.verdict === 'overlap') ? 'overlap' : 'clear', hits };
 }
-const corpus = candidates.map((p) => ({ url: SITES[p.site].origin + p.path, title: p.title, h1: p.h1, head: `${p.title} ${p.h1} ${p.keywords}`.toLowerCase(), body: `${p.title} ${p.h1} ${p.keywords} ${p.h2s.join(" ")}`.toLowerCase() }));
-
-function score(item) {
-  const phrases = (item.targetKeywords || []).map((k) => k.toLowerCase());
-  const itemTok = new Set(tok([item.title || item.topic || String(item.slug).replace(/-/g, " "), ...(item.targetKeywords || [])].join(" ")));
-  const hits = corpus.map((pg) => {
-    const headPhrase = phrases.filter((ph) => pg.head.includes(ph)).length;
-    const bodyPhrase = phrases.filter((ph) => pg.body.includes(ph)).length;
-    const pgTok = new Set(tok(pg.body));
-    let overlap = 0; for (const t of itemTok) if (pgTok.has(t)) overlap++;
-    const jac = itemTok.size ? overlap / itemTok.size : 0;
-    const s = headPhrase * 3 + bodyPhrase * 1 + jac * 4;
-    let verdict = "ok";
-    if (headPhrase >= 1 || (bodyPhrase >= 2 && jac >= 0.5) || (itemTok.size >= 3 && jac >= 0.8)) verdict = "INTENT-REVIEW";
-    else if (bodyPhrase >= 1 || jac >= 0.5) verdict = "overlap";
-    return { url: pg.url, title: pg.title, s: +s.toFixed(2), headPhrase, bodyPhrase, jac: +jac.toFixed(2), verdict };
-  }).filter((x) => x.s > 0).sort((a, b) => b.s - a.s).slice(0, 4);
-  const worst = hits.find((h) => h.verdict === "INTENT-REVIEW") ? "INTENT-REVIEW" : hits.find((h) => h.verdict === "overlap") ? "overlap" : "clear";
-  return { hits, worst };
+export function intentReviewed(item, ownership) {
+  const review=item.intentReview;
+  return !!(review?.decision==='distinct-intent' && review.reviewedBy && review.readerTask && review.distinctValue && review.comparedTo?.length && ownership.hits.filter(h=>h.verdict==='INTENT-REVIEW').every(h=>review.comparedTo.includes(h.url)));
 }
-
-const args = process.argv.slice(2);
-const strict = args.includes("--strict");
-const site = args.includes("--site") ? args[args.indexOf("--site") + 1] : "pmh";
-if (!SITES[site]) throw new Error("Use --site pmh or gc");
-let items;
-if (args.includes("--kw")) {
-  const kws = args.flatMap((a, i) => (a === "--kw" ? [args[i + 1]] : []));
-  items = [{ slug: "(ad hoc)", title: kws.join(" "), targetKeywords: kws }];
-} else {
-  const q = JSON.parse(readFileSync(ROOT + SITES[site].queue, "utf8")).queue;
-  const one = args.find((a, i) => !a.startsWith("--") && args[i - 1] !== "--site");
-  items = one ? q.filter((t) => t.slug === one) : q;
-  if (!items.length) { console.error("no queue item matches", one); process.exit(2); }
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  const args = process.argv.slice(2);
+  const arg = flag => args.includes(flag) ? args[args.indexOf(flag) + 1] : null;
+  const site = arg('--site') || 'pmh';
+  if (!SITES[site]) throw new Error('site must be gc or pmh');
+  const kws = args.flatMap((a,i) => a === '--kw' ? [args[i+1]] : []);
+  const positional = args.filter((a,i) => !a.startsWith('--') && !['--site','--kw','--exclude-url'].includes(args[i-1]))[0];
+  const queue = kws.length ? [{ slug: '(ad hoc)', targetKeywords: kws }] : JSON.parse(readFileSync(join(ROOT, SITES[site].queue), 'utf8')).queue;
+  const items = positional && !kws.length ? queue.filter(t => t.slug === positional) : queue;
+  if (!items.length) throw new Error('No matching queue item');
+  const corpus = buildCorpus();
+  const rows = items.map(item => {
+    const ownership=compareTopic(item, corpus, { excludeUrl: item.refreshUrl || arg('--exclude-url') });
+    return {...ownership,isRefresh:!!item.refreshUrl || !!item.isRefresh,intentReviewed:intentReviewed(item,ownership)};
+  });
+  if (args.includes('--json')) console.log(JSON.stringify(rows, null, 2));
+  else for (const row of rows) {
+    console.log(row.slug + ': ' + row.verdict + (row.isRefresh ? ' (refresh, review remaining overlap)' : ''));
+    for (const hit of row.hits) console.log('  ' + hit.verdict + ': ' + hit.url + ' | ' + hit.title);
+  }
+  if (args.includes('--strict') && rows.some(r => r.verdict === 'INTENT-REVIEW' && !r.intentReviewed)) process.exitCode = 1;
 }
-let dupes = 0;
-for (const it of items) {
-  if (it.isRefresh || String(it.slug).startsWith("REFRESH:")) { console.log(`\n${it.slug}: refresh item, skipped`); continue; }
-  const { hits, worst } = score(it);
-  const review = it.intentReview;
-  const resolved = review?.decision === "distinct-intent" && review.reviewedBy && review.readerTask && review.distinctValue && review.comparedTo?.length && hits.filter((h) => h.verdict === "INTENT-REVIEW").every((h) => review.comparedTo.includes(h.url));
-  if (worst === "INTENT-REVIEW" && !resolved) dupes++;
-  if (resolved) console.log("  Intent review documented; keep the reviewed reader task and distinct contribution in the research pack.");
-  console.log(`\n${it.slug}  [${worst}]  kws: ${(it.targetKeywords || []).join(" | ")}`);
-  for (const h of hits) console.log(`   ${h.verdict.padEnd(9)} ${String(h.s).padStart(5)}  ${h.url}  (${h.headPhrase} head, ${h.bodyPhrase} body, jac ${h.jac})  ${h.title.slice(0, 60)}`);
-  if (!hits.length) console.log("   (no related pages)");
-}
-console.log("Token/phrase overlap proposes candidates. It does not establish actual search cannibalization; inspect reader intent before merging or writing.");
-console.log(`\n${items.length} item(s) checked across both sites, ${dupes} unresolved intent review(s)`);
-if (strict && dupes) process.exit(1);

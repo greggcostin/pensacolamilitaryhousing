@@ -1,7 +1,8 @@
 // Evidence validation checks traceability and arithmetic, not whether a source is true.
 import { existsSync, readFileSync } from "node:fs";
 import { resolve, relative } from "node:path";
-import { isoDay } from "./search-evidence.mjs";
+import { monthlyPrincipalInterest } from './civilian-mortgage-math.mjs';
+const isoDay = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s) && Number.isFinite(Date.parse(s)) && new Date(s).toISOString().slice(0,10) === s;
 
 const OWN = new Set(["pensacolamilitaryhousing.com", "www.pensacolamilitaryhousing.com", "greggcostin.com", "www.greggcostin.com"]);
 export function externalSources(html) {
@@ -22,6 +23,7 @@ export function calculate(c) {
   if (c.operation === "product") return a.reduce((x, y) => x * y, 1);
   if (c.operation === "difference" && a.length === 2) return a[0] - a[1];
   if (c.operation === "quotient" && a.length === 2 && a[1] !== 0) return a[0] / a[1];
+  if (c.operation === 'amortization' && a.length === 3) return monthlyPrincipalInterest(...a);
   throw new Error("unsupported calculation; use a separately tested model and document its path");
 }
 
@@ -39,7 +41,7 @@ export function validatePack(pack, { slug, site, today, body = "", strict = true
   for (const c of pack.claims || []) {
     if (!c.id || ids.has(c.id)) errors.push("claim ids must be present and unique");
     ids.add(c.id);
-    if (!c.claim || !["fact", "calculation", "illustration"].includes(c.kind)) errors.push(c.id + ": claim text and valid kind required");
+    if (!c.claim || !["fact", "calculation", "illustration", "scenario"].includes(c.kind)) errors.push(c.id + ": claim text and valid kind required");
     if (c.status !== "verified" && published.has(c.id)) errors.push(c.id + ": uncertain or omitted claim appears in publishable prose");
     if (c.status !== "verified") continue;
     if (!isoDay(c.accessed) || c.accessed > today || !c.asOf || !c.locator) errors.push(c.id + ": source access date, data vintage and precise locator required");

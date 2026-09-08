@@ -394,6 +394,15 @@
       "creditRequired": false,
       "credit": "The Costin Team",
       "copiedFrom": "public/images/gregg-navy-no-tie.jpg"
+    },
+    "civilian-site/images/mortgage-rates-north-hill-20260908.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola NHPD house17.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house17.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Pensacola North Hill house"
     }
   }
 }

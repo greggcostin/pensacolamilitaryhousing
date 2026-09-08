@@ -10,15 +10,17 @@
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const pages = [];
+const fileArg = process.argv.indexOf('--file');
 // Both sites: the civilian blog engine's L004 gate (90+ before staging) reads the same table.
 // civilian-site/schools is 82 templated FLDOE pages and is left out so it cannot swamp the ranking.
-for (const dir of ["public", "public/bases", "public/communities", "public/blog", "civilian-site", "civilian-site/resources", "civilian-site/neighborhoods", "civilian-site/blog"]) {
+for (const dir of fileArg >= 0 ? [] : ["public", "public/bases", "public/communities", "public/blog", "civilian-site", "civilian-site/resources", "civilian-site/neighborhoods", "civilian-site/blog"]) {
   for (const f of readdirSync(dir)) {
     if (!f.endsWith(".html")) continue;
     if (["404.html", "search.html", "thanks.html", "blog.html", "book-pcs-call.html"].includes(f) && (dir === "public" || dir === "civilian-site")) continue;
     pages.push(`${dir}/${f}`);
   }
 }
+if (fileArg >= 0) pages.push(process.argv[fileArg + 1]);
 
 const rows = [];
 for (const file of pages) {
@@ -27,7 +29,7 @@ for (const file of pages) {
   if (!mainMatch) continue;
   const main = mainMatch[1];
 
-  const text = (s) => s.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  const text = (s) => s.replace(/<(style|script)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   const words = (s) => (text(s) ? text(s).split(" ").length : 0);
 
   const paras = [...main.matchAll(/<p(?=[\s>])[^>]*>([\s\S]*?)<\/p>/g)].map((m) => words(m[1]));
@@ -82,9 +84,12 @@ ${rows.map(fmt).join("\n")}
   average words between them.
 `;
 
-writeFileSync("docs/formatting-audit.md", report);
-console.log(`analyzed ${rows.length} pages -> docs/formatting-audit.md`);
+const outputArg = process.argv.indexOf('--out');
+const output = outputArg >= 0 ? process.argv[outputArg + 1] : fileArg >= 0 ? null : 'docs/formatting-audit.md';
+if (output) writeFileSync(output, report);
+console.log(`analyzed ${rows.length} pages${output ? ' -> ' + output : ' (read-only single-page report)'}`);
 console.log("\nWorst 10:");
 rows.slice(0, 10).forEach((r) => console.log(`  ${r.score}  ${r.file}  (${r.walls} walls, ${r.wordsPerHeading}w/heading, ${r.wordsPerAid}w/aid)`));
 console.log("\nBest 5:");
 rows.slice(-5).forEach((r) => console.log(`  ${r.score}  ${r.file}`));
+if (process.argv.includes('--gate') && (!rows.length || rows.some(r => r.score < 90))) process.exitCode = 1;

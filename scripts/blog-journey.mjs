@@ -6,7 +6,14 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&
 
 export function journeyFor(spec, site) {
   const slug = spec.slug, text = (slug + " " + spec.category).toLowerCase();
+  if (site === 'gc' && spec.journey) {
+    const j=spec.journey;
+    if (!/^[a-z][a-z-]{2,60}$/.test(j.goal || '') || ['prompt','tool','toolLabel','bridge','bridgeLabel'].some(k=>typeof j[k]!=='string' || !j[k].trim())) throw Error('A custom article journey requires a stable goal, prompt and two labeled first-party destinations');
+    return j;
+  }
   if (site === "gc") {
+    if (spec.editorial?.pillar === 'selling') return {goal:'seller-planning',prompt:'Compare the options against your net proceeds, timing and next move.',tool:'/sell',toolLabel:'Build your selling plan',bridge:'/blog/property-taxes-escambia-santa-rosa',bridgeLabel:'Check the local property-tax questions'};
+    if (['rental-investing','str-vacation','mtr-landlord'].includes(spec.editorial?.pillar)) return {goal:'rental-property-review',prompt:'Check the property documents and complete operating budget before relying on advertised rental income.',tool:'/gulf-shores-orange-beach',toolLabel:'Review coastal Alabama property questions',bridge:'/resources/florida-home-insurance',bridgeLabel:'Prepare Florida insurance questions'};
     if (/insurance/.test(text)) return { goal: "property-cost-review", prompt: "Before comparing homes, collect insurance questions for each property.", tool: "/resources/florida-home-insurance", toolLabel: "Use the Florida insurance guide", bridge: "https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers", bridgeLabel: "Check flood-zone questions before you make an offer" };
     if (/tax/.test(text)) return { goal: "property-cost-review", prompt: "Compare tax rules with the address and ownership plan you are considering.", tool: "/resources/florida-homestead-exemption", toolLabel: "Review homestead requirements", bridge: "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide", bridgeLabel: "Veteran buyer? See the county tax guide" };
     return { goal: "buyer-planning", prompt: "Use this guide to prepare the questions for your own purchase.", tool: "/resources/first-time-home-buyer", toolLabel: "Plan your next home purchase", bridge: "https://pensacolamilitaryhousing.com/va-loan-guide", bridgeLabel: "Using a VA loan? Review the VA buyer guide" };
@@ -33,7 +40,7 @@ export function journeyHtml(spec, site, root) {
     '<h2 id="article-next-title">Put this guide to work</h2><p>' + esc(j.prompt) + '</p>' +
     '<ul><li><a data-blog-next="tool" href="' + esc(j.tool) + '">' + esc(j.toolLabel) + '</a></li>' +
     '<li><a data-blog-next="companion" href="' + esc(j.bridge) + '">' + esc(j.bridgeLabel) + '</a></li></ul>' +
-    '<p><a href="/contact" data-inquiry-open data-inquiry-type="General Question" data-blog-next="inquiry">Ask Gregg about your own move</a></p>' +
+    '<p><a href="/contact" data-inquiry-open data-inquiry-type="General Question" data-blog-next="inquiry">Ask Gregg about your property plans</a></p>' +
     '<div class="article-share"><button type="button" data-blog-share hidden>Share this guide</button> ' +
     '<button type="button" data-blog-copy hidden>Copy guide link</button> <a href="' + esc(SITES[site].origin + "/blog/" + spec.slug) + '">Permanent link</a>' +
     '<span data-blog-share-status role="status" aria-live="polite"></span></div></section>';

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generated": "2026-09-06",
+  "generated": "2026-09-08",
   "mode": "reviewable-plan",
   "maximumArticleChanges": 1,
   "next": {
@@ -289,6 +289,57 @@
         "distribute"
       ],
       "status": "active"
+    },
+    {
+      "id": "L021",
+      "date": "2026-09-07",
+      "appliesTo": [
+        "research",
+        "decide"
+      ],
+      "status": "active",
+      "rule": "A rate-move current-events override is only real after the weekly figure is checked against Freddie Mac PMMS itself. Syndicated rate coverage is not evidence of a move.",
+      "evidence": "Sep 7 2026: syndicated articles reported a 30-year rate of 6.89%, called rates \"much higher week over week\", and attributed the move to an oil shock. Freddie Mac PMMS for the week ending Sep 3 2026 showed 6.71% against a prior 6.66%, a 5 basis point change. The override was rejected and the run fell through to the refresh queue. The discrepancy itself became the post's information-gain section.",
+      "type": "operational",
+      "legacyId": "L016 (duplicate in uncommitted Sep 7 state)",
+      "migrationNote": "Historical lesson preserved with a unique ID; not a new performance finding."
+    },
+    {
+      "id": "L023",
+      "date": "2026-09-08",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "research",
+        "finance"
+      ],
+      "rule": "When explaining mortgage pricing, define whether a spread already includes origination costs and margins. Do not add that margin twice or infer daily causality from mismatched weekly and daily observations.",
+      "evidence": "The interrupted mortgage fragment added a lender margin after the full mortgage-to-Treasury difference. This run re-read Federal Reserve FEDS 2021-048 pages 8-9 and replaced the decomposition; the 6.71/6.66 PMMS change is presented only as a weekly observation. Evidence: content/civilian-blog/research/what-moves-mortgage-rates.json."
+    },
+    {
+      "id": "L024",
+      "date": "2026-09-08",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "write",
+        "build"
+      ],
+      "rule": "Preserve both the shared claim/calculation gate and the civilian final-content/source-review hashes. A review record must match the exact final article; arithmetic is recomputed from numeric inputs, not trusted because a reviewer checked a box.",
+      "evidence": "Tests reproduced failures for a changed content hash, expired source, absent claim passage, source mismatch and incorrect recorded arithmetic. The complete article passes both validators and the payment model amortizes to zero. scripts/civilian-editorial.test.mjs and scripts/tests/blog-evidence.test.mjs."
+    },
+    {
+      "id": "L025",
+      "date": "2026-09-08",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "orchestrate",
+        "build",
+        "ship"
+      ],
+      "rule": "When the shared checkout has unfinished changes, build owned blog work in a clean worktree based on current main, reconcile newer evidence/privacy/journey code, and commit only owned files. A dirty shared checkout does not require stopping at an unbuilt fragment.",
+      "evidence": "The Sep 8 release integrated against main 5dc3822e while preserving the pre-existing working-tree changes. The isolated 310-page civilian audit and 679-page entity audit passed. Integration also caught and preserved the school llms marker and unchanged sitemap dates."
     }
   ],
   "excludedLessons": [],
@@ -325,6 +376,30 @@
     "errors": [],
     "note": "No client count, revenue or conversion lift is inferred from clicks. Cross-domain assisted journeys and qualified clients require separately matched analytics/CRM evidence. Do not double-count legacy inquiry_submit and blog_inquiry_success."
   },
+  "contentExperiments": [
+    {
+      "site": "gc",
+      "slug": "what-moves-mortgage-rates",
+      "runId": "civilian-blog-engine-2026-09-08",
+      "id": "gc-mortgage-decision-guide-2026-09-08",
+      "status": "prepared",
+      "deployedAt": null,
+      "hypothesis": "A sourced financing comparison with usable calculations and property-specific next steps will support better-qualified inquiries.",
+      "primaryOutcome": "Verified qualified conversations attributed to this article; requires separate CRM evidence.",
+      "secondaryOutcomes": [
+        "unique landing sessions with an accepted inquiry",
+        "organic search clicks",
+        "reading engagement",
+        "verified shares",
+        "provider-reported AI citations when available"
+      ],
+      "minimumFollowupDays": 28,
+      "comparison": "Same production-host cohort, source, definitions and equal non-overlapping complete windows. Apply shared sample/uncertainty checks.",
+      "conclusion": "No live effect measured; awaiting deployment and adequate observations.",
+      "source": "content/civilian-blog/ledger.json",
+      "note": "Prepared changes have no live effect. Record actual deployment and review comparable outcome windows; status is not a causal finding."
+    }
+  ],
   "articles": [
     {
       "site": "pmh",
@@ -723,7 +798,7 @@
         "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/",
         "https://www.consumerfinance.gov/rules-policy/regulations/1026/19/"
       ],
-      "contextualInbound": 4,
+      "contextualInbound": 5,
       "evidencePack": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
       "readerTask": "Calculate cash to close and identify the unresolved contract and quote items.",
       "nextStep": {
@@ -800,7 +875,7 @@
         "https://santarosaclerk.com/other-services/value-adjustment-board-public-notice/",
         "https://taxfoundation.org/blog/florida-property-tax-proposal/"
       ],
-      "contextualInbound": 3,
+      "contextualInbound": 4,
       "evidencePack": null,
       "readerTask": null,
       "nextStep": {
@@ -816,20 +891,26 @@
       "site": "gc",
       "slug": "what-moves-mortgage-rates",
       "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
-      "linkedSourceDomains": 1,
+      "linkedSourceDomains": 4,
       "sourceUrls": [
-        "https://greggcostin.realscout.com/onboarding"
+        "https://www.freddiemac.com/pmms",
+        "https://www.federalreserve.gov/econres/feds/files/2021048pap.pdf",
+        "https://www.consumerfinance.gov/ask-cfpb/does-my-credit-score-affect-my-ability-to-get-a-mortgage-loan-or-the-mortgage-rate-i-pay-en-319/",
+        "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/",
+        "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
+        "https://guide-selling.fanniemae.com/sel/b2-1.1-01/occupancy-types"
       ],
-      "contextualInbound": 2,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 4,
+      "evidencePack": "content/civilian-blog/research/what-moves-mortgage-rates.json",
+      "readerTask": "Compare written financing offers and decide whether points, a rate lock and the total property budget fit the intended use.",
       "nextStep": {
-        "goal": "buyer-planning",
-        "prompt": "Use this guide to prepare the questions for your own purchase.",
-        "tool": "/resources/first-time-home-buyer",
-        "toolLabel": "Plan your next home purchase",
-        "bridge": "https://pensacolamilitaryhousing.com/va-loan-guide",
-        "bridgeLabel": "Using a VA loan? Review the VA buyer guide"
+        "goal": "property-financing-review",
+        "prompt": "Bring the property location, intended use and written financing offers together. Then check the ownership costs that sit outside the mortgage payment.",
+        "tool": "/resources/florida-home-insurance",
+        "toolLabel": "Prepare property-specific insurance questions",
+        "bridge": "/gulf-shores-orange-beach",
+        "bridgeLabel": "Review coastal Alabama ownership questions"
       }
     }
   ],

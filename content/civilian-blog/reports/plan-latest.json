@@ -1,0 +1,1606 @@
+{
+  "generated": "2026-09-08",
+  "purpose": "Editorial selection, not search-volume or ranking prediction",
+  "measurement": {
+    "collectedAt": "2026-09-08T06:21:25.553Z",
+    "windowStart": "2026-08-10",
+    "windowEnd": "2026-09-06",
+    "reportedTrafficDays": 13,
+    "endpointStatus": {
+      "pages": {
+        "status": "empty",
+        "rows": 0,
+        "error": null
+      },
+      "queries": {
+        "status": "empty",
+        "rows": 0,
+        "error": null
+      },
+      "traffic": {
+        "status": "observed",
+        "rows": 13,
+        "error": null
+      }
+    },
+    "site28": {
+      "imp": 0,
+      "clk": 0
+    }
+  },
+  "demandReview": [],
+  "coverage": [
+    {
+      "pillar": "financing-macro",
+      "recent": 2
+    },
+    {
+      "pillar": "local-market",
+      "recent": 0
+    },
+    {
+      "pillar": "buying",
+      "recent": 1
+    },
+    {
+      "pillar": "selling",
+      "recent": 0
+    },
+    {
+      "pillar": "ownership-costs",
+      "recent": 2
+    },
+    {
+      "pillar": "rental-investing",
+      "recent": 0
+    },
+    {
+      "pillar": "str-vacation",
+      "recent": 0
+    },
+    {
+      "pillar": "mtr-landlord",
+      "recent": 0
+    }
+  ],
+  "ranked": [
+    {
+      "slug": "market-check-monthly",
+      "topic": "RECURRING: Pensacola-area market check with researched, cited current data (inventory, days on market, price trends). Only run with real sourced numbers.",
+      "type": "current-events",
+      "pillar": "local-market",
+      "audience": [
+        "buyer",
+        "seller",
+        "long-term investor"
+      ],
+      "targetKeywords": [
+        "Pensacola housing market monthly report",
+        "Baldwin County housing inventory"
+      ],
+      "decision": "Explain what a completed local reporting period changes for an offer or listing price; separate detached homes and condos.",
+      "gate": "Requires a primary local report with period, geography, property type, sample and comparable prior period.",
+      "evidenceStatus": "Editorial proposal; no observed demand claimed.",
+      "observedDemand": false,
+      "coverageCount": 0,
+      "priority": 49.94,
+      "runnable": false,
+      "reasons": [
+        "requires a verified event",
+        "explicit queue gate requires evidence"
+      ],
+      "ownership": {
+        "slug": "market-check-monthly",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/communities/gulf-breeze",
+            "title": "Gulf Breeze, FL Military Homes | NAS Pensacola | Gregg Costin",
+            "coverage": 0.29,
+            "exact": 0,
+            "score": 1.1428571428571428,
+            "verdict": "ok",
+            "file": "public/communities/gulf-breeze.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog",
+            "title": "Military Real Estate Blog | PCS, VA Loans, BAH | Gregg Costin",
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9523809523809523,
+            "verdict": "ok",
+            "file": "public/blog.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers",
+            "title": "Pensacola Flood Zones for Homebuyers | 2025 FEMA Maps",
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9523809523809523,
+            "verdict": "ok",
+            "file": "public/pensacola-flood-zones-homebuyers.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/rent-or-sell-pcs-pensacola",
+            "title": "Selling Your House Before a PCS: Rent or Sell in Pensacola",
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9523809523809523,
+            "verdict": "ok",
+            "file": "public/rent-or-sell-pcs-pensacola.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "price-cut-or-seller-concession",
+      "topic": "Price cut or seller concession: compare seller net proceeds and the buyer problem each option actually solves",
+      "type": "evergreen",
+      "pillar": "selling",
+      "audience": [
+        "seller",
+        "buyer"
+      ],
+      "targetKeywords": [
+        "price reduction vs seller concession",
+        "seller credit vs price reduction"
+      ],
+      "decision": "Choose an offer structure using net proceeds and a lender-confirmed buyer budget.",
+      "sourcePlan": [
+        "Written hypothetical offers with the same assumptions",
+        "CFPB Loan Estimate",
+        "Applicable loan-program concession rules"
+      ],
+      "asset": "Two-offer net-proceeds table and a lender-question checklist",
+      "evidenceStatus": "Editorial proposal based on coverage gaps; no observed demand or search volume claimed.",
+      "added": "2026-09-08",
+      "observedDemand": false,
+      "coverageCount": 0,
+      "priority": 49.87,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "price-cut-or-seller-concession",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+            "title": "VA Loan Seller Concessions: The 4% Myth Costing You Money",
+            "hasFragment": true,
+            "coverage": 0.4,
+            "exact": 0,
+            "score": 1.6,
+            "verdict": "ok",
+            "file": "content/blog/va-loan-seller-concessions-truth.fragment.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+            "title": "Florida Closing Costs for Buyers: A Cash-to-Close Guide",
+            "hasFragment": true,
+            "coverage": 0.27,
+            "exact": 0,
+            "score": 1.0666666666666667,
+            "verdict": "ok",
+            "file": "content/civilian-blog/closing-costs-florida-buyers.fragment.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "sell-or-keep-house-as-rental",
+      "topic": "Sell your current home or keep it as a rental: equity, cash flow, management effort and a downside case",
+      "type": "evergreen",
+      "pillar": "selling",
+      "audience": [
+        "seller",
+        "homeowner",
+        "long-term investor"
+      ],
+      "targetKeywords": [
+        "sell or rent out my house Pensacola",
+        "keep home as rental equity return"
+      ],
+      "decision": "Compare net sale proceeds with documented rental economics, financing restrictions and cash reserves.",
+      "sourcePlan": [
+        "IRS current home-sale and rental guidance",
+        "Written hypothetical operating and sale scenarios",
+        "Actual financing and insurance requirements"
+      ],
+      "asset": "Side-by-side decision worksheet with vacancy and repair sensitivity",
+      "evidenceStatus": "Editorial proposal based on coverage gaps; no observed demand or search volume claimed.",
+      "added": "2026-09-08",
+      "observedDemand": false,
+      "coverageCount": 0,
+      "priority": 49.86,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "sell-or-keep-house-as-rental",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/rent-or-sell-pcs-pensacola",
+            "title": "Selling Your House Before a PCS: Rent or Sell in Pensacola",
+            "coverage": 0.47,
+            "exact": 0,
+            "score": 1.8666666666666667,
+            "verdict": "ok",
+            "file": "public/rent-or-sell-pcs-pensacola.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.4,
+            "exact": 0,
+            "score": 1.6,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/military-rental-property-management",
+            "title": "Military Rental Property Management Pensacola | PCS Rental",
+            "coverage": 0.33,
+            "exact": 0,
+            "score": 1.3333333333333333,
+            "verdict": "ok",
+            "file": "public/military-rental-property-management.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+            "title": "Florida Homestead Exemption for Military: Save Thousands",
+            "hasFragment": true,
+            "coverage": 0.27,
+            "exact": 0,
+            "score": 1.0666666666666667,
+            "verdict": "ok",
+            "file": "content/blog/florida-homestead-exemption-military.fragment.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "rental-noi-cash-flow-cash-on-cash",
+      "topic": "Gross rent, NOI and cash left after the mortgage: read a Gulf Coast rental investment without confusing the metrics",
+      "type": "evergreen",
+      "pillar": "rental-investing",
+      "audience": [
+        "long-term investor",
+        "short-term rental owner",
+        "mid-term rental owner"
+      ],
+      "targetKeywords": [
+        "rental NOI vs cash flow",
+        "cash on cash return rental expenses"
+      ],
+      "decision": "Rebuild an investment calculation from revenue to operating expenses, debt service and reserves.",
+      "sourcePlan": [
+        "IRS rental-expense guidance for classification only",
+        "Explicit hypothetical loan and operating inputs",
+        "Independent arithmetic reconciliation"
+      ],
+      "asset": "Reproducible operating statement and a downside scenario",
+      "evidenceStatus": "Editorial proposal based on coverage gaps; no observed demand or search volume claimed.",
+      "added": "2026-09-08",
+      "observedDemand": false,
+      "coverageCount": 0,
+      "priority": 49.85,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "rental-noi-cash-flow-cash-on-cash",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+            "title": "What Moves Mortgage Rates? A Gulf Coast Buyer's Guide",
+            "hasFragment": true,
+            "coverage": 0.28,
+            "exact": 0,
+            "score": 1.1111111111111112,
+            "verdict": "ok",
+            "file": "content/civilian-blog/what-moves-mortgage-rates.fragment.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "vacation-rental-break-even-occupancy",
+      "topic": "How many booked nights does a vacation rental need to break even? Account for owner use, fees, seasonality and reserves",
+      "type": "evergreen",
+      "pillar": "str-vacation",
+      "audience": [
+        "short-term rental owner",
+        "vacation-home buyer"
+      ],
+      "targetKeywords": [
+        "vacation rental break even occupancy",
+        "short term rental booked nights break even"
+      ],
+      "decision": "Find the booked-night requirement under transparent assumptions without promising occupancy or revenue.",
+      "sourcePlan": [
+        "Documented hypothetical nightly revenue and variable costs",
+        "Municipal and county tax rules for the chosen jurisdiction",
+        "Written management-fee and insurance assumptions"
+      ],
+      "asset": "Booked-night break-even table with low-season and downtime cases",
+      "evidenceStatus": "Editorial proposal based on coverage gaps; no observed demand or search volume claimed.",
+      "added": "2026-09-08",
+      "observedDemand": false,
+      "coverageCount": 0,
+      "priority": 49.84,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "vacation-rental-break-even-occupancy",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+            "title": "What Moves Mortgage Rates? A Gulf Coast Buyer's Guide",
+            "hasFragment": true,
+            "coverage": 0.35,
+            "exact": 0,
+            "score": 1.411764705882353,
+            "verdict": "ok",
+            "file": "content/civilian-blog/what-moves-mortgage-rates.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/veteran-realtor-destin",
+            "title": "Veteran Real Estate Agent Destin FL | Gregg Costin",
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9411764705882353,
+            "verdict": "ok",
+            "file": "public/veteran-realtor-destin.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "vacation-rental-operating-statement-due-diligence",
+      "topic": "Before buying a vacation rental, reconcile the advertised revenue with the operating statement and owner cash flow",
+      "type": "evergreen",
+      "pillar": "rental-investing",
+      "audience": [
+        "short-term rental owner",
+        "vacation-home buyer"
+      ],
+      "targetKeywords": [
+        "vacation rental income statement due diligence",
+        "verify rental revenue before buying"
+      ],
+      "decision": "Identify what the seller revenue report includes, excludes and cannot prove about future performance.",
+      "sourcePlan": [
+        "Explicit hypothetical channel and payout records",
+        "Property-specific expense checklist",
+        "Official rental permissions and association documents"
+      ],
+      "asset": "Revenue-to-payout reconciliation and document request list",
+      "evidenceStatus": "Editorial proposal based on coverage gaps; no observed demand or search volume claimed.",
+      "added": "2026-09-08",
+      "observedDemand": false,
+      "coverageCount": 0,
+      "priority": 49.83,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "vacation-rental-operating-statement-due-diligence",
+        "verdict": "clear",
+        "hits": []
+      }
+    },
+    {
+      "slug": "mid-term-vs-long-term-rental-costs",
+      "topic": "Furnished mid-term rental or annual lease: compare vacancy gaps, utilities, turnover and the cash actually retained",
+      "type": "evergreen",
+      "pillar": "mtr-landlord",
+      "audience": [
+        "mid-term rental owner",
+        "long-term investor"
+      ],
+      "targetKeywords": [
+        "mid term vs long term rental cash flow",
+        "furnished rental utilities vacancy costs"
+      ],
+      "decision": "Compare two operating models using the same property and separately verify every applicable rule.",
+      "sourcePlan": [
+        "Florida or Alabama statutes for the named jurisdiction",
+        "City and association rules for the actual permitted use",
+        "Explicit hypothetical rent, utilities and vacancy inputs"
+      ],
+      "asset": "Twelve-month scenario worksheet; no unsupported hospital or traveling-worker demand claims",
+      "evidenceStatus": "Editorial proposal based on coverage gaps; no observed demand or search volume claimed.",
+      "added": "2026-09-08",
+      "observedDemand": false,
+      "coverageCount": 0,
+      "priority": 49.82,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "mid-term-vs-long-term-rental-costs",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/rent-or-sell-pcs-pensacola",
+            "title": "Selling Your House Before a PCS: Rent or Sell in Pensacola",
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9411764705882353,
+            "verdict": "ok",
+            "file": "public/rent-or-sell-pcs-pensacola.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/veteran-realtor-destin",
+            "title": "Veteran Real Estate Agent Destin FL | Gregg Costin",
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9411764705882353,
+            "verdict": "ok",
+            "file": "public/veteran-realtor-destin.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+            "title": "Florida Closing Costs for Buyers: A Cash-to-Close Guide",
+            "hasFragment": true,
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9411764705882353,
+            "verdict": "ok",
+            "file": "content/civilian-blog/closing-costs-florida-buyers.fragment.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+            "title": "What Moves Mortgage Rates? A Gulf Coast Buyer's Guide",
+            "hasFragment": true,
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9411764705882353,
+            "verdict": "ok",
+            "file": "content/civilian-blog/what-moves-mortgage-rates.fragment.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "rental-hurricane-downtime-budget",
+      "topic": "What happens to rental cash flow when a Gulf Coast property cannot operate after a storm?",
+      "type": "evergreen",
+      "pillar": "str-vacation",
+      "audience": [
+        "short-term rental owner",
+        "mid-term rental owner",
+        "long-term investor"
+      ],
+      "targetKeywords": [
+        "rental property hurricane downtime budget",
+        "vacation rental loss of income insurance questions"
+      ],
+      "decision": "Size a scenario reserve and ask specific coverage questions without assuming a policy pays.",
+      "sourcePlan": [
+        "FEMA flood coverage guidance",
+        "State insurance department consumer material",
+        "Actual policy wording or clearly hypothetical coverage limitations"
+      ],
+      "asset": "Downtime budget and insurance-agent question list",
+      "evidenceStatus": "Editorial proposal based on coverage gaps; no observed demand or search volume claimed.",
+      "added": "2026-09-08",
+      "observedDemand": false,
+      "coverageCount": 0,
+      "priority": 49.81,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "rental-hurricane-downtime-budget",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.32,
+            "exact": 0,
+            "score": 1.263157894736842,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/communities/destin",
+            "title": "Destin, FL Military Homes | Eglin & Hurlburt PCS",
+            "coverage": 0.26,
+            "exact": 0,
+            "score": 1.0526315789473684,
+            "verdict": "ok",
+            "file": "public/communities/destin.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/communities/perdido-key",
+            "title": "Perdido Key, FL Military Homes | NAS Pensacola | Gregg Costin",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8421052631578947,
+            "verdict": "ok",
+            "file": "public/communities/perdido-key.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/military-rental-property-management",
+            "title": "Military Rental Property Management Pensacola | PCS Rental",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8421052631578947,
+            "verdict": "ok",
+            "file": "public/military-rental-property-management.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/rent-or-sell-pcs-pensacola",
+            "title": "Selling Your House Before a PCS: Rent or Sell in Pensacola",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8421052631578947,
+            "verdict": "ok",
+            "file": "public/rent-or-sell-pcs-pensacola.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "rental-financing-dscr-sensitivity",
+      "topic": "What a rental loan payment does to cash flow: stress-test debt coverage, refinancing assumptions and reserves",
+      "type": "evergreen",
+      "pillar": "rental-investing",
+      "audience": [
+        "long-term investor",
+        "short-term rental owner"
+      ],
+      "targetKeywords": [
+        "rental debt service coverage sensitivity",
+        "investment property financing cash flow"
+      ],
+      "decision": "Test the actual lender definition and proposed debt payment instead of assuming one universal DSCR qualification rule.",
+      "sourcePlan": [
+        "Identified lender program terms checked this session if quoted",
+        "Reproducible hypothetical amortization and operating statement",
+        "CFPB financing definitions"
+      ],
+      "asset": "Rate and revenue sensitivity table; no blanket approval thresholds",
+      "evidenceStatus": "Editorial proposal based on coverage gaps; no observed demand or search volume claimed.",
+      "added": "2026-09-08",
+      "observedDemand": false,
+      "coverageCount": 0,
+      "priority": 49.8,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "rental-financing-dscr-sensitivity",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9411764705882353,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/veteran-realtor-destin",
+            "title": "Veteran Real Estate Agent Destin FL | Gregg Costin",
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9411764705882353,
+            "verdict": "ok",
+            "file": "public/veteran-realtor-destin.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+            "title": "What Moves Mortgage Rates? A Gulf Coast Buyer's Guide",
+            "hasFragment": true,
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9411764705882353,
+            "verdict": "ok",
+            "file": "content/civilian-blog/what-moves-mortgage-rates.fragment.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "home-appraisals-explained",
+      "topic": "How home appraisals work: who hires the appraiser, what they compare, what happens when the number comes in low",
+      "type": "evergreen",
+      "evidence": "Radar 2026-09-04: how much is a home appraisal in Florida (Bing demand 67, 12 queries). Open with the fee range and who pays.",
+      "pillar": "buying",
+      "audience": [
+        "buyer",
+        "seller"
+      ],
+      "targetKeywords": [
+        "how home appraisals work Florida",
+        "what happens when an appraisal is low"
+      ],
+      "decision": "Evaluate an appraisal gap without assuming the price, value and loan amount are the same.",
+      "evidenceStatus": "Historical discovery note, not verified current civilian impressions or search volume. Recheck against the dated evidence packet.",
+      "observedDemand": false,
+      "coverageCount": 1,
+      "priority": 39.99,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "home-appraisals-explained",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.27,
+            "exact": 0,
+            "score": 1.0909090909090908,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/schools/pensacola-beach-elementary-school",
+            "title": "Pensacola Beach Elementary School, Inc. | FL DOE Grade",
+            "coverage": 0.27,
+            "exact": 0,
+            "score": 1.0909090909090908,
+            "verdict": "ok",
+            "file": "civilian-site/schools/pensacola-beach-elementary-school.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "title-insurance-explained",
+      "topic": "What title insurance is, why lenders require it, and what an owner policy protects in Florida",
+      "type": "evergreen",
+      "evidence": "Radar 2026-09-04: cost of title policy in Florida (5 queries), title policy calculator (Bing demand 366), owner title insurance cost Florida (529). Lead with the rate table (FAC 69O-186.003) and a worked example.",
+      "pillar": "buying",
+      "audience": [
+        "buyer"
+      ],
+      "targetKeywords": [
+        "owner title insurance Florida",
+        "Florida title insurance cost"
+      ],
+      "decision": "Understand the policy being purchased, exclusions, closing allocation and a sourced premium example.",
+      "evidenceStatus": "Historical discovery note, not verified current civilian impressions or search volume. Recheck against the dated evidence packet.",
+      "observedDemand": false,
+      "coverageCount": 1,
+      "priority": 39.97,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "title-insurance-explained",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/resources/florida-home-insurance",
+            "title": "Florida Home Insurance Guide: Costs, Inspections, Flood Zones",
+            "coverage": 0.38,
+            "exact": 0,
+            "score": 1.5,
+            "verdict": "ok",
+            "file": "civilian-site/resources/florida-home-insurance.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+            "title": "2026 BAH Pensacola: What Can You Afford? | Gregg Costin",
+            "hasFragment": true,
+            "coverage": 0.25,
+            "exact": 0,
+            "score": 1,
+            "verdict": "ok",
+            "file": "content/blog/bah-2026-pensacola-what-can-you-afford.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+            "title": "Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98",
+            "hasFragment": true,
+            "coverage": 0.25,
+            "exact": 0,
+            "score": 1,
+            "verdict": "ok",
+            "file": "content/blog/moving-to-navarre-2026-guide.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide",
+            "title": "Moving to Pensacola, FL: The Complete 2026 Guide",
+            "hasFragment": true,
+            "coverage": 0.25,
+            "exact": 0,
+            "score": 1,
+            "verdict": "ok",
+            "file": "content/blog/moving-to-pensacola-2026-guide.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
+            "title": "How to Assume a VA Loan in 2026: The Buyer's Playbook",
+            "hasFragment": true,
+            "coverage": 0.25,
+            "exact": 0,
+            "score": 1,
+            "verdict": "ok",
+            "file": "content/blog/va-loan-assumption-buyers-guide.fragment.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "new-construction-vs-resale",
+      "topic": "New construction vs resale on the Gulf Coast: true costs, timelines, builder contracts, and inspection rights",
+      "type": "evergreen",
+      "pillar": "buying",
+      "audience": [
+        "buyer"
+      ],
+      "targetKeywords": [
+        "new construction vs resale Gulf Coast",
+        "builder incentive true cost"
+      ],
+      "decision": "Compare all-in cost, independent inspections, contingencies and incentive terms.",
+      "evidenceStatus": "Editorial proposal; no observed demand claimed.",
+      "observedDemand": false,
+      "coverageCount": 1,
+      "priority": 39.96,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "new-construction-vs-resale",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/resources/florida-home-insurance",
+            "title": "Florida Home Insurance Guide: Costs, Inspections, Flood Zones",
+            "coverage": 0.29,
+            "exact": 0,
+            "score": 1.1428571428571428,
+            "verdict": "ok",
+            "file": "civilian-site/resources/florida-home-insurance.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8571428571428571,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/florida-home-insurance-military",
+            "title": "Florida Home Insurance for Military Families | Gregg Costin",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8571428571428571,
+            "verdict": "ok",
+            "file": "public/florida-home-insurance-military.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/new-construction-pensacola",
+            "title": "New Construction Homes in Pensacola FL: Military Guide",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8571428571428571,
+            "verdict": "ok",
+            "file": "public/new-construction-pensacola.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "buying-on-pensacola-beach-leasehold",
+      "topic": "Buying a home or condo on Pensacola Beach: Santa Rosa Island Authority leasehold land (you lease, you do not own), how the lease fee and term affect financing and resale, wind and flood insurance on the barrier island, HOA and rental rules, and the Navarre Beach comparison",
+      "type": "evergreen",
+      "archetype": "decision",
+      "targetKeywords": [
+        "pensacola beach properties",
+        "pensacola beach real estate",
+        "pensacola beach leasehold",
+        "buying a condo on pensacola beach"
+      ],
+      "source": "topic-miner 2026-09-04",
+      "evidence": "Radar #11 (Bing related-keyword demand 400) and #18 (oceanfront condos in Pensacola with pool). The SRIA leasehold structure is the most misunderstood fact about buying on the beach and no page on either site explains it; the Navarre guide covers Navarre Beach leases, so cross-link and differentiate.",
+      "pillar": "buying",
+      "audience": [
+        "buyer",
+        "vacation-home buyer"
+      ],
+      "refreshUrl": "https://greggcostin.com/resources/pensacola-beach-leasehold",
+      "decision": "Read the actual lease, obligations, financing and rental permissions before making an offer.",
+      "evidenceStatus": "Historical discovery note, not verified current civilian impressions or search volume. Recheck against the dated evidence packet.",
+      "observedDemand": false,
+      "coverageCount": 1,
+      "priority": 39.88,
+      "runnable": false,
+      "reasons": [
+        "refresh destination absent from this checkout; integrate the existing guide before refreshing it"
+      ],
+      "ownership": {
+        "slug": "buying-on-pensacola-beach-leasehold",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.32,
+            "exact": 0,
+            "score": 1.2857142857142858,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/neighborhoods/pensacola-beach",
+            "title": "Pensacola Beach Condos & Homes | The Costin Team",
+            "coverage": 0.32,
+            "exact": 0,
+            "score": 1.2857142857142858,
+            "verdict": "ok",
+            "file": "civilian-site/neighborhoods/pensacola-beach.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/veteran-realtor-destin",
+            "title": "Veteran Real Estate Agent Destin FL | Gregg Costin",
+            "coverage": 0.29,
+            "exact": 0,
+            "score": 1.1428571428571428,
+            "verdict": "ok",
+            "file": "public/veteran-realtor-destin.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+            "title": "Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98",
+            "hasFragment": true,
+            "coverage": 0.25,
+            "exact": 0,
+            "score": 1,
+            "verdict": "ok",
+            "file": "content/blog/moving-to-navarre-2026-guide.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/va-approved-condos-pensacola",
+            "title": "VA Approved Condos Pensacola | Check the VA Condo List",
+            "coverage": 0.25,
+            "exact": 0,
+            "score": 1,
+            "verdict": "ok",
+            "file": "public/va-approved-condos-pensacola.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "coastal-alabama-vs-panhandle",
+      "topic": "Buying on the Gulf: coastal Alabama (Orange Beach, Gulf Shores, Lillian) vs the Florida Panhandle, taxes, insurance, and lifestyle compared (Gregg is licensed in both states)",
+      "type": "evergreen",
+      "pillar": "ownership-costs",
+      "audience": [
+        "buyer",
+        "vacation-home buyer"
+      ],
+      "targetKeywords": [
+        "coastal ownership costs Florida Alabama",
+        "buying a home Florida versus Alabama"
+      ],
+      "refreshUrl": "https://greggcostin.com/resources/coastal-ownership-costs",
+      "decision": "Compare the complete cost of two specific properties, with jurisdiction and use held explicit.",
+      "evidenceStatus": "Editorial proposal; no observed demand claimed.",
+      "observedDemand": false,
+      "coverageCount": 2,
+      "priority": 30,
+      "runnable": false,
+      "reasons": [
+        "refresh destination absent from this checkout; integrate the existing guide before refreshing it"
+      ],
+      "ownership": {
+        "slug": "coastal-alabama-vs-panhandle",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/gulf-shores-orange-beach",
+            "title": "Gulf Shores & Orange Beach, AL Realtor | The Costin Team",
+            "coverage": 0.32,
+            "exact": 0,
+            "score": 1.263157894736842,
+            "verdict": "ok",
+            "file": "civilian-site/gulf-shores-orange-beach.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+            "title": "2026 BAH Pensacola: What Can You Afford? | Gregg Costin",
+            "hasFragment": true,
+            "coverage": 0.26,
+            "exact": 0,
+            "score": 1.0526315789473684,
+            "verdict": "ok",
+            "file": "content/blog/bah-2026-pensacola-what-can-you-afford.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.26,
+            "exact": 0,
+            "score": 1.0526315789473684,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+            "title": "Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98",
+            "hasFragment": true,
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8421052631578947,
+            "verdict": "ok",
+            "file": "content/blog/moving-to-navarre-2026-guide.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/veteran-realtor-destin",
+            "title": "Veteran Real Estate Agent Destin FL | Gregg Costin",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8421052631578947,
+            "verdict": "ok",
+            "file": "public/veteran-realtor-destin.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "refinance-break-even-math",
+      "topic": "When refinancing actually makes sense: the break-even math, costs people forget, and the reset-clock problem",
+      "type": "evergreen",
+      "evidence": "Radar 2026-09-04: how much are closing costs in Florida to refinance (8 queries). Add a refinance closing-cost table beside the break-even math.",
+      "pillar": "financing-macro",
+      "audience": [
+        "homeowner",
+        "long-term investor"
+      ],
+      "targetKeywords": [
+        "refinance break even closing costs",
+        "refinance loan balance comparison"
+      ],
+      "decision": "Compare total costs and remaining balances at the expected exit date; keep the dedicated refinancing intent distinct from rate mechanics.",
+      "evidenceStatus": "Historical discovery note, not verified current civilian impressions or search volume. Recheck against the dated evidence packet.",
+      "observedDemand": false,
+      "coverageCount": 2,
+      "priority": 29.98,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "refinance-break-even-math",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.33,
+            "exact": 0,
+            "score": 1.3333333333333333,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/veteran-realtor-destin",
+            "title": "Veteran Real Estate Agent Destin FL | Gregg Costin",
+            "coverage": 0.28,
+            "exact": 0,
+            "score": 1.1111111111111112,
+            "verdict": "ok",
+            "file": "public/veteran-realtor-destin.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola",
+            "title": "Assumable VA Loans Pensacola | 2.75% Rates Still Available",
+            "coverage": 0.22,
+            "exact": 0,
+            "score": 0.8888888888888888,
+            "verdict": "ok",
+            "file": "public/assumable-va-loans-pensacola.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+            "title": "VA Loan Seller Concessions: The 4% Myth Costing You Money",
+            "hasFragment": true,
+            "coverage": 0.22,
+            "exact": 0,
+            "score": 0.8888888888888888,
+            "verdict": "ok",
+            "file": "content/blog/va-loan-seller-concessions-truth.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/cash-offer-pensacola",
+            "title": "Cash Offer on Your Pensacola Home? Read This First",
+            "coverage": 0.22,
+            "exact": 0,
+            "score": 0.8888888888888888,
+            "verdict": "ok",
+            "file": "public/cash-offer-pensacola.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "hoa-fees-gulf-coast",
+      "topic": "HOA and condo fees on the Gulf Coast: what they cover, special assessments, and the questions to ask before you offer",
+      "type": "evergreen",
+      "pillar": "ownership-costs",
+      "audience": [
+        "buyer",
+        "vacation-home buyer"
+      ],
+      "targetKeywords": [
+        "condo due diligence Florida",
+        "condo reserves special assessments"
+      ],
+      "refreshUrl": "https://greggcostin.com/resources/condo-due-diligence",
+      "decision": "Evaluate assessments, reserves, insurance and financing using the actual condominium documents.",
+      "evidenceStatus": "Editorial proposal; no observed demand claimed.",
+      "observedDemand": false,
+      "coverageCount": 2,
+      "priority": 29.95,
+      "runnable": false,
+      "reasons": [
+        "refresh destination absent from this checkout; integrate the existing guide before refreshing it"
+      ],
+      "ownership": {
+        "slug": "hoa-fees-gulf-coast",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.25,
+            "exact": 0,
+            "score": 1,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/veteran-realtor-destin",
+            "title": "Veteran Real Estate Agent Destin FL | Gregg Costin",
+            "coverage": 0.25,
+            "exact": 0,
+            "score": 1,
+            "verdict": "ok",
+            "file": "public/veteran-realtor-destin.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/",
+            "title": "Pensacola & Gulf Coast Realtor | Gregg Costin, FL & AL",
+            "coverage": 0.25,
+            "exact": 0,
+            "score": 1,
+            "verdict": "ok",
+            "file": "civilian-site/index.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "rate-news-reaction",
+      "topic": "TEMPLATE: when a Fed meeting or big rate move happens, a same-week plain-English reaction post with cited sources",
+      "type": "current-events",
+      "pillar": "financing-macro",
+      "audience": [
+        "buyer",
+        "seller",
+        "long-term investor"
+      ],
+      "targetKeywords": [
+        "what moves mortgage rates",
+        "mortgage rate news Gulf Coast"
+      ],
+      "refreshUrl": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "decision": "Refresh the existing rate explainer only when a verified release changes a reader decision.",
+      "evidenceStatus": "Editorial proposal; no observed demand claimed.",
+      "observedDemand": false,
+      "coverageCount": 2,
+      "priority": 29.93,
+      "runnable": false,
+      "reasons": [
+        "requires a verified event"
+      ],
+      "ownership": {
+        "slug": "rate-news-reaction",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+            "title": "Fed Rate Hike: What Gulf Coast Buyers Should Do Now",
+            "hasFragment": true,
+            "coverage": 0.43,
+            "exact": 0,
+            "score": 1.7142857142857142,
+            "verdict": "ok",
+            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.33,
+            "exact": 0,
+            "score": 1.3333333333333333,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola",
+            "title": "Assumable VA Loans Pensacola | 2.75% Rates Still Available",
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9523809523809523,
+            "verdict": "ok",
+            "file": "public/assumable-va-loans-pensacola.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "baldwin-county-property-taxes",
+      "topic": "Baldwin County property taxes for Orange Beach, Gulf Shores, Foley and Fairhope buyers: millage by city, the Alabama homestead exemption, Class III assessment, and a side-by-side with Escambia and Santa Rosa (Gregg is licensed in both states)",
+      "type": "evergreen",
+      "archetype": "data-study",
+      "targetKeywords": [
+        "baldwin county property tax rate",
+        "how much is property tax in baldwin county alabama",
+        "orange beach alabama property tax",
+        "alabama vs florida property tax"
+      ],
+      "source": "topic-miner 2026-09-04",
+      "evidence": "Radar #1 (score 19.6, 12 related queries from Google + Bing autosuggest) plus #5 and #12 (Orange Beach tax-rate cluster). No page on either site answers Baldwin County taxes; the Gulf Shores/Orange Beach page mentions them in passing. Research from the Baldwin County Revenue Commissioner millage tables and Ala. Code 40-9-19 (homestead), never aggregators.",
+      "pillar": "ownership-costs",
+      "audience": [
+        "buyer",
+        "long-term investor"
+      ],
+      "decision": "Calculate taxes using the parcel jurisdiction, property use and applicable assessment class; verify current exemptions.",
+      "evidenceStatus": "Historical discovery note, not verified current civilian impressions or search volume. Recheck against the dated evidence packet.",
+      "observedDemand": false,
+      "coverageCount": 2,
+      "priority": 29.92,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "baldwin-county-property-taxes",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+            "title": "2026 BAH Pensacola: What Can You Afford? | Gregg Costin",
+            "hasFragment": true,
+            "coverage": 0.43,
+            "exact": 0,
+            "score": 1.7333333333333334,
+            "verdict": "ok",
+            "file": "content/blog/bah-2026-pensacola-what-can-you-afford.fragment.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+            "title": "Property Taxes in Escambia and Santa Rosa County, Explained",
+            "hasFragment": true,
+            "coverage": 0.4,
+            "exact": 0,
+            "score": 1.6,
+            "verdict": "ok",
+            "file": "content/civilian-blog/property-taxes-escambia-santa-rosa.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+            "title": "Florida Homestead Exemption for Military: Save Thousands",
+            "hasFragment": true,
+            "coverage": 0.3,
+            "exact": 0,
+            "score": 1.2,
+            "verdict": "ok",
+            "file": "content/blog/florida-homestead-exemption-military.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+            "title": "Florida Disabled Veteran Property Tax: County Filing Guide 2026",
+            "hasFragment": true,
+            "coverage": 0.3,
+            "exact": 0,
+            "score": 1.2,
+            "verdict": "ok",
+            "file": "content/blog/florida-veteran-property-tax-county-guide.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.3,
+            "exact": 0,
+            "score": 1.2,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "florida-homestead-exemption-how-to-apply-2027",
+      "topic": "How to apply for the Florida homestead exemption for 2027: the March 1 deadline, what counts as permanent residence, the Escambia and Santa Rosa online portals, portability, and what a missed deadline costs",
+      "type": "seasonal",
+      "archetype": "howto",
+      "targetKeywords": [
+        "how to apply for homestead exemption Florida",
+        "Escambia County homestead application",
+        "Santa Rosa County homestead application"
+      ],
+      "source": "topic-miner 2026-09-04",
+      "gate": "Editorial review in the first January run; verify each county application window and statutory deadlines then. Do not assume applications only open in January.",
+      "evidence": "Radar #3 (Bing related-keyword demand 697, 6 queries) and #8 (how-to cluster, 7 queries: online, when, what do I need). The resource guide explains the exemption; nothing on either site walks the application itself. Seasonal: the query pays in January and February.",
+      "pillar": "ownership-costs",
+      "audience": [
+        "homeowner"
+      ],
+      "refreshUrl": "https://greggcostin.com/resources/florida-homestead-exemption",
+      "notBefore": "2027-01-01",
+      "decision": "Prepare a complete application for the applicable tax year, with official county instructions.",
+      "evidenceStatus": "Historical discovery note, not verified current civilian impressions or search volume. Recheck against the dated evidence packet.",
+      "observedDemand": false,
+      "coverageCount": 2,
+      "priority": 29.91,
+      "runnable": false,
+      "reasons": [
+        "not runnable before 2027-01-01"
+      ],
+      "ownership": {
+        "slug": "florida-homestead-exemption-how-to-apply-2027",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+            "title": "Florida Disabled Veteran Property Tax: County Filing Guide 2026",
+            "hasFragment": true,
+            "coverage": 0.44,
+            "exact": 0,
+            "score": 1.7777777777777777,
+            "verdict": "ok",
+            "file": "content/blog/florida-veteran-property-tax-county-guide.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+            "title": "Florida Homestead Exemption for Military: Save Thousands",
+            "hasFragment": true,
+            "coverage": 0.39,
+            "exact": 0,
+            "score": 1.5555555555555556,
+            "verdict": "ok",
+            "file": "content/blog/florida-homestead-exemption-military.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/florida-homestead-exemption-military",
+            "title": "Florida Homestead Exemption for Military 2026 | Gregg Costin",
+            "coverage": 0.39,
+            "exact": 0,
+            "score": 1.5555555555555556,
+            "verdict": "ok",
+            "file": "public/florida-homestead-exemption-military.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+            "title": "Property Taxes in Escambia and Santa Rosa County, Explained",
+            "hasFragment": true,
+            "coverage": 0.33,
+            "exact": 0,
+            "score": 1.3333333333333333,
+            "verdict": "ok",
+            "file": "content/civilian-blog/property-taxes-escambia-santa-rosa.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/va-disability-property-tax-florida",
+            "title": "FL VA Disability Property Tax Exemption | Gregg Costin",
+            "coverage": 0.28,
+            "exact": 0,
+            "score": 1.1111111111111112,
+            "verdict": "ok",
+            "file": "public/va-disability-property-tax-florida.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "florida-property-tax-elimination-what-it-means",
+      "topic": "CURRENT-EVENTS TEMPLATE: the Florida property-tax elimination push (what has actually been proposed, what a ballot measure would need, what it would do to a homesteaded Pensacola bill vs a non-homestead one, and the school-funding question)",
+      "type": "current-events",
+      "archetype": "news-reaction",
+      "targetKeywords": [
+        "florida property tax elimination update",
+        "florida property tax elimination",
+        "will florida eliminate property taxes",
+        "florida property tax amendment 2026"
+      ],
+      "source": "topic-miner 2026-09-04",
+      "evidence": "Radar #4 (Bing related-keyword demand 874, 5 queries incl. pros and cons and calculator). The property-taxes post mentions Amendment 5 only. Run it the week a real development lands (a filed joint resolution, ballot placement, a Revenue Estimating Conference study); cite the resolution text, never a headline.",
+      "pillar": "ownership-costs",
+      "audience": [
+        "buyer",
+        "homeowner",
+        "long-term investor"
+      ],
+      "decision": "Separate a proposal, ballot action, adoption and effective law; show which actual bills could be affected.",
+      "evidenceStatus": "Historical discovery note, not verified current civilian impressions or search volume. Recheck against the dated evidence packet.",
+      "observedDemand": false,
+      "coverageCount": 2,
+      "priority": 29.9,
+      "runnable": false,
+      "reasons": [
+        "requires a verified event",
+        "existing owner: select a scoped refresh or document distinct intent"
+      ],
+      "ownership": {
+        "slug": "florida-property-tax-elimination-what-it-means",
+        "verdict": "INTENT-REVIEW",
+        "hits": [
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+            "title": "Property Taxes in Escambia and Santa Rosa County, Explained",
+            "hasFragment": true,
+            "coverage": 0.31,
+            "exact": 1,
+            "score": 4.241379310344827,
+            "verdict": "INTENT-REVIEW",
+            "file": "content/civilian-blog/property-taxes-escambia-santa-rosa.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.31,
+            "exact": 0,
+            "score": 1.2413793103448276,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+            "title": "Florida Homestead Exemption for Military: Save Thousands",
+            "hasFragment": true,
+            "coverage": 0.24,
+            "exact": 0,
+            "score": 0.9655172413793104,
+            "verdict": "ok",
+            "file": "content/blog/florida-homestead-exemption-military.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/florida-homestead-exemption-military",
+            "title": "Florida Homestead Exemption for Military 2026 | Gregg Costin",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8275862068965517,
+            "verdict": "ok",
+            "file": "public/florida-homestead-exemption-military.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/va-loan-closing-costs-florida",
+            "title": "VA Loan Closing Costs in Florida: What You Actually Pay",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8275862068965517,
+            "verdict": "ok",
+            "file": "public/va-loan-closing-costs-florida.html"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "hurricane-and-flood-history-by-gulf-coast-town",
+      "topic": "Hurricane and flood history by Gulf Coast town, Pensacola to Destin: which areas took surge in Ivan, Sally and Michael, FEMA zone shares by town, wind vs water, and what that means for insurance and where to buy (flood and insurance framing only, per the fair-housing content design)",
+      "type": "evergreen",
+      "archetype": "data-study",
+      "targetKeywords": [
+        "does destin florida get hurricanes",
+        "does milton florida get hurricanes",
+        "pensacola hurricane history",
+        "gulf breeze flood zone"
+      ],
+      "source": "topic-miner 2026-09-04",
+      "evidence": "Radar #6 and #24 (does Destin / Milton get hurricanes) plus Clarity: /pensacola-flood-zones-homebuyers is the deepest read on the military site (165 s average engagement). A town-by-town table from NOAA landfall records and FEMA zone shares is the shareable asset neither site has.",
+      "pillar": "ownership-costs",
+      "audience": [
+        "buyer",
+        "short-term rental owner"
+      ],
+      "requiresEditorialReview": true,
+      "decision": "Use official historical exposure and parcel flood information without ranking residents or claiming a town is safe.",
+      "reviewRequirement": "Do not publish town-level FEMA zone shares without a reproducible GIS method, denominator and dated source. Military-site Clarity is not evidence of civilian engagement.",
+      "evidenceStatus": "Historical discovery note, not verified current civilian impressions or search volume. Recheck against the dated evidence packet.",
+      "observedDemand": false,
+      "coverageCount": 2,
+      "priority": 29.89,
+      "runnable": false,
+      "reasons": [
+        "editorial/source review required",
+        "existing owner: select a scoped refresh or document distinct intent"
+      ],
+      "ownership": {
+        "slug": "hurricane-and-flood-history-by-gulf-coast-town",
+        "verdict": "INTENT-REVIEW",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
+            "title": "Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers",
+            "hasFragment": true,
+            "coverage": 0.15,
+            "exact": 1,
+            "score": 3.606060606060606,
+            "verdict": "INTENT-REVIEW",
+            "file": "content/blog/living-in-gulf-breeze-pros-cons.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.36,
+            "exact": 0,
+            "score": 1.4545454545454546,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers",
+            "title": "Pensacola Flood Zones for Homebuyers | 2025 FEMA Maps",
+            "coverage": 0.27,
+            "exact": 0,
+            "score": 1.0909090909090908,
+            "verdict": "ok",
+            "file": "public/pensacola-flood-zones-homebuyers.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+            "title": "Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98",
+            "hasFragment": true,
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8484848484848485,
+            "verdict": "ok",
+            "file": "content/blog/moving-to-navarre-2026-guide.fragment.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/communities/east-hill",
+            "title": "East Hill Pensacola Military Homes | Historic | Gregg Costin",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8484848484848485,
+            "verdict": "ok",
+            "file": "public/communities/east-hill.html"
+          }
+        ]
+      }
+    }
+  ],
+  "selected": {
+    "kind": "editorial-queue",
+    "item": {
+      "slug": "price-cut-or-seller-concession",
+      "topic": "Price cut or seller concession: compare seller net proceeds and the buyer problem each option actually solves",
+      "type": "evergreen",
+      "pillar": "selling",
+      "audience": [
+        "seller",
+        "buyer"
+      ],
+      "targetKeywords": [
+        "price reduction vs seller concession",
+        "seller credit vs price reduction"
+      ],
+      "decision": "Choose an offer structure using net proceeds and a lender-confirmed buyer budget.",
+      "sourcePlan": [
+        "Written hypothetical offers with the same assumptions",
+        "CFPB Loan Estimate",
+        "Applicable loan-program concession rules"
+      ],
+      "asset": "Two-offer net-proceeds table and a lender-question checklist",
+      "evidenceStatus": "Editorial proposal based on coverage gaps; no observed demand or search volume claimed.",
+      "added": "2026-09-08",
+      "observedDemand": false,
+      "coverageCount": 0,
+      "priority": 49.87,
+      "runnable": true,
+      "reasons": [],
+      "ownership": {
+        "slug": "price-cut-or-seller-concession",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+            "title": "VA Loan Seller Concessions: The 4% Myth Costing You Money",
+            "hasFragment": true,
+            "coverage": 0.4,
+            "exact": 0,
+            "score": 1.6,
+            "verdict": "ok",
+            "file": "content/blog/va-loan-seller-concessions-truth.fragment.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+            "title": "Florida Closing Costs for Buyers: A Cash-to-Close Guide",
+            "hasFragment": true,
+            "coverage": 0.27,
+            "exact": 0,
+            "score": 1.0666666666666667,
+            "verdict": "ok",
+            "file": "content/civilian-blog/closing-costs-florida-buyers.fragment.html"
+          }
+        ]
+      }
+    }
+  }
+}

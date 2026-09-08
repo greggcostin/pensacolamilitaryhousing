@@ -109,7 +109,7 @@ function buildPost(spec) {
     : "";
   const main = `
 <div class="blog-byline" style="max-width:760px;margin:0 auto 16px;color:var(--muted);font-size:14px">By <a href="/team">Gregg Costin, Realtor</a> &middot; Published <time datetime="${spec.datePublished}">${longDate(spec.datePublished)}</time>${spec.dateModified ? ` &middot; Updated <time datetime="${spec.dateModified}">${longDate(spec.dateModified)}</time>` : ''} &middot; ${Math.ceil(words / 220)} minute read</div>
-<style>.blog-toc{max-width:760px;margin:20px auto;padding:18px 22px;background:var(--panel);border:1px solid var(--hair);border-radius:12px}.blog-toc ul{columns:2;column-gap:28px;margin:8px 0}.blog-toc li{break-inside:avoid;margin:8px 0}main h2[id]{scroll-margin-top:110px}main .blog-table-scroll{max-width:760px;overflow-x:auto;margin:24px auto}main .blog-table-scroll:focus-visible{outline:2px solid var(--gold)}main table caption{text-align:left;padding:12px 0;font-weight:600}main table th{text-align:left}@media(max-width:650px){.blog-toc ul{columns:1}.blog-byline{line-height:1.7}}</style>
+<style>.blog-toc{max-width:760px;margin:20px auto;padding:18px 22px;background:var(--panel);border:1px solid var(--hair);border-radius:12px}.blog-toc ul{columns:2;column-gap:28px;margin:8px 0}.blog-toc li{break-inside:avoid;margin:8px 0}body main h2[id]{scroll-margin-top:var(--article-anchor-gap,110px)}main .blog-table-scroll{max-width:760px;overflow-x:auto;margin:24px auto}main .blog-table-scroll:focus-visible{outline:2px solid var(--gold)}main table caption{text-align:left;padding:12px 0;font-weight:600}main table th{text-align:left}@media(max-width:650px){.blog-toc ul{columns:1}.blog-byline{line-height:1.7}}</style>
 ${figureBand({ ...spec.figure })}
 ${takeawaysHtml}
 ${toc}

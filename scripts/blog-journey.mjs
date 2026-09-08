@@ -54,7 +54,7 @@ export function articleRuntime(config) {
   const doc = document, nav = navigator, main = doc.querySelector("main");
   const panel = doc.querySelector("[data-article-journey]");
   if (!main || !panel) return;
-  if (config.site === 'pmh' && doc.documentElement?.style?.setProperty) {
+  if (doc.documentElement?.style?.setProperty) {
     const banner = doc.querySelector('.main-banner');
     if (banner) {
       const updateGap = () => doc.documentElement.style.setProperty('--article-anchor-gap', Math.ceil(banner.getBoundingClientRect().height + 16) + 'px');
@@ -112,12 +112,15 @@ export function articleRuntime(config) {
 }
 
 export function wireJourney(html, spec, site) {
-  if (html.includes('id="costin-article-runtime"')) return html;
   const marker = "if(res.ok&&res.j.success){";
   // Instrument the existing confirmed success branch, never a click or attempted submit.
   if (!html.includes("costin:lead-success") && html.includes(marker)) html = html.replace(marker, marker + "document.dispatchEvent(new CustomEvent('costin:lead-success'));");
   const config = { slug: spec.slug, title: spec.h1, site, goal: journeyFor(spec, site).goal, url: SITES[site].origin + "/blog/" + spec.slug };
   const json = JSON.stringify(config).replace(/</g, "\\u003c");
   const style = '<style id="article-journey-style">.article-next{max-width:760px;margin:2rem auto;padding:1.2rem;border:1px solid var(--gold-line,#7c692f);border-radius:10px}.article-next h2{margin-top:0}.article-share{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.article-share button{padding:10px 14px;min-height:44px;border:1px solid #9b8445;border-radius:6px;color:inherit;background:transparent;font:inherit;cursor:pointer}.article-share [hidden]{display:none}.article-share button:focus-visible{outline:3px solid #C9A84C;outline-offset:3px}.article-share [role=status]{display:block;width:100%;font-size:14px}</style>';
-  return html.replace("</head>", style + "</head>").replace("</body>", '<script id="costin-article-runtime">(' + articleRuntime.toString() + ')(' + json + ');</script>\n</body>');
+  const runtime = '<script id="costin-article-runtime">(' + articleRuntime.toString() + ')(' + json + ');</script>';
+  const stylePattern = /<style\b[^>]*id="article-journey-style"[^>]*>[\s\S]*?<\/style>/;
+  const runtimePattern = /<script\b[^>]*id="costin-article-runtime"[^>]*>[\s\S]*?<\/script>/;
+  html = stylePattern.test(html) ? html.replace(stylePattern, () => style) : html.replace("</head>", style + "</head>");
+  return runtimePattern.test(html) ? html.replace(runtimePattern, () => runtime) : html.replace("</body>", runtime + "\n</body>");
 }

@@ -224,7 +224,7 @@ const PAGES = [
 <p>A common dual-military scenario in the Panhandle: one spouse at NAS Pensacola, one at Eglin or Hurlburt. 60+ miles apart.</p>
 <p>Options:</p>
 <ul>
-<li><strong>Live near one, commute the other:</strong> Navarre is the sweet spot — 35 min to NAS Pensacola, 25 min to Hurlburt, 40 min to Eglin. BAH comes from the higher-BAH spouse's assignment (FL023 if assigned to Eglin/Hurlburt).</li>
+<li><strong>Live near one, commute the other:</strong> Navarre is the sweet spot — 35 min to NAS Pensacola, 25 min to Hurlburt, 40 min to Eglin. BAH comes from the higher-BAH spouse's assignment (FL056 if assigned to Eglin/Hurlburt).</li>
 <li><strong>Geo-bachelor / geo-bachelorette:</strong> Spouse A lives near their base full-time, spouse B commutes home weekends. Common for short duty rotations. Requires a rental at the second base.</li>
 <li><strong>Bluewater Bay or Niceville:</strong> Best Okaloosa schools, works for Eglin and Hurlburt, further from NAS Pensacola (60-75 min).</li>
 </ul>
@@ -232,10 +232,10 @@ const PAGES = [
 <h2>Dual-BAH Strategy — A Real Math Example</h2>
 <p>E-5 + E-5 dual-military at Hurlburt Field. Each draws BAH independently per JTR Chapter 10.</p>
 <ul>
-<li>E-5 with dependents FL023 BAH: $2,235</li>
-<li>E-5 without dependents FL023 BAH: $2,007 (when the other spouse is the dependent-claiming one)</li>
+<li>E-5 with dependents FL056 BAH: $2,235</li>
+<li>E-5 without dependents FL056 BAH: $2,007 (when the other spouse is the dependent-claiming one)</li>
 <li>Some dual-military couples can structure as both "without dependents" if they have no children — each draws the single rate.</li>
-<li>Combined FL023 BAH: $4,242 with kids, $4,014 without.</li>
+<li>Combined FL056 BAH: $4,242 with kids, $4,014 without.</li>
 <li>Combined base pay E-5 + E-5: $6,300/mo</li>
 <li>Combined gross income (125% BAH gross-up + base): $11,603/mo</li>
 <li>41% DTI ceiling: $4,757/mo for all debts and PITI</li>

@@ -186,7 +186,7 @@ export const pages = [
 <li>Start virtual home tours in your target neighborhoods. Filter by commute to your new duty station and school zones.</li>
 <li>If buying: get pre-approval letter from VA-specialist lender in hand before you tour.</li>
 <li>If renting: get on wait lists for Balfour Beatty Communities or equivalent base housing at NAS Pensacola, Hurlburt, or Eglin.</li>
-<li>Compare <a href="/bah-rates.html">FL064 (Pensacola) vs FL023 (Fort Walton Beach)</a> BAH rates for your duty station.</li>
+<li>Compare <a href="/bah-rates.html">FL064 (Pensacola) vs FL056 (Fort Walton Beach)</a> BAH rates for your duty station.</li>
 </ul>
 <h3>Family and Schools</h3>
 <ul>
@@ -251,7 +251,7 @@ export const pages = [
 
 <h2>Common Pensacola-Area PCS Mistakes</h2>
 <ul>
-<li><strong>Assuming NAS Pensacola and Hurlburt have the same BAH.</strong> They don't. FL064 and FL023 are different MHAs with different rates. I have seen families lose $200-400/mo of BAH by picking the wrong side of the Pensacola Bay.</li>
+<li><strong>Assuming NAS Pensacola and Hurlburt have the same BAH.</strong> They don't. FL064 and FL056 are different MHAs with different rates. I have seen families lose $200-400/mo of BAH by picking the wrong side of the Pensacola Bay.</li>
 <li><strong>Not verifying school zones at the parcel level.</strong> Escambia County has boundary lines that split streets. A "Bellview Middle" listing may actually feed into Beulah Middle.</li>
 <li><strong>Skipping Homestead Exemption.</strong> If you don't file by March 1 of the year following purchase, you forfeit up to $50,000 of assessed-value exemption — $800-1,200 per year in lost tax savings.</li>
 <li><strong>Using a retail national lender instead of a VA-specialist.</strong> Retail lenders often miss VA-specific cost structures, slow-walk VA appraisals, and occasionally fail to waive the funding fee for disabled veterans at closing.</li>
@@ -274,17 +274,17 @@ export const pages = [
 // ─────────────────────────────────────────────────────────────────────────
 {
   slug: "fl064-bah-rates",
-  title: "2026 BAH Rates Pensacola FL064 + Fort Walton Beach FL023 | Gregg Costin",
-  description: "Complete 2026 BAH tables for MHA FL064 (Pensacola) and FL023 (Fort Walton Beach). All ranks with and without dependents. Buying-power translation.",
-  keywords: "2026 BAH rates Pensacola, FL064 BAH, FL023 BAH, Fort Walton Beach BAH 2026, Basic Allowance for Housing Pensacola, NAS Pensacola BAH, Eglin AFB BAH, Hurlburt Field BAH, Whiting Field BAH, BAH calculator Florida Panhandle",
-  h1: "2026 BAH Rates — FL064 Pensacola &amp; FL023 Fort Walton Beach",
+  title: "2026 BAH Rates Pensacola FL064 + Fort Walton Beach FL056 | Gregg Costin",
+  description: "Complete 2026 BAH tables for MHA FL064 (Pensacola) and FL056 (Fort Walton Beach). All ranks with and without dependents. Buying-power translation.",
+  keywords: "2026 BAH rates Pensacola, FL064 BAH, FL056 BAH, Fort Walton Beach BAH 2026, Basic Allowance for Housing Pensacola, NAS Pensacola BAH, Eglin AFB BAH, Hurlburt Field BAH, Whiting Field BAH, BAH calculator Florida Panhandle",
+  h1: "2026 BAH Rates — FL064 Pensacola &amp; FL056 Fort Walton Beach",
   breadcrumbName: "2026 BAH Rates",
   areaServed: "Florida Panhandle",
   lead: "Complete DoD-published 2026 BAH tables for both Florida Panhandle MHAs. All ranks, with and without dependents. Plus the buying-power translation for each pay grade.",
-  knowsAbout: ["Basic Allowance for Housing", "MHA FL064", "MHA FL023", "Pensacola BAH", "Eglin AFB BAH", "Hurlburt Field BAH"],
+  knowsAbout: ["Basic Allowance for Housing", "MHA FL064", "MHA FL056", "Pensacola BAH", "Eglin AFB BAH", "Hurlburt Field BAH"],
   facts: [
     ["MHA FL064", "Pensacola — covers NAS Pensacola, Corry, Saufley, Whiting Field"],
-    ["MHA FL023", "Fort Walton Beach — covers Eglin AFB, Hurlburt Field, Duke Field"],
+    ["MHA FL056", "Fort Walton Beach — covers Eglin AFB, Hurlburt Field, Duke Field"],
     ["2026 change", "+0.5% national average over 2025 rates"],
     ["Rate published by", "DoD Defense Travel Management Office (DTMO)"],
     ["Effective date", "January 1, 2026"],
@@ -293,7 +293,7 @@ export const pages = [
     ["Official calculator", "travel.dod.mil (linked below)"],
   ],
   body: `
-<p>Your BAH is set by your <strong>duty station</strong>, not your home address. If you work at Hurlburt Field but live in Navarre (Santa Rosa County / FL064), you still draw FL023 BAH because Hurlburt is in FL023. Conversely, if you work at NAS Pensacola and live in Fort Walton Beach, you draw FL064 because NAS Pensacola is in FL064. The MHA assignment follows the pay clerk's entry on your orders — not your ZIP code.</p>
+<p>Your BAH is set by your <strong>duty station</strong>, not your home address. If you work at Hurlburt Field but live in Navarre (Santa Rosa County / FL064), you still draw FL056 BAH because Hurlburt is in FL056. Conversely, if you work at NAS Pensacola and live in Fort Walton Beach, you draw FL064 because NAS Pensacola is in FL064. The MHA assignment follows the pay clerk's entry on your orders — not your ZIP code.</p>
 
 <h2>MHA FL064 — Pensacola (Covers NAS Pensacola, Corry Station, Saufley Field, NAS Whiting Field)</h2>
 <div class="bah-title">Enlisted (E-1 through E-9)</div>
@@ -326,7 +326,7 @@ export const pages = [
 <tr><td>O-6</td><td>$2,631</td><td>$2,247</td></tr>
 </tbody></table></div>
 
-<h2>MHA FL023 — Fort Walton Beach (Covers Eglin AFB, Hurlburt Field, Duke Field)</h2>
+<h2>MHA FL056 — Fort Walton Beach (Covers Eglin AFB, Hurlburt Field, Duke Field)</h2>
 <div class="bah-title">Enlisted (E-1 through E-9)</div>
 <div class="bah-wrap"><table class="bah-table"><thead><tr><th>Pay Grade</th><th>With Dependents</th><th>Without Dependents</th></tr></thead><tbody>
 <tr><td>E-1 through E-4</td><td>$2,340</td><td>$1,968</td></tr>
@@ -349,24 +349,24 @@ export const pages = [
 <tr><td>O-6</td><td>$3,642</td><td>$3,087</td></tr>
 </tbody></table></div>
 
-<h2>FL064 vs FL023 — The $600-900 Per Month Difference</h2>
+<h2>FL064 vs FL056 — The $600-900 Per Month Difference</h2>
 <p>Comparing the two MHAs shows why Panhandle PCS families need to understand their duty-station assignment before they select a neighborhood:</p>
 <ul>
-<li><strong>E-5 with dependents</strong>: FL064 $1,863 vs FL023 $2,433 → FL023 is $570/mo higher</li>
-<li><strong>E-7 with dependents</strong>: FL064 $2,256 vs FL023 $2,841 → FL023 is $585/mo higher</li>
-<li><strong>O-3 with dependents</strong>: FL064 $2,271 vs FL023 $3,399 → FL023 is $1,128/mo higher</li>
-<li><strong>O-5 with dependents</strong>: FL064 $2,610 vs FL023 $3,612 → FL023 is $1,002/mo higher</li>
+<li><strong>E-5 with dependents</strong>: FL064 $1,863 vs FL056 $2,433 → FL056 is $570/mo higher</li>
+<li><strong>E-7 with dependents</strong>: FL064 $2,256 vs FL056 $2,841 → FL056 is $585/mo higher</li>
+<li><strong>O-3 with dependents</strong>: FL064 $2,271 vs FL056 $3,399 → FL056 is $1,128/mo higher</li>
+<li><strong>O-5 with dependents</strong>: FL064 $2,610 vs FL056 $3,612 → FL056 is $1,002/mo higher</li>
 </ul>
-<p>The gap exists because Destin and Fort Walton Beach beach-market pricing drives FL023, while Pensacola's metro-area pricing holds FL064 steady. Practical implication: a Hurlburt-assigned E-7 earns nearly $7,000 more per year in BAH than a NAS Pensacola-assigned E-7 — worth considering if you have follow-on orders negotiability.</p>
+<p>The gap exists because Destin and Fort Walton Beach beach-market pricing drives FL056, while Pensacola's metro-area pricing holds FL064 steady. Practical implication: a Hurlburt-assigned E-7 earns nearly $7,000 more per year in BAH than a NAS Pensacola-assigned E-7 — worth considering if you have follow-on orders negotiability.</p>
 
 <h2>Buying Power Translation — What Your BAH Actually Buys</h2>
 <p>As a quick planning shortcut: monthly BAH covers approximately 0.6-0.7% of a home's purchase price in principal + interest at 6.5% on a 30-year VA loan (zero down), plus taxes and insurance. Multiply your BAH by 150-170 for a rough purchase-price ceiling that stays inside BAH.</p>
 <ul>
 <li>FL064 E-5 w/ dependents ($1,863) → ~$280,000-$315,000 home</li>
 <li>FL064 E-7 w/ dependents ($2,256) → ~$340,000-$380,000 home</li>
-<li>FL023 E-7 w/ dependents ($2,841) → ~$425,000-$480,000 home</li>
-<li>FL023 O-3 w/ dependents ($3,399) → ~$510,000-$575,000 home</li>
-<li>FL023 O-5 w/ dependents ($3,612) → ~$540,000-$610,000 home</li>
+<li>FL056 E-7 w/ dependents ($2,841) → ~$425,000-$480,000 home</li>
+<li>FL056 O-3 w/ dependents ($3,399) → ~$510,000-$575,000 home</li>
+<li>FL056 O-5 w/ dependents ($3,612) → ~$540,000-$610,000 home</li>
 </ul>
 <p>These are conservative. Disabled veteran funding-fee waiver, homestead exemption on the next tax year, and escrow-averaged insurance in non-flood zones all push the ceiling higher. I run the precise number for every client before we write an offer. Use the <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/" target="_blank" rel="noopener">official DoD BAH calculator</a> to verify your exact rate.</p>
 
@@ -374,12 +374,12 @@ export const pages = [
 <p>BAH rates are published annually by the DoD Defense Travel Management Office (DTMO) and take effect January 1. The 2026 rates reflect the DoD survey of residential rental costs conducted in spring 2025 across 300+ MHAs nationwide. Rates are not adjusted mid-year except under extraordinary circumstances. Individual service members receive <strong>rate protection</strong> — if BAH decreases between year over year, you continue to receive the higher previous rate until you change duty station or pay grade.</p>
 `,
   faqs: [
-    { q: "What is BAH?", a: "Basic Allowance for Housing — a tax-free monthly housing allowance the US military pays to service members based on pay grade, dependent status, and duty station location. BAH is set annually by DoD using a survey of residential rental costs in each Military Housing Area (MHA). Rates differ sharply between MHAs — MHA FL064 (Pensacola) and MHA FL023 (Fort Walton Beach) pay $570-1,100+ per month different for the same pay grade." },
+    { q: "What is BAH?", a: "Basic Allowance for Housing — a tax-free monthly housing allowance the US military pays to service members based on pay grade, dependent status, and duty station location. BAH is set annually by DoD using a survey of residential rental costs in each Military Housing Area (MHA). Rates differ sharply between MHAs — MHA FL064 (Pensacola) and MHA FL056 (Fort Walton Beach) pay $570-1,100+ per month different for the same pay grade." },
     { q: "How much is BAH for Pensacola in 2026?", a: "Pensacola MHA (FL064) 2026 monthly BAH with dependents ranges from $1,794 (E-1 through E-4) to $2,631 (O-6). Without dependents runs $1,521 to $2,247. Full table by rank appears above on this page. These rates apply to NAS Pensacola, Corry Station, Saufley Field, and NAS Whiting Field assigned service members." },
-    { q: "How much is BAH for Fort Walton Beach in 2026?", a: "Fort Walton Beach MHA (FL023) 2026 monthly BAH with dependents ranges from $2,340 (E-1 through E-4) to $3,642 (O-6). FL023 covers Eglin AFB, Hurlburt Field, and Duke Field. Without dependents runs $1,968 to $3,087. FL023 is meaningfully higher than FL064 because Destin and Fort Walton Beach pricing drive the rate." },
-    { q: "What's the difference between FL064 and FL023?", a: "FL064 is the Pensacola MHA (NAS Pensacola, Corry Station, Saufley Field, NAS Whiting Field). FL023 is the Fort Walton Beach MHA (Eglin AFB, Hurlburt Field, Duke Field). FL023 rates are $570-1,100+ per month higher depending on pay grade because Destin and Fort Walton Beach pricing drives the FL023 number." },
+    { q: "How much is BAH for Fort Walton Beach in 2026?", a: "Fort Walton Beach MHA (FL056) 2026 monthly BAH with dependents ranges from $2,340 (E-1 through E-4) to $3,642 (O-6). FL056 covers Eglin AFB, Hurlburt Field, and Duke Field. Without dependents runs $1,968 to $3,087. FL056 is meaningfully higher than FL064 because Destin and Fort Walton Beach pricing drive the rate." },
+    { q: "What's the difference between FL064 and FL056?", a: "FL064 is the Pensacola MHA (NAS Pensacola, Corry Station, Saufley Field, NAS Whiting Field). FL056 is the Fort Walton Beach MHA (Eglin AFB, Hurlburt Field, Duke Field). FL056 rates are $570-1,100+ per month higher depending on pay grade because Destin and Fort Walton Beach pricing drives the FL056 number." },
     { q: "Is BAH taxable income?", a: "No. BAH is a tax-free allowance. It does not appear on your W-2 as taxable income. This is a meaningful advantage over civilian housing stipends — a $2,400/mo BAH is equivalent to roughly $3,000/mo of pre-tax salary for most service members." },
-    { q: "Does my BAH change if I move between Pensacola and Fort Walton Beach?", a: "Only if your duty station changes. BAH is set by duty station, not home address. A service member assigned to Hurlburt (FL023) who chooses to live in Navarre (FL064 geography) still draws FL023 BAH based on the Hurlburt duty station." },
+    { q: "Does my BAH change if I move between Pensacola and Fort Walton Beach?", a: "Only if your duty station changes. BAH is set by duty station, not home address. A service member assigned to Hurlburt (FL056) who chooses to live in Navarre (FL064 geography) still draws FL056 BAH based on the Hurlburt duty station." },
     { q: "What is BAH rate protection?", a: "If your MHA's BAH rate decreases from one year to the next, you continue to receive the higher previous-year rate as long as you remain at the same duty station and pay grade. Rate protection prevents mid-tour BAH cuts." },
     { q: "Can I use BAH to qualify for a VA loan?", a: "Yes. BAH is untaxed income and counts toward qualifying for a mortgage. Most VA lenders treat BAH as primary qualifying income on top of base pay. For BAH-backed VA loans in Pensacola and Fort Walton Beach, see the VA Loan guide." },
     { q: "Do I get BAH while deployed?", a: "Yes — you continue to receive BAH at your home duty station's rate during deployment. There is no BAH adjustment for deployment itself. Dual-military couples and family separation may trigger additional allowances." },
@@ -551,9 +551,9 @@ const baseShortData = [
   { base: "NAS Whiting Field", basePath: "/nas-whiting-field.html", mha: "FL064", primary: "Pace, Milton, Navarre, rural Santa Rosa", population: "Student Naval Aviators, helicopter pilots, instructor pilots, Marine and Coast Guard helo students" },
   { base: "Corry Station", basePath: "/corry-station.html", mha: "FL064", primary: "Cantonment, Ferry Pass, Bellview, Gulf Breeze", population: "Cryptologic Technicians (CTI/CTN/CTR/CTT/CTM), information warfare, cyber, linguist students" },
   { base: "Saufley Field", basePath: "/saufley-field.html", mha: "FL064", primary: "Bellview, Myrtle Grove, Cantonment, Ferry Pass", population: "NIOC Pensacola personnel, CIWT detachment students, NETSAFA, DLI linguist trainees" },
-  { base: "Hurlburt Field", basePath: "/hurlburt-field.html", mha: "FL023", primary: "Navarre, Mary Esther, Niceville, Bluewater Bay", population: "AFSOC aircrew (CV-22, AC-130J, MC-130J, U-28A, MQ-9), Special Tactics operators, maintenance, mission support" },
-  { base: "Eglin AFB", basePath: "/eglin-afb.html", mha: "FL023", primary: "Niceville, Bluewater Bay, Fort Walton Beach, Destin", population: "33rd FW F-35A pilots, 96th TW test and research personnel, 53rd Wing, 350th SWW, 7th SFG soldiers" },
-  { base: "Duke Field", basePath: "/duke-field.html", mha: "FL023", primary: "Crestview, Niceville, Laurel Hill, Holt", population: "919th SOW Active Associate reservists, ART/AGR, 2nd SOS MQ-9 aircrew, 711th SOS MC-130J crew" },
+  { base: "Hurlburt Field", basePath: "/hurlburt-field.html", mha: "FL056", primary: "Navarre, Mary Esther, Niceville, Bluewater Bay", population: "AFSOC aircrew (CV-22, AC-130J, MC-130J, U-28A, MQ-9), Special Tactics operators, maintenance, mission support" },
+  { base: "Eglin AFB", basePath: "/eglin-afb.html", mha: "FL056", primary: "Niceville, Bluewater Bay, Fort Walton Beach, Destin", population: "33rd FW F-35A pilots, 96th TW test and research personnel, 53rd Wing, 350th SWW, 7th SFG soldiers" },
+  { base: "Duke Field", basePath: "/duke-field.html", mha: "FL056", primary: "Crestview, Niceville, Laurel Hill, Holt", population: "919th SOW Active Associate reservists, ART/AGR, 2nd SOS MQ-9 aircrew, 711th SOS MC-130J crew" },
 ];
 
 // On-base vs off-base pages (7)
@@ -627,18 +627,18 @@ for (const b of baseShortData) {
 pages.push({
   slug: "nas-pensacola-vs-hurlburt-field",
   title: "NAS Pensacola vs Hurlburt Field | PCS Family Comparison | Gregg Costin",
-  description: "NAS Pensacola vs Hurlburt Field for military families: BAH FL064 vs FL023, schools, commute, cost of living. Which base works better for your family?",
-  keywords: "NAS Pensacola vs Hurlburt, NAS Pensacola or Hurlburt Field, Pensacola vs Fort Walton Beach military, FL064 vs FL023, Pensacola AFSOC comparison",
+  description: "NAS Pensacola vs Hurlburt Field for military families: BAH FL064 vs FL056, schools, commute, cost of living. Which base works better for your family?",
+  keywords: "NAS Pensacola vs Hurlburt, NAS Pensacola or Hurlburt Field, Pensacola vs Fort Walton Beach military, FL064 vs FL056, Pensacola AFSOC comparison",
   h1: "NAS Pensacola vs Hurlburt Field — Which Base Works Better for Your Family?",
   breadcrumbName: "NAS Pensacola vs Hurlburt Field",
   areaServed: "Florida Panhandle",
   lead: "Head-to-head comparison for military families choosing between NAS Pensacola and Hurlburt Field assignments. BAH, schools, commute, community culture, housing markets.",
-  knowsAbout: ["NAS Pensacola", "Hurlburt Field", "FL064", "FL023", "AFSOC", "PCS"],
+  knowsAbout: ["NAS Pensacola", "Hurlburt Field", "FL064", "FL056", "AFSOC", "PCS"],
   body: `
 <p>Some military careers hop between NAS Pensacola and Hurlburt Field — AFSOC aviators who instruct at NAS Pensacola's 479th FTG, Navy liaisons to AFSOC mission sets, special operations aircrew cross-training. If you have an option between the two or a dual-military couple splitting assignments, here is the honest comparison.</p>
 
-<h2>Money: BAH FL064 vs FL023</h2>
-<p>FL023 (Fort Walton Beach / Hurlburt) pays $570-1,128 more per month than FL064 (Pensacola) across all pay grades. An E-7 with dependents draws $2,841 at Hurlburt vs $2,256 at NAS Pensacola — $7,000 per year difference. An O-3 with dependents draws $3,399 vs $2,271 — $13,500 per year difference. All else equal, Hurlburt pays meaningfully more BAH.</p>
+<h2>Money: BAH FL064 vs FL056</h2>
+<p>FL056 (Fort Walton Beach / Hurlburt) pays $570-1,128 more per month than FL064 (Pensacola) across all pay grades. An E-7 with dependents draws $2,841 at Hurlburt vs $2,256 at NAS Pensacola — $7,000 per year difference. An O-3 with dependents draws $3,399 vs $2,271 — $13,500 per year difference. All else equal, Hurlburt pays meaningfully more BAH.</p>
 <p>However: Destin and Fort Walton Beach home prices run 15-25% above comparable Pensacola and Gulf Breeze inventory, which partially offsets the BAH advantage.</p>
 
 <h2>Schools</h2>
@@ -657,7 +657,7 @@ pages.push({
 <h2>Housing Markets</h2>
 <ul>
 <li><strong>NAS Pensacola</strong>: Gulf Breeze (premium), Pace (best value), Navarre (beach + schools), Cantonment (E-5/E-6 budget), Perdido Key (waterfront lifestyle).</li>
-<li><strong>Hurlburt</strong>: Navarre (BAH arbitrage if you're Hurlburt-assigned — draw FL023 BAH but pay FL064 home prices), Mary Esther (closest, AFSOC community), Niceville (premium schools), Fort Walton Beach (value), Crestview (budget).</li>
+<li><strong>Hurlburt</strong>: Navarre (BAH arbitrage if you're Hurlburt-assigned — draw FL056 BAH but pay FL064 home prices), Mary Esther (closest, AFSOC community), Niceville (premium schools), Fort Walton Beach (value), Crestview (budget).</li>
 </ul>
 
 <h2>Who Thrives Where</h2>
@@ -670,7 +670,7 @@ pages.push({
   faqs: [
     { q: "Is NAS Pensacola or Hurlburt better for families?", a: "Both are excellent for families. NAS Pensacola wins on urban amenities, school diversity, and base size. Hurlburt wins on BAH, SOF community tightness, and beach proximity. The right answer depends on family priorities." },
     { q: "Can I live between the two bases?", a: "Yes — Navarre is the sweet spot. 25 minutes to Hurlburt, 35 minutes to NAS Pensacola. If dual-military with one spouse at each base, Navarre is the default choice." },
-    { q: "How much more does Hurlburt pay in BAH?", a: "FL023 pays $570-1,128 per month more than FL064 depending on pay grade. For an E-7 with dependents, that's $7,000/year; for an O-3 with dependents, $13,500/year. Home prices offset some but not all of this advantage." },
+    { q: "How much more does Hurlburt pay in BAH?", a: "FL056 pays $570-1,128 per month more than FL064 depending on pay grade. For an E-7 with dependents, that's $7,000/year; for an O-3 with dependents, $13,500/year. Home prices offset some but not all of this advantage." },
     { q: "Which base has better schools?", a: "Both have excellent top-tier schools. Santa Rosa County (NAS Pensacola side: Gulf Breeze, Pace, Navarre) has more uniformly strong schools district-wide. Okaloosa County (Hurlburt side: Niceville, Bluewater Bay) has the single strongest cluster." },
   ],
 });
@@ -717,7 +717,7 @@ pages.push({
 <p>This is the most important number on this page. Both Gulf Breeze and Navarre are in Santa Rosa County, which is the FL064 (Pensacola) MHA geography. But BAH is set by duty station, not home address.</p>
 <ul>
 <li><strong>NAS Pensacola-assigned family</strong>: draws FL064 BAH. Gulf Breeze and Navarre home prices both fit the BAH bracket.</li>
-<li><strong>Hurlburt-assigned family living in Navarre</strong>: draws FL023 BAH (~$570-1,128 per month higher than FL064) while paying FL064-area home prices in Navarre. This BAH arbitrage makes Navarre the financial win for Hurlburt-assigned families who want Santa Rosa schools at Okaloosa-comparable commute times.</li>
+<li><strong>Hurlburt-assigned family living in Navarre</strong>: draws FL056 BAH (~$570-1,128 per month higher than FL064) while paying FL064-area home prices in Navarre. This BAH arbitrage makes Navarre the financial win for Hurlburt-assigned families who want Santa Rosa schools at Okaloosa-comparable commute times.</li>
 </ul>
 
 <h2>Who Picks Gulf Breeze</h2>
@@ -730,7 +730,7 @@ pages.push({
 
 <h2>Who Picks Navarre</h2>
 <ul>
-<li>Hurlburt-assigned families arbitraging FL023 BAH to buy in FL064 geography</li>
+<li>Hurlburt-assigned families arbitraging FL056 BAH to buy in FL064 geography</li>
 <li>E-5 through E-7 families with growing kids who need more house for the budget</li>
 <li>Families wanting less touristy beach culture</li>
 <li>AFSOC deployment-heavy families wanting spouse-community tightness</li>
@@ -740,7 +740,7 @@ pages.push({
     { q: "Which has better schools, Gulf Breeze or Navarre?", a: "Both are A-rated Santa Rosa County clusters. Gulf Breeze High has a stronger AP catalog and higher academic rigor. Navarre High has the stronger NJROTC and military-connected student body. Either works; Gulf Breeze is the rigor pick, Navarre is the military-culture pick." },
     { q: "How much more expensive is Gulf Breeze than Navarre?", a: "Typically 15-25% per square foot. A 2,400 sf 4-bed in Gulf Breeze Whisper Bay runs $575K-650K; a comparable Navarre home runs $450K-525K. Waterfront and beach homes command premiums in both markets." },
     { q: "Can I get to Hurlburt from Gulf Breeze?", a: "Technically yes, but 55-65 minutes via US-98. Not practical for a Hurlburt assignment. Navarre is the right Santa Rosa County choice for Hurlburt families (25 min commute)." },
-    { q: "Is the BAH different between Gulf Breeze and Navarre?", a: "BAH is set by your duty station, not home address. Both Gulf Breeze and Navarre are in Santa Rosa County. A Hurlburt-assigned family in Navarre draws FL023 BAH (higher) while paying FL064-area home prices — the best BAH arbitrage play in the Panhandle." },
+    { q: "Is the BAH different between Gulf Breeze and Navarre?", a: "BAH is set by your duty station, not home address. Both Gulf Breeze and Navarre are in Santa Rosa County. A Hurlburt-assigned family in Navarre draws FL056 BAH (higher) while paying FL064-area home prices — the best BAH arbitrage play in the Panhandle." },
   ],
 });
 

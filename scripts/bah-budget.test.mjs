@@ -1,0 +1,12 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {compareBudget,DEFAULTS} from '../public/tools/bah-budget-model.js';
+import {rebuildCoreGuide,enhanceInstallation,enhanceRegion,COAST,RATES} from './geo-core-lib.mjs';
+import {readFileSync} from 'node:fs';
+test('Published default arithmetic uses actual BAH and clearly hypothetical income',()=>{assert.deepEqual(compareBudget(DEFAULTS),{member:2094.79,household:3324.79,bah:1863,gap:537});});
+test('Additional income affects the household scenario, not BAH or the member scenario',()=>{const a=compareBudget(DEFAULTS),b=compareBudget({...DEFAULTS,additionalIncome:0});assert.equal(a.household-b.household,1230);assert.equal(a.member,b.member);assert.equal(a.bah,b.bah);});
+test('Debts cannot produce negative capacity and an unused allowance remains negative gap',()=>{const r=compareBudget({...DEFAULTS,debts:20000,housingCost:1000});assert.equal(r.member,0);assert.equal(r.household,0);assert.equal(r.gap,-863);});
+test('Reject missing, invalid, negative and non-finite financial input',()=>{for(const patch of [{basePay:''},{basePay:null},{basePay:-1},{bah:NaN},{debts:Infinity},{ratio:0},{ratio:101},{grossUp:.9},{grossUp:1.26}])assert.throws(()=>compareBudget({...DEFAULTS,...patch}),RangeError);});
+test('Both dependency choices and regions use independent actual allowances',()=>{assert.equal(RATES.FL056['E-5'].withoutDependents,2157);assert.equal(RATES.FL064['E-5'].withDependents+RATES.FL064['E-5'].withoutDependents,3507);assert.equal(RATES.FL056['E-5'].withDependents+RATES.FL056['E-5'].withoutDependents,4590);});
+test('Guide generation is idempotent and contains no retired approval table',()=>{for(const slug of ['va-loan-guide','bah-to-mortgage-guide']){const source=readFileSync(`public/${slug}.html`,'utf8');const once=rebuildCoreGuide(source,slug);assert.equal(rebuildCoreGuide(once,slug),once);assert.doesNotMatch(once,/typically approved for|Either one can absolutely|Max Purchase Price \(Zero Down\)|FL023/);assert.match(once,/2026-09-08/);}});
+test('New installation and local-market answers do not duplicate on rebuild',()=>{const base=COAST.bases[4],region=COAST.regions.at(-1);for(const [f,fn] of [['public/bases/eglin-afb.html',h=>enhanceInstallation(h,base)],['civilian-site/neighborhoods/destin.html',h=>enhanceRegion(h,region)]]){const h=readFileSync(f,'utf8');const once=fn(h);assert.equal(fn(once),once);}});

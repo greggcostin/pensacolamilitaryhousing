@@ -39,7 +39,7 @@
       }
     }
     const link = event.target.closest('[data-guide-link]');
-    if (link) track('guide_select', { guide: link.dataset.guideLink });
+    if (link) track('guide_select', { guide: link.dataset.guideLink, guide_format: /\.pdf(?:[?#]|$)/i.test(link.getAttribute('href') || '') ? 'pdf' : 'html' });
     const section = event.target.closest('.gc-toc a[href^="#"]');
     if (section) track('guide_section_select', { section_id: section.getAttribute('href').slice(1) });
   }, true);
@@ -52,11 +52,7 @@
     let started = false;
     form.addEventListener('input', () => { if (!started) { started = true; track('inquiry_start', { form_id: form.id }); } });
   });
-  document.addEventListener('costin:lead-success', event => {
-    const formId = ['inquiry-form','inquiry-form-c'].includes(event.detail?.form_id) ? event.detail.form_id : 'inquiry-form';
-    track('generate_lead', { form_id: formId, lead_method: 'website_form' });
-    window.costinMeta?.track('Lead');
-  });
+  // Accepted lead events are emitted once by costin-conversions.js.
   // Keep keyboard focus in the open inquiry dialog, and restore the opener on close.
   const overlay = document.getElementById('inquiry-modal');
   if (overlay) {

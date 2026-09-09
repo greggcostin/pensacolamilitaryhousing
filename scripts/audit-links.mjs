@@ -1,5 +1,6 @@
 // Quick integrity audit — broken internal links + orphan pages.
-import { readdirSync, readFileSync } from "node:fs";
+import { readdirSync, readFileSync, existsSync, statSync } from "node:fs";
+import { resolve, sep } from "node:path";
 
 function walk(dir, out = []) {
   for (const f of readdirSync(dir, { withFileTypes: true })) {
@@ -46,7 +47,8 @@ for (const f of files) {
 // /pagefind/* is generated into dist/ by pagefind at build time; not a source file.
 // /images/* is supplied at deploy time on the host (see CLAUDE.md), never in git.
 const isBuildArtifact = (h) => h.startsWith("/pagefind/") || h.startsWith("/images/");
-const broken = Object.keys(hrefs).filter(h => !existingPages.has(h) && !existingPages.has(h + ".html") && !isBuildArtifact(h));
+const validPdf=h=>{const root=resolve('public'),p=resolve(root,'.'+h);return h.endsWith('.pdf')&&p.startsWith(root+sep)&&existsSync(p)&&statSync(p).isFile();};
+const broken = Object.keys(hrefs).filter(h => !existingPages.has(h) && !existingPages.has(h + ".html") && !isBuildArtifact(h) && !validPdf(h));
 console.log("=== BROKEN INTERNAL LINKS ===");
 broken.slice(0, 40).forEach(h => {
   console.log(`  ${h}  ← ${hrefs[h].length} refs, e.g. ${hrefs[h][0]}`);
@@ -73,3 +75,4 @@ const top = Object.entries(inbound)
   .sort((a, b) => b[1] - a[1])
   .slice(0, 10);
 top.forEach(([h, n]) => console.log(`  ${n.toString().padStart(3)}  ${h}`));
+if(broken.length)process.exitCode=1;

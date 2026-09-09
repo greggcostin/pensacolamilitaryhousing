@@ -24,7 +24,7 @@
         "2027 BAH rates",
         "did BAH go up 2027"
       ],
-      "note": "ADDED 2026-09-01 by trend scan. DoD publishes 2027 BAH tables mid-December effective Jan 1 (the 2026 tables were announced Dec 11 2025). Hold for the first run after the tables drop, then write same-week off the real FL064/FL023 numbers: this is the highest-intent, most time-boxed query of the year for this site. Do NOT write it early and do NOT predict a number.",
+      "note": "ADDED 2026-09-01 by trend scan. DoD publishes 2027 BAH tables mid-December effective Jan 1 (the 2026 tables were announced Dec 11 2025). Hold for the first run after the tables drop, then write same-week off the real FL064/FL056 numbers: this is the highest-intent, most time-boxed query of the year for this site. Do NOT write it early and do NOT predict a number.",
       "dedup": "Dedup gate 2026-09-04 (scripts/blog-dedup-check.mjs, lesson L003): DUPLICATE against /blog/bah-2026-pensacola-what-can-you-afford because that post now targets \"2027 BAH Pensacola\" on purpose (Sep 2 refresh). By design: the December run decides between (a) a short news-reaction post that links to the retitled 2026 post and (b) retitling the 2026 post as the 2027 anchor. Do not write both."
     },
     {
@@ -60,7 +60,7 @@
         "bah rate protection pcs",
         "same house new duty station bah"
       ],
-      "evidence": "Evidence: Bing Webmaster Tools keyword export, 3-month window ending Aug 22 2026 (docs/seo-baselines/bing-keywords-2026-08-22.csv). The site already earns impressions on these queries with no page that answers them. Query: \"does pensacola to hurlburt field count as a pca or pcs\" (3 imp, pos 4.3) with no page on the site or, from the Sep 2 research, any competitor answering it. Sits on the rate-protection finding from the BAH refresh: FL064 to FL023 is a 25-31% BAH jump for the same house in Navarre or Milton. Ground truth to verify: JTR PCA definition and the 50-mile / commuting-area rule, DTMO rate protection on PCA vs PCS, whether an intra-area move triggers a new BAH determination.",
+      "evidence": "Evidence: Bing Webmaster Tools keyword export, 3-month window ending Aug 22 2026 (docs/seo-baselines/bing-keywords-2026-08-22.csv). The site already earns impressions on these queries with no page that answers them. Query: \"does pensacola to hurlburt field count as a pca or pcs\" (3 imp, pos 4.3) with no page on the site or, from the Sep 2 research, any competitor answering it. Sits on the rate-protection finding from the BAH refresh: FL064 to FL056 is a 25-31% BAH jump for the same house in Navarre or Milton. Ground truth to verify: JTR PCA definition and the 50-mile / commuting-area rule, DTMO rate protection on PCA vs PCS, whether an intra-area move triggers a new BAH determination.",
       "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009)."
     },
     {

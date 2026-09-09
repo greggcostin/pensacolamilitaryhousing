@@ -3,6 +3,8 @@
 
 import { writeFileSync } from "node:fs";
 import { renderPage } from "./content-page-template.mjs";
+import { GUIDES } from "../content/geo/core-guide-data.mjs";
+import { FINANCIAL_GUIDES } from "../content/geo/financial-guide-data.mjs";
 
 const PAGES = [
   // ─────────────────────────────────────────────────────────────────
@@ -635,7 +637,7 @@ Max Purchase Price = Max Loan (zero-down VA)
 
 <h2>Related Pages</h2>
 <ul>
-<li><a href="/bah-rates.html">2026 BAH Rates — FL064 + FL023</a></li>
+<li><a href="/bah-rates.html">2026 BAH Rates — FL064 + FL056</a></li>
 <li><a href="/va-loan-guide">VA Loan Guide</a></li>
 <li><a href="/va-funding-fee-2026.html">VA Funding Fee 2026</a></li>
 <li><a href="/disabled-veteran-benefits-florida.html">Disabled Veteran Benefits</a></li>
@@ -731,7 +733,7 @@ Max Purchase Price = Max Loan (zero-down VA)
 <p><strong>Fort Walton Beach feeder:</strong> Elliott Point Elementary (B) → Bruner Middle (B) → Choctawhatchee High (B+). Strong band/ROTC programs at Choctaw.</p>
 <p><strong>Mary Esther:</strong> Mary Esther Elementary (B+) → Bruner Middle → Choctawhatchee High. Convenient to Hurlburt gate.</p>
 <p><strong>Shalimar:</strong> Meigs Middle (A-), Choctawhatchee High. Shalimar homes often priced similar to Fort Walton Beach with better middle-school feeder.</p>
-<p><strong>Navarre option:</strong> BAH arbitrage for Hurlburt-assigned families (higher FL023 BAH, Santa Rosa schools). Navarre Elementary (A) → Holley-Navarre Intermediate (A) → Navarre High (A-). Commute: 25-35 min to Hurlburt.</p>
+<p><strong>Navarre option:</strong> BAH arbitrage for Hurlburt-assigned families (higher FL056 BAH, Santa Rosa schools). Navarre Elementary (A) → Holley-Navarre Intermediate (A) → Navarre High (A-). Commute: 25-35 min to Hurlburt.</p>
 
 <h3>Duke Field</h3>
 <p><strong>Closest communities:</strong> Crestview, Baker, Holt. Crestview is the primary commute market.</p>
@@ -788,6 +790,7 @@ Max Purchase Price = Max Loan (zero-down VA)
 // ─── Render and write ─────────────────────────────────────────────
 let count = 0;
 for (const p of PAGES) {
+  if (GUIDES[p.slug] || FINANCIAL_GUIDES[p.slug]) { console.log(`preserved source-reviewed core guide: ${p.slug}`); continue; }
   const html = renderPage(p);
   writeFileSync(`public/${p.slug}.html`, html, "utf8");
   count++;

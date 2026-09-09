@@ -5,11 +5,14 @@
 // or a bare {"@id"} reference. Also fails on retired ids and the deleted Wikidata item, and on
 // any page with no reference to the shared business id. Exit 1 on findings.
 //   node scripts/audit-entity.mjs
-import { readdirSync, readFileSync } from "node:fs";
+import { readdirSync, readFileSync, existsSync } from "node:fs";
 import { IDS, personFull, teamFull, brokerageFull, personCompact, teamCompact, brokerageCompact, publisherRef } from "./entity-lib.mjs";
 
 const OLD = ["https://pensacolamilitaryhousing.com/#agent", "https://pensacolamilitaryhousing.com/#person-gregg", "https://pensacolamilitaryhousing.com/#localbusiness", "https://pensacolamilitaryhousing.com/#brokerage", "Q140446886"];
-const FULL_PAGES = new Set(["index.html", "civilian-site/index.html", "civilian-site/team.html"]);
+const argument=name=>process.argv.includes(name)?process.argv[process.argv.indexOf(name)+1].replaceAll('\\','/'):null;
+const pmhRoot=argument('--pmh-root'),gcRoot=argument('--gc-root');
+if(Boolean(pmhRoot)!==Boolean(gcRoot))throw Error('Provide both --pmh-root and --gc-root for a complete release audit');
+const FULL_PAGES = new Set(pmhRoot?[`${pmhRoot}/index.html`,`${gcRoot}/index.html`,`${gcRoot}/team.html`]:["index.html", "civilian-site/index.html", "civilian-site/team.html"]);
 const S = (o) => JSON.stringify(o);
 const ALLOWED = {
   [IDS.person]: { full: S(personFull()), compact: S(personCompact()) },
@@ -29,8 +32,17 @@ const collect = (node, out) => {
   if (node["@id"] && ALLOWED[node["@id"]]) out.push(node);
   for (const k of Object.keys(node)) if (k !== "@id") collect(node[k], out);
 };
-const files = ["index.html", ...walk("public"), ...walk("civilian-site")];
+const files = pmhRoot?[...walk(pmhRoot),...walk(gcRoot)]:["index.html", ...walk("public"), ...walk("civilian-site")];
 const findings = [];
+const publicRecords = [pmhRoot || 'public', gcRoot || 'civilian-site'].map(root => `${root}/data/gregg-costin.json`);
+for (const file of publicRecords) if (!existsSync(file)) findings.push(`${file}: public professional record is missing`);
+if (publicRecords.every(existsSync)) {
+  try {
+    const [military, civilian] = publicRecords.map(file => JSON.parse(readFileSync(file, 'utf8')));
+    if (JSON.stringify(military) !== JSON.stringify(civilian)) findings.push('Public professional records differ between domains');
+    if (military.canonicalPersonId !== IDS.person) findings.push('Public professional record uses a non-canonical person identity');
+  } catch { findings.push('Public professional record contains invalid JSON'); }
+}
 let fullSeen = { [IDS.person]: 0, [IDS.team]: 0, [IDS.brokerage]: 0 };
 for (const f of files) {
   const h = readFileSync(f, "utf8");

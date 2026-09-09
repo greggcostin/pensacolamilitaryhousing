@@ -1,6 +1,5 @@
-// Refresh `<lastmod>` in sitemap.xml and the "Last updated" stamps in
-// llms.txt / llms-full.txt to today's date. Wired into `npm run build`
-// so dates track deploys without manual edits.
+// Synchronize sitemap dates from actual page dates. A build is not a content review.
+// Preserve existing dates when a route has no documented page modification date.
 //
 // Override the date with:      node scripts/bump-dates.mjs 2026-07-06
 //
@@ -34,37 +33,29 @@ const MONTH_YEAR = `${MONTHS[M - 1]} ${Y}`;  // "July 2026"
 
 // 1) Sitemap: honest per-URL <lastmod> (audit 2026-09-02, idx-03 / geo-04). Each static page
 // reports its own JSON-LD dateModified (or datePublished); only the SPA routes, the homepage
-// and the text files (which carry no per-page stamp) take the build date. Blanket-stamping
-// 101 URLs on every deploy told Google every page changed every time.
+// and text files retain their existing dates unless an editor explicitly updates them.
 const sitemapPath = "public/sitemap.xml";
 let sitemap = readFileSync(sitemapPath, "utf8");
 const before = sitemap;
 const SPA_ROUTES = new Set(["/", "/about", "/contact", "/pcs-guide", "/communities", "/mortgage-calculators"]);
-let honest = 0, stamped = 0;
-sitemap = sitemap.replace(/<loc>https:\/\/pensacolamilitaryhousing\.com(\/[^<]*)?<\/loc>(\s*)<lastmod>[^<]+<\/lastmod>/g, (m, path, ws) => {
+let honest = 0, preserved = 0;
+sitemap = sitemap.replace(/<loc>https:\/\/pensacolamilitaryhousing\.com(\/[^<]*)?<\/loc>(\s*)<lastmod>([^<]+)<\/lastmod>/g, (m, path, ws, existingDate) => {
   const p = path || "/";
-  let d = TODAY;
+  let d = existingDate;
   if (!SPA_ROUTES.has(p) && !/\.(txt|xml|json)$/.test(p)) {
     try {
       const html = readFileSync("public" + p + ".html", "utf8");
       const hit = html.match(/"dateModified":\s*"(\d{4}-\d{2}-\d{2})/) || html.match(/"datePublished":\s*"(\d{4}-\d{2}-\d{2})/);
-      if (hit) { d = hit[1]; honest++; } else stamped++;
-    } catch { stamped++; }
-  } else stamped++;
+      if (hit) { d = hit[1]; honest++; } else preserved++;
+    } catch { preserved++; }
+  } else preserved++;
   return "<loc>https://pensacolamilitaryhousing.com" + (path || "") + "</loc>" + ws + "<lastmod>" + d + "</lastmod>";
 });
 if (sitemap !== before) writeFileSync(sitemapPath, sitemap);
-console.log("sitemap lastmod: " + honest + " URLs from their page dateModified, " + stamped + " stamped " + TODAY);
+console.log("sitemap lastmod: " + honest + " URLs from their page dateModified, " + preserved + " existing dates preserved");
 
-// 2) llms.txt + llms-full.txt: refresh "Last updated:" header.
-for (const path of ["public/llms.txt", "public/llms-full.txt"]) {
-  let txt;
-  try { txt = readFileSync(path, "utf8"); } catch { continue; }
-  const updated = txt.replace(/^# Last updated:.*$/m, `# Last updated: ${TODAY}`);
-  if (updated !== txt) writeFileSync(path, updated);
-}
-
-console.log(`Bumped lastmod / Last updated to ${TODAY}`);
+// Discovery text is edited separately. Rebuilding assets must not imply its text was reviewed.
+console.log('Discovery-file review dates preserved.');
 
 // 3) Opt-in: sync per-page dateModified + visible stamps.
 if (doHtml) {

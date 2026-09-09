@@ -21,6 +21,10 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { applyMilitaryMeta } from "./military-meta-lib.mjs";
 import { ROUTE_META, SITE, HOME_TITLE, HOME_DESC } from "../src/routeMeta.js";
 import { BAH_DATA } from "../src/bahData.js";
+import { IDENTITY } from "../src/entityData.js";
+import { professionalProfileHtml } from "../src/professionalProfile.js";
+import { IDS, personCompact, teamCompact, brokerageCompact } from './entity-lib.mjs';
+import { routeStructuredData } from '../src/routeSchema.js';
 import { INSTALLATIONS_HEADERS, INSTALLATIONS, NEIGHBORHOOD_HEADERS, NEIGHBORHOOD_ROWS, PCS_CHECKLIST, FL_BENEFITS, PCS_FAQS } from "../src/pcsGuideData.js";
 
 // ── /pcs-guide shell content (audit 2026-09-02, geo-01 / idx-04) ──
@@ -50,7 +54,7 @@ function pcsGuideBody() {
     h3("Enlisted (E-1 through E-9)"), table(["Grade", "With Dependents", "Without Dependents"], bahRows(enlisted)),
     h3("Warrant Officer (W-1 through W-5)"), table(["Grade", "With Dependents", "Without Dependents"], bahRows(fl.warrant)),
     h3("Officer (O-1 through O-6, including prior-enlisted O-1E, O-2E, O-3E)"), table(["Grade", "With Dependents", "Without Dependents"], bahRows(fl.officer.filter(([g]) => g !== "O-7"))),
-    p(`Fort Walton Beach (Eglin AFB, Hurlburt Field, Duke Field) falls under MHA ${BAH_DATA.FL023.mhaCode}; see the <a href="/bah-rates" style="color:#C4A75A">2026 BAH rates page</a> for both tables and the <a href="/mortgage-calculators" style="color:#C4A75A">BAH-to-mortgage calculators</a>.`),
+    p(`Fort Walton Beach (Eglin AFB, Hurlburt Field, Duke Field) falls under MHA ${BAH_DATA.FL056.mhaCode}; see the <a href="/bah-rates" style="color:#C4A75A">2026 BAH rates page</a> for both tables and the <a href="/mortgage-calculators" style="color:#C4A75A">BAH-to-mortgage calculators</a>.`),
     h2("Florida Benefits for Military Families"),
     `<ul style="font-size:15px;line-height:1.8;color:#B8BAC0;padding-left:20px;margin:0 0 12px">${FL_BENEFITS.map((b) => `<li><strong style="color:#fff">${esc(b.title)}</strong> ${esc(b.text)}</li>`).join("")}</ul>`,
     h2("Frequently Asked Questions"),
@@ -106,25 +110,25 @@ function communityGridHtml() {
 
 function makeFallback(r) {
   const grid = r.file === "communities" || r.file === "pcs-guide" ? communityGridHtml() : "";
-  const body = (r.file === "pcs-guide" ? `<section style="margin:8px 0 32px">${pcsGuideBody()}</section>` : "") + sectionsHtml(r) + grid;
+  const body = (r.file === "pcs-guide" ? `<section style="margin:8px 0 32px">${pcsGuideBody()}</section>` : "") + (r.file === 'about' ? professionalProfileHtml() : '') + sectionsHtml(r) + grid;
   const tools = SHELL_LINKS[r.file]
     ? `<section style="margin:0 0 24px"><h2 style="color:#C4A75A;font-size:18px;margin:0 0 10px;font-weight:500">PCS Decision Tools</h2><ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2">${SHELL_LINKS[r.file].map(([label, href]) => `<li><a href="${href}" style="color:#E8E9EB">${label}</a></li>`).join("")}</ul></section>`
     : "";
-  return `            <div style="background:#0A0F1A;color:#E8E9EB;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh;padding:40px 24px;max-width:1100px;margin:0 auto">
+  return `            <div data-pagefind-body style="background:#0A0F1A;color:#E8E9EB;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh;padding:40px 24px;max-width:1100px;margin:0 auto">
               <main id="main">
               <header style="margin-bottom:32px">
                 <p style="color:#C4A75A;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;margin:0 0 8px">Pensacola Military Housing</p>
                 <h1 style="font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 16px;color:#fff;font-weight:500">${r.heading}</h1>
                 <p style="font-size:16px;line-height:1.7;color:#B8BAC0;margin:0 0 20px;max-width:720px">${r.intro}</p>
                 ${tools}
-                <p style="font-size:15px;margin:0 0 8px"><strong>Call or text:</strong> <a href="tel:8502665005" style="color:#C4A75A;text-decoration:none">(850) 266-5005</a> &nbsp;&middot;&nbsp; <strong>Email:</strong> <a href="mailto:gregg.costin@gmail.com" style="color:#C4A75A;text-decoration:none">gregg.costin@gmail.com</a></p>
-                <p style="font-size:14px;color:#8A8D94;margin:0">Gregg Costin, Realtor&reg; &middot; Levin Rinke Realty &middot; 220 W. Garden Street, Pensacola, FL 32502 &middot; Licensed in Florida &amp; Alabama &middot; Equal Housing Opportunity &middot; <a href="/privacy" style="color:#8A8D94">Privacy</a> &middot; <a href="/accessibility" style="color:#8A8D94">Accessibility</a></p>
+                <p style="font-size:15px;margin:0 0 8px"><strong>Call or text:</strong> <a href="tel:8502665005" style="color:#C4A75A;text-decoration:none">(850) 266-5005</a> &nbsp;&middot;&nbsp; <strong>Email:</strong> <a href="mailto:${esc(IDENTITY.email)}" style="color:#C4A75A;text-decoration:none">${esc(IDENTITY.email)}</a></p>
+                <p style="font-size:14px;color:#8A8D94;margin:0">Gregg Costin, Realtor&reg; &middot; Levin Rinke Realty &middot; ${esc(IDENTITY.addressLine)} &middot; Licensed in Florida &amp; Alabama &middot; Equal Housing Opportunity &middot; <a href="/privacy" style="color:#8A8D94">Privacy</a> &middot; <a href="/accessibility" style="color:#8A8D94">Accessibility</a></p>
               </header>
               ${body}
               </main>
               <p data-costin-sites>Buying or selling beyond a military move? <a href="https://greggcostin.com/" style="color:#C4A75A">Explore The Costin Team’s Florida and Alabama guides</a>.</p>
               <nav style="font-size:14px;color:#B8BAC0;line-height:1.9"><a href="/" style="color:#E8E9EB">Home</a> &middot; <a href="/about" style="color:#E8E9EB">About</a> &middot; <a href="/pcs-guide" style="color:#E8E9EB">PCS Guide</a> &middot; <a href="/communities" style="color:#E8E9EB">Communities</a> &middot; <a href="/mortgage-calculators" style="color:#E8E9EB">Calculators</a> &middot; <a href="/va-loan-guide" style="color:#E8E9EB">VA Loan Guide</a> &middot; <a href="/reviews" style="color:#E8E9EB">Reviews</a> &middot; <a href="/contact" style="color:#E8E9EB">Contact</a></nav>
-              <p style="margin-top:32px;font-size:12px;line-height:1.7;color:#8A8D94;font-style:italic"><strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (220 W. Garden St., Pensacola, FL 32502). Information on this site (including BAH figures, VA loan terms, funding fees, tax rules, homestead and disability benefits, school zoning, and rental/investment commentary) is provided for general informational purposes only and is not legal, tax, financial, mortgage, lending, or investment advice. Real estate, lending, tax, and benefits rules change frequently and depend on individual circumstances; verify current figures with official sources (DoD BAH calculator, VA, IRS, your county property appraiser) and consult a licensed attorney, CPA, or NMLS-licensed loan officer for guidance specific to your situation. Gregg Costin is not a mortgage lender, attorney, tax professional, or financial advisor, and is not affiliated with, endorsed by, or representing the U.S. Department of Defense, Department of Veterans Affairs, or any branch of the U.S. military. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.</p><noscript><p style="margin-top:32px;padding:16px;background:#1a1f2a;border-left:3px solid #C4A75A;color:#B8BAC0;font-size:13px">Enable JavaScript for the full interactive experience, including the 2026 BAH and mortgage calculators.</p></noscript>
+              <p style="margin-top:32px;font-size:12px;line-height:1.7;color:#8A8D94;font-style:italic"><strong>Disclaimer.</strong> Gregg Costin is a Florida- and Alabama-licensed Real Estate Agent with Levin Rinke Realty (${esc(IDENTITY.addressLine)}). Information on this site (including BAH figures, VA loan terms, funding fees, tax rules, homestead and disability benefits, school zoning, and rental/investment commentary) is provided for general informational purposes only and is not legal, tax, financial, mortgage, lending, or investment advice. Real estate, lending, tax, and benefits rules change frequently and depend on individual circumstances; verify current figures with official sources (DoD BAH calculator, VA, IRS, your county property appraiser) and consult a licensed attorney, CPA, or NMLS-licensed loan officer for guidance specific to your situation. Gregg Costin is not a mortgage lender, attorney, tax professional, or financial advisor, and is not affiliated with, endorsed by, or representing the U.S. Department of Defense, Department of Veterans Affairs, or any branch of the U.S. military. Use of this site does not create an agency or fiduciary relationship; representation begins only upon a signed brokerage agreement. Equal Housing Opportunity.</p><noscript><p style="margin-top:32px;padding:16px;background:#1a1f2a;border-left:3px solid #C4A75A;color:#B8BAC0;font-size:13px">Enable JavaScript for the full interactive experience, including the 2026 BAH and mortgage calculators.</p></noscript>
             </div>`;
 }
 
@@ -152,9 +156,10 @@ for (const r of ROUTE_META.filter((e) => e.shell)) {
 
   // ── per-page structured data: WebPage + BreadcrumbList (entity blocks untouched) ──
   const webPage = JSON.stringify({
-    "@context": "https://schema.org", "@type": "WebPage", "@id": `${canon}#webpage`,
+    "@context": "https://schema.org", "@type": r.file === 'about' ? 'ProfilePage' : 'WebPage', "@id": `${canon}#webpage`,
     url: canon, name: r.title, description: r.description,
-    isPartOf: { "@id": `${SITE}/#website` }, about: { "@id": "https://greggcostin.com/#team" }, inLanguage: "en-US",
+    isPartOf: { "@id": `${SITE}/#website` }, about: { "@id": IDS.team }, inLanguage: "en-US",
+    ...(r.file === 'about' ? {mainEntity: {'@id': IDS.person}} : {}),
   });
   const crumbs = JSON.stringify({
     "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -163,9 +168,13 @@ for (const r of ROUTE_META.filter((e) => e.shell)) {
       { "@type": "ListItem", position: 2, name: r.crumb, item: canon },
     ],
   });
-  const faqLd = r.file === "pcs-guide" ? `<script type="application/ld+json">${pcsGuideFaqJsonLd()}</script>\n` : "";
+  // An interior route describes itself. Do not inherit the homepage's WebPage or Services.
+  const compactGraph = JSON.stringify({'@context':'https://schema.org','@graph':[personCompact(),teamCompact(),brokerageCompact()]});
+  const homeEntity = /<script\b[^>]*data-entity="entity-graph:home"[^>]*>[\s\S]*?<\/script>/;
+  if (!homeEntity.test(html)) throw Error('Homepage identity graph not found for route isolation.');
+  html = html.replace(homeEntity, `<script type="application/ld+json" data-entity="entity-graph:compact">${compactGraph}</script>`);
   html = swap(html, `</head>`,
-    `<script type="application/ld+json">${webPage}</script>\n<script type="application/ld+json">${crumbs}</script>\n${faqLd}</head>`,
+    Object.entries(routeStructuredData(r)).map(([kind,data])=>`<script type="application/ld+json" data-route-schema="${kind}">${JSON.stringify(data)}</script>`).join('\n')+'\n</head>',
     "head-close", r);
 
   // ── #root fallback (route-specific, replaces the homepage SEO block) ──
@@ -178,7 +187,7 @@ for (const r of ROUTE_META.filter((e) => e.shell)) {
   if (!html.includes(`<link rel="canonical" href="${canon}" />`)) throw new Error(`2.15: canonical not applied for /${r.file}`);
   if (html.includes(`<link rel="canonical" href="${SITE}/" />`)) throw new Error(`2.15: homepage canonical still present in /${r.file}`);
   if (html.includes(`<title>${HOME_TITLE}</title>`)) throw new Error(`2.15: homepage title still present in /${r.file}`);
-  if (html.includes(`Pensacola's #1 <em`)) throw new Error(`2.15: homepage #root H1 still present in /${r.file}`);
+  if (html.includes('id="pcs-decisions"')) throw new Error(`2.15: homepage decision section still present in /${r.file}`);
   // Crawler-visible content floor (audit 2026-09-02, geo-01): the PCS guide shell must carry its data.
   if (r.file === "pcs-guide") {
     const rootText = (html.match(ROOT_RE) || [""])[0].replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<[^>]+>/g, " ");

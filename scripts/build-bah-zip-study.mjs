@@ -1,72 +1,41 @@
-// Quarterly refresh pipeline for the "BAH vs. Cost of Owning by ZIP" data study
-// (/bah-vs-cost-of-owning-pensacola). Downloads Zillow's public ZHVI-by-ZIP CSV,
-// filters to the 26 covered ZIPs, runs each through the SAME cost model as the
-// bah-rates calculator (VA zero-down, 2.15% first-use fee financed, 6.5%/30yr,
-// 1.0% tax, $3,000/yr insurance), compares against BAH_DATA in src/App.jsx, and
-// prints the finished <tr> rows plus the headline stats for pasting into
-// content/pages/bah-vs-cost-of-owning-pensacola.fragment.html (then rebuild via
-// page-factory and update the data-vintage month in the page's prose/FAQ).
-//
-// Usage: node scripts/build-bah-zip-study.mjs
-// Refresh cadence: quarterly; re-baseline each January when new BAH rates drop
-// (update RATE/TAX/INS here only if the calculator's defaults change too).
-
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-import { createInterface } from "node:readline";
-import { createReadStream } from "node:fs";
-
-const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
-const ZHVI_URL = "https://files.zillowstatic.com/research/public_csvs/zhvi/Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv";
-const CSV = ROOT + "zhvi_zip_tmp.csv"; // ~120MB; delete after running
-
-const RATE = 0.065, TAX = 0.01, INS_YR = 3000, FEE = 0.0215;
-
-const NAMES = { "32501": ["Pensacola: downtown", "Escambia"], "32502": ["Pensacola: downtown / Palafox", "Escambia"], "32503": ["Pensacola: East Hill / Cordova", "Escambia"], "32504": ["Pensacola: northeast", "Escambia"], "32505": ["Pensacola: west side", "Escambia"], "32506": ["Pensacola: southwest, near NASP", "Escambia"], "32507": ["Pensacola: Navy Point / Perdido side", "Escambia"], "32514": ["Ferry Pass", "Escambia"], "32526": ["Bellview / Beulah side", "Escambia"], "32533": ["Cantonment", "Escambia"], "32534": ["Pensacola: north", "Escambia"], "32536": ["Crestview (west)", "Okaloosa"], "32539": ["Crestview (east)", "Okaloosa"], "32541": ["Destin", "Okaloosa"], "32547": ["Fort Walton Beach (north)", "Okaloosa"], "32548": ["Fort Walton Beach (south)", "Okaloosa"], "32561": ["Gulf Breeze proper", "Santa Rosa"], "32563": ["Gulf Breeze (Midway/Tiger Point)", "Santa Rosa"], "32566": ["Navarre", "Santa Rosa"], "32569": ["Mary Esther", "Okaloosa"], "32570": ["Milton", "Santa Rosa"], "32571": ["Pace", "Santa Rosa"], "32578": ["Niceville / Bluewater Bay", "Okaloosa"], "32579": ["Shalimar", "Okaloosa"], "32580": ["Valparaiso", "Okaloosa"], "32583": ["Milton (east)", "Santa Rosa"] };
-
-if (!existsSync(CSV)) {
-  console.log("Downloading ZHVI (~120MB)...");
-  const res = await fetch(ZHVI_URL);
-  writeFileSync(CSV, Buffer.from(await res.arrayBuffer()));
+// Deterministic refresh of the existing URL. Public source downloads are explicit
+// and separate: node scripts/fetch-zip-study-sources.mjs.
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {DEFAULT_COSTS,RATE_REFERENCE,monthlyOwnership} from '../public/tools/ownership-model.js';
+import {RATES,e} from './geo-core-lib.mjs';
+import {reviewedPage} from './reviewed-page-lib.mjs';
+const sourceDir='content/data/sources/bah-ownership-2026';
+export const slug='bah-vs-cost-of-owning-pensacola';
+export const median=values=>{const a=[...values].sort((a,b)=>a-b);if(!a.length)throw Error('Empty median');const m=Math.floor(a.length/2);return a.length%2?a[m]:(a[m-1]+a[m])/2;};
+export function buildStudy(zhvi,geo,captures){
+ if(zhvi.length!==26||new Set(zhvi.map(r=>r.RegionName)).size!==26)throw Error('Expected 26 unique ZIPs');
+ const dates=Object.keys(zhvi[0]).filter(k=>/^\d{4}-\d\d-\d\d$/.test(k)).sort().reverse();
+ const month=dates.find(k=>zhvi.every(r=>r[k]!==''&&Number.isFinite(Number(r[k]))&&Number(r[k])>0));if(!month)throw Error('No complete shared value month');
+ if(captures.some(c=>c.status!=='captured'))throw Error('Source capture incomplete');
+ const rows=zhvi.map(r=>{const counties=geo.filter(g=>g.GEOID_ZCTA5_20===r.RegionName);if(!counties.length)throw Error('County relationship missing');const value=Number(r[month]),cost=monthlyOwnership(value,DEFAULT_COSTS);return {zip:r.RegionName,zillowRegionId:r.RegionID,zillowCity:r.City,zillowCounty:r.CountyName,zctaCounties:counties.map(g=>({name:g.NAMELSAD_COUNTY_20,fips:g.GEOID_COUNTY_20,landShare:Number((Number(g.AREALAND_PART)/Number(g.AREALAND_ZCTA5_20)).toFixed(6))})),valueDate:month,zhvi:value,valueKind:'published modeled home-value index, not a closed-sale median',monthlyIllustration:cost,gapFL064:Math.round((cost.monthly-RATES.FL064['E-5'].withDependents)*100)/100,gapFL056:Math.round((cost.monthly-RATES.FL056['E-5'].withDependents)*100)/100};}).sort((a,b)=>a.zhvi-b.zhvi);
+ return {schemaVersion:2,reviewed:'2026-09-08',canonicalUrl:`https://pensacolamilitaryhousing.com/${slug}`,scope:'26 selected Florida ZIP identifiers; no Alabama ZIPs; corresponding 2020 Census ZCTAs may cross counties',valueDate:month,sourceCaptures:captures.map(({header,...r})=>r),rateReference:RATE_REFERENCE,assumptions:{...DEFAULT_COSTS,status:'illustrative common inputs, not observed property costs or local quotes'},bah:{year:2026,exampleGrade:'E-5',dependency:'with dependents',FL064:RATES.FL064['E-5'].withDependents,FL056:RATES.FL056['E-5'].withDependents,source:'https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/'},medianMonthly:Math.round(median(rows.map(r=>r.monthlyIllustration.monthly))*100)/100,rows};
 }
-
-const appSrc = readFileSync(ROOT + "src/App.jsx", "utf8");
-const bah = eval("(" + appSrc.match(/const BAH_DATA = ({[\s\S]*?});/)[1] + ")");
-const grades = (mha) => [...bah[mha].enlisted, ...bah[mha].warrant, ...bah[mha].officer]
-  .filter(([g]) => /^E-|^O-[1-6]$/.test(g)).map(([g, w]) => [g, w]);
-const FL064 = grades("FL064"), FL023 = grades("FL023");
-
-const rl = createInterface({ input: createReadStream(CSV) });
-let header = null; const rows = [];
-for await (const l of rl) {
-  if (!header) { header = l.split(","); continue; }
-  const cols = l.split(",");
-  const zip = cols[2].replace(/"/g, "");
-  if (!NAMES[zip]) continue;
-  let val = null, month = null;
-  for (let i = cols.length - 1; i > 8; i--) if (cols[i] !== "") { val = parseFloat(cols[i]); month = header[Math.min(i, header.length - 1)]; break; }
-  rows.push({ zip, v: Math.round(val), month });
+const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
+export function studyPage(data){
+ const label=new Date(data.valueDate+'T12:00:00Z').toLocaleDateString('en-US',{month:'long',year:'numeric',timeZone:'UTC'});
+ const sources=['https://www.zillow.com/research/data/','https://www.zillow.com/research/zhvi-methodology/','https://www.census.gov/programs-surveys/geography/guidance/geo-areas/zctas.html',...data.sourceCaptures.map(c=>c.url),RATE_REFERENCE.url,data.bah.source,'https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/','https://floridarevenue.com/property/Documents/pt107.pdf'];
+ const spec={slug,title:'2026 BAH & Ownership Costs Across 26 Florida ZIPs',description:'Compare July 2026 Zillow values across 26 Florida ZIPs with a transparent ownership-cost illustration, 2026 BAH, county geography and downloadable data.',h1:'BAH and ownership costs across 26 Florida ZIP codes',lead:`${label} home-value data, 2026 BAH and a September 8, 2026 model review. Understand the cost ingredients before comparing actual properties.`,quickAnswer:`This study compares ${label} Zillow home-value estimates for 26 selected Florida ZIP codes using one illustrative ownership-cost model. The median modeled total is ${money(data.medianMonthly)} per month, including reserves and utilities. A ZIP label does not establish a property's taxes, duty-station BAH or loan approval.`,reviewed:'2026-09-08',reviewLabel:'September 8, 2026',sources,faq:[
+ {q:'Are these actual sale prices or quoted monthly payments?',a:'No. Zillow ZHVI is a modeled index of typical home values, not a closed-sale median or an asking price. The payments are arithmetic illustrations using shared hypothetical expense inputs. We did not observe a mortgage quote, tax bill or insurance premium for each ZIP.'},
+ {q:'Which data dates does the comparison use?',a:`Zillow values are for ${label}; the downloaded file was last modified August 16, 2026 and retrieved September 8. BAH is the published 2026 schedule. The 6.71% conventional national mortgage-rate reference is dated September 3, 2026. County relationships use 2020 Census ZIP Code Tabulation Areas.`},
+ {q:'Does the ZIP where I buy determine my BAH?',a:'Generally, BAH uses the permanent duty-station ZIP, grade and dependency status, subject to eligibility and exceptions. A residential ZIP alone does not establish the allowance. Verify your orders and actual entitlement with finance.'},
+ {q:'Why does ZIP 32561 show two counties?',a:'The Census 2020 area with identifier 32561 intersects Escambia and Santa Rosa counties. It includes the Pensacola Beach and Gulf Breeze comparison area, so the previous Gulf Breeze proper label was too narrow. Verify the exact parcel, jurisdiction and any leasehold terms.'},
+ {q:'Does a positive gap mean I cannot buy in that ZIP?',a:'No. The gap compares one illustrative total with one published E-5 with-dependents allowance. Actual price, other household income, debts, down payment, funding-fee exemption and property expenses change the outcome. A lender must evaluate the real borrower and property.'},
+ {q:'Are the taxes and insurance specific to each ZIP?',a:'No. Each row uses the same hypothetical $3,600 annual tax, $4,800 combined homeowners and wind insurance, and $1,200 flood premium. It also includes $75 monthly dues, $250 maintenance reserve and $225 utilities. Obtain buyer-based tax estimates and address-specific insurance and association documents.'}
+ ]};
+ const table=`<div class="table-wrap geo-table-wrap" role="region" tabindex="0" aria-label="26 ZIP ownership-cost illustrations"><table><caption>${label} Zillow values; monthly illustrations in dollars. Positive gaps mean modeled cost exceeds the selected BAH example.</caption><thead><tr><th scope="col">ZIP / Zillow city label</th><th scope="col">2020 ZCTA counties</th><th scope="col">ZHVI</th><th scope="col">Illustrative total / month</th><th scope="col">Cost minus FL064 E-5 BAH</th><th scope="col">Cost minus FL056 E-5 BAH</th></tr></thead><tbody>${data.rows.map(r=>`<tr><th scope="row">${r.zip}<br>${e(r.zillowCity)}</th><td>${r.zctaCounties.map(c=>e(c.name)).join(' / ')}</td><td>${money(r.zhvi)}</td><td>${money(r.monthlyIllustration.monthly)}</td><td>${money(r.gapFL064)}</td><td>${money(r.gapFL056)}</td></tr>`).join('')}</tbody></table></div>`;
+ const template=readFileSync(new URL('../content/geo/zip-study-method.fragment.html',import.meta.url),'utf8');
+ const sourceLabels=['Zillow Research data','Zillow Home Value Index methodology','Census ZIP Code Tabulation Areas','Captured Zillow ZIP value series','Census 2020 ZCTA-to-county relationships','Freddie Mac mortgage-rate reference','Official 2026 BAH lookup','VA funding fee and closing costs','Florida property assessment guide'];
+ const body=template.replace('{{VALUE_MONTH}}',label).replace('{{BAH064}}',money(data.bah.FL064)).replace('{{BAH056}}',money(data.bah.FL056)).replace('{{TABLE}}',table).replace('{{SOURCES}}',sources.map((u,i)=>`<li><a href="${e(u)}">${e(sourceLabels[i]||new URL(u).hostname)}</a></li>`).join(''));
+ return {spec,body};
 }
-
-const per1 = (RATE / 12) / (1 - Math.pow(1 + RATE / 12, -360));
-const cost = (p) => Math.round(p * (1 + FEE) * per1 + p * TAX / 12 + INS_YR / 12);
-const cover = (c, tbl) => {
-  const e = tbl.find(([g, w]) => g.startsWith("E") && w >= c);
-  const o = tbl.find(([g, w]) => g.startsWith("O") && w >= c);
-  if (!e && !o) return "No grade";
-  return [e ? (e[0] === "E-1" ? "E-1+" : e[0] + "+") : null, o ? o[0] + "+" : null].filter(Boolean).join(" / ");
-};
-
-rows.forEach(r => r.c = cost(r.v));
-rows.sort((a, b) => a.c - b.c);
-
-console.log("Data month:", rows[0].month, "\n");
-for (const r of rows)
-  console.log(`<tr><td>${r.zip}</td><td>${NAMES[r.zip][0]}</td><td>${NAMES[r.zip][1]}</td><td>$${r.v.toLocaleString()}</td><td><strong>$${r.c.toLocaleString()}</strong></td><td>${cover(r.c, FL064)}</td><td>${cover(r.c, FL023)}</td></tr>`);
-
-const e5_64 = FL064.find(([g]) => g === "E-5")[1], e5_23 = FL023.find(([g]) => g === "E-5")[1];
-const max64 = Math.max(...FL064.map(([, w]) => w)), max23 = Math.max(...FL023.map(([, w]) => w));
-console.log(`\nStats: E-5 FL064 ($${e5_64}) covers ${rows.filter(r => r.c <= e5_64).length}/${rows.length} ZIPs; E-5 FL023 ($${e5_23}) covers ${rows.filter(r => r.c <= e5_23).length}/${rows.length}`);
-console.log(`No FL064 grade: ${rows.filter(r => r.c > max64).length}/${rows.length}; no FL023 grade: ${rows.filter(r => r.c > max23).length}/${rows.length}`);
-console.log(`Median monthly cost: $${rows[Math.floor(rows.length / 2)].c.toLocaleString()}`);
-console.log("\nRemember: update the data-vintage month in the fragment prose/FAQ, rebuild with page-factory, delete zhvi_zip_tmp.csv.");
+if(process.argv[1]?.replaceAll('\\','/').endsWith('/build-bah-zip-study.mjs')){
+ const captures=JSON.parse(readFileSync(`${sourceDir}/capture.json`)),data=buildStudy(JSON.parse(readFileSync(`${sourceDir}/zhvi-selected.json`)),JSON.parse(readFileSync(`${sourceDir}/zcta-counties-selected.json`)),captures),{spec,body}=studyPage(data);
+ const file='content/data/bah-ownership-study-2026.json',json=JSON.stringify(data,null,2)+'\n';mkdirSync('content/data',{recursive:true});
+ if(process.argv.includes('--check')){if(!existsSync(file)||readFileSync(file,'utf8')!==json)throw Error('Study output drift');console.log('Study source/model match: 26 ZIPs');}
+ else {writeFileSync(file,json);mkdirSync('public/data',{recursive:true});writeFileSync('public/data/bah-ownership-study-2026.json',json);const header=['zip','value_date','zillow_city_label','zcta_counties_2020','zhvi_modeled_index','illustrative_monthly_total','cost_minus_FL064_E5_with','cost_minus_FL056_E5_with'];const csv=[header.join(','),...data.rows.map(r=>[r.zip,r.valueDate,r.zillowCity,r.zctaCounties.map(c=>c.name).join(' / '),r.zhvi,r.monthlyIllustration.monthly,r.gapFL064,r.gapFL056].map(v=>'"'+String(v).replaceAll('"','""')+'"').join(','))].join('\n')+'\n';writeFileSync('public/data/bah-ownership-study-2026.csv',csv);writeFileSync(`content/pages/${slug}.fragment.html`,'<!--PAGE\n'+JSON.stringify({...spec,breadcrumbName:'BAH and ownership study',articleHeadline:spec.h1,figure:null,related:[]},null,2)+'\nPAGE-->\n'+body+'\n');const page=`public/${slug}.html`;writeFileSync(page,reviewedPage(readFileSync(page,'utf8'),spec,body,{marker:'zip-study'}));console.log(JSON.stringify({zipCount:data.rows.length,valueDate:data.valueDate,medianMonthly:data.medianMonthly,multiCounty:data.rows.filter(r=>r.zctaCounties.length>1).map(r=>r.zip)}));}
+}

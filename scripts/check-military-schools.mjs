@@ -16,7 +16,7 @@ const text=html=>decode(html.replace(/<[^>]*>/g,' ')).replace(/\s+/g,' ').trim()
 const attrs=tag=>Object.fromEntries([...tag.matchAll(/([\w:-]+)="([^"]*)"/g)].map(m=>[m[1],decode(m[2])]));
 const meta=(html,key)=>[...html.matchAll(/<meta\b[^>]*>/g)].map(m=>attrs(m[0])).find(a=>a.name===key||a.property===key)?.content;
 const scripts=html=>[...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)].map(m=>({attrs:attrs(m[1]),body:m[2]}));
-const schemas=html=>scripts(html).filter(s=>s.attrs.type==='application/ld+json').map(s=>JSON.parse(s.body));
+const schemas=html=>scripts(html).filter(s=>s.attrs.type==='application/ld+json').flatMap(s=>{const n=JSON.parse(s.body);return n['@graph']||[n];});
 const anchors=html=>[...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)].map(m=>({...attrs(m[1]),text:text(m[2]),html:m[0]}));
 function elementAtId(html,id){
   const opening=new RegExp('<([a-z][a-z0-9-]*)\\b[^>]*\\bid="'+id+'"[^>]*>','i').exec(html);
@@ -58,7 +58,8 @@ check('Each edition owns its canonical, social URLs and page metadata',()=>{
 check('Structured data preserve school facts and business identity while giving PMH pages their own URLs',()=>{
   for(const [route,p]of pages){
     const ps=schemas(p.pmh),gs=schemas(p.gc),serialized=JSON.stringify(ps);
-    assert(!serialized.includes(GC+'/schools'),route+': GC school URL in PMH schema');
+    for(const node of ps.filter(n=>['WebPage','CollectionPage','School'].includes(n['@type'])))for(const key of ['url','@id'])assert(!String(node[key]||'').startsWith(GC+'/schools'),route+': foreign page or school identity');
+    if(route==='/schools'){const dataset=ps.find(n=>n['@type']==='Dataset');assert.equal(dataset?.['@id'],GC+'/schools#school-dataset');assert.equal(dataset.url,GC+'/schools');}
     for(const id of ['#gregg','#team','#brokerage'])assert(serialized.includes(GC+'/'+id),route+': shared business '+id);
     const pg=ps.find(n=>['WebPage','CollectionPage'].includes(n['@type']));assert(pg,route+': page schema');
     assert.equal(pg.url,PMH+route);assert.equal(pg.name,meta(p.pmh,'og:title'));assert.equal(pg.description,meta(p.pmh,'description'));
@@ -131,7 +132,7 @@ check('Address input remains masked, explicit-submit-only and outside history, a
   const input=hub.match(/<input id="sf-home-address"[^>]*>/)?.[0];assert(input?.includes('data-clarity-mask="true"'));assert(input.includes('data-private="true"'));assert(!/\bname=/.test(input));
   assert(!elementAtId(hub,'inquiry-form').includes('sf-home-address'));
   for(const key of ['data-sf-address-matches','data-sf-home-active'])assert(new RegExp('<[^>]*'+key+'[^>]*data-clarity-mask="true"').test(hub));
-  assert(ui.includes("get('#sf-address-form').addEventListener('submit'"));assert(ui.includes('apply();\n  openMap();'));
+  assert(ui.includes("get('#sf-address-form').addEventListener('submit'"));assert(/apply\(\);\s+openMap\(\);\s*}/.test(ui));
   assert(!/gtag|dataLayer|fbq/.test(transport));assert(ui.includes("popup.setAttribute('data-clarity-mask','true')"));
 });
 check('PMH filtering keeps straight-line radius separate from road routes and never invents virtual-campus distances',()=>{

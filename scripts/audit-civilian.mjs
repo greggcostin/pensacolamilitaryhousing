@@ -5,10 +5,11 @@
 // gates protect the blog.
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { analyticsGuardFindings } from "./analytics-host-guard.mjs";
+import { recordLink } from './identity-page-lib.mjs';
 
 const rootArg = process.argv.indexOf('--root');
-const ROOT = rootArg >= 0 ? process.argv[rootArg+1] : 'civilian-site';
-if (!ROOT) throw Error('--root requires a complete site directory');
+const ROOT = rootArg >= 0 ? process.argv[rootArg + 1] : 'civilian-site';
+if (!ROOT) throw new Error('--root requires a complete civilian site directory');
 const SITE = "https://greggcostin.com";
 const findings = [];
 const f = (page, msg) => findings.push(`${page}: ${msg}`);
@@ -34,6 +35,7 @@ for (const file of pages) {
   for (const issue of analyticsGuardFindings(h)) f(file, issue);
   const slug = slugOf(file);
   const url = SITE + (slug === "/" ? "/" : slug);
+  if (!h.includes(recordLink)) f(file, 'missing or stale canonical professional-record link');
 
   /* ---------- head ---------- */
   const title = (h.match(/<title>([^<]*)<\/title>/) || [])[1];
@@ -67,6 +69,9 @@ for (const file of pages) {
     if (tag==='name="ICBM"' && h.includes('data-school-profile=') && !h.includes('"@type":"GeoCoordinates"')) continue; // No invented coordinates for virtual/unconfirmed campuses.
     if (!h.includes(tag)) f(file, `missing ${tag}`);
   }
+  // A virtual school can correctly omit physical coordinates. When a location
+  // is supplied, preserve the site's paired legacy geographic metadata.
+  if (h.includes('name="geo.position"') && !h.includes('name="ICBM"')) f(file, 'geo.position supplied without matching ICBM metadata');
   if (!h.includes("max-video-preview:-1")) f(file, "robots meta missing max-video-preview:-1");
   if (["buy.html", "sell.html"].includes(file) && !h.includes('"@type":"Service"')) f(file, "service page missing Service schema");
   if (!h.includes('name="robots" content="index,follow')) f(file, "missing robots meta");
@@ -78,24 +83,25 @@ for (const file of pages) {
   for (const b of blocks) {
     try { parsed.push(JSON.parse(b)); } catch (e) { f(file, `invalid JSON-LD: ${e.message.slice(0, 60)}`); }
   }
-  const types = parsed.flatMap((p) => (p["@graph"] ? p["@graph"].map((n) => n["@type"]) : [p["@type"]]));
+  const schemaNodes = parsed.flatMap((p) => p["@graph"] || [p]);
+  const types = schemaNodes.flatMap((p) => p["@type"] || []);
   if (file === "index.html") {
     for (const t of ["WebSite", "RealEstateAgent", "Person", "FAQPage"]) if (!types.includes(t)) f(file, `index missing ${t} schema`);
   } else {
     if (!types.includes("BreadcrumbList")) f(file, "missing BreadcrumbList");
     if (!parsed.some((p) => JSON.stringify(p).includes('"@id":"https://greggcostin.com/#team"'))) f(file, "schema not wired to #team entity");
-    const wp = parsed.find((p) => ["WebPage", "AboutPage", "ContactPage", "CollectionPage", "Blog", "Article", "BlogPosting"].includes(p["@type"]));
+    const wp = schemaNodes.find((p) => ["WebPage", "AboutPage", "ContactPage", "CollectionPage", "Blog", "Article", "BlogPosting"].includes(p["@type"]));
     if (!wp) f(file, "missing WebPage-type schema");
     else if (!wp.dateModified && !wp.datePublished && wp["@type"] !== "Blog") f(file, "WebPage schema missing dateModified");
   }
   if (file === "team.html" && !types.includes("Person")) f(file, "team page missing Person schema");
   // FAQPage answers must mirror visible <details> text
-  const faq = parsed.find((p) => p["@type"] === "FAQPage");
+  const faq = schemaNodes.find((p) => p["@type"] === "FAQPage");
   if (faq) {
     for (const q of faq.mainEntity) {
       const qEsc = q.name.replace(/&/g, "&amp;").replace(/'/g, "'");
       if (!h.includes(q.name) && !h.includes(qEsc)) f(file, `FAQ question not in visible HTML: "${q.name.slice(0, 40)}..."`);
-      if (file.startsWith('blog/')) {
+      if (file.startsWith('blog/') || file === 'schools.html') {
         const normalize = s => String(s || '').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/\s+/g, ' ').trim();
         const details = [...h.matchAll(/<details\b[^>]*>([\s\S]*?)<\/details>/g)];
         const matching = details.find(m => normalize(/<summary[^>]*>([\s\S]*?)<\/summary>/.exec(m[1])?.[1]) === normalize(q.name));
@@ -118,9 +124,7 @@ for (const file of pages) {
   }
   const stripped = h.replace(/PCS \/ Relocation — (Buying|Selling)/g, "");
   if (!h.includes('class="skip-link" href="#main-content"') || !/<main[^>]*id="main-content"/.test(h)) f(file, "missing usable skip-to-content target");
-  const inlineFonts = h.match(/<style data-costin-fonts>([\s\S]*?)<\/style>/)?.[1]?.trim();
-  if (inlineFonts !== readFileSync(`${ROOT}/assets/costin-fonts.css`, 'utf8').trim()) f(file, "missing or stale inline copy of pinned font declarations");
-  for (const asset of ["costin-experience.css", "costin-experience.js", "costin-meta-config.js", "costin-meta.js"]) {
+  for (const asset of ["costin-fonts.css", "costin-experience.css", "costin-experience.js", "costin-meta-config.js", "costin-meta.js"]) {
     if (!h.includes(`/assets/${asset}`) || !existsSync(`${ROOT}/assets/${asset}`)) f(file, `missing shared experience asset ${asset}`);
   }
   if (/href="https:\/\/fonts\.(googleapis|gstatic)\.com/.test(h)) f(file, "remote font loading reintroduced; use the pinned local fonts");
@@ -132,17 +136,17 @@ for (const file of pages) {
 
   /* ---------- links + images ---------- */
   for (const m of h.matchAll(/href="(\/[^"#]*)"/g)) {
-    // Cache-version query strings do not change the backing file path.
-    const p = m[1].split('?')[0];
+    const p = new URL(m[1], SITE).pathname;
     if (p.startsWith("/images/") || p.startsWith("/og/")) { if (!existsSync(ROOT + p)) f(file, `broken asset link ${p}`); continue; }
-    if ([".xml", ".txt", ".webmanifest", ".json", ".png", ".css", ".js", ".woff2"].some((e) => p.endsWith(e))) { if (!existsSync(ROOT + p)) f(file, `broken file link ${p}`); continue; }
+    if ([".xml", ".txt", ".webmanifest", ".json", ".csv", ".png", ".css", ".js", ".woff2", ".pdf"].some((e) => p.endsWith(e))) { if (!existsSync(ROOT + p)) f(file, `broken file link ${p}`); continue; }
     const target = p === "/" ? "index.html" : p.slice(1) + ".html";
     if (p === "/about") continue; // _redirects alias
     if (!existsSync(`${ROOT}/${target}`)) f(file, `broken internal link ${p}`);
   }
   for (const m of h.matchAll(/<img([^>]*)>/g)) {
     const attrs = m[1];
-    if (!/alt="[^"]+"/.test(attrs)) f(file, `img missing alt: ${attrs.slice(0, 60)}`);
+    const decorative = /alt=""/.test(attrs) && /(?:role="presentation"|aria-hidden="true")/.test(attrs);
+    if (!/alt="[^"]+"/.test(attrs) && !decorative) f(file, `img missing alt: ${attrs.slice(0, 60)}`);
     if (!/width=/.test(attrs) || !/height=/.test(attrs)) f(file, `img missing width/height: ${(attrs.match(/src="([^"]*)"/) || [])[1]}`);
     const src = (attrs.match(/src="([^"]*)"/) || [])[1] || "";
     if (src.startsWith("/") && !existsSync(ROOT + src)) f(file, `img file missing: ${src}`);
@@ -154,6 +158,12 @@ for (const file of pages) {
     if (OWNED_IMAGES.includes(m[1])) continue;
     const entry = LEDGER[`civilian-site/images/${m[1]}.jpg`];
     if (entry && entry.creditRequired === false) continue;
+    // A visible footer link can lead to full attribution on the dedicated credits page.
+    if (new RegExp(`<a[^>]*href="/photo-credits"[^>]*data-photo-credits-page="[^"]*\\b${m[1]}\\b`).test(h)) {
+      const credits = existsSync(`${ROOT}/photo-credits.html`) ? readFileSync(`${ROOT}/photo-credits.html`,'utf8') : '';
+      if (entry && credits.includes(`id="photo-${m[1]}"`) && credits.includes(entry.pageUrl?.replaceAll('&','&amp;') || 'MISSING_SOURCE') && credits.includes(entry.license)) continue;
+      f(file, `linked photo credit missing its source/license: ${m[1]}`);
+    }
     // A page-level consolidated credits block (data-photo-credits="name1 name2 ...") satisfies attribution
     if (new RegExp(`data-photo-credits="[^"]*\\b${m[1]}\\b`).test(h)) continue;
     const consolidated = new RegExp(`data-photo-credits="[^"]*${m[1]}`).test(h);
@@ -206,6 +216,10 @@ const keyFiles = readdirSync(ROOT).filter((x) => /^[0-9a-f]{32}\.txt$/.test(x));
 if (keyFiles.length !== 1) f("indexnow", `expected exactly 1 IndexNow key file, found ${keyFiles.length}`);
 
 /* ---------- report ---------- */
+if (process.argv.includes('--json')) {
+  console.log(JSON.stringify({root:ROOT,pages:pages.length,findings},null,2));
+  process.exit(findings.length ? 1 : 0);
+}
 if (findings.length) {
   console.log(`AUDIT: ${findings.length} finding(s)\n` + findings.map((x) => "  - " + x).join("\n"));
   process.exit(1);

@@ -8,6 +8,7 @@
 //
 //   node scripts/build-entity-graph.mjs
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { refreshEntityHtml } from './entity-sync-lib.mjs';
 
 import { E, IDS as ids, PMH, GC, imageObject, logoInline, personFull, teamFull, brokerageFull, serviceNode, personCompact, teamCompact, brokerageCompact, publisherRef, SERVICES as services } from "./entity-lib.mjs";
 const { nap, images, person, team, brokerage } = E;
@@ -56,6 +57,16 @@ const isStandaloneEntity = (j) => {
 };
 
 let stats = { pmhPages: 0, gcPages: 0, dropped: 0, refsRewritten: 0 };
+
+// A consolidated marker means regenerate from the master record, not skip updates.
+// Refresh before the legacy consolidation pass, retaining unrelated page schema and copy.
+let refreshed = 0;
+for (const file of ['index.html', ...walk('public'), ...walk('civilian-site')]) {
+  const before = readFileSync(file, 'utf8');
+  const after = refreshEntityHtml(before, { site: file.startsWith('civilian-site/') ? 'gc' : 'pmh' });
+  if (after !== before) { writeFileSync(file, after); refreshed++; }
+}
+console.log(`Existing entity blocks refreshed on ${refreshed} pages.`);
 
 // ---------- 1. PMH homepage: one @graph replaces the eight hand-written blocks ----------
 {

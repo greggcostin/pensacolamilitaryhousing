@@ -1,0 +1,60 @@
+// Reconcile published evidence and update the project register without resetting other work.
+import {readFileSync,writeFileSync} from 'node:fs';
+const root='docs/seo-geo-2026-09-06',dir=root+'/projects/03-accuracy';
+const read=p=>JSON.parse(readFileSync(p,'utf8'));
+const candidate=read(dir+'/candidate-manifest.json'),checks=read(dir+'/candidate-verification.json'),live=read(dir+'/live-verification.json'),published=read(dir+'/published/production-baseline.json'),rates=read(dir+'/bah-source-verification.json'),indexing=read(dir+'/indexing-receipts.json');
+if(!checks.ok||!live.ok||!published.ok||indexing.reports.some(r=>r.exitCode!==0))throw Error('Required release evidence is incomplete.');
+const old=read(root+'/live-crawl.json').pages.filter(p=>p.tag==='pmh'&&p.flags?.oldEglinCode);
+const codeRows=old.map(p=>{const path=p.url==='https://pensacolamilitaryhousing.com/'?'index.html':new URL(p.url).pathname.slice(1)+'.html';const before=readFileSync(candidate.baseline+'/pmh/'+path,'utf8'),after=readFileSync(candidate.candidate+'/pmh/'+path,'utf8');return {url:p.url,path,originalFlag:true,resolvedIn:before.includes('FL023')?'2026-09-08-pcs-va':'2026-09-07-foundation',remainingOldCode:after.includes('FL023')};});
+if(codeRows.length!==64||codeRows.some(r=>r.remainingOldCode))throw Error('Original 64 flagged pages have not all been reconciled.');
+const inventory=read(dir+'/old-mha-pmh.json');
+writeFileSync(dir+'/eglin-reconciliation.json',JSON.stringify({checkedAt:new Date().toISOString(),originalFlaggedPages:64,fixedInFoundation:codeRows.filter(r=>r.resolvedIn==='2026-09-07-foundation').length,fixedInThisRelease:codeRows.filter(r=>r.resolvedIn==='2026-09-08-pcs-va').length,preReleaseOccurrences:inventory.length,preReleaseFiles:new Set(inventory.map(x=>x.file)).size,discoveryFilesCorrected:['llms.txt','llms-full.txt'],historicalAssetPreserved:candidate.ignoredHistoricalAssets,activeScriptCheck:'No current indexable page references a script containing FL023; retained hashed asset is historical.',rows:codeRows},null,2)+'\n');
+const progress=read(root+'/progress.json');
+progress.updatedAt=new Date().toISOString();
+progress.status='Foundation, shared identity and inquiry acceptance are published. September 8 adds sourced VA/BAH guides, a monthly-budget comparison, Eglin code corrections, seven installation answer blocks and eleven civilian regional connections. Remaining financial content, authentic inquiry measurement, indexing and AI recommendation evidence are still open.';
+progress.metrics.publishedAssetsVerified=published.sites.reduce((n,s)=>n+s.assetCount,0);
+progress.metrics.lastReleaseChangedHtmlPages=71;
+progress.metrics.sourceCheckedBahValues=96;
+const setProject=(id,patch)=>Object.assign(progress.projects.find(p=>p.id===id),patch);
+const financialNext='Finish the remaining legacy pay, tax, insurance and purchase-price model; propagate verified VA entitlement, funding-fee and dual-military rules into the other guides and discovery summaries. Seven housing/contact blocks are current; a complete base-article and commute review remains open.';
+setProject('P03',{status:'in_progress',next:financialNext});
+setProject('P07',{status:'in_progress',next:'Eleven existing civilian regional pages now connect to the reviewed VA/BAH guidance. Add original property and association evidence, distinct local comparisons and measured routes before adding new pages.'});
+setProject('P08',{status:'in_progress',next:'The BAH monthly-budget comparison is live with transparent inputs. Next, complete the property-specific ownership-cost model and original study; do not substitute illustrative outputs for market medians or lender approvals.'});
+progress.taskUpdates.R04={status:'in_progress',action:'Published a source-reviewed VA guide and rebuilt the BAH guide around actual user-entered income, editable assumptions and verified allowances. Corrected entitlement restoration, fee exemptions, seller concessions, appraisal treatment and dual-military examples. Protected these guides from legacy generator overwrites.',acceptance:'Core guide repair verified live; the remaining legacy income, tax, insurance, interest-rate and price-band examples are explicitly still open.',evidence:'projects/03-accuracy/README.md; projects/03-accuracy/bah-source-verification.json'};
+progress.taskUpdates.R05={status:'published_verified',action:'Reconciled all 64 original flagged HTML pages: four corrected in the foundation and the remaining 60 in this release. Corrected two discovery files and active annual-update instructions; retained only an unreferenced historical hashed script for cached clients.',acceptance:'No FL023 in any of the 374 indexable military HTML pages, discovery files or actively referenced scripts. Current deployed manifest matches the reviewed candidate.',evidence:'projects/03-accuracy/eglin-reconciliation.json; projects/03-accuracy/live-verification.json'};
+progress.taskUpdates.R22={status:'in_progress',action:'Published seven installation-specific answer blocks with official housing contacts, duty-location distinctions, verified BAH examples and links to civilian ownership and seller planning. New answers mirror their FAQ schema.',acceptance:'Housing source checks and new blocks verified. No phone availability checks or complete audit of all older base-page claims has been represented as complete.',evidence:'content/geo/pcs-coast.json; projects/03-accuracy/README.md'};
+for(const id of ['R27','R28','R29','R30'])progress.taskUpdates[id]={status:'in_progress',action:'Added context-specific VA and PCS decision answers to existing civilian region pages, connecting ownership costs, association documents, actual reporting destinations and selling options to the shared military guidance.',acceptance:'Eleven pages published across the six coastal regions; original market research, quote-backed ownership comparisons and full legacy article review remain separate tasks.',evidence:'content/geo/pcs-coast.json; projects/03-accuracy/candidate-manifest.json'};
+progress.taskUpdates.R33={status:'in_progress',action:'Published a browser-only monthly budget comparison with three distinct outputs: member income, additional household income and BAH alone. Verified synthetic input changes, invalid inputs and responsive layouts.',acceptance:'Seven arithmetic/generator tests pass; browser behavior verified. Actual user task completion and consultation quality are not yet measured.',evidence:'public/tools/bah-budget-model.js; projects/03-accuracy/browser-verification.json'};
+progress.taskUpdates.R07={status:'in_progress',action:'IndexNow and Bing accepted all 71 changed URLs after successful publication and readback. The original 19 foundation submissions remain recorded separately.',acceptance:'Submission receipts confirmed; authenticated selected-canonical and indexing inspections of 20 URLs per domain remain open.',evidence:'projects/03-accuracy/indexing-receipts.json; projects/01-foundation/indexing-receipts.json'};
+const releaseId='2026-09-08-pcs-va';progress.releases=progress.releases.filter(r=>r.id!==releaseId);progress.releases.push({id:releaseId,project:'P03',publishedAt:published.sites.map(s=>s.createdOn).sort().at(-1),sites:published.sites.map(({site,deploymentId,assetCount})=>({site,deploymentId,assetCount})),changedHtml:71,evidence:'projects/03-accuracy/README.md'});
+writeFileSync(root+'/progress.json',JSON.stringify(progress,null,2)+'\n');
+const current=`<!-- PCS_VA_RELEASE_START -->
+# Latest release: PCS and VA guidance, September 8, 2026
+
+Both domains are published and verified. The complete site still has **374 military and 319 civilian HTML sitemap pages**. This release changes **71 existing pages**: 60 military pages and 11 civilian pages, with two rewritten core guides, seven installation answer blocks and six regional themes. **39 new or rewritten FAQ pairs** agree with the visible answers. It adds a monthly-budget tool and retains the requested #1 statement and shared professional record.
+
+| Site | Production deployment | Verified assets |
+|---|---|---|
+${published.sites.map(s=>`| ${s.domain} | ${s.deploymentId} | ${s.assetCount} |`).join('\n')}
+
+All **693 live pages** returned HTTP 200 with the expected canonical, indexability, structured data and shared-record links. New answer sections match the candidate after removing only Cloudflare's standard email-decoder tag. All **3,738 deployed asset hashes** match; **542 school pages** retain their exact content and dates. The English military search index contains **374 pages**. IndexNow and Bing accepted **60 military and 11 civilian updated URLs**; acceptance does not establish indexing or a recommendation result.
+
+The core guide corrections use current VA/DoD sources. All 96 published BAH rate values match the archived official 2026 DoD data. The original 64 flagged Eglin HTML pages are resolved, with four repaired by the foundation and 60 in this release. Remaining financial examples elsewhere are still under R04 review.
+
+Source gates: military 0 findings, civilian 0 findings, shared entity 0 findings. Complete production comparison: 0 introduced civilian findings, with 315 existing gate findings retained in the evidence for the separate font rollout and school geolocation metadata review. Do not call that production comparison a globally clean audit.
+
+Read the [complete PCS/VA release evidence](projects/03-accuracy/README.md), [live page verification](projects/03-accuracy/live-verification.json), [candidate and preservation checks](projects/03-accuracy/candidate-verification.json), [browser checks](projects/03-accuracy/browser-verification.json), and [indexing receipts](projects/03-accuracy/indexing-receipts.json).
+
+Rollback: the previous complete military deployment is 8c5832a6-429d-4791-bf67-bd530ac72431 and the previous civilian deployment is f63830b8-38b2-4fe4-a7ac-823c736f371a. The complete local baseline is .coast-release/2026-09-07-foundation. Do not deploy ordinary dist or civilian-site directories without checking the full current live inventory.
+
+The ongoing program still requires authentic provider/CRM inquiry evidence, receipt-based browser conversions, the fixed AI benchmark, authenticated indexing inspection, external profile updates and original local evidence. No ranking improvement, traffic lift, appointment or closing is claimed by this release.
+<!-- PCS_VA_RELEASE_END -->
+
+`;
+let release=readFileSync(root+'/RELEASE.md','utf8').replace(/<!-- PCS_VA_RELEASE_START -->[\s\S]*?<!-- PCS_VA_RELEASE_END -->\s*/,'');
+writeFileSync(root+'/RELEASE.md',current+release);
+let projects=readFileSync(root+'/PROJECTS.md','utf8').replace('Reconcile the 64 flagged live Eglin pages by context, then verify affordability assumptions, installation resources and commute methodology.',financialNext).replace('| R27, R28, R29, R30, R31 | planned |','| R27, R28, R29, R30, R31 | in progress |').replace('| R24, R32, R33 | planned |','| R24, R32, R33 | in progress |');
+projects=projects.replace(/<!-- PCS_VA_PROJECT_UPDATE -->[\s\S]*?<!-- \/PCS_VA_PROJECT_UPDATE -->\s*/,'');
+projects+=`\n<!-- PCS_VA_PROJECT_UPDATE -->\n## Published September 8: sourced VA/BAH guidance and regional connections\n\nR05 is published and verified. R04 and R22 have a substantial first release but remain in progress for older financial and base-page claims. Eleven civilian pages gained local VA/PCS answers under R27-R30, and R33 now has a tested budget comparison. All 71 updated URLs were accepted by IndexNow and Bing. [Release details and remaining work](projects/03-accuracy/README.md).\n\nThe complete production gate also records 315 inherited findings tied to the separate font rollout and school geolocation metadata. Source gates pass and this release introduces none of those findings. Keep that distinction when reporting quality.\n<!-- /PCS_VA_PROJECT_UPDATE -->\n`;
+writeFileSync(root+'/PROJECTS.md',projects);
+console.log(JSON.stringify({recorded:releaseId,originalFlagsReconciled:codeRows.length,livePages:live.pagesChecked,deployedAssets:progress.metrics.publishedAssetsVerified},null,2));

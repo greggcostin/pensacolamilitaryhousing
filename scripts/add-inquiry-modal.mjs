@@ -74,6 +74,7 @@ else{errBox.textContent='⚠ '+(res.j.error||'Something went wrong. Please call 
 `;
 }
 
+import {withReceiptConversions} from './inquiry-browser-lib.mjs';
 const CONTACT_BTN = `<button type="button" class="btn btn-secondary" data-inquiry-open>Contact Me</button>`;
 
 function inject(file, defaultType) {
@@ -85,9 +86,9 @@ function inject(file, defaultType) {
   h = h.replace(/<div class="hero-ctas">([\s\S]*?)<\/div>/g, (m, inner) => `<div class="hero-ctas">${inner}${CONTACT_BTN}</div>`);
   // modal markup + script before </body>
   h = h.replace("</body>", modalHtml(defaultType) + "</body>");
-  writeFileSync(file, h);
+  writeFileSync(file, withReceiptConversions(h));
   console.log(`injected inquiry modal -> ${file}`);
 }
 
-inject("public/buy.html", "PCS Relocation — Buying");
-inject("public/sell.html", "PCS Relocation — Selling");
+inject("public/buy.html", "PCS / Relocation — Buying");
+inject("public/sell.html", "Selling My Home");

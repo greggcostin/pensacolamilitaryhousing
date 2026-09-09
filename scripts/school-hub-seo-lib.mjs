@@ -1,0 +1,149 @@
+// The two school hubs describe one shared, dated corpus. Counts come from its records.
+import {createHash} from 'node:crypto';
+export const SCHOOL_REVIEW_DATE='2026-09-08';
+export const SCHOOL_ORIGINS={gc:'https://greggcostin.com',pmh:'https://pensacolamilitaryhousing.com'};
+export function schoolHeaderLabel(html){
+  return html.replace(/<nav\b[^>]*>[\s\S]*?<\/nav>/g,nav=>{
+    if(!/\bmain-banner\b|id="site-drawer"/.test(nav))return nav;
+    return nav.replace(/(<a\b[^>]*href="\/schools"[^>]*>)Schools(<\/a>)/g,'$1School Finder$2');
+  });
+}
+// Official destinations reviewed 2026-09-08. City school systems have their own enrollment offices.
+const registrationResources=[
+  ['Escambia County Public Schools','https://www.escambiaschools.org/families/military-families/military-families'],
+  ['Santa Rosa County District Schools','https://www.santarosaschools.org/page/student-registration'],
+  ['Okaloosa County School District','https://www2.okaloosaschools.com/page/registration'],
+  ['Baldwin County Public Schools','https://www.bcbe.org/departments/communications/registration/registration-new-returning'],
+  ['Gulf Shores City Schools','https://www.gsboe.org/login/enrollment-registration'],
+  ['Orange Beach City Schools','https://www.orangebeachboe.org/families/registration']
+];
+const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const plain=value=>String(value??'').replace(/[\u2013\u2014]/g,'-');
+const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
+export function schoolCoverage(data){
+  if(!Array.isArray(data.schools)||!data.schools.length)throw Error('School records required');
+  const unique=new Map();
+  for(const s of data.schools){if(!s.reportUrl?.startsWith('/schools/'))throw Error('School guide URL missing: '+s.id);if(!unique.has(s.reportUrl))unique.set(s.reportUrl,s);}
+  const guides=[...unique.values()];
+  const mapped=s=>!s.virtual&&Number.isFinite(s.lat)&&Number.isFinite(s.lng);
+  return {records:data.schools.length,guides:guides.length,mapped:data.schools.filter(mapped).length,
+    publicGuides:guides.filter(s=>s.sector==='public').length,privateGuides:guides.filter(s=>s.sector==='private').length,
+    christianGuides:guides.filter(s=>s.sector==='private'&&s.christian===true).length,
+    floridaGrades:data.schools.filter(s=>s.state==='FL'&&s.sector==='public'&&/^[ABCDF]$/.test(s.grade||'')).length,
+    alabamaGrades:data.schools.filter(s=>s.state==='AL'&&s.sector==='public'&&/^[ABCDF]$/.test(s.grade||'')).length,
+    counties:data.counties.map(c=>({key:c.key,label:c.label,anchor:'county-'+c.key.toLowerCase().replace(/[^a-z]+/g,'-'),
+      records:data.schools.filter(s=>s.countyKey===c.key).length,guides:guides.filter(s=>s.countyKey===c.key).length,
+      publicGuides:guides.filter(s=>s.countyKey===c.key&&s.sector==='public').length,privateGuides:guides.filter(s=>s.countyKey===c.key&&s.sector==='private').length})),guideRows:guides};
+}
+export function schoolExport(data){
+  const fields=['id','ncesId','name','state','county','city','address','zip','lat','lng','sector','charter','magnet','christian','religiousOrientation','gradeSpan','virtual','grade','gradeStatus','gradeYear','sourceYear','sourceUrl','website','reportUrl','affiliationSourceUrl','affiliationSourceYear','addressSourceUrl','locationSourceUrl','resourcesCheckedAt','resourceSourceUrl','campusNote','programName','programSourceUrl','programSourceYear'];
+  const records=data.schools.map(s=>Object.fromEntries(fields.map(k=>[k,s[k]??null])));
+  const version=createHash('sha256').update(JSON.stringify(records)).digest('hex');
+  const {guideRows,...coverage}=schoolCoverage(data);
+  const result={schemaVersion:1,identifier:'costin-school-finder',version,datasetUrl:SCHOOL_ORIGINS.gc+'/schools#school-dataset',
+    dataBuiltAt:data.builtAt,description:plain(data.coverageNote),coverage,sources:data.sources,records,
+    fieldNotes:{reportUrl:'Relative school guide path on either Costin site; multiple source identities can share one guide.',
+      grade:'Official public-school accountability grade, when published. Florida and Alabama use different years and formulas; do not rank across states.',
+      christian:'Reported affiliation, not an academic rating. null means unknown.',
+      lat:'Recorded or sourced approximate location. null for virtual schools and unconfirmed campuses. Not an attendance boundary.',
+      sourceYear:'Directory vintage, independent of the accountability grade year. dataBuiltAt is a compilation date, not a claim that every source was refreshed.',
+      gradeStatus:'Source status can include a waiver or missing result. Neither is a failing grade.'}};
+  const cell=value=>{let text=plain(value);if(typeof value==='string'&&/^[=+@-]/.test(text))text="'"+text;return '"'+text.replaceAll('"','""')+'"';};
+  const csv=fields.join(',')+'\r\n'+records.map(r=>fields.map(k=>cell(r[k])).join(',')).join('\r\n')+'\r\n';
+  return {json:JSON.stringify(result,null,2)+'\n',csv,version,coverage};
+}
+export function schoolHubFaq(data,site){
+  const c=schoolCoverage(data);
+  const faq=[
+    {q:'Which areas does the school finder cover?',a:`The finder contains ${c.records} source records linked to ${c.guides} school guides across Escambia, Santa Rosa and Okaloosa counties in Florida, and Baldwin County in Alabama. Search by school name, city, ZIP code or a home address. Coverage follows dated federal directories and documented school additions; it is not a live list of every opening, closure or preschool.`},
+    {q:'Does the school map show my assigned attendance zone?',a:'No. The map shows school locations and distances, not attendance boundaries or an enrollment assignment. Confirm a specific home address, current school year, grade level and any choice or transfer requirements with the school district. Private schools set their own admissions requirements.'},
+    {q:'Where do the school grades and directory records come from?',a:`The compiled records include ${c.floridaGrades} Florida public-school letter grades from 2025-26 and ${c.alabamaGrades} Alabama public-school letter grades from 2024-25. Public directory data use NCES 2024-25; private directory and affiliation data use NCES 2023-24, with separately dated school-published additions and corrections. Compilation and page review dates do not change those source years.`},
+    {q:'Can I compare Florida and Alabama letter grades directly?',a:'The two states use different accountability formulas and reporting years. Compare results within the same state and year, then read the school guide and original state source. An approved waiver or unpublished result is not a failing grade, and a letter grade does not predict an individual child\'s experience.'},
+    {q:'Does the finder include private, Christian, charter and magnet schools?',a:`Yes. The ${c.guides} guides include ${c.publicGuides} public-school guides and ${c.privateGuides} private-school guides. ${c.christianGuides} private guides have a documented Christian affiliation and also appear under Private. Charter and magnet filters use recorded designations. CP and P map markers identify school types, not academic grades; unknown affiliations remain unknown.`},
+    {q:'Are the distances driving distances or live commute times?',a:'The radius filter and nearest-school sorting use straight-line distance from the selected address or ZIP reference point. Calculate drive requests a separate road-route estimate for one selected school. The road miles and estimated duration are not live-traffic predictions, bus routes or proof of an accessible campus entrance.'},
+    {q:'Can I download the school data or use the guides without the map?',a:`Yes. The source-linked ${c.records}-record directory is available as JSON and CSV in the data and methodology section. All ${c.guides} school guides have ordinary page links below the map, so the guide directory remains usable without JavaScript. The downloads include source years, source URLs, missing values and shared guide identifiers.`},
+    {q:'How do I report an incorrect school record?',a:'Use the contact link in the data and methodology section. Include the school name, its guide URL, the field to correct and a current official school or agency source. Source-backed corrections can be checked against the original identity and publication date.'}
+  ];
+  if(site==='pmh')faq.push({q:'How can military families use this finder for a PCS move?',a:'Start with schools and communities near the new duty station, then use the PCS planning resources on this page and each school guide. Installation school liaisons and district enrollment teams can help with records and transition questions. Duty-station proximity does not determine school assignment; confirm the home address with the district.'});
+  return faq;
+}
+const css=`.school-resource{max-width:1180px;margin:28px auto;padding:28px;border:1px solid var(--gold-line,#66582e);border-radius:12px;background:var(--panel,#121823);color:var(--text,#e8e6df)}.school-resource h2{font-family:var(--serif,Georgia);font-size:clamp(25px,3vw,36px);line-height:1.2;margin:0 0 14px}.school-resource h3{margin:24px 0 10px}.school-resource p,.school-resource li{font-size:15px;line-height:1.7}.school-resource p{margin:10px 0}.school-resource a{color:var(--gold,#c9a84c);text-decoration:underline;text-underline-offset:3px}.school-resource .school-resource-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold,#c9a84c)}.school-resource-nav{display:flex;gap:8px 18px;flex-wrap:wrap;margin-top:16px}.school-resource-table{overflow-x:auto;max-width:100%}.school-resource table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.6}.school-resource th,.school-resource td{text-align:left;padding:12px;border-bottom:1px solid var(--gold-line,#66582e);vertical-align:top}.school-resource caption{text-align:left;padding:8px 0;font-size:13px}.school-resource ul{padding-left:20px}.school-resource details{border-top:1px solid var(--gold-line,#66582e);padding:16px 0}.school-resource summary{cursor:pointer;font-weight:600;font-size:16px;line-height:1.5}.school-resource [id]{scroll-margin-top:180px}.school-resource.quick-answer{margin:18px auto 24px}.school-resource:target{outline:2px solid var(--gold,#c9a84c)}@media(max-width:600px){.school-resource{padding:20px 16px;margin:18px 12px}.school-resource th,.school-resource td{padding:9px 7px;font-size:13px}}`;
+export function enhanceSchoolHub(html,data,site){
+  const origin=SCHOOL_ORIGINS[site];if(!origin)throw Error('Unknown school edition');
+  const url=origin+'/schools',c=schoolCoverage(data),snapshot=data.builtAt.slice(0,10),exported=schoolExport(data),faq=schoolHubFaq(data,site);
+  const title=site==='gc'?'Pensacola School Finder: Map, Grades & Guides | Costin Team':'PCS School Finder: Pensacola & Gulf Coast Map | Gregg Costin';
+  const description=site==='gc'?`Compare ${c.guides} school guides across Pensacola, the Emerald Coast and Baldwin County. Explore public, private and Christian schools, state grades and address search.`:`Plan your PCS with ${c.guides} Gulf Coast school guides, a public and private school map, official state grades, address search and military enrollment resources.`;
+  const heading=site==='gc'?'Pensacola &amp; Gulf Coast<br>School Finder':'Pensacola &amp; Gulf Coast<br>PCS School Finder';
+  const lead=site==='gc'?'Explore public, private and Christian schools across Escambia, Santa Rosa and Okaloosa counties in Florida, plus Baldwin County, Alabama. Compare school guides, official grades and nearby campuses from one address search.':'Find schools around your next duty station, from Pensacola and the Emerald Coast to coastal Alabama. Compare public, private and Christian school options, then use the installation liaison and enrollment resources to plan your family\'s move.';
+  // Preserve this block's place among shared identity, conversion and preload
+  // tags. Rebuilding the hub must not reorder scripts added by another factory.
+  const headSlot='<!-- SCHOOL_SEO_HEAD_SLOT -->';
+  html=html.replace(/<!-- SCHOOL_SEO_HEAD_START -->[\s\S]*?<!-- SCHOOL_SEO_HEAD_END -->/g,headSlot)
+    .replace(/<!-- SCHOOL_SEO_(?:SUMMARY|DETAILS|FAQ)_START -->[\s\S]*?<!-- SCHOOL_SEO_(?:SUMMARY|DETAILS|FAQ)_END -->\s*/g,'');
+  const scripts=[...html.matchAll(/<script\b([^>]*type=["']application\/ld\+json["'][^>]*)>([\s\S]*?)<\/script>/g)];
+  const entities=scripts.filter(m=>m[1].includes('data-entity')).flatMap(m=>JSON.parse(m[2])['@graph']||[]);
+  const team=entities.find(n=>n['@type']==='RealEstateAgent');if(!team?.['@id'])throw Error('Shared publisher entity missing');
+  const existing=scripts.filter(m=>!m[1].includes('data-entity')).map(m=>JSON.parse(m[2]));
+  const oldPage=existing.find(n=>n['@type']==='CollectionPage');
+  const published=oldPage?.datePublished||(site==='gc'?'2026-08-24':'2026-09-06');
+  // Hub page/schema comes from this shared source; retain the entity graph and any unrelated nodes.
+  html=html.replace(/<script\b([^>]*type=["']application\/ld\+json["'][^>]*)>([\s\S]*?)<\/script>\s*/g,(full,attrs,body)=>{
+    if(attrs.includes('data-entity'))return full;const node=JSON.parse(body);
+    return ['CollectionPage','BreadcrumbList','FAQPage','Dataset','WebApplication','ItemList'].includes(node['@type'])?'':full;
+  });
+  html=html.replace(/<title>[\s\S]*?<\/title>/,'<title>'+escape(title)+'</title>')
+    .replace(/(<meta\b[^>]*(?:name="description"|property="og:description"|name="twitter:description")[^>]*content=")[^"]*/g,'$1'+escape(description))
+    .replace(/(<meta\b[^>]*(?:property="og:title"|name="twitter:title")[^>]*content=")[^"]*/g,'$1'+escape(title))
+    .replace(/(<meta\b[^>]*property="og:type"[^>]*content=")[^"]*/g,'$1website')
+    .replace(/<meta\b[^>]*(?:property="article:[^"]+"|name="keywords")[^>]*>\s*/g,'')
+    .replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/,'<h1>'+heading+'</h1>')
+    .replace(/<p class="lead">[\s\S]*?<\/p>/,'<p class="lead">'+escape(lead)+'</p>')
+    .replace(/(<a\b[^>]*href="\/schools"[^>]*>)Schools(<\/a>)/g,'$1School Finder$2');
+  html=html.replace(/(<main\b)([^>]*>)/,(_,tag,attrs)=>tag+(attrs.includes('data-pagefind-body')?attrs:' data-pagefind-body'+attrs));
+  html=html.replace('Every graded public and charter school in Escambia and Santa Rosa County, with its official Florida DOE accountability grade, three-year history, and achievement data on its own report page. 82 schools, 31 rated A for 2025-26, updated from the state\'s 2026 release.',
+    'The grade-history cards below cover the original 82 graded public and charter schools in Escambia and Santa Rosa County. Use the complete county directory for all 271 school guides, including Okaloosa and Baldwin counties and private-school options.')
+    .replace('Ten minutes in the front office and hallways tells you more about culture than any statistic.','Visit the campus and ask how its daily routines, student support and programs would fit your child.')
+    .replace('Research consistently shows family engagement outweighs most school-level differences. The percentages here measure the school; they do not predict your child.','School-level percentages do not predict an individual child\'s experience. Discuss your child\'s needs, interests and support with the school.')
+    .replace('Send us your shortlist and price range. We will map the current attendance zones, verify them with the district, and hand-pick homes that actually qualify.','Send us your shortlist and price range. We can help you compare homes and coordinate school-assignment questions with the appropriate district. Confirm attendance eligibility before relying on a listing\'s school information.');
+  const quick=`The Costin School Finder brings together ${c.records} public and private school records and ${c.guides} school guides across Escambia, Santa Rosa and Okaloosa counties in Florida, plus Baldwin County, Alabama. It combines NCES directory data, official state grades, documented Christian-school affiliations, address search and optional driving estimates. Source years differ; school locations do not establish attendance eligibility.`;
+  const summary=`<!-- SCHOOL_SEO_SUMMARY_START --><section class="school-resource quick-answer" data-quick-answer aria-label="School finder coverage"><p class="school-resource-label">School finder at a glance</p><p class="qa-text">${escape(quick)}</p><p class="qa-by">Compiled by The Costin Team from the <a href="#school-data-sources">dated sources below</a>. Data snapshot: <time datetime="${snapshot}">${snapshot}</time>. Page reviewed: <time datetime="${SCHOOL_REVIEW_DATE}">${SCHOOL_REVIEW_DATE}</time>.</p><nav class="school-resource-nav" aria-label="School research shortcuts"><a href="#school-finder">Open the map</a><a href="#all-school-guides">Browse ${c.guides} school guides</a><a href="#school-data-methodology">Data &amp; downloads</a><a href="#school-finder-faq">School finder questions</a></nav></section><!-- SCHOOL_SEO_SUMMARY_END -->`;
+  html=html.replace(/(<main\b[^>]*>)/,'$1\n'+summary+'\n');
+  const other=site==='gc'?'pmh':'gc';
+  const sources=data.sources.filter(s=>!s.url.startsWith('/')).map(s=>`<tr><th scope="row"><a href="${escape(s.url)}" target="_blank" rel="noopener">${escape(s.name)}</a></th><td>${escape(plain(s.year))}</td></tr>`).join('');
+  const details=`<!-- SCHOOL_SEO_DETAILS_START --><section class="school-resource" id="school-data-methodology" aria-labelledby="school-data-heading"><p class="school-resource-label">The data behind your search</p><h2 id="school-data-heading">Four counties. One source-linked school resource.</h2><p>Compare ${c.guides} school guides, including ${c.publicGuides} public and ${c.privateGuides} private guides. The underlying directory retains ${c.records} source records: duplicate source identities for the same school share one guide. ${c.mapped} records have a recorded map point; virtual schools and unconfirmed campuses remain in the list.</p><div class="school-resource-table table-wrap" role="region" aria-label="School directory coverage" tabindex="0"><table><caption>Coverage in the ${snapshot} compilation. Counts describe this directory, not a census of every current school.</caption><thead><tr><th scope="col">Area</th><th scope="col">Source records</th><th scope="col">School guides</th><th scope="col">Public / private guides</th></tr></thead><tbody>${c.counties.map(x=>`<tr><th scope="row"><a href="#${x.anchor}">${escape(x.label)}</a></th><td>${x.records}</td><td>${x.guides}</td><td>${x.publicGuides} / ${x.privateGuides}</td></tr>`).join('')}</tbody></table></div><h3>What you can compare here</h3><p>Use a school name, city, ZIP code or home address to explore the region. Filter public, private and documented Christian schools, recorded charter and magnet designations, school levels and available official grades. Read individual guides for local context and original sources; choose Calculate drive for a separate road-route estimate.</p><h3 id="school-data-sources">Sources, dates and important gaps</h3><div class="school-resource-table table-wrap" role="region" aria-label="School data sources and reporting years" tabindex="0"><table><caption>Directory, accountability and geographic sources have separate reporting years.</caption><thead><tr><th scope="col">Original source</th><th scope="col">Data vintage</th></tr></thead><tbody>${sources}</tbody></table></div><p>The compilation links ${c.floridaGrades} published Florida letter grades (2025-26) and ${c.alabamaGrades} Alabama letter grades (2024-25). The two states use different formulas. Private-school types, approved waivers, unknown affiliations and unpublished results remain separate from academic grades. Okaloosa and Alabama guides may have different available detail from the original Escambia and Santa Rosa reports.</p><p>Federal directories can lag openings, closures, moves and renamed schools. School-published additions and campus corrections have their own source links and check dates. A compilation date is not a fresh verification of every campus. <a href="#private-school-resources">School websites and admissions resources</a> help you confirm current details.</p><h3>How records and distances are handled</h3><p>NCES identities and state district/school identifiers link directory records to available results. Source records stay distinct when a school has more than one identity, while the guide registry preserves a single published guide URL where a duplicate was verified. Recorded campus and approximate Census address points support straight-line distance. Road estimates are requested separately and do not include live traffic. Neither distance nor a map marker establishes attendance eligibility.</p><h3 id="school-dataset">Download the school directory</h3><p><a href="/data/school-finder.json" download>Download JSON (${c.records} records)</a> &nbsp; <a href="/data/school-finder.csv" download>Download CSV (${c.records} records)</a></p><p>Downloads include identifiers, school types, locations, guide links, source years and source URLs. Missing values remain missing. The JSON includes field notes and a content version for checking updates. This is a compiled directory, not a new government rating or a live enrollment database.</p><p><a href="/contact">Suggest a source-backed correction</a>: include the school name, guide URL, field to correct and a current official source. The ${site==='gc'?'military':'civilian'} edition uses the same records: <a href="${SCHOOL_ORIGINS[other]}/schools">${site==='gc'?'School Finder with PCS planning resources':'School Finder for local home searches'}</a>.</p></section><!-- SCHOOL_SEO_DETAILS_END -->`;
+  const faqHtml=`<!-- SCHOOL_SEO_FAQ_START --><section class="school-resource" id="school-finder-faq" aria-labelledby="school-faq-heading"><p class="school-resource-label">Plan with better information</p><h2 id="school-faq-heading">School finder questions, answered.</h2>${faq.map(x=>`<details><summary>${escape(x.q)}</summary><p>${escape(x.a)}</p></details>`).join('')}</section><!-- SCHOOL_SEO_FAQ_END -->`;
+  const enrollment='<h3 id="school-enrollment-resources">Confirm enrollment with the right school system</h3><p>Ask the district to check the specific address, school year and grade level. Baldwin County, Gulf Shores and Orange Beach have separate public-school registration resources. For a private school, contact its admissions office directly.</p><ul>'+registrationResources.map(([name,href])=>'<li><a href="'+escape(href)+'" target="_blank" rel="noopener">'+escape(name)+'</a></li>').join('')+'</ul>';
+  html=html.replace('</main>',details.replace('<h3 id="school-dataset">',enrollment+'<h3 id="school-dataset">')+'\n'+faqHtml+'\n</main>');
+  if(!html.includes('<!-- SCHOOL_SEO_DETAILS_START -->'))throw Error('School finder placement missing');
+  // Give the existing static guide directory addressable county headings, without duplicating it.
+  html=html.replace(/<!-- ALL_SCHOOL_PAGES_START -->[\s\S]*?<!-- ALL_SCHOOL_PAGES_END -->/,block=>{
+    for(const x of c.counties)block=block.replace(new RegExp('<h3(?: id="'+x.anchor+'")?>'+escape(x.label).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'<\\/h3>'),`<h3 id="${x.anchor}">${escape(x.label)}</h3>`);return block;
+  });
+  const datasetId=SCHOOL_ORIGINS.gc+'/schools#school-dataset';
+  const schema=[
+    {'@type':'CollectionPage','@id':url+'#webpage',url,name:title,description,inLanguage:'en-US',datePublished:published,dateModified:SCHOOL_REVIEW_DATE,
+      isPartOf:{'@type':'WebSite','@id':origin+'/#website',url:origin+'/',name:site==='gc'?'Gregg Costin | The Costin Team':'Pensacola Military Housing'},
+      publisher:{'@id':team['@id']},mainEntity:{'@id':datasetId},hasPart:[{'@id':url+'#finder-application'},{'@id':url+'#guide-list'},{'@id':url+'#school-finder-faq'}],
+      relatedLink:SCHOOL_ORIGINS[other]+'/schools'},
+    {'@type':'Dataset','@id':datasetId,url:SCHOOL_ORIGINS.gc+'/schools',name:'Pensacola and Gulf Coast School Finder Directory',
+      description:plain(data.coverageNote)+' The public export retains source identities, school-guide links, source years, original source URLs and unknown values. It is a compiled directory, not an interstate school ranking.',
+      identifier:'costin-school-finder',version:exported.version,dateModified:snapshot,creator:{'@id':team['@id']},isAccessibleForFree:true,inLanguage:'en-US',
+      spatialCoverage:c.counties.map(x=>({'@type':'AdministrativeArea',name:x.label})),
+      measurementTechnique:'NCES and state school identities join dated directory and accountability records. Documented school-published corrections supplement campus information; unknown locations and results remain null.',
+      variableMeasured:['School name and source identity','School type and reported affiliation','Campus location','Grade span','Official state accountability grade and reporting year','Original source URL and source year'],
+      isBasedOn:data.sources.filter(s=>!s.url.startsWith('/')).map(s=>({'@type':'CreativeWork',name:s.name+' ('+plain(s.year)+')',url:s.url})),
+      distribution:[{'@type':'DataDownload',encodingFormat:'application/json',contentUrl:origin+'/data/school-finder.json'},{'@type':'DataDownload',encodingFormat:'text/csv',contentUrl:origin+'/data/school-finder.csv'}],
+      ...(site==='pmh'?{sameAs:SCHOOL_ORIGINS.gc+'/schools#school-dataset'}:{})},
+    {'@type':'WebApplication','@id':url+'#finder-application',name:site==='gc'?'Costin School Finder':'Costin PCS School Finder',url:url+'#school-finder',applicationCategory:'EducationalApplication',operatingSystem:'Any',browserRequirements:'JavaScript is required for the interactive map; static guides remain available without it.',isAccessibleForFree:true,publisher:{'@id':team['@id']},isBasedOn:{'@id':datasetId},featureList:['School name and city search','ZIP and submitted address comparison','Public, private and documented Christian school filters','Recorded charter and magnet designations','Official state grades labeled by state and year','Straight-line distance and optional driving estimates','Static school guides and source links']},
+    {'@type':'ItemList','@id':url+'#guide-list',name:'School guides by county',numberOfItems:c.counties.length,itemListElement:c.counties.map((x,i)=>({'@type':'ListItem',position:i+1,name:x.label+' - '+x.guides+' school guides',url:url+'#'+x.anchor}))},
+    {'@type':'FAQPage','@id':url+'#school-finder-faq',mainEntity:faq.map(x=>({'@type':'Question',name:x.q,acceptedAnswer:{'@type':'Answer',text:x.a}}))},
+    {'@type':'BreadcrumbList','@id':url+'#breadcrumb',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:origin+'/'},{'@type':'ListItem',position:2,name:'School Finder',item:url}]}
+  ];
+  const schoolHead=`<!-- SCHOOL_SEO_HEAD_START --><style data-school-seo>${css}</style><script type="application/ld+json" data-school-seo>${json({'@context':'https://schema.org','@graph':schema})}</script><!-- SCHOOL_SEO_HEAD_END -->`;
+  html=html.includes(headSlot)?html.replace(headSlot,schoolHead):html.replace('</head>',schoolHead+'\n</head>');
+  return html;
+}
+export function schoolDiscovery(data,site){
+  const c=schoolCoverage(data),origin=SCHOOL_ORIGINS[site];
+  return `<!-- SCHOOL_RESOURCE_START -->\n## School Finder: regional school data and map\n- [${site==='pmh'?'PCS School Finder':'Pensacola and Gulf Coast School Finder'}](${origin}/schools): ${c.records} source records, ${c.guides} school guides, ${c.publicGuides} public guides and ${c.privateGuides} private guides across Escambia, Santa Rosa, Okaloosa and Baldwin counties.\n- [Sources and methodology](${origin}/schools#school-data-methodology): NCES public directory 2024-25; private directory and affiliation data 2023-24; ${c.floridaGrades} Florida grades 2025-26; ${c.alabamaGrades} Alabama grades 2024-25. Data compilation ${data.builtAt.slice(0,10)}. Page review ${SCHOOL_REVIEW_DATE}.\n- [School data JSON](${origin}/data/school-finder.json) and [CSV](${origin}/data/school-finder.csv): Source identifiers, dated facts, original source URLs and missing values.\n- [School finder questions](${origin}/schools#school-finder-faq): Attendance boundaries, state-grade comparability, private/Christian school types, distances and corrections.\n${site==='pmh'?'The military edition adds installation liaison and PCS enrollment context.':'The civilian edition connects school research with local home searches.'} The two editions use the same corpus and retain separate page URLs. Map locations are not attendance boundaries; driving estimates are not live-traffic forecasts. Private-school affiliation is not an academic grade. State grades should not be compared across states. Counts do not establish complete current coverage, a school ranking or market exclusivity.\n<!-- SCHOOL_RESOURCE_END -->`;
+}

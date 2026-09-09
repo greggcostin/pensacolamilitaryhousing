@@ -23,3 +23,12 @@ https://greggcostin.pages.dev/*
 # Font files are pinned; rename them when replacing a font build.
 /fonts/*
   Cache-Control: public, max-age=2592000
+
+# SCHOOL_DATA_HEADERS_START
+/data/school-finder.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=0, must-revalidate
+/data/school-finder.csv
+  Content-Type: text/csv; charset=utf-8
+  Cache-Control: public, max-age=0, must-revalidate
+# SCHOOL_DATA_HEADERS_END

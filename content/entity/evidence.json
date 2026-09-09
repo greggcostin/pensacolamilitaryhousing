@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "policy": "Verification applies to the listed facts, not every claim on the website. Retain owner positioning; do not invent independent ranking evidence. Never publish a residential address from a licensing record.",
+  "licenses": [
+    {
+      "identifier": "SL3630964",
+      "state": "Florida",
+      "status": "Current, Active",
+      "checkedOn": "2026-09-07",
+      "expiresOn": "2026-09-30",
+      "source": "https://www.myfloridalicense.com/portalsearches/VerifyLicensee/LicenseDetail?ID=AC5740A2FFB1E506A82D86E377ACE3EB",
+      "method": "Official DBPR registry search and rendered license detail",
+      "reviewBy": "2026-09-30"
+    },
+    {
+      "identifier": "000171694-0",
+      "state": "Alabama",
+      "status": "Active",
+      "checkedOn": "2026-09-07",
+      "expiresOn": "2028-09-30",
+      "source": "https://arec.alabama.gov/apps/LicenseSearch/Home/Details/163221",
+      "method": "Official AREC registry search and rendered license detail",
+      "reviewBy": "2026-12-07"
+    }
+  ],
+  "publicContact": {
+    "checkedOn": "2026-09-07",
+    "source": "https://greggc.levinrinkerealty.com/",
+    "method": "Public brokerage profile",
+    "values": {
+      "name": "Gregg Costin",
+      "telephone": "+1-850-266-5005",
+      "email": "greggcostin@gmail.com",
+      "streetAddress": "220 W Garden St, Suite 125",
+      "addressLocality": "Pensacola",
+      "addressRegion": "FL",
+      "postalCode": "32502",
+      "brokerage": "Levin Rinke Realty"
+    },
+    "reviewBy": "2026-12-07"
+  },
+  "claims": [
+    {"fields": ["person.positioning"], "status": "owner_asserted", "source": "User instruction to retain the #1 military relocation statement", "checkedOn": "2026-09-07", "nextAction": "Attach the ranking definition, period and supporting production evidence when available; keep the existing statement."},
+    {"fields": ["person.military", "person.alumniOf"], "status": "owner_biography", "source": "Existing About page and owner-provided biography", "nextAction": "Maintain consistent biography; do not describe military service as independently verified by a licensing registry."},
+    {"fields": ["person.award"], "status": "existing_owner_claims", "source": "Existing shared entity record and public biography", "nextAction": "Attach dated award and MLS/leaderboard evidence with exact denominator and period before expanding these claims."},
+    {"fields": ["person.honorificSuffix", "person.credentials[2:]"], "status": "brokerage_profile_corroborated", "source": "https://greggc.levinrinkerealty.com/", "checkedOn": "2026-09-07", "nextAction": "Keep MRP, ABR, SRS, RENE and FMS; issuer directories or certificates remain the stronger supporting record."},
+    {"fields": ["team.openingHoursSpecification", "nap.contactHours"], "status": "owner_confirmed", "source": "User instruction: keep Google Business Profile at 24 hours; actual contact hours are 6 a.m. to midnight Central, daily", "checkedOn": "2026-09-07", "nextAction": "Keep business-profile availability and personal contact hours distinct. No external profile edit is required."},
+    {"fields": ["person.sameAs", "team.sameAs"], "status": "partial_review", "source": "Current public brokerage, MLS and real estate directory profiles", "checkedOn": "2026-09-07", "nextAction": "Realtor.com URL corrected and MLS profile added. Complete social-handle and directory routing review in R20; do not replace legitimate tracking numbers automatically."}
+  ]
+}

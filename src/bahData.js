@@ -20,8 +20,8 @@ export const BAH_DATA = {
       ["O-4",2457,2232],["O-5",2610,2244],["O-6",2631,2247],["O-7",2646,2259],
     ],
   },
-  FL023: {
-    mhaCode: "FL023", mhaName: "Fort Walton Beach, FL", yoyChange: "2026 rates, effective January 1",
+  FL056: {
+    mhaCode: "FL056", mhaName: "Eglin AFB, FL", yoyChange: "2026 rates, effective January 1",
     installations: "Eglin AFB • Hurlburt Field",
     enlisted: [
       ["E-1",2340,2007],["E-2",2340,2007],["E-3",2340,2007],["E-4",2340,2007],

@@ -1,0 +1,24 @@
+{
+  "google": {
+    "name": "Google",
+    "rating": 5,
+    "count": 56,
+    "url": "https://www.google.com/maps/place/Gregg+Costin+Pensacola+Realtor+-+Levin+Rinke+Realty/@30.4129639,-87.2188735,17z/data=!4m6!3m5!1s0x8890c1a04a17d29b:0xaaa3b223c50fa5fc!8m2!3d30.4129639!4d-87.2188735!16s%2Fg%2F11mdg2zjxd",
+    "ratingCheckedAt": "2026-09-09T04:30:33.984Z",
+    "countStatus": "verified-public-browser",
+    "evidence": "Fresh Google Maps profile read in the in-app browser: 56 reviews, 5.0 average. Histogram: 5 stars 56, all other star counts zero. Earlier separate Chrome read matched 56. Previous owner-confirmed snapshot was 57; no reason for the difference is asserted.",
+    "checkedAt": "2026-09-09T04:30:33.984Z",
+    "fiveStarCount": 56
+  },
+  "zillow": {
+    "name": "Zillow",
+    "rating": 5,
+    "count": 27,
+    "url": "https://www.zillow.com/profile/GreggCostin",
+    "countStatus": "verified-public-browser",
+    "checkedAt": "2026-09-09T04:30:33.984Z",
+    "evidence": "Fresh Zillow team profile: 27 team reviews, average 5.0. All-reviews dialog sorted Rating (low to high) finished loading with first rating 5.0. Team-member review counts are not added.",
+    "fiveStarCount": 27,
+    "ratingCheckedAt": "2026-09-09T04:30:33.984Z"
+  }
+}

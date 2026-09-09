@@ -1,0 +1,1286 @@
+{
+  "generated": "2026-09-08",
+  "note": "A review schedule is not verification. Reopen authoritative sources before changing a claim or review date. Review immediately when an official rule changes, regardless of due date.",
+  "queue": [
+    {
+      "id": "dirWhitingHhg",
+      "name": "Whiting: temporary HHG closure",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-whiting-field/moving/household-goods",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-09-14",
+      "reviewIntervalDays": 7,
+      "sourceStatus": "temporary_service_change",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirEglinMpf",
+      "name": "Eglin: MPF / DEERS",
+      "url": "https://eglin96fss.com/mpf/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-09-14",
+      "reviewIntervalDays": 7,
+      "sourceStatus": "temporary_service_change",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasReport",
+      "name": "Military OneSource: NAS check-in",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/base-essentials/check-in-procedures",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasc",
+      "name": "NASC: Aviation Training School",
+      "url": "https://www.netc.navy.mil/Commands/Naval-Aviation-Schools-Command/Aviation-Training-School/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNattc",
+      "name": "NATTC: service-specific reporting",
+      "url": "https://www.netc.navy.mil/Commands/Center-for-Naval-Aviation-Technical-Training/Naval-Air-Technical-Training-Center/Reporting/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirCso2022",
+      "name": "479 FTG: June 2022 welcome packet",
+      "url": "https://www.jbsa.mil/Portals/102/Documents/12th%20FTW/Welcome%20Guide%2027%20Jun%2022.pdf?ver=q17kNtXuVWMevNjmIbtJsw%3D%3D",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "archival_reconfirm",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirVt10",
+      "name": "VT-10: student control",
+      "url": "https://www.cnatra.navy.mil/tw6/vt10/phone-list.asp",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirVt4",
+      "name": "VT-4: contact desk",
+      "url": "https://www.cnatra.navy.mil/tw6/vt4/contact-us.asp",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirVt86",
+      "name": "VT-86: student control",
+      "url": "https://www.cnatra.navy.mil/tw6/vt86/phone-list.asp",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirCorry",
+      "name": "IWTC Corry: reporting",
+      "url": "https://www.netc.navy.mil/Commands/Center-for-Information-Warfare-Training/Information-Warfare-Training-Command-Corry-Station/Reporting-Information/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirCorryMarines",
+      "name": "Marine Detachment Corry",
+      "url": "https://www.matsg21.marines.mil/Units/Marine-Corps-Detachment-Corry-Station/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNetpdc",
+      "name": "NETPDC: current contact page",
+      "url": "https://www.netc.navy.mil/Commands/Naval-Education-and-Training-Professional-Development-Center/Contact-Us/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNetpdcLegacy",
+      "name": "NETPDC: alternate contact listing",
+      "url": "https://www.netc.navy.mil/NETPDC/NETPDC-Contact-Us/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "conflicting_address",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirSaufley",
+      "name": "Florida DEP: Saufley location",
+      "url": "https://floridadep.gov/waste/waste-cleanup/content/naval-air-station-pensacola%E2%80%99s-saufley-field-pfas-investigation",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirDantes",
+      "name": "DANTES: education help desk",
+      "url": "https://www.dantes.mil/About-DANTES/Contact-Us-Test/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirMilgears",
+      "name": "DANTES: MilGears support",
+      "url": "https://www.dantes.mil/Education-Programs/MilGears/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirRsc",
+      "name": "NAS: personnel support / ID lab",
+      "url": "https://cnrse.cnic.navy.mil/Installations/NAS-Pensacola/About/Installation-Guide/RSC-Pensacola/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasId",
+      "name": "Military OneSource: Florida ID offices",
+      "url": "https://installations.militaryonesource.mil/search?program-service=50%2Fstate%3DFlorida",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirIdco",
+      "name": "ID Card Office Online",
+      "url": "https://idco.dmdc.osd.mil/idco/locator",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasHhg",
+      "name": "NAS Pensacola: household goods",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/moving/household-goods",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirHhgEmail",
+      "name": "Regional Navy HHG contact",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-meridian/moving/household-goods",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasHousing",
+      "name": "Navy: Pensacola housing offices",
+      "url": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NAS-Pensacola/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasGate",
+      "name": "NAS Pensacola: visitor access",
+      "url": "https://cnrse.cnic.navy.mil/Installations/NAS-Pensacola/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirLodge",
+      "name": "Navy Lodge Pensacola",
+      "url": "https://www.navy-lodge.com/pensacola",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNgu",
+      "name": "Navy: NAS lodging contact",
+      "url": "https://www.cnrc.navy.mil/NRC-Command/Navy-Recruiting-Orientation-Unit/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasFfsc",
+      "name": "NAS: Fleet and Family support",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/military-and-family-support-center/financial-assistance",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasSl",
+      "name": "Pensacola School Liaison",
+      "url": "https://www.navymwrpensacola.com/programs/ddab9fec-1223-46aa-9705-d8e175ed0915",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirCorryCdc",
+      "name": "Corry Child Development Center",
+      "url": "https://www.navymwrpensacola.com/programs/bed32613-1cf4-4496-a84e-14a732c3b583",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasCdc",
+      "name": "NAS Child Development Center",
+      "url": "https://www.navymwrpensacola.com/programs/8b876326-6890-4c6b-9179-79bdb22c9aa5",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirCorryYouth",
+      "name": "Corry Youth Center",
+      "url": "https://www.navymwrpensacola.com/programs/465596d4-4884-499b-84e3-ed660e96b3f4",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNhCare",
+      "name": "Naval Hospital: primary care",
+      "url": "https://pensacola.tricare.mil/Health-Services/Primary-Care",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNhAccess",
+      "name": "Naval Hospital: current access notice",
+      "url": "https://pensacola.tricare.mil/About-Us/Contact-Us",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNhUrgent",
+      "name": "Naval Hospital: urgent care / no ER",
+      "url": "https://pensacola.tricare.mil/Health-Services/Urgent-Care",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasEfmp",
+      "name": "NAS: medical EFMP",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/exceptional-family-member-program/health-care-special-needs",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNavyLegal",
+      "name": "Navy: Southeast legal assistance",
+      "url": "https://www.jag.navy.mil/legal-services/southeast/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNasRelief",
+      "name": "NAS: emergency assistance",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/base-essentials/emergency-assistance",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirTw5",
+      "name": "TW-5: incoming flight students",
+      "url": "https://www.cnatra.navy.mil/tw5/check-in-student.asp",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirTw5Staff",
+      "name": "TW-5: staff check-in",
+      "url": "https://www.cnatra.navy.mil/tw5/check-in-staff.asp",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirWhiting",
+      "name": "NAS Whiting: quarterdeck / CDO",
+      "url": "https://cnrse.cnic.navy.mil/Installations/NAS-Whiting-Field/Contact-Us/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirWhitingTech",
+      "name": "CNATT Whiting: student control",
+      "url": "https://www.netc.navy.mil/Commands/Center-for-Naval-Aviation-Technical-Training/Whiting-Field/Contact-Us/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirWhitingHousing",
+      "name": "Navy: Whiting housing offices",
+      "url": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NAS-Whiting-Field/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirWhitingSupport",
+      "name": "Whiting: support / ID contacts",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-whiting-field/base-essentials/emergency-assistance",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirWhitingFfsc",
+      "name": "Whiting Fleet and Family support",
+      "url": "https://www.navymwrwhitingfield.com/programs/2413bd64-9bae-4be1-b875-47525d03b0f2",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirWhitingClinic",
+      "name": "Whiting Branch Health Clinic",
+      "url": "https://pensacola.tricare.mil/Clinics/NBHC-Whiting-Field",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirWhitingCdc",
+      "name": "Whiting Child Development Center",
+      "url": "https://www.navymwrwhitingfield.com/programs/1d5f7d69-eedd-4f2b-89f3-015b153fc9af",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirWhitingSl",
+      "name": "Whiting School Liaison",
+      "url": "https://www.navymwrwhitingfield.com/child-youth/school-liaison",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNavySlEmails",
+      "name": "Navy: regional School Liaison contacts",
+      "url": "https://www.navymwrpensacola.com/modules/media/?do=download&id=11ff5901-3be4-4afb-b818-4fd92b574894",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirWhitingUnits",
+      "name": "Whiting: major unit contacts",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-whiting-field/base-essentials/major-units",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirAfFlorida",
+      "name": "Air Force: Florida office locator",
+      "url": "https://myairforcebenefits.us.af.mil/Benefit-Library/Resource-Locator/Florida",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirEglinFss",
+      "name": "Eglin: FSS facility directory",
+      "url": "https://eglin96fss.com/directory/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirEglinFinance",
+      "name": "Eglin: finance contact",
+      "url": "https://installations.militaryonesource.mil/search?program-service=54%2Finstallation%3Deglin-afb",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirEglinHhg",
+      "name": "Eglin: household goods",
+      "url": "https://installations.militaryonesource.mil/military-installation/eglin-afb/moving/household-goods",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirEglinLegal",
+      "name": "Eglin: legal assistance",
+      "url": "https://installations.militaryonesource.mil/military-installation/eglin-afb/legal/legal-assistance",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirEglinMedical",
+      "name": "Eglin: medical appointments",
+      "url": "https://eglin.tricare.mil/Getting-Care/Appointments-Referrals",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirEglinF35",
+      "name": "Eglin: Navy F-35 students",
+      "url": "https://www.netc.navy.mil/Commands/Center-for-Naval-Aviation-Technical-Training/Eglin-AFB/Navy-Student-Information/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirHurlburtMpf",
+      "name": "Hurlburt: MPF customer support",
+      "url": "https://myhurlburt.com/military-personnel/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirHurlburtFss",
+      "name": "Hurlburt: FSS facility directory",
+      "url": "https://myhurlburt.com/directory/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirHurlburtHhg",
+      "name": "Hurlburt: household goods",
+      "url": "https://installations.militaryonesource.mil/military-installation/hurlburt-field/moving/household-goods",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirDukeMpf",
+      "name": "Duke: Military Personnel Flight",
+      "url": "https://duke919fss.com/military-personnel-flight/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirDukeId",
+      "name": "Duke: DEERS / ID appointments",
+      "url": "https://duke919fss.com/deers-and-id/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirDukeMfrc",
+      "name": "Duke: Military and Family Readiness",
+      "url": "https://duke919fss.com/military-and-family-readiness-center/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirDukeInn",
+      "name": "Duke Inn: reservations",
+      "url": "https://duke919fss.com/duke-inn/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirTyndallList",
+      "name": "Tyndall: January 2026 phone list",
+      "url": "https://www.tyndall.af.mil/Portals/107/documents/TYNDALL%20AFB%20CONTACT%20LISTINGS%20(CAO%2014%20Jan%202026).pdf?ver=NZNY2qPwEDwOGXSJMEEsBQ%3D%3D",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirTyndallMpf",
+      "name": "Tyndall: MPF / Base Intro",
+      "url": "https://tyndallfss.com/military-personnel-flight/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirTyndallSl",
+      "name": "Tyndall: School Liaison program",
+      "url": "https://www.tyndall.af.mil/SLO/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirTyndallCdc",
+      "name": "Tyndall: childcare contact",
+      "url": "https://installations.militaryonesource.mil/military-installation/tyndall-afb/child-and-youth-services/child-care",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirTyndallInn",
+      "name": "Tyndall: Sand Dollar Inn",
+      "url": "https://tyndallfss.com/lodging-sand-dollar-inn/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirTyndallLodgingBook",
+      "name": "Tyndall: lodging newcomer reference",
+      "url": "https://www.dodlodging.net/documents/Sand-Dollar-Inn-GuestBook.pdf",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNsa",
+      "name": "NSA Panama City: command contacts",
+      "url": "https://cnrse.cnic.navy.mil/Installations/NSA-Panama-City/Contact-Us/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNsaHousing",
+      "name": "Navy: Panama City housing offices",
+      "url": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NSA-Panama-City/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirDive",
+      "name": "NDSTC: command contacts",
+      "url": "https://www.netc.navy.mil/Commands/Center-for-Explosive-Ordnance-Disposal-and-Diving/Naval-Diving-and-Salvage-Training-Center/Contact-Us/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirDiveNavy",
+      "name": "NDSTC: Navy student reporting",
+      "url": "https://www.netc.navy.mil/Commands/Center-for-Explosive-Ordnance-Disposal-and-Diving/Naval-Diving-and-Salvage-Training-Center/Navy-Student-Information/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirDiveAf",
+      "name": "NDSTC: Air Force dive supervisor instructions",
+      "url": "https://www.netc.navy.mil/Portals/46/CEODD/NDSTC/doc/Air%20Force%20Combat%20Dive%20Supervisor.pdf?ver=t7vJ569PcGPuTIOGYesMFw%3D%3D",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirDiveMarine",
+      "name": "NDSTC: Marine student desk",
+      "url": "https://www.netc.navy.mil/Commands/Center-for-Explosive-Ordnance-Disposal-and-Diving/Naval-Diving-and-Salvage-Training-Center/Marine-Corps-Student-Information/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNsaClinic",
+      "name": "Panama City Branch Health Clinic",
+      "url": "https://pensacola.tricare.mil/Clinics/NBHC-Panama-City",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNsaFfsc",
+      "name": "Panama City: Fleet and Family support",
+      "url": "https://www.navymwrpanamacity.com/programs/86a3c94d-1454-4047-8826-f06871d68ef5",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "conflicting_phone",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNsaSl",
+      "name": "Panama City School Liaison",
+      "url": "https://www.navymwrpanamacity.com/programs/b8ae336b-d7da-4061-a711-2ee9e5173ca0",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNsaYouth",
+      "name": "Panama City: youth programs",
+      "url": "https://www.navymwrpanamacity.com/programs/9a70b72a-b37b-4de6-bb87-6e9a8d3397c7",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirNsaChapel",
+      "name": "NSA Panama City: chaplain",
+      "url": "https://cnrse.cnic.navy.mil/Installations/NSA-Panama-City/Resources/Chaplains-Office/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "dirMso",
+      "name": "Military OneSource: assistance",
+      "url": "https://www.militaryonesource.mil/education-employment/for-service-members/4-tips-for-transition-and-career-success/",
+      "lastReviewed": "2026-09-07",
+      "reviewDue": "2026-10-07",
+      "reviewIntervalDays": 30,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "nasOverview",
+      "name": "U.S. Navy: NAS Pensacola, Corry and Saufley support",
+      "url": "https://cnrse.cnic.navy.mil/Installations/NAS-Pensacola/About/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "tleDays",
+      "name": "DTMO: CONUS Temporary Lodging Expense, 21 days",
+      "url": "https://www.travel.dod.mil/About/News/Article/Article/3981433/dod-authorizes-additional-7-days-to-conus-temporary-lodging-expense/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "vaUnderwriting",
+      "name": "38 CFR 36.4340: VA underwriting and residual income",
+      "url": "https://www.ecfr.gov/current/title-38/chapter-I/part-36/subpart-B/section-36.4340",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "hurricane",
+      "name": "Florida CFO: Hurricane deductibles",
+      "url": "https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "insurance",
+      "name": "Florida OIR: Homeowners insurance",
+      "url": "https://floir.gov/property-casualty/homeowners-insurance",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "flood",
+      "name": "NFIP: Buying flood insurance and waiting periods",
+      "url": "https://www.floodsmart.gov/get-insured/buy-a-policy",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "lease",
+      "name": "Santa Rosa Island Authority: Leasing documents and forms",
+      "url": "https://www.sria-fla.com/administration/page/administration-leasing-documents-forms",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "sria",
+      "name": "Santa Rosa Island Authority: Administration",
+      "url": "https://www.sria-fla.com/administration",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "navyHousing",
+      "name": "U.S. Navy: Housing Service Center contacts",
+      "url": "https://ffr.cnic.navy.mil/Navy-Housing/Contact-Navy-Housing/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "nas",
+      "name": "U.S. Navy: NAS Pensacola housing",
+      "url": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NAS-Pensacola/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "whiting",
+      "name": "U.S. Navy: NAS Whiting Field contacts",
+      "url": "https://cnrse.cnic.navy.mil/Installations/NAS-Whiting-Field/Contact-Us/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "nsa",
+      "name": "U.S. Navy: NSA Panama City housing",
+      "url": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NSA-Panama-City/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "eglin",
+      "name": "Military OneSource: Eglin AFB installation overview",
+      "url": "https://installations.militaryonesource.mil/in-depth-overview/eglin-afb",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "eglinHousing",
+      "name": "U.S. Air Force: Eglin housing",
+      "url": "https://www.housing.af.mil/Home-depricated/Units/Eglin/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "hurlburt",
+      "name": "U.S. Air Force: Hurlburt Field housing",
+      "url": "https://www.housing.af.mil/Home/Installations/Hurlburt-Field/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "duke",
+      "name": "Air Force Reserve Command: 919th Special Operations Wing",
+      "url": "https://www.afrc.af.mil/Units/919sow/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "tyndall",
+      "name": "U.S. Air Force: Tyndall AFB housing",
+      "url": "https://www.housing.af.mil/Home/Installations/Tyndall-AFB/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "preapproval",
+      "name": "CFPB: Get a preapproval letter",
+      "url": "https://www.consumerfinance.gov/owning-a-home/explore/get-a-preapproval-letter/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "documents",
+      "name": "CFPB: Documents before closing",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-documents-should-i-receive-before-closing-on-a-mortgage-loan-en-181/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "disclosure",
+      "name": "CFPB: What is a Closing Disclosure?",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-closing-disclosure-en-1983/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "trid",
+      "name": "CFPB: TILA-RESPA disclosure FAQs",
+      "url": "https://www.consumerfinance.gov/compliance/compliance-resources/mortgage-resources/tila-respa-integrated-disclosures/tila-respa-integrated-disclosure-faqs/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "cd",
+      "name": "CFPB: Closing Disclosure explainer",
+      "url": "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "vaFees",
+      "name": "VA: Funding fee and closing costs",
+      "url": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "vaLimits",
+      "name": "VA: Entitlement and loan limits",
+      "url": "https://www.va.gov/housing-assistance/home-loans/loan-limits/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "vaEligibility",
+      "name": "VA: Home loan eligibility",
+      "url": "https://www.va.gov/housing-assistance/home-loans/eligibility/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "vaBuying",
+      "name": "VA: Buying with a VA-backed loan",
+      "url": "https://www.va.gov/housing-assistance/home-loans/home-buying-process/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "vaAssume",
+      "name": "VA: Assumption entitlement acknowledgment, Form 26-10291",
+      "url": "https://www.vba.va.gov/pubs/forms/VBA-26-10291-ARE.pdf",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "vaLiability",
+      "name": "VA: Rights of VA loan borrowers, Form 26-8978",
+      "url": "https://www.vba.va.gov/pubs/forms/26-8978.pdf",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "bah",
+      "name": "DTMO: Official BAH rates and downloads",
+      "url": "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "pcs",
+      "name": "Military OneSource: PCS and moving FAQs",
+      "url": "https://www.militaryonesource.mil/moving-pcs/plan-to-move/military-pcs-moving-faqs/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "relocation",
+      "name": "Military OneSource: Relocation Assistance Program",
+      "url": "https://www.militaryonesource.mil/benefits/relocation-assistance-program/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "tle",
+      "name": "Military OneSource: Temporary Lodging Expense",
+      "url": "https://www.militaryonesource.mil/benefits/temporary-lodging-expense/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "flTax",
+      "name": "Florida DOR: Property tax forms and publications",
+      "url": "https://floridarevenue.com/property/Pages/Forms.aspx",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "flSOH",
+      "name": "Florida DOR: Save Our Homes and portability",
+      "url": "https://floridarevenue.com/property/Documents/pt112.pdf",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "alTax",
+      "name": "Baldwin County: Assessment exemptions",
+      "url": "https://baldwincountyal.gov/government/revenue-commission/divisions/assessments/exemptions",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "alCalc",
+      "name": "Baldwin County: Property tax calculator",
+      "url": "https://services.baldwincountyal.gov/PropertyTaxCalculator",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "condo",
+      "name": "Florida DBPR: Condominium inspection and reserve requirements",
+      "url": "https://condos.myfloridalicense.com/inspections/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "condoFAQ",
+      "name": "Florida DBPR: Condominium FAQs",
+      "url": "https://condos.myfloridalicense.com/faqs/",
+      "lastReviewed": "2026-09-06",
+      "reviewDue": "2026-12-05",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "jRental",
+      "name": "IRS: Residential rental property and vacation homes",
+      "url": "https://www.irs.gov/forms-pubs/about-publication-527",
+      "lastReviewed": "2026-09-08",
+      "reviewDue": "2026-12-07",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "jEntitlement",
+      "name": "VA: Entitlement after a loan assumption",
+      "url": "https://benefits.va.gov/homeloans/eligibility.asp?vm=r",
+      "lastReviewed": "2026-09-08",
+      "reviewDue": "2026-12-07",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "jPreapproval",
+      "name": "CFPB: Preapproval and its conditions",
+      "url": "https://www.consumerfinance.gov/owning-a-home/explore/get-a-preapproval-letter/",
+      "lastReviewed": "2026-09-08",
+      "reviewDue": "2026-12-07",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "jProducts",
+      "name": "CFPB: Loan types, terms and rate structures",
+      "url": "https://www.consumerfinance.gov/owning-a-home/explore/understand-the-different-kinds-of-loans-available/",
+      "lastReviewed": "2026-09-08",
+      "reviewDue": "2026-12-07",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "jCma",
+      "name": "NAR: What goes into pricing a home",
+      "url": "https://www.nar.realtor/the-facts/consumer-guide-what-goes-into-pricing-your-home",
+      "lastReviewed": "2026-09-08",
+      "reviewDue": "2026-12-07",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "jRenovation",
+      "name": "HUD: Section 203(k) rehabilitation mortgages",
+      "url": "https://www.hud.gov/hud-partners/single-family-mortgage-programs-203k",
+      "lastReviewed": "2026-09-08",
+      "reviewDue": "2026-12-07",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "jUsda",
+      "name": "USDA: Guaranteed housing eligibility and application",
+      "url": "https://www.rd.usda.gov/programs-services/single-family-housing-programs/single-family-housing-guaranteed-loan-program",
+      "lastReviewed": "2026-09-08",
+      "reviewDue": "2026-12-07",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "jVa",
+      "name": "VA: Purchase process, appraisal and closing",
+      "url": "https://www.va.gov/housing-assistance/home-loans/home-buying-process/",
+      "lastReviewed": "2026-09-08",
+      "reviewDue": "2026-12-07",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "jAssume",
+      "name": "VA Form 26-10291: Assumption and entitlement acknowledgement",
+      "url": "https://www.vba.va.gov/pubs/forms/VBA-26-10291-ARE.pdf",
+      "lastReviewed": "2026-09-08",
+      "reviewDue": "2026-12-07",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    },
+    {
+      "id": "jDisclosure",
+      "name": "CFPB: Closing Disclosure and review period",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-closing-disclosure-en-1983/",
+      "lastReviewed": "2026-09-08",
+      "reviewDue": "2026-12-07",
+      "reviewIntervalDays": 90,
+      "sourceStatus": "published",
+      "status": "within_review_window"
+    }
+  ]
+}

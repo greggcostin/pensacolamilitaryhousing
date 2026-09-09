@@ -3,6 +3,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { getInteriorDesign } from './civilian-interior-design-data.mjs';
 import { withBlogCardImages } from './civilian-blog-card-images.mjs';
+import { improveCivilianLoading } from './civilian-loading-lib.mjs';
 
 const esc = value => String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
 const strip = html => html.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
@@ -92,6 +93,8 @@ function sectionsFrom(html, path) {
 }
 
 export function withInteriorDesign(html, requestedPath) {
+  // Regional guide generators own their complete editorial layout.
+  if (/data-regional-guide=/.test(html)) return improveCivilianLoading(html);
   const path = requestedPath || html.match(/rel="canonical" href="https:\/\/greggcostin\.com([^"?]*)"/)?.[1];
   if (!path || path==='/' || /gc-home/.test(html.match(/<body[^>]*>/)?.[0]||'')) return html;
   const config = getInteriorDesign(path);
@@ -104,7 +107,7 @@ export function withInteriorDesign(html, requestedPath) {
       html=html.replace(/<figure class="gc-interior-feature"><picture>[\s\S]*?<\/figure>/,current=>current.match(/<img[^>]*src="([^"]+)"/)?.[1]===config.photo ? current : photo(config.photo,config));
       if (!html.includes('class="gc-interior-hero-media"')) html=html.replace(/<\/div><\/header>/,`<div class="gc-interior-hero-media">${photo(config.photo,config)}</div></div></header>`).replace('class="gc-interior-hero"','class="gc-interior-hero gc-interior-hero--split"');
     }
-    return withBlogCardImages(withAtmosphere(html,config));
+    return improveCivilianLoading(withBlogCardImages(withAtmosphere(html,config)));
   }
   const header = html.match(/<header\b[^>]*>([\s\S]*?)<\/header>/);
   const main = html.match(/<main\b([^>]*)>([\s\S]*?)<\/main>/);
@@ -136,5 +139,5 @@ export function withInteriorDesign(html, requestedPath) {
   const mainHtml=`<main${main[1]}><div class="gc-interior-grid${hasAside?'':' gc-interior-grid--wide'}"><div class="gc-interior-content">${sectionHtml}</div>${aside}</div></main>`;
   html=html.replace(header[0],newHeader).replace(main[0],mainHtml);
   html=html.replace(/<body([^>]*)>/,(_,attrs)=>`<body${/class="/.test(attrs)?attrs.replace('class="','class="gc-interior gc-interior--'+config.family+' '):attrs+' class="gc-page gc-interior gc-interior--'+config.family+'"'} data-gc-interior-version="1" data-gc-path="${esc(path)}">`);
-  return withBlogCardImages(withAtmosphere(html,config));
+  return improveCivilianLoading(withBlogCardImages(withAtmosphere(html,config)));
 }

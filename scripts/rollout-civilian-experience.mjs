@@ -1,3 +1,4 @@
+import {withReceiptConversions} from './inquiry-browser-lib.mjs';
 // Idempotent shared upgrades. Keeps the existing contact-worker handlers and field contract.
 import { readdirSync, readFileSync, writeFileSync, copyFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -25,7 +26,7 @@ for (const file of files) {
   html = html.replace(/if\(res\.ok&&res\.j\.success\)\{(?!document\.dispatchEvent)/g, "if(res.ok&&res.j.success){document.dispatchEvent(new CustomEvent('costin:lead-success',{detail:{form_id:form.id}}));");
   html = html.replace(/<div class="ierr" id="([^"]+)"(?! role=)/g, '<div class="ierr" id="$1" role="alert"');
   if (!html.includes('data-meta-settings')) html = html.replace('</footer>', '<p><button class="gc-ad-settings" type="button" data-meta-settings hidden>Facebook &amp; Instagram ad preferences</button></p>\n</footer>');
-  html = withGuideNavigation(html);
+  html = withReceiptConversions(withGuideNavigation(html));
   if (html !== before) { writeFileSync(file,html); changed++; }
 }
 console.log(`Civilian shared refinement: ${changed} changed pages; ${files.length - 1} content pages covered.`);

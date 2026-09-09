@@ -4,12 +4,20 @@
 // public/**/*.html (404.html excluded) and exits 1 on any finding. Runs in `npm run build` (prebuild)
 // and in the blog-engine STEP 5.
 //   node scripts/audit-military.mjs
+//   node scripts/audit-military.mjs --root <complete-built-site> [--json]
 import { readdirSync, readFileSync, existsSync } from "node:fs";
+import { resolve, relative } from "node:path";
 import sharp from "sharp";
 import { ROUTE_META } from "../src/routeMeta.js";
+import { recordLink } from './identity-page-lib.mjs';
 import { analyticsGuardFindings } from "./analytics-host-guard.mjs";
 
 const SITE = "https://pensacolamilitaryhousing.com";
+const rootArg = process.argv.indexOf("--root");
+if (rootArg >= 0 && !process.argv[rootArg + 1]) throw new Error("--root needs a complete built-site directory");
+const builtSite = rootArg >= 0;
+const root = resolve(builtSite ? process.argv[rootArg + 1] : "public");
+const homeFile = builtSite ? `${root}/index.html` : "index.html";
 const findings = [];
 const f = (page, msg) => findings.push(`${page}: ${msg}`);
 
@@ -21,8 +29,8 @@ function walk(dir, out = []) {
   }
   return out;
 }
-const files = ["index.html", ...walk("public")];
-const slugOf = (file) => file === "index.html" ? "/" : "/" + file.replace(/^public\//, "").replace(/\.html$/, "");
+const files = builtSite ? walk(root) : [homeFile, ...walk(root)];
+const slugOf = (file) => resolve(file) === resolve(homeFile) ? "/" : "/" + relative(root, file).replaceAll("\\", "/").replace(/\.html$/, "");
 const decode = (s) => s == null ? s : s.replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
 function metas(html, key) {
   const out = [];
@@ -51,11 +59,11 @@ const WAIT_NOUN = /\b(?:wait ?lists?|waiting lists?|wait ?times?|waits|the wait)
 const ldStrings = (html) => { const out = []; const walkV = (v) => { if (typeof v === "string") out.push(v); else if (Array.isArray(v)) v.forEach(walkV); else if (v && typeof v === "object") Object.values(v).forEach(walkV); }; for (const m of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) { try { walkV(JSON.parse(m[1])); } catch {} } return out; };
 
 // ---- sitemap + og inventory ----
-const sitemap = readFileSync("public/sitemap.xml", "utf8");
+const sitemap = readFileSync(`${root}/sitemap.xml`, "utf8");
 const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 const locSet = new Set(locs);
 const shellSlugs = new Set(ROUTE_META.filter((r) => r.shell).map((r) => SITE + r.slug));
-const ogFiles = readdirSync("public/og").filter((x) => x.endsWith(".png"));
+const ogFiles = readdirSync(`${root}/og`).filter((x) => x.endsWith(".png"));
 const referencedOg = new Set();
 const seenTitles = new Map(), seenDescs = new Map();
 const REQUIRED_META = ["og:title", "og:description", "og:image", "og:image:width", "og:image:height", "og:type", "og:url", "og:site_name", "og:locale", "twitter:card", "twitter:image", "twitter:title", "twitter:description", "description", "robots"];
@@ -66,6 +74,7 @@ for (const file of files) {
   const slug = slugOf(file);
   const canonExpected = SITE + slug;
   const page = file;
+  if (!html.includes(recordLink)) f(page, 'missing or stale canonical professional-record link');
 
   // 1. title + description
   const title = decode((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1]?.trim());
@@ -109,14 +118,14 @@ for (const file of files) {
   if (ogImage) {
     if (!ogImage.startsWith(SITE + "/")) f(page, `og:image not on ${SITE}: ${ogImage}`);
     else {
-      const rel = ogImage.slice(SITE.length), local = "public" + rel;
+      const rel = ogImage.slice(SITE.length), local = root + rel;
       if (!existsSync(local)) f(page, `og:image file missing: ${rel}`);
       else {
         const m = await sharp(local).metadata();
         if (m.width !== 1200 || m.height !== 630) f(page, `og:image ${rel} is ${m.width}x${m.height}, not 1200x630`);
         if (rel.startsWith("/og/")) referencedOg.add(rel.slice(4));
       }
-      const expected = file === "index.html" ? "home.png" : slug.slice(1).replace(/\//g, "-") + ".png";
+      const expected = slug === "/" ? "home.png" : slug.slice(1).replace(/\//g, "-") + ".png";
       if (!ogImage.endsWith("/og/" + expected)) f(page, `og:image is not the page-specific card /og/${expected}`);
     }
   }
@@ -146,7 +155,9 @@ for (const file of files) {
   if (!html.includes("https://greggcostin.com/#team")) f(page, "no reference to the shared business entity");
   for (const old of ["pensacolamilitaryhousing.com/#agent\"", "/#person-gregg", "/#localbusiness", "Q140446886", "RealEstateOrganization"]) if (html.includes(old)) f(page, `retired identifier ${old}`);
   // 8. sitewide furniture that every static page must carry
-  if (file !== "index.html") {
+  // Built SPA shells use React navigation rather than static-page furniture.
+  // The source-mode gate never inspected emitted shells; all SEO checks still apply.
+  if (slug !== "/" && !(builtSite && shellSlugs.has(canonExpected))) {
     if (!html.includes("data-costin-sites")) f(page, "missing the cross-site family line (data-costin-sites)");
     if (!/class="nav-toggle"|id="site-drawer"/.test(html)) f(page, "missing the mobile drawer");
     if (!/href="\/privacy"/.test(html)) f(page, "footer lacks /privacy link");
@@ -158,7 +169,7 @@ for (const file of files) {
   // 9b. mob-03: every table sits in a horizontally scrolling wrapper (bare tables clip at 320px)
   for (const m of html.matchAll(/<table\b/g)) {
     const prefix = html.slice(Math.max(0, m.index - 140), m.index);
-    if (!/class="(?:bah-wrap|tbl-scroll|table-wrap|calc-table-wrap|rate-table-wrap)[^"]*"[^<]*$|overflow(?:-x)?:\s*auto[^<]*$/.test(prefix)) { f(page, "bare <table> without a scrolling wrapper (run scripts/wrap-tables.mjs)"); break; }
+    if (!/class="(?:[^"\s]+\s+)*(?:bah-wrap|tbl-scroll|table-wrap|calc-table-wrap|rate-table-wrap)(?:\s+[^"\s]+)*"[^<]*$|overflow(?:-x)?:\s*auto[^<]*$/.test(prefix)) { f(page, "bare <table> without a scrolling wrapper (run scripts/wrap-tables.mjs)"); break; }
   }
   // 10. unresolved template placeholders / merge junk
   for (const junk of ["{{", "__ENTITY_DROP__", "<<<<<<<", "TODO:", "lorem ipsum"]) if (html.includes(junk)) f(page, `contains "${junk}"`);
@@ -169,12 +180,22 @@ for (const file of files) {
 for (const loc of locs) {
   if (/\.(txt|xml|pdf)$/.test(loc)) continue;
   const rel = loc.replace(SITE, "");
-  const file = rel === "/" ? "index.html" : `public${rel}.html`;
+  const file = rel === "/" ? homeFile : `${root}${rel}.html`;
   if (!existsSync(file) && !shellSlugs.has(loc)) f("sitemap.xml", `<loc> ${loc} has no page file and no SPA shell`);
 }
 for (const s of shellSlugs) if (!locSet.has(s)) f("sitemap.xml", `SPA shell ${s} missing from sitemap`);
 for (const og of ogFiles) if (!referencedOg.has(og) && !["home.png", "404.png"].includes(og) && !ROUTE_META.some((r) => r.file && `${r.file}.png` === og)) f("public/og", `${og} is referenced by no page`);
-for (const r of ROUTE_META.filter((x) => x.shell)) if (!existsSync(`public/og/${r.file}.png`)) f("public/og", `SPA shell card ${r.file}.png missing`);
+for (const r of ROUTE_META.filter((x) => x.shell)) if (!existsSync(`${root}/og/${r.file}.png`)) f("public/og", `SPA shell card ${r.file}.png missing`);
+
+// Published financial corrections are part of the normal release gate, including
+// full production copies made by another deployment workflow.
+const {auditFinancial} = await import('./financial-audit-lib.mjs');
+for (const issue of auditFinancial(root).findings) f('financial-content', issue);
+
+if (process.argv.includes("--json")) {
+  console.log(JSON.stringify({ ok: findings.length === 0, root, builtSite, pages: files.length, sitemapUrls: locs.length, shareCards: ogFiles.length, findings }, null, 2));
+  process.exit(findings.length ? 1 : 0);
+}
 
 if (findings.length) {
   const cap = process.env.AUDIT_FULL ? findings.length : 80;

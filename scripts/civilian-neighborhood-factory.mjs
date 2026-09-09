@@ -8,6 +8,14 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import sharp from "sharp";
 import { buildPage, breadcrumbs, webPage, faqPage, gate, makeOgCard, figureBand, esc, SITE_DIR, SITE } from "./civilian-page-lib.mjs";
 import { NEIGHBORHOODS } from "./civilian-neighborhoods-data.mjs";
+import {renderCommunityGuide} from './coast-community-guide-lib.mjs';
+import {REGIONAL_GUIDES} from '../content/communities/civilian-regional-guides.mjs';
+import {renderRegionalGuide} from './civilian-regional-guide-lib.mjs';
+import {spawnSync} from 'node:child_process';
+
+const onlyIndex=process.argv.indexOf('--only');
+const onlySlug=onlyIndex>=0?process.argv[onlyIndex+1]:null;
+if(onlySlug&&!NEIGHBORHOODS.some(n=>n.slug===onlySlug))throw Error('Unknown neighborhood: '+onlySlug);
 
 const DATE_ISO = "2026-09-02";
 const PMH = "https://pensacolamilitaryhousing.com";
@@ -34,6 +42,26 @@ const details = (faqs) => faqs.map((f, i) => `<details${i === 0 ? " open" : ""}>
 
 async function build(n) {
   const path = `/neighborhoods/${n.slug}`;
+  const reviewedGuide=REGIONAL_GUIDES.find(g=>g.path===path);
+  if(reviewedGuide){
+    const file=`${SITE_DIR}${path}.html`,html=renderRegionalGuide(readFileSync(file,'utf8'),reviewedGuide,SITE_DIR);
+    writeFileSync(file,html);
+    const responsive=spawnSync(process.execPath,['scripts/apply-responsive-images.mjs','--civilian','--only',file],{encoding:'utf8'});
+    if(responsive.status!==0)throw Error(responsive.stderr||responsive.stdout);
+    return {path,n,words:html.replace(/<[^>]+>/g,' ').split(/\s+/).length};
+  }
+  if(n.slug==='navarre' && existsSync(`${SITE_DIR}${path}.html`) && readFileSync(`${SITE_DIR}${path}.html`,'utf8').includes('data-regional-guide="neighborhoods/navarre"')){
+    const html=readFileSync(`${SITE_DIR}${path}.html`,'utf8');
+    return {path,n,words:html.replace(/<[^>]+>/g,' ').split(/\s+/).length}; // Dedicated build-navarre-guides.mjs owns the reviewed edition.
+  }
+  if(n.guideKey==='perdido-key'){
+    const file=`${SITE_DIR}${path}.html`;
+    const html=renderCommunityGuide(readFileSync(file,'utf8'),'gc',SITE_DIR);
+    writeFileSync(file,html);
+    const responsive=spawnSync(process.execPath,['scripts/apply-responsive-images.mjs','--civilian','--only',file],{encoding:'utf8'});
+    if(responsive.status!==0)throw Error(responsive.stderr||responsive.stdout);
+    return {path,n,words:html.replace(/<[^>]+>/g,' ').split(/\s+/).length};
+  }
   const meta = await sharp(`${SITE_DIR}${n.image}`).metadata();
   const credit = n.credit || credits[n.image] || "Photo: The Costin Team";
   const figure = figureBand({ src: n.image, webp: n.image.replace(/\.jpg$/, ".webp"), alt: n.alt, caption: `${n.short}. ${credit}`, width: meta.width, height: meta.height });
@@ -84,8 +112,10 @@ ${details(n.faqs)}
 }
 
 const built = [];
-for (const n of NEIGHBORHOODS) built.push(await build(n));
+for (const n of NEIGHBORHOODS.filter(n=>!onlySlug||n.slug===onlySlug)) built.push(await build(n));
 console.log(built.map((b) => `${b.path} (${b.words} words)`).join("\n"));
+// A scoped regeneration leaves hub cards, homepage and unrelated dates intact.
+if(onlySlug)process.exit(0);
 
 // ---- hub cards + homepage chips -> internal pages ----
 // Retarget by CARD, not by regex across the whole file. The earlier version also tried a

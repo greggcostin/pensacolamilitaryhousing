@@ -159,7 +159,7 @@ const BASE_EXPANSIONS = {
     ],
     lifestyle: [
       "Hurlburt's AFSOC community is tight. On-base family housing means your neighbors are also in the SOF world — mission familiarity, childcare coverage during deployments, shared tempo.",
-      "Navarre is THE BAH arbitrage play — Hurlburt pays FL023 BAH (substantially higher than FL064 Pensacola), but Navarre home prices are in FL064 range. Best of both.",
+      "Navarre is THE BAH arbitrage play — Hurlburt pays FL056 BAH (substantially higher than FL064 Pensacola), but Navarre home prices are in FL064 range. Best of both.",
       "Niceville / Bluewater Bay if schools are top priority and the 25-35 min commute is acceptable. Strongest Okaloosa feeder.",
       "Destin if you're in at O-3+ and want beach lifestyle. Premium pricing; short commute to Hurlburt but inventory is thinner in the $500-$800K band.",
     ],
@@ -258,7 +258,7 @@ ${data.lifestyle.map(l => `<li>${l}</li>`).join("\n")}
 <ul>
 <li><a href="/va-loan-guide">VA Loan Guide</a> — zero-down financing, funding fee, seller concessions, 2026 Tier 1 limits.</li>
 <li><a href="/va-funding-fee-2026.html">VA Funding Fee 2026</a> — exact tier and waiver rules.</li>
-<li><a href="/bah-to-mortgage-guide.html">BAH to Mortgage Guide</a> — rank-by-rank buying-power math for FL064 and FL023.</li>
+<li><a href="/bah-to-mortgage-guide.html">BAH to Mortgage Guide</a> — rank-by-rank buying-power math for FL064 and FL056.</li>
 <li><a href="/bah-rates.html">2026 BAH Rates</a> — official DoD tables for this MHA.</li>
 <li><a href="/florida-homestead-exemption-military.html">Florida Homestead Exemption</a> — property tax savings for military families who buy.</li>
 <li><a href="/disabled-veteran-benefits-florida.html">Disabled Veteran Benefits</a> — if you are 10%+ service-connected rated.</li>
@@ -343,7 +343,7 @@ const PILLAR_CLUSTERS = [
     afterMarker: "<h2>Sources</h2>",
     clusterTitle: "Related BAH & Budget Resources",
     satellites: [
-      ["2026 BAH Rates (FL064 + FL023)", "/bah-rates.html"],
+      ["2026 BAH Rates (FL064 + FL056)", "/bah-rates.html"],
       ["VA Loan Guide", "/va-loan-guide"],
       ["Zero-Down Home Loans Compared", "/zero-down-home-loans.html"],
       ["First-Time Military Homebuyer", "/first-time-military-homebuyer.html"],

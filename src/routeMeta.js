@@ -56,7 +56,7 @@ export const ROUTE_META = [
     title: "Military Mortgage & BAH Calculators | Pensacola",
     description: "Free VA, FHA, and conventional mortgage calculators plus a 2026 BAH tool for Pensacola-area military buyers. Compare payments, funding fees, and terms.",
     heading: "Military Mortgage & BAH Calculators",
-    intro: "Estimate your VA, FHA, or conventional payment, compare loan types, model the VA funding fee, and align a home price to your 2026 BAH for the Pensacola (FL064) and Fort Walton Beach (FL023) MHAs.",
+    intro: "Estimate your VA, FHA, or conventional payment, compare loan types, model the VA funding fee, and align a home price to your 2026 BAH for the Pensacola (FL064) and Fort Walton Beach (FL056) MHAs.",
   },
   // shell:false — client-side unknown path only; the server serves public/404.html (audit 2026-09-02).
   { page: "notfound", slug: "/404", shell: false, title: "Page Not Found | Pensacola Military Housing", description: "That page does not exist. Find the PCS guide, 2026 BAH rates, VA loan guide, and community guides." },

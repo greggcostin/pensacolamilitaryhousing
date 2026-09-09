@@ -2,6 +2,8 @@
 const strip = text => text.replace(/<[^>]*>/g,'').trim();
 export function withGuideNavigation(html) {
   if (/<body[^>]*class="[^"]*gc-home/.test(html)) return html;
+  // Interior pages already contain the original article navigation. Do not add sidebar headings.
+  if (/data-gc-interior-version=/.test(html)) return html;
   const isGuide = /rel="canonical" href="https:\/\/greggcostin\.com\/(resources|blog|neighborhoods)\//.test(html);
   return html.replace(/(<main\b[^>]*>)([\s\S]*?)(<\/main>)/, (_, open, content, close) => {
     content = content.replace(/\s*<!-- COSTIN_TOC_START -->[\s\S]*?<!-- COSTIN_TOC_END -->\s*/g,'\n');

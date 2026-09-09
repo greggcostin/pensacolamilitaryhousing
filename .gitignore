@@ -23,3 +23,20 @@ REALTIME-AUDIT*.md
 
 # regenerable autosuggest pull for scripts/topic-miner.mjs (--from-cache)
 content/measure/suggest-cache.json
+
+# Local marketing research and complete release rehearsal copies (not public source)
+/.coast-release/
+/docs/seo-geo-2026-09-06/
+
+# Local release snapshots, browser evidence, private operational state and credentials
+/artifacts/
+/backups/
+/.school-release/
+/.preview-runtime/
+.wrangler/
+.dev.vars
+.dev.vars.*
+/docs/growth-execution-2026-09-08/
+/docs/performance-2026-09-09/
+/content/reviews/automation.json
+/scripts/_tmp-assemble.mjs

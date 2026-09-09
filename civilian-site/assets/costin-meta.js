@@ -85,7 +85,5 @@
     if (event.target.closest('a[href^="tel:"],a[href^="sms:"]')) window.costinMeta.track('Contact');
   });
   // Civilian forms already use the experience layer. Only configured military forms use this listener.
-  document.addEventListener('costin:lead-success', event => {
-    if (config.acceptedLeadForms?.includes(event.detail?.form_id)) window.costinMeta.track('Lead');
-  });
+  // Accepted lead events are emitted once by costin-conversions.js.
 })();

@@ -2,6 +2,7 @@
 // No form values, personal data, referrer strings, query strings or monetary estimates.
 import { existsSync } from "node:fs";
 import { SITES } from "./blog-lib.mjs";
+import {withReceiptConversions} from './inquiry-browser-lib.mjs';
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 export function journeyFor(spec, site) {
@@ -78,7 +79,7 @@ export function articleRuntime(config) {
     if (!a) return;
     emit("blog_next_step", { step_type: a.getAttribute("data-blog-next") });
   });
-  doc.addEventListener("costin:lead-success", () => emit("blog_inquiry_success", { method: "accepted_form" }, true));
+  doc.addEventListener("costin:lead-success", event => { if (window.costinConversions?.isVerifiedEvent(event)) emit("blog_inquiry_success", { method: "accepted_form" }, true); });
   const share = panel.querySelector("[data-blog-share]"), copy = panel.querySelector("[data-blog-copy]"), status = panel.querySelector("[data-blog-share-status]");
   if (share && typeof nav.share === "function") {
     share.hidden = false;
@@ -122,5 +123,5 @@ export function wireJourney(html, spec, site) {
   const stylePattern = /<style\b[^>]*id="article-journey-style"[^>]*>[\s\S]*?<\/style>/;
   const runtimePattern = /<script\b[^>]*id="costin-article-runtime"[^>]*>[\s\S]*?<\/script>/;
   html = stylePattern.test(html) ? html.replace(stylePattern, () => style) : html.replace("</head>", style + "</head>");
-  return runtimePattern.test(html) ? html.replace(runtimePattern, () => runtime) : html.replace("</body>", runtime + "\n</body>");
+  return withReceiptConversions(runtimePattern.test(html) ? html.replace(runtimePattern, () => runtime) : html.replace("</body>", runtime + "\n</body>"));
 }

@@ -3,7 +3,7 @@
 //
 // Layout: journey-based, 4 columns, balanced via subheads.
 //   1. Bases               (7, no subheads)
-//   2. Where to Live       (16, split FL064 / FL023)
+//   2. Where to Live       (16, split FL064 / FL056)
 //   3. Money & Financing   (11, VA Loans / Budget & BAH / Tax & Benefits)
 //   4. Planning & Compare  (20, PCS / Buyer Profiles / Compare / On vs Off / Ref)
 //
@@ -37,7 +37,7 @@ const COMMUNITIES_FL064 = [
   ["Bellview/Myrtle Grove",           "/communities/bellview-myrtle-grove"],
   ["Navy Point/Warrington",           "/communities/navy-point-warrington"],
 ];
-const COMMUNITIES_FL023 = [
+const COMMUNITIES_FL056 = [
   ["Niceville/Valparaiso/Bluewater Bay", "/communities/niceville"],
   ["Fort Walton Beach/Shalimar",         "/communities/fort-walton-beach"],
   ["Destin",                             "/communities/destin"],
@@ -112,8 +112,8 @@ ${items(BASES)}
 <div class="related">
 ${sub("Pensacola Area (FL064)")}
 ${items(COMMUNITIES_FL064)}
-${sub("Fort Walton Beach Area (FL023)")}
-${items(COMMUNITIES_FL023)}
+${sub("Fort Walton Beach Area (FL056)")}
+${items(COMMUNITIES_FL056)}
 </div>
 </div>
 <div class="explore-col">

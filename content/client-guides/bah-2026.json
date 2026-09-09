@@ -1,0 +1,347 @@
+{
+  "year": 2026,
+  "retrieved": "2026-09-06",
+  "source": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+  "sourceSha256": "5446fed831e125c23cc6a407dcde4cae541f108e90ac852aaadeec0aa11e515f",
+  "areas": {
+    "FL056": {
+      "name": "EGLIN AFB, FL",
+      "rates": {
+        "E-1": {
+          "withDependents": 2340.0,
+          "withoutDependents": 2007.0
+        },
+        "E-2": {
+          "withDependents": 2340.0,
+          "withoutDependents": 2007.0
+        },
+        "E-3": {
+          "withDependents": 2340.0,
+          "withoutDependents": 2007.0
+        },
+        "E-4": {
+          "withDependents": 2340.0,
+          "withoutDependents": 2007.0
+        },
+        "E-5": {
+          "withDependents": 2433.0,
+          "withoutDependents": 2157.0
+        },
+        "E-6": {
+          "withDependents": 2526.0,
+          "withoutDependents": 2250.0
+        },
+        "E-7": {
+          "withDependents": 2841.0,
+          "withoutDependents": 2340.0
+        },
+        "E-8": {
+          "withDependents": 3189.0,
+          "withoutDependents": 2457.0
+        },
+        "E-9": {
+          "withDependents": 3447.0,
+          "withoutDependents": 2586.0
+        },
+        "W-1": {
+          "withDependents": 2544.0,
+          "withoutDependents": 2322.0
+        },
+        "W-2": {
+          "withDependents": 2985.0,
+          "withoutDependents": 2454.0
+        },
+        "W-3": {
+          "withDependents": 3414.0,
+          "withoutDependents": 2589.0
+        },
+        "W-4": {
+          "withDependents": 3456.0,
+          "withoutDependents": 2604.0
+        },
+        "W-5": {
+          "withDependents": 3516.0,
+          "withoutDependents": 2922.0
+        },
+        "O-1E": {
+          "withDependents": 2910.0,
+          "withoutDependents": 2430.0
+        },
+        "O-2E": {
+          "withDependents": 3351.0,
+          "withoutDependents": 2514.0
+        },
+        "O-3E": {
+          "withDependents": 3468.0,
+          "withoutDependents": 2601.0
+        },
+        "O-1": {
+          "withDependents": 2451.0,
+          "withoutDependents": 2244.0
+        },
+        "O-2": {
+          "withDependents": 2523.0,
+          "withoutDependents": 2406.0
+        },
+        "O-3": {
+          "withDependents": 3399.0,
+          "withoutDependents": 2592.0
+        },
+        "O-4": {
+          "withDependents": 3528.0,
+          "withoutDependents": 2865.0
+        },
+        "O-5": {
+          "withDependents": 3612.0,
+          "withoutDependents": 3066.0
+        },
+        "O-6": {
+          "withDependents": 3642.0,
+          "withoutDependents": 3393.0
+        },
+        "O-7": {
+          "withDependents": 3669.0,
+          "withoutDependents": 3453.0
+        },
+        "O-8": {
+          "withDependents": 3669.0,
+          "withoutDependents": 3453.0
+        },
+        "O-9": {
+          "withDependents": 3669.0,
+          "withoutDependents": 3453.0
+        },
+        "O-10": {
+          "withDependents": 3669.0,
+          "withoutDependents": 3453.0
+        }
+      }
+    },
+    "FL063": {
+      "name": "PANAMA CITY, FL",
+      "rates": {
+        "E-1": {
+          "withDependents": 2058.0,
+          "withoutDependents": 1713.0
+        },
+        "E-2": {
+          "withDependents": 2058.0,
+          "withoutDependents": 1713.0
+        },
+        "E-3": {
+          "withDependents": 2058.0,
+          "withoutDependents": 1713.0
+        },
+        "E-4": {
+          "withDependents": 2058.0,
+          "withoutDependents": 1713.0
+        },
+        "E-5": {
+          "withDependents": 2163.0,
+          "withoutDependents": 1863.0
+        },
+        "E-6": {
+          "withDependents": 2442.0,
+          "withoutDependents": 1959.0
+        },
+        "E-7": {
+          "withDependents": 2538.0,
+          "withoutDependents": 2058.0
+        },
+        "E-8": {
+          "withDependents": 2643.0,
+          "withoutDependents": 2223.0
+        },
+        "E-9": {
+          "withDependents": 2766.0,
+          "withoutDependents": 2298.0
+        },
+        "W-1": {
+          "withDependents": 2460.0,
+          "withoutDependents": 2037.0
+        },
+        "W-2": {
+          "withDependents": 2580.0,
+          "withoutDependents": 2220.0
+        },
+        "W-3": {
+          "withDependents": 2712.0,
+          "withoutDependents": 2310.0
+        },
+        "W-4": {
+          "withDependents": 2787.0,
+          "withoutDependents": 2460.0
+        },
+        "W-5": {
+          "withDependents": 2886.0,
+          "withoutDependents": 2562.0
+        },
+        "O-1E": {
+          "withDependents": 2556.0,
+          "withoutDependents": 2160.0
+        },
+        "O-2E": {
+          "withDependents": 2691.0,
+          "withoutDependents": 2280.0
+        },
+        "O-3E": {
+          "withDependents": 2802.0,
+          "withoutDependents": 2433.0
+        },
+        "O-1": {
+          "withDependents": 2202.0,
+          "withoutDependents": 1953.0
+        },
+        "O-2": {
+          "withDependents": 2439.0,
+          "withoutDependents": 2133.0
+        },
+        "O-3": {
+          "withDependents": 2709.0,
+          "withoutDependents": 2337.0
+        },
+        "O-4": {
+          "withDependents": 2913.0,
+          "withoutDependents": 2538.0
+        },
+        "O-5": {
+          "withDependents": 3060.0,
+          "withoutDependents": 2595.0
+        },
+        "O-6": {
+          "withDependents": 3084.0,
+          "withoutDependents": 2691.0
+        },
+        "O-7": {
+          "withDependents": 3105.0,
+          "withoutDependents": 2736.0
+        },
+        "O-8": {
+          "withDependents": 3105.0,
+          "withoutDependents": 2736.0
+        },
+        "O-9": {
+          "withDependents": 3105.0,
+          "withoutDependents": 2736.0
+        },
+        "O-10": {
+          "withDependents": 3105.0,
+          "withoutDependents": 2736.0
+        }
+      }
+    },
+    "FL064": {
+      "name": "PENSACOLA, FL",
+      "rates": {
+        "E-1": {
+          "withDependents": 1794.0,
+          "withoutDependents": 1521.0
+        },
+        "E-2": {
+          "withDependents": 1794.0,
+          "withoutDependents": 1521.0
+        },
+        "E-3": {
+          "withDependents": 1794.0,
+          "withoutDependents": 1521.0
+        },
+        "E-4": {
+          "withDependents": 1794.0,
+          "withoutDependents": 1521.0
+        },
+        "E-5": {
+          "withDependents": 1863.0,
+          "withoutDependents": 1644.0
+        },
+        "E-6": {
+          "withDependents": 2235.0,
+          "withoutDependents": 1722.0
+        },
+        "E-7": {
+          "withDependents": 2256.0,
+          "withoutDependents": 1791.0
+        },
+        "E-8": {
+          "withDependents": 2265.0,
+          "withoutDependents": 1941.0
+        },
+        "E-9": {
+          "withDependents": 2304.0,
+          "withoutDependents": 2046.0
+        },
+        "W-1": {
+          "withDependents": 2253.0,
+          "withoutDependents": 1782.0
+        },
+        "W-2": {
+          "withDependents": 2262.0,
+          "withoutDependents": 1938.0
+        },
+        "W-3": {
+          "withDependents": 2274.0,
+          "withoutDependents": 2061.0
+        },
+        "W-4": {
+          "withDependents": 2325.0,
+          "withoutDependents": 2229.0
+        },
+        "W-5": {
+          "withDependents": 2427.0,
+          "withoutDependents": 2241.0
+        },
+        "O-1E": {
+          "withDependents": 2259.0,
+          "withoutDependents": 1860.0
+        },
+        "O-2E": {
+          "withDependents": 2268.0,
+          "withoutDependents": 2022.0
+        },
+        "O-3E": {
+          "withDependents": 2340.0,
+          "withoutDependents": 2226.0
+        },
+        "O-1": {
+          "withDependents": 1914.0,
+          "withoutDependents": 1719.0
+        },
+        "O-2": {
+          "withDependents": 2232.0,
+          "withoutDependents": 1842.0
+        },
+        "O-3": {
+          "withDependents": 2271.0,
+          "withoutDependents": 2097.0
+        },
+        "O-4": {
+          "withDependents": 2457.0,
+          "withoutDependents": 2232.0
+        },
+        "O-5": {
+          "withDependents": 2610.0,
+          "withoutDependents": 2244.0
+        },
+        "O-6": {
+          "withDependents": 2631.0,
+          "withoutDependents": 2247.0
+        },
+        "O-7": {
+          "withDependents": 2646.0,
+          "withoutDependents": 2259.0
+        },
+        "O-8": {
+          "withDependents": 2646.0,
+          "withoutDependents": 2259.0
+        },
+        "O-9": {
+          "withDependents": 2646.0,
+          "withoutDependents": 2259.0
+        },
+        "O-10": {
+          "withDependents": 2646.0,
+          "withoutDependents": 2259.0
+        }
+      }
+    }
+  }
+}

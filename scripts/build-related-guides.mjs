@@ -48,6 +48,7 @@ const BASE_MAP = {
   "whiting-field": {
     name: "NAS Whiting Field",
     onOff: "/on-base-vs-off-base-nas-whiting-field",
+    offBase: { href: "/nas-whiting-field-off-base-housing", label: "Whiting Field Off-Base Housing: Costs and PCS Planning" },
     comparison: null,
     communities: [
       { href: "/communities/milton", label: "Milton, FL (10 minutes to the field)" },
@@ -196,7 +197,7 @@ const COMMUNITY_MAP = {
 };
 
 // ─── Pillar links used everywhere ───────────────────────────────────────────
-const PILLAR_BAH = { href: "/bah-rates", label: "2026 BAH Rates (FL064 + FL023)" };
+const PILLAR_BAH = { href: "/bah-rates", label: "2026 BAH Rates (FL064 + FL056)" };
 const PILLAR_VA = { href: "/va-loan-guide", label: "VA Loan Guide — Field Manual" };
 const PILLAR_PCS = { href: "/pcs-checklist", label: "PCS Checklist — 60 / 30 / 7-Day Timeline" };
 const PILLAR_FIRST = { href: "/first-time-military-homebuyer", label: "First-Time Military Homebuyer Playbook" };
@@ -219,6 +220,7 @@ function blockForBase(slug) {
   if (!b) return null;
   const links = [
     { href: b.onOff, label: `Should You Live On-Base or Off-Base at ${b.name}?` },
+    ...(b.offBase ? [b.offBase] : []),
     ...(b.comparison ? [b.comparison] : []),
     ...b.communities,
     PILLAR_BAH,
@@ -342,9 +344,9 @@ const PILLAR_MAP = {
     { href: "/bases/nas-pensacola", label: "FL064: NAS Pensacola Housing Guide" },
     { href: "/bases/corry-station", label: "FL064: Corry Station Housing Guide" },
     { href: "/bases/whiting-field", label: "FL064: NAS Whiting Field Housing Guide" },
-    { href: "/bases/eglin-afb", label: "FL023: Eglin AFB Housing Guide" },
-    { href: "/bases/hurlburt-field", label: "FL023: Hurlburt Field Housing Guide" },
-    { href: "/bases/duke-field", label: "FL023: Duke Field Housing Guide" },
+    { href: "/bases/eglin-afb", label: "FL056: Eglin AFB Housing Guide" },
+    { href: "/bases/hurlburt-field", label: "FL056: Hurlburt Field Housing Guide" },
+    { href: "/bases/duke-field", label: "FL056: Duke Field Housing Guide" },
     PILLAR_VA,
   ],
   "pcs-checklist": [

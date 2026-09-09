@@ -1,0 +1,16 @@
+import {readFileSync,existsSync} from 'node:fs';
+import {join,resolve} from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {json,save} from './isolated-release-lib.mjs';
+const at=process.argv.indexOf('--directory');if(at<0)throw Error('Provide --directory');const dir=process.argv[at+1];
+const c=json(join(dir,'candidate.json')),r=json(join(dir,'deployment.json')),live=json(join(dir,'live/production-baseline.json'));
+if(r.status!=='provider-success'||!live.ok||live.sites.some(s=>resolve(s.localBaseline)!==resolve(c.candidate,s.site)))throw Error('Both production inventories must match the candidate');
+for(const s of r.sites)if(live.sites.find(x=>x.site===s.site)?.deploymentId!==s.after)throw Error('Readback does not match deployment receipt');
+if(!existsSync(join(dir,'public-readback.json'))||!json(join(dir,'public-readback.json')).ok)throw Error('Public count readback required');
+const result=spawnSync(process.execPath,['scripts/review-counts.mjs','--set-google',String(c.counts.google),'--set-zillow',String(c.counts.zillow),'--force'],{encoding:'utf8',maxBuffer:8*1024*1024});if(result.status)throw Error(result.stderr||result.stdout);
+const snapshot=json('content/reviews/ratings.json');
+for(const p of ['google','zillow'])Object.assign(snapshot[p],{count:c.counts[p],rating:c.observation[p].rating,fiveStarCount:c.observation[p].fiveStarCount,countStatus:'verified-public-browser',checkedAt:c.observation[p].checkedAt,ratingCheckedAt:c.observation[p].checkedAt,evidence:c.observation[p].evidence});
+save('content/reviews/ratings.json',snapshot);
+const config=json('content/reviews/automation.json');Object.assign(config,{lastVerifiedAt:live.checkedAt,lastRunDirectory:dir,baselineRoot:c.candidate,lastCounts:c.counts});save('content/reviews/automation.json',config);
+save(join(dir,'result.json'),{completedAt:new Date().toISOString(),status:'published-and-verified',counts:c.counts,combined:c.counts.google+c.counts.zillow,sites:live.sites.map(s=>({site:s.site,deploymentId:s.deploymentId})),sourceSync:JSON.parse(result.stdout)});
+console.log(JSON.stringify({status:'published-and-verified',counts:c.counts,combined:c.counts.google+c.counts.zillow},null,2));

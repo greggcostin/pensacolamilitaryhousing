@@ -1,0 +1,58 @@
+{
+  "reviewed": "2026-09-08",
+  "geography": "Navarre Beach utility service and leasehold documents; do not apply these rates to all mainland Navarre addresses",
+  "evidenceType": "Published official schedule and document requirements, not observed household bills or property-specific quotes",
+  "water": {
+    "effective": "2026-07",
+    "class": "Class I: single family or individually metered multifamily, per unit each month",
+    "first3000GallonsMinimum": 41.09,
+    "next3000Per1000": 6.7,
+    "over6000Per1000": 7.25,
+    "source": "https://www.santarosa.fl.gov/documentcenter/view/484"
+  },
+  "sewer": {
+    "effective": "2026-07",
+    "class": "Class I",
+    "first3000GallonsMinimum": 47.95,
+    "over3000Per1000": 6.38,
+    "source": "https://www.santarosa.fl.gov/documentcenter/view/484"
+  },
+  "illustrations": [
+    {
+      "usageGallons": 3000,
+      "water": 41.09,
+      "sewer": 47.95,
+      "combined": 89.04
+    },
+    {
+      "usageGallons": 5000,
+      "water": 54.49,
+      "sewer": 60.71,
+      "combined": 115.2
+    }
+  ],
+  "illustrationLimits": "Calculated from the Class I schedule only. Not a customer's bill. Excludes other services, fees, taxes, deposits and connection charges. Confirm class, service and actual account billing with the utility. Shared-meter condominium treatment can differ.",
+  "lease": {
+    "authorizationDate": "2016-08",
+    "fixedLeaseAnnualAmount": 250,
+    "variableLeaseAnnualCap": 250,
+    "status": "County amendment process, not proof that every parcel has an executed amendment",
+    "source": "https://www.santarosa.fl.gov/FormCenter/BOCCAdmin-21/Navarre-Beach-Lease-Amendment-Request-131"
+  },
+  "tax": {
+    "source": "https://srcpa.gov/millage-rates",
+    "status": "The appraiser page says 2026 final millage is unavailable until October 2026; estimates based on 2025 rates remain estimates. Non-ad-valorem amounts vary by parcel."
+  },
+  "propertySpecificEvidence": {
+    "insuranceQuote": null,
+    "executedLeaseAmendment": null,
+    "associationBudget": null,
+    "observedUtilityBill": null,
+    "buyerTaxEstimate": null
+  },
+  "routeEvidence": {
+    "method": "Record exact origin, authorized entrance and work destination, provider, date, departure period, direction, distance, estimate, toll treatment and gate-processing exclusions. Keep driven observations separate.",
+    "observations": [],
+    "status": "Method documented; no timed drive or address-specific travel-time observation claimed"
+  }
+}

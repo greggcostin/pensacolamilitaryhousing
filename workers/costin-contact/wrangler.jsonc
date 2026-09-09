@@ -6,5 +6,10 @@
   "main": "worker.js",
   "compatibility_date": "2026-04-16",
   "keep_vars": true,
-  "workers_dev": true
+  "workers_dev": true,
+  "durable_objects": {
+    "bindings": [{ "name": "INQUIRY_RECEIPTS", "class_name": "InquiryReceipt" }]
+  },
+  "migrations": [{ "tag": "inquiry-receipts-v1", "new_sqlite_classes": ["InquiryReceipt"] }],
+  "observability": { "enabled": true }
 }

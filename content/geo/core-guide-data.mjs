@@ -1,0 +1,35 @@
+export const REVIEWED = '2026-09-08';
+export const GUIDES = {
+  'va-loan-guide': {
+    title:'VA Loan Guide: Pensacola to Destin & Gulf Shores | Gregg Costin',
+    h1:'VA home buying from Gulf Shores to Pensacola and Destin',
+    lead:'A practical VA purchase guide for military members, veterans and eligible surviving spouses. Connect the financing, property and PCS decisions before you make an offer.',
+    description:'Plan a VA home purchase from Gulf Shores to Pensacola and Destin: eligibility, entitlement, funding fees, condos, inspections and PCS timing with Gregg Costin.',
+    quickAnswer:'An eligible VA buyer may purchase a primary home with no down payment when entitlement, lender approval and the appraisal support the transaction. VA purchase loans do not require monthly mortgage insurance, but closing costs and a funding fee may apply. Gregg Costin helps buyers connect those financing checks with property and PCS decisions from Gulf Shores through Pensacola to Destin.',
+    faq:[
+      {q:'Can I use a VA loan to buy in Gulf Shores, Pensacola or Destin?',a:'Yes, a qualifying VA-backed purchase can be used in Alabama or Florida. Your eligibility, lender approval, intended occupancy and the specific property determine whether the transaction qualifies. Gregg Costin is licensed in both states and works with the lender and closing team on the local property steps.'},
+      {q:'Does full VA entitlement mean my loan is automatically approved?',a:'No. Full entitlement removes the VA county loan limit for an eligible borrower, but the lender still reviews income, debts, credit and assets, and the property appraisal must support the transaction. The Certificate of Eligibility is evidence of the benefit, not a mortgage approval.'},
+      {q:'Can I use my VA benefit again while keeping my current home?',a:'Possibly. A lender must review the entitlement charged to your existing loan and the entitlement remaining for the next purchase. One-time restoration while keeping the old property requires the prior VA loan to be paid in full. Keeping an active VA loan is a remaining-entitlement question.'},
+      {q:'Can a VA buyer finance a Destin or Gulf Shores vacation rental?',a:'A VA purchase loan requires qualifying personal occupancy. A property being purchased only as a vacation rental does not satisfy that requirement. For a condo, the lender must also confirm that the project is VA approved and that the transaction meets its requirements.'},
+      {q:'Who is exempt from paying the VA funding fee?',a:'VA lists several exemption categories, including receiving qualifying service-connected disability compensation, certain compensation eligibility situations, qualifying surviving spouses and active-duty Purple Heart recipients. Ask the lender to verify the exemption shown by your VA documentation before closing.'},
+      {q:'Can a seller pay more than 4% toward a VA buyer transaction?',a:'VA distinguishes normal buyer closing costs from seller concessions. Its 4% limit applies to seller concessions based on the property reasonable value; ordinary closing-cost credits are treated separately. Have the lender classify the proposed credits and confirm the final structure before signing.'},
+      {q:'Is a VA appraisal the same as a home inspection?',a:'No. The VA appraisal addresses value and minimum property requirements. An independent home inspection investigates condition for the buyer. VA recommends an inspection, and the contract should address the appraisal and any inspection contingencies you need.'},
+      {q:'How can I buy remotely before a PCS to the Emerald Coast?',a:'Start with your report date, actual duty location and lender review. Gregg can coordinate property video tours and local inspection access; you still need to review the reports, insurance, association documents and contract deadlines. Confirm the lender and closing agent can support your signing arrangements before relying on a remote closing.'}
+    ]
+  },
+  'bah-to-mortgage-guide': {
+    title:'BAH to Mortgage: Pensacola & Eglin Budget Guide | Gregg Costin',
+    h1:'Turn your BAH and income into a home-buying plan',
+    lead:'Compare your income, household scenario and BAH budget for Pensacola, Eglin, Hurlburt and Whiting Field. Use your actual pay and debts, then have your lender review the file.',
+    description:'Compare BAH, your actual income and housing costs for Pensacola FL064 and Eglin FL056. Plan a VA purchase with a clear budget and lender-review checklist.',
+    quickAnswer:'BAH is one part of a military household budget; it is not a home-price limit or a loan approval. Start with verified income and debts, compare a second-income scenario, then check how much of the full monthly housing cost fits inside BAH. The 2026 E-5 rate with dependents is $1,863 for Pensacola FL064 and $2,433 for Eglin FL056.',
+    faq:[
+      {q:'How much house can I buy with my BAH in Pensacola or Eglin?',a:'There is no reliable home-price answer from BAH alone. A lender reviews your actual income, debts, credit, entitlement and property costs. First estimate the monthly housing payment your income can support, compare it with your personal budget, and then use a property-specific rate, tax and insurance quote to translate payment into price.'},
+      {q:'Which BAH area applies to Eglin and Hurlburt Field?',a:'The official 2026 Eglin AFB housing area is FL056. Pensacola is FL064. Use the permanent duty station ZIP, pay grade and dependency status in the DoD lookup, then confirm your personal entitlement and any rate protection with finance.'},
+      {q:'Does a 41% debt-to-income calculation mean I am approved for a VA loan?',a:'No. A debt-to-income calculation is only a planning input. The lender also evaluates residual income, credit, income stability, assets, entitlement and the property. The illustration on this page uses an editable 41% assumption; it does not perform underwriting or promise approval.'},
+      {q:'Do both spouses get with-dependent BAH in a dual-military household?',a:'DoD says that when two BAH-eligible service members are married with children, one receives the with-dependent rate and the other receives the without-dependent rate. Do not double the with-dependent amount for the same dependents. Use both members actual LES amounts and confirm unusual situations with finance.'},
+      {q:'What costs should I compare with my BAH?',a:'Compare principal, interest, property taxes, homeowners insurance, separate flood coverage where applicable and association dues. Also plan for utilities, maintenance, deductibles and closing cash. An example using Escambia taxes or an inland insurance allowance is not an estimate for every home from Gulf Shores to Destin.'},
+      {q:'Can I shop above my BAH amount?',a:'A lender may approve a payment above BAH when the full file supports it. The amount above BAH then needs to fit your household cash flow alongside other expenses and reserves. Compare a possible PCS, income change and sale or rental plan before choosing your own spending limit.'}
+    ]
+  }
+};

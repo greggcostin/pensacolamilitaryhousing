@@ -22,10 +22,16 @@ const LOGOS = { "logo-lrr.png": { w: 834, h: 472 }, "logo-08-sm.png": { w: 480, 
 
 // sizes presets keyed by the rendering context (the nearest class on the picture's ancestors)
 const SIZES = {
+  "cg-hero-media": "(max-width: 680px) calc(100vw - 68px), (max-width: 1240px) 43vw, 535px",
+  "gc-interior-hero-media": "(max-width: 640px) calc(100vw - 44px), (max-width: 1100px) 42vw, 510px",
   "gc-support-person": "52px",
+  "gc-story-portrait": "(max-width: 640px) 260px, 230px",
+  "gc-blog-card-media": "(max-width: 640px) calc(100vw - 44px), (max-width: 1100px) 46vw, 370px",
+  "gc-blog-card-media-featured": "(max-width: 640px) calc(100vw - 44px), (max-width: 1100px) calc(100vw - 56px), 740px",
   "gc-hero-image": "100vw",
+  "gc-resource-image": "100vw",
   "gc-hero-portrait": "(max-width: 360px) 173px, (max-width: 640px) 203px, (max-width: 1100px) 34vw, 390px",
-  "gc-region-card": "(max-width: 640px) 45vw, (max-width: 1100px) 46vw, 520px",
+  "gc-region-card": "(max-width: 640px) calc(100vw - 44px), (max-width: 1100px) 46vw, 520px",
   "gc-person-image": "(max-width: 640px) 88vw, 480px",
   avatar: "60px",
   "hero-portrait": "(max-width: 640px) 90vw, 380px",
@@ -40,7 +46,12 @@ function contextFor(html, idx, site, src) {
   if (src.endsWith("gregg-portrait.jpg")) return "avatar";
   const before = html.slice(Math.max(0, idx - 600), idx);
   const classes = [...before.matchAll(/class="([^"]+)"/g)].map((m) => m[1]).reverse().join(" ");
-  for (const k of ["gc-support-person", "gc-hero-portrait", "gc-hero-image", "gc-region-card", "gc-person-image", "hero-portrait", "nb-photo", "cc-photo", "hero-band"]) if (classes.split(/\s+/).includes(k)) return k;
+  if (classes.split(/\s+/).includes('cg-hero-media')) return 'cg-hero-media';
+  if (classes.split(/\s+/).includes('gc-blog-card-media')) {
+    const priorCards=[...html.slice(0,idx).matchAll(/<a\b[^>]*class="blog-card"[^>]*>/g)].length;
+    return priorCards===1 ? 'gc-blog-card-media-featured' : 'gc-blog-card-media';
+  }
+  for (const k of ["gc-blog-card-media", "gc-support-person", "gc-story-portrait", "gc-interior-hero-media", "gc-hero-portrait", "gc-hero-image", "gc-resource-image", "gc-region-card", "gc-person-image", "hero-portrait", "nb-photo", "cc-photo", "hero-band"]) if (classes.split(/\s+/).includes(k)) return k;
   if (/\bfigure-band\b/.test(classes)) return site === "gc" ? "figure-band-gc" : "figure-band-pmh";
   return "default";
 }
@@ -74,7 +85,7 @@ function buildImg(a, src, m, ctx, srcsetJpg) {
     const style = (a.style || '').replace(/(?:^|;)\s*--image-aspect\s*:[^;]*/g,'').replace(/^;|;$/g,'');
     a.style = (style ? style + ';' : '') + `--image-aspect:${m.width}/${m.height}`;
   }
-  const keep = ["alt", "loading", "fetchpriority", "class", "style", "id", "title", "data-credit"];
+  const keep = ["alt", "role", "aria-hidden", "loading", "fetchpriority", "class", "style", "id", "title", "data-credit"];
   const parts = [`src="${src}"`];
   if (srcsetJpg.length) parts.push(`srcset="${srcsetJpg.join(", ")}"`, `sizes="${SIZES[ctx]}"`);
   parts.push(`width="${isAvatar ? 60 : m.width}"`, `height="${isAvatar ? 60 : m.height}"`);
@@ -83,7 +94,7 @@ function buildImg(a, src, m, ctx, srcsetJpg) {
   return `<img ${parts.join(" ")}>`;
 }
 
-const files = ONLY ? [ONLY] : CIVILIAN ? walkHtml("civilian-site") : SCHOOLS ? ["civilian-site/schools.html", ...walkHtml("civilian-site/schools")] : ["index.html", ...walkHtml("public"), ...walkHtml("civilian-site")];
+const files = ONLY ? [ONLY] : CIVILIAN ? walkHtml("civilian-site").filter(f=>f!=="civilian-site/index.html") : SCHOOLS ? ["civilian-site/schools.html", ...walkHtml("civilian-site/schools")] : ["index.html", ...walkHtml("public"), ...walkHtml("civilian-site")];
 let pages = 0, pictures = 0, bare = 0, logos = 0, missing = new Set();
 for (const f of files) {
   const site = CIVILIAN || f.startsWith("civilian-site") ? "gc" : "pmh";

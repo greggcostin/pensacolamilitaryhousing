@@ -103,13 +103,9 @@ ${tail}`);
   // spec.outDir lets a factory write a preview build somewhere other than the live site tree
   const outDir = spec.outDir || SITE_DIR;
   if (spec.outDir) mkdirSync(`${outDir}/${spec.file}`.replace(/\/[^/]+$/, ""), { recursive: true });
-  // The school release upgrades this collection only. Other factories retain
-  // their current presentation and the production analytics guard below.
-  if (spec.path === '/schools' || spec.path.startsWith('/schools/')) {
-    html = withInteriorDesign(html, spec.path);
-    html = withSchoolFinder(html, spec.path);
-    html = withSchoolGuide(html, spec.path);
-  }
+  html = withInteriorDesign(html, spec.path);
+  html = withSchoolFinder(html, spec.path);
+  html = withSchoolGuide(html, spec.path);
   writeFileSync(`${outDir}/${spec.file}`, guardAnalytics(html));
   return guardAnalytics(html);
 }

@@ -1,133 +1,64 @@
-// Review-count sync tool. The site's Google/Zillow review counts are static
-// text; nothing updates them automatically. This script is the deterministic
-// half of the weekly "review-count-sync" scheduled task: the agent reads the
-// LIVE counts from Google Maps and the Zillow profile (via the browser —
-// both platforms bot-wall curl), then calls this to apply them everywhere.
-//
-// Usage:
-//   node scripts/review-counts.mjs --current
-//     -> prints {"google":42,"zillow":20} parsed from public/reviews.html
-//   node scripts/review-counts.mjs --set-google 43 --set-zillow 21
-//     -> rewrites every count reference repo-wide, prints a change report
-//   Add --force to allow DECREASING a count (normally refused: a drop means
-//   a review was removed and Gregg should confirm before the site changes).
-//
-// Exit codes: 0 ok/no-op, 1 bad usage, 2 decrease refused, 3 parse failure.
-
-import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
-
-const REVIEWS = "public/reviews.html";
-
+// Static review-count sync for both websites and their source fragments.
+// This does not fetch reviews, change ratings, publish sites, or schedule a task.
+// --current: print snapshot; --check: detect drift; --sync: repair from snapshot.
+// --set-google N --set-zillow N: apply source-verified counts, then repair references.
+// --force allows a decrease after a second public read confirms the lower count.
+// The count alone does not establish why it changed.
+import { readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { syncReviewText, validateCount } from './review-counts-lib.mjs';
+const snapshotFile = 'content/reviews/ratings.json';
+const snapshot = existsSync(snapshotFile) ? JSON.parse(readFileSync(snapshotFile,'utf8')) : null;
 function currentCounts() {
-  const h = readFileSync(REVIEWS, "utf8");
-  // Google/Zillow counts are read from the VISIBLE page text. The self-serving
-  // "reviewCount"/aggregateRating JSON-LD was removed 2026-07 (ineligible for
-  // review rich results + manual-action-adjacent), so counts now live only in
-  // visible copy — do not reintroduce review structured data on our own entity.
-  const g = h.match(/(\d+) Google Reviews/i);
-  const z = h.match(/(\d+) Zillow Reviews/i);
-  if (!g || !z) { console.error("PARSE FAILURE: count patterns not found in " + REVIEWS); process.exit(3); }
-  return { google: Number(g[1]), zillow: Number(z[1]) };
+  if (snapshot) return {google:validateCount(snapshot.google.count), zillow:validateCount(snapshot.zillow.count)};
+  const html = readFileSync('public/reviews.html','utf8');
+  const google = html.match(/(\d+) Google Reviews/i), zillow = html.match(/(\d+) Zillow Reviews/i);
+  if (!google || !zillow) throw new Error('Cannot read existing Google and Zillow counts.');
+  return {google:Number(google[1]), zillow:Number(zillow[1])};
 }
-
-function walk(dir, out = []) {
-  for (const f of readdirSync(dir, { withFileTypes: true })) {
-    if (f.name === "node_modules" || f.name === ".git" || f.name === "dist") continue;
-    const p = `${dir}/${f.name}`;
-    if (f.isDirectory()) walk(p, out);
-    else if (/\.(html|txt|md|jsx)$/.test(f.name)) out.push(p);
-  }
-  return out;
+function walk(dir) {
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir,{withFileTypes:true}).flatMap(entry => {
+    const path = dir + '/' + entry.name;
+    if (['node_modules','.git','dist'].includes(entry.name)) return [];
+    return entry.isDirectory() ? walk(path) : /\.(html|txt|md|jsx)$/.test(entry.name) ? [path] : [];
+  });
 }
-
 const args = process.argv.slice(2);
-const flag = (n) => { const i = args.indexOf(n); return i > -1 ? args[i + 1] : null; };
-
-if (args.includes("--current")) {
-  console.log(JSON.stringify(currentCounts()));
-  process.exit(0);
-}
-
-const newG = flag("--set-google") ? Number(flag("--set-google")) : null;
-const newZ = flag("--set-zillow") ? Number(flag("--set-zillow")) : null;
-if (newG === null && newZ === null) {
-  console.error("usage: --current | --set-google N --set-zillow N [--force]");
-  process.exit(1);
-}
-
-const cur = currentCounts();
-const jobs = [];
-if (newG !== null && newG !== cur.google) jobs.push({ platform: "Google", from: cur.google, to: newG });
-if (newZ !== null && newZ !== cur.zillow) jobs.push({ platform: "Zillow", from: cur.zillow, to: newZ });
-
-// Both sites also quote a COMBINED total ("80 five-star reviews across Google
-// and Zillow"). It is derived, so it drifts silently whenever either count
-// moves. Derive it here rather than leaving it to a later hand-edit.
-const curTotal = cur.google + cur.zillow;
-const newTotal = (newG ?? cur.google) + (newZ ?? cur.zillow);
-if (newTotal !== curTotal) jobs.push({ platform: "Combined", from: curTotal, to: newTotal });
-
-if (!jobs.length) { console.log("IN SYNC — no changes needed", JSON.stringify(cur)); process.exit(0); }
-
-for (const j of jobs) {
-  if (j.to < j.from && !args.includes("--force")) {
-    console.error(`REFUSED: ${j.platform} would DECREASE ${j.from} -> ${j.to}. A drop usually means a review was removed — confirm with Gregg, then re-run with --force.`);
-    process.exit(2);
+try {
+  const current = currentCounts();
+  if (args.includes('--current')) { console.log(JSON.stringify({...current,combined:current.google+current.zillow})); process.exit(0); }
+  const counts = {...current}, supplied = [];
+  for (const platform of ['google','zillow']) {
+    const at = args.indexOf('--set-' + platform);
+    if (at < 0) continue;
+    if (!/^\d+$/.test(args[at+1] || '')) throw new Error('--set-' + platform + ' requires a nonnegative whole number.');
+    counts[platform] = validateCount(Number(args[at+1]));
+    supplied.push(platform);
+    if (counts[platform] < current[platform] && !args.includes('--force')) throw new Error(platform + ' count decreased. Verify the source, then use --force if the decrease is correct.');
   }
-}
-
-// Count phrases as they appear across the repo. {n} is the current number.
-const PATTERNS = {
-  Google: [
-    "{n} five-star Google reviews",
-    "{n} Google reviews",
-    "{n} Google Reviews",
-    "Read All {n} Reviews on Google",
-    "Google Business Profile 5.0 stars from {n} reviews",
-    "5.0 stars across {n} Google and",
-    "5.0-star Google rating from {n} verified reviews",
-    "{n} verified Google reviews",
-    "Google Business Profile ({n} reviews)",
-  ],
-  Zillow: [
-    "{n} Zillow reviews",
-    "{n} Zillow Reviews",
-    "Read All {n} Reviews on Zillow",
-    "& {n} Zillow",
-    "Zillow agent profile ({n} reviews)",
-    "Read all {n} Zillow reviews",
-    "Agent 5.0 stars from {n} reviews",
-  ],
-  Combined: [
-    "{n} five-star reviews across Google and Zillow",
-    "5.0 stars across {n} reviews",
-    "{n} Google and Zillow reviews",
-    "{n} Google/Zillow reviews",
-  ],
-};
-
-// civilian-site is a separate deploy surface with its own copy of these counts.
-// It was originally left out of this walk, which is how greggcostin.com drifted
-// two counts behind pensacolamilitaryhousing.com.
-const files = [...walk("public"), ...walk("civilian-site"), ...walk("content"), "index.html", "MARKETING_KIT.md", "AGGREGATOR_PROFILES.md", "src/App.jsx"].filter(existsSync);
-let totalSubs = 0;
-const report = [];
-
-for (const file of files) {
-  let text = readFileSync(file, "utf8");
-  let fileSubs = 0;
-  for (const j of jobs) {
-    for (const pat of PATTERNS[j.platform]) {
-      const from = pat.replaceAll("{n}", String(j.from));
-      const to = pat.replaceAll("{n}", String(j.to));
-      const n = text.split(from).length - 1;
-      if (n > 0) { text = text.replaceAll(from, to); fileSubs += n; }
+  const check = args.includes('--check');
+  if (!check && !args.includes('--sync') && !supplied.length) throw new Error('Use --current, --check, --sync, or --set-google N / --set-zillow N.');
+  if (check && supplied.length) throw new Error('--check uses the saved snapshot; do not combine it with --set flags.');
+  const files = [...walk('public'),...walk('civilian-site'),...walk('content/pages'),
+    'index.html','MARKETING_KIT.md','AGGREGATOR_PROFILES.md','src/App.jsx'].filter(existsSync);
+  const changes = [];
+  for (const file of files) {
+    const before = readFileSync(file,'utf8'), after = syncReviewText(before,counts);
+    if (before !== after) changes.push({file,after});
+  }
+  if (check) {
+    console.log(JSON.stringify({counts,combined:counts.google+counts.zillow,findings:changes.map(change=>change.file)},null,2));
+    process.exit(changes.length ? 1 : 0);
+  }
+  for (const {file,after} of changes) writeFileSync(file,after);
+  if (snapshot && supplied.length) {
+    for (const platform of supplied) {
+      snapshot[platform].count = counts[platform];
+      snapshot[platform].countStatus = 'operator-synced';
+      snapshot[platform].checkedAt = new Date().toISOString().slice(0,10);
+      snapshot[platform].evidence = 'Count supplied to review-counts.mjs after source verification by the operator. Preserve detailed verification evidence in the review monitor log.';
     }
+    writeFileSync(snapshotFile,JSON.stringify(snapshot,null,2)+'\n');
   }
-  if (fileSubs) { writeFileSync(file, text); totalSubs += fileSubs; report.push(`${file}: ${fileSubs}`); }
-}
-
-for (const j of jobs) console.log(`${j.platform}: ${j.from} -> ${j.to}`);
-console.log(`substitutions: ${totalSubs}`);
-report.forEach((r) => console.log("  " + r));
-console.log("verify:", JSON.stringify(currentCounts()));
+  console.log(JSON.stringify({counts,combined:counts.google+counts.zillow,changed:changes.map(change=>change.file)},null,2));
+} catch (error) { console.error(error.message); process.exitCode = 1; }

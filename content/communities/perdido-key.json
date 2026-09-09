@@ -1,0 +1,76 @@
+{
+  "slug": "perdido-key",
+  "name": "Perdido Key",
+  "reviewed": "2026-09-08",
+  "reviewLabel": "September 8, 2026",
+  "schools": ["hellen-caro-elementary-school", "jim-c-bailey-middle-school", "escambia-high-school"],
+  "sources": [
+    {"id":"state-park","label":"Florida State Parks: Perdido Key","url":"https://www.floridastateparks.org/parks-and-trails/perdido-key-state-park","supports":"Location, beach boardwalks, picnic facilities and park access."},
+    {"id":"johnson-beach","label":"National Park Service: Perdido Key Area","url":"https://www.nps.gov/guis/planyourvisit/perdido-key-area.htm","supports":"Johnson Beach facilities, parking, entrance fee and seasonal capacity closures."},
+    {"id":"big-lagoon","label":"Florida State Parks: Big Lagoon experiences","url":"https://www.floridastateparks.org/parks-and-trails/big-lagoon-state-park/experiences-amenities","supports":"Boat launch to the Intracoastal Waterway and lagoon recreation."},
+    {"id":"lost-key","label":"Lost Key Golf Club: official course information","url":"https://www.lostkeygolf.com/","supports":"Public 18-hole Arnold Palmer golf course. Does not establish benefits conveyed with a home."},
+    {"id":"condo","label":"Florida DBPR: condominium questions and reserve studies","url":"https://www2.myfloridalicense.com/condominiums-and-cooperatives/faqs/","supports":"Reserve-study concepts and association-document research. Requirements depend on the building."},
+    {"id":"flood","label":"FloodSmart: flood insurance basics","url":"https://www.floodsmart.gov/flood-insurance-basics","supports":"Flood coverage is generally separate from standard homeowners coverage."},
+    {"id":"school-address","label":"Escambia schools: transportation and address questions","url":"https://www.escambiaschools.org/departments/transportation/parent-resources/transportation-faqs","supports":"Official district contact and address-based transportation research; not an attendance assignment for a listed home."},
+    {"id":"navy","label":"NAS Pensacola: official installation information","url":"https://cnrse.cnic.navy.mil/Installations/NAS-Pensacola/","supports":"Current installation access and contact information; no estimated commute is derived from this source."},
+    {"id":"va","label":"VA: purchase loan eligibility and property rules","url":"https://www.va.gov/housing-assistance/home-loans/loan-types/purchase-loan/","supports":"Occupancy, borrower qualification and VA-approved condominium project requirements."}
+  ],
+  "places": [
+    {"name":"Johnson Beach","label":"Gulf Islands National Seashore","text":"Beach crossovers, picnic pavilions, restrooms and an accessible boardwalk trail make this a useful place to experience the eastern end of the island. An entrance fee applies, and the National Park Service warns that parking can fill during busy seasons.","source":"johnson-beach","question":"How will you reach the beach on an ordinary weekend, including parking and carrying your gear?"},
+    {"name":"Perdido Key State Park","label":"Beach, dunes and boardwalks","text":"The state park pairs Gulf beach access with dune-protecting boardwalks and covered picnic tables. It is a different access option from Johnson Beach, with its own entrance arrangements.","source":"state-park","question":"Does the property include documented beach access, or will you use a public park?"},
+    {"name":"Big Lagoon State Park","label":"A mainland waterfront option","text":"Big Lagoon offers a boat launch connecting to the Intracoastal Waterway. Its lagoon setting gives you a different way to spend time on the water from an open-Gulf beach day.","source":"big-lagoon","question":"For boating, does a nearby launch work for you, or is a documented private slip essential?"},
+    {"name":"Lost Key Golf Club","label":"A specific stop on your shortlist","text":"Lost Key's official site describes a public, 18-hole Arnold Palmer golf course. If you are considering a nearby home, confirm separately which amenities, memberships and fees actually belong to that property.","source":"lost-key","question":"Which amenities convey with ownership, and which require separate payment or access?"}
+  ],
+  "editions": {
+    "gc": {
+      "path":"/neighborhoods/perdido-key",
+      "title":"Perdido Key Homes, Condos & Local Guide | Gregg Costin",
+      "description":"Explore Perdido Key homes and condos with a local buying guide to beach access, schools, ownership costs and the Florida-Alabama coast. The Costin Team.",
+      "eyebrow":"THE COSTIN TEAM LOCAL GUIDES",
+      "h1":"Perdido Key.",
+      "heroLine":"The view is only the beginning.",
+      "lead":"Beach mornings. Water on both sides. A home that fits the way you want to live. Get to know the places, property choices and ownership questions behind this stretch of the coast.",
+      "answer":"Perdido Key offers a coastal home search west of Pensacola, with Gulf beach access and nearby lagoon recreation. Compare a condo, detached home or waterfront property by its actual access rights, complete ownership costs and location. Use the property documents and exact address to confirm beach access, insurance needs and school assignment before choosing a home.",
+      "primaryLabel":"Explore Perdido Key listings",
+      "primaryHref":"https://greggc.levinrinkerealty.com/map/?newsearch=1&newsearchresults=1&state=12&condition=or&status_types%5B%5D=sale&property_category%5B%5D=residential&sort_by=1&pagenum=1&city%5B%5D=Perdido+Key",
+      "secondaryLabel":"Build my Perdido shortlist",
+      "openingTitle":"One coastal search. Three different decisions.",
+      "openingText":"Start with how you want to use the property: living here year-round, keeping a second home or evaluating a rental. Then narrow the map and the property type. The strongest comparison puts the view, the documents and the monthly cost on the same page.",
+      "perspective":"Our local perspective: make the everyday route part of the showing. Visit the beach access you would actually use, locate your grocery and school stops, and drive the approach to the property at a time you would normally travel. Park facilities and public golf access create useful alternatives to paying for an amenity you may rarely use. This is our interpretation of the published access information, not a claim that every property includes those benefits.",
+      "ctaTitle":"Let the next step be a well-informed one.",
+      "ctaText":"Tell Gregg the property or part of Perdido you are considering, your intended use and your timeline. We can help build a shortlist and identify the documents, cost questions and comparisons to address before an offer.",
+      "faqs":[
+        {"q":"How should I compare prices for Perdido Key homes and condos?","a":"Compare active listings with recent closed sales for the same property type, building or location. Gulf frontage, deeded access, condition, association costs and assessments can change the comparison. A ZIP-wide value index is not a price for a specific Perdido Key property; request a current, property-specific comparison."},
+        {"q":"Does a Perdido Key address include private beach access?","a":"Do not assume that it does. Check the deed, survey, association documents and any recorded access agreement. Public options include Perdido Key State Park and the National Park Service's Johnson Beach area, each with its own access and parking arrangements."},
+        {"q":"What should I review before buying a Perdido Key condo?","a":"Ask for the association budget, reserve information, applicable inspection and reserve-study reports, current and proposed assessments, insurance details and use restrictions. Confirm with your lender whether the project fits your financing. Compare those findings with the unit's inspection and your complete monthly ownership budget."},
+        {"q":"Which schools should I research near Perdido Key?","a":"Hellen Caro Elementary, Jim C. Bailey Middle and Escambia High are useful starting points in our school directory. Their 2025-26 Florida accountability grades are B, B and C respectively. Confirm attendance for the exact address with the district, and use the School Finder to explore other public, private and Christian options."},
+        {"q":"Can Gregg help compare Perdido Key with Orange Beach or Gulf Shores?","a":"Yes. Gregg Costin is licensed in Florida and Alabama. The same team can help you compare properties across the state line, while checking the applicable location, ownership documents, taxes, insurance and use restrictions for each home."}
+      ]
+    },
+    "pmh": {
+      "path":"/communities/perdido-key",
+      "title":"Perdido Key Military Housing & PCS Guide | Gregg Costin",
+      "description":"Considering Perdido Key for a PCS? Compare NAS Pensacola and Corry routes, schools, VA condo questions and full ownership costs before choosing a home.",
+      "eyebrow":"PENSACOLA MILITARY HOUSING · COMMUNITY FIELD GUIDE",
+      "h1":"Perdido Key for your next PCS.",
+      "heroLine":"A coastal home. A practical move plan.",
+      "lead":"Bring the beach into your home search, then work through the decisions that make the move possible: where you report, what you can comfortably spend and how the property fits your next set of orders.",
+      "answer":"Perdido Key is a coastal option to investigate when reporting to NAS Pensacola or Corry Station. Compare the exact home-to-duty-location route, your complete payment using actual income and expenses, and the property's financing and insurance requirements. BAH alone does not set a home price, and a condo requires project-specific financing review.",
+      "primaryLabel":"Plan my PCS home search",
+      "primaryHref":"/pcs-home-search",
+      "secondaryLabel":"Talk through my move",
+      "openingTitle":"Put the duty location on the map first.",
+      "openingText":"A listing's distance to the installation boundary is not your daily trip. Identify your reporting address and authorized entrance, then compare the route from each property at your expected shift time. Include school or childcare stops and a second trip during busier visitor traffic before you choose an area.",
+      "perspective":"Our PCS planning perspective: keep a short comparison sheet for each property with the reporting route, full payment, school questions and a plan for the next move. A condo can reduce some individual exterior-maintenance tasks while creating association obligations. A detached home gives you different maintenance responsibilities. Neither property type guarantees rental permission, lender approval or a predictable resale date.",
+      "ctaTitle":"Your orders. Your priorities. A clearer plan.",
+      "ctaText":"Share your reporting destination, timeline and the type of home you are considering. Gregg can help compare the route, property choices and questions for your lender and insurer as you build your Perdido Key shortlist.",
+      "faqs":[
+        {"q":"How long is the commute from Perdido Key to NAS Pensacola or Corry Station?","a":"There is no single reliable time for the whole area. Compare the exact property with your reporting address and authorized gate at the times you expect to travel. Gate access, the route, traffic and intermediate stops matter. Confirm current access instructions with the installation and your unit."},
+        {"q":"Can I afford a Perdido Key home on my BAH?","a":"Start with your actual LES income, recurring expenses and a property-specific payment. Include principal and interest, taxes, insurance, association dues, maintenance and any assessments. BAH is one budget input, not a purchase-price approval. Use the BAH and mortgage guides, then have a lender review your circumstances."},
+        {"q":"Can I use a VA loan for a Perdido Key condo?","a":"Potentially. VA purchase guidance requires a condo to be in a VA-approved project, and you must meet the applicable borrower, lender and occupancy requirements. Ask your lender to verify the specific project and your eligibility before relying on a VA-financed offer."},
+        {"q":"Which schools should I research for a Perdido Key PCS?","a":"Start with the guides for Hellen Caro Elementary, Jim C. Bailey Middle and Escambia High, then confirm the schools assigned to the actual home address. The School Finder also includes private and Christian schools, straight-line proximity and optional driving-route comparisons. A nearby map marker is not an attendance assignment."},
+        {"q":"Can I rent out the home when I receive new orders?","a":"Do not build a budget on assumed rental income. Review the property's association and recorded restrictions, current local requirements, financing and insurance conditions, and the costs of management and vacancy. Short-term and long-term rentals can have different rules. Evaluate the specific property before treating rental as an exit plan."}
+      ]
+    }
+  }
+}

@@ -78,7 +78,7 @@ const NEW_EXPLORE = `<h2>Explore Other Bases &amp; Areas</h2>
 const INLINE_LINKS = [
   { phrase: /\b2026 BAH rates?\b/g, url: "/bah-rates.html", label: "2026 BAH rates" },
   { phrase: /\bBAH MHA FL064\b/g, url: "/bah-rates.html", label: "BAH MHA FL064" },
-  { phrase: /\bBAH MHA FL023\b/g, url: "/bah-rates.html", label: "BAH MHA FL023" },
+  { phrase: /\bBAH MHA FL056\b/g, url: "/bah-rates.html", label: "BAH MHA FL056" },
   { phrase: /\bPCS checklist\b/gi, url: "/pcs-checklist.html", label: "PCS checklist" },
   { phrase: /\bVA Pamphlet 26-7\b/g, url: "/va-loan-pensacola.html", label: "VA Pamphlet 26-7" },
   { phrase: /\bassumable VA loans?\b/gi, url: "/assumable-va-loans-pensacola.html", label: "assumable VA loan" },

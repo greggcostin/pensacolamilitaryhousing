@@ -1,3 +1,4 @@
+import {withReceiptConversions} from './inquiry-browser-lib.mjs';
 // Shared by the rollout and both military factories so new pages retain measurement.
 export const META_SETTINGS = '<p><button type="button" data-meta-settings>Facebook &amp; Instagram ad preferences</button></p>';
 
@@ -18,5 +19,5 @@ export function applyMilitaryMeta(html) {
     "e.preventDefault();errBox.style.display='none';if(!form.reportValidity())return;");
   html = html.replace(/(?:if\(data\._gotcha\)return;\r?\n)?if\(!data.name\|\|!data.email/g,
     match => match.startsWith('if(data._gotcha)') ? match : 'if(data._gotcha)return;\n' + match);
-  return html;
+  return withReceiptConversions(html);
 }

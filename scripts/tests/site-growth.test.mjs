@@ -24,7 +24,7 @@ test('Only exact HTTPS production hosts on default ports can track',()=>{
 });
 test('Every deployed HTML source has guarded, idempotent analytics',()=>{
  assert.ok(productionPages.length>=220);
- for(const file of productionPages){const html=read(file);assert.deepEqual(analyticsGuardFindings(html),[],file);assert.equal(guardAnalytics(html),html,file+' guard must be idempotent');}
+ for(const file of productionPages){const html=read(file);assert.deepEqual(analyticsGuardFindings(html),[],file);assert.equal(guardAnalytics(html).replaceAll('\r\n','\n'),html.replaceAll('\r\n','\n'),file+' guard must be idempotent across checkout line endings');}
 });
 test('Raw source HTML sends no analytics on local and preview origins',()=>{
  for(const file of productionPages)for(const url of ['http://127.0.0.1:4184/','http://localhost:5173/','https://preview.greggcostin.pages.dev/']){
@@ -41,8 +41,8 @@ test('Production GA and Clarity start, while the CRM loader waits for page load'
   r.context.gtag('event','generate_lead');assert.equal(r.context.dataLayer.filter(e=>e[1]==='generate_lead').length,1);
  }
 });
-test('All 82 school descriptions are complete and agree with social metadata',()=>{
- const files=walk('civilian-site/schools');assert.equal(files.length,82);
+test('All 271 school descriptions are complete and agree with social metadata',()=>{
+ const files=walk('civilian-site/schools');assert.equal(files.length,271);
  const descriptions=new Set();
  for(const file of files){const h=read(file),d=h.match(/<meta name="description" content="([^"]+)"/)[1];
   assert.ok(d.length>=120&&d.length<=165,file+' length');assert.match(d,/\.$/,file+' complete sentence');assert.doesNotMatch(d,/undefined|how to eva\.$/i);assert.ok(!descriptions.has(d),file+' unique description');descriptions.add(d);

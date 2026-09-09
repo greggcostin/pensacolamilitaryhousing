@@ -27,7 +27,7 @@ const COURSES = {
   },
   "public/bah-to-mortgage-guide.html": {
     name: "BAH to Mortgage Conversion Guide for Pensacola and Fort Walton Beach MHAs",
-    description: "How to translate 2026 BAH for Pensacola (MHA FL064) and Fort Walton Beach (FL023) into a real mortgage budget: 125% tax-free gross-up, VA debt-to-income ceiling, residual income minimums by region and family size, and rank-by-rank max purchase-price estimates from E-5 to O-5 with target neighborhoods.",
+    description: "How to translate 2026 BAH for Pensacola (MHA FL064) and Fort Walton Beach (FL056) into a real mortgage budget: 125% tax-free gross-up, VA debt-to-income ceiling, residual income minimums by region and family size, and rank-by-rank max purchase-price estimates from E-5 to O-5 with target neighborhoods.",
     audienceType: "Military service members at any pay grade modeling home affordability against BAH",
     workload: "PT30M",
     url: `${DOMAIN}/bah-to-mortgage-guide`,

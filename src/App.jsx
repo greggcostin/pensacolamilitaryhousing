@@ -1,6 +1,10 @@
 import { Fragment, useState, useEffect, useReducer, useId, useRef } from "react";
 import { BAH_DATA } from "./bahData.js";
 import { COMMUNITY_LINKS } from "./communitiesData.js";
+import { PCS_HERO, PCS_DECISIONS } from "./coastIntentData.js";
+import { IDENTITY } from "./entityData.js";
+import { professionalProfileHtml } from "./professionalProfile.js";
+import { syncRouteSchema } from "./routeSchema.js";
 import { INSTALLATIONS, NEIGHBORHOOD_ROWS, PCS_CHECKLIST, FL_BENEFITS, PCS_FAQS } from "./pcsGuideData.js";
 import { META_BY_PAGE, SITE } from "./routeMeta.js";
 import { IMAGE_VARIANTS } from "./imageVariants.js";
@@ -487,12 +491,11 @@ const Hero = ({ go }) => {
       <div style={{ maxWidth: 720 }}>
         <Eyebrow>Retired USAF Combat Systems Officer · E-3 AWACS</Eyebrow>
         <h1 style={{ fontFamily: SF, fontWeight: 500, fontSize: "clamp(40px,5.2vw,68px)", lineHeight: 1.05, letterSpacing: "-0.01em", color: "#fff", margin: 0 }}>
-          Pensacola's <span style={{ fontSize: "1.2em", fontWeight: 700 }}>#1</span><br />
-          <span style={{ fontStyle: "italic", color: C.gold, fontWeight: 400 }}>military relocation</span><br />
-          REALTOR&reg;
+          {PCS_HERO.title}<br />
+          <span style={{ fontStyle: "italic", color: C.gold, fontWeight: 400 }}>{PCS_HERO.emphasis}</span>
         </h1>
         <p style={{ marginTop: 28, fontSize: 18, lineHeight: 1.7, color: "rgba(255,255,255,0.78)", maxWidth: 580, fontWeight: 300 }}>
-          PCS and VA loan expertise for active duty, veterans, and military families buying, selling, and building wealth across the Florida Panhandle and Gulf Coast.
+          {PCS_HERO.intro}
         </p>
         <p style={{ marginTop: 16, fontSize: 13, color: C.muted, letterSpacing: 1.5, textTransform: "uppercase" }}>
           NAS Pensacola · Corry Station · Whiting Field · Eglin AFB · Hurlburt Field
@@ -719,6 +722,23 @@ const CtaBanner = ({ go }) => (
   </section>
 );
 
+const PcsDecisionPaths = () => (
+  <section id={PCS_DECISIONS.id} aria-labelledby={`${PCS_DECISIONS.id}-title`} style={{ background: C.panel, padding: "64px 24px", borderTop: `1px solid ${C.hairline}` }}>
+    <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <Eyebrow>Your move, step by step</Eyebrow>
+      <h2 id={`${PCS_DECISIONS.id}-title`} style={{ fontFamily: SF, fontWeight: 500, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.2, color: C.text }}>{PCS_DECISIONS.title}</h2>
+      <p style={{ color: C.muted, fontSize: 16, lineHeight: 1.75, maxWidth: 800 }}>{PCS_DECISIONS.intro}</p>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,300px),1fr))", gap: 22, marginTop: 28 }}>
+        {PCS_DECISIONS.cards.map(card => <article key={card.title} style={{ background: C.elevated, border: `1px solid ${C.hairline}`, borderRadius: 12, padding: 24 }}>
+          <h3 style={{ fontFamily: SF, color: C.text, fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 0 }}>{card.title}</h3>
+          <p style={{ color: C.muted, fontSize: 15, lineHeight: 1.75 }}>{card.text}</p>
+          <ul style={{ paddingLeft: 18, fontSize: 14, lineHeight: 1.9 }}>{card.links.map(([label,href]) => <li key={href}><a href={href} style={{ color: C.goldSoft, textUnderlineOffset: 3 }}>{label}</a></li>)}</ul>
+        </article>)}
+      </div>
+    </div>
+  </section>
+);
+
 const BasesAndCommunitiesSection = () => {
   const cardStyle = { background: C.elevated, border: `1px solid ${C.hairline}`, borderRadius: 12, padding: 20, textDecoration: "none", display: "block", transition: "border-color 0.2s" };
   const cardHover = e => (e.currentTarget.style.borderColor = C.goldLine);
@@ -772,7 +792,7 @@ const Footer = ({ go }) => {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 40, marginBottom: 48 }}>
           <div>
             <Pic loading="lazy" src={IMG.logoStacked} alt="The Costin Team" style={{ height: 160, marginBottom: 16 }} />
-            <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}>Levin Rinke Realty<br />220 W. Garden St., Pensacola, FL 32502<br />Licensed in Florida & Alabama</p>
+            <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}>{IDENTITY.brokerage.name}<br />{IDENTITY.addressLine}<br />Licensed in Florida & Alabama<br />Contact: {IDENTITY.contactHours.label}</p>
           </div>
           <div>
             <div style={{ color: C.gold, fontSize: 16, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Quick Links</div>
@@ -797,7 +817,7 @@ const Footer = ({ go }) => {
           </div>
           <div>
             <div style={{ color: C.gold, fontSize: 16, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16, fontFamily: SS }}>Contact</div>
-            <a href="tel:8502665005" style={{ color: "#fff", fontSize: 40, fontWeight: 600, textDecoration: "none", display: "block", marginBottom: 8, fontFamily: SF, whiteSpace: "nowrap" }}>(850) 266-5005</a>
+            <a href="tel:8502665005" style={{ color: "#fff", fontSize: "clamp(24px,2vw,32px)", fontWeight: 600, textDecoration: "none", display: "block", marginBottom: 8, fontFamily: SF, whiteSpace: "nowrap" }}>(850) 266-5005</a>
             <p style={{ color: C.muted, fontSize: 13, lineHeight: 1.7 }}><a href="mailto:Gregg.Costin@gmail.com" style={{ color: C.muted, textDecoration: "none" }}>Gregg.Costin@gmail.com</a><br />Instagram: <a href="https://www.instagram.com/greggcostinrealtor/" target="_blank" rel="noopener" style={{ color: C.muted, textDecoration: "none" }}>@greggcostinrealtor</a><br />Facebook: <a href="https://www.facebook.com/greggcostin/" target="_blank" rel="noopener" style={{ color: C.muted, textDecoration: "none" }}>@greggcostin</a></p>
           </div>
         </div>
@@ -833,7 +853,7 @@ const AboutPage = ({ go }) => (
             {[
               ["USAF Retired", "SSgt → Captain"],
               ["Prior Enlisted E-5", "2M0 AFSC"],
-              ["11", "PCS Moves"],
+              [String(IDENTITY.military.personalPcsMoves), "PCS Moves"],
               ["Combat Veteran", "OIF / OEF / GWOT"],
               ["E-3 AWACS", "Combat Systems Officer"],
             ].map(([big, small]) => (
@@ -884,7 +904,7 @@ const AboutPage = ({ go }) => (
         </div>
         <div>
           <Eyebrow>Family Man</Eyebrow>
-          <H2>11 PCS moves. I get it.</H2>
+          <H2>{IDENTITY.military.personalPcsMoves} PCS moves. I get it.</H2>
           <Body>When I say I understand the stress of a PCS move, I mean it. My family and I have lived it: packing up, finding homes from overseas, navigating schools and neighborhoods sight-unseen. Now I channel that experience into making your transition as smooth as possible.</Body>
           <Body>I am the preferred real estate agent for VeteranPCS, TIER 1 PCS, and the M.O.R.E. Network, three of the most respected military relocation organizations in the country. I'm also recognized as a Zillow Premier Agent in the top 0.8% of Pensacola-area Realtors with a perfect 5-star rating.</Body>
         </div>
@@ -893,6 +913,7 @@ const AboutPage = ({ go }) => (
 
     <Section bg={C.panel}>
       <H2 align="center">Credentials & Recognition</H2>
+      <div dangerouslySetInnerHTML={{ __html: professionalProfileHtml() }} />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(260px,100%),1fr))", gap: 24, marginTop: 40 }}>
         {[
           { title: "Military Relocation Professional (MRP®)", desc: "NAR certification for agents specializing in serving current and former military service members." },
@@ -942,11 +963,9 @@ const InquiryForm = () => {
       const payload = withAttribution({ name: formData.name, email: formData.email, phone: formData.phone, inquiryType: formData.inquiryType, message: formData.message.trim() || `Inquiry from ${window.location.pathname} (no message text)`, _gotcha: formData.honeypot });
       const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       const data = await response.json();
-      if (response.ok && data.success === true) {
+      if (window.costinConversions?.accept(response.ok, data, 'spa-inquiry-form')) {
         setStatus("success");
         markInquirySubmitted();
-        document.dispatchEvent(new CustomEvent("costin:lead-success", { detail: { form_id: "spa-inquiry-form" } }));
-        track("inquiry_submit", { inquiry_type: formData.inquiryType, cta_location: "spa-inquiry-form", page_path: window.location.pathname });
         setFormData({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
       } else { setStatus("error"); setErrorMsg(data.error || "Something went wrong. Please call (850) 266-5005."); }
     } catch (err) { setStatus("error"); setErrorMsg("Connection error. Please call (850) 266-5005 directly."); }
@@ -1055,7 +1074,7 @@ const PCSPage = ({ go }) => {
       <BAHTable title="Enlisted (E-1 through E-9)" rows={[["E-1 through E-4", BAH_DATA.FL064.enlisted[0][1], BAH_DATA.FL064.enlisted[0][2]], ...BAH_DATA.FL064.enlisted.filter(([g]) => !["E-1","E-2","E-3","E-4"].includes(g))]} />
       <BAHTable title="Warrant Officer (W-1 through W-5)" rows={BAH_DATA.FL064.warrant} />
       <BAHTable title="Officer (O-1 through O-6, including Prior-Enlisted O-1E, O-2E, O-3E)" rows={BAH_DATA.FL064.officer.filter(([g]) => g !== "O-7")} />
-      <P style={{ fontSize: 14, color: WARM_GRAY, marginTop: 12 }}><em>Source: DoD 2026 BAH tables for MHA FL064 ({BAH_DATA.FL064.yoyChange}). E-1 through E-4 share a single "junior enlisted" rate by DoD convention, which is why they're collapsed into one row above. Fort Walton Beach (Eglin AFB, Hurlburt Field, Duke Field) falls under MHA FL023 (different rates). For FL023 or any other MHA, use the <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/" target="_blank" rel="noopener" style={{ color: GOLD }}>official DoD BAH calculator</a>.</em></P>
+      <P style={{ fontSize: 14, color: WARM_GRAY, marginTop: 12 }}><em>Source: DoD 2026 BAH tables for MHA FL064 ({BAH_DATA.FL064.yoyChange}). E-1 through E-4 share a single "junior enlisted" rate by DoD convention, which is why they're collapsed into one row above. Fort Walton Beach (Eglin AFB, Hurlburt Field, Duke Field) falls under MHA FL056 (different rates). For FL056 or any other MHA, use the <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/" target="_blank" rel="noopener" style={{ color: GOLD }}>official DoD BAH calculator</a>.</em></P>
       <button onClick={() => go("calculator")} style={{ background: `${GOLD}15`, border: `1px solid ${GOLD}44`, color: GOLD, padding: "12px 24px", borderRadius: 8, cursor: "pointer", fontWeight: 600, fontSize: 14, marginTop: 8 }}>Run Your BAH Through the Mortgage Calculators →</button>
       <H2>Florida Benefits for Military Families</H2>
       <ul style={{ paddingLeft: 20 }}>
@@ -1197,8 +1216,8 @@ const BaseGuide = ({ base, go }) => {
         ["Destin","$400-600K+","25-30 min","Good","Beach lifestyle, higher price point"],
         ["Navarre","$350-450K","35-40 min","A-rated","Beach community, between Eglin and Hurlburt"],
       ],
-      bahMha: "FL023", bahLabel: "Eglin AFB", bahZip: "32542",
-      bahNote: "Eglin falls under the FL023 Fort Walton Beach MHA, with meaningfully higher rates than Pensacola due to the Emerald Coast beach premium.",
+      bahMha: "FL056", bahLabel: "Eglin AFB", bahZip: "32542",
+      bahNote: "Eglin falls under the FL056 Fort Walton Beach MHA, with meaningfully higher rates than Pensacola due to the Emerald Coast beach premium.",
       tips: "Niceville (especially Bluewater Bay) is the gold standard for Eglin families with kids: top schools, newer inventory, and a 10-minute commute. Crestview is where budget-conscious buyers go, with significantly lower prices and strong new construction inventory."
     },
     hurlburt: {
@@ -1213,8 +1232,8 @@ const BaseGuide = ({ base, go }) => {
         ["Gulf Breeze","$380-480K","45-50 min","A-rated","Long commute but top-tier community"],
         ["Crestview","$260-330K","35-40 min","Good","Budget-friendly, newer homes"],
       ],
-      bahMha: "FL023", bahLabel: "Hurlburt Field", bahZip: "32544",
-      bahNote: "Hurlburt is FL023 Fort Walton Beach MHA, with the same rates as Eglin AFB.",
+      bahMha: "FL056", bahLabel: "Hurlburt Field", bahZip: "32544",
+      bahNote: "Hurlburt is FL056 Fort Walton Beach MHA, with the same rates as Eglin AFB.",
       tips: "Navarre is the overwhelming favorite for Hurlburt families: it combines beautiful beaches, excellent Santa Rosa School District schools, a family-friendly community, and a reasonable 15-20 minute commute. Mary Esther is the closest option and most affordable."
     },
   };
@@ -2145,9 +2164,9 @@ const NeighborhoodsPage = ({ go }) => {
   const [inquiryOpen, setInquiryOpen] = useState(false);
   return (
   <PageWrapper>
-    <PageHero title="Pensacola Area Communities &amp; Neighborhood Guides" subtitle="From Gulf-front beach living on Perdido Key to A-rated Santa Rosa schools in Gulf Breeze to starter homes minutes from the NAS Pensacola main gate: the complete guide to every community we serve." breadcrumb="Home > Communities" />
+    <PageHero title="Emerald Coast Communities & Neighborhood Guides" subtitle="Compare housing, ownership costs, school resources and routes to your installation across the Pensacola and Eglin military housing areas." breadcrumb="Home > Communities" />
     <Content>
-      <P>Thirteen distinct communities across the Pensacola and Fort Walton Beach Military Housing Areas. Each has its own BAH fit, school zoning, commute profile, and character. Click any card below for the full built-out guide with facts, sub-neighborhoods, BAH math, schools, hurricane considerations, and FAQ.</P>
+      <P>Explore {COMMUNITY_LINKS.length} community guides across the Pensacola and Eglin military housing areas. Use the guides to build a shortlist, then verify the route, attendance boundaries, insurance and total cost for each address. Published area estimates are a starting point for your own research.</P>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(300px, 100%), 1fr))", gap: 16, marginTop: 24 }}>
         {COMMUNITY_LINKS.map(n => {
           const slug = n.href.split("/").pop();
@@ -2245,10 +2264,8 @@ const ContactPage = () => {
       const payload = withAttribution({ name: formData.name, email: formData.email, phone: formData.phone, inquiryType: formData.inquiryType, message: formData.message.trim() || `Inquiry from ${window.location.pathname} (no message text)`, _gotcha: formData.honeypot });
       const response = await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       const data = await response.json();
-      if (response.ok && data.success === true) {
+      if (window.costinConversions?.accept(response.ok, data, 'spa-contact-page')) {
         setStatus("success");
-        document.dispatchEvent(new CustomEvent("costin:lead-success", { detail: { form_id: "spa-contact-page" } }));
-        track("inquiry_submit", { inquiry_type: formData.inquiryType, cta_location: "spa-contact-page", page_path: window.location.pathname });
         setFormData({ name: "", email: "", phone: "", inquiryType: "PCS / Relocation — Buying", message: "", honeypot: "" });
       } else { setStatus("error"); setErrorMsg(data.error || "Something went wrong. Please call (850) 266-5005."); }
     } catch (err) { setStatus("error"); setErrorMsg("Connection error. Please call (850) 266-5005 directly."); }
@@ -2293,13 +2310,13 @@ const ContactPage = () => {
               </div>
               <div style={{ background: `linear-gradient(135deg, ${C.panel}, ${C.elevated})`, color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderTop: `1px solid rgba(201,168,76,0.25)`, borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Email</div>
               <div style={{ padding: "12px 16px", textAlign: "center" }}>
-                <a href="mailto:gregg.costin@gmail.com" style={{ color: GOLD, fontSize: 14, fontWeight: 600, textDecoration: "none" }}>gregg.costin@gmail.com</a>
+                <a href={`mailto:${IDENTITY.email}`} style={{ color: GOLD, fontSize: 14, fontWeight: 600, textDecoration: "none" }}>{IDENTITY.email}</a>
               </div>
               <div style={{ background: `linear-gradient(135deg, ${C.panel}, ${C.elevated})`, color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "10px 16px", borderTop: `1px solid rgba(201,168,76,0.25)`, borderBottom: `1px solid rgba(201,168,76,0.25)`, textAlign: "center" }}>Levin Rinke Realty Offices</div>
               <div style={{ padding: "12px 16px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, textAlign: "center" }}>
                 <div>
                   <div style={{ color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", marginBottom: 4, textAlign: "center" }}>Downtown</div>
-                  <div style={{ color: "#bbb", fontSize: 12.5, lineHeight: 1.55, textAlign: "center" }}>220 W. Garden Street<br />Pensacola, FL 32502</div>
+                  <div style={{ color: "#bbb", fontSize: 12.5, lineHeight: 1.55, textAlign: "center" }}>{IDENTITY.address.streetAddress}<br />{IDENTITY.address.addressLocality}, {IDENTITY.address.addressRegion} {IDENTITY.address.postalCode}<br />Contact: {IDENTITY.contactHours.label}</div>
                 </div>
                 <div>
                   <div style={{ color: GOLD, fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", marginBottom: 4, textAlign: "center" }}>Perdido Key</div>
@@ -2444,6 +2461,9 @@ export default function App() {
     document.title = m.title;
     const set = (sel, attr, val) => { const el = document.head.querySelector(sel); if (el && val != null) el.setAttribute(attr, val); };
     set('link[rel="canonical"]', "href", canon);
+    set('link[hreflang="en-US"]', 'href', canon);
+    set('link[hreflang="x-default"]', 'href', canon);
+    syncRouteSchema(m);
     set('meta[name="description"]', "content", m.description);
     set('meta[property="og:url"]', "content", canon);
     set('meta[property="og:title"]', "content", m.title);
@@ -2543,6 +2563,7 @@ export default function App() {
       {page === "home" && <>
         <Hero go={go} />
         <TrustBar />
+        <PcsDecisionPaths />
         <div id="services"></div>
         <div id="va-loans"></div>
         <div id="pcs-guide"></div>

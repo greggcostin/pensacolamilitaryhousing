@@ -120,6 +120,7 @@ function walk(dir, out = []) {
   return out;
 }
 
+import {withReceiptConversions} from './inquiry-browser-lib.mjs';
 const FAQ_RE = /<h2\b[^>]*>\s*(?:FAQ|Frequently Asked)/i;
 let modals = 0, blocks = 0, skipped = 0;
 for (const file of walk("public")) {
@@ -140,6 +141,6 @@ for (const file of walk("public")) {
   }
   // 3. modal HTML+script before </body>
   if (s.includes("</body>")) { s = s.replace("</body>", `${MODAL_HTML}\n</body>`); modals++; }
-  writeFileSync(file, s);
+  writeFileSync(file, withReceiptConversions(s));
 }
 console.log(`inquiry-cta: modals injected ${modals}, conversion blocks ${blocks}, skipped ${skipped}`);

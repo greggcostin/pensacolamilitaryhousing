@@ -3,12 +3,13 @@
 // React). Each route gets 3-5 sections that mirror the H2s the React page renders, plus a link
 // block. Rendered by scripts/postbuild-spa-routes.mjs into dist/<file>.html. Plain data, no JSX.
 // Keep facts in sync with src/App.jsx (AboutPage, ContactPage, LoanCalculator, NeighborhoodsPage).
+import { IDENTITY as I } from './entityData.js';
 
 export const ROUTE_SECTIONS = {
   about: [
     { h2: "My Story: From Global Strategy to Local Real Estate Excellence", text: [
       "I completed a full U.S. Air Force career, starting as a prior-enlisted Staff Sergeant and retiring as a Captain and E-3 AWACS Combat Systems Officer. Along the way my family and I made 11 PCS moves, so I know what it is like to house-hunt from a different time zone, sign on a home you have seen only on video, and report for duty two days after the moving truck leaves.",
-      "Today I am a Florida- and Alabama-licensed Realtor with Levin Rinke Realty at 220 W. Garden Street in downtown Pensacola. Military families are the reason this site exists: every guide, calculator and community page here is written for someone holding orders to NAS Pensacola, Corry Station, Saufley Field, NAS Whiting Field, Hurlburt Field, Eglin AFB or Duke Field.",
+      `Today I am a Florida- and Alabama-licensed Realtor with ${I.brokerage.name} at ${I.addressLine}. Military families are the reason this site exists: every guide, calculator and community page here is written for someone holding orders to NAS Pensacola, Corry Station, Saufley Field, NAS Whiting Field, Hurlburt Field, Eglin AFB or Duke Field.`,
     ] },
     { h2: "Forged by Military Discipline", text: [
       "Mission planning translates directly to a home search. You get a written plan tied to your report date, a short list built around commute, BAH fit, schools and flood risk, and a negotiation run on data rather than emotion. I answer texts and calls, I show up on time, and I tell you when a house is wrong for you even when it would be an easy sale.",
@@ -28,7 +29,7 @@ export const ROUTE_SECTIONS = {
       "I respond to every inquiry within two hours during business hours. If you are calling from an overseas time zone, send a text with a good window and I will schedule around it.",
     ] },
     { h2: "Office", text: [
-      "Levin Rinke Realty, 220 W. Garden Street, Pensacola, FL 32502, in downtown Pensacola near the county courthouse. Meetings in person, by phone or by video call. Licensed in Florida and Alabama.",
+      `${I.brokerage.name}, ${I.addressLine}, in downtown Pensacola near the county courthouse. Meetings in person, by phone or by video call. Licensed in Florida and Alabama. Contact hours: ${I.contactHours.label}.`,
     ] },
     { h2: "Before You Reach Out", text: [
       "The PCS guide, the 2026 BAH tables and the VA loan guide answer the questions I hear most on a first call. Reading them first is not required, but it usually turns the first conversation into a plan rather than an overview.",
@@ -36,8 +37,8 @@ export const ROUTE_SECTIONS = {
   ],
   communities: [
     { h2: "How to Choose a Community on Military Orders", text: [
-      "Four things decide most military home searches on the Emerald Coast: the gate you will use every morning, whether the payment fits inside BAH on one income, the school zone, and the flood zone. Every community guide below is built around those four, with commute times measured to the specific gate, a BAH-neutral price band from the sitewide affordability model, official FLDOE school grades and a flood note.",
-      "The Pensacola MHA (FL064) covers NAS Pensacola, Corry Station, Saufley Field and NAS Whiting Field. The Fort Walton Beach MHA (FL023) covers Eglin AFB, Hurlburt Field and Duke Field and pays several hundred dollars more per month at every grade, which changes what the same rank can buy in Navarre or Niceville versus Milton or Pace.",
+      "Compare the installation and gate you will use, your total monthly budget, school attendance boundaries and the property's flood and insurance information. The community guides help you build a shortlist. Published area estimates do not replace an address-specific route check, school assignment confirmation or insurance quote.",
+      "The Pensacola MHA (FL064) covers NAS Pensacola, Corry Station, Saufley Field and NAS Whiting Field. The Eglin AFB MHA (FL056) covers Eglin AFB, Hurlburt Field and Duke Field. Check the official duty ZIP, pay grade and dependency status before using the BAH tables to plan your budget.",
     ] },
     { h2: "Need Help Choosing?", text: [
       "Send me your duty station, report date and pay grade and I will narrow the list to three communities and explain the trade-offs in plain language. Call or text (850) 266-5005.",
@@ -51,7 +52,7 @@ export const ROUTE_SECTIONS = {
       "The VA funding fee is 2.15% of the loan on first use with less than 5% down and 3.30% on subsequent use. It is waived entirely for veterans receiving VA disability compensation, for surviving spouses receiving DIC, and for Purple Heart recipients on active duty. On a $250,000 loan the first-use fee is $5,375, or about $34 a month over 30 years, so the waiver is worth checking before you assume the conventional loan is cheaper.",
     ] },
     { h2: "Matching a Price to Your 2026 BAH", text: [
-      "The BAH tool uses the same affordability model as every other page on this site: VA loan, zero down, funding fee financed, the current Freddie Mac 30-year rate, Escambia County millage with the homestead exemption, and an inland insurance estimate. For an E-5 with dependents drawing $1,863 in the Pensacola MHA that is a BAH-neutral band of about $200,000 to $220,000; an O-3 with dependents at Hurlburt Field drawing $3,399 lands near $365,000 to $410,000. The full rank-by-rank tables are on the BAH-to-mortgage guide.",
+      "Use your actual duty location, pay grade and dependency status to look up BAH, then compare it with the estimated loan payment, property taxes, insurance and association costs. Change the calculator inputs for the property and financing you are considering. A BAH amount by itself does not establish a purchase price or loan approval. The BAH-to-mortgage guide compares actual-income scenarios, and the BAH rates page includes a property-cost worksheet.",
     ] },
     { h2: "Estimates Only: Confirm With a Lender", text: [
       "These calculators do not pull credit, verify income or price your insurance. A lender's pre-approval and an insurance quote on the specific address are the two documents that turn an estimate into a budget. I can introduce you to VA-experienced lenders who close on the Emerald Coast every week.",

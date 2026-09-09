@@ -1,3 +1,5 @@
+import {readFileSync} from 'node:fs';
+const PERDIDO=JSON.parse(readFileSync(new URL('../content/communities/perdido-key.json',import.meta.url),'utf8'));
 // Civilian neighborhood pages for greggcostin.com (audit 2026-09-02, gc-content-01: the civilian site
 // owned zero neighborhood URLs; every hub card deep-linked to a military-framed page). Every figure
 // here is taken from the military site's canon-verified community pages, the neighborhoods-by-rank
@@ -114,39 +116,15 @@ export const NEIGHBORHOODS = [
     ],
   },
   {
-    slug: "perdido-key", name: "Perdido Key", short: "Perdido Key",
-    title: "Perdido Key Condos & Homes | The Costin Team",
-    desc: "Perdido Key real estate on the Florida-Alabama line: Gulf-front condos, Old River canal homes, 2026 prices, schools, flood and insurance. The Costin Team.",
-    keywords: "Perdido Key condos for sale, Perdido Key homes, Perdido Key real estate, Lost Key homes",
-    h1: "Perdido Key",
-    lead: "The quieter coast on the Alabama line: condos on the Gulf, canal homes along Old River, and state-park beaches locals guard jealously. Gregg's Alabama license covers the Orange Beach side of the line too.",
-    fit: "Waterfront, quiet coast, two-state reach",
+    slug: "perdido-key", name: "Perdido Key", short: "Perdido Key", guideKey: "perdido-key",
+    title: PERDIDO.editions.gc.title, desc: PERDIDO.editions.gc.description,
+    keywords: "Perdido Key homes, Perdido Key condos, Perdido Key local guide, Lost Key homes",
+    h1: PERDIDO.editions.gc.h1, lead: PERDIDO.editions.gc.lead,
+    fit: "Coastal homes, beach access and property-specific comparisons",
     image: "/images/perdido-key.jpg", alt: "White sand dunes and sea oats at a Perdido Key beach access",
-    pmh: "/communities/perdido-key", zip: "32507",
-    sections: [
-      { h2: "Where it is", p: [
-        "Perdido Key is a 16-mile barrier island on the Florida-Alabama line west of Pensacola, with Gulf Islands National Seashore and Perdido Key State Park holding long stretches of undeveloped beach. Commutes head east: NAS Pensacola and Corry Station are roughly 20 to 25 minutes via Sorrento Road and Gulf Beach Highway outside rush hour, and downtown Pensacola is about 30 minutes.",
-      ] },
-      { h2: "Homes and prices", p: [
-        "Condos dominate the Gulf-front inventory, with entry-level Gulf-view units trading in the $275,000 to $375,000 range. Single-family homes run along the sound and Old River and in inland communities such as Perdido Key Estates and Lost Key, and they start well above the condo tier.",
-        "The 32507 ZIP that includes Perdido Key showed a Zillow Research typical home value of $375,726 as of August 1, 2026, a number that blends beachfront with the mainland Warrington neighborhoods on the same ZIP, so use it as context rather than a price guide.",
-      ] },
-      { h2: "Insurance, flood and condo dues", p: [
-        "Most of the island sits in flood zones AE or VE. Gulf-front condos carry master-policy wind premiums that flow through as association fees of $500 to $1,200 a month, while sound-side and inland single-family homes quote lower. Read the association's budget and reserve study before you fall for the view.",
-      ] },
-      { h2: "The Alabama side", p: [
-        "Orange Beach and Gulf Shores begin a few minutes west, and Gregg is licensed in Alabama and a Baldwin REALTORS member, so a search that starts on Perdido Key can cross the state line without changing agents. See the Gulf Shores and Orange Beach page for that market.",
-      ] },
-    ],
-    schools: ["hellen-caro-elementary-school", "jim-c-bailey-middle-school", "escambia-high-school"],
-    schoolsNote: "Perdido Key addresses are typically zoned for Hellen Caro Elementary, Jim C. Bailey Middle and Escambia High School in Escambia County Public Schools.",
-    flood: "Barrier-island flood zones AE and VE cover most parcels, so flood insurance is mandatory on federally backed loans and the elevation certificate matters as much as the inspection.",
-    faqs: [
-      { q: "How much are condos on Perdido Key?", a: "Entry-level Gulf-view condos trade in roughly the $275,000 to $375,000 range, with Gulf-front and larger units above that. Single-family homes on the sound and Old River start well above the condo tier." },
-      { q: "How far is Perdido Key from Pensacola?", a: "About 20 to 25 minutes to NAS Pensacola and Corry Station via Sorrento Road and Gulf Beach Highway, and roughly 30 minutes to downtown Pensacola." },
-      { q: "What are the flood and insurance costs on Perdido Key?", a: "Most of the island is in flood zones AE or VE. Gulf-front condo wind coverage flows through as association dues of about $500 to $1,200 a month; sound-side and inland homes quote lower. We pull both quotes before you offer." },
-      { q: "Can The Costin Team help across the line in Orange Beach?", a: "Yes. Gregg is licensed in Alabama as well as Florida and is a Baldwin REALTORS member, so the same team represents you on either side of the state line." },
-    ],
+    pmh: PERDIDO.editions.pmh.path, zip: "32507", schools: PERDIDO.schools,
+    faqs: PERDIDO.editions.gc.faqs,
+    // The premium renderer reads the full source-backed guide; do not restore legacy price or rank bands.
   },
   {
     slug: "midtown-east-pensacola-heights", name: "Midtown and East Pensacola Heights", short: "Midtown & East Pensacola Heights",

@@ -1,0 +1,160 @@
+{
+  "reviewedAt": "2026-09-06T20:02:32.128Z",
+  "rule": "Unique cover photograph and unique coastal home per guide. No cover is used inside another guide. No visible image attribution; original evidence is internal.",
+  "selections": [
+    {
+      "slug": "preapproval-first",
+      "theme": "coastal-home",
+      "candidate": "unsplash-HxOp82CEkgc",
+      "source": "https://unsplash.com/photos/white-and-brown-concrete-building-near-green-trees-under-white-clouds-and-blue-sky-during-daytime-HxOp82CEkgc",
+      "sha256": "c32aecf2e821a8899b737e9fb4bd24e6641b716237157c71e09cc314bfaddbb3"
+    },
+    {
+      "slug": "buyer-transaction-roadmap",
+      "theme": "coastal-home",
+      "candidate": "unsplash-0wAZ8Di5r1A",
+      "source": "https://unsplash.com/photos/a-house-on-the-beach-with-a-surfboard-in-front-of-it-0wAZ8Di5r1A",
+      "sha256": "03b9e2f2057955b1549080f906d270029201b266b2a00ea179b6d3a64146b54b"
+    },
+    {
+      "slug": "mortgage-preapproval-to-closing",
+      "theme": "coastal-home",
+      "candidate": "pexels-32301959",
+      "source": "https://www.pexels.com/photo/beachfront-modern-villa-with-outdoor-lounge-area-32301959/",
+      "sha256": "68feaa9e9aec8cb7c0ca624140a3e0dcc233b832bb595f8701fe208a91105dc9"
+    },
+    {
+      "slug": "seller-transaction-roadmap",
+      "theme": "coastal-home",
+      "candidate": "pexels-29334712",
+      "source": "https://www.pexels.com/photo/elegant-beach-house-on-sandy-shore-29334712/",
+      "sha256": "b718948949fb0bcfe2dca9a54d0b8a6bbddad03f341a3821cfec0aa89e193e0a"
+    },
+    {
+      "slug": "seller-net-proceeds",
+      "theme": "coastal-home",
+      "candidate": "unsplash-NdfXlq_G_vo",
+      "source": "https://unsplash.com/photos/a-row-of-houses-sitting-on-top-of-a-lush-green-field-NdfXlq_G_vo",
+      "sha256": "b9846a011ad98db5b1641506bfd3afa3c3b481e52993766d7a5002f8973a34d1"
+    },
+    {
+      "slug": "florida-property-tax-after-purchase",
+      "theme": "coastal-home",
+      "candidate": "unsplash-9mWADnnhpL8",
+      "source": "https://unsplash.com/photos/white-and-gray-wooden-house-near-road-9mWADnnhpL8",
+      "sha256": "1c2bef10b6dacf359a28f96e7f81043bafc6b83f716103a3c3906595e8d2ef67"
+    },
+    {
+      "slug": "alabama-florida-ownership-costs",
+      "theme": "coastal-home",
+      "candidate": "unsplash-6sl3k82w3nE",
+      "source": "https://unsplash.com/photos/white-and-blue-concrete-house-under-blue-sky-during-daytime-6sl3k82w3nE",
+      "sha256": "8f04c7c6c00abdc833a63ce17e9a08ff580ff9886bb1b9f79112b6e85a7742d3"
+    },
+    {
+      "slug": "pensacola-beach-leasehold-due-diligence",
+      "theme": "coastal-home",
+      "candidate": "unsplash-K-tuuZBsblM",
+      "source": "https://unsplash.com/photos/a-house-on-the-beach-with-a-staircase-leading-to-it-K-tuuZBsblM",
+      "sha256": "62e60cadb29855e655eca34ddd21cdbad75722fb36cb5e3343d0825bda9a7be0"
+    },
+    {
+      "slug": "gulf-coast-condo-due-diligence",
+      "theme": "coastal-home",
+      "candidate": "pexels-19879683",
+      "source": "https://www.pexels.com/photo/modern-house-buildings-by-the-beach-19879683/",
+      "sha256": "560111c401d60157b08e0f128d678917f98ef0c2167e3a82467683af9e1428b6"
+    },
+    {
+      "slug": "coastal-insurance-and-flood",
+      "theme": "coastal-home",
+      "candidate": "pexels-15501517",
+      "source": "https://www.pexels.com/photo/a-house-at-the-beach-15501517/",
+      "sha256": "06063c4a15f2fdd999b76d4a74cd4144633d7c90608ed283b92c2498b18a8e91"
+    },
+    {
+      "slug": "inspection-to-repair-decision",
+      "theme": "coastal-home",
+      "candidate": "unsplash-5X3ql6fJ-LI",
+      "source": "https://unsplash.com/photos/a-house-on-a-hill-5X3ql6fJ-LI",
+      "sha256": "f790df2e0dc6161d8b59bcfd1ee4c94652c1fd8a39ec371c9e4d811f3dfefd0a"
+    },
+    {
+      "slug": "va-loan-insider-guide",
+      "theme": "military",
+      "candidate": "dvids-9621353",
+      "source": "https://www.dvidshub.net/image/9621353/blue-angels-return-home",
+      "sha256": "7cf6137b1e17660a668c0b43de69edc99aa4ad4107609110c51c55ee3e88835b"
+    },
+    {
+      "slug": "va-loan-assumption-guide",
+      "theme": "military",
+      "candidate": "dvids-403839",
+      "source": "https://www.dvidshub.net/image/403839/blue-angels-over-naval-air-station-pensacola",
+      "sha256": "447f12a265ee543fb59911b9012da9b9f296bae71fec1dd03cac2e852e3fa019"
+    },
+    {
+      "slug": "pcs-nas-pensacola",
+      "theme": "military",
+      "candidate": "dvids-6534966",
+      "source": "https://www.dvidshub.net/image/6534966/blue-angels-flight-over-nas-pensacola",
+      "sha256": "88d7f7191446e7310835d715452568cc5d857a2f9c4046a7cd953b7c749c49fd"
+    },
+    {
+      "slug": "pcs-corry-station",
+      "theme": "military",
+      "candidate": "dvids-6112244",
+      "source": "https://www.dvidshub.net/image/6112244/iwtc-corry-station-sailors-march",
+      "sha256": "03fd36b58068dcda09c253c9be11eb5a24e3353bf8c2c605e39e37f5de0a40c1"
+    },
+    {
+      "slug": "pcs-saufley-field",
+      "theme": "military",
+      "candidate": "dvids-7500863",
+      "source": "https://www.dvidshub.net/image/7500863/blue-angels-perform-over-pensacola-beach-florida",
+      "sha256": "f784541f0c972244c5bf5c625fea462b3e9f891bc56b8370519e26fcb2193d97"
+    },
+    {
+      "slug": "pcs-nas-whiting-field",
+      "theme": "military",
+      "candidate": "dvids-6791437",
+      "source": "https://www.dvidshub.net/image/6791437/th-73a-thrasher-arrival-nas-whiting-field",
+      "sha256": "210e96fe0fb4ea48aec3bd061be1ac816b5817361fbc39f371381127f3967793"
+    },
+    {
+      "slug": "pcs-eglin-afb",
+      "theme": "military",
+      "candidate": "dvids-9404258",
+      "source": "https://www.dvidshub.net/image/9404258/secaf-visits-eglin-afb",
+      "sha256": "bd0c0e4493aa47f2b6e71ff21ff8567640d44f8d07fe8ce27b2b1d50aad93877"
+    },
+    {
+      "slug": "pcs-hurlburt-field",
+      "theme": "military",
+      "candidate": "dvids-7720038",
+      "source": "https://www.dvidshub.net/image/7720038/hurlburt-field-flightline",
+      "sha256": "33a045e32e07b3100daa5ae6ea5331a2dc4de8d275101b0b3a0e751516d483d0"
+    },
+    {
+      "slug": "pcs-duke-field",
+      "theme": "military",
+      "candidate": "dvids-3029897",
+      "source": "https://www.dvidshub.net/image/3029897/lift-off",
+      "sha256": "ad55d71329ffc486d75cedf4dfae758b000d8a94278590d992fa675a863fccc9"
+    },
+    {
+      "slug": "pcs-tyndall-afb",
+      "theme": "military",
+      "candidate": "dvids-9619295",
+      "source": "https://www.dvidshub.net/image/9619295/gulf-coast-salute-air-show-2026",
+      "sha256": "2cf574f915e3835126785dea704a7e9d2db73c331659eca89b3fb0523aedb31e"
+    },
+    {
+      "slug": "pcs-nsa-panama-city",
+      "theme": "military",
+      "candidate": "dvids-8922682",
+      "source": "https://www.dvidshub.net/image/8922682/3rd-force-reconnaissance-company-helo-drills",
+      "sha256": "b7db132d2451d60136920f81f3a0e163c3ea2f66f68e201eecd3a7c2889f2e90"
+    }
+  ]
+}

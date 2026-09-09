@@ -1,0 +1,1095 @@
+{
+  "schemaVersion": 2,
+  "reviewed": "2026-09-08",
+  "canonicalUrl": "https://pensacolamilitaryhousing.com/bah-vs-cost-of-owning-pensacola",
+  "scope": "26 selected Florida ZIP identifiers; no Alabama ZIPs; corresponding 2020 Census ZCTAs may cross counties",
+  "valueDate": "2026-07-31",
+  "sourceCaptures": [
+    {
+      "id": "zhvi",
+      "url": "https://files.zillowstatic.com/research/public_csvs/zhvi/Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv",
+      "retrievedAt": "2026-09-08T18:32:24.690Z",
+      "httpStatus": 200,
+      "lastModified": "Sun, 16 Aug 2026 18:59:06 GMT",
+      "sourceSha256": "50dce14cddd4e3cf27da5b84708fa79dd85e982bd8831c4c12e04f6b7c967719",
+      "sourceBytes": 123065811,
+      "selectedRows": 26,
+      "status": "captured",
+      "selectedSha256": "a08a668418bc8dc4ac251ff0a0fc64301e2d8a900bf55cab35d70c643dd71847"
+    },
+    {
+      "id": "zcta-counties",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt",
+      "retrievedAt": "2026-09-08T18:32:27.900Z",
+      "httpStatus": 200,
+      "lastModified": "Thu, 09 Dec 2021 16:27:40 GMT",
+      "sourceSha256": "3ed41278d637dc249e0323306f68be8a6c234e3090f4de88ef328dee71aeaaaf",
+      "sourceBytes": 6821287,
+      "selectedRows": 29,
+      "status": "captured",
+      "selectedSha256": "908f1f5cb77bccc08bb87a8f5b92de282ee04f2030cf8ab096a141c88fad8f02"
+    }
+  ],
+  "rateReference": {
+    "rate": 6.71,
+    "date": "2026-09-03",
+    "name": "Freddie Mac PMMS, conventional 30-year national average",
+    "url": "https://www.freddiemac.com/pmms"
+  },
+  "assumptions": {
+    "rate": 6.71,
+    "termYears": 30,
+    "downPaymentPct": 0,
+    "feeType": "first",
+    "feeFinanced": true,
+    "annualTax": 3600,
+    "annualInsurance": 4800,
+    "annualFlood": 1200,
+    "mortgageInsurance": 0,
+    "hoa": 75,
+    "assessments": 0,
+    "maintenance": 250,
+    "utilities": 225,
+    "status": "illustrative common inputs, not observed property costs or local quotes"
+  },
+  "bah": {
+    "year": 2026,
+    "exampleGrade": "E-5",
+    "dependency": "with dependents",
+    "FL064": 1863,
+    "FL056": 2433,
+    "source": "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/"
+  },
+  "medianMonthly": 3457.39,
+  "rows": [
+    {
+      "zip": "32505",
+      "zillowRegionId": "72027",
+      "zillowCity": "Pensacola",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 144690.55694017964,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 144690.56,
+        "baseLoan": 144690.56,
+        "loan": 147801.4,
+        "fee": 3110.85,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 954.71,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 1754.71,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 1829.71,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 2304.71
+      },
+      "gapFL064": 441.71,
+      "gapFL056": -128.29
+    },
+    {
+      "zip": "32534",
+      "zillowRegionId": "72046",
+      "zillowCity": "Pensacola",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 239659.56463187633,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 239659.56,
+        "baseLoan": 239659.56,
+        "loan": 244812.25,
+        "fee": 5152.68,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1581.34,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2381.34,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2456.34,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 2931.34
+      },
+      "gapFL064": 1068.34,
+      "gapFL056": 498.34
+    },
+    {
+      "zip": "32506",
+      "zillowRegionId": "72028",
+      "zillowCity": "Pensacola",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 246560.24401774083,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 246560.24,
+        "baseLoan": 246560.24,
+        "loan": 251861.29,
+        "fee": 5301.05,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1626.88,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2426.88,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2501.88,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 2976.88
+      },
+      "gapFL064": 1113.88,
+      "gapFL056": 543.88
+    },
+    {
+      "zip": "32514",
+      "zillowRegionId": "72035",
+      "zillowCity": "Pensacola",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 261923.90270141338,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 261923.9,
+        "baseLoan": 261923.9,
+        "loan": 267555.27,
+        "fee": 5631.36,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1728.25,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2528.25,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2603.25,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3078.25
+      },
+      "gapFL064": 1215.25,
+      "gapFL056": 645.25
+    },
+    {
+      "zip": "32501",
+      "zillowRegionId": "72023",
+      "zillowCity": "Pensacola",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 267024.8161764539,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 267024.82,
+        "baseLoan": 267024.82,
+        "loan": 272765.85,
+        "fee": 5741.03,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1761.91,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2561.91,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2636.91,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3111.91
+      },
+      "gapFL064": 1248.91,
+      "gapFL056": 678.91
+    },
+    {
+      "zip": "32504",
+      "zillowRegionId": "72026",
+      "zillowCity": "Pensacola",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 272183.0505604818,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 272183.05,
+        "baseLoan": 272183.05,
+        "loan": 278034.99,
+        "fee": 5851.94,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1795.94,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2595.94,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2670.94,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3145.94
+      },
+      "gapFL064": 1282.94,
+      "gapFL056": 712.94
+    },
+    {
+      "zip": "32570",
+      "zillowRegionId": "72071",
+      "zillowCity": "Milton",
+      "zillowCounty": "Santa Rosa County",
+      "zctaCounties": [
+        {
+          "name": "Santa Rosa County",
+          "fips": "12113",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 278380.21249309904,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 278380.21,
+        "baseLoan": 278380.21,
+        "loan": 284365.39,
+        "fee": 5985.17,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1836.83,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2636.83,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2711.83,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3186.83
+      },
+      "gapFL064": 1323.83,
+      "gapFL056": 753.83
+    },
+    {
+      "zip": "32526",
+      "zillowRegionId": "72042",
+      "zillowCity": "Pensacola",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 283108.70029013715,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 283108.7,
+        "baseLoan": 283108.7,
+        "loan": 289195.54,
+        "fee": 6086.84,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1868.03,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2668.03,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2743.03,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3218.03
+      },
+      "gapFL064": 1355.03,
+      "gapFL056": 785.03
+    },
+    {
+      "zip": "32539",
+      "zillowRegionId": "72051",
+      "zillowCity": "Crestview",
+      "zillowCounty": "Okaloosa County",
+      "zctaCounties": [
+        {
+          "name": "Okaloosa County",
+          "fips": "12091",
+          "landShare": 0.886696
+        },
+        {
+          "name": "Walton County",
+          "fips": "12131",
+          "landShare": 0.113304
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 284748.22078333976,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 284748.22,
+        "baseLoan": 284748.22,
+        "loan": 290870.31,
+        "fee": 6122.09,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1878.85,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2678.85,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2753.85,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3228.85
+      },
+      "gapFL064": 1365.85,
+      "gapFL056": 795.85
+    },
+    {
+      "zip": "32583",
+      "zillowRegionId": "72084",
+      "zillowCity": "Milton",
+      "zillowCounty": "Santa Rosa County",
+      "zctaCounties": [
+        {
+          "name": "Santa Rosa County",
+          "fips": "12113",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 292188.9925870022,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 292188.99,
+        "baseLoan": 292188.99,
+        "loan": 298471.06,
+        "fee": 6282.06,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1927.95,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2727.95,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2802.95,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3277.95
+      },
+      "gapFL064": 1414.95,
+      "gapFL056": 844.95
+    },
+    {
+      "zip": "32536",
+      "zillowRegionId": "72048",
+      "zillowCity": "Crestview",
+      "zillowCounty": "Okaloosa County",
+      "zctaCounties": [
+        {
+          "name": "Okaloosa County",
+          "fips": "12091",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 295931.3702020872,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 295931.37,
+        "baseLoan": 295931.37,
+        "loan": 302293.89,
+        "fee": 6362.52,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1952.64,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2752.64,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2827.64,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3302.64
+      },
+      "gapFL064": 1439.64,
+      "gapFL056": 869.64
+    },
+    {
+      "zip": "32503",
+      "zillowRegionId": "72025",
+      "zillowCity": "Pensacola",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 297279.9558776209,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 297279.96,
+        "baseLoan": 297279.96,
+        "loan": 303671.47,
+        "fee": 6391.52,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 1961.54,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2761.54,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2836.54,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3311.54
+      },
+      "gapFL064": 1448.54,
+      "gapFL056": 878.54
+    },
+    {
+      "zip": "32547",
+      "zillowRegionId": "72056",
+      "zillowCity": "Fort Walton Beach",
+      "zillowCounty": "Okaloosa County",
+      "zctaCounties": [
+        {
+          "name": "Okaloosa County",
+          "fips": "12091",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 316555.2498289112,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 316555.25,
+        "baseLoan": 316555.25,
+        "loan": 323361.19,
+        "fee": 6805.94,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2088.72,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2888.72,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 2963.72,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3438.72
+      },
+      "gapFL064": 1575.72,
+      "gapFL056": 1005.72
+    },
+    {
+      "zip": "32569",
+      "zillowRegionId": "72070",
+      "zillowCity": "Mary Esther",
+      "zillowCounty": "Okaloosa County",
+      "zctaCounties": [
+        {
+          "name": "Okaloosa County",
+          "fips": "12091",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 322212.101843433,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 322212.1,
+        "baseLoan": 322212.1,
+        "loan": 329139.66,
+        "fee": 6927.56,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2126.05,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2926.05,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3001.05,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3476.05
+      },
+      "gapFL064": 1613.05,
+      "gapFL056": 1043.05
+    },
+    {
+      "zip": "32533",
+      "zillowRegionId": "72045",
+      "zillowCity": "Cantonment",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 328407.63824926474,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 328407.64,
+        "baseLoan": 328407.64,
+        "loan": 335468.4,
+        "fee": 7060.76,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2166.93,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2966.93,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3041.93,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3516.93
+      },
+      "gapFL064": 1653.93,
+      "gapFL056": 1083.93
+    },
+    {
+      "zip": "32571",
+      "zillowRegionId": "72072",
+      "zillowCity": "Pace",
+      "zillowCounty": "Santa Rosa County",
+      "zctaCounties": [
+        {
+          "name": "Santa Rosa County",
+          "fips": "12113",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 330382.4338282451,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 330382.43,
+        "baseLoan": 330382.43,
+        "loan": 337485.66,
+        "fee": 7103.22,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2179.96,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2979.96,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3054.96,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3529.96
+      },
+      "gapFL064": 1666.96,
+      "gapFL056": 1096.96
+    },
+    {
+      "zip": "32580",
+      "zillowRegionId": "72081",
+      "zillowCity": "Eglin AFB",
+      "zillowCounty": "Okaloosa County",
+      "zctaCounties": [
+        {
+          "name": "Okaloosa County",
+          "fips": "12091",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 331445.9070730158,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 331445.91,
+        "baseLoan": 331445.91,
+        "loan": 338571.99,
+        "fee": 7126.09,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2186.98,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 2986.98,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3061.98,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3536.98
+      },
+      "gapFL064": 1673.98,
+      "gapFL056": 1103.98
+    },
+    {
+      "zip": "32502",
+      "zillowRegionId": "72024",
+      "zillowCity": "Pensacola",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 333763.05260287685,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 333763.05,
+        "baseLoan": 333763.05,
+        "loan": 340938.96,
+        "fee": 7175.91,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2202.27,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 3002.27,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3077.27,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3552.27
+      },
+      "gapFL064": 1689.27,
+      "gapFL056": 1119.27
+    },
+    {
+      "zip": "32548",
+      "zillowRegionId": "72057",
+      "zillowCity": "Fort Walton Beach",
+      "zillowCounty": "Okaloosa County",
+      "zctaCounties": [
+        {
+          "name": "Okaloosa County",
+          "fips": "12091",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 341402.18292158726,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 341402.18,
+        "baseLoan": 341402.18,
+        "loan": 348742.33,
+        "fee": 7340.15,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2252.67,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 3052.67,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3127.67,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3602.67
+      },
+      "gapFL064": 1739.67,
+      "gapFL056": 1169.67
+    },
+    {
+      "zip": "32507",
+      "zillowRegionId": "72029",
+      "zillowCity": "Pensacola",
+      "zillowCounty": "Escambia County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 369610.0550911052,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 369610.06,
+        "baseLoan": 369610.06,
+        "loan": 377556.67,
+        "fee": 7946.62,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2438.8,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 3238.8,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3313.8,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3788.8
+      },
+      "gapFL064": 1925.8,
+      "gapFL056": 1355.8
+    },
+    {
+      "zip": "32579",
+      "zillowRegionId": "72080",
+      "zillowCity": "Shalimar",
+      "zillowCounty": "Okaloosa County",
+      "zctaCounties": [
+        {
+          "name": "Okaloosa County",
+          "fips": "12091",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 388946.41738583846,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 388946.42,
+        "baseLoan": 388946.42,
+        "loan": 397308.77,
+        "fee": 8362.35,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2566.38,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 3366.38,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3441.38,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 3916.38
+      },
+      "gapFL064": 2053.38,
+      "gapFL056": 1483.38
+    },
+    {
+      "zip": "32563",
+      "zillowRegionId": "72064",
+      "zillowCity": "Gulf Breeze",
+      "zillowCounty": "Santa Rosa County",
+      "zctaCounties": [
+        {
+          "name": "Santa Rosa County",
+          "fips": "12113",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 406682.6889077345,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 406682.69,
+        "baseLoan": 406682.69,
+        "loan": 415426.37,
+        "fee": 8743.68,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2683.41,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 3483.41,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3558.41,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 4033.41
+      },
+      "gapFL064": 2170.41,
+      "gapFL056": 1600.41
+    },
+    {
+      "zip": "32566",
+      "zillowRegionId": "72067",
+      "zillowCity": "Navarre",
+      "zillowCounty": "Santa Rosa County",
+      "zctaCounties": [
+        {
+          "name": "Santa Rosa County",
+          "fips": "12113",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 421657.46276167565,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 421657.46,
+        "baseLoan": 421657.46,
+        "loan": 430723.1,
+        "fee": 9065.64,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2782.22,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 3582.22,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3657.22,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 4132.22
+      },
+      "gapFL064": 2269.22,
+      "gapFL056": 1699.22
+    },
+    {
+      "zip": "32578",
+      "zillowRegionId": "72079",
+      "zillowCity": "Niceville",
+      "zillowCounty": "Okaloosa County",
+      "zctaCounties": [
+        {
+          "name": "Okaloosa County",
+          "fips": "12091",
+          "landShare": 0.973938
+        },
+        {
+          "name": "Walton County",
+          "fips": "12131",
+          "landShare": 0.026062
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 440989.84399482555,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 440989.84,
+        "baseLoan": 440989.84,
+        "loan": 450471.13,
+        "fee": 9481.28,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 2909.78,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 3709.78,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 3784.78,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 4259.78
+      },
+      "gapFL064": 2396.78,
+      "gapFL056": 1826.78
+    },
+    {
+      "zip": "32541",
+      "zillowRegionId": "72053",
+      "zillowCity": "Destin",
+      "zillowCounty": "Okaloosa County",
+      "zctaCounties": [
+        {
+          "name": "Okaloosa County",
+          "fips": "12091",
+          "landShare": 1
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 627422.0616560398,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 627422.06,
+        "baseLoan": 627422.06,
+        "loan": 640911.64,
+        "fee": 13489.57,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 4139.91,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 4939.91,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 5014.91,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 5489.91
+      },
+      "gapFL064": 3626.91,
+      "gapFL056": 3056.91
+    },
+    {
+      "zip": "32561",
+      "zillowRegionId": "72062",
+      "zillowCity": "Gulf Breeze",
+      "zillowCounty": "Santa Rosa County",
+      "zctaCounties": [
+        {
+          "name": "Escambia County",
+          "fips": "12033",
+          "landShare": 0.611167
+        },
+        {
+          "name": "Santa Rosa County",
+          "fips": "12113",
+          "landShare": 0.388833
+        }
+      ],
+      "valueDate": "2026-07-31",
+      "zhvi": 686211.0550588475,
+      "valueKind": "published modeled home-value index, not a closed-sale median",
+      "monthlyIllustration": {
+        "price": 686211.06,
+        "baseLoan": 686211.06,
+        "loan": 700964.59,
+        "fee": 14753.54,
+        "feeRate": 2.15,
+        "downPayment": 0,
+        "cashFundingFee": 0,
+        "principalInterest": 4527.82,
+        "tax": 300,
+        "insurance": 400,
+        "flood": 100,
+        "mortgageInsurance": 0,
+        "piti": 5327.82,
+        "hoa": 75,
+        "assessments": 0,
+        "recurring": 5402.82,
+        "maintenance": 250,
+        "utilities": 225,
+        "monthly": 5877.82
+      },
+      "gapFL064": 4014.82,
+      "gapFL056": 3444.82
+    }
+  ]
+}

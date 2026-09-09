@@ -70,8 +70,11 @@ export function gscPages(root, file, origin) {
 
 export function normalizeSnapshot(s) {
   if (!s) return null;
-  const missing = s.status === "not-observed" || /no Bing rows/i.test(s.note || "");
-  return { ...s, status: missing ? "not-observed" : s.status || (s.impressions == null || s.clicks == null ? "unavailable" : "observed"),
+  const missing = s.status === "not-observed" || ['no_rows', 'unavailable', 'failed'].includes(s.dataStatus) || /no Bing rows/i.test(s.note || "");
+  const window = s.window || (s.windowStart || s.windowEnd ? { start: s.windowStart || null, end: s.windowEnd || null,
+    searchType: s.searchType || null, dimensions: s.dimensions || null, filters: { device: s.device || null, country: s.country || null },
+    complete: false, description: 'Dates retained from the flat-window collector; date labels alone do not confirm full coverage.' } : undefined);
+  return { ...s, ...(window ? { window } : {}), status: missing ? "not-observed" : s.status || (s.impressions == null || s.clicks == null ? "unavailable" : "observed"),
     clicks: missing ? null : s.clicks, impressions: missing ? null : s.impressions,
     impressions90: missing ? null : s.impressions90, clicks90: missing ? null : s.clicks90,
     impressionsPrior28: missing ? null : s.impressionsPrior28, clicksPrior28: missing ? null : s.clicksPrior28,
@@ -154,4 +157,36 @@ export function eligibleLesson(lesson, experiments, today = operatingDate()) {
   if (lesson.type !== "performance" || !lesson.scope || !isoDay(lesson.expires) || lesson.expires < today) return false;
   const ids = new Set(lesson.experimentIds || []);
   return [...ids].filter((id) => experiments.some((e) => e.id === id && e.scope === lesson.scope && e.status === "reviewed" && e.outcome === "supported" && e.reviewedBy && e.comparison?.comparable === true)).length >= 2;
+}
+
+// Compatibility for the installed flat-window collector; new editorial decisions use assessSearch.
+export const engineOf=s=>s.engine||(/^gsc/.test(s.source)?'google':/^bing/.test(s.source)?'bing':'unknown');
+export function evidenceState(s,today=new Date().toISOString().slice(0,10)) {
+ if(!s)return 'missing';
+ if(s.note==='no Bing rows for this URL')return 'legacy_missing';
+ if(s.dataStatus!=='observed')return s.dataStatus||'legacy_unverified';
+ if(!s.windowStart||!s.windowEnd||!Number.isFinite(dayDiff(s.windowStart,s.windowEnd)))return 'window_unknown';
+ const age=dayDiff(s.windowEnd,today);
+ if(age<0)return 'future';
+ if(age>10)return 'stale';
+ if(s.impressions==null||s.clicks==null)return 'missing';
+ return 'observed';
+}
+export function signals(s,today) {
+ const state=evidenceState(s,today);if(state!=='observed')return {state,flags:[]};
+ const flags=[];
+ if(s.impressions>=100&&s.clicks===0&&s.position!=null&&s.position<=8)flags.push('CTR-REVIEW');
+ if(s.comparisonEligible&&s.impressionsPrior28!=null&&s.impressions>=100&&s.impressionsPrior28>=100) {
+  if(s.impressions>=1.5*s.impressionsPrior28)flags.push('RISING-CANDIDATE');
+  if(s.impressions<.6*s.impressionsPrior28)flags.push('DECLINE-REVIEW');
+ }
+ return {state,flags,reading:flags.length?'Investigate query mix, dates, indexing, seasonality and inquiry outcomes.':'Insufficient change evidence or no review threshold crossed.'};
+}
+export function latestByEngine(search=[]) {
+ const result={};
+ for(const s of search.filter(s=>s.kind==='page').sort((a,b)=>(a.collectedAt||a.date||'').localeCompare(b.collectedAt||b.date||'')))result[engineOf(s)]=s;
+ return result;
+}
+export function comparable(a,b) {
+ return engineOf(a)===engineOf(b)&&a.source===b.source&&a.searchType===b.searchType&&a.device===b.device&&a.country===b.country&&a.windowDays===b.windowDays&&a.windowDays>0&&a.windowEnd<b.windowStart&&a.dataStatus==='observed'&&b.dataStatus==='observed';
 }

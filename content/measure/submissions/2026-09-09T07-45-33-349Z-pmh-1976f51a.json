@@ -1,0 +1,616 @@
+{
+  "id": "1976f51a-0ad7-4e7c-80a9-e88e1b4d55ce",
+  "site": "pmh",
+  "startedAt": "2026-09-09T07:45:33.349Z",
+  "mode": "submit",
+  "checks": [
+    {
+      "url": "https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola",
+      "fingerprint": "7e6b2177eb92f6ec95c89e1de7c16e4428e8e6a21f0fffbf0a1054b0e7fc32e5",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/bah-rates",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/bah-rates",
+      "fingerprint": "8537fbe220eb72e73d133538fb1adf87aaeb769fb0967bc1ed4665e4c3056cc4",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/bah-to-mortgage-guide",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/bah-to-mortgage-guide",
+      "fingerprint": "fc93c73857eb5f0c25f03508945b9a8b978a30df0793b64e014510b4caa230a1",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/bases/eglin-afb",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/bases/eglin-afb",
+      "fingerprint": "d22babf536232368133e40152c86e2531938a97c36da3031bc32b4b585be4848",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/bases/hurlburt-field",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/bases/hurlburt-field",
+      "fingerprint": "f5e5ab7c295b8b6737d73c28c080473f0cbc9f20854f00185efb9a6596b20f87",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/bases/nas-pensacola",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/bases/nas-pensacola",
+      "fingerprint": "07e0ec168675b95ba79213f9edc1b432708cac5002f43841e94982854bc940fc",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog",
+      "fingerprint": "57857862a37172bea4b382718bad2df5a9aa7ed474f037f3d5238aad42007c62",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+      "fingerprint": "7f4b8fa675f8cfc813b9fcfeae39ac115caa04e99327831697b76b28477982d1",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
+      "fingerprint": "0c7efa1c97388962cf7af242edb89e4ce208cdc4b1e83485f96a599551e043bb",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/best-pensacola-neighborhoods-by-rank-bah",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/best-pensacola-neighborhoods-by-rank-bah",
+      "fingerprint": "c0e423f7f961e214087ea1663843290e753b83d7340339534766ec48eb4a4e95",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+      "fingerprint": "876f4243fee23d1b4dfb5da5c34e80f47766eb10e0ca139e500a0a8ce10cd525",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+      "fingerprint": "78a3d445a5d2c5b9d1b55e9ad3a1768c1d9ccc646a0b6ea62911eb0e9fc5eac0",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
+      "fingerprint": "c11446b1fa188fac0d2994d128fa0efbf062560bb86e65bb7565ef862f2faa8c",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+      "fingerprint": "4e95ea9d1b03dd43b3e9a51c72fb2f4515170119c5470136bfaccc1ed8c26eb5",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide",
+      "fingerprint": "919f0feaa1fb7ad3419d14dda8ed654a8d581480812c4eb8a9f8be5f55614dbd",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide",
+      "fingerprint": "76880bb8f332bf0057490f0b8f94d68d829b3c5feeb43a4411db6e0ef8a372b6",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
+      "fingerprint": "1c11aa91141171ee2f7d32f3f9ad64f0329502e30c88de8b5d703031cfc4eb18",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
+      "fingerprint": "9e9e6929084b5f1cd20cfd905aec9fde0b01b3c176de8be9c6788c5411ca926f",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+      "fingerprint": "db41c5743808071329580197583edad96b15d2f069c8971c5cb41fedeb19757c",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/buying-sight-unseen-pcs-pensacola",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/buying-sight-unseen-pcs-pensacola",
+      "fingerprint": "56e07acb2ac4bf444b5df1fcc1070a51d3cb769877b8cd0ac909b60e4f1f5fea",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/communities/gulf-breeze",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/communities/gulf-breeze",
+      "fingerprint": "20fb4294d78ce9134e3be1b3e9776b8226c83d3ec192218672a336095306c4f5",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/communities/milton",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/communities/milton",
+      "fingerprint": "4bd5d4b31043fdd5bff822ee3c98b8d5b8ec45315f6be1ecc31c12645f2cc802",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/communities/navarre",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/communities/navarre",
+      "fingerprint": "3df2fca8d81ae7b091fd0a69bea9bc458f07948c0ad8785aa48d6443d4d3d0f8",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/communities/niceville",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/communities/niceville",
+      "fingerprint": "7e767397a7cbdadcdebe9ffa8eec87ac68105a37d568cf3ebee8fceb5c6dea64",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida",
+      "fingerprint": "5ac1197803feff63216e859387d7e9ef4fb1961d991d69c1ad9257ec0bd08e12",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/dual-military-homes",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/dual-military-homes",
+      "fingerprint": "7bde18c64ae98d35abd9a30f69bb097738fea152b5abe21f85ec931e24779e8d",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/faq",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/faq",
+      "fingerprint": "d83a8ea0dd8004c8fb41dd0b10dee486ff4eb4419341e486c9dc3b3889ce31f7",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/first-time-military-homebuyer",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/first-time-military-homebuyer",
+      "fingerprint": "0ea6e6e254193ac2b4b413ce988afee7a94e13b3109aef99cff51459197844f2",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/florida-homestead-exemption-military",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/florida-homestead-exemption-military",
+      "fingerprint": "a7686ccac8951eb549f9c106175abb113ae75a7cbfb0b2b9384b3c40f3b137eb",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/gulf-breeze-vs-navarre",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/gulf-breeze-vs-navarre",
+      "fingerprint": "6ac2b6dbf02f5476d5273812d8d659c30859806a7cdaf2a7d51479f97da8937e",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/military-pcs-tax-deductions",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/military-pcs-tax-deductions",
+      "fingerprint": "6e652df9af9a49a71a604b38e76ec66d1425c37ac7af47bc17966c6bc9c26db9",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/pcs-checklist",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/pcs-checklist",
+      "fingerprint": "40e358939930a7f701dcb3abe8fc166d4851a31d455e2bdd589bec6501e11509",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/pcs-home-search",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/pcs-home-search",
+      "fingerprint": "8a018bd4bb17954d27cdd185903ade0327a2dd1d9322fd723d218fff6e7ffa7c",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers",
+      "fingerprint": "1c3b2ab85302c7db5a3cf1e4c8d9ef6d38de0a592bd7286137aeafb654fef68d",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/va-disability-property-tax-florida",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/va-disability-property-tax-florida",
+      "fingerprint": "d3c5afbd59acfff9fb55412821a97b88ebbf12e81cacb94cb9d59a2d43831ab8",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/va-loan-guide",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/va-loan-guide",
+      "fingerprint": "e7bf277fb4ba81783fcd97d222bdf6fcab6c39b362f6169fc011931fe553efca",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/zero-down-home-loans",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/zero-down-home-loans",
+      "fingerprint": "a59c6f7798542d22ee5a90bbb657a641a58b5837e2661fabd2e1317b043ecd57",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    }
+  ],
+  "engines": {
+    "indexnow": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola",
+          "fingerprint": "7e6b2177eb92f6ec95c89e1de7c16e4428e8e6a21f0fffbf0a1054b0e7fc32e5"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/bah-rates",
+          "fingerprint": "8537fbe220eb72e73d133538fb1adf87aaeb769fb0967bc1ed4665e4c3056cc4"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/bah-to-mortgage-guide",
+          "fingerprint": "fc93c73857eb5f0c25f03508945b9a8b978a30df0793b64e014510b4caa230a1"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/bases/eglin-afb",
+          "fingerprint": "d22babf536232368133e40152c86e2531938a97c36da3031bc32b4b585be4848"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/bases/hurlburt-field",
+          "fingerprint": "f5e5ab7c295b8b6737d73c28c080473f0cbc9f20854f00185efb9a6596b20f87"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/bases/nas-pensacola",
+          "fingerprint": "07e0ec168675b95ba79213f9edc1b432708cac5002f43841e94982854bc940fc"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog",
+          "fingerprint": "57857862a37172bea4b382718bad2df5a9aa7ed474f037f3d5238aad42007c62"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+          "fingerprint": "7f4b8fa675f8cfc813b9fcfeae39ac115caa04e99327831697b76b28477982d1"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
+          "fingerprint": "0c7efa1c97388962cf7af242edb89e4ce208cdc4b1e83485f96a599551e043bb"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/best-pensacola-neighborhoods-by-rank-bah",
+          "fingerprint": "c0e423f7f961e214087ea1663843290e753b83d7340339534766ec48eb4a4e95"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+          "fingerprint": "876f4243fee23d1b4dfb5da5c34e80f47766eb10e0ca139e500a0a8ce10cd525"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+          "fingerprint": "78a3d445a5d2c5b9d1b55e9ad3a1768c1d9ccc646a0b6ea62911eb0e9fc5eac0"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
+          "fingerprint": "c11446b1fa188fac0d2994d128fa0efbf062560bb86e65bb7565ef862f2faa8c"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+          "fingerprint": "4e95ea9d1b03dd43b3e9a51c72fb2f4515170119c5470136bfaccc1ed8c26eb5"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide",
+          "fingerprint": "919f0feaa1fb7ad3419d14dda8ed654a8d581480812c4eb8a9f8be5f55614dbd"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide",
+          "fingerprint": "76880bb8f332bf0057490f0b8f94d68d829b3c5feeb43a4411db6e0ef8a372b6"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
+          "fingerprint": "1c11aa91141171ee2f7d32f3f9ad64f0329502e30c88de8b5d703031cfc4eb18"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
+          "fingerprint": "9e9e6929084b5f1cd20cfd905aec9fde0b01b3c176de8be9c6788c5411ca926f"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+          "fingerprint": "db41c5743808071329580197583edad96b15d2f069c8971c5cb41fedeb19757c"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/buying-sight-unseen-pcs-pensacola",
+          "fingerprint": "56e07acb2ac4bf444b5df1fcc1070a51d3cb769877b8cd0ac909b60e4f1f5fea"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/gulf-breeze",
+          "fingerprint": "20fb4294d78ce9134e3be1b3e9776b8226c83d3ec192218672a336095306c4f5"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/milton",
+          "fingerprint": "4bd5d4b31043fdd5bff822ee3c98b8d5b8ec45315f6be1ecc31c12645f2cc802"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/navarre",
+          "fingerprint": "3df2fca8d81ae7b091fd0a69bea9bc458f07948c0ad8785aa48d6443d4d3d0f8"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/niceville",
+          "fingerprint": "7e767397a7cbdadcdebe9ffa8eec87ac68105a37d568cf3ebee8fceb5c6dea64"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida",
+          "fingerprint": "5ac1197803feff63216e859387d7e9ef4fb1961d991d69c1ad9257ec0bd08e12"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/dual-military-homes",
+          "fingerprint": "7bde18c64ae98d35abd9a30f69bb097738fea152b5abe21f85ec931e24779e8d"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/faq",
+          "fingerprint": "d83a8ea0dd8004c8fb41dd0b10dee486ff4eb4419341e486c9dc3b3889ce31f7"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/first-time-military-homebuyer",
+          "fingerprint": "0ea6e6e254193ac2b4b413ce988afee7a94e13b3109aef99cff51459197844f2"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/florida-homestead-exemption-military",
+          "fingerprint": "a7686ccac8951eb549f9c106175abb113ae75a7cbfb0b2b9384b3c40f3b137eb"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/gulf-breeze-vs-navarre",
+          "fingerprint": "6ac2b6dbf02f5476d5273812d8d659c30859806a7cdaf2a7d51479f97da8937e"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/military-pcs-tax-deductions",
+          "fingerprint": "6e652df9af9a49a71a604b38e76ec66d1425c37ac7af47bc17966c6bc9c26db9"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/pcs-checklist",
+          "fingerprint": "40e358939930a7f701dcb3abe8fc166d4851a31d455e2bdd589bec6501e11509"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/pcs-home-search",
+          "fingerprint": "8a018bd4bb17954d27cdd185903ade0327a2dd1d9322fd723d218fff6e7ffa7c"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers",
+          "fingerprint": "1c3b2ab85302c7db5a3cf1e4c8d9ef6d38de0a592bd7286137aeafb654fef68d"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/va-disability-property-tax-florida",
+          "fingerprint": "d3c5afbd59acfff9fb55412821a97b88ebbf12e81cacb94cb9d59a2d43831ab8"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/va-loan-guide",
+          "fingerprint": "e7bf277fb4ba81783fcd97d222bdf6fcab6c39b362f6169fc011931fe553efca"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/zero-down-home-loans",
+          "fingerprint": "a59c6f7798542d22ee5a90bbb657a641a58b5837e2661fabd2e1317b043ecd57"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    },
+    "bing": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola",
+          "fingerprint": "7e6b2177eb92f6ec95c89e1de7c16e4428e8e6a21f0fffbf0a1054b0e7fc32e5"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/bah-rates",
+          "fingerprint": "8537fbe220eb72e73d133538fb1adf87aaeb769fb0967bc1ed4665e4c3056cc4"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/bah-to-mortgage-guide",
+          "fingerprint": "fc93c73857eb5f0c25f03508945b9a8b978a30df0793b64e014510b4caa230a1"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/bases/eglin-afb",
+          "fingerprint": "d22babf536232368133e40152c86e2531938a97c36da3031bc32b4b585be4848"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/bases/hurlburt-field",
+          "fingerprint": "f5e5ab7c295b8b6737d73c28c080473f0cbc9f20854f00185efb9a6596b20f87"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/bases/nas-pensacola",
+          "fingerprint": "07e0ec168675b95ba79213f9edc1b432708cac5002f43841e94982854bc940fc"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog",
+          "fingerprint": "57857862a37172bea4b382718bad2df5a9aa7ed474f037f3d5238aad42007c62"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+          "fingerprint": "7f4b8fa675f8cfc813b9fcfeae39ac115caa04e99327831697b76b28477982d1"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
+          "fingerprint": "0c7efa1c97388962cf7af242edb89e4ce208cdc4b1e83485f96a599551e043bb"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/best-pensacola-neighborhoods-by-rank-bah",
+          "fingerprint": "c0e423f7f961e214087ea1663843290e753b83d7340339534766ec48eb4a4e95"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+          "fingerprint": "876f4243fee23d1b4dfb5da5c34e80f47766eb10e0ca139e500a0a8ce10cd525"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+          "fingerprint": "78a3d445a5d2c5b9d1b55e9ad3a1768c1d9ccc646a0b6ea62911eb0e9fc5eac0"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
+          "fingerprint": "c11446b1fa188fac0d2994d128fa0efbf062560bb86e65bb7565ef862f2faa8c"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+          "fingerprint": "4e95ea9d1b03dd43b3e9a51c72fb2f4515170119c5470136bfaccc1ed8c26eb5"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide",
+          "fingerprint": "919f0feaa1fb7ad3419d14dda8ed654a8d581480812c4eb8a9f8be5f55614dbd"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide",
+          "fingerprint": "76880bb8f332bf0057490f0b8f94d68d829b3c5feeb43a4411db6e0ef8a372b6"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
+          "fingerprint": "1c11aa91141171ee2f7d32f3f9ad64f0329502e30c88de8b5d703031cfc4eb18"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
+          "fingerprint": "9e9e6929084b5f1cd20cfd905aec9fde0b01b3c176de8be9c6788c5411ca926f"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+          "fingerprint": "db41c5743808071329580197583edad96b15d2f069c8971c5cb41fedeb19757c"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/buying-sight-unseen-pcs-pensacola",
+          "fingerprint": "56e07acb2ac4bf444b5df1fcc1070a51d3cb769877b8cd0ac909b60e4f1f5fea"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/gulf-breeze",
+          "fingerprint": "20fb4294d78ce9134e3be1b3e9776b8226c83d3ec192218672a336095306c4f5"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/milton",
+          "fingerprint": "4bd5d4b31043fdd5bff822ee3c98b8d5b8ec45315f6be1ecc31c12645f2cc802"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/navarre",
+          "fingerprint": "3df2fca8d81ae7b091fd0a69bea9bc458f07948c0ad8785aa48d6443d4d3d0f8"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/niceville",
+          "fingerprint": "7e767397a7cbdadcdebe9ffa8eec87ac68105a37d568cf3ebee8fceb5c6dea64"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/disabled-veteran-benefits-florida",
+          "fingerprint": "5ac1197803feff63216e859387d7e9ef4fb1961d991d69c1ad9257ec0bd08e12"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/dual-military-homes",
+          "fingerprint": "7bde18c64ae98d35abd9a30f69bb097738fea152b5abe21f85ec931e24779e8d"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/faq",
+          "fingerprint": "d83a8ea0dd8004c8fb41dd0b10dee486ff4eb4419341e486c9dc3b3889ce31f7"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/first-time-military-homebuyer",
+          "fingerprint": "0ea6e6e254193ac2b4b413ce988afee7a94e13b3109aef99cff51459197844f2"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/florida-homestead-exemption-military",
+          "fingerprint": "a7686ccac8951eb549f9c106175abb113ae75a7cbfb0b2b9384b3c40f3b137eb"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/gulf-breeze-vs-navarre",
+          "fingerprint": "6ac2b6dbf02f5476d5273812d8d659c30859806a7cdaf2a7d51479f97da8937e"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/military-pcs-tax-deductions",
+          "fingerprint": "6e652df9af9a49a71a604b38e76ec66d1425c37ac7af47bc17966c6bc9c26db9"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/pcs-checklist",
+          "fingerprint": "40e358939930a7f701dcb3abe8fc166d4851a31d455e2bdd589bec6501e11509"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/pcs-home-search",
+          "fingerprint": "8a018bd4bb17954d27cdd185903ade0327a2dd1d9322fd723d218fff6e7ffa7c"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers",
+          "fingerprint": "1c3b2ab85302c7db5a3cf1e4c8d9ef6d38de0a592bd7286137aeafb654fef68d"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/va-disability-property-tax-florida",
+          "fingerprint": "d3c5afbd59acfff9fb55412821a97b88ebbf12e81cacb94cb9d59a2d43831ab8"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/va-loan-guide",
+          "fingerprint": "e7bf277fb4ba81783fcd97d222bdf6fcab6c39b362f6169fc011931fe553efca"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/zero-down-home-loans",
+          "fingerprint": "a59c6f7798542d22ee5a90bbb657a641a58b5837e2661fabd2e1317b043ecd57"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    }
+  }
+}

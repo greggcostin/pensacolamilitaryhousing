@@ -1,6 +1,6 @@
 {
   "id": "blog-catalog-2026-09-09",
-  "status": "validated-awaiting-deployment",
+  "status": "published-and-live-verified",
   "provider": "codex",
   "model": "gpt-6-astra",
   "effort": "max",
@@ -248,13 +248,53 @@
         "queriesReturned": 0,
         "reported28dImpressions": 0,
         "reported28dClicks": 0,
-        "indexedPageCount": "unknown"
+        "indexedPageCount": "unknown",
+        "collectedAt": "2026-09-09T07:55:31.835Z",
+        "endpointStatus": {
+          "pages": {
+            "status": "empty",
+            "rows": 0,
+            "error": null
+          },
+          "queries": {
+            "status": "empty",
+            "rows": 0,
+            "error": null
+          },
+          "traffic": {
+            "status": "observed",
+            "rows": 14,
+            "error": null
+          }
+        },
+        "reportedTrafficDays": 14,
+        "aggregation": "Unique keys with valid counts inside the trailing 90 days; periods without observed rows remain null."
       },
       "pmh": {
-        "pagesReturned": 55,
-        "queriesReturned": 490,
+        "pagesReturned": 53,
+        "queriesReturned": 363,
         "reported28dImpressions": 724,
-        "reported28dClicks": 13
+        "reported28dClicks": 13,
+        "collectedAt": "2026-09-09T07:55:30.867Z",
+        "endpointStatus": {
+          "pages": {
+            "status": "observed",
+            "rows": 274,
+            "error": null
+          },
+          "queries": {
+            "status": "observed",
+            "rows": 529,
+            "error": null
+          },
+          "traffic": {
+            "status": "observed",
+            "rows": 138,
+            "error": null
+          }
+        },
+        "reportedTrafficDays": 28,
+        "aggregation": "Unique keys with valid counts inside the trailing 90 days; periods without observed rows remain null."
       },
       "comparableCoverage": "not established"
     },
@@ -265,5 +305,108 @@
     "minimumDays": 28,
     "firstCompleteDay": "2026-10-08",
     "limitations": "A simultaneous catalog refresh is observational. Compare identical page, query, device, country and search-type cohorts; do not attribute changes to one feature."
+  },
+  "sourceCommit": "1f837d262baaad5363dcee55c723812f5a3c9cd0",
+  "publication": {
+    "completedAt": "2026-09-09T07:40:05.752Z",
+    "liveVerifiedAt": "2026-09-09T07:41:17.443Z",
+    "manifestVerification": "all provider file hashes match the sealed candidate",
+    "totalProviderFilesMatched": 4837,
+    "deployments": [
+      {
+        "site": "pmh",
+        "id": "6982ec12-9640-4a25-9ed2-55fbed9837fc",
+        "url": "https://6982ec12.pensacolamilitaryhousing.pages.dev",
+        "checkedAt": "2026-09-09T07:39:48.977Z",
+        "providerFilesMatched": 3286
+      },
+      {
+        "site": "gc",
+        "id": "8e0af763-c770-486f-991b-5bb8b78f729e",
+        "url": "https://8e0af763.greggcostin.pages.dev",
+        "checkedAt": "2026-09-09T07:39:57.842Z",
+        "providerFilesMatched": 1551
+      }
+    ],
+    "liveChecks": 29,
+    "liveFailures": 0
+  },
+  "validation": {
+    "ok": true,
+    "checkedAt": "2026-09-09T07:37:59.729Z",
+    "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.coast-release\\blog-catalog-og-20260909",
+    "candidateFingerprint": "19e64975668d4d93ad1821593fa4ec4a47deef890bf33d8401b0e9e58d97107b",
+    "checks": [
+      {
+        "name": "tests",
+        "exitCode": 0
+      },
+      {
+        "name": "civilian",
+        "exitCode": 0
+      },
+      {
+        "name": "military",
+        "exitCode": 0
+      },
+      {
+        "name": "entity",
+        "exitCode": 0
+      }
+    ],
+    "scope": "Only OG and Twitter image version query strings changed; all other deployed bytes preserved.",
+    "priorFullCatalogProof": "../release/quality-gates.json",
+    "tests": 66,
+    "renderedSourceChecks": 17,
+    "browserChecks": 34,
+    "searchQueries": 17,
+    "sitePages": 693,
+    "formatting": "17 of 17 score 100",
+    "fullCatalogProof": "artifacts/blog-catalog-refresh/2026-09-09/release/quality-gates.json",
+    "finalPublicProof": "artifacts/blog-catalog-refresh/2026-09-09/release-og/live-verification.json"
+  },
+  "images": {
+    "selectedAndViewed": 17,
+    "acceptedOriginalAndResponsiveFiles": 193,
+    "shareCardsViewed": 17,
+    "cacheStrategy": "OG and Twitter URLs use the first 12 SHA256 characters of the actual image bytes"
+  },
+  "searchCoverage": {
+    "gc": 319,
+    "pmh": 374,
+    "allArticlesFoundByBrowserQueries": true
+  },
+  "indexing": {
+    "submittedAt": "2026-09-09",
+    "totalUrls": 51,
+    "status": "accepted by both IndexNow and Bing; indexing, ranking and AI citations unverified",
+    "sites": {
+      "gc": {
+        "receipt": "content/measure/submissions/2026-09-09T07-45-14-883Z-gc-ccf14765.json",
+        "urls": 14,
+        "engines": {
+          "indexnow": "accepted",
+          "bing": "accepted"
+        }
+      },
+      "pmh": {
+        "receipt": "content/measure/submissions/2026-09-09T07-45-33-349Z-pmh-1976f51a.json",
+        "urls": 37,
+        "engines": {
+          "indexnow": "accepted",
+          "bing": "accepted"
+        }
+      }
+    }
+  },
+  "sourceSynchronization": {
+    "workingDirectory": "C:\\Users\\gregg\\pensacolamilitaryhousing",
+    "completedAt": "2026-09-09T07:57:41.051Z",
+    "gitStateChanged": false,
+    "rootRegressionTests": 83,
+    "publicationSourceRegressionTests": 68,
+    "renderedArticles": 17,
+    "record": "artifacts/blog-catalog-refresh/2026-09-09/root-sync-receipt.json",
+    "notes": "Preserved concurrent site shells and shared records. Retained the installed collector API, endpoint timeouts and missing-period nulls while installing current source, context-link and evidence gates."
   }
 }

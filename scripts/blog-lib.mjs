@@ -90,7 +90,7 @@ export function bingClient(key = process.env.BING_WEBMASTER_API_KEY) {
   const base = "https://ssl.bing.com/webmaster/api.svc/json/";
   const call = async (method, params) => {
     const qs = Object.entries(params).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
-    const r = await fetch(`${base}${method}?${qs}&apikey=${key}`);
+    const r = await fetch(`${base}${method}?${qs}&apikey=${key}`, { signal: AbortSignal.timeout(30000) });
     if (!r.ok) throw new Error(`Bing ${method}: HTTP ${r.status}`);
     const j = await r.json();
     return j.d;
@@ -105,30 +105,31 @@ export function bingClient(key = process.env.BING_WEBMASTER_API_KEY) {
     keywordStats: (siteUrl, q, country = "us", language = "en-US") => call("GetKeywordStats", { siteUrl, q, country, language }),
   };
 }
-export const bingDate = (value) => {
-  const s = String(value), match = /^\/Date\((-?\d+)(?:[+-]\d{4})?\)\/$/.exec(s);
-  if (match) { const d = new Date(Number(match[1])); return Number.isFinite(d.getTime()) ? d.toISOString().slice(0, 10) : null; }
-  if (isoDay(s.slice(0, 10))) return s.slice(0, 10);
-  return null;
+export const bingDate = (s) => {
+ const str=String(s??'');const m=/^\/?Date\((-?\d+)(?:[+-]\d{4})?\)\/?$/.exec(str);
+ const iso=/^\d{4}-\d{2}-\d{2}(?:T|$)/.test(str)?str:null;
+ if(iso&&!isoDay(iso.slice(0,10)))return null;
+ const d=new Date(m?+m[1]:iso||NaN);return Number.isFinite(+d)?d.toISOString().slice(0,10):null;
 };
 
 /** Aggregate dated Bing rows into trailing windows ending at the newest row date. */
-export function windowize(rows, keyField, anchor = null) {
-  const dated = rows.map((r) => ({ key: r[keyField], date: bingDate(r.Date), imp: r.Impressions || 0, clk: r.Clicks || 0, pos: r.AvgImpressionPosition || 0 })).filter((r) => r.date);
-  const asOf = anchor || dated.map((r) => r.date).sort().at(-1) || null;
+export function windowize(rows, keyField, anchor=null) {
+  const dated = rows.map((r) => ({ key: r[keyField], date: bingDate(r.Date), imp: r.Impressions, clk: r.Clicks, pos: r.AvgImpressionPosition })).filter((r) => r.key && r.date && r.date<=TODAY && Number.isSafeInteger(r.imp) && Number.isSafeInteger(r.clk) && r.imp>=0 && r.clk>=0 && r.clk<=r.imp);
+  const asOf = anchor || dated.reduce((m, r) => (r.date > m ? r.date : m), null);
+  if(!asOf)return {asOf:null,rows:[]};
   const day = (iso) => Math.round((new Date(asOf) - new Date(iso)) / 86400000);
   const out = new Map();
   for (const r of dated) {
     const d = day(r.date);
-    if (d < 0) continue;
-    const a = out.get(r.key) || (out.set(r.key, { key: r.key, imp28: 0, clk28: 0, posW28: 0, impPrior28: 0, clkPrior28: 0, imp90: 0, clk90: 0, posW90: 0, first: r.date, last: r.date }), out.get(r.key));
-    if (d <= 27) { a.imp28 += r.imp; a.clk28 += r.clk; a.posW28 += r.pos * r.imp; }
-    else if (d <= 55) { a.impPrior28 += r.imp; a.clkPrior28 += r.clk; }
-    if (d <= 89) { a.imp90 += r.imp; a.clk90 += r.clk; a.posW90 += r.pos * r.imp; }
+    if(d<0||d>89)continue;
+    const a = out.get(r.key) || (out.set(r.key, { key: r.key, imp28: 0, clk28: 0, posW28: 0, posI28:0, seen28:0, seenPrior28:0, impPrior28: 0, clkPrior28: 0, imp90: 0, clk90: 0, posW90: 0,posI90:0, first: r.date, last: r.date }), out.get(r.key));
+    if (d <= 27) { a.seen28++;a.imp28 += r.imp; a.clk28 += r.clk; if(r.pos>0){a.posW28+=r.pos*r.imp;a.posI28+=r.imp;} }
+    else if (d <= 55) { a.seenPrior28++;a.impPrior28 += r.imp; a.clkPrior28 += r.clk; }
+    if (d <= 89) { a.imp90 += r.imp; a.clk90 += r.clk; if(r.pos>0){a.posW90+=r.pos*r.imp;a.posI90+=r.imp;} }
     if (r.date < a.first) a.first = r.date;
     if (r.date > a.last) a.last = r.date;
   }
-  const rowsOut = [...out.values()].map((a) => ({ ...a, pos28: a.imp28 ? +(a.posW28 / a.imp28).toFixed(1) : null, pos90: a.imp90 ? +(a.posW90 / a.imp90).toFixed(1) : null }));
+  const rowsOut = [...out.values()].map((a) => ({ ...a, imp28:a.seen28?a.imp28:null,clk28:a.seen28?a.clk28:null,impPrior28:a.seenPrior28?a.impPrior28:null,clkPrior28:a.seenPrior28?a.clkPrior28:null,pos28: a.posI28 ? +(a.posW28 / a.posI28).toFixed(1) : null, pos90: a.posI90 ? +(a.posW90 / a.posI90).toFixed(1) : null }));
   for (const r of rowsOut) { delete r.posW28; delete r.posW90; }
   return { asOf, rows: rowsOut.sort((a, b) => b.imp90 - a.imp90) };
 }

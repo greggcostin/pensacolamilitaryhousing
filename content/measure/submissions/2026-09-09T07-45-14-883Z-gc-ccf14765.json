@@ -1,0 +1,248 @@
+{
+  "id": "ccf14765-ce1f-44e4-866e-d56c6e177c28",
+  "site": "gc",
+  "startedAt": "2026-09-09T07:45:14.883Z",
+  "mode": "submit",
+  "checks": [
+    {
+      "url": "https://greggcostin.com/blog",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog",
+      "fingerprint": "dac0220afdd3b1d28bae13ea14fb93c093ac96cee4629228a62d867f8fd62a01",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+      "fingerprint": "bb1e677e24e5c009a4b199f725c26f85f8bd2e3352386b7e0a2c443922573c1a",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "fingerprint": "df6c409a243327bb7686249cfdebe1b305c1aa784c051e0c3c01ed91f12b4ae2",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/blog/florida-insurance-relief-2026",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/florida-insurance-relief-2026",
+      "fingerprint": "8b45b34d991ecf2c4ab52b5a3d72bc0d33171c58bbb48be46ff50ca090407bc9",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+      "fingerprint": "c914d6ecffbf983e4af860bfa4341adb79c9bc525fbf02e99dbb2993bded3ab0",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "fingerprint": "8a93d064e51b4d81199cd46e79f7fd9f60ac9e6b4040c3cd6cca21493628b62c",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/buy",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/buy",
+      "fingerprint": "41072e8a65f7c2ab80f0107295c650d33ee28f6e58abfb4efeeee36e866f657c",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/neighborhoods/gulf-breeze",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/neighborhoods/gulf-breeze",
+      "fingerprint": "24eb573f3622995627f27975774efcdf9bc43af2bff3c7abb7b99d330cc423c4",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/resources/coastal-ownership-costs",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/resources/coastal-ownership-costs",
+      "fingerprint": "207d4bd96e7e4e3340a2c8c6fe75dbdc5638b43c02bd14d209adb200389b7998",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/resources/first-time-home-buyer",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/resources/first-time-home-buyer",
+      "fingerprint": "d3157090e3b4ecfac42df83fd374bdbbf34a4f203d6a33a470ba9bc6a7e5f470",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/resources/florida-home-insurance",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/resources/florida-home-insurance",
+      "fingerprint": "6048df4ce9d20c66fa1969619b75bb6947c24dbb2278b447a95498e68bd5b7b2",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/resources/florida-homestead-exemption",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/resources/florida-homestead-exemption",
+      "fingerprint": "62359d63dae8b57c9ba1cc424aa6f869f825623d1762bb664b84b0b1e0196ae3",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/resources/mortgage-preapproval",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/resources/mortgage-preapproval",
+      "fingerprint": "e556d86d6d75b60117acbf63984564542730d147244ca3fedbb4a049f2510903",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/sell",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/sell",
+      "fingerprint": "ac8ed409552667529213aba9eaffbc248a9f47c5619862adf85033b784c01c69",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    }
+  ],
+  "engines": {
+    "indexnow": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/blog",
+          "fingerprint": "dac0220afdd3b1d28bae13ea14fb93c093ac96cee4629228a62d867f8fd62a01"
+        },
+        {
+          "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+          "fingerprint": "bb1e677e24e5c009a4b199f725c26f85f8bd2e3352386b7e0a2c443922573c1a"
+        },
+        {
+          "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+          "fingerprint": "df6c409a243327bb7686249cfdebe1b305c1aa784c051e0c3c01ed91f12b4ae2"
+        },
+        {
+          "url": "https://greggcostin.com/blog/florida-insurance-relief-2026",
+          "fingerprint": "8b45b34d991ecf2c4ab52b5a3d72bc0d33171c58bbb48be46ff50ca090407bc9"
+        },
+        {
+          "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+          "fingerprint": "c914d6ecffbf983e4af860bfa4341adb79c9bc525fbf02e99dbb2993bded3ab0"
+        },
+        {
+          "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+          "fingerprint": "8a93d064e51b4d81199cd46e79f7fd9f60ac9e6b4040c3cd6cca21493628b62c"
+        },
+        {
+          "url": "https://greggcostin.com/buy",
+          "fingerprint": "41072e8a65f7c2ab80f0107295c650d33ee28f6e58abfb4efeeee36e866f657c"
+        },
+        {
+          "url": "https://greggcostin.com/neighborhoods/gulf-breeze",
+          "fingerprint": "24eb573f3622995627f27975774efcdf9bc43af2bff3c7abb7b99d330cc423c4"
+        },
+        {
+          "url": "https://greggcostin.com/resources/coastal-ownership-costs",
+          "fingerprint": "207d4bd96e7e4e3340a2c8c6fe75dbdc5638b43c02bd14d209adb200389b7998"
+        },
+        {
+          "url": "https://greggcostin.com/resources/first-time-home-buyer",
+          "fingerprint": "d3157090e3b4ecfac42df83fd374bdbbf34a4f203d6a33a470ba9bc6a7e5f470"
+        },
+        {
+          "url": "https://greggcostin.com/resources/florida-home-insurance",
+          "fingerprint": "6048df4ce9d20c66fa1969619b75bb6947c24dbb2278b447a95498e68bd5b7b2"
+        },
+        {
+          "url": "https://greggcostin.com/resources/florida-homestead-exemption",
+          "fingerprint": "62359d63dae8b57c9ba1cc424aa6f869f825623d1762bb664b84b0b1e0196ae3"
+        },
+        {
+          "url": "https://greggcostin.com/resources/mortgage-preapproval",
+          "fingerprint": "e556d86d6d75b60117acbf63984564542730d147244ca3fedbb4a049f2510903"
+        },
+        {
+          "url": "https://greggcostin.com/sell",
+          "fingerprint": "ac8ed409552667529213aba9eaffbc248a9f47c5619862adf85033b784c01c69"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    },
+    "bing": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/blog",
+          "fingerprint": "dac0220afdd3b1d28bae13ea14fb93c093ac96cee4629228a62d867f8fd62a01"
+        },
+        {
+          "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+          "fingerprint": "bb1e677e24e5c009a4b199f725c26f85f8bd2e3352386b7e0a2c443922573c1a"
+        },
+        {
+          "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+          "fingerprint": "df6c409a243327bb7686249cfdebe1b305c1aa784c051e0c3c01ed91f12b4ae2"
+        },
+        {
+          "url": "https://greggcostin.com/blog/florida-insurance-relief-2026",
+          "fingerprint": "8b45b34d991ecf2c4ab52b5a3d72bc0d33171c58bbb48be46ff50ca090407bc9"
+        },
+        {
+          "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+          "fingerprint": "c914d6ecffbf983e4af860bfa4341adb79c9bc525fbf02e99dbb2993bded3ab0"
+        },
+        {
+          "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+          "fingerprint": "8a93d064e51b4d81199cd46e79f7fd9f60ac9e6b4040c3cd6cca21493628b62c"
+        },
+        {
+          "url": "https://greggcostin.com/buy",
+          "fingerprint": "41072e8a65f7c2ab80f0107295c650d33ee28f6e58abfb4efeeee36e866f657c"
+        },
+        {
+          "url": "https://greggcostin.com/neighborhoods/gulf-breeze",
+          "fingerprint": "24eb573f3622995627f27975774efcdf9bc43af2bff3c7abb7b99d330cc423c4"
+        },
+        {
+          "url": "https://greggcostin.com/resources/coastal-ownership-costs",
+          "fingerprint": "207d4bd96e7e4e3340a2c8c6fe75dbdc5638b43c02bd14d209adb200389b7998"
+        },
+        {
+          "url": "https://greggcostin.com/resources/first-time-home-buyer",
+          "fingerprint": "d3157090e3b4ecfac42df83fd374bdbbf34a4f203d6a33a470ba9bc6a7e5f470"
+        },
+        {
+          "url": "https://greggcostin.com/resources/florida-home-insurance",
+          "fingerprint": "6048df4ce9d20c66fa1969619b75bb6947c24dbb2278b447a95498e68bd5b7b2"
+        },
+        {
+          "url": "https://greggcostin.com/resources/florida-homestead-exemption",
+          "fingerprint": "62359d63dae8b57c9ba1cc424aa6f869f825623d1762bb664b84b0b1e0196ae3"
+        },
+        {
+          "url": "https://greggcostin.com/resources/mortgage-preapproval",
+          "fingerprint": "e556d86d6d75b60117acbf63984564542730d147244ca3fedbb4a049f2510903"
+        },
+        {
+          "url": "https://greggcostin.com/sell",
+          "fingerprint": "ac8ed409552667529213aba9eaffbc248a9f47c5619862adf85033b784c01c69"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    }
+  }
+}

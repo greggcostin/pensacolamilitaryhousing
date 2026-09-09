@@ -1,6 +1,6 @@
 # Both-site blog catalog refresh, September 9, 2026
 
-Status: validated; publication pending.
+Status: published on both domains and verified against the complete release bundles on September 9, 2026.
 
 All 17 existing articles received a substantive research and writing refresh. Existing canonical URLs and original publication dates were retained. Reviews, source periods and modification dates are explicit. The examples distinguish hypothetical calculations from current rates, tax rules and benefit eligibility.
 
@@ -28,8 +28,14 @@ Generator corrections preserve the current page shell, prevent loss of reviewed 
 
 Search builds now cover 319 civilian and 374 military pages; live-browser tests against the local release find all 17 posts. The default civilian index had included only 8 pages. The existing production-host analytics safeguard was applied to 18 legacy output pages so preview activity is excluded without changing tracking destinations.
 
-Validation: 64 regression tests, 34 desktop/mobile article checks, 17 actual search queries, 17 rendered-source checks, zero findings in both complete-site audits and the shared entity audit, clean link and dash checks, and 100/100 formatting for every article. All 17 share cards and selected photographs were visually reviewed. These quality scores do not predict rankings.
+Validation: 66 regression tests, 34 desktop/mobile article checks, 17 actual search queries, 17 rendered-source checks, zero findings in both complete-site audits and the shared entity audit, clean link and dash checks, and 100/100 formatting for every article. All 17 share cards and selected photographs were visually reviewed. These quality scores do not predict rankings.
 
 Bing data through September 7 returns no civilian page/query rows; this does not establish that zero pages are indexed. Military totals report 724 impressions and 13 clicks in the rolling 28-day bin; comparable coverage is unproven. Clarity is already installed on the civilian site, but authenticated reports were unavailable. Current, comparable GSC exports are still needed.
 
 Evaluate at least 28 complete days after deployment, using equivalent cohorts and accounting for the other site releases. Do not claim a ranking, AI-citation or lead improvement before observing it. Google’s [AI-feature guidance](https://developers.google.com/search/docs/appearance/ai-features) supports crawlability, useful text, internal links and structured data that matches visible content; there is no special AI schema requirement.
+
+Publication source commit: `1f837d262baaad5363dcee55c723812f5a3c9cd0`. Military deployment `6982ec12-9640-4a25-9ed2-55fbed9837fc`; civilian deployment `8e0af763-c770-486f-991b-5bb8b78f729e`. All 4,837 provider file hashes match the final bundles. Public verification passed 29 checks covering every article, share-image bytes, blog hubs, sitemaps, discovery files, robots files and search runtimes. Content-based OG version URLs corrected a reproduced stale-cache response.
+
+IndexNow and Bing each accepted 51 changed URLs: 14 civilian and 37 military. Each URL passed the deployed canonical and content-fingerprint preflight. Acceptance is a submission receipt, not proof of indexing. The receipts and compact release evidence are recorded in `content/measure/catalog-refresh-2026-09-09.json`.
+
+The scheduled working copy now uses the refreshed source, images and generators. Three shared files were merged after reviewing their diffs; existing site chrome, measurement interfaces and unrelated changes were preserved. The dependency handoff passed 83 local checks and 68 checks in the publication checkout, plus all 17 rendered-source checks. The measurement helper retains 30-second API timeouts and nulls for unobserved periods, rejects impossible counts and invalid dates, and accepts existing collector records without treating their date labels as proof of complete coverage. Live Bing collection completed for both sites after this handoff.

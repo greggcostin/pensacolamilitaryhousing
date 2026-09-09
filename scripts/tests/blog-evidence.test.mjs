@@ -183,3 +183,25 @@ test("a claimed observed snapshot with invalid counts cannot support a decision"
   assert.ok(r.flags.includes("MEASUREMENT-INCOMPLETE"));
   assert.ok(!r.flags.includes("DECAY-REVIEW"));
 });
+
+test("flat collector dates survive normalization without certifying coverage or reviving absent rows", () => {
+  const flat = { source: 'bing-api', kind: 'page', dataStatus: 'observed', impressions: 300, clicks: 4,
+    windowStart: '2026-08-01', windowEnd: '2026-08-28', searchType: 'web', device: 'all', country: 'all' };
+  const normalized = normalizeSnapshot(flat);
+  assert.equal(normalized.window.start, flat.windowStart);
+  assert.equal(normalized.window.end, flat.windowEnd);
+  assert.equal(normalized.window.complete, false);
+  assert.equal(compareWindows(normalized, normalized, today).comparable, false);
+  assert.equal(normalizeSnapshot({ ...flat, dataStatus: 'no_rows' }).impressions, null);
+});
+
+test("Bing aggregation keeps unobserved periods null and rejects missing or impossible counts", () => {
+  const rows = [{ Query: '/old', Date: '2026-07-30', Impressions: 12, Clicks: 1 },
+    { Query: '/missing', Date: '2026-08-28', Clicks: 0 },
+    { Query: '/impossible', Date: '2026-08-28', Impressions: 1, Clicks: 2 }];
+  const result = windowize(rows, 'Query', '2026-08-28');
+  assert.equal(result.rows.length, 1);
+  assert.equal(result.rows[0].imp28, null);
+  assert.equal(result.rows[0].impPrior28, 12);
+  assert.equal(bingDate('2026-02-31'), null);
+});

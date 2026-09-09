@@ -1,0 +1,6 @@
+// A stable OG filename can remain cached after an article refresh. Version the
+// public reference by its actual bytes, retaining the existing per-page asset.
+import {readFileSync,existsSync} from 'node:fs';import {createHash} from 'node:crypto';import {resolve,sep} from 'node:path';
+export function ogDigest(url,root){const u=new URL(url),base=resolve(root),file=resolve(base,'.'+u.pathname);if(!file.startsWith(base+sep)||!existsSync(file))throw Error('Missing or unsafe OG image');return createHash('sha256').update(readFileSync(file)).digest('hex').slice(0,12);}
+export function ogVersionFindings(url,root){const u=new URL(url);if(!u.search)return [];try{if([...u.searchParams.keys()].join(',')!=='v'||u.searchParams.get('v')!==ogDigest(url,root))return ['OG content version differs from the local image'];return [];}catch(e){return [e.message];}}
+export function versionBlogOg(html,root){return html.replace(/<meta\b[^>]*>/g,tag=>{const key=tag.match(/(?:name|property)="([^"]+)"/)?.[1];if(!['og:image','twitter:image'].includes(key))return tag;const value=tag.match(/content="([^"]+)"/)?.[1];if(!value)throw Error('OG image URL missing');const u=new URL(value);if(!u.pathname.startsWith('/og/'))throw Error('Blog OG must use a per-page share card');u.search='?v='+ogDigest(value,root);return tag.replace(/content="[^"]*"/,'content="'+u.href+'"');});}

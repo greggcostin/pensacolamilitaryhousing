@@ -1,3 +1,4 @@
+import {ogVersionFindings} from './blog-og-version.mjs';
 // SEO / schema / content audit for civilian-site (greggcostin.com).
 // Run before every deploy: node scripts/audit-civilian.mjs
 // Exit code 1 on any finding, 0 when clean. Add checks here as standards evolve —
@@ -65,7 +66,8 @@ for (const file of pages) {
   if (ogUrl !== canon) f(file, `og:url "${ogUrl}" != canonical`);
   const ogImg = (h.match(/<meta property="og:image" content="([^"]*)"/) || [])[1] || "";
   if (!ogImg.startsWith(SITE + "/og/")) f(file, `og:image not a branded per-page card: ${ogImg}`);
-  else if (!existsSync(`${ROOT}/og/${ogImg.split("/og/")[1]}`)) f(file, `og image file missing: ${ogImg}`);
+  else if (!existsSync(`${ROOT}${new URL(ogImg).pathname}`)) f(file, `og image file missing: ${ogImg}`);
+  if (ogImg.startsWith(SITE+'/og/')) for(const issue of ogVersionFindings(ogImg,ROOT)) f(file,issue);
   if (!h.includes('rel="icon"')) f(file, "missing favicon");
   for (const tag of ['name="twitter:title"', 'name="twitter:description"', 'name="twitter:url"', 'rel="apple-touch-icon"', 'rel="manifest"', 'name="theme-color"', 'name="ICBM"']) {
     if (tag==='name="ICBM"' && h.includes('data-school-profile=') && !h.includes('"@type":"GeoCoordinates"')) continue; // No invented coordinates for virtual/unconfirmed campuses.

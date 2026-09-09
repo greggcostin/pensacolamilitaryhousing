@@ -1,3 +1,4 @@
+import {versionBlogOg} from './blog-og-version.mjs';
 // Generate per-page OG images (1200×630 PNG) so each page gets a unique
 // social-share preview instead of all 60+ pages sharing one generic image.
 // Uses Sharp's SVG renderer — no browser, no external service.
@@ -190,6 +191,7 @@ for (const path of pages) {
     /<meta\s+name="twitter:image"\s+content="[^"]*"\s*\/?>/i,
     `<meta name="twitter:image" content="${ogUrl}">`
   );
+  if(path.replaceAll('\\','/').includes('/blog/'))updatedHtml=versionBlogOg(updatedHtml,'public');
   if (updatedHtml !== html) {
     writeFileSync(path, updatedHtml, "utf8");
     updated++;

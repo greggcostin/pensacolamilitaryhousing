@@ -1,3 +1,4 @@
+import {versionBlogOg} from './blog-og-version.mjs';
 import {assertBlogRendered} from './blog-render-gate.mjs';
 import {finishBlogDiscovery} from './finish-blog-discovery.mjs';
 import { evidenceGate } from "./article-evidence.mjs";
@@ -229,12 +230,14 @@ for (const spec of targets) {
   buildPost(spec);
   const titleLines = spec.ogTitleLines || [spec.h1.length > 26 ? spec.h1.slice(0, spec.h1.lastIndexOf(" ", 26)) : spec.h1, spec.h1.length > 26 ? spec.h1.slice(spec.h1.lastIndexOf(" ", 26) + 1, 52) : ""].filter(Boolean);
   await blogOg(OUT || SITE_DIR, `blog-${spec.slug}`, titleLines, `Updated ${longDate(spec.dateModified || spec.datePublished)}`);
+  const postFile=`${OUT || SITE_DIR}/blog/${spec.slug}.html`;writeFileSync(postFile,versionBlogOg(readFileSync(postFile,'utf8'),OUT || SITE_DIR));
   built.push(spec.slug);
   console.log(`${OUT ? 'PREVIEW' : 'BUILT'} ${OUT || SITE_DIR}/blog/${spec.slug}.html`);
 }
 if (!OUT || BUNDLE) {
   buildIndex(frags, OUT);
   await blogOg(OUT || SITE_DIR, "blog", ["Real estate decisions", "on the Gulf Coast"], "Buyers, sellers and rental owners");
+  const indexFile=`${OUT || SITE_DIR}/blog.html`;writeFileSync(indexFile,versionBlogOg(readFileSync(indexFile,'utf8'),OUT || SITE_DIR));
   syncSitemapAndLlms(frags, OUT || SITE_DIR, targets);
   if (!OUT) finishBlogDiscovery('gc');
   console.log(`INDEX rebuilt with ${frags.length} post(s); sitemap + llms synced`);

@@ -1,3 +1,4 @@
+import {ogVersionFindings} from './blog-og-version.mjs';
 // Quality gate for the MILITARY site (pensacolamilitaryhousing.com), the twin of audit-civilian.mjs
 // (audit 2026-09-02, og-02: 101 hand-maintained PMH pages had no gate, so a skipped og-images step or
 // a head edit could ship a 404ing share card or drop a canonical unseen). Walks index.html + every
@@ -118,7 +119,8 @@ for (const file of files) {
   if (ogImage) {
     if (!ogImage.startsWith(SITE + "/")) f(page, `og:image not on ${SITE}: ${ogImage}`);
     else {
-      const rel = ogImage.slice(SITE.length), local = root + rel;
+      const rel = new URL(ogImage).pathname, local = root + rel;
+      for(const issue of ogVersionFindings(ogImage,root)) f(page,issue);
       if (!existsSync(local)) f(page, `og:image file missing: ${rel}`);
       else {
         const m = await sharp(local).metadata();
@@ -126,7 +128,7 @@ for (const file of files) {
         if (rel.startsWith("/og/")) referencedOg.add(rel.slice(4));
       }
       const expected = slug === "/" ? "home.png" : slug.slice(1).replace(/\//g, "-") + ".png";
-      if (!ogImage.endsWith("/og/" + expected)) f(page, `og:image is not the page-specific card /og/${expected}`);
+      if (!new URL(ogImage).pathname.endsWith("/og/" + expected)) f(page, `og:image is not the page-specific card /og/${expected}`);
     }
   }
   // 5. sitemap membership

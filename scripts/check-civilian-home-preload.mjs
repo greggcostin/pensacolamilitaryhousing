@@ -51,7 +51,7 @@ try{
     assert.ok(pair[key].nodes.filter(n=>n.tag==='IMG').every(n=>n.complete&&n.naturalWidth),'Missing hero image');
     if(width===390||width===1440)await p.screenshot({path:join(output,`${key}-${width}.png`)});
     if(key==='after'){
-     assert.ok(await p.locator('a[href="/reviews"]').filter({hasText:/\d+ client reviews/}).count());
+     assert.ok(await p.locator('a[href="/reviews"] [data-review-count="combined"]').count());
      assert.ok(await p.locator('a[href="/photo-credits"]').count());
      await p.locator('[data-inquiry-open]').first().click();await p.locator('#inquiry-form').waitFor({state:'visible'});await p.keyboard.press('Escape');
      assert.equal(await p.locator('#inquiry-form').isVisible(),false);

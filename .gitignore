@@ -40,3 +40,7 @@ content/measure/suggest-cache.json
 /docs/performance-2026-09-09/
 /content/reviews/automation.json
 /scripts/_tmp-assemble.mjs
+
+# Rebuilt from maintained HTML by build:civilian and the military production build.
+/civilian-site/pagefind/
+/public/pagefind/

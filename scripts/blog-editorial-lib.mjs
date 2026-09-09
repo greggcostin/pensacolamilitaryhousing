@@ -8,7 +8,9 @@ import { calculate, externalSources } from './article-evidence.mjs';
 export const EDITORIAL_SINCE = '2026-09-08';
 export const contentHash = (spec, body) => {
   const { body: ignoredBody, outDir: ignoredOutDir, ...content } = spec;
-  return createHash('sha256').update(JSON.stringify(content) + '\n' + body.trim()).digest('hex');
+  // Git's Windows line endings must not invalidate an unchanged reviewed draft.
+  // Preserve every other character so prose, links and figures still break the seal.
+  return createHash('sha256').update(JSON.stringify(content) + '\n' + body.replace(/\r\n/g,'\n').trim()).digest('hex');
 };
 export const evidenceHash = research => {
   const { review, ...evidence } = research;

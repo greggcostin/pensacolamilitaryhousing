@@ -5,7 +5,8 @@ import {createHash} from 'node:crypto';
 import {findSchools,milesBetween} from '../public/school-assets/school-finder-core.js';
 
 const PMH='https://pensacolamilitaryhousing.com',GC='https://greggcostin.com';
-const read=path=>readFileSync(path,'utf8');
+// Compare text contracts consistently across LF deploy files and CRLF checkouts.
+const read=path=>readFileSync(path,'utf8').replace(/\r\n/g,'\n');
 const data=JSON.parse(read('civilian-site/assets/school-finder-data.json'));
 const paths=[...new Set(data.schools.map(s=>s.reportUrl))];
 const routes=['/schools',...paths];

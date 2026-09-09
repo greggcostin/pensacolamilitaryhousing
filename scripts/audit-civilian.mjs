@@ -7,6 +7,7 @@ import {ogVersionFindings} from './blog-og-version.mjs';
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { analyticsGuardFindings } from "./analytics-host-guard.mjs";
 import { auditStyleBundle } from "./civilian-style-audit.mjs";
+import { hasLinkedPhotoCredit, photographyFindings } from './photo-credits-lib.mjs';
 import { recordLink } from './identity-page-lib.mjs';
 
 const rootArg = process.argv.indexOf('--root');
@@ -162,6 +163,7 @@ for (const file of pages) {
     if (OWNED_IMAGES.includes(m[1])) continue;
     const entry = LEDGER[`civilian-site/images/${m[1]}.jpg`];
     if (entry && entry.creditRequired === false) continue;
+    if (hasLinkedPhotoCredit(h, ROOT, '/images/' + m[1] + '.jpg')) continue;
     // A visible footer link can lead to full attribution on the dedicated credits page.
     if (new RegExp(`<a[^>]*href="/photo-credits"[^>]*data-photo-credits-page="[^"]*\\b${m[1]}\\b`).test(h)) {
       const credits = existsSync(`${ROOT}/photo-credits.html`) ? readFileSync(`${ROOT}/photo-credits.html`,'utf8') : '';
@@ -220,6 +222,7 @@ const keyFiles = readdirSync(ROOT).filter((x) => /^[0-9a-f]{32}\.txt$/.test(x));
 if (keyFiles.length !== 1) f("indexnow", `expected exactly 1 IndexNow key file, found ${keyFiles.length}`);
 
 /* ---------- report ---------- */
+for(const issue of photographyFindings(ROOT))f('photography',issue);
 if (process.argv.includes('--json')) {
   console.log(JSON.stringify({root:ROOT,pages:pages.length,findings},null,2));
   process.exit(findings.length ? 1 : 0);

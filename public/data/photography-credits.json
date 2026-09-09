@@ -1,0 +1,626 @@
+{
+  "site": "pmh",
+  "domain": "pensacolamilitaryhousing.com",
+  "entries": [
+    {
+      "id": "photo-communities-shalimar",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/shalimar.jpg",
+      "path": "/images/communities/shalimar.jpg",
+      "sourceSite": "pmh",
+      "title": "A bayfront boardwalk and gazebo at dusk, characteristic of Shalimar waterfront living",
+      "credit": "Unsplash.",
+      "suppliedCreditHtml": "Photo: Unsplash.",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/shalimar.html"
+      ]
+    },
+    {
+      "id": "photo-topics-buying-sight-unseen",
+      "image": "https://pensacolamilitaryhousing.com/images/topics/buying-sight-unseen.jpg",
+      "path": "/images/topics/buying-sight-unseen.jpg",
+      "sourceSite": "pmh",
+      "title": "A buyer on a laptop video call touring a home remotely",
+      "credit": "Ekaterina Bolovtsova / Pexels.",
+      "suppliedCreditHtml": "Photo: Ekaterina Bolovtsova / Pexels.",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "buying-sight-unseen-pcs-pensacola.html"
+      ]
+    },
+    {
+      "id": "photo-communities-ferry-pass",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/ferry-pass.jpg",
+      "path": "/images/communities/ferry-pass.jpg",
+      "sourceSite": "pmh",
+      "title": "A calm, cloud-swept view across Escambia Bay near Pensacola",
+      "credit": "Dofftoubab / Wikimedia Commons (CC0).",
+      "suppliedCreditHtml": "Photo: Dofftoubab / Wikimedia Commons (CC0).",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/ferry-pass.html"
+      ]
+    },
+    {
+      "id": "photo-communities-milton",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/milton.jpg",
+      "path": "/images/communities/milton.jpg",
+      "sourceSite": "pmh",
+      "title": "A historic red-brick building in downtown Milton, Florida",
+      "credit": "Jesse Hasty / Wikimedia Commons (CC0).",
+      "suppliedCreditHtml": "Photo: Jesse Hasty / Wikimedia Commons (CC0).",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/milton.html"
+      ]
+    },
+    {
+      "id": "photo-communities-cordova-park",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/cordova-park.jpg",
+      "path": "/images/communities/cordova-park.jpg",
+      "sourceSite": "pmh",
+      "title": "A residential street canopied by live oaks draped in Spanish moss",
+      "credit": "Dominik Gryzbon / Pexels.",
+      "suppliedCreditHtml": "Photo: Dominik Gryzbon / Pexels.",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/cordova-park.html"
+      ]
+    },
+    {
+      "id": "photo-communities-east-pensacola-heights",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/east-pensacola-heights.jpg",
+      "path": "/images/communities/east-pensacola-heights.jpg",
+      "sourceSite": "pmh",
+      "title": "A restored historic cottage with a covered front porch in Pensacola, Florida",
+      "credit": "Carol M. Highsmith / Library of Congress.",
+      "suppliedCreditHtml": "Photo: Carol M. Highsmith / Library of Congress.",
+      "license": "",
+      "licenseUrl": "",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/east-pensacola-heights.html"
+      ]
+    },
+    {
+      "id": "photo-communities-east-hill",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/east-hill.jpg",
+      "path": "/images/communities/east-hill.jpg",
+      "sourceSite": "pmh",
+      "title": "A restored historic Pensacola cottage with a wide porch and gingerbread trim",
+      "credit": "Carol M. Highsmith / Library of Congress.",
+      "suppliedCreditHtml": "Photo: Carol M. Highsmith / Library of Congress.",
+      "license": "",
+      "licenseUrl": "",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/east-hill.html"
+      ]
+    },
+    {
+      "id": "photo-topics-flood-zones",
+      "image": "https://pensacolamilitaryhousing.com/images/topics/flood-zones.jpg",
+      "path": "/images/topics/flood-zones.jpg",
+      "sourceSite": "pmh",
+      "title": "A summer storm cell dropping rain over the Gulf of Mexico seen from the beach",
+      "credit": "Pexels.",
+      "suppliedCreditHtml": "Photo: Pexels.",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "pensacola-flood-zones-homebuyers.html"
+      ]
+    },
+    {
+      "id": "photo-communities-bellview-myrtle-grove",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/bellview-myrtle-grove.jpg",
+      "path": "/images/communities/bellview-myrtle-grove.jpg",
+      "sourceSite": "pmh",
+      "title": "A tidy single-story ranch home with a two-car garage and front lawn",
+      "credit": "Clay Elliot / Pexels.",
+      "suppliedCreditHtml": "Photo: Clay Elliot / Pexels.",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/bellview-myrtle-grove.html"
+      ]
+    },
+    {
+      "id": "photo-blog-crestview-7sfg-training",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/crestview-7sfg-training.jpg",
+      "path": "/images/blog/crestview-7sfg-training.jpg",
+      "sourceSite": "pmh",
+      "title": "A U.S. Soldier with the 7th Special Forces Group (Airborne), runs down a 40-foot rappelling wall at the training tower at Eglin Base Air Force Base, Fla 130204-A-YI554-308.jpg",
+      "credit": "U.S. Army",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AA%20U.S.%20Soldier%20with%20the%207th%20Special%20Forces%20Group%20(Airborne)%2C%20runs%20down%20a%2040-foot%20rappelling%20wall%20at%20the%20training%20tower%20at%20Eglin%20Base%20Air%20Force%20Base%2C%20Fla%20130204-A-YI554-308.jpg",
+      "creditRequired": false,
+      "uses": [
+        "crestview-military-relocation.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-communities-beulah",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/beulah.jpg",
+      "path": "/images/communities/beulah.jpg",
+      "sourceSite": "pmh",
+      "title": "Aerial view of new-construction homes in a wooded suburban neighborhood",
+      "credit": "Curtis Adams / Pexels.",
+      "suppliedCreditHtml": "Photo: Curtis Adams / Pexels.",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/beulah.html"
+      ]
+    },
+    {
+      "id": "photo-topics-va-approved-condos",
+      "image": "https://pensacolamilitaryhousing.com/images/topics/va-approved-condos.jpg",
+      "path": "/images/topics/va-approved-condos.jpg",
+      "sourceSite": "pmh",
+      "title": "Aerial view of the Destin, Florida coastline with condos along the white-sand Gulf beach",
+      "credit": "TopSphere Media / Unsplash.",
+      "suppliedCreditHtml": "Photo: TopSphere Media / Unsplash.",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "va-approved-condos-pensacola.html"
+      ]
+    },
+    {
+      "id": "photo-communities-perdido-key",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/perdido-key.jpg",
+      "path": "/images/communities/perdido-key.jpg",
+      "sourceSite": "pmh",
+      "title": "Archival aerial view of Perdido Key, waterways and surrounding coast",
+      "credit": "Curtis Palmer, CC BY 2.0. Original photograph · License",
+      "suppliedCreditHtml": "Photo: Curtis Palmer, CC BY 2.0. <a href=\"https://commons.wikimedia.org/wiki/File:Perdido_Key,_Florida_by_C._Palmer_(2010_aerial_view).jpg\">Original photograph</a> · <a href=\"https://creativecommons.org/licenses/by/2.0/\">License</a>",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Perdido_Key,_Florida_by_C._Palmer_(2010_aerial_view).jpg",
+      "creditRequired": true,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/perdido-key.html"
+      ]
+    },
+    {
+      "id": "photo-blog-eglin-bay-final-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/eglin-bay-final-20260909.jpg",
+      "path": "/images/blog/eglin-bay-final-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "Choctawhatchee Bay.JPG",
+      "credit": "Skye Marthaler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Choctawhatchee_Bay.JPG",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/best-neighborhoods-eglin-afb-families.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-communities-destin",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/destin.jpg",
+      "path": "/images/communities/destin.jpg",
+      "sourceSite": "pmh",
+      "title": "Destin Harbor and the emerald-green Gulf of Mexico in Destin, Florida",
+      "credit": "Destin Vacation Boat Rentals / Wikimedia Commons (CC BY 2.0).",
+      "suppliedCreditHtml": "Photo: Destin Vacation Boat Rentals / <a href=\"https://commons.wikimedia.org/wiki/File:View_of_Destin,_Florida_from_the_Destin_Harbor.jpg\">Wikimedia Commons</a> (CC BY 2.0).",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_Destin,_Florida_from_the_Destin_Harbor.jpg",
+      "creditRequired": true,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/destin.html",
+        "veteran-realtor-destin.html"
+      ]
+    },
+    {
+      "id": "photo-blog-eglin-f35",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/eglin-f35.jpg",
+      "path": "/images/blog/eglin-f35.jpg",
+      "sourceSite": "pmh",
+      "title": "First F-35 Lightning Arrives at Eglin AFB Florida.jpg",
+      "credit": "U.S. Air Force",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AFirst%20F-35%20Lightning%20Arrives%20at%20Eglin%20AFB%20Florida.jpg",
+      "creditRequired": false,
+      "uses": [
+        "niceville-vs-crestview.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-gulf-breeze-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/gulf-breeze-review-20260909.jpg",
+      "path": "/images/blog/gulf-breeze-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "GINS FL Live Oaks water west bridge01.jpg",
+      "credit": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AGINS%20FL%20Live%20Oaks%20water%20west%20bridge01.jpg",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/living-in-gulf-breeze-pros-cons.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-gregg-courthouse",
+      "image": "https://greggcostin.com/images/gregg-courthouse.jpg",
+      "path": "/images/gregg-courthouse.jpg",
+      "sourceSite": "gc",
+      "title": "Gregg Costin at the Escambia County Court House",
+      "credit": "The Costin Team",
+      "license": "All rights reserved (owner: Gregg Costin)",
+      "licenseUrl": "",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "../index.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-communities-cantonment",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/cantonment.jpg",
+      "path": "/images/communities/cantonment.jpg",
+      "sourceSite": "pmh",
+      "title": "Longleaf pine flatwoods with a saw-palmetto understory in Northwest Florida",
+      "credit": "Geoff Gallice / Wikimedia Commons (CC BY 2.0).",
+      "suppliedCreditHtml": "Photo: Geoff Gallice / Wikimedia Commons (CC BY 2.0).",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "sourceUrl": "",
+      "creditRequired": true,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/cantonment.html"
+      ]
+    },
+    {
+      "id": "photo-blog-va-concession-residence-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/va-concession-residence-review-20260909.jpg",
+      "path": "/images/blog/va-concession-residence-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "Milton Hist Dist house01.jpg",
+      "credit": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AMilton%20Hist%20Dist%20house01.jpg",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/va-loan-seller-concessions-truth.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-veteran-tax-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/veteran-tax-review-20260909.jpg",
+      "path": "/images/blog/veteran-tax-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "Milton Santa Rosa crths01.jpg",
+      "credit": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AMilton%20Santa%20Rosa%20crths01.jpg",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/florida-veteran-property-tax-county-guide.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-navarre-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/navarre-review-20260909.jpg",
+      "path": "/images/blog/navarre-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "Navarre Beach Pier Wikivoyage banner.jpg",
+      "credit": "Taminar",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ANavarre%20Beach%20Pier%20Wikivoyage%20banner.jpg",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/moving-to-navarre-2026-guide.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-ppa-packing-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/ppa-packing-review-20260909.jpg",
+      "path": "/images/blog/ppa-packing-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "Packing Picture.jpg",
+      "credit": "Quick movers and packers",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APacking%20Picture.jpg",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/personal-property-activity-pcs-2026.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-gulf-breeze-bridge",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/gulf-breeze-bridge.jpg",
+      "path": "/images/blog/gulf-breeze-bridge.jpg",
+      "sourceSite": "pmh",
+      "title": "Pensacola Bay Bridge Looking North.jpg",
+      "credit": "Skarz",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Bay%20Bridge%20Looking%20North.jpg",
+      "creditRequired": false,
+      "uses": [
+        "gulf-breeze-vs-navarre.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-bah-area-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/bah-area-review-20260909.jpg",
+      "path": "/images/blog/bah-area-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "Pensacola NHPD house02.jpg",
+      "credit": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house02.jpg",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/best-pensacola-neighborhoods-by-rank-bah.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-va-assumption-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/va-assumption-review-20260909.jpg",
+      "path": "/images/blog/va-assumption-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "Pensacola NHPD house17.jpg",
+      "credit": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house17.jpg",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/va-loan-assumption-buyers-guide.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-pensacola-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/pensacola-review-20260909.jpg",
+      "path": "/images/blog/pensacola-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "Rainy day on Palafox Street - Pensacola Florida 30 August 2021 - 13.jpg",
+      "credit": "Infrogmation",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ARainy%20day%20on%20Palafox%20Street%20-%20Pensacola%20Florida%2030%20August%202021%20-%2013.jpg",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/moving-to-pensacola-2026-guide.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-communities-mary-esther",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/mary-esther.jpg",
+      "path": "/images/communities/mary-esther.jpg",
+      "sourceSite": "pmh",
+      "title": "Sunset over the Fort Walton Beach shoreline near Mary Esther, Florida",
+      "credit": "Unsplash.",
+      "suppliedCreditHtml": "Photo: Unsplash.",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/mary-esther.html"
+      ]
+    },
+    {
+      "id": "photo-communities-pace",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/pace.jpg",
+      "path": "/images/communities/pace.jpg",
+      "sourceSite": "pmh",
+      "title": "The Blackwater River winding through pine forest in Santa Rosa County near Pace",
+      "credit": "Mike Tilley / Wikimedia Commons (CC BY 3.0).",
+      "suppliedCreditHtml": "Photo: Mike Tilley / <a href=\"https://commons.wikimedia.org/wiki/File:Blackwater_River,_View_from_the_Big_Sand_Bar_-_panoramio.jpg\">Wikimedia Commons</a> (CC BY 3.0).",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blackwater_River,_View_from_the_Big_Sand_Bar_-_panoramio.jpg",
+      "creditRequired": true,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/pace.html"
+      ]
+    },
+    {
+      "id": "photo-blog-bah-budget-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/bah-budget-review-20260909.jpg",
+      "path": "/images/blog/bah-budget-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "The Blue Angels fly over Pensacola. (9519619338).jpg",
+      "credit": "Official U.S. Navy Page from United States of America\n\nMass Communication Specialist 2nd Class Kathryn E. Macdonald/U.S.",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AThe%20Blue%20Angels%20fly%20over%20Pensacola.%20(9519619338).jpg",
+      "creditRequired": false,
+      "uses": [
+        "blog.html",
+        "blog/bah-2026-pensacola-what-can-you-afford.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-communities-fort-walton-beach",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/fort-walton-beach.jpg",
+      "path": "/images/communities/fort-walton-beach.jpg",
+      "sourceSite": "pmh",
+      "title": "The Brooks Bridge and Emerald Coast water tower at dawn in Fort Walton Beach",
+      "credit": "Julie Jordan Scott / Wikimedia Commons (CC BY 2.0).",
+      "suppliedCreditHtml": "Photo: Julie Jordan Scott / <a href=\"https://commons.wikimedia.org/wiki/File:Sunrise_Fort_Walton_Beach_19_January_2014_-_Bridge.jpg\">Wikimedia Commons</a> (CC BY 2.0).",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sunrise_Fort_Walton_Beach_19_January_2014_-_Bridge.jpg",
+      "creditRequired": true,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/fort-walton-beach.html"
+      ]
+    },
+    {
+      "id": "photo-communities-gulf-breeze",
+      "image": "https://pensacolamilitaryhousing.com/images/communities/gulf-breeze.jpg",
+      "path": "/images/communities/gulf-breeze.jpg",
+      "sourceSite": "pmh",
+      "title": "The Pensacola Bay Bridge stretching across the water toward Gulf Breeze",
+      "credit": "Skarz / Wikimedia Commons (CC0).",
+      "suppliedCreditHtml": "Photo: Skarz / Wikimedia Commons (CC0).",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "assets/index-NjNDzgmQ.geo-0942acb3e4.js",
+        "communities/gulf-breeze.html"
+      ]
+    },
+    {
+      "id": "photo-blog-navy-lodge-suitcase",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/navy-lodge-suitcase.jpg",
+      "path": "/images/blog/navy-lodge-suitcase.jpg",
+      "sourceSite": "pmh",
+      "title": "Travelers with luggage arrive at hotel entrance while suitcase waits on pavement",
+      "credit": "Shixart1985",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=187311890",
+      "creditRequired": true,
+      "uses": [
+        "military-lodging-pensacola.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-blue-angels-diamond",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/blue-angels-diamond.jpg",
+      "path": "/images/blog/blue-angels-diamond.jpg",
+      "sourceSite": "pmh",
+      "title": "US Navy 031108-N-5862D-202 The Navy's Blue Angels flight demonstration team maintains a tight formation thrilling the audience, at Sherman Field onboard NAS Pensacola.jpg",
+      "credit": "U.S. Navy",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AUS%20Navy%20031108-N-5862D-202%20The%20Navy's%20Blue%20Angels%20flight%20demonstration%20team%20maintains%20a%20tight%20formation%20thrilling%20the%20audience%2C%20at%20Sherman%20Field%20onboard%20NAS%20Pensacola.jpg",
+      "creditRequired": false,
+      "uses": [
+        "nas-pensacola-gates.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-pcs-aerial-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/pcs-aerial-review-20260909.jpg",
+      "path": "/images/blog/pcs-aerial-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "US Navy 060125-N-4039N-012 An aerial view of the Navy's newest guided-missile destroyer Pre-Commissioning Unit (PCU) Forrest Sherman (DDG 98) moored at Naval Air Station (NAS) Pensacola.jpg",
+      "credit": "U.S. Navy photo by Mr. Patrick Nichols",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AUS%20Navy%20060125-N-4039N-012%20An%20aerial%20view%20of%20the%20Navy's%20newest%20guided-missile%20destroyer%20Pre-Commissioning%20Unit%20(PCU)%20Forrest%20Sherman%20(DDG%2098)%20moored%20at%20Naval%20Air%20Station%20(NAS)%20Pensacola.jpg",
+      "creditRequired": false,
+      "uses": [
+        "blog.html",
+        "blog/pcs-to-pensacola-2026-complete-guide.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-hurlburt-mv22-coast",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/hurlburt-mv22-coast.jpg",
+      "path": "/images/blog/hurlburt-mv22-coast.jpg",
+      "sourceSite": "pmh",
+      "title": "USMC MV-22 Osprey over Hurlburt Field.JPG",
+      "credit": "U.S. Air Force",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AUSMC%20MV-22%20Osprey%20over%20Hurlburt%20Field.JPG",
+      "creditRequired": false,
+      "uses": [
+        "military-realtor-hurlburt-field.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-blog-military-homestead-review-20260909",
+      "image": "https://pensacolamilitaryhousing.com/images/blog/military-homestead-review-20260909.jpg",
+      "path": "/images/blog/military-homestead-review-20260909.jpg",
+      "sourceSite": "pmh",
+      "title": "VIEW OF NORTH (FRONT) FACADE - 501 East Government Street (House), Seville Square vicinity, Pensacola, Escambia County, FL HABS FLA,17-PENSA,44-1.tif",
+      "credit": "Jack Boucher",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AVIEW%20OF%20NORTH%20(FRONT)%20FACADE%20-%20501%20East%20Government%20Street%20(House)%2C%20Seville%20Square%20vicinity%2C%20Pensacola%2C%20Escambia%20County%2C%20FL%20HABS%20FLA%2C17-PENSA%2C44-1.tif",
+      "creditRequired": false,
+      "uses": [
+        "blog.html",
+        "blog/florida-homestead-exemption-military.html"
+      ],
+      "provenanceNote": ""
+    }
+  ]
+}

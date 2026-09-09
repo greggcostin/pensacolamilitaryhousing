@@ -20,10 +20,11 @@ import { fileURLToPath } from "node:url";
 import { placeQuickAnswer } from "./quick-answer-lib.mjs";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
-const TEMPLATE_PATH = ROOT + "public/first-time-military-homebuyer.html";
-const TODAY_ISO = "2026-09-02";
-const TODAY_LONG = "September 2, 2026";
-const MONTH_YEAR = "September 2026";
+const PAGE_ROOT = process.env.COSTIN_PAGE_ROOT || ROOT + "public";
+const TEMPLATE_PATH = PAGE_ROOT + "/first-time-military-homebuyer.html";
+const TODAY_ISO = process.env.COSTIN_PAGE_DATE || "2026-09-02";
+const TODAY_LONG = new Date(TODAY_ISO+'T12:00:00Z').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'});
+const MONTH_YEAR = new Date(TODAY_ISO+'T12:00:00Z').toLocaleDateString('en-US',{month:'long',year:'numeric',timeZone:'UTC'});
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const jesc = (s) => JSON.stringify(s);
@@ -162,9 +163,9 @@ function buildPage(fragmentPath) {
   const spec = JSON.parse(m[1]);
   const html = renderMilitaryPage(spec, frag.slice(m.index + m[0].length).trim());
   const NEW_URL = "https://pensacolamilitaryhousing.com/" + spec.slug;
-  writeFileSync(ROOT + "public/" + spec.slug + ".html", html);
+  writeFileSync(PAGE_ROOT + "/" + spec.slug + ".html", html);
 
-  const smPath = ROOT + "public/sitemap.xml";
+  const smPath = PAGE_ROOT + "/sitemap.xml";
   let sm = readFileSync(smPath, "utf8");
   if (!sm.includes(NEW_URL + "<")) {
     sm = sm.replace("</urlset>", `  <url>\n    <loc>${NEW_URL}</loc>\n    <lastmod>${TODAY_ISO}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n</urlset>`);

@@ -1,13 +1,13 @@
 // Builds the civilian homepage from existing guides and its existing review/FAQ copy.
 // Run before rollout-civilian-experience.mjs and apply-responsive-images.mjs.
 import { readFileSync, writeFileSync } from 'node:fs';
-import { buildPage, breadcrumbs, webPage, makeOgCard } from './civilian-page-lib.mjs';
+import { spawnSync } from 'node:child_process';
 import { enhanceHomeDiscovery } from './civilian-resource-library.mjs';
 import {reviewSourceNote,reviewCheckDate} from './review-counts-lib.mjs';
 const file = 'civilian-site/index.html';
 const old = readFileSync(file, 'utf8');
 // Change when the editorial content changes, not each time this builder runs.
-const modified = '2026-09-06';
+const modified = '2026-09-09';
 const esc = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 const ledger = JSON.parse(readFileSync('content/blog/image-credits.json', 'utf8')).images;
 const ratings = JSON.parse(readFileSync('content/reviews/ratings.json','utf8'));
@@ -49,13 +49,24 @@ const regions = [
 const regionCards = regions.map(r => `<article class="gc-region-card" data-region="${r.id}">${img(r.photo,r.alt,r.width,r.height)}<div><small>${esc(r.eyebrow)}</small><h3>${r.title}</h3><p>${esc(r.description)}</p><nav class="gc-region-links" aria-label="${esc(r.eyebrow)} guides">${r.links.map(([name,url])=>`<a href="${url}" data-guide-link="${url.split('/').at(-1)}">${esc(name)} <span aria-hidden="true">↗</span></a>`).join('')}</nav></div></article>`).join('\n');
 const searchPhotos = [...readFileSync('civilian-site/search.html','utf8').matchAll(/<img[^>]*src="\/images\/([^"/]+)\.jpg"/g)].map(match=>match[1]);
 const photoNames = [...new Set(['navarre','gregg-courthouse','gregg-navy-no-tie',...regions.map(r=>r.photo),...areas.map(a=>a[2]),...searchPhotos])];
+const study = JSON.parse(readFileSync('content/data/bah-ownership-study-2026.json','utf8'));
+const publishedStudy = JSON.parse(readFileSync('public/data/bah-ownership-study-2026.json','utf8'));
+if (JSON.stringify(study)!==JSON.stringify(publishedStudy)) throw new Error('Publish the current ownership-study data before rebuilding the homepage.');
 const snapshots = [
-  { area: 'Milton area', zip: '32570', value: 279289, path: '/neighborhoods/pace-milton', date: 'Aug 1, 2026' },
-  { area: 'Central Pensacola', zip: '32503', value: 299979, path: '/neighborhoods/east-hill-downtown', date: 'Aug 1, 2026' },
-  { area: 'Midway / Tiger Point', zip: '32563', value: 407122, path: '/neighborhoods/gulf-breeze', date: 'Aug 1, 2026' },
-  { area: 'Foley, Alabama', zip: '36535', value: 306621, path: '/neighborhoods/foley', date: 'Jul 31, 2026' }
-];
-for (const row of snapshots) if (!readFileSync('civilian-site' + row.path + '.html','utf8').includes(row.value.toLocaleString('en-US'))) throw new Error(`Snapshot no longer matches guide: ${row.path}. Refresh the homepage data and its date.`);
+  { area: 'Milton area', zip: '32570', path: '/neighborhoods/pace-milton' },
+  { area: 'Central Pensacola', zip: '32503', path: '/neighborhoods/east-hill-downtown' },
+  { area: 'Midway / Tiger Point', zip: '32563', path: '/neighborhoods/gulf-breeze' }
+].map(row=>{
+  const record=study.rows.find(r=>r.zip===row.zip);
+  if(!record||!Number.isFinite(record.zhvi)||record.zhvi<=0||record.valueDate!==study.valueDate)throw new Error('Missing or undated ZIP snapshot: '+row.zip);
+  return {...row,value:Math.round(record.zhvi),date:new Date(record.valueDate+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})};
+});
+// The Florida study does not cover Alabama. Retain the separately dated Foley
+// guide quotation and fail if its source page no longer supports it.
+const foley={area:'Foley, Alabama',zip:'36535',value:306621,path:'/neighborhoods/foley',date:'Jul 31, 2026'};
+const foleySource=readFileSync('civilian-site'+foley.path+'.html','utf8');
+if(!foleySource.includes(foley.value.toLocaleString('en-US'))||!foleySource.includes('July 31, 2026'))throw new Error('Foley snapshot no longer matches its separately dated source guide.');
+snapshots.push(foley);
 const body = `
 <main id="main-content">
 <section class="gc-coast-hero" aria-labelledby="home-title">
@@ -66,16 +77,15 @@ const body = `
     <h1 id="home-title">Find your place<br><em>on the Gulf Coast.</em></h1>
     <p>I&rsquo;m Gregg Costin, your Realtor in Florida and Alabama. From Pensacola to the Emerald Coast and coastal Alabama, I&rsquo;ll help you make your next move with clear answers and a personal plan.</p>
     <div class="gc-actions"><a class="gc-button" href="/search" data-guide-link="hero-home-search">Explore homes <span aria-hidden="true">↗</span></a><a class="gc-button gc-button--line" href="/sell">Let&rsquo;s talk about selling <span aria-hidden="true">↗</span></a></div>
-    <a class="gc-hero-bottom" href="/reviews"><span class="gc-stars" aria-label="Five stars">★★★★★</span><span>Real clients. Their words. <span aria-hidden="true">↗</span></span></a>
     </div>
     <figure class="gc-hero-portrait">${img('gregg-courthouse','Gregg Costin seated on the steps of the Escambia County Court House in downtown Pensacola',928,1152,true)}<figcaption><span>YOUR GULF COAST REALTOR</span><strong>Gregg Costin</strong><small>Florida &amp; Alabama<br>Levin Rinke Realty</small></figcaption></figure>
   </div>
 </section>
 <section class="gc-proof" aria-label="Your local real estate team"><div class="gc-wrap gc-proof-grid">
   <div><strong>Florida + Alabama</strong><span>One team across the state line</span></div>
-  <div><strong>ABR &middot; SRS &middot; RENE</strong><span>Buyer, seller &amp; negotiation credentials</span></div>
+  <div><strong><b style="font:inherit">ABR<sup style="font-size:.48em;vertical-align:super;line-height:0">&reg;</sup> &middot; SRS<sup style="font-size:.48em;vertical-align:super;line-height:0">&reg;</sup> &middot; RENE<sup style="font-size:.48em;vertical-align:super;line-height:0">&reg;</sup></b></strong><span>Buyer, seller &amp; negotiation national credentials</span></div>
   <div><strong>USAF Captain, retired</strong><span>Service that shapes our approach</span></div>
-  <div><strong>Levin Rinke Realty</strong><span>Local knowledge. Personal service.</span></div>
+  <div><a class="gc-proof-reviews" href="/reviews" style="display:grid;grid-template-rows:1fr auto;justify-items:center;width:100%;height:100%;color:inherit"><strong style="flex-direction:column;gap:5px"><i aria-hidden="true" style="font:500 16px/1 var(--sans);letter-spacing:.1em">★★★★★</i><b style="font:inherit"><b data-review-count="combined" style="font:inherit">${combinedReviews}</b> 5-Star<br>Reviews</b></strong><span>Real Clients. <span style="white-space:nowrap">Their Words. <i aria-hidden="true" style="font-style:normal">↗</i></span></span></a></div>
 </div></section>
 <section class="gc-section gc-plans"><div class="gc-wrap">
   <div class="gc-section-intro gc-section-intro--balanced"><div><span class="gc-eyebrow">A good move starts with a good plan</span><h2>What does your next<br>chapter look like?</h2></div><div class="gc-intro-note"><p>A first home. More room. A new view. Start with what matters to you.</p></div></div>
@@ -95,7 +105,7 @@ const body = `
 </div></section>
 <section class="gc-section gc-data"><div class="gc-wrap">
   <div class="gc-data-grid"><div><span class="gc-eyebrow">Local insight, with the numbers behind it</span><h2>Before the offer,<br>know the whole picture.</h2><p>The purchase price is the starting point. Insurance, property taxes, association costs, and financing all shape what a home costs to own.</p><p>Use our published area snapshots to get oriented. Then ask us for recent comparable sales and a closer look at the homes on your shortlist.</p><button class="gc-button" type="button" data-inquiry-open data-inquiry-type="General Question" data-inquiry-message="Please help me compare recent sales and ownership costs in the areas I am considering.">Get a local comparison <span aria-hidden="true">↗</span></button></div>
-  <div><table><caption>Published ZIP value snapshots</caption><thead><tr><th scope="col">Area / source guide</th><th scope="col">Typical home value</th></tr></thead><tbody>${snapshots.map(row => `<tr><td><a href="${row.path}">${row.area}</a><small>ZIP ${row.zip} &middot; ${row.date}</small></td><td>$${row.value.toLocaleString('en-US')}</td></tr>`).join('')}</tbody></table><p class="gc-data-note">Figures reproduced from our dated neighborhood guides, using Zillow Research typical home values (ZHVI). Each figure covers the whole ZIP, including different neighborhoods and housing types. These are historical area snapshots, not current asking prices or appraisals. <a href="https://www.zillow.com/research/data/" target="_blank" rel="noopener">About the source ↗</a></p></div></div>
+  <div><table><caption>Published ZIP value snapshots</caption><thead><tr><th scope="col">Area / source guide</th><th scope="col">Typical home value</th></tr></thead><tbody>${snapshots.map(row => `<tr><td><a href="${row.path}">${row.area}</a><small>ZIP ${row.zip} &middot; ${row.date}</small></td><td>$${row.value.toLocaleString('en-US')}</td></tr>`).join('')}</tbody></table><p class="gc-data-note">The three Florida figures come from our <a href="https://pensacolamilitaryhousing.com/bah-vs-cost-of-owning-pensacola">sourced 26-ZIP study</a>; Foley comes from its separately dated neighborhood guide. These are Zillow Research typical home values (ZHVI). Each figure covers the whole ZIP, including different neighborhoods and housing types. These are historical area snapshots, not current asking prices or appraisals. <a href="https://www.zillow.com/research/data/" target="_blank" rel="noopener">About the source ↗</a></p></div></div>
   <div class="gc-tools">
     <a class="gc-tool" href="https://pensacolamilitaryhousing.com/mortgage-calculators" data-guide-link="mortgage-calculators"><span aria-hidden="true">01</span><div><h3>Work through the payment ↗</h3><p>Explore the mortgage tools on our military housing site.</p></div></a>
     <a class="gc-tool" href="/resources/florida-home-insurance" data-guide-link="home-insurance"><span aria-hidden="true">02</span><div><h3>Understand the insurance ↗</h3><p>Read what to check before committing to a Florida home.</p></div></a>
@@ -153,27 +163,7 @@ writeFileSync(llmsFullFile,fullText);
 const sitemapFile = 'civilian-site/sitemap.xml';
 const sitemap = readFileSync(sitemapFile,'utf8').replace(/(<loc>https:\/\/greggcostin\.com\/<\/loc>\s*<lastmod>)[^<]+/, '$1' + modified);
 writeFileSync(sitemapFile, sitemap);
-// Keep attribution accessible from the footer without occupying the homepage's opening sections.
-const licenseUrl = label => {
-  const cc = label.match(/^CC (BY-SA|BY) ([\d.]+)/);
-  if (cc) return `https://creativecommons.org/licenses/${cc[1].toLowerCase()}/${cc[2]}/`;
-  if (label === 'CC0') return 'https://creativecommons.org/publicdomain/zero/1.0/';
-  return null;
-};
-const creditItems = photoNames.map(name => {
-  const entry = ledger['civilian-site/images/' + name + '.jpg'];
-  if (!entry) throw new Error('Missing photo-credit record: ' + name);
-  const license = licenseUrl(entry.license);
-  return `<li id="photo-${name}" class="gc-credit-item"><h2>${esc(entry.title || name)}</h2><p>Photo: ${esc(entry.credit || entry.artist || entry.source)}. ${entry.dateTaken ? 'Photographed ' + esc(entry.dateTaken) + '. ' : ''}${entry.pageUrl ? `<a href="${esc(entry.pageUrl)}" target="_blank" rel="noopener">Original source</a> &middot; ` : ''}${license ? `<a href="${license}" target="_blank" rel="noopener">${esc(entry.license)}</a>` : esc(entry.license)}.</p><p><a href="/images/${name}.jpg">View the website image</a>. Images are resized and compressed for this site; framing and overlays may vary with the page layout.</p></li>`;
-}).join('\n');
-const creditSpec = { file:'photo-credits.html', path:'/photo-credits', title:'Photography Credits | Gregg Costin, The Costin Team', desc:'Photography sources, creators and license information for the Gulf Coast images and team portraits featured on Gregg Costin and The Costin Team’s website.', keywords:'photography credits, Gulf Coast, The Costin Team', ogSlug:'photo-credits', h1:'Photography credits', lead:'The people and places behind our Gulf Coast photography.', dateISO:modified, main:`<p>Our photography brings together Gulf Coast places and portraits from The Costin Team. This page identifies the creators and original sources of images featured on the homepage, neighborhood directory, and Search Homes page. Source links provide the original descriptions and licensing details.</p><p>Area photography illustrates a place and is not a current property listing. Some images are archival. Image credits do not imply endorsement of The Costin Team by a photographer or source organization.</p><ul class="gc-credit-list">${creditItems}</ul><p><a href="/">Return to the homepage</a> or <a href="/contact">contact The Costin Team</a> with a question about image attribution.</p>` };
-creditSpec.schemaBlocks = [webPage('WebPage',creditSpec),breadcrumbs([{name:'Home',path:'/'},{name:'Photography credits',path:'/photo-credits'}])];
-buildPage(creditSpec);
-await makeOgCard('photo-credits',['Photography','Credits'],'Gulf Coast places. The people behind the photographs.');
-let updatedSitemap = readFileSync(sitemapFile,'utf8');
-if (!updatedSitemap.includes('<loc>https://greggcostin.com/photo-credits</loc>')) updatedSitemap = updatedSitemap.replace('</urlset>',`  <url><loc>https://greggcostin.com/photo-credits</loc><lastmod>${modified}</lastmod></url>\n</urlset>`);
-writeFileSync(sitemapFile,updatedSitemap);
-const llmsFile = 'civilian-site/llms.txt';
-let llms = readFileSync(llmsFile,'utf8');
-if (!llms.includes('https://greggcostin.com/photo-credits')) writeFileSync(llmsFile,llms.trimEnd() + '\n- [Photography credits](https://greggcostin.com/photo-credits): image sources, creators and licenses.\n');
+// Finalize the complete shared catalog without changing its review dates or share card.
+const attribution=spawnSync(process.execPath,['scripts/build-photography-credits.mjs','--site','gc','--root','civilian-site'],{encoding:'utf8'});
+if(attribution.status)throw Error(attribution.stderr||attribution.stdout);
 console.log(`Homepage built: ${areas.length} area guides, ${snapshots.length} sourced ZIP snapshots, ${faqs.length} mirrored FAQs.`);

@@ -48,7 +48,9 @@ export async function bundleCivilianStyles(html,root,{inline=false}={}){
   // Long-tail guides reuse the hashed cacheable bundle. Neither path depends on JavaScript.
   const link=inline?`<style ${attributes}>${result.code}</style>`:`<link rel="stylesheet" href="/${path}" ${attributes}>`;
   // Discover critical styling before the asynchronous analytics loaders.
-  head=head.replace(/<meta\b[^>]*charset=[^>]*>/,m=>m+'\n'+link);
+  // Consume only the whitespace left by restored style tokens at the insertion
+  // point. Otherwise each restore/build cycle adds blank lines to the HTML.
+  head=head.replace(/(<meta\b[^>]*charset=[^>]*>)\s*/,(_,charset)=>charset+'\n'+link+'\n');
   if(!head.includes(link))throw Error('Missing charset insertion point');
   return {html:head+source.slice(end),changed:true,id,inline,sourceFiles,beforeBytes:Buffer.byteLength(html),afterBytes:Buffer.byteLength(head+source.slice(end)),cssBytes:Buffer.byteLength(result.code)};
 }

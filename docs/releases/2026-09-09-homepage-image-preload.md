@@ -13,3 +13,5 @@ Three cold-cache mobile comparisons showed median hero-image download completion
 This commit contains the loading implementation and its checks. The publication used the latest complete production bundle, which also includes later photography-credit and homepage-review work maintained in a separate local source lane. Reconcile that entire source lane before deploying a complete checkout; do not equate this source commit with all deployed page bytes.
 
 The implementation follows the [responsive-image preloading guidance](https://web.dev/articles/preload-responsive-images), including matching responsive candidates and avoiding multiple-format preloads.
+
+The later [photography and homepage source reconciliation](2026-09-09-photography-homepage-source.md) brings the separately maintained design refinements into the current blog/GEO source. Its verification and build instructions supersede the remaining source-reconciliation warning above; publication remains a separate step.

@@ -11,6 +11,7 @@ import { resolve, relative } from "node:path";
 import sharp from "sharp";
 import { ROUTE_META } from "../src/routeMeta.js";
 import { recordLink } from './identity-page-lib.mjs';
+import { photographyFindings } from './photo-credits-lib.mjs';
 import { analyticsGuardFindings } from "./analytics-host-guard.mjs";
 
 const SITE = "https://pensacolamilitaryhousing.com";
@@ -193,6 +194,7 @@ for (const r of ROUTE_META.filter((x) => x.shell)) if (!existsSync(`${root}/og/$
 // full production copies made by another deployment workflow.
 const {auditFinancial} = await import('./financial-audit-lib.mjs');
 for (const issue of auditFinancial(root).findings) f('financial-content', issue);
+for (const issue of photographyFindings(root)) f('photography', issue);
 
 if (process.argv.includes("--json")) {
   console.log(JSON.stringify({ ok: findings.length === 0, root, builtSite, pages: files.length, sitemapUrls: locs.length, shareCards: ogFiles.length, findings }, null, 2));

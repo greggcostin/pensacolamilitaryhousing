@@ -16,6 +16,8 @@ for(const inline of [false,true])test(`${inline?'Inline':'Linked'} CSS round tri
  assert.ok(restored.includes('<script>window.kept=true;</script>'));
  assert.equal(restored.slice(restored.indexOf('<body>')),html.slice(html.indexOf('<body>')));
  assert.ok(restored.indexOf('h1{color:red}')<restored.indexOf('href="/assets/one.css"'));
+ const repeated=await bundleCivilianStyles(restored,root,{inline});
+ assert.equal(repeated.html,built,'Restoring editable styles and rebuilding must not accumulate HTML changes');
  writeFileSync(join(root,'assets/one.css'),'h1{color:green}');
  assert.ok(auditStyleBundle(built,root).some(m=>m.includes('without rebuilding')));
  const rebuilt=await bundleCivilianStyles(built,root,{inline});assert.deepEqual(auditStyleBundle(rebuilt.html,root),[]);

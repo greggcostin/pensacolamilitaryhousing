@@ -1,5 +1,5 @@
 {
-  "note": "License + attribution ledger for downloaded imagery. CC-BY/CC-BY-SA entries MUST have their credit shown in the image's visible figcaption.",
+  "note": "License and attribution ledger for downloaded imagery. Required credits remain publicly accessible on each domain's /photo-credits page through visible footer links. Run scripts/build-photography-credits.mjs after page generators and before publication. Preserve useful descriptive captions, source records, licenses and modification notices. Owner authorized consolidated attribution on 2026-09-09.",
   "images": {
     "/images/blog/blue-angels-diamond.jpg": {
       "source": "Wikimedia Commons",

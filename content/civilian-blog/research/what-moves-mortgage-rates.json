@@ -596,7 +596,12 @@
       "counterarguments": true
     },
     "notes": "Reopened all seven primary sources and read the Fed research decomposition. Recomputed three payment scenarios, rounded differences, point break-even and the new $3844.39 full ownership illustration. Reviewed all body text, FAQs and occupancy limits. No fabricated client experience, lender quote or future refinance. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
-    "contentHash": "3d0e2944a935c9159dcf4678c03f5af75ac6a5ba6cb167dc3d55e98480dc1b60",
-    "evidenceHash": "259df54341399889c67cbb1dc859dd4b6593162955e463ebfb5740c15bec43ea"
+    "contentHash": "f03e2b1c5061fb70212ffa3319c0a4de6d98958991c1aaf1317c910c348905f2",
+    "evidenceHash": "259df54341399889c67cbb1dc859dd4b6593162955e463ebfb5740c15bec43ea",
+    "hashNormalization": {
+      "previousHash": "3d0e2944a935c9159dcf4678c03f5af75ac6a5ba6cb167dc3d55e98480dc1b60",
+      "format": "LF",
+      "reason": "The original sealed draft used mixed CRLF/LF. Its original hash was verified and its metadata and normalized text are identical to the maintained source. This changes the hash representation only; the editorial review and its date are preserved."
+    }
   }
 }

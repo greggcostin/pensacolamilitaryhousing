@@ -43,7 +43,8 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const jesc = (s) => JSON.stringify(String(s));
 
 // License + attribution ledger written by scripts/fetch-stock-image.mjs.
-// CC-BY / CC-BY-SA images MUST show their credit in the visible figcaption;
+// Render source credits for validation; the final photography pass consolidates
+// them into the domain's footer-linked /photo-credits page before publication.
 // the factory appends it automatically so compliance can't be forgotten.
 const CREDITS_PATH = ROOT + "content/blog/image-credits.json";
 const IMAGE_CREDITS = existsSync(CREDITS_PATH) ? JSON.parse(readFileSync(CREDITS_PATH, "utf8")).images : {};

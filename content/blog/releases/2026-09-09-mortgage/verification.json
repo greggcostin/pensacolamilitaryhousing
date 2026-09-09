@@ -1,0 +1,231 @@
+{
+  "recordedAt": "2026-09-09T04:35:28.311Z",
+  "article": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+  "deployedAt": "2026-09-09T04:31:09.733359Z",
+  "deploymentId": "ec4e5d5e-97f3-4af9-a546-994921d4c850",
+  "baselineDeployment": "19ac3e4f-fec4-4ab6-aabf-7a812fec9836",
+  "candidateFingerprint": "3e3dae5ad6970030f9192a68f17e07f82cd20af162ce332fb4fa20410dd74717",
+  "changes": [
+    {
+      "path": "blog.html",
+      "before": "6df988de30d4cca3df18b2cd65a529a97f379c44713e9973134199d1d9d54666",
+      "after": "3aa654424cf047f4af1eec021f03791e7e61f30bf06ddee671616114c2c0dc30"
+    },
+    {
+      "path": "blog/what-moves-mortgage-rates.html",
+      "before": "8fe1e10f98e00b21b0ed6e02d6c4ee5d3ea25ab63a53d71e73617c50d5e90b29",
+      "after": "35e6c8df124b0bde6508d1efade7c86356837c635fb82ff29bfbd1b807284df9"
+    },
+    {
+      "path": "buy.html",
+      "before": "4ca8121f9ed29c527f329a34298bb17513aac74c2be71351370bf4128bf6bcb7",
+      "after": "c94b9bc01b4de5ef90fb03361bbbe5f96ddae06fe9884974f2d73388c9529bc6"
+    },
+    {
+      "path": "gulf-shores-orange-beach.html",
+      "before": "2ff0e797fe4debbad0fdb1b32a62b4baaa0bc47edfaef5a04501f22ae18eae66",
+      "after": "90c57c146178d662b39e82511d89378b5b1f4633e701d0fcfe81f935b83cb86a"
+    },
+    {
+      "path": "images/mortgage-rates-north-hill-20260908-1200.avif",
+      "before": null,
+      "after": "842bdbc3bd000546c95f4526461f70f5b4e7e31851c93d3f3674c7a4ed3643c3"
+    },
+    {
+      "path": "images/mortgage-rates-north-hill-20260908-1200.jpg",
+      "before": null,
+      "after": "4a19fa74cac2c3bcc0a3afb6fe9a3bbffcb0b6b5d557a65600070125e97fcb2c"
+    },
+    {
+      "path": "images/mortgage-rates-north-hill-20260908-1200.webp",
+      "before": null,
+      "after": "61b83c676f89d5c3df2b2e039f442c1743131074ffe0f086dd2e6483ed08ff39"
+    },
+    {
+      "path": "images/mortgage-rates-north-hill-20260908-480.avif",
+      "before": null,
+      "after": "eeb034d45d9d0a4fe8d208ebad9c9ccad69b68cb714da7ea20ff49236d29d4bc"
+    },
+    {
+      "path": "images/mortgage-rates-north-hill-20260908-480.jpg",
+      "before": null,
+      "after": "e62f0ddd016e3334f479b513897cba04d0bd8d9e0bd7015bf8e80562a3ad245a"
+    },
+    {
+      "path": "images/mortgage-rates-north-hill-20260908-768.avif",
+      "before": null,
+      "after": "ebf91f1508ae7f778ef26b44cc1cc5ae30b48ed6506d07fb513f1df299455692"
+    },
+    {
+      "path": "images/mortgage-rates-north-hill-20260908-768.jpg",
+      "before": null,
+      "after": "4ba54f61ba970e610357678e1fb9d91410edb71dbf70282cb7a593edb4ceb04f"
+    },
+    {
+      "path": "images/mortgage-rates-north-hill-20260908.avif",
+      "before": null,
+      "after": "b90934e4ee59aa9bba83ed368dd50fad6c2f6069cb9f280d1360a555b0125c3a"
+    },
+    {
+      "path": "images/mortgage-rates-north-hill-20260908.jpg",
+      "before": null,
+      "after": "3836b279ae9fac2b379ef8172514d57a76c861f1ae4b0d913cfc3b7cbee045c9"
+    },
+    {
+      "path": "images/mortgage-rates-north-hill-20260908.webp",
+      "before": null,
+      "after": "beca0283d249098363c460f0e7968639bc89d606771247191990d01b613000d8"
+    },
+    {
+      "path": "llms.txt",
+      "before": "78638dd9794d4ee6b5ce41279d7782abd068a251b28aaa28334a01629c57b9fd",
+      "after": "0cfc7ae1d3e0194cfd99e469e67d656dd87f5dd70c6d4b290ca4dfe9e1862ec5"
+    },
+    {
+      "path": "og/blog-what-moves-mortgage-rates.png",
+      "before": "ac002527233af6b3a78de1f580729bbc25b49783047397d4f1e6adb84a4fbbaf",
+      "after": "1c2aca17f8319b61bd93c07359cd9ff528b3a3aaa5660a5f02f80172ec068dd4"
+    },
+    {
+      "path": "og/blog.png",
+      "before": "13b9373b5b854b0bd8cb0c88e06ba2423c4abdcb17c9491a5be80b1a9555aac7",
+      "after": "1f92fa7c9da357e893823b2461792e404902f26a76e60bf90ac3d4f4dd7d9261"
+    },
+    {
+      "path": "sitemap.xml",
+      "before": "a18133db9b4f90dca8eebbdcf2913c9998704409533d79ed5010e071d2b41506",
+      "after": "ca3c4385adb2c35c736a345d5d61ba78cb87bc35bfb2e94bcfc2a988e0412bae"
+    }
+  ],
+  "preserved": 1073,
+  "removed": [],
+  "quality": {
+    "editorial": 100,
+    "formatting": 100,
+    "civilianPages": 319,
+    "civilianFindings": 0,
+    "entityPages": 693,
+    "entityFindings": 0,
+    "currentTestsPassed": 48
+  },
+  "sites": [
+    {
+      "site": "gc",
+      "project": "greggcostin",
+      "domain": "greggcostin.com",
+      "deploymentId": "ec4e5d5e-97f3-4af9-a546-994921d4c850",
+      "url": "https://ec4e5d5e.greggcostin.pages.dev",
+      "createdOn": "2026-09-09T04:31:09.733359Z",
+      "stage": "success",
+      "assetCount": 1089,
+      "differences": [],
+      "missingFromProvider": [],
+      "productionAutoDeploy": null
+    },
+    {
+      "site": "pmh",
+      "project": "pensacolamilitaryhousing",
+      "domain": "pensacolamilitaryhousing.com",
+      "deploymentId": "3b032ef3-214e-4934-833f-2db42abcb788",
+      "url": "https://3b032ef3.pensacolamilitaryhousing.pages.dev",
+      "createdOn": "2026-09-08T20:55:19.660373Z",
+      "stage": "success",
+      "assetCount": 3004,
+      "differences": [],
+      "missingFromProvider": [],
+      "productionAutoDeploy": false
+    }
+  ],
+  "live": [
+    {
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 75331,
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "fingerprint": "799e8523c765176f0f7d23a619eedd26685af8e49e28330f2e06700146255304",
+      "fingerprintVersion": 2,
+      "approvedArticleMatches": true,
+      "schemaTypes": [
+        "BlogPosting",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "faqQuestions": 7
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 46983,
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog",
+      "fingerprint": "367ab126770c36c096e3bc9631692a8c3bfb60d6facdbd40cb8afcc6dcf0e3a9",
+      "fingerprintVersion": 2,
+      "inboundLink": true
+    },
+    {
+      "url": "https://greggcostin.com/buy",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 64598,
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/buy",
+      "fingerprint": "35589161b1420da697a7c40f8d2f3a7153f27cae24dcc136d00e414758b25862",
+      "fingerprintVersion": 2,
+      "inboundLink": true
+    },
+    {
+      "url": "https://greggcostin.com/gulf-shores-orange-beach",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 62947,
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/gulf-shores-orange-beach",
+      "fingerprint": "2d170539d527e49c8851c81587923526b7ead14b76e1ddea114533e27ce0f464",
+      "fingerprintVersion": 2,
+      "inboundLink": true
+    },
+    {
+      "url": "https://greggcostin.com/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "bytes": 37217,
+      "matchesCandidate": true
+    },
+    {
+      "url": "https://greggcostin.com/llms.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 67200,
+      "matchesCandidate": true
+    },
+    {
+      "url": "https://greggcostin.com/og/blog-what-moves-mortgage-rates.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 37602,
+      "matchesCandidate": true
+    },
+    {
+      "url": "https://greggcostin.com/og/blog.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 40633,
+      "matchesCandidate": true
+    },
+    {
+      "url": "https://greggcostin.com/images/mortgage-rates-north-hill-20260908-1200.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 233592,
+      "matchesCandidate": true
+    }
+  ],
+  "indexingReceipt": "content/measure/submissions/2026-09-09T04-31-49-849Z-gc-c6052b66.json",
+  "sourceReviewDue": "2026-09-10",
+  "followup": "Collect at least 28 days of comparable evidence; performance effects unknown.",
+  "approval": "Gregg: push and publish if you are making things better and more GEO and SEO. Explicit publication approval received after the prepared mortgage article was identified.",
+  "lesson": "L026"
+}

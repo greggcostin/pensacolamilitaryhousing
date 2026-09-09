@@ -1,0 +1,56 @@
+{
+  "id": "c6052b66-f726-45b7-a505-961e4fdf3213",
+  "site": "gc",
+  "startedAt": "2026-09-09T04:31:49.849Z",
+  "mode": "submit",
+  "checks": [
+    {
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "fingerprint": "799e8523c765176f0f7d23a619eedd26685af8e49e28330f2e06700146255304",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog",
+      "fingerprint": "367ab126770c36c096e3bc9631692a8c3bfb60d6facdbd40cb8afcc6dcf0e3a9",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    }
+  ],
+  "engines": {
+    "indexnow": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+          "fingerprint": "799e8523c765176f0f7d23a619eedd26685af8e49e28330f2e06700146255304"
+        },
+        {
+          "url": "https://greggcostin.com/blog",
+          "fingerprint": "367ab126770c36c096e3bc9631692a8c3bfb60d6facdbd40cb8afcc6dcf0e3a9"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    },
+    "bing": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+          "fingerprint": "799e8523c765176f0f7d23a619eedd26685af8e49e28330f2e06700146255304"
+        },
+        {
+          "url": "https://greggcostin.com/blog",
+          "fingerprint": "367ab126770c36c096e3bc9631692a8c3bfb60d6facdbd40cb8afcc6dcf0e3a9"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    }
+  }
+}

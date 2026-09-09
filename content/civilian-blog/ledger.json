@@ -153,7 +153,23 @@
      "performanceChange": "not measured",
      "summary": "Corrected mortgage-spread reasoning, added verified loan-cost comparisons, replaced the image and completed all civilian build gates."
     }
-   ]
+   ],
+   "publication": {
+    "status": "published-and-live-verified",
+    "autoPublish": false,
+    "deployed": true,
+    "deployedAt": "2026-09-09T04:31:09.733359Z",
+    "deploymentId": "ec4e5d5e-97f3-4af9-a546-994921d4c850",
+    "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+    "indexNowSubmitted": true,
+    "bingSubmitted": true,
+    "indexingStatus": "Both engines accepted both URLs; indexing and ranking remain unverified.",
+    "indexingReceipt": "content/measure/submissions/2026-09-09T04-31-49-849Z-gc-c6052b66.json",
+    "sourceRecheckDue": "2026-09-10",
+    "report": "content/blog/reports/2026-09-09-publication-closeout.md",
+    "releaseRecord": "content/blog/releases/2026-09-09-mortgage/deployment.json"
+   },
+   "published": "Refreshed article published and live-verified 2026-09-09T04:31:09.733359Z; deployment ec4e5d5e-97f3-4af9-a546-994921d4c850"
   },
   {
    "slug": "property-taxes-escambia-santa-rosa",
@@ -734,14 +750,22 @@
     "selection": "Retro named /buy; the coastal Alabama ownership hub supplies an additional direct reader connection."
    },
    "publication": {
-    "status": "staged-for-approval",
+    "status": "published-and-live-verified",
     "autoPublish": false,
-    "deployed": false,
-    "indexNowSubmitted": false,
+    "deployed": true,
+    "indexNowSubmitted": true,
     "preview": "http://127.0.0.1:43792/blog/what-moves-mortgage-rates",
-    "buildRoot": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-08\\release-checkout\\civilian-site",
+    "buildRoot": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\military-blog-engine\\2026-09-08\\civilian-publication-20260909-merged\\gc",
     "sourceRecheckDue": "2026-09-10",
-    "gitReceipt": "artifacts/civilian-blog-engine/2026-09-08/release-receipt.json"
+    "gitReceipt": "artifacts/civilian-blog-engine/2026-09-08/release-receipt.json",
+    "deployedAt": "2026-09-09T04:31:09.733359Z",
+    "deploymentId": "ec4e5d5e-97f3-4af9-a546-994921d4c850",
+    "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+    "bingSubmitted": true,
+    "indexingStatus": "Both engines accepted both URLs; indexing and ranking remain unverified.",
+    "indexingReceipt": "content/measure/submissions/2026-09-09T04-31-49-849Z-gc-c6052b66.json",
+    "report": "content/blog/reports/2026-09-09-publication-closeout.md",
+    "releaseRecord": "content/blog/releases/2026-09-09-mortgage/deployment.json"
    },
    "measurement": {
     "collectedAt": "2026-09-08T06:21:25.553Z",
@@ -756,12 +780,12 @@
     "clarity": "Project ydd39cyp64 installed; current query access unavailable",
     "gsc": "Historical export lacks a currently verified reporting window; new comparable export needed",
     "qualifiedInquiries": "unavailable",
-    "performanceEffect": "not measured; not deployed"
+    "performanceEffect": "not measured; published and collecting a follow-up window"
    },
    "experiment": {
     "id": "gc-mortgage-decision-guide-2026-09-08",
-    "status": "prepared",
-    "deployedAt": null,
+    "status": "collecting",
+    "deployedAt": "2026-09-09T04:31:09.733359Z",
     "hypothesis": "A sourced financing comparison with usable calculations and property-specific next steps will support better-qualified inquiries.",
     "primaryOutcome": "Verified qualified conversations attributed to this article; requires separate CRM evidence.",
     "secondaryOutcomes": [
@@ -773,7 +797,7 @@
     ],
     "minimumFollowupDays": 28,
     "comparison": "Same production-host cohort, source, definitions and equal non-overlapping complete windows. Apply shared sample/uncertainty checks.",
-    "conclusion": "No live effect measured; awaiting deployment and adequate observations."
+    "conclusion": "Published; no effect estimated until comparable source windows and adequate observations exist."
    },
    "next": "price-cut-or-seller-concession, unless a verified event or priority 60+ refresh takes precedence",
    "lessonsAdded": [

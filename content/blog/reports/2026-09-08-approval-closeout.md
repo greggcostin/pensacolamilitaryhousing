@@ -1,5 +1,7 @@
 # Approved civilian and military blog generator release
 
+Publication update: the article is now live under explicit approval. See [the verified publication closeout](2026-09-09-publication-closeout.md). The remainder of this document records the earlier prepublication state.
+
 Gregg approved pushing both blog upgrades on September 8, 2026. The civilian upgrade at `2ecb6e99` and military upgrade at `9e689504` are on GitHub main. The military review branch was also pushed. The approved military/shared generator files and their two absent committed dependencies were installed into the active workspace with backups and concurrent-change hash checks. Existing civilian article source and evidence already matched the approved version.
 
 Final mobile checks extended the fixed-header spacing logic to civilian articles, raised the article heading rule above the existing site stylesheet, and made the article runtime refresh on a rebuild. Existing privacy and confirmed-inquiry behavior remain covered by regression checks. The combined release suite passed 60 tests; the active workspace's civilian and military suite passed 37 tests.

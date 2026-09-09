@@ -312,6 +312,19 @@
       ],
       "rule": "When the shared checkout has unfinished changes, build owned blog work in a clean worktree based on current main, reconcile newer evidence/privacy/journey code, and commit only owned files. A dirty shared checkout does not require stopping at an unbuilt fragment.",
       "evidence": "The Sep 8 release integrated against main 5dc3822e while preserving the pre-existing working-tree changes. The isolated 310-page civilian audit and 679-page entity audit passed. Integration also caught and preserved the school llms marker and unchanged sitemap dates."
+    },
+    {
+      "id": "L026",
+      "date": "2026-09-09",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "orchestrate",
+        "build",
+        "ship"
+      ],
+      "rule": "Before an approved deployment on either site, reconcile the complete candidate with the actual provider production manifest and acquire the existing shared .coast-release/publication.lock.json exclusively. Hold it through preflight, deployment and provider confirmation. A Git commit or an unlocked baseline check does not prevent a concurrent release from replacing the work.",
+      "evidence": "The mortgage release at 04:25:22 UTC and regional release at 04:25:25 UTC both passed the same baseline check. The latter became canonical and displaced the article. The merged release used the shared publication lock, retained all current regional changes, and verified 1089 civilian assets plus 3004 unchanged military assets. content/blog/reports/2026-09-09-publication-closeout.md"
     }
   ]
 }

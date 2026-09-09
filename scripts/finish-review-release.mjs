@@ -11,6 +11,7 @@ const result=spawnSync(process.execPath,['scripts/review-counts.mjs','--set-goog
 const snapshot=json('content/reviews/ratings.json');
 for(const p of ['google','zillow'])Object.assign(snapshot[p],{count:c.counts[p],rating:c.observation[p].rating,fiveStarCount:c.observation[p].fiveStarCount,countStatus:'verified-public-browser',checkedAt:c.observation[p].checkedAt,ratingCheckedAt:c.observation[p].checkedAt,evidence:c.observation[p].evidence});
 save('content/reviews/ratings.json',snapshot);
+const dateSync=spawnSync(process.execPath,['scripts/review-counts.mjs','--sync'],{encoding:'utf8',maxBuffer:8*1024*1024});if(dateSync.status)throw Error(dateSync.stderr||dateSync.stdout);
 const config=json('content/reviews/automation.json');Object.assign(config,{lastVerifiedAt:live.checkedAt,lastRunDirectory:dir,baselineRoot:c.candidate,lastCounts:c.counts});save('content/reviews/automation.json',config);
 save(join(dir,'result.json'),{completedAt:new Date().toISOString(),status:'published-and-verified',counts:c.counts,combined:c.counts.google+c.counts.zillow,sites:live.sites.map(s=>({site:s.site,deploymentId:s.deploymentId})),sourceSync:JSON.parse(result.stdout)});
 console.log(JSON.stringify({status:'published-and-verified',counts:c.counts,combined:c.counts.google+c.counts.zillow},null,2));

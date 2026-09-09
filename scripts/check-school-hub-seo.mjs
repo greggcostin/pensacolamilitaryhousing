@@ -4,6 +4,7 @@ import {join,relative,extname,dirname} from 'node:path';
 import {createHash} from 'node:crypto';
 import {gzipSync} from 'node:zlib';
 import sharp from 'sharp';
+import {unbundleCivilianStyles} from './civilian-style-bundle.mjs';
 import {refreshEntityHtml} from './entity-sync-lib.mjs';
 import {enhanceSchoolHub,schoolCoverage,schoolExport,schoolHubFaq,schoolHeaderLabel,SCHOOL_ORIGINS,SCHOOL_REVIEW_DATE} from './school-hub-seo-lib.mjs';
 // --source validates a clean checkout without private deployment receipts. The
@@ -60,7 +61,10 @@ for(const site of ['gc','pmh']){
   }
   const newBody=[...html.matchAll(/<!-- SCHOOL_SEO_(SUMMARY|DETAILS|FAQ)_START -->([\s\S]*?)<!-- SCHOOL_SEO_\1_END -->/g)].map(m=>m[2]).join('');
   check(site+' no unsupported exclusivity or em/en dashes',!/[\u2013\u2014]|only (?:school )?map|best school|number one|#1/i.test(visible(newBody)));
-  check(site+' stable repeated rendering',enhanceSchoolHub(html,data,site).replace(/\r\n/g,'\n')===html.replace(/\r\n/g,'\n'));
+  const bundled=html.includes('data-costin-style-bundle=');
+  const editable=bundled?unbundleCivilianStyles(html,root):html;
+  const rendered=enhanceSchoolHub(editable,data,site);
+  check(site+' stable repeated rendering after editable-style restoration',enhanceSchoolHub(rendered,data,site).replace(/\r\n/g,'\n')===rendered.replace(/\r\n/g,'\n')&&(bundled||rendered.replace(/\r\n/g,'\n')===html.replace(/\r\n/g,'\n')));
   if(site==='gc')check('Civilian header label is School Finder throughout',walk(root).filter(p=>p.endsWith('.html')&&!p.endsWith('404.html')).every(p=>schoolHeaderLabel(read(p))===read(p)));
   const localLinks=[...newBody.matchAll(/href="([^"]+)"/g)].map(m=>decode(m[1]));
   check(site+' all new same-site links resolve',localLinks.every(href=>{const u=new URL(href,url);if(u.origin!==SCHOOL_ORIGINS[site])return true;if(u.pathname==='/schools'&&u.hash)return ids.includes(u.hash.slice(1));const p=u.pathname==='/'?'index.html':u.pathname.slice(1)+(extname(u.pathname)?'':'.html');return existsSync(join(root,p));}));
@@ -68,7 +72,7 @@ for(const site of ['gc','pmh']){
   const image=await sharp(join(root,'og/schools.png')).metadata();check(site+' 1200x630 school share card',image.width===1200&&image.height===630);
   report.sites[site]={title,description,htmlBytes:Buffer.byteLength(html),htmlGzipBytes:gzipSync(html).length,addedGzipBytes:sourceMode?null:gzipSync(html).length-gzipSync(before).length,guides:coverage.guides,faqPairs:schoolHubFaq(data,site).length,schoolDataHash:hash(join(root,site==='gc'?'assets/school-finder-data.json':'school-assets/school-finder-data.json'))};
 }
-check('Both original map datasets identical',report.sites.gc.schoolDataHash===report.sites.pmh.schoolDataHash);
+check('Both original map datasets identical across platform line endings',read(join(roots.gc,'assets/school-finder-data.json')).replace(/\r\n/g,'\n')===read(join(roots.pmh,'school-assets/school-finder-data.json')).replace(/\r\n/g,'\n'));
 for(const name of ['json','csv'])check('Both '+name+' exports identical',hash(join(roots.gc,'data/school-finder.'+name))===hash(join(roots.pmh,'data/school-finder.'+name)));
 const csv=schoolExport(data).csv;check('CSV retains numeric negative coordinates without spreadsheet text prefix',csv.includes(',"'+data.schools.find(s=>s.lng!==null).lng+'",')&&!/,"\'-87\./.test(csv));
 const output=sourceMode?'artifacts/school-source-verification.json':'docs/school-seo-2026-09-08/verification.json';

@@ -3,6 +3,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { buildPage, breadcrumbs, webPage, makeOgCard } from './civilian-page-lib.mjs';
 import { enhanceHomeDiscovery } from './civilian-resource-library.mjs';
+import {reviewSourceNote,reviewCheckDate} from './review-counts-lib.mjs';
 const file = 'civilian-site/index.html';
 const old = readFileSync(file, 'utf8');
 // Change when the editorial content changes, not each time this builder runs.
@@ -107,7 +108,7 @@ const body = `
 </div></section>
 <section class="gc-section gc-reviews"><div class="gc-wrap"><div class="gc-section-intro"><div><span class="gc-eyebrow">The experience, in their words</span><h2>The best part of this work?<br>The people.</h2></div><a class="gc-link" href="/reviews">Read our client reviews ↗</a></div>
 <div class="gc-ratings" aria-label="Client ratings"><div class="gc-rating-total"><strong data-review-count="combined">${combinedReviews}</strong><span>Client reviews</span><p>Across Google and Zillow</p></div>${['google','zillow'].map(platform=>{const r=ratings[platform];return `<a class="gc-rating-platform" href="${esc(r.url)}" target="_blank" rel="noopener" data-guide-link="${platform}-reviews"><span class="gc-rating-name">${esc(r.name)}</span><div><strong>${r.rating.toFixed(1)}</strong><span class="gc-rating-stars" aria-label="5 out of 5 stars">★★★★★</span></div><span class="gc-rating-count">${r.count} ${esc(r.name)} ${platform==='zillow'?'team ':''}reviews <span aria-hidden="true">↗</span></span></a>`;}).join('')}</div>
-<p class="gc-review-source-note">Review counts can change. Visit the profiles to read the latest client feedback.</p>
+<p class="gc-review-source-note">${['google','zillow'].every(p=>ratings[p].countStatus==='verified-public-browser')?reviewSourceNote(reviewCheckDate(ratings)):'Review counts can change. Visit the profiles to read the latest client feedback.'}</p>
 ${reviews}
 <div class="btn-row"><a class="gc-link" href="/reviews">More stories from our clients ↗</a></div>
 </div></section>

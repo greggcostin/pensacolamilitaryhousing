@@ -5,6 +5,7 @@
 // gates protect the blog.
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { analyticsGuardFindings } from "./analytics-host-guard.mjs";
+import { auditStyleBundle } from "./civilian-style-audit.mjs";
 import { recordLink } from './identity-page-lib.mjs';
 
 const rootArg = process.argv.indexOf('--root');
@@ -33,6 +34,7 @@ const titles = new Map(), descs = new Map();
 for (const file of pages) {
   const h = readFileSync(`${ROOT}/${file}`, "utf8");
   for (const issue of analyticsGuardFindings(h)) f(file, issue);
+  for (const issue of auditStyleBundle(h,ROOT)) f(file, issue);
   const slug = slugOf(file);
   const url = SITE + (slug === "/" ? "/" : slug);
   if (!h.includes(recordLink)) f(file, 'missing or stale canonical professional-record link');

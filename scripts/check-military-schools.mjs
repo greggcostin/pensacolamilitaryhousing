@@ -79,7 +79,7 @@ check('Editorial, academic facts, enrollment, comparison and source sections sur
 check('School maps use an exact shared repository and locally served copies of the tested modules',()=>{
   assert.deepEqual(JSON.parse(read('public/school-assets/school-finder-data.json')),data);
   for(const name of ['school-finder.js','school-finder-core.js','school-address-search.js','school-driving-route.js']){
-    assert.equal(read('public/school-assets/'+name),read('civilian-site/assets/'+name).replaceAll('/assets/','/school-assets/'),name+': unexpected algorithm fork');
+    assert.equal(read('public/school-assets/'+name).replaceAll('\r\n','\n'),read('civilian-site/assets/'+name).replaceAll('/assets/','/school-assets/').replaceAll('\r\n','\n'),name+': unexpected algorithm fork');
     const script=read('public/school-assets/'+name);assert(!script.includes("'/assets/"),name+': foreign assets');
     for(const match of script.matchAll(/from\s+['"](\.\/[^'"]+)['"]/g))assert(existsSync('public/school-assets/'+match[1].slice(2)),name+': missing module');
   }

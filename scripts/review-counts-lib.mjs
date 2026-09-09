@@ -9,7 +9,17 @@ export function validateCount(value) {
   if (!Number.isSafeInteger(value) || value < 0) throw new Error('Review counts must be nonnegative whole numbers.');
   return value;
 }
-export function syncReviewText(text, counts) {
+export function reviewCheckDate(observation){
+  const dates=['google','zillow'].map(p=>Date.parse(observation?.[p]?.checkedAt));
+  if(dates.some(d=>!Number.isFinite(d)))throw Error('Both review sources need a recorded verification date');
+  return new Date(Math.min(...dates)).toISOString();
+}
+export function reviewSourceNote(verifiedAt){
+  if(!Number.isFinite(Date.parse(verifiedAt)))throw Error('A recorded review verification date is required');
+  const date=new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'America/Chicago'}).format(new Date(verifiedAt));
+  return `Google and Zillow counts checked against their public profiles on ${date} (Central Time). Review counts can change. Visit the profiles for the latest client feedback.`;
+}
+export function syncReviewText(text, counts, verifiedAt) {
   validateCount(counts.google); validateCount(counts.zillow);
   const totals = {...counts, combined: counts.google + counts.zillow};
   for (const [platform, patterns] of Object.entries(REVIEW_COUNT_PATTERNS)) {
@@ -19,5 +29,7 @@ export function syncReviewText(text, counts) {
       text = text.replace(match, (_,prefix) => prefix + totals[platform]);
     }
   }
-  return text.replace(/(data-review-count="(google|zillow|combined)"[^>]*>)\d+(?=<)/g, (_,open,platform) => open + totals[platform]);
+  text=text.replace(/(data-review-count="(google|zillow|combined)"[^>]*>)\d+(?=<)/g, (_,open,platform) => open + totals[platform]);
+  if(verifiedAt)text=text.replace(/(<p\b[^>]*class="gc-review-source-note"[^>]*>)[\s\S]*?(<\/p>)/g,(_,open,close)=>open+reviewSourceNote(verifiedAt)+close);
+  return text;
 }

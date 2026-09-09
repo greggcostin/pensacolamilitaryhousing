@@ -1,0 +1,6 @@
+# Published CSS bundle/source hashes and inline styles must survive Windows checkout.
+civilian-site/**/*.html text eol=lf
+civilian-site/*.html text eol=lf
+civilian-site/assets/**/*.css text eol=lf
+civilian-site/assets/*.css text eol=lf
+civilian-site/assets/styles/manifest.json text eol=lf

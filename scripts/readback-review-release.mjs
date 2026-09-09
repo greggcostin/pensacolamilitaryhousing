@@ -2,7 +2,7 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {createHash} from 'node:crypto';
 import {json,save} from './isolated-release-lib.mjs';
-import {syncReviewText} from './review-counts-lib.mjs';
+import {syncReviewText,reviewCheckDate} from './review-counts-lib.mjs';
 
 const at=process.argv.indexOf('--directory');
 if(at<0)throw Error('Provide --directory');
@@ -28,7 +28,7 @@ for(const site of candidate.production){
     const visible=body.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');
     const phrases=[...visible.matchAll(/\b\d+ (?:five-star )?(?:Google|Zillow|five-star reviews across Google and Zillow)[^<]{0,35}/gi)].map(x=>x[0]).slice(0,12);
     const markers=[...body.matchAll(/data-review-count="(google|zillow|combined)"[^>]*>(\d+)</g)].map(x=>({platform:x[1],count:Number(x[2])}));
-    const countsCorrect=syncReviewText(body,candidate.counts)===body;
+    const countsCorrect=syncReviewText(body,candidate.counts,reviewCheckDate(candidate.observation))===body;
     const profilesPresent=path!=='/reviews'||new RegExp(candidate.counts.google+' (?:five-star )?Google reviews','i').test(visible)&&new RegExp(candidate.counts.zillow+' Zillow (?:team )?reviews','i').test(visible);
     const rawMatchesCandidate=digest(body)===digest(local);
     const matchesCandidate=digest(withoutEdgeEmailProtection(body))===digest(local);

@@ -5,7 +5,7 @@
 // --force allows a decrease after a second public read confirms the lower count.
 // The count alone does not establish why it changed.
 import { readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
-import { syncReviewText, validateCount } from './review-counts-lib.mjs';
+import { syncReviewText, validateCount, reviewCheckDate } from './review-counts-lib.mjs';
 const snapshotFile = 'content/reviews/ratings.json';
 const snapshot = existsSync(snapshotFile) ? JSON.parse(readFileSync(snapshotFile,'utf8')) : null;
 function currentCounts() {
@@ -42,8 +42,9 @@ try {
   const files = [...walk('public'),...walk('civilian-site'),...walk('content/pages'),
     'index.html','MARKETING_KIT.md','AGGREGATOR_PROFILES.md','src/App.jsx'].filter(existsSync);
   const changes = [];
+  const verifiedAt=['google','zillow'].every(p=>snapshot?.[p]?.countStatus==='verified-public-browser')?reviewCheckDate(snapshot):undefined;
   for (const file of files) {
-    const before = readFileSync(file,'utf8'), after = syncReviewText(before,counts);
+    const before = readFileSync(file,'utf8'), after = syncReviewText(before,counts,verifiedAt);
     if (before !== after) changes.push({file,after});
   }
   if (check) {

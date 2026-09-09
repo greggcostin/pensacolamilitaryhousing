@@ -9,11 +9,14 @@
 import { readdirSync, readFileSync, writeFileSync, existsSync, statSync } from "node:fs";
 import { parse, join } from "node:path";
 import sharp from "sharp";
+import {responsiveHeaderLogos} from './responsive-logo-lib.mjs';
 import { WIDTHS, AVATAR, variantPath, modernPath } from "./generate-responsive-images.mjs";
 
 const DRY = process.argv.includes("--dry");
-const CIVILIAN = process.argv.includes('--civilian');
+const CIVILIAN = process.argv.includes("--civilian");
 const SCHOOLS = process.argv.includes("--schools");
+const rootArg=k=>process.argv.includes(k)?process.argv[process.argv.indexOf(k)+1]:null;
+const GC_ROOT=rootArg('--gc-root')||'civilian-site',PMH_ROOT=rootArg('--pmh-root')||'public';
 const onlyIdx = process.argv.indexOf("--only");
 const ONLY = onlyIdx > -1 ? process.argv[onlyIdx + 1].replace(/\\/g, "/") : null;
 const PMH = "https://pensacolamilitaryhousing.com";
@@ -63,9 +66,12 @@ function walkHtml(dir, out = []) {
   return out;
 }
 const attrs = (tag) => { const o = {}; for (const m of tag.matchAll(/([a-zA-Z-]+)="([^"]*)"/g)) o[m[1]] = m[2]; return o; };
-const localFor = (src, site) => src.startsWith(`${PMH}/`) ? "public" + src.slice(PMH.length) : src.startsWith("/") ? (site === "gc" ? "civilian-site" : "public") + src : null;
+const localFor = (src, site) => src.startsWith(`${PMH}/`) ? PMH_ROOT + src.slice(PMH.length) : src.startsWith("/") ? (site === "gc" ? GC_ROOT : PMH_ROOT) + src : null;
 const urlFor = (local, src) => { // keep the page's own URL style (absolute for GC images hosted on PMH)
-  const rel = local.replace(/^public|^civilian-site/, "");
+  const normalized=local.replaceAll('\\','/');
+  const matched=[GC_ROOT,PMH_ROOT].map(p=>p.replaceAll('\\','/')).find(p=>normalized.startsWith(p+'/'));
+  if(!matched)throw Error('Image outside configured roots: '+local);
+  const rel = normalized.slice(matched.length);
   return src.startsWith(`${PMH}/`) ? PMH + rel : rel;
 };
 const metaCache = new Map();
@@ -94,12 +100,17 @@ function buildImg(a, src, m, ctx, srcsetJpg) {
   return `<img ${parts.join(" ")}>`;
 }
 
-const files = ONLY ? [ONLY] : CIVILIAN ? walkHtml("civilian-site").filter(f=>f!=="civilian-site/index.html") : SCHOOLS ? ["civilian-site/schools.html", ...walkHtml("civilian-site/schools")] : ["index.html", ...walkHtml("public"), ...walkHtml("civilian-site")];
+const files = ONLY ? [ONLY] : CIVILIAN ? walkHtml(GC_ROOT).filter(f=>process.argv.includes("--logos-only")||f!==GC_ROOT+"/index.html") : SCHOOLS ? [GC_ROOT+"/schools.html", ...walkHtml(GC_ROOT+"/schools")] : ["index.html", ...walkHtml(PMH_ROOT), ...walkHtml(GC_ROOT)];
 let pages = 0, pictures = 0, bare = 0, logos = 0, missing = new Set();
 for (const f of files) {
   const site = CIVILIAN || f.startsWith("civilian-site") ? "gc" : "pmh";
   let h = readFileSync(f, "utf8");
   const before = h;
+  if(process.argv.includes('--logos-only')){
+    const next=responsiveHeaderLogos(h,GC_ROOT);
+    if(next!==h){pages++;if(!DRY)writeFileSync(f,next);}
+    continue;
+  }
   // 1. header logos
   h = h.replace(/<img\b[^>]*\bsrc="([^"]*\/images\/(logo-lrr\.png|logo-08-sm\.png))"[^>]*>/g, (tag, src, name) => {
     const a = attrs(tag); const L = LOGOS[name];
@@ -107,6 +118,7 @@ for (const f of files) {
     if (next !== tag) logos++;
     return next;
   });
+  if(site==='gc')h=responsiveHeaderLogos(h,GC_ROOT);
   // 2. content pictures
   const jobs = [];
   const pictureHtml = h;

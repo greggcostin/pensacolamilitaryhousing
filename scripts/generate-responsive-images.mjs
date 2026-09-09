@@ -11,8 +11,9 @@
 //
 //   node scripts/generate-responsive-images.mjs [--force] [--dry]
 import { readdirSync, readFileSync, statSync, existsSync, unlinkSync, writeFileSync } from "node:fs";
-import { join, parse } from "node:path";
+import { join, parse, resolve, relative, sep } from "node:path";
 import sharp from "sharp";
+import {generateHeaderLogos} from './responsive-logo-lib.mjs';
 import { COMMUNITY_LINKS } from "../src/communitiesData.js";
 
 const FORCE = process.argv.includes("--force");
@@ -83,9 +84,20 @@ async function encode(src, w, fmt, out) {
 const fresh = (out, srcStat) => !FORCE && existsSync(out) && statSync(out).mtimeMs >= srcStat.mtimeMs;
 
 if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, "/")}` || process.argv[1].endsWith("generate-responsive-images.mjs")) {
+  const rootIndex=process.argv.indexOf('--gc-root');
+  const isolatedRoot=rootIndex>=0?resolve(process.argv[rootIndex+1]):null;
+  if(isolatedRoot&&!existsSync(join(isolatedRoot,'index.html')))throw Error('--gc-root must contain a civilian site');
+  if(process.argv.includes('--logos-only')){
+    if(DRY)console.log('Would generate transparent responsive header logos');
+    else console.log(JSON.stringify(await generateHeaderLogos(isolatedRoot||'civilian-site')));
+    process.exit(0);
+  }
   const onlyIndex = process.argv.indexOf('--only');
   const selected = onlyIndex >= 0 ? process.argv[onlyIndex + 1]?.replace(/\\/g, '/') : null;
-  if (onlyIndex >= 0 && (!selected || !/^(public|civilian-site)\/images\/[a-z0-9_./-]+\.(jpg|jpeg|png)$/i.test(selected) || selected.includes('..') || !existsSync(selected))) throw new Error('--only requires an existing image inside public/images or civilian-site/images');
+  const isolatedImage=selected&&isolatedRoot&&relative(join(isolatedRoot,'images'),resolve(selected));
+  const inIsolatedImages=isolatedImage&&!isolatedImage.startsWith('..')&&!isolatedImage.startsWith(sep)&&/\.(jpg|jpeg|png)$/i.test(isolatedImage);
+  if (onlyIndex >= 0 && (!selected || (!inIsolatedImages&&!/^(public|civilian-site)\/images\/[a-z0-9_./-]+\.(jpg|jpeg|png)$/i.test(selected)) || selected.includes('..') || !existsSync(selected))) throw new Error('--only requires an existing image inside the selected site images directory');
+  if(isolatedRoot&&!selected)throw Error('Use --only or --logos-only with an isolated root');
   const files = selected ? [selected] : referencedImages();
   let made = 0, skipped = 0, dropped = 0, bytes = 0;
   for (const src of files) {

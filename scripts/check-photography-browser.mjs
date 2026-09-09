@@ -63,8 +63,35 @@ try{
   }
   checks.push({site:'gc',path:'/reviews',width,profileLinks:true,ok:true});await c.close();
  }
+ for(const width of [390,1366]){
+  const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});
+  await c.route('**/*',r=>new URL(r.request().url()).hostname==='127.0.0.1'?r.continue():r.abort());
+  const page=await c.newPage();await page.goto(servers.gc.url+'/',{waitUntil:'networkidle'});
+  const trigger=page.locator('[data-gc-site-search]');
+  const openSearch=async()=>{
+   if(!await trigger.isVisible())await page.locator('.nav-toggle:visible').click();
+   await trigger.click();
+  };
+  assert.equal(await trigger.count(),1,'One civilian header search control');
+  assert.equal(await page.locator('.gc-calculator').getAttribute('href'),'https://pensacolamilitaryhousing.com/mortgage-calculators');
+  await openSearch();
+  const dialog=page.locator('#gc-site-search');await dialog.waitFor({state:'visible'});
+  const input=dialog.locator('.pagefind-ui__search-input');await input.waitFor({state:'visible'});
+  assert.ok(await input.evaluate(el=>document.activeElement===el),'Search receives keyboard focus');
+  for(const [query,target] of [['closing costs','/blog/closing-costs-florida-buyers'],['Gulf Breeze High School','/schools/gulf-breeze-high-school']]){
+   await input.fill(query);
+   await dialog.locator('.pagefind-ui__result-link[href*="'+target+'"]').first().waitFor({state:'visible',timeout:15000});
+  }
+  assert.ok(await dialog.evaluate(el=>el.getBoundingClientRect().left>=0&&el.getBoundingClientRect().right<=innerWidth),'Search dialog fits viewport');
+  await page.keyboard.press('Escape');await dialog.waitFor({state:'hidden'});
+  await openSearch();await dialog.locator('[data-gc-search-close]').click();await dialog.waitFor({state:'hidden'});
+  await page.waitForFunction(()=>!document.documentElement.classList.contains('gc-search-open'),null,{timeout:5000});
+  checks.push({site:'gc',width,headerSearch:true,blogAndSchoolResults:true,calculatorLink:true,keyboardAndClose:true,ok:true});
+  console.log('PASS civilian header search '+width);await c.close();
+ }
  const c=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:900}});
  await c.route('**/*',r=>new URL(r.request().url()).hostname==='127.0.0.1'?r.continue():r.abort());
- const p=await c.newPage();await p.goto(servers.pmh.url+'/');assert.equal(await p.locator('footer a[href="/photo-credits"]:visible').count(),1);checks.push({site:'pmh',path:'/',javascript:false,ok:true});await c.close();
+ const p=await c.newPage();await p.goto(servers.pmh.url+'/');assert.equal(await p.locator('footer a[href="/photo-credits"]:visible').count(),1);checks.push({site:'pmh',path:'/',javascript:false,ok:true});
+ await p.goto(servers.gc.url+'/');assert.equal(await p.locator('[data-gc-site-search]').getAttribute('href'),'/resources');assert.equal(await p.locator('.gc-calculator').getAttribute('href'),'https://pensacolamilitaryhousing.com/mortgage-calculators');checks.push({site:'gc',path:'/',javascript:false,headerFallback:true,ok:true});await c.close();
  save(join(dir,'browser.json'),{ok:true,checks});
 }finally{await browser.close();for(const {server} of Object.values(servers))server.close();}

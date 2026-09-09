@@ -6,6 +6,7 @@ import {spawnSync} from 'node:child_process';
 import {walk} from './isolated-release-lib.mjs';
 import {bundleCivilianStyles,unbundleCivilianStyles} from './civilian-style-bundle.mjs';
 import {responsiveHeaderLogos} from './responsive-logo-lib.mjs';
+import {preloadCivilianHomeHero} from './civilian-home-preload.mjs';
 const i=process.argv.indexOf('--root');if(i<0)throw Error('Provide --root with a complete civilian candidate');
 const root=resolve(process.argv[i+1]);if(!existsSync(join(root,'index.html')))throw Error('Missing civilian homepage');
 const restore=process.argv.includes('--restore');
@@ -17,6 +18,7 @@ for(const file of walk(root).filter(f=>f.endsWith('.html'))){
   html=responsiveHeaderLogos(html,root);
   if(name==='index.html')html=html.replace(/(<div class="gc-hero-image">[\s\S]*?<img\b[^>]*)(>)/,(_,tag,end)=>tag.replace(/\sfetchpriority="[^"]*"/g,'')+' fetchpriority="high"'+end);
   if(name!=='buy.html')html=(await bundleCivilianStyles(html,root,{inline:['index.html','neighborhoods.html','schools.html'].includes(name)})).html;
+  if(name==='index.html')html=preloadCivilianHomeHero(html);
  }
  if(html!==old){writeFileSync(file,html);changed++;}
 }

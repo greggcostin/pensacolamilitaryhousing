@@ -349,3 +349,8 @@ The civilian edition connects school research with local home searches. The two 
 <!-- ALL_SCHOOL_GUIDES_END -->
 
 - [Photography credits](https://greggcostin.com/photo-credits): image sources and licenses.
+
+<!-- NATIVE_CALCULATORS -->
+## Mortgage and Rental Calculators
+https://greggcostin.com/mortgage-calculators
+Five free native tools: monthly payments, loan comparisons, extra principal, purchase cash and rental cash flow. Illustrative inputs; sources and methods reviewed 2026-09-09.

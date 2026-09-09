@@ -1,0 +1,80 @@
+/* Native civilian calculator experience. Scoped to preserve the shared site. */
+body.calculator-page{--cal-ink:#101824;--cal-card:#182332;--cal-line:#354151;--cal-text:#edece5;--cal-muted:#bdc4cc;--cal-gold:#dec17d}
+.calculator-page .cal-hero{background:radial-gradient(ellipse at 90% 15%,#324657 0,transparent 55%),linear-gradient(125deg,#101a28,#172635);text-align:left;padding:46px 24px 40px;border-bottom:1px solid #3d4651}
+.cal-hero .cal-hero-inner{max-width:1160px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
+.cal-hero .cal-kicker{font:600 12px/1.4 var(--sans);color:var(--cal-gold);letter-spacing:2px;text-transform:uppercase;margin:0 0 16px}
+.calculator-page .cal-hero h1{font-size:clamp(32px,4.6vw,57px);line-height:1.08;max-width:690px;margin:0 0 16px;letter-spacing:-1.1px}
+.calculator-page .cal-hero p{color:#d1d5dc;font-size:17px;max-width:620px;margin:0;line-height:1.7}
+.cal-hero .cal-hero-note{border-left:1px solid #74808b;padding-left:28px}
+.cal-hero .cal-hero-note strong{display:block;font:400 28px/1.2 var(--serif);color:var(--cal-gold);margin-bottom:14px}
+.cal-hero .cal-hero-note p{font-size:14px;line-height:1.8}
+.calculator-page main{max-width:1220px;padding:28px 24px 60px}
+.cal-breadcrumb{font-size:13px;color:var(--cal-muted);margin-bottom:24px}
+.cal-suite{max-width:none!important;margin:0;color:var(--cal-text);font:400 15px/1.65 var(--sans)}
+.cal-suite *{box-sizing:border-box}.cal-suite [hidden]{display:none!important}
+.cal-suite p,.cal-suite ul,.cal-suite ol{max-width:none;margin:0 0 14px;font:400 14px/1.7 var(--sans);color:var(--cal-muted)}
+.cal-suite h2{font:400 clamp(24px,3vw,33px)/1.2 var(--serif);border:0;padding:0;margin:0 0 10px;max-width:none;color:#fff}
+.cal-suite h3{font:500 19px/1.3 var(--serif);text-transform:none;letter-spacing:0;border:0;padding:0;margin:0 0 14px;max-width:none;color:var(--cal-gold)}
+.cal-toolbar{display:flex;gap:24px;align-items:center;justify-content:space-between;padding:18px 20px;background:#14202c;border:1px solid var(--cal-line);border-radius:10px 10px 0 0}
+.cal-toolbar p{max-width:590px;margin:0;font-size:13px}.cal-toolbar strong{display:block;font-size:15px;color:#fff!important}
+.cal-toolbar>div{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.cal-toolbar button{background:transparent;border:1px solid #536271;color:#e5e9ed;border-radius:6px;padding:8px 11px;min-height:40px;font:500 12px var(--sans);cursor:pointer;white-space:nowrap}
+.cal-toolbar button:hover{border-color:var(--cal-gold);color:var(--cal-gold)}
+.cal-suite .cal-status{font-size:12px;color:#c5cdd5;padding:10px 20px;margin:0;border:1px solid var(--cal-line);border-top:0;border-radius:0 0 10px 10px;background:#101b28;min-height:42px}
+.cal-tabs{display:flex;gap:8px;margin:24px 0 28px;flex-wrap:wrap}
+.cal-tabs button{flex:1;display:flex;align-items:center;gap:10px;justify-content:center;border:1px solid #435362;background:#121e2b;color:#dae0e8;font:600 13px/1.4 var(--sans);padding:14px 12px;border-radius:8px;min-height:55px;cursor:pointer;white-space:nowrap}
+.cal-tabs button span{font:600 11px var(--sans);opacity:.7}
+.cal-tabs button[aria-selected=true]{background:#dcc17e;border-color:#dcc17e;color:#141c25;box-shadow:0 3px 18px #0002}
+.cal-tabs button:hover{border-color:var(--cal-gold)}
+.cal-panel-intro{max-width:850px;margin-bottom:24px}
+.cal-layout{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,1fr);gap:26px;align-items:start}
+.cal-layout>*{min-width:0}.cal-form{margin:0;max-width:none}
+.cal-form fieldset{border:0;border-top:1px solid #475363;padding:20px 0 4px;margin:0 0 24px;min-width:0}
+.cal-form legend{padding:0 12px 0 0;color:var(--cal-gold);font:600 13px/1.4 var(--sans);letter-spacing:.3px}
+.cal-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}
+.cal-field{min-width:0;margin:0 0 13px}.cal-field label{display:block;font:500 13px/1.5 var(--sans);color:#e9edf2;margin-bottom:7px}
+.cal-input-wrap{position:relative;display:flex;align-items:center;background:#f3f4f1;border:1px solid #c3cbd1;border-radius:6px;overflow:hidden;min-height:47px}
+.cal-input-wrap>span{color:#515c66;font:500 14px var(--sans);padding:0 0 0 12px;flex:none}
+.cal-input-wrap input+span{padding:0 12px 0 0}
+.cal-input-wrap input{min-width:0;width:100%;border:0;background:transparent;border-radius:0;color:#152132;font:600 16px/1.3 var(--sans);padding:11px 10px;min-height:46px;outline-offset:-3px!important}
+.cal-input-wrap:focus-within{outline:2px solid var(--cal-gold);outline-offset:2px}
+.cal-field select{min-width:0;width:100%;min-height:48px;padding:10px;border:1px solid #b8c2ca;border-radius:6px;background:#f3f4f1;color:#152132;font:500 15px/1.3 var(--sans)}
+.cal-field small{display:block;color:#b9c2cb;font:400 12px/1.5 var(--sans);margin-top:7px}
+.cal-suite .cal-help{font-size:12px;line-height:1.7;color:#bdc6d0;margin:14px 0 0}
+.cal-result-card{background:linear-gradient(125deg,#1c2b3b,#172331);border:1px solid #405163;border-radius:10px;padding:25px;margin-bottom:18px}
+.cal-metric{min-width:0;margin:0 0 20px}.cal-metric>span{display:block;color:#d8dce1;font:500 12px/1.5 var(--sans);letter-spacing:.2px;margin-bottom:8px}
+.cal-metric>strong{display:block;color:#fff;font:500 clamp(24px,3.3vw,37px)/1.18 var(--sans);letter-spacing:-.7px;overflow-wrap:anywhere}
+.cal-metric--hero>strong{color:var(--cal-gold);font-size:clamp(37px,5vw,54px);letter-spacing:-1.3px}
+.cal-metric small{display:block;color:#b9c4ce;margin-top:10px;font:400 12px/1.6 var(--sans)}
+.cal-negative>strong{color:#ffb5a0}.cal-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:18px;margin:0 0 16px}
+.cal-metrics>.cal-metric{background:#162332;border:1px solid #43505f;padding:20px;border-radius:8px;margin:0}
+.cal-result-card .cal-metrics>.cal-metric{background:#101c29;padding:14px}.cal-result-card .cal-metrics strong{font-size:25px}
+.cal-cost-bar{display:flex;min-height:12px;overflow:hidden;border-radius:5px;margin:24px 0 17px}.cal-cost-bar span{height:12px}
+.cal-line{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:11px 0;border-bottom:1px solid #344455;font-size:13px;line-height:1.5}
+.cal-line:last-of-type{border-bottom:0}.cal-line>span{color:#cfd6de}.cal-line strong{white-space:nowrap;color:#fff;font:600 14px/1.5 var(--sans);text-align:right}
+.cal-line i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:8px}
+.cal-button{display:inline-flex;align-items:center;justify-content:center;background:var(--cal-gold);color:#152031;font:600 13px/1.4 var(--sans);border:1px solid var(--cal-gold);border-radius:7px;min-height:44px;padding:12px 18px;cursor:pointer;text-decoration:none}
+.cal-button:hover{background:#ecd497;color:#101724}.cal-button--subtle{background:#142130;color:var(--cal-gold)}
+.cal-text-button{font:600 13px/1.5 var(--sans);background:transparent;color:var(--cal-gold);border:0;padding:12px 0;text-decoration:underline;text-underline-offset:3px;cursor:pointer;min-height:44px}
+.cal-update{margin-bottom:22px}
+.cal-suite .cal-advanced{background:#121f2d;border:1px solid #415160;margin:20px 0 25px;padding:18px;max-width:none;border-radius:8px}
+.cal-advanced summary{color:var(--cal-gold);font:600 14px var(--sans);cursor:pointer;min-height:26px}.cal-advanced[open] summary{margin-bottom:25px}
+.cal-table-scroll{width:100%;overflow:auto;border:1px solid #445363;border-radius:8px;margin:20px 0;background:#15212f}
+.cal-suite table{border-collapse:collapse;width:100%;min-width:480px;color:var(--cal-text);font:400 13px/1.55 var(--sans)}
+.cal-suite caption{text-align:left;font:600 14px/1.5 var(--sans);padding:17px;color:var(--cal-gold);background:#1b2b3b}
+.cal-suite th,.cal-suite td{padding:12px 15px;border-bottom:1px solid #3a4856;text-align:right;vertical-align:top}
+.cal-suite th:first-child{text-align:left}.cal-suite thead th{font-weight:600;color:#fff;background:#1c2a39}.cal-suite tbody th{font-weight:400;color:#cbd3dc}
+.cal-suite tr:nth-child(even){background:#ffffff04}.cal-suite tbody tr:last-child>*{border-bottom:0}
+.cal-suite .cal-error{background:#39272b;border:1px solid #bf8a85;color:#ffd4c9;padding:17px;border-radius:8px;margin-bottom:20px;font:500 14px/1.6 var(--sans)}
+.cal-chart{width:100%;height:auto;display:block}.cal-chart text{font:12px var(--sans);fill:#cdd7e0}
+.cal-chart-key{display:flex;gap:20px;justify-content:center;font-size:12px!important}.cal-chart-key span:before{content:'';display:inline-block;width:20px;height:3px;margin-right:7px;vertical-align:middle;background:#93bfcc}.cal-chart-key span+span:before{background:#d8b869}
+.cal-rental-select{max-width:400px;margin-bottom:24px}.cal-stress{border-color:#817056;background:#252a2e}
+.cal-bottom-tools{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid #43505f;margin-top:30px;padding-top:22px;flex-wrap:wrap}
+.cal-guide{margin-top:60px;border-top:1px solid #52606e;padding-top:12px;max-width:860px;margin-left:auto;margin-right:auto}
+.cal-guide>h2{scroll-margin-top:180px}.cal-guide .cal-sources{font-size:14px}.cal-guide .cal-sources li{margin-bottom:12px;font-size:14px}
+.cal-guide .cal-method{border-left:3px solid #dec17d;padding:15px 22px;background:#152332;margin:25px 0}
+.cal-guide .cal-method p{font-size:15px;max-width:none}.cal-guide a{text-decoration:underline;text-underline-offset:3px}
+@media(min-width:1000px){.cal-layout>div:last-child{position:sticky;top:180px;max-height:none}}
+@media(max-width:900px){.cal-layout{grid-template-columns:1fr;gap:14px}.cal-hero .cal-hero-inner{grid-template-columns:1fr;gap:24px}.cal-hero .cal-hero-note{padding:16px 0 0;border-left:0;border-top:1px solid #61717f}.cal-hero .cal-hero-note strong{font-size:21px}.cal-toolbar{flex-direction:column;align-items:flex-start;gap:15px}.cal-toolbar>div{justify-content:flex-start}.cal-tabs button{flex:1 1 28%}.cal-result-card{padding:21px}.cal-metric--hero>strong{font-size:42px}}
+@media(max-width:480px){.calculator-page main{padding:20px 16px 50px}.calculator-page .cal-hero{padding:30px 20px}.calculator-page .cal-hero h1{font-size:36px}.cal-hero .cal-hero-note{display:none}.cal-toolbar{padding:15px}.cal-toolbar button{min-height:40px;padding:8px;font-size:11px}.cal-tabs{gap:7px}.cal-tabs button{flex-basis:42%;min-height:48px;white-space:normal;padding:10px;font-size:12px}.cal-fields{gap:13px 12px}.cal-field label{font-size:12px}.cal-field select{font-size:14px}.cal-metrics{grid-template-columns:1fr 1fr;gap:10px}.cal-metrics>.cal-metric{padding:14px}.cal-metrics>.cal-metric:first-child:last-child{grid-column:1/-1}.cal-metric strong{font-size:25px}.cal-metric--hero>strong{font-size:40px}.cal-line{gap:10px}.cal-line strong{font-size:13px}.cal-bottom-tools{align-items:stretch;flex-direction:column}}
+@media print{.main-banner,.cal-toolbar,.cal-tabs,.cal-bottom-tools,.cal-update,.cal-text-button,.cal-button,.cal-status,.sticky-mobile-cta,[data-costin-sticky],footer,.cal-guide,.cal-hero-note,.cal-breadcrumb{display:none!important}.calculator-page,.calculator-page main,.cal-suite,.cal-panel,.cal-form,.cal-result-card,.cal-metric,.cal-table-scroll{background:#fff!important;color:#111!important;max-width:none;box-shadow:none}.calculator-page main{padding:0}.calculator-page .cal-hero{padding:0 0 20px;background:#fff}.cal-layout{display:block}.cal-layout>*{position:static!important}.cal-suite p,.cal-suite small,.cal-suite label,.cal-suite strong,.cal-suite span,.cal-suite h2,.cal-suite h3,.cal-suite th,.cal-suite td,.cal-suite legend,.cal-hero h1,.cal-hero p{color:#111!important}.cal-panel[hidden]{display:none!important}.cal-result-card,.cal-metric{break-inside:avoid;border-color:#aaa}.cal-table-scroll{overflow:visible}table{min-width:0!important}input,select{color:#111!important;border:1px solid #999!important}.cal-chart-key,.cal-chart{display:none}.cal-advanced:not([open]){display:none}.cal-status{display:block!important}.cal-suite:after{content:'Illustrative estimate from GreggCostin.com. Confirm property costs, loan terms and rental assumptions.';display:block;margin-top:20px;font-size:10px;color:#111}}

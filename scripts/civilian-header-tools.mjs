@@ -9,7 +9,8 @@ export function installCivilianHeaderAssets(root){
 export function withCivilianHeaderTools(html,root){
  if(!/<nav class="main-banner"/.test(html))return html;
  html=html.replace(/<nav class="main-banner"[\s\S]*?<\/nav>/,nav=>{
-  if(!nav.includes('https://pensacolamilitaryhousing.com/mortgage-calculators'))nav=nav.replace('<a href="/blog"','<a class="gc-calculator" href="https://pensacolamilitaryhousing.com/mortgage-calculators">Calculator</a>\n<a href="/blog"');
+  if(!nav.includes('class="gc-calculator"'))nav=nav.replace('<a href="/blog"','<a class="gc-calculator" href="/mortgage-calculators">Mortgage Calculators</a>\n<a href="/blog"');
+  nav=nav.replace(/<a\b(?=[^>]*class="gc-calculator")[^>]*>[^<]*<\/a>/,'<a class="gc-calculator" href="/mortgage-calculators">Mortgage Calculators</a>');
   if(!nav.includes('data-gc-site-search'))nav=nav.replace('<a class="mil-link"','<a class="banner-search" href="/resources" data-gc-site-search aria-label="Search the site" aria-haspopup="dialog" aria-controls="gc-site-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Search</span></a>\n<a class="mil-link"');
   if(!nav.includes('data-gc-site-search')||!nav.includes('class="gc-calculator"'))throw Error('Civilian header insertion point missing');
   return nav;

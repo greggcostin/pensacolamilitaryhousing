@@ -1,0 +1,471 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "florida-veteran-property-tax-county-guide",
+  "article": {
+    "slug": "florida-veteran-property-tax-county-guide",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Veteran or surviving spouse filing for a Florida property-tax benefit",
+  "decision": "Submit the right benefit and evidence to the correct county while budgeting only verified tax treatment.",
+  "readerTask": "Submit the right benefit and evidence to the correct county while budgeting only verified tax treatment.",
+  "pillar": "ownership-costs",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Corrects nonresident and automatic-refund assumptions, separates three tax calculations and makes the filing/approval record explicit.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "partial",
+      "publisher": "Florida Legislature",
+      "title": "Section 196.24: disabled ex-servicemember exemption",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.24.html",
+      "evidenceNote": "Read 2026 statute: bona fide Florida resident, honorable discharge, qualifying disability at least10percent, $5000 property value reduction. Non-homestead availability does not waive Florida residency.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "total",
+      "publisher": "Florida Legislature",
+      "title": "Section 196.081: permanent and total veteran exemption",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.081.html",
+      "evidenceNote": "Read 2026 statute including both prorated refund routes, Jan1 disability/residency conditions, Jan1-Nov1 acquisition and next-year approval. Read surviving-spouse conditions. Avoid blanket refund or all-charges-zero promise.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "combat",
+      "publisher": "Florida Legislature",
+      "title": "Section 196.082: combat-related disability discount",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.082.html",
+      "evidenceNote": "Read age65+, permanent service-connected disability, combat-related and honorable discharge conditions, Jan1 age, March1 filing and late-application process. Not an automatic discount for every rating.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "dor-military",
+      "publisher": "Florida Department of Revenue",
+      "title": "Property Tax Benefits for Active Duty Military and Veterans",
+      "url": "https://floridarevenue.com/property/Documents/pt109.pdf",
+      "evidenceNote": "Read all PT109 Aug2024 brochure. Confirmed county appraiser filing, qualifying military rental exception, partial versus homestead total benefit and early filing pending VA documents. Current numerical homestead CPI is checked separately.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "santa-military",
+      "publisher": "Santa Rosa County Property Appraiser",
+      "title": "Exemptions and active duty renewal",
+      "url": "https://srcpa.gov/exemptions/",
+      "evidenceNote": "Read 2026 additional26411 and first25000 scopes, Jan1 qualifications, March1 with late instances, military annual LES income redacted/currentorders/Floridaresidency. Page has stale50ktotal sentence; used DOR2026CPI table to resolve.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "esc-military",
+      "publisher": "Escambia County Property Appraiser",
+      "title": "Current calendar and filing entry point",
+      "url": "https://www.escpa.org/",
+      "evidenceNote": "Read live calendar: 2026 March2 exemption filing and Sept8 VAB deadline; Sept8 has passed at this review. No extension inferred.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "ok-login",
+      "publisher": "Okaloosa County Property Appraiser",
+      "title": "Official online homestead portal",
+      "url": "https://hx.okaloosapa.com/login",
+      "evidenceNote": "Opened official portal, current login page. Main site returned403 in this session; portal is a destination only, not evidence of current processing promises.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "partial",
+      "kind": "fact",
+      "text": "Florida's $5,000 disabled ex-servicemember exemption requires bona fide Florida residency and qualifying disability of at least 10%.",
+      "sourceIds": [
+        "partial"
+      ],
+      "scope": "Section196.24, honorable discharge and qualifying disability also required",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read2026statute; corrected prior claim that part-year nonresidents could receive it.",
+      "claim": "Florida's $5,000 disabled ex-servicemember exemption requires bona fide Florida residency and qualifying disability of at least 10%.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.24.html",
+      "locator": "Read2026statute; corrected prior claim that part-year nonresidents could receive it.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read2026statute; corrected prior claim that part-year nonresidents could receive it."
+      },
+      "appliesTo": "Veteran or surviving spouse filing for a Florida property-tax benefit",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "total",
+      "kind": "fact",
+      "text": "The full veteran homestead exemption requires a qualifying service-connected total and permanent disability, not a payment percentage alone.",
+      "sourceIds": [
+        "total"
+      ],
+      "scope": "Section196.081 homestead and individual conditions",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read qualifying letter, residency and homestead requirements.",
+      "claim": "The full veteran homestead exemption requires a qualifying service-connected total and permanent disability, not a payment percentage alone.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.081.html",
+      "locator": "Read qualifying letter, residency and homestead requirements.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read qualifying letter, residency and homestead requirements."
+      },
+      "appliesTo": "Veteran or surviving spouse filing for a Florida property-tax benefit",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "combat",
+      "kind": "fact",
+      "text": "Florida's combat-related veteran discount requires age 65 or older and additional disability and discharge conditions.",
+      "sourceIds": [
+        "combat"
+      ],
+      "scope": "Section196.082, permanent service-connected combat-related disability",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read statutory age and evidence conditions.",
+      "claim": "Florida's combat-related veteran discount requires age 65 or older and additional disability and discharge conditions.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.082.html",
+      "locator": "Read statutory age and evidence conditions.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read statutory age and evidence conditions."
+      },
+      "appliesTo": "Veteran or surviving spouse filing for a Florida property-tax benefit",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "appeal-passed",
+      "kind": "fact",
+      "text": "Escambia's published 2026 VAB petition deadline was September 8, 2026.",
+      "sourceIds": [
+        "esc-military"
+      ],
+      "scope": "Published2026EscambiaVABdeadline,not extension advice",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read current calendar and compared toSep9review.",
+      "claim": "Escambia's published 2026 VAB petition deadline was September 8, 2026.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.escpa.org/",
+      "locator": "Read current calendar and compared toSep9review.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read current calendar and compared toSep9review."
+      },
+      "appliesTo": "Veteran or surviving spouse filing for a Florida property-tax benefit",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "partial-math",
+      "kind": "calculation",
+      "text": "$80 annual savings",
+      "claim": "$80 annual savings",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.24.html",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(5000, 0.016) = 80 USD per year.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical5000value reduction at16mills,notcurrentparcelrate.",
+      "method": "product(5000, 0.016) = 80 USD per year.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(5000, 0.016) = 80 USD per year."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          5000,
+          0.016
+        ],
+        "result": 80,
+        "units": "USD per year",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical5000value reduction at16mills,notcurrentparcelrate."
+        ]
+      }
+    },
+    {
+      "id": "discount-math",
+      "kind": "calculation",
+      "text": "$1,280 annual reduction",
+      "claim": "$1,280 annual reduction",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.082.html",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(3200, 0.4) = 1280 USD per year.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical eligible40percentdiscount on3200advaloremtax.",
+      "method": "product(3200, 0.4) = 1280 USD per year.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(3200, 0.4) = 1280 USD per year."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          3200,
+          0.4
+        ],
+        "result": 1280,
+        "units": "USD per year",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical eligible40percentdiscount on3200advaloremtax."
+        ]
+      }
+    },
+    {
+      "id": "remaining-math",
+      "kind": "calculation",
+      "text": "$1,920 remaining",
+      "claim": "$1,920 remaining",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.082.html",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(3200, 1280) = 1920 USD per year.",
+      "loadBearing": true,
+      "assumptions": "3200less1280 beforeseparateassessments.",
+      "method": "difference(3200, 1280) = 1920 USD per year.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(3200, 1280) = 1920 USD per year."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          3200,
+          1280
+        ],
+        "result": 1920,
+        "units": "USD per year",
+        "tolerance": 0.005,
+        "inputSources": [
+          "3200less1280 beforeseparateassessments."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.24.html",
+        "title": "Section 196.24: disabled ex-servicemember exemption",
+        "reviewed": "Read 2026 statute: bona fide Florida resident, honorable discharge, qualifying disability at least10percent, $5000 property value reduction. Non-homestead availability does not waive Florida residency."
+      },
+      {
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.081.html",
+        "title": "Section 196.081: permanent and total veteran exemption",
+        "reviewed": "Read 2026 statute including both prorated refund routes, Jan1 disability/residency conditions, Jan1-Nov1 acquisition and next-year approval. Read surviving-spouse conditions. Avoid blanket refund or all-charges-zero promise."
+      },
+      {
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.082.html",
+        "title": "Section 196.082: combat-related disability discount",
+        "reviewed": "Read age65+, permanent service-connected disability, combat-related and honorable discharge conditions, Jan1 age, March1 filing and late-application process. Not an automatic discount for every rating."
+      },
+      {
+        "url": "https://floridarevenue.com/property/Documents/pt109.pdf",
+        "title": "Property Tax Benefits for Active Duty Military and Veterans",
+        "reviewed": "Read all PT109 Aug2024 brochure. Confirmed county appraiser filing, qualifying military rental exception, partial versus homestead total benefit and early filing pending VA documents. Current numerical homestead CPI is checked separately."
+      },
+      {
+        "url": "https://srcpa.gov/exemptions/",
+        "title": "Exemptions and active duty renewal",
+        "reviewed": "Read 2026 additional26411 and first25000 scopes, Jan1 qualifications, March1 with late instances, military annual LES income redacted/currentorders/Floridaresidency. Page has stale50ktotal sentence; used DOR2026CPI table to resolve."
+      },
+      {
+        "url": "https://www.escpa.org/",
+        "title": "Current calendar and filing entry point",
+        "reviewed": "Read live calendar: 2026 March2 exemption filing and Sept8 VAB deadline; Sept8 has passed at this review. No extension inferred."
+      },
+      {
+        "url": "https://hx.okaloosapa.com/login",
+        "title": "Official online homestead portal",
+        "reviewed": "Opened official portal, current login page. Main site returned403 in this session; portal is a destination only, not evidence of current processing promises."
+      }
+    ],
+    "informationGain": "Corrects nonresident and automatic-refund assumptions, separates three tax calculations and makes the filing/approval record explicit.",
+    "questions": [
+      {
+        "question": "Does the $5,000 exemption waive Florida residency?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a 100% payment rate automatically eliminate the tax bill?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How much does a value reduction actually save?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Which county office should receive the application?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should you assemble before submitting?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What if a filing or appeal date has already passed?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can a purchase during the year produce a refund?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a high VA rating guarantee the full exemption?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can a nonresident claim the $5,000 veteran reduction?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should I wait for a VA letter before applying?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Will a full exemption remove every amount on the bill?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I assume a refund after buying during the year?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should I do after the county approves the exemption?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Crestview",
+      "decision": "Obtain buyer-based estimate before subtracting an unapproved benefit.",
+      "passage": "For a veteran buying in Crestview, ask for a buyer-based tax estimate before subtracting a possible benefit."
+    },
+    {
+      "place": "Pensacola",
+      "decision": "Reconcile approved exemption with TRIM and bill.",
+      "passage": "For an owner in Pensacola, compare the proposed exemption record with the actual TRIM notice and bill."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "veteran",
+    "readerSituation": "Current or prospective Florida homeowner seeking a disability-related benefit",
+    "dutyLocations": [
+      "Pensacola",
+      "Crestview",
+      "Santa Rosa County"
+    ],
+    "topics": [
+      "ownership-costs"
+    ],
+    "limitations": [
+      "Rating percentage alone is insufficient; county review and residence conditions apply.",
+      "Surviving spouses, co-owners and trusts require individual review."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "partial"
+  ],
+  "answerPassages": [
+    {
+      "question": "Does the $5,000 exemption waive Florida residency?",
+      "answer": "Florida's $5,000 disabled ex-servicemember exemption requires bona fide Florida residency and qualifying disability of at least 10%. Section 196.24 also requires honorable discharge. Its availability beyond homestead property does not make an out-of-state resident eligible.",
+      "claimIds": [
+        "partial"
+      ],
+      "scope": "Section196.24, honorable discharge and qualifying disability also required",
+      "caveat": "Its availability beyond homestead property does not make an out-of-state resident eligible."
+    },
+    {
+      "question": "Does a 100% payment rate automatically eliminate the tax bill?",
+      "answer": "The full veteran homestead exemption requires a qualifying service-connected total and permanent disability, not a payment percentage alone. Section 196.081 also imposes ownership, homestead and residency conditions. Have the county review the actual VA letter before budgeting the exemption.",
+      "claimIds": [
+        "total"
+      ],
+      "scope": "Section196.081 homestead and individual conditions",
+      "caveat": "Have the county review the actual VA letter before budgeting the exemption."
+    }
+  ],
+  "image": {
+    "selected": "veteran-tax-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Milton Santa Rosa crths01.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMilton%20Santa%20Rosa%20crths01.jpg",
+    "license": "CC BY-SA 3.0",
+    "creditRequired": true,
+    "credit": "Ebyabe",
+    "query": "Santa Rosa County Courthouse Milton",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read the live Florida statutes, DOR military brochure and accessible county exemption resources. Corrected residency scope, distinguished assessed-value reductions from tax reductions, checked age/combat and total disability conditions, retained conditional refund routes, and recalculated the hypothetical $80 and $1280 reductions. Okaloosa full site access was unavailable; no unseen county rule was inferred. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "a3df143854188789777085241cb923a0337f6931bb946023d000e31ba6ac9542",
+    "evidenceHash": "1d7604f910c3623c2e6a62e72db44b632c87245b6d51dd19b777c13ca69361af"
+  }
+}

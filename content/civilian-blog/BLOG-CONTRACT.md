@@ -54,3 +54,16 @@ Use an isolated checkout when the shared checkout contains other unfinished work
 One article or substantive refresh per run, Monday and Thursday at 6:04am. Read active lessons and repository status first. Measure live. A verified consequential current event outranks a refresh with priority 60+, which outranks observed demand and then a runnable editorial proposal. Check the radar and both domains' existing and unpublished content before writing.
 
 After the work, run `node scripts/blog-retro.mjs --site gc` and `node scripts/blog-weekly-plan.mjs`. Preserve the other site's shared queue entries during a single-site run. Record sources, actual model, decisions, scores, image review, publication state, one specific hypothesis and measurement gaps in the ledger. Add only 1-3 evidenced operational lessons; performance conclusions need comparable observations and the shared evidence thresholds. Prepared work has no measured live effect.
+
+
+## Rendered catalog and publication safeguards (September 9, 2026)
+
+The shared rendered-page gate requires the reviewed quick answer, licensed figure, worked table and FAQs to survive the final layout. Blog layouts are owned by the blog factory; generic interior-page design must not move their hero or split their source body. Existing page chrome and shared entity, privacy and receipt code are preserved. No emoji labels in blog contact actions.
+
+After a blog or hub build, run `node scripts/finish-blog-discovery.mjs`. Its contextual links are defined in `content/blog/contextual-links.json`; its answer summaries come from published HTML rather than pending drafts. Run responsive-image markup after the final render, then the full site, entity, link and dash gates. Browser QA must compare actual quick answers, loaded responsive images, table access and FAQ expansion on desktop and mobile.
+
+The two financial-owned BAH articles use `node scripts/build-financial-blog.mjs`. Their canonical `content/geo/` body and reviewed blog fragment must match; the legacy military factory must continue to refuse ownership. Update the financial FAQ source alongside an approved substantive refresh.
+
+For an approved full-catalog release, stage complete current production baselines, apply only the reviewed file scope, validate the exact candidate, and verify provider file manifests after deployment. Keep the existing draft-first policy for future runs; one approved publication does not enable permanent autopublishing. Quality scores are structural checks, not a prediction of rankings or AI citations.
+
+Run `node scripts/build-blog-search.mjs` before an approved release and check the page-count receipt. It stages the published main content and avoids silently excluding pages that use a different Pagefind marker.

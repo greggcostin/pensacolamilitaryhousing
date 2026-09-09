@@ -1,0 +1,449 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "florida-homestead-exemption-military",
+  "article": {
+    "slug": "florida-homestead-exemption-military",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Apply for or maintain Florida homestead during a military move without assuming tax, loan and rental rules are the same.",
+  "readerTask": "Apply for or maintain Florida homestead during a military move without assuming tax, loan and rental rules are the same.",
+  "pillar": "ownership-costs",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Separates school/non-school savings, new applications, military absence renewal and a rental exit; removes invented first-person filing anecdotes and automatic eligibility promises.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "cpi-exemption",
+      "publisher": "Florida Department of Revenue",
+      "title": "Additional homestead exemption adjustment",
+      "url": "https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf",
+      "evidenceNote": "Read 2026 row $26,411, superseding the unadjusted $25,000 second tier in older brochures.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "santa-rosa-soh",
+      "publisher": "Santa Rosa County Property Appraiser",
+      "title": "Ad valorem tax process",
+      "url": "https://srcpa.gov/ad-valorem-tax/",
+      "evidenceNote": "Read 2026 2.7% Save Our Homes limit on qualifying continuing assessments, not total bills; new ownership, additions, just value and recapture distinctions.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "santa-military",
+      "publisher": "Santa Rosa County Property Appraiser",
+      "title": "Exemptions and active duty renewal",
+      "url": "https://srcpa.gov/exemptions/",
+      "evidenceNote": "Read 2026 additional26411 and first25000 scopes, Jan1 qualifications, March1 with late instances, military annual LES income redacted/currentorders/Floridaresidency. Page has stale50ktotal sentence; used DOR2026CPI table to resolve.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "rental",
+      "publisher": "Florida Legislature",
+      "title": "Section 196.061: rental and homestead abandonment",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.061.html",
+      "evidenceNote": "Read 2026 text, military exception to abandonment and amendments affecting other federal officers. Exception alone is not proof a specific property is qualified; county residency documentation remains necessary.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "dor-military",
+      "publisher": "Florida Department of Revenue",
+      "title": "Property Tax Benefits for Active Duty Military and Veterans",
+      "url": "https://floridarevenue.com/property/Documents/pt109.pdf",
+      "evidenceNote": "Read all PT109 Aug2024 brochure. Confirmed county appraiser filing, qualifying military rental exception, partial versus homestead total benefit and early filing pending VA documents. Current numerical homestead CPI is checked separately.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "esc-military",
+      "publisher": "Escambia County Property Appraiser",
+      "title": "Current calendar and filing entry point",
+      "url": "https://www.escpa.org/",
+      "evidenceNote": "Read live calendar: 2026 March2 exemption filing and Sept8 VAB deadline; Sept8 has passed at this review. No extension inferred.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "ok-login",
+      "publisher": "Okaloosa County Property Appraiser",
+      "title": "Official online homestead portal",
+      "url": "https://hx.okaloosapa.com/login",
+      "evidenceNote": "Opened official portal, current login page. Main site returned403 in this session; portal is a destination only, not evidence of current processing promises.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "additional",
+      "kind": "fact",
+      "text": "Florida's additional homestead exemption is up to $26,411 for 2026 and applies to non-school taxes.",
+      "sourceIds": [
+        "cpi-exemption"
+      ],
+      "scope": "2026additionaltier;fulluseconditionalonvalueandeligibility",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read2026CPIpdfandSantaRosaapplicability.",
+      "claim": "Florida's additional homestead exemption is up to $26,411 for 2026 and applies to non-school taxes.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf",
+      "locator": "Read2026CPIpdfandSantaRosaapplicability.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read2026CPIpdfandSantaRosaapplicability."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "soh",
+      "kind": "fact",
+      "text": "The 2026 Save Our Homes assessment increase limit is 2.7% for qualifying continuing homesteads.",
+      "sourceIds": [
+        "santa-rosa-soh"
+      ],
+      "scope": "Assessment growth;notbillgrowth",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Readannualcapandnewownership/improvementdistinctions.",
+      "claim": "The 2026 Save Our Homes assessment increase limit is 2.7% for qualifying continuing homesteads.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://srcpa.gov/ad-valorem-tax/",
+      "locator": "Readannualcapandnewownership/improvementdistinctions.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Readannualcapandnewownership/improvementdistinctions."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "renewal",
+      "kind": "fact",
+      "text": "Santa Rosa requires Florida residents away on active duty to renew annually with current orders, residency evidence and an LES with income redacted.",
+      "sourceIds": [
+        "santa-military"
+      ],
+      "scope": "SantaRosaactiveabsenceprocess",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Readcurrentrenewalparagraph,notgeneralizedallcounties.",
+      "claim": "Santa Rosa requires Florida residents away on active duty to renew annually with current orders, residency evidence and an LES with income redacted.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://srcpa.gov/exemptions/",
+      "locator": "Readcurrentrenewalparagraph,notgeneralizedallcounties.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Readcurrentrenewalparagraph,notgeneralizedallcounties."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "first-saving",
+      "kind": "calculation",
+      "text": "$425.00",
+      "claim": "$425.00",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://srcpa.gov/exemptions/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(25000, 0.017) = 425 USD per year.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical25000firsttier at17millscombined.",
+      "method": "product(25000, 0.017) = 425 USD per year.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(25000, 0.017) = 425 USD per year."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          25000,
+          0.017
+        ],
+        "result": 425,
+        "units": "USD per year",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical25000firsttier at17millscombined."
+        ]
+      }
+    },
+    {
+      "id": "second-saving",
+      "kind": "calculation",
+      "text": "$264.11",
+      "claim": "$264.11",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(26411, 0.01) = 264.11 USD per year.",
+      "loadBearing": true,
+      "assumptions": "Full26411additionalvalue at10hypotheticalnon-schoolmills.",
+      "method": "product(26411, 0.01) = 264.11 USD per year.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(26411, 0.01) = 264.11 USD per year."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          26411,
+          0.01
+        ],
+        "result": 264.11,
+        "units": "USD per year",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Full26411additionalvalue at10hypotheticalnon-schoolmills."
+        ]
+      }
+    },
+    {
+      "id": "total-saving",
+      "kind": "calculation",
+      "text": "$689.11",
+      "claim": "$689.11",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://srcpa.gov/exemptions/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(425, 264.11) = 689.11 USD per year.",
+      "loadBearing": true,
+      "assumptions": "425plus264.11;qualifyingvalueassumed.",
+      "method": "sum(425, 264.11) = 689.11 USD per year.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(425, 264.11) = 689.11 USD per year."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          425,
+          264.11
+        ],
+        "result": 689.11,
+        "units": "USD per year",
+        "tolerance": 0.005,
+        "inputSources": [
+          "425plus264.11;qualifyingvalueassumed."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf",
+        "title": "Additional homestead exemption adjustment",
+        "reviewed": "Read 2026 row $26,411, superseding the unadjusted $25,000 second tier in older brochures."
+      },
+      {
+        "url": "https://srcpa.gov/ad-valorem-tax/",
+        "title": "Ad valorem tax process",
+        "reviewed": "Read 2026 2.7% Save Our Homes limit on qualifying continuing assessments, not total bills; new ownership, additions, just value and recapture distinctions."
+      },
+      {
+        "url": "https://srcpa.gov/exemptions/",
+        "title": "Exemptions and active duty renewal",
+        "reviewed": "Read 2026 additional26411 and first25000 scopes, Jan1 qualifications, March1 with late instances, military annual LES income redacted/currentorders/Floridaresidency. Page has stale50ktotal sentence; used DOR2026CPI table to resolve."
+      },
+      {
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.061.html",
+        "title": "Section 196.061: rental and homestead abandonment",
+        "reviewed": "Read 2026 text, military exception to abandonment and amendments affecting other federal officers. Exception alone is not proof a specific property is qualified; county residency documentation remains necessary."
+      },
+      {
+        "url": "https://floridarevenue.com/property/Documents/pt109.pdf",
+        "title": "Property Tax Benefits for Active Duty Military and Veterans",
+        "reviewed": "Read all PT109 Aug2024 brochure. Confirmed county appraiser filing, qualifying military rental exception, partial versus homestead total benefit and early filing pending VA documents. Current numerical homestead CPI is checked separately."
+      },
+      {
+        "url": "https://www.escpa.org/",
+        "title": "Current calendar and filing entry point",
+        "reviewed": "Read live calendar: 2026 March2 exemption filing and Sept8 VAB deadline; Sept8 has passed at this review. No extension inferred."
+      },
+      {
+        "url": "https://hx.okaloosapa.com/login",
+        "title": "Official online homestead portal",
+        "reviewed": "Opened official portal, current login page. Main site returned403 in this session; portal is a destination only, not evidence of current processing promises."
+      }
+    ],
+    "informationGain": "Separates school/non-school savings, new applications, military absence renewal and a rental exit; removes invented first-person filing anecdotes and automatic eligibility promises.",
+    "questions": [
+      {
+        "question": "How large is Florida's additional homestead exemption in 2026?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does the 2026 assessment cap limit the whole tax bill?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What does the exemption mean in dollars?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can active-duty service preserve an existing homestead while renting?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does permission to keep homestead also permit a rental business?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should a new applicant handle the filing calendar?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What other military benefits should you ask about?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should you check after the county responds?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does buying with a VA loan establish Florida homestead?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does the additional 2026 exemption reduce school taxes?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I keep an existing homestead when military orders take me away?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a military rental exception authorize vacation rentals?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should I use the seller's tax bill when buying?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should I do if the regular filing period has passed?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Gulf Breeze",
+      "decision": "Determine city jurisdiction for parcel-specific tax.",
+      "passage": "For a buyer in Gulf Breeze, verify whether the parcel is inside the city or elsewhere in Santa Rosa County before using a tax estimate."
+    },
+    {
+      "place": "Milton",
+      "decision": "Verify maintained exemption before rental projection.",
+      "passage": "For a Milton owner leaving for a new assignment, document whether the existing exemption will remain qualified before comparing rental cash flow with a sale."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Apply for or maintain Florida homestead during a military move without assuming tax, loan and rental rules are the same.",
+    "dutyLocations": [
+      "NAS Pensacola",
+      "Eglin AFB",
+      "Hurlburt Field"
+    ],
+    "topics": [
+      "ownership-costs"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "additional"
+  ],
+  "answerPassages": [
+    {
+      "question": "How large is Florida's additional homestead exemption in 2026?",
+      "answer": "Florida's additional homestead exemption is up to $26,411 for 2026 and applies to non-school taxes. The DOR inflation table establishes the annual amount. The actual savings depend on qualifying value, eligibility and the parcel's taxing authorities.",
+      "claimIds": [
+        "additional"
+      ],
+      "scope": "2026additionaltier;fulluseconditionalonvalueandeligibility",
+      "caveat": "The actual savings depend on qualifying value, eligibility and the parcel's taxing authorities."
+    },
+    {
+      "question": "Does the 2026 assessment cap limit the whole tax bill?",
+      "answer": "The 2026 Save Our Homes assessment increase limit is 2.7% for qualifying continuing homesteads. The county assessment explanation distinguishes value assessment from the final bill. Changes in rates, assessments, ownership or improvements can produce a different tax result.",
+      "claimIds": [
+        "soh"
+      ],
+      "scope": "Assessment growth;notbillgrowth",
+      "caveat": "Changes in rates, assessments, ownership or improvements can produce a different tax result."
+    }
+  ],
+  "image": {
+    "selected": "military-homestead-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "VIEW OF NORTH (FRONT) FACADE - 501 East Government Street (House), Seville Square vicinity, Pensacola, Escambia County, FL HABS FLA,17-PENSA,44-1.tif",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3AVIEW%20OF%20NORTH%20(FRONT)%20FACADE%20-%20501%20East%20Government%20Street%20(House)%2C%20Seville%20Square%20vicinity%2C%20Pensacola%2C%20Escambia%20County%2C%20FL%20HABS%20FLA%2C17-PENSA%2C44-1.tif",
+    "license": "Public domain",
+    "creditRequired": false,
+    "credit": "Jack Boucher",
+    "query": "Pensacola historic house porch",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read current DOR inflation and exemption guidance, live military rental statute and county pages. Checked $26411 nonschool tier and 2.7 percent assessment cap without calling it a bill cap. Recomputed the separate levy example. Reviewed active-duty absence renewal, rental exception scope and distinction from VA occupancy. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "e40c2ea098130996f511ae2e0cf4fe1538ca3ddc4339d55737312f4502126926",
+    "evidenceHash": "e2fb1b8a70e6deac0fac2c6ab5ac203ed4157f89c5a8df867c66704dcfaa5e32"
+  }
+}

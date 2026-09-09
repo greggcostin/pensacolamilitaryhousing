@@ -1,0 +1,407 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "moving-to-pensacola-2026-guide",
+  "article": {
+    "slug": "moving-to-pensacola-2026-guide",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Build a Pensacola shortlist around the actual duty destination, property records and complete purchase budget.",
+  "readerTask": "Build a Pensacola shortlist around the actual duty destination, property records and complete purchase budget.",
+  "pillar": "local-living",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Separates Pensacola mailing area from jurisdiction and duty location, adds a cash timeline without double-counting earnest money, and compares condition and flexible housing.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "pensacola-services",
+      "publisher": "City of Pensacola",
+      "title": "Online Services",
+      "url": "https://www.cityofpensacola.com/2758/Online-Services",
+      "evidenceNote": "Read address lookup, zoning, permit/inspection and flood-information links. No address query completed and no future permitted-use determination inferred.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "buyer-tax",
+      "publisher": "Florida Department of Revenue",
+      "title": "Property tax information for first-time Florida homebuyers",
+      "url": "https://floridarevenue.com/property/Documents/pt107.pdf",
+      "evidenceNote": "Read January 1 assessment, reassessment after sale, distinction among just/assessed/taxable values, and buyer-estimate guidance. August 2024 brochure has old exemption totals; use the current inflation table instead for 2026 amounts.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "escambia",
+      "publisher": "Escambia County Property Appraiser",
+      "title": "Property search and important dates",
+      "url": "https://www.escpa.org/",
+      "evidenceNote": "Read parcel-search and tax-estimator links, March 2 2026 exemption deadline, August 14 TRIM mailing and September 8 2026 VAB deadline. As of session September 9, do not describe September 8 as upcoming.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "cfpb-budget",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "How much do you want to spend on a home?",
+      "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "evidenceNote": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "fl511",
+      "publisher": "Florida Department of Transportation",
+      "title": "Florida 511",
+      "url": "https://fl511.com/",
+      "evidenceNote": "Read road-condition map layers. No actual commute measured; readers must verify route, gate and work times.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "nas-housing",
+      "publisher": "Military OneSource MilitaryINSTALLATIONS",
+      "title": "NAS Pensacola temporary housing",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/housing/temporary-housing",
+      "evidenceNote": "Read check-in/billeting requirements;studentsunder140classroomdaysdo notbringfamilyunlessordersorotherwrittenauthorization. Brown-baggerpermissiondoesnotestablishtravelreimbursement. No current vacancy guarantee.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "city",
+      "kind": "fact",
+      "text": "The City of Pensacola provides address lookup, zoning, permit and flood-information links through its online services page.",
+      "sourceIds": [
+        "pensacola-services"
+      ],
+      "scope": "City resource availability, no parcel lookup result",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read online service links and descriptions.",
+      "claim": "The City of Pensacola provides address lookup, zoning, permit and flood-information links through its online services page.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.cityofpensacola.com/2758/Online-Services",
+      "locator": "Read online service links and descriptions.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read online service links and descriptions."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "tax",
+      "kind": "fact",
+      "text": "A change in ownership can reset a Florida property's assessed value, so the seller's bill is not a reliable buyer tax estimate.",
+      "sourceIds": [
+        "buyer-tax"
+      ],
+      "scope": "Florida buyer assessment, not an exact future tax bill",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read new ownership and assessed-value guidance.",
+      "claim": "A change in ownership can reset a Florida property's assessed value, so the seller's bill is not a reliable buyer tax estimate.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/property/Documents/pt107.pdf",
+      "locator": "Read new ownership and assessed-value guidance.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read new ownership and assessed-value guidance."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "purchase-cash",
+      "kind": "calculation",
+      "text": "Total transaction cash in this illustration $10,300",
+      "claim": "Total transaction cash in this illustration $10,300",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(2500, 700, 600, 6500) = 10300 USD.",
+      "loadBearing": true,
+      "assumptions": "2500earnest700inspection600appraisal6500finalnetafterpriorpayments;nodoublecount.",
+      "method": "sum(2500, 700, 600, 6500) = 10300 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(2500, 700, 600, 6500) = 10300 USD."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          2500,
+          700,
+          600,
+          6500
+        ],
+        "result": 10300,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "2500earnest700inspection600appraisal6500finalnetafterpriorpayments;nodoublecount."
+        ]
+      }
+    },
+    {
+      "id": "target",
+      "kind": "calculation",
+      "text": "The hypothetical total cash target is $15,300.",
+      "claim": "The hypothetical total cash target is $15,300.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(10300, 5000) = 15300 USD.",
+      "loadBearing": true,
+      "assumptions": "10300transactioncashplus5000inventedretainedreserve.",
+      "method": "sum(10300, 5000) = 15300 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(10300, 5000) = 15300 USD."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          10300,
+          5000
+        ],
+        "result": 15300,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "10300transactioncashplus5000inventedretainedreserve."
+        ]
+      }
+    },
+    {
+      "id": "gap",
+      "kind": "calculation",
+      "text": "Unfunded gap $2,300",
+      "claim": "Unfunded gap $2,300",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(15300, 13000) = 2300 USD.",
+      "loadBearing": true,
+      "assumptions": "15300targetless13000inventedavailablesavings.",
+      "method": "difference(15300, 13000) = 2300 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(15300, 13000) = 2300 USD."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          15300,
+          13000
+        ],
+        "result": 2300,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "15300targetless13000inventedavailablesavings."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://www.cityofpensacola.com/2758/Online-Services",
+        "title": "Online Services",
+        "reviewed": "Read address lookup, zoning, permit/inspection and flood-information links. No address query completed and no future permitted-use determination inferred."
+      },
+      {
+        "url": "https://floridarevenue.com/property/Documents/pt107.pdf",
+        "title": "Property tax information for first-time Florida homebuyers",
+        "reviewed": "Read January 1 assessment, reassessment after sale, distinction among just/assessed/taxable values, and buyer-estimate guidance. August 2024 brochure has old exemption totals; use the current inflation table instead for 2026 amounts."
+      },
+      {
+        "url": "https://www.escpa.org/",
+        "title": "Property search and important dates",
+        "reviewed": "Read parcel-search and tax-estimator links, March 2 2026 exemption deadline, August 14 TRIM mailing and September 8 2026 VAB deadline. As of session September 9, do not describe September 8 as upcoming."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "title": "How much do you want to spend on a home?",
+        "reviewed": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates."
+      },
+      {
+        "url": "https://fl511.com/",
+        "title": "Florida 511",
+        "reviewed": "Read road-condition map layers. No actual commute measured; readers must verify route, gate and work times."
+      },
+      {
+        "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/housing/temporary-housing",
+        "title": "NAS Pensacola temporary housing",
+        "reviewed": "Read check-in/billeting requirements;studentsunder140classroomdaysdo notbringfamilyunlessordersorotherwrittenauthorization. Brown-baggerpermissiondoesnotestablishtravelreimbursement. No current vacancy guarantee."
+      }
+    ],
+    "informationGain": "Separates Pensacola mailing area from jurisdiction and duty location, adds a cash timeline without double-counting earnest money, and compares condition and flexible housing.",
+    "questions": [
+      {
+        "question": "Where can you check a Pensacola address before buying?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can you budget with the seller's current property-tax bill?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Which search areas match the actual duty destination?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How much cash can a purchase require before you settle in?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should an older or newly renovated home make you investigate?",
+        "origin": "editorial"
+      },
+      {
+        "question": "When is renting first the stronger choice?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should you bring to a focused home-search conversation?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should every Pensacola assignment use the same home-search area?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I use the seller tax bill to estimate my mortgage escrow?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How do I avoid counting earnest money twice?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a renovated house still need detailed inspection?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is renting first a setback for a military buyer?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should I bring when asking for help with the search?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "NAS Pensacola",
+      "decision": "Compare actual Navy Point and Beulah routes.",
+      "passage": "For a NAS Pensacola household comparing Navy Point with Beulah, test each address against the assigned gate and duty building."
+    },
+    {
+      "place": "Whiting Field",
+      "decision": "Distinguish assigned work from mailing area.",
+      "passage": "For a Whiting Field household comparing Milton with a Pensacola address, use the actual reporting location and expected travel times."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Build a Pensacola shortlist around the actual duty destination, property records and complete purchase budget.",
+    "dutyLocations": [
+      "NAS Pensacola",
+      "Eglin AFB",
+      "Hurlburt Field"
+    ],
+    "topics": [
+      "local-market"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "target"
+  ],
+  "answerPassages": [
+    {
+      "question": "Where can you check a Pensacola address before buying?",
+      "answer": "The City of Pensacola provides address lookup, zoning, permit and flood-information links through its online services page. Use the official resources to begin the review. Confirm the parcel's jurisdiction; a Pensacola mailing address does not establish that every city service or rule applies.",
+      "claimIds": [
+        "city"
+      ],
+      "scope": "City resource availability, no parcel lookup result",
+      "caveat": "Confirm the parcel's jurisdiction; a Pensacola mailing address does not establish that every city service or rule applies."
+    },
+    {
+      "question": "Can you budget with the seller's current property-tax bill?",
+      "answer": "A change in ownership can reset a Florida property's assessed value, so the seller's bill is not a reliable buyer tax estimate. The Florida Department of Revenue buyer guide explains the distinction. Obtain an estimate for your ownership and exemptions before relying on a payment.",
+      "claimIds": [
+        "tax"
+      ],
+      "scope": "Florida buyer assessment, not an exact future tax bill",
+      "caveat": "Obtain an estimate for your ownership and exemptions before relying on a payment."
+    }
+  ],
+  "image": {
+    "selected": "pensacola-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Rainy day on Palafox Street - Pensacola Florida 30 August 2021 - 13.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3ARainy%20day%20on%20Palafox%20Street%20-%20Pensacola%20Florida%2030%20August%202021%20-%2013.jpg",
+    "license": "CC BY-SA 4.0",
+    "creditRequired": true,
+    "credit": "Infrogmation",
+    "query": "Pensacola Palafox street",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read city lookup resources, DOR buyer-tax brochure, county page, CFPB, NAS housing and FDOT. Recomputed $10300 transaction cash, $15300 target and $2300 gap without double-counting earnest money. Reviewed address, duty destination, condition and flexible housing alternatives. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "7b0c8e83674087d7c8b111cb0966ad792e0e4f0425f2d75c4951068b4e8f7328",
+    "evidenceHash": "f67a73b8b6c65a1cdb4827aa11d37368424dbabddff16da5a7f1ec6c3c179f1f"
+  }
+}

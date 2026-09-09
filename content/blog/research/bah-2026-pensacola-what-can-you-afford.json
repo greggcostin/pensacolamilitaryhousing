@@ -1,0 +1,516 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "bah-2026-pensacola-what-can-you-afford",
+  "article": {
+    "slug": "bah-2026-pensacola-what-can-you-afford",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Compare verified BAH with actual household income and full ownership costs without inventing a rank-based purchase limit.",
+  "readerTask": "Compare verified BAH with actual household income and full ownership costs without inventing a rank-based purchase limit.",
+  "pillar": "bah",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Four individually verified E-5 rate records and a full $3125 budget show the difference between an allowance, the household budget and lender approval.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "dod-2026",
+      "publisher": "Defense Travel Management Office",
+      "title": "2026 BAH ASCII annual archive",
+      "url": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "evidenceNote": "Read locally retained official archive retrieved2026-09-06, SHA2565446fed831e125c23cc6a407dcde4cae541f108e90ac852aaadeec0aa11e515f. Independently inspected FL064/FL056 fifth enlisted columns in with/without files and MHA names September9; verify-bah-source passed96comparisons. Not a claimed new archive download today.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "dod-lookup",
+      "publisher": "Defense Travel Management Office",
+      "title": "BAH rate lookup",
+      "url": "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
+      "evidenceNote": "Read current lookup and eligibility scope September9. Permanent duty ZIP, grade and dependency, not chosen home address. No individual allowance award.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "dod-eligibility",
+      "publisher": "Defense Travel Management Office",
+      "title": "BAH eligibility",
+      "url": "https://www.travel.dod.mil/Support/ALL-FAQs/Article/2978684/bah-eligibility/",
+      "evidenceNote": "Read eligibility and married military with children allocation. Finance must determine actual entitlement; do not assume two with-dependent payments.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "cfpb-budget",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "How much do you want to spend on a home?",
+      "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "evidenceNote": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "buyer-tax",
+      "publisher": "Florida Department of Revenue",
+      "title": "Property tax information for first-time Florida homebuyers",
+      "url": "https://floridarevenue.com/property/Documents/pt107.pdf",
+      "evidenceNote": "Read January 1 assessment, reassessment after sale, distinction among just/assessed/taxable values, and buyer-estimate guidance. August 2024 brochure has old exemption totals; use the current inflation table instead for 2026 amounts.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "va-fee",
+      "publisher": "Department of Veterans Affairs",
+      "title": "VA funding fee and closing costs",
+      "url": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "evidenceNote": "Read current fee table, exemption categories, assumption 0.5 percent and purchase financing limits. Seller concessions are capped at 4 percent reasonable value, ordinary closing-cost credits are distinct.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "pensacola-with",
+      "kind": "fact",
+      "text": "The 2026 FL064 Pensacola E-5 with-dependent BAH is $1,863 per month.",
+      "sourceIds": [
+        "dod-2026"
+      ],
+      "scope": "2026 published E-5 monthly BAH; individual finance eligibility and rate protection may differ",
+      "asOf": "2026-01-01",
+      "perishable": true,
+      "expires": "2027-01-01",
+      "loadBearing": true,
+      "verification": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate.",
+      "claim": "The 2026 FL064 Pensacola E-5 with-dependent BAH is $1,863 per month.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "locator": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate."
+      },
+      "bahRate": {
+        "year": 2026,
+        "mha": "FL064",
+        "grade": "E-5",
+        "dependency": "withDependents",
+        "monthly": 1863
+      },
+      "appliesTo": "Qualifying E-5 in stated 2026 MHA and dependency category",
+      "limitations": "Published annual rate is not a personal award or lender approval; verify LES and finance."
+    },
+    {
+      "id": "pensacola-without",
+      "kind": "fact",
+      "text": "The 2026 FL064 Pensacola E-5 without-dependent BAH is $1,644 per month.",
+      "sourceIds": [
+        "dod-2026"
+      ],
+      "scope": "2026 published E-5 monthly BAH; individual finance eligibility and rate protection may differ",
+      "asOf": "2026-01-01",
+      "perishable": true,
+      "expires": "2027-01-01",
+      "loadBearing": true,
+      "verification": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate.",
+      "claim": "The 2026 FL064 Pensacola E-5 without-dependent BAH is $1,644 per month.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "locator": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate."
+      },
+      "bahRate": {
+        "year": 2026,
+        "mha": "FL064",
+        "grade": "E-5",
+        "dependency": "withoutDependents",
+        "monthly": 1644
+      },
+      "appliesTo": "Qualifying E-5 in stated 2026 MHA and dependency category",
+      "limitations": "Published annual rate is not a personal award or lender approval; verify LES and finance."
+    },
+    {
+      "id": "eglin-with",
+      "kind": "fact",
+      "text": "The 2026 FL056 Eglin AFB E-5 with-dependent BAH is $2,433 per month.",
+      "sourceIds": [
+        "dod-2026"
+      ],
+      "scope": "2026 published E-5 monthly BAH; individual finance eligibility and rate protection may differ",
+      "asOf": "2026-01-01",
+      "perishable": true,
+      "expires": "2027-01-01",
+      "loadBearing": true,
+      "verification": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate.",
+      "claim": "The 2026 FL056 Eglin AFB E-5 with-dependent BAH is $2,433 per month.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "locator": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate."
+      },
+      "bahRate": {
+        "year": 2026,
+        "mha": "FL056",
+        "grade": "E-5",
+        "dependency": "withDependents",
+        "monthly": 2433
+      },
+      "appliesTo": "Qualifying E-5 in stated 2026 MHA and dependency category",
+      "limitations": "Published annual rate is not a personal award or lender approval; verify LES and finance."
+    },
+    {
+      "id": "eglin-without",
+      "kind": "fact",
+      "text": "The 2026 FL056 Eglin AFB E-5 without-dependent BAH is $2,157 per month.",
+      "sourceIds": [
+        "dod-2026"
+      ],
+      "scope": "2026 published E-5 monthly BAH; individual finance eligibility and rate protection may differ",
+      "asOf": "2026-01-01",
+      "perishable": true,
+      "expires": "2027-01-01",
+      "loadBearing": true,
+      "verification": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate.",
+      "claim": "The 2026 FL056 Eglin AFB E-5 without-dependent BAH is $2,157 per month.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "locator": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate."
+      },
+      "bahRate": {
+        "year": 2026,
+        "mha": "FL056",
+        "grade": "E-5",
+        "dependency": "withoutDependents",
+        "monthly": 2157
+      },
+      "appliesTo": "Qualifying E-5 in stated 2026 MHA and dependency category",
+      "limitations": "Published annual rate is not a personal award or lender approval; verify LES and finance."
+    },
+    {
+      "id": "dual",
+      "kind": "fact",
+      "text": "For two BAH-eligible service members married with children, DoD describes one with-dependent rate and one without-dependent rate.",
+      "sourceIds": [
+        "dod-eligibility"
+      ],
+      "scope": "Married eligible service members with children; individual allocation verified by finance",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read specific married-members FAQ and do not generalize to custody or OCONUS exceptions.",
+      "claim": "For two BAH-eligible service members married with children, DoD describes one with-dependent rate and one without-dependent rate.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.travel.dod.mil/Support/ALL-FAQs/Article/2978684/bah-eligibility/",
+      "locator": "Read specific married-members FAQ and do not generalize to custody or OCONUS exceptions.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read specific married-members FAQ and do not generalize to custody or OCONUS exceptions."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "ownership",
+      "kind": "calculation",
+      "text": "The hypothetical ownership budget below totals $3,125 per month.",
+      "claim": "The hypothetical ownership budget below totals $3,125 per month.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(1950, 300, 275, 75, 50, 250, 225) = 3125 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Invented1950PI300tax275homewind75flood50dues250maintenance225utilities,noMIorassessment.",
+      "method": "sum(1950, 300, 275, 75, 50, 250, 225) = 3125 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(1950, 300, 275, 75, 50, 250, 225) = 3125 USD per month."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          1950,
+          300,
+          275,
+          75,
+          50,
+          250,
+          225
+        ],
+        "result": 3125,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Invented1950PI300tax275homewind75flood50dues250maintenance225utilities,noMIorassessment."
+        ]
+      }
+    },
+    {
+      "id": "extras",
+      "kind": "calculation",
+      "text": "The hypothetical expenses beyond principal and interest total $1,175 per month.",
+      "claim": "The hypothetical expenses beyond principal and interest total $1,175 per month.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(3125, 1950) = 1175 USD per month.",
+      "loadBearing": true,
+      "assumptions": "3125totalminus1950PI.",
+      "method": "difference(3125, 1950) = 1175 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(3125, 1950) = 1175 USD per month."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          3125,
+          1950
+        ],
+        "result": 1175,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "3125totalminus1950PI."
+        ]
+      }
+    },
+    {
+      "id": "gap",
+      "kind": "calculation",
+      "text": "Compared with the published $1,863 allowance, this hypothetical budget requires $1,262 from other monthly income.",
+      "claim": "Compared with the published $1,863 allowance, this hypothetical budget requires $1,262 from other monthly income.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(3125, 1863) = 1262 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Invented3125monthlybudgetlesspublished2026FL064E5withdependent1863.",
+      "method": "difference(3125, 1863) = 1262 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(3125, 1863) = 1262 USD per month."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          3125,
+          1863
+        ],
+        "result": 1262,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Invented3125monthlybudgetlesspublished2026FL064E5withdependent1863."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+        "title": "2026 BAH ASCII annual archive",
+        "reviewed": "Read locally retained official archive retrieved2026-09-06, SHA2565446fed831e125c23cc6a407dcde4cae541f108e90ac852aaadeec0aa11e515f. Independently inspected FL064/FL056 fifth enlisted columns in with/without files and MHA names September9; verify-bah-source passed96comparisons. Not a claimed new archive download today."
+      },
+      {
+        "url": "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
+        "title": "BAH rate lookup",
+        "reviewed": "Read current lookup and eligibility scope September9. Permanent duty ZIP, grade and dependency, not chosen home address. No individual allowance award."
+      },
+      {
+        "url": "https://www.travel.dod.mil/Support/ALL-FAQs/Article/2978684/bah-eligibility/",
+        "title": "BAH eligibility",
+        "reviewed": "Read eligibility and married military with children allocation. Finance must determine actual entitlement; do not assume two with-dependent payments."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "title": "How much do you want to spend on a home?",
+        "reviewed": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates."
+      },
+      {
+        "url": "https://floridarevenue.com/property/Documents/pt107.pdf",
+        "title": "Property tax information for first-time Florida homebuyers",
+        "reviewed": "Read January 1 assessment, reassessment after sale, distinction among just/assessed/taxable values, and buyer-estimate guidance. August 2024 brochure has old exemption totals; use the current inflation table instead for 2026 amounts."
+      },
+      {
+        "url": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+        "title": "VA funding fee and closing costs",
+        "reviewed": "Read current fee table, exemption categories, assumption 0.5 percent and purchase financing limits. Seller concessions are capped at 4 percent reasonable value, ordinary closing-cost credits are distinct."
+      }
+    ],
+    "informationGain": "Four individually verified E-5 rate records and a full $3125 budget show the difference between an allowance, the household budget and lender approval.",
+    "questions": [
+      {
+        "question": "What is the published 2026 E-5 BAH for Pensacola?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What does a full property budget show beyond BAH?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How do you determine your own housing spending room?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Which property costs need special care on the Gulf Coast?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How can a VA funding fee affect the loan calculation?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should you use the calculators without mistaking an example for a quote?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What if your next PCS comes sooner than expected?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does BAH determine the price of home I can buy?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should I use the BAH area where I want to live?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can two military spouses both assume the with-dependent rate?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What if the property costs more per month than BAH?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Are the calculator starting values a VA rate quote?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should the next PCS affect the budget?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Pensacola and Beulah",
+      "decision": "Compare completed-home taxes and quoted insurance.",
+      "passage": "For a Pensacola buyer comparing a renovated house with new construction in Beulah, obtain the completed-home tax estimate and property-specific coverage for both."
+    },
+    {
+      "place": "Eglin and Destin",
+      "decision": "Add condominium obligations.",
+      "passage": "For an Eglin household considering a Destin condominium, add the association documents, reserves, assessments and insurance responsibilities to the review."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Compare verified BAH with actual household income and full ownership costs without inventing a rank-based purchase limit.",
+    "dutyLocations": [
+      "NAS Pensacola",
+      "Eglin AFB",
+      "Hurlburt Field"
+    ],
+    "topics": [
+      "bah"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "pensacola-with"
+  ],
+  "answerPassages": [
+    {
+      "question": "What is the published 2026 E-5 BAH for Pensacola?",
+      "answer": "The 2026 FL064 Pensacola E-5 with-dependent BAH is $1,863 per month. This figure was checked against the official annual BAH archive . Confirm your actual entitlement, dependency category and any rate protection with finance.",
+      "claimIds": [
+        "pensacola-with"
+      ],
+      "scope": "2026 published E-5 monthly BAH; individual finance eligibility and rate protection may differ",
+      "caveat": "Confirm your actual entitlement, dependency category and any rate protection with finance."
+    },
+    {
+      "question": "What does a full property budget show beyond BAH?",
+      "answer": "The hypothetical ownership budget below totals $3,125 per month. Its categories follow CFPB's budgeting guidance , with every expense amount invented for the illustration. Replace them with actual lender figures, tax estimates and coverage quotes before using the result.",
+      "claimIds": [
+        "ownership"
+      ],
+      "scope": "Compare verified BAH with actual household income and full ownership costs without inventing a rank-based purchase limit.",
+      "caveat": "Replace them with actual lender figures, tax estimates and coverage quotes before using the result."
+    }
+  ],
+  "image": {
+    "selected": "bah-budget-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "The Blue Angels fly over Pensacola. (9519619338).jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3AThe%20Blue%20Angels%20fly%20over%20Pensacola.%20(9519619338).jpg",
+    "license": "Public domain",
+    "creditRequired": false,
+    "credit": "Official U.S. Navy Page from United States of America\n\nMass Communication Specialist 2nd Class Kathryn E. Macdonald/U.S.",
+    "query": "Pensacola Bay aerial",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Inspected the retained official archive rows and MHA names and ran the 96-value verification. Reopened DoD lookup/eligibility, VA, CFPB and DOR sources. Checked all four E5 rate records and the dual-member scope, recomputed $3125 total, $1175 extras and $1262 gap. Actual LES, eligibility, household downside and lender review remain distinct. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "bc5e6ffb32e34fee36809f6c5b06da1e9560b4035df0a8dca45db44c5756d5bb",
+    "evidenceHash": "4c4afe0ff178eac6c4bbb21ed82c621ab762be0b7f142245a2f20624daf95a0f"
+  }
+}

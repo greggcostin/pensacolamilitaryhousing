@@ -1,4 +1,7 @@
+import {assertBlogRendered} from './blog-render-gate.mjs';
+import {finishBlogDiscovery} from './finish-blog-discovery.mjs';
 import { guardAnalytics } from "./analytics-host-guard.mjs";
+import {preserveBlogShell} from './blog-shell-lib.mjs';
 import { applyMilitaryMeta } from "./military-meta-lib.mjs";
 import { evidenceGate } from "./article-evidence.mjs";
 import { isModern, readResearch, sentenceCount, sectionLinks, updateBlogSitemap, plainBlogActions, finalizeArticleHtml } from './blog-editorial-lib.mjs';
@@ -66,7 +69,7 @@ function figureHTML(fig, { hero = false } = {}) {
   const cl = creditLine(src);
   if (cl && !/Photo:/.test(caption)) caption += cl;
   const sources = [['avif',avif],['webp',webp]].filter(([,url])=>url!==src && existsSync(ROOT+'public'+url)).map(([type,url])=>`<source srcset="${esc(url)}" type="image/${type}">`).join('');
-  return `<figure class="figure-band"><picture>${sources}<img src="${esc(src)}" width="1600" height="900" alt="${esc(fig.alt)}" ${load} decoding="async"${posStyle}></picture><figcaption>${caption.trim()}</figcaption></figure>`;
+  return `<figure class="figure-band"><picture>${sources}<img src="${esc(src)}" width="${Number(fig.width)||1600}" height="${Number(fig.height)||900}" alt="${esc(fig.alt)}" ${load} decoding="async"${posStyle}></picture><figcaption>${caption.trim()}</figcaption></figure>`;
 }
 
 // Rewrite every figure-band in body HTML to the canonical form above, so
@@ -276,7 +279,7 @@ export function renderMilitaryPost(spec, template) {
   html = html.replace(/<h1>[\s\S]*?<\/h1>/, () => `<h1>${spec.h1}</h1>`);
   html = html.replace(/<p class="lead">[\s\S]*?<\/p>/, () => `<p class="lead">${spec.lead}</p>`);
 
-  if (!html.includes("/*BLOG_CSS*/")) html = html.replace("</style>", EXTRA_CSS + "</style>");
+  if (!html.includes("/*BLOG_CSS*/")) html = html.replace("</style>", EXTRA_CSS.slice(EXTRA_CSS.indexOf('/*BLOG_CSS*/')) + "</style>");
 
   // main content
   const mainStart = html.indexOf("<main data-pagefind-body>");
@@ -286,7 +289,7 @@ export function renderMilitaryPost(spec, template) {
   const acLine = oldMain.split("\n").find((l) => l.includes('class="author-card"'));
   if (!acLine) throw new Error("No author-card in template main");
   if ((acLine.match(/<div\b/g) || []).length !== (acLine.match(/<\/div>/g) || []).length) throw new Error("author-card line unbalanced");
-  const authorCard = acLine.trim().replace(/Reviewed &amp; updated &middot; [A-Za-z]+ \d{4}/, `Reviewed &amp; updated &middot; ${monthYear(spec.dateModified)}`);
+  const authorCard = acLine.trim().replace(/Reviewed &amp; updated &middot; [A-Za-z]+ \d{4}/, `Reviewed &amp; updated &middot; ${monthYear(spec.dateModified)}`).replace(/Content reviewed [A-Za-z]+ \d{1,2}, \d{4}/, `Content reviewed ${longDate(spec.dateModified)}`);
 
   const exMatch = /<!-- EXPLORE_V2 -->[\s\S]*?<!-- \/EXPLORE_V2 -->/.exec(oldMain);
   if (!exMatch) throw new Error("No explore grid in template main");
@@ -437,7 +440,10 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
   const destination = out ? out.replace(/\\/g, '/') + '/blog/' : OUT_DIR;
   mkdirSync(destination, {recursive:true});
   for (const {spec, html} of rendered) {
-    writeFileSync(destination + spec.slug + '.html', html);
+    const existing=OUT_DIR+spec.slug+'.html';
+    const final=existsSync(existing)?preserveBlogShell(readFileSync(existing,'utf8'),html,{articleCss:EXTRA_CSS.slice(EXTRA_CSS.indexOf('/*BLOG_CSS*/'))}):html;
+    assertBlogRendered(spec,final);
+    writeFileSync(destination + spec.slug + '.html', final);
     console.log((out ? 'PREVIEW: ' : 'POST: ') + destination + spec.slug + '.html');
   }
   if (!out) {
@@ -449,5 +455,6 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
     updateLedger(buildSpecs);
     writeManifest(allSpecs);
     syncLlms(allSpecs);
+    finishBlogDiscovery('pmh');
   }
 }

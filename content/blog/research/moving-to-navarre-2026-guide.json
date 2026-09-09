@@ -1,0 +1,379 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "moving-to-navarre-2026-guide",
+  "article": {
+    "slug": "moving-to-navarre-2026-guide",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Choose a Navarre property with a workable commute, coastal due diligence and a realistic PCS exit.",
+  "readerTask": "Choose a Navarre property with a workable commute, coastal due diligence and a realistic PCS exit.",
+  "pillar": "local-living",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Separates mainland, beach and condominium decisions and exposes a rental cash shortfall after expenses instead of equating gross rent with affordability.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "santa-development",
+      "publisher": "Santa Rosa County",
+      "title": "Development Services",
+      "url": "https://www.santarosa.fl.gov/149/Development-Services",
+      "evidenceNote": "Read planning, permitting, inspections and floodplain responsibilities and MGO route. No parcel-specific permission or rental rule inferred.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "nfip-risk",
+      "publisher": "FEMA National Flood Insurance Program",
+      "title": "What is my flood risk?",
+      "url": "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+      "evidenceNote": "Read risk outside high-risk zones and homeowners-policy flood exclusion. No address lookup was completed and no parcel risk or premium is inferred.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "fl511",
+      "publisher": "Florida Department of Transportation",
+      "title": "Florida 511",
+      "url": "https://fl511.com/",
+      "evidenceNote": "Read road-condition map layers. No actual commute measured; readers must verify route, gate and work times.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "cfpb-budget",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "How much do you want to spend on a home?",
+      "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "evidenceNote": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "county",
+      "kind": "fact",
+      "text": "Santa Rosa County Development Services handles planning, permitting, building inspections and floodplain questions.",
+      "sourceIds": [
+        "santa-development"
+      ],
+      "scope": "County service scope, not parcel-specific approval",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read service list and department responsibilities.",
+      "claim": "Santa Rosa County Development Services handles planning, permitting, building inspections and floodplain questions.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.santarosa.fl.gov/149/Development-Services",
+      "locator": "Read service list and department responsibilities.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read service list and department responsibilities."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "flood",
+      "kind": "fact",
+      "text": "Flood risk extends beyond mapped high-risk zones.",
+      "sourceIds": [
+        "nfip-risk"
+      ],
+      "scope": "General NFIP risk, not local probability",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read NFIP outside-high-risk explanation.",
+      "claim": "Flood risk extends beyond mapped high-risk zones.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+      "locator": "Read NFIP outside-high-risk explanation.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read NFIP outside-high-risk explanation."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "operating",
+      "kind": "calculation",
+      "text": "Total operating allowances $929",
+      "claim": "Total operating allowances $929",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(280, 224, 250, 75, 100) = 929 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Inventedvacancy280management224maintenance250leasing75other100.",
+      "method": "sum(280, 224, 250, 75, 100) = 929 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(280, 224, 250, 75, 100) = 929 USD per month."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          280,
+          224,
+          250,
+          75,
+          100
+        ],
+        "result": 929,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Inventedvacancy280management224maintenance250leasing75other100."
+        ]
+      }
+    },
+    {
+      "id": "available",
+      "kind": "calculation",
+      "text": "Rent remaining before fixed carrying costs $1,871",
+      "claim": "Rent remaining before fixed carrying costs $1,871",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(2800, 929) = 1871 USD per month.",
+      "loadBearing": true,
+      "assumptions": "2800inventedgrossminus929operatingallowances.",
+      "method": "difference(2800, 929) = 1871 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(2800, 929) = 1871 USD per month."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          2800,
+          929
+        ],
+        "result": 1871,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "2800inventedgrossminus929operatingallowances."
+        ]
+      }
+    },
+    {
+      "id": "gap",
+      "kind": "calculation",
+      "text": "The hypothetical monthly cash shortfall is $629.",
+      "claim": "The hypothetical monthly cash shortfall is $629.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(2500, 1871) = 629 USD per month.",
+      "loadBearing": true,
+      "assumptions": "2500inventedfixedcarryingcostsless1871remainingrent.",
+      "method": "difference(2500, 1871) = 629 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(2500, 1871) = 629 USD per month."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          2500,
+          1871
+        ],
+        "result": 629,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "2500inventedfixedcarryingcostsless1871remainingrent."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://www.santarosa.fl.gov/149/Development-Services",
+        "title": "Development Services",
+        "reviewed": "Read planning, permitting, inspections and floodplain responsibilities and MGO route. No parcel-specific permission or rental rule inferred."
+      },
+      {
+        "url": "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+        "title": "What is my flood risk?",
+        "reviewed": "Read risk outside high-risk zones and homeowners-policy flood exclusion. No address lookup was completed and no parcel risk or premium is inferred."
+      },
+      {
+        "url": "https://fl511.com/",
+        "title": "Florida 511",
+        "reviewed": "Read road-condition map layers. No actual commute measured; readers must verify route, gate and work times."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "title": "How much do you want to spend on a home?",
+        "reviewed": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates."
+      }
+    ],
+    "informationGain": "Separates mainland, beach and condominium decisions and exposes a rental cash shortfall after expenses instead of equating gross rent with affordability.",
+    "questions": [
+      {
+        "question": "Who can answer Navarre permit and land-use questions?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a mainland address eliminate flood concerns?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should you compare mainland Navarre with the beach?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Would renting the home after PCS cover its costs?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What changes for a furnished mid-term or vacation rental?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should a condominium buyer investigate?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What belongs on the move-before-offer checklist?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should I compare Navarre Beach with mainland Navarre?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is Navarre always convenient for Hurlburt Field?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can gross rent tell me whether to keep the house after PCS?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is a furnished mid-term rental the same as a long-term lease?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What documents should I request for a Navarre condominium?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Who should confirm renovation or rental-use questions?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Navarre",
+      "decision": "Match actual Hurlburt reporting time.",
+      "passage": "For a Navarre household assigned to Hurlburt Field, test the exact route at the expected work times."
+    },
+    {
+      "place": "Navarre Beach",
+      "decision": "Include mainland connection in duty comparison.",
+      "passage": "For a Navarre Beach candidate, include the connection back to the mainland in that same test instead of measuring only the distance to a beach access."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Choose a Navarre property with a workable commute, coastal due diligence and a realistic PCS exit.",
+    "dutyLocations": [
+      "Hurlburt Field",
+      "Eglin AFB"
+    ],
+    "topics": [
+      "local-market"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "gap"
+  ],
+  "answerPassages": [
+    {
+      "question": "Who can answer Navarre permit and land-use questions?",
+      "answer": "Santa Rosa County Development Services handles planning, permitting, building inspections and floodplain questions. Its official services page provides the starting route. Confirm jurisdiction and the proposed use for the exact parcel; a general guide cannot approve a renovation or rental.",
+      "claimIds": [
+        "county"
+      ],
+      "scope": "County service scope, not parcel-specific approval",
+      "caveat": "Confirm jurisdiction and the proposed use for the exact parcel; a general guide cannot approve a renovation or rental."
+    },
+    {
+      "question": "Does a mainland address eliminate flood concerns?",
+      "answer": "Flood risk extends beyond mapped high-risk zones. The National Flood Insurance Program explains why the map is only part of the coverage decision. Check the actual parcel, drainage and policy requirements before treating a mainland address as a low-cost insurance finding.",
+      "claimIds": [
+        "flood"
+      ],
+      "scope": "General NFIP risk, not local probability",
+      "caveat": "Check the actual parcel, drainage and policy requirements before treating a mainland address as a low-cost insurance finding."
+    }
+  ],
+  "image": {
+    "selected": "navarre-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Navarre Beach Pier Wikivoyage banner.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3ANavarre%20Beach%20Pier%20Wikivoyage%20banner.jpg",
+    "license": "CC BY-SA 4.0",
+    "creditRequired": true,
+    "credit": "Taminar",
+    "query": "Navarre Beach pier",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read county development responsibilities, NFIP, CFPB and FDOT. Recomputed $929 operating allowances, $1871 remaining rent and $629 hypothetical shortfall. Reviewed mainland, beach and condominium distinctions; future STR and MTR use requires property-specific verification and no invented rent or occupancy. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "e56a06faddc1ade572eefa8b3ba64ceb4b0746b3cbfc7f9af406f99355bd744f",
+    "evidenceHash": "975f81264814aa985762ad46304e55b754df51f4318ab3cfd263bfed2067bfca"
+  }
+}

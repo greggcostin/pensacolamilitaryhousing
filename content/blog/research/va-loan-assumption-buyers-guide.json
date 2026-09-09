@@ -1,0 +1,378 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "va-loan-assumption-buyers-guide",
+  "article": {
+    "slug": "va-loan-assumption-buyers-guide",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Compare an assumption using equity cash, all debt payments, the seller entitlement outcome and the PCS timeline.",
+  "readerTask": "Compare an assumption using equity cash, all debt payments, the seller entitlement outcome and the PCS timeline.",
+  "pillar": "va-loans",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "A complete equity-gap worksheet and separate release/substitution checklist prevent the low note rate from hiding cash and next-home constraints.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "assumption",
+      "publisher": "Department of Veterans Affairs",
+      "title": "Circular 26-23-10: VA Assumption Updates",
+      "url": "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-23-10.pdf",
+      "evidenceNote": "Read pages 1-2, current loan, creditworthiness, full liability, processing authority and complete-package clocks. Read no-substitution versus substitution and page 6 valid-until-rescinded. Did not reuse fee caps without current locality-variance review.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "va-fee",
+      "publisher": "Department of Veterans Affairs",
+      "title": "VA funding fee and closing costs",
+      "url": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "evidenceNote": "Read current fee table, exemption categories, assumption 0.5 percent and purchase financing limits. Seller concessions are capped at 4 percent reasonable value, ordinary closing-cost credits are distinct.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "secondary",
+      "publisher": "Department of Veterans Affairs",
+      "title": "Circular 26-24-17: secondary borrowing with assumptions",
+      "url": "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-17.pdf",
+      "evidenceNote": "Read both pages: junior lien, recorded repayment terms, approved purposes, no cash back, payment in underwriting and future assumability. Index lists valid until rescinded. No promise a secondary lender will offer financing.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "eligibility",
+      "publisher": "Department of Veterans Affairs",
+      "title": "Home loan eligibility and restoration",
+      "url": "https://www.va.gov/housing-assistance/home-loans/eligibility/",
+      "evidenceNote": "Read service-status distinctions, COE versus credit/income/occupancy and restoration alternatives. A retained home with a fully repaid prior loan is distinct from an outstanding mortgage.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "entitlement",
+      "kind": "fact",
+      "text": "An assumption without substitution leaves the original veteran's entitlement tied to the loan until it is paid in full.",
+      "sourceIds": [
+        "assumption"
+      ],
+      "scope": "Assumption without entitlement substitution",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read paragraph 2(1)(d), not confused with liability release.",
+      "claim": "An assumption without substitution leaves the original veteran's entitlement tied to the loan until it is paid in full.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-23-10.pdf",
+      "locator": "Read paragraph 2(1)(d), not confused with liability release.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read paragraph 2(1)(d), not confused with liability release."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "assumption-fee",
+      "kind": "fact",
+      "text": "The VA assumption funding fee is 0.5% unless an exemption applies.",
+      "sourceIds": [
+        "va-fee"
+      ],
+      "scope": "VA assumption funding fee, exemption and chargeable balance require confirmation",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read assumption row and exemption list.",
+      "claim": "The VA assumption funding fee is 0.5% unless an exemption applies.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "locator": "Read assumption row and exemption list.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read assumption row and exemption list."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "equity-gap",
+      "kind": "calculation",
+      "text": "Price minus balance $120,000",
+      "claim": "Price minus balance $120,000",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-17.pdf",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(390000, 270000) = 120000 USD.",
+      "loadBearing": true,
+      "assumptions": "Illustrative price 390000 minus assumed principal 270000.",
+      "method": "difference(390000, 270000) = 120000 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(390000, 270000) = 120000 USD."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          390000,
+          270000
+        ],
+        "result": 120000,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Illustrative price 390000 minus assumed principal 270000."
+        ]
+      }
+    },
+    {
+      "id": "fee-example",
+      "kind": "calculation",
+      "text": "Assumed nonexempt funding fee $1,350",
+      "claim": "Assumed nonexempt funding fee $1,350",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(270000, 0.005) = 1350 USD.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical nonexempt 270000 balance times 0.005.",
+      "method": "product(270000, 0.005) = 1350 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(270000, 0.005) = 1350 USD."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          270000,
+          0.005
+        ],
+        "result": 1350,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical nonexempt 270000 balance times 0.005."
+        ]
+      }
+    },
+    {
+      "id": "cash-total",
+      "kind": "calculation",
+      "text": "Total cash before reserves $125,350",
+      "claim": "Total cash before reserves $125,350",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-17.pdf",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(120000, 1350, 4000) = 125350 USD.",
+      "loadBearing": true,
+      "assumptions": "Equity120000 plus funding fee1350 plus invented other costs4000; no credit or second loan.",
+      "method": "sum(120000, 1350, 4000) = 125350 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(120000, 1350, 4000) = 125350 USD."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          120000,
+          1350,
+          4000
+        ],
+        "result": 125350,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Equity120000 plus funding fee1350 plus invented other costs4000; no credit or second loan."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-23-10.pdf",
+        "title": "Circular 26-23-10: VA Assumption Updates",
+        "reviewed": "Read pages 1-2, current loan, creditworthiness, full liability, processing authority and complete-package clocks. Read no-substitution versus substitution and page 6 valid-until-rescinded. Did not reuse fee caps without current locality-variance review."
+      },
+      {
+        "url": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+        "title": "VA funding fee and closing costs",
+        "reviewed": "Read current fee table, exemption categories, assumption 0.5 percent and purchase financing limits. Seller concessions are capped at 4 percent reasonable value, ordinary closing-cost credits are distinct."
+      },
+      {
+        "url": "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-17.pdf",
+        "title": "Circular 26-24-17: secondary borrowing with assumptions",
+        "reviewed": "Read both pages: junior lien, recorded repayment terms, approved purposes, no cash back, payment in underwriting and future assumability. Index lists valid until rescinded. No promise a secondary lender will offer financing."
+      },
+      {
+        "url": "https://www.va.gov/housing-assistance/home-loans/eligibility/",
+        "title": "Home loan eligibility and restoration",
+        "reviewed": "Read service-status distinctions, COE versus credit/income/occupancy and restoration alternatives. A retained home with a fully repaid prior loan is distinct from an outstanding mortgage."
+      }
+    ],
+    "informationGain": "A complete equity-gap worksheet and separate release/substitution checklist prevent the low note rate from hiding cash and next-home constraints.",
+    "questions": [
+      {
+        "question": "Does an assumption automatically restore the seller's entitlement?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What is the VA funding fee for an assumption?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How much cash could the equity gap require?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can a second loan cover the difference?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should the assumption fit a PCS timeline?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What property checks still matter with a low-rate loan?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should the seller receive before calling the transaction complete?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a VA assumption automatically restore the seller's benefit?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does the buyer have to be a veteran?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I borrow the equity gap?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is the funding fee the only assumption cost?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should I schedule household-goods delivery for the proposed closing day?",
+        "origin": "editorial"
+      },
+      {
+        "question": "When is a new loan worth comparing with an assumption?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "NAS Pensacola",
+      "decision": "Verify entitlement before next duty-station purchase.",
+      "passage": "For a seller leaving NAS Pensacola, a completed sale and a restored benefit are different milestones."
+    },
+    {
+      "place": "Eglin AFB",
+      "decision": "Compare identical property under assumption and new loan.",
+      "passage": "For a buyer near Eglin AFB, compare the assumption's total cash and ongoing expenses with a written new-loan offer for the same property."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Compare an assumption using equity cash, all debt payments, the seller entitlement outcome and the PCS timeline.",
+    "dutyLocations": [
+      "NAS Pensacola",
+      "Eglin AFB",
+      "Hurlburt Field"
+    ],
+    "topics": [
+      "va-loans"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "assumption-fee"
+  ],
+  "answerPassages": [
+    {
+      "question": "Does an assumption automatically restore the seller's entitlement?",
+      "answer": "An assumption without substitution leaves the original veteran's entitlement tied to the loan until it is paid in full. VA's assumption guidance distinguishes that result from release of liability. Obtain written confirmation of both outcomes before relying on the sale to finance the next home.",
+      "claimIds": [
+        "entitlement"
+      ],
+      "scope": "Assumption without entitlement substitution",
+      "caveat": "Obtain written confirmation of both outcomes before relying on the sale to finance the next home."
+    },
+    {
+      "question": "What is the VA funding fee for an assumption?",
+      "answer": "The VA assumption funding fee is 0.5% unless an exemption applies. The VA fee table separates assumptions from purchase loans. Ask the servicer to confirm exemption status, the chargeable balance and every other closing expense in writing.",
+      "claimIds": [
+        "assumption-fee"
+      ],
+      "scope": "VA assumption funding fee, exemption and chargeable balance require confirmation",
+      "caveat": "Ask the servicer to confirm exemption status, the chargeable balance and every other closing expense in writing."
+    }
+  ],
+  "image": {
+    "selected": "va-assumption-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Pensacola NHPD house17.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house17.jpg",
+    "license": "CC BY-SA 3.0",
+    "creditRequired": true,
+    "credit": "Ebyabe",
+    "query": "Pensacola North Hill house",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read the VA assumption and secondary-borrowing circulars and current fee/eligibility pages. Kept liability release and entitlement substitution distinct, avoided stale processing fee caps, and recalculated the $120000 gap, $1350 funding fee and $125350 total. Reviewed approval timing and unguaranteed future financing. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "776fd6ccc490dd25cd89fa8c39de8f54ecb9b93779c2aaaf2768d6476b8f2fc8",
+    "evidenceHash": "c1e63e0d345886d8f3e5b13d81489ef379fd2b6d0cfebb15e9e056da771677a7"
+  }
+}

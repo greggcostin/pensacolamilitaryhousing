@@ -1,0 +1,396 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "best-neighborhoods-eglin-afb-families",
+  "article": {
+    "slug": "best-neighborhoods-eglin-afb-families",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Compare actual homes around Eglin by duty route, total ownership expense and household needs.",
+  "readerTask": "Compare actual homes around Eglin by duty route, total ownership expense and household needs.",
+  "pillar": "local-living",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Uses a cost-reversal example and specific Niceville, Fort Walton Beach, Crestview and Destin due diligence instead of demographic rankings or invented commute averages.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "eglin-housing",
+      "publisher": "Military OneSource MilitaryINSTALLATIONS",
+      "title": "Eglin AFB housing",
+      "url": "https://installations.militaryonesource.mil/military-installation/eglin-afb/housing/housing",
+      "evidenceNote": "Read privatized housing MHO application process and unaccompanied housing E1-E3/E4under3years. No vacancy, assignment or waiting-time promise.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "cfpb-budget",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "How much do you want to spend on a home?",
+      "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "evidenceNote": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "fl511",
+      "publisher": "Florida Department of Transportation",
+      "title": "Florida 511",
+      "url": "https://fl511.com/",
+      "evidenceNote": "Read road-condition map layers. No actual commute measured; readers must verify route, gate and work times.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "eglin-school",
+      "publisher": "Military OneSource MilitaryINSTALLATIONS",
+      "title": "Eglin AFB education",
+      "url": "https://installations.militaryonesource.mil/military-installation/eglin-afb/education/education",
+      "evidenceNote": "Read school liaison and district contact guidance. Avoid stale assessment terminology and unverified address-level assignment.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "nfip-risk",
+      "publisher": "FEMA National Flood Insurance Program",
+      "title": "What is my flood risk?",
+      "url": "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+      "evidenceNote": "Read risk outside high-risk zones and homeowners-policy flood exclusion. No address lookup was completed and no parcel risk or premium is inferred.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "housing",
+      "kind": "fact",
+      "text": "Eglin's Military Housing Office handles information about privatized housing and its application process.",
+      "sourceIds": [
+        "eglin-housing"
+      ],
+      "scope": "Eglin housing options",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read MHO application guidance; no vacancy claim.",
+      "claim": "Eglin's Military Housing Office handles information about privatized housing and its application process.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://installations.militaryonesource.mil/military-installation/eglin-afb/housing/housing",
+      "locator": "Read MHO application guidance; no vacancy claim.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read MHO application guidance; no vacancy claim."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "dorm",
+      "kind": "fact",
+      "text": "The published unaccompanied-housing guidance covers E-1 through E-3 and E-4 with less than 3 years of service.",
+      "sourceIds": [
+        "eglin-housing"
+      ],
+      "scope": "Published permanent-party UH eligibility description, individual assignment requires office confirmation",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read UH section separately from privatized housing.",
+      "claim": "The published unaccompanied-housing guidance covers E-1 through E-3 and E-4 with less than 3 years of service.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://installations.militaryonesource.mil/military-installation/eglin-afb/housing/housing",
+      "locator": "Read UH section separately from privatized housing.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read UH section separately from privatized housing."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "gap",
+      "kind": "calculation",
+      "text": "Home A costs $200 more per month than Home B after property expenses.",
+      "claim": "Home A costs $200 more per month than Home B after property expenses.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(3475, 3275) = 200 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Invented3475minus3275monthlytotals.",
+      "method": "difference(3475, 3275) = 200 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(3475, 3275) = 200 USD per month."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          3475,
+          3275
+        ],
+        "result": 200,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Invented3475minus3275monthlytotals."
+        ]
+      }
+    },
+    {
+      "id": "a",
+      "kind": "calculation",
+      "text": "$3,475",
+      "claim": "$3,475",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(1900, 350, 350, 100, 250, 300, 225) = 3475 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical1900PI350tax350homewind100flood250dues300reserve225utilities,noseparateMIorassessment.",
+      "method": "sum(1900, 350, 350, 100, 250, 300, 225) = 3475 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(1900, 350, 350, 100, 250, 300, 225) = 3475 USD per month."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          1900,
+          350,
+          350,
+          100,
+          250,
+          300,
+          225
+        ],
+        "result": 3475,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical1900PI350tax350homewind100flood250dues300reserve225utilities,noseparateMIorassessment."
+        ]
+      }
+    },
+    {
+      "id": "b",
+      "kind": "calculation",
+      "text": "$3,275",
+      "claim": "$3,275",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(2100, 350, 225, 50, 75, 250, 225) = 3275 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical2100PI350tax225homewind50flood75dues250reserve225utilities,noseparateMIorassessment.",
+      "method": "sum(2100, 350, 225, 50, 75, 250, 225) = 3275 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(2100, 350, 225, 50, 75, 250, 225) = 3275 USD per month."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          2100,
+          350,
+          225,
+          50,
+          75,
+          250,
+          225
+        ],
+        "result": 3275,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical2100PI350tax225homewind50flood75dues250reserve225utilities,noseparateMIorassessment."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://installations.militaryonesource.mil/military-installation/eglin-afb/housing/housing",
+        "title": "Eglin AFB housing",
+        "reviewed": "Read privatized housing MHO application process and unaccompanied housing E1-E3/E4under3years. No vacancy, assignment or waiting-time promise."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "title": "How much do you want to spend on a home?",
+        "reviewed": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates."
+      },
+      {
+        "url": "https://fl511.com/",
+        "title": "Florida 511",
+        "reviewed": "Read road-condition map layers. No actual commute measured; readers must verify route, gate and work times."
+      },
+      {
+        "url": "https://installations.militaryonesource.mil/military-installation/eglin-afb/education/education",
+        "title": "Eglin AFB education",
+        "reviewed": "Read school liaison and district contact guidance. Avoid stale assessment terminology and unverified address-level assignment."
+      },
+      {
+        "url": "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+        "title": "What is my flood risk?",
+        "reviewed": "Read risk outside high-risk zones and homeowners-policy flood exclusion. No address lookup was completed and no parcel risk or premium is inferred."
+      }
+    ],
+    "informationGain": "Uses a cost-reversal example and specific Niceville, Fort Walton Beach, Crestview and Destin due diligence instead of demographic rankings or invented commute averages.",
+    "questions": [
+      {
+        "question": "Should you check military housing before signing off base?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How can a cheaper house cost more each month?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should you compare in Niceville and Fort Walton Beach?",
+        "origin": "editorial"
+      },
+      {
+        "question": "When do Crestview and Destin belong on the shortlist?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should schools and flood exposure affect the decision?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should be completed before you choose?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is Niceville automatically the best choice for Eglin?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should a Hurlburt household use the same shortlist?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a lower asking price guarantee lower monthly costs?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How can I confirm a school assignment?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is a Destin condominium comparable to a house?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What if my next PCS date is uncertain?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Niceville",
+      "decision": "Test candidate address to duty location.",
+      "passage": "A Niceville household should test the candidate address against the assigned Eglin work destination, including access instructions."
+    },
+    {
+      "place": "Fort Walton Beach",
+      "decision": "Distinguish duty routes.",
+      "passage": "A Fort Walton Beach household should distinguish an Eglin assignment from a Hurlburt assignment before treating proximity to either installation as interchangeable."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Compare actual homes around Eglin by duty route, total ownership expense and household needs.",
+    "dutyLocations": [
+      "Eglin AFB",
+      "Hurlburt Field"
+    ],
+    "topics": [
+      "local-market"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "gap"
+  ],
+  "answerPassages": [
+    {
+      "question": "Should you check military housing before signing off base?",
+      "answer": "Eglin's Military Housing Office handles information about privatized housing and its application process. The official Eglin housing page also describes unaccompanied housing. Confirm the rules for your status and assignment before committing to an off-base lease.",
+      "claimIds": [
+        "housing"
+      ],
+      "scope": "Eglin housing options",
+      "caveat": "Confirm the rules for your status and assignment before committing to an off-base lease."
+    },
+    {
+      "question": "How can a cheaper house cost more each month?",
+      "answer": "In the hypothetical comparison below, Home A costs $200 more per month than Home B after property expenses. The example follows the categories in CFPB's ownership-budget guidance . These invented figures describe neither a town average nor a current listing.",
+      "claimIds": [
+        "gap"
+      ],
+      "scope": "Compare actual homes around Eglin by duty route, total ownership expense and household needs.",
+      "caveat": "These invented figures describe neither a town average nor a current listing."
+    }
+  ],
+  "image": {
+    "selected": "eglin-bay-final-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Choctawhatchee Bay.JPG",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3AChoctawhatchee%20Bay.JPG",
+    "license": "CC BY-SA 4.0",
+    "creditRequired": true,
+    "credit": "Skye Marthaler",
+    "query": "intitle:\"Choctawhatchee Bay\"",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read Eglin housing and school liaison guidance, CFPB, NFIP and FDOT. Checked unaccompanied-housing status scope and calculated both complete hypothetical budgets and the $200 reversal. Read the final area, inspection, school and exit comparisons for useful property questions without invented commute, price, school or demographic rankings. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "023a313a1d627af1005ef31aaed4e26d162a7a73857803242519b325ad326d80",
+    "evidenceHash": "03b164f1326d125fe116fc09136489af1c66747b7c2f8b86ddf571f98c095fb0"
+  }
+}

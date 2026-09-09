@@ -1,0 +1,419 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "va-loan-seller-concessions-truth",
+  "article": {
+    "slug": "va-loan-seller-concessions-truth",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Structure a useful seller contribution without confusing closing expenses, concessions and temporary payment subsidies.",
+  "readerTask": "Structure a useful seller contribution without confusing closing expenses, concessions and temporary payment subsidies.",
+  "pillar": "va-loans",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Separates a lender-classified concession calculation from the buyer cash problem and the seller net proceeds, with full-payment and exemption checks.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "va-fee",
+      "publisher": "Department of Veterans Affairs",
+      "title": "VA funding fee and closing costs",
+      "url": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "evidenceNote": "Read current fee table, exemption categories, assumption 0.5 percent and purchase financing limits. Seller concessions are capped at 4 percent reasonable value, ordinary closing-cost credits are distinct.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "buydown",
+      "publisher": "Department of Veterans Affairs",
+      "title": "Temporary Buydowns",
+      "url": "https://www.benefits.va.gov/homeloans/temporary-buydown.asp",
+      "evidenceNote": "Read FAQ on seller/builder funded subsidy as concession, full-payment qualifying, segregated funds and disposition on payoff/assumption. Do not call a temporary subsidy a permanent note-rate reduction.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "estimate",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Loan Estimate explainer",
+      "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+      "evidenceNote": "Read comparable terms, projected payments, estimated cash to close, services and escrow sections. The total is not just lender fees.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "concession-cap",
+      "kind": "fact",
+      "text": "VA limits seller concessions to 4% of the home's reasonable value, while ordinary closing-cost credits are separate.",
+      "sourceIds": [
+        "va-fee"
+      ],
+      "scope": "VA purchase contribution classification",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read closing-credit versus concession distinction and reasonable value.",
+      "claim": "VA limits seller concessions to 4% of the home's reasonable value, while ordinary closing-cost credits are separate.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "locator": "Read closing-credit versus concession distinction and reasonable value.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read closing-credit versus concession distinction and reasonable value."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "full-payment",
+      "kind": "fact",
+      "text": "VA requires qualification using the full payment due after a temporary buydown ends.",
+      "sourceIds": [
+        "buydown"
+      ],
+      "scope": "VA temporary subsidy, not a permanent rate reduction",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read underwriting FAQ and seller/builder treatment.",
+      "claim": "VA requires qualification using the full payment due after a temporary buydown ends.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.benefits.va.gov/homeloans/temporary-buydown.asp",
+      "locator": "Read underwriting FAQ and seller/builder treatment.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read underwriting FAQ and seller/builder treatment."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "purchase-fee",
+      "kind": "fact",
+      "text": "The VA first-use purchase funding fee is 2.15% with less than 5% down when no exemption applies.",
+      "sourceIds": [
+        "va-fee"
+      ],
+      "scope": "Nonexempt purchase with less than 5 percent down",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read first-use purchase row and exceptions.",
+      "claim": "The VA first-use purchase funding fee is 2.15% with less than 5% down when no exemption applies.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "locator": "Read first-use purchase row and exceptions.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read first-use purchase row and exceptions."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "cap-example",
+      "kind": "calculation",
+      "text": "4% of $350,000 reasonable value $14,000",
+      "claim": "4% of $350,000 reasonable value $14,000",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(350000, 0.04) = 14000 USD.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical VA reasonable value350000 times4percent.",
+      "method": "product(350000, 0.04) = 14000 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(350000, 0.04) = 14000 USD."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          350000,
+          0.04
+        ],
+        "result": 14000,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical VA reasonable value350000 times4percent."
+        ]
+      }
+    },
+    {
+      "id": "fee-example",
+      "kind": "calculation",
+      "text": "Seller-paid funding fee at 2.15% $7,525",
+      "claim": "Seller-paid funding fee at 2.15% $7,525",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(350000, 0.0215) = 7525 USD.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical350000loan,firstuse,noexemption,nodownpayment.",
+      "method": "product(350000, 0.0215) = 7525 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(350000, 0.0215) = 7525 USD."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          350000,
+          0.0215
+        ],
+        "result": 7525,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical350000loan,firstuse,noexemption,nodownpayment."
+        ]
+      }
+    },
+    {
+      "id": "used",
+      "kind": "calculation",
+      "text": "Total concessions $11,225",
+      "claim": "Total concessions $11,225",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(7525, 2500, 1200) = 11225 USD.",
+      "loadBearing": true,
+      "assumptions": "7525fee+2500inventedsubsidy+1200inventedprepaidpremium.",
+      "method": "sum(7525, 2500, 1200) = 11225 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(7525, 2500, 1200) = 11225 USD."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          7525,
+          2500,
+          1200
+        ],
+        "result": 11225,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "7525fee+2500inventedsubsidy+1200inventedprepaidpremium."
+        ]
+      }
+    },
+    {
+      "id": "room",
+      "kind": "calculation",
+      "text": "Unused room below ceiling $2,775",
+      "claim": "Unused room below ceiling $2,775",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(14000, 11225) = 2775 USD.",
+      "loadBearing": true,
+      "assumptions": "14000less11225;unused ceiling not cash back.",
+      "method": "difference(14000, 11225) = 2775 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(14000, 11225) = 2775 USD."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          14000,
+          11225
+        ],
+        "result": 2775,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "14000less11225;unused ceiling not cash back."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+        "title": "VA funding fee and closing costs",
+        "reviewed": "Read current fee table, exemption categories, assumption 0.5 percent and purchase financing limits. Seller concessions are capped at 4 percent reasonable value, ordinary closing-cost credits are distinct."
+      },
+      {
+        "url": "https://www.benefits.va.gov/homeloans/temporary-buydown.asp",
+        "title": "Temporary Buydowns",
+        "reviewed": "Read FAQ on seller/builder funded subsidy as concession, full-payment qualifying, segregated funds and disposition on payoff/assumption. Do not call a temporary subsidy a permanent note-rate reduction."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "title": "Loan Estimate explainer",
+        "reviewed": "Read comparable terms, projected payments, estimated cash to close, services and escrow sections. The total is not just lender fees."
+      }
+    ],
+    "informationGain": "Separates a lender-classified concession calculation from the buyer cash problem and the seller net proceeds, with full-payment and exemption checks.",
+    "questions": [
+      {
+        "question": "Does VA limit every seller-paid cost to 4%?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can a temporary buydown make an unaffordable loan qualify?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How do you calculate the limit and remaining room?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is a credit better than a price reduction?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should the buyer request from the lender?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What can make the offer need revision?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does the 4% limit include every seller-paid expense?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is the limit based on the contract price?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a seller-funded temporary buydown count as a concession?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I receive unused seller assistance as cash?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should an exempt borrower ask the seller to pay a funding fee?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should a military seller compare between two offers?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Hurlburt Field",
+      "decision": "Compare subsidy period with move expenses and full later payment.",
+      "passage": "For a buyer reporting to Hurlburt Field, the early payment may overlap with expensive move-in months."
+    },
+    {
+      "place": "Pensacola",
+      "decision": "Compare seller net across structures.",
+      "passage": "For a Pensacola seller, compare net proceeds after payoff and all agreed costs under each structure."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Structure a useful seller contribution without confusing closing expenses, concessions and temporary payment subsidies.",
+    "dutyLocations": [
+      "NAS Pensacola",
+      "Eglin AFB",
+      "Hurlburt Field"
+    ],
+    "topics": [
+      "va-loans"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "concession-cap"
+  ],
+  "answerPassages": [
+    {
+      "question": "Does VA limit every seller-paid cost to 4%?",
+      "answer": "VA limits seller concessions to 4% of the home's reasonable value, while ordinary closing-cost credits are separate. The VA closing-cost guidance makes that distinction. The lender must classify the actual expenses; the limit is not a promise that a seller will contribute.",
+      "claimIds": [
+        "concession-cap"
+      ],
+      "scope": "VA purchase contribution classification",
+      "caveat": "The lender must classify the actual expenses; the limit is not a promise that a seller will contribute."
+    },
+    {
+      "question": "Can a temporary buydown make an unaffordable loan qualify?",
+      "answer": "VA requires qualification using the full payment due after a temporary buydown ends. Its temporary-buydown guidance also counts seller- or builder-funded buydowns as concessions. Evaluate the later payment before accepting an early discount; a future refinance is not assured.",
+      "claimIds": [
+        "full-payment"
+      ],
+      "scope": "VA temporary subsidy, not a permanent rate reduction",
+      "caveat": "Evaluate the later payment before accepting an early discount; a future refinance is not assured."
+    }
+  ],
+  "image": {
+    "selected": "va-concession-residence-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Milton Hist Dist house01.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMilton%20Hist%20Dist%20house01.jpg",
+    "license": "CC BY-SA 3.0",
+    "creditRequired": true,
+    "credit": "Ebyabe",
+    "query": "Milton Hist Dist house01.jpg",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read VA fee, seller-concession and temporary-buydown guidance plus CFPB disclosure guidance. Checked 4 percent reasonable-value base separately from ordinary closing credits and full-payment qualification. Recomputed $14000 ceiling, $7525 example fee, $11225 used and $2775 room. Reviewed cash timing, unused credits and seller net alternatives. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "601920ec5900e62054952023afb144deda2274a97acd132ea1be691a2bddccfe",
+    "evidenceHash": "5f8bc098442cba4ef59943661037ceb81515f6cae414e1b8143fd1b09197d948"
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "version": 1,
+  "reviewed": "2026-09-09",
+  "purpose": "Two relevant same-site guide links per refreshed article. Preserve the hub substance and reapply after generation.",
+  "links": [
+    {
+      "site": "gc",
+      "post": "/blog/closing-costs-florida-buyers",
+      "hub": "buy",
+      "label": "Florida buyer closing-cost breakdown",
+      "sentence": "Before setting your cash target, use the {link} to separate the down payment, financing taxes, prepaid expenses and negotiated credits."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/closing-costs-florida-buyers",
+      "hub": "resources/first-time-home-buyer",
+      "label": "Florida buyer closing-cost breakdown",
+      "sentence": "Before setting your cash target, use the {link} to separate the down payment, financing taxes, prepaid expenses and negotiated credits."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/fed-rate-hike-what-it-means",
+      "hub": "buy",
+      "label": "Fed decisions and your housing plan",
+      "sentence": "A policy headline does not settle whether to move. The {link} compares the payment, timing and proceeds questions behind that choice."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/fed-rate-hike-what-it-means",
+      "hub": "sell",
+      "label": "Fed decisions and your housing plan",
+      "sentence": "A policy headline does not settle whether to move. The {link} compares the payment, timing and proceeds questions behind that choice."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/what-moves-mortgage-rates",
+      "hub": "resources/mortgage-preapproval",
+      "label": "mortgage-rate and points comparison",
+      "sentence": "When two loan offers look similar, work through the {link} before choosing a rate lock or paying discount points."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/what-moves-mortgage-rates",
+      "hub": "resources/coastal-ownership-costs",
+      "label": "mortgage-rate and points comparison",
+      "sentence": "When two loan offers look similar, work through the {link} before choosing a rate lock or paying discount points."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/property-taxes-escambia-santa-rosa",
+      "hub": "resources/florida-homestead-exemption",
+      "label": "Escambia and Santa Rosa buyer-tax example",
+      "sentence": "The seller’s bill may not predict yours. Follow the {link} to see how taxable values, separate levies and assessments fit together."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/property-taxes-escambia-santa-rosa",
+      "hub": "buy",
+      "label": "Escambia and Santa Rosa buyer-tax example",
+      "sentence": "The seller’s bill may not predict yours. Follow the {link} to see how taxable values, separate levies and assessments fit together."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/florida-insurance-relief-2026",
+      "hub": "resources/florida-home-insurance",
+      "label": "insurance premium and deductible comparison",
+      "sentence": "Lower statewide or county averages do not establish a quote for your home. The {link} shows how a smaller premium can come with a larger cash exposure."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/florida-insurance-relief-2026",
+      "hub": "resources/coastal-ownership-costs",
+      "label": "insurance premium and deductible comparison",
+      "sentence": "Lower statewide or county averages do not establish a quote for your home. The {link} shows how a smaller premium can come with a larger cash exposure."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/bah-2026-pensacola-what-can-you-afford",
+      "hub": "bah-rates",
+      "label": "complete BAH housing-budget example",
+      "sentence": "Use the {link} to add insurance, taxes, dues, maintenance and utilities before comparing ownership costs with your actual allowance."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/bah-2026-pensacola-what-can-you-afford",
+      "hub": "bah-to-mortgage-guide",
+      "label": "complete BAH housing-budget example",
+      "sentence": "Use the {link} to add insurance, taxes, dues, maintenance and utilities before comparing ownership costs with your actual allowance."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/best-pensacola-neighborhoods-by-rank-bah",
+      "hub": "bah-rates",
+      "label": "Pensacola area comparison by costs and duty route",
+      "sentence": "Move from an allowance figure to the {link}. It shows why the lower mortgage payment is not always the lower household expense."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/best-pensacola-neighborhoods-by-rank-bah",
+      "hub": "pcs-home-search",
+      "label": "Pensacola area comparison by costs and duty route",
+      "sentence": "Move from an allowance figure to the {link}. It shows why the lower mortgage payment is not always the lower household expense."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/best-neighborhoods-eglin-afb-families",
+      "hub": "bases/eglin-afb",
+      "label": "Eglin housing comparison",
+      "sentence": "The {link} organizes the housing-office, school, route and property-budget checks before a neighborhood shortlist becomes a commitment."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/best-neighborhoods-eglin-afb-families",
+      "hub": "communities/niceville",
+      "label": "Eglin housing comparison",
+      "sentence": "The {link} organizes the housing-office, school, route and property-budget checks before a neighborhood shortlist becomes a commitment."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/florida-homestead-exemption-military",
+      "hub": "florida-homestead-exemption-military",
+      "label": "military homestead and PCS questions",
+      "sentence": "Review the {link} before assuming an absence or a rental arrangement preserves the same exemption treatment."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/florida-homestead-exemption-military",
+      "hub": "military-pcs-tax-deductions",
+      "label": "military homestead and PCS questions",
+      "sentence": "Review the {link} before assuming an absence or a rental arrangement preserves the same exemption treatment."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/florida-veteran-property-tax-county-guide",
+      "hub": "va-disability-property-tax-florida",
+      "label": "county veteran property-tax checklist",
+      "sentence": "The {link} distinguishes an assessed-value reduction, a tax discount and a full exemption, with documents to confirm before budgeting the benefit."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/florida-veteran-property-tax-county-guide",
+      "hub": "disabled-veteran-benefits-florida",
+      "label": "county veteran property-tax checklist",
+      "sentence": "The {link} distinguishes an assessed-value reduction, a tax discount and a full exemption, with documents to confirm before budgeting the benefit."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/living-in-gulf-breeze-pros-cons",
+      "hub": "communities/gulf-breeze",
+      "label": "Gulf Breeze ownership and location questions",
+      "sentence": "Use the {link} to separate the mailing address from jurisdiction and to compare flood, evacuation, route and recurring-cost questions."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/living-in-gulf-breeze-pros-cons",
+      "hub": "gulf-breeze-vs-navarre",
+      "label": "Gulf Breeze ownership and location questions",
+      "sentence": "Use the {link} to separate the mailing address from jurisdiction and to compare flood, evacuation, route and recurring-cost questions."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/moving-to-navarre-2026-guide",
+      "hub": "communities/navarre",
+      "label": "Navarre move and rental-budget guide",
+      "sentence": "Planning to keep the property after a move? The {link} includes a conservative rental illustration and the documents to check before relying on future income."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/moving-to-navarre-2026-guide",
+      "hub": "gulf-breeze-vs-navarre",
+      "label": "Navarre move and rental-budget guide",
+      "sentence": "Planning to keep the property after a move? The {link} includes a conservative rental illustration and the documents to check before relying on future income."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/moving-to-pensacola-2026-guide",
+      "hub": "bases/nas-pensacola",
+      "label": "Pensacola arrival and purchase-cash plan",
+      "sentence": "The {link} combines address checks, possession timing and an example that separates transaction cash from the reserve you keep afterward."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/moving-to-pensacola-2026-guide",
+      "hub": "pcs-home-search",
+      "label": "Pensacola arrival and purchase-cash plan",
+      "sentence": "The {link} combines address checks, possession timing and an example that separates transaction cash from the reserve you keep afterward."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/pcs-to-pensacola-2026-complete-guide",
+      "hub": "pcs-checklist",
+      "label": "Pensacola PCS arrival plan",
+      "sentence": "Tie your search to written orders and actual access to the property. The {link} covers temporary housing, student authorization and arrival cash."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/pcs-to-pensacola-2026-complete-guide",
+      "hub": "first-time-military-homebuyer",
+      "label": "Pensacola PCS arrival plan",
+      "sentence": "Tie your search to written orders and actual access to the property. The {link} covers temporary housing, student authorization and arrival cash."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/personal-property-activity-pcs-2026",
+      "hub": "pcs-checklist",
+      "label": "PPA moving and claims guide",
+      "sentence": "Keep the shipment plan alongside the housing timeline. The {link} separates pickup scheduling, damage notice, itemized claims and a personally procured move budget."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/personal-property-activity-pcs-2026",
+      "hub": "buying-sight-unseen-pcs-pensacola",
+      "label": "PPA moving and claims guide",
+      "sentence": "Keep the shipment plan alongside the housing timeline. The {link} separates pickup scheduling, damage notice, itemized claims and a personally procured move budget."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/va-loan-assumption-buyers-guide",
+      "hub": "va-loan-guide",
+      "label": "VA assumption cash-gap example",
+      "sentence": "A low existing rate is only one part of an assumption. The {link} explains cash needs, servicer approval, liability release and entitlement substitution."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/va-loan-assumption-buyers-guide",
+      "hub": "assumable-va-loans-pensacola",
+      "label": "VA assumption cash-gap example",
+      "sentence": "A low existing rate is only one part of an assumption. The {link} explains cash needs, servicer approval, liability release and entitlement substitution."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/va-loan-seller-concessions-truth",
+      "hub": "va-loan-guide",
+      "label": "VA seller-concession worked example",
+      "sentence": "Before writing a credit into an offer, compare the {link} with ordinary closing costs, the lender’s requirements and the seller’s net proceeds."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/va-loan-seller-concessions-truth",
+      "hub": "first-time-military-homebuyer",
+      "label": "VA seller-concession worked example",
+      "sentence": "Before writing a credit into an offer, compare the {link} with ordinary closing costs, the lender’s requirements and the seller’s net proceeds."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/fed-rate-hike-what-it-means",
+      "hub": "resources/mortgage-preapproval",
+      "label": "Fed decisions and your housing plan",
+      "sentence": "A policy headline does not settle whether to move. The {link} compares the payment, timing and proceeds questions behind that choice."
+    },
+    {
+      "site": "gc",
+      "post": "/blog/florida-insurance-relief-2026",
+      "hub": "neighborhoods/gulf-breeze",
+      "label": "insurance premium and deductible comparison",
+      "sentence": "Lower statewide or county averages do not establish a quote for your home. The {link} shows how a smaller premium can come with a larger cash exposure."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/bah-2026-pensacola-what-can-you-afford",
+      "hub": "first-time-military-homebuyer",
+      "label": "complete BAH housing-budget example",
+      "sentence": "Use the {link} to add insurance, taxes, dues, maintenance and utilities before comparing ownership costs with your actual allowance."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/florida-homestead-exemption-military",
+      "hub": "faq",
+      "label": "military homestead and PCS questions",
+      "sentence": "Review the {link} before assuming an absence or a rental arrangement preserves the same exemption treatment."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/va-loan-seller-concessions-truth",
+      "hub": "zero-down-home-loans",
+      "label": "VA seller-concession worked example",
+      "sentence": "Before writing a credit into an offer, compare the {link} with ordinary closing costs, the lender’s requirements and the seller’s net proceeds."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/best-pensacola-neighborhoods-by-rank-bah",
+      "hub": "communities/milton",
+      "label": "Pensacola area comparison by costs and duty route",
+      "sentence": "Move from an allowance figure to the {link}. It shows why the lower mortgage payment is not always the lower household expense."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/living-in-gulf-breeze-pros-cons",
+      "hub": "pensacola-flood-zones-homebuyers",
+      "label": "Gulf Breeze ownership and location questions",
+      "sentence": "Use the {link} to separate the mailing address from jurisdiction and to compare flood, evacuation, route and recurring-cost questions."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/moving-to-navarre-2026-guide",
+      "hub": "bases/hurlburt-field",
+      "label": "Navarre move and rental-budget guide",
+      "sentence": "Planning to keep the property after a move? The {link} includes a conservative rental illustration and the documents to check before relying on future income."
+    },
+    {
+      "site": "pmh",
+      "post": "/blog/va-loan-assumption-buyers-guide",
+      "hub": "dual-military-homes",
+      "label": "VA assumption cash-gap example",
+      "sentence": "A low existing rate is only one part of an assumption. The {link} explains cash needs, servicer approval, liability release and entitlement substitution."
+    }
+  ]
+}

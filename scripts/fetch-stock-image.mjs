@@ -38,7 +38,8 @@ async function searchWikimedia(query, n) {
   const r = await fetch(url, { headers: { "User-Agent": UA } });
   if (!r.ok) return [];
   const j = await r.json();
-  const pages = Object.values(j?.query?.pages || {});
+  // MediaWiki returns an object keyed by page id, not relevance order.
+  const pages = Object.values(j?.query?.pages || {}).sort((a, b) => (a.index ?? Infinity) - (b.index ?? Infinity));
   const out = [];
   for (const p of pages) {
     const ii = p.imageinfo?.[0];

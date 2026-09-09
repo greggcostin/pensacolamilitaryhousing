@@ -58,3 +58,16 @@ After final review, build the selected slug normally, generate its OG card and i
 Honor `content/blog/ledger.json` configuration. With `autoPublish:false`, commit only owned files on a review branch, push that branch and report the preview, score, shareHook and evidence gaps. Publication needs Gregg's authorization. Add two or three planned contextual inbound links to the staged release, preserve the civilian entries in shared retro files, and record actual deployment and later outcomes separately.
 
 The builder also checks `content/geo/financial-guide-data.mjs` when present. An article owned by that reviewed financial-guide source must use `scripts/financial-guide-lib.mjs` and its checks, rather than a legacy blog fragment. A mixed legacy checkout is not permission to overwrite a reviewed financial page.
+
+
+## Rendered catalog and publication safeguards (September 9, 2026)
+
+The shared rendered-page gate requires the reviewed quick answer, licensed figure, worked table and FAQs to survive the final layout. Blog layouts are owned by the blog factory; generic interior-page design must not move their hero or split their source body. Existing page chrome and shared entity, privacy and receipt code are preserved. No emoji labels in blog contact actions.
+
+After a blog or hub build, run `node scripts/finish-blog-discovery.mjs`. Its contextual links are defined in `content/blog/contextual-links.json`; its answer summaries come from published HTML rather than pending drafts. Run responsive-image markup after the final render, then the full site, entity, link and dash gates. Browser QA must compare actual quick answers, loaded responsive images, table access and FAQ expansion on desktop and mobile.
+
+The two financial-owned BAH articles use `node scripts/build-financial-blog.mjs`. Their canonical `content/geo/` body and reviewed blog fragment must match; the legacy military factory must continue to refuse ownership. Update the financial FAQ source alongside an approved substantive refresh.
+
+For an approved full-catalog release, stage complete current production baselines, apply only the reviewed file scope, validate the exact candidate, and verify provider file manifests after deployment. Keep the existing draft-first policy for future runs; one approved publication does not enable permanent autopublishing. Quality scores are structural checks, not a prediction of rankings or AI citations.
+
+Run `node scripts/build-blog-search.mjs` before an approved release and check the page-count receipt. It stages the published main content and avoids silently excluding pages that use a different Pagefind marker.

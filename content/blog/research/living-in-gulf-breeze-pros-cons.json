@@ -1,0 +1,395 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "living-in-gulf-breeze-pros-cons",
+  "article": {
+    "slug": "living-in-gulf-breeze-pros-cons",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Decide whether a Gulf Breeze address fits military work, coastal ownership costs and the next move.",
+  "readerTask": "Decide whether a Gulf Breeze address fits military work, coastal ownership costs and the next move.",
+  "pillar": "local-living",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Separates mailing area, jurisdiction, flood and evacuation questions, with an explicit $1450 monthly-cost gap and a conditional rental exit.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "gulf-gis",
+      "publisher": "City of Gulf Breeze",
+      "title": "Geographic Information Systems",
+      "url": "https://cityofgulfbreeze.us/departments/public-works/development-services/geographic-information-systems-gis/",
+      "evidenceNote": "Read separate flood, evacuation, zoning and future-land-use layers; city explicitly states mapping does not replace surveys or legal instruments.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "santa-development",
+      "publisher": "Santa Rosa County",
+      "title": "Development Services",
+      "url": "https://www.santarosa.fl.gov/149/Development-Services",
+      "evidenceNote": "Read planning, permitting, inspections and floodplain responsibilities and MGO route. No parcel-specific permission or rental rule inferred.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "nfip-risk",
+      "publisher": "FEMA National Flood Insurance Program",
+      "title": "What is my flood risk?",
+      "url": "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+      "evidenceNote": "Read risk outside high-risk zones and homeowners-policy flood exclusion. No address lookup was completed and no parcel risk or premium is inferred.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "cfpb-budget",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "How much do you want to spend on a home?",
+      "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "evidenceNote": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "fl511",
+      "publisher": "Florida Department of Transportation",
+      "title": "Florida 511",
+      "url": "https://fl511.com/",
+      "evidenceNote": "Read road-condition map layers. No actual commute measured; readers must verify route, gate and work times.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "maps",
+      "kind": "fact",
+      "text": "The City of Gulf Breeze publishes separate flood, hurricane evacuation, zoning and future-land-use maps.",
+      "sourceIds": [
+        "gulf-gis"
+      ],
+      "scope": "City GIS resources, not parcel adjudication",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read map links and explicit survey/legal instrument limitation.",
+      "claim": "The City of Gulf Breeze publishes separate flood, hurricane evacuation, zoning and future-land-use maps.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://cityofgulfbreeze.us/departments/public-works/development-services/geographic-information-systems-gis/",
+      "locator": "Read map links and explicit survey/legal instrument limitation.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read map links and explicit survey/legal instrument limitation."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "flood",
+      "kind": "fact",
+      "text": "Flooding can occur outside mapped high-risk zones, and most homeowners insurance excludes flood damage.",
+      "sourceIds": [
+        "nfip-risk"
+      ],
+      "scope": "General flood-risk guidance, no local risk probability",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read risk and homeowners coverage sections.",
+      "claim": "Flooding can occur outside mapped high-risk zones, and most homeowners insurance excludes flood damage.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+      "locator": "Read risk and homeowners coverage sections.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read risk and homeowners coverage sections."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "extras",
+      "kind": "calculation",
+      "text": "Expenses beyond principal and interest $1,450",
+      "claim": "Expenses beyond principal and interest $1,450",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(400, 325, 100, 75, 300, 250) = 1450 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Inventedtax400homewind325flood100dues75maintenance300utilities250.",
+      "method": "sum(400, 325, 100, 75, 300, 250) = 1450 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(400, 325, 100, 75, 300, 250) = 1450 USD per month."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          400,
+          325,
+          100,
+          75,
+          300,
+          250
+        ],
+        "result": 1450,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Inventedtax400homewind325flood100dues75maintenance300utilities250."
+        ]
+      }
+    },
+    {
+      "id": "total",
+      "kind": "calculation",
+      "text": "Total monthly illustration $3,800",
+      "claim": "Total monthly illustration $3,800",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(2350, 1450) = 3800 USD per month.",
+      "loadBearing": true,
+      "assumptions": "InventedPI2350plus1450extras,noMIorassessment.",
+      "method": "sum(2350, 1450) = 3800 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(2350, 1450) = 3800 USD per month."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          2350,
+          1450
+        ],
+        "result": 3800,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "InventedPI2350plus1450extras,noMIorassessment."
+        ]
+      }
+    },
+    {
+      "id": "annual",
+      "kind": "calculation",
+      "text": "The hypothetical $1,450 in monthly extras becomes $17,400 over a year.",
+      "claim": "The hypothetical $1,450 in monthly extras becomes $17,400 over a year.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(1450, 12) = 17400 USD per year.",
+      "loadBearing": true,
+      "assumptions": "1450assumedmonthlyexpenses times12.",
+      "method": "product(1450, 12) = 17400 USD per year.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(1450, 12) = 17400 USD per year."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          1450,
+          12
+        ],
+        "result": 17400,
+        "units": "USD per year",
+        "tolerance": 0.005,
+        "inputSources": [
+          "1450assumedmonthlyexpenses times12."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://cityofgulfbreeze.us/departments/public-works/development-services/geographic-information-systems-gis/",
+        "title": "Geographic Information Systems",
+        "reviewed": "Read separate flood, evacuation, zoning and future-land-use layers; city explicitly states mapping does not replace surveys or legal instruments."
+      },
+      {
+        "url": "https://www.santarosa.fl.gov/149/Development-Services",
+        "title": "Development Services",
+        "reviewed": "Read planning, permitting, inspections and floodplain responsibilities and MGO route. No parcel-specific permission or rental rule inferred."
+      },
+      {
+        "url": "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+        "title": "What is my flood risk?",
+        "reviewed": "Read risk outside high-risk zones and homeowners-policy flood exclusion. No address lookup was completed and no parcel risk or premium is inferred."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "title": "How much do you want to spend on a home?",
+        "reviewed": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates."
+      },
+      {
+        "url": "https://fl511.com/",
+        "title": "Florida 511",
+        "reviewed": "Read road-condition map layers. No actual commute measured; readers must verify route, gate and work times."
+      }
+    ],
+    "informationGain": "Separates mailing area, jurisdiction, flood and evacuation questions, with an explicit $1450 monthly-cost gap and a conditional rental exit.",
+    "questions": [
+      {
+        "question": "Which Gulf Breeze maps should you check before buying?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does being outside a high-risk flood zone remove the concern?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How much can the ownership extras change the budget?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should you test the military commute?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What are the real advantages and tradeoffs?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What if you want to rent the home after PCS?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should you verify before making an offer?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a Gulf Breeze address mean the property is inside the city?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is Gulf Breeze a practical choice for NAS Pensacola?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can a home outside a high-risk flood zone still need flood coverage?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What expenses should I add to the mortgage payment?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I turn a Gulf Breeze home into a vacation rental later?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should I compare Gulf Breeze with Navarre?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "NAS Pensacola",
+      "decision": "Test complete bridge and gate route.",
+      "passage": "For a NAS Pensacola household considering Gulf Breeze, include the bridge crossing, authorized gate and travel beyond the gate."
+    },
+    {
+      "place": "Hurlburt Field",
+      "decision": "Compare actual eastward corridor route.",
+      "passage": "For a household assigned to Hurlburt Field, compare the eastward route from that exact Gulf Breeze address with alternatives farther along the corridor."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Decide whether a Gulf Breeze address fits military work, coastal ownership costs and the next move.",
+    "dutyLocations": [
+      "NAS Pensacola",
+      "Eglin AFB",
+      "Hurlburt Field"
+    ],
+    "topics": [
+      "local-market"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "annual"
+  ],
+  "answerPassages": [
+    {
+      "question": "Which Gulf Breeze maps should you check before buying?",
+      "answer": "The City of Gulf Breeze publishes separate flood, hurricane evacuation, zoning and future-land-use maps. Start with its official GIS resources . The city cautions that mapping does not replace surveys, deeds or other legal instruments.",
+      "claimIds": [
+        "maps"
+      ],
+      "scope": "City GIS resources, not parcel adjudication",
+      "caveat": "The city cautions that mapping does not replace surveys, deeds or other legal instruments."
+    },
+    {
+      "question": "Does being outside a high-risk flood zone remove the concern?",
+      "answer": "Flooding can occur outside mapped high-risk zones, and most homeowners insurance excludes flood damage. The National Flood Insurance Program explains that distinction. Obtain property-specific flood information and coverage advice before deciding what risk to retain.",
+      "claimIds": [
+        "flood"
+      ],
+      "scope": "General flood-risk guidance, no local risk probability",
+      "caveat": "Obtain property-specific flood information and coverage advice before deciding what risk to retain."
+    }
+  ],
+  "image": {
+    "selected": "gulf-breeze-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "GINS FL Live Oaks water west bridge01.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3AGINS%20FL%20Live%20Oaks%20water%20west%20bridge01.jpg",
+    "license": "CC BY-SA 3.0",
+    "creditRequired": true,
+    "credit": "Ebyabe",
+    "query": "Gulf Breeze bridge",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read city GIS limitations, county planning resources, NFIP, CFPB and FDOT. Distinguished jurisdiction, flood and evacuation questions. Independently summed $1450 extras, $3800 total and $17400 annual extras. Reviewed actual-route and conditional rental advice without parcel permission, rate or insurance guarantees. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "bf55c70b412d2d4ec01832f422b29c0a4c56da738606c091ba1e7e8475a935b3",
+    "evidenceHash": "c0dcac6add9190cb46060eb5167897bd4a4ad2d155e93ea60678adfcea4bae4f"
+  }
+}

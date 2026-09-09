@@ -1,0 +1,463 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "florida-insurance-relief-2026",
+  "article": {
+    "slug": "florida-insurance-relief-2026",
+    "site": "gc"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Florida homeowner or buyer evaluating insurance relief and renewal offers",
+  "decision": "Compare property-specific coverage, deductibles and flood requirements before changing the ownership budget.",
+  "readerTask": "Compare property-specific coverage, deductibles and flood requirements before changing the ownership budget.",
+  "pillar": "insurance-taxes",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Corrects the source reporting window, names local aggregate figures, separates premium savings from deductible exposure and applies the Citizens schedule with exceptions.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "oir-july",
+      "publisher": "Florida Office of Insurance Regulation",
+      "title": "July 2026 Property Insurance Stability Report",
+      "url": "https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf",
+      "evidenceNote": "Read pages 19-20, premium methodology: MIR as of March 31 2026, not entire first half; average homeowners including wind down in 51 counties from January report. County table: Escambia $3,702; Santa Rosa $3,512 including wind. Separate nonwind and condominium columns. Average premium varies with company, insured value, deductible and terms.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "citizens-flood",
+      "publisher": "Citizens Property Insurance Corporation",
+      "title": "Flood coverage requirements",
+      "url": "https://www.citizensfla.com/flood",
+      "evidenceNote": "Read outside-SFHA schedule: January 1 2026 Coverage A $400,000 threshold; January 1 2027 all values for applicable personal residential wind policies. SFHA rule already applies. Condo unit-owner, tenant contents and wind-excluded exceptions retained; agent must confirm applicability.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "deductible",
+      "publisher": "Florida Department of Financial Services",
+      "title": "Florida hurricane deductible",
+      "url": "https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible",
+      "evidenceNote": "Read percentage deductible applied to insured dwelling limit rather than claim or purchase price, annual same-insurer conditions, inflation guard and surplus-lines qualification. Example here only illustrates percentage math; no claim that every policy has same deductible.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "nfip",
+      "publisher": "FEMA National Flood Insurance Program",
+      "title": "Flood insurance eligibility",
+      "url": "https://www.floodsmart.gov/get-insured/eligibility",
+      "evidenceNote": "Read most homeowners policies do not cover flood damage, lender and SFHA requirement, lender may require outside high-risk area. No claim that low mapped risk means no flood risk.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "county-declines",
+      "kind": "fact",
+      "text": "OIR's July 2026 report says the average homeowners premium including wind decreased in 51 counties compared with its January report.",
+      "sourceIds": [
+        "oir-july"
+      ],
+      "scope": "Traditional homeowners including wind, county aggregate MIR data March 31 2026",
+      "asOf": "2026-03-31",
+      "perishable": true,
+      "expires": "2027-01-02",
+      "loadBearing": true,
+      "verification": "Read page 19 methodology and reporting date; rejected news description of a full first-half period.",
+      "claim": "OIR's July 2026 report says the average homeowners premium including wind decreased in 51 counties compared with its January report.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf",
+      "locator": "Read page 19 methodology and reporting date; rejected news description of a full first-half period.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read page 19 methodology and reporting date; rejected news description of a full first-half period."
+      }
+    },
+    {
+      "id": "escambia-premium",
+      "kind": "fact",
+      "text": "Escambia $3,702 County aggregate, not an address quote",
+      "sourceIds": [
+        "oir-july"
+      ],
+      "scope": "Escambia homeowners including wind, MIR March 31 2026",
+      "asOf": "2026-03-31",
+      "perishable": true,
+      "expires": "2027-01-02",
+      "loadBearing": true,
+      "verification": "Checked row on page 19 against column heading; not the condo or ex-wind column.",
+      "claim": "Escambia $3,702 County aggregate, not an address quote",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf",
+      "locator": "Checked row on page 19 against column heading; not the condo or ex-wind column.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Checked row on page 19 against column heading; not the condo or ex-wind column."
+      }
+    },
+    {
+      "id": "santa-rosa-premium",
+      "kind": "fact",
+      "text": "Santa Rosa $3,512 County aggregate, not an address quote",
+      "sourceIds": [
+        "oir-july"
+      ],
+      "scope": "Santa Rosa homeowners including wind, MIR March 31 2026",
+      "asOf": "2026-03-31",
+      "perishable": true,
+      "expires": "2027-01-02",
+      "loadBearing": true,
+      "verification": "Checked page 20 continuation and same column as Escambia.",
+      "claim": "Santa Rosa $3,512 County aggregate, not an address quote",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf",
+      "locator": "Checked page 20 continuation and same column as Escambia.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Checked page 20 continuation and same column as Escambia."
+      }
+    },
+    {
+      "id": "citizens-2026",
+      "kind": "fact",
+      "text": "the 2026 flood requirement reaches dwelling Coverage A of $400,000 or more",
+      "sourceIds": [
+        "citizens-flood"
+      ],
+      "scope": "Applicable Citizens personal residential wind policies outside SFHA, exceptions stated",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2027-01-01",
+      "loadBearing": true,
+      "verification": "Read threshold and current policy exceptions; compared Coverage A with excluded purchase-price interpretation.",
+      "claim": "the 2026 flood requirement reaches dwelling Coverage A of $400,000 or more",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.citizensfla.com/flood",
+      "locator": "Read threshold and current policy exceptions; compared Coverage A with excluded purchase-price interpretation.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read threshold and current policy exceptions; compared Coverage A with excluded purchase-price interpretation."
+      }
+    },
+    {
+      "id": "citizens-2027",
+      "kind": "fact",
+      "text": "Citizens' published schedule extends that outside-hazard-area requirement to applicable policies regardless of dwelling value on January 1, 2027.",
+      "sourceIds": [
+        "citizens-flood"
+      ],
+      "scope": "Scheduled requirement for applicable policies; not all insurance products",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2027-01-01",
+      "loadBearing": true,
+      "verification": "Read January 1 2027 final stage and exceptions.",
+      "claim": "Citizens' published schedule extends that outside-hazard-area requirement to applicable policies regardless of dwelling value on January 1, 2027.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.citizensfla.com/flood",
+      "locator": "Read January 1 2027 final stage and exceptions.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read January 1 2027 final stage and exceptions."
+      }
+    },
+    {
+      "id": "flood-separate",
+      "kind": "fact",
+      "text": "Most homeowners insurance does not cover flood damage",
+      "sourceIds": [
+        "nfip"
+      ],
+      "scope": "General homeowners/flood distinction, actual contract governs",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read NFIP eligibility and coverage explanation.",
+      "claim": "Most homeowners insurance does not cover flood damage",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.floodsmart.gov/get-insured/eligibility",
+      "locator": "Read NFIP eligibility and coverage explanation.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read NFIP eligibility and coverage explanation."
+      }
+    },
+    {
+      "id": "deductible-a",
+      "kind": "calculation",
+      "text": "$400,000 times 0.02 equals $8,000",
+      "claim": "$400,000 times 0.02 equals $8,000",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(400000, 0.02) = 8000 USD.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical $400,000 dwelling limit, assumed 2% deductible.",
+      "method": "product(400000, 0.02) = 8000 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(400000, 0.02) = 8000 USD."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          400000,
+          0.02
+        ],
+        "result": 8000,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical $400,000 dwelling limit, assumed 2% deductible."
+        ]
+      }
+    },
+    {
+      "id": "deductible-b",
+      "kind": "calculation",
+      "text": "$400,000 times 0.05 equals $20,000",
+      "claim": "$400,000 times 0.05 equals $20,000",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(400000, 0.05) = 20000 USD.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical $400,000 dwelling limit, assumed 5% deductible.",
+      "method": "product(400000, 0.05) = 20000 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(400000, 0.05) = 20000 USD."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          400000,
+          0.05
+        ],
+        "result": 20000,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical $400,000 dwelling limit, assumed 5% deductible."
+        ]
+      }
+    },
+    {
+      "id": "premium-saving",
+      "kind": "calculation",
+      "text": "$4,200 minus $3,600 equals $600",
+      "claim": "$4,200 minus $3,600 equals $600",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(4200, 3600) = 600 USD per year.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical comparable annual premium offers only.",
+      "method": "difference(4200, 3600) = 600 USD per year.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(4200, 3600) = 600 USD per year."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          4200,
+          3600
+        ],
+        "result": 600,
+        "units": "USD per year",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical comparable annual premium offers only."
+        ]
+      }
+    },
+    {
+      "id": "deductible-gap",
+      "kind": "calculation",
+      "text": "$20,000 minus $8,000 equals $12,000",
+      "claim": "$20,000 minus $8,000 equals $12,000",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(20000, 8000) = 12000 USD.",
+      "loadBearing": true,
+      "assumptions": "Difference between hypothetical hurricane deductibles, not predicted claim loss.",
+      "method": "difference(20000, 8000) = 12000 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(20000, 8000) = 12000 USD."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          20000,
+          8000
+        ],
+        "result": 12000,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Difference between hypothetical hurricane deductibles, not predicted claim loss."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf",
+        "title": "July 2026 Property Insurance Stability Report",
+        "reviewed": "Read pages 19-20, premium methodology: MIR as of March 31 2026, not entire first half; average homeowners including wind down in 51 counties from January report. County table: Escambia $3,702; Santa Rosa $3,512 including wind. Separate nonwind and condominium columns. Average premium varies with company, insured value, deductible and terms."
+      },
+      {
+        "url": "https://www.citizensfla.com/flood",
+        "title": "Flood coverage requirements",
+        "reviewed": "Read outside-SFHA schedule: January 1 2026 Coverage A $400,000 threshold; January 1 2027 all values for applicable personal residential wind policies. SFHA rule already applies. Condo unit-owner, tenant contents and wind-excluded exceptions retained; agent must confirm applicability."
+      },
+      {
+        "url": "https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible",
+        "title": "Florida hurricane deductible",
+        "reviewed": "Read percentage deductible applied to insured dwelling limit rather than claim or purchase price, annual same-insurer conditions, inflation guard and surplus-lines qualification. Example here only illustrates percentage math; no claim that every policy has same deductible."
+      },
+      {
+        "url": "https://www.floodsmart.gov/get-insured/eligibility",
+        "title": "Flood insurance eligibility",
+        "reviewed": "Read most homeowners policies do not cover flood damage, lender and SFHA requirement, lender may require outside high-risk area. No claim that low mapped risk means no flood risk."
+      }
+    ],
+    "informationGain": "Corrects the source reporting window, names local aggregate figures, separates premium savings from deductible exposure and applies the Citizens schedule with exceptions.",
+    "questions": [
+      {
+        "question": "What does the 2026 insurance report actually show?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Why might your renewal still increase?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What does a percentage hurricane deductible mean in dollars?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What are the Citizens flood requirements in 2026?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does homeowners coverage protect against flooding?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should a buyer or seller use improving insurance conditions?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should you do before changing insurers?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a lower county average mean my renewal should fall?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is a higher deductible a sensible way to lower the premium?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a Citizens flood threshold use the purchase price?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Do rental owners need to describe the length of stays?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should a buyer wait until closing to obtain insurance quotes?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I apply these Florida findings to Orange Beach?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Pensacola",
+      "decision": "Resolve older-roof underwriting before budget.",
+      "passage": "For a Pensacola house with an older roof, obtain the documentation the insurer actually requests before relying on an initial indication."
+    },
+    {
+      "place": "Gulf Breeze",
+      "decision": "Resolve specific renewal flood condition.",
+      "passage": "For a Gulf Breeze renewal, ask whether flood coverage must be in place for your policy and what evidence the insurer needs."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "image": {
+    "selected": "insurance-house-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "FEMA - 11390 - Photograph by Mark Wolfe taken on 09-27-2004 in Florida.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFEMA%20-%2011390%20-%20Photograph%20by%20Mark%20Wolfe%20taken%20on%2009-27-2004%20in%20Florida.jpg",
+    "license": "Public domain",
+    "creditRequired": false,
+    "credit": "Mark Wolfe",
+    "query": "Florida house hurricane shutters",
+    "eyeTest": "Viewed every returned candidate in this session. Selected this image for legible subject and accurate archival context; rejected unrelated or duplicate candidates. Caption avoids current-property, valuation or endorsement claims."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read the July OIR report and its March 31 data period, county table, Citizens flood requirements, DFS deductible guide and NFIP. Checked county averages and 2026/2027 conditions; recomputed $8000 versus $20000 deductibles and $600 premium difference. No promise of savings, eligibility or property coverage. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "cfe9dbea2843e667048d894fe41bcb69ac9c04738c17254d144cd7bd9d7d05a6",
+    "evidenceHash": "506cba3465d0c38b2316ee8c056bb8159a77295c932195ee9f157045ef930b46"
+  }
+}

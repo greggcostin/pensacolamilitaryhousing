@@ -1,0 +1,429 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "best-pensacola-neighborhoods-by-rank-bah",
+  "article": {
+    "slug": "best-pensacola-neighborhoods-by-rank-bah",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Choose Gulf Coast search areas using actual household finances and address-specific comparisons instead of assigning ranks to neighborhoods.",
+  "readerTask": "Choose Gulf Coast search areas using actual household finances and address-specific comparisons instead of assigning ranks to neighborhoods.",
+  "pillar": "bah",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Preserves community routing and current ownership tools while replacing grade-to-price shortcuts with an auditable two-property budget and downside test.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "dod-2026",
+      "publisher": "Defense Travel Management Office",
+      "title": "2026 BAH ASCII annual archive",
+      "url": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "evidenceNote": "Read locally retained official archive retrieved2026-09-06, SHA2565446fed831e125c23cc6a407dcde4cae541f108e90ac852aaadeec0aa11e515f. Independently inspected FL064/FL056 fifth enlisted columns in with/without files and MHA names September9; verify-bah-source passed96comparisons. Not a claimed new archive download today.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "dod-lookup",
+      "publisher": "Defense Travel Management Office",
+      "title": "BAH rate lookup",
+      "url": "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
+      "evidenceNote": "Read current lookup and eligibility scope September9. Permanent duty ZIP, grade and dependency, not chosen home address. No individual allowance award.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "cfpb-budget",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "How much do you want to spend on a home?",
+      "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "evidenceNote": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "buyer-tax",
+      "publisher": "Florida Department of Revenue",
+      "title": "Property tax information for first-time Florida homebuyers",
+      "url": "https://floridarevenue.com/property/Documents/pt107.pdf",
+      "evidenceNote": "Read January 1 assessment, reassessment after sale, distinction among just/assessed/taxable values, and buyer-estimate guidance. August 2024 brochure has old exemption totals; use the current inflation table instead for 2026 amounts.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "fl511",
+      "publisher": "Florida Department of Transportation",
+      "title": "Florida 511",
+      "url": "https://fl511.com/",
+      "evidenceNote": "Read road-condition map layers. No actual commute measured; readers must verify route, gate and work times.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "nfip-risk",
+      "publisher": "FEMA National Flood Insurance Program",
+      "title": "What is my flood risk?",
+      "url": "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+      "evidenceNote": "Read risk outside high-risk zones and homeowners-policy flood exclusion. No address lookup was completed and no parcel risk or premium is inferred.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "allowance",
+      "kind": "fact",
+      "text": "The 2026 FL064 Pensacola E-5 with-dependent BAH is $1,863 per month.",
+      "sourceIds": [
+        "dod-2026"
+      ],
+      "scope": "2026 published E-5 monthly BAH; individual finance eligibility and rate protection may differ",
+      "asOf": "2026-01-01",
+      "perishable": true,
+      "expires": "2027-01-01",
+      "loadBearing": true,
+      "verification": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate.",
+      "claim": "The 2026 FL064 Pensacola E-5 with-dependent BAH is $1,863 per month.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "locator": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read fifth enlisted column in official with/without archive and checked MHA name; structured rate revalidated by gate."
+      },
+      "bahRate": {
+        "year": 2026,
+        "mha": "FL064",
+        "grade": "E-5",
+        "dependency": "withDependents",
+        "monthly": 1863
+      },
+      "appliesTo": "Qualifying E-5 in stated 2026 MHA and dependency category",
+      "limitations": "Published annual rate is not a personal award or lender approval; verify LES and finance."
+    },
+    {
+      "id": "difference",
+      "kind": "calculation",
+      "text": "Home B costs $100 less per month than Home A despite a higher loan payment.",
+      "claim": "Home B costs $100 less per month than Home A despite a higher loan payment.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(3175, 3075) = 100 USD per month.",
+      "loadBearing": true,
+      "assumptions": "3175inventedHomeAminus3075inventedHomeB.",
+      "method": "difference(3175, 3075) = 100 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(3175, 3075) = 100 USD per month."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          3175,
+          3075
+        ],
+        "result": 100,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "3175inventedHomeAminus3075inventedHomeB."
+        ]
+      }
+    },
+    {
+      "id": "a",
+      "kind": "calculation",
+      "text": "$3,175",
+      "claim": "$3,175",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(1800, 300, 325, 75, 150, 300, 225) = 3175 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Invented1800PI300tax325homewind75flood150dues300reserve225utilities,noMIorassessment.",
+      "method": "sum(1800, 300, 325, 75, 150, 300, 225) = 3175 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(1800, 300, 325, 75, 150, 300, 225) = 3175 USD per month."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          1800,
+          300,
+          325,
+          75,
+          150,
+          300,
+          225
+        ],
+        "result": 3175,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Invented1800PI300tax325homewind75flood150dues300reserve225utilities,noMIorassessment."
+        ]
+      }
+    },
+    {
+      "id": "b",
+      "kind": "calculation",
+      "text": "$3,075",
+      "claim": "$3,075",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(2000, 300, 200, 50, 50, 250, 225) = 3075 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Invented2000PI300tax200homewind50flood50dues250reserve225utilities,noMIorassessment.",
+      "method": "sum(2000, 300, 200, 50, 50, 250, 225) = 3075 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(2000, 300, 200, 50, 50, 250, 225) = 3075 USD per month."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          2000,
+          300,
+          200,
+          50,
+          50,
+          250,
+          225
+        ],
+        "result": 3075,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Invented2000PI300tax200homewind50flood50dues250reserve225utilities,noMIorassessment."
+        ]
+      }
+    },
+    {
+      "id": "buffer",
+      "kind": "calculation",
+      "text": "Against an invented $3,200 monthly housing target, Home B leaves $125 of room.",
+      "claim": "Against an invented $3,200 monthly housing target, Home B leaves $125 of room.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(3200, 3075) = 125 USD per month.",
+      "loadBearing": true,
+      "assumptions": "3200inventedhouseholdtargetless3075HomeB.",
+      "method": "difference(3200, 3075) = 125 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(3200, 3075) = 125 USD per month."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          3200,
+          3075
+        ],
+        "result": 125,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "3200inventedhouseholdtargetless3075HomeB."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+        "title": "2026 BAH ASCII annual archive",
+        "reviewed": "Read locally retained official archive retrieved2026-09-06, SHA2565446fed831e125c23cc6a407dcde4cae541f108e90ac852aaadeec0aa11e515f. Independently inspected FL064/FL056 fifth enlisted columns in with/without files and MHA names September9; verify-bah-source passed96comparisons. Not a claimed new archive download today."
+      },
+      {
+        "url": "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
+        "title": "BAH rate lookup",
+        "reviewed": "Read current lookup and eligibility scope September9. Permanent duty ZIP, grade and dependency, not chosen home address. No individual allowance award."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "title": "How much do you want to spend on a home?",
+        "reviewed": "Read ownership expenses, maintenance, utilities, reserves and mortgage payment components. All article dollar inputs are hypothetical, not CFPB estimates."
+      },
+      {
+        "url": "https://floridarevenue.com/property/Documents/pt107.pdf",
+        "title": "Property tax information for first-time Florida homebuyers",
+        "reviewed": "Read January 1 assessment, reassessment after sale, distinction among just/assessed/taxable values, and buyer-estimate guidance. August 2024 brochure has old exemption totals; use the current inflation table instead for 2026 amounts."
+      },
+      {
+        "url": "https://fl511.com/",
+        "title": "Florida 511",
+        "reviewed": "Read road-condition map layers. No actual commute measured; readers must verify route, gate and work times."
+      },
+      {
+        "url": "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+        "title": "What is my flood risk?",
+        "reviewed": "Read risk outside high-risk zones and homeowners-policy flood exclusion. No address lookup was completed and no parcel risk or premium is inferred."
+      }
+    ],
+    "informationGain": "Preserves community routing and current ownership tools while replacing grade-to-price shortcuts with an auditable two-property budget and downside test.",
+    "questions": [
+      {
+        "question": "Can your military rank tell you which neighborhood to choose?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How can the same housing budget fit different properties?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Which areas should go into an address-based comparison?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How do you keep the cost comparison consistent?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should the route and school research affect the shortlist?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should the next PCS change your shortlist?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What information should be confirmed before making an offer?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can a neighborhood be matched to my military rank?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What makes two homes financially comparable?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should I choose the home with the lower mortgage payment?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can the school finder guarantee enrollment for a listing?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should I handle another income source that is not yet confirmed?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What if I may keep the home as a rental after PCS?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Navy Point and Beulah",
+      "decision": "Compare actual insurance and condition.",
+      "passage": "For a Navy Point home and a Beulah alternative, obtain separate coverage and condition information instead of assuming the same expense because both serve a Pensacola search."
+    },
+    {
+      "place": "Milton and Pace",
+      "decision": "Compare actual Whiting route and completed tax estimate.",
+      "passage": "For a Milton home and a Pace alternative, compare the actual Whiting Field route and the completed-property tax estimate."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Choose Gulf Coast search areas using actual household finances and address-specific comparisons instead of assigning ranks to neighborhoods.",
+    "dutyLocations": [
+      "NAS Pensacola",
+      "Eglin AFB",
+      "Hurlburt Field"
+    ],
+    "topics": [
+      "bah"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "allowance"
+  ],
+  "answerPassages": [
+    {
+      "question": "Can your military rank tell you which neighborhood to choose?",
+      "answer": "The 2026 FL064 Pensacola E-5 with-dependent BAH is $1,863 per month. It is a published allowance, not a neighborhood assignment or a lender decision. Verify the applicable rate through DoD and your actual LES before using it in a budget.",
+      "claimIds": [
+        "allowance"
+      ],
+      "scope": "2026 published E-5 monthly BAH; individual finance eligibility and rate protection may differ",
+      "caveat": "Verify the applicable rate through DoD and your actual LES before using it in a budget."
+    },
+    {
+      "question": "How can the same housing budget fit different properties?",
+      "answer": "In the hypothetical comparison below, Home B costs $100 less per month than Home A despite a higher loan payment. CFPB's ownership-budget guidance explains why the other expenses belong in the comparison. The invented amounts describe no particular neighborhood or listing.",
+      "claimIds": [
+        "difference"
+      ],
+      "scope": "Choose Gulf Coast search areas using actual household finances and address-specific comparisons instead of assigning ranks to neighborhoods.",
+      "caveat": "The invented amounts describe no particular neighborhood or listing."
+    }
+  ],
+  "image": {
+    "selected": "bah-area-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Pensacola NHPD house02.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house02.jpg",
+    "license": "CC BY-SA 3.0",
+    "creditRequired": true,
+    "credit": "Ebyabe",
+    "query": "Pensacola NHPD house02",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Inspected official FL064 E5 source and checked archive provenance. Read CFPB, DOR, NFIP and FDOT sources. Recomputed $3175 versus $3075 budgets, $100 difference and $125 room against a hypothetical target. Reviewed every community comparison, exact local applications and school/exit caveats; no rank-to-neighborhood or house-price claim remains. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "be2d9db3631dbf8e340527a92ec4fea36b65b086747f39723f5bad8f72a105fc",
+    "evidenceHash": "02a13235d392b1b0a9b33f56999ff9eb9edd15f85bf47439f86d688fd6bea2af"
+  }
+}

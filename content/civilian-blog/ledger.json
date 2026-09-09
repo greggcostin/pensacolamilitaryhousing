@@ -1,814 +1,968 @@
 {
- "note": "Civilian blog post ledger. One entry per published post: slug, date, topic type, image credit, and any measurement notes fed back into the queue.",
- "posts": [
-  {
-   "slug": "what-moves-mortgage-rates",
-   "datePublished": "2026-08-24",
-   "type": "evergreen",
-   "image": "mortgage-rates-north-hill-20260908.jpg; Ebyabe, Wikimedia Commons, CC BY-SA 3.0; archival context, not a current listing",
-   "metrics": [
+  "note": "Civilian blog post ledger. One entry per published post: slug, date, topic type, image credit, and any measurement notes fed back into the queue.",
+  "posts": [
     {
-     "date": "2026-09-08",
-     "runId": "civilian-blog-engine-2026-09-08",
-     "bingPage": "not-observed",
-     "clarity": "unavailable in this runtime; installed project ydd39cyp64",
-     "google": "no currently verified reporting window",
-     "qualifiedInquiries": "unavailable"
-    }
-   ],
-   "search": [
-    {
-     "slug": "what-moves-mortgage-rates",
-     "url": "/blog/what-moves-mortgage-rates",
-     "source": "gsc-pages",
-     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
-     "date": "2026-09-04",
-     "property": "https://greggcostin.com",
-     "kind": "page",
-     "status": "not-observed",
-     "impressions": null,
-     "clicks": null,
-     "position": null,
-     "window": {
-      "start": null,
-      "end": null,
-      "searchType": null,
-      "dimensions": [
-       "page"
+      "slug": "what-moves-mortgage-rates",
+      "datePublished": "2026-08-24",
+      "type": "evergreen",
+      "image": "/images/mortgage-house-review-20260909.jpg",
+      "metrics": [
+        {
+          "date": "2026-09-08",
+          "runId": "civilian-blog-engine-2026-09-08",
+          "bingPage": "not-observed",
+          "clarity": "unavailable in this runtime; installed project ydd39cyp64",
+          "google": "no currently verified reporting window",
+          "qualifiedInquiries": "unavailable"
+        }
       ],
-      "filters": null,
-      "complete": false,
-      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
-     },
-     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
-    },
-    {
-     "engine": "bing",
-     "source": "bing-api",
-     "date": "2026-09-06",
-     "collectedAt": "2026-09-08T06:21:25.553Z",
-     "windowStart": "2026-08-10",
-     "windowEnd": "2026-09-06",
-     "priorWindowStart": "2026-07-13",
-     "priorWindowEnd": "2026-08-09",
-     "windowDays": 28,
-     "searchType": "web",
-     "device": "all",
-     "country": "all",
-     "coverage": "observed API rows; absence is not zero",
-     "slug": "what-moves-mortgage-rates",
-     "kind": "page",
-     "dataStatus": "no_rows",
-     "comparisonEligible": false,
-     "clicks": null,
-     "impressions": null,
-     "position": null,
-     "impressionsPrior28": null,
-     "clicksPrior28": null,
-     "impressions90": null,
-     "clicks90": null,
-     "position90": null
-    },
-    {
-     "engine": "bing",
-     "source": "bing-api",
-     "date": "2026-09-08",
-     "collectedAt": "2026-09-08T06:21:14.845Z",
-     "windowStart": null,
-     "windowEnd": null,
-     "priorWindowStart": null,
-     "priorWindowEnd": null,
-     "windowDays": 28,
-     "searchType": "web",
-     "device": "all",
-     "country": "all",
-     "coverage": "observed API rows; absence is not zero",
-     "slug": "what-moves-mortgage-rates",
-     "kind": "page",
-     "dataStatus": "unavailable",
-     "comparisonEligible": false,
-     "clicks": null,
-     "impressions": null,
-     "position": null,
-     "impressionsPrior28": null,
-     "clicksPrior28": null,
-     "impressions90": null,
-     "clicks90": null,
-     "position90": null
-    }
-   ],
-   "legacyMetrics": "no GSC/Bing data available in-session",
-   "refreshes": [
-    {
-     "date": "2026-09-07",
-     "type": "refresh",
-     "run": "civilian-blog-engine",
-     "words": 1799,
-     "scoreBefore": 59,
-     "scoreAfter": 93,
-     "formattingScore": 100,
-     "image": "unchanged (fed-building.jpg, Wikimedia, AgnosticPreachersKid, CC BY-SA 3.0)",
-     "sources": [
-      "Freddie Mac PMMS week ending 2026-09-03 (30yr 6.71%, prior 6.66%)",
-      "U.S. Treasury daily par yield curve (10yr 4.77% on 2026-09-03, 4.52% on 2026-08-27)",
-      "Federal Reserve open market operations (target range 3.50-3.75% since 2025-12-11)",
-      "Redfin Escambia County median ~$325,000, three months ending June 2026"
-     ],
-     "decisions": [
-      "Current-events override tested and REJECTED: syndicated coverage claimed 6.89% and \"much higher week over week\"; Freddie Mac primary survey showed 6.71%, up 5bp. Not a big move, so no reaction post.",
-      "Fell through to refresh queue; what-moves-mortgage-rates was the lowest-scoring gc post (59) and its worst component (evidence sourcing) was exactly what verified figures fix.",
-      "Dedup gate run on rate-news keywords: 0 DUPLICATE, but a new post would have cannibalized this page, so refreshed it instead (L003).",
-      "Added parity fields (targetKeywords, quickAnswer, takeaways, shareHook, perishables), all 10 H2s question-shaped, spread table, 60-second headline checklist, Sources line.",
-      "Number-led title per L014: \"The 1.94-Point Spread Explained\"."
-     ],
-     "models": {
-      "research": "self",
-      "write": "self"
-     },
-     "metrics": "Bing gc: pages endpoint empty, queries empty, traffic observed 0 impressions/0 clicks through 2026-09-05. Clarity: not queried this run. Not zero, unknown.",
-     "status": "interrupted fragment-only work; prior committed status was not supported by git history",
-     "originalStatus": "fragment committed; site-tree build DEFERRED (parallel session holds an uncommitted civilian-site redesign)",
-     "reconciledAt": "2026-09-08",
-     "reconciliation": "Existing fragment retained as input, then substantively corrected, given new imagery, built and validated in the Sep 8 release. No prior publication inferred."
-    }
-   ],
-   "dateModified": "2026-09-08",
-   "currentEvidenceFile": "content/civilian-blog/research/what-moves-mortgage-rates.json",
-   "refreshHistory": [
-    {
-     "runId": "civilian-blog-engine-2026-09-08",
-     "date": "2026-09-08",
-     "kind": "substantive sourced refresh",
-     "models": {
-      "research": "gpt-6-astra",
-      "write": "gpt-6-astra",
-      "effort": "max"
-     },
-     "evidenceFile": "content/civilian-blog/research/what-moves-mortgage-rates.json",
-     "datePublished": "2026-08-24",
-     "dateModified": "2026-09-08",
-     "scoreAfter": 100,
-     "formatting": 100,
-     "publication": "staged-for-approval; not deployed",
-     "performanceChange": "not measured",
-     "summary": "Corrected mortgage-spread reasoning, added verified loan-cost comparisons, replaced the image and completed all civilian build gates."
-    }
-   ],
-   "publication": {
-    "status": "published-and-live-verified",
-    "autoPublish": false,
-    "deployed": true,
-    "deployedAt": "2026-09-09T04:31:09.733359Z",
-    "deploymentId": "ec4e5d5e-97f3-4af9-a546-994921d4c850",
-    "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
-    "indexNowSubmitted": true,
-    "bingSubmitted": true,
-    "indexingStatus": "Both engines accepted both URLs; indexing and ranking remain unverified.",
-    "indexingReceipt": "content/measure/submissions/2026-09-09T04-31-49-849Z-gc-c6052b66.json",
-    "sourceRecheckDue": "2026-09-10",
-    "report": "content/blog/reports/2026-09-09-publication-closeout.md",
-    "releaseRecord": "content/blog/releases/2026-09-09-mortgage/deployment.json"
-   },
-   "published": "Refreshed article published and live-verified 2026-09-09T04:31:09.733359Z; deployment ec4e5d5e-97f3-4af9-a546-994921d4c850"
-  },
-  {
-   "slug": "property-taxes-escambia-santa-rosa",
-   "datePublished": "2026-08-27",
-   "type": "evergreen (seasonally timed to TRIM season)",
-   "words": 2160,
-   "image": "prop-tax-hist.jpg (Wikimedia, Ebyabe, CC BY-SA 3.0, Lear-Rocheblave House, Historic Pensacola)",
-   "sources": "escpa.org 2026 important dates (TRIM Aug 14, VAB Sep 8); santarosaclerk.com VAB notice (Sep 14 4pm CST, $50); srcpa.gov ad-valorem (2026 SOH cap 2.7%); srcpa.gov/millage-rates table id=2026 (SR district millage); escambiataxcollector.com millage-rate-detail (2025 Escambia district millage, verbatim); FL Amendment 5 2026 additional exemption $26,411; taxfoundation.org HJR 1F analysis",
-   "metrics": [
-    {
-     "date": "2026-09-08",
-     "runId": "civilian-blog-engine-2026-09-08",
-     "bingPage": "not-observed",
-     "clarity": "unavailable in this runtime; installed project ydd39cyp64",
-     "google": "no currently verified reporting window",
-     "qualifiedInquiries": "unavailable"
-    }
-   ],
-   "millageVerified": "All district totals re-derived from published component rates and reconciled exactly (ESC beach 12.7185 / uninc 13.4035 / Century 13.6389 / Pensacola 17.0080 / Downtown 19.0080; SR 2026 Gulf Breeze 11.2804 / uninc 11.3781 / Milton 13.4261 / Jay 16.5481). Worked examples recomputed from these rates.",
-   "search": [
-    {
-     "slug": "property-taxes-escambia-santa-rosa",
-     "url": "/blog/property-taxes-escambia-santa-rosa",
-     "source": "gsc-pages",
-     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
-     "date": "2026-09-04",
-     "property": "https://greggcostin.com",
-     "kind": "page",
-     "status": "not-observed",
-     "impressions": null,
-     "clicks": null,
-     "position": null,
-     "window": {
-      "start": null,
-      "end": null,
-      "searchType": null,
-      "dimensions": [
-       "page"
+      "search": [
+        {
+          "slug": "what-moves-mortgage-rates",
+          "url": "/blog/what-moves-mortgage-rates",
+          "source": "gsc-pages",
+          "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+          "date": "2026-09-04",
+          "property": "https://greggcostin.com",
+          "kind": "page",
+          "status": "not-observed",
+          "impressions": null,
+          "clicks": null,
+          "position": null,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          },
+          "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+        },
+        {
+          "engine": "bing",
+          "source": "bing-api",
+          "date": "2026-09-06",
+          "collectedAt": "2026-09-08T06:21:25.553Z",
+          "windowStart": "2026-08-10",
+          "windowEnd": "2026-09-06",
+          "priorWindowStart": "2026-07-13",
+          "priorWindowEnd": "2026-08-09",
+          "windowDays": 28,
+          "searchType": "web",
+          "device": "all",
+          "country": "all",
+          "coverage": "observed API rows; absence is not zero",
+          "slug": "what-moves-mortgage-rates",
+          "kind": "page",
+          "dataStatus": "no_rows",
+          "comparisonEligible": false,
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": null,
+          "clicks90": null,
+          "position90": null
+        },
+        {
+          "slug": "what-moves-mortgage-rates",
+          "property": "https://greggcostin.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
+        },
+        {
+          "engine": "bing",
+          "source": "bing-api",
+          "date": "2026-09-08",
+          "collectedAt": "2026-09-08T06:21:14.845Z",
+          "windowStart": null,
+          "windowEnd": null,
+          "priorWindowStart": null,
+          "priorWindowEnd": null,
+          "windowDays": 28,
+          "searchType": "web",
+          "device": "all",
+          "country": "all",
+          "coverage": "observed API rows; absence is not zero",
+          "slug": "what-moves-mortgage-rates",
+          "kind": "page",
+          "dataStatus": "unavailable",
+          "comparisonEligible": false,
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": null,
+          "clicks90": null,
+          "position90": null
+        }
       ],
-      "filters": null,
-      "complete": false,
-      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
-     },
-     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
-    },
-    {
-     "engine": "bing",
-     "source": "bing-api",
-     "date": "2026-09-06",
-     "collectedAt": "2026-09-08T06:21:25.553Z",
-     "windowStart": "2026-08-10",
-     "windowEnd": "2026-09-06",
-     "priorWindowStart": "2026-07-13",
-     "priorWindowEnd": "2026-08-09",
-     "windowDays": 28,
-     "searchType": "web",
-     "device": "all",
-     "country": "all",
-     "coverage": "observed API rows; absence is not zero",
-     "slug": "property-taxes-escambia-santa-rosa",
-     "kind": "page",
-     "dataStatus": "no_rows",
-     "comparisonEligible": false,
-     "clicks": null,
-     "impressions": null,
-     "position": null,
-     "impressionsPrior28": null,
-     "clicksPrior28": null,
-     "impressions90": null,
-     "clicks90": null,
-     "position90": null
-    },
-    {
-     "engine": "bing",
-     "source": "bing-api",
-     "date": "2026-09-08",
-     "collectedAt": "2026-09-08T06:21:14.845Z",
-     "windowStart": null,
-     "windowEnd": null,
-     "priorWindowStart": null,
-     "priorWindowEnd": null,
-     "windowDays": 28,
-     "searchType": "web",
-     "device": "all",
-     "country": "all",
-     "coverage": "observed API rows; absence is not zero",
-     "slug": "property-taxes-escambia-santa-rosa",
-     "kind": "page",
-     "dataStatus": "unavailable",
-     "comparisonEligible": false,
-     "clicks": null,
-     "impressions": null,
-     "position": null,
-     "impressionsPrior28": null,
-     "clicksPrior28": null,
-     "impressions90": null,
-     "clicks90": null,
-     "position90": null
-    }
-   ],
-   "legacyMetrics": "no GSC/Bing data available in-session"
-  },
-  {
-   "slug": "closing-costs-florida-buyers",
-   "datePublished": "2026-08-31",
-   "type": "evergreen (queue head; no current-events override warranted)",
-   "words": 1732,
-   "image": "closing-costs.jpg (Wikimedia, Ebyabe, CC BY-SA 3.0, Escambia County Court House / Pensacola Customshouse)",
-   "sources": "floridarevenue.com doc stamp page (deed 70c per $100, Miami-Dade 60c + 45c surtax, note/mortgage 35c per $100); floridarevenue.com nonrecurring intangible tax (2 mills, x0.002); myfloridacfo.com title insurance overview citing FAC 69O-186.003 (owner original $5.75/1000 first 100k then $5.00/1000 to $1M, $100 min; simultaneous-issue lender min $25; reissue $3.30/$3.00); titlecapture.com county custom table (Escambia, Santa Rosa, Okaloosa, Walton = buyer-pays); escambiaclerk.com fee schedule per Fla. Stat. 28.24 ($10 first page, $8.50 each additional); consumerfinance.gov Closing Disclosure 3-business-day rule",
-   "currentEventsCheck": "Aug 31 2026 sweep: 30-yr ~6.62-6.68%, Fed on hold at 3.50-3.75%, jobs report Friday; FL insurance stabilizing (Citizens 8.8% cut). Nothing broke big enough to override the queue head.",
-   "metrics": [
-    {
-     "date": "2026-09-08",
-     "runId": "civilian-blog-engine-2026-09-08",
-     "bingPage": "not-observed",
-     "clarity": "unavailable in this runtime; installed project ydd39cyp64",
-     "google": "no currently verified reporting window",
-     "qualifiedInquiries": "unavailable"
-    }
-   ],
-   "mathVerified": "Worked example recomputed: 350k deed stamps 3500x0.70=2450; 315k note stamps 3150x0.35=1102.50; intangible 315000x0.002=630; owner policy 575+1250=1825.",
-   "published": "2026-08-31 deployed to greggcostin.com (Pages deploy ddef7164), verified 200 on post + image + OG card + sitemap + blog index; IndexNow ping 200",
-   "search": [
-    {
-     "slug": "closing-costs-florida-buyers",
-     "url": "/blog/closing-costs-florida-buyers",
-     "source": "gsc-pages",
-     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
-     "date": "2026-09-04",
-     "property": "https://greggcostin.com",
-     "kind": "page",
-     "status": "not-observed",
-     "impressions": null,
-     "clicks": null,
-     "position": null,
-     "window": {
-      "start": null,
-      "end": null,
-      "searchType": null,
-      "dimensions": [
-       "page"
+      "legacyMetrics": "no GSC/Bing data available in-session",
+      "refreshes": [
+        {
+          "date": "2026-09-07",
+          "type": "refresh",
+          "run": "civilian-blog-engine",
+          "words": 1799,
+          "scoreBefore": 59,
+          "scoreAfter": 93,
+          "formattingScore": 100,
+          "image": "unchanged (fed-building.jpg, Wikimedia, AgnosticPreachersKid, CC BY-SA 3.0)",
+          "sources": [
+            "Freddie Mac PMMS week ending 2026-09-03 (30yr 6.71%, prior 6.66%)",
+            "U.S. Treasury daily par yield curve (10yr 4.77% on 2026-09-03, 4.52% on 2026-08-27)",
+            "Federal Reserve open market operations (target range 3.50-3.75% since 2025-12-11)",
+            "Redfin Escambia County median ~$325,000, three months ending June 2026"
+          ],
+          "decisions": [
+            "Current-events override tested and REJECTED: syndicated coverage claimed 6.89% and \"much higher week over week\"; Freddie Mac primary survey showed 6.71%, up 5bp. Not a big move, so no reaction post.",
+            "Fell through to refresh queue; what-moves-mortgage-rates was the lowest-scoring gc post (59) and its worst component (evidence sourcing) was exactly what verified figures fix.",
+            "Dedup gate run on rate-news keywords: 0 DUPLICATE, but a new post would have cannibalized this page, so refreshed it instead (L003).",
+            "Added parity fields (targetKeywords, quickAnswer, takeaways, shareHook, perishables), all 10 H2s question-shaped, spread table, 60-second headline checklist, Sources line.",
+            "Number-led title per L014: \"The 1.94-Point Spread Explained\"."
+          ],
+          "models": {
+            "research": "self",
+            "write": "self"
+          },
+          "metrics": "Bing gc: pages endpoint empty, queries empty, traffic observed 0 impressions/0 clicks through 2026-09-05. Clarity: not queried this run. Not zero, unknown.",
+          "status": "interrupted fragment-only work; prior committed status was not supported by git history",
+          "originalStatus": "fragment committed; site-tree build DEFERRED (parallel session holds an uncommitted civilian-site redesign)",
+          "reconciledAt": "2026-09-08",
+          "reconciliation": "Existing fragment retained as input, then substantively corrected, given new imagery, built and validated in the Sep 8 release. No prior publication inferred."
+        }
       ],
-      "filters": null,
-      "complete": false,
-      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
-     },
-     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
-    },
-    {
-     "engine": "bing",
-     "source": "bing-api",
-     "date": "2026-09-06",
-     "collectedAt": "2026-09-08T06:21:25.553Z",
-     "windowStart": "2026-08-10",
-     "windowEnd": "2026-09-06",
-     "priorWindowStart": "2026-07-13",
-     "priorWindowEnd": "2026-08-09",
-     "windowDays": 28,
-     "searchType": "web",
-     "device": "all",
-     "country": "all",
-     "coverage": "observed API rows; absence is not zero",
-     "slug": "closing-costs-florida-buyers",
-     "kind": "page",
-     "dataStatus": "no_rows",
-     "comparisonEligible": false,
-     "clicks": null,
-     "impressions": null,
-     "position": null,
-     "impressionsPrior28": null,
-     "clicksPrior28": null,
-     "impressions90": null,
-     "clicks90": null,
-     "position90": null
-    },
-    {
-     "engine": "bing",
-     "source": "bing-api",
-     "date": "2026-09-08",
-     "collectedAt": "2026-09-08T06:21:14.845Z",
-     "windowStart": null,
-     "windowEnd": null,
-     "priorWindowStart": null,
-     "priorWindowEnd": null,
-     "windowDays": 28,
-     "searchType": "web",
-     "device": "all",
-     "country": "all",
-     "coverage": "observed API rows; absence is not zero",
-     "slug": "closing-costs-florida-buyers",
-     "kind": "page",
-     "dataStatus": "unavailable",
-     "comparisonEligible": false,
-     "clicks": null,
-     "impressions": null,
-     "position": null,
-     "impressionsPrior28": null,
-     "clicksPrior28": null,
-     "impressions90": null,
-     "clicks90": null,
-     "position90": null
-    }
-   ],
-   "refreshHistory": [
-    {
-     "date": "2026-09-06",
-     "kind": "substantive sourced refresh",
-     "models": {
-      "research": "gpt-6-astra",
-      "write": "gpt-6-astra"
-     },
-     "configuredModels": {
-      "research": "self",
-      "write": "self",
-      "note": "in-session by default; set opus/fable to mirror the military engine standing order"
-     },
-     "evidenceFile": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
-     "readerTask": "Calculate cash to close and identify the unresolved contract and quote items.",
-     "datePublished": "2026-08-31",
-     "dateModified": "2026-09-06",
-     "scoreBefore": 53,
-     "scoreAfter": 95,
-     "formatting": 100,
-     "performanceChange": "not measured",
-     "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
-     "summary": "Added a reproducible cash-to-close worksheet, primary state and CFPB sources, and distinctions between legal charges, negotiated costs and provider quotes."
-    }
-   ],
-   "currentEvidenceFile": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
-   "legacyMetrics": "no GSC/Bing data available in-session"
-  },
-  {
-   "slug": "fed-rate-hike-what-it-means",
-   "datePublished": "2026-09-01",
-   "type": "current-events (OVERRIDE of queue head coastal-alabama-vs-panhandle; queue left intact)",
-   "words": 1693,
-   "image": "rate-hike-2026.jpg (Wikimedia, Chris Pruitt, CC BY-SA 3.0, Birmingham Branch, Federal Reserve Bank of Atlanta)",
-   "sources": "Freddie Mac PMMS Aug 27 2026 (30-yr 6.66%, prior 6.65%, yr-ago 6.56%; 15-yr 5.98%); BEA Personal Income and Outlays July 2026 (PCE +3.7% y/y, core +3.3%); Dallas Fed trimmed mean PCE 2.3%; FOMC July 28-29 hold at 3.50-3.75%, 5th straight, 9-3 vote (Hammack/Kashkari/Logan dissent for higher), minutes released Aug 19; Bloomberg Aug 31 (10-yr topped 4.75%, first since Jan 2025); Real Estate News Sep 1 (Barr speech quote; 30-yr daily 6.89% vs 6.77% wk-ago; FedWatch 68.2%); Forbes Aug 31 (FedWatch 66%); BLS CPI release schedule (Aug CPI Fri Sep 11 8:30am ET); FOMC meets Sep 15-16; Florida Realtors July 2026 (SF 23,870 closed +5.1%, median 425k +3.7%, 4.5 mo supply; condo 8,194 +11%, median 295k flat, 7.8 mo supply, 12th straight pending increase)",
-   "currentEventsCheck": "Sep 1 2026 sweep triggered an override: FedWatch hike odds swung 40% -> 57% -> 66-68% in a week, 10-yr Treasury at a 19-20 month high, Fed governor publicly floating a hike ahead of the Sep 15-16 FOMC. Directional reversal after two years of cut expectations, and time-sensitive before the meeting, so the rate-news-reaction template beat the evergreen queue head.",
-   "mathVerified": "Payment math recomputed on a 340k 30-yr loan (20% down on the 425k FL median): 6.75% = 2,205.23/mo, 7.00% = 2,262.03/mo, delta 56.79/mo and 682/yr. Quoted as 'about 57 dollars a month'.",
-   "metrics": [
-    {
-     "date": "2026-09-08",
-     "runId": "civilian-blog-engine-2026-09-08",
-     "bingPage": "not-observed",
-     "clarity": "unavailable in this runtime; installed project ydd39cyp64",
-     "google": "no currently verified reporting window",
-     "qualifiedInquiries": "unavailable"
-    }
-   ],
-   "engineFix": "Fixed a real bug in scripts/civilian-blog-factory.mjs: the llms.txt section-replace built its RegExp from the unescaped literal '## Blog Posts (auto-maintained)', so the parentheses compiled as a capture group and the pattern never matched. llms.txt had been frozen at the first post since Aug 24. Escaped the source and used a function replacer; all 4 posts now listed.",
-   "published": "2026-09-01 approved by Gregg and deployed to greggcostin.com (Pages deploy 96187781); verified 200 on post + blog index + image + OG card + sitemap + llms.txt; IndexNow ping 200",
-   "reviewCountSync": "Same session: verified LIVE counts via browser (Google Maps 55 reviews all five-star, Zillow profile 27 team reviews) and corrected Zillow 25 -> 27 and the combined total 79/80 -> 82 across both sites. scripts/review-counts.mjs did not walk civilian-site and had no combined-total patterns, which is why greggcostin.com kept drifting; both gaps fixed in that script.",
-   "search": [
-    {
-     "slug": "fed-rate-hike-what-it-means",
-     "url": "/blog/fed-rate-hike-what-it-means",
-     "source": "gsc-pages",
-     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
-     "date": "2026-09-04",
-     "property": "https://greggcostin.com",
-     "kind": "page",
-     "status": "not-observed",
-     "impressions": null,
-     "clicks": null,
-     "position": null,
-     "window": {
-      "start": null,
-      "end": null,
-      "searchType": null,
-      "dimensions": [
-       "page"
+      "dateModified": "2026-09-09",
+      "currentEvidenceFile": "content/civilian-blog/research/what-moves-mortgage-rates.json",
+      "refreshHistory": [
+        {
+          "runId": "civilian-blog-engine-2026-09-08",
+          "date": "2026-09-08",
+          "kind": "substantive sourced refresh",
+          "models": {
+            "research": "gpt-6-astra",
+            "write": "gpt-6-astra",
+            "effort": "max"
+          },
+          "evidenceFile": "content/civilian-blog/research/what-moves-mortgage-rates.json",
+          "datePublished": "2026-08-24",
+          "dateModified": "2026-09-08",
+          "scoreAfter": 100,
+          "formatting": 100,
+          "publication": "staged-for-approval; not deployed",
+          "performanceChange": "not measured",
+          "summary": "Corrected mortgage-spread reasoning, added verified loan-cost comparisons, replaced the image and completed all civilian build gates."
+        }
       ],
-      "filters": null,
-      "complete": false,
-      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
-     },
-     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
-    },
-    {
-     "engine": "bing",
-     "source": "bing-api",
-     "date": "2026-09-06",
-     "collectedAt": "2026-09-08T06:21:25.553Z",
-     "windowStart": "2026-08-10",
-     "windowEnd": "2026-09-06",
-     "priorWindowStart": "2026-07-13",
-     "priorWindowEnd": "2026-08-09",
-     "windowDays": 28,
-     "searchType": "web",
-     "device": "all",
-     "country": "all",
-     "coverage": "observed API rows; absence is not zero",
-     "slug": "fed-rate-hike-what-it-means",
-     "kind": "page",
-     "dataStatus": "no_rows",
-     "comparisonEligible": false,
-     "clicks": null,
-     "impressions": null,
-     "position": null,
-     "impressionsPrior28": null,
-     "clicksPrior28": null,
-     "impressions90": null,
-     "clicks90": null,
-     "position90": null
-    },
-    {
-     "engine": "bing",
-     "source": "bing-api",
-     "date": "2026-09-08",
-     "collectedAt": "2026-09-08T06:21:14.845Z",
-     "windowStart": null,
-     "windowEnd": null,
-     "priorWindowStart": null,
-     "priorWindowEnd": null,
-     "windowDays": 28,
-     "searchType": "web",
-     "device": "all",
-     "country": "all",
-     "coverage": "observed API rows; absence is not zero",
-     "slug": "fed-rate-hike-what-it-means",
-     "kind": "page",
-     "dataStatus": "unavailable",
-     "comparisonEligible": false,
-     "clicks": null,
-     "impressions": null,
-     "position": null,
-     "impressionsPrior28": null,
-     "clicksPrior28": null,
-     "impressions90": null,
-     "clicks90": null,
-     "position90": null
-    }
-   ],
-   "refreshHistory": [
-    {
-     "date": "2026-09-06",
-     "kind": "substantive sourced refresh",
-     "models": {
-      "research": "gpt-6-astra",
-      "write": "gpt-6-astra"
-     },
-     "configuredModels": {
-      "research": "self",
-      "write": "self",
-      "note": "in-session by default; set opus/fable to mirror the military engine standing order"
-     },
-     "evidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
-     "readerTask": "Choose a rate-lock discussion and purchase budget using official information instead of a forecast.",
-     "datePublished": "2026-09-01",
-     "dateModified": "2026-09-06",
-     "scoreBefore": 56,
-     "scoreAfter": 100,
-     "formatting": 100,
-     "performanceChange": "not measured",
-     "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
-     "summary": "Replaced Fed-cut/mortgage-rate assumptions with verified dated context, lender comparison steps and a reproducible payment sensitivity table."
-    }
-   ],
-   "currentEvidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
-   "legacyMetrics": "no GSC/Bing data available in-session"
-  },
-  {
-   "slug": "florida-insurance-relief-2026",
-   "datePublished": "2026-09-03",
-   "type": "current-events (OVERRIDE of queue head coastal-alabama-vs-panhandle; queue left intact)",
-   "words": 2538,
-   "image": "fl-insurance-2026.jpg (Wikimedia, Mark Wolfe / FEMA, public domain, shuttered Florida coastal home; candidates 2 and 3 rejected as too tight/underexposed)",
-   "sources": "APCIA-commissioned actuarial study \"Florida's Legal Reforms: Lower Insurance Costs and Less Litigation\" by Moore Actuarial Consulting + James Lynch Casualty Actuary, released Sep 3 2026 (HO DWP -1.29B/-7%, auto DWP -1.70B/-5%, auto rates -4.1%, avg approved HO rate increase 9.6%/1.3%/0.9% for 2023/24/25, dividends +118% 2023-25 and +43% in 2025 to 211M, HO suits 8,000+ 2021 to ~2,500 end-2025, AOB suits 1,000-2,000/mo to ~200/mo, Chase Mitchell quote) via insurancejournal.com and legalnewsline.com; citizensfla.com 20260304 release (OIR-approved, effective Jul 1 2026: HO multiperil -8.8%, wind-only -5.5%, all personal lines min -2%; 336,000 policies, -76% from 1.41M Oct 2023; Tim Cerio quote); floir.gov newsroom Jan 13 2026 (17 new insurers); floir.gov wind-mitigation resources (OIR-B1-1802 updated eff. Apr 1 2026, valid up to 5 years, ARA 2024 study; s.627.0629 website-disclosure duty since Oct 1 2023); fema.gov NFIP congressional reauthorization (expires Sep 30 2026; lapse = no new/renewal policies, claims still paid; 35 short-term extensions since FY2017); nar.realtor NFIP FAQ (~1,300 sales/day, ~40,000 closings/month; seller NFIP policy assignable by name substitution); flsenate.gov s.627.70132 (1 year claim/reopened, 18 months supplemental, hurricane clock starts at landfall)",
-   "currentEventsCheck": "Sep 3 2026 sweep triggered an override: the APCIA/Moore-Lynch actuarial report landed THAT DAY quantifying Florida insurance relief for the first time, and the NFIP authorization lapse date (Sep 30) is 27 days out. Insurance is the top cost question for Gulf Coast civilian buyers and leads our Copilot citations, so this beat the evergreen queue head. Rates were checked (30-yr ~6.72-6.74% Sep 2, up on Middle East escalation) but the Sep 1 post already covered rates; no hurricane threat in the Gulf.",
-   "sourcingNotes": "NAR FAQ page (last updated Feb 4 2026) carries a stale internal line saying the NFIP expires Dec 11 2026 while its own URL and every other source say Sep 30 2026. FEMA's official reauthorization page was treated as authoritative and the post cites FEMA for the date. Citizens county-level figures (Escambia +0.2%, Santa Rosa +5.5%, avg premiums 3,376 / 3,871) came from the DECEMBER 2025 recommended filing and conflict with the approved March 2026 statewide -8.8%; deliberately NOT published, the county point is made qualitatively instead. My Safe Florida Home eligibility numbers were only available from aggregators (mysafeflhome.com returned 403), so the post sends readers to the official site rather than stating a perishable rule.",
-   "metrics": [
-    {
-     "date": "2026-09-08",
-     "runId": "civilian-blog-engine-2026-09-08",
-     "bingPage": "not-observed",
-     "clarity": "unavailable in this runtime; installed project ydd39cyp64",
-     "google": "no currently verified reporting window",
-     "qualifiedInquiries": "unavailable"
-    }
-   ],
-   "published": "2026-09-03 approved by Gregg and deployed to greggcostin.com (Pages deploy 8711c156, 19 new files); verified 200 on post + blog index + hero image + OG card + sitemap + llms.txt, post listed on all three; IndexNow ping 200 for the post and /blog",
-   "search": [
-    {
-     "slug": "florida-insurance-relief-2026",
-     "url": "/blog/florida-insurance-relief-2026",
-     "source": "gsc-pages",
-     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
-     "date": "2026-09-04",
-     "property": "https://greggcostin.com",
-     "kind": "page",
-     "status": "not-observed",
-     "impressions": null,
-     "clicks": null,
-     "position": null,
-     "window": {
-      "start": null,
-      "end": null,
-      "searchType": null,
-      "dimensions": [
-       "page"
+      "publication": {
+        "status": "published-and-live-verified",
+        "autoPublish": false,
+        "deployed": true,
+        "deployedAt": "2026-09-09T04:31:09.733359Z",
+        "deploymentId": "ec4e5d5e-97f3-4af9-a546-994921d4c850",
+        "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+        "indexNowSubmitted": true,
+        "bingSubmitted": true,
+        "indexingStatus": "Both engines accepted both URLs; indexing and ranking remain unverified.",
+        "indexingReceipt": "content/measure/submissions/2026-09-09T04-31-49-849Z-gc-c6052b66.json",
+        "sourceRecheckDue": "2026-09-10",
+        "report": "content/blog/reports/2026-09-09-publication-closeout.md",
+        "releaseRecord": "content/blog/releases/2026-09-09-mortgage/deployment.json"
+      },
+      "published": "Refreshed article published and live-verified 2026-09-09T04:31:09.733359Z; deployment ec4e5d5e-97f3-4af9-a546-994921d4c850",
+      "title": "What Moves Mortgage Rates? A Gulf Coast Buyer's Guide",
+      "category": "Financing and the economy",
+      "targetKeywords": [
+        "what moves mortgage rates",
+        "when should I lock my mortgage rate",
+        "are discount points worth it",
+        "mortgage rates for investment property"
       ],
-      "filters": null,
-      "complete": false,
-      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
-     },
-     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "shareHook": "Before you pay for a lower mortgage rate, calculate how long it takes to earn the money back. A practical guide for Gulf Coast buyers and rental owners.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/civilian-blog/research/what-moves-mortgage-rates.json"
+      }
     },
     {
-     "engine": "bing",
-     "source": "bing-api",
-     "date": "2026-09-06",
-     "collectedAt": "2026-09-08T06:21:25.553Z",
-     "windowStart": "2026-08-10",
-     "windowEnd": "2026-09-06",
-     "priorWindowStart": "2026-07-13",
-     "priorWindowEnd": "2026-08-09",
-     "windowDays": 28,
-     "searchType": "web",
-     "device": "all",
-     "country": "all",
-     "coverage": "observed API rows; absence is not zero",
-     "slug": "florida-insurance-relief-2026",
-     "kind": "page",
-     "dataStatus": "no_rows",
-     "comparisonEligible": false,
-     "clicks": null,
-     "impressions": null,
-     "position": null,
-     "impressionsPrior28": null,
-     "clicksPrior28": null,
-     "impressions90": null,
-     "clicks90": null,
-     "position90": null
+      "slug": "property-taxes-escambia-santa-rosa",
+      "datePublished": "2026-08-27",
+      "type": "evergreen (seasonally timed to TRIM season)",
+      "words": 2160,
+      "image": "/images/property-tax-review-20260909.jpg",
+      "sources": "escpa.org 2026 important dates (TRIM Aug 14, VAB Sep 8); santarosaclerk.com VAB notice (Sep 14 4pm CST, $50); srcpa.gov ad-valorem (2026 SOH cap 2.7%); srcpa.gov/millage-rates table id=2026 (SR district millage); escambiataxcollector.com millage-rate-detail (2025 Escambia district millage, verbatim); FL Amendment 5 2026 additional exemption $26,411; taxfoundation.org HJR 1F analysis",
+      "metrics": [
+        {
+          "date": "2026-09-08",
+          "runId": "civilian-blog-engine-2026-09-08",
+          "bingPage": "not-observed",
+          "clarity": "unavailable in this runtime; installed project ydd39cyp64",
+          "google": "no currently verified reporting window",
+          "qualifiedInquiries": "unavailable"
+        }
+      ],
+      "millageVerified": "All district totals re-derived from published component rates and reconciled exactly (ESC beach 12.7185 / uninc 13.4035 / Century 13.6389 / Pensacola 17.0080 / Downtown 19.0080; SR 2026 Gulf Breeze 11.2804 / uninc 11.3781 / Milton 13.4261 / Jay 16.5481). Worked examples recomputed from these rates.",
+      "search": [
+        {
+          "slug": "property-taxes-escambia-santa-rosa",
+          "url": "/blog/property-taxes-escambia-santa-rosa",
+          "source": "gsc-pages",
+          "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+          "date": "2026-09-04",
+          "property": "https://greggcostin.com",
+          "kind": "page",
+          "status": "not-observed",
+          "impressions": null,
+          "clicks": null,
+          "position": null,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          },
+          "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+        },
+        {
+          "engine": "bing",
+          "source": "bing-api",
+          "date": "2026-09-06",
+          "collectedAt": "2026-09-08T06:21:25.553Z",
+          "windowStart": "2026-08-10",
+          "windowEnd": "2026-09-06",
+          "priorWindowStart": "2026-07-13",
+          "priorWindowEnd": "2026-08-09",
+          "windowDays": 28,
+          "searchType": "web",
+          "device": "all",
+          "country": "all",
+          "coverage": "observed API rows; absence is not zero",
+          "slug": "property-taxes-escambia-santa-rosa",
+          "kind": "page",
+          "dataStatus": "no_rows",
+          "comparisonEligible": false,
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": null,
+          "clicks90": null,
+          "position90": null
+        },
+        {
+          "slug": "property-taxes-escambia-santa-rosa",
+          "property": "https://greggcostin.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
+        },
+        {
+          "engine": "bing",
+          "source": "bing-api",
+          "date": "2026-09-08",
+          "collectedAt": "2026-09-08T06:21:14.845Z",
+          "windowStart": null,
+          "windowEnd": null,
+          "priorWindowStart": null,
+          "priorWindowEnd": null,
+          "windowDays": 28,
+          "searchType": "web",
+          "device": "all",
+          "country": "all",
+          "coverage": "observed API rows; absence is not zero",
+          "slug": "property-taxes-escambia-santa-rosa",
+          "kind": "page",
+          "dataStatus": "unavailable",
+          "comparisonEligible": false,
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": null,
+          "clicks90": null,
+          "position90": null
+        }
+      ],
+      "legacyMetrics": "no GSC/Bing data available in-session",
+      "title": "Escambia and Santa Rosa Property Taxes: Buyer Guide",
+      "category": "Insurance and property taxes",
+      "dateModified": "2026-09-09",
+      "targetKeywords": [
+        "Escambia County property taxes",
+        "Santa Rosa County property taxes",
+        "Florida homestead exemption 2026",
+        "buyer property tax estimate"
+      ],
+      "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+      "shareHook": "The seller's tax bill can be correct and still be the wrong number for your purchase budget.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/civilian-blog/research/property-taxes-escambia-santa-rosa.json"
+      }
     },
     {
-     "engine": "bing",
-     "source": "bing-api",
-     "date": "2026-09-08",
-     "collectedAt": "2026-09-08T06:21:14.845Z",
-     "windowStart": null,
-     "windowEnd": null,
-     "priorWindowStart": null,
-     "priorWindowEnd": null,
-     "windowDays": 28,
-     "searchType": "web",
-     "device": "all",
-     "country": "all",
-     "coverage": "observed API rows; absence is not zero",
-     "slug": "florida-insurance-relief-2026",
-     "kind": "page",
-     "dataStatus": "unavailable",
-     "comparisonEligible": false,
-     "clicks": null,
-     "impressions": null,
-     "position": null,
-     "impressionsPrior28": null,
-     "clicksPrior28": null,
-     "impressions90": null,
-     "clicks90": null,
-     "position90": null
+      "slug": "closing-costs-florida-buyers",
+      "datePublished": "2026-08-31",
+      "type": "evergreen (queue head; no current-events override warranted)",
+      "words": 1732,
+      "image": "/images/closing-costs-review-20260909.jpg",
+      "sources": "floridarevenue.com doc stamp page (deed 70c per $100, Miami-Dade 60c + 45c surtax, note/mortgage 35c per $100); floridarevenue.com nonrecurring intangible tax (2 mills, x0.002); myfloridacfo.com title insurance overview citing FAC 69O-186.003 (owner original $5.75/1000 first 100k then $5.00/1000 to $1M, $100 min; simultaneous-issue lender min $25; reissue $3.30/$3.00); titlecapture.com county custom table (Escambia, Santa Rosa, Okaloosa, Walton = buyer-pays); escambiaclerk.com fee schedule per Fla. Stat. 28.24 ($10 first page, $8.50 each additional); consumerfinance.gov Closing Disclosure 3-business-day rule",
+      "currentEventsCheck": "Aug 31 2026 sweep: 30-yr ~6.62-6.68%, Fed on hold at 3.50-3.75%, jobs report Friday; FL insurance stabilizing (Citizens 8.8% cut). Nothing broke big enough to override the queue head.",
+      "metrics": [
+        {
+          "date": "2026-09-08",
+          "runId": "civilian-blog-engine-2026-09-08",
+          "bingPage": "not-observed",
+          "clarity": "unavailable in this runtime; installed project ydd39cyp64",
+          "google": "no currently verified reporting window",
+          "qualifiedInquiries": "unavailable"
+        }
+      ],
+      "mathVerified": "Worked example recomputed: 350k deed stamps 3500x0.70=2450; 315k note stamps 3150x0.35=1102.50; intangible 315000x0.002=630; owner policy 575+1250=1825.",
+      "published": "2026-08-31 deployed to greggcostin.com (Pages deploy ddef7164), verified 200 on post + image + OG card + sitemap + blog index; IndexNow ping 200",
+      "search": [
+        {
+          "slug": "closing-costs-florida-buyers",
+          "url": "/blog/closing-costs-florida-buyers",
+          "source": "gsc-pages",
+          "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+          "date": "2026-09-04",
+          "property": "https://greggcostin.com",
+          "kind": "page",
+          "status": "not-observed",
+          "impressions": null,
+          "clicks": null,
+          "position": null,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          },
+          "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+        },
+        {
+          "engine": "bing",
+          "source": "bing-api",
+          "date": "2026-09-06",
+          "collectedAt": "2026-09-08T06:21:25.553Z",
+          "windowStart": "2026-08-10",
+          "windowEnd": "2026-09-06",
+          "priorWindowStart": "2026-07-13",
+          "priorWindowEnd": "2026-08-09",
+          "windowDays": 28,
+          "searchType": "web",
+          "device": "all",
+          "country": "all",
+          "coverage": "observed API rows; absence is not zero",
+          "slug": "closing-costs-florida-buyers",
+          "kind": "page",
+          "dataStatus": "no_rows",
+          "comparisonEligible": false,
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": null,
+          "clicks90": null,
+          "position90": null
+        },
+        {
+          "slug": "closing-costs-florida-buyers",
+          "property": "https://greggcostin.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
+        },
+        {
+          "engine": "bing",
+          "source": "bing-api",
+          "date": "2026-09-08",
+          "collectedAt": "2026-09-08T06:21:14.845Z",
+          "windowStart": null,
+          "windowEnd": null,
+          "priorWindowStart": null,
+          "priorWindowEnd": null,
+          "windowDays": 28,
+          "searchType": "web",
+          "device": "all",
+          "country": "all",
+          "coverage": "observed API rows; absence is not zero",
+          "slug": "closing-costs-florida-buyers",
+          "kind": "page",
+          "dataStatus": "unavailable",
+          "comparisonEligible": false,
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": null,
+          "clicks90": null,
+          "position90": null
+        }
+      ],
+      "refreshHistory": [
+        {
+          "date": "2026-09-06",
+          "kind": "substantive sourced refresh",
+          "models": {
+            "research": "gpt-6-astra",
+            "write": "gpt-6-astra"
+          },
+          "configuredModels": {
+            "research": "self",
+            "write": "self",
+            "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+          },
+          "evidenceFile": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
+          "readerTask": "Calculate cash to close and identify the unresolved contract and quote items.",
+          "datePublished": "2026-08-31",
+          "dateModified": "2026-09-06",
+          "scoreBefore": 53,
+          "scoreAfter": 95,
+          "formatting": 100,
+          "performanceChange": "not measured",
+          "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
+          "summary": "Added a reproducible cash-to-close worksheet, primary state and CFPB sources, and distinctions between legal charges, negotiated costs and provider quotes."
+        }
+      ],
+      "currentEvidenceFile": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
+      "legacyMetrics": "no GSC/Bing data available in-session",
+      "title": "Florida Buyer Closing Costs: What to Budget and Verify",
+      "category": "Buying and selling",
+      "dateModified": "2026-09-09",
+      "targetKeywords": [
+        "Florida buyer closing costs",
+        "Escambia County closing costs",
+        "cash to close Florida",
+        "who pays title insurance"
+      ],
+      "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+      "shareHook": "The closing-cost total is easier to challenge once you separate taxes, negotiated fees and your own escrow money.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/civilian-blog/research/closing-costs-florida-buyers.json"
+      }
+    },
+    {
+      "slug": "fed-rate-hike-what-it-means",
+      "datePublished": "2026-09-01",
+      "type": "current-events (OVERRIDE of queue head coastal-alabama-vs-panhandle; queue left intact)",
+      "words": 1693,
+      "image": "/images/fed-decision-review-20260909.jpg",
+      "sources": "Freddie Mac PMMS Aug 27 2026 (30-yr 6.66%, prior 6.65%, yr-ago 6.56%; 15-yr 5.98%); BEA Personal Income and Outlays July 2026 (PCE +3.7% y/y, core +3.3%); Dallas Fed trimmed mean PCE 2.3%; FOMC July 28-29 hold at 3.50-3.75%, 5th straight, 9-3 vote (Hammack/Kashkari/Logan dissent for higher), minutes released Aug 19; Bloomberg Aug 31 (10-yr topped 4.75%, first since Jan 2025); Real Estate News Sep 1 (Barr speech quote; 30-yr daily 6.89% vs 6.77% wk-ago; FedWatch 68.2%); Forbes Aug 31 (FedWatch 66%); BLS CPI release schedule (Aug CPI Fri Sep 11 8:30am ET); FOMC meets Sep 15-16; Florida Realtors July 2026 (SF 23,870 closed +5.1%, median 425k +3.7%, 4.5 mo supply; condo 8,194 +11%, median 295k flat, 7.8 mo supply, 12th straight pending increase)",
+      "currentEventsCheck": "Sep 1 2026 sweep triggered an override: FedWatch hike odds swung 40% -> 57% -> 66-68% in a week, 10-yr Treasury at a 19-20 month high, Fed governor publicly floating a hike ahead of the Sep 15-16 FOMC. Directional reversal after two years of cut expectations, and time-sensitive before the meeting, so the rate-news-reaction template beat the evergreen queue head.",
+      "mathVerified": "Payment math recomputed on a 340k 30-yr loan (20% down on the 425k FL median): 6.75% = 2,205.23/mo, 7.00% = 2,262.03/mo, delta 56.79/mo and 682/yr. Quoted as 'about 57 dollars a month'.",
+      "metrics": [
+        {
+          "date": "2026-09-08",
+          "runId": "civilian-blog-engine-2026-09-08",
+          "bingPage": "not-observed",
+          "clarity": "unavailable in this runtime; installed project ydd39cyp64",
+          "google": "no currently verified reporting window",
+          "qualifiedInquiries": "unavailable"
+        }
+      ],
+      "engineFix": "Fixed a real bug in scripts/civilian-blog-factory.mjs: the llms.txt section-replace built its RegExp from the unescaped literal '## Blog Posts (auto-maintained)', so the parentheses compiled as a capture group and the pattern never matched. llms.txt had been frozen at the first post since Aug 24. Escaped the source and used a function replacer; all 4 posts now listed.",
+      "published": "2026-09-01 approved by Gregg and deployed to greggcostin.com (Pages deploy 96187781); verified 200 on post + blog index + image + OG card + sitemap + llms.txt; IndexNow ping 200",
+      "reviewCountSync": "Same session: verified LIVE counts via browser (Google Maps 55 reviews all five-star, Zillow profile 27 team reviews) and corrected Zillow 25 -> 27 and the combined total 79/80 -> 82 across both sites. scripts/review-counts.mjs did not walk civilian-site and had no combined-total patterns, which is why greggcostin.com kept drifting; both gaps fixed in that script.",
+      "search": [
+        {
+          "slug": "fed-rate-hike-what-it-means",
+          "url": "/blog/fed-rate-hike-what-it-means",
+          "source": "gsc-pages",
+          "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+          "date": "2026-09-04",
+          "property": "https://greggcostin.com",
+          "kind": "page",
+          "status": "not-observed",
+          "impressions": null,
+          "clicks": null,
+          "position": null,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          },
+          "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+        },
+        {
+          "engine": "bing",
+          "source": "bing-api",
+          "date": "2026-09-06",
+          "collectedAt": "2026-09-08T06:21:25.553Z",
+          "windowStart": "2026-08-10",
+          "windowEnd": "2026-09-06",
+          "priorWindowStart": "2026-07-13",
+          "priorWindowEnd": "2026-08-09",
+          "windowDays": 28,
+          "searchType": "web",
+          "device": "all",
+          "country": "all",
+          "coverage": "observed API rows; absence is not zero",
+          "slug": "fed-rate-hike-what-it-means",
+          "kind": "page",
+          "dataStatus": "no_rows",
+          "comparisonEligible": false,
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": null,
+          "clicks90": null,
+          "position90": null
+        },
+        {
+          "slug": "fed-rate-hike-what-it-means",
+          "property": "https://greggcostin.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
+        },
+        {
+          "engine": "bing",
+          "source": "bing-api",
+          "date": "2026-09-08",
+          "collectedAt": "2026-09-08T06:21:14.845Z",
+          "windowStart": null,
+          "windowEnd": null,
+          "priorWindowStart": null,
+          "priorWindowEnd": null,
+          "windowDays": 28,
+          "searchType": "web",
+          "device": "all",
+          "country": "all",
+          "coverage": "observed API rows; absence is not zero",
+          "slug": "fed-rate-hike-what-it-means",
+          "kind": "page",
+          "dataStatus": "unavailable",
+          "comparisonEligible": false,
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": null,
+          "clicks90": null,
+          "position90": null
+        }
+      ],
+      "refreshHistory": [
+        {
+          "date": "2026-09-06",
+          "kind": "substantive sourced refresh",
+          "models": {
+            "research": "gpt-6-astra",
+            "write": "gpt-6-astra"
+          },
+          "configuredModels": {
+            "research": "self",
+            "write": "self",
+            "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+          },
+          "evidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
+          "readerTask": "Choose a rate-lock discussion and purchase budget using official information instead of a forecast.",
+          "datePublished": "2026-09-01",
+          "dateModified": "2026-09-06",
+          "scoreBefore": 56,
+          "scoreAfter": 100,
+          "formatting": 100,
+          "performanceChange": "not measured",
+          "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
+          "summary": "Replaced Fed-cut/mortgage-rate assumptions with verified dated context, lender comparison steps and a reproducible payment sensitivity table."
+        }
+      ],
+      "currentEvidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
+      "legacyMetrics": "no GSC/Bing data available in-session",
+      "title": "Fed Rate Hike Talk: What Gulf Coast Buyers Should Do",
+      "category": "Financing and the economy",
+      "dateModified": "2026-09-09",
+      "targetKeywords": [
+        "Fed rate hike housing",
+        "September 2026 Fed meeting mortgage",
+        "should I lock my mortgage rate",
+        "seller credit versus price reduction"
+      ],
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "shareHook": "A Fed headline cannot tell you whether to buy. A payment stress test, a real lock deadline and a cash reserve can.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/civilian-blog/research/fed-rate-hike-what-it-means.json"
+      }
+    },
+    {
+      "slug": "florida-insurance-relief-2026",
+      "datePublished": "2026-09-03",
+      "type": "current-events (OVERRIDE of queue head coastal-alabama-vs-panhandle; queue left intact)",
+      "words": 2538,
+      "image": "/images/insurance-house-review-20260909.jpg",
+      "sources": "APCIA-commissioned actuarial study \"Florida's Legal Reforms: Lower Insurance Costs and Less Litigation\" by Moore Actuarial Consulting + James Lynch Casualty Actuary, released Sep 3 2026 (HO DWP -1.29B/-7%, auto DWP -1.70B/-5%, auto rates -4.1%, avg approved HO rate increase 9.6%/1.3%/0.9% for 2023/24/25, dividends +118% 2023-25 and +43% in 2025 to 211M, HO suits 8,000+ 2021 to ~2,500 end-2025, AOB suits 1,000-2,000/mo to ~200/mo, Chase Mitchell quote) via insurancejournal.com and legalnewsline.com; citizensfla.com 20260304 release (OIR-approved, effective Jul 1 2026: HO multiperil -8.8%, wind-only -5.5%, all personal lines min -2%; 336,000 policies, -76% from 1.41M Oct 2023; Tim Cerio quote); floir.gov newsroom Jan 13 2026 (17 new insurers); floir.gov wind-mitigation resources (OIR-B1-1802 updated eff. Apr 1 2026, valid up to 5 years, ARA 2024 study; s.627.0629 website-disclosure duty since Oct 1 2023); fema.gov NFIP congressional reauthorization (expires Sep 30 2026; lapse = no new/renewal policies, claims still paid; 35 short-term extensions since FY2017); nar.realtor NFIP FAQ (~1,300 sales/day, ~40,000 closings/month; seller NFIP policy assignable by name substitution); flsenate.gov s.627.70132 (1 year claim/reopened, 18 months supplemental, hurricane clock starts at landfall)",
+      "currentEventsCheck": "Sep 3 2026 sweep triggered an override: the APCIA/Moore-Lynch actuarial report landed THAT DAY quantifying Florida insurance relief for the first time, and the NFIP authorization lapse date (Sep 30) is 27 days out. Insurance is the top cost question for Gulf Coast civilian buyers and leads our Copilot citations, so this beat the evergreen queue head. Rates were checked (30-yr ~6.72-6.74% Sep 2, up on Middle East escalation) but the Sep 1 post already covered rates; no hurricane threat in the Gulf.",
+      "sourcingNotes": "NAR FAQ page (last updated Feb 4 2026) carries a stale internal line saying the NFIP expires Dec 11 2026 while its own URL and every other source say Sep 30 2026. FEMA's official reauthorization page was treated as authoritative and the post cites FEMA for the date. Citizens county-level figures (Escambia +0.2%, Santa Rosa +5.5%, avg premiums 3,376 / 3,871) came from the DECEMBER 2025 recommended filing and conflict with the approved March 2026 statewide -8.8%; deliberately NOT published, the county point is made qualitatively instead. My Safe Florida Home eligibility numbers were only available from aggregators (mysafeflhome.com returned 403), so the post sends readers to the official site rather than stating a perishable rule.",
+      "metrics": [
+        {
+          "date": "2026-09-08",
+          "runId": "civilian-blog-engine-2026-09-08",
+          "bingPage": "not-observed",
+          "clarity": "unavailable in this runtime; installed project ydd39cyp64",
+          "google": "no currently verified reporting window",
+          "qualifiedInquiries": "unavailable"
+        }
+      ],
+      "published": "2026-09-03 approved by Gregg and deployed to greggcostin.com (Pages deploy 8711c156, 19 new files); verified 200 on post + blog index + hero image + OG card + sitemap + llms.txt, post listed on all three; IndexNow ping 200 for the post and /blog",
+      "search": [
+        {
+          "slug": "florida-insurance-relief-2026",
+          "url": "/blog/florida-insurance-relief-2026",
+          "source": "gsc-pages",
+          "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+          "date": "2026-09-04",
+          "property": "https://greggcostin.com",
+          "kind": "page",
+          "status": "not-observed",
+          "impressions": null,
+          "clicks": null,
+          "position": null,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          },
+          "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+        },
+        {
+          "engine": "bing",
+          "source": "bing-api",
+          "date": "2026-09-06",
+          "collectedAt": "2026-09-08T06:21:25.553Z",
+          "windowStart": "2026-08-10",
+          "windowEnd": "2026-09-06",
+          "priorWindowStart": "2026-07-13",
+          "priorWindowEnd": "2026-08-09",
+          "windowDays": 28,
+          "searchType": "web",
+          "device": "all",
+          "country": "all",
+          "coverage": "observed API rows; absence is not zero",
+          "slug": "florida-insurance-relief-2026",
+          "kind": "page",
+          "dataStatus": "no_rows",
+          "comparisonEligible": false,
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": null,
+          "clicks90": null,
+          "position90": null
+        },
+        {
+          "slug": "florida-insurance-relief-2026",
+          "property": "https://greggcostin.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
+        },
+        {
+          "engine": "bing",
+          "source": "bing-api",
+          "date": "2026-09-08",
+          "collectedAt": "2026-09-08T06:21:14.845Z",
+          "windowStart": null,
+          "windowEnd": null,
+          "priorWindowStart": null,
+          "priorWindowEnd": null,
+          "windowDays": 28,
+          "searchType": "web",
+          "device": "all",
+          "country": "all",
+          "coverage": "observed API rows; absence is not zero",
+          "slug": "florida-insurance-relief-2026",
+          "kind": "page",
+          "dataStatus": "unavailable",
+          "comparisonEligible": false,
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": null,
+          "clicks90": null,
+          "position90": null
+        }
+      ],
+      "refreshHistory": [
+        {
+          "date": "2026-09-06",
+          "kind": "substantive sourced refresh",
+          "models": {
+            "research": "gpt-6-astra",
+            "write": "gpt-6-astra"
+          },
+          "configuredModels": {
+            "research": "self",
+            "write": "self",
+            "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+          },
+          "evidenceFile": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
+          "readerTask": "Compare a renewal or purchase quote without mistaking statewide premium figures for personal savings.",
+          "datePublished": "2026-09-03",
+          "dateModified": "2026-09-06",
+          "scoreBefore": 59,
+          "scoreAfter": 96,
+          "formatting": 100,
+          "performanceChange": "not measured",
+          "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
+          "summary": "Separated an industry-commissioned aggregate study from household quotes, checked the newer Citizens bulletin and added a premium/deductible comparison."
+        }
+      ],
+      "currentEvidenceFile": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
+      "legacyMetrics": "no GSC/Bing data available in-session",
+      "title": "Florida Insurance Relief in 2026: What to Check First",
+      "category": "Insurance and property taxes",
+      "dateModified": "2026-09-09",
+      "targetKeywords": [
+        "Florida insurance relief 2026",
+        "Escambia home insurance",
+        "Citizens flood insurance 2026",
+        "hurricane deductible comparison"
+      ],
+      "url": "https://greggcostin.com/blog/florida-insurance-relief-2026",
+      "shareHook": "A $600 premium saving can accompany $12,000 more hurricane deductible exposure. Compare the whole policy before calling it a better deal.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/civilian-blog/research/florida-insurance-relief-2026.json"
+      }
     }
-   ],
-   "refreshHistory": [
+  ],
+  "runs": [
     {
-     "date": "2026-09-06",
-     "kind": "substantive sourced refresh",
-     "models": {
-      "research": "gpt-6-astra",
-      "write": "gpt-6-astra"
-     },
-     "configuredModels": {
-      "research": "self",
-      "write": "self",
-      "note": "in-session by default; set opus/fable to mirror the military engine standing order"
-     },
-     "evidenceFile": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
-     "readerTask": "Compare a renewal or purchase quote without mistaking statewide premium figures for personal savings.",
-     "datePublished": "2026-09-03",
-     "dateModified": "2026-09-06",
-     "scoreBefore": 59,
-     "scoreAfter": 96,
-     "formatting": 100,
-     "performanceChange": "not measured",
-     "publication": "staged on codex/blog-engine-evidence-loop; not deployed",
-     "summary": "Separated an industry-commissioned aggregate study from household quotes, checked the newer Citizens bulletin and added a premium/deductible comparison."
-    }
-   ],
-   "currentEvidenceFile": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
-   "legacyMetrics": "no GSC/Bing data available in-session"
-  }
- ],
- "runs": [
-  {
-   "id": "growth-refresh-2026-09-06",
-   "date": "2026-09-06",
-   "models": {
-    "research": "gpt-6-astra",
-    "write": "gpt-6-astra"
-   },
-   "scope": "Three civilian sourcing refreshes explicitly requested by Gregg; not a normal one-article scheduled run.",
-   "changes": [
-    {
-     "slug": "closing-costs-florida-buyers",
-     "evidenceFile": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
-     "scoreBefore": 53,
-     "scoreAfter": 95
+      "id": "growth-refresh-2026-09-06",
+      "date": "2026-09-06",
+      "models": {
+        "research": "gpt-6-astra",
+        "write": "gpt-6-astra"
+      },
+      "scope": "Three civilian sourcing refreshes explicitly requested by Gregg; not a normal one-article scheduled run.",
+      "changes": [
+        {
+          "slug": "closing-costs-florida-buyers",
+          "evidenceFile": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
+          "scoreBefore": 53,
+          "scoreAfter": 95
+        },
+        {
+          "slug": "fed-rate-hike-what-it-means",
+          "evidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
+          "scoreBefore": 56,
+          "scoreAfter": 100
+        },
+        {
+          "slug": "florida-insurance-relief-2026",
+          "evidenceFile": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
+          "scoreBefore": 59,
+          "scoreAfter": 96
+        }
+      ],
+      "measurement": {
+        "semrush": "unavailable: insufficient API units in the audit",
+        "clarity": "Civilian live read: 6 unfiltered sessions, 5 production-hostname sessions; exact window not verified, too small for performance conclusions. Local previews excluded in the new code.",
+        "search": "Saved September 4 exports have unverified coverage windows; no new ranking or conversion lift claimed.",
+        "meta": "Live baseline retained separately in docs/site-growth-2026-09-06/meta-setup.json"
+      },
+      "stage": {
+        "branch": "codex/blog-engine-evidence-loop",
+        "pullRequest": "https://github.com/greggcostin/pensacolamilitaryhousing/pull/1",
+        "published": false
+      },
+      "next": "Use the regenerated shared weekly plan; retain hypotheses until comparable outcomes exist."
     },
     {
-     "slug": "fed-rate-hike-what-it-means",
-     "evidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
-     "scoreBefore": 56,
-     "scoreAfter": 100
-    },
-    {
-     "slug": "florida-insurance-relief-2026",
-     "evidenceFile": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
-     "scoreBefore": 59,
-     "scoreAfter": 96
+      "id": "civilian-blog-engine-2026-09-08",
+      "date": "2026-09-08",
+      "routine": "civilian-blog-engine",
+      "provider": "codex",
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "leaseId": "4471c1fc-77b5-4dfe-8588-44875bf48507",
+      "selectionReason": "Gregg explicitly requested resuming the interrupted work and improving the civilian blog engine.",
+      "fallbackReason": "Prior native Claude leg was interrupted; its exact stopped lease and fragment-only status were reconciled. Explicit Codex selection authorizes this continuation.",
+      "type": "engine upgrade plus one substantive refresh",
+      "slug": "what-moves-mortgage-rates",
+      "workItemReason": "Continue the existing financing intent, fix a pricing explanation and finish the sourced, built artifact. No second current-events post or duplicate URL created.",
+      "evidenceFile": "content/civilian-blog/research/what-moves-mortgage-rates.json",
+      "report": "content/civilian-blog/reports/2026-09-08-engine-upgrade.md",
+      "verification": "content/civilian-blog/reports/2026-09-08-verification.json",
+      "words": 1635,
+      "editorialScore": 100,
+      "formattingScore": 100,
+      "faqs": 7,
+      "primarySources": 7,
+      "tests": {
+        "focusedPass": 42,
+        "focusedFail": 0,
+        "civilianFindings": 0,
+        "entityFindings": 0,
+        "broaderSuite": "Four unchanged broader-site/environment failures recorded in verification report."
+      },
+      "image": {
+        "file": "civilian-site/images/mortgage-rates-north-hill-20260908.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house17.jpg",
+        "credit": "Ebyabe",
+        "license": "CC BY-SA 3.0",
+        "candidateReview": "All candidates viewed. Initial house-step images rejected as off-topic; selected second query North Hill house after rejecting cluttered alternative.",
+        "responsiveFiles": 10
+      },
+      "shareHook": "Before you pay for a lower mortgage rate, calculate how long it takes to earn the money back. A practical guide for Gulf Coast buyers and rental owners.",
+      "inboundLinks": {
+        "added": [
+          "/buy",
+          "/gulf-shores-orange-beach"
+        ],
+        "contextualTotal": 4,
+        "selection": "Retro named /buy; the coastal Alabama ownership hub supplies an additional direct reader connection."
+      },
+      "publication": {
+        "status": "published-and-live-verified",
+        "autoPublish": false,
+        "deployed": true,
+        "indexNowSubmitted": true,
+        "preview": "http://127.0.0.1:43792/blog/what-moves-mortgage-rates",
+        "buildRoot": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\military-blog-engine\\2026-09-08\\civilian-publication-20260909-merged\\gc",
+        "sourceRecheckDue": "2026-09-10",
+        "gitReceipt": "artifacts/civilian-blog-engine/2026-09-08/release-receipt.json",
+        "deployedAt": "2026-09-09T04:31:09.733359Z",
+        "deploymentId": "ec4e5d5e-97f3-4af9-a546-994921d4c850",
+        "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+        "bingSubmitted": true,
+        "indexingStatus": "Both engines accepted both URLs; indexing and ranking remain unverified.",
+        "indexingReceipt": "content/measure/submissions/2026-09-09T04-31-49-849Z-gc-c6052b66.json",
+        "report": "content/blog/reports/2026-09-09-publication-closeout.md",
+        "releaseRecord": "content/blog/releases/2026-09-09-mortgage/deployment.json"
+      },
+      "measurement": {
+        "collectedAt": "2026-09-08T06:21:25.553Z",
+        "windowStart": "2026-08-10",
+        "windowEnd": "2026-09-06",
+        "trafficDays": 13,
+        "bingPageRows": 0,
+        "bingQueryRows": 0,
+        "observedSiteImpressions": 0,
+        "observedSiteClicks": 0,
+        "indexedPages": "unknown; empty performance results do not establish indexing",
+        "clarity": "Project ydd39cyp64 installed; current query access unavailable",
+        "gsc": "Historical export lacks a currently verified reporting window; new comparable export needed",
+        "qualifiedInquiries": "unavailable",
+        "performanceEffect": "not measured; published and collecting a follow-up window"
+      },
+      "experiment": {
+        "id": "gc-mortgage-decision-guide-2026-09-08",
+        "status": "collecting",
+        "deployedAt": "2026-09-09T04:31:09.733359Z",
+        "hypothesis": "A sourced financing comparison with usable calculations and property-specific next steps will support better-qualified inquiries.",
+        "primaryOutcome": "Verified qualified conversations attributed to this article; requires separate CRM evidence.",
+        "secondaryOutcomes": [
+          "unique landing sessions with an accepted inquiry",
+          "organic search clicks",
+          "reading engagement",
+          "verified shares",
+          "provider-reported AI citations when available"
+        ],
+        "minimumFollowupDays": 28,
+        "comparison": "Same production-host cohort, source, definitions and equal non-overlapping complete windows. Apply shared sample/uncertainty checks.",
+        "conclusion": "Published; no effect estimated until comparable source windows and adequate observations exist."
+      },
+      "next": "price-cut-or-seller-concession, unless a verified event or priority 60+ refresh takes precedence",
+      "lessonsAdded": [
+        "L023",
+        "L024",
+        "L025"
+      ],
+      "legacyLessonIdsReconciled": [
+        "L021",
+        "L022"
+      ]
     }
-   ],
-   "measurement": {
-    "semrush": "unavailable: insufficient API units in the audit",
-    "clarity": "Civilian live read: 6 unfiltered sessions, 5 production-hostname sessions; exact window not verified, too small for performance conclusions. Local previews excluded in the new code.",
-    "search": "Saved September 4 exports have unverified coverage windows; no new ranking or conversion lift claimed.",
-    "meta": "Live baseline retained separately in docs/site-growth-2026-09-06/meta-setup.json"
-   },
-   "stage": {
-    "branch": "codex/blog-engine-evidence-loop",
-    "pullRequest": "https://github.com/greggcostin/pensacolamilitaryhousing/pull/1",
-    "published": false
-   },
-   "next": "Use the regenerated shared weekly plan; retain hypotheses until comparable outcomes exist."
-  },
-  {
-   "id": "civilian-blog-engine-2026-09-08",
-   "date": "2026-09-08",
-   "routine": "civilian-blog-engine",
-   "provider": "codex",
-   "model": "gpt-6-astra",
-   "effort": "max",
-   "leaseId": "4471c1fc-77b5-4dfe-8588-44875bf48507",
-   "selectionReason": "Gregg explicitly requested resuming the interrupted work and improving the civilian blog engine.",
-   "fallbackReason": "Prior native Claude leg was interrupted; its exact stopped lease and fragment-only status were reconciled. Explicit Codex selection authorizes this continuation.",
-   "type": "engine upgrade plus one substantive refresh",
-   "slug": "what-moves-mortgage-rates",
-   "workItemReason": "Continue the existing financing intent, fix a pricing explanation and finish the sourced, built artifact. No second current-events post or duplicate URL created.",
-   "evidenceFile": "content/civilian-blog/research/what-moves-mortgage-rates.json",
-   "report": "content/civilian-blog/reports/2026-09-08-engine-upgrade.md",
-   "verification": "content/civilian-blog/reports/2026-09-08-verification.json",
-   "words": 1635,
-   "editorialScore": 100,
-   "formattingScore": 100,
-   "faqs": 7,
-   "primarySources": 7,
-   "tests": {
-    "focusedPass": 42,
-    "focusedFail": 0,
-    "civilianFindings": 0,
-    "entityFindings": 0,
-    "broaderSuite": "Four unchanged broader-site/environment failures recorded in verification report."
-   },
-   "image": {
-    "file": "civilian-site/images/mortgage-rates-north-hill-20260908.jpg",
-    "source": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house17.jpg",
-    "credit": "Ebyabe",
-    "license": "CC BY-SA 3.0",
-    "candidateReview": "All candidates viewed. Initial house-step images rejected as off-topic; selected second query North Hill house after rejecting cluttered alternative.",
-    "responsiveFiles": 10
-   },
-   "shareHook": "Before you pay for a lower mortgage rate, calculate how long it takes to earn the money back. A practical guide for Gulf Coast buyers and rental owners.",
-   "inboundLinks": {
-    "added": [
-     "/buy",
-     "/gulf-shores-orange-beach"
-    ],
-    "contextualTotal": 4,
-    "selection": "Retro named /buy; the coastal Alabama ownership hub supplies an additional direct reader connection."
-   },
-   "publication": {
-    "status": "published-and-live-verified",
-    "autoPublish": false,
-    "deployed": true,
-    "indexNowSubmitted": true,
-    "preview": "http://127.0.0.1:43792/blog/what-moves-mortgage-rates",
-    "buildRoot": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\military-blog-engine\\2026-09-08\\civilian-publication-20260909-merged\\gc",
-    "sourceRecheckDue": "2026-09-10",
-    "gitReceipt": "artifacts/civilian-blog-engine/2026-09-08/release-receipt.json",
-    "deployedAt": "2026-09-09T04:31:09.733359Z",
-    "deploymentId": "ec4e5d5e-97f3-4af9-a546-994921d4c850",
-    "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
-    "bingSubmitted": true,
-    "indexingStatus": "Both engines accepted both URLs; indexing and ranking remain unverified.",
-    "indexingReceipt": "content/measure/submissions/2026-09-09T04-31-49-849Z-gc-c6052b66.json",
-    "report": "content/blog/reports/2026-09-09-publication-closeout.md",
-    "releaseRecord": "content/blog/releases/2026-09-09-mortgage/deployment.json"
-   },
-   "measurement": {
-    "collectedAt": "2026-09-08T06:21:25.553Z",
-    "windowStart": "2026-08-10",
-    "windowEnd": "2026-09-06",
-    "trafficDays": 13,
-    "bingPageRows": 0,
-    "bingQueryRows": 0,
-    "observedSiteImpressions": 0,
-    "observedSiteClicks": 0,
-    "indexedPages": "unknown; empty performance results do not establish indexing",
-    "clarity": "Project ydd39cyp64 installed; current query access unavailable",
-    "gsc": "Historical export lacks a currently verified reporting window; new comparable export needed",
-    "qualifiedInquiries": "unavailable",
-    "performanceEffect": "not measured; published and collecting a follow-up window"
-   },
-   "experiment": {
-    "id": "gc-mortgage-decision-guide-2026-09-08",
-    "status": "collecting",
-    "deployedAt": "2026-09-09T04:31:09.733359Z",
-    "hypothesis": "A sourced financing comparison with usable calculations and property-specific next steps will support better-qualified inquiries.",
-    "primaryOutcome": "Verified qualified conversations attributed to this article; requires separate CRM evidence.",
-    "secondaryOutcomes": [
-     "unique landing sessions with an accepted inquiry",
-     "organic search clicks",
-     "reading engagement",
-     "verified shares",
-     "provider-reported AI citations when available"
-    ],
-    "minimumFollowupDays": 28,
-    "comparison": "Same production-host cohort, source, definitions and equal non-overlapping complete windows. Apply shared sample/uncertainty checks.",
-    "conclusion": "Published; no effect estimated until comparable source windows and adequate observations exist."
-   },
-   "next": "price-cut-or-seller-concession, unless a verified event or priority 60+ refresh takes precedence",
-   "lessonsAdded": [
-    "L023",
-    "L024",
-    "L025"
-   ],
-   "legacyLessonIdsReconciled": [
-    "L021",
-    "L022"
-   ]
-  }
- ]
+  ]
 }

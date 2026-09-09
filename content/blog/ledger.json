@@ -1,15 +1,14 @@
 {
   "posts": {
     "bah-2026-pensacola-what-can-you-afford": {
-      "title": "2026 BAH Pensacola: What Can You Afford? | Gregg Costin",
-      "category": "BAH",
+      "title": "2026 Pensacola BAH: Build a Complete Housing Budget",
+      "category": "BAH & Budget",
       "datePublished": "2026-03-20",
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "2026 BAH Pensacola",
-        "BAH what can you afford",
-        "2027 BAH Pensacola",
-        "BAH home buying"
+        "2026 Pensacola BAH housing budget",
+        "E-5 BAH Pensacola 2026",
+        "BAH mortgage affordability"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
       "metrics": [
@@ -92,17 +91,40 @@
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           },
           "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+        },
+        {
+          "slug": "bah-2026-pensacola-what-can-you-afford",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/bah-budget-review-20260909.jpg",
+      "shareHook": "Your BAH can help frame a home search. It cannot tell you what a house costs to own or what your household can comfortably spend.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/bah-2026-pensacola-what-can-you-afford.json"
+      }
     },
     "best-neighborhoods-eglin-afb-families": {
-      "title": "Best Neighborhoods for Eglin AFB: Niceville vs Crestview vs FWB",
-      "category": "Neighborhoods",
+      "title": "Where to Live Near Eglin AFB: Compare Four Areas",
+      "category": "Local Living",
       "datePublished": "2026-03-28",
-      "dateModified": "2026-08-12",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "best neighborhoods Eglin AFB",
-        "Niceville vs Crestview vs Fort Walton Beach"
+        "best neighborhoods near Eglin AFB",
+        "Niceville Fort Walton Beach military housing",
+        "Crestview Destin Eglin commute"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
       "metrics": [
@@ -161,17 +183,40 @@
             "complete": false,
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           }
+        },
+        {
+          "slug": "best-neighborhoods-eglin-afb-families",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/eglin-bay-final-20260909.jpg",
+      "shareHook": "The cheaper loan payment can belong to the more expensive home. Compare the complete budget before choosing where to live near Eglin.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/best-neighborhoods-eglin-afb-families.json"
+      }
     },
     "florida-homestead-exemption-military": {
-      "title": "Florida Homestead Exemption for Military: Save Thousands",
+      "title": "Florida Military Homestead: 2026 Savings, PCS and Rental Rules",
       "category": "Homestead",
       "datePublished": "2026-04-05",
-      "dateModified": "2026-08-12",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "Florida homestead exemption military",
-        "homestead exemption Pensacola"
+        "Florida homestead military PCS",
+        "military rent house homestead Florida",
+        "2026 homestead exemption Florida"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
       "metrics": [
@@ -230,18 +275,40 @@
             "complete": false,
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           }
+        },
+        {
+          "slug": "florida-homestead-exemption-military",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/military-homestead-review-20260909.jpg",
+      "shareHook": "Keeping Florida homestead during a PCS can matter, but the exemption, rental permission and loan obligations are three different questions.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/florida-homestead-exemption-military.json"
+      }
     },
     "pcs-to-pensacola-2026-complete-guide": {
-      "title": "PCS to Pensacola 2026: Military Housing Guide | Gregg Costin",
+      "title": "PCS to Pensacola in 2026: Orders, Housing and Arrival Cash",
       "category": "PCS",
       "datePublished": "2026-04-15",
-      "dateModified": "2026-08-12",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "PCS to Pensacola",
-        "moving to Pensacola military",
-        "NAS Pensacola PCS guide"
+        "PCS to Pensacola 2026",
+        "NAS Pensacola student family housing",
+        "Pensacola military relocation checklist"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide",
       "metrics": [
@@ -300,19 +367,40 @@
             "complete": false,
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           }
+        },
+        {
+          "slug": "pcs-to-pensacola-2026-complete-guide",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/pcs-aerial-review-20260909.jpg",
+      "shareHook": "A smooth PCS starts with the orders, not the listing. Match the housing commitment to the move you are actually making.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/pcs-to-pensacola-2026-complete-guide.json"
+      }
     },
     "personal-property-activity-pcs-2026": {
-      "title": "Personal Property Activity: What the PPA Means for Your PCS",
+      "title": "Personal Property Activity: 2026 PCS Claims and Moving Budget",
       "category": "PCS",
       "datePublished": "2026-06-10",
-      "dateModified": "2026-08-12",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "personal property activity",
-        "PPA military move",
-        "PCS household goods 2026",
-        "HomeSafe replacement"
+        "Personal Property Activity PCS",
+        "2026 household goods claim deadline",
+        "personally procured move budget"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
       "metrics": [
@@ -377,18 +465,40 @@
             "complete": false,
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           }
+        },
+        {
+          "slug": "personal-property-activity-pcs-2026",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/ppa-packing-review-20260909.jpg",
+      "shareHook": "The truck, the claim and the closing each have their own clock. Keep all three visible before your PCS.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/personal-property-activity-pcs-2026.json"
+      }
     },
     "va-loan-seller-concessions-truth": {
-      "title": "VA Loan Seller Concessions: The 4% Myth Costing You Money",
+      "title": "VA Seller Concessions: What the 4% Limit Actually Covers",
       "category": "VA Loans",
       "datePublished": "2026-04-10",
-      "dateModified": "2026-08-12",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "VA loan seller concessions",
-        "VA loan myths",
-        "seller concessions Florida"
+        "VA seller concessions 4 percent",
+        "VA seller paid closing costs",
+        "VA temporary buydown"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
       "metrics": [
@@ -468,18 +578,40 @@
             "complete": false,
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           }
+        },
+        {
+          "slug": "va-loan-seller-concessions-truth",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/va-concession-residence-review-20260909.jpg",
+      "shareHook": "A VA seller credit should solve a specific problem. Start with the expense, not an assumed 4% limit on everything.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/va-loan-seller-concessions-truth.json"
+      }
     },
     "moving-to-pensacola-2026-guide": {
-      "title": "Moving to Pensacola, FL: The Complete 2026 Guide",
-      "category": "Living Here",
+      "title": "Moving to Pensacola: A Practical Military Housing Guide",
+      "category": "Local Living",
       "datePublished": "2026-08-12",
-      "dateModified": "2026-08-12",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "moving to Pensacola FL",
-        "living in Pensacola",
-        "is Pensacola a good place to live"
+        "moving to Pensacola 2026",
+        "Pensacola military home buying",
+        "Pensacola relocation housing costs"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide",
       "metrics": [
@@ -538,18 +670,40 @@
             "complete": false,
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           }
+        },
+        {
+          "slug": "moving-to-pensacola-2026-guide",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/pensacola-review-20260909.jpg",
+      "shareHook": "Before choosing a Pensacola neighborhood, put the duty route, buyer tax estimate and cash timeline on the same page.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/moving-to-pensacola-2026-guide.json"
+      }
     },
     "best-pensacola-neighborhoods-by-rank-bah": {
-      "title": "Best Pensacola Neighborhoods for Military, by Rank and BAH",
-      "category": "Living Here",
+      "title": "Pensacola Neighborhoods: Compare Homes With Your BAH Budget",
+      "category": "BAH & Budget",
       "datePublished": "2026-08-12",
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "best neighborhoods pensacola military",
-        "where to live E-5 pensacola",
-        "neighborhoods by BAH"
+        "Pensacola neighborhoods BAH budget",
+        "military neighborhoods Pensacola",
+        "BAH housing comparison"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/best-pensacola-neighborhoods-by-rank-bah",
       "metrics": [
@@ -608,18 +762,40 @@
             "complete": false,
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           }
+        },
+        {
+          "slug": "best-pensacola-neighborhoods-by-rank-bah",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/bah-area-review-20260909.jpg",
+      "shareHook": "A military rank does not choose a neighborhood. Put actual homes through the same budget and duty-route comparison.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/best-pensacola-neighborhoods-by-rank-bah.json"
+      }
     },
     "living-in-gulf-breeze-pros-cons": {
-      "title": "Living in Gulf Breeze FL: Pros, Cons, and the Real Numbers",
-      "category": "Living Here",
+      "title": "Living in Gulf Breeze: Costs, Commutes and Tradeoffs",
+      "category": "Local Living",
       "datePublished": "2026-08-13",
-      "dateModified": "2026-08-13",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "living in gulf breeze fl",
-        "gulf breeze pros and cons",
-        "is gulf breeze a good place to live"
+        "living in Gulf Breeze pros and cons",
+        "Gulf Breeze military commute",
+        "Gulf Breeze cost of homeownership"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
       "metrics": [
@@ -678,19 +854,41 @@
             "complete": false,
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           }
+        },
+        {
+          "slug": "living-in-gulf-breeze-pros-cons",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/gulf-breeze-review-20260909.jpg",
+      "shareHook": "Gulf Breeze can fit your plans beautifully, but compare the ordinary workweek and the complete property bill before deciding.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/living-in-gulf-breeze-pros-cons.json"
+      }
     },
     "florida-veteran-property-tax-county-guide": {
-      "title": "Florida Disabled Veteran Property Tax: County Filing Guide 2026",
+      "title": "Florida Veteran Property Tax: County Filing Guide for 2026",
       "category": "Homestead",
       "datePublished": "2026-08-22",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "florida disabled veteran property tax exemption",
-        "100 percent disabled veteran property tax florida",
-        "tdiu property tax exemption florida",
-        "escambia county veteran property tax exemption"
+        "Florida disabled veteran property tax exemption",
+        "Escambia veteran exemption application",
+        "Santa Rosa veteran property tax",
+        "Okaloosa veteran homestead"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
       "metrics": [
@@ -748,19 +946,56 @@
             "complete": false,
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           }
+        },
+        {
+          "slug": "florida-veteran-property-tax-county-guide",
+          "url": "/blog/florida-veteran-property-tax-county-guide",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "window": {
+            "start": "2026-08-11",
+            "end": "2026-09-07",
+            "searchType": "web",
+            "dimensions": [
+              "page"
+            ],
+            "filters": {},
+            "complete": false,
+            "description": "Trailing bins from returned API rows; report completeness and row aggregation must be confirmed before trend claims."
+          },
+          "clicks": 0,
+          "impressions": 4,
+          "position": 6,
+          "impressionsPrior28": 0,
+          "clicksPrior28": 0,
+          "impressions90": 4,
+          "clicks90": 0,
+          "position90": 6
         }
-      ]
+      ],
+      "image": "/images/blog/veteran-tax-review-20260909.jpg",
+      "shareHook": "Your rating percentage is not the whole property-tax answer. The benefit category, residence and dates determine what the county can approve.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/florida-veteran-property-tax-county-guide.json"
+      }
     },
     "va-loan-assumption-buyers-guide": {
-      "title": "How to Assume a VA Loan in 2026: The Buyer's Playbook",
+      "title": "VA Loan Assumptions: Equity Gap, Costs and Seller Entitlement",
       "category": "VA Loans",
       "datePublished": "2026-08-23",
-      "dateModified": "2026-08-23",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "assume a va loan",
-        "va loan assumption civilian",
-        "how to assume a va loan",
-        "va assumable loans pensacola"
+        "VA loan assumption equity gap",
+        "VA assumption seller entitlement",
+        "VA assumption funding fee"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
       "metrics": [
@@ -812,18 +1047,40 @@
             "complete": false,
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           }
+        },
+        {
+          "slug": "va-loan-assumption-buyers-guide",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/va-assumption-review-20260909.jpg",
+      "shareHook": "The cheapest-looking VA loan can require the most cash. Calculate the equity gap before falling in love with the rate.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/va-loan-assumption-buyers-guide.json"
+      }
     },
     "moving-to-navarre-2026-guide": {
-      "title": "Moving to Navarre FL: The 2026 Guide to Prices, BAH & US-98",
-      "category": "Living Here",
+      "title": "Moving to Navarre: Housing Costs and Your PCS Exit",
+      "category": "Local Living",
       "datePublished": "2026-09-01",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-09",
       "targetKeywords": [
-        "moving to navarre fl",
-        "living in navarre florida",
-        "is navarre a good place to live"
+        "moving to Navarre 2026",
+        "Navarre military housing",
+        "Navarre rental after PCS"
       ],
       "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
       "metrics": [],
@@ -852,8 +1109,30 @@
             "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
           },
           "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+        },
+        {
+          "slug": "moving-to-navarre-2026-guide",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-07",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
-      ]
+      ],
+      "image": "/images/blog/navarre-review-20260909.jpg",
+      "shareHook": "A Navarre home that could rent for enough to cover the loan can still lose money after the other costs. Run the full exit budget.",
+      "catalogRefresh": {
+        "date": "2026-09-09",
+        "status": "validated-awaiting-deployment",
+        "provider": "codex",
+        "model": "gpt-6-astra",
+        "effort": "max",
+        "research": "content/blog/research/moving-to-navarre-2026-guide.json"
+      }
     }
   },
   "runs": [

@@ -1,0 +1,379 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "pcs-to-pensacola-2026-complete-guide",
+  "article": {
+    "slug": "pcs-to-pensacola-2026-complete-guide",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Sequence orders, reporting, housing, cash and delivery before making a binding Pensacola move commitment.",
+  "readerTask": "Sequence orders, reporting, housing, cash and delivery before making a binding Pensacola move commitment.",
+  "pillar": "pcs-orders",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Separates student authorization from permanent-party planning and uses an arrival cash-gap example with named duty-route choices.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "nas-housing",
+      "publisher": "Military OneSource MilitaryINSTALLATIONS",
+      "title": "NAS Pensacola temporary housing",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/housing/temporary-housing",
+      "evidenceNote": "Read check-in/billeting requirements;studentsunder140classroomdaysdo notbringfamilyunlessordersorotherwrittenauthorization. Brown-baggerpermissiondoesnotestablishtravelreimbursement. No current vacancy guarantee.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "nas-report",
+      "publisher": "Military OneSource MilitaryINSTALLATIONS",
+      "title": "NAS Pensacola check-in procedures",
+      "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/base-essentials/check-in-procedures",
+      "evidenceNote": "ReaddistinctNATTC,NASC,CNATT,MATSG,479FTGreportingdirectionsandafterhours guidance. Do not routeeveryone tooneofficeor assume publishedphonehourswillremainunchanged.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "tle",
+      "publisher": "Defense Travel Management Office",
+      "title": "Temporary lodging expense expansion",
+      "url": "https://www.travel.dod.mil/About/News/Article/Article/3981433/dod-authorizes-additional-7-days-to-conus-temporary-lodging-expense/",
+      "evidenceNote": "Read effectiveNov27 2024 increasefrom14to21daysforPCS toCONUS;partialreimbursement;designatedlocationextensionsnotuniversal. CurrentJTRandfinancegovernindividualclaim.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "purchase",
+      "publisher": "Department of Veterans Affairs",
+      "title": "VA-backed purchase loan",
+      "url": "https://www.va.gov/housing-assistance/home-loans/loan-types/purchase-loan/",
+      "evidenceNote": "Read COE, credit/income and residence requirements, lack of PMI and distinction from lender approval. Avoid outdated conforming-limit wording in favor of VA specific entitlement guidance.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "student-orders",
+      "kind": "fact",
+      "text": "NAS Pensacola guidance says students assigned for fewer than 140 classroom days need orders or other written authorization before bringing family.",
+      "sourceIds": [
+        "nas-housing"
+      ],
+      "scope": "OfficialNASstudenthousinginstructions,individualcommandordersgovern",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Readcheckinparagraph140classroomdaysandauthorizationexception.",
+      "claim": "NAS Pensacola guidance says students assigned for fewer than 140 classroom days need orders or other written authorization before bringing family.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/housing/temporary-housing",
+      "locator": "Readcheckinparagraph140classroomdaysandauthorizationexception.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Readcheckinparagraph140classroomdaysandauthorizationexception."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "purchase-conditions",
+      "kind": "fact",
+      "text": "A VA purchase requires the applicable eligibility, lender credit and income standards, and residence requirements.",
+      "sourceIds": [
+        "purchase"
+      ],
+      "scope": "VAbackedpurchase,notautomaticgoodhouseholddecision",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "ReadthreeconditionsinVAguide.",
+      "claim": "A VA purchase requires the applicable eligibility, lender credit and income standards, and residence requirements.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.va.gov/housing-assistance/home-loans/loan-types/purchase-loan/",
+      "locator": "ReadthreeconditionsinVAguide.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "ReadthreeconditionsinVAguide."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "arrival-cash",
+      "kind": "calculation",
+      "text": "The hypothetical arrival costs total $5,950.",
+      "claim": "The hypothetical arrival costs total $5,950.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.travel.dod.mil/About/News/Article/Article/3981433/dod-authorizes-additional-7-days-to-conus-temporary-lodging-expense/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(2200, 2200, 350, 1200) = 5950 USD.",
+      "loadBearing": true,
+      "assumptions": "Inventeddeposit2200+rent2200+utility350+temporaryliving1200;notentitlement.",
+      "method": "sum(2200, 2200, 350, 1200) = 5950 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(2200, 2200, 350, 1200) = 5950 USD."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          2200,
+          2200,
+          350,
+          1200
+        ],
+        "result": 5950,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Inventeddeposit2200+rent2200+utility350+temporaryliving1200;notentitlement."
+        ]
+      }
+    },
+    {
+      "id": "reserve-total",
+      "kind": "calculation",
+      "text": "Adding a separate $2,000 emergency reserve brings the planning target to $7,950.",
+      "claim": "Adding a separate $2,000 emergency reserve brings the planning target to $7,950.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.travel.dod.mil/About/News/Article/Article/3981433/dod-authorizes-additional-7-days-to-conus-temporary-lodging-expense/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(5950, 2000) = 7950 USD.",
+      "loadBearing": true,
+      "assumptions": "5950arrivalcashplus2000reserve.",
+      "method": "sum(5950, 2000) = 7950 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(5950, 2000) = 7950 USD."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          5950,
+          2000
+        ],
+        "result": 7950,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "5950arrivalcashplus2000reserve."
+        ]
+      }
+    },
+    {
+      "id": "cash-gap",
+      "kind": "calculation",
+      "text": "With an assumed $6,500 available, the household would still need $1,450.",
+      "claim": "With an assumed $6,500 available, the household would still need $1,450.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.travel.dod.mil/About/News/Article/Article/3981433/dod-authorizes-additional-7-days-to-conus-temporary-lodging-expense/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(7950, 6500) = 1450 USD.",
+      "loadBearing": true,
+      "assumptions": "7950targetless6500available.",
+      "method": "difference(7950, 6500) = 1450 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(7950, 6500) = 1450 USD."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          7950,
+          6500
+        ],
+        "result": 1450,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "7950targetless6500available."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/housing/temporary-housing",
+        "title": "NAS Pensacola temporary housing",
+        "reviewed": "Read check-in/billeting requirements;studentsunder140classroomdaysdo notbringfamilyunlessordersorotherwrittenauthorization. Brown-baggerpermissiondoesnotestablishtravelreimbursement. No current vacancy guarantee."
+      },
+      {
+        "url": "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/base-essentials/check-in-procedures",
+        "title": "NAS Pensacola check-in procedures",
+        "reviewed": "ReaddistinctNATTC,NASC,CNATT,MATSG,479FTGreportingdirectionsandafterhours guidance. Do not routeeveryone tooneofficeor assume publishedphonehourswillremainunchanged."
+      },
+      {
+        "url": "https://www.travel.dod.mil/About/News/Article/Article/3981433/dod-authorizes-additional-7-days-to-conus-temporary-lodging-expense/",
+        "title": "Temporary lodging expense expansion",
+        "reviewed": "Read effectiveNov27 2024 increasefrom14to21daysforPCS toCONUS;partialreimbursement;designatedlocationextensionsnotuniversal. CurrentJTRandfinancegovernindividualclaim."
+      },
+      {
+        "url": "https://www.va.gov/housing-assistance/home-loans/loan-types/purchase-loan/",
+        "title": "VA-backed purchase loan",
+        "reviewed": "Read COE, credit/income and residence requirements, lack of PMI and distinction from lender approval. Avoid outdated conforming-limit wording in favor of VA specific entitlement guidance."
+      }
+    ],
+    "informationGain": "Separates student authorization from permanent-party planning and uses an arrival cash-gap example with named duty-route choices.",
+    "questions": [
+      {
+        "question": "Can a student bring family based on the class location alone?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does VA eligibility by itself make buying the right move?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Which duty location should drive the search?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How much cash should be available during the transition?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should temporary lodging fit the plan?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What needs checking before signing a lease or purchase?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should happen in the first days after arrival?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I arrange family housing before the student orders are clear?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should everyone reporting to Pensacola use the same check-in location?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is it better to rent or buy for the assignment?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I count a PCS reimbursement toward cash needed at closing?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How should I compare Pensacola, Gulf Breeze and Milton?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What if closing and household-goods delivery no longer line up?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Whiting Field, Milton and Pace",
+      "decision": "Test actual addresses forworkroute.",
+      "passage": "For a Whiting Field household comparing Milton and Pace, test the drive from the actual candidate addresses instead of using a town-center estimate."
+    },
+    {
+      "place": "NAS Pensacola and Gulf Breeze",
+      "decision": "Considerbridgecommuteandfamilycalendar.",
+      "passage": "For a NAS Pensacola household considering Gulf Breeze, evaluate the bridge route and household schedule before choosing a home for its weekend appeal."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Sequence orders, reporting, housing, cash and delivery before making a binding Pensacola move commitment.",
+    "dutyLocations": [
+      "NAS Pensacola",
+      "Eglin AFB",
+      "Hurlburt Field"
+    ],
+    "topics": [
+      "pcs-orders"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "student-orders"
+  ],
+  "answerPassages": [
+    {
+      "question": "Can a student bring family based on the class location alone?",
+      "answer": "NAS Pensacola guidance says students assigned for fewer than 140 classroom days need orders or other written authorization before bringing family. Read the official temporary-housing instructions . Confirm your own command and student status before arranging off-base housing or dependent travel.",
+      "claimIds": [
+        "student-orders"
+      ],
+      "scope": "OfficialNASstudenthousinginstructions,individualcommandordersgovern",
+      "caveat": "Confirm your own command and student status before arranging off-base housing or dependent travel."
+    },
+    {
+      "question": "Does VA eligibility by itself make buying the right move?",
+      "answer": "A VA purchase requires the applicable eligibility, lender credit and income standards, and residence requirements. The VA purchase guidance separates those conditions. Approval still does not determine whether the home fits your holding period, reserves and possible next assignment.",
+      "claimIds": [
+        "purchase-conditions"
+      ],
+      "scope": "VAbackedpurchase,notautomaticgoodhouseholddecision",
+      "caveat": "Approval still does not determine whether the home fits your holding period, reserves and possible next assignment."
+    }
+  ],
+  "image": {
+    "selected": "pcs-aerial-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "US Navy 060125-N-4039N-012 An aerial view of the Navy's newest guided-missile destroyer Pre-Commissioning Unit (PCU) Forrest Sherman (DDG 98) moored at Naval Air Station (NAS) Pensacola.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUS%20Navy%20060125-N-4039N-012%20An%20aerial%20view%20of%20the%20Navy's%20newest%20guided-missile%20destroyer%20Pre-Commissioning%20Unit%20(PCU)%20Forrest%20Sherman%20(DDG%2098)%20moored%20at%20Naval%20Air%20Station%20(NAS)%20Pensacola.jpg",
+    "license": "Public domain",
+    "creditRequired": false,
+    "credit": "U.S. Navy photo by Mr. Patrick Nichols",
+    "query": "Pensacola aerial naval air station",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read NAS temporary housing and command-specific reporting guidance, DTMO lodging summary and VA purchase requirements. Retained written authorization for short student assignments and avoided a universal reporting location or current JTR allowance claim. Recomputed the hypothetical arrival cash target and gap; reviewed possession and household-goods timing. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "8b621cb903c083edeae46b74ddcad06a6d79d7b4872d1a5f9979db3882184c15",
+    "evidenceHash": "65fa00d458d1f2c5e6405847dc66ab136edaa061d5218d31945e95cd6ff0cf26"
+  }
+}

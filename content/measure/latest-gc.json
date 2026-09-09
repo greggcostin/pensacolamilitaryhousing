@@ -1,103 +1,79 @@
 {
-  "engine": "bing",
-  "source": "bing-api",
-  "date": "2026-09-06",
-  "collectedAt": "2026-09-08T06:21:25.553Z",
-  "windowStart": "2026-08-10",
-  "windowEnd": "2026-09-06",
-  "priorWindowStart": "2026-07-13",
-  "priorWindowEnd": "2026-08-09",
-  "windowDays": 28,
-  "searchType": "web",
-  "device": "all",
-  "country": "all",
-  "coverage": "observed API rows; absence is not zero",
-  "site": "gc",
-  "endpointStatus": {
-    "pages": {
-      "status": "empty",
-      "rows": 0,
-      "error": null
-    },
-    "queries": {
-      "status": "empty",
-      "rows": 0,
-      "error": null
-    },
-    "traffic": {
-      "status": "observed",
-      "rows": 13,
-      "error": null
-    }
+ "site": "gc",
+ "asOf": "2026-09-07",
+ "generated": "2026-09-09",
+ "pages": [],
+ "queries": [],
+ "traffic": [
+  {
+   "date": "2026-08-25",
+   "impressions": 0,
+   "clicks": 0
   },
-  "generated": "2026-09-08",
-  "pages": [],
-  "queries": [],
-  "traffic": [
-    {
-      "date": "2026-08-25",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-08-26",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-08-27",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-08-28",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-08-29",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-08-30",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-08-31",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-09-01",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-09-02",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-09-03",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-09-04",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-09-05",
-      "impressions": 0,
-      "clicks": 0
-    },
-    {
-      "date": "2026-09-06",
-      "impressions": 0,
-      "clicks": 0
-    }
-  ]
+  {
+   "date": "2026-08-26",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-08-27",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-08-28",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-08-29",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-08-30",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-08-31",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-01",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-02",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-03",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-04",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-05",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-06",
+   "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-07",
+   "impressions": 0,
+   "clicks": 0
+  }
+ ]
 }

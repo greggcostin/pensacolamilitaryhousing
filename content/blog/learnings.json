@@ -325,6 +325,45 @@
       ],
       "rule": "Before an approved deployment on either site, reconcile the complete candidate with the actual provider production manifest and acquire the existing shared .coast-release/publication.lock.json exclusively. Hold it through preflight, deployment and provider confirmation. A Git commit or an unlocked baseline check does not prevent a concurrent release from replacing the work.",
       "evidence": "The mortgage release at 04:25:22 UTC and regional release at 04:25:25 UTC both passed the same baseline check. The latter became canonical and displaced the article. The merged release used the shared publication lock, retained all current regional changes, and verified 1089 civilian assets plus 3004 unchanged military assets. content/blog/reports/2026-09-09-publication-closeout.md"
+    },
+    {
+      "id": "L-CATALOG-RENDER-20260909",
+      "rule": "Compare the rendered quick answer and licensed hero with the reviewed fragment after every layout pass; a passing draft score cannot establish rendered completeness.",
+      "evidence": "Full catalog refresh reproduced lost civilian quick answers during header preservation and removed hero images during generic interior layout. blog-render-gate.mjs and browser checks cover both failures.",
+      "date": "2026-09-09",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "build",
+        "verify",
+        "publish"
+      ]
+    },
+    {
+      "id": "L-CATALOG-SEARCH-20260909",
+      "rule": "Require local search page coverage to match the intended public inventory before deployment. Mixed Pagefind body markers can silently exclude most pages.",
+      "evidence": "Default Pagefind run indexed 8 of 319 civilian pages. build-blog-search.mjs stages published main content consistently and requires the complete count.",
+      "date": "2026-09-09",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "build",
+        "verify",
+        "publish"
+      ]
+    },
+    {
+      "id": "L-CATALOG-BASELINE-20260909",
+      "rule": "Recheck production deployment IDs immediately before releasing an approved catalog refresh and preserve the complete newest baseline.",
+      "evidence": "Civilian production changed from c8b4f1b7 to 3a116599 during the refresh. Rebuilt on its verified 1119-file baseline before publication.",
+      "date": "2026-09-09",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "build",
+        "verify",
+        "publish"
+      ]
     }
   ]
 }

@@ -1,4 +1,7 @@
+import {assertBlogRendered} from './blog-render-gate.mjs';
+import {finishBlogDiscovery} from './finish-blog-discovery.mjs';
 import { evidenceGate } from "./article-evidence.mjs";
+import {preserveBlogShell} from './blog-shell-lib.mjs';
 import { journeyHtml, wireJourney } from "./blog-journey.mjs";
 // Blog factory for greggcostin.com — builds civilian-site/blog/<slug>.html from
 // content/civilian-blog/*.fragment.html, rebuilds the /blog index, keeps the
@@ -122,6 +125,7 @@ ${journeyHtml(spec, "gc", ROOT)}
 <p style="max-width:760px;margin:1.5rem auto;text-align:center"><a href="/blog">&larr; Back to all posts</a></p>`;
 
   const pageSpec = {
+    layout: 'article',
     outDir: spec.outDir,
     file: `blog/${spec.slug}.html`, path: `/blog/${spec.slug}`,
     title: spec.title, desc: spec.description, keywords: spec.keywords,
@@ -131,12 +135,16 @@ ${journeyHtml(spec, "gc", ROOT)}
   };
   // geo-03: optional dated quick-answer block after the lead (fragment field "quickAnswer", 2-4 sentences with the post's key figure).
   // buildPage writes the page; the quick-answer pass rewrites that file (fixed 2026-09-04: the block used to be discarded).
+  const canonicalFile=`${SITE_DIR}/${pageSpec.file}`;
+  const existing=existsSync(canonicalFile)?readFileSync(canonicalFile,'utf8'):null;
   let html = buildPage(pageSpec);
   if (spec.quickAnswer) {
     html = placeQuickAnswer(html, { text: spec.quickAnswer, date: monthYear(spec.dateModified || spec.datePublished), by: "Gregg Costin, Realtor, The Costin Team at Levin Rinke Realty" });
   }
   html = wireJourney(html, spec, "gc");
   html = plainBlogActions(finalizeArticleHtml(html));
+  html = preserveBlogShell(existing,html);
+  assertBlogRendered(spec,html);
   writeFileSync(`${spec.outDir || SITE_DIR}/${pageSpec.file}`, html);
   const gateErrs = gate({ title: spec.title, desc: spec.description, minWords: 1100 }, html);
   if (gateErrs.length) throw new Error(`${spec.slug}: POST-BUILD GATE FAIL\n  - ` + gateErrs.join("\n  - "));
@@ -184,7 +192,8 @@ ${cards}
     main, dateISO: new Date().toISOString().slice(0, 10),
     schemaBlocks: [blogSchema, breadcrumbs([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }])],
   };
-  const html = plainBlogActions(buildPage(spec));
+  const existing=existsSync(`${SITE_DIR}/blog.html`)?readFileSync(`${SITE_DIR}/blog.html`,'utf8'):null;
+  const html = preserveBlogShell(existing,plainBlogActions(buildPage({...spec,layout:'article'})));
   writeFileSync(`${outDir || SITE_DIR}/blog.html`, html);
 }
 
@@ -227,5 +236,6 @@ if (!OUT || BUNDLE) {
   buildIndex(frags, OUT);
   await blogOg(OUT || SITE_DIR, "blog", ["Real estate decisions", "on the Gulf Coast"], "Buyers, sellers and rental owners");
   syncSitemapAndLlms(frags, OUT || SITE_DIR, targets);
+  if (!OUT) finishBlogDiscovery('gc');
   console.log(`INDEX rebuilt with ${frags.length} post(s); sitemap + llms synced`);
 }

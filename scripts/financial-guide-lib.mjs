@@ -3,6 +3,7 @@ import {FINANCIAL_GUIDES,FINANCIAL_REVIEWED} from '../content/geo/financial-guid
 import {DEFAULT_COSTS,RATE_REFERENCE,monthlyOwnership,priceForBudget} from '../public/tools/ownership-model.js';
 import {e,RATES,addCss,mapSchema,appendFaq,faqHtml,regionLinks} from './geo-core-lib.mjs';
 import {placeQuickAnswer} from './quick-answer-lib.mjs';
+import {renderFinancialBlog} from './build-financial-blog.mjs';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n);
 export const financialSourceLinks=`<p>Sources reviewed September 8, 2026: <a href="https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/">DoD BAH lookup</a>, <a href="https://www.travel.dod.mil/Support/ALL-FAQs/Article/2978684/bah-eligibility/">DoD BAH eligibility</a>, <a href="https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/">VA purchase funding fees</a>, <a href="https://www.va.gov/housing-assistance/home-loans/eligibility/">VA eligibility and restoration</a>, <a href="https://www.freddiemac.com/pmms">Freddie Mac PMMS</a>, <a href="https://floridarevenue.com/property/Documents/pt107.pdf">Florida buyer property-tax guidance</a> and <a href="https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/">CFPB ownership-budget guidance</a>.</p>`;
 export function rateTable(all=false){const grades=all?Object.keys(RATES.FL064):['E-4','E-5','E-6','E-7','W-1','O-1','O-3'];return `<div class="table-wrap geo-table-wrap" role="region" tabindex="0" aria-label="2026 monthly BAH table"><table><caption>2026 published monthly BAH, US dollars. Confirm individual eligibility and rate protection with finance.</caption><thead><tr><th scope="col">Pay grade</th><th scope="col">FL064 with dependents</th><th scope="col">FL064 without dependents</th><th scope="col">FL056 with dependents</th><th scope="col">FL056 without dependents</th></tr></thead><tbody>${grades.map(g=>`<tr><th scope="row">${g}</th>${['FL064','FL056'].flatMap(code=>['withDependents','withoutDependents'].map(k=>`<td>${money(RATES[code][g][k])}</td>`)).join('')}</tr>`).join('')}</tbody></table></div>`;}
@@ -19,6 +20,7 @@ export function financialBody(slug){
  if(/\{\{[^}]+\}\}/.test(body))throw Error('Unresolved financial guide token');return body;
 }
 export function rebuildFinancialGuide(html,slug){
+ if(slug.startsWith('blog/'))return renderFinancialBlog(html,slug);
  const spec=FINANCIAL_GUIDES[slug];if(!spec)throw Error('Unknown financial guide');
  html=html.replaceAll('FL023','FL056');const main=html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1];if(!main)throw Error('Main absent');
  const author=main.match(/<div class="author-card">[\s\S]*?<div class="ac-updated">[\s\S]*?<\/div><\/div><\/div>/)?.[0],explore=main.match(/<!-- EXPLORE_V2 -->[\s\S]*?<!-- \/EXPLORE_V2 -->/)?.[0];

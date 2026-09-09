@@ -1,0 +1,390 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "personal-property-activity-pcs-2026",
+  "article": {
+    "slug": "personal-property-activity-pcs-2026",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Military household making a housing decision around Gulf Coast duty assignments",
+  "decision": "Coordinate household-goods records, claims deadlines and a realistic housing cash buffer.",
+  "readerTask": "Coordinate household-goods records, claims deadlines and a realistic housing cash buffer.",
+  "pillar": "pcs-orders",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Replaces an agency-history narrative with shipment-specific deadline distinctions, separate claim channels and a reproducible PPM cash test.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "ppa-claims",
+      "publisher": "Personal Property Activity",
+      "title": "The Claims Process",
+      "url": "https://www.ppa.mil/Your-Move/The-Claims-Process/",
+      "evidenceNote": "Read entire operational guide:180calendar-day notice;9months preMay15pickup/12months May15andlater;delivery clock;DPS exceptions forNTS/DPM;inconvenience/residential damage directTSP;MCOtwo-year route. No guarantee of claim settlement.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "ppa-ppm",
+      "publisher": "Personal Property Activity",
+      "title": "Personally Procured Moves",
+      "url": "https://www.ppa.mil/Your-Move/Personally-Procured-Moves/",
+      "evidenceNote": "Read counseling/authorization beforemove,certifiedempty/fullweighttickets,100percentconstructedcostbasedonactualweight/distance,taxableprofit and advance subtraction. Do not guarantee amount,processingtime ortaxoutcome.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "spread-window",
+      "publisher": "Military OneSource",
+      "title": "7-Day Scheduling Window, March 2026",
+      "url": "https://download.militaryonesource.mil/12038/MOS/Factsheets/FactSheet-7Day-SpreadWindow.pdf",
+      "evidenceNote": "Read March2026one-pageguidance:7-daypickupwindow includesrequesteddate; movingcompany confirms actualpickup;datesrequestedearlyafterorders;not a delivery guarantee.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "notice",
+      "kind": "fact",
+      "text": "PPA gives 180 calendar days from delivery to submit notice of household-goods loss or damage.",
+      "sourceIds": [
+        "ppa-claims"
+      ],
+      "scope": "HHG notice; routing differs for certain shipment types",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Readstep1anddistinguisheditemizedclaim.",
+      "claim": "PPA gives 180 calendar days from delivery to submit notice of household-goods loss or damage.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.ppa.mil/Your-Move/The-Claims-Process/",
+      "locator": "Readstep1anddistinguisheditemizedclaim.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Readstep1anddistinguisheditemizedclaim."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "claim-window",
+      "kind": "fact",
+      "text": "For shipments picked up on or after May 15, 2026, PPA lists 12 months from delivery for the itemized full-replacement-value claim.",
+      "sourceIds": [
+        "ppa-claims"
+      ],
+      "scope": "May15or laterpickup;separatenoticestillrequired",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Readstep2and9monthpriorcohort.",
+      "claim": "For shipments picked up on or after May 15, 2026, PPA lists 12 months from delivery for the itemized full-replacement-value claim.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.ppa.mil/Your-Move/The-Claims-Process/",
+      "locator": "Readstep2and9monthpriorcohort.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Readstep2and9monthpriorcohort."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "ppm-rate",
+      "kind": "fact",
+      "text": "PPA describes the personally procured move incentive as 100% of the government's constructed cost for the actual qualifying shipment.",
+      "sourceIds": [
+        "ppa-ppm"
+      ],
+      "scope": "AuthorizedPPMactualweightdistance,notprofit",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "ReadgrossGCCguidanceanddocumentationconditions.",
+      "claim": "PPA describes the personally procured move incentive as 100% of the government's constructed cost for the actual qualifying shipment.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.ppa.mil/Your-Move/Personally-Procured-Moves/",
+      "locator": "ReadgrossGCCguidanceanddocumentationconditions.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "ReadgrossGCCguidanceanddocumentationconditions."
+      },
+      "appliesTo": "Military household making a housing decision around Gulf Coast duty assignments",
+      "limitations": "Confirm individual circumstances with the responsible office; this guide does not award a benefit."
+    },
+    {
+      "id": "ppm-expenses",
+      "kind": "calculation",
+      "text": "Hypothetical expenses total $4,900",
+      "claim": "Hypothetical expenses total $4,900",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.ppa.mil/Your-Move/Personally-Procured-Moves/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(3000, 1200, 700) = 4900 USD.",
+      "loadBearing": true,
+      "assumptions": "Inventedtruck3000,labor1200,suppliesfuel700.",
+      "method": "sum(3000, 1200, 700) = 4900 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(3000, 1200, 700) = 4900 USD."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          3000,
+          1200,
+          700
+        ],
+        "result": 4900,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Inventedtruck3000,labor1200,suppliesfuel700."
+        ]
+      }
+    },
+    {
+      "id": "ppm-margin",
+      "kind": "calculation",
+      "text": "The hypothetical pre-tax difference is $2,300",
+      "claim": "The hypothetical pre-tax difference is $2,300",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.ppa.mil/Your-Move/Personally-Procured-Moves/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(7200, 4900) = 2300 USD.",
+      "loadBearing": true,
+      "assumptions": "Inventedgross7200lessexpenses4900,nopayoutpromise.",
+      "method": "difference(7200, 4900) = 2300 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(7200, 4900) = 2300 USD."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          7200,
+          4900
+        ],
+        "result": 2300,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Inventedgross7200lessexpenses4900,nopayoutpromise."
+        ]
+      }
+    },
+    {
+      "id": "ppm-cushion",
+      "kind": "calculation",
+      "text": "After reserving $800 for overruns, the illustration leaves $1,500 before taxes.",
+      "claim": "After reserving $800 for overruns, the illustration leaves $1,500 before taxes.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://www.ppa.mil/Your-Move/Personally-Procured-Moves/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. difference(2300, 800) = 1500 USD.",
+      "loadBearing": true,
+      "assumptions": "2300less800contingency,nottaxadvice.",
+      "method": "difference(2300, 800) = 1500 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "difference(2300, 800) = 1500 USD."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          2300,
+          800
+        ],
+        "result": 1500,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "2300less800contingency,nottaxadvice."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://www.ppa.mil/Your-Move/The-Claims-Process/",
+        "title": "The Claims Process",
+        "reviewed": "Read entire operational guide:180calendar-day notice;9months preMay15pickup/12months May15andlater;delivery clock;DPS exceptions forNTS/DPM;inconvenience/residential damage directTSP;MCOtwo-year route. No guarantee of claim settlement."
+      },
+      {
+        "url": "https://www.ppa.mil/Your-Move/Personally-Procured-Moves/",
+        "title": "Personally Procured Moves",
+        "reviewed": "Read counseling/authorization beforemove,certifiedempty/fullweighttickets,100percentconstructedcostbasedonactualweight/distance,taxableprofit and advance subtraction. Do not guarantee amount,processingtime ortaxoutcome."
+      },
+      {
+        "url": "https://download.militaryonesource.mil/12038/MOS/Factsheets/FactSheet-7Day-SpreadWindow.pdf",
+        "title": "7-Day Scheduling Window, March 2026",
+        "reviewed": "Read March2026one-pageguidance:7-daypickupwindow includesrequesteddate; movingcompany confirms actualpickup;datesrequestedearlyafterorders;not a delivery guarantee."
+      }
+    ],
+    "informationGain": "Replaces an agency-history narrative with shipment-specific deadline distinctions, separate claim channels and a reproducible PPM cash test.",
+    "questions": [
+      {
+        "question": "How soon must you report missing or damaged belongings?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Which shipments have the longer itemized-claim period?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should the move record contain?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What does a personally procured move pay?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How can you test a PPM budget before agreeing?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What does the seven-day pickup window mean for housing?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should you do if the truck is late?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is a damage notice the same as the final claim?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Which date determines the nine- or twelve-month claim period?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a PPM incentive equal profit?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I arrange a PPM and seek permission afterward?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Should my home purchase close on the required delivery date?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Are temporary lodging and inconvenience claims interchangeable?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Pensacola",
+      "decision": "Keep deposit outside speculative moving proceeds.",
+      "passage": "For a Pensacola-bound household that must also pay a security deposit, keep that deposit outside the move-profit calculation."
+    },
+    {
+      "place": "Eglin",
+      "decision": "Protect closing and repair cash.",
+      "passage": "For an Eglin-bound buyer, keep closing cash and repair reserves separate as well."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "military": {
+    "audience": "active-duty",
+    "readerSituation": "Coordinate household-goods records, claims deadlines and a realistic housing cash buffer.",
+    "dutyLocations": [
+      "NAS Pensacola",
+      "Eglin AFB",
+      "Hurlburt Field"
+    ],
+    "topics": [
+      "pcs-orders"
+    ],
+    "limitations": [
+      "Orders, service status, lender review and the individual property can change the answer.",
+      "No personal eligibility ruling, invented transaction or guarantee of savings."
+    ]
+  },
+  "quickAnswerClaimIds": [
+    "notice"
+  ],
+  "answerPassages": [
+    {
+      "question": "How soon must you report missing or damaged belongings?",
+      "answer": "PPA gives 180 calendar days from delivery to submit notice of household-goods loss or damage. Its claims guide distinguishes that notice from the later itemized claim. Record issues promptly and confirm the route for your shipment type; waiting for unpacking to finish can lose useful evidence.",
+      "claimIds": [
+        "notice"
+      ],
+      "scope": "HHG notice; routing differs for certain shipment types",
+      "caveat": "Record issues promptly and confirm the route for your shipment type; waiting for unpacking to finish can lose useful evidence."
+    },
+    {
+      "question": "Which shipments have the longer itemized-claim period?",
+      "answer": "For shipments picked up on or after May 15, 2026, PPA lists 12 months from delivery for the itemized full-replacement-value claim. Earlier pickups through May 14 retain the nine-month period. Confirm the pickup and delivery records, and do not substitute this deadline for the separate notice requirement.",
+      "claimIds": [
+        "claim-window"
+      ],
+      "scope": "May15or laterpickup;separatenoticestillrequired",
+      "caveat": "Confirm the pickup and delivery records, and do not substitute this deadline for the separate notice requirement."
+    }
+  ],
+  "image": {
+    "selected": "ppa-packing-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Packing Picture.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3APacking%20Picture.jpg",
+    "license": "CC BY-SA 4.0",
+    "creditRequired": true,
+    "credit": "Quick movers and packers",
+    "query": "household goods movers packing",
+    "eyeTest": "All returned candidates visually inspected in this session. Chosen subject matches the caption; unrelated sports, combat, disaster, commercial storefront and map candidates rejected. Archival context and absence of property-level conclusions made explicit."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read PPA claim and PPM pages and Military OneSource pickup fact sheet. Verified notice versus itemized claim, delivery clock and May15 pickup cohorts, direct-carrier exceptions and 100 percent constructed-cost context. Recomputed expenses and hypothetical pretax margin. Reviewed evidence records, packing and housing-cash separation. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "a5d710ded2bc785a74438f59d8ae87980377cb479660ba8c8c52efb0a9ab9d6e",
+    "evidenceHash": "02371a843477923389becc748d228c487db44a559f4978aefcbee4d73f458fed"
+  }
+}

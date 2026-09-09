@@ -103,7 +103,8 @@ ${tail}`);
   // spec.outDir lets a factory write a preview build somewhere other than the live site tree
   const outDir = spec.outDir || SITE_DIR;
   if (spec.outDir) mkdirSync(`${outDir}/${spec.file}`.replace(/\/[^/]+$/, ""), { recursive: true });
-  html = withInteriorDesign(html, spec.path);
+  // Blog factories own their figure, contents and answer layout.
+  if(spec.layout !== 'article') html = withInteriorDesign(html, spec.path);
   html = withSchoolFinder(html, spec.path);
   html = withSchoolGuide(html, spec.path);
   writeFileSync(`${outDir}/${spec.file}`, guardAnalytics(html));

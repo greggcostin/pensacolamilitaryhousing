@@ -1,6 +1,6 @@
 // Shared, accessible article next steps and first-party event labels for both sites.
 // No form values, personal data, referrer strings, query strings or monetary estimates.
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { SITES } from "./blog-lib.mjs";
 import {withReceiptConversions} from './inquiry-browser-lib.mjs';
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -30,10 +30,16 @@ export function journeyFor(spec, site) {
 function verifyDestination(href, site, root) {
   const u = new URL(href, SITES[site].origin);
   const dest = Object.values(SITES).find((s) => s.origin === u.origin);
-  if (!dest || u.search || u.hash) throw new Error("Journey destination must be a clean first-party URL");
+  if (!dest || u.search) throw new Error("Journey destination must be a clean first-party URL");
   const path = u.pathname === "/" ? "/index" : u.pathname;
   const spa = dest.key === "pmh" && ["/pcs-guide", "/mortgage-calculators", "/contact"].includes(path);
   if (!spa && !existsSync(root + dest.siteDir + path + ".html")) throw new Error("Missing journey destination: " + href);
+  if (u.hash) {
+    const id=u.hash.slice(1),file=root+dest.siteDir+path+'.html';
+    if(!/^[A-Za-z][\w-]{0,80}$/.test(id)||!existsSync(file))throw Error('Journey anchor must identify an existing first-party section');
+    const html=readFileSync(file,'utf8');
+    if(!html.includes('id="'+id+'"')&&!html.includes("id='"+id+"'"))throw Error('Missing journey section: '+id);
+  }
 }
 
 export function journeyHtml(spec, site, root) {

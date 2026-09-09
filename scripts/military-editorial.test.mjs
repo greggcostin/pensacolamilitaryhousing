@@ -12,7 +12,7 @@ import { selectWork, importDemand, applyTopicPolicy } from './blog-plan-lib.mjs'
 import { journeyFor, journeyHtml } from './blog-journey.mjs';
 import { scorePost } from './score-post.mjs';
 import { assertFragmentOwnership } from './military-blog-ownership.mjs';
-const today = '2026-09-08';
+const today = parseFragment('content/civilian-blog/what-moves-mortgage-rates.fragment.html').spec.dateModified;
 const sha = value => createHash('sha256').update(value).digest('hex');
 const clean = value => strip(value).replace(/\s+/g,' ').trim();
 function fixture() {

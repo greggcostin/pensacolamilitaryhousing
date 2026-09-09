@@ -1,0 +1,269 @@
+{
+  "id": "blog-catalog-2026-09-09",
+  "status": "validated-awaiting-deployment",
+  "provider": "codex",
+  "model": "gpt-6-astra",
+  "effort": "max",
+  "reason": "Explicit user choice and approval for both sites",
+  "posts": [
+    {
+      "site": "gc",
+      "slug": "closing-costs-florida-buyers",
+      "title": "What should Florida buyers budget for closing costs?",
+      "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
+      "score": 100,
+      "bodyWords": 1241,
+      "faqs": 6,
+      "shareHook": "The closing-cost total is easier to challenge once you separate taxes, negotiated fees and your own escrow money.",
+      "research": "content/civilian-blog/research/closing-costs-florida-buyers.json"
+    },
+    {
+      "site": "gc",
+      "slug": "fed-rate-hike-what-it-means",
+      "title": "What should Gulf Coast buyers do about Fed rate-hike talk?",
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "score": 98,
+      "bodyWords": 1185,
+      "faqs": 6,
+      "shareHook": "A Fed headline cannot tell you whether to buy. A payment stress test, a real lock deadline and a cash reserve can.",
+      "research": "content/civilian-blog/research/fed-rate-hike-what-it-means.json"
+    },
+    {
+      "site": "gc",
+      "slug": "florida-insurance-relief-2026",
+      "title": "Does Florida insurance relief mean a lower bill for your home?",
+      "url": "https://greggcostin.com/blog/florida-insurance-relief-2026",
+      "score": 100,
+      "bodyWords": 1111,
+      "faqs": 6,
+      "shareHook": "A $600 premium saving can accompany $12,000 more hurricane deductible exposure. Compare the whole policy before calling it a better deal.",
+      "research": "content/civilian-blog/research/florida-insurance-relief-2026.json"
+    },
+    {
+      "site": "gc",
+      "slug": "property-taxes-escambia-santa-rosa",
+      "title": "How should buyers estimate Escambia and Santa Rosa property taxes?",
+      "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
+      "score": 98,
+      "bodyWords": 1183,
+      "faqs": 6,
+      "shareHook": "The seller's tax bill can be correct and still be the wrong number for your purchase budget.",
+      "research": "content/civilian-blog/research/property-taxes-escambia-santa-rosa.json"
+    },
+    {
+      "site": "gc",
+      "slug": "what-moves-mortgage-rates",
+      "title": "What moves mortgage rates, and what should you do about it?",
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "score": 100,
+      "bodyWords": 1830,
+      "faqs": 7,
+      "shareHook": "Before you pay for a lower mortgage rate, calculate how long it takes to earn the money back. A practical guide for Gulf Coast buyers and rental owners.",
+      "research": "content/civilian-blog/research/what-moves-mortgage-rates.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "bah-2026-pensacola-what-can-you-afford",
+      "title": "What can your 2026 Pensacola BAH actually tell you about buying?",
+      "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
+      "score": 95,
+      "bodyWords": 1179,
+      "faqs": 6,
+      "shareHook": "Your BAH can help frame a home search. It cannot tell you what a house costs to own or what your household can comfortably spend.",
+      "research": "content/blog/research/bah-2026-pensacola-what-can-you-afford.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "best-neighborhoods-eglin-afb-families",
+      "title": "Which area near Eglin AFB fits your household?",
+      "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
+      "score": 92,
+      "bodyWords": 1137,
+      "faqs": 6,
+      "shareHook": "The cheaper loan payment can belong to the more expensive home. Compare the complete budget before choosing where to live near Eglin.",
+      "research": "content/blog/research/best-neighborhoods-eglin-afb-families.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "best-pensacola-neighborhoods-by-rank-bah",
+      "title": "How do you compare neighborhoods using your actual BAH budget?",
+      "url": "https://pensacolamilitaryhousing.com/blog/best-pensacola-neighborhoods-by-rank-bah",
+      "score": 99,
+      "bodyWords": 1139,
+      "faqs": 6,
+      "shareHook": "A military rank does not choose a neighborhood. Put actual homes through the same budget and duty-route comparison.",
+      "research": "content/blog/research/best-pensacola-neighborhoods-by-rank-bah.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "florida-homestead-exemption-military",
+      "title": "How does Florida homestead work during a military move?",
+      "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
+      "score": 98,
+      "bodyWords": 1116,
+      "faqs": 6,
+      "shareHook": "Keeping Florida homestead during a PCS can matter, but the exemption, rental permission and loan obligations are three different questions.",
+      "research": "content/blog/research/florida-homestead-exemption-military.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "florida-veteran-property-tax-county-guide",
+      "title": "How should a Florida veteran file for a property-tax exemption?",
+      "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
+      "score": 98,
+      "bodyWords": 1130,
+      "faqs": 6,
+      "shareHook": "Your rating percentage is not the whole property-tax answer. The benefit category, residence and dates determine what the county can approve.",
+      "research": "content/blog/research/florida-veteran-property-tax-county-guide.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "living-in-gulf-breeze-pros-cons",
+      "title": "Is Gulf Breeze the right move for your military household?",
+      "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
+      "score": 94,
+      "bodyWords": 1123,
+      "faqs": 6,
+      "shareHook": "Gulf Breeze can fit your plans beautifully, but compare the ordinary workweek and the complete property bill before deciding.",
+      "research": "content/blog/research/living-in-gulf-breeze-pros-cons.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "moving-to-navarre-2026-guide",
+      "title": "What should you check before moving to Navarre?",
+      "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
+      "score": 96,
+      "bodyWords": 1135,
+      "faqs": 6,
+      "shareHook": "A Navarre home that could rent for enough to cover the loan can still lose money after the other costs. Run the full exit budget.",
+      "research": "content/blog/research/moving-to-navarre-2026-guide.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "moving-to-pensacola-2026-guide",
+      "title": "How should you choose a home when moving to Pensacola?",
+      "url": "https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide",
+      "score": 95,
+      "bodyWords": 1135,
+      "faqs": 6,
+      "shareHook": "Before choosing a Pensacola neighborhood, put the duty route, buyer tax estimate and cash timeline on the same page.",
+      "research": "content/blog/research/moving-to-pensacola-2026-guide.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "pcs-to-pensacola-2026-complete-guide",
+      "title": "How should you plan a PCS to Pensacola in 2026?",
+      "url": "https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide",
+      "score": 99,
+      "bodyWords": 1146,
+      "faqs": 6,
+      "shareHook": "A smooth PCS starts with the orders, not the listing. Match the housing commitment to the move you are actually making.",
+      "research": "content/blog/research/pcs-to-pensacola-2026-complete-guide.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "personal-property-activity-pcs-2026",
+      "title": "How should PPA guidance shape your PCS move and housing plan?",
+      "url": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
+      "score": 94,
+      "bodyWords": 1145,
+      "faqs": 6,
+      "shareHook": "The truck, the claim and the closing each have their own clock. Keep all three visible before your PCS.",
+      "research": "content/blog/research/personal-property-activity-pcs-2026.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "va-loan-assumption-buyers-guide",
+      "title": "Is a VA loan assumption the right purchase for your move?",
+      "url": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
+      "score": 95,
+      "bodyWords": 1112,
+      "faqs": 6,
+      "shareHook": "The cheapest-looking VA loan can require the most cash. Calculate the equity gap before falling in love with the rate.",
+      "research": "content/blog/research/va-loan-assumption-buyers-guide.json"
+    },
+    {
+      "site": "pmh",
+      "slug": "va-loan-seller-concessions-truth",
+      "title": "How much can a seller contribute to a VA purchase?",
+      "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
+      "score": 95,
+      "bodyWords": 1148,
+      "faqs": 6,
+      "shareHook": "A VA seller credit should solve a specific problem. Start with the expense, not an assumed 4% limit on everything.",
+      "research": "content/blog/research/va-loan-seller-concessions-truth.json"
+    }
+  ],
+  "checks": {
+    "ok": true,
+    "checkedAt": "2026-09-09T07:28:02.791Z",
+    "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.coast-release\\blog-catalog-20260909",
+    "candidateFingerprint": "438256f7ec642b61089d84809860721e38696125cabbee7ca3930039f40cb951",
+    "checks": [
+      {
+        "name": "tests",
+        "exitCode": 0
+      },
+      {
+        "name": "civilian",
+        "exitCode": 0
+      },
+      {
+        "name": "military",
+        "exitCode": 0
+      },
+      {
+        "name": "entity",
+        "exitCode": 0
+      },
+      {
+        "name": "dashes",
+        "exitCode": 0
+      },
+      {
+        "name": "links",
+        "exitCode": 0
+      },
+      {
+        "name": "formatting",
+        "exitCode": 0
+      },
+      {
+        "name": "score",
+        "exitCode": 0
+      }
+    ],
+    "renderedSourceChecks": 17,
+    "browserChecks": 34,
+    "searchQueries": 17,
+    "sitePages": 693
+  },
+  "contextualLinks": 43,
+  "linkedHubs": 32,
+  "measurements": {
+    "bing": {
+      "through": "2026-09-07",
+      "gc": {
+        "pagesReturned": 0,
+        "queriesReturned": 0,
+        "reported28dImpressions": 0,
+        "reported28dClicks": 0,
+        "indexedPageCount": "unknown"
+      },
+      "pmh": {
+        "pagesReturned": 55,
+        "queriesReturned": 490,
+        "reported28dImpressions": 724,
+        "reported28dClicks": 13
+      },
+      "comparableCoverage": "not established"
+    },
+    "clarity": "gc tag ydd39cyp64 exists; authenticated analytics access unavailable this run",
+    "gsc": "historical exports are incomplete; a current comparable date-window export was unavailable"
+  },
+  "followup": {
+    "minimumDays": 28,
+    "firstCompleteDay": "2026-10-08",
+    "limitations": "A simultaneous catalog refresh is observational. Compare identical page, query, device, country and search-type cohorts; do not attribute changes to one feature."
+  }
+}

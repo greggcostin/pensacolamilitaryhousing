@@ -387,23 +387,6 @@
       "credit": "Mark Wolfe",
       "query": "hurricane shutters Florida house"
     },
-    "civilian-site/images/gregg-navy-no-tie.jpg": {
-      "source": "The Costin Team (existing portrait asset)",
-      "title": "Gregg Costin in a navy jacket",
-      "license": "All rights reserved (owner: Gregg Costin)",
-      "creditRequired": false,
-      "credit": "The Costin Team",
-      "copiedFrom": "public/images/gregg-navy-no-tie.jpg"
-    },
-    "civilian-site/images/mortgage-rates-north-hill-20260908.jpg": {
-      "source": "Wikimedia Commons",
-      "title": "Pensacola NHPD house17.jpg",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house17.jpg",
-      "license": "CC BY-SA 3.0",
-      "creditRequired": true,
-      "credit": "Ebyabe",
-      "query": "Pensacola North Hill house"
-    },
     "civilian-site/images/three-mile-bridge.jpg": {
       "source": "Wikimedia Commons",
       "title": "Pensacola Bay Bridge Looking North.jpg",
@@ -424,6 +407,14 @@
       "credit": "Curtis Palmer",
       "dateTaken": "2010-06-27",
       "copiedFrom": "public/images/communities/perdido-key.jpg"
+    },
+    "civilian-site/images/gregg-navy-no-tie.jpg": {
+      "source": "The Costin Team (existing portrait asset)",
+      "title": "Gregg Costin in a navy jacket",
+      "license": "All rights reserved (owner: Gregg Costin)",
+      "creditRequired": false,
+      "credit": "The Costin Team",
+      "copiedFrom": "public/images/gregg-navy-no-tie.jpg"
     },
     "civilian-site/images/niceville.jpg": {
       "source": "Existing civilian neighborhood-page attribution",
@@ -906,6 +897,170 @@
       "creditRequired": true,
       "credit": "Ebyabe",
       "query": "Pensacola houses"
+    },
+    "civilian-site/images/mortgage-rates-north-hill-20260908.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola NHPD house17.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house17.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Pensacola North Hill house"
+    },
+    "civilian-site/images/closing-costs-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola Customshouse01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Customshouse01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Pensacola courthouse"
+    },
+    "civilian-site/images/fed-decision-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Federal Reserve Bank Birmingham Branch Nov 2011 02.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFederal%20Reserve%20Bank%20Birmingham%20Branch%20Nov%202011%2002.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Chris Pruitt",
+      "query": "Federal Reserve Atlanta Birmingham"
+    },
+    "civilian-site/images/property-tax-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola HD 400 house01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20HD%20400%20house01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Pensacola Historic District house"
+    },
+    "civilian-site/images/insurance-house-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "FEMA - 11390 - Photograph by Mark Wolfe taken on 09-27-2004 in Florida.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFEMA%20-%2011390%20-%20Photograph%20by%20Mark%20Wolfe%20taken%20on%2009-27-2004%20in%20Florida.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Mark Wolfe",
+      "query": "Florida house hurricane shutters"
+    },
+    "civilian-site/images/mortgage-house-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola NHPD house06a.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house06a.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Pensacola North Hill house"
+    },
+    "/images/blog/va-assumption-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola NHPD house17.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house17.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Pensacola North Hill house"
+    },
+    "/images/blog/va-concession-residence-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Milton Hist Dist house01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMilton%20Hist%20Dist%20house01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Milton Hist Dist house01.jpg"
+    },
+    "/images/blog/veteran-tax-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Milton Santa Rosa crths01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AMilton%20Santa%20Rosa%20crths01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Santa Rosa County Courthouse Milton"
+    },
+    "/images/blog/military-homestead-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "VIEW OF NORTH (FRONT) FACADE - 501 East Government Street (House), Seville Square vicinity, Pensacola, Escambia County, FL HABS FLA,17-PENSA,44-1.tif",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AVIEW%20OF%20NORTH%20(FRONT)%20FACADE%20-%20501%20East%20Government%20Street%20(House)%2C%20Seville%20Square%20vicinity%2C%20Pensacola%2C%20Escambia%20County%2C%20FL%20HABS%20FLA%2C17-PENSA%2C44-1.tif",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Jack Boucher",
+      "query": "Pensacola historic house porch"
+    },
+    "/images/blog/ppa-packing-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Packing Picture.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APacking%20Picture.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Quick movers and packers",
+      "query": "household goods movers packing"
+    },
+    "/images/blog/pcs-aerial-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "US Navy 060125-N-4039N-012 An aerial view of the Navy's newest guided-missile destroyer Pre-Commissioning Unit (PCU) Forrest Sherman (DDG 98) moored at Naval Air Station (NAS) Pensacola.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AUS%20Navy%20060125-N-4039N-012%20An%20aerial%20view%20of%20the%20Navy's%20newest%20guided-missile%20destroyer%20Pre-Commissioning%20Unit%20(PCU)%20Forrest%20Sherman%20(DDG%2098)%20moored%20at%20Naval%20Air%20Station%20(NAS)%20Pensacola.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "U.S. Navy photo by Mr. Patrick Nichols",
+      "query": "Pensacola aerial naval air station"
+    },
+    "/images/blog/bah-area-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola NHPD house02.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house02.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Pensacola NHPD house02"
+    },
+    "/images/blog/bah-budget-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "The Blue Angels fly over Pensacola. (9519619338).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AThe%20Blue%20Angels%20fly%20over%20Pensacola.%20(9519619338).jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Official U.S. Navy Page from United States of America\n\nMass Communication Specialist 2nd Class Kathryn E. Macdonald/U.S.",
+      "query": "Pensacola Bay aerial"
+    },
+    "/images/blog/gulf-breeze-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "GINS FL Live Oaks water west bridge01.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AGINS%20FL%20Live%20Oaks%20water%20west%20bridge01.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Gulf Breeze bridge"
+    },
+    "/images/blog/navarre-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Navarre Beach Pier Wikivoyage banner.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ANavarre%20Beach%20Pier%20Wikivoyage%20banner.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Taminar",
+      "query": "Navarre Beach pier"
+    },
+    "/images/blog/pensacola-review-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Rainy day on Palafox Street - Pensacola Florida 30 August 2021 - 13.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ARainy%20day%20on%20Palafox%20Street%20-%20Pensacola%20Florida%2030%20August%202021%20-%2013.jpg",
+      "license": "CC BY-SA 4.0",
+      "creditRequired": true,
+      "credit": "Infrogmation",
+      "query": "Pensacola Palafox street"
+    },
+    "/images/blog/eglin-bay-final-20260909.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Choctawhatchee Bay.JPG",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Choctawhatchee_Bay.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "creditRequired": true,
+      "credit": "Skye Marthaler",
+      "query": "Choctawhatchee Bay.JPG",
+      "metadataVerified": "2026-09-09"
     }
   }
 }

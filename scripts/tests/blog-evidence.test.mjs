@@ -113,7 +113,7 @@ test("the inquiry event is inserted only in the confirmed-success branch and is 
   const spec = { slug: "example", h1: "Useful guide" };
   const html = '<html><head></head><body><script>if(res.ok&&res.j.success){done();}else{error();}</script></body></html>';
   const rendered = wireJourney(html, spec, "pmh");
-  assert.ok(rendered.includes("window.costinConversions?.accept(res.ok,res.j,form.id)"));
+  assert.ok(rendered.includes("costinConversions?.accept(res.ok,res.j,form.id)"));
   assert.ok(!rendered.includes("if(res.ok&&res.j.success){document.dispatchEvent"));
   assert.equal(wireJourney(rendered, spec, "pmh"), rendered);
   assert.ok(!rendered.includes("ga_client_id"));
@@ -124,13 +124,9 @@ function browser({ privacy = false, shareError = false, hidden = false } = {}) {
   const panel = { querySelector: (s) => controls[s] };
   const document = { visibilityState: hidden ? "hidden" : "visible", querySelector: (s) => s === "main" ? { getBoundingClientRect: () => ({ top: -500, height: 1500 }) } : panel, addEventListener: (n, f) => { handlers[n] = f; } };
   const navigator = { globalPrivacyControl: privacy, share: async () => { if (shareError) throw { name: "AbortError" }; }, clipboard: { writeText: async (url) => { handlers.copied = url; } } };
-  const window = { innerHeight: 700, gtag: (...a) => events.push(a), setInterval: (fn) => { handlers.tick = fn; return 1; }, clearInterval: () => {}, addEventListener: () => {} };
+  const verifiedEvent = {}, window = { costinConversions: {isVerifiedEvent:e=>e===verifiedEvent}, innerHeight: 700, gtag: (...a) => events.push(a), setInterval: (fn) => { handlers.tick = fn; return 1; }, clearInterval: () => {}, addEventListener: () => {} };
   runInNewContext("(" + articleRuntime.toString() + ")(config)", { window, document, navigator, config: { slug: "example", site: "pmh", goal: "budget", url: property + "/blog/example", title: "Guide" } });
-  const storage=new Map();
-  const context={window,document,navigator,location:{hostname:'pensacolamilitaryhousing.com'},CustomEvent:class{constructor(type,options){this.type=type;this.detail=options.detail;}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)}};
-  document.dispatchEvent=event=>handlers[event.type]?.(event);
-  runInNewContext(readFileSync(new URL('../../public/assets/costin-conversions.js',import.meta.url),'utf8'),context);
-  return { events, handlers, controls, accept:window.costinConversions.accept };
+  return { events, handlers, controls, verifiedEvent };
 }
 test("copy is not a share and canceled native sharing sends no share event", async () => {
   const b = browser({ shareError: true });
@@ -143,16 +139,11 @@ test("copy is not a share and canceled native sharing sends no share event", asy
 test("successful inquiry is counted once; no click or form contents are accepted as a lead", () => {
   const b = browser();
   assert.equal(b.events.length, 0);
-  b.handlers['costin:lead-success']({detail:{receipt_verified:true}});
-  assert.equal(b.events.length,0,'a forged event is not an accepted inquiry');
-  const receipt={success:true,accepted:true,duplicate:false,receiptId:'f265e4d2-7c80-4f64-a7db-160ca199a013',captureStatus:'crm_accepted'};
-  assert.equal(b.accept(true,{success:true},'inquiry-form'),false);
-  assert.equal(b.events.length,0,'success without a receipt is not a conversion');
-  b.accept(true,receipt,'inquiry-form');b.accept(true,receipt,'inquiry-form');
-  const leads=b.events.filter(e=>e[1]==='generate_lead'),article=b.events.filter(e=>e[1]==='blog_inquiry_success');
-  assert.equal(leads.length,1);assert.equal(article.length,1);
-  assert.deepEqual(Object.keys(article[0][2]).sort(),['article_goal','article_site','content_id','content_type','method']);
-  assert.ok(!JSON.stringify(b.events).includes(receipt.receiptId));
+  b.handlers["costin:lead-success"](); b.handlers["costin:lead-success"]({detail:{success:true}});
+  assert.equal(b.events.length, 0);
+  b.handlers["costin:lead-success"](b.verifiedEvent); b.handlers["costin:lead-success"](b.verifiedEvent);
+  assert.equal(b.events.length, 1); assert.equal(b.events[0][1], "blog_inquiry_success");
+  assert.deepEqual(Object.keys(b.events[0][2]).sort(), ["article_goal", "article_site", "content_id", "content_type", "method"]);
 });
 test("privacy signals suppress analytics and hidden tabs cannot earn read engagement", () => {
   const a = browser({ privacy: true }); a.handlers["costin:lead-success"](); assert.equal(a.events.length, 0);

@@ -1,0 +1,453 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "closing-costs-florida-buyers",
+  "article": {
+    "slug": "closing-costs-florida-buyers",
+    "site": "gc"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Florida civilian homebuyer comparing closing cash before an offer",
+  "decision": "Build an itemized cash-to-close plan and verify the allocation before committing.",
+  "readerTask": "Build an itemized cash-to-close plan and verify the allocation before committing.",
+  "pillar": "buying-selling",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Separates government tax calculations from negotiated allocation, fixes unsupported county custom, and connects upfront cash to reserves and actual property costs.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "doc",
+      "publisher": "Florida Department of Revenue",
+      "title": "Documentary stamp tax",
+      "url": "https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx",
+      "evidenceNote": "Read deed rate $0.70 per $100 or fraction outside Miami-Dade; mortgage rate $0.35 per $100 or fraction without cap, distinction from capped unrecorded notes, and all-party liability. Do not assert a county custom is a legal allocation.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "intangible",
+      "publisher": "Florida Department of Revenue",
+      "title": "Nonrecurring intangible tax",
+      "url": "https://floridarevenue.com/taxes/taxesfees/Pages/nonrecurring_intangible_tax.aspx",
+      "evidenceNote": "Read 2 mills / 0.002 on the secured obligation, collateral value limit and lender liability with permitted pass-through to borrower.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "le",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "What is a Loan Estimate?",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-estimate-en-1995/",
+      "evidenceNote": "Read application timing of three business days, estimated terms and costs, and explicit statement that the estimate is not approval.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "cd",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "What is a Closing Disclosure?",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-closing-disclosure-en-1983/",
+      "evidenceNote": "Read delivery at least three business days before closing for covered mortgages; reverse mortgages, HELOCs and other listed exceptions are not covered by the same form.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "estimate",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Loan Estimate explainer",
+      "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+      "evidenceNote": "Read comparable terms, projected payments, estimated cash to close, services and escrow sections. The total is not just lender fees.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "deed-rate",
+      "kind": "fact",
+      "text": "Florida's deed documentary stamp rate is $0.70 per $100 of consideration or fraction thereof",
+      "sourceIds": [
+        "doc"
+      ],
+      "scope": "Ordinary taxable deed outside Miami-Dade",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read the tax-rate heading and consideration definition; no claim that buyer or seller is always liable alone.",
+      "claim": "Florida's deed documentary stamp rate is $0.70 per $100 of consideration or fraction thereof",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx",
+      "locator": "Read the tax-rate heading and consideration definition; no claim that buyer or seller is always liable alone.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read the tax-rate heading and consideration definition; no claim that buyer or seller is always liable alone."
+      }
+    },
+    {
+      "id": "mortgage-rate",
+      "kind": "fact",
+      "text": "The recorded mortgage rate is $0.35 per $100 secured or fraction thereof.",
+      "sourceIds": [
+        "doc"
+      ],
+      "scope": "Ordinary recorded Florida mortgage",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Checked recorded mortgage paragraph, including absence of cap; did not carry the unrecorded note cap into mortgage treatment.",
+      "claim": "The recorded mortgage rate is $0.35 per $100 secured or fraction thereof.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx",
+      "locator": "Checked recorded mortgage paragraph, including absence of cap; did not carry the unrecorded note cap into mortgage treatment.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Checked recorded mortgage paragraph, including absence of cap; did not carry the unrecorded note cap into mortgage treatment."
+      }
+    },
+    {
+      "id": "intangible-rate",
+      "kind": "fact",
+      "text": "Florida's nonrecurring intangible tax rate is 0.002 of the obligation secured by Florida real estate",
+      "sourceIds": [
+        "intangible"
+      ],
+      "scope": "Florida collateral and statutory limits",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Checked rate and legal taxpayer/pass-through distinction.",
+      "claim": "Florida's nonrecurring intangible tax rate is 0.002 of the obligation secured by Florida real estate",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/taxes/taxesfees/Pages/nonrecurring_intangible_tax.aspx",
+      "locator": "Checked rate and legal taxpayer/pass-through distinction.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Checked rate and legal taxpayer/pass-through distinction."
+      }
+    },
+    {
+      "id": "le-timing",
+      "kind": "fact",
+      "text": "the lender generally must provide a Loan Estimate within three business days of receiving the application",
+      "sourceIds": [
+        "le"
+      ],
+      "scope": "Covered consumer mortgage application",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Checked receipt-of-application timing and nonapproval language.",
+      "claim": "the lender generally must provide a Loan Estimate within three business days of receiving the application",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-estimate-en-1995/",
+      "locator": "Checked receipt-of-application timing and nonapproval language.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Checked receipt-of-application timing and nonapproval language."
+      }
+    },
+    {
+      "id": "cd-timing",
+      "kind": "fact",
+      "text": "the Closing Disclosure must arrive at least three business days before closing",
+      "sourceIds": [
+        "cd"
+      ],
+      "scope": "Covered consumer mortgage; product exceptions apply",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Checked before-closing receipt rule separately from Loan Estimate timing.",
+      "claim": "the Closing Disclosure must arrive at least three business days before closing",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-closing-disclosure-en-1983/",
+      "locator": "Checked before-closing receipt rule separately from Loan Estimate timing.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Checked before-closing receipt rule separately from Loan Estimate timing."
+      }
+    },
+    {
+      "id": "deed-example",
+      "kind": "calculation",
+      "text": "3,500 taxable units times $0.70 equals $2,450",
+      "claim": "3,500 taxable units times $0.70 equals $2,450",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(3500, 0.7) = 2450 USD.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical $350,000 taxable consideration, exactly 3,500 units.",
+      "method": "product(3500, 0.7) = 2450 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(3500, 0.7) = 2450 USD."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          3500,
+          0.7
+        ],
+        "result": 2450,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical $350,000 taxable consideration, exactly 3,500 units."
+        ]
+      }
+    },
+    {
+      "id": "mortgage-example",
+      "kind": "calculation",
+      "text": "3,150 taxable units times $0.35 equals $1,102.50",
+      "claim": "3,150 taxable units times $0.35 equals $1,102.50",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(3150, 0.35) = 1102.5 USD.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical $315,000 new mortgage secured solely by Florida property.",
+      "method": "product(3150, 0.35) = 1102.5 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(3150, 0.35) = 1102.5 USD."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          3150,
+          0.35
+        ],
+        "result": 1102.5,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical $315,000 new mortgage secured solely by Florida property."
+        ]
+      }
+    },
+    {
+      "id": "intangible-example",
+      "kind": "calculation",
+      "text": "$315,000 times 0.002 equals $630",
+      "claim": "$315,000 times 0.002 equals $630",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/taxes/taxesfees/Pages/nonrecurring_intangible_tax.aspx",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(315000, 0.002) = 630 USD.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical $315,000 secured obligation below collateral value.",
+      "method": "product(315000, 0.002) = 630 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(315000, 0.002) = 630 USD."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          315000,
+          0.002
+        ],
+        "result": 630,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Hypothetical $315,000 secured obligation below collateral value."
+        ]
+      }
+    },
+    {
+      "id": "finance-tax-total",
+      "kind": "calculation",
+      "text": "$1,102.50 plus $630 equals $1,732.50",
+      "claim": "$1,102.50 plus $630 equals $1,732.50",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(1102.5, 630) = 1732.5 USD.",
+      "loadBearing": true,
+      "assumptions": "Two illustrated financing taxes only, no other closing expenses.",
+      "method": "sum(1102.5, 630) = 1732.5 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(1102.5, 630) = 1732.5 USD."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          1102.5,
+          630
+        ],
+        "result": 1732.5,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Two illustrated financing taxes only, no other closing expenses."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx",
+        "title": "Documentary stamp tax",
+        "reviewed": "Read deed rate $0.70 per $100 or fraction outside Miami-Dade; mortgage rate $0.35 per $100 or fraction without cap, distinction from capped unrecorded notes, and all-party liability. Do not assert a county custom is a legal allocation."
+      },
+      {
+        "url": "https://floridarevenue.com/taxes/taxesfees/Pages/nonrecurring_intangible_tax.aspx",
+        "title": "Nonrecurring intangible tax",
+        "reviewed": "Read 2 mills / 0.002 on the secured obligation, collateral value limit and lender liability with permitted pass-through to borrower."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-estimate-en-1995/",
+        "title": "What is a Loan Estimate?",
+        "reviewed": "Read application timing of three business days, estimated terms and costs, and explicit statement that the estimate is not approval."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-closing-disclosure-en-1983/",
+        "title": "What is a Closing Disclosure?",
+        "reviewed": "Read delivery at least three business days before closing for covered mortgages; reverse mortgages, HELOCs and other listed exceptions are not covered by the same form."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "title": "Loan Estimate explainer",
+        "reviewed": "Read comparable terms, projected payments, estimated cash to close, services and escrow sections. The total is not just lender fees."
+      }
+    ],
+    "informationGain": "Separates government tax calculations from negotiated allocation, fixes unsupported county custom, and connects upfront cash to reserves and actual property costs.",
+    "questions": [
+      {
+        "question": "What counts as closing costs for a Florida buyer?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Which Florida taxes belong in the estimate?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Who pays title insurance and the other charges locally?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What does a worked closing-cost example show?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How do you compare two lenders without being misled?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What changes for coastal homes and rental purchases?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should you check before wiring the final amount?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Are closing costs the same as the down payment?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does the seller always pay the deed stamps?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can a seller credit pay every cost I have?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Why do two lenders show different escrow deposits?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a cash purchase eliminate closing costs?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I use these Florida formulas for an Alabama property?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Pensacola",
+      "decision": "Separate title coverage and itemized closing services.",
+      "passage": "For a Pensacola purchase, highlight the owner's title policy, lender's title policy, search and settlement charges separately."
+    },
+    {
+      "place": "Pace and Milton",
+      "decision": "Verify allocation and recording estimate for Santa Rosa property.",
+      "passage": "For a Pace or Milton purchase, use the same process with the actual Santa Rosa County property and contract."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "image": {
+    "selected": "closing-costs-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Pensacola Customshouse01.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Customshouse01.jpg",
+    "license": "CC BY-SA 3.0",
+    "creditRequired": true,
+    "credit": "Ebyabe",
+    "query": "Pensacola courthouse",
+    "eyeTest": "Viewed every returned candidate in this session. Selected this image for legible subject and accurate archival context; rejected unrelated or duplicate candidates. Caption avoids current-property, valuation or endorsement claims."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read Florida DOR deed, mortgage and intangible rules and CFPB disclosures directly. Checked statutory liability separately from contract allocation. Recomputed deed $2450, mortgage $1102.50 and intangible $630. Reviewed the complete buyer, seller-credit and coastal/rental caveats. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "b49c7100ea7ef796705c54e5e183be9149771b9907097df001ed2c6c0f1abbb3",
+    "evidenceHash": "cbf39254a5b900f877c039f66eaa85b7ee87405e681d28333a29b153297d9353"
+  }
+}

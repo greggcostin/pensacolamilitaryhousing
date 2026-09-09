@@ -3,7 +3,7 @@
 import { createHash } from 'node:crypto';
 import { readFileSync, existsSync } from 'node:fs';
 import { ROOT, SITES, strip, words } from './blog-lib.mjs';
-import { calculate } from './article-evidence.mjs';
+import { calculate, externalSources } from './article-evidence.mjs';
 
 export const EDITORIAL_SINCE = '2026-09-08';
 export const contentHash = (spec, body) => {
@@ -61,6 +61,7 @@ export function validateEditorial(spec, body, research, { today = new Date().toI
   if (research.article?.site && research.article.site !== site) errors.push('research: evidence belongs to a different site');
   const sources = research.sources || [], claims = research.claims || [];
   const sourceMap = new Map(sources.map(s => [s.id, s]));
+  const citedUrls = new Set(externalSources(body));
   if (sourceMap.size !== sources.length) errors.push('research: duplicate source id');
   if (new Set(claims.map(c => c.id)).size !== claims.length) errors.push('research: duplicate claim id');
   for (const s of sources) {
@@ -77,7 +78,10 @@ export function validateEditorial(spec, body, research, { today = new Date().toI
       if (!c.scope || !dateOK(c.asOf) || c.asOf > today) errors.push(`claim ${c.id}: missing scope or valid data vintage`);
       if (c.perishable && (!dateOK(c.expires) || c.expires <= today)) errors.push(`claim ${c.id}: perishable is expired or has no review deadline`);
       if (c.perishable && !(spec.perishables || []).some(p => p.claimId === c.id && p.expires === c.expires && c.sourceIds.some(id => p.source === sourceMap.get(id)?.url))) errors.push(`claim ${c.id}: no matching perishable in PAGE header`);
-      const relevantLinks = c.sourceIds?.filter(id => body.includes(sourceMap.get(id)?.url || '\0')) || [];
+      const relevantLinks = c.sourceIds?.filter(id => {
+        try { return citedUrls.has(new URL(sourceMap.get(id)?.url).href); }
+        catch { return false; }
+      }) || [];
       if (!relevantLinks.length) errors.push(`claim ${c.id}: no supporting source link in visible body`);
     } else if (!c.assumptions || !c.method) errors.push(`claim ${c.id}: declare assumptions and reproducible method`);
     if (c.kind === 'calculation') {

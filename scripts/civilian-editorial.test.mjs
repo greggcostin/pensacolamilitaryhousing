@@ -10,7 +10,7 @@ import { selectWork, importDemand } from './civilian-blog-plan.mjs';
 import { monthlyPrincipalInterest, simpleBreakEven } from './civilian-mortgage-math.mjs';
 const original = parseFragment('content/civilian-blog/what-moves-mortgage-rates.fragment.html');
 const brief = () => structuredClone(readResearch(original.spec.slug));
-const check = (spec=original.spec, body=original.body, research=brief(), requireReview=false) => validateEditorial(spec, body, research, {today:'2026-09-08',requireReview});
+const check = (spec=original.spec, body=original.body, research=brief(), requireReview=false) => validateEditorial(spec, body, research, {today:original.spec.dateModified,requireReview});
 
 test('final article evidence record has no structural findings',()=>assert.deepEqual(check().errors,[]));
 test('required civilian elements cannot be traded away for a high score',()=>{
@@ -23,7 +23,7 @@ test('required civilian elements cannot be traded away for a high score',()=>{
 test('refresh of old post activates the current standard',()=>assert.equal(isModern({datePublished:'2020-01-01',dateModified:'2026-09-08'}),true));
 test('build-only properties do not invalidate final source review',()=>assert.equal(contentHash(original.spec,original.body),contentHash({...original.spec,body:original.body,outDir:'preview'},original.body)));
 test('changing content invalidates a previously sealed review',()=>{
-  const r=brief();r.review={contentHash:contentHash(original.spec,original.body),evidenceHash:evidenceHash(r),provider:'test',model:'fixture',checkedAt:'2026-09-08',notes:'Fixture only',checks:Object.fromEntries(['facts','calculations','voice','scope','sources','counterarguments'].map(k=>[k,true]))};
+  const r=brief();r.review={contentHash:contentHash(original.spec,original.body),evidenceHash:evidenceHash(r),provider:'test',model:'fixture',checkedAt:original.spec.dateModified,notes:'Fixture only',checks:Object.fromEntries(['facts','calculations','voice','scope','sources','counterarguments'].map(k=>[k,true]))};
   assert(!check(original.spec,original.body,r,true).errors.length);
   assert(check(original.spec,original.body+'<p>New claim.</p>',r,true).errors.some(e=>e.startsWith('review: absent or stale')));
   r.sources[0].evidenceNote='Changed evidence';assert(check(original.spec,original.body,r,true).errors.some(e=>e.startsWith('review: evidence changed')));

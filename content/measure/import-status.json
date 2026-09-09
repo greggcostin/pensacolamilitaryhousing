@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-05",
-  "bingAttempt": "not attempted (offline)",
+  "generated": "2026-09-09",
+  "bingAttempt": "see per-site output",
   "exports": [
     {
       "site": "pmh",
@@ -19,12 +19,6 @@
       "file": "gsc-queries-2026-09-04.csv",
       "status": "parsed",
       "rows": 486
-    },
-    {
-      "site": "gc",
-      "file": "gsc-pages-gc-2026-09-04.csv",
-      "status": "parsed",
-      "rows": 1
     }
   ]
 }

@@ -1,0 +1,454 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "property-taxes-escambia-santa-rosa",
+  "article": {
+    "slug": "property-taxes-escambia-santa-rosa",
+    "site": "gc"
+  },
+  "sessionDate": "2026-09-09",
+  "reader": "Civilian buyer or property owner budgeting a Florida parcel",
+  "decision": "Estimate buyer-based property taxes using the correct jurisdiction, tax year and eligible exemptions.",
+  "readerTask": "Estimate buyer-based property taxes using the correct jurisdiction, tax year and eligible exemptions.",
+  "pillar": "insurance-taxes",
+  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "originalValue": "Separates school/non-school taxable values, resolves stale brochure figures with current-year source, corrects deadline framing and provides a reproducible parcel-based example.",
+  "models": {
+    "research": "codex / gpt-6-astra / max",
+    "write": "codex / gpt-6-astra / max"
+  },
+  "uncertainFacts": [],
+  "sources": [
+    {
+      "id": "buyer-tax",
+      "publisher": "Florida Department of Revenue",
+      "title": "Property tax information for first-time Florida homebuyers",
+      "url": "https://floridarevenue.com/property/Documents/pt107.pdf",
+      "evidenceNote": "Read January 1 assessment, reassessment after sale, distinction among just/assessed/taxable values, and buyer-estimate guidance. August 2024 brochure has old exemption totals; use the current inflation table instead for 2026 amounts.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "cpi-exemption",
+      "publisher": "Florida Department of Revenue",
+      "title": "Additional homestead exemption adjustment",
+      "url": "https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf",
+      "evidenceNote": "Read 2026 row $26,411, superseding the unadjusted $25,000 second tier in older brochures.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "santa-rosa-exemptions",
+      "publisher": "Santa Rosa County Property Appraiser",
+      "title": "Available exemptions",
+      "url": "https://srcpa.gov/exemptions/",
+      "evidenceNote": "Read first $25,000 for all levies and additional up to $26,411 only for nonschool assessed value above $50,000, residency and application conditions; active-duty absence renewal documentation.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "santa-rosa-soh",
+      "publisher": "Santa Rosa County Property Appraiser",
+      "title": "Ad valorem tax process",
+      "url": "https://srcpa.gov/ad-valorem-tax/",
+      "evidenceNote": "Read 2026 2.7% Save Our Homes limit on qualifying continuing assessments, not total bills; new ownership, additions, just value and recapture distinctions.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    },
+    {
+      "id": "escambia",
+      "publisher": "Escambia County Property Appraiser",
+      "title": "Property search and important dates",
+      "url": "https://www.escpa.org/",
+      "evidenceNote": "Read parcel-search and tax-estimator links, March 2 2026 exemption deadline, August 14 TRIM mailing and September 8 2026 VAB deadline. As of session September 9, do not describe September 8 as upcoming.",
+      "primary": true,
+      "checkedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "reassessment",
+      "kind": "fact",
+      "text": "A change of ownership generally brings reassessment to just value on January 1 after the purchase, with applicable exceptions.",
+      "sourceIds": [
+        "buyer-tax"
+      ],
+      "scope": "Florida ownership change, exceptions and personal portability require appraiser review",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read January-after-sale paragraph; did not assert the buyer keeps the seller cap.",
+      "claim": "A change of ownership generally brings reassessment to just value on January 1 after the purchase, with applicable exceptions.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/property/Documents/pt107.pdf",
+      "locator": "Read January-after-sale paragraph; did not assert the buyer keeps the seller cap.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read January-after-sale paragraph; did not assert the buyer keeps the seller cap."
+      }
+    },
+    {
+      "id": "additional-exemption",
+      "kind": "fact",
+      "text": "The 2026 additional homestead exemption is up to $26,411 for qualifying non-school taxable value",
+      "sourceIds": [
+        "cpi-exemption"
+      ],
+      "scope": "2026 Florida additional tier, sufficient qualifying value and eligibility required",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2027-01-01",
+      "loadBearing": true,
+      "verification": "Read current 2026 adjustment row and cross-checked Santa Rosa tiers.",
+      "claim": "The 2026 additional homestead exemption is up to $26,411 for qualifying non-school taxable value",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf",
+      "locator": "Read current 2026 adjustment row and cross-checked Santa Rosa tiers.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read current 2026 adjustment row and cross-checked Santa Rosa tiers."
+      }
+    },
+    {
+      "id": "first-tier",
+      "kind": "fact",
+      "text": "The first $25,000 of qualifying homestead exemption applies to all property-tax levies, including school taxes.",
+      "sourceIds": [
+        "santa-rosa-exemptions"
+      ],
+      "scope": "Qualifying Florida homestead",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read school/non-school allocation; did not apply full second tier to schools.",
+      "claim": "The first $25,000 of qualifying homestead exemption applies to all property-tax levies, including school taxes.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://srcpa.gov/exemptions/",
+      "locator": "Read school/non-school allocation; did not apply full second tier to schools.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read school/non-school allocation; did not apply full second tier to schools."
+      }
+    },
+    {
+      "id": "soh-cap",
+      "kind": "fact",
+      "text": "The 2026 Save Our Homes assessment cap is 2.7% for qualifying continuing homestead property",
+      "sourceIds": [
+        "santa-rosa-soh"
+      ],
+      "scope": "Eligible continuing homestead assessments, not entire tax bill",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2027-01-01",
+      "loadBearing": true,
+      "verification": "Read exact 2026 cap and additions/ownership-change exceptions.",
+      "claim": "The 2026 Save Our Homes assessment cap is 2.7% for qualifying continuing homestead property",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://srcpa.gov/ad-valorem-tax/",
+      "locator": "Read exact 2026 cap and additions/ownership-change exceptions.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read exact 2026 cap and additions/ownership-change exceptions."
+      }
+    },
+    {
+      "id": "escambia-deadline",
+      "kind": "fact",
+      "text": "Escambia's published 2026 Value Adjustment Board petition deadline was September 8.",
+      "sourceIds": [
+        "escambia"
+      ],
+      "scope": "Published ordinary Escambia 2026 petition deadline; further procedure requires VAB determination",
+      "asOf": "2026-09-09",
+      "perishable": true,
+      "expires": "2026-10-09",
+      "loadBearing": true,
+      "verification": "Read current calendar and compared with September 9 session date; explicitly treated as passed.",
+      "claim": "Escambia's published 2026 Value Adjustment Board petition deadline was September 8.",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "sourceUrl": "https://www.escpa.org/",
+      "locator": "Read current calendar and compared with September 9 session date; explicitly treated as passed.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "Read current calendar and compared with September 9 session date; explicitly treated as passed."
+      }
+    },
+    {
+      "id": "school-tax",
+      "kind": "calculation",
+      "text": "$325,000 taxable value times 0.007 equals $2,275",
+      "claim": "$325,000 taxable value times 0.007 equals $2,275",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://srcpa.gov/exemptions/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(325000, 0.007) = 2275 USD.",
+      "loadBearing": true,
+      "assumptions": "Illustration: $350,000 assessed minus first $25,000; seven fictional school mills.",
+      "method": "product(325000, 0.007) = 2275 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(325000, 0.007) = 2275 USD."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          325000,
+          0.007
+        ],
+        "result": 2275,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Illustration: $350,000 assessed minus first $25,000; seven fictional school mills."
+        ]
+      }
+    },
+    {
+      "id": "nonschool-tax",
+      "kind": "calculation",
+      "text": "$298,589 taxable value times 0.010 equals $2,985.89",
+      "claim": "$298,589 taxable value times 0.010 equals $2,985.89",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://srcpa.gov/exemptions/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. product(298589, 0.01) = 2985.89 USD.",
+      "loadBearing": true,
+      "assumptions": "Illustration: $350,000 minus $51,411, ten fictional non-school mills.",
+      "method": "product(298589, 0.01) = 2985.89 USD.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "product(298589, 0.01) = 2985.89 USD."
+      },
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          298589,
+          0.01
+        ],
+        "result": 2985.89,
+        "units": "USD",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Illustration: $350,000 minus $51,411, ten fictional non-school mills."
+        ]
+      }
+    },
+    {
+      "id": "total-tax",
+      "kind": "calculation",
+      "text": "$2,275 plus $2,985.89 plus $300 equals $5,560.89",
+      "claim": "$2,275 plus $2,985.89 plus $300 equals $5,560.89",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://srcpa.gov/exemptions/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. sum(2275, 2985.89, 300) = 5560.89 USD per year.",
+      "loadBearing": true,
+      "assumptions": "Illustration: two tax components plus fictional $300 non-ad valorem assessment.",
+      "method": "sum(2275, 2985.89, 300) = 5560.89 USD per year.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "sum(2275, 2985.89, 300) = 5560.89 USD per year."
+      },
+      "calculation": {
+        "operation": "sum",
+        "inputs": [
+          2275,
+          2985.89,
+          300
+        ],
+        "result": 5560.89,
+        "units": "USD per year",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Illustration: two tax components plus fictional $300 non-ad valorem assessment."
+        ]
+      }
+    },
+    {
+      "id": "monthly-tax",
+      "kind": "calculation",
+      "text": "$5,560.89 divided by 12 equals $463.41",
+      "claim": "$5,560.89 divided by 12 equals $463.41",
+      "status": "verified",
+      "accessed": "2026-09-09",
+      "asOf": "2026-09-09",
+      "sourceUrl": "https://srcpa.gov/exemptions/",
+      "locator": "Article illustration; source supplies context, not the invented inputs. quotient(5560.89, 12) = 463.41 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Illustrated annual cost spread evenly over 12 months; not lender escrow schedule.",
+      "method": "quotient(5560.89, 12) = 463.41 USD per month.",
+      "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
+      "independentCheck": {
+        "reviewer": "Codex gpt-6-astra max",
+        "date": "2026-09-09",
+        "finding": "quotient(5560.89, 12) = 463.41 USD per month."
+      },
+      "calculation": {
+        "operation": "quotient",
+        "inputs": [
+          5560.89,
+          12
+        ],
+        "result": 463.41,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "Illustrated annual cost spread evenly over 12 months; not lender escrow schedule."
+        ]
+      }
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-09",
+    "results": [
+      {
+        "url": "https://floridarevenue.com/property/Documents/pt107.pdf",
+        "title": "Property tax information for first-time Florida homebuyers",
+        "reviewed": "Read January 1 assessment, reassessment after sale, distinction among just/assessed/taxable values, and buyer-estimate guidance. August 2024 brochure has old exemption totals; use the current inflation table instead for 2026 amounts."
+      },
+      {
+        "url": "https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf",
+        "title": "Additional homestead exemption adjustment",
+        "reviewed": "Read 2026 row $26,411, superseding the unadjusted $25,000 second tier in older brochures."
+      },
+      {
+        "url": "https://srcpa.gov/exemptions/",
+        "title": "Available exemptions",
+        "reviewed": "Read first $25,000 for all levies and additional up to $26,411 only for nonschool assessed value above $50,000, residency and application conditions; active-duty absence renewal documentation."
+      },
+      {
+        "url": "https://srcpa.gov/ad-valorem-tax/",
+        "title": "Ad valorem tax process",
+        "reviewed": "Read 2026 2.7% Save Our Homes limit on qualifying continuing assessments, not total bills; new ownership, additions, just value and recapture distinctions."
+      },
+      {
+        "url": "https://www.escpa.org/",
+        "title": "Property search and important dates",
+        "reviewed": "Read parcel-search and tax-estimator links, March 2 2026 exemption deadline, August 14 TRIM mailing and September 8 2026 VAB deadline. As of session September 9, do not describe September 8 as upcoming."
+      }
+    ],
+    "informationGain": "Separates school/non-school taxable values, resolves stale brochure figures with current-year source, corrects deadline framing and provides a reproducible parcel-based example.",
+    "questions": [
+      {
+        "question": "How are property taxes calculated in Escambia and Santa Rosa?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Why can the tax bill increase after you buy?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What is the Florida homestead exemption in 2026?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does Save Our Homes cap the entire tax bill?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What does a realistic tax example look like?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Which deadlines should you check now?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What changes for rentals, second homes and coastal parcels?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I use the tax number shown in a home listing?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does the full homestead exemption reduce school taxes?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a homestead exemption eliminate separate assessments?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can property taxes rise while market value falls?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What should I do if the ordinary petition deadline passed?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Does a Gulf Breeze mailing address establish the city tax rate?",
+        "origin": "editorial"
+      }
+    ],
+    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+  },
+  "localApplications": [
+    {
+      "place": "Pace",
+      "decision": "Estimate completed improvements instead of relying on land tax.",
+      "passage": "For a Pace buyer comparing an older owned home with new construction, request separate estimates for the completed properties."
+    },
+    {
+      "place": "Gulf Breeze",
+      "decision": "Confirm actual municipal jurisdiction.",
+      "passage": "For a Gulf Breeze property, confirm the parcel's city or unincorporated location before selecting tax rates."
+    }
+  ],
+  "scopeChecks": {
+    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
+    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+  },
+  "image": {
+    "selected": "property-tax-review-20260909.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Pensacola HD 400 house01.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20HD%20400%20house01.jpg",
+    "license": "CC BY-SA 3.0",
+    "creditRequired": true,
+    "credit": "Ebyabe",
+    "query": "Pensacola Historic District house",
+    "eyeTest": "Viewed every returned candidate in this session. Selected this image for legible subject and accurate archival context; rejected unrelated or duplicate candidates. Caption avoids current-property, valuation or endorsement claims."
+  },
+  "review": {
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "checkedAt": "2026-09-09",
+    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Read the 2026 DOR CPI table and county exemption/SOH pages. Kept 2.7 percent assessment growth separate from tax-bill growth, checked the expired Escambia appeal date, and recalculated separate school and non-school taxable values and hypothetical bill. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
+    "contentHash": "f282c7f0958b913079159aca30387157c67dc67137acb59c9667006529482778",
+    "evidenceHash": "deb3d6225d0f18c8ad0809de2d6e7ec3be796c68c2f6d0654a44fb2a166869a2"
+  }
+}

@@ -1,6 +1,6 @@
 // Fixed-rate planning mathematics. Dollar assumptions come from the user, never a live-rate feed.
 // Sources and supported scope: content/calculators/sources.json. Reviewed 2026-09-09.
-export const MODEL_VERSION = '2026-09-09.1';
+export const MODEL_VERSION = '2026-09-09.2';
 export const cents = n => Math.round((n + Number.EPSILON) * 100) / 100;
 const number = (n, label, min = 0, max = 1e9) => {
   if (typeof n !== 'number' || !Number.isFinite(n) || n < min || n > max) throw new Error(`${label} must be between ${min.toLocaleString('en-US')} and ${max.toLocaleString('en-US')}.`);
@@ -20,12 +20,30 @@ export function amortize(principal, annualPercent, months, extras = {}) {
   const lumpMonth = number(extras.lumpMonth ?? 1, 'One-time payment month', 1, 480);
   if (!Number.isInteger(lumpMonth)) throw new Error('One-time payment month must be a whole number.');
   if (lump > 0 && lumpMonth > months) throw new Error('The one-time payment month is after the selected loan term. Choose an earlier month.');
+  const freq = extras.freq ?? 'monthly', customFreq = extras.customFreq ?? 'onetime';
+  if (!['monthly','biweekly','weekly'].includes(freq)) throw new Error('Choose a supported payment frequency.');
+  if (!['onetime','weekly','monthly','quarterly','annual'].includes(customFreq)) throw new Error('Choose a supported custom payment frequency.');
+  const customAmt = number(extras.customAmt ?? 0, 'Custom extra principal');
+  const customStart = number(extras.customStart ?? 1, 'Custom payment start month', 1, 480);
+  if (!Number.isInteger(customStart)) throw new Error('Custom payment start month must be a whole number.');
+  if (customAmt > 0 && customStart > months) throw new Error('Custom payments start after the loan term. Choose an earlier month.');
+  // The military calculator's frequency model: 26 half-payments or 52 quarter-
+  // payments per year, represented by one extra monthly payment spread over 12 months.
+  // This is a monthly-equivalent estimate, not a daily-interest servicing schedule.
+  const frequencyExtra = freq === 'monthly' ? 0 : payment / 12;
+  const customAt = month => {
+    if (month < customStart) return 0;
+    if (customFreq === 'onetime') return month === customStart ? customAmt : 0;
+    if (customFreq === 'weekly') return customAmt * 52 / 12;
+    if (customFreq === 'monthly') return customAmt;
+    return (month-customStart) % (customFreq === 'quarterly' ? 3 : 12) === 0 ? customAmt : 0;
+  };
   let balance = principal, totalInterest = 0, totalPrincipal = 0;
   const rows = [];
   for (let month = 1; balance > 0.000001 && month <= months; month++) {
     const opening = balance, interest = balance * annualPercent / 1200;
     const scheduledPrincipal = Math.min(balance, Math.max(0, payment - interest));
-    const extra = Math.min(Math.max(0, balance - scheduledPrincipal), monthly + (month % 12 === 0 ? annual : 0) + (month === lumpMonth ? lump : 0));
+    const extra = Math.min(Math.max(0, balance - scheduledPrincipal), monthly + frequencyExtra + customAt(month) + (month % 12 === 0 ? annual : 0) + (month === lumpMonth ? lump : 0));
     const principalPaid = scheduledPrincipal + extra;
     balance = Math.max(0, balance - principalPaid);
     if (month === months && balance < 0.01) balance = 0;

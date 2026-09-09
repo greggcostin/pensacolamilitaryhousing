@@ -3,9 +3,9 @@ import {MODEL_VERSION,loanScenario,ownershipPeriod,affordablePrice,rentalScenari
 const money = (n,d=0) => Number.isFinite(n) ? new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:d,minimumFractionDigits:d}).format(Object.is(n,-0)?0:n) : 'Not applicable';
 const percent = n => Number.isFinite(n) ? `${n.toFixed(1)}%` : 'Not applicable';
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export const loanDefaults = () => ({type:'conv',price:350000,downPct:10,rate:6.5,years:30,tax:3500,insurance:3000,flood:0,hoa:0,pmi:.6,vaUse:'first',vaExempt:'no',financeFee:'yes',lenderFees:3500,points:0,otherClosing:2500,prepaid:1500,escrow:2500,credits:0,deposit:0,reserves:10000,moving:2500});
+export const loanDefaults = () => ({label:'Loan A',extra:0,type:'conv',price:350000,downPct:10,rate:6.5,years:30,tax:3500,insurance:3000,flood:0,hoa:0,pmi:.6,vaUse:'first',vaExempt:'no',financeFee:'yes',lenderFees:3500,points:0,otherClosing:2500,prepaid:1500,escrow:2500,credits:0,deposit:0,reserves:10000,moving:2500});
 const rentalDefaults = mode => ({mode,price:350000,downPct:25,rate:7.5,years:30,monthlyMI:0,closing:8000,setup:mode==='long'?2500:15000,reserve:12000,rent:mode==='short'?225:mode==='mid'?3250:2500,occupancy:mode==='short'?60:mode==='mid'?80:95,personalNights:0,averageStay:mode==='short'?4:60,turnovers:1,cleaningCharged:mode==='long'?0:125,cleaningCost:mode==='long'?250:150,management:mode==='short'?20:10,platform:mode==='long'?0:3,maintenance:5,replacement:5,tax:4000,insurance:4000,flood:1000,hoa:100,utilities:mode==='long'?0:350,licenses:300,other:50});
-export const defaultState = () => ({loan:loanDefaults(),compareB:{...loanDefaults(),downPct:20,rate:6.25,points:1},horizon:5,extra:{monthly:200,annual:0,lump:0,lumpMonth:1},budget:{target:2500,takeHome:8000,debts:500,living:2500,savings:60000},rentalMode:'long',rentals:Object.fromEntries(['long','mid','short'].map(m=>[m,rentalDefaults(m)]))});
+export const defaultState = () => ({loan:loanDefaults(),compareB:{...loanDefaults(),label:'Loan B',downPct:20,rate:6.25,points:1},horizon:5,extra:{monthly:200,annual:0,lump:0,lumpMonth:1,freq:'monthly',customAmt:0,customFreq:'onetime',customStart:12},budget:{target:2500,takeHome:8000,debts:500,living:2500,savings:60000},rentalMode:'long',rentals:Object.fromEntries(['long','mid','short'].map(m=>[m,rentalDefaults(m)]))});
 let state=defaultState(), active='payment';
 const panels=[['payment','Monthly payment'],['compare','Compare loans'],['payoff','Extra payments'],['budget','Budget & cash'],['rental','Rental analysis']];
 const field = (path,label,value,{min=0,max=1e8,step='any',hint='',suffix='$'}={}) => `<div class="cal-field"><label for="cal-${path}">${label}</label><div class="cal-input-wrap">${suffix==='$'?'<span aria-hidden="true">$</span>':''}<input id="cal-${path}" name="${path}" type="number" inputmode="decimal" min="${min}" max="${max}" step="${step}" value="${esc(value)}"${hint?` aria-describedby="hint-${path}"`:''} required>${suffix&&suffix!=='$'?`<span aria-hidden="true">${suffix}</span>`:''}</div>${hint?`<small id="hint-${path}">${hint}</small>`:''}</div>`;
@@ -74,26 +74,46 @@ function rentalOutput() {
 const outputs={payment:paymentOutput,compare:compareOutput,payoff:payoffOutput,budget:budgetOutput,rental:rentalOutput};
 export function validateState(s) {
  if(!s||!['long','mid','short'].includes(s.rentalMode))throw Error('Choose a valid rental strategy.');
- const a=loanScenario(s.loan,s.extra);loanScenario(s.compareB);ownershipPeriod(a,s.horizon);
+ const a=loanScenario(s.loan,s.extra);loanScenario(s.compareB,{monthly:Number(s.compareB.extra??0)});loanScenario(s.loan,{monthly:Number(s.loan.extra??0)});ownershipPeriod(a,s.horizon);
  for(const [key,label] of Object.entries({target:'Housing payment target',takeHome:'Take-home income',debts:'Other debt payments',living:'Living costs',savings:'Available cash'})){
   const value=s.budget?.[key];if(!Number.isFinite(value)||value<(key==='target'?1:0))throw Error(`${label} needs a valid ${key==='target'?'positive':'nonnegative'} amount.`);
  }
  for(const mode of ['long','mid','short'])rentalScenario(s.rentals[mode]);
  return s;
 }
+export function restoreSavedEstimate(saved) {
+ if(!saved||![MODEL_VERSION,'2026-09-09.1'].includes(saved.version))throw Error('The saved estimate uses an older model. Start a new estimate.');
+ const next=structuredClone(saved.state),defaults=defaultState();
+ next.loan={...defaults.loan,...next.loan};next.compareB={...defaults.compareB,...next.compareB};
+ next.extra={...defaults.extra,...next.extra};
+ if(saved.version==='2026-09-09.1')next.extra={...next.extra,customAmt:next.extra.lump||0,customStart:next.extra.lumpMonth||1,customFreq:'onetime',lump:0};
+ return validateState(next);
+}
 function form(content,id) {return `<form id="cal-form-${id}" class="cal-form" novalidate>${content}<button class="cal-button cal-update" type="submit">Update estimate</button></form>`;}
 const result=id=>`<div id="cal-error-${id}" class="cal-error" role="alert" hidden></div><div id="cal-output-${id}" class="cal-results">${outputs[id]()}</div>`;
-export function renderCalculatorSuite() {
+export function renderCalculatorSuite(militaryPanels=null) {
  state=defaultState();
- return `<section class="cal-suite" id="calculators" data-clarity-mask="true" aria-label="Mortgage and rental calculators"><div class="cal-toolbar"><p><strong>Your numbers. Your decision.</strong> Every starting figure is an illustration, not a quote or local market average.</p><div><button type="button" data-action="save">Save on this device</button><button type="button" data-action="load">Load saved</button><button type="button" data-action="clear">Clear saved</button><button type="button" data-action="print">Print / PDF</button></div></div><p id="cal-status" class="cal-status" role="status" aria-live="polite">Estimates run in your browser. No account or contact details required.</p><div class="cal-tabs" role="tablist" aria-label="Choose a calculator">${panels.map(([id,label],i)=>`<button type="button" role="tab" id="cal-tab-${id}" aria-controls="cal-panel-${id}" aria-selected="${i===0}" tabindex="${i===0?'0':'-1'}" data-panel="${id}"><span>${String(i+1).padStart(2,'0')}</span>${label}</button>`).join('')}</div>
+ let html = `<section class="cal-suite" id="calculators" data-clarity-mask="true" aria-label="Mortgage and rental calculators"><div class="cal-toolbar"><p><strong>Your numbers. Your decision.</strong> Every starting figure is an illustration, not a quote or local market average.</p><div><button type="button" data-action="save">Save on this device</button><button type="button" data-action="load">Load saved</button><button type="button" data-action="clear">Clear saved</button><button type="button" data-action="print">Print / PDF</button></div></div><p id="cal-status" class="cal-status" role="status" aria-live="polite">Estimates run in your browser. No account or contact details required.</p><div class="cal-tabs" role="tablist" aria-label="Choose a calculator">${panels.map(([id,label],i)=>`<button type="button" role="tab" id="cal-tab-${id}" aria-controls="cal-panel-${id}" aria-selected="${i===0}" tabindex="${i===0?'0':'-1'}" data-panel="${id}"><span>${String(i+1).padStart(2,'0')}</span>${label}</button>`).join('')}</div>
  <section class="cal-panel" role="tabpanel" id="cal-panel-payment" aria-labelledby="cal-tab-payment"><div class="cal-panel-intro"><h2>What will the home cost each month?</h2><p>Start with the loan, then account for the property. Your monthly budget needs both.</p></div><div class="cal-layout">${form(loanFields('loan',state.loan),'payment')}<div>${result('payment')}</div></div></section>
    <section class="cal-panel" role="tabpanel" id="cal-panel-compare" aria-labelledby="cal-tab-compare" hidden><div class="cal-panel-intro"><h2>Compare two loans, side by side.</h2><p>Change either quote and follow the balances over time. Loan A stays connected to Monthly payment and Budget &amp; cash.</p></div>${form('<div class="cal-compare-controls">'+field('horizon','Expected ownership period',state.horizon,{min:1,max:30,suffix:'years',step:1})+'<button type="button" class="cal-button cal-button--subtle" data-action="copy-a">Copy Loan A into Loan B</button></div><div class="cal-quote-grid"><section class="cal-quote-card cal-quote-a"><h3>Loan A</h3>'+loanFields('compareA',state.loan,{closing:true,compact:true})+'</section><section class="cal-quote-card cal-quote-b"><h3>Loan B</h3>'+loanFields('compareB',state.compareB,{closing:true,compact:true})+'</section></div>','compare')}${result('compare')}</section>
 <section class="cal-panel" role="tabpanel" id="cal-panel-payoff" aria-labelledby="cal-tab-payoff" hidden><div class="cal-panel-intro"><h2>What would extra principal payments change?</h2><p>Use the loan from Monthly payment and see the effect of a steady extra amount, an annual payment, or a lump sum.</p></div>${form(grid(field('extra.monthly','Extra principal each month',state.extra.monthly)+field('extra.annual','Extra principal each year',state.extra.annual)+field('extra.lump','One-time extra principal',state.extra.lump)+field('extra.lumpMonth','One-time payment month',state.extra.lumpMonth,{min:1,max:360,suffix:'',step:1})),'payoff')}${result('payoff')}</section>
  <section class="cal-panel" role="tabpanel" id="cal-panel-budget" aria-labelledby="cal-tab-budget" hidden><div class="cal-panel-intro"><h2>How much cash should you have ready?</h2><p>Separate money due at closing from money already paid and the reserve you want to keep. This uses your Monthly payment loan.</p></div><div class="cal-layout">${form(closingFields('loan',state.loan)+group('Your household budget',grid(field('budget.target','Comfortable total housing payment',state.budget.target,{min:1})+field('budget.takeHome','Household take-home income per month',state.budget.takeHome)+field('budget.debts','Other debt payments per month',state.budget.debts)+field('budget.living','Other living costs / savings goals per month',state.budget.living)+field('budget.savings','Cash available before paying earnest money',state.budget.savings))),'budget')}<div>${result('budget')}</div></div></section>
  <section class="cal-panel" role="tabpanel" id="cal-panel-rental" aria-labelledby="cal-tab-rental" hidden><div class="cal-panel-intro"><h2>Does the rental work after the expenses?</h2><p>Each strategy keeps its own inputs while you compare. Replace the examples with property records, quotes and realistic rental evidence.</p></div><div class="cal-rental-select">${select('rentalMode','Rental strategy',state.rentalMode,[['long','Long-term rental'],['mid','Mid-term furnished rental'],['short','Vacation / short-term rental']])}</div><div class="cal-layout"><div id="cal-rental-fields">${form(rentalFields(state.rentals.long),'rental')}</div><div>${result('rental')}</div></div></section>
  <div class="cal-bottom-tools"><button type="button" class="cal-button cal-button--subtle" data-action="export">Download this estimate (CSV)</button><button type="button" class="cal-text-button" data-action="reset">Reset all examples</button></div><noscript><p class="cal-error">JavaScript is needed to change the calculator inputs. The initial example above and the calculation guide below remain readable.</p></noscript></section>`;
+ if(militaryPanels)for(const id of ['payment','compare','payoff']){
+ const pattern=new RegExp('(<section class="cal-panel" role="tabpanel" id="cal-panel-'+id+'"[^>]*>)[\\s\\S]*?(?=<section class="cal-panel" role="tabpanel")');
+ html=html.replace(pattern,(_,opening)=>opening+'<div id="cal-react-'+id+'">'+militaryPanels[id]+'</div></section>\n');
+ }return html;
 }
+const bridgeListeners=new Set();
+const broadcast=()=>bridgeListeners.forEach(fn=>fn());
+export const calculatorBridge={get:()=>state,subscribe:fn=>{bridgeListeners.add(fn);return()=>bridgeListeners.delete(fn);},update:(key,value)=>{
+ if(['loan','compareB'].includes(key)){value={...value};for(const n of ['price','downPct','rate','years','tax','insurance','flood','hoa','pmi','extra','lenderFees','points','otherClosing','prepaid','escrow','credits','deposit','reserves','moving'])if(n in value)value[n]=value[n]===''?NaN:Number(value[n]);}
+ state={...state,[key]:value};broadcast();document.getElementById('cal-status').textContent='Estimate updated. Example inputs are not lender quotes or market forecasts.';
+}};
 function refresh() {
+ broadcast();
+ if(document.getElementById('cal-react-'+active)){document.getElementById('cal-status').textContent='Estimate updated. Example inputs are not lender quotes or market forecasts.';return;}
  const error=document.getElementById('cal-error-'+active),output=document.getElementById('cal-output-'+active);
  try {output.innerHTML=outputs[active](); bindCharts(output); output.hidden=false;error.hidden=true;document.getElementById('cal-status').textContent='Estimate updated. Example inputs are not lender quotes or market forecasts.';}
  catch(e){error.textContent=e.message;error.hidden=false;output.hidden=true;}
@@ -115,16 +135,16 @@ function syncFields() {
  });refresh();
 }
 export function exportRows(amortization=false) {
- outputs[active]();
+ validateState(state);
  let rows=[['GreggCostin.com calculator estimate'],['Model',MODEL_VERSION],['Tool',active],['Created',new Date().toISOString()],['Scope','Illustrative inputs; not a loan offer, approval or market forecast.']];
  const addInputs=(name,x)=>{rows.push([],['Inputs',name],...Object.entries(x).map(([k,v])=>[k,v]));};
  if(active==='rental'){
   const x=state.rentals[state.rentalMode],r=rentalScenario(x);addInputs('rental',x);
   rows.push([],['Annual results'],...['rentRevenue','cleaningRevenue','operating','noi','debt','replacement','cashFlow','cashInvested','capRate','cashOnCash','dscr','breakEvenOccupancy'].map(k=>[k,Number.isFinite(r[k])?r[k]:'Not applicable']));
  }else{
-  addInputs('Loan A',state.loan);const l=loanScenario(state.loan,active==='payoff'?state.extra:{});
+  addInputs('Loan A',state.loan);const l=loanScenario(state.loan,active==='payoff'?state.extra:active==='compare'?{monthly:state.loan.extra||0}:{});
   rows.push([],['Results'],['Monthly principal and interest',l.scheduled.payment],['Initial mortgage insurance',l.initialMI],['Full monthly cost',l.totalMonthly],['Total financed',l.principal],['Cash still due at closing',l.cashToClose],['Total cash plan',l.allCashNeeded]);
-  if(active==='compare'){addInputs('Loan B',state.compareB);rows.push(['Ownership years',state.horizon]);for(const [name,loan] of [['A',l],['B',loanScenario(state.compareB)]])rows.push(...Object.entries(ownershipPeriod(loan,state.horizon)).map(([k,v])=>[name+' '+k,v]));}
+  if(active==='compare'){addInputs('Loan B',state.compareB);rows.push(['Ownership years',state.horizon]);for(const [name,loan] of [['A',l],['B',loanScenario(state.compareB,{monthly:state.compareB.extra||0})]])rows.push(...Object.entries(ownershipPeriod(loan,state.horizon)).map(([k,v])=>[name+' '+k,v]));}
   if(active==='budget'){addInputs('Household budget',state.budget);rows.push(['Monthly budget remaining',state.budget.takeHome-state.budget.debts-state.budget.living-l.totalMonthly],['Savings remaining',state.budget.savings-l.allCashNeeded]);}
   if(active==='payoff'||amortization){addInputs('Extra principal',state.extra);rows.push([],['Month','Opening balance','Total principal','Interest','Extra principal included','P&I payment','Mortgage insurance','Ending balance'],...l.actual.rows.map(r=>[r.month,r.opening,r.principal,r.interest,r.extra,r.payment,r.mi,r.balance]));}
  }
@@ -164,7 +184,7 @@ if(typeof document!=='undefined') {
     switch(b.dataset.action){
      case 'copy-a':state.compareB={...state.loan};syncFields();status.textContent='Loan A copied to Loan B. Change the second quote to compare.';break;
      case 'save':validateState(state);localStorage.setItem(key,JSON.stringify({version:MODEL_VERSION,state}));status.textContent='Saved on this browser and device. These calculator figures were not sent to us.';break;
-     case 'load':{const raw=localStorage.getItem(key);if(!raw){status.textContent='No saved estimate on this device.';break;}const saved=JSON.parse(raw);if(saved.version!==MODEL_VERSION)throw Error('The saved estimate uses an older model. Start a new estimate.');state=validateState(saved.state);syncFields();status.textContent='Saved figures loaded. Verify your quotes are still current.';break;}
+     case 'load':{const raw=localStorage.getItem(key);if(!raw){status.textContent='No saved estimate on this device.';break;}state=restoreSavedEstimate(JSON.parse(raw));syncFields();status.textContent='Saved figures loaded. Verify your quotes are still current.';break;}
      case 'clear':localStorage.removeItem(key);status.textContent='Saved estimate removed from this device. The current on-screen figures remain.';break;
      case 'reset':state=defaultState();syncFields();status.textContent='All five tools reset to illustrative examples. A saved estimate is unchanged.';break;
      case 'print':window.print();break;

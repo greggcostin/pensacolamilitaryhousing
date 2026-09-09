@@ -1,17 +1,58 @@
 {
   "reviewedOn": "2026-09-09",
-  "modelVersion": "2026-09-09.1",
+  "modelVersion": "2026-09-09.2",
   "scope": "Illustrative fixed-rate purchase loans and annual rental planning. No live rate, insurance, tax or rental-income defaults. Not underwriting or a lender disclosure.",
   "sources": [
-    {"name":"HUD current FHA mortgage insurance structure","url":"https://answers.hud.gov/FHA/s/article/What-is-the-FHA-Mortgage-Insurance-Premium-structure-for-forward-mortgage-loans","verified":"1.75% purchase upfront MIP and annual-premium bands by original base amount, LTV and term. The $726,200 premium band is not an FHA county loan limit."},
-    {"name":"HUD Mortgagee Letter 2023-05","url":"https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf","verified":"Annual MIP rate table and 11-year versus full-term duration. Current HUD FAQ cross-checked this session; special programs excluded."},
-    {"name":"HUD monthly mortgage insurance calculation","url":"https://www.hud.gov/hud-partners/housing-premium-calculation?oc=317242","verified":"Original scheduled average beginning balances, financed upfront factor removed, annual and monthly rounding. Historical worked example used only as a mathematical test, not a current premium rate."},
-    {"name":"VA purchase funding fees and closing costs","url":"https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/","verified":"First use, subsequent use, down-payment bands and lender-confirmed exemptions. Financing versus cash payment modeled separately. No monthly VA mortgage insurance."},
-    {"name":"CFPB PMI removal","url":"https://www.consumerfinance.gov/ask-cfpb/when-can-i-remove-private-mortgage-insurance-pmi-from-my-loan-en-202/","verified":"Requested cancellation at 80% differs from automatic scheduled 78% termination and midpoint rule. Extra payments do not advance the automatic date. Current payments assumed."},
-    {"name":"CFPB compare loan estimates","url":"https://www.consumerfinance.gov/owning-a-home/compare/compare-loan-estimates/","verified":"Separate interest and costs from principal paid, compare rate, fees, credits and closing cash over a common ownership period."},
-    {"name":"CFPB Closing Disclosure","url":"https://www.consumerfinance.gov/owning-a-home/closing-disclosure/","verified":"Prepaids, initial escrow, credits, deposits and closing cash are distinct budget components."},
-    {"name":"Florida DBPR vacation rental guide","url":"https://www2.myfloridalicense.com/hotels-restaurants/licensing/vrtsp-guide/","verified":"Official state licensing resource. Calculator makes no property-specific rental-permission finding."},
-    {"name":"Gulf Shores rental licensing","url":"https://gulfshoresal.gov/780/Rental-License","verified":"Local licensing, zoning review and lodging-tax guidance. Users must check the actual jurisdiction and property."}
+    {
+      "name": "HUD current FHA mortgage insurance structure",
+      "url": "https://answers.hud.gov/FHA/s/article/What-is-the-FHA-Mortgage-Insurance-Premium-structure-for-forward-mortgage-loans",
+      "verified": "1.75% purchase upfront MIP and annual-premium bands by original base amount, LTV and term. The $726,200 premium band is not an FHA county loan limit."
+    },
+    {
+      "name": "HUD Mortgagee Letter 2023-05",
+      "url": "https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf",
+      "verified": "Annual MIP rate table and 11-year versus full-term duration. Current HUD FAQ cross-checked this session; special programs excluded."
+    },
+    {
+      "name": "HUD monthly mortgage insurance calculation",
+      "url": "https://www.hud.gov/hud-partners/housing-premium-calculation?oc=317242",
+      "verified": "Original scheduled average beginning balances, financed upfront factor removed, annual and monthly rounding. Historical worked example used only as a mathematical test, not a current premium rate."
+    },
+    {
+      "name": "VA purchase funding fees and closing costs",
+      "url": "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
+      "verified": "First use, subsequent use, down-payment bands and lender-confirmed exemptions. Financing versus cash payment modeled separately. No monthly VA mortgage insurance."
+    },
+    {
+      "name": "CFPB PMI removal",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-can-i-remove-private-mortgage-insurance-pmi-from-my-loan-en-202/",
+      "verified": "Requested cancellation at 80% differs from automatic scheduled 78% termination and midpoint rule. Extra payments do not advance the automatic date. Current payments assumed."
+    },
+    {
+      "name": "CFPB compare loan estimates",
+      "url": "https://www.consumerfinance.gov/owning-a-home/compare/compare-loan-estimates/",
+      "verified": "Separate interest and costs from principal paid, compare rate, fees, credits and closing cash over a common ownership period."
+    },
+    {
+      "name": "CFPB Closing Disclosure",
+      "url": "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/",
+      "verified": "Prepaids, initial escrow, credits, deposits and closing cash are distinct budget components."
+    },
+    {
+      "name": "Florida DBPR vacation rental guide",
+      "url": "https://www2.myfloridalicense.com/hotels-restaurants/licensing/vrtsp-guide/",
+      "verified": "Official state licensing resource. Calculator makes no property-specific rental-permission finding."
+    },
+    {
+      "name": "Gulf Shores rental licensing",
+      "url": "https://gulfshoresal.gov/780/Rental-License",
+      "verified": "Local licensing, zoning review and lodging-tax guidance. Users must check the actual jurisdiction and property."
+    },
+    {
+      "name": "CFPB mortgage servicing and extra principal",
+      "url": "https://www.consumerfinance.gov/consumer-tools/mortgages/your-mortgage-servicer-must-comply-with-federal-rules/",
+      "verified": "Reviewed during the component port. Extra principal may reduce interest; partial payments can be held until a full periodic payment is available. Confirm the servicer's application rules."
+    }
   ],
   "limitations": [
     "Price assumed to equal the original property value used for LTV. Appraisal gaps, county loan limits, jumbo eligibility, credit and lender overlays require review.",
@@ -20,6 +61,7 @@
     "Taxes, insurance and association costs stay at user-entered dollar amounts throughout the comparison.",
     "Loan comparison treats annualized property costs as expenses; prepaids and initial escrow appear in initial cash, not again as extra period expenses.",
     "Rentals use 365 days and annual-average income. Personal-use time reduces availability. No appreciation, sale proceeds or income-tax benefits are forecast.",
-    "Rental debt coverage uses NOI / annual debt service and is not a lender DSCR qualification calculation. Capital replacement reserves are excluded from NOI and deducted from cash flow."
+    "Rental debt coverage uses NOI / annual debt service and is not a lender DSCR qualification calculation. Capital replacement reserves are excluded from NOI and deducted from cash flow.",
+    "Biweekly and weekly accelerated options use the military calculator's monthly-equivalent approximation: 13 monthly payments annually. Custom weekly extras also use a monthly equivalent; exact posting dates and daily accrual are not modeled."
   ]
 }

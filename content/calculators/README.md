@@ -2,14 +2,16 @@
 
 The native page is `/mortgage-calculators` on GreggCostin.com. It contains mortgage payments, fixed-rate loan comparisons, extra principal and amortization, purchase cash and household budgeting, and long-term/mid-term/vacation rental analysis. The civilian header points here. The military calculator retains its own route and audience.
 
-`scripts/mortgage-math.mjs` is the calculation engine shared by all five native tools. `scripts/civilian-calculator-ui.mjs` renders the initial HTML and supplies browser interactions. `scripts/civilian-calculator-charts.mjs` renders native SVG curves with pointer tracking, keyboard sliders, exact-value readouts and zero/negative-value support. `scripts/civilian-calculators.css` and `scripts/civilian-calculator-visuals.css` contain scoped presentation. `scripts/build-civilian-calculators.mjs` installs the page, assets, share card, header links, contextual links and discovery entries.
+`scripts/mortgage-math.mjs` is the calculation engine shared by all five native tools. Monthly Payment, Loan Comparison and the Extra Payment Analyzer directly port the military React components from `src/App.jsx` into `scripts/civilian-military-calculators.jsx`, preserving their compact forms, result cards, SVG plots and tables in the civilian palette. `scripts/military-calculator-adapter.mjs` connects those components to the verified civilian financial model. It retains separate property costs, current FHA tables, original-schedule PMI and complete closing cash accounting.
+
+`scripts/civilian-calculator-ui.mjs` owns the shared state, five-tool ribbon, budget/rental tools, CSV, print and explicit device saves. `scripts/civilian-calculators-server.jsx` renders the three React panels to initial HTML; `scripts/civilian-calculators-entry.jsx` hydrates the same components with matching identifier prefixes. `scripts/civilian-calculator-charts.mjs` supplies the rental SVG chart. The three `civilian-*calculators.css` / calculator-visuals stylesheets contain scoped presentation. `scripts/build-civilian-calculators.mjs` installs the page, bundled local React assets, share card, header links, contextual links and discovery entries.
 
 Edit the source modules, not the minified asset. Maintain `sources.json` when reviewing loan rules; only change the review date after substantive review. All financial starting values are explicitly illustrative. Do not describe them as current mortgage offers, local insurance/tax averages or rental forecasts.
 
 Run from the isolated source checkout:
 
 ```powershell
-node --test scripts/tests/mortgage-math.test.mjs scripts/tests/civilian-calculator-charts.test.mjs
+node --test scripts/tests/mortgage-math.test.mjs scripts/tests/civilian-calculator-charts.test.mjs scripts/tests/civilian-military-calculators.test.mjs
 node scripts/build-civilian-calculators.mjs --root civilian-site
 node scripts/build-blog-search.mjs gc --root civilian-site
 ```
@@ -19,6 +21,8 @@ Build the same code against a complete, provider-verified production candidate u
 The page includes WebPage, WebApplication and BreadcrumbList schema linked to canonical entity IDs. The explanation and worked example are ordinary HTML. The interactive inputs/results are excluded from Pagefind to keep incidental example numbers out of site search. No extra AI schema or FAQ rich-result promise is made.
 
 The five-tool ribbon stays visible on wider screens. Loan A and Loan B are edited side by side; Loan A remains synchronized with Monthly payment and Budget & cash. The comparison and payoff charts read the same amortization rows as the tables. The rental chart shows cash flow across paid occupancy for the current and downside assumptions, and the comparison table keeps each rental strategy's independently entered inputs. Inspect curves with a pointer or the labeled keyboard slider. Browser validation must cover these interactions and phone-sized layouts before publication.
+
+Monthly Payment includes a stacked total-payment bar and six matching component fill bars. The extra-payment analyzer supports monthly, accelerated biweekly/weekly, annual and custom one-time/weekly/monthly/quarterly/annual payments. Accelerated frequencies represent 13 monthly payments per year, spread across the monthly schedule; custom weekly amounts use 52/12. They do not model exact daily interest or a servicer's posting rules. Annual lump sums occur at month 12 and each following year; custom payments begin at the selected month. All extras combine once and are capped at the remaining principal. Model v2026-09-09.1 device saves migrate their one-time payment to the new custom controls without double-counting. Version, cadence, fee accounting, exact payoff months and actual server-rendered components have regression tests.
 
 Only tool names are sent by the calculator's optional analytics event. Financial amounts are never included in that event, URLs or contact links. The entire calculator region is marked for Clarity masking. Saving requires an explicit button press and stays in localStorage; loading, clearing, CSV export and print are user actions. Do not add automatic financial-data collection or lead gating.
 

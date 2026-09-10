@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
-  "generated": "2026-09-08",
+  "generated": "2026-09-10",
   "mode": "reviewable-plan",
   "maximumArticleChanges": 1,
   "next": {
-    "kind": "research-intent-gap",
-    "site": "pmh",
-    "brief": "full-payment"
+    "kind": "verify-expired-facts",
+    "site": "gc",
+    "target": "https://greggcostin.com/blog/fed-rate-hike-what-it-means"
   },
   "models": {
-    "research": "opus",
-    "write": "fable",
-    "note": "Standing order Aug 13 2026: Opus researches (rigor, source discipline), Fable writes from the pack (prose). Set by Gregg after A/B testing."
+    "research": "self",
+    "write": "self",
+    "note": "in-session by default; set opus/fable to mirror the military engine standing order"
   },
   "modelsBySite": {
     "pmh": {
@@ -340,6 +340,58 @@
       ],
       "rule": "When the shared checkout has unfinished changes, build owned blog work in a clean worktree based on current main, reconcile newer evidence/privacy/journey code, and commit only owned files. A dirty shared checkout does not require stopping at an unbuilt fragment.",
       "evidence": "The Sep 8 release integrated against main 5dc3822e while preserving the pre-existing working-tree changes. The isolated 310-page civilian audit and 679-page entity audit passed. Integration also caught and preserved the school llms marker and unchanged sitemap dates."
+    },
+    {
+      "id": "L026",
+      "date": "2026-09-09",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "orchestrate",
+        "build",
+        "ship"
+      ],
+      "rule": "Before an approved deployment on either site, reconcile the complete candidate with the actual provider production manifest and acquire the existing shared .coast-release/publication.lock.json exclusively. Hold it through preflight, deployment and provider confirmation. A Git commit or an unlocked baseline check does not prevent a concurrent release from replacing the work.",
+      "evidence": "The mortgage release at 04:25:22 UTC and regional release at 04:25:25 UTC both passed the same baseline check. The latter became canonical and displaced the article. The merged release used the shared publication lock, retained all current regional changes, and verified 1089 civilian assets plus 3004 unchanged military assets. content/blog/reports/2026-09-09-publication-closeout.md"
+    },
+    {
+      "id": "L-CATALOG-RENDER-20260909",
+      "rule": "Compare the rendered quick answer and licensed hero with the reviewed fragment after every layout pass; a passing draft score cannot establish rendered completeness.",
+      "evidence": "Full catalog refresh reproduced lost civilian quick answers during header preservation and removed hero images during generic interior layout. blog-render-gate.mjs and browser checks cover both failures.",
+      "date": "2026-09-09",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "build",
+        "verify",
+        "publish"
+      ]
+    },
+    {
+      "id": "L-CATALOG-SEARCH-20260909",
+      "rule": "Require local search page coverage to match the intended public inventory before deployment. Mixed Pagefind body markers can silently exclude most pages.",
+      "evidence": "Default Pagefind run indexed 8 of 319 civilian pages. build-blog-search.mjs stages published main content consistently and requires the complete count.",
+      "date": "2026-09-09",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "build",
+        "verify",
+        "publish"
+      ]
+    },
+    {
+      "id": "L-CATALOG-BASELINE-20260909",
+      "rule": "Recheck production deployment IDs immediately before releasing an approved catalog refresh and preserve the complete newest baseline.",
+      "evidence": "Civilian production changed from c8b4f1b7 to 3a116599 during the refresh. Rebuilt on its verified 1119-file baseline before publication.",
+      "date": "2026-09-09",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "build",
+        "verify",
+        "publish"
+      ]
     }
   ],
   "excludedLessons": [],
@@ -382,8 +434,8 @@
       "slug": "what-moves-mortgage-rates",
       "runId": "civilian-blog-engine-2026-09-08",
       "id": "gc-mortgage-decision-guide-2026-09-08",
-      "status": "prepared",
-      "deployedAt": null,
+      "status": "collecting",
+      "deployedAt": "2026-09-09T04:31:09.733359Z",
       "hypothesis": "A sourced financing comparison with usable calculations and property-specific next steps will support better-qualified inquiries.",
       "primaryOutcome": "Verified qualified conversations attributed to this article; requires separate CRM evidence.",
       "secondaryOutcomes": [
@@ -395,7 +447,7 @@
       ],
       "minimumFollowupDays": 28,
       "comparison": "Same production-host cohort, source, definitions and equal non-overlapping complete windows. Apply shared sample/uncertainty checks.",
-      "conclusion": "No live effect measured; awaiting deployment and adequate observations.",
+      "conclusion": "Published; no effect estimated until comparable source windows and adequate observations exist.",
       "source": "content/civilian-blog/ledger.json",
       "note": "Prepared changes have no live effect. Record actual deployment and review comparable outcome windows; status is not a causal finding."
     }
@@ -405,486 +457,412 @@
       "site": "pmh",
       "slug": "bah-2026-pensacola-what-can-you-afford",
       "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
-      "linkedSourceDomains": 9,
+      "linkedSourceDomains": 4,
       "sourceUrls": [
-        "https://www.freddiemac.com/pmms",
+        "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
         "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
-        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/",
-        "https://www.defense.gov/News/Releases/",
-        "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
-        "https://www.benefits.va.gov/warms/pam26_7.asp",
-        "https://escambiataxcollector.com/",
-        "https://srcpa.gov/",
-        "https://www.citizensfla.com/",
-        "https://insurify.com/homeowners-insurance/florida/"
+        "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "https://www.travel.dod.mil/Support/ALL-FAQs/Article/2978684/bah-eligibility/",
+        "https://floridarevenue.com/property/Documents/pt107.pdf",
+        "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/"
       ],
-      "contextualInbound": 2,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 3,
+      "evidencePack": "content/blog/research/bah-2026-pensacola-what-can-you-afford.json",
+      "readerTask": "Compare verified BAH with actual household income and full ownership costs without inventing a rank-based purchase limit.",
       "nextStep": {
-        "goal": "purchase-budget",
-        "prompt": "Compare the full payment, cash needed and ownership plan for the home you are considering.",
-        "tool": "/mortgage-calculators",
-        "toolLabel": "Work through a purchase budget",
-        "bridge": "https://greggcostin.com/blog/closing-costs-florida-buyers",
-        "bridgeLabel": "Include Florida closing costs in your plan"
+        "goal": "bah-budget",
+        "prompt": "Bring the actual allowance, target property and the expenses that still need quotes.",
+        "tool": "/bah-to-mortgage-guide#budget-tool",
+        "toolLabel": "Use your actual income",
+        "bridge": "/contact",
+        "bridgeLabel": "Build a property budget"
       }
     },
     {
       "site": "pmh",
       "slug": "best-neighborhoods-eglin-afb-families",
       "url": "https://pensacolamilitaryhousing.com/blog/best-neighborhoods-eglin-afb-families",
-      "linkedSourceDomains": 8,
+      "linkedSourceDomains": 4,
       "sourceUrls": [
-        "https://www.zillow.com/home-values/40018/niceville-fl/",
-        "https://www.zillow.com/home-values/24265/crestview-fl/",
-        "https://www.zillow.com/home-values/52082/fort-walton-beach-fl/",
-        "https://www.zillow.com/home-values/22742/shalimar-fl/",
-        "https://www.zillow.com/home-values/42657/navarre-fl/",
-        "https://www.redfin.com/city/12482/FL/Niceville/housing-market",
-        "https://www.redfin.com/city/4016/FL/Crestview/housing-market",
-        "https://www.okaloosaschools.com/article/3019144",
-        "https://www.santarosaschools.org/article/2299751",
-        "https://www.fldoe.org/accountability/accountability-reporting/school-grades/",
-        "https://www.freddiemac.com/pmms",
-        "https://www.newhomesource.com/communities/fl/destin-fort-walton-beach-area/crestview",
-        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/"
+        "https://installations.militaryonesource.mil/military-installation/eglin-afb/housing/housing",
+        "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "https://fl511.com/",
+        "https://installations.militaryonesource.mil/military-installation/eglin-afb/education/education",
+        "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk"
       ],
-      "contextualInbound": 2,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 3,
+      "evidencePack": "content/blog/research/best-neighborhoods-eglin-afb-families.json",
+      "readerTask": "Compare actual homes around Eglin by duty route, total ownership expense and household needs.",
       "nextStep": {
-        "goal": "home-shortlist",
-        "prompt": "Build a shortlist around your commute, property costs and housing needs.",
-        "tool": "/pcs-home-search",
-        "toolLabel": "Plan a local home search",
-        "bridge": "https://greggcostin.com/neighborhoods",
-        "bridgeLabel": "Compare the local community guides"
+        "goal": "eglin-location",
+        "prompt": "Bring two candidate addresses, your duty location and a target monthly budget.",
+        "tool": "/bah-rates#calculator",
+        "toolLabel": "Compare ownership costs",
+        "bridge": "/contact",
+        "bridgeLabel": "Build an Eglin shortlist"
       }
     },
     {
       "site": "pmh",
       "slug": "best-pensacola-neighborhoods-by-rank-bah",
       "url": "https://pensacolamilitaryhousing.com/blog/best-pensacola-neighborhoods-by-rank-bah",
-      "linkedSourceDomains": 13,
+      "linkedSourceDomains": 5,
       "sourceUrls": [
         "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
-        "https://www.freddiemac.com/pmms",
-        "https://www.cnbc.com/select/what-are-va-loan-rates-today-august-12-2026/",
-        "https://movewithmomentum.com/data/fl/32506-housing-scorecard",
-        "https://weartv.com/news/local/escambia-santa-rosa-and-okaloosa-school-districts-all-receive-a-for-2025-26",
-        "https://www.ownwell.com/trends/florida/escambia-county",
-        "https://www.ownwell.com/trends/florida/santa-rosa-county",
-        "https://www.insure.com/home-insurance/how-much-is-homeowners-insurance-in-pensacola-fl/",
-        "https://insurify.com/homeowners-insurance/florida/pensacola/",
-        "https://harbourinsuranceagency.com/blog/how-much-is-flood-insurance-in-florida-real-averages-by-county-home-type-risk-rating-2-0/",
-        "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
-        "https://floridarevenue.com/property/Pages/Taxpayers_Exemptions.aspx",
-        "https://www.escpa.org/",
-        "https://srcpa.gov/"
+        "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "https://floridarevenue.com/property/Documents/pt107.pdf",
+        "https://fl511.com/",
+        "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+        "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip"
       ],
       "contextualInbound": 3,
-      "evidencePack": null,
-      "readerTask": null,
+      "evidencePack": "content/blog/research/best-pensacola-neighborhoods-by-rank-bah.json",
+      "readerTask": "Choose Gulf Coast search areas using actual household finances and address-specific comparisons instead of assigning ranks to neighborhoods.",
       "nextStep": {
-        "goal": "purchase-budget",
-        "prompt": "Compare the full payment, cash needed and ownership plan for the home you are considering.",
-        "tool": "/mortgage-calculators",
-        "toolLabel": "Work through a purchase budget",
-        "bridge": "https://greggcostin.com/blog/closing-costs-florida-buyers",
-        "bridgeLabel": "Include Florida closing costs in your plan"
+        "goal": "bah-shortlist",
+        "prompt": "Bring candidate addresses and a budget based on your actual income and obligations.",
+        "tool": "/bah-rates#calculator",
+        "toolLabel": "Compare property expenses",
+        "bridge": "/contact",
+        "bridgeLabel": "Build a practical shortlist"
       }
     },
     {
       "site": "pmh",
       "slug": "florida-homestead-exemption-military",
       "url": "https://pensacolamilitaryhousing.com/blog/florida-homestead-exemption-military",
-      "linkedSourceDomains": 7,
+      "linkedSourceDomains": 5,
       "sourceUrls": [
-        "https://floridarevenue.com/property/Pages/Taxpayers_Exemptions.aspx",
-        "https://floridarevenue.com/property/Documents/SaveOurHomes.pdf",
-        "https://floridarevenue.com/property/Documents/pt109.pdf",
-        "https://floridarevenue.com/property/Documents/dr501m.pdf",
-        "https://www.flsenate.gov/Laws/Statutes/2024/196.081",
-        "https://www.escpa.org/",
-        "https://escambiataxcollector.com/property-tax/millage-rate-detail/",
+        "https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf",
         "https://srcpa.gov/exemptions/",
-        "https://www.santarosa.fl.gov/CivicAlerts.aspx?AID=1472",
-        "https://www.okaloosapa.com/"
+        "https://srcpa.gov/ad-valorem-tax/",
+        "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.061.html",
+        "https://floridarevenue.com/property/Documents/pt109.pdf",
+        "https://www.escpa.org/",
+        "https://hx.okaloosapa.com/login"
       ],
-      "contextualInbound": 1,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 3,
+      "evidencePack": "content/blog/research/florida-homestead-exemption-military.json",
+      "readerTask": "Apply for or maintain Florida homestead during a military move without assuming tax, loan and rental rules are the same.",
       "nextStep": {
-        "goal": "property-cost-review",
-        "prompt": "Apply the checklist to a specific address before relying on an advertised monthly payment.",
-        "tool": "/va-disability-property-tax-florida",
-        "toolLabel": "Review veteran property-tax rules",
-        "bridge": "https://greggcostin.com/resources/florida-homestead-exemption",
-        "bridgeLabel": "Compare Florida homestead requirements"
+        "goal": "military-homestead-plan",
+        "prompt": "Bring the parcel, move timing and whether this is a new application or an existing homestead.",
+        "tool": "/rent-or-sell-pcs-pensacola",
+        "toolLabel": "Compare the exit options",
+        "bridge": "/contact",
+        "bridgeLabel": "Plan the property questions"
       }
     },
     {
       "site": "pmh",
       "slug": "florida-veteran-property-tax-county-guide",
       "url": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
-      "linkedSourceDomains": 8,
+      "linkedSourceDomains": 5,
       "sourceUrls": [
-        "https://floridarevenue.com/property/Pages/Taxpayers_Exemptions.aspx",
+        "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.24.html",
+        "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.081.html",
+        "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0196/Sections/0196.082.html",
         "https://floridarevenue.com/property/Documents/pt109.pdf",
-        "https://floridarevenue.com/property/Documents/dr501.pdf",
-        "https://floridarevenue.com/property/Documents/dr501dv.pdf",
-        "https://www.flsenate.gov/Laws/Statutes/2026/196.081",
         "https://www.escpa.org/",
-        "https://escambiataxcollector.com/property-tax/millage-rate-detail/",
         "https://srcpa.gov/exemptions/",
-        "https://www.okaloosapa.com/",
-        "https://www.irs.gov/taxtopics/tc701",
-        "https://www.irs.gov/publications/p523",
-        "https://www.ecfr.gov/current/title-12/chapter-X/part-1024"
+        "https://hx.okaloosapa.com/login"
       ],
-      "contextualInbound": 1,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 3,
+      "evidencePack": "content/blog/research/florida-veteran-property-tax-county-guide.json",
+      "readerTask": "Submit the right benefit and evidence to the correct county while budgeting only verified tax treatment.",
       "nextStep": {
-        "goal": "property-cost-review",
-        "prompt": "Apply the checklist to a specific address before relying on an advertised monthly payment.",
+        "goal": "veteran-tax-planning",
+        "prompt": "Bring the property location and the exemption question; submit sensitive VA records directly to the county.",
         "tool": "/va-disability-property-tax-florida",
-        "toolLabel": "Review veteran property-tax rules",
-        "bridge": "https://greggcostin.com/resources/florida-homestead-exemption",
-        "bridgeLabel": "Compare Florida homestead requirements"
+        "toolLabel": "Review benefit categories",
+        "bridge": "/contact",
+        "bridgeLabel": "Plan the property budget"
       }
     },
     {
       "site": "pmh",
       "slug": "living-in-gulf-breeze-pros-cons",
       "url": "https://pensacolamilitaryhousing.com/blog/living-in-gulf-breeze-pros-cons",
-      "linkedSourceDomains": 10,
+      "linkedSourceDomains": 5,
       "sourceUrls": [
-        "https://srcpa.gov/millage-rates",
-        "https://www.fldoe.org/accountability/accountability-reporting/school-grades/",
-        "https://www.usnews.com/education/best-high-schools/florida",
-        "https://movewithmomentum.com/data/fl/32561-housing-scorecard",
-        "https://www.fema.gov/floodplain-management/community-rating-system",
-        "https://cityofgulfbreeze.us/flood-information",
-        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
-        "https://www.census.gov/quickfacts/gulfbreezecityflorida",
-        "https://en.wikipedia.org/wiki/Gulf_Breeze,_Florida",
-        "https://en.wikipedia.org/wiki/Garcon_Point_Bridge",
-        "https://myescambia.com/",
-        "https://www.census.gov/quickfacts/fact/table/gulfbreezecityflorida/PST045224"
+        "https://cityofgulfbreeze.us/departments/public-works/development-services/geographic-information-systems-gis/",
+        "https://www.santarosa.fl.gov/149/Development-Services",
+        "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+        "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "https://fl511.com/"
       ],
-      "contextualInbound": 1,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 3,
+      "evidencePack": "content/blog/research/living-in-gulf-breeze-pros-cons.json",
+      "readerTask": "Decide whether a Gulf Breeze address fits military work, coastal ownership costs and the next move.",
       "nextStep": {
-        "goal": "home-shortlist",
-        "prompt": "Build a shortlist around your commute, property costs and housing needs.",
-        "tool": "/pcs-home-search",
-        "toolLabel": "Plan a local home search",
-        "bridge": "https://greggcostin.com/neighborhoods",
-        "bridgeLabel": "Compare the local community guides"
+        "goal": "gulf-breeze-fit",
+        "prompt": "Bring the Gulf Breeze address, duty location and questions still missing answers.",
+        "tool": "/gulf-breeze-vs-navarre",
+        "toolLabel": "Compare Gulf Breeze and Navarre",
+        "bridge": "/contact",
+        "bridgeLabel": "Review a Gulf Breeze home"
       }
     },
     {
       "site": "pmh",
       "slug": "moving-to-navarre-2026-guide",
       "url": "https://pensacolamilitaryhousing.com/blog/moving-to-navarre-2026-guide",
-      "linkedSourceDomains": 11,
+      "linkedSourceDomains": 4,
       "sourceUrls": [
-        "https://corpweb1.dfas.mil/askDFAS/faqView?faq.faqId=237&pgModId=4",
-        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/",
-        "https://srcpa.gov/millage-rates/",
-        "https://taxestimator.srcpa.gov/",
-        "https://www.citizensfla.com/-/20260304-citizens-2026-multiperil-rates-to-drop-statewide",
-        "https://www.fema.gov/floodplain-management/community-rating-system",
-        "https://www.santarosa.fl.gov/162/Floodplain-Management",
-        "https://www.santarosa.fl.gov/272/Flood-Zones-Versus-Evacuation-Zones",
-        "https://www.santarosa.fl.gov/1033/Navarre-Community-Access-Road",
-        "https://www.santarosaschools.org/o/shs/article/2605423",
-        "https://www.wuwf.org/local-news/2025-08-27/us-98-traffic-congestion-threatens-special-ops-mission-at-hurlburt-field-base-official-says",
-        "https://broadbandnow.com/Florida/Navarre",
-        "https://www.fdot.gov/docs/default-source/info/d3/news/newsreleases/091616-US98ProjectDevMtgs.pdf"
+        "https://www.santarosa.fl.gov/149/Development-Services",
+        "https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-risk",
+        "https://fl511.com/",
+        "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/"
       ],
-      "contextualInbound": 2,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 3,
+      "evidencePack": "content/blog/research/moving-to-navarre-2026-guide.json",
+      "readerTask": "Choose a Navarre property with a workable commute, coastal due diligence and a realistic PCS exit.",
       "nextStep": {
-        "goal": "home-shortlist",
-        "prompt": "Build a shortlist around your commute, property costs and housing needs.",
-        "tool": "/pcs-home-search",
-        "toolLabel": "Plan a local home search",
-        "bridge": "https://greggcostin.com/neighborhoods",
-        "bridgeLabel": "Compare the local community guides"
+        "goal": "navarre-plan",
+        "prompt": "Bring the address, assignment and whether you expect to sell or rent after PCS.",
+        "tool": "/rent-or-sell-pcs-pensacola",
+        "toolLabel": "Compare the next-PCS options",
+        "bridge": "/contact",
+        "bridgeLabel": "Plan a Navarre move"
       }
     },
     {
       "site": "pmh",
       "slug": "moving-to-pensacola-2026-guide",
       "url": "https://pensacolamilitaryhousing.com/blog/moving-to-pensacola-2026-guide",
-      "linkedSourceDomains": 28,
+      "linkedSourceDomains": 6,
       "sourceUrls": [
-        "https://usafacts.org/answers/how-many-people-live-in-the-us/metro-area/pensacola-fl/",
-        "https://worldpopulationreview.com/us-counties/florida/santa-rosa-county",
-        "https://www.bls.gov/regions/southeast/news-release/occupationalemploymentandwages_pensacola.htm",
-        "https://www.zillow.com/home-values/53856/pensacola-fl/",
-        "https://www.zillow.com/home-values/5013/gulf-breeze-fl/",
-        "https://www.zillow.com/home-values/42657/navarre-fl/",
-        "https://www.houzeo.com/housing-market/florida/pensacola",
-        "https://www.movoto.com/pensacola-fl/market-trends/",
-        "https://www.redfin.com/city/7162/FL/Gulf-Breeze/housing-market",
-        "https://www.rentcafe.com/average-rent-market-trends/us/fl/pensacola/",
-        "https://www.salary.com/research/cost-of-living/pensacola-fl",
-        "https://www.erieri.com/cost-of-living/united-states/florida/pensacola",
-        "https://srcpa.gov/exemptions/",
-        "https://insurify.com/homeowners-insurance/florida/pensacola/",
-        "https://www.insure.com/home-insurance/how-much-is-homeowners-insurance-in-pensacola-fl/",
-        "https://www.citizensfla.com/-/20260304-citizens-2026-multiperil-rates-to-drop-statewide",
-        "https://firststreet.org/city/pensacola/1255925_fsid/flood",
-        "https://www.fldoe.org/core/fileparse.php/18534/urlt/SchoolGradesResultsPacket25.pdf",
-        "https://news.uwf.edu/uwf-enrollment-exceeds-15000-students/",
-        "https://www.wuwf.org/local-news/2023-09-21/the-new-baptist-hospital-is-ready-to-start-a-new-healthcare-chapter-in-pensacola",
-        "https://weartv.com/news/local/st-engineering-launches-expansion-at-pensacola-airport-set-to-create-1700-jobs",
-        "https://www.studeri.org/news-detail/post_detail/navy-federals-boom-is-just-beginning",
-        "https://www.nhc.noaa.gov/data/tcr/AL192020_Sally.pdf",
-        "https://www.weather.gov/bmx/event_ivan2004paper",
-        "https://hurricanecity.com/city/pensacola.htm",
-        "https://flypensacola.com/pensacolas-airport-has-record-breaking-year-and-lowest-fares-in-the-u-s/",
-        "https://www.blueangels.navy.mil/show/",
-        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/",
-        "https://www.militaryfriendlynwf.com/economic-impact/",
-        "https://www.bestplaces.net/climate/city/florida/pensacola"
+        "https://www.cityofpensacola.com/2758/Online-Services",
+        "https://floridarevenue.com/property/Documents/pt107.pdf",
+        "https://www.escpa.org/",
+        "https://fl511.com/",
+        "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/",
+        "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/housing/temporary-housing"
       ],
       "contextualInbound": 3,
-      "evidencePack": null,
-      "readerTask": null,
+      "evidencePack": "content/blog/research/moving-to-pensacola-2026-guide.json",
+      "readerTask": "Build a Pensacola shortlist around the actual duty destination, property records and complete purchase budget.",
       "nextStep": {
-        "goal": "home-shortlist",
-        "prompt": "Build a shortlist around your commute, property costs and housing needs.",
-        "tool": "/pcs-home-search",
-        "toolLabel": "Plan a local home search",
-        "bridge": "https://greggcostin.com/neighborhoods",
-        "bridgeLabel": "Compare the local community guides"
+        "goal": "pensacola-shortlist",
+        "prompt": "Bring your duty location, cash budget and a few candidate addresses.",
+        "tool": "/rent-vs-buy-military-pensacola",
+        "toolLabel": "Compare renting and buying",
+        "bridge": "/contact",
+        "bridgeLabel": "Build a Pensacola shortlist"
       }
     },
     {
       "site": "pmh",
       "slug": "pcs-to-pensacola-2026-complete-guide",
       "url": "https://pensacolamilitaryhousing.com/blog/pcs-to-pensacola-2026-complete-guide",
-      "linkedSourceDomains": 7,
+      "linkedSourceDomains": 3,
       "sourceUrls": [
+        "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/housing/temporary-housing",
+        "https://www.va.gov/housing-assistance/home-loans/loan-types/purchase-loan/",
         "https://www.travel.dod.mil/About/News/Article/Article/3981433/dod-authorizes-additional-7-days-to-conus-temporary-lodging-expense/",
-        "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/",
-        "https://www.militaryonesource.mil/education-employment/for-children-youth/interstate-compact-for-military-children/",
-        "https://mic3.net/",
-        "https://www.defense.gov/",
-        "https://www.militaryonesource.mil/resources/millife-guides/household-goods-claims/",
-        "https://floridarevenue.com/property/Pages/Taxpayers_Exemptions.aspx",
-        "https://www.fldoe.org/accountability/accountability-reporting/school-grades/",
-        "https://myairforcebenefits.us.af.mil/"
+        "https://installations.militaryonesource.mil/military-installation/naval-air-station-pensacola/base-essentials/check-in-procedures"
       ],
-      "contextualInbound": 2,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 3,
+      "evidencePack": "content/blog/research/pcs-to-pensacola-2026-complete-guide.json",
+      "readerTask": "Sequence orders, reporting, housing, cash and delivery before making a binding Pensacola move commitment.",
       "nextStep": {
-        "goal": "relocation-planning",
-        "prompt": "Turn your moving timeline into a housing search plan.",
-        "tool": "/pcs-guide",
-        "toolLabel": "Use the PCS planning guide",
-        "bridge": "https://greggcostin.com/neighborhoods",
-        "bridgeLabel": "Explore local community guides for the whole household"
+        "goal": "pcs-arrival-plan",
+        "prompt": "Bring your destination, report window, household needs and whether your orders are for training or permanent duty.",
+        "tool": "/pcs-checklist",
+        "toolLabel": "Build the PCS checklist",
+        "bridge": "/contact",
+        "bridgeLabel": "Plan the housing search"
       }
     },
     {
       "site": "pmh",
       "slug": "personal-property-activity-pcs-2026",
       "url": "https://pensacolamilitaryhousing.com/blog/personal-property-activity-pcs-2026",
-      "linkedSourceDomains": 8,
+      "linkedSourceDomains": 2,
       "sourceUrls": [
-        "https://www.ppa.mil/",
-        "https://media.defense.gov/2026/Jan/23/2003860547/-1/-1/1/PERSONAL-PROPERTY-ACTIVITY-IMPLEMENTATION-MEMORANDUM.PDF",
-        "https://www.army.mil/article/292127/department_of_war_personal_property_activity_launches_official_website",
-        "https://www.army.mil/article/293337/navigating_your_next_pcs_inside_the_dows_personal_property_activity",
-        "https://www.travel.dod.mil/",
-        "https://media.defense.gov/2025/May/27/2003723373/-1/-1/0/UTD_for_MAP_42-25(R)_Temporarily_Increase_Personally_Procured_Move_Reimbursement_and_Attachments.PDF",
-        "https://www.travel.dod.mil/About/News/Article/Article/3981433/dod-authorizes-additional-7-days-to-conus-temporary-lodging-expense/",
-        "https://www.militaryonesource.mil/resources/millife-guides/moving-claims/",
-        "https://download.militaryonesource.mil/12038/MOS/Factsheets/PPM%20and%20Rogue%20Operators_Fact%20Sheet.pdf",
-        "https://www.armytimes.com/pay-benefits/2026/07/01/dod-movers-try-to-ease-the-heavy-lift-for-troops-moving-this-summer/",
-        "https://www.military.com/spouse/military-relocation/pcs-moves/3-big-pcs-changes-are-coming-once-heres-what-service-members-need-know-peak-season.html"
+        "https://www.ppa.mil/Your-Move/The-Claims-Process/",
+        "https://www.ppa.mil/Your-Move/Personally-Procured-Moves/",
+        "https://download.militaryonesource.mil/12038/MOS/Factsheets/FactSheet-7Day-SpreadWindow.pdf"
       ],
-      "contextualInbound": 1,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 3,
+      "evidencePack": "content/blog/research/personal-property-activity-pcs-2026.json",
+      "readerTask": "Coordinate household-goods records, claims deadlines and a realistic housing cash buffer.",
       "nextStep": {
-        "goal": "relocation-planning",
-        "prompt": "Turn your moving timeline into a housing search plan.",
-        "tool": "/pcs-guide",
-        "toolLabel": "Use the PCS planning guide",
-        "bridge": "https://greggcostin.com/neighborhoods",
-        "bridgeLabel": "Explore local community guides for the whole household"
+        "goal": "pcs-shipment-plan",
+        "prompt": "Bring the move window, housing dates and the unresolved property decision.",
+        "tool": "/pcs-checklist",
+        "toolLabel": "Organize the move checklist",
+        "bridge": "/contact",
+        "bridgeLabel": "Coordinate the housing plan"
       }
     },
     {
       "site": "pmh",
       "slug": "va-loan-assumption-buyers-guide",
       "url": "https://pensacolamilitaryhousing.com/blog/va-loan-assumption-buyers-guide",
-      "linkedSourceDomains": 7,
+      "linkedSourceDomains": 2,
       "sourceUrls": [
-        "https://www.law.cornell.edu/uscode/text/38/3714",
         "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-23-10.pdf",
-        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-23-27.pdf",
-        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-5.pdf",
-        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-17.pdf",
-        "https://www.ecfr.gov/current/title-38/section-36.4303",
-        "https://www.benefits.va.gov/warms/pam26_7.asp",
         "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
-        "https://www.freddiemac.com/pmms",
-        "https://www.fhfa.gov/data/nmdb-aggregate-statistics",
-        "https://www.benefits.va.gov/HOMELOANS/lender_statistics.asp",
-        "https://www.flsenate.gov/Laws/Statutes/2025/193.155",
-        "https://www.flsenate.gov/Laws/Statutes/2025/196.011"
+        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-17.pdf",
+        "https://www.va.gov/housing-assistance/home-loans/eligibility/"
       ],
-      "contextualInbound": 2,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 3,
+      "evidencePack": "content/blog/research/va-loan-assumption-buyers-guide.json",
+      "readerTask": "Compare an assumption using equity cash, all debt payments, the seller entitlement outcome and the PCS timeline.",
       "nextStep": {
-        "goal": "purchase-budget",
-        "prompt": "Compare the full payment, cash needed and ownership plan for the home you are considering.",
-        "tool": "/mortgage-calculators",
-        "toolLabel": "Work through a purchase budget",
-        "bridge": "https://greggcostin.com/blog/closing-costs-florida-buyers",
-        "bridgeLabel": "Include Florida closing costs in your plan"
+        "goal": "assumption-review",
+        "prompt": "Bring the listing, servicer terms, estimated equity gap and your move date.",
+        "tool": "/va-coe-guide",
+        "toolLabel": "Review entitlement questions",
+        "bridge": "/contact",
+        "bridgeLabel": "Plan the property review"
       }
     },
     {
       "site": "pmh",
       "slug": "va-loan-seller-concessions-truth",
       "url": "https://pensacolamilitaryhousing.com/blog/va-loan-seller-concessions-truth",
-      "linkedSourceDomains": 6,
+      "linkedSourceDomains": 3,
       "sourceUrls": [
-        "https://www.benefits.va.gov/warms/pam26_7.asp",
-        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-14.pdf",
-        "https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-24-14-change1.pdf",
-        "https://benefits.va.gov/HOMELOANS/resources_circulars.asp",
         "https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/",
-        "https://www.ecfr.gov/current/title-38/chapter-I/part-36/subject-group-ECFR40dddd48c9a4ff8/section-36.4313",
-        "https://selling-guide.fanniemae.com/sel/b3-4.1-02/interested-party-contributions-ipcs",
-        "https://www.nar.realtor/the-facts"
+        "https://www.benefits.va.gov/homeloans/temporary-buydown.asp",
+        "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
       ],
-      "contextualInbound": 1,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 3,
+      "evidencePack": "content/blog/research/va-loan-seller-concessions-truth.json",
+      "readerTask": "Structure a useful seller contribution without confusing closing expenses, concessions and temporary payment subsidies.",
       "nextStep": {
-        "goal": "purchase-budget",
-        "prompt": "Compare the full payment, cash needed and ownership plan for the home you are considering.",
-        "tool": "/mortgage-calculators",
-        "toolLabel": "Work through a purchase budget",
-        "bridge": "https://greggcostin.com/blog/closing-costs-florida-buyers",
-        "bridgeLabel": "Include Florida closing costs in your plan"
+        "goal": "va-offer-structure",
+        "prompt": "Bring the price, proposed seller contribution and lender cost worksheet.",
+        "tool": "/va-loan-closing-costs-florida",
+        "toolLabel": "Review VA closing expenses",
+        "bridge": "/contact",
+        "bridgeLabel": "Discuss the offer structure"
       }
     },
     {
       "site": "gc",
       "slug": "closing-costs-florida-buyers",
       "url": "https://greggcostin.com/blog/closing-costs-florida-buyers",
-      "linkedSourceDomains": 3,
+      "linkedSourceDomains": 2,
       "sourceUrls": [
-        "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/",
         "https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx",
         "https://floridarevenue.com/taxes/taxesfees/Pages/nonrecurring_intangible_tax.aspx",
-        "https://myfloridacfo.com/division/consumers/understanding-insurance/title-insurance-overview",
         "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
-        "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/",
-        "https://www.consumerfinance.gov/rules-policy/regulations/1026/19/"
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-estimate-en-1995/",
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-closing-disclosure-en-1983/"
       ],
-      "contextualInbound": 5,
-      "evidencePack": "content/civilian-blog/research/closing-costs-florida-buyers-2026-09-06.json",
-      "readerTask": "Calculate cash to close and identify the unresolved contract and quote items.",
+      "contextualInbound": 9,
+      "evidencePack": "content/civilian-blog/research/closing-costs-florida-buyers.json",
+      "readerTask": "Build an itemized cash-to-close plan and verify the allocation before committing.",
       "nextStep": {
-        "goal": "buyer-planning",
-        "prompt": "Use this guide to prepare the questions for your own purchase.",
-        "tool": "/resources/first-time-home-buyer",
-        "toolLabel": "Plan your next home purchase",
-        "bridge": "https://pensacolamilitaryhousing.com/va-loan-guide",
-        "bridgeLabel": "Using a VA loan? Review the VA buyer guide"
+        "goal": "closing-cash-review",
+        "prompt": "Bring the contract, Loan Estimate and property address together before finalizing the purchase budget.",
+        "tool": "/resources/coastal-ownership-costs",
+        "toolLabel": "Check the costs after closing",
+        "bridge": "/buy",
+        "bridgeLabel": "Plan the purchase"
       }
     },
     {
       "site": "gc",
       "slug": "fed-rate-hike-what-it-means",
       "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-      "linkedSourceDomains": 4,
+      "linkedSourceDomains": 3,
       "sourceUrls": [
         "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
         "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
         "https://www.freddiemac.com/pmms",
-        "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
-        "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
-        "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/",
-        "https://files.consumerfinance.gov/f/documents/cfpb_charm_booklet.pdf"
+        "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/"
       ],
       "contextualInbound": 3,
-      "evidencePack": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
-      "readerTask": "Choose a rate-lock discussion and purchase budget using official information instead of a forecast.",
+      "evidencePack": "content/civilian-blog/research/fed-rate-hike-what-it-means.json",
+      "readerTask": "Separate confirmed policy from forecasts and choose a financing or timing action the household can afford.",
       "nextStep": {
-        "goal": "buyer-planning",
-        "prompt": "Use this guide to prepare the questions for your own purchase.",
-        "tool": "/resources/first-time-home-buyer",
-        "toolLabel": "Plan your next home purchase",
-        "bridge": "https://pensacolamilitaryhousing.com/va-loan-guide",
-        "bridgeLabel": "Using a VA loan? Review the VA buyer guide"
+        "goal": "rate-decision-review",
+        "prompt": "Bring the property, current financing terms and the point where the budget stops working.",
+        "tool": "/resources/coastal-ownership-costs",
+        "toolLabel": "Stress-test the property budget",
+        "bridge": "/buy",
+        "bridgeLabel": "Plan the buying decision"
       }
     },
     {
       "site": "gc",
       "slug": "florida-insurance-relief-2026",
       "url": "https://greggcostin.com/blog/florida-insurance-relief-2026",
-      "linkedSourceDomains": 7,
+      "linkedSourceDomains": 4,
       "sourceUrls": [
-        "https://api.apci.org/file/downloadnsfile?area=s&id=14026",
-        "https://www.citizensfla.com/-/20260430-july-2026-rate-rule-and-wind-loss-mitigation-updates",
-        "https://www.flsenate.gov/Laws/Statutes/2025/0627.701",
-        "https://floir.gov/consumers/wind-mitigation-resources",
-        "https://mysafeflhome.com/",
-        "https://www.floodsmart.gov/get-insured/buy-a-policy",
-        "https://www.floodsmart.gov/get-insured/eligibility",
-        "https://www.fema.gov/flood-insurance/rules-legislation/congressional-reauthorization"
+        "https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf",
+        "https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible",
+        "https://www.citizensfla.com/flood",
+        "https://www.floodsmart.gov/get-insured/eligibility"
       ],
       "contextualInbound": 3,
-      "evidencePack": "content/civilian-blog/research/florida-insurance-relief-2026-2026-09-06.json",
-      "readerTask": "Compare a renewal or purchase quote without mistaking statewide premium figures for personal savings.",
+      "evidencePack": "content/civilian-blog/research/florida-insurance-relief-2026.json",
+      "readerTask": "Compare property-specific coverage, deductibles and flood requirements before changing the ownership budget.",
       "nextStep": {
-        "goal": "property-cost-review",
-        "prompt": "Before comparing homes, collect insurance questions for each property.",
+        "goal": "insurance-budget-review",
+        "prompt": "Gather the address, current policy and comparable offers before changing the property budget.",
         "tool": "/resources/florida-home-insurance",
-        "toolLabel": "Use the Florida insurance guide",
-        "bridge": "https://pensacolamilitaryhousing.com/pensacola-flood-zones-homebuyers",
-        "bridgeLabel": "Check flood-zone questions before you make an offer"
+        "toolLabel": "Prepare insurance questions",
+        "bridge": "/resources/coastal-ownership-costs",
+        "bridgeLabel": "Compare full property costs"
+      }
+    },
+    {
+      "site": "gc",
+      "slug": "home-appraisals-explained",
+      "url": "https://greggcostin.com/blog/home-appraisals-explained",
+      "linkedSourceDomains": 5,
+      "sourceUrls": [
+        "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "https://www.consumerfinance.gov/rules-policy/regulations/1026/42/",
+        "https://www.consumerfinance.gov/rules-policy/regulations/1002/14/",
+        "https://selling-guide.fanniemae.com/sel/b4-1.3-08/comparable-sales",
+        "https://www.consumerfinance.gov/archive/newsroom/agencies-finalize-interagency-guidance-on-reconsiderations-of-value-for-residential-real-estate-valuations/",
+        "https://www.consumerfinance.gov/archive/blog/mortgage-borrowers-can-challenge-inaccurate-appraisals-through-the-reconsideration-of-value-process/",
+        "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+        "https://reab.alabama.gov/",
+        "https://www2.myfloridalicense.com/real-estate-appraisal-board/",
+        "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0718/Sections/0718.112.html"
+      ],
+      "contextualInbound": 3,
+      "evidencePack": "content/civilian-blog/research/home-appraisals-explained.json",
+      "readerTask": "Read the appraisal, test whether its comparable sales are defensible for this property, and price each of the four responses to the gap in actual cash.",
+      "nextStep": {
+        "goal": "appraisal-gap-review",
+        "prompt": "Bring the appraisal report, the contract and your lender's revised figures together before deciding how to close the gap.",
+        "tool": "/mortgage-calculators",
+        "toolLabel": "Recalculate the cash needed",
+        "bridge": "/buy",
+        "bridgeLabel": "Plan the purchase"
       }
     },
     {
       "site": "gc",
       "slug": "property-taxes-escambia-santa-rosa",
       "url": "https://greggcostin.com/blog/property-taxes-escambia-santa-rosa",
-      "linkedSourceDomains": 5,
+      "linkedSourceDomains": 3,
       "sourceUrls": [
-        "https://escambiataxcollector.com/property-tax/millage-rate-detail/",
-        "https://srcpa.gov/millage-rates/",
-        "https://escpa.org/",
-        "https://santarosaclerk.com/other-services/value-adjustment-board-public-notice/",
-        "https://taxfoundation.org/blog/florida-property-tax-proposal/"
+        "https://floridarevenue.com/property/Documents/pt107.pdf",
+        "https://www.escpa.org/",
+        "https://srcpa.gov/ad-valorem-tax/",
+        "https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf",
+        "https://srcpa.gov/exemptions/"
       ],
-      "contextualInbound": 4,
-      "evidencePack": null,
-      "readerTask": null,
+      "contextualInbound": 5,
+      "evidencePack": "content/civilian-blog/research/property-taxes-escambia-santa-rosa.json",
+      "readerTask": "Estimate buyer-based property taxes using the correct jurisdiction, tax year and eligible exemptions.",
       "nextStep": {
-        "goal": "property-cost-review",
-        "prompt": "Compare tax rules with the address and ownership plan you are considering.",
-        "tool": "/resources/florida-homestead-exemption",
-        "toolLabel": "Review homestead requirements",
-        "bridge": "https://pensacolamilitaryhousing.com/blog/florida-veteran-property-tax-county-guide",
-        "bridgeLabel": "Veteran buyer? See the county tax guide"
+        "goal": "buyer-tax-review",
+        "prompt": "Bring the parcel number, expected purchase date and tax estimate into the ownership budget.",
+        "tool": "/resources/coastal-ownership-costs",
+        "toolLabel": "Compare full ownership costs",
+        "bridge": "/buy",
+        "bridgeLabel": "Plan the purchase"
       }
     },
     {
@@ -901,14 +879,14 @@
         "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
         "https://guide-selling.fanniemae.com/sel/b2-1.1-01/occupancy-types"
       ],
-      "contextualInbound": 4,
+      "contextualInbound": 6,
       "evidencePack": "content/civilian-blog/research/what-moves-mortgage-rates.json",
       "readerTask": "Compare written financing offers and decide whether points, a rate lock and the total property budget fit the intended use.",
       "nextStep": {
         "goal": "property-financing-review",
         "prompt": "Bring the property location, intended use and written financing offers together. Then check the ownership costs that sit outside the mortgage payment.",
-        "tool": "/resources/florida-home-insurance",
-        "toolLabel": "Prepare property-specific insurance questions",
+        "tool": "/resources/coastal-ownership-costs",
+        "toolLabel": "Compare the full property budget",
         "bridge": "/gulf-shores-orange-beach",
         "bridgeLabel": "Review coastal Alabama ownership questions"
       }

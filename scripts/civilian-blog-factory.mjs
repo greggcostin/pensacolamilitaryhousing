@@ -21,7 +21,7 @@ import { journeyHtml, wireJourney } from "./blog-journey.mjs";
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import { SITE_DIR, SITE, esc, buildPage, figureBand, breadcrumbs, faqPage, gate } from "./civilian-page-lib.mjs";
 import { publisherRef } from "./entity-lib.mjs";
-import { placeQuickAnswer } from "./quick-answer-lib.mjs";
+import { placeQuickAnswer, QA_CSS } from "./quick-answer-lib.mjs";
 import { fileURLToPath } from "node:url";
 import { readResearch, isModern, validateEditorial, voiceFindings, sectionLinks, updateBlogSitemap, sentenceCount, finalizeArticleHtml, plainBlogActions, updateBlogListing } from './civilian-editorial-lib.mjs';
 import { scorePost } from './score-post.mjs';
@@ -141,10 +141,37 @@ ${journeyHtml(spec, "gc", ROOT)}
   let html = buildPage(pageSpec);
   if (spec.quickAnswer) {
     html = placeQuickAnswer(html, { text: spec.quickAnswer, date: monthYear(spec.dateModified || spec.datePublished), by: "Gregg Costin, Realtor, The Costin Team at Levin Rinke Realty" });
+    // The civilian interior template renders the h1 and lead in the hero ABOVE <main>, so the shared
+    // helper's lead branch drops the block outside <main> and blog-render-gate rejects it. Rebuilds were
+    // rescued by preserveBlogShell, which relocates the block; a genuinely new post has no existing file,
+    // so it could never pass its first build. Normalize here so first build and rebuild render identically.
+    const qaPattern = /<div class="quick-answer" data-quick-answer>[\s\S]*?<\/div>/;
+    const block = html.match(qaPattern)?.[0];
+    const mainHtml = html.match(/<main\b[^>]*>[\s\S]*?<\/main>/)?.[0];
+    if (!existing && block && mainHtml && !mainHtml.includes('data-quick-answer')) {
+      html = html.replace(qaPattern, '').replace(/(<main\b[^>]*>)\s*/, (_, tag) => tag + '\n' + block + '\n');
+      // Match preserveBlogShell's head style block so a first build equals the steady state.
+      const css = '<style id="blog-quick-answer-style">' + QA_CSS + '</style>';
+      html = /<style id="blog-quick-answer-style">[\s\S]*?<\/style>/.test(html)
+        ? html.replace(/<style id="blog-quick-answer-style">[\s\S]*?<\/style>/, () => css)
+        : html.replace('</head>', () => css + '\n</head>');
+    }
   }
   html = wireJourney(html, spec, "gc");
   html = plainBlogActions(finalizeArticleHtml(html));
   html = preserveBlogShell(existing,html);
+  // A new post inherits an already-bundled head template, so the shared experience stylesheet links
+  // arrive stripped (bundleCivilianStyles removed them from the source page) and the new page carries
+  // neither them nor a bundle. Restore them whenever the page has no style bundle, so audit-civilian
+  // passes in editable state and prepare-civilian-delivery folds them into the hashed bundle exactly
+  // like every other civilian page. Idempotent: skipped once either the links or a bundle are present.
+  if (!html.includes('data-costin-style-bundle=')) {
+    const anchor = '<script src="/assets/costin-meta-config.js" defer></script>';
+    const missing = ['costin-fonts.css', 'costin-experience.css'].filter(css => !html.includes(`/assets/${css}`));
+    if (missing.length && html.includes(anchor)) {
+      html = html.replace(anchor, () => missing.map(css => `<link rel="stylesheet" href="/assets/${css}">`).join('\n') + '\n' + anchor);
+    }
+  }
   assertBlogRendered(spec,html);
   writeFileSync(`${spec.outDir || SITE_DIR}/${pageSpec.file}`, html);
   const gateErrs = gate({ title: spec.title, desc: spec.description, minWords: 1100 }, html);

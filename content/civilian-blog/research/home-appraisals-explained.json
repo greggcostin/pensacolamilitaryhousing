@@ -1,0 +1,751 @@
+{
+  "version": 2,
+  "schemaVersion": 2,
+  "slug": "home-appraisals-explained",
+  "sessionDate": "2026-09-10",
+  "article": {
+    "slug": "home-appraisals-explained",
+    "site": "gc"
+  },
+  "models": {
+    "research": "claude / claude-opus-5[1m] / in-session",
+    "write": "claude / claude-opus-5[1m] / in-session"
+  },
+  "reader": "A Florida Panhandle or coastal Alabama buyer under contract whose appraisal has come in below the agreed price, plus the seller on the other side of that same contract.",
+  "decision": "Decide what to do about an appraisal gap: pay the difference in cash, renegotiate the price, request a reconsideration of value, or exit under the financing terms.",
+  "pillar": "buying",
+  "readerTask": "Read the appraisal the lender is required to give you, test whether its comparable sales are defensible for this property, and price each of the four responses to the gap in actual cash.",
+  "originalValue": "Most appraisal explainers stop at renegotiate or pay the difference. This one uses the rules that actually govern the file: the Regulation B free-copy and notice rights, the Regulation Z independence prohibition, Fannie Mae's own comparable-selection language naming FEMA flood zone as a selection factor, the named federal reconsideration-of-value process, and the value acceptance exclusions that make a full appraisal unavoidable on leasehold and higher-priced coastal property.",
+  "changeReason": "New article. The buying pillar had no coverage on the civilian blog, the dedup gate returned clear on both domains, and the appraisal gap is the buying decision with the largest cash consequence that the site did not answer.",
+  "uncertainFacts": [
+    {
+      "fact": "A dollar range for what a residential appraisal costs in the Pensacola or Baldwin County market",
+      "status": "omitted",
+      "reason": "No primary source publishes a current local fee range. Regulation Z requires customary and reasonable compensation in the property's geographic market, which is a standard rather than a published number. The article answers the fee question by pointing the reader at Section B of their own Loan Estimate instead of inventing a range."
+    },
+    {
+      "fact": "That a lender sizes a purchase loan against the lower of contract price and appraised value",
+      "status": "reframed as a stated assumption",
+      "reason": "The public Fannie Mae Selling Guide topics reachable this session did not carry the loan-to-value definition, and the Freddie Mac guide viewer returned no text. The worked example therefore declares the lower-of-two basis as an explicit assumption of the illustration rather than asserting it as a sourced rule."
+    }
+  ],
+  "sources": [
+    {
+      "id": "regb",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Regulation B, 12 CFR 1002.14, Rules on providing appraisals and other valuations",
+      "url": "https://www.consumerfinance.gov/rules-policy/regulations/1002/14/",
+      "primary": true,
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Opened the regulation text and read paragraphs (a)(1) In general, (a)(2) Disclosure and (a)(3) Reimbursement verbatim. Confirmed the copy requirement covers a first lien on a dwelling, the promptly-upon-completion or three-business-day timing, the third-business-day written notice after application, and that the creditor may not charge for the copy while it may still charge for the appraisal itself."
+    },
+    {
+      "id": "regz42",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Regulation Z, 12 CFR 1026.42, Valuation independence",
+      "url": "https://www.consumerfinance.gov/rules-policy/regulations/1026/42/",
+      "primary": true,
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Read 1026.42(c)(1) coercion prohibition and its examples, including seeking to influence a preparer to report a minimum or maximum value and withholding payment over value. Also read 1026.42(f)(1) customary and reasonable compensation in the geographic market of the property being appraised. Covered persons include creditors and settlement service providers such as agents and appraisal management companies."
+    },
+    {
+      "id": "le",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Loan Estimate explainer, Owning a Home",
+      "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+      "primary": true,
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Confirmed the appraisal fee sits in Section B, Services You Cannot Shop For, on page 2, and read the explanation that these services and providers are required and chosen by the lender so the borrower compares section totals across lenders rather than shopping the individual item."
+    },
+    {
+      "id": "fnma-comps",
+      "publisher": "Fannie Mae",
+      "title": "Selling Guide B4-1.3-08, Comparable Sales",
+      "url": "https://selling-guide.fanniemae.com/sel/b4-1.3-08/comparable-sales",
+      "primary": true,
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Opened topic B4-1.3-08, dated 06/04/2025, in the Selling Guide published September 2, 2026. Read Selection of Comparable Sales, including the sentence naming FEMA designated flood zone among external factors to consider; Minimum Number of Comparable Sales, requiring three closed comparables in the sales comparison approach; and Age of the Comparable Sales, preferring sales closed within the last 12 months with explanation for older ones."
+    },
+    {
+      "id": "fnma-va",
+      "publisher": "Fannie Mae",
+      "title": "Selling Guide B4-1.4-10, Value Acceptance",
+      "url": "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+      "primary": true,
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Opened topic B4-1.4-10, dated 06/03/2026, in the Selling Guide published September 2, 2026. Read the Overview stating an appraisal is not required when DU offers value acceptance, the Ineligible Transactions list including leasehold properties, two- to four-unit properties and transactions where purchase price or estimated value provided to DU is $1,000,000 or more, and the Exercising Value Acceptance condition that the offer is not more than four months old on the date of the note."
+    },
+    {
+      "id": "rov-news",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Agencies Finalize Interagency Guidance on Reconsiderations of Value for Residential Real Estate Valuations",
+      "url": "https://www.consumerfinance.gov/archive/newsroom/agencies-finalize-interagency-guidance-on-reconsiderations-of-value-for-residential-real-estate-valuations/",
+      "primary": true,
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Confirmed the issuance date of July 18, 2024 and the five issuing agencies, which are the CFPB, FDIC, Federal Reserve Board, NCUA and OCC. Read the definition of a reconsideration of value as a request from a financial institution to an appraiser or other preparer of a valuation report to reassess the value of residential real estate, and the scope covering consumer-supplied information not considered during an appraisal or deficiencies identified in the original appraisal."
+    },
+    {
+      "id": "rov-blog",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Mortgage borrowers can challenge inaccurate appraisals through the reconsideration of value process",
+      "url": "https://www.consumerfinance.gov/archive/blog/mortgage-borrowers-can-challenge-inaccurate-appraisals-through-the-reconsideration-of-value-process/",
+      "primary": true,
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Read the consumer-facing explanation, published October 6, 2022, naming the grounds a borrower can raise: factual or other errors or omissions, inadequate comparable properties, or evidence that the appraisal was influenced by prohibited bias. Also read the statement that plain-language notice of reconsideration opportunities supports a nondiscriminatory process."
+    },
+    {
+      "id": "freab",
+      "publisher": "Florida Department of Business and Professional Regulation",
+      "title": "Florida Real Estate Appraisal Board",
+      "url": "https://www2.myfloridalicense.com/real-estate-appraisal-board/",
+      "primary": true,
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Read that the board handles examination, licensing and regulation of real estate appraisers, appraisal management companies and instructors pursuant to Chapter 475, Part II, Florida Statutes, and the classification definitions, including certified residential appraiser as a person certified by the department as qualified to issue appraisal reports for residential real property of one to four residential units."
+    },
+    {
+      "id": "alreab",
+      "publisher": "Alabama Real Estate Appraisers Board",
+      "title": "Alabama Real Estate Appraisers Board",
+      "url": "https://reab.alabama.gov/",
+      "primary": true,
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Confirmed Alabama licenses and regulates appraisers and appraisal management companies through its own board, separate from Florida's, and that a public lookup exists for appraisers and entities. The site did not state classification levels or a statutory cite, so no Alabama classification claim is made in the article."
+    },
+    {
+      "id": "fl718",
+      "publisher": "The Florida Legislature",
+      "title": "Section 718.112, Florida Statutes, Bylaws",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0718/Sections/0718.112.html",
+      "primary": true,
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Read subsection (2)(g) on structural integrity reserve studies: required at least every 10 years after the condominium's creation for each building three habitable stories or higher in height, the listed components, the December 31, 2025 date for associations existing on or before July 1, 2022 under unit-owner control, and the outer limit that in no event may the study be completed after December 31, 2026."
+    }
+  ],
+  "claims": [
+    {
+      "id": "reg-b-copy",
+      "kind": "fact",
+      "text": "a copy of all appraisals and other written valuations developed in connection with an application for credit that is to be secured by a first lien on a dwelling",
+      "claim": "Regulation B requires the creditor to provide a copy of all appraisals and other written valuations developed for a first-lien dwelling application.",
+      "sourceIds": [
+        "regb"
+      ],
+      "scope": "US closed-end and open-end credit applications secured by a first lien on a dwelling. It does not cover junior liens or valuations developed outside a credit application.",
+      "asOf": "2026-09-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www.consumerfinance.gov/rules-policy/regulations/1002/14/",
+      "locator": "12 CFR 1002.14(a)(1), In general, first sentence.",
+      "verification": "Opened the CFPB regulation page and read paragraph (a)(1) verbatim rather than relying on a summary."
+    },
+    {
+      "id": "reg-b-timing",
+      "kind": "fact",
+      "text": "promptly upon completion, or three business days prior to consummation of the transaction",
+      "claim": "The copy must arrive promptly upon completion, or three business days prior to consummation, whichever is earlier.",
+      "sourceIds": [
+        "regb"
+      ],
+      "scope": "Timing rule for closed-end credit consummation. The applicant may waive the timing and receive the copy at or before consummation.",
+      "asOf": "2026-09-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www.consumerfinance.gov/rules-policy/regulations/1002/14/",
+      "locator": "12 CFR 1002.14(a)(1), timing clause.",
+      "loadBearing": true,
+      "verification": "Read the timing clause and the waiver sentence in the regulation text, and confirmed the waiver still requires the valuation to be obtained at least three business days before consummation.",
+      "independentCheck": {
+        "reviewer": "Claude claude-opus-5[1m] in-session",
+        "date": "2026-09-10",
+        "finding": "Re-opened 1002.14(a)(1) and confirmed the whichever-is-earlier construction. The article does not present the deadline as an absolute right to three days of review, because the applicant may waive it."
+      }
+    },
+    {
+      "id": "reg-b-notice",
+      "kind": "fact",
+      "text": "not later than the third business day after the creditor receives an application",
+      "claim": "The creditor must mail or deliver written notice of the right to receive appraisal copies no later than the third business day after receiving the application.",
+      "sourceIds": [
+        "regb"
+      ],
+      "scope": "Applications subject to 1002.14(a)(1). A later determination that a first lien is involved restarts the three-day clock.",
+      "asOf": "2026-09-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www.consumerfinance.gov/rules-policy/regulations/1002/14/",
+      "locator": "12 CFR 1002.14(a)(2), Disclosure.",
+      "verification": "Read paragraph (a)(2) verbatim, including the alternative timing when a lien position is determined later."
+    },
+    {
+      "id": "reg-b-no-charge",
+      "kind": "fact",
+      "text": "A creditor shall not charge an applicant for providing a copy of appraisals and other written valuations",
+      "claim": "The creditor may not charge for the copy, though it may charge a reasonable fee to reimburse the cost of the appraisal itself.",
+      "sourceIds": [
+        "regb"
+      ],
+      "scope": "Copies required under 1002.14. The reimbursement allowance for the appraisal cost is a separate charge and may be limited by other law.",
+      "asOf": "2026-09-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www.consumerfinance.gov/rules-policy/regulations/1002/14/",
+      "locator": "12 CFR 1002.14(a)(3), Reimbursement.",
+      "verification": "Read paragraph (a)(3) verbatim and kept the no-charge rule for the copy separate from the permitted reimbursement for the appraisal."
+    },
+    {
+      "id": "regz-coercion",
+      "kind": "fact",
+      "text": "based on any factor other than the independent judgment of a person that prepares valuations",
+      "claim": "Regulation Z prohibits covered persons from causing a dwelling's assigned value to rest on anything other than the preparer's independent judgment, through coercion or similar conduct.",
+      "sourceIds": [
+        "regz42"
+      ],
+      "scope": "Covered transactions secured by the consumer's principal dwelling. Covered persons include creditors and settlement service providers such as agents and appraisal management companies.",
+      "asOf": "2026-09-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www.consumerfinance.gov/rules-policy/regulations/1026/42/",
+      "locator": "12 CFR 1026.42(c)(1) and its examples.",
+      "verification": "Read the prohibition and its enumerated examples, including seeking a minimum or maximum value and withholding payment over the reported value."
+    },
+    {
+      "id": "le-section-b",
+      "kind": "fact",
+      "text": "the appraisal fee appears in Section B, Services You Cannot Shop For",
+      "claim": "On the Loan Estimate the appraisal fee sits in Section B, Services You Cannot Shop For, because the lender selects the provider.",
+      "sourceIds": [
+        "le"
+      ],
+      "scope": "Loan Estimate page 2 for covered closed-end mortgage applications. The amount itself is lender and market specific and is not published by the CFPB.",
+      "asOf": "2026-09-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+      "locator": "Loan Estimate explainer, page 2, Section B.",
+      "verification": "Read the explainer's description of Section B and its instruction to compare section totals across lenders because the borrower cannot shop these providers separately."
+    },
+    {
+      "id": "comps-minimum",
+      "kind": "fact",
+      "text": "A minimum of three closed comparables must be reported in the sales comparison approach",
+      "claim": "Fannie Mae requires at least three closed comparable sales in the sales comparison approach.",
+      "sourceIds": [
+        "fnma-comps"
+      ],
+      "scope": "Fannie Mae conventional loans using an appraisal report. Other investors, government programs and cash purchases are not governed by this topic.",
+      "asOf": "2025-06-04",
+      "perishable": true,
+      "expires": "2027-03-04",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://selling-guide.fanniemae.com/sel/b4-1.3-08/comparable-sales",
+      "locator": "Selling Guide B4-1.3-08, Minimum Number of Comparable Sales, first sentence.",
+      "loadBearing": true,
+      "verification": "Opened topic B4-1.3-08 and read the minimum-count paragraph, including that listings and contract offerings are supporting data rather than substitutes for the three closed sales.",
+      "independentCheck": {
+        "reviewer": "Claude claude-opus-5[1m] in-session",
+        "date": "2026-09-10",
+        "finding": "Confirmed the requirement is three closed comparables, not three of any kind. The article does not claim more comps automatically produce a higher value."
+      }
+    },
+    {
+      "id": "comps-age",
+      "kind": "fact",
+      "text": "Comparable sales that have closed within the last 12 months should be used",
+      "claim": "Comparable sales closed within the last 12 months should be used, with an explanation when an older sale is the better indicator.",
+      "sourceIds": [
+        "fnma-comps"
+      ],
+      "scope": "Fannie Mae conventional appraisal reports. The guide expressly allows older sales in thin markets when the appraiser explains the choice.",
+      "asOf": "2025-06-04",
+      "perishable": true,
+      "expires": "2027-03-04",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://selling-guide.fanniemae.com/sel/b4-1.3-08/comparable-sales",
+      "locator": "Selling Guide B4-1.3-08, Age of the Comparable Sales.",
+      "verification": "Read the full paragraph, including the example preferring a nine-month-old sale with a time adjustment over a one-month-old sale needing multiple adjustments."
+    },
+    {
+      "id": "comps-flood",
+      "kind": "fact",
+      "text": "External factors, including Federal Emergency Management Agency (FEMA) designated flood zone, should be given consideration when selecting comparables",
+      "claim": "Fannie Mae names FEMA designated flood zone among the external factors an appraiser should consider when selecting comparable sales.",
+      "sourceIds": [
+        "fnma-comps"
+      ],
+      "scope": "Comparable selection guidance for Fannie Mae appraisal reports. It is a selection consideration, not a rule that comps must share a flood zone or that a mismatch invalidates an appraisal.",
+      "asOf": "2025-06-04",
+      "perishable": true,
+      "expires": "2027-03-04",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://selling-guide.fanniemae.com/sel/b4-1.3-08/comparable-sales",
+      "locator": "Selling Guide B4-1.3-08, Selection of Comparable Sales, sentence on external factors.",
+      "loadBearing": true,
+      "verification": "Read the sentence in place and checked the surrounding paragraph so the article states it as a selection consideration rather than a disqualifying rule.",
+      "independentCheck": {
+        "reviewer": "Claude claude-opus-5[1m] in-session",
+        "date": "2026-09-10",
+        "finding": "Verified the guide says flood zone should be given consideration. The article therefore frames a flood-zone mismatch as a documented argument to raise, not as proof the appraisal is wrong."
+      }
+    },
+    {
+      "id": "va-leasehold",
+      "kind": "fact",
+      "text": "leasehold properties as ineligible for a value acceptance offer",
+      "claim": "Fannie Mae lists leasehold properties among the transactions ineligible for a value acceptance offer, so an appraisal is required.",
+      "sourceIds": [
+        "fnma-va"
+      ],
+      "scope": "Fannie Mae conventional loans underwritten through Desktop Underwriter. Other investors and government programs set their own appraisal waiver policies.",
+      "asOf": "2026-06-03",
+      "perishable": true,
+      "expires": "2026-12-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+      "locator": "Selling Guide B4-1.4-10, Ineligible Transactions list.",
+      "loadBearing": true,
+      "verification": "Read the full Ineligible Transactions list and confirmed leasehold properties appear in it, alongside two- to four-unit properties, co-op units, manufactured homes and proposed construction.",
+      "independentCheck": {
+        "reviewer": "Claude claude-opus-5[1m] in-session",
+        "date": "2026-09-10",
+        "finding": "Confirmed the exclusion is categorical within this topic. The article limits the consequence to Fannie Mae conventional financing rather than claiming every lender must appraise every leasehold."
+      }
+    },
+    {
+      "id": "va-million",
+      "kind": "fact",
+      "text": "purchase price or estimated value provided to DU is $1,000,000 or more",
+      "claim": "Transactions where the purchase price or estimated value provided to Desktop Underwriter is $1,000,000 or more are ineligible for value acceptance.",
+      "sourceIds": [
+        "fnma-va"
+      ],
+      "scope": "Fannie Mae conventional loans underwritten through Desktop Underwriter. The threshold is stated in the guide and is subject to Fannie Mae announcements.",
+      "asOf": "2026-06-03",
+      "perishable": true,
+      "expires": "2026-12-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+      "locator": "Selling Guide B4-1.4-10, Ineligible Transactions list.",
+      "verification": "Read the threshold line and confirmed it turns on either the purchase price or the estimated value submitted to DU, not solely on the loan amount."
+    },
+    {
+      "id": "va-age",
+      "kind": "fact",
+      "text": "the value acceptance offer is not more than four months old on the date of the note",
+      "claim": "A lender may only exercise value acceptance if the offer is not more than four months old on the note date.",
+      "sourceIds": [
+        "fnma-va"
+      ],
+      "scope": "Fannie Mae conventional loans. One of three stated conditions for exercising the offer, alongside the final DU submission and no appraisal being obtained.",
+      "asOf": "2026-06-03",
+      "perishable": true,
+      "expires": "2026-12-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+      "locator": "Selling Guide B4-1.4-10, Exercising Value Acceptance.",
+      "verification": "Read all three conditions and confirmed the four-month limit runs to the date of the note and mortgage."
+    },
+    {
+      "id": "rov-issued",
+      "kind": "fact",
+      "text": "issued interagency guidance on reconsiderations of value on July 18, 2024",
+      "claim": "Five federal agencies issued interagency guidance on reconsiderations of value on July 18, 2024.",
+      "sourceIds": [
+        "rov-news"
+      ],
+      "scope": "Supervisory guidance for financial institutions on ROV policies and procedures. It is guidance to institutions, not a consumer entitlement to a particular outcome.",
+      "asOf": "2024-07-18",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www.consumerfinance.gov/archive/newsroom/agencies-finalize-interagency-guidance-on-reconsiderations-of-value-for-residential-real-estate-valuations/",
+      "locator": "CFPB newsroom release announcing the finalized interagency guidance.",
+      "loadBearing": true,
+      "verification": "Confirmed the July 18, 2024 issuance date and the five issuing agencies, and read the guidance's definition of an ROV as a request to reassess value.",
+      "independentCheck": {
+        "reviewer": "Claude claude-opus-5[1m] in-session",
+        "date": "2026-09-10",
+        "finding": "Verified the date and agency list. The article describes the ROV as a process institutions are guided to offer, and does not promise the lender must change the value."
+      }
+    },
+    {
+      "id": "rov-grounds",
+      "kind": "fact",
+      "text": "factual or other errors or omissions, inadequate comparable properties, or evidence that the appraisal was influenced by prohibited bias",
+      "claim": "The CFPB describes the grounds a borrower can raise in a reconsideration of value as errors or omissions, inadequate comparable properties, or evidence of prohibited bias.",
+      "sourceIds": [
+        "rov-blog"
+      ],
+      "scope": "CFPB consumer guidance published October 6, 2022. It describes what borrowers may raise, not a guarantee the lender will revise the value.",
+      "asOf": "2022-10-06",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www.consumerfinance.gov/archive/blog/mortgage-borrowers-can-challenge-inaccurate-appraisals-through-the-reconsideration-of-value-process/",
+      "locator": "CFPB blog, paragraph listing what borrowers can provide.",
+      "verification": "Read the consumer post and confirmed the three grounds and the publication date of October 6, 2022."
+    },
+    {
+      "id": "freab-cert",
+      "kind": "fact",
+      "text": "certified by the department as qualified to issue appraisal reports for residential real property of one to four residential units",
+      "claim": "Florida defines a certified residential appraiser as a person certified by the department as qualified to issue appraisal reports for residential property of one to four units.",
+      "sourceIds": [
+        "freab"
+      ],
+      "scope": "Florida licensure under Chapter 475, Part II, Florida Statutes. Alabama credentials are issued separately by its own board.",
+      "asOf": "2026-09-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www2.myfloridalicense.com/real-estate-appraisal-board/",
+      "locator": "Florida Real Estate Appraisal Board page, classification definitions.",
+      "verification": "Read the board's own classification wording and the Chapter 475, Part II authority statement."
+    },
+    {
+      "id": "sirs-stories",
+      "kind": "fact",
+      "text": "three habitable stories or higher in height",
+      "claim": "Florida requires a structural integrity reserve study for each condominium building three habitable stories or higher, at least every 10 years after the condominium's creation.",
+      "sourceIds": [
+        "fl718"
+      ],
+      "scope": "Residential condominium associations under section 718.112(2)(g), Florida Statutes. It does not apply to single-family homes or to Alabama condominiums.",
+      "asOf": "2026-09-10",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0718/Sections/0718.112.html",
+      "locator": "Section 718.112(2)(g), Florida Statutes.",
+      "verification": "Read the subsection and confirmed both the height threshold and the ten-year interval, along with the listed components the study must address."
+    },
+    {
+      "id": "sirs-deadline",
+      "kind": "fact",
+      "text": "In no event may the structural integrity reserve study be completed after December 31, 2026",
+      "claim": "Florida sets an outer limit for completing a structural integrity reserve study of December 31, 2026.",
+      "sourceIds": [
+        "fl718"
+      ],
+      "scope": "Section 718.112(2)(g), Florida Statutes, as currently published. Statutory deadlines have been amended repeatedly in recent sessions, so the date needs rechecking after each session.",
+      "asOf": "2026-09-10",
+      "perishable": true,
+      "expires": "2027-01-15",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0718/Sections/0718.112.html",
+      "locator": "Section 718.112(2)(g), Florida Statutes, outer deadline sentence.",
+      "loadBearing": true,
+      "verification": "Read the sentence in the current statute text rather than a news summary, and kept it distinct from the December 31, 2025 date that applies to associations existing on or before July 1, 2022 under unit-owner control.",
+      "independentCheck": {
+        "reviewer": "Claude claude-opus-5[1m] in-session",
+        "date": "2026-09-10",
+        "finding": "Confirmed two different dates appear in the same subsection and that the article uses the outer limit only. Review deadline set to January 15, 2027 because the date lapses at the end of 2026."
+      }
+    },
+    {
+      "id": "gap-loan-planned",
+      "kind": "calculation",
+      "text": "$373,500",
+      "claim": "Ninety percent of a $415,000 contract price is a $373,500 loan.",
+      "assumptions": "Hypothetical purchase at $415,000 with a planned 10 percent down payment. The illustration assumes the lender sizes the loan against the lower of the contract price and the appraised value, which is the assumption the low appraisal puts to work.",
+      "method": "Multiply the contract price by the loan-to-value ratio: 415000 times 0.90 equals 373500.",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "asOf": "2026-09-10",
+      "sourceUrl": "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+      "locator": "Hypothetical illustration written for this article. The source URL supplies underwriting context only; the price, down payment and arithmetic are supplied by the article.",
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          415000,
+          0.9
+        ],
+        "result": 373500,
+        "units": "US dollars",
+        "inputSources": [
+          "Hypothetical contract price and down payment chosen for this article"
+        ],
+        "tolerance": 0.005
+      }
+    },
+    {
+      "id": "gap-loan-actual",
+      "kind": "calculation",
+      "text": "$360,000",
+      "claim": "Ninety percent of a $400,000 appraised value is a $360,000 loan.",
+      "assumptions": "Same hypothetical purchase, with the appraisal returning $400,000 and the lender sizing the loan against that lower figure.",
+      "method": "Multiply the appraised value by the loan-to-value ratio: 400000 times 0.90 equals 360000.",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "asOf": "2026-09-10",
+      "sourceUrl": "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+      "locator": "Hypothetical illustration written for this article. The source URL supplies underwriting context only.",
+      "calculation": {
+        "operation": "product",
+        "inputs": [
+          400000,
+          0.9
+        ],
+        "result": 360000,
+        "units": "US dollars",
+        "inputSources": [
+          "Hypothetical appraised value and down payment chosen for this article"
+        ],
+        "tolerance": 0.005
+      }
+    },
+    {
+      "id": "gap-cash",
+      "kind": "calculation",
+      "text": "$55,000",
+      "claim": "Holding the $415,000 price with a $360,000 loan leaves $55,000 to bring instead of the planned down payment.",
+      "assumptions": "The seller does not reduce the price and the buyer keeps the contract. Closing costs, prepaid items and deposits are excluded so the gap arithmetic stays visible.",
+      "method": "Subtract the loan from the contract price: 415000 minus 360000 equals 55000.",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "asOf": "2026-09-10",
+      "sourceUrl": "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+      "locator": "Hypothetical illustration written for this article. The source URL supplies underwriting context only.",
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          415000,
+          360000
+        ],
+        "result": 55000,
+        "units": "US dollars",
+        "inputSources": [
+          "Hypothetical contract price and the calculated loan amount in gap-loan-actual"
+        ],
+        "tolerance": 0.005
+      }
+    },
+    {
+      "id": "gap-extra",
+      "kind": "calculation",
+      "text": "$13,500",
+      "claim": "The low appraisal moves $13,500 of additional cash onto the buyer if nothing else changes.",
+      "assumptions": "Compares the planned $41,500 down payment against the $55,000 now required. Excludes closing costs and any renegotiation.",
+      "method": "Subtract the planned down payment from the required cash: 55000 minus 41500 equals 13500. Cross-check: the 15000 value gap times the 0.90 loan-to-value ratio equals the same 13500.",
+      "status": "verified",
+      "accessed": "2026-09-10",
+      "asOf": "2026-09-10",
+      "sourceUrl": "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+      "locator": "Hypothetical illustration written for this article. The source URL supplies underwriting context only.",
+      "loadBearing": true,
+      "verification": "Recomputed both routes to the same figure: 55000 minus 41500, and 15000 times 0.90. Both return 13500.",
+      "independentCheck": {
+        "reviewer": "Claude claude-opus-5[1m] in-session",
+        "date": "2026-09-10",
+        "finding": "Independently recalculated the whole chain in Node. Planned loan 373500, planned down 41500, new loan 360000, cash 55000, increase 13500, and the cross-check 15000 times 0.90 equals 13500."
+      },
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          55000,
+          41500
+        ],
+        "result": 13500,
+        "units": "US dollars",
+        "inputSources": [
+          "Calculated required cash in gap-cash and the planned down payment implied by gap-loan-planned"
+        ],
+        "tolerance": 0.005
+      },
+      "additionalCalculations": [
+        {
+          "operation": "product",
+          "inputs": [
+            15000,
+            0.9
+          ],
+          "result": 13500,
+          "units": "US dollars",
+          "inputSources": [
+            "Cross-check: the value gap multiplied by the loan-to-value ratio"
+          ],
+          "tolerance": 0.005
+        }
+      ]
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-10",
+    "status": "Reviewed the primary sources and the site's own coverage. No current per-query volume or civilian impressions were verified this session: Bing returned zero page and query rows for greggcostin.com and the topic miner's suggestion collection is switched off.",
+    "results": [
+      {
+        "url": "https://www.consumerfinance.gov/rules-policy/regulations/1002/14/",
+        "title": "Regulation B, 12 CFR 1002.14",
+        "observation": "Carries the copy, timing, notice and no-charge rules in full, but as regulation text with no consumer framing. A buyer facing a low appraisal would not find the decision here."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/rules-policy/regulations/1026/42/",
+        "title": "Regulation Z, 12 CFR 1026.42",
+        "observation": "States the independence prohibition and the customary and reasonable compensation standard. Explains why nobody in the transaction can lean on the appraiser, and why no public local fee table exists."
+      },
+      {
+        "url": "https://selling-guide.fanniemae.com/sel/b4-1.3-08/comparable-sales",
+        "title": "Selling Guide B4-1.3-08, Comparable Sales",
+        "observation": "The three-comp minimum, the 12-month window and the FEMA flood zone sentence are all here. Written for lenders, so nobody translates it into a review checklist a buyer can use."
+      },
+      {
+        "url": "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+        "title": "Selling Guide B4-1.4-10, Value Acceptance",
+        "observation": "Names leasehold properties, two- to four-unit properties and $1,000,000 or more among the ineligible transactions. Directly determines whether a Pensacola Beach or Orange Beach buyer can ever avoid an appraisal, which consumer explainers do not connect."
+      },
+      {
+        "url": "https://www.consumerfinance.gov/archive/blog/mortgage-borrowers-can-challenge-inaccurate-appraisals-through-the-reconsideration-of-value-process/",
+        "title": "CFPB, challenging an inaccurate appraisal",
+        "observation": "The clearest consumer statement of the grounds for a reconsideration. It does not tell the reader what evidence to assemble or how the flood zone and comp-age rules supply specific arguments."
+      },
+      {
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0718/Sections/0718.112.html",
+        "title": "Section 718.112, Florida Statutes",
+        "observation": "The structural integrity reserve study requirement and its December 31, 2026 outer limit. Relevant because a coastal condo file is more often stalled by reserves and assessments than by the appraised value."
+      }
+    ],
+    "informationGain": "The pages that answer what happens when an appraisal is low converge on the same four options and stop there. None of them work from the documents that actually govern the file. They do not tell the reader that Regulation B entitles them to a free copy and to written notice of that right within three business days, which is the difference between arguing about a number and reading the report. They do not use Fannie Mae's own comparable-selection language, so they never mention that FEMA designated flood zone is a stated selection consideration, which on this coast is the most useful thing to check before writing a reconsideration request. They treat the reconsideration of value as informal negotiation rather than a process five federal agencies issued guidance on in July 2024. And they assume an appraisal always happens, which is wrong in both directions here: value acceptance can remove it entirely, but never for leasehold property or at $1,000,000 or more, so Pensacola Beach and Orange Beach buyers can plan on the appraisal with certainty while an inland buyer may not get one at all. The gap this article fills is turning a valuation outcome into a document review with named grounds.",
+    "questions": [
+      {
+        "question": "How much does a home appraisal cost in Florida?",
+        "origin": "historical-discovery",
+        "source": "The topic radar generated 2026-09-04 recorded a Bing discovery note for this phrasing. The current content/topic-candidates.json, generated 2026-09-05, has suggestion collection switched off and contains no appraisal cluster, so this is a dated discovery note and not verified current demand."
+      },
+      {
+        "question": "What happens if the appraisal comes in lower than the offer?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Who orders the appraisal, the buyer or the lender?",
+        "origin": "source",
+        "source": "Wording drawn from CFPB Regulation Z 1026.42 valuation independence and the Loan Estimate explainer's Section B description of lender-chosen providers."
+      },
+      {
+        "question": "Can I get a copy of the appraisal I paid for?",
+        "origin": "source",
+        "source": "Wording drawn from 12 CFR 1002.14(a)(1) and (a)(3), which govern the copy and the no-charge rule."
+      },
+      {
+        "question": "What is a reconsideration of value?",
+        "origin": "source",
+        "source": "Phrase taken from the interagency guidance title and the CFPB consumer post naming the process."
+      },
+      {
+        "question": "How many comparable sales does an appraiser have to use?",
+        "origin": "source",
+        "source": "Wording drawn from Selling Guide B4-1.3-08, Minimum Number of Comparable Sales."
+      },
+      {
+        "question": "Can an appraiser use comps from a different flood zone?",
+        "origin": "source",
+        "source": "Wording drawn from the external-factors sentence in Selling Guide B4-1.3-08 naming FEMA designated flood zone."
+      },
+      {
+        "question": "Does the seller have to lower the price after a low appraisal?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can my lender waive the appraisal?",
+        "origin": "source",
+        "source": "Wording drawn from Selling Guide B4-1.4-10, Value Acceptance, which states an appraisal is not required when DU offers value acceptance."
+      },
+      {
+        "question": "Why does my beach condo always need an appraisal?",
+        "origin": "source",
+        "source": "Derived from the leasehold entry in the Ineligible Transactions list in Selling Guide B4-1.4-10."
+      },
+      {
+        "question": "Is an appraisal the same thing as a home inspection?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can I use the same appraisal if I switch lenders?",
+        "origin": "editorial"
+      },
+      {
+        "question": "How do I check that an appraiser is licensed in Florida?",
+        "origin": "source",
+        "source": "Wording drawn from the Florida Real Estate Appraisal Board page describing licensure under Chapter 475, Part II."
+      },
+      {
+        "question": "Does a low appraisal mean I am overpaying?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What stalls a Florida condo purchase besides the appraised value?",
+        "origin": "source",
+        "source": "Derived from section 718.112(2)(g), Florida Statutes, on structural integrity reserve studies."
+      }
+    ]
+  },
+  "localApplications": [
+    {
+      "place": "Pensacola Beach and Navarre Beach",
+      "decision": "Plan the transaction timeline and appraisal fee around a full appraisal, because leasehold property cannot receive a value acceptance offer.",
+      "passage": "Because Fannie Mae lists leasehold properties as ineligible for a value acceptance offer, a Pensacola Beach or Navarre Beach purchase on leased island land should be planned around a full appraisal every time."
+    },
+    {
+      "place": "Gulf Breeze, Navarre and Perdido Key",
+      "decision": "Check the flood zone of each comparable sale before deciding whether to pay the gap or contest the report.",
+      "passage": "If your Gulf Breeze or Perdido Key home sits in a different FEMA flood zone than the sales used to value it, that belongs in a written reconsideration request rather than a phone call."
+    },
+    {
+      "place": "Orange Beach and Gulf Shores",
+      "decision": "Expect an appraisal on higher priced Baldwin County waterfront and verify the appraiser's credential with the correct state board.",
+      "passage": "An Orange Beach or Gulf Shores contract at or above $1,000,000 sits outside value acceptance, and the appraiser on that file answers to the Alabama Real Estate Appraisers Board rather than Florida's."
+    }
+  ],
+  "scopeChecks": {
+    "rentalLaw": "No rental eligibility, zoning or licensing ruling is made. This is a purchase-financing article.",
+    "forecasts": "None. No prediction about values, rates or whether a reconsideration will succeed.",
+    "currentEvents": "No news override claimed. The Atlantic basin had no active tropical cyclones at the 2:00 AM EDT September 10, 2026 outlook, the next FOMC meeting is September 15 to 16, 2026, and the latest Freddie Mac PMMS reading available at the time of writing was the September 3, 2026 release. None of those met the override bar.",
+    "attribution": "No invented client story, transaction outcome, lender quote or claim that Gregg personally performed a fact check. No claim that any specific appraisal will be revised.",
+    "taxAndLegal": "The Florida condominium reserve requirement is described as statutory text with its citation. No legal or tax interpretation is offered and no professional review is implied.",
+    "fees": "No local appraisal fee figure is published because no primary source supports one. The reader is directed to Section B of their own Loan Estimate."
+  },
+  "image": {
+    "selected": "appraisal-review-20260910.jpg",
+    "source": "Wikimedia Commons",
+    "title": "Pensacola NHPD house05.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house05.jpg",
+    "license": "CC BY-SA 3.0",
+    "creditRequired": true,
+    "credit": "Ebyabe",
+    "query": "Pensacola North Hill historic district house",
+    "eyeTest": "Viewed every candidate returned across four queries. Rejected a sepia book-plate scan of palms from a 1900s travel volume (dated archival scan), a HAER lock and power-house photograph (wrong subject), and four FEMA 2004 Florida hurricane-damage photographs by Mark Wolfe (disaster imagery is excluded). Selected this bright colour photograph of a North Hill Preservation District house: legible residential subject, no identifiable people, no watermark, no damage. Downsized to 1400 by 1050 at quality 78 and generated the webp. Caption states it is not a property in any transaction and makes no valuation claim.",
+    "rejected": [
+      {
+        "query": "Gulf Coast Florida house exterior",
+        "reason": "Both candidates were unusable: a sepia 1900s book-plate scan of palms and a HAER industrial lock photograph."
+      },
+      {
+        "query": "Pensacola Florida residential neighborhood home",
+        "reason": "No candidates survived the license and size filter."
+      },
+      {
+        "query": "Gulf Breeze Florida house",
+        "reason": "All four candidates were FEMA 2004 hurricane-damage photographs. Disaster imagery is excluded by the image standard."
+      }
+    ]
+  },
+  "review": {
+    "provider": "claude",
+    "model": "claude-opus-5[1m]",
+    "effort": "in-session",
+    "checkedAt": "2026-09-10",
+    "selectionReason": "Scheduled civilian run. No verified current event, refresh queue empty, radar carried no civilian demand, so the top runnable queue item with a clear dedup verdict was written.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "notes": "Opened all ten primary sources in this session and read the cited passages in place rather than from search summaries: Regulation B 1002.14(a)(1) to (a)(3) verbatim, Regulation Z 1026.42(c)(1) and (f)(1), the CFPB Loan Estimate Section B description, Fannie Mae Selling Guide B4-1.3-08 and B4-1.4-10 in the guide published September 2, 2026, the CFPB ROV newsroom release and consumer post, the Florida Real Estate Appraisal Board classifications, the Alabama board site, and section 718.112(2)(g), Florida Statutes. Recomputed the whole worked example twice in Node by two routes: 415000 times 0.90 equals 373500, 400000 times 0.90 equals 360000, 415000 minus 360000 equals 55000, 55000 minus 41500 equals 13500, cross-checked as 15000 times 0.90 equals 13500. Dropped two figures rather than guess: no local appraisal fee range exists in any primary source, so the fee FAQ points at Section B of the reader own Loan Estimate; and the lower-of-price-or-value basis is declared as an explicit assumption of the illustration because the public Selling Guide topics reachable this session did not carry the loan-to-value definition and the Freddie Mac guide viewer returned no text. Kept the two Florida condominium reserve dates distinct and used only the outer limit. Scope held: Fannie Mae rules are attributed to conventional loans, the flood zone sentence is presented as a selection consideration rather than a disqualifying rule, and the ROV is described as a process with no promised outcome. Counterarguments are in the body: a reconsideration usually fails without a named error or better sale, the appraisal does not bind the contract price, exiting depends on the financing terms actually signed, and a clean appraisal is not an inspection. Read the final prose aloud for wall length and stock phrasing; longest paragraph is 74 words. Agent editorial review only. This is not a claim that Gregg, a lender, an appraiser, an attorney or a tax professional reviewed the article. Re-reviewed after the structural revision: added a visible Sources section listing the same ten primary sources, turned the closing into three concrete steps, and rewrote the lead so it names the reader task. No fact, figure, source or claim changed in that pass; hashes resealed on the revised draft.",
+    "contentHash": "b5943267817fe7e34914c2ecada70f67f0270a4b1486f8949f3b478cbe501f32",
+    "evidenceHash": "0f3a4686a35d8e5f8dedab82a7c7782e3eec453ea9b4c8d8b685086d03ce755c"
+  }
+}

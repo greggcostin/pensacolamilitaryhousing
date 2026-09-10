@@ -1,369 +1,405 @@
 {
-  "note": "Operational safeguards may follow a reproduced error. Performance ideas remain hypotheses until two comparable, reviewed experiments support a scoped rule. The weekly loop reads scripts/blog-weekly-plan.mjs output; historical evidence is retained, not treated as a current measurement.",
-  "lessons": [
-    {
-      "id": "L001",
-      "date": "2026-09-02",
-      "appliesTo": [
-        "research",
-        "orchestrate"
-      ],
-      "status": "active",
-      "rule": "A research pack's load-bearing numbers get independently verified before anything is written. The pack lists its five most load-bearing figures; the orchestrator fetches a primary source for each one itself.",
-      "evidence": "The Sep 2 pack reported unincorporated Escambia at 19.0080 mills and a $100/mo tax understatement. The Tax Collector's own components sum to 13.4035. The pack had flagged it uncertain; without a second fetch the wrong figure ships into a post whose whole point is real tax math.",
-      "type": "operational"
-    },
-    {
-      "id": "L002",
-      "date": "2026-09-03",
-      "appliesTo": [
-        "research",
-        "canon"
-      ],
-      "status": "active",
-      "rule": "Any figure the site calls canonical (BAH, millage, homestead, funding fee, residual income, PMMS) is re-verified against its primary source every time a post touches it, not carried forward from the site. Statutory figures can be indexed; ask whether they are.",
-      "evidence": "The additional Florida homestead exemption was carried as a flat $25,000 across the model, /bah-to-mortgage-guide and a freshly shipped post. Fla. Stat. 196.031(1)(b) indexes it to CPI; the DOR publishes $26,411 for 2026. Found only on a second research pass.",
-      "type": "operational"
-    },
-    {
-      "id": "L003",
-      "date": "2026-09-03",
-      "appliesTo": [
-        "decide"
-      ],
-      "status": "active",
-      "rule": "Before a queue item is written as a NEW post, run scripts/blog-dedup-check.mjs. If a live page already owns the topic, the item becomes a refresh of that page. New posts never cannibalize.",
-      "evidence": "Queue #1 (bah-vs-real-cost-by-zip-2026) was already live as /bah-vs-cost-of-owning-pensacola with a Citing-this-study block. Writing it would have split the site's own press asset.",
-      "type": "operational"
-    },
-    {
-      "id": "L004",
-      "date": "2026-09-01",
-      "appliesTo": [
-        "write",
-        "build"
-      ],
-      "status": "active",
-      "rule": "Score every NEW post with scripts/analyze-formatting.mjs before staging and require 90+. Long Fable prose is accurate and defaults to dense paragraphs; the factory now refuses any paragraph over 110 words and warns over 85. Send structure-only revisions back to the writer with the measured list.",
-      "evidence": "The Navarre mega-guide passed every factory gate and scored 65, the worst page on the site: 18 wall paragraphs, zero h3s. One structure-only pass took it to 100 with no fact changes.",
-      "type": "operational"
-    },
-    {
-      "id": "L005",
-      "date": "2026-09-02",
-      "appliesTo": [
-        "write"
-      ],
-      "status": "active",
-      "rule": "Correct a third party's error without naming the third party. Describe the wrong figure and the right source; the brand stays out unless Gregg puts it back in.",
-      "evidence": "The BAH refresh named a forecast site as unreliable. Accurate, but a public swipe at a competitor is Gregg's call, not the machine's. Softened to 'one AI-generated forecast site'.",
-      "type": "operational"
-    },
-    {
-      "id": "L006",
-      "date": "2026-09-03",
-      "appliesTo": [
-        "decide",
-        "measure"
-      ],
-      "status": "active",
-      "rule": "docs/formatting-audit.md is only trustworthy after the Sep 3 analyzer fix. Regenerate it in every run before DECIDE reads it.",
-      "evidence": "The paragraph regex also matched <picture>, faking wall paragraphs on 95 pages. DECIDE had been ranking refresh candidates off a corrupted table since the figure standing order landed.",
-      "type": "operational"
-    },
-    {
-      "id": "L007",
-      "date": "2026-09-03",
-      "appliesTo": [
-        "research",
-        "data-study"
-      ],
-      "status": "active",
-      "rule": "For anything modeled by jurisdiction (tax, insurance zone, school zone), assign from a parcel roll or GIS boundary, never from geography or ZIP. The Florida DOR NAL roll gives every parcel's taxing authority and is downloadable per county.",
-      "evidence": "The uniform-unincorporated model was right for exactly 13 of 26 ZIPs. The 'Okaloosa is the cheap county' finding was wrong: only 19.5% of its single-family parcels pay the unincorporated rate. Counting all 407,635 parcels settled every ZIP at high confidence.",
-      "type": "operational",
-      "qualification": "The research identified mixed-jurisdiction ZIPs with Medium confidence in a representative single rate. Parcel coverage does not remove population, geography or year mismatches. Match SF parcels to SF price data and retain blended-rate assumptions."
-    },
-    {
-      "id": "L008",
-      "date": "2026-09-04",
-      "appliesTo": [
-        "measure"
-      ],
-      "status": "active",
-      "rule": "Probe configured measurement sources each run. Record unavailable sources and missing URL rows as unknown; never infer a winner, stalled article or zero traffic from missing data. Tool availability is current state, not a permanent lesson.",
-      "evidence": "Every post read 0-3 Clarity sessions over 28 days and the ledger held one Semrush snapshot from Aug 22. DECIDE could not tell a winner from a loser; it defaulted everything to 'stalled'.",
-      "type": "operational"
-    },
-    {
-      "id": "L009",
-      "date": "2026-09-04",
-      "appliesTo": [
-        "decide",
-        "topics"
-      ],
-      "status": "active",
-      "rule": "Mine the newest Bing/GSC export for queries the site already ranks for but has no page answering, before trend-scanning. Demand the site is already earning impressions on beats a topic the queue guessed at.",
-      "evidence": "The Aug 22 Bing export shows a training-base audience the queue never served: 'training air wing five' (15 imp), Corry tech-school dorm questions, 'flight school milton' at position 1, 'pensacola to hurlburt PCA or PCS' at 4.3, 'army bah crestview', 'duke field housing'. None map to a queue item.",
-      "type": "operational"
-    },
-    {
-      "id": "L010",
-      "date": "2026-09-04",
-      "appliesTo": [
-        "stage",
-        "report"
-      ],
-      "status": "active",
-      "rule": "A staged draft older than 7 days is a defect. Every run lists unmerged blog/* branches with their age in the report, and the standing 'ship each batch' rule means the run offers to merge them.",
-      "evidence": "The Navarre mega-guide sat staged from Sep 1 to Sep 3 and its ledger/queue edits had drifted into 21 merge conflicts by the time it shipped.",
-      "type": "operational"
-    },
-    {
-      "id": "L011",
-      "date": "2026-09-04",
-      "appliesTo": [
-        "decide"
-      ],
-      "status": "active",
-      "rule": "Run the dedup gate over the WHOLE queue at every re-rank, not just the item about to be written. Collisions accumulate silently as pages get built by other routines.",
-      "evidence": "First full run of scripts/blog-dedup-check.mjs on the 16-item queue found 5 DUPLICATEs: the insurance guide and the Crestview guide already existed as static pages, the cost-of-living post collided with the Pensacola mega-guide, the Destin comparison with the duty-station vs-page, and the 2027 BAH item with the 2026 post that now targets the 2027 keyword on purpose. Two converted to refreshes, three annotated.",
-      "type": "operational"
-    },
-    {
-      "id": "L012",
-      "date": "2026-09-04",
-      "appliesTo": [
-        "write",
-        "build"
-      ],
-      "status": "active",
-      "rule": "A quickAnswer is 2-4 sentences AND under 85 words. It renders as a paragraph, so a long one is a wall at the top of the page and scores as one.",
-      "evidence": "The first two quick answers written under the GEO gate ran 90 and 94 words and dropped the BAH post to 88 and Navarre to 94 in the scannability report on rebuild. Both were tightened to about 75 words without losing a figure.",
-      "type": "operational"
-    },
-    {
-      "id": "L013",
-      "date": "2026-09-04",
-      "appliesTo": [
-        "measure",
-        "topics"
-      ],
-      "status": "retired",
-      "rule": "The site is invisible to itself on search: no export in docs/seo-baselines carries a URL column, so page-level clicks and positions do not exist for any post. Until Gregg drops a GSC Pages export (gsc-pages-YYYY-MM-DD.csv), keywordDemand from the Bing keyword file is the only search signal and it only matches on target keywords.",
-      "evidence": "scripts/blog-measure.mjs joined 12 posts to one export and produced one keyword-demand snapshot (the BAH post, 1 query, 4 impressions). Every other post: no search data.",
-      "retiredWhy": "2026-09-04: Bing Webmaster API page stats work for the military domain (other session), and the first GSC Pages export arrived the same day. Per-post page-level signal exists; keep the rule about recording unavailable honestly (L008).",
-      "type": "operational"
-    },
-    {
-      "id": "L014",
-      "date": "2026-09-04",
-      "appliesTo": [
-        "measure",
-        "decide",
-        "write"
-      ],
-      "status": "retired",
-      "rule": "Click-through is the bottleneck, not content volume. When a page already ranks on page one and converts under the position benchmark, the title and description are the work item, and it outranks writing anything new. Put the one concrete figure the page states into the title.",
-      "evidence": "First GSC Pages export (2026-09-04): about 20,000 impressions a month at roughly 0.7% CTR. /bah-rates: 9,117 impressions, 48 clicks, position 8.5, about 182 clicks a month below benchmark. The whole blog earned 4 clicks. The one page that converts, /assumable-va-loans-pensacola at 25.9%, has a number in its title (2.75%). Position 4.4 with zero clicks (Gulf Breeze post, 53 impressions) is a snippet problem.",
-      "type": "performance",
-      "retiredWhy": "2026-09-05 computational audit: the export window was not a month, the generic CTR curve was not calibrated, and unrelated pages are not a controlled comparison. Number-led titles remain an unproven hypothesis; evaluate the two registered Sep 4 changes after separate comparable windows."
-    },
-    {
-      "id": "L015",
-      "date": "2026-09-04",
-      "appliesTo": [
-        "measure"
-      ],
-      "status": "active",
-      "rule": "Compare only the same property, source, URL or query cohort, search type, filters and equal non-overlapping confirmed windows. Export timestamps are not coverage dates. Record uncertainty and sample size.",
-      "evidence": "After the Bing API pipe and the GSC export both landed, scripts/blog-measure.mjs labeled all ten posts WINNER by comparing a Bing 0-click snapshot to a GSC snapshot. Fixed to compare only within a source.",
-      "type": "operational"
-    },
-    {
-      "id": "L016",
-      "date": "2026-09-04",
-      "appliesTo": [
-        "topics"
-      ],
-      "status": "retired",
-      "retiredWhy": "Superseded the same day: the Bing Webmaster API (GetPageStats) does give per-URL data for pensacolamilitaryhousing.com, and a GSC Pages export landed. L013 is retired for the same reason; page-level signal now exists from two sources.",
-      "rule": "(retired) The site is invisible to itself on search.",
-      "evidence": "See L013.",
-      "type": "operational"
-    },
-    {
-      "id": "L017",
-      "date": "2026-09-05",
-      "type": "operational",
-      "appliesTo": [
-        "measure",
-        "decide",
-        "write"
-      ],
-      "status": "active",
-      "rule": "Use evidence policy v2 from scripts/blog-weekly-plan.mjs. No automatic snippet rewrites from small samples, no promotion of attribute correlations to performance rules, and no fabricated first-person anecdotes to satisfy a content score. A source-cue word is not evidence.",
-      "evidence": "Reproduced the prior missing-row zero, 0/41 CTR diagnosis and benchmark-as-monthly-traffic output at baseline a621c4c. Regression fixtures and current replay live in docs/blog-engine-audit-2026-09-05/."
-    },
-    {
-      "id": "L018",
-      "rule": "An aggregate insurance or market figure is not an individual property quote. Record who commissioned the source, the population and vintage, and check for a newer authoritative bulletin before using a figure.",
-      "evidence": "The three Sep 6 civilian research packs distinguish fixed state charges from contract choices, Fed policy from mortgage pricing, and insurance-industry totals from household premiums. The insurance refresh uses the newer Citizens wind-only figure.",
-      "date": "2026-09-06",
-      "type": "operational",
-      "appliesTo": [
-        "research",
-        "measure",
-        "decide",
-        "distribute"
-      ],
-      "status": "active"
-    },
-    {
-      "id": "L019",
-      "rule": "Measure only production-hostname traffic and accepted submissions. A delivered download is not a captured lead, and a requested call is not a confirmed appointment. Keep article, social and paid cohorts separate.",
-      "evidence": "One 127.0.0.1 Clarity session changed the initial six-session picture. The military checklist previously called every JSON response a conversion. Host guards and mocked 400/503/200-false/network-failure tests now exclude those events.",
-      "date": "2026-09-06",
-      "type": "operational",
-      "appliesTo": [
-        "research",
-        "measure",
-        "decide",
-        "distribute"
-      ],
-      "status": "active"
-    },
-    {
-      "id": "L020",
-      "rule": "Choose research and writing policy for the actual site being worked on. Check final platform identity after switching ad accounts, since the UI can reset creative and targeting. Existing followers are not proof of campaign effectiveness.",
-      "evidence": "The weekly plan previously exposed only PMH model settings even for a civilian next item. Live personal-profile advertising supports Gregg Costin and account 467811675743449; changing the account reset the ad form. Campaigns remain unpublished.",
-      "date": "2026-09-06",
-      "type": "operational",
-      "appliesTo": [
-        "research",
-        "measure",
-        "decide",
-        "distribute"
-      ],
-      "status": "active"
-    },
-    {
-      "id": "L021",
-      "date": "2026-09-07",
-      "appliesTo": [
-        "research",
-        "decide"
-      ],
-      "status": "active",
-      "rule": "A rate-move current-events override is only real after the weekly figure is checked against Freddie Mac PMMS itself. Syndicated rate coverage is not evidence of a move.",
-      "evidence": "Sep 7 2026: syndicated articles reported a 30-year rate of 6.89%, called rates \"much higher week over week\", and attributed the move to an oil shock. Freddie Mac PMMS for the week ending Sep 3 2026 showed 6.71% against a prior 6.66%, a 5 basis point change. The override was rejected and the run fell through to the refresh queue. The discrepancy itself became the post's information-gain section.",
-      "type": "operational",
-      "legacyId": "L016 (duplicate in uncommitted Sep 7 state)",
-      "migrationNote": "Historical lesson preserved with a unique ID; not a new performance finding."
-    },
-    {
-      "id": "L022",
-      "date": "2026-09-07",
-      "appliesTo": [
-        "build",
-        "stage"
-      ],
-      "status": "retired",
-      "rule": "When another session holds uncommitted changes to the built site tree, the blog engine stops at the fragment: preview-build with --out for the gates, commit only the fragment, and hand the site-tree build back with the exact command. Never commit files whose working-tree content is another session's work.",
-      "evidence": "Sep 7 2026: 607 files were dirty with an uncommitted civilian-site redesign (COSTIN_EXPERIENCE / gc-interior markers, untracked rollout scripts). civilian-blog-factory rebuilds blog.html, sitemap.xml and llms.txt on every non---out run, and content/civilian-blog/ledger.json already held the parallel session's Sep 6 measurement snapshot. Only the fragment was safely attributable.",
-      "type": "operational",
-      "legacyId": "L017 (uncommitted Sep 7 state)",
-      "retiredAt": "2026-09-08",
-      "retirementReason": "A complete isolated worktree build passed the gates while preserving parallel changes. L025 replaces the fragment-only stopping rule."
-    },
-    {
-      "id": "L023",
-      "date": "2026-09-08",
-      "type": "operational",
-      "status": "active",
-      "appliesTo": [
-        "research",
-        "finance"
-      ],
-      "rule": "When explaining mortgage pricing, define whether a spread already includes origination costs and margins. Do not add that margin twice or infer daily causality from mismatched weekly and daily observations.",
-      "evidence": "The interrupted mortgage fragment added a lender margin after the full mortgage-to-Treasury difference. This run re-read Federal Reserve FEDS 2021-048 pages 8-9 and replaced the decomposition; the 6.71/6.66 PMMS change is presented only as a weekly observation. Evidence: content/civilian-blog/research/what-moves-mortgage-rates.json."
-    },
-    {
-      "id": "L024",
-      "date": "2026-09-08",
-      "type": "operational",
-      "status": "active",
-      "appliesTo": [
-        "write",
-        "build"
-      ],
-      "rule": "Preserve both the shared claim/calculation gate and the civilian final-content/source-review hashes. A review record must match the exact final article; arithmetic is recomputed from numeric inputs, not trusted because a reviewer checked a box.",
-      "evidence": "Tests reproduced failures for a changed content hash, expired source, absent claim passage, source mismatch and incorrect recorded arithmetic. The complete article passes both validators and the payment model amortizes to zero. scripts/civilian-editorial.test.mjs and scripts/tests/blog-evidence.test.mjs."
-    },
-    {
-      "id": "L025",
-      "date": "2026-09-08",
-      "type": "operational",
-      "status": "active",
-      "appliesTo": [
-        "orchestrate",
-        "build",
-        "ship"
-      ],
-      "rule": "When the shared checkout has unfinished changes, build owned blog work in a clean worktree based on current main, reconcile newer evidence/privacy/journey code, and commit only owned files. A dirty shared checkout does not require stopping at an unbuilt fragment.",
-      "evidence": "The Sep 8 release integrated against main 5dc3822e while preserving the pre-existing working-tree changes. The isolated 310-page civilian audit and 679-page entity audit passed. Integration also caught and preserved the school llms marker and unchanged sitemap dates."
-    },
-    {
-      "id": "L026",
-      "date": "2026-09-09",
-      "type": "operational",
-      "status": "active",
-      "appliesTo": [
-        "orchestrate",
-        "build",
-        "ship"
-      ],
-      "rule": "Before an approved deployment on either site, reconcile the complete candidate with the actual provider production manifest and acquire the existing shared .coast-release/publication.lock.json exclusively. Hold it through preflight, deployment and provider confirmation. A Git commit or an unlocked baseline check does not prevent a concurrent release from replacing the work.",
-      "evidence": "The mortgage release at 04:25:22 UTC and regional release at 04:25:25 UTC both passed the same baseline check. The latter became canonical and displaced the article. The merged release used the shared publication lock, retained all current regional changes, and verified 1089 civilian assets plus 3004 unchanged military assets. content/blog/reports/2026-09-09-publication-closeout.md"
-    },
-    {
-      "id": "L-CATALOG-RENDER-20260909",
-      "rule": "Compare the rendered quick answer and licensed hero with the reviewed fragment after every layout pass; a passing draft score cannot establish rendered completeness.",
-      "evidence": "Full catalog refresh reproduced lost civilian quick answers during header preservation and removed hero images during generic interior layout. blog-render-gate.mjs and browser checks cover both failures.",
-      "date": "2026-09-09",
-      "type": "operational",
-      "status": "active",
-      "appliesTo": [
-        "build",
-        "verify",
-        "publish"
-      ]
-    },
-    {
-      "id": "L-CATALOG-SEARCH-20260909",
-      "rule": "Require local search page coverage to match the intended public inventory before deployment. Mixed Pagefind body markers can silently exclude most pages.",
-      "evidence": "Default Pagefind run indexed 8 of 319 civilian pages. build-blog-search.mjs stages published main content consistently and requires the complete count.",
-      "date": "2026-09-09",
-      "type": "operational",
-      "status": "active",
-      "appliesTo": [
-        "build",
-        "verify",
-        "publish"
-      ]
-    },
-    {
-      "id": "L-CATALOG-BASELINE-20260909",
-      "rule": "Recheck production deployment IDs immediately before releasing an approved catalog refresh and preserve the complete newest baseline.",
-      "evidence": "Civilian production changed from c8b4f1b7 to 3a116599 during the refresh. Rebuilt on its verified 1119-file baseline before publication.",
-      "date": "2026-09-09",
-      "type": "operational",
-      "status": "active",
-      "appliesTo": [
-        "build",
-        "verify",
-        "publish"
-      ]
-    }
-  ]
+ "note": "Operational safeguards may follow a reproduced error. Performance ideas remain hypotheses until two comparable, reviewed experiments support a scoped rule. The weekly loop reads scripts/blog-weekly-plan.mjs output; historical evidence is retained, not treated as a current measurement.",
+ "lessons": [
+  {
+   "id": "L001",
+   "date": "2026-09-02",
+   "appliesTo": [
+    "research",
+    "orchestrate"
+   ],
+   "status": "active",
+   "rule": "A research pack's load-bearing numbers get independently verified before anything is written. The pack lists its five most load-bearing figures; the orchestrator fetches a primary source for each one itself.",
+   "evidence": "The Sep 2 pack reported unincorporated Escambia at 19.0080 mills and a $100/mo tax understatement. The Tax Collector's own components sum to 13.4035. The pack had flagged it uncertain; without a second fetch the wrong figure ships into a post whose whole point is real tax math.",
+   "type": "operational"
+  },
+  {
+   "id": "L002",
+   "date": "2026-09-03",
+   "appliesTo": [
+    "research",
+    "canon"
+   ],
+   "status": "active",
+   "rule": "Any figure the site calls canonical (BAH, millage, homestead, funding fee, residual income, PMMS) is re-verified against its primary source every time a post touches it, not carried forward from the site. Statutory figures can be indexed; ask whether they are.",
+   "evidence": "The additional Florida homestead exemption was carried as a flat $25,000 across the model, /bah-to-mortgage-guide and a freshly shipped post. Fla. Stat. 196.031(1)(b) indexes it to CPI; the DOR publishes $26,411 for 2026. Found only on a second research pass.",
+   "type": "operational"
+  },
+  {
+   "id": "L003",
+   "date": "2026-09-03",
+   "appliesTo": [
+    "decide"
+   ],
+   "status": "active",
+   "rule": "Before a queue item is written as a NEW post, run scripts/blog-dedup-check.mjs. If a live page already owns the topic, the item becomes a refresh of that page. New posts never cannibalize.",
+   "evidence": "Queue #1 (bah-vs-real-cost-by-zip-2026) was already live as /bah-vs-cost-of-owning-pensacola with a Citing-this-study block. Writing it would have split the site's own press asset.",
+   "type": "operational"
+  },
+  {
+   "id": "L004",
+   "date": "2026-09-01",
+   "appliesTo": [
+    "write",
+    "build"
+   ],
+   "status": "active",
+   "rule": "Score every NEW post with scripts/analyze-formatting.mjs before staging and require 90+. Long Fable prose is accurate and defaults to dense paragraphs; the factory now refuses any paragraph over 110 words and warns over 85. Send structure-only revisions back to the writer with the measured list.",
+   "evidence": "The Navarre mega-guide passed every factory gate and scored 65, the worst page on the site: 18 wall paragraphs, zero h3s. One structure-only pass took it to 100 with no fact changes.",
+   "type": "operational"
+  },
+  {
+   "id": "L005",
+   "date": "2026-09-02",
+   "appliesTo": [
+    "write"
+   ],
+   "status": "active",
+   "rule": "Correct a third party's error without naming the third party. Describe the wrong figure and the right source; the brand stays out unless Gregg puts it back in.",
+   "evidence": "The BAH refresh named a forecast site as unreliable. Accurate, but a public swipe at a competitor is Gregg's call, not the machine's. Softened to 'one AI-generated forecast site'.",
+   "type": "operational"
+  },
+  {
+   "id": "L006",
+   "date": "2026-09-03",
+   "appliesTo": [
+    "decide",
+    "measure"
+   ],
+   "status": "active",
+   "rule": "docs/formatting-audit.md is only trustworthy after the Sep 3 analyzer fix. Regenerate it in every run before DECIDE reads it.",
+   "evidence": "The paragraph regex also matched <picture>, faking wall paragraphs on 95 pages. DECIDE had been ranking refresh candidates off a corrupted table since the figure standing order landed.",
+   "type": "operational"
+  },
+  {
+   "id": "L007",
+   "date": "2026-09-03",
+   "appliesTo": [
+    "research",
+    "data-study"
+   ],
+   "status": "active",
+   "rule": "For anything modeled by jurisdiction (tax, insurance zone, school zone), assign from a parcel roll or GIS boundary, never from geography or ZIP. The Florida DOR NAL roll gives every parcel's taxing authority and is downloadable per county.",
+   "evidence": "The uniform-unincorporated model was right for exactly 13 of 26 ZIPs. The 'Okaloosa is the cheap county' finding was wrong: only 19.5% of its single-family parcels pay the unincorporated rate. Counting all 407,635 parcels settled every ZIP at high confidence.",
+   "type": "operational",
+   "qualification": "The research identified mixed-jurisdiction ZIPs with Medium confidence in a representative single rate. Parcel coverage does not remove population, geography or year mismatches. Match SF parcels to SF price data and retain blended-rate assumptions."
+  },
+  {
+   "id": "L008",
+   "date": "2026-09-04",
+   "appliesTo": [
+    "measure"
+   ],
+   "status": "active",
+   "rule": "Probe configured measurement sources each run. Record unavailable sources and missing URL rows as unknown; never infer a winner, stalled article or zero traffic from missing data. Tool availability is current state, not a permanent lesson.",
+   "evidence": "Every post read 0-3 Clarity sessions over 28 days and the ledger held one Semrush snapshot from Aug 22. DECIDE could not tell a winner from a loser; it defaulted everything to 'stalled'.",
+   "type": "operational"
+  },
+  {
+   "id": "L009",
+   "date": "2026-09-04",
+   "appliesTo": [
+    "decide",
+    "topics"
+   ],
+   "status": "active",
+   "rule": "Mine the newest Bing/GSC export for queries the site already ranks for but has no page answering, before trend-scanning. Demand the site is already earning impressions on beats a topic the queue guessed at.",
+   "evidence": "The Aug 22 Bing export shows a training-base audience the queue never served: 'training air wing five' (15 imp), Corry tech-school dorm questions, 'flight school milton' at position 1, 'pensacola to hurlburt PCA or PCS' at 4.3, 'army bah crestview', 'duke field housing'. None map to a queue item.",
+   "type": "operational"
+  },
+  {
+   "id": "L010",
+   "date": "2026-09-04",
+   "appliesTo": [
+    "stage",
+    "report"
+   ],
+   "status": "active",
+   "rule": "A staged draft older than 7 days is a defect. Every run lists unmerged blog/* branches with their age in the report, and the standing 'ship each batch' rule means the run offers to merge them.",
+   "evidence": "The Navarre mega-guide sat staged from Sep 1 to Sep 3 and its ledger/queue edits had drifted into 21 merge conflicts by the time it shipped.",
+   "type": "operational"
+  },
+  {
+   "id": "L011",
+   "date": "2026-09-04",
+   "appliesTo": [
+    "decide"
+   ],
+   "status": "active",
+   "rule": "Run the dedup gate over the WHOLE queue at every re-rank, not just the item about to be written. Collisions accumulate silently as pages get built by other routines.",
+   "evidence": "First full run of scripts/blog-dedup-check.mjs on the 16-item queue found 5 DUPLICATEs: the insurance guide and the Crestview guide already existed as static pages, the cost-of-living post collided with the Pensacola mega-guide, the Destin comparison with the duty-station vs-page, and the 2027 BAH item with the 2026 post that now targets the 2027 keyword on purpose. Two converted to refreshes, three annotated.",
+   "type": "operational"
+  },
+  {
+   "id": "L012",
+   "date": "2026-09-04",
+   "appliesTo": [
+    "write",
+    "build"
+   ],
+   "status": "active",
+   "rule": "A quickAnswer is 2-4 sentences AND under 85 words. It renders as a paragraph, so a long one is a wall at the top of the page and scores as one.",
+   "evidence": "The first two quick answers written under the GEO gate ran 90 and 94 words and dropped the BAH post to 88 and Navarre to 94 in the scannability report on rebuild. Both were tightened to about 75 words without losing a figure.",
+   "type": "operational"
+  },
+  {
+   "id": "L013",
+   "date": "2026-09-04",
+   "appliesTo": [
+    "measure",
+    "topics"
+   ],
+   "status": "retired",
+   "rule": "The site is invisible to itself on search: no export in docs/seo-baselines carries a URL column, so page-level clicks and positions do not exist for any post. Until Gregg drops a GSC Pages export (gsc-pages-YYYY-MM-DD.csv), keywordDemand from the Bing keyword file is the only search signal and it only matches on target keywords.",
+   "evidence": "scripts/blog-measure.mjs joined 12 posts to one export and produced one keyword-demand snapshot (the BAH post, 1 query, 4 impressions). Every other post: no search data.",
+   "retiredWhy": "2026-09-04: Bing Webmaster API page stats work for the military domain (other session), and the first GSC Pages export arrived the same day. Per-post page-level signal exists; keep the rule about recording unavailable honestly (L008).",
+   "type": "operational"
+  },
+  {
+   "id": "L014",
+   "date": "2026-09-04",
+   "appliesTo": [
+    "measure",
+    "decide",
+    "write"
+   ],
+   "status": "retired",
+   "rule": "Click-through is the bottleneck, not content volume. When a page already ranks on page one and converts under the position benchmark, the title and description are the work item, and it outranks writing anything new. Put the one concrete figure the page states into the title.",
+   "evidence": "First GSC Pages export (2026-09-04): about 20,000 impressions a month at roughly 0.7% CTR. /bah-rates: 9,117 impressions, 48 clicks, position 8.5, about 182 clicks a month below benchmark. The whole blog earned 4 clicks. The one page that converts, /assumable-va-loans-pensacola at 25.9%, has a number in its title (2.75%). Position 4.4 with zero clicks (Gulf Breeze post, 53 impressions) is a snippet problem.",
+   "type": "performance",
+   "retiredWhy": "2026-09-05 computational audit: the export window was not a month, the generic CTR curve was not calibrated, and unrelated pages are not a controlled comparison. Number-led titles remain an unproven hypothesis; evaluate the two registered Sep 4 changes after separate comparable windows."
+  },
+  {
+   "id": "L015",
+   "date": "2026-09-04",
+   "appliesTo": [
+    "measure"
+   ],
+   "status": "active",
+   "rule": "Compare only the same property, source, URL or query cohort, search type, filters and equal non-overlapping confirmed windows. Export timestamps are not coverage dates. Record uncertainty and sample size.",
+   "evidence": "After the Bing API pipe and the GSC export both landed, scripts/blog-measure.mjs labeled all ten posts WINNER by comparing a Bing 0-click snapshot to a GSC snapshot. Fixed to compare only within a source.",
+   "type": "operational"
+  },
+  {
+   "id": "L016",
+   "date": "2026-09-04",
+   "appliesTo": [
+    "topics"
+   ],
+   "status": "retired",
+   "retiredWhy": "Superseded the same day: the Bing Webmaster API (GetPageStats) does give per-URL data for pensacolamilitaryhousing.com, and a GSC Pages export landed. L013 is retired for the same reason; page-level signal now exists from two sources.",
+   "rule": "(retired) The site is invisible to itself on search.",
+   "evidence": "See L013.",
+   "type": "operational"
+  },
+  {
+   "id": "L017",
+   "date": "2026-09-05",
+   "type": "operational",
+   "appliesTo": [
+    "measure",
+    "decide",
+    "write"
+   ],
+   "status": "active",
+   "rule": "Use evidence policy v2 from scripts/blog-weekly-plan.mjs. No automatic snippet rewrites from small samples, no promotion of attribute correlations to performance rules, and no fabricated first-person anecdotes to satisfy a content score. A source-cue word is not evidence.",
+   "evidence": "Reproduced the prior missing-row zero, 0/41 CTR diagnosis and benchmark-as-monthly-traffic output at baseline a621c4c. Regression fixtures and current replay live in docs/blog-engine-audit-2026-09-05/."
+  },
+  {
+   "id": "L018",
+   "rule": "An aggregate insurance or market figure is not an individual property quote. Record who commissioned the source, the population and vintage, and check for a newer authoritative bulletin before using a figure.",
+   "evidence": "The three Sep 6 civilian research packs distinguish fixed state charges from contract choices, Fed policy from mortgage pricing, and insurance-industry totals from household premiums. The insurance refresh uses the newer Citizens wind-only figure.",
+   "date": "2026-09-06",
+   "type": "operational",
+   "appliesTo": [
+    "research",
+    "measure",
+    "decide",
+    "distribute"
+   ],
+   "status": "active"
+  },
+  {
+   "id": "L019",
+   "rule": "Measure only production-hostname traffic and accepted submissions. A delivered download is not a captured lead, and a requested call is not a confirmed appointment. Keep article, social and paid cohorts separate.",
+   "evidence": "One 127.0.0.1 Clarity session changed the initial six-session picture. The military checklist previously called every JSON response a conversion. Host guards and mocked 400/503/200-false/network-failure tests now exclude those events.",
+   "date": "2026-09-06",
+   "type": "operational",
+   "appliesTo": [
+    "research",
+    "measure",
+    "decide",
+    "distribute"
+   ],
+   "status": "active"
+  },
+  {
+   "id": "L020",
+   "rule": "Choose research and writing policy for the actual site being worked on. Check final platform identity after switching ad accounts, since the UI can reset creative and targeting. Existing followers are not proof of campaign effectiveness.",
+   "evidence": "The weekly plan previously exposed only PMH model settings even for a civilian next item. Live personal-profile advertising supports Gregg Costin and account 467811675743449; changing the account reset the ad form. Campaigns remain unpublished.",
+   "date": "2026-09-06",
+   "type": "operational",
+   "appliesTo": [
+    "research",
+    "measure",
+    "decide",
+    "distribute"
+   ],
+   "status": "active"
+  },
+  {
+   "id": "L021",
+   "date": "2026-09-07",
+   "appliesTo": [
+    "research",
+    "decide"
+   ],
+   "status": "active",
+   "rule": "A rate-move current-events override is only real after the weekly figure is checked against Freddie Mac PMMS itself. Syndicated rate coverage is not evidence of a move.",
+   "evidence": "Sep 7 2026: syndicated articles reported a 30-year rate of 6.89%, called rates \"much higher week over week\", and attributed the move to an oil shock. Freddie Mac PMMS for the week ending Sep 3 2026 showed 6.71% against a prior 6.66%, a 5 basis point change. The override was rejected and the run fell through to the refresh queue. The discrepancy itself became the post's information-gain section.",
+   "type": "operational",
+   "legacyId": "L016 (duplicate in uncommitted Sep 7 state)",
+   "migrationNote": "Historical lesson preserved with a unique ID; not a new performance finding."
+  },
+  {
+   "id": "L022",
+   "date": "2026-09-07",
+   "appliesTo": [
+    "build",
+    "stage"
+   ],
+   "status": "retired",
+   "rule": "When another session holds uncommitted changes to the built site tree, the blog engine stops at the fragment: preview-build with --out for the gates, commit only the fragment, and hand the site-tree build back with the exact command. Never commit files whose working-tree content is another session's work.",
+   "evidence": "Sep 7 2026: 607 files were dirty with an uncommitted civilian-site redesign (COSTIN_EXPERIENCE / gc-interior markers, untracked rollout scripts). civilian-blog-factory rebuilds blog.html, sitemap.xml and llms.txt on every non---out run, and content/civilian-blog/ledger.json already held the parallel session's Sep 6 measurement snapshot. Only the fragment was safely attributable.",
+   "type": "operational",
+   "legacyId": "L017 (uncommitted Sep 7 state)",
+   "retiredAt": "2026-09-08",
+   "retirementReason": "A complete isolated worktree build passed the gates while preserving parallel changes. L025 replaces the fragment-only stopping rule."
+  },
+  {
+   "id": "L023",
+   "date": "2026-09-08",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "research",
+    "finance"
+   ],
+   "rule": "When explaining mortgage pricing, define whether a spread already includes origination costs and margins. Do not add that margin twice or infer daily causality from mismatched weekly and daily observations.",
+   "evidence": "The interrupted mortgage fragment added a lender margin after the full mortgage-to-Treasury difference. This run re-read Federal Reserve FEDS 2021-048 pages 8-9 and replaced the decomposition; the 6.71/6.66 PMMS change is presented only as a weekly observation. Evidence: content/civilian-blog/research/what-moves-mortgage-rates.json."
+  },
+  {
+   "id": "L024",
+   "date": "2026-09-08",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "write",
+    "build"
+   ],
+   "rule": "Preserve both the shared claim/calculation gate and the civilian final-content/source-review hashes. A review record must match the exact final article; arithmetic is recomputed from numeric inputs, not trusted because a reviewer checked a box.",
+   "evidence": "Tests reproduced failures for a changed content hash, expired source, absent claim passage, source mismatch and incorrect recorded arithmetic. The complete article passes both validators and the payment model amortizes to zero. scripts/civilian-editorial.test.mjs and scripts/tests/blog-evidence.test.mjs."
+  },
+  {
+   "id": "L025",
+   "date": "2026-09-08",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "orchestrate",
+    "build",
+    "ship"
+   ],
+   "rule": "When the shared checkout has unfinished changes, build owned blog work in a clean worktree based on current main, reconcile newer evidence/privacy/journey code, and commit only owned files. A dirty shared checkout does not require stopping at an unbuilt fragment.",
+   "evidence": "The Sep 8 release integrated against main 5dc3822e while preserving the pre-existing working-tree changes. The isolated 310-page civilian audit and 679-page entity audit passed. Integration also caught and preserved the school llms marker and unchanged sitemap dates."
+  },
+  {
+   "id": "L026",
+   "date": "2026-09-09",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "orchestrate",
+    "build",
+    "ship"
+   ],
+   "rule": "Before an approved deployment on either site, reconcile the complete candidate with the actual provider production manifest and acquire the existing shared .coast-release/publication.lock.json exclusively. Hold it through preflight, deployment and provider confirmation. A Git commit or an unlocked baseline check does not prevent a concurrent release from replacing the work.",
+   "evidence": "The mortgage release at 04:25:22 UTC and regional release at 04:25:25 UTC both passed the same baseline check. The latter became canonical and displaced the article. The merged release used the shared publication lock, retained all current regional changes, and verified 1089 civilian assets plus 3004 unchanged military assets. content/blog/reports/2026-09-09-publication-closeout.md"
+  },
+  {
+   "id": "L-CATALOG-RENDER-20260909",
+   "rule": "Compare the rendered quick answer and licensed hero with the reviewed fragment after every layout pass; a passing draft score cannot establish rendered completeness.",
+   "evidence": "Full catalog refresh reproduced lost civilian quick answers during header preservation and removed hero images during generic interior layout. blog-render-gate.mjs and browser checks cover both failures.",
+   "date": "2026-09-09",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "build",
+    "verify",
+    "publish"
+   ]
+  },
+  {
+   "id": "L-CATALOG-SEARCH-20260909",
+   "rule": "Require local search page coverage to match the intended public inventory before deployment. Mixed Pagefind body markers can silently exclude most pages.",
+   "evidence": "Default Pagefind run indexed 8 of 319 civilian pages. build-blog-search.mjs stages published main content consistently and requires the complete count.",
+   "date": "2026-09-09",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "build",
+    "verify",
+    "publish"
+   ]
+  },
+  {
+   "id": "L-CATALOG-BASELINE-20260909",
+   "rule": "Recheck production deployment IDs immediately before releasing an approved catalog refresh and preserve the complete newest baseline.",
+   "evidence": "Civilian production changed from c8b4f1b7 to 3a116599 during the refresh. Rebuilt on its verified 1119-file baseline before publication.",
+   "date": "2026-09-09",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "build",
+    "verify",
+    "publish"
+   ]
+  },
+  {
+   "id": "L027",
+   "date": "2026-09-10",
+   "appliesTo": [
+    "build",
+    "orchestrate"
+   ],
+   "status": "active",
+   "type": "operational",
+   "rule": "A page generator that is only ever exercised on rebuilds hides first-build defects. When adding the first new article in a while, build it from a deleted output file and require the gate to pass on that clean run, not on the second attempt.",
+   "evidence": "home-appraisals-explained failed blog-render-gate with 'rendered quick answer differs from the reviewed source'. Instrumented positions showed the block at index 18676 and <main> opening at 19274: the civilian interior template renders the h1 and lead in the hero ABOVE <main>, so placeQuickAnswer's lead branch put the quick answer outside <main>. Every existing post passed only because preserveBlogShell relocates the block, and that path needs an existing file. The same clean run also shipped without /assets/costin-fonts.css and /assets/costin-experience.css, because the head template it clones had already had those links folded into a style bundle. A new civilian post could not pass its own gates. Both are now fixed in scripts/civilian-blog-factory.mjs and first build is byte-identical to rebuild."
+  },
+  {
+   "id": "L028",
+   "date": "2026-09-10",
+   "appliesTo": [
+    "build",
+    "verify",
+    "publish"
+   ],
+   "status": "active",
+   "type": "operational",
+   "rule": "Run audit-civilian on a prepared delivery candidate (copy the site, run prepare-civilian-delivery --root, then audit --root), not on the editable working tree. The editable tree legitimately carries style-bundle drift, so its finding count neither proves nor disproves publication readiness.",
+   "evidence": "The working tree reported 319 findings on 2026-09-10, of which 309 were 'style source changed without rebuilding bundle /assets/civilian-header-search.css' and 10 the same for costin-guide-tools.css, on pages this run never touched and with civilian-site/assets clean against origin/main. The identical tree copied and passed through prepare-civilian-delivery audited CLEAN at 0 findings across 321 pages. Judging readiness from the editable tree would have reported a blocked deploy that does not exist, and judging it from the candidate alone would have hidden the two real new-post findings that survived delivery prep."
+  },
+  {
+   "id": "L029",
+   "date": "2026-09-10",
+   "appliesTo": [
+    "build"
+   ],
+   "status": "active",
+   "type": "operational",
+   "rule": "Reapply responsive image markup after ANY generator that rewrites a rendered page, not just after adding an image. The blog factory and build-photography-credits both re-emit <picture> blocks from source and drop the avif/webp srcset sets.",
+   "evidence": "Rebuilding closing-costs-florida-buyers replaced its four-width avif plus webp plus jpg srcset with a single '<source srcset=\"/images/closing-costs-review-20260909.webp\">'. build-photography-credits did the same to six pictures on blog.html. Running apply-responsive-images afterwards restored them. Separately, apply-responsive-images re-dirties civilian-site/index.html and resources.html even from a pristine HEAD copy, so that drift is pre-existing on origin/main and those two files must be left out of an unrelated commit."
+  }
+ ]
 }

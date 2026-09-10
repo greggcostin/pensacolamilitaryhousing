@@ -1,38 +1,21 @@
 {
-  "site": "gc",
-  "engine": "bing",
-  "asOf": "2026-09-07",
-  "generated": "2026-09-09",
-  "collectedAt": "2026-09-09T07:55:31.835Z",
-  "windowStart": "2026-08-11",
-  "windowEnd": "2026-09-07",
-  "reportedTrafficDays": 14,
-  "endpointStatus": {
-    "pages": {
-      "status": "empty",
-      "rows": 0,
-      "error": null
-    },
-    "queries": {
-      "status": "empty",
-      "rows": 0,
-      "error": null
-    },
-    "traffic": {
-      "status": "observed",
-      "rows": 14,
-      "error": null
-    }
-  },
-  "dataStatus": "observed",
-  "site28": {
-    "imp": 0,
-    "clk": 0
-  },
-  "topPages": [],
-  "strikingDistance": [],
-  "ctrProblems": [],
-  "rising": [],
-  "declining": [],
-  "uncoveredDemand": []
+ "site": "gc",
+ "asOf": "2026-09-07",
+ "generated": "2026-09-10",
+ "site28": {
+  "imp": 0,
+  "clk": 0
+ },
+ "topPages": [],
+ "strikingDistance": [],
+ "ctrProblems": [],
+ "rising": [],
+ "declining": [],
+ "exploratory": {
+  "ctrCandidates": [],
+  "risingCandidates": [],
+  "decliningCandidates": [],
+  "note": "Unvalidated report windows; inspect before decisions."
+ },
+ "uncoveredDemand": []
 }

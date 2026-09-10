@@ -731,6 +731,23 @@
       "provenanceNote": ""
     },
     {
+      "id": "photo-appraisal-review-20260910",
+      "image": "https://greggcostin.com/images/appraisal-review-20260910.jpg",
+      "path": "/images/appraisal-review-20260910.jpg",
+      "sourceSite": "gc",
+      "title": "Pensacola NHPD house05.jpg",
+      "credit": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house05.jpg",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/home-appraisals-explained.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
       "id": "photo-mortgage-house-review-20260909",
       "image": "https://greggcostin.com/images/mortgage-house-review-20260909.jpg",
       "path": "/images/mortgage-house-review-20260909.jpg",

@@ -1,9 +1,56 @@
 {
- "generated": "2026-09-09",
+ "generated": "2026-09-10",
  "note": "Evidence policy v2. Missing data and small samples never trigger a rewrite. Expired declared facts take priority; search reviews require valid comparable windows. Contextual links exclude navigation, footer and the global Explore grid. Quality scores flag editorial review, not ranking outcomes.",
  "generatedBySite": {
   "pmh": "2026-09-09",
-  "gc": "2026-09-09"
+  "gc": "2026-09-10"
  },
- "queue": []
+ "queue": [
+  {
+   "site": "gc",
+   "slug": "fed-rate-hike-what-it-means",
+   "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+   "priority": 50,
+   "flags": [
+    "DATA-UNAVAILABLE",
+    "NEW",
+    "EXPIRED",
+    "LOW-SCORE"
+   ],
+   "why": [
+    "1 declared perishable(s) passed their review date",
+    "quality score 73/100"
+   ],
+   "actions": [
+    "verify primary sources; change the article date only if the content changes substantively",
+    "fix: seo: primary keyword not in the lead or first 100 words",
+    "fix: claim pmms: perishable is expired or has no review deadline"
+   ],
+   "score": 73,
+   "inbound": 3
+  },
+  {
+   "site": "gc",
+   "slug": "what-moves-mortgage-rates",
+   "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+   "priority": 50,
+   "flags": [
+    "DATA-UNAVAILABLE",
+    "NEW",
+    "EXPIRED",
+    "LOW-SCORE"
+   ],
+   "why": [
+    "2 declared perishable(s) passed their review date",
+    "quality score 75/100"
+   ],
+   "actions": [
+    "verify primary sources; change the article date only if the content changes substantively",
+    "fix: claim pmms-current: perishable is expired or has no review deadline",
+    "fix: claim pmms-prior: perishable is expired or has no review deadline"
+   ],
+   "score": 75,
+   "inbound": 6
+  }
+ ]
 }

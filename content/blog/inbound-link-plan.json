@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-09",
+ "generated": "2026-09-10",
  "note": "Every post with fewer than 3 inbound internal links, with the hub pages whose titles/H2s overlap it most. Military hubs carry a RELATED_GUIDES block the retro can insert into (--apply-links N); civilian hubs need a sentence-level link placed by the engine.",
  "generatedBySite": {
   "pmh": "2026-09-09",
-  "gc": "2026-09-09"
+  "gc": "2026-09-10"
  },
  "plan": []
 }

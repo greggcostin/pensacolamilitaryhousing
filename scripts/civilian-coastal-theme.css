@@ -1,0 +1,424 @@
+/* Gregg Costin: an airy coastal system for every static page family.
+   Loaded last, after each page's verified styles. No content or behavior changes. */
+.gc-coastal {
+  --shore-paper:#faf8f3;
+  --shore-white:#fffefa;
+  --shore-ink:#15343c;
+  --shore-body:#40575c;
+  --shore-muted:#596b6d;
+  --shore-sea:#e8f0ed;
+  --shore-sand:#efe7d8;
+  --shore-line:#d5dfd9;
+  --shore-gold:#795922;
+  --shore-navy:#102c36;
+  --shore-scene:url('/images/navarre-1200.avif');
+  --coast-paper:var(--shore-paper);
+  --coast-ink:var(--shore-ink);
+  --coast-muted:var(--shore-muted);
+  --coast-line:var(--shore-line);
+  --coast-accent:var(--shore-gold);
+  background:var(--shore-paper);
+  color:var(--shore-ink);
+  font-family:var(--sans,Inter,Arial,sans-serif);
+  -webkit-font-smoothing:antialiased;
+}
+.gc-coastal ::selection {background:#d9e8df;color:#15343c}
+.gc-coastal :focus-visible {outline:3px solid #86652f;outline-offset:4px}
+.gc-coastal :is(h1,h2,h3) {text-wrap:balance}
+.gc-coastal :is(p,li) {text-wrap:pretty}
+.gc-coastal .main-banner {background:#122b34;border-bottom:1px solid #ccb98255;box-shadow:0 2px 12px #102c360a}
+.gc-coastal .main-banner .banner-tabs>a {letter-spacing:.65px}
+.gc-coastal .main-banner .banner-tabs>a:hover {background:#ffffff09}
+.gc-coastal .main-banner .banner-tabs>a[aria-current=page] {box-shadow:inset 0 -2px #d4b768}
+
+/* The same shoreline introduces guides, communities, schools and tools. */
+.gc-coastal.gc-interior .gc-interior-hero,
+.gc-coastal.coast-guide-page header.cg-hero,
+.gc-coastal.calculator-page header.cal-hero,
+.gc-coastal.gc-page>header:not(.gc-interior-hero):not(.cg-hero):not(.cal-hero) {
+  background-color:var(--shore-paper);
+  background-image:linear-gradient(90deg,#faf8f3 0%,#faf8f3f7 40%,#faf8f3d9 65%,#faf8f329 100%),var(--shore-scene);
+  background-position:center,center 59%;
+  background-size:cover;
+  color:var(--shore-ink);
+  border-bottom:1px solid var(--shore-line);
+}
+.gc-coastal .gc-interior-hero:before {display:none}
+.gc-coastal .gc-interior-hero-wrap,
+.gc-coastal .cg-hero-inner {max-width:1280px;padding:76px 48px 80px;gap:58px}
+.gc-coastal .gc-interior-hero--split .gc-interior-hero-wrap {grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:64px}
+.gc-coastal.gc-interior .gc-interior-hero h1,
+.gc-coastal.coast-guide-page .cg-hero h1,
+.gc-coastal.calculator-page .cal-hero h1,
+.gc-coastal.gc-page>header h1 {
+  color:var(--shore-ink);
+  font-weight:400;
+  font-size:clamp(37px,4.2vw,61px);
+  line-height:1.13;
+  letter-spacing:-1.5px;
+  margin-bottom:24px;
+}
+.gc-coastal.gc-interior--article .gc-interior-hero h1 {font-size:clamp(35px,3.8vw,53px);max-width:900px}
+.gc-coastal :is(.gc-interior-hero,.cg-hero,.cal-hero) :is(.lead,.cg-byline,.cal-hero-note p),
+.gc-coastal.gc-page>header p {color:var(--shore-body);font-size:17px;line-height:1.85;max-width:65ch}
+.gc-coastal :is(.gc-interior-hero,.cg-hero,.cal-hero) :is(.gc-interior-kicker,.cg-eyebrow,.cal-kicker),
+.gc-coastal .cg-hero-line,.gc-coastal .cal-hero-note strong {color:var(--shore-gold)}
+.gc-coastal :is(.gc-interior-hero,.cg-hero) :is(.gc-interior-kicker,.cg-eyebrow) {letter-spacing:2px;font-size:11px;line-height:1.7;margin-bottom:20px}
+.gc-coastal .gc-interior-hero-actions {margin-top:30px;gap:18px 26px}
+.gc-coastal .gc-interior-hero .gc-interior-action {color:var(--shore-ink);border-color:#aebbb3;font-size:13px}
+.gc-coastal .gc-interior-hero .gc-interior-action--primary,
+.gc-coastal .cg-hero .cg-button {background:var(--shore-navy);border-color:var(--shore-navy);color:#fffefa;min-height:50px;border-radius:3px}
+.gc-coastal .gc-interior-hero .gc-interior-action--primary:hover,
+.gc-coastal .cg-hero .cg-button:hover {background:#214b54;border-color:#214b54;color:#fff}
+.gc-coastal .cg-hero .cg-button-secondary {background:#fffefaaf;border-color:#91a39b;color:var(--shore-ink)}
+.gc-coastal .cg-byline a {color:var(--shore-gold)}
+.gc-coastal .gc-interior-hero-media picture {border:6px solid #fffefa;box-shadow:12px 14px 0 #ddd8c45c,0 18px 48px #22484414;aspect-ratio:1.3}
+.gc-coastal :is(.gc-interior-hero-media,.cg-hero-media) figcaption {color:var(--shore-muted);font-size:11px;line-height:1.7;padding-top:16px}
+.gc-coastal :is(.gc-interior-hero-media,.cg-hero-media) figcaption a {color:var(--shore-gold)}
+.gc-coastal .cg-hero-media {padding:10px;background:var(--shore-white);border:1px solid #d2dcd3;box-shadow:12px 14px 0 #ddd8c445}
+.gc-coastal :is(.gc-interior--contact,.gc-interior--team) .gc-interior-hero-media picture {aspect-ratio:1/1.12}
+.gc-coastal.gc-interior--contact .gc-interior-hero-media picture {aspect-ratio:1/1.12}
+.gc-coastal.gc-interior--team .gc-interior-hero-media picture {aspect-ratio:1/1.12}
+
+/* Long-form reading stays calm, with distinct sources and quick answers. */
+.gc-coastal.gc-interior main {
+  --text:var(--shore-body);--muted:var(--shore-muted);--mutedD:var(--shore-muted);
+  --paper:var(--shore-ink);--gold:var(--shore-gold);--gold-soft:#70501f;
+  --panel:var(--shore-white);--elev:var(--shore-sea);--hair:var(--shore-line);
+}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main {
+  --text:var(--shore-body);--muted:var(--shore-muted);--mutedD:var(--shore-muted);
+  --paper:var(--shore-ink);--gold:var(--shore-gold);--gold-soft:#70501f;
+  --panel:var(--shore-white);--elev:var(--shore-sea);--hair:var(--shore-line);--gold-line:#c5cfbd;
+  max-width:1220px;padding:56px 36px 84px;color:var(--shore-body);
+}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library)>header {padding:70px max(28px,calc((100vw - 1120px)/2)) 76px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(p,ul,ol) {font-size:17px;line-height:1.9;color:var(--shore-body);max-width:760px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(h2,h3) {font-family:var(--serif);color:var(--shore-ink);text-transform:none;font-weight:400;letter-spacing:-.6px;border-color:var(--shore-line)}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main h2 {font-size:clamp(29px,3vw,39px);line-height:1.25;margin-top:52px;margin-bottom:24px;padding-bottom:0;border:0}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main h3 {font-size:25px;line-height:1.3}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main a {color:var(--shore-gold);text-underline-offset:4px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.card,.nb-card,.city-card,.blog-card,.review-card) {background:var(--shore-white);border-color:var(--shore-line);border-radius:4px;box-shadow:none}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.card,.review-card,.nb-body) {padding:28px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.nb-body p,.card p,.bc-desc) {color:var(--shore-body)!important;font-size:15px!important;line-height:1.85}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.bc-title,.cc-name,.nb-body h3,.card h3) {color:var(--shore-ink)!important;font-family:var(--serif);font-weight:400}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main .nb-grid {gap:26px;max-width:none}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.nb-photo,.cc-photo) {aspect-ratio:16/10;overflow:hidden}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.nb-photo,.cc-photo) :is(picture,img) {width:100%;height:100%;object-fit:cover;display:block}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.btn-p,.ip,.isubmit) {background:var(--shore-navy);border-color:var(--shore-navy);color:var(--shore-white);text-transform:none;letter-spacing:0;min-height:48px;border-radius:3px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.btn-g,.il) {color:var(--shore-ink);border-color:#a6b8aa;min-height:48px;border-radius:3px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.takeaways,.blog-toc,.article-next,.article-share,.geo-guide,.guide-note) {color:var(--shore-body);background:#f0f4ee;border-color:var(--shore-line);border-radius:3px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main .geo-guide {background:transparent;padding:0;border:0}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.blog-toc,.article-next,.takeaways) {padding:25px 28px;margin-top:32px;margin-bottom:32px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main .review-card p {font:400 20px/1.8 var(--serif)!important;color:var(--shore-body)!important}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.who,.review-author) {color:var(--shore-ink)!important}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.meta,.review-meta,.fine,.fine-print,.ifine,.nb-credit) {color:var(--shore-muted)!important}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main details {background:transparent;border:0;border-bottom:1px solid var(--shore-line);padding:24px 0;border-radius:0}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main summary {color:var(--shore-ink);font-size:16px;line-height:1.75;min-height:44px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main table {background:var(--shore-white);font-size:14px;line-height:1.8;border-color:var(--shore-line)}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main th {background:#deebe5;color:var(--shore-ink);padding:16px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main td {color:var(--shore-body);padding:16px;border-color:var(--shore-line)}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main tr:nth-child(even) td {background:#f2f5ef}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main [style*="color:#fff"] {color:var(--shore-ink)!important}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main [style*="color:#9CA3AF"] {color:var(--shore-muted)!important}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main form :is(label,.ifine) {color:var(--shore-body)}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main form :is(input,textarea,select) {color:var(--shore-ink);background:var(--shore-white);border-color:#9eb1a5;font-size:16px;min-height:48px;border-radius:3px}
+.gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main figcaption {color:var(--shore-muted);font-size:12px;line-height:1.8}
+.gc-coastal[data-gc-coastal-family=directory]:not(.gc-interior) main .blog-grid {max-width:none;gap:28px}
+.gc-coastal[data-gc-coastal-family=directory] main .nb-body h3 {font-weight:700!important;line-height:1.25;letter-spacing:-.35px;margin-bottom:16px}
+.gc-coastal[data-gc-coastal-family=directory]:not(.gc-interior) main .blog-card {padding:30px;border-top:2px solid #b39b63}
+.gc-coastal[data-gc-coastal-family=directory]:not(.gc-interior) main .bc-title {font-size:29px;line-height:1.25}
+.gc-coastal[data-gc-coastal-family=directory]:not(.gc-interior) main .blog-card:first-child {background:var(--shore-sea)}
+.gc-coastal[data-gc-coastal-family=article]>header h1,
+.gc-coastal[data-gc-coastal-family=guide]>header h1 {max-width:900px}
+.gc-coastal[data-gc-coastal-family=article] main>.figure-band {margin-top:30px;margin-bottom:42px;border:7px solid #fffefa;border-radius:2px;box-shadow:0 8px 28px #15343c09}
+.gc-coastal[data-gc-coastal-family=contact] .gc-contact-night {background:var(--shore-white);border:1px solid var(--shore-line);border-radius:5px;box-shadow:0 8px 28px #15343c0d}
+.gc-coastal[data-gc-coastal-family=contact] .gc-contact-night img {aspect-ratio:16/9;object-fit:cover;object-position:50% 82%}
+.gc-coastal[data-gc-coastal-family=contact] .gc-contact-night figcaption {padding:16px 22px;color:var(--shore-body);font-size:13px;line-height:1.7}
+.gc-coastal[data-gc-coastal-family=article] main .blog-byline {color:var(--shore-muted);line-height:1.8}
+.gc-coastal.gc-interior .gc-interior-grid {max-width:1280px;padding:64px 48px 96px;gap:64px;grid-template-columns:minmax(0,1fr) 272px}
+.gc-coastal.gc-interior .gc-interior-grid--wide {display:block}
+.gc-coastal.gc-interior main :is(p,ul,ol),
+.gc-coastal.coast-guide-page .cg-guide :is(p,li) {font-size:17px;line-height:1.9;color:var(--shore-body)}
+.gc-coastal.gc-interior main :is(h2,h3),
+.gc-coastal.coast-guide-page .cg-guide :is(h2,h3) {color:var(--shore-ink);font-weight:400;line-height:1.22}
+.gc-coastal.gc-interior main h2 {font-size:clamp(30px,3vw,40px);margin-bottom:24px;letter-spacing:-.8px}
+.gc-coastal.gc-interior main h3 {font-size:25px;margin-top:30px;margin-bottom:15px}
+.gc-coastal.gc-interior main a {color:var(--shore-gold);text-underline-offset:4px;text-decoration-thickness:1px}
+.gc-coastal.gc-interior main a:hover {color:var(--shore-ink)}
+.gc-coastal.gc-interior main a.btn-p {background:var(--shore-navy);border-color:var(--shore-navy);color:#fffefa}
+.gc-coastal.gc-interior main a.btn-p:hover {background:#214b54;border-color:#214b54;color:#fff}
+.gc-coastal .gc-interior-content {min-width:0}
+.gc-coastal .gc-interior-content :is(.gc-page-intro,.gc-story-section)>:is(p,ul,ol) {max-width:72ch}
+.gc-coastal.gc-interior .gc-story-section {padding-top:46px;margin-bottom:38px;border-color:var(--shore-line)}
+.gc-coastal :is(.quick-answer,.geo-guide) {border-color:var(--shore-line)}
+.gc-coastal .quick-answer {
+  background:var(--shore-sea)!important;color:var(--shore-ink)!important;
+  border:1px solid #cddcd3!important;border-left:3px solid #a6874c!important;
+  border-radius:3px!important;padding:25px 28px!important;box-shadow:none;
+}
+.gc-coastal .quick-answer :is(p,div,span,strong) {color:var(--shore-ink)!important}
+.gc-coastal .quick-answer :is(small,cite),.gc-coastal .quick-answer .qa-by {color:var(--shore-muted)!important}
+.gc-coastal .quick-answer :is(.qa-label,.qa-title) {color:var(--shore-gold)!important}
+.gc-coastal .gc-interior-hero .quick-answer {margin:26px 0 0;max-width:72ch}
+.gc-coastal :is(.author-card,.author-byline) {background:var(--shore-white)!important;color:var(--shore-body)!important;border-color:var(--shore-line)!important;box-shadow:none;border-radius:3px}
+.gc-coastal :is(.author-card,.author-byline) :is(p,span,strong,a) {color:var(--shore-body)}
+.gc-coastal .gc-interior-content :is(.gc-toc,.article-toc) {padding:20px 24px;background:#f0f3ed;border:1px solid var(--shore-line);border-radius:3px;margin-bottom:30px}
+.gc-coastal.gc-interior main details {padding:23px 0;border-color:var(--shore-line)}
+.gc-coastal.gc-interior main details summary {font-size:16px;line-height:1.75;color:var(--shore-ink)}
+.gc-coastal.gc-interior main details p {font-size:16px;line-height:1.85;color:var(--shore-body)}
+.gc-coastal.gc-interior main table {background:var(--shore-white);font-variant-numeric:tabular-nums}
+.gc-coastal.gc-interior main th,
+.gc-coastal .cg-guide th {background:#deebe5;color:var(--shore-ink);font-size:13px;line-height:1.6;padding:17px 19px}
+.gc-coastal.gc-interior main td {padding:18px 19px;font-size:14px;line-height:1.8;border-color:var(--shore-line)}
+.gc-coastal.gc-interior main tr:nth-child(even) td,
+.gc-coastal .cg-guide tbody tr:nth-child(even) {background:#f2f5ef}
+.gc-coastal.gc-interior main figcaption {color:var(--shore-muted);font-size:12px;line-height:1.8}
+.gc-coastal .gc-support-card {background:#e7eee8;border:1px solid #ccd9cf;border-top:3px solid #ad935e;padding:28px 24px;color:var(--shore-ink)}
+.gc-coastal .gc-support-person {border-color:#bdcfc3}
+.gc-coastal .gc-support-person strong,
+.gc-coastal .gc-support-card h2 {color:var(--shore-ink)}
+.gc-coastal .gc-support-person span,
+.gc-coastal .gc-support-card p {color:var(--shore-body);font-size:14px;line-height:1.85}
+.gc-coastal .gc-support-card .gc-interior-kicker {color:var(--shore-gold)}
+.gc-coastal .gc-support-card .gc-interior-action--primary {background:var(--shore-navy);border-color:var(--shore-navy);color:#fffefa}
+.gc-coastal .gc-support-phone {color:var(--shore-ink)!important}
+.gc-coastal.gc-interior main .gc-interior-aside {top:184px}
+.gc-coastal.gc-interior main .inq-cta {background-color:var(--shore-navy);background-image:linear-gradient(95deg,#102c36f5,#102c36df 65%,#102c3699),var(--shore-scene);background-size:cover;background-position:center 65%;border-top:2px solid #ccb982;padding:40px;border-radius:3px}
+.gc-coastal.gc-interior main .inq-cta h2 {color:#fffefa}
+
+/* Photo-led directories and understated, readable cards. */
+.gc-coastal.gc-interior main :is(.cards,.nb-grid,.city-grid,.blog-grid,.review-grid) {gap:26px}
+.gc-coastal.gc-interior main :is(.card,.nb-card,.city-card,.blog-card,.review-card),
+.gc-coastal .gc-home .area-card {background:var(--shore-white);border-color:var(--shore-line);border-radius:4px;box-shadow:0 5px 22px #15343c05}
+.gc-coastal.gc-interior main :is(.nb-card,.city-card,.blog-card):hover {border-color:#91aaa0;box-shadow:0 12px 30px #15343c0d;transform:translateY(-3px)}
+.gc-coastal.gc-interior main .blog-card:first-child {background:#e6efea;color:var(--shore-ink);border-top-color:#9a7b40}
+.gc-coastal.gc-interior main .blog-card:first-child :is(.bc-title,.bc-desc,.bc-date,.bc-more,.gc-blog-card-credit) {color:var(--shore-ink)}
+.gc-coastal.gc-interior main .bc-desc,
+.gc-coastal.gc-interior main .nb-body p {font-size:15px;line-height:1.85;color:var(--shore-body)}
+.gc-coastal.gc-interior main .nb-body {padding:28px}
+.gc-coastal.gc-interior main .card {border-top:2px solid #baa574}
+.gc-coastal.gc-interior main .review-card {border-top:2px solid #baa574;padding:32px}
+.gc-coastal.gc-interior main .review-card p {font-size:20px!important;line-height:1.8!important;color:var(--shore-body)!important}
+.gc-coastal .gc-review-profile {display:grid!important;grid-template-columns:84px minmax(0,1fr);gap:16px 20px!important;flex:1 1 280px;min-width:0;max-width:100%;min-height:172px;padding:28px!important;background:var(--shore-white)!important;border:1px solid #b9cabd!important;border-top:3px solid #aa8950!important;border-radius:14px!important;box-shadow:0 6px 24px #15343c08;color:var(--shore-ink)!important}
+.gc-coastal .gc-review-profile[data-review-platform=zillow] {background:#edf3ef!important}
+.gc-coastal .gc-review-profile .gc-review-platform-label {grid-column:1/-1;text-align:center;font-size:22px;font-weight:800;line-height:1.25;color:var(--shore-ink);letter-spacing:-.2px}
+.gc-coastal .gc-review-profile>div:nth-of-type(1) {font-size:48px!important;color:var(--shore-ink)!important}
+.gc-coastal .gc-review-profile>div:nth-of-type(2)>div:not([aria-hidden]) {font-size:14px!important;line-height:1.6;color:var(--shore-body)!important}
+.gc-coastal .gc-review-profile [data-review-count] {font-weight:700}
+.gc-coastal .gc-review-profile:hover {border-color:#8a6a31!important;box-shadow:0 10px 28px #15343c12}
+.gc-coastal.gc-interior main :is(.chips a,.school-list li) {background:var(--shore-white);border-color:var(--shore-line);border-radius:3px}
+.gc-coastal.gc-interior main .chips a {min-height:44px;align-content:center}
+.gc-coastal .cg-perspective,.gc-coastal .cg-facts>div {background:var(--shore-sea)}
+.gc-coastal.coast-guide-page .cg-guide strong {color:var(--shore-ink)}
+.gc-coastal.coast-guide-page .cg-guide .cg-cta :is(h2,h3) {color:#fffefa}
+.gc-coastal.coast-guide-page .cg-guide .cg-cta p {color:#d8e3df}
+.gc-coastal.coast-guide-page .cg-guide .cg-cta .cg-eyebrow {color:#e4ce9b;font-size:11px}
+.gc-coastal :is(.cg-section,.sg-section) {padding-top:56px;padding-bottom:52px;border-color:var(--shore-line)}
+.gc-coastal :is(.cg-place,.cg-cost-grid article,.cg-school,.sg-summary,.sf-filters,.sf-list-panel) {background:var(--shore-white);border-color:var(--shore-line);border-radius:4px}
+.gc-coastal .sg-summary {padding:34px;border-top-color:#ad935e}
+.gc-coastal.gc-interior--school .gc-interior-hero-wrap {grid-template-columns:minmax(0,1fr) 310px}
+.gc-coastal.gc-interior--school .gc-interior-hero-media>.gc-interior-feature,
+.gc-coastal.gc-interior--reviews .gc-interior-feature>div {background:var(--shore-white)!important;border:1px solid #c8d8cd!important;box-shadow:10px 12px 0 #d6dfd252;border-radius:4px!important}
+.gc-coastal.gc-interior--school .gc-interior-feature [style*="color:var(--muted)"],
+.gc-coastal.gc-interior--reviews .gc-interior-feature [style*="color:#9CA3AF"] {color:var(--shore-muted)!important}
+.gc-coastal.gc-interior main .sg-comparison caption {background:var(--shore-navy);color:#f0dfb3}
+.gc-coastal .sf-result.sf-selected {background:#e8f0e9;box-shadow:inset 3px 0 #7b9888}
+.gc-coastal .sf {--sf-navy:var(--shore-ink);--sf-gold:#bea264}
+.gc-coastal .sf-map-column {border:1px solid var(--shore-line);border-radius:4px;overflow:hidden}
+.gc-coastal.gc-interior--school .gc-interior-hero-media [style*="color:#fff"]:not([aria-label]) {color:var(--shore-ink)!important}
+.gc-coastal.gc-interior main .sg-alternatives article,.gc-coastal .sf-next-step {background:var(--shore-sea);border-color:#c3d5c8}
+.gc-coastal.gc-interior main .sg-alternatives article :is(h3,p) {color:var(--shore-ink)}
+.gc-coastal.gc-interior main .sg-alternatives article a {color:var(--shore-gold)}
+.gc-coastal.gc-interior main .sg-alternatives article span {color:var(--shore-gold)}
+.gc-coastal.gc-interior main .sg-alternatives article small {color:var(--shore-muted);font-size:12px;line-height:1.7}
+
+/* The homepage keeps its composition; the coast is more visible behind it. */
+.gc-coastal.gc-home .gc-coast-hero:after {background:linear-gradient(90deg,#102c36f2 0%,#102c36d9 38%,#15343c69 76%,#15343c38 100%)}
+.gc-coastal.gc-home .gc-section {padding-top:96px;padding-bottom:96px}
+.gc-coastal.gc-home .gc-plans {padding-bottom:0}
+.gc-coastal.gc-home .gc-proof-strip {background:#efece2;border-color:var(--shore-line)}
+.gc-coastal.gc-home .gc-proof-grid {padding-top:32px;padding-bottom:32px}
+.gc-coastal.gc-home .gc-region-card {background:var(--shore-white);color:var(--shore-ink)!important;border:1px solid var(--shore-line);border-radius:3px}
+.gc-coastal.gc-home .gc-region-card>div {border-color:var(--shore-line);padding:28px}
+.gc-coastal.gc-home .gc-region-card :is(h3,p) {color:var(--shore-ink)}
+.gc-coastal.gc-home .gc-region-card p {font-size:14px;line-height:1.8;color:var(--shore-body)}
+.gc-coastal.gc-home .gc-region-card :is(small,a) {color:var(--shore-gold)}
+.gc-coastal.gc-home .gc-region-card[data-region=perdido] {outline:1px solid #baa574;outline-offset:-1px}
+.gc-coastal.gc-home .gc-reviews {background:var(--shore-sea)}
+.gc-coastal.gc-home :is(.gc-data,.gc-last-word) {background:var(--shore-navy)}
+.gc-coastal.gc-home .gc-ratings {background:var(--shore-navy)}
+.gc-coastal.gc-home .gc-resource-coast:after {background:linear-gradient(105deg,#102c36f5,#102c36d9 55%,#102c3685)}
+.gc-coastal.gc-home .gc-resource-coast :is(.gc-reading-card,.gc-faq details) {background:#102c36c9;border-color:#b5c8be66}
+.gc-coastal.gc-home .area-card {border-color:var(--shore-line);background:var(--shore-white)}
+.gc-coastal.gc-resource-library .rl-hero {color:var(--shore-ink);background:var(--shore-paper)}
+.gc-coastal.gc-resource-library .rl-hero:after {background:linear-gradient(95deg,#faf8f3fc,#faf8f3eb 52%,#faf8f365)}
+.gc-coastal.gc-resource-library .rl-hero :is(h1,h2,p) {color:var(--shore-ink)}
+.gc-coastal.gc-resource-library .rl-hero :is(em,.rl-eyebrow,.rl-link) {color:var(--shore-gold)}
+.gc-coastal .rl-hero-grid {padding-top:76px;padding-bottom:80px}
+.gc-coastal .rl-hero-note {border-color:#aebfb2}
+.gc-coastal .rl-tool {background:var(--shore-sea);color:var(--shore-ink);border:1px solid var(--shore-line);border-top:2px solid #ad935e}
+.gc-coastal.gc-resource-library .rl-tool :is(h3,p,span) {color:var(--shore-ink)}
+.gc-coastal .rl-tool :is(.rl-tag,.rl-tool-link) {color:var(--shore-gold)}
+
+/* Calculators retain their proven, high-contrast chart colors in a coastal frame. */
+.gc-coastal.calculator-page {--cal-ink:var(--shore-ink);--cal-muted:var(--shore-body)}
+.gc-coastal.calculator-page .cal-hero {padding:48px 32px}
+.gc-coastal.calculator-page .cal-hero h1 {font-size:clamp(32px,3.5vw,48px)}
+.gc-coastal.calculator-page .cal-hero p {color:var(--shore-body)}
+.gc-coastal .cal-hero-note {border-color:#aebfb2;background:#faf8f3c9;padding:22px 26px}
+.gc-coastal.calculator-page main {padding-top:36px;padding-bottom:80px}
+.gc-coastal .cal-breadcrumb {color:var(--shore-muted)}
+.gc-coastal .cal-breadcrumb a {color:var(--shore-gold)}
+.gc-coastal .cal-toolbar {background:var(--shore-sea);border-color:var(--shore-line);padding:20px 24px;border-radius:4px 4px 0 0}
+.gc-coastal .cal-toolbar :is(p,strong) {color:var(--shore-ink)!important;font-size:14px;line-height:1.7}
+.gc-coastal .cal-toolbar button {color:var(--shore-ink);border-color:#9bb0a2;background:var(--shore-white);min-height:44px}
+.gc-coastal .cal-suite .cal-status {background:#f0f4ee;color:var(--shore-muted);border-color:var(--shore-line);padding:12px 24px}
+.gc-coastal .cal-tabs {gap:10px;margin:26px 0}
+.gc-coastal .cal-tabs button {background:var(--shore-white);border-color:#c8d7ce;color:var(--shore-ink);min-height:54px;border-radius:3px;white-space:normal}
+.gc-coastal .cal-tabs button[aria-selected=true] {background:var(--shore-navy);color:#f3dfb0;border-color:var(--shore-navy);box-shadow:0 4px 12px #15343c0e}
+.gc-coastal .cal-panel {background:#112633;border:1px solid #8b9d9266;padding:30px;border-radius:5px;--cal-ink:#101824;--cal-card:#182332;--cal-line:#354151;--cal-text:#edece5;--cal-muted:#bdc4cc;--cal-gold:#dec17d}
+.gc-coastal .cal-suite .cal-panel :is(p,ul,ol) {color:#cad4d6}
+.gc-coastal .cal-suite .cal-panel h2 {color:#fffefa}
+.gc-coastal .cal-suite .cal-panel h3 {color:#dec17d}
+.gc-coastal .cal-panel .cal-hero-note {background:transparent}
+.gc-coastal .cal-panel-intro {margin-bottom:26px}
+.gc-coastal .cal-field {margin-bottom:12px}
+.gc-coastal .cal-field label {font-size:13px;line-height:1.7;margin-bottom:8px}
+.gc-coastal .cal-field :is(input,select) {font-size:16px;min-height:46px}
+.gc-coastal .cal-suite .cal-help {font-size:12px;line-height:1.8}
+.gc-coastal .cal-panel .cal-metric small {font-size:12px;line-height:1.7}
+.gc-coastal.calculator-page .cal-guide {color:var(--shore-body)}
+.gc-coastal.calculator-page .cal-guide :is(h2,h3) {color:var(--shore-ink);font-weight:400;font-size:30px;line-height:1.3;margin-top:40px;margin-bottom:22px}
+.gc-coastal.calculator-page .cal-guide :is(p,ul,ol,li) {color:var(--shore-body);font-size:16px;line-height:1.85}
+.gc-coastal.calculator-page .cal-guide a,
+.gc-coastal .cal-bottom-tools .cal-text-button {color:var(--shore-gold)}
+.gc-coastal .cal-bottom-tools .cal-help {color:var(--shore-body)}
+.gc-coastal.calculator-page .cal-guide .cal-method {background:var(--shore-sea);border-color:var(--shore-line)}
+.gc-coastal.calculator-page .cal-guide .cal-method strong {color:var(--shore-ink)}
+
+/* Forms, dialogs and the footer finish the same experience. */
+.gc-coastal .imodal {background:var(--shore-paper);border:1px solid #b4c7b9;border-radius:5px;color:var(--shore-ink);box-shadow:0 30px 100px #0d273559}
+.gc-coastal .imodal :is(h2,h3,label,.imodal-title) {color:var(--shore-ink)}
+.gc-coastal .imodal :is(p,.imodal-sub,.fine-print) {color:var(--shore-body)}
+.gc-coastal .imodal :is(input,select,textarea) {background:var(--shore-white);color:var(--shore-ink);border-color:#9fb4a5;border-radius:3px;font-size:16px}
+.gc-coastal .imodal .imodal-close {color:var(--shore-ink);background:var(--shore-sea);border-color:var(--shore-line)}
+.gc-coastal .imodal a {color:var(--shore-gold)}
+.gc-coastal .imodal :is(.isubmit,button[type=submit]) {background:var(--shore-navy);color:#fffefa;border-color:var(--shore-navy)}
+.gc-coastal.gc-interior main form :is(input,textarea,select) {background:var(--shore-white)!important;border-color:#9eb1a5!important;border-radius:3px!important}
+.gc-coastal.gc-interior main form :is(input,select):not([type=checkbox]):not([type=radio]) {min-height:49px}
+.gc-coastal[data-gc-coastal-family=contact] main form label {color:var(--shore-body)!important;font-size:13px!important;line-height:1.7}
+.gc-coastal.gc-interior main .gc-story-section--form>div {padding:36px!important;border-color:var(--shore-line)!important;background:var(--shore-white)!important}
+.gc-coastal .gc-search-dialog {background:var(--shore-paper);color:var(--shore-ink);border:1px solid #b4c7b9;border-radius:5px}
+.gc-coastal .gc-search-dialog :is(h2,p,a,.gc-search-close) {color:var(--shore-ink)}
+.gc-coastal .gc-search-dialog :focus-visible {outline:3px solid var(--shore-gold)!important;outline-offset:3px}
+.gc-coastal .gc-search-close:hover {background:var(--shore-sea);color:var(--shore-ink)}
+.gc-coastal #gc-search-results {--pagefind-ui-primary:var(--shore-ink);--pagefind-ui-text:var(--shore-ink);--pagefind-ui-background:var(--shore-white);--pagefind-ui-border:#7b9185;--pagefind-ui-tag:var(--shore-sea)}
+.gc-coastal #gc-search-results .pagefind-ui__search-input {background:var(--shore-white);color:var(--shore-ink);caret-color:var(--shore-ink)}
+.gc-coastal #gc-search-results .pagefind-ui__search-input::placeholder {color:var(--shore-body);opacity:1}
+.gc-coastal #gc-search-results .pagefind-ui__result-title a {color:var(--shore-ink)}
+.gc-coastal #gc-search-results mark {color:var(--shore-ink);background:var(--shore-sand)}
+.gc-coastal>footer {background:var(--shore-navy);color:#d5e0dc;border-top:3px solid #b69b64;max-width:none;padding:52px max(24px,calc((100% - 1152px)/2)) 44px;line-height:1.9}
+.gc-coastal>footer a {color:#e5ce99}
+.gc-coastal>footer p {line-height:1.9}
+.gc-coastal>footer p[style*="color"] {color:#bfcec7!important;font-size:12px!important}
+.gc-coastal #professional-details {background:var(--shore-sea)!important;color:var(--shore-ink)!important;border-color:var(--shore-line)!important;border-radius:3px}
+.gc-coastal #professional-details a {color:var(--shore-gold)!important}
+.gc-coastal #professional-details p {color:var(--shore-body)!important}
+.gc-coastal .sticky-mobile-cta {background:#102c36f5;border-color:#bba36d}
+.gc-coastal .table-wrap {max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+.gc-coastal.gc-coastal--error {background:linear-gradient(#102c364d,#102c36c9),var(--shore-scene) center/cover fixed;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:100svh;padding:64px 24px 0;gap:56px}
+.gc-coastal--error,.gc-coastal--error * {box-sizing:border-box}
+.gc-coastal--error>div {width:min(680px,100%);padding:54px 48px;background:var(--shore-paper);border-top:3px solid #b69b64;border-radius:4px;box-shadow:0 24px 80px #102c3645;text-align:center}
+.gc-coastal--error h1 {font:400 clamp(88px,11vw,132px)/1.05 var(--serif,Georgia,serif);letter-spacing:-4px;color:var(--shore-ink);margin:0 0 24px}
+.gc-coastal--error>div p {color:var(--shore-body);font-size:18px;line-height:1.8;margin-bottom:28px}
+.gc-coastal--error>div a {background:var(--shore-navy);border:1px solid var(--shore-navy);color:var(--shore-white);min-height:48px;border-radius:3px;font-size:14px;padding:14px 22px}
+.gc-coastal--error>div a.ghost {background:transparent;color:var(--shore-ink);border-color:#819b8e}
+.gc-coastal--error>footer {width:100%;max-width:100%;background:transparent;color:#e0e9e4!important;font-size:12px!important;line-height:1.9!important;margin-top:auto;padding:24px!important;border-top:1px solid #ffffff38!important}
+.gc-coastal--error>footer a {background:transparent;border:0;border-radius:0;box-shadow:none;padding:6px 0;margin:0;color:#eedbae!important;text-decoration:underline;text-underline-offset:4px;font:inherit}
+.gc-coastal.gc-coastal--error main {background:var(--shore-paper);border-radius:4px;box-shadow:0 24px 80px #102c3645}
+
+@media(min-width:1600px) {
+  .gc-coastal :is(.gc-interior-hero,.cg-hero) {background-position:center,center 62%}
+}
+@media(max-width:1100px) {
+  .gc-coastal .gc-interior-hero-wrap,.gc-coastal .cg-hero-inner {padding:62px 32px;gap:36px}
+  .gc-coastal .gc-interior-hero--split .gc-interior-hero-wrap {gap:36px}
+  .gc-coastal.gc-interior .gc-interior-grid {padding:54px 32px 76px;gap:36px;grid-template-columns:minmax(0,1fr) 245px}
+  .gc-coastal.gc-interior--school .gc-interior-hero-wrap {grid-template-columns:minmax(0,1fr) 260px}
+  .gc-coastal.gc-home .gc-section {padding-top:72px;padding-bottom:72px}
+  .gc-coastal.gc-home .gc-plans {padding-bottom:0}
+}
+@media(max-width:850px) {
+  .gc-coastal.gc-interior .gc-interior-grid {display:block}
+  .gc-coastal.gc-interior main .gc-interior-aside {position:static;margin-top:44px}
+  .gc-coastal .cal-panel {padding:24px}
+}
+@media(max-width:640px) {
+  .gc-coastal {--shore-scene:url('/images/navarre-768.avif')}
+  .gc-coastal.gc-interior .gc-interior-hero,
+  .gc-coastal.coast-guide-page header.cg-hero,
+  .gc-coastal.calculator-page header.cal-hero {
+    background-image:linear-gradient(100deg,#faf8f3fa,#faf8f3e8 62%,#faf8f3ba),var(--shore-scene);
+  }
+  .gc-coastal .gc-interior-hero-wrap,
+  .gc-coastal .gc-interior-hero--split .gc-interior-hero-wrap,
+  .gc-coastal.gc-interior--school .gc-interior-hero-wrap,
+  .gc-coastal .cg-hero-inner {display:flex;flex-direction:column;align-items:stretch;padding:42px 24px 46px;gap:30px}
+  .gc-coastal.gc-interior .gc-interior-hero h1,
+  .gc-coastal.coast-guide-page .cg-hero h1 {font-size:clamp(32px,8.8vw,39px)!important;line-height:1.16;letter-spacing:-.9px}
+  .gc-coastal :is(.gc-interior-hero,.cg-hero,.cal-hero) :is(.lead,.cal-hero-note p) {font-size:16px;line-height:1.8}
+  .gc-coastal :is(.gc-interior-hero,.cg-hero) :is(.gc-interior-kicker,.cg-eyebrow) {font-size:10px;letter-spacing:1.55px}
+  .gc-coastal .gc-interior-hero-media picture {aspect-ratio:1.6;box-shadow:8px 9px 0 #ddd8c45c}
+  .gc-coastal .quick-answer {padding:22px!important;font-size:16px!important;line-height:1.8!important}
+  .gc-coastal.gc-interior .gc-interior-grid {padding:40px 24px 64px}
+  .gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library)>header {padding:42px 24px 46px!important}
+  .gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main {padding:36px 24px 64px}
+  .gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(p,ul,ol) {font-size:16px;line-height:1.85}
+  .gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main h2 {font-size:30px;margin-top:38px}
+  .gc-coastal.gc-page:not(.gc-interior):not(.coast-guide-page):not(.gc-resource-library) main :is(.blog-toc,.article-next,.takeaways) {padding:23px}
+  .gc-coastal.gc-interior main :is(p,ul,ol),
+  .gc-coastal.coast-guide-page .cg-guide :is(p,li) {font-size:16px;line-height:1.85}
+  .gc-coastal.gc-interior main h2 {font-size:30px!important;line-height:1.25}
+  .gc-coastal.gc-interior main h3 {font-size:24px;line-height:1.3}
+  .gc-coastal.gc-interior .gc-story-section {padding-top:34px;margin-bottom:30px}
+  .gc-coastal.gc-interior main :is(th,td) {font-size:13px;padding:14px 12px}
+  .gc-coastal.gc-interior main :is(.cards,.nb-grid,.city-grid,.blog-grid,.review-grid) {gap:22px}
+  .gc-coastal[data-gc-coastal-family=directory] main .nb-grid {grid-template-columns:minmax(0,1fr)}
+  .gc-coastal[data-gc-coastal-family=school-finder] main .gc-story-section>div[style*="display:grid"] {grid-template-columns:minmax(0,1fr)!important}
+  .gc-coastal.gc-interior main .inq-cta {padding:28px}
+  .gc-coastal .gc-review-profile {grid-template-columns:72px minmax(0,1fr);gap:14px 16px!important;padding:24px!important;min-height:160px}
+  .gc-coastal.gc-interior main .gc-story-section--form>div {padding:24px!important}
+  .gc-coastal .sg-summary {padding:25px}
+  .gc-coastal :is(.cg-section,.sg-section) {padding-top:40px;padding-bottom:36px}
+  .gc-coastal.gc-home .gc-section {padding-top:58px;padding-bottom:58px}
+  .gc-coastal.gc-home .gc-plans {padding-bottom:0}
+  .gc-coastal.gc-home .gc-coast-hero:after {background:linear-gradient(100deg,#102c36eb,#102c36bc 65%,#15343c91)}
+  .gc-coastal.gc-home .gc-region-card>div {padding:26px}
+  .gc-coastal.gc-home .gc-region-card p {font-size:14px}
+  .gc-coastal .rl-hero-grid {padding-top:44px;padding-bottom:46px}
+  .gc-coastal.calculator-page .cal-hero {padding:38px 24px}
+  .gc-coastal .cal-hero-note {padding:18px 22px}
+  .gc-coastal.calculator-page main {padding:26px 16px 64px}
+  .gc-coastal .cal-toolbar {padding:20px}
+  .gc-coastal .cal-toolbar :is(p,strong) {font-size:13px}
+  .gc-coastal .cal-tabs {gap:8px}
+  .gc-coastal .cal-tabs button {min-height:52px;padding:12px 8px}
+  .gc-coastal .cal-panel {padding:22px 16px}
+  .gc-coastal>footer {padding:40px 24px 112px}
+  .gc-coastal.gc-coastal--error {padding:40px 20px 0;gap:36px}
+  .gc-coastal--error>div {padding:38px 24px}
+  .gc-coastal--error>div p {font-size:16px}
+  .gc-coastal--error>div a {padding:13px 17px;font-size:13px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .gc-coastal *, .gc-coastal *:before, .gc-coastal *:after {animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+@media print {
+  .gc-coastal {background:#fff!important;color:#111!important}
+  .gc-coastal :is(header,.gc-interior-hero,.cg-hero,.cal-hero,.rl-hero,.cal-panel) {background:#fff!important;color:#111!important;box-shadow:none!important}
+  .gc-coastal :is(.gc-interior-grid,.cg-guide) {display:block!important;padding:0!important}
+  .gc-coastal :is(.gc-interior-aside,.gc-interior-hero-actions,.sticky-mobile-cta) {display:none!important}
+  .gc-coastal :is(p,h1,h2,h3,li,.lead) {color:#111!important}
+  .gc-coastal :is(.quick-answer,.gc-story-section,.sg-summary) {break-inside:avoid}
+}

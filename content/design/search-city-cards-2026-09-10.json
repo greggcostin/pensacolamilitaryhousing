@@ -1,0 +1,278 @@
+{
+  "request": "Give Milton, Destin, Niceville, Crestview and Mary Esther matching photo cards on Search Homes.",
+  "source": "Existing civilian-site/search.html cards and current credited photography; no image or srcset was invented.",
+  "cards": [
+    {
+      "name": "Milton",
+      "html": "<a class=\"city-card\" href=\"https://greggc.levinrinkerealty.com/map/?newsearch=1&newsearchresults=1&state=12&condition=or&status_types%5B%5D=sale&property_category%5B%5D=residential&sort_by=1&pagenum=1&city%5B%5D=Milton\" rel=\"noopener\"><span class=\"cc-photo\"><picture><source type=\"image/avif\" srcset=\"/images/milton-480.avif 480w, /images/milton-768.avif 768w, /images/milton-1200.avif 1200w, /images/milton.avif 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\"><source type=\"image/webp\" srcset=\"/images/milton-480.webp 480w, /images/milton-768.webp 768w, /images/milton-1200.webp 1200w, /images/milton.webp 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\"><img src=\"/images/milton.jpg\" srcset=\"/images/milton-480.jpg 480w, /images/milton-768.jpg 768w, /images/milton-1200.jpg 1200w, /images/milton.jpg 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\" width=\"1600\" height=\"900\" alt=\"Historic storefronts in downtown Milton, Florida\" loading=\"lazy\" decoding=\"async\"></picture></span><span class=\"cc-body\"><span class=\"cc-name\">Milton</span><span class=\"cc-go\">Browse the map &rarr;</span></span></a>"
+    },
+    {
+      "name": "Destin",
+      "html": "<a class=\"city-card\" href=\"https://greggc.levinrinkerealty.com/map/?newsearch=1&newsearchresults=1&state=12&condition=or&status_types%5B%5D=sale&property_category%5B%5D=residential&sort_by=1&pagenum=1&city%5B%5D=Destin\" rel=\"noopener\"><span class=\"cc-photo\"><picture><source type=\"image/avif\" srcset=\"/images/destin-480.avif 480w, /images/destin-768.avif 768w, /images/destin-1200.avif 1200w, /images/destin.avif 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\"><source type=\"image/webp\" srcset=\"/images/destin-480.webp 480w, /images/destin-768.webp 768w, /images/destin-1200.webp 1200w, /images/destin.webp 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\"><img src=\"/images/destin.jpg\" srcset=\"/images/destin-480.jpg 480w, /images/destin-768.jpg 768w, /images/destin-1200.jpg 1200w, /images/destin.jpg 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\" width=\"1600\" height=\"836\" alt=\"Boats and turquoise water at Destin Harbor, Florida\" loading=\"lazy\" decoding=\"async\"></picture></span><span class=\"cc-body\"><span class=\"cc-name\">Destin</span><span class=\"cc-go\">Browse the map &rarr;</span></span></a>"
+    },
+    {
+      "name": "Niceville",
+      "html": "<a class=\"city-card\" href=\"https://greggc.levinrinkerealty.com/map/?newsearch=1&newsearchresults=1&state=12&condition=or&status_types%5B%5D=sale&property_category%5B%5D=residential&sort_by=1&pagenum=1&city%5B%5D=Niceville\" rel=\"noopener\"><span class=\"cc-photo\"><picture><source type=\"image/avif\" srcset=\"/images/niceville-480.avif 480w, /images/niceville-768.avif 768w, /images/niceville-1200.avif 1200w, /images/niceville.avif 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\"><source type=\"image/webp\" srcset=\"/images/niceville-480.webp 480w, /images/niceville-768.webp 768w, /images/niceville-1200.webp 1200w, /images/niceville.webp 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\"><img src=\"/images/niceville.jpg\" srcset=\"/images/niceville-480.jpg 480w, /images/niceville-768.jpg 768w, /images/niceville-1200.jpg 1200w, /images/niceville.jpg 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\" width=\"1600\" height=\"900\" alt=\"Sunrise over Choctawhatchee Bay near Niceville, Florida\" loading=\"lazy\" decoding=\"async\"></picture></span><span class=\"cc-body\"><span class=\"cc-name\">Niceville</span><span class=\"cc-go\">Browse the map &rarr;</span></span></a>"
+    },
+    {
+      "name": "Crestview",
+      "html": "<a class=\"city-card\" href=\"https://greggc.levinrinkerealty.com/map/?newsearch=1&newsearchresults=1&state=12&condition=or&status_types%5B%5D=sale&property_category%5B%5D=residential&sort_by=1&pagenum=1&city%5B%5D=Crestview\" rel=\"noopener\"><span class=\"cc-photo\"><picture><source type=\"image/avif\" srcset=\"/images/crestview-480.avif 480w, /images/crestview-768.avif 768w, /images/crestview-1200.avif 1200w, /images/crestview.avif 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\"><source type=\"image/webp\" srcset=\"/images/crestview-480.webp 480w, /images/crestview-768.webp 768w, /images/crestview-1200.webp 1200w, /images/crestview.webp 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\"><img src=\"/images/crestview.jpg\" srcset=\"/images/crestview-480.jpg 480w, /images/crestview-768.jpg 768w, /images/crestview-1200.jpg 1200w, /images/crestview.jpg 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\" width=\"1600\" height=\"900\" alt=\"An AC-130J at Bob Sikes Airport in Crestview, Florida\" loading=\"lazy\" decoding=\"async\"></picture></span><span class=\"cc-body\"><span class=\"cc-name\">Crestview</span><span class=\"cc-go\">Browse the map &rarr;</span></span></a>"
+    },
+    {
+      "name": "Mary Esther",
+      "html": "<a class=\"city-card\" href=\"https://greggc.levinrinkerealty.com/map/?newsearch=1&newsearchresults=1&state=12&condition=or&status_types%5B%5D=sale&property_category%5B%5D=residential&sort_by=1&pagenum=1&city%5B%5D=Mary+Esther\" rel=\"noopener\"><span class=\"cc-photo\"><picture><source type=\"image/avif\" srcset=\"/images/mary-esther-480.avif 480w, /images/mary-esther-768.avif 768w, /images/mary-esther-1200.avif 1200w, /images/mary-esther.avif 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\"><source type=\"image/webp\" srcset=\"/images/mary-esther-480.webp 480w, /images/mary-esther-768.webp 768w, /images/mary-esther-1200.webp 1200w, /images/mary-esther.webp 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\"><img src=\"/images/mary-esther.jpg\" srcset=\"/images/mary-esther-480.jpg 480w, /images/mary-esther-768.jpg 768w, /images/mary-esther-1200.jpg 1200w, /images/mary-esther.jpg 1600w\" sizes=\"(max-width: 520px) 94vw, (max-width: 900px) 46vw, 290px\" width=\"1600\" height=\"900\" alt=\"Sunset over the Fort Walton Beach shoreline near Mary Esther, Florida\" loading=\"lazy\" decoding=\"async\"></picture></span><span class=\"cc-body\"><span class=\"cc-name\">Mary Esther</span><span class=\"cc-go\">Browse the map &rarr;</span></span></a>"
+    }
+  ],
+  "credits": [
+    {
+      "slug": "milton",
+      "html": "<li id=\"photo-milton\" data-image-credit=\"/images/milton.jpg\" class=\"gc-credit-item\" style=\"padding:24px 0;border-bottom:1px solid var(--hair,rgba(201,168,76,.3));overflow-wrap:anywhere;scroll-margin-top:160px\"><h2>Downtown Milton, Florida</h2><p>Photo: Jesse Hasty / Wikimedia Commons. CC0.</p><p><a href=\"https://greggcostin.com/images/milton.jpg\">View the website image</a> &middot; <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\" target=\"_blank\" rel=\"noopener\">CC0</a></p></li>"
+    },
+    {
+      "slug": "mary-esther",
+      "html": "<li id=\"photo-mary-esther\" data-image-credit=\"/images/mary-esther.jpg\" class=\"gc-credit-item\" style=\"padding:24px 0;border-bottom:1px solid var(--hair,rgba(201,168,76,.3));overflow-wrap:anywhere;scroll-margin-top:160px\"><h2>Sunset over the Fort Walton Beach shoreline near Mary Esther</h2><p>Photo: Unsplash. Unsplash License.</p><p><a href=\"https://greggcostin.com/images/mary-esther.jpg\">View the website image</a> &middot; <a href=\"https://unsplash.com/license\" target=\"_blank\" rel=\"noopener\">Unsplash License</a></p></li>"
+    }
+  ],
+  "assets": [
+    {
+      "path": "images/crestview-1200.avif",
+      "sha256": "5504df6070beb6518839560a32c332d10549a7f5012dbac6a5ef15335f7131fc"
+    },
+    {
+      "path": "images/crestview-1200.jpg",
+      "sha256": "c94bce652a1f4411c7a9e6b61b98dc0de65cb316629eeb07ae4b689fd49ffb97"
+    },
+    {
+      "path": "images/crestview-1200.webp",
+      "sha256": "bfb0c53084a6cf868daa3649ccc6f802f174d1e2a83fbd099c8db89696acb8c1"
+    },
+    {
+      "path": "images/crestview-480.avif",
+      "sha256": "36a14e36b7e458328c2d3532a75ce7af170281886b5320d1548c21aa21af4e16"
+    },
+    {
+      "path": "images/crestview-480.jpg",
+      "sha256": "a99b05b2f65e4b7bcf432fe3a48057fae4d52ada25646054eb39d692ae5837ee"
+    },
+    {
+      "path": "images/crestview-480.webp",
+      "sha256": "a634fb43f596c35b243ca74dd14b78e23ac02039aab68ffbddccda8920f20866"
+    },
+    {
+      "path": "images/crestview-768.avif",
+      "sha256": "15787167e15f34621183376d251524ca7ef2878d9bf46284b9b3066a9146a598"
+    },
+    {
+      "path": "images/crestview-768.jpg",
+      "sha256": "b83f4400e8292f0ad9751a77c0231d460ae144c38f6914cc806f046387f83c8b"
+    },
+    {
+      "path": "images/crestview-768.webp",
+      "sha256": "0344a23b490aad97fb84206397bd6455e2207e82a10b1866a580cf3b53122658"
+    },
+    {
+      "path": "images/crestview.avif",
+      "sha256": "6f2bf63ccff570ec14e47f165f63bc3c8b0653e13620e2d7cd6f18ab63bd9cbd"
+    },
+    {
+      "path": "images/crestview.jpg",
+      "sha256": "c8c6955293ea6d767725627cc57d15717bfebf321e464e6178d95313df11f9b8"
+    },
+    {
+      "path": "images/crestview.webp",
+      "sha256": "4bae821f0b46baff019a02dce791cfd57890e8418d780415d25868cb400a5bd4"
+    },
+    {
+      "path": "images/destin-1200.avif",
+      "sha256": "b8d24e26a81ea79d67cff0959c8595915c95242731536d0918d0e818dbf2c23b"
+    },
+    {
+      "path": "images/destin-1200.jpg",
+      "sha256": "11ea6f072aba372021c4e6f3811e66a5bffc56b2c0d593b253f1a3f1c18d39c5"
+    },
+    {
+      "path": "images/destin-1200.webp",
+      "sha256": "0dfba07fa7cc46d9fa86fc5cba541d93b7d400ec3539d93856d107d5aceef800"
+    },
+    {
+      "path": "images/destin-480.avif",
+      "sha256": "413663ea70f886313a64bc8b0b685dccfa16674590ee5ff1d00f059d44b53654"
+    },
+    {
+      "path": "images/destin-480.jpg",
+      "sha256": "502069d65e4c0989e681c9571d87d870c108ea90d526c08ee4409a9167382984"
+    },
+    {
+      "path": "images/destin-480.webp",
+      "sha256": "555f9dd611d4874cad73dbf24b7e670a1c1668d3438d430871120dfb347b26af"
+    },
+    {
+      "path": "images/destin-768.avif",
+      "sha256": "65b25aa18bd58c2bb5d3fd0b9919b75231bb52012fd830f5b6c0eb6e9054863f"
+    },
+    {
+      "path": "images/destin-768.jpg",
+      "sha256": "8d3d507413b37f8d3e78300b880f14327d04f72fdcc831b1b4c298b9bd5a160c"
+    },
+    {
+      "path": "images/destin-768.webp",
+      "sha256": "2bcee2bfb368bb0115b53d902acc0f0a3d0f01002fc5321e50a0ced4a86b0c66"
+    },
+    {
+      "path": "images/destin.avif",
+      "sha256": "7b2746223de30c5229bb994ed40b0839704fadbf6e388d7796478222dd2f56f5"
+    },
+    {
+      "path": "images/destin.jpg",
+      "sha256": "fccbc2029eaaf0d04e4d8ddf6730b6a8d56b8ca343297ca365fc1d0bbec635ac"
+    },
+    {
+      "path": "images/destin.webp",
+      "sha256": "26025f87e6a2ba0b012978bc8efa12800c411d025edac960addf7224ca1f5b21"
+    },
+    {
+      "path": "images/mary-esther-1200.avif",
+      "sha256": "dfc4a374d0f65de898ab9310566cabfbd471dc03794929715e92782e4468c6f0"
+    },
+    {
+      "path": "images/mary-esther-1200.jpg",
+      "sha256": "8d96b23d286aa9e7ef203d192cfa05064a43f7a7380222a2dd49dced88a875ae"
+    },
+    {
+      "path": "images/mary-esther-1200.webp",
+      "sha256": "cbe8c4617cd9726b08da4fed5caa6e629dcf5f12f0829ca07ffaf926888de631"
+    },
+    {
+      "path": "images/mary-esther-480.avif",
+      "sha256": "9b4fc16a6af97e4fb7210f37c2c45bfad5bb05abe20ebabc602b67668c4c89b7"
+    },
+    {
+      "path": "images/mary-esther-480.jpg",
+      "sha256": "413db5488a8f58bb6e79466032aa416b0fde374290d2bc5a615d4db2bbc10b30"
+    },
+    {
+      "path": "images/mary-esther-480.webp",
+      "sha256": "67a6c10072019d46ef63e2ebba10db6e316e08c4d1a9c60b51eaa2069fd9d4bf"
+    },
+    {
+      "path": "images/mary-esther-768.avif",
+      "sha256": "ed42bdf8df6c7c77f0a2885eb57c1eaee126794cada875ad2fb9f5b7974f6bb3"
+    },
+    {
+      "path": "images/mary-esther-768.jpg",
+      "sha256": "9367984c6cbd01f98025c782c4001b7059d88291af6b7cb80b4173e98f2a247e"
+    },
+    {
+      "path": "images/mary-esther-768.webp",
+      "sha256": "2c908a2b5adf6806388fbd64bdcbbeff12c8421fb023747437613be919a85f4c"
+    },
+    {
+      "path": "images/mary-esther.avif",
+      "sha256": "1695c64baf138d4237fae8896d2a664067ca9e0b4e58bca3f2d0faee29f2e1e9"
+    },
+    {
+      "path": "images/mary-esther.jpg",
+      "sha256": "f236cc322330217f3065f0a3f7f3be1d356d3fbe006fff20c5b1c82d1958e7b8"
+    },
+    {
+      "path": "images/mary-esther.webp",
+      "sha256": "43c7b7f0c79d15b87e53b4beaa508b1319b29b6003c941d81841098f1840cfd4"
+    },
+    {
+      "path": "images/milton-1200.avif",
+      "sha256": "fb6b28f8b4bc76184c086fb7cce8bd99aafc3b0cc0148f40ba2b96724c3aaccc"
+    },
+    {
+      "path": "images/milton-1200.jpg",
+      "sha256": "df56df39fe6200c08f1a5c764f195a7064d70d7496a59d4ba6cc2190b78fbae3"
+    },
+    {
+      "path": "images/milton-1200.webp",
+      "sha256": "821344536de90e9c77fb7d28fa2a15713cf22858ac02a6e5766626a4cb9f29c9"
+    },
+    {
+      "path": "images/milton-480.avif",
+      "sha256": "6228b506af919e4a183bed8869c9c88c17b3945ea623dbb2b64a5a6b5e19296e"
+    },
+    {
+      "path": "images/milton-480.jpg",
+      "sha256": "cb8228fd047a17ac52d667ba719b4962296c9cd56257d4112bbcb0b9fc269387"
+    },
+    {
+      "path": "images/milton-480.webp",
+      "sha256": "3d5ba19b5fc67037eee091985f19400905e29c810801243f4c8fb60ea8d353a7"
+    },
+    {
+      "path": "images/milton-768.avif",
+      "sha256": "e9602ba5e1c1eee35582e9a745629c2470586d234868b99f77980b229dacaec6"
+    },
+    {
+      "path": "images/milton-768.jpg",
+      "sha256": "412e9fcf2f2b385e5398de70a7a9f2ba8f8283767b039c20d5708df595c00c83"
+    },
+    {
+      "path": "images/milton-768.webp",
+      "sha256": "c9c514742ce3b9c3f2855d0a5e3a670391e0461d4e80637976b418dd689df568"
+    },
+    {
+      "path": "images/milton.avif",
+      "sha256": "5be7db178074e42f630702195a7a57021c40b7884e7a17a15455136ef3803ac4"
+    },
+    {
+      "path": "images/milton.jpg",
+      "sha256": "291354c56a29381676512747de5b688b2d8cec7a0071669cddce90ae0681855a"
+    },
+    {
+      "path": "images/milton.webp",
+      "sha256": "21297f52eb186aca094fcd8c0e170b406284e59d9886dbe914db92432d376ffc"
+    },
+    {
+      "path": "images/niceville-1200.avif",
+      "sha256": "57991abc74c31ba81fcf5ce6c9b536fefcc53ef2fa21e9ba165186ef3d5f97bc"
+    },
+    {
+      "path": "images/niceville-1200.jpg",
+      "sha256": "cae272177fc32607b7c456820678104826ec0664ba5d0bdb616bc2c065cf4787"
+    },
+    {
+      "path": "images/niceville-1200.webp",
+      "sha256": "2d198372f46b3d0e65d87ffdf8fa7b6612827b7ba94c168cd69563b10329b2a2"
+    },
+    {
+      "path": "images/niceville-480.avif",
+      "sha256": "797b94f0d3f57824c96d6ab340492b3423ec909c260a9dd9e8027f547a4c19a4"
+    },
+    {
+      "path": "images/niceville-480.jpg",
+      "sha256": "f93d0bb71bf7b7f4f5cec35f4972cf1b7151a572b871d2eff3f5d705921f7900"
+    },
+    {
+      "path": "images/niceville-480.webp",
+      "sha256": "e86812d15ea804f025bb9e67e8e850aaaf1944a6c70f2c6f3df23b1ddab0134f"
+    },
+    {
+      "path": "images/niceville-768.avif",
+      "sha256": "ca0bde3537bbb463d0cc34a62ace40ee26aa4132a3cc4cd0a0db794b9c086e9c"
+    },
+    {
+      "path": "images/niceville-768.jpg",
+      "sha256": "703558ca87a6fdf7c0af44b53b452925836fe541d8287591a82a9f8cae929ca3"
+    },
+    {
+      "path": "images/niceville-768.webp",
+      "sha256": "8ded57697e03d55d49805402bb3d2c90803bb415219b02adf5a8895682d0bb89"
+    },
+    {
+      "path": "images/niceville.avif",
+      "sha256": "f4a535eaeadef7b88092f3f09376d87c0895fc8a599ea6d0e3beab068bd5bc0e"
+    },
+    {
+      "path": "images/niceville.jpg",
+      "sha256": "32cb3ea64320bf7528531ca8dfabf214198219b540a35d02fed32729e3420081"
+    },
+    {
+      "path": "images/niceville.webp",
+      "sha256": "c873a9b4e8a271be6d376d2389f7e7939bde362154fe0db9b0fe2e0262f07beb"
+    }
+  ]
+}

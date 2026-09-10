@@ -63,7 +63,8 @@
       "creditRequired": false,
       "uses": [
         "index.html",
-        "neighborhoods/crestview.html"
+        "neighborhoods/crestview.html",
+        "search.html"
       ],
       "provenanceNote": "Existing page credits this image to the U.S. Air Force. Original source URL was not recorded; this revision did not independently verify the original attribution."
     },
@@ -133,6 +134,22 @@
         "neighborhoods/cordova-park-northeast.html"
       ],
       "provenanceNote": ""
+    },
+    {
+      "id": "photo-milton",
+      "image": "https://greggcostin.com/images/milton.jpg",
+      "path": "/images/milton.jpg",
+      "sourceSite": "gc",
+      "title": "Downtown Milton, Florida",
+      "credit": "Jesse Hasty / Wikimedia Commons",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "search.html"
+      ],
+      "provenanceNote": "Reused from public/images/communities/milton.jpg. The existing military guide credits Jesse Hasty / Wikimedia Commons (CC0); the original source URL was not recorded."
     },
     {
       "id": "photo-fed-decision-review-20260909",
@@ -612,6 +629,22 @@
       "provenanceNote": ""
     },
     {
+      "id": "photo-palafox-night",
+      "image": "https://greggcostin.com/images/palafox-night.jpg",
+      "path": "/images/palafox-night.jpg",
+      "sourceSite": "gc",
+      "title": "Pensacola at night December 2018.jpg",
+      "credit": "Todd Van Hoosear",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pensacola_at_night_December_2018.jpg",
+      "creditRequired": true,
+      "uses": [
+        "contact.html"
+      ],
+      "provenanceNote": "Source photograph taken December 16, 2018. Resized and compressed for the website; framing is cropped through CSS. Photograph remains available under CC BY-SA 2.0."
+    },
+    {
       "id": "photo-three-mile-bridge",
       "image": "https://greggcostin.com/images/three-mile-bridge.jpg",
       "path": "/images/three-mile-bridge.jpg",
@@ -667,6 +700,7 @@
       "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Beach%20-%20White%20Sands%2C%20Florida%20Coast%20(27268946483).jpg",
       "creditRequired": true,
       "uses": [
+        "assets/civilian-coastal-theme.css",
         "buy.html",
         "index.html",
         "neighborhoods.html",
@@ -776,7 +810,6 @@
       "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Saenger%20Thtr01.jpg",
       "creditRequired": true,
       "uses": [
-        "contact.html",
         "neighborhoods.html"
       ],
       "provenanceNote": ""
@@ -866,9 +899,26 @@
       "uses": [
         "index.html",
         "neighborhoods.html",
-        "neighborhoods/niceville.html"
+        "neighborhoods/niceville.html",
+        "search.html"
       ],
       "provenanceNote": "Existing page credits this image to the U.S. Air Force. Original source URL was not recorded; this revision did not independently verify the original attribution."
+    },
+    {
+      "id": "photo-mary-esther",
+      "image": "https://greggcostin.com/images/mary-esther.jpg",
+      "path": "/images/mary-esther.jpg",
+      "sourceSite": "gc",
+      "title": "Sunset over the Fort Walton Beach shoreline near Mary Esther",
+      "credit": "Unsplash",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "sourceUrl": "",
+      "creditRequired": false,
+      "uses": [
+        "search.html"
+      ],
+      "provenanceNote": "Reused from public/images/communities/mary-esther.jpg. The existing military guide credits Unsplash; the original photographer and source URL were not recorded."
     },
     {
       "id": "photo-gulf-shores",
@@ -920,7 +970,8 @@
       "uses": [
         "index.html",
         "neighborhoods.html",
-        "neighborhoods/destin.html"
+        "neighborhoods/destin.html",
+        "search.html"
       ],
       "provenanceNote": ""
     },

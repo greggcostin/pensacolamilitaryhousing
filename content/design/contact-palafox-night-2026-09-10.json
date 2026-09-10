@@ -1,0 +1,85 @@
+{
+  "selectedAt": "2026-09-10T19:39:57.014Z",
+  "sourceTitle": "Pensacola at night December 2018.jpg",
+  "sourceOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/97/Pensacola_at_night_December_2018.jpg",
+  "sourceSha256": "e4bbace097af7a0548c1aac3dbcef5c3dc2d1a4a7817cd028129b8736323ac00",
+  "figureHtml": "<figure class=\"figure-band gc-contact-night\"><picture><source type=\"image/avif\" srcset=\"/images/palafox-night-480.avif 480w, /images/palafox-night-768.avif 768w, /images/palafox-night-1200.avif 1200w, /images/palafox-night.avif 1600w\" sizes=\"(max-width: 800px) 92vw, 760px\"><source type=\"image/webp\" srcset=\"/images/palafox-night-480.webp 480w, /images/palafox-night-768.webp 768w, /images/palafox-night-1200.webp 1200w, /images/palafox-night.webp 1600w\" sizes=\"(max-width: 800px) 92vw, 760px\"><img src=\"/images/palafox-night.jpg\" srcset=\"/images/palafox-night-480.jpg 480w, /images/palafox-night-768.jpg 768w, /images/palafox-night-1200.jpg 1200w, /images/palafox-night.jpg 1600w\" sizes=\"(max-width: 800px) 92vw, 760px\" width=\"1600\" height=\"1200\" alt=\"Palafox Street at night in downtown Pensacola, with illuminated storefronts and trees wrapped in warm white lights\" loading=\"lazy\" style=\"--image-aspect:1600/1200\" decoding=\"async\"></picture><figcaption>An evening on Palafox Street, with downtown storefronts and trees wrapped in lights.</figcaption></figure>",
+  "credit": {
+    "id": "photo-palafox-night",
+    "image": "https://greggcostin.com/images/palafox-night.jpg",
+    "path": "/images/palafox-night.jpg",
+    "sourceSite": "gc",
+    "title": "Palafox Street at night, December 2018",
+    "credit": "Todd Van Hoosear",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pensacola_at_night_December_2018.jpg",
+    "creditRequired": true,
+    "uses": [
+      "contact.html"
+    ],
+    "provenanceNote": "Source photograph taken December 16, 2018. Resized and compressed for the website; framing is cropped through CSS. Photograph remains available under CC BY-SA 2.0."
+  },
+  "assets": [
+    {
+      "path": "images/palafox-night-1200.avif",
+      "bytes": 61190,
+      "sha256": "0fd876975a482c5c725029ec1a588087d914bb2b4ba537dec39d72bf30bd3236"
+    },
+    {
+      "path": "images/palafox-night-1200.jpg",
+      "bytes": 104942,
+      "sha256": "d4d56209e3c74cd22bd2dfb8dc858bc466f87fe513ba84e1dbc3b48466934f08"
+    },
+    {
+      "path": "images/palafox-night-1200.webp",
+      "bytes": 77944,
+      "sha256": "8b69e226bcf29a8fe3321b44d60c823bf978683614765fb9bad577dcffeaeace"
+    },
+    {
+      "path": "images/palafox-night-480.avif",
+      "bytes": 16142,
+      "sha256": "338af4751724710bd40a347d29618bfa7efbf2627b9ec7e84fc202bf654f105f"
+    },
+    {
+      "path": "images/palafox-night-480.jpg",
+      "bytes": 23017,
+      "sha256": "574ca1c4798ef135833ae57cfa4e7f28a49ac5bee407ba4463a27436785e370e"
+    },
+    {
+      "path": "images/palafox-night-480.webp",
+      "bytes": 18766,
+      "sha256": "0f1660bfe509c0d1a2142e9b9c175a193063d8a97173d2aec36f4e556a5be947"
+    },
+    {
+      "path": "images/palafox-night-768.avif",
+      "bytes": 33528,
+      "sha256": "e769707a9db4e6f66196df2f4ccc9db3bd840144340155d8a7a873e26d460a43"
+    },
+    {
+      "path": "images/palafox-night-768.jpg",
+      "bytes": 50929,
+      "sha256": "c9426f123ccd621a9ef770d3b66012ccf9119400f7bc024a4932d001d15f5aba"
+    },
+    {
+      "path": "images/palafox-night-768.webp",
+      "bytes": 40184,
+      "sha256": "ffdd1aaeb30f967a5c057ff387bcd6475df557ca339cb0993df5d221c3127526"
+    },
+    {
+      "path": "images/palafox-night.avif",
+      "bytes": 88123,
+      "sha256": "0ad8ab13838cc7456352d602ff17b2af7eb1377fdbbaa8934bde61f4ccfb71cc"
+    },
+    {
+      "path": "images/palafox-night.jpg",
+      "bytes": 220017,
+      "sha256": "52002e197b7e63ea41b3632965bf33e475f5fd65885dc363235a5bb6f4e4f601"
+    },
+    {
+      "path": "images/palafox-night.webp",
+      "bytes": 115992,
+      "sha256": "227027d0757e3c83231e130ab39adb1ad788e716860bdff0d5ae325e5cac7171"
+    }
+  ]
+}

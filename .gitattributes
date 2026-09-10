@@ -4,6 +4,9 @@ civilian-site/*.html text eol=lf
 civilian-site/assets/**/*.css text eol=lf
 civilian-site/assets/*.css text eol=lf
 civilian-site/assets/styles/manifest.json text eol=lf
+# Source styles also feed versioned assets and bundle hashes on Windows.
+scripts/civilian-coastal-theme.css text eol=lf
+scripts/civilian-header-search.css text eol=lf
 # Reviewed article text has one canonical representation on every checkout.
 content/blog/*.fragment.html text eol=lf
 content/civilian-blog/*.fragment.html text eol=lf

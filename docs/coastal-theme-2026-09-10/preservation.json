@@ -1,0 +1,109 @@
+{
+  "checkedAt": "2026-09-10T19:42:14.841Z",
+  "root": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.coast-release\\coastal-theme-20260910\\gc",
+  "baseline": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.coast-release\\coastal-theme-20260910\\baseline\\gc",
+  "counts": {
+    "pages": 321,
+    "jsonLdBlocks": 1278,
+    "unchangedAssets": 1473,
+    "restoredConfigurationFiles": 1,
+    "forms": 327,
+    "images": 1046
+  },
+  "families": {
+    "error": 1,
+    "accessibility": 1,
+    "article": 5,
+    "directory": 2,
+    "buy": 1,
+    "contact": 1,
+    "faq": 1,
+    "area": 16,
+    "home": 1,
+    "calculator": 1,
+    "photo-credits": 1,
+    "privacy": 1,
+    "guide": 12,
+    "library": 1,
+    "reviews": 1,
+    "school": 271,
+    "school-finder": 1,
+    "search": 1,
+    "sell": 1,
+    "team": 1
+  },
+  "newFiles": [
+    "assets\\civilian-coastal-theme.css",
+    "images\\mary-esther-1200.avif",
+    "images\\mary-esther-1200.jpg",
+    "images\\mary-esther-1200.webp",
+    "images\\mary-esther-480.avif",
+    "images\\mary-esther-480.jpg",
+    "images\\mary-esther-480.webp",
+    "images\\mary-esther-768.avif",
+    "images\\mary-esther-768.jpg",
+    "images\\mary-esther-768.webp",
+    "images\\mary-esther.avif",
+    "images\\mary-esther.webp",
+    "images\\milton-1200.avif",
+    "images\\milton-1200.jpg",
+    "images\\milton-1200.webp",
+    "images\\milton-480.avif",
+    "images\\milton-480.jpg",
+    "images\\milton-480.webp",
+    "images\\milton-768.avif",
+    "images\\milton-768.jpg",
+    "images\\milton-768.webp",
+    "images\\milton.avif",
+    "images\\milton.webp",
+    "images\\palafox-night-1200.avif",
+    "images\\palafox-night-1200.jpg",
+    "images\\palafox-night-1200.webp",
+    "images\\palafox-night-480.avif",
+    "images\\palafox-night-480.jpg",
+    "images\\palafox-night-480.webp",
+    "images\\palafox-night-768.avif",
+    "images\\palafox-night-768.jpg",
+    "images\\palafox-night-768.webp",
+    "images\\palafox-night.avif",
+    "images\\palafox-night.jpg",
+    "images\\palafox-night.webp"
+  ],
+  "scope": "Original HTML, metadata, JSON-LD, scripts, links and forms preserved except the five requested city links promoted to matching photo cards, explicit Google Reviews and Zillow Reviews badge labels, the replacement contact-page Palafox night photograph and caption, and their photography credits. Original public non-HTML assets remain byte-for-byte unchanged except the photography catalog receives the new Palafox attribution entry.",
+  "requestedRefinement": {
+    "cities": [
+      "Milton",
+      "Destin",
+      "Niceville",
+      "Crestview",
+      "Mary Esther"
+    ],
+    "pages": [
+      "search.html",
+      "photo-credits.html",
+      "reviews.html",
+      "contact.html",
+      "data/photography-credits.json"
+    ],
+    "reviewLabels": [
+      "Google Reviews",
+      "Zillow Reviews"
+    ],
+    "neighborhoodNames": "Bold serif card headings through the shared theme stylesheet",
+    "contactPhoto": {
+      "path": "/images/palafox-night.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pensacola_at_night_December_2018.jpg",
+      "author": "Todd Van Hoosear",
+      "license": "CC BY-SA 2.0"
+    }
+  },
+  "configurationRestoration": {
+    "file": "_headers",
+    "source": ".coast-release/civilian-header-label-20260909/gc/_headers",
+    "reason": "The initial source-derived configuration lacked the school-data no-cache rules. Restored the prior release configuration after verifying the current live school JSON response uses these headers.",
+    "liveEvidence": "prepublication-state.json"
+  },
+  "selfTest": "Detected changed heading, form contract, schema and missing text",
+  "findings": [],
+  "ok": true
+}

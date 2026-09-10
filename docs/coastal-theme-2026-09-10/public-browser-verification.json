@@ -1,0 +1,190 @@
+{
+  "checkedAt": "2026-09-10T20:05:00.805Z",
+  "deploymentId": "2c692b4b-9b38-44cc-906f-5fde440975e3",
+  "checks": [
+    {
+      "cityCards": 0,
+      "labels": [],
+      "neighborhoodHeadings": [],
+      "overflow": false,
+      "photo": {
+        "loaded": true,
+        "src": "https://greggcostin.com/images/palafox-night-768.avif"
+      },
+      "stylesheet": [
+        "https://greggcostin.com/assets/civilian-coastal-theme.css?v=7ba0ce283ad2"
+      ],
+      "theme": "coastal-2026-09",
+      "url": "https://greggcostin.com/contact",
+      "viewport": 1440
+    },
+    {
+      "focused": true,
+      "placeholderOpacity": "1",
+      "searchBackground": "rgb(255, 254, 250)",
+      "searchColor": "rgb(21, 52, 60)",
+      "url": "https://greggcostin.com/contact"
+    },
+    {
+      "resultLinks": 10,
+      "searchResults": "24 results for Navarre",
+      "url": "https://greggcostin.com/contact"
+    },
+    {
+      "cityCards": 0,
+      "labels": [
+        {
+          "align": "center",
+          "text": "Google Reviews",
+          "weight": "800"
+        },
+        {
+          "align": "center",
+          "text": "Zillow Reviews",
+          "weight": "800"
+        }
+      ],
+      "neighborhoodHeadings": [],
+      "overflow": false,
+      "photo": null,
+      "stylesheet": [
+        "https://greggcostin.com/assets/civilian-coastal-theme.css?v=7ba0ce283ad2"
+      ],
+      "theme": "coastal-2026-09",
+      "url": "https://greggcostin.com/reviews",
+      "viewport": 1440
+    },
+    {
+      "cityCards": 13,
+      "labels": [],
+      "neighborhoodHeadings": [],
+      "overflow": false,
+      "photo": null,
+      "stylesheet": [
+        "https://greggcostin.com/assets/civilian-coastal-theme.css?v=7ba0ce283ad2"
+      ],
+      "theme": "coastal-2026-09",
+      "url": "https://greggcostin.com/search",
+      "viewport": 1440
+    },
+    {
+      "cityCards": 0,
+      "labels": [],
+      "neighborhoodHeadings": [
+        {
+          "name": "East Hill & Downtown",
+          "weight": "700"
+        },
+        {
+          "name": "Gulf Breeze & Tiger Point",
+          "weight": "700"
+        },
+        {
+          "name": "Pensacola Beach",
+          "weight": "700"
+        },
+        {
+          "name": "Perdido Key",
+          "weight": "700"
+        },
+        {
+          "name": "Midtown & East Pensacola Heights",
+          "weight": "700"
+        },
+        {
+          "name": "Pace & Milton",
+          "weight": "700"
+        },
+        {
+          "name": "Navarre",
+          "weight": "700"
+        },
+        {
+          "name": "Cordova Park & Northeast",
+          "weight": "700"
+        },
+        {
+          "name": "Beulah",
+          "weight": "700"
+        },
+        {
+          "name": "Cantonment",
+          "weight": "700"
+        },
+        {
+          "name": "Fort Walton Beach",
+          "weight": "700"
+        },
+        {
+          "name": "Orange Beach, AL",
+          "weight": "700"
+        },
+        {
+          "name": "Destin",
+          "weight": "700"
+        },
+        {
+          "name": "Niceville & Bluewater Bay",
+          "weight": "700"
+        },
+        {
+          "name": "Gulf Shores, AL",
+          "weight": "700"
+        }
+      ],
+      "overflow": false,
+      "photo": null,
+      "stylesheet": [
+        "https://greggcostin.com/assets/civilian-coastal-theme.css?v=7ba0ce283ad2"
+      ],
+      "theme": "coastal-2026-09",
+      "url": "https://greggcostin.com/neighborhoods",
+      "viewport": 1440
+    },
+    {
+      "cityCards": 0,
+      "labels": [
+        {
+          "align": "center",
+          "text": "Google Reviews",
+          "weight": "800"
+        },
+        {
+          "align": "center",
+          "text": "Zillow Reviews",
+          "weight": "800"
+        }
+      ],
+      "neighborhoodHeadings": [],
+      "overflow": false,
+      "photo": null,
+      "stylesheet": [
+        "https://greggcostin.com/assets/civilian-coastal-theme.css?v=7ba0ce283ad2"
+      ],
+      "theme": "coastal-2026-09",
+      "url": "https://greggcostin.com/reviews",
+      "viewport": 390
+    },
+    {
+      "mapInitialized": true,
+      "mapTiles": 12,
+      "overflow": false,
+      "scrollY": 0,
+      "url": "https://greggcostin.com/schools"
+    },
+    {
+      "cityCards": 0,
+      "labels": [],
+      "neighborhoodHeadings": [],
+      "overflow": false,
+      "photo": null,
+      "stylesheet": [
+        "https://greggcostin.com/assets/civilian-coastal-theme.css?v=7ba0ce283ad2"
+      ],
+      "theme": "coastal-2026-09",
+      "url": "https://greggcostin.com/",
+      "viewport": 1440
+    }
+  ],
+  "passed": true
+}

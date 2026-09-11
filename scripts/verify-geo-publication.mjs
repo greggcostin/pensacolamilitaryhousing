@@ -27,7 +27,8 @@ for(const s of c.production){
   const ownCanonical=path.endsWith('.json')?true:body.includes(`rel="canonical" href="${url}"`);
   checks.push({url,status:r.status,finalUrl:r.url,ownCanonical,qualifications:phrases.length?phrases.every(t=>body.includes(t)):null,ok:r.status===200&&r.url===url&&ownCanonical&&phrases.every(t=>body.includes(t))});
  }
- const record={...s,localBaseline:root,deploymentId:d.id,url:d.url,createdOn:d.created_on,stage:d.latest_stage?.status,commit:d.deployment_trigger?.metadata?.commit_hash,assetCount:Object.keys(d.files||{}).length,mismatches,liveChecks:checks,ok:d.id===expectedId&&d.latest_stage?.status==='success'&&!mismatches.length&&checks.every(c=>c.ok)};
+ const counts={exact:[...keys].filter(k=>expected[k]&&expected[k]===d.files?.[k]).length,lineEndingOnly:0,missing:[...keys].filter(k=>!expected[k]).length,different:mismatches.length};
+ const record={...s,localBaseline:root,deploymentId:d.id,url:d.url,createdOn:d.created_on,stage:d.latest_stage?.status,commit:d.deployment_trigger?.metadata?.commit_hash,assetCount:Object.keys(d.files||{}).length,counts,differences:mismatches,mismatches,liveChecks:checks,ok:d.id===expectedId&&d.latest_stage?.status==='success'&&!mismatches.length&&checks.every(c=>c.ok)};
  save(join(dir,'live','production-'+s.site+'.json'),{...record,files:d.files});sites.push(record);
 }
 const result={checkedAt:new Date().toISOString(),ok:sites.every(s=>s.ok),sites,scope:'Complete immutable deployment asset manifests plus selected live apex URLs. Browser behavior verified separately.'};

@@ -1,6 +1,6 @@
 {
  "site": "gc",
- "asOf": "2026-09-07",
+ "asOf": "2026-09-08",
  "generated": "2026-09-10",
  "pages": [],
  "queries": [],
@@ -73,6 +73,11 @@
   {
    "date": "2026-09-07",
    "impressions": 0,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-08",
+   "impressions": 1,
    "clicks": 0
   }
  ]

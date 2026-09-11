@@ -1,0 +1,25 @@
+// Advance only the verified release pointer in the operational checkout.
+import {readFileSync,cpSync,existsSync,mkdirSync} from 'node:fs';
+import {join,resolve,sep} from 'node:path';
+import assert from 'node:assert/strict';
+import {json,save,fingerprint} from './isolated-release-lib.mjs';
+const root=resolve('C:/Users/gregg/pensacolamilitaryhousing'),dir='docs/geo-execution-2026-09-10/guidance-release';
+const c=json(join(dir,'candidate.json')),live=json(join(dir,'live/production-baseline.json')),g=json(join(dir,'quality-gates.json'));
+assert.ok(live.ok&&live.sites.every(s=>s.ok),'Independent live verification required');
+assert.equal(fingerprint(c.candidate),g.candidateFingerprint,'Exact sealed candidate');
+const destination=resolve(root,'.coast-release/geo-guidance-20260910');
+assert.ok(destination.startsWith(root+sep+'.coast-release'+sep),'Bounded snapshot path');
+const configPath=join(root,'content/reviews/automation.json'),before=readFileSync(configPath,'utf8'),config=JSON.parse(before);
+assert.equal(config.intervalHours,168,'Preserve owner weekly cadence');
+if(!existsSync(destination))cpSync(c.candidate,destination,{recursive:true,errorOnExist:true,force:false});
+assert.equal(fingerprint(destination),g.candidateFingerprint,'Complete durable snapshot');
+const rootDir=join(root,dir);mkdirSync(rootDir,{recursive:true});
+for(const name of ['candidate.json','quality-gates.json','deployment.json','review-rehearsal.json'])if(!existsSync(join(rootDir,name)))cpSync(join(dir,name),join(rootDir,name),{errorOnExist:true,force:false});
+const proof={...live,sites:live.sites.map(s=>({...s,localBaseline:join(destination,s.site)}))};
+save(join(rootDir,'production-baseline.json'),proof);save(join(rootDir,'automation-before.json'),config);
+Object.assign(config,{baselineRoot:destination,lastSiteReleaseAt:live.checkedAt,lastProductionVerifiedAt:live.checkedAt,lastSiteReleaseEvidence:dir+'/production-baseline.json',currentDeployments:Object.fromEntries(live.sites.map(s=>[s.site,s.deploymentId]))});
+assert.equal(readFileSync(configPath,'utf8'),before,'Operational configuration not changed concurrently');
+save(configPath,config);
+assert.equal(json(configPath).baselineRoot,destination);assert.deepEqual(json(configPath).schedule,JSON.parse(before).schedule);assert.equal(json(configPath).lastVerifiedAt,JSON.parse(before).lastVerifiedAt);
+const result={recordedAt:new Date().toISOString(),ok:true,baselineRoot:destination,productionEvidence:join(rootDir,'production-baseline.json'),currentDeployments:config.currentDeployments,weeklyCadencePreserved:true,reviewObservationDatesPreserved:true,rootSourceFilesOverwritten:0};
+save(join(dir,'operational-readback.json'),result);console.log(JSON.stringify(result,null,2));

@@ -924,7 +924,7 @@ const AboutPage = ({ go }) => (
           { title: "Accredited Buyer's Representative (ABR®)", desc: "NAR advanced buyer-representation training: negotiation, market analysis, and fiduciary advocacy." },
           { title: "Seller Representative Specialist (SRS®)", desc: "NAR premier seller-representation certification covering pricing, marketing, and listing strategy." },
           { title: "Real Estate Negotiation Expert (RENE®)", desc: "NAR certification for advanced offer and counter-offer negotiation techniques across all transaction types." },
-          { title: "2025 Rookie of the Year", desc: "Levin Rinke Realty / Forbes Global Properties brokerage recognition, as reported in my brokerage profile." },
+          { title: "Forbes Global Properties - Rookie of the Year for 2025", desc: "Levin Rinke Realty brokerage recognition, as reported in my brokerage profile." },
           { title: "Pensacola MLS standing", desc: "Owner-reported: #34 among 4,100+ Realtors by sales volume and transactions as of August 1, 2026. Zillow reviews are a separate source of client feedback." },
           { title: "Licensed FL + AL", desc: "Dual-licensed to serve military families across the Florida Panhandle and coastal Alabama markets." },
         ].map(c => (

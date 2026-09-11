@@ -61,7 +61,9 @@ try{
     if(javaScriptEnabled)await p.locator('.about-hero-right').waitFor();
     const text=await p.locator('body').innerText();
     for(const phrase of required)assert.ok(text.includes(phrase),phrase);
-    assert.ok(text.includes('20 years of service and 11 personal PCS moves'));
+    assert.ok(text.includes('two decades, from enlisted service to retirement as a Captain'));
+    assert.ok(text.includes('11 personal PCS moves'));
+    assert.doesNotMatch(text,/20[- ]year|years of service/);
     headings.push(await p.locator('h1').innerText());
     await p.goto(origins.gc+'/team',{waitUntil:'load'});
     const bio=await p.locator('[data-profile-biography]').innerText();

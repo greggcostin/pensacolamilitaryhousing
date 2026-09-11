@@ -55,7 +55,8 @@
         "person.alumniOf"
       ],
       "status": "owner_biography",
-      "source": "Existing About page and owner-provided biography",
+      "source": "Existing About page and owner-provided biography; September 11, 2026 owner clarification: military career spanned two decades, from prior enlisted service to retirement as a Captain",
+      "checkedOn": "2026-09-11",
       "nextAction": "Maintain consistent biography; do not describe military service as independently verified by a licensing registry."
     },
     {

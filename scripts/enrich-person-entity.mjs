@@ -1,7 +1,7 @@
 // Enrich the Person (#person-gregg) JSON-LD entity site-wide with three
 // E-E-A-T-strengthening fields that the audit flagged as missing:
 //
-//   award         — Forbes Global Properties Rookie of the Year 2025
+//   award         — Forbes Global Properties - Rookie of the Year for 2025
 //   memberOf      — National Association of Realtors, Florida Realtors
 //                   (implicit from his MRP/ABR/SRS/RENE/FMS designations
 //                   already in hasCredential, but Google can't infer
@@ -17,15 +17,15 @@
 import { readdirSync, readFileSync, writeFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
-const ENRICHMENT_MARKER = '"award":["Forbes Global Properties Rookie of the Year 2025"]';
+const ENRICHMENT_MARKER = '"award":["Forbes Global Properties - Rookie of the Year for 2025 (Levin Rinke Realty brokerage recognition)"]';
 
 const COMPACT_FROM = '"jobTitle":"Realtor, Military Relocation Specialist",';
-const COMPACT_TO = '"jobTitle":"Realtor, Military Relocation Specialist","award":["Forbes Global Properties Rookie of the Year 2025"],"memberOf":[{"@type":"Organization","name":"National Association of Realtors","url":"https://www.nar.realtor/"},{"@type":"Organization","name":"Florida Realtors","url":"https://www.floridarealtors.org/"}],"knowsLanguage":["en-US"],';
+const COMPACT_TO = '"jobTitle":"Realtor, Military Relocation Specialist","award":["Forbes Global Properties - Rookie of the Year for 2025 (Levin Rinke Realty brokerage recognition)"],"memberOf":[{"@type":"Organization","name":"National Association of Realtors","url":"https://www.nar.realtor/"},{"@type":"Organization","name":"Florida Realtors","url":"https://www.floridarealtors.org/"}],"knowsLanguage":["en-US"],';
 
 const INDENT = "                ";
 const MULTILINE_FROM = `${INDENT}"jobTitle": "Realtor, Military Relocation Specialist",`;
 const MULTILINE_TO = `${INDENT}"jobTitle": "Realtor, Military Relocation Specialist",
-${INDENT}"award": ["Forbes Global Properties Rookie of the Year 2025"],
+${INDENT}"award": ["Forbes Global Properties - Rookie of the Year for 2025 (Levin Rinke Realty brokerage recognition)"],
 ${INDENT}"memberOf": [
 ${INDENT}  {"@type": "Organization", "name": "National Association of Realtors", "url": "https://www.nar.realtor/"},
 ${INDENT}  {"@type": "Organization", "name": "Florida Realtors", "url": "https://www.floridarealtors.org/"}

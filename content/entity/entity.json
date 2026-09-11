@@ -66,11 +66,11 @@
     "alternateName": "Gregg Costin, Realtor",
     "honorificSuffix": "MRP, ABR, SRS, RENE, FMS",
     "jobTitle": "Realtor",
-    "description": "Realtor with Levin Rinke Realty, licensed in Florida and Alabama, leading The Costin Team for buyers and sellers across Pensacola, the Florida Panhandle and coastal Alabama, where he is a top-producing Baldwin County agent for Gulf Shores and Orange Beach. Retired USAF Captain and E-3 AWACS Combat Systems Officer with 20 years of service and 11 PCS moves, and a military relocation, VA loan and PCS specialist for NAS Pensacola, Corry Station, NAS Whiting Field, Eglin AFB and Hurlburt Field. Gregg holds a B.S. in Economics and a B.A. in International Affairs from the University of Tampa and is a Part 107 Certified Drone Pilot.",
+    "description": "Realtor with Levin Rinke Realty, licensed in Florida and Alabama, leading The Costin Team for buyers and sellers across Pensacola, the Florida Panhandle and coastal Alabama, where he is a top-producing Baldwin County agent for Gulf Shores and Orange Beach. His U.S. Air Force career spanned two decades, from enlisted service to retirement as a Captain. His background as an E-3 AWACS Combat Systems Officer and 11 personal PCS moves inform his military relocation, VA loan and PCS work for NAS Pensacola, Corry Station, NAS Whiting Field, Eglin AFB and Hurlburt Field. Gregg holds a B.S. in Economics and a B.A. in International Affairs from the University of Tampa and is a Part 107 Certified Drone Pilot.",
     "shortDescription": "Realtor with Levin Rinke Realty, licensed in Florida and Alabama; retired USAF Combat Systems Officer; serves Pensacola, the Florida Panhandle and Alabama's Gulf Shores and Orange Beach.",
     "url": "https://greggcostin.com/team",
     "award": [
-      "Forbes Global Properties Rookie of the Year 2025",
+      "Forbes Global Properties - Rookie of the Year for 2025 (Levin Rinke Realty brokerage recognition)",
       "Ranked number 3, number 4, and number 10 agent out of more than 450 agents on the Levin Rinke Realty leaderboard, Summer 2026",
       "Ranked number 34 Realtor of more than 4,100 agents in the Pensacola MLS by volume and transactions, as of August 1, 2026"
     ],
@@ -231,7 +231,8 @@
       "rank": "Captain",
       "role": "E-3 AWACS Combat Systems Officer",
       "personalPcsMoves": 11,
-      "yearsOfService": 20
+      "careerLength": "two decades",
+      "priorEnlisted": true
     },
     "positioning": "Pensacola's #1 military relocation REALTOR®"
   },

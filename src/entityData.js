@@ -16,7 +16,8 @@ export const IDENTITY = {
     "rank": "Captain",
     "role": "E-3 AWACS Combat Systems Officer",
     "personalPcsMoves": 11,
-    "yearsOfService": 20
+    "careerLength": "two decades",
+    "priorEnlisted": true
   },
   "positioning": "Pensacola's #1 military relocation REALTOR®",
   "credentials": [

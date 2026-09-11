@@ -29,7 +29,11 @@ test('military initial HTML and React use the same essential biography and headi
  assert.ok(app.includes('{BIOGRAPHY.militaryIntro}'));
  assert.ok(app.includes('{BIOGRAPHY.qualifications}'));
  assert.ok(!app.includes('double B.S. and B.A.'));
- assert.ok(BIOGRAPHY.militaryIntro.includes('20 years of service and 11 personal PCS moves'));
+ for(const copy of [BIOGRAPHY.militaryIntro,civilianBiographyHtml(),personFull().description]){
+  assert.ok(copy.includes('two decades, from enlisted service to retirement as a Captain'));
+  assert.ok(copy.includes('11 personal PCS moves'));
+  assert.doesNotMatch(copy,/20[- ]year|years of service/);
+ }
  assert.ok(civilianBiographyHtml().includes('href="/buy"'));
  assert.ok(civilianBiographyHtml().includes('href="/sell"'));
 });

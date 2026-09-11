@@ -1,6 +1,6 @@
 {
   "recordVersion": 1,
-  "recordFingerprint": "319435bbfdc59341c162c101b64257e24a17b85cd1b53dd7a4039f6846fc2c43",
+  "recordFingerprint": "8ab604c9fee351ed95253fa470c2ca64f44eedf0fc3c63591463000827f0210d",
   "canonicalPersonId": "https://greggcostin.com/#gregg",
   "ids": {
     "person": "https://greggcostin.com/#gregg",
@@ -18,7 +18,8 @@
     "rank": "Captain",
     "role": "E-3 AWACS Combat Systems Officer",
     "personalPcsMoves": 11,
-    "yearsOfService": 20
+    "careerLength": "two decades",
+    "priorEnlisted": true
   },
   "positioning": "Pensacola's #1 military relocation REALTOR®",
   "credentials": [

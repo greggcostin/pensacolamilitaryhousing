@@ -350,6 +350,46 @@ main details p{font-size:16px}
 <link rel="describedby" type="application/json" href="https://greggcostin.com/data/gregg-costin.json" data-business-record>
 <script src="/assets/costin-conversions.js" defer></script>
 <style id="blog-quick-answer-style">.quick-answer{max-width:760px;margin:6px auto 22px;padding:16px 20px;border:1px solid var(--gold-line,rgba(201,168,76,.35));border-left:4px solid var(--gold,#c9a84c);border-radius:10px;background:var(--panel,rgba(255,255,255,.03))}.quick-answer .qa-label{margin:0 0 6px;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold,#c9a84c);font-weight:600}.quick-answer .qa-text{margin:0;font-size:16px;line-height:1.65;color:var(--text,#e8e6df)}.quick-answer .qa-by{margin:8px 0 0;font-size:13px;color:var(--muted,#9aa0aa);font-style:italic}</style>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<style>
+.banner-search{background:transparent;border:1px solid rgba(201,168,76,0.4);color:#C9A84C;cursor:pointer;padding:5px 10px;font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;font-family:inherit;border-radius:4px;display:inline-flex;align-items:center;gap:6px;transition:background .2s,border-color .2s;margin-left:4px}
+.banner-search:hover,.banner-search:focus{background:rgba(201,168,76,0.15);border-color:#C9A84C;outline:none}
+.banner-search svg{display:block}
+@media(max-width:480px){.banner-search-label{display:none}.banner-search{padding:5px 8px}}
+
+.search-modal{border:1px solid rgba(201,168,76,0.35);background:#0A0F1A;color:#E8E6DF;padding:0;max-width:720px;width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.7);overflow:hidden;font-family:'Inter',system-ui,sans-serif}
+.search-modal::backdrop{background:rgba(0,0,0,0.78);backdrop-filter:blur(4px)}
+.search-modal[open]{display:flex;flex-direction:column}
+.search-close{position:absolute;top:10px;right:14px;background:transparent;border:none;color:#A5A496;font-size:32px;cursor:pointer;padding:0;width:36px;height:36px;line-height:1;font-family:inherit;z-index:2}
+.search-close:hover{color:#C9A84C}
+.search-modal-header{padding:28px 28px 0}
+.search-eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;margin:0 0 8px;font-weight:600}
+.search-title{font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:500;color:#fff;margin:0 0 8px;letter-spacing:-0.01em}
+.search-sub{font-size:13px;color:#A5A496;margin:0;line-height:1.5}
+#search{padding:20px 28px 28px;overflow-y:auto;flex:1}
+
+/* Pagefind UI theme overrides to match site */
+:root{
+  --pagefind-ui-primary:#C9A84C;
+  --pagefind-ui-text:#E8E6DF;
+  --pagefind-ui-background:#0A0F1A;
+  --pagefind-ui-border:rgba(255,255,255,0.10);
+  --pagefind-ui-tag:#1A2332;
+  --pagefind-ui-border-radius:6px;
+  --pagefind-ui-border-width:1px;
+  --pagefind-ui-image-border-radius:4px;
+  --pagefind-ui-image-box-ratio:3 / 2;
+  --pagefind-ui-font:'Inter',system-ui,sans-serif;
+}
+.pagefind-ui__search-input{background:#121823!important;color:#E8E6DF!important;border-color:rgba(201,168,76,0.35)!important}
+.pagefind-ui__search-input:focus{border-color:#C9A84C!important;outline:none!important}
+.pagefind-ui__result-link{color:#C9A84C!important;font-weight:600!important}
+.pagefind-ui__result-link:hover{color:#D4B768!important}
+.pagefind-ui__result-excerpt{color:#A5A496!important}
+.pagefind-ui__result-excerpt mark{background:rgba(201,168,76,0.25)!important;color:#fff!important;padding:0 2px;border-radius:2px}
+.pagefind-ui__result{border-bottom:1px solid rgba(255,255,255,0.06)!important;padding:14px 0!important}
+.pagefind-ui__message{color:#A5A496!important;font-size:13px!important}
+</style>
 </head>
 <body>
 <nav class="main-banner" aria-label="Main site navigation">
@@ -520,46 +560,7 @@ MRP &middot; ABR &middot; SRS &middot; RENE &middot; FMS &middot; Pursuing GRI</
   </div>
   <div id="search"></div>
 </dialog>
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-<style>
-.banner-search{background:transparent;border:1px solid rgba(201,168,76,0.4);color:#C9A84C;cursor:pointer;padding:5px 10px;font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;font-family:inherit;border-radius:4px;display:inline-flex;align-items:center;gap:6px;transition:background .2s,border-color .2s;margin-left:4px}
-.banner-search:hover,.banner-search:focus{background:rgba(201,168,76,0.15);border-color:#C9A84C;outline:none}
-.banner-search svg{display:block}
-@media(max-width:480px){.banner-search-label{display:none}.banner-search{padding:5px 8px}}
 
-.search-modal{border:1px solid rgba(201,168,76,0.35);background:#0A0F1A;color:#E8E6DF;padding:0;max-width:720px;width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.7);overflow:hidden;font-family:'Inter',system-ui,sans-serif}
-.search-modal::backdrop{background:rgba(0,0,0,0.78);backdrop-filter:blur(4px)}
-.search-modal[open]{display:flex;flex-direction:column}
-.search-close{position:absolute;top:10px;right:14px;background:transparent;border:none;color:#A5A496;font-size:32px;cursor:pointer;padding:0;width:36px;height:36px;line-height:1;font-family:inherit;z-index:2}
-.search-close:hover{color:#C9A84C}
-.search-modal-header{padding:28px 28px 0}
-.search-eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;margin:0 0 8px;font-weight:600}
-.search-title{font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:500;color:#fff;margin:0 0 8px;letter-spacing:-0.01em}
-.search-sub{font-size:13px;color:#A5A496;margin:0;line-height:1.5}
-#search{padding:20px 28px 28px;overflow-y:auto;flex:1}
-
-/* Pagefind UI theme overrides to match site */
-:root{
-  --pagefind-ui-primary:#C9A84C;
-  --pagefind-ui-text:#E8E6DF;
-  --pagefind-ui-background:#0A0F1A;
-  --pagefind-ui-border:rgba(255,255,255,0.10);
-  --pagefind-ui-tag:#1A2332;
-  --pagefind-ui-border-radius:6px;
-  --pagefind-ui-border-width:1px;
-  --pagefind-ui-image-border-radius:4px;
-  --pagefind-ui-image-box-ratio:3 / 2;
-  --pagefind-ui-font:'Inter',system-ui,sans-serif;
-}
-.pagefind-ui__search-input{background:#121823!important;color:#E8E6DF!important;border-color:rgba(201,168,76,0.35)!important}
-.pagefind-ui__search-input:focus{border-color:#C9A84C!important;outline:none!important}
-.pagefind-ui__result-link{color:#C9A84C!important;font-weight:600!important}
-.pagefind-ui__result-link:hover{color:#D4B768!important}
-.pagefind-ui__result-excerpt{color:#A5A496!important}
-.pagefind-ui__result-excerpt mark{background:rgba(201,168,76,0.25)!important;color:#fff!important;padding:0 2px;border-radius:2px}
-.pagefind-ui__result{border-bottom:1px solid rgba(255,255,255,0.06)!important;padding:14px 0!important}
-.pagefind-ui__message{color:#A5A496!important;font-size:13px!important}
-</style>
 <script>
 (function(){
   let inited = false;

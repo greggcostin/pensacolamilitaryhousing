@@ -5,6 +5,8 @@
 <script>if(location.hostname.indexOf('.pages.dev')>-1)location.replace('https://pensacolamilitaryhousing.com'+location.pathname+location.search);</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin data-costin-loading="font">
+<link rel="preload" href="/fonts/playfair-latin-variable.woff2" as="font" type="font/woff2" crossorigin data-costin-loading="font">
 <title>Gulf Breeze High School | PCS School Guide</title>
 <link rel="manifest" href="/site.webmanifest" />
 <meta name="description" content="Gulf Breeze High School: school facts, enrollment resources and PCS planning in Gulf Breeze. Explore local options and prepare for your military move." />
@@ -45,10 +47,6 @@ gtag('js',new Date());
 gtag('config','G-W29GHBK38M',{linker:{domains:['pensacolamilitaryhousing.com','greggcostin.com'],accept_incoming:true}});gtag('config','GT-WVGM66XS');(function(){try{var p=new URLSearchParams(location.search),keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];var a=JSON.parse(localStorage.getItem('costin_attr')||'{}'),hit=false;keys.forEach(function(k){if(p.get(k)){a[k]=p.get(k);hit=true;}});if(!a.landing_page||hit){a.landing_page=location.pathname+location.search;a.referrer=document.referrer||'';a.first_seen=new Date().toISOString();}localStorage.setItem('costin_attr',JSON.stringify(a));}catch(e){}})();
 document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('tel:')===0){gtag('event','phone_call_click',{event_category:'conversion',event_label:h.replace('tel:','')});}else if(h.indexOf('mailto:')===0){gtag('event','email_click',{event_category:'conversion',event_label:h.replace('mailto:','')});}else if(h.indexOf('google.com/maps')>-1&&h.indexOf('Gregg')>-1){gtag('event','google_reviews_click',{event_category:'social_proof'});}else if(h.indexOf('zillow.com/profile')>-1){gtag('event','zillow_profile_click',{event_category:'social_proof'});}else if(h.indexOf('instagram.com/greggcostin')>-1){gtag('event','instagram_click',{event_category:'social'});}else if(h.indexOf('facebook.com/greggcostin')>-1){gtag('event','facebook_click',{event_category:'social'});}else if(h.indexOf('youtube.com/@Pensacola')>-1){gtag('event','youtube_click',{event_category:'social'});}else if(h.indexOf('linktr.ee/Greggcostin')>-1){gtag('event','linktree_click',{event_category:'social'});}else if(h.indexOf('greggc.levinrinkerealty.com')>-1){gtag('event','brokerage_profile_click',{event_category:'social_proof'});}else if(h.indexOf('sms:')===0){gtag('event','text_message_click',{event_category:'conversion'});}else if(h.indexOf('calendly')>-1){gtag('event','calendly_click',{event_category:'conversion'});}else if(h.indexOf('whats-my-home-worth')>-1){gtag('event','home_valuation_click',{event_category:'conversion'});}else if(h.indexOf('825bayshore')>-1){gtag('event','property_page_click',{event_category:'conversion'});}else if(h.indexOf('travel.dod.mil')>-1){gtag('event','dod_bah_calc_click',{event_category:'outbound'});}else if(h.indexOf('http')===0&&(h.indexOf('.gov')>-1||h.indexOf('.mil')>-1||h.indexOf('floridarevenue.com')>-1||h.indexOf('fldoe.org')>-1||h.indexOf('citizensfla.com')>-1)){gtag('event','authority_link_click',{event_category:'outbound',event_label:h.split('/')[2]||h});}});document.addEventListener('toggle',function(e){var t=e.target;if(t&&t.tagName==='DETAILS'&&t.open){var s=t.querySelector('summary');gtag('event','faq_expand',{event_category:'engagement',event_label:s?s.textContent.trim().slice(0,100):'faq'});}},true);
 })();</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
 <style>
 :root{--ink:#0A0F1A;--panel:#121823;--elev:#1A2332;--hair:rgba(255,255,255,0.08);--gold:#C9A84C;--gold-soft:#D4B768;--gold-line:rgba(201,168,76,0.35);--gold-tint:rgba(201,168,76,0.10);--text:#E8E6DF;--muted:#A5A496;--mutedD:#8f8e83;--serif:'Playfair Display',Georgia,serif;--sans:'Inter','DM Sans',system-ui,-apple-system,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}*:focus-visible{outline:2px solid var(--gold)!important;outline-offset:2px;border-radius:2px}
@@ -525,6 +523,46 @@ figcaption a{color:var(--muted);text-decoration:underline}
 <link rel="stylesheet" href="/school-assets/military-schools.css?v=8be9372727da">
 <link rel="describedby" type="application/json" href="https://greggcostin.com/data/gregg-costin.json" data-business-record>
 <script src="/assets/costin-conversions.js" defer></script>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<style>
+.banner-search{background:transparent;border:1px solid rgba(201,168,76,0.4);color:#C9A84C;cursor:pointer;padding:5px 10px;font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;font-family:inherit;border-radius:4px;display:inline-flex;align-items:center;gap:6px;transition:background .2s,border-color .2s;margin-left:4px}
+.banner-search:hover,.banner-search:focus{background:rgba(201,168,76,0.15);border-color:#C9A84C;outline:none}
+.banner-search svg{display:block}
+@media(max-width:480px){.banner-search-label{display:none}.banner-search{padding:5px 8px}}
+
+.search-modal{border:1px solid rgba(201,168,76,0.35);background:#0A0F1A;color:#E8E6DF;padding:0;max-width:720px;width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.7);overflow:hidden;font-family:'Inter',system-ui,sans-serif}
+.search-modal::backdrop{background:rgba(0,0,0,0.78);backdrop-filter:blur(4px)}
+.search-modal[open]{display:flex;flex-direction:column}
+.search-close{position:absolute;top:10px;right:14px;background:transparent;border:none;color:#A5A496;font-size:32px;cursor:pointer;padding:0;width:36px;height:36px;line-height:1;font-family:inherit;z-index:2}
+.search-close:hover{color:#C9A84C}
+.search-modal-header{padding:28px 28px 0}
+.search-eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;margin:0 0 8px;font-weight:600}
+.search-title{font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:500;color:#fff;margin:0 0 8px;letter-spacing:-0.01em}
+.search-sub{font-size:13px;color:#A5A496;margin:0;line-height:1.5}
+#search{padding:20px 28px 28px;overflow-y:auto;flex:1}
+
+/* Pagefind UI theme overrides to match site */
+:root{
+  --pagefind-ui-primary:#C9A84C;
+  --pagefind-ui-text:#E8E6DF;
+  --pagefind-ui-background:#0A0F1A;
+  --pagefind-ui-border:rgba(255,255,255,0.10);
+  --pagefind-ui-tag:#1A2332;
+  --pagefind-ui-border-radius:6px;
+  --pagefind-ui-border-width:1px;
+  --pagefind-ui-image-border-radius:4px;
+  --pagefind-ui-image-box-ratio:3 / 2;
+  --pagefind-ui-font:'Inter',system-ui,sans-serif;
+}
+.pagefind-ui__search-input{background:#121823!important;color:#E8E6DF!important;border-color:rgba(201,168,76,0.35)!important}
+.pagefind-ui__search-input:focus{border-color:#C9A84C!important;outline:none!important}
+.pagefind-ui__result-link{color:#C9A84C!important;font-weight:600!important}
+.pagefind-ui__result-link:hover{color:#D4B768!important}
+.pagefind-ui__result-excerpt{color:#A5A496!important}
+.pagefind-ui__result-excerpt mark{background:rgba(201,168,76,0.25)!important;color:#fff!important;padding:0 2px;border-radius:2px}
+.pagefind-ui__result{border-bottom:1px solid rgba(255,255,255,0.06)!important;padding:14px 0!important}
+.pagefind-ui__message{color:#A5A496!important;font-size:13px!important}
+</style>
 </head>
 <body class="pmh-school-page gc-interior gc-interior--school gc-page" data-gc-interior-version="1" data-gc-path="/schools/gulf-breeze-high-school">
 <nav class="main-banner" aria-label="Main site navigation">
@@ -688,46 +726,7 @@ MRP &middot; ABR &middot; SRS &middot; RENE &middot; FMS &middot; Pursuing GRI</
   </div>
   <div id="search"></div>
 </dialog>
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-<style>
-.banner-search{background:transparent;border:1px solid rgba(201,168,76,0.4);color:#C9A84C;cursor:pointer;padding:5px 10px;font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;font-family:inherit;border-radius:4px;display:inline-flex;align-items:center;gap:6px;transition:background .2s,border-color .2s;margin-left:4px}
-.banner-search:hover,.banner-search:focus{background:rgba(201,168,76,0.15);border-color:#C9A84C;outline:none}
-.banner-search svg{display:block}
-@media(max-width:480px){.banner-search-label{display:none}.banner-search{padding:5px 8px}}
 
-.search-modal{border:1px solid rgba(201,168,76,0.35);background:#0A0F1A;color:#E8E6DF;padding:0;max-width:720px;width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.7);overflow:hidden;font-family:'Inter',system-ui,sans-serif}
-.search-modal::backdrop{background:rgba(0,0,0,0.78);backdrop-filter:blur(4px)}
-.search-modal[open]{display:flex;flex-direction:column}
-.search-close{position:absolute;top:10px;right:14px;background:transparent;border:none;color:#A5A496;font-size:32px;cursor:pointer;padding:0;width:36px;height:36px;line-height:1;font-family:inherit;z-index:2}
-.search-close:hover{color:#C9A84C}
-.search-modal-header{padding:28px 28px 0}
-.search-eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;margin:0 0 8px;font-weight:600}
-.search-title{font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:500;color:#fff;margin:0 0 8px;letter-spacing:-0.01em}
-.search-sub{font-size:13px;color:#A5A496;margin:0;line-height:1.5}
-#search{padding:20px 28px 28px;overflow-y:auto;flex:1}
-
-/* Pagefind UI theme overrides to match site */
-:root{
-  --pagefind-ui-primary:#C9A84C;
-  --pagefind-ui-text:#E8E6DF;
-  --pagefind-ui-background:#0A0F1A;
-  --pagefind-ui-border:rgba(255,255,255,0.10);
-  --pagefind-ui-tag:#1A2332;
-  --pagefind-ui-border-radius:6px;
-  --pagefind-ui-border-width:1px;
-  --pagefind-ui-image-border-radius:4px;
-  --pagefind-ui-image-box-ratio:3 / 2;
-  --pagefind-ui-font:'Inter',system-ui,sans-serif;
-}
-.pagefind-ui__search-input{background:#121823!important;color:#E8E6DF!important;border-color:rgba(201,168,76,0.35)!important}
-.pagefind-ui__search-input:focus{border-color:#C9A84C!important;outline:none!important}
-.pagefind-ui__result-link{color:#C9A84C!important;font-weight:600!important}
-.pagefind-ui__result-link:hover{color:#D4B768!important}
-.pagefind-ui__result-excerpt{color:#A5A496!important}
-.pagefind-ui__result-excerpt mark{background:rgba(201,168,76,0.25)!important;color:#fff!important;padding:0 2px;border-radius:2px}
-.pagefind-ui__result{border-bottom:1px solid rgba(255,255,255,0.06)!important;padding:14px 0!important}
-.pagefind-ui__message{color:#A5A496!important;font-size:13px!important}
-</style>
 <script>
 (function(){
   let inited = false;

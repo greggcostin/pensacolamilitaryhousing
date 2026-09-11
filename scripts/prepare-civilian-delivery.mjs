@@ -12,6 +12,7 @@ import {installCivilianCoastalTheme,withCivilianCoastalTheme,withoutCoastalTheme
 import {withSearchCityCards,withSearchCityCredits,installSearchCityAssets} from './civilian-search-city-cards.mjs';
 import {withReviewPlatformLabels} from './civilian-review-badges.mjs';
 import {withContactNightPhoto,withContactNightCredits,installContactNightAssets} from './civilian-contact-photo.mjs';
+import {preparePageLoading} from './page-loading-lib.mjs';
 const i=process.argv.indexOf('--root');if(i<0)throw Error('Provide --root with a complete civilian candidate');
 const root=resolve(process.argv[i+1]);if(!existsSync(join(root,'index.html')))throw Error('Missing civilian homepage');
 const restore=process.argv.includes('--restore');
@@ -37,6 +38,7 @@ for(const file of walk(root).filter(f=>f.endsWith('.html'))){
   if(name!=='buy.html')html=(await bundleCivilianStyles(html,root,{inline:['index.html','neighborhoods.html','schools.html'].includes(name)})).html;
   if(name==='index.html')html=preloadCivilianHomeHero(html);
   html=withCivilianCoastalTheme(html);
+  html=preparePageLoading(html,{hasAsset:p=>p.startsWith('/')&&existsSync(join(root,p.slice(1)))}).html;
  }
  if(html!==old){writeFileSync(file,html);changed++;}
 }

@@ -33,6 +33,19 @@ The complete candidate was based on freshly verified provider manifests, not the
 
 IndexNow and Bing accepted the updated guidance URL batches. Acceptance is not indexing or ranking proof. Current mobile PageSpeed measurements establish a baseline with no available CrUX field data; further loading and military-school hero layout-shift work is identified in the private execution report.
 
-The operational review baseline points to this complete release. Gregg's review verification and sync schedule is weekly, Sunday at 9 a.m. America/Chicago. Review observations are dated separately from site releases.
+The operational review baseline follows the latest verified complete release. Gregg's review verification and sync schedule is weekly, Sunday at 9 a.m. America/Chicago. Review observations are dated separately from site releases.
 
 The preceding identity release and rollback deployments remain recorded in the private release receipts. External profile edits, independent ranking proof, real CRM receipt reconciliation and permission-limited Cloudflare account settings remain separate follow-ups.
+
+## Continuity after the photo and mobile-header releases
+
+Two separately authorized tasks subsequently published the supplied Pensacola Bay Bridge photograph and tighter mobile headers. At September 11, 03:20 UTC, independent verification matched all 5,868 current deployment assets to their complete saved snapshots. All 26 guidance URLs returned 200 with their own canonicals and retained the published main content.
+
+| Site | Current deployment at verification | Assets |
+|---|---|---:|
+| GreggCostin.com | `5f782b1d-bd2a-4c19-a833-1b1e90a7c19e` | 2,300 |
+| PensacolaMilitaryHousing.com | `cc286e59-3bb6-4064-ad10-2cc89b13b90e` | 3,568 |
+
+The weekly review job now uses the complete `mobile-header-20260910` snapshot. Its configuration was read back after checking both current provider deployment IDs; verified review counts and observation dates were preserved. The automation resolves the current configured baseline and reconciles later releases before staging any count change.
+
+Public responses include Cloudflare edge transformations, including email protection. Asset-manifest equality and public content/canonical verification are recorded separately; raw HTML response equality is not claimed. The earlier PageSpeed figures describe the exact guidance release before these subsequent photo/header changes and remain a historical baseline.

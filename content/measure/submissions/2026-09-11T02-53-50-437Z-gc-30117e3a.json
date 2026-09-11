@@ -1,0 +1,216 @@
+{
+  "id": "30117e3a-ca40-49c9-8427-822753a63ce7",
+  "site": "gc",
+  "startedAt": "2026-09-11T02:53:50.437Z",
+  "mode": "submit",
+  "checks": [
+    {
+      "url": "https://greggcostin.com/schools",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/schools",
+      "fingerprint": "3f8212b6b901da4a1dbd2264f988fad91ddcf335feab0dc8434d2ca55c319b7b",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/neighborhoods/navarre",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/neighborhoods/navarre",
+      "fingerprint": "8cf6cd885460d5d97be68b5b891e8a34a5f8273ab76d384fd0cf774d054eca44",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/neighborhoods/gulf-breeze",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/neighborhoods/gulf-breeze",
+      "fingerprint": "7f4b20e87411f435eb5e5a73b407b9c75f85ded4ce05c543800fd64d4ac5dbed",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "fingerprint": "e9ed6fa54f2c1853e757d4689e15d209182155b162c48fcac8377ea22ae74309",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "fingerprint": "b053265c15e681a5dc313aa07518344cd495e346d11ad808c968e60f6b917829",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/schools/warrington-preparatory-academy",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/schools/warrington-preparatory-academy",
+      "fingerprint": "db9ff71cbb76eeced69cf7ce91b7893ed4198ab556cae566bff84264e53637f1",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/schools/creative-learning-academy",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/schools/creative-learning-academy",
+      "fingerprint": "c3d0b2d31e48ac7fe2b2dcfb1724c22ba622bf3472f5e12c660835b3733447cb",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/schools/navarre-high-school",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/schools/navarre-high-school",
+      "fingerprint": "9d35454f6a70a1ed99ce2002ab7d32c814ec5cd7a14e8b3d696b51588ac722be",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/schools/niceville-senior-high-school",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/schools/niceville-senior-high-school",
+      "fingerprint": "325470e18022ba0c80130b189c137d2dfe738cc4d610d37c69fbe5544db32c37",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/schools/gulf-shores-high-school",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/schools/gulf-shores-high-school",
+      "fingerprint": "9fa37db90dd742031ea1d9e340bd5552bfaca5eacfe61ada22415fb1307d9efb",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/schools/bayshore-christian-school",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/schools/bayshore-christian-school",
+      "fingerprint": "29cd2e5a213d16c2007d81c22b1e21cfc823841cf7124a64f37df12272f62f78",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/schools/gulf-shores-middle-school",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/schools/gulf-shores-middle-school",
+      "fingerprint": "92464aa827ef897e6c2d8485237f5e9b9aaa17ff8ca1eeb2cda904a1bf3454ae",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    }
+  ],
+  "engines": {
+    "indexnow": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/schools",
+          "fingerprint": "3f8212b6b901da4a1dbd2264f988fad91ddcf335feab0dc8434d2ca55c319b7b"
+        },
+        {
+          "url": "https://greggcostin.com/neighborhoods/navarre",
+          "fingerprint": "8cf6cd885460d5d97be68b5b891e8a34a5f8273ab76d384fd0cf774d054eca44"
+        },
+        {
+          "url": "https://greggcostin.com/neighborhoods/gulf-breeze",
+          "fingerprint": "7f4b20e87411f435eb5e5a73b407b9c75f85ded4ce05c543800fd64d4ac5dbed"
+        },
+        {
+          "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+          "fingerprint": "e9ed6fa54f2c1853e757d4689e15d209182155b162c48fcac8377ea22ae74309"
+        },
+        {
+          "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+          "fingerprint": "b053265c15e681a5dc313aa07518344cd495e346d11ad808c968e60f6b917829"
+        },
+        {
+          "url": "https://greggcostin.com/schools/warrington-preparatory-academy",
+          "fingerprint": "db9ff71cbb76eeced69cf7ce91b7893ed4198ab556cae566bff84264e53637f1"
+        },
+        {
+          "url": "https://greggcostin.com/schools/creative-learning-academy",
+          "fingerprint": "c3d0b2d31e48ac7fe2b2dcfb1724c22ba622bf3472f5e12c660835b3733447cb"
+        },
+        {
+          "url": "https://greggcostin.com/schools/navarre-high-school",
+          "fingerprint": "9d35454f6a70a1ed99ce2002ab7d32c814ec5cd7a14e8b3d696b51588ac722be"
+        },
+        {
+          "url": "https://greggcostin.com/schools/niceville-senior-high-school",
+          "fingerprint": "325470e18022ba0c80130b189c137d2dfe738cc4d610d37c69fbe5544db32c37"
+        },
+        {
+          "url": "https://greggcostin.com/schools/gulf-shores-high-school",
+          "fingerprint": "9fa37db90dd742031ea1d9e340bd5552bfaca5eacfe61ada22415fb1307d9efb"
+        },
+        {
+          "url": "https://greggcostin.com/schools/bayshore-christian-school",
+          "fingerprint": "29cd2e5a213d16c2007d81c22b1e21cfc823841cf7124a64f37df12272f62f78"
+        },
+        {
+          "url": "https://greggcostin.com/schools/gulf-shores-middle-school",
+          "fingerprint": "92464aa827ef897e6c2d8485237f5e9b9aaa17ff8ca1eeb2cda904a1bf3454ae"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    },
+    "bing": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/schools",
+          "fingerprint": "3f8212b6b901da4a1dbd2264f988fad91ddcf335feab0dc8434d2ca55c319b7b"
+        },
+        {
+          "url": "https://greggcostin.com/neighborhoods/navarre",
+          "fingerprint": "8cf6cd885460d5d97be68b5b891e8a34a5f8273ab76d384fd0cf774d054eca44"
+        },
+        {
+          "url": "https://greggcostin.com/neighborhoods/gulf-breeze",
+          "fingerprint": "7f4b20e87411f435eb5e5a73b407b9c75f85ded4ce05c543800fd64d4ac5dbed"
+        },
+        {
+          "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+          "fingerprint": "e9ed6fa54f2c1853e757d4689e15d209182155b162c48fcac8377ea22ae74309"
+        },
+        {
+          "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+          "fingerprint": "b053265c15e681a5dc313aa07518344cd495e346d11ad808c968e60f6b917829"
+        },
+        {
+          "url": "https://greggcostin.com/schools/warrington-preparatory-academy",
+          "fingerprint": "db9ff71cbb76eeced69cf7ce91b7893ed4198ab556cae566bff84264e53637f1"
+        },
+        {
+          "url": "https://greggcostin.com/schools/creative-learning-academy",
+          "fingerprint": "c3d0b2d31e48ac7fe2b2dcfb1724c22ba622bf3472f5e12c660835b3733447cb"
+        },
+        {
+          "url": "https://greggcostin.com/schools/navarre-high-school",
+          "fingerprint": "9d35454f6a70a1ed99ce2002ab7d32c814ec5cd7a14e8b3d696b51588ac722be"
+        },
+        {
+          "url": "https://greggcostin.com/schools/niceville-senior-high-school",
+          "fingerprint": "325470e18022ba0c80130b189c137d2dfe738cc4d610d37c69fbe5544db32c37"
+        },
+        {
+          "url": "https://greggcostin.com/schools/gulf-shores-high-school",
+          "fingerprint": "9fa37db90dd742031ea1d9e340bd5552bfaca5eacfe61ada22415fb1307d9efb"
+        },
+        {
+          "url": "https://greggcostin.com/schools/bayshore-christian-school",
+          "fingerprint": "29cd2e5a213d16c2007d81c22b1e21cfc823841cf7124a64f37df12272f62f78"
+        },
+        {
+          "url": "https://greggcostin.com/schools/gulf-shores-middle-school",
+          "fingerprint": "92464aa827ef897e6c2d8485237f5e9b9aaa17ff8ca1eeb2cda904a1bf3454ae"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    }
+  }
+}

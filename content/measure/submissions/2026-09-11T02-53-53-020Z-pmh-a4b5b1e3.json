@@ -1,0 +1,184 @@
+{
+  "id": "a4b5b1e3-a9c2-4122-9140-6a0a27c08860",
+  "site": "pmh",
+  "startedAt": "2026-09-11T02:53:53.020Z",
+  "mode": "submit",
+  "checks": [
+    {
+      "url": "https://pensacolamilitaryhousing.com/schools",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/schools",
+      "fingerprint": "ae95fe5b49cc17eb8c51db7c98c3a20c3a6566e8568220d62a3e8a36a256bb7c",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/communities/navarre",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/communities/navarre",
+      "fingerprint": "13999111d5397750e701942b1b6c8ebb26ebcc7c069cc4908332eb775c9e6dec",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/communities/gulf-breeze",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/communities/gulf-breeze",
+      "fingerprint": "7e5cd18e92a298f400da9d76194bd9a2b5799447eebd3a8a81c62bbb4c2384ee",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/schools/warrington-preparatory-academy",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/schools/warrington-preparatory-academy",
+      "fingerprint": "834909caffcf7d8341913110809ab7f570fae7bbcdb0267594915c8ebee90e4d",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/schools/creative-learning-academy",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/schools/creative-learning-academy",
+      "fingerprint": "129419df885ee639f1c39d97e1634aacb73439e44d00126191a4999e0a3b392b",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/schools/navarre-high-school",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/schools/navarre-high-school",
+      "fingerprint": "f053c5f72ca89405c07b04e487f840afcf6e102e314ce63b00130a7a91fde174",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/schools/niceville-senior-high-school",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/schools/niceville-senior-high-school",
+      "fingerprint": "2f51849a718b1598ddda02c0c25404c26c97a067cf2bea682d360388383ff310",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/schools/gulf-shores-high-school",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/schools/gulf-shores-high-school",
+      "fingerprint": "d0218b4f8e99270d729eda9a33d0820997cda258df9b52d48e3c0c41d618bcd9",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/schools/bayshore-christian-school",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/schools/bayshore-christian-school",
+      "fingerprint": "ee501230e07b6325fe41999b657f212a798dccf7ce6c71ac706970e6ac509d05",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://pensacolamilitaryhousing.com/schools/gulf-shores-middle-school",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/schools/gulf-shores-middle-school",
+      "fingerprint": "2c78465dd2424fbbb8386507ab65b9e72900a744b0d3a7b03240d69ce9739dc5",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    }
+  ],
+  "engines": {
+    "indexnow": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools",
+          "fingerprint": "ae95fe5b49cc17eb8c51db7c98c3a20c3a6566e8568220d62a3e8a36a256bb7c"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/navarre",
+          "fingerprint": "13999111d5397750e701942b1b6c8ebb26ebcc7c069cc4908332eb775c9e6dec"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/gulf-breeze",
+          "fingerprint": "7e5cd18e92a298f400da9d76194bd9a2b5799447eebd3a8a81c62bbb4c2384ee"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/warrington-preparatory-academy",
+          "fingerprint": "834909caffcf7d8341913110809ab7f570fae7bbcdb0267594915c8ebee90e4d"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/creative-learning-academy",
+          "fingerprint": "129419df885ee639f1c39d97e1634aacb73439e44d00126191a4999e0a3b392b"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/navarre-high-school",
+          "fingerprint": "f053c5f72ca89405c07b04e487f840afcf6e102e314ce63b00130a7a91fde174"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/niceville-senior-high-school",
+          "fingerprint": "2f51849a718b1598ddda02c0c25404c26c97a067cf2bea682d360388383ff310"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/gulf-shores-high-school",
+          "fingerprint": "d0218b4f8e99270d729eda9a33d0820997cda258df9b52d48e3c0c41d618bcd9"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/bayshore-christian-school",
+          "fingerprint": "ee501230e07b6325fe41999b657f212a798dccf7ce6c71ac706970e6ac509d05"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/gulf-shores-middle-school",
+          "fingerprint": "2c78465dd2424fbbb8386507ab65b9e72900a744b0d3a7b03240d69ce9739dc5"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    },
+    "bing": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools",
+          "fingerprint": "ae95fe5b49cc17eb8c51db7c98c3a20c3a6566e8568220d62a3e8a36a256bb7c"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/navarre",
+          "fingerprint": "13999111d5397750e701942b1b6c8ebb26ebcc7c069cc4908332eb775c9e6dec"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/communities/gulf-breeze",
+          "fingerprint": "7e5cd18e92a298f400da9d76194bd9a2b5799447eebd3a8a81c62bbb4c2384ee"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/warrington-preparatory-academy",
+          "fingerprint": "834909caffcf7d8341913110809ab7f570fae7bbcdb0267594915c8ebee90e4d"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/creative-learning-academy",
+          "fingerprint": "129419df885ee639f1c39d97e1634aacb73439e44d00126191a4999e0a3b392b"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/navarre-high-school",
+          "fingerprint": "f053c5f72ca89405c07b04e487f840afcf6e102e314ce63b00130a7a91fde174"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/niceville-senior-high-school",
+          "fingerprint": "2f51849a718b1598ddda02c0c25404c26c97a067cf2bea682d360388383ff310"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/gulf-shores-high-school",
+          "fingerprint": "d0218b4f8e99270d729eda9a33d0820997cda258df9b52d48e3c0c41d618bcd9"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/bayshore-christian-school",
+          "fingerprint": "ee501230e07b6325fe41999b657f212a798dccf7ce6c71ac706970e6ac509d05"
+        },
+        {
+          "url": "https://pensacolamilitaryhousing.com/schools/gulf-shores-middle-school",
+          "fingerprint": "2c78465dd2424fbbb8386507ab65b9e72900a744b0d3a7b03240d69ce9739dc5"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    }
+  }
+}

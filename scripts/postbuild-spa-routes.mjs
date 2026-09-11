@@ -18,6 +18,7 @@
 // entities are meant to repeat across URLs).
 
 import { readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
 import { applyMilitaryMeta } from "./military-meta-lib.mjs";
 import { ROUTE_META, SITE, HOME_TITLE, HOME_DESC } from "../src/routeMeta.js";
 import { BAH_DATA } from "../src/bahData.js";
@@ -69,7 +70,10 @@ const pcsGuideFaqJsonLd = () => JSON.stringify({
 import { ROUTE_SECTIONS, ROUTE_LINKS, BASE_LINKS } from "../src/routeSections.js";
 import { COMMUNITY_LINKS, COMMUNITY_GROUPS } from "../src/communitiesData.js";
 
-const SRC = "dist/index.html";
+const rootArg = process.argv.indexOf('--root');
+if (rootArg >= 0 && !process.argv[rootArg + 1]) throw Error('--root requires a built site directory');
+const outputRoot = rootArg < 0 ? 'dist' : process.argv[rootArg + 1];
+const SRC = path.join(outputRoot, 'index.html');
 const base = readFileSync(SRC, "utf8"); // utf8 => the ® in the title survives round-trip
 
 // Replace an anchor; throw (fail the build) if it isn't present.
@@ -196,7 +200,7 @@ for (const r of ROUTE_META.filter((e) => e.shell)) {
     console.log(`postbuild geo-01: /pcs-guide shell carries ${words} words + FAQPage JSON-LD`);
   }
 
-  writeFileSync(`dist/${r.file}.html`, applyMilitaryMeta(html), "utf8");
+  writeFileSync(path.join(outputRoot, `${r.file}.html`), applyMilitaryMeta(html), "utf8");
   count++;
   console.log(`postbuild 2.15: wrote dist/${r.file}.html  title="${r.title}"  canonical=${canon}`);
 }

@@ -37,3 +37,16 @@ test('military initial HTML and React use the same essential biography and headi
  assert.ok(civilianBiographyHtml().includes('href="/buy"'));
  assert.ok(civilianBiographyHtml().includes('href="/sell"'));
 });
+
+test('the firsthand story and detailed military experience remain readable without JavaScript',()=>{
+ const paragraphs=ROUTE_SECTIONS.about.flatMap(s=>s.text),app=readFileSync('src/App.jsx','utf8');
+ for(const key of ['storyOpening','clientOrigin','clientCommitment','militaryFoundation','militaryTechnicalCareer','militaryLeadership','teamPromise','militaryPcsExperience','militaryNetworks']){
+  assert.ok(paragraphs.includes(BIOGRAPHY[key]),'Initial HTML omits '+key);
+  assert.ok(app.includes('{BIOGRAPHY.'+key+'}'),'React no longer shares '+key);
+ }
+ for(const phrase of ['2M0 cruise missile technician','B-52 Stratofortress','Navigator and Combat Systems Officer','Iraq, Afghanistan, and Syria','Chief of Integrated Air and Missile Defense (IAMD) Plans for CENTCOM A5']){
+  assert.ok(paragraphs.some(p=>p.includes(phrase)),phrase);
+ }
+ assert.doesNotMatch(paragraphs.join(' '),/Response within two hours|lender bench that closes on time/);
+ for(const route of ['/neighborhoods','/schools','/mortgage-calculators','/contact'])assert.ok(civilianBiographyHtml().includes('href="'+route+'"'));
+});

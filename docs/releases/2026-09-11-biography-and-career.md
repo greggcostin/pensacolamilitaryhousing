@@ -1,38 +1,38 @@
-# Brokerage biography and consistent military career wording
+# Combined biographies and crawlable military background
 
-Gregg's brokerage profile previously had a short general biography and links that did not clearly distinguish his civilian website from his military resource site. The revised public biography explains his military career, how his 11 personal PCS moves inform his service, his education and credentials, and the practical resources available on both websites.
+The final biographies combine the earlier personal story with clearer professional identity, exact credentials and useful resource links. PensacolaMilitaryHousing.com retains the detailed military career. GreggCostin.com serves the broader Gulf Coast buyer and seller audience. The brokerage biography now connects both websites with nine direct resource and contact links.
 
-The owner's final preferred wording is: "My Air Force career spanned two decades, from enlisted service to retirement as a Captain." This replaces the numeric 20-year service-length wording in the current military and civilian profiles, full Person descriptions, public identity records and search text. The numeric field was removed from the canonical military record and replaced by a two-decade description and prior-enlisted flag. Existing mortgage-term and property-age references to 20 years were retained.
+The owner's preferred wording is: "My Air Force career spanned two decades, from enlisted service to retirement as a Captain." Both websites use corresponding third-person wording. The canonical military record uses a two-decade description and a prior-enlisted flag instead of a numeric years-of-service field. Mortgage-term and property-age references were retained.
 
-## Public biography and navigation
+## Content and implementation
 
-The biography at https://greggc.levinrinkerealty.com/ now covers prior enlisted service and advancement to Staff Sergeant, cruise-missile work supporting B-52 readiness, commissioning after the University of Tampa, E-3 AWACS service, defense planning and 11 personal PCS moves. These are owner-provided biography facts. The profile retains the owner's military relocation positioning without inventing an independently audited ranking.
+The military biography shares its firsthand story, technical service, leadership, PCS experience and client commitment between React and the initial HTML. The account of 2M0 cruise-missile work, B-52 readiness, commissioning, E-3 AWACS Navigator and Combat Systems Officer duties, deployments, and Chief of Integrated Air and Missile Defense Plans work at CENTCOM A5 no longer requires JavaScript to read. These remain owner-provided biography facts. The shared text replaces mismatched generic promises previously present only in the HTML shell.
 
-The website descriptions explain the PCS, installation, BAH and VA resources on PensacolaMilitaryHousing.com and the neighborhood, school, ownership-cost and buyer/seller resources on GreggCostin.com. Both school finders and the civilian contact page have direct links. Degrees, Part 107 and MRP, ABR, SRS, RENE and FMS credentials are included.
+The civilian biography retains all 10 earlier paragraphs of at least 25 words and adds specific buyer/seller services, Economics and International Affairs degrees from the University of Tampa, Part 107, and links to the neighborhood guides, school finder, calculators, purchase/sale guidance and contact page. Its full military-story link goes to the companion About page. Canonicals and the shared Person identity remain consistent.
 
-The owner-requested award title is "Forbes Global Properties - Rookie of the Year for 2025," with Levin Rinke Realty brokerage scope. The preceding award release updated existing mentions on both sites and was independently verified against all 5,969 provider assets. No independent global award or search-ranking result was asserted.
+The brokerage biography restores the personal reason for learning real estate, explains the military career and 11 personal PCS moves, and describes professional photography, aerial imagery and careful negotiation preparation. It retains the owner's military-relocation positioning, dated owner-reported MLS standing, and brokerage-scoped award wording: "Forbes Global Properties - Rookie of the Year for 2025" through Levin Rinke Realty. This does not assert independent global award or ranking verification.
 
-Four brokerage navigation destinations were saved and publicly checked: GreggCostin.com, Contact Gregg, Military PCS and housing resources, and Gulf Coast home guides and articles. The website icon links to GreggCostin.com. A broken custom article entry was replaced in navigation with a direct blog link; the old custom page remains in the page library. Existing social accounts, contact addresses and brokerage analytics were retained. Linktree's website buttons, bio and search metadata were also saved and publicly checked.
+Both website homepages, both school finders, civilian buying, selling, calculators, neighborhoods and contact have direct HTML links in the brokerage biography. Google and Zillow review links are separate. Previously repaired brokerage navigation, the civilian website icon and Linktree profile remain in place. Existing brokerage analytics and contact settings were retained.
 
-## Performance figures awaiting definitions
+## Performance figures
 
-Additional owner-requested production figures await a reporting period, ranking definition, pricing comparison basis and supporting review sources. Those new figures have not been published in this biography while that factual clarification remains pending. The existing dated owner-reported MLS standing on the two sites was preserved.
+The newer requested top-50/4,200+ ranking, 99.89% seller ratio, 8.1% buyer savings and 85+ review total still require reporting definitions and source clarification. The biography uses the existing owner-reported #34 among more than 4,100 agents by volume and transactions as of August 1, 2026.
 
-The live Google profile displayed 56 reviews, all in its five-star bucket, and Zillow displayed 27 team reviews with a 5.0 rating. The brokerage biography links to each and labels the separate counts and September 11 check date. This is 83 displayed reviews, not evidence of 83 distinct clients or support for 85+. The routine review synchronization remains weekly; the websites' September 9 review observation dates were not advanced.
+The brokerage labels 56 Google reviews and 27 Zillow team reviews, each with a 5.0 rating, checked September 11. The Google profile's five-star bucket contained all 56. These are separate platform counts, not 83 distinct clients or support for 85+. The routine weekly review schedule and the websites' September 9 observation dates were retained.
 
-## Release verification
+## Final publication and verification
 
-| Site | Career deployment | Verified assets |
+| Site | Final deployment | Verified assets |
 |---|---|---:|
-| PensacolaMilitaryHousing.com | `e645bd5a-ff40-44dd-a3b7-513dfea97df1` | 3,736 |
-| GreggCostin.com | `b78723f6-0ef6-4ae4-be6a-bf66d97ea7f3` | 2,419 |
+| PensacolaMilitaryHousing.com | 658c5699-36e9-4836-8eda-1970aaf623fc | 3,791 |
+| GreggCostin.com | 0201ca98-144c-4dca-b41f-dc372b05d0bb | 2,457 |
 
-All 6,155 provider asset hashes matched the complete candidate. The final wording release changed 13 files outside the search index, including the active compiled application, profile text and identity records. No prior asset was removed. The earlier award application's bytes matched a fresh build of the maintained source before the career change; the new application was compiled from the updated source.
+All 6,248 provider asset hashes matched the complete candidate. The release changed eight files outside the search index: the military About HTML, the new compiled application and its six route references, and the civilian team page. No earlier asset was removed. Only the About section group and civilian biography block were replaced in the complete verified production HTML; current styles, photography, headers, contact behavior and automatic school maps were preserved.
 
-Both site audits, the shared-entity audit, identity/profile consistency checks, biography tests and existing article-source checks passed. All 39 isolated integration checks passed, including initial HTML and JavaScript biography consistency and automatic school maps. The current photography, navigation, contact controls and conversions were retained by the exact scope comparison.
+Both site audits, the entity audit, identity/profile checks, three biography tests, article-source checks and all 39 isolated integration checks passed. An additional 12 browser observations compared original, preceding and final profiles with JavaScript on and off. The detailed military facts were present in both final render paths. No desktop horizontal overflow was found. Public About and team content matched the sealed candidate after publication.
 
-The brokerage save was verified after reloading its editor and independently fetching the public page. Its source editor required a wider viewport to expose the confirmation button; the normal viewport was restored afterward.
+The brokerage source editor's full 24 lines matched the prepared HTML before saving. The saved editor was reloaded, all 24 lines were independently found in the public response, and all nine website backlinks were present. Desktop at 1,366px and phone at 390px had no biography overflow. No extra JavaScript injection was needed for the brokerage biography.
 
-The weekly review job now uses the complete shared snapshot at `C:/Users/gregg/pensacolamilitaryhousing/.coast-release/geo-decades-20260911`. Deployment identifiers were checked again before updating that pointer. Sunday 09:00 America/Chicago, review counts and prior observation dates were preserved. The dirty operational checkout received targeted wording and military identity changes; older modules and unrelated edits were retained. Detailed receipts and before/after copies are in the private `docs/geo-execution-2026-09-10/decades-release/`, `career-release/` and `enhancement-pass/` directories.
+The complete operational release snapshot is C:/Users/gregg/pensacolamilitaryhousing/.coast-release/geo-hybrid-20260911. Current deployment IDs were checked again before advancing the review baseline. Sunday 09:00 America/Chicago, review counts and observation dates were preserved. The dirty operational source checkout retains its unrelated work; the final implementation is maintained on the source branch and in GitHub main after the source push.
 
-A comparison of five saved biography stages with JavaScript enabled and disabled found that the current civilian page retains all 10 earlier paragraphs of at least 25 words. The military page retains the core personal story while improving exact credential wording and claim scope. Its initial HTML now includes the confirmed degrees and Part 107; deeper military-career passages still require JavaScript. The comparison establishes content and rendering differences, not a measured ranking or traffic increase.
+Private comparison, provider baseline and release evidence remain in docs/geo-execution-2026-09-10/. The earlier two-decade release and before/after biography copies remain available. These checks establish publication, content accessibility and preservation. They do not establish higher search rankings, traffic, AI citations or accepted leads.

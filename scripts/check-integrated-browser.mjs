@@ -63,6 +63,7 @@ try{
     for(const phrase of required)assert.ok(text.includes(phrase),phrase);
     assert.ok(text.includes('two decades, from enlisted service to retirement as a Captain'));
     assert.ok(text.includes('11 personal PCS moves'));
+    for(const phrase of ['it started with a vow','2M0 cruise missile technician','B-52 Stratofortress','Navigator and Combat Systems Officer','Iraq, Afghanistan, and Syria','Chief of Integrated Air and Missile Defense (IAMD) Plans for CENTCOM A5'])assert.ok(text.includes(phrase),phrase+' missing with JavaScript '+javaScriptEnabled);
     assert.doesNotMatch(text,/20[- ]year|years of service/);
     headings.push(await p.locator('h1').innerText());
     await p.goto(origins.gc+'/team',{waitUntil:'load'});
@@ -70,6 +71,7 @@ try{
     for(const phrase of required)assert.ok(bio.includes(phrase),phrase);
     assert.ok(bio.includes('Pensacola, the Emerald Coast and coastal Alabama'));
     assert.equal(await p.locator('[data-profile-biography] a[href="/buy"]').count(),1);
+    for(const route of ['/sell','/neighborhoods','/schools','/mortgage-calculators','/contact'])assert.equal(await p.locator('[data-profile-biography] a[href="'+route+'"]').count(),1);
     assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1));
    }finally{await ctx.close();}
   }

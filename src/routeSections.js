@@ -8,21 +8,20 @@ import { BIOGRAPHY } from './biography.js';
 
 export const ROUTE_SECTIONS = {
   about: [
-    { h2: "Education and relocation experience", text: [BIOGRAPHY.qualifications, BIOGRAPHY.militaryPurpose,
-      "PensacolaMilitaryHousing.com focuses on military relocation resources. Gregg's primary professional website, GreggCostin.com, serves buyers and sellers throughout Pensacola, the Emerald Coast and coastal Alabama.",
-    ] },
     { h2: "My Story: From Global Strategy to Local Real Estate Excellence", text: [
-      "I completed a full U.S. Air Force career, starting as a prior-enlisted Staff Sergeant and retiring as a Captain and E-3 AWACS Combat Systems Officer. Along the way my family and I made 11 PCS moves, so I know what it is like to house-hunt from a different time zone, sign on a home you have seen only on video, and report for duty two days after the moving truck leaves.",
-      `Today I am a Florida- and Alabama-licensed Realtor with ${I.brokerage.name} at ${I.addressLine}. Military families are the reason this site exists: every guide, calculator and community page here is written for someone holding orders to NAS Pensacola, Corry Station, Saufley Field, NAS Whiting Field, Hurlburt Field, Eglin AFB or Duke Field.`,
+      BIOGRAPHY.storyOpening, BIOGRAPHY.clientOrigin, BIOGRAPHY.clientCommitment,
     ] },
     { h2: "Forged by Military Discipline", text: [
-      "Mission planning translates directly to a home search. You get a written plan tied to your report date, a short list built around commute, BAH fit, schools and flood risk, and a negotiation run on data rather than emotion. I answer texts and calls, I show up on time, and I tell you when a house is wrong for you even when it would be an easy sale.",
+      BIOGRAPHY.qualifications, BIOGRAPHY.militaryFoundation,
+      BIOGRAPHY.militaryTechnicalCareer, BIOGRAPHY.militaryLeadership,
     ] },
-    { h2: "The Gregg Costin Team Promise", text: [
-      "Response within two hours during business hours. Video walk-throughs for buyers who cannot fly in. A VA loan lender bench that closes on time. A written PCS timeline with 60-, 30- and 7-day milestones. And no pressure: if the right move is to rent for a year or to keep your current house and lease it out, that is what I will tell you.",
+    { h2: "The Gregg Costin Team Promise", text: [BIOGRAPHY.teamPromise] },
+    { h2: I.military.personalPcsMoves + " PCS moves. I get it.", text: [
+      BIOGRAPHY.militaryPcsExperience, BIOGRAPHY.militaryNetworks,
     ] },
-    { h2: "Credentials and Recognition", text: [
-      "Military Relocation Professional (MRP), Accredited Buyer's Representative (ABR) and Real Estate Negotiation Expert (RENE) designations. Licensed in Florida and Alabama, which matters on the western edge of our market where Perdido Key runs into Orange Beach and Gulf Shores. Reviews from military clients are collected on the reviews page, and the civilian side of the practice, The Costin Team, is at greggcostin.com.",
+    { h2: "Resources for your next move", text: [
+      BIOGRAPHY.militaryPurpose,
+      "PensacolaMilitaryHousing.com connects installation guides, PCS planning, BAH and VA homebuying resources, school research and housing comparisons. Gregg's primary professional website, GreggCostin.com, serves buyers and sellers throughout Pensacola, the Emerald Coast and coastal Alabama.",
     ] },
   ],
   contact: [

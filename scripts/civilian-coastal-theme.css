@@ -225,7 +225,12 @@
 .gc-coastal.gc-interior main .sg-comparison caption {background:var(--shore-navy);color:#f0dfb3}
 .gc-coastal .sf-result.sf-selected {background:#e8f0e9;box-shadow:inset 3px 0 #7b9888}
 .gc-coastal .sf {--sf-navy:var(--shore-ink);--sf-gold:#bea264}
-.gc-coastal .sf-map-column {border:1px solid var(--shore-line);border-radius:4px;overflow:hidden}
+/* Clip the rounded frame without creating a scroll container that traps sticky. */
+.gc-coastal .sf-map-column {border:1px solid var(--shore-line);border-radius:4px;overflow:clip}
+@media(min-width:801px) {
+  .gc-coastal .sf-map-panel {top:184px;max-height:calc(100vh - 200px);max-height:calc(100dvh - 200px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:#b8c1cc transparent}
+  .gc-coastal .sf-map-stage {height:clamp(240px,calc(100vh - 520px),550px);height:clamp(240px,calc(100dvh - 520px),550px)}
+}
 .gc-coastal.gc-interior--school .gc-interior-hero-media [style*="color:#fff"]:not([aria-label]) {color:var(--shore-ink)!important}
 .gc-coastal.gc-interior main .sg-alternatives article,.gc-coastal .sf-next-step {background:var(--shore-sea);border-color:#c3d5c8}
 .gc-coastal.gc-interior main .sg-alternatives article :is(h3,p) {color:var(--shore-ink)}

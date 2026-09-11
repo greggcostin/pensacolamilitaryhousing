@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-09-11T01:14:28.413Z",
+  "deploymentId": "c478c2c1-1bc0-4c26-804e-e57ae675f2f1",
+  "stage": "success",
+  "assetCount": 1829,
+  "mismatches": [],
+  "schoolPageStatus": 200,
+  "currentCssLinked": true,
+  "cssStatus": 200,
+  "cssMatchesCandidate": true,
+  "ok": true
+}

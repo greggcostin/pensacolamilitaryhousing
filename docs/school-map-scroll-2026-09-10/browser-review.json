@@ -1,0 +1,21 @@
+{
+  "candidate": ".coast-release/school-map-scroll-20260910",
+  "url": "http://127.0.0.1:4190/schools.html#school-finder",
+  "method": "CUA browser interaction and read-only DOM geometry measurements",
+  "passed": true,
+  "originalFailure": "The coastal theme set overflow:hidden on .sf-map-column. Its sticky child followed this non-scrolling ancestor instead of the page viewport.",
+  "checks": [
+    {"name":"1280x720 scrolling down", "pageScrollPositions":[1466,2186], "mapTopAtBothPositions":184, "mapBottomAtBothPositions":704, "headerBottom":169.667, "passed":true},
+    {"name":"1280x720 scrolling back up", "pageScrollPosition":1826, "mapTop":184, "mapBottom":704, "passed":true},
+    {"name":"1440x1000 sticky", "mapTop":184, "mapBottom":984, "passed":true},
+    {"name":"Map stops at the bottom of its column", "pageScrollPosition":3145.333, "mapBottom":253.375, "columnBottom":254.042, "passed":true},
+    {"name":"Map resumes sticking on upward scroll", "pageScrollPosition":2145.333, "mapTop":184, "passed":true},
+    {"name":"School name filtering and popup", "query":"Suter", "resultCount":1, "popupSchool":"A. K. Suter Elementary School", "resetResultCount":274, "passed":true},
+    {"name":"390x844 mobile flow", "mapPosition":"static", "mapStageHeight":355, "horizontalOverflow":false, "mapLoaded":true, "passed":true},
+    {"name":"820x720 narrow desktop", "mapTop":184, "mapBottom":704, "headerBottom":147.667, "passed":true},
+    {"name":"Map notes remain reachable", "pageScrollPosition":2489.333, "mapPanelScrollTopAfterScroll":162.667, "passed":true},
+    {"name":"Automatic loading preserved", "mapInitializedBeforeAnyMapLoadClick":true, "passed":true},
+    {"name":"Browser errors", "errors":[], "passed":true}
+  ],
+  "viewportOverrideReset": true
+}

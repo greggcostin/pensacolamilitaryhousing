@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-09-11T01:13:14.130Z",
+  "directory": "docs/school-map-scroll-2026-09-10",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.coast-release\\school-map-scroll-20260910",
+  "candidateFingerprint": "685d7eddf277c18e689e47b9804771f7defa9bcaba0bcc434ea4268dd131ac31",
+  "sites": [
+    {
+      "site": "gc",
+      "project": "greggcostin",
+      "before": "2c692b4b-9b38-44cc-906f-5fde440975e3",
+      "status": "provider-success",
+      "exitCode": 0,
+      "after": "c478c2c1-1bc0-4c26-804e-e57ae675f2f1",
+      "url": "https://c478c2c1.greggcostin.pages.dev",
+      "providerStage": "success",
+      "checkedAt": "2026-09-11T01:13:22.508Z"
+    }
+  ],
+  "status": "provider-success",
+  "finishedAt": "2026-09-11T01:13:22.511Z"
+}

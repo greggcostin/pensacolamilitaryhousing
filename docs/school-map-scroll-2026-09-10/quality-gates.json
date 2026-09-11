@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-09-11T01:12:49.063Z",
+  "ok": true,
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.coast-release\\school-map-scroll-20260910",
+  "candidateFingerprint": "685d7eddf277c18e689e47b9804771f7defa9bcaba0bcc434ea4268dd131ac31",
+  "browserReviewSha256": "7612d33abbd35667e3e9c1ef4ac5c8b10e24fb87e7ac478428238dc35467abe6",
+  "audit": "AUDIT CLEAN: 320 pages, 0 findings",
+  "preservation": "All deployed files identical except the school map CSS rules and the school hub CSS cache key. School data, HTML content, JSON-LD, metadata, scripts, analytics, forms, and other pages are unchanged.",
+  "changedFiles": [
+    "assets/civilian-coastal-theme.css",
+    "schools.html"
+  ],
+  "unchangedFiles": 1829
+}

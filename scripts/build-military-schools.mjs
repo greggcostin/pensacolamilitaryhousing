@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import sharp from 'sharp';
 import {renderMilitaryPage} from './page-factory.mjs';
 import {militarySchoolContext, militaryHubContext} from './military-school-context.mjs';
+import {withSchoolAudience} from './school-audience-lib.mjs';
 import {uniqueSchoolGuides} from './school-browse-lib.mjs';
 
 const PMH='https://pensacolamilitaryhousing.com', GC='https://greggcostin.com';
@@ -88,7 +89,7 @@ for(const school of [null,...guides]){
   html=html.replaceAll('/og/'+slug+'.png','/og/'+slug.replaceAll('/','-')+'.png');
   // Source images retain their attribution; PMH serves a local copy where needed.
   for(const m of html.matchAll(/(?:["'(,\s])(\/images\/[^\s"'),<>]+)/g)){const path=m[1];if(!existsSync('public'+path)&&existsSync('civilian-site'+path)){mkdirSync(dirname('public'+path),{recursive:true});copyFileSync('civilian-site'+path,'public'+path);}}
-  write('public/'+slug+'.html',html);
+  write('public/'+slug+'.html',withSchoolAudience(html,route,'pmh'));
   write(sourcePath,withEdition(source,route,false));
   await ogCard(slug,name,school?`${school.city}, ${school.state} • School & relocation guide`:'Explore schools. Prepare for your next move.');
 }

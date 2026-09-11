@@ -83,7 +83,7 @@ const schools=rawRows.map(record=>{
     sector:record.sector,charter:grade?grade.charter==='YES':record.charter,magnet:program?.magnet===true?true:record.magnet,
     virtual,grade:grade&&/^[ABCDF]$/.test(grade.g2026)?grade.g2026:alabamaAccountability?.grade||null,gradeStatus:grade?.g2026||alabamaAccountability?.officialGrade||null,gradeYear:grade?'2025–26':alabamaAccountability?'2024–25':null,
     alabamaAccountability:alabamaAccountability||null,
-    reportUrl,website:safeUrl(resource?.website||record.website),admissionsUrl:safeUrl(resource?.admissionsUrl),sourceUrl,sourceYear:record.sourceYear|| (record.sector==='private'?privateData.sourceYear:publicData.sourceYear),
+    reportUrl,website:safeUrl(publicNote?.website||resource?.website||record.website),admissionsUrl:safeUrl(publicNote?.admissionsUrl||resource?.admissionsUrl),sourceUrl,sourceYear:record.sourceYear|| (record.sector==='private'?privateData.sourceYear:publicData.sourceYear),
     christian:affiliation?.christian===true?true:affiliation?.christian===false?false:null,
     religiousOrientation:affiliation?.religiousOrientation||null,
     religiousCategory:affiliation?.christian===true?'christian':/^Nonsectarian$/i.test(affiliation?.religiousOrientation||'')?'nonreligious':'unknown',

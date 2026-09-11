@@ -42,6 +42,10 @@ const details = (faqs) => faqs.map((f, i) => `<details${i === 0 ? " open" : ""}>
 
 async function build(n) {
   const path = `/neighborhoods/${n.slug}`;
+  if(n.slug==='gulf-breeze' && existsSync(`${SITE_DIR}${path}.html`) && readFileSync(`${SITE_DIR}${path}.html`,'utf8').includes('id="address-checks"')){
+    const html=readFileSync(`${SITE_DIR}${path}.html`,'utf8');
+    return {path,n,words:html.replace(/<[^>]+>/g,' ').split(/\s+/).length}; // Dedicated build-gulf-breeze-guides.mjs owns the reviewed edition.
+  }
   const reviewedGuide=REGIONAL_GUIDES.find(g=>g.path===path);
   if(reviewedGuide){
     const file=`${SITE_DIR}${path}.html`,html=renderRegionalGuide(readFileSync(file,'utf8'),reviewedGuide,SITE_DIR);

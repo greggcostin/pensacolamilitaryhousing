@@ -8,6 +8,8 @@ const link=(href,label)=>`<a href="${esc(href)}">${esc(label)}</a>`;
 const section=(id,kicker,title,body)=>`<section class="cg-section" id="${id}" aria-labelledby="${id}-title"><p class="cg-eyebrow">${esc(kicker)}</p><h2 id="${id}-title">${esc(title)}</h2>${body}</section>`;
 const question=label=>`<button class="cg-button cg-button-secondary" type="button" data-inquiry-open data-inquiry-type="General Question">${esc(label)}</button>`;
 export function renderRegionalGuide(html,g,root){
+  const reviewed=g.reviewed||REVIEWED;
+  const reviewLabel=new Date(reviewed+'T12:00:00Z').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'});
   const oldMain=html.match(/<main\b[^>]*>[\s\S]*?<\/main>/)?.[0];
   if(!oldMain||/<script\b/.test(oldMain))throw Error('Expected static main: '+g.path);
   const retained=oldMain.match(/<section class="geo-guide"[\s\S]*?<\/section>/)?.[0]||'';
@@ -58,5 +60,6 @@ export function renderRegionalGuide(html,g,root){
   });
   if(!out.includes('href="/assets/coast-community-guide.css"'))out=out.replace('</head>','<link rel="stylesheet" href="/assets/coast-community-guide.css">\n</head>');
   if(!out.includes('data-regional-guide-style'))out=out.replace('</head>','<style data-regional-guide-style>.coast-guide-page header.cg-hero>.cg-hero-inner{margin-left:auto;margin-right:auto}</style>\n</head>');
+  if(g.reviewed)out=out.replaceAll('September 8, 2026',reviewLabel).replaceAll('"dateModified": "'+REVIEWED+'"','"dateModified": "'+reviewed+'"').replace('property="article:modified_time" content="'+REVIEWED+'"','property="article:modified_time" content="'+reviewed+'"');
   return out;
 }

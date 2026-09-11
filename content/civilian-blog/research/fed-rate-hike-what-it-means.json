@@ -6,16 +6,16 @@
     "slug": "fed-rate-hike-what-it-means",
     "site": "gc"
   },
-  "sessionDate": "2026-09-09",
+  "sessionDate": "2026-09-10",
   "reader": "Civilian buyer, seller or owner deciding what to do before a scheduled Fed meeting",
   "decision": "Separate confirmed policy from forecasts and choose a financing or timing action the household can afford.",
   "readerTask": "Separate confirmed policy from forecasts and choose a financing or timing action the household can afford.",
   "pillar": "financing-macro",
-  "changeReason": "User-authorized full catalog refresh to current evidence, voice, GEO and SEO standards at the existing URL.",
+  "changeReason": "GEO-06 source freshness: September 10 PMMS release replaces the expired survey reference; retain the approved photography, independent scenarios and existing canonical URL.",
   "originalValue": "Preserves the news URL while replacing unverified odds and causal narratives with confirmed policy, an independently calculated payment stress test, seller net comparison and rental downside.",
   "models": {
-    "research": "codex / gpt-6-astra / max",
-    "write": "codex / gpt-6-astra / max"
+    "research": "Codex / GPT-6 / in-session",
+    "write": "Codex / GPT-6 / in-session"
   },
   "uncertainFacts": [],
   "sources": [
@@ -26,7 +26,7 @@
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
       "evidenceNote": "Read target held at 3.50 to 3.75 percent, 9 to 3 vote with three named dissenters favoring a quarter point increase. No September decision has occurred.",
       "primary": true,
-      "checkedAt": "2026-09-09"
+      "checkedAt": "2026-09-10"
     },
     {
       "id": "calendar",
@@ -35,16 +35,16 @@
       "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
       "evidenceNote": "Read next scheduled September 15-16, 2026 meeting; distinguish calendar from a decision or prediction.",
       "primary": true,
-      "checkedAt": "2026-09-09"
+      "checkedAt": "2026-09-10"
     },
     {
       "id": "pmms",
       "publisher": "Freddie Mac",
       "title": "Primary Mortgage Market Survey",
       "url": "https://www.freddiemac.com/pmms",
-      "evidenceNote": "Read September 3, 2026 30-year conventional national average 6.71%, prior August 27 6.66%, weekly Thursday-Wednesday applications and scope. This is not a local VA or investment quote.",
+      "evidenceNote": "Opened September 10 PMMS: 30-year 6.76%, prior September 3 6.71%; weekly conventional purchase application scope. National reference, not a lender quote.",
       "primary": true,
-      "checkedAt": "2026-09-09"
+      "checkedAt": "2026-09-10"
     },
     {
       "id": "lock",
@@ -53,7 +53,7 @@
       "url": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
       "evidenceNote": "Read application and closing-window conditions, changed income/credit/loan exceptions and lender-specific extension/float-down questions.",
       "primary": true,
-      "checkedAt": "2026-09-09"
+      "checkedAt": "2026-09-10"
     },
     {
       "id": "estimate",
@@ -62,7 +62,7 @@
       "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "evidenceNote": "Read comparable terms, projected payments, estimated cash to close, services and escrow sections. The total is not just lender fees.",
       "primary": true,
-      "checkedAt": "2026-09-09"
+      "checkedAt": "2026-09-10"
     }
   ],
   "claims": [
@@ -81,12 +81,12 @@
       "verification": "Read the July 29 statement directly and distinguished the target from mortgage pricing.",
       "claim": "The Federal Reserve held its target range at 3.50% to 3.75% on July 29, 2026.",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
       "locator": "Read the July 29 statement directly and distinguished the target from mortgage pricing.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
         "finding": "Read the July 29 statement directly and distinguished the target from mortgage pricing."
       }
     },
@@ -105,36 +105,36 @@
       "verification": "Checked September calendar entry; no decision exists in that future entry.",
       "claim": "The next scheduled FOMC meeting is September 15 and 16, 2026",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
       "locator": "Checked September calendar entry; no decision exists in that future entry.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
         "finding": "Checked September calendar entry; no decision exists in that future entry."
       }
     },
     {
       "id": "pmms",
       "kind": "fact",
-      "text": "Freddie Mac's September 3, 2026 survey reported a 6.71% national average for a 30-year fixed mortgage.",
+      "text": "Freddie Mac's September 10, 2026 survey reported a 6.76% national average for a 30-year fixed mortgage.",
       "sourceIds": [
         "pmms"
       ],
       "scope": "US conventional weekly mortgage applications",
-      "asOf": "2026-09-03",
+      "asOf": "2026-09-10",
       "perishable": true,
-      "expires": "2026-09-10",
+      "expires": "2026-09-17",
       "loadBearing": true,
       "verification": "Read current release and methodology; no daily or local lending claim.",
-      "claim": "Freddie Mac's September 3, 2026 survey reported a 6.71% national average for a 30-year fixed mortgage.",
+      "claim": "Freddie Mac's September 10, 2026 survey reported a 6.76% national average for a 30-year fixed mortgage.",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "sourceUrl": "https://www.freddiemac.com/pmms",
       "locator": "Read current release and methodology; no daily or local lending claim.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
         "finding": "Read current release and methodology; no daily or local lending claim."
       }
     },
@@ -153,12 +153,12 @@
       "verification": "Read application change exceptions and extension questions; did not promise all locks are absolute.",
       "claim": "A mortgage rate lock depends on closing within the agreed period and keeping the application terms consistent.",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
       "locator": "Read application change exceptions and extension questions; did not promise all locks are absolute.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
         "finding": "Read application change exceptions and extension questions; did not promise all locks are absolute."
       }
     },
@@ -168,7 +168,7 @@
       "text": "6.75% $2,205.23 Starting scenario",
       "claim": "6.75% $2,205.23 Starting scenario",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "asOf": "2026-09-09",
       "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "locator": "Article illustration; source supplies context, not the invented inputs. amortization(340000, 6.75, 360) = 2205.23 USD per month.",
@@ -177,9 +177,9 @@
       "method": "amortization(340000, 6.75, 360) = 2205.23 USD per month.",
       "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
-        "finding": "amortization(340000, 6.75, 360) = 2205.23 USD per month."
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
+        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
       },
       "calculation": {
         "operation": "amortization",
@@ -202,7 +202,7 @@
       "text": "7.00% $2,262.03 Higher-rate scenario",
       "claim": "7.00% $2,262.03 Higher-rate scenario",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "asOf": "2026-09-09",
       "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "locator": "Article illustration; source supplies context, not the invented inputs. amortization(340000, 7, 360) = 2262.03 USD per month.",
@@ -211,9 +211,9 @@
       "method": "amortization(340000, 7, 360) = 2262.03 USD per month.",
       "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
-        "finding": "amortization(340000, 7, 360) = 2262.03 USD per month."
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
+        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
       },
       "calculation": {
         "operation": "amortization",
@@ -236,7 +236,7 @@
       "text": "Difference $56.80 Using the displayed rounded payments",
       "claim": "Difference $56.80 Using the displayed rounded payments",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "asOf": "2026-09-09",
       "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "locator": "Article illustration; source supplies context, not the invented inputs. difference(2262.03, 2205.23) = 56.8 USD per month.",
@@ -245,9 +245,9 @@
       "method": "difference(2262.03, 2205.23) = 56.8 USD per month.",
       "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
-        "finding": "difference(2262.03, 2205.23) = 56.8 USD per month."
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
+        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
       },
       "calculation": {
         "operation": "difference",
@@ -280,7 +280,7 @@
       {
         "url": "https://www.freddiemac.com/pmms",
         "title": "Primary Mortgage Market Survey",
-        "reviewed": "Read September 3, 2026 30-year conventional national average 6.71%, prior August 27 6.66%, weekly Thursday-Wednesday applications and scope. This is not a local VA or investment quote."
+        "reviewed": "Read September 10, 2026 30-year conventional national average 6.76%, prior August 27 6.71%, weekly Thursday-Wednesday applications and scope. This is not a local VA or investment quote."
       },
       {
         "url": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
@@ -379,10 +379,9 @@
   },
   "review": {
     "provider": "codex",
-    "model": "gpt-6-astra",
-    "effort": "max",
-    "checkedAt": "2026-09-09",
-    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "model": "GPT-6",
+    "checkedAt": "2026-09-10",
+    "selectionReason": "GEO-06 source freshness: September 10 PMMS release replaces the expired survey reference; retain the approved photography, independent scenarios and existing canonical URL.",
     "checks": {
       "facts": true,
       "calculations": true,
@@ -391,8 +390,15 @@
       "sources": true,
       "counterarguments": true
     },
-    "notes": "Read the July 29 Fed statement, September calendar, PMMS and CFPB lock/Loan Estimate guidance. Corrected unsupported hike predictions. Independently calculated both hypothetical mortgage payments and the rounded $56.80 difference. Reviewed waiting, seller proceeds and rental downside as legitimate alternatives. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
-    "contentHash": "91805360be27c7bf3e74ebf1b1a2dff217dde01f5909849ff8ddd2fd1a274bdd",
-    "evidenceHash": "ee2f4a0e78607a083bf433612846a45294b9c5abad94fa760b5ac872f4b62b9f"
-  }
+    "notes": "Reopened every cited primary source. Checked PMMS current and prior weeks, Fed calendar and policy where applicable, CFPB credit/points/lock/Loan Estimate guidance and Fannie Mae occupancy limits. Read the complete body and FAQs, retained hypothetical examples and waiting/holding-period caveats, and recomputed all recorded calculations. Approved archival imagery and captions retained under the owner preservation instruction. This is an agent review, not a lender, legal or Gregg sign-off.",
+    "contentHash": "dfb8d79b44b61674771a58a298e266aa994f10eec0ec848dfeb0cc5457871738",
+    "evidenceHash": "c0ca79b5e745c79b2c4510447c1a1c502b77dd2a105587c8c633e26038ec2a73"
+  },
+  "reviewHistory": [
+    {
+      "checkedAt": "2026-09-09",
+      "contentHash": "91805360be27c7bf3e74ebf1b1a2dff217dde01f5909849ff8ddd2fd1a274bdd",
+      "evidenceHash": "ee2f4a0e78607a083bf433612846a45294b9c5abad94fa760b5ac872f4b62b9f"
+    }
+  ]
 }

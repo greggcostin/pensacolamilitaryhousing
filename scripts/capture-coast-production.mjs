@@ -1,7 +1,10 @@
 // Read only: pin both current production deployments and compare the complete local baseline.
 import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
 import {join,extname,resolve} from 'node:path';
-import {blake3} from '@noble/hashes/blake3';
+import {createRequire} from 'node:module';
+let blake3;
+try{({blake3}=createRequire(import.meta.url)('@noble/hashes/blake3'));}
+catch{({blake3}=createRequire('C:/Users/gregg/pensacolamilitaryhousing/package.json')('@noble/hashes/blake3'));}
 const output=process.argv.includes('--out')?process.argv[process.argv.indexOf('--out')+1]:'docs/seo-geo-2026-09-06/projects/01-foundation';
 mkdirSync(output,{recursive:true});
 const token=process.env.CLOUDFLARE_API_TOKEN||process.env.CF_API_TOKEN;

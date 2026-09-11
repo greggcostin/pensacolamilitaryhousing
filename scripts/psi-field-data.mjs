@@ -21,11 +21,14 @@ const args = process.argv.slice(2);
 const strategies = args.includes("--mobile") ? ["mobile"] : args.includes("--desktop") ? ["desktop"] : ["mobile", "desktop"];
 const ALL_URLS = [
   "https://pensacolamilitaryhousing.com/",
+  "https://pensacolamilitaryhousing.com/about",
+  "https://pensacolamilitaryhousing.com/schools",
   "https://pensacolamilitaryhousing.com/pcs-guide",
   "https://pensacolamilitaryhousing.com/bah-rates",
   "https://pensacolamilitaryhousing.com/bases/nas-pensacola",
   "https://pensacolamilitaryhousing.com/va-disability-property-tax-florida",
   "https://greggcostin.com/",
+  "https://greggcostin.com/team",
   "https://greggcostin.com/buy",
   "https://greggcostin.com/neighborhoods",
   "https://greggcostin.com/schools",
@@ -37,6 +40,7 @@ const urlIndex = args.indexOf("--url");
 const selectedUrl = urlIndex < 0 ? null : args[urlIndex + 1];
 if (selectedUrl && !ALL_URLS.includes(selectedUrl)) throw new Error("--url must be one of the configured site URLs");
 const URLS = ALL_URLS.filter(url => (!selectedUrl || selectedUrl === url) && (selectedSite === "both" || url.includes(selectedSite === "gc" ? "greggcostin.com" : "pensacolamilitaryhousing.com")));
+if(args.includes('--core-cohort'))URLS.splice(0,URLS.length,...URLS.filter(url=>/\/(?:about|team|schools)?$/.test(url)));
 
 const fmt = (m, k) => {
   const x = m && m[k];

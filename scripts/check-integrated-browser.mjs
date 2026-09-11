@@ -19,6 +19,38 @@ const results=[],blocked=[];let fixtureSubmissions=0;
 const check=async(name,fn)=>{try{await fn();results.push({name,pass:true});console.log('PASS '+name);}catch(e){results.push({name,pass:false,error:e.message});console.log('FAIL '+name+': '+e.message);}};
 async function context(options={}){const c=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce',...options});await c.route('**/*',r=>{const u=new URL(r.request().url());if(u.hostname==='127.0.0.1')return r.continue();const site=u.hostname==='pensacolamilitaryhousing.com'?'pmh':u.hostname==='greggcostin.com'?'gc':null;const f=site?pathFor(roots[site],u.href):null;if(f)return r.fulfill({path:f,contentType:mime[extname(f)]});blocked.push(u.hostname);return r.abort();});await c.addInitScript(()=>{window.__receipts=[];window.__posts=[];window.__events=[];const original=window.fetch.bind(window);window.fetch=(url,opts)=>{if(String(url).includes('costin-contact.gregg-costin.workers.dev')){window.__posts.push(JSON.parse(opts.body));const reply=window.__receipts.shift()||{success:false};return Promise.resolve(new Response(JSON.stringify(reply),{status:200,headers:{'Content-Type':'application/json'}}));}return original(url,opts);};});return c;}
 try{
+ await check('Navarre utility uses both verified tiers and keeps inputs out of inquiry payloads',async()=>{
+  const ctx=await context(),p=await ctx.newPage();try{
+   await p.goto(origins.gc+'/neighborhoods/navarre',{waitUntil:'load'});
+   const form=p.locator('[data-navarre-utility]');await p.waitForFunction(()=>document.querySelector('[data-navarre-utility] button')?.disabled===false);
+   await form.locator('input').fill('8000');await form.locator('button').click();assert.match(await form.locator('output').innerText(),/75\.69.*79\.85.*155\.54/);
+   assert.equal(await p.evaluate(()=>window.__posts.length),0);assert.equal(new URL(p.url()).search,'');
+   assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1));
+   await p.goto(origins.pmh+'/communities/navarre',{waitUntil:'load'});assert.equal(await p.locator('[data-navarre-utility]').count(),0);
+   assert.equal(await p.locator('a[href="https://greggcostin.com/neighborhoods/navarre#navarre-utility-illustrator"]').count(),1);
+  }finally{await ctx.close();}
+ });
+ await check('Navarre malformed schedule keeps calculation disabled with a visible fallback',async()=>{
+  const ctx=await context(),p=await ctx.newPage();try{
+   await p.route('**/data/navarre-cost-evidence.json',r=>r.fulfill({json:{version:999}}));
+   await p.goto(origins.gc+'/neighborhoods/navarre',{waitUntil:'load'});
+   await p.waitForFunction(()=>document.querySelector('[data-navarre-utility] [role="status"]')?.textContent.includes('could not load'));
+   assert.equal(await p.locator('[data-navarre-utility] button').isDisabled(),true);
+   assert.match(await p.locator('#navarre-utility-illustrator table').innerText(),/115\.20/);
+  }finally{await ctx.close();}
+ });
+ await check('Six school pilots retain distinct source-backed home and PCS guidance',async()=>{
+  const source=JSON.parse(readFileSync('content/schools/audience-guidance-2026-09.json','utf8'));
+  const ctx=await context(),p=await ctx.newPage();try{
+   for(const s of source.schools)for(const site of ['gc','pmh']){
+    await p.goto(origins[site]+'/schools/'+s.slug,{waitUntil:'load'});
+    assert.equal(await p.locator('#school-perspective').getAttribute('data-school-audience'),site);
+    assert.equal(await p.locator('#school-perspective h2').innerText(),s[site].heading);
+    assert.equal(await p.locator('#school-enrollment li').count(),4);
+    assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1));
+   }
+  }finally{await ctx.close();}
+ });
  await check('Confirmed biography and military heading agree before and after JavaScript',async()=>{
   const required=['B.S. in Economics','B.A. in International Affairs','University of Tampa','Part 107 Certified Drone Pilot'];
   const headings=[];
@@ -42,7 +74,7 @@ try{
   assert.equal(headings[0],headings[1]);
  });
  const c=await context(),page=await c.newPage();
- const paths={pmh:['/','/about','/contact','/pcs-guide','/mortgage-calculators','/communities','/bah-vs-cost-of-owning-pensacola','/va-funding-fee-2026','/communities/navarre','/schools','/schools/pensacola-christian-academy'],gc:['/','/buy','/sell','/resources','/neighborhoods/perdido-key','/neighborhoods/navarre','/neighborhoods/gulf-breeze','/neighborhoods/east-hill-downtown','/neighborhoods/cordova-park-northeast','/neighborhoods/fort-walton-beach','/neighborhoods/destin','/gulf-shores-orange-beach','/blog/what-moves-mortgage-rates','/schools','/schools/pensacola-christian-academy']};
+ const paths={pmh:['/','/about','/contact','/pcs-guide','/mortgage-calculators','/communities','/bah-vs-cost-of-owning-pensacola','/va-funding-fee-2026','/communities/navarre','/communities/gulf-breeze','/schools','/schools/pensacola-christian-academy'],gc:['/','/buy','/sell','/resources','/neighborhoods/perdido-key','/neighborhoods/navarre','/neighborhoods/gulf-breeze','/neighborhoods/east-hill-downtown','/neighborhoods/cordova-park-northeast','/neighborhoods/fort-walton-beach','/neighborhoods/destin','/gulf-shores-orange-beach','/blog/what-moves-mortgage-rates','/schools','/schools/pensacola-christian-academy']};
  for(const [site,urls]of Object.entries(paths))for(const path of urls)await check(site+path+' mobile content and layout',async()=>{await page.goto(origins[site]+path,{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);assert.equal(await page.locator('h1').count(),1);const size=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));assert.ok(size.scroll<=size.width+1,JSON.stringify(size));assert.ok(await page.locator('a[href*="'+(site==='gc'?'pensacolamilitaryhousing.com':'greggcostin.com')+'"]').count());});
  for(const site of ['pmh','gc'])await check(site+' automatic school map and category order',async()=>{await page.goto(origins[site]+'/schools',{waitUntil:'load'});await page.locator('.leaflet-container').waitFor({state:'visible'});const order=await page.evaluate(()=>{const ids=['school-finder','private-school-resources','all-school-guides'];return ids.map(id=>({id,y:document.getElementById(id)?.getBoundingClientRect().top}));});assert.ok(order[0].y<order[1].y&&order[1].y<order[2].y);assert.equal(await page.locator('a[href="/schools/pensacola-christian-academy"]').count()>0,true);});
  await check('School directory links preserve normal clicks after typing',async()=>{

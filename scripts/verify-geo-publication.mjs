@@ -3,7 +3,8 @@ import {readFileSync} from 'node:fs';
 import {join,relative,extname} from 'node:path';
 import {createRequire} from 'node:module';
 import {json,save,walk,fingerprint} from './isolated-release-lib.mjs';
-const dir='docs/geo-execution-2026-09-10/identity-release';
+const arg=k=>process.argv.includes(k)?process.argv[process.argv.indexOf(k)+1]:null;
+const dir=arg('--directory')||'docs/geo-execution-2026-09-10/identity-release';
 const c=json(join(dir,'candidate.json')),g=json(join(dir,'quality-gates.json')),receipt=json(join(dir,'deployment.json'));
 if(receipt.status!=='provider-success'||fingerprint(c.candidate)!==g.candidateFingerprint)throw Error('Missing reliable publication receipt or changed candidate');
 const require=createRequire('C:/Users/gregg/pensacolamilitaryhousing/package.json'),{blake3}=require('@noble/hashes/blake3');
@@ -18,7 +19,8 @@ for(const s of c.production){
  const keys=new Set([...Object.keys(expected),...Object.keys(d.files||{})]),mismatches=[...keys].filter(k=>expected[k]!==d.files?.[k]);
  const expectedId=receipt.sites.find(r=>r.site===s.site)?.after;
  const checks=[];
- for(const path of s.site==='gc'?['/','/team','/data/gregg-costin.json','/schools']:['/','/about','/data/gregg-costin.json','/schools']){
+ const defaultPaths=s.site==='gc'?['/','/team','/data/gregg-costin.json','/schools']:['/','/about','/data/gregg-costin.json','/schools'];
+ for(const path of c.livePaths?.[s.site]||defaultPaths){
   const url='https://'+s.domain+path,r=await fetch(url,{signal:AbortSignal.timeout(30000)}),body=await r.text();
   const qualifications=path==='/team'||path==='/about'||path==='/data/gregg-costin.json';
   const phrases=qualifications?['B.S. in Economics','B.A. in International Affairs','Part 107 Certified Drone Pilot']:[];

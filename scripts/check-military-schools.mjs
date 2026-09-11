@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,existsSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {findSchools,milesBetween} from '../public/school-assets/school-finder-core.js';
+import {schoolAudience,withSchoolAudience} from './school-audience-lib.mjs';
 
 const PMH='https://pensacolamilitaryhousing.com',GC='https://greggcostin.com';
 // Compare text contracts consistently across LF deploy files and CRLF checkouts.
@@ -72,8 +73,13 @@ check('Structured data preserve school facts and business identity while giving 
     }
   }
 });
-check('Editorial, academic facts, enrollment, comparison and source sections survive the mirror intact',()=>{
+check('Shared facts remain identical; reviewed pilot decisions belong to each audience',()=>{
   for(const route of paths){const p=pages.get(route);for(const id of ['school-summary','school-perspective','school-comparison','school-enrollment','similar-schools','school-guide-sources']){
+    if(schoolAudience.schools.some(s=>route==='/schools/'+s.slug)&&['school-perspective','school-enrollment'].includes(id)){
+      assert.notEqual(text(elementAtId(p.pmh,id)),text(elementAtId(p.gc,id)),route+': missing audience distinction');
+      for(const site of ['pmh','gc'])assert.equal(p[site],withSchoolAudience(p[site],route,site),route+': stale '+site+' guidance');
+      continue;
+    }
     assert.equal(text(elementAtId(p.pmh,id)),text(elementAtId(p.gc,id)),route+': '+id);
   }}
 });

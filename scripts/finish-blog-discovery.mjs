@@ -3,8 +3,8 @@ import {readFileSync,writeFileSync,readdirSync,existsSync} from 'node:fs';
 import {resolve} from 'node:path';import {pathToFileURL} from 'node:url';
 import {ROOT,SITES,strip} from './blog-lib.mjs';
 import {applyBlogInboundLinks} from './apply-blog-inbound-links.mjs';
-export function finishBlogDiscovery(site){
- const s=SITES[site],dir=ROOT+s.siteDir,posts=[];
+export function finishBlogDiscovery(site,{root=null}={}){
+ const s=SITES[site],dir=root||ROOT+s.siteDir,posts=[];
  for(const file of readdirSync(dir+'/blog').filter(f=>f.endsWith('.html'))){
   const html=readFileSync(dir+'/blog/'+file,'utf8');
   const url=html.match(/<link rel="canonical" href="([^"]+)"/)?.[1],title=strip(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1]||'');
@@ -18,8 +18,11 @@ export function finishBlogDiscovery(site){
  writeFileSync(full,re.test(old)?old.replace(re,()=>block):old.trimEnd()+'\n\n'+block+'\n');
  const plan=existsSync(ROOT+'content/blog/contextual-links.json')?JSON.parse(readFileSync(ROOT+'content/blog/contextual-links.json','utf8')):null;
  const dates=new Map(posts.map(p=>[p.url,p.date]));
- if(plan){applyBlogInboundLinks(site);for(const p of plan.links.filter(p=>p.site===site))dates.set(s.origin+'/'+p.hub,plan.reviewed);}
+ if(plan&&!root){applyBlogInboundLinks(site);for(const p of plan.links.filter(p=>p.site===site))dates.set(s.origin+'/'+p.hub,plan.reviewed);}
  const sm=dir+'/sitemap.xml';writeFileSync(sm,readFileSync(sm,'utf8').replace(/<url>[\s\S]*?<\/url>/g,item=>{const date=dates.get(item.match(/<loc>([^<]+)<\/loc>/)?.[1]);if(!date)return item;return /<lastmod>/.test(item)?item.replace(/<lastmod>[^<]+<\/lastmod>/,'<lastmod>'+date+'</lastmod>'):item.replace('</url>','<lastmod>'+date+'</lastmod></url>');}));
  return {site,publishedArticles:posts.length,contextualLinks:plan?.links.filter(p=>p.site===site).length||0};
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href)for(const s of ['gc','pmh'])console.log(JSON.stringify(finishBlogDiscovery(s)));
+if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href)for(const s of ['gc','pmh']){
+ const flag=process.argv.indexOf('--'+s+'-root');
+ console.log(JSON.stringify(finishBlogDiscovery(s,{root:flag<0?null:process.argv[flag+1]})));
+}

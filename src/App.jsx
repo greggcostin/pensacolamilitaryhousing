@@ -909,7 +909,7 @@ const AboutPage = ({ go }) => (
           <Eyebrow>Family Man</Eyebrow>
           <H2>{IDENTITY.military.personalPcsMoves} PCS moves. I get it.</H2>
           <Body>When I say I understand the stress of a PCS move, I mean it. My family and I have lived it: packing up, finding homes from overseas, navigating schools and neighborhoods sight-unseen. Now I channel that experience into making your transition as smooth as possible.</Body>
-          <Body>I am the preferred real estate agent for VeteranPCS, TIER 1 PCS, and the M.O.R.E. Network, three of the most respected military relocation organizations in the country. I'm also recognized as a Zillow Premier Agent in the top 0.8% of Pensacola-area Realtors with a perfect 5-star rating.</Body>
+          <Body>I work with VeteranPCS, TIER 1 PCS, and the M.O.R.E. Network to support military moves. My Zillow profile provides client review history. Separately, my reported Pensacola MLS standing was #34 among 4,100+ Realtors by sales volume and transactions as of August 1, 2026.</Body>
         </div>
       </div>
     </Section>
@@ -924,8 +924,8 @@ const AboutPage = ({ go }) => (
           { title: "Accredited Buyer's Representative (ABR®)", desc: "NAR advanced buyer-representation training: negotiation, market analysis, and fiduciary advocacy." },
           { title: "Seller Representative Specialist (SRS®)", desc: "NAR premier seller-representation certification covering pricing, marketing, and listing strategy." },
           { title: "Real Estate Negotiation Expert (RENE®)", desc: "NAR certification for advanced offer and counter-offer negotiation techniques across all transaction types." },
-          { title: "Forbes Global Properties · Rookie of the Year 2025", desc: "Recognized for outstanding transactions, sales volume, and market impact in first year." },
-          { title: "Zillow Premier Agent · Top 0.8%", desc: "Perfect 5-star rating. Recognized among the top-performing agents in the Pensacola metro area." },
+          { title: "2025 Rookie of the Year", desc: "Levin Rinke Realty / Forbes Global Properties brokerage recognition, as reported in my brokerage profile." },
+          { title: "Pensacola MLS standing", desc: "Owner-reported: #34 among 4,100+ Realtors by sales volume and transactions as of August 1, 2026. Zillow reviews are a separate source of client feedback." },
           { title: "Licensed FL + AL", desc: "Dual-licensed to serve military families across the Florida Panhandle and coastal Alabama markets." },
         ].map(c => (
           <div key={c.title} style={{ background: C.elevated, border: `1px solid ${C.hairline}`, padding: 28 }}>

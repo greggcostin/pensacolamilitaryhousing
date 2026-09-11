@@ -1,11 +1,11 @@
 {
   "version": 2,
   "slug": "what-moves-mortgage-rates",
-  "sessionDate": "2026-09-09",
+  "sessionDate": "2026-09-10",
   "reader": "Gulf Coast buyer or rental owner comparing a loan; secondary seller application",
   "decision": "Compare written financing offers and decide whether points, a rate lock and the total property budget fit the intended use.",
   "pillar": "financing-macro",
-  "changeReason": "Substantive full-catalog refresh adds an itemized ownership budget and connects financing choices to buyer and seller tools; all retained primary sources rechecked September 9.",
+  "changeReason": "GEO-06 source freshness: September 10 PMMS release replaces the expired survey reference; retain the approved photography, independent scenarios and existing canonical URL.",
   "sources": [
     {
       "id": "pmms",
@@ -13,8 +13,8 @@
       "title": "Primary Mortgage Market Survey",
       "url": "https://www.freddiemac.com/pmms",
       "primary": true,
-      "checkedAt": "2026-09-09",
-      "evidenceNote": "Opened the live survey: September 3, 2026 30-year 6.71%, prior week 6.66%. Read the Thursday-through-Wednesday methodology and borrower profile."
+      "checkedAt": "2026-09-10",
+      "evidenceNote": "Opened September 10 PMMS: 30-year 6.76%, prior September 3 6.71%; weekly conventional purchase application scope. National reference, not a lender quote."
     },
     {
       "id": "fed-spread",
@@ -22,7 +22,7 @@
       "title": "How Resilient Is Mortgage Credit Supply? FEDS 2021-048",
       "url": "https://www.federalreserve.gov/econres/feds/files/2021048pap.pdf",
       "primary": true,
-      "checkedAt": "2026-09-09",
+      "checkedAt": "2026-09-10",
       "evidenceNote": "Read PDF pages 8-9, section III.A: mortgage-Treasury spread equals primary-secondary spread plus MBS yield spread. Ten-year maturity is an imperfect duration benchmark; conclusions are researchers', not Board policy."
     },
     {
@@ -31,7 +31,7 @@
       "title": "Credit scores and mortgage pricing",
       "url": "https://www.consumerfinance.gov/ask-cfpb/does-my-credit-score-affect-my-ability-to-get-a-mortgage-loan-or-the-mortgage-rate-i-pay-en-319/",
       "primary": true,
-      "checkedAt": "2026-09-09",
+      "checkedAt": "2026-09-10",
       "evidenceNote": "Opened the consumer guide on credit report information, qualification and rate factors."
     },
     {
@@ -40,7 +40,7 @@
       "title": "Lender credits and discount points",
       "url": "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/",
       "primary": true,
-      "checkedAt": "2026-09-09",
+      "checkedAt": "2026-09-10",
       "evidenceNote": "Read points definition and Loan Estimate Section A. One point is one percent of principal, not a guaranteed percentage-point rate reduction; discount varies by lender/product/market."
     },
     {
@@ -49,7 +49,7 @@
       "title": "Mortgage rate locks",
       "url": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
       "primary": true,
-      "checkedAt": "2026-09-09",
+      "checkedAt": "2026-09-10",
       "evidenceNote": "Read typical 30/45/60 day periods, closing-window/application conditions, extension costs and changed-application exceptions."
     },
     {
@@ -58,7 +58,7 @@
       "title": "Loan Estimate explainer",
       "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "primary": true,
-      "checkedAt": "2026-09-09",
+      "checkedAt": "2026-09-10",
       "evidenceNote": "Read comparable-loan requirements, APR, payment/cash-to-close, lock status and Comparisons sections."
     },
     {
@@ -67,7 +67,7 @@
       "title": "Selling Guide B2-1.1-01, Occupancy Types",
       "url": "https://guide-selling.fanniemae.com/sel/b2-1.1-01/occupancy-types",
       "primary": true,
-      "checkedAt": "2026-09-09",
+      "checkedAt": "2026-09-10",
       "evidenceNote": "Read second-home and investment property definitions including personal occupancy, rental-income qualifying limitation, exclusive control and management restrictions."
     }
   ],
@@ -75,48 +75,48 @@
     {
       "id": "pmms-current",
       "kind": "fact",
-      "text": "6.71% average for a 30-year fixed mortgage as of September 3, 2026",
+      "text": "6.76% average for a 30-year fixed mortgage as of September 10, 2026",
       "sourceIds": [
         "pmms"
       ],
       "scope": "US national weekly conventional purchase mortgage survey; not a local or investor quote",
-      "asOf": "2026-09-03",
-      "expires": "2026-09-10",
+      "asOf": "2026-09-10",
+      "expires": "2026-09-17",
       "perishable": true,
       "loadBearing": true,
       "verification": "Independently opened Freddie Mac PMMS and checked the release date and 30-year field.",
-      "claim": "6.71% average for a 30-year fixed mortgage as of September 3, 2026",
+      "claim": "6.76% average for a 30-year fixed mortgage as of September 10, 2026",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "sourceUrl": "https://www.freddiemac.com/pmms",
       "locator": "Independently opened Freddie Mac PMMS and checked the release date and 30-year field.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
         "finding": "Independently opened Freddie Mac PMMS and checked the release date and 30-year field."
       }
     },
     {
       "id": "pmms-prior",
       "kind": "fact",
-      "text": "compared with 6.66% the previous week",
+      "text": "compared with 6.71% the previous week",
       "sourceIds": [
         "pmms"
       ],
-      "scope": "Prior comparable Freddie Mac PMMS 30-year series, August 27, 2026",
-      "asOf": "2026-08-27",
-      "expires": "2026-09-10",
+      "scope": "Prior comparable Freddie Mac PMMS 30-year series, September 3, 2026",
+      "asOf": "2026-09-03",
+      "expires": "2026-09-17",
       "perishable": true,
       "loadBearing": true,
       "verification": "Checked the prior-week value on the same PMMS release, not a news summary.",
-      "claim": "compared with 6.66% the previous week",
+      "claim": "compared with 6.71% the previous week",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "sourceUrl": "https://www.freddiemac.com/pmms",
       "locator": "Checked the prior-week value on the same PMMS release, not a news summary.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
         "finding": "Checked the prior-week value on the same PMMS release, not a news summary."
       }
     },
@@ -124,31 +124,31 @@
       "id": "rate-change",
       "kind": "calculation",
       "text": "0.05 percentage points, or five basis points",
-      "assumptions": "Same Freddie Mac series: 6.71% minus 6.66%.",
-      "method": "Subtract percentages: 6.71 - 6.66 = 0.05 percentage points; multiply by 100 for basis points.",
+      "assumptions": "Same Freddie Mac series: 6.76% minus 6.71%.",
+      "method": "Subtract percentages: 6.76 - 6.71 = 0.05 percentage points; multiply by 100 for basis points.",
       "loadBearing": true,
       "verification": "Recalculated change; removed unsupported comparison of weekly mortgage average and single-day Treasury yields.",
       "claim": "0.05 percentage points, or five basis points",
       "status": "verified",
-      "accessed": "2026-09-09",
-      "asOf": "2026-09-08",
+      "accessed": "2026-09-10",
+      "asOf": "2026-09-10",
       "sourceUrl": "https://www.freddiemac.com/pmms",
-      "locator": "Hypothetical or derived example in this article. Source URL supplies context only; actual inputs and arithmetic are recorded separately. Subtract percentages: 6.71 - 6.66 = 0.05 percentage points; multiply by 100 for basis points.",
+      "locator": "Hypothetical or derived example in this article. Source URL supplies context only; actual inputs and arithmetic are recorded separately. Subtract percentages: 6.76 - 6.71 = 0.05 percentage points; multiply by 100 for basis points.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
-        "finding": "Recalculated change; removed unsupported comparison of weekly mortgage average and single-day Treasury yields."
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
+        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
       },
       "calculation": {
         "operation": "difference",
         "inputs": [
-          6.71,
-          6.66
+          6.76,
+          6.71
         ],
         "result": 0.05,
         "units": "percentage points",
         "inputSources": [
-          "Freddie Mac PMMS current and prior weeks, checked September 8, 2026"
+          "Freddie Mac September 10, 2026 release and its prior-week comparison, checked September 10, 2026"
         ],
         "tolerance": 0.005
       }
@@ -166,12 +166,12 @@
       "verification": "Read the decomposition on PDF pages 8-9 and confirmed full mortgage-Treasury spread already includes intermediation.",
       "claim": "Adding a lender margin again after using that full difference would double-count part of the cost.",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "sourceUrl": "https://www.federalreserve.gov/econres/feds/files/2021048pap.pdf",
       "locator": "Read the decomposition on PDF pages 8-9 and confirmed full mortgage-Treasury spread already includes intermediation.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
         "finding": "Read the decomposition on PDF pages 8-9 and confirmed full mortgage-Treasury spread already includes intermediation."
       }
     },
@@ -185,14 +185,14 @@
       "verification": "Recomputed in Node with explicit assumptions and compared to independent amortization fixture.",
       "claim": "6.75% $2,594.39 Reference scenario",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "asOf": "2026-09-08",
       "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "locator": "Hypothetical or derived example in this article. Source URL supplies context only; actual inputs and arithmetic are recorded separately. P*r/(1-(1+r)^(-n)); r=annualPercent/1200; n=360. Middle result 2594.3923862728625, rounded 2594.39.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
-        "finding": "Recomputed in Node with explicit assumptions and compared to independent amortization fixture."
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
+        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
       },
       "calculation": {
         "operation": "amortization",
@@ -218,14 +218,14 @@
       "verification": "Node amortization calculation.",
       "claim": "6.25% $2,462.87 $131.52 less",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "asOf": "2026-09-08",
       "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "locator": "Hypothetical or derived example in this article. Source URL supplies context only; actual inputs and arithmetic are recorded separately. Payment 2462.868801705578, rounded 2462.87; displayed 2594.39 minus 2462.87 equals 131.52.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
-        "finding": "Node amortization calculation."
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
+        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
       },
       "calculation": {
         "operation": "amortization",
@@ -266,14 +266,14 @@
       "verification": "Node amortization calculation; differences use displayed cent-rounded payments.",
       "claim": "7.25% $2,728.71 $134.32 more",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "asOf": "2026-09-08",
       "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "locator": "Hypothetical or derived example in this article. Source URL supplies context only; actual inputs and arithmetic are recorded separately. Payment 2728.7051202247603, rounded 2728.71; displayed 2728.71 minus 2594.39 equals 134.32.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
-        "finding": "Node amortization calculation; differences use displayed cent-rounded payments."
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
+        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
       },
       "calculation": {
         "operation": "amortization",
@@ -318,12 +318,12 @@
       "verification": "Read definition and qualification on CFPB page.",
       "claim": "one point as one percent of the loan amount",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/",
       "locator": "Read definition and qualification on CFPB page.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
         "finding": "Read definition and qualification on CFPB page."
       }
     },
@@ -337,14 +337,14 @@
       "verification": "Recomputed division and first whole month exceeding upfront cost; caveats visible.",
       "claim": "$4,000 divided by $65 equals about 61.5 months",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "asOf": "2026-09-08",
       "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/",
       "locator": "Hypothetical or derived example in this article. Source URL supplies context only; actual inputs and arithmetic are recorded separately. 4000/65=61.5384615 months; ceiling=62 payment months. Ignores amortization balance differences, tax and opportunity cost.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
-        "finding": "Recomputed division and first whole month exceeding upfront cost; caveats visible."
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
+        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
       },
       "calculation": {
         "operation": "quotient",
@@ -373,12 +373,12 @@
       "verification": "Read CFPB period examples and change/expiration exceptions.",
       "claim": "rate locks commonly run for 30, 45 or 60 days",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
       "locator": "Read CFPB period examples and change/expiration exceptions.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
         "finding": "Read CFPB period examples and change/expiration exceptions."
       }
     },
@@ -396,12 +396,12 @@
       "verification": "Read second-home rules including control and rental-income footnote. No blanket claim that occasional renting automatically disqualifies a second home.",
       "claim": "Fannie Mae's occupancy rules distinguish second homes from investment properties.",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "sourceUrl": "https://guide-selling.fanniemae.com/sel/b2-1.1-01/occupancy-types",
       "locator": "Read second-home rules including control and rental-income footnote. No blanket claim that occasional renting automatically disqualifies a second home.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
         "finding": "Read second-home rules including control and rental-income footnote. No blanket claim that occasional renting automatically disqualifies a second home."
       }
     },
@@ -411,7 +411,7 @@
       "text": "Total assumed monthly budget $3,844.39",
       "claim": "Total assumed monthly budget $3,844.39",
       "status": "verified",
-      "accessed": "2026-09-09",
+      "accessed": "2026-09-10",
       "asOf": "2026-09-09",
       "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "locator": "Article illustration; source supplies context, not the invented inputs. sum(2594.39, 400, 250, 75, 100, 200, 225) = 3844.39 USD per month.",
@@ -420,9 +420,9 @@
       "method": "sum(2594.39, 400, 250, 75, 100, 200, 225) = 3844.39 USD per month.",
       "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
       "independentCheck": {
-        "reviewer": "Codex gpt-6-astra max",
-        "date": "2026-09-09",
-        "finding": "sum(2594.39, 400, 250, 75, 100, 200, 225) = 3844.39 USD per month."
+        "reviewer": "Codex GPT-6",
+        "date": "2026-09-10",
+        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
       },
       "calculation": {
         "operation": "sum",
@@ -451,7 +451,7 @@
       {
         "url": "https://www.freddiemac.com/pmms",
         "title": "Primary Mortgage Market Survey",
-        "observation": "Opened the live survey: September 3, 2026 30-year 6.71%, prior week 6.66%. Read the Thursday-through-Wednesday methodology and borrower profile."
+        "observation": "Opened the live survey: September 10, 2026 30-year 6.76%, prior week 6.71%. Read the Thursday-through-Wednesday methodology and borrower profile."
       },
       {
         "url": "https://www.federalreserve.gov/econres/feds/files/2021048pap.pdf",
@@ -575,18 +575,17 @@
     "site": "gc"
   },
   "models": {
-    "research": "codex / gpt-6-astra / max",
-    "write": "codex / gpt-6-astra / max"
+    "research": "Codex / GPT-6 / in-session",
+    "write": "Codex / GPT-6 / in-session"
   },
   "uncertainFacts": [],
   "readerTask": "Compare written financing offers and decide whether points, a rate lock and the total property budget fit the intended use.",
   "originalValue": "Connect national rate reporting to a real comparison method: explain what a spread includes, avoid mismatched survey/daily claims, provide reproducible payment and points math, show what changes for sellers and rental owners, and require property-specific carrying costs.",
   "review": {
     "provider": "codex",
-    "model": "gpt-6-astra",
-    "effort": "max",
-    "checkedAt": "2026-09-09",
-    "selectionReason": "User explicitly requested the full catalog upgrade and approved publication.",
+    "model": "GPT-6",
+    "checkedAt": "2026-09-10",
+    "selectionReason": "GEO-06 source freshness: September 10 PMMS release replaces the expired survey reference; retain the approved photography, independent scenarios and existing canonical URL.",
     "checks": {
       "facts": true,
       "calculations": true,
@@ -595,13 +594,15 @@
       "sources": true,
       "counterarguments": true
     },
-    "notes": "Reopened all seven primary sources and read the Fed research decomposition. Recomputed three payment scenarios, rounded differences, point break-even and the new $3844.39 full ownership illustration. Reviewed all body text, FAQs and occupancy limits. No fabricated client experience, lender quote or future refinance. Read the final prose and image captions for plain language and source scope. Agent editorial review only; no invented specialist or personal Gregg fact-check.",
-    "contentHash": "f03e2b1c5061fb70212ffa3319c0a4de6d98958991c1aaf1317c910c348905f2",
-    "evidenceHash": "259df54341399889c67cbb1dc859dd4b6593162955e463ebfb5740c15bec43ea",
-    "hashNormalization": {
-      "previousHash": "3d0e2944a935c9159dcf4678c03f5af75ac6a5ba6cb167dc3d55e98480dc1b60",
-      "format": "LF",
-      "reason": "The original sealed draft used mixed CRLF/LF. Its original hash was verified and its metadata and normalized text are identical to the maintained source. This changes the hash representation only; the editorial review and its date are preserved."
+    "notes": "Reopened every cited primary source. Checked PMMS current and prior weeks, Fed calendar and policy where applicable, CFPB credit/points/lock/Loan Estimate guidance and Fannie Mae occupancy limits. Read the complete body and FAQs, retained hypothetical examples and waiting/holding-period caveats, and recomputed all recorded calculations. Approved archival imagery and captions retained under the owner preservation instruction. This is an agent review, not a lender, legal or Gregg sign-off.",
+    "contentHash": "0c94dd1bc1343acf9589276fd1f7d18314a8920f8a7851bcd88b737674e742d9",
+    "evidenceHash": "08e439760a13ac425b61610a251aed26dccd6763076b9b279fcc11bb63f6f0ed"
+  },
+  "reviewHistory": [
+    {
+      "checkedAt": "2026-09-09",
+      "contentHash": "f03e2b1c5061fb70212ffa3319c0a4de6d98958991c1aaf1317c910c348905f2",
+      "evidenceHash": "259df54341399889c67cbb1dc859dd4b6593162955e463ebfb5740c15bec43ea"
     }
-  }
+  ]
 }

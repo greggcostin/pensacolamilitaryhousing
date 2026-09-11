@@ -33,8 +33,11 @@ if (!TOKEN) {
 // All 41 owned short domains and their canonical 301 targets.
 // Direct redirects only — no chains — so PageRank consolidates cleanly.
 // Source-of-truth in scripts/domain-funnel.mjs.
-import { DOMAIN_MAP, CANONICAL } from "./domain-funnel.mjs";
+import { DOMAIN_MAP, CANONICAL, PRIMARY_DOMAINS } from "./domain-funnel.mjs";
 const DOMAINS = DOMAIN_MAP.map(([d, path]) => [d, `${CANONICAL}${path}`]);
+if (DOMAINS.some(([domain]) => PRIMARY_DOMAINS.includes(domain))) {
+  throw new Error("Refusing to redirect either primary website");
+}
 
 async function cf(method, path, body, { allow404 = false } = {}) {
   const r = await fetch(`${CF_API}${path}`, {

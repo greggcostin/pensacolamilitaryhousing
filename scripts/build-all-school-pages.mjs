@@ -3,6 +3,7 @@ import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 import {buildPage,breadcrumbs,webPage,makeOgCard,gate} from './civilian-page-lib.mjs';
 import {profileContext,schoolProfileMarkup,schoolFormat,escapeHtml as e} from './school-profile-lib.mjs';
 import {loadSchoolInsights} from './school-insight-lib.mjs';
+import {withSchoolAudience} from './school-audience-lib.mjs';
 const ctx=profileContext(),legacy=loadSchoolInsights({required:true}),date='2026-09-06';
 const all=[...new Map(ctx.directory.schools.map(s=>[s.reportUrl,s])).values()];
 // Use the first directory identity for the primary presentation of grouped records.
@@ -38,7 +39,7 @@ for(const s of schools){
  if(!s.virtual&&Number.isFinite(s.lat)&&Number.isFinite(s.lng)){html=html.replace('content="30.4213;-87.2169"',`content="${s.lat};${s.lng}"`).replace('content="30.4213, -87.2169"',`content="${s.lat}, ${s.lng}"`);}
  else html=html.replace(/<meta name="(?:geo.position|ICBM)"[^>]*>\s*/g,'');
  const errors=gate({title,desc,minWords:450},html);if(errors.length)throw Error(page+': '+errors.join('; '));
- writeFileSync('civilian-site'+page+'.html',html.replace(/[ \t]+(?=\r?$)/gm,'').replace(/(?:\r?\n)+$/,'\n'));
+ writeFileSync('civilian-site'+page+'.html',withSchoolAudience(html,page,'gc').replace(/[ \t]+(?=\r?$)/gm,'').replace(/(?:\r?\n)+$/,'\n'));
  if(!existsSync(`civilian-site/og/${ogSlug}.png`)){
   const words=s.name.split(/\s+/),lines=[];let line='';for(const word of words){if((line+' '+word).length>24&&line){lines.push(line);line='';}line+=(line?' ':'')+word;}if(line)lines.push(line);
   await makeOgCard(ogSlug,lines.slice(0,3),`${s.city}, ${s.state} | School guide`);

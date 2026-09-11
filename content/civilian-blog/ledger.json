@@ -205,7 +205,10 @@
      "clicksPrior28": null,
      "impressions90": null,
      "clicks90": null,
-     "position90": null
+     "position90": null,
+     "property": "https://greggcostin.com",
+     "status": "not-observed",
+     "note": "no Bing rows for this URL; coverage unknown"
     }
    ],
    "legacyMetrics": "no GSC/Bing data available in-session",
@@ -542,7 +545,10 @@
      "clicksPrior28": null,
      "impressions90": null,
      "clicks90": null,
-     "position90": null
+     "position90": null,
+     "property": "https://greggcostin.com",
+     "status": "not-observed",
+     "note": "no Bing rows for this URL; coverage unknown"
     }
    ],
    "legacyMetrics": "no GSC/Bing data available in-session",
@@ -810,7 +816,10 @@
      "clicksPrior28": null,
      "impressions90": null,
      "clicks90": null,
-     "position90": null
+     "position90": null,
+     "property": "https://greggcostin.com",
+     "status": "not-observed",
+     "note": "no Bing rows for this URL; coverage unknown"
     }
    ],
    "refreshHistory": [
@@ -1103,7 +1112,10 @@
      "clicksPrior28": null,
      "impressions90": null,
      "clicks90": null,
-     "position90": null
+     "position90": null,
+     "property": "https://greggcostin.com",
+     "status": "not-observed",
+     "note": "no Bing rows for this URL; coverage unknown"
     }
    ],
    "refreshHistory": [
@@ -1394,7 +1406,10 @@
      "clicksPrior28": null,
      "impressions90": null,
      "clicks90": null,
-     "position90": null
+     "position90": null,
+     "property": "https://greggcostin.com",
+     "status": "not-observed",
+     "note": "no Bing rows for this URL; coverage unknown"
     }
    ],
    "refreshHistory": [
@@ -1518,6 +1533,33 @@
     "/sell",
     "/resources/buyer-transaction-timeline",
     "/resources/condo-due-diligence"
+   ],
+   "search": [
+    {
+     "slug": "home-appraisals-explained",
+     "url": "/blog/home-appraisals-explained",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-04.csv",
+     "date": "2026-09-04",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": null,
+      "end": null,
+      "searchType": null,
+      "dimensions": [
+       "page"
+      ],
+      "filters": null,
+      "complete": false,
+      "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+    }
    ]
   }
  ],

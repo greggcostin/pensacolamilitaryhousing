@@ -1,4 +1,4 @@
-// Master domain map for the 40-domain 301 funnel into pensacolamilitaryhousing.com.
+// Legacy short-domain redirects. The two primary sites are separate destinations.
 //
 // All 40 owned short domains map to the most semantically-relevant canonical
 // target on pensacolamilitaryhousing.com. Each redirect goes DIRECTLY to its
@@ -10,6 +10,7 @@
 //   - llms.txt and llms-full.txt entity-disambiguation sections
 
 export const CANONICAL = "https://pensacolamilitaryhousing.com";
+export const PRIMARY_DOMAINS = ["greggcostin.com", "pensacolamilitaryhousing.com"];
 
 export const DOMAIN_MAP = [
   // ── Brand / Personal — funnel to homepage (entity hub) ──
@@ -17,7 +18,6 @@ export const DOMAIN_MAP = [
   ["costinteamrealtors.com",               "/"],
   ["thecostinteam.com",                    "/"],
   ["thegreggcostinteam.com",               "/"],
-  ["greggcostin.com",                      "/"],
   ["greggcostin.net",                      "/"],
   ["greggcostinrealtor.com",               "/"],
 
@@ -66,7 +66,10 @@ export const DOMAIN_MAP = [
   ["orangebeachmilitaryhousing.com",       "/communities/perdido-key"],
 ];
 
-export const ALL_OWNED_DOMAINS = ["pensacolamilitaryhousing.com", ...DOMAIN_MAP.map(([d]) => d)];
+if (DOMAIN_MAP.some(([domain]) => PRIMARY_DOMAINS.includes(domain))) {
+  throw new Error("A primary site must never be included in the short-domain redirect funnel");
+}
+export const ALL_OWNED_DOMAINS = [...PRIMARY_DOMAINS, ...DOMAIN_MAP.map(([d]) => d)];
 
 // Full https:// URLs for sameAs JSON-LD arrays (entity-graph SEO)
 export const SAMEAS_DOMAIN_URLS = DOMAIN_MAP.map(([d]) => `https://${d}`);

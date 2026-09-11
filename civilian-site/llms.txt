@@ -12,10 +12,11 @@
 
 
 
+
 <!-- SCHOOL_RESOURCE_START -->
 ## School Finder: regional school data and map
 - [Pensacola and Gulf Coast School Finder](https://greggcostin.com/schools): 274 source records, 271 school guides, 208 public guides and 63 private guides across Escambia, Santa Rosa, Okaloosa and Baldwin counties.
-- [Sources and methodology](https://greggcostin.com/schools#school-data-methodology): NCES public directory 2024-25; private directory and affiliation data 2023-24; 119 Florida grades 2025-26; 46 Alabama grades 2024-25. Data compilation 2026-09-06. Page review 2026-09-08.
+- [Sources and methodology](https://greggcostin.com/schools#school-data-methodology): NCES public directory 2024-25; private directory and affiliation data 2023-24; 119 Florida grades 2025-26; 46 Alabama grades 2024-25. Data compilation 2026-09-11. Page review 2026-09-10.
 - [School data JSON](https://greggcostin.com/data/school-finder.json) and [CSV](https://greggcostin.com/data/school-finder.csv): Source identifiers, dated facts, original source URLs and missing values.
 - [School finder questions](https://greggcostin.com/schools#school-finder-faq): Attendance boundaries, state-grade comparability, private/Christian school types, distances and corrections.
 The civilian edition connects school research with local home searches. The two editions use the same corpus and retain separate page URLs. Map locations are not attendance boundaries; driving estimates are not live-traffic forecasts. Private-school affiliation is not an academic grade. State grades should not be compared across states. Counts do not establish complete current coverage, a school ranking or market exclusivity.

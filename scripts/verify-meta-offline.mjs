@@ -8,8 +8,9 @@ import {homedir} from 'node:os';
 import {json,save,sha} from './isolated-release-lib.mjs';
 const require=createRequire(import.meta.url);let pw;
 try{pw=require('playwright');}catch{pw=require(join(homedir(),'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'));}
-const baseline=json('content/reviews/automation.json').baselineRoot;
-const out='docs/growth-execution-2026-09-08/meta/browser-verification.json';
+const arg=k=>process.argv.includes(k)?process.argv[process.argv.indexOf(k)+1]:null;
+const baseline=arg('--baseline-root')||json('content/reviews/automation.json').baselineRoot;
+const out=arg('--out')||'docs/growth-execution-2026-09-08/meta/browser-verification.json';
 const browser=await pw.chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
 const checks=[];
 const receipt={success:true,accepted:true,duplicate:false,receiptId:'ac8c31f1-4e18-4603-a6fc-114b36c11538',captureStatus:'crm_accepted'};

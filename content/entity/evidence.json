@@ -40,11 +40,72 @@
     "reviewBy": "2026-12-07"
   },
   "claims": [
-    {"fields": ["person.positioning"], "status": "owner_asserted", "source": "User instruction to retain the #1 military relocation statement", "checkedOn": "2026-09-07", "nextAction": "Attach the ranking definition, period and supporting production evidence when available; keep the existing statement."},
-    {"fields": ["person.military", "person.alumniOf"], "status": "owner_biography", "source": "Existing About page and owner-provided biography", "nextAction": "Maintain consistent biography; do not describe military service as independently verified by a licensing registry."},
-    {"fields": ["person.award"], "status": "existing_owner_claims", "source": "Existing shared entity record and public biography", "nextAction": "Attach dated award and MLS/leaderboard evidence with exact denominator and period before expanding these claims."},
-    {"fields": ["person.honorificSuffix", "person.credentials[2:]"], "status": "brokerage_profile_corroborated", "source": "https://greggc.levinrinkerealty.com/", "checkedOn": "2026-09-07", "nextAction": "Keep MRP, ABR, SRS, RENE and FMS; issuer directories or certificates remain the stronger supporting record."},
-    {"fields": ["team.openingHoursSpecification", "nap.contactHours"], "status": "owner_confirmed", "source": "User instruction: keep Google Business Profile at 24 hours; actual contact hours are 6 a.m. to midnight Central, daily", "checkedOn": "2026-09-07", "nextAction": "Keep business-profile availability and personal contact hours distinct. No external profile edit is required."},
-    {"fields": ["person.sameAs", "team.sameAs"], "status": "partial_review", "source": "Current public brokerage, MLS and real estate directory profiles", "checkedOn": "2026-09-07", "nextAction": "Realtor.com URL corrected and MLS profile added. Complete social-handle and directory routing review in R20; do not replace legitimate tracking numbers automatically."}
+    {
+      "fields": [
+        "person.positioning"
+      ],
+      "status": "owner_asserted",
+      "source": "User instruction to retain the #1 military relocation statement",
+      "checkedOn": "2026-09-07",
+      "nextAction": "Attach the ranking definition, period and supporting production evidence when available; keep the existing statement."
+    },
+    {
+      "fields": [
+        "person.military",
+        "person.alumniOf"
+      ],
+      "status": "owner_biography",
+      "source": "Existing About page and owner-provided biography",
+      "nextAction": "Maintain consistent biography; do not describe military service as independently verified by a licensing registry."
+    },
+    {
+      "fields": [
+        "person.award"
+      ],
+      "status": "existing_owner_claims",
+      "source": "Existing shared entity record and public biography",
+      "nextAction": "Attach dated award and MLS/leaderboard evidence with exact denominator and period before expanding these claims."
+    },
+    {
+      "fields": [
+        "person.honorificSuffix",
+        "person.credentials[2:7]"
+      ],
+      "status": "brokerage_profile_corroborated",
+      "source": "https://greggc.levinrinkerealty.com/",
+      "checkedOn": "2026-09-07",
+      "nextAction": "Keep MRP, ABR, SRS, RENE and FMS; issuer directories or certificates remain the stronger supporting record."
+    },
+    {
+      "fields": [
+        "team.openingHoursSpecification",
+        "nap.contactHours"
+      ],
+      "status": "owner_confirmed",
+      "source": "User instruction: keep Google Business Profile at 24 hours; actual contact hours are 6 a.m. to midnight Central, daily",
+      "checkedOn": "2026-09-07",
+      "nextAction": "Keep business-profile availability and personal contact hours distinct. No external profile edit is required."
+    },
+    {
+      "fields": [
+        "person.sameAs",
+        "team.sameAs"
+      ],
+      "status": "partial_review",
+      "source": "Current public brokerage, MLS and real estate directory profiles",
+      "checkedOn": "2026-09-07",
+      "nextAction": "Realtor.com URL corrected and MLS profile added. Complete social-handle and directory routing review in R20; do not replace legitimate tracking numbers automatically."
+    },
+    {
+      "fields": [
+        "person.credentials[name=Bachelor of Science in Economics]",
+        "person.credentials[name=Bachelor of Arts in International Affairs]",
+        "person.credentials[name=FAA Part 107 Certified Drone Pilot]"
+      ],
+      "status": "owner_confirmed",
+      "source": "Gregg Costin, direct September 9 owner response; reaffirmed in September 10 execution instruction",
+      "checkedOn": "2026-09-09",
+      "scope": "Exact degree majors, university and Part 107 wording. No graduation dates, certificate number or currency date established."
+    }
   ]
 }

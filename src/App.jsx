@@ -3,6 +3,7 @@ import { BAH_DATA } from "./bahData.js";
 import { COMMUNITY_LINKS } from "./communitiesData.js";
 import { PCS_HERO, PCS_DECISIONS } from "./coastIntentData.js";
 import { IDENTITY } from "./entityData.js";
+import { BIOGRAPHY } from "./biography.js";
 import { professionalProfileHtml } from "./professionalProfile.js";
 import { syncRouteSchema } from "./routeSchema.js";
 import { INSTALLATIONS, NEIGHBORHOOD_ROWS, PCS_CHECKLIST, FL_BENEFITS, PCS_FAQS } from "./pcsGuideData.js";
@@ -842,10 +843,10 @@ const AboutPage = ({ go }) => (
         <div>
           <Eyebrow>About Gregg Costin</Eyebrow>
           <h1 style={{ fontFamily: SF, fontWeight: 500, fontSize: "clamp(36px,4vw,56px)", lineHeight: 1.05, color: "#fff", margin: "0 0 24px" }}>
-            From the flight deck to your <span style={{ color: C.gold, fontStyle: "italic" }}>front door.</span>
+            {BIOGRAPHY.headingStart}<span style={{ color: C.gold, fontStyle: "italic" }}>{BIOGRAPHY.headingEnd}</span>
           </h1>
           <p style={{ fontSize: 17, lineHeight: 1.75, color: C.muted, fontWeight: 300, maxWidth: 540 }}>
-            I completed a full USAF career, starting as a prior-enlisted Staff Sergeant (E-5) and retiring as a Captain (O-3) serving as a Combat Systems Officer on the E-3 AWACS. Along the way I completed 11 PCS moves and multiple combat deployments. That experience is the foundation of everything I bring to real estate.
+            {BIOGRAPHY.militaryIntro}
           </p>
         </div>
         <div className="about-hero-right" style={{ display: "flex", gap: 16, alignItems: "stretch" }}>
@@ -890,8 +891,9 @@ const AboutPage = ({ go }) => (
       <Body>When I bought my very first home early in my career, I was completely burned by a horrible agent. The experience left such a deep mark on me that I made a promise right then and there: I would self-educate to the absolute highest level so I would never have to rely on another real estate agent again. As I bought and sold properties across the entire United States during every military PCS move, I mastered the process from the ground up. I have experienced firsthand what it's like to have a terrible agent, which means I know exactly what it takes to be an exceptional one.</Body>
       <Body>My promise to you as a client is simple: to be better than anyone else out there in the local market. I bring that same relentless drive and determination to your transaction so you can completely avoid the pitfalls and mistakes I once faced. I aspire to be a cut above anyone else you come in contact with, delivering the absolute best in customer service, market knowledge, expertise, and fierce negotiation skills.</Body>
       <H2>Forged by Military Discipline</H2>
+      <Body>{BIOGRAPHY.qualifications}</Body>
       <Body>That standard of excellence is rooted deeply in my military background. Over the course of my career in the United States Air Force, I evolved from hands-on technical expertise to high-level strategic planning.</Body>
-      <Body>I began at the tip of the spear in nuclear deterrence as a 2M0 cruise missile technician, ensuring the readiness of payloads on the B-52 Stratofortress. After earning a prestigious double B.S. and B.A. degree from the University of Tampa, I commissioned as an officer and took to the skies. As a Navigator and Combat Systems Officer (CSO) aboard the E-3 AWACS, I managed complex tactical routing and electronic warfare across multiple deployments to combat zones including Iraq, Afghanistan, and Syria, as well as strategic hubs across the Middle East and the Pacific.</Body>
+      <Body>I began at the tip of the spear in nuclear deterrence as a 2M0 cruise missile technician, ensuring the readiness of payloads on the B-52 Stratofortress. After completing my studies at the University of Tampa, I commissioned as an officer and took to the skies. As a Navigator and Combat Systems Officer (CSO) aboard the E-3 AWACS, I managed complex tactical routing and electronic warfare across multiple deployments to combat zones including Iraq, Afghanistan, and Syria, as well as strategic hubs across the Middle East and the Pacific.</Body>
       <Body>My career culminated in the senior echelons of military strategy as the Chief of Integrated Air and Missile Defense (IAMD) Plans for CENTCOM A5, where I architected theater-wide defense strategies to protect our forward-deployed forces.</Body>
       <H2>The Gregg Costin Team Promise</H2>
       <Body>Today, I combine the precision, strategic planning, and unwavering discipline of a military war planner with my hard-earned real estate expertise. When you work with me, you aren't just getting an agent. You are getting an aggressively educated advocate who will fight for your best interests every single step of the way.</Body>

@@ -19,6 +19,98 @@ export const IDENTITY = {
     "yearsOfService": 20
   },
   "positioning": "Pensacola's #1 military relocation REALTOR®",
+  "credentials": [
+    {
+      "name": "Florida Real Estate Sales Associate License",
+      "category": "license",
+      "by": {
+        "@type": "GovernmentOrganization",
+        "name": "Florida Department of Business and Professional Regulation",
+        "url": "https://www.myfloridalicense.com/"
+      },
+      "identifier": "SL3630964",
+      "url": "https://www.myfloridalicense.com/portalsearches/VerifyLicensee/LicenseDetail?ID=AC5740A2FFB1E506A82D86E377ACE3EB"
+    },
+    {
+      "name": "Alabama Real Estate Salesperson License",
+      "category": "license",
+      "by": {
+        "@type": "GovernmentOrganization",
+        "name": "Alabama Real Estate Commission",
+        "url": "https://arec.alabama.gov/"
+      },
+      "identifier": "000171694-0",
+      "url": "https://arec.alabama.gov/apps/LicenseSearch/Home/Details/163221"
+    },
+    {
+      "name": "Military Relocation Professional (MRP)",
+      "category": "certification",
+      "by": {
+        "@type": "Organization",
+        "name": "National Association of Realtors"
+      }
+    },
+    {
+      "name": "Accredited Buyer's Representative (ABR)",
+      "category": "certification",
+      "by": {
+        "@type": "Organization",
+        "name": "National Association of Realtors"
+      }
+    },
+    {
+      "name": "Seller Representative Specialist (SRS)",
+      "category": "certification",
+      "by": {
+        "@type": "Organization",
+        "name": "National Association of Realtors"
+      }
+    },
+    {
+      "name": "Real Estate Negotiation Expert (RENE)",
+      "category": "certification",
+      "by": {
+        "@type": "Organization",
+        "name": "National Association of Realtors"
+      }
+    },
+    {
+      "name": "Florida Military Specialist (FMS)",
+      "category": "certification",
+      "by": {
+        "@type": "Organization",
+        "name": "Florida Realtors"
+      }
+    },
+    {
+      "name": "Bachelor of Science in Economics",
+      "category": "degree",
+      "by": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Tampa"
+      },
+      "shortName": "B.S. in Economics"
+    },
+    {
+      "name": "Bachelor of Arts in International Affairs",
+      "category": "degree",
+      "by": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Tampa"
+      },
+      "shortName": "B.A. in International Affairs"
+    },
+    {
+      "name": "FAA Part 107 Certified Drone Pilot",
+      "category": "certification",
+      "by": {
+        "@type": "GovernmentOrganization",
+        "name": "Federal Aviation Administration",
+        "url": "https://www.faa.gov/"
+      },
+      "shortName": "Part 107 Certified Drone Pilot"
+    }
+  ],
   "brokerage": {
     "name": "Levin Rinke Realty",
     "url": "https://www.levinrinkerealty.com/"

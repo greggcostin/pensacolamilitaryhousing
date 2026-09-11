@@ -20,7 +20,15 @@
       "opens": "06:00",
       "closes": "00:00",
       "timeZone": "America/Chicago",
-      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ]
     },
     "streetAddress": "220 W Garden St, Suite 125",
     "addressLocality": "Pensacola",
@@ -58,7 +66,7 @@
     "alternateName": "Gregg Costin, Realtor",
     "honorificSuffix": "MRP, ABR, SRS, RENE, FMS",
     "jobTitle": "Realtor",
-    "description": "Realtor with Levin Rinke Realty, licensed in Florida and Alabama, leading The Costin Team for buyers and sellers across Pensacola, the Florida Panhandle and coastal Alabama, where he is a top-producing Baldwin County agent for Gulf Shores and Orange Beach. Retired USAF Captain and E-3 AWACS Combat Systems Officer with 20 years of service and 11 PCS moves, and a military relocation, VA loan and PCS specialist for NAS Pensacola, Corry Station, NAS Whiting Field, Eglin AFB and Hurlburt Field.",
+    "description": "Realtor with Levin Rinke Realty, licensed in Florida and Alabama, leading The Costin Team for buyers and sellers across Pensacola, the Florida Panhandle and coastal Alabama, where he is a top-producing Baldwin County agent for Gulf Shores and Orange Beach. Retired USAF Captain and E-3 AWACS Combat Systems Officer with 20 years of service and 11 PCS moves, and a military relocation, VA loan and PCS specialist for NAS Pensacola, Corry Station, NAS Whiting Field, Eglin AFB and Hurlburt Field. Gregg holds a B.S. in Economics and a B.A. in International Affairs from the University of Tampa and is a Part 107 Certified Drone Pilot.",
     "shortDescription": "Realtor with Levin Rinke Realty, licensed in Florida and Alabama; retired USAF Combat Systems Officer; serves Pensacola, the Florida Panhandle and Alabama's Gulf Shores and Orange Beach.",
     "url": "https://greggcostin.com/team",
     "award": [
@@ -155,6 +163,34 @@
           "@type": "Organization",
           "name": "Florida Realtors"
         }
+      },
+      {
+        "name": "Bachelor of Science in Economics",
+        "category": "degree",
+        "by": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Tampa"
+        },
+        "shortName": "B.S. in Economics"
+      },
+      {
+        "name": "Bachelor of Arts in International Affairs",
+        "category": "degree",
+        "by": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Tampa"
+        },
+        "shortName": "B.A. in International Affairs"
+      },
+      {
+        "name": "FAA Part 107 Certified Drone Pilot",
+        "category": "certification",
+        "by": {
+          "@type": "GovernmentOrganization",
+          "name": "Federal Aviation Administration",
+          "url": "https://www.faa.gov/"
+        },
+        "shortName": "Part 107 Certified Drone Pilot"
       }
     ],
     "knowsAbout": [

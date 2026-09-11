@@ -4,9 +4,13 @@
 // block. Rendered by scripts/postbuild-spa-routes.mjs into dist/<file>.html. Plain data, no JSX.
 // Keep facts in sync with src/App.jsx (AboutPage, ContactPage, LoanCalculator, NeighborhoodsPage).
 import { IDENTITY as I } from './entityData.js';
+import { BIOGRAPHY } from './biography.js';
 
 export const ROUTE_SECTIONS = {
   about: [
+    { h2: "Education and relocation experience", text: [BIOGRAPHY.qualifications, BIOGRAPHY.militaryPurpose,
+      "PensacolaMilitaryHousing.com focuses on military relocation resources. Gregg's primary professional website, GreggCostin.com, serves buyers and sellers throughout Pensacola, the Emerald Coast and coastal Alabama.",
+    ] },
     { h2: "My Story: From Global Strategy to Local Real Estate Excellence", text: [
       "I completed a full U.S. Air Force career, starting as a prior-enlisted Staff Sergeant and retiring as a Captain and E-3 AWACS Combat Systems Officer. Along the way my family and I made 11 PCS moves, so I know what it is like to house-hunt from a different time zone, sign on a home you have seen only on video, and report for duty two days after the moving truck leaves.",
       `Today I am a Florida- and Alabama-licensed Realtor with ${I.brokerage.name} at ${I.addressLine}. Military families are the reason this site exists: every guide, calculator and community page here is written for someone holding orders to NAS Pensacola, Corry Station, Saufley Field, NAS Whiting Field, Hurlburt Field, Eglin AFB or Duke Field.`,

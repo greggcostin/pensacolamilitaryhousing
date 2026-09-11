@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "domain": "https://greggcostin.com",
+  "purpose": "Named civilian discovery cohort from the September 9 independent GEO audit",
+  "paths": ["/", "/team", "/buy", "/sell", "/neighborhoods", "/neighborhoods/perdido-key", "/neighborhoods/gulf-breeze", "/neighborhoods/navarre", "/gulf-shores-orange-beach", "/mortgage-calculators"],
+  "outcomes": ["live eligibility", "declared canonical", "Google-selected canonical", "sitemap discovery", "indexing status", "submission acceptance", "search impressions and clicks", "AI visibility", "accepted inquiries"],
+  "policy": "Outcomes are separate. HTTP success and submission acceptance do not establish indexing or ranking. Reinspect after substantive changes and normal provider processing; do not repeatedly resubmit unchanged pages."
+}

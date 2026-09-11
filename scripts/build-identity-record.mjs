@@ -17,7 +17,7 @@ const licenses=E.person.credentials.filter(c=>c.category==='license').map(c=>{
 if(failures.length)throw Error(failures.join('\n'));
 const data={
  ids:E.ids,name:E.person.name,suffix:E.person.honorificSuffix,jobTitle:E.person.jobTitle,
- shortBio:E.person.shortDescription,military:E.person.military,positioning:E.person.positioning,
+ shortBio:E.person.shortDescription,military:E.person.military,positioning:E.person.positioning,credentials:E.person.credentials,
  brokerage:E.brokerage,telephone:E.nap.telephone,phoneDisplay:E.nap.telephone.replace(/^\+1-(\d{3})-(\d{3})-(\d{4})$/,'($1) $2-$3'),email:E.nap.email,
  contactHours:E.nap.contactHours,businessProfileHours:E.team.openingHoursSpecification,
  address:{streetAddress:E.nap.streetAddress,addressLocality:E.nap.addressLocality,addressRegion:E.nap.addressRegion,postalCode:E.nap.postalCode,addressCountry:'US'},

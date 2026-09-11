@@ -73,7 +73,7 @@ try{
    await trigger.click();
   };
   assert.equal(await trigger.count(),1,'One civilian header search control');
-  assert.equal(await page.locator('.gc-calculator').getAttribute('href'),'https://pensacolamilitaryhousing.com/mortgage-calculators');
+  assert.equal(await page.locator('.gc-calculator').getAttribute('href'),'/mortgage-calculators');
   await openSearch();
   const dialog=page.locator('#gc-site-search');await dialog.waitFor({state:'visible'});
   const input=dialog.locator('.pagefind-ui__search-input');await input.waitFor({state:'visible'});
@@ -92,6 +92,6 @@ try{
  const c=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:900}});
  await c.route('**/*',r=>new URL(r.request().url()).hostname==='127.0.0.1'?r.continue():r.abort());
  const p=await c.newPage();await p.goto(servers.pmh.url+'/');assert.equal(await p.locator('footer a[href="/photo-credits"]:visible').count(),1);checks.push({site:'pmh',path:'/',javascript:false,ok:true});
- await p.goto(servers.gc.url+'/');assert.equal(await p.locator('[data-gc-site-search]').getAttribute('href'),'/resources');assert.equal(await p.locator('.gc-calculator').getAttribute('href'),'https://pensacolamilitaryhousing.com/mortgage-calculators');checks.push({site:'gc',path:'/',javascript:false,headerFallback:true,ok:true});await c.close();
+ await p.goto(servers.gc.url+'/');assert.equal(await p.locator('[data-gc-site-search]').getAttribute('href'),'/resources');assert.equal(await p.locator('.gc-calculator').getAttribute('href'),'/mortgage-calculators');checks.push({site:'gc',path:'/',javascript:false,headerFallback:true,ok:true});await c.close();
  save(join(dir,'browser.json'),{ok:true,checks});
 }finally{await browser.close();for(const {server} of Object.values(servers))server.close();}

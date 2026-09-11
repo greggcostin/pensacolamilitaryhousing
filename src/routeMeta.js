@@ -12,6 +12,7 @@
 // are shell:false — they still appear here so client-side SPA nav sets a sane title,
 // but crawlers never reach them as SPA shells.
 
+import { BIOGRAPHY } from './biography.js';
 export const SITE = "https://pensacolamilitaryhousing.com";
 
 export const HOME_TITLE = "Pensacola Military Housing | Gregg Costin, Realtor® | PCS & VA Loan";
@@ -27,8 +28,8 @@ export const ROUTE_META = [
     page: "about", file: "about", slug: "/about", shell: true, crumb: "About",
     title: "About Gregg Costin | Pensacola Military Realtor",
     description: "Retired USAF Captain and E-3 AWACS officer, now a dual-licensed Florida and Alabama Realtor guiding military families through PCS moves and VA loans.",
-    heading: "About Gregg Costin",
-    intro: "Retired USAF Captain, E-3 AWACS Combat Systems Officer, and prior-enlisted Staff Sergeant with 11 personal PCS moves, now a Florida- and Alabama-licensed Realtor serving military families across the Emerald Coast.",
+    heading: BIOGRAPHY.militaryHeading,
+    intro: BIOGRAPHY.militaryIntro,
   },
   {
     page: "contact", file: "contact", slug: "/contact", shell: true, crumb: "Contact",

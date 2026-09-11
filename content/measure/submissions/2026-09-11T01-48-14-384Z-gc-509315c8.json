@@ -1,0 +1,40 @@
+{
+  "id": "509315c8-21a9-4be7-8e20-1749d260b107",
+  "site": "gc",
+  "startedAt": "2026-09-11T01:48:14.384Z",
+  "mode": "submit",
+  "checks": [
+    {
+      "url": "https://greggcostin.com/team",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/team",
+      "fingerprint": "c8e7149961e5389c85dc3966b0c16243051eddfa093fcea134f32562e6f47083",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    }
+  ],
+  "engines": {
+    "indexnow": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/team",
+          "fingerprint": "c8e7149961e5389c85dc3966b0c16243051eddfa093fcea134f32562e6f47083"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    },
+    "bing": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/team",
+          "fingerprint": "c8e7149961e5389c85dc3966b0c16243051eddfa093fcea134f32562e6f47083"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    }
+  }
+}

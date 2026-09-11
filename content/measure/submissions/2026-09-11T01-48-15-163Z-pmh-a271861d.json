@@ -1,0 +1,40 @@
+{
+  "id": "a271861d-2f1b-4744-bef3-9110bb85cd5d",
+  "site": "pmh",
+  "startedAt": "2026-09-11T01:48:15.163Z",
+  "mode": "submit",
+  "checks": [
+    {
+      "url": "https://pensacolamilitaryhousing.com/about",
+      "httpStatus": 200,
+      "canonical": "https://pensacolamilitaryhousing.com/about",
+      "fingerprint": "23f5b60f68e2a6f3c9320a5b537e20faf1ed79d4d36fa0d568db725db421e6c4",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    }
+  ],
+  "engines": {
+    "indexnow": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://pensacolamilitaryhousing.com/about",
+          "fingerprint": "23f5b60f68e2a6f3c9320a5b537e20faf1ed79d4d36fa0d568db725db421e6c4"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    },
+    "bing": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://pensacolamilitaryhousing.com/about",
+          "fingerprint": "23f5b60f68e2a6f3c9320a5b537e20faf1ed79d4d36fa0d568db725db421e6c4"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    }
+  }
+}

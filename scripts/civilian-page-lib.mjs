@@ -9,6 +9,7 @@ import { withGuideNavigation } from './civilian-experience-lib.mjs';
 import { withInteriorDesign } from './civilian-interior-design.mjs';
 import { withSchoolFinder } from './school-finder-lib.mjs';
 import { withSchoolGuide } from './school-report-guide-lib.mjs';
+import { unbundleCivilianStyles } from './civilian-style-bundle.mjs';
 
 export const ROOT = fileURLToPath(new URL("..", import.meta.url)).replace(/\\/g, "/");
 export const SITE_DIR = ROOT + "civilian-site";
@@ -27,14 +28,17 @@ export function creditFor(srcPath) {
 }
 
 export function chrome() {
-  const idx = readFileSync(`${SITE_DIR}/index.html`, "utf8");
+  const idx = unbundleCivilianStyles(readFileSync(`${SITE_DIR}/index.html`, "utf8"), SITE_DIR);
   const headStart = idx.search(/<script\b[^>]*data-costin-tracker/);
   const headEnd = idx.indexOf("</head>");
   const navStart = idx.indexOf('<nav class="main-banner"');
   const navEnd = idx.indexOf("</nav>") + 6;
   const tail = idx.slice(idx.indexOf("<footer>"));
   if (headStart < 0 || navStart < 0 || tail.length < 100) throw new Error("chrome extraction failed on index.html");
-  return { sharedHead: idx.slice(headStart, headEnd), nav: '<a class="skip-link" href="#main-content">Skip to content</a>\n' + idx.slice(navStart, navEnd), tail };
+  // Delivery moves the bundle before the trackers. Restore its editable tokens
+  // and retain styles on both sides of that boundary, in their cascade order.
+  const earlyStyles = idx.slice(0, headStart).match(/<style\b[^>]*>[\s\S]*?<\/style>|<link\b(?=[^>]*\brel="stylesheet")[^>]*>/g) || [];
+  return { sharedHead: earlyStyles.join('\n') + '\n' + idx.slice(headStart, headEnd), nav: '<a class="skip-link" href="#main-content">Skip to content</a>\n' + idx.slice(navStart, navEnd), tail };
 }
 
 export function figureBand({ src, webp, alt, caption, width, height, tall = false, ratio43 = false }) {

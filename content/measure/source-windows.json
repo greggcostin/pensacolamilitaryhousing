@@ -37,6 +37,48 @@
       "filters": null,
       "complete": false,
       "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+    },
+    "gsc-pages-gc-2026-09-12.csv": {
+      "property": "https://greggcostin.com",
+      "start": "2026-08-14",
+      "end": "2026-09-10",
+      "searchType": "web",
+      "dimensions": [
+        "page"
+      ],
+      "filters": [],
+      "complete": false,
+      "chartStart": "2026-08-23",
+      "chartEnd": "2026-09-10",
+      "chartRows": 19,
+      "selectedDays": 28,
+      "exportedAt": "2026-09-12T23:48:49.662Z",
+      "workbook": "docs/civilian-blog-engine/2026-09-12/analytics/gsc-gc-2026-09-12.xlsx",
+      "exportUrl": "https://docs.google.com/spreadsheets/d/1uLBVx1mQCyGL1KntoUx1bFp77EnsdSq3OYtlfht8JV8/edit",
+      "description": "Exact property and selected dates verified in Search Console and native Filters export. Full workbook archived. Chart contains only August 23-September 10; missing selected days are not assumed zero. No disclosed query rows.",
+      "exportProperty": "https://greggcostin.com/",
+      "propertyNormalization": "Origin form required by the importer; exportProperty retains the exact URL-prefix label."
+    },
+    "gsc-queries-gc-2026-09-12.csv": {
+      "property": "https://greggcostin.com",
+      "start": "2026-08-14",
+      "end": "2026-09-10",
+      "searchType": "web",
+      "dimensions": [
+        "query"
+      ],
+      "filters": [],
+      "complete": false,
+      "chartStart": "2026-08-23",
+      "chartEnd": "2026-09-10",
+      "chartRows": 19,
+      "selectedDays": 28,
+      "exportedAt": "2026-09-12T23:48:49.662Z",
+      "workbook": "docs/civilian-blog-engine/2026-09-12/analytics/gsc-gc-2026-09-12.xlsx",
+      "exportUrl": "https://docs.google.com/spreadsheets/d/1uLBVx1mQCyGL1KntoUx1bFp77EnsdSq3OYtlfht8JV8/edit",
+      "description": "Exact property and selected dates verified in Search Console and native Filters export. Full workbook archived. Chart contains only August 23-September 10; missing selected days are not assumed zero. No disclosed query rows.",
+      "exportProperty": "https://greggcostin.com/",
+      "propertyNormalization": "Origin form required by the importer; exportProperty retains the exact URL-prefix label."
     }
   }
 }

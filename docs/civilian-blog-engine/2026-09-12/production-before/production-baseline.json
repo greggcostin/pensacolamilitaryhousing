@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-12T23:38:56.293Z",
+  "readOnly": true,
+  "sites": [
+    {
+      "site": "pmh",
+      "project": "pensacolamilitaryhousing",
+      "domain": "pensacolamilitaryhousing.com",
+      "localBaseline": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.coast-release\\military-flood-map-20260911\\pmh",
+      "deploymentId": "d05633e1-b253-4f9c-8ad1-146e0aaeb4cf",
+      "url": "https://d05633e1.pensacolamilitaryhousing.pages.dev",
+      "createdOn": "2026-09-11T22:47:41.897923Z",
+      "stage": "success",
+      "commit": "a621c4c0a85e0cbd2b98516cef8b58c8d9ee1e01",
+      "assetCount": 3914,
+      "counts": {
+        "exact": 3914,
+        "lineEndingOnly": 0,
+        "missing": 0,
+        "different": 0
+      },
+      "differences": []
+    },
+    {
+      "site": "gc",
+      "project": "greggcostin",
+      "domain": "greggcostin.com",
+      "localBaseline": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.coast-release\\military-flood-map-20260911\\gc",
+      "deploymentId": "3ec62323-654b-4f9d-9baf-22442bd35f52",
+      "url": "https://3ec62323.greggcostin.pages.dev",
+      "createdOn": "2026-09-11T22:06:17.530954Z",
+      "stage": "success",
+      "commit": "a621c4c0a85e0cbd2b98516cef8b58c8d9ee1e01",
+      "assetCount": 2509,
+      "counts": {
+        "exact": 2509,
+        "lineEndingOnly": 0,
+        "missing": 0,
+        "different": 0
+      },
+      "differences": []
+    }
+  ],
+  "ok": true
+}

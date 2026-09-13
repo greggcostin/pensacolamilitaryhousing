@@ -209,6 +209,43 @@
      "property": "https://greggcostin.com",
      "status": "not-observed",
      "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "what-moves-mortgage-rates",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-11",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "what-moves-mortgage-rates",
+     "url": "/blog/what-moves-mortgage-rates",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-12.csv",
+     "date": "2026-09-12",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": "2026-08-14",
+      "end": "2026-09-10",
+      "searchType": "web",
+      "dimensions": [
+       "page"
+      ],
+      "filters": [],
+      "complete": false,
+      "description": "Exact property and selected dates verified in Search Console and native Filters export. Full workbook archived. Chart contains only August 23-September 10; missing selected days are not assumed zero. No disclosed query rows."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
     }
    ],
    "legacyMetrics": "no GSC/Bing data available in-session",
@@ -549,6 +586,43 @@
      "property": "https://greggcostin.com",
      "status": "not-observed",
      "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "property-taxes-escambia-santa-rosa",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-11",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "property-taxes-escambia-santa-rosa",
+     "url": "/blog/property-taxes-escambia-santa-rosa",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-12.csv",
+     "date": "2026-09-12",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": "2026-08-14",
+      "end": "2026-09-10",
+      "searchType": "web",
+      "dimensions": [
+       "page"
+      ],
+      "filters": [],
+      "complete": false,
+      "description": "Exact property and selected dates verified in Search Console and native Filters export. Full workbook archived. Chart contains only August 23-September 10; missing selected days are not assumed zero. No disclosed query rows."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
     }
    ],
    "legacyMetrics": "no GSC/Bing data available in-session",
@@ -820,6 +894,43 @@
      "property": "https://greggcostin.com",
      "status": "not-observed",
      "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "closing-costs-florida-buyers",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-11",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "closing-costs-florida-buyers",
+     "url": "/blog/closing-costs-florida-buyers",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-12.csv",
+     "date": "2026-09-12",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": "2026-08-14",
+      "end": "2026-09-10",
+      "searchType": "web",
+      "dimensions": [
+       "page"
+      ],
+      "filters": [],
+      "complete": false,
+      "description": "Exact property and selected dates verified in Search Console and native Filters export. Full workbook archived. Chart contains only August 23-September 10; missing selected days are not assumed zero. No disclosed query rows."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
     }
    ],
    "refreshHistory": [
@@ -1116,6 +1227,43 @@
      "property": "https://greggcostin.com",
      "status": "not-observed",
      "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "fed-rate-hike-what-it-means",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-11",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "fed-rate-hike-what-it-means",
+     "url": "/blog/fed-rate-hike-what-it-means",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-12.csv",
+     "date": "2026-09-12",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": "2026-08-14",
+      "end": "2026-09-10",
+      "searchType": "web",
+      "dimensions": [
+       "page"
+      ],
+      "filters": [],
+      "complete": false,
+      "description": "Exact property and selected dates verified in Search Console and native Filters export. Full workbook archived. Chart contains only August 23-September 10; missing selected days are not assumed zero. No disclosed query rows."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
     }
    ],
    "refreshHistory": [
@@ -1410,6 +1558,43 @@
      "property": "https://greggcostin.com",
      "status": "not-observed",
      "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "florida-insurance-relief-2026",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-11",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "florida-insurance-relief-2026",
+     "url": "/blog/florida-insurance-relief-2026",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-12.csv",
+     "date": "2026-09-12",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": "2026-08-14",
+      "end": "2026-09-10",
+      "searchType": "web",
+      "dimensions": [
+       "page"
+      ],
+      "filters": [],
+      "complete": false,
+      "description": "Exact property and selected dates verified in Search Console and native Filters export. Full workbook archived. Chart contains only August 23-September 10; missing selected days are not assumed zero. No disclosed query rows."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
     }
    ],
    "refreshHistory": [
@@ -1557,6 +1742,43 @@
       "filters": null,
       "complete": false,
       "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+     },
+     "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
+    },
+    {
+     "slug": "home-appraisals-explained",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-11",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "home-appraisals-explained",
+     "url": "/blog/home-appraisals-explained",
+     "source": "gsc-pages",
+     "sourceFile": "gsc-pages-gc-2026-09-12.csv",
+     "date": "2026-09-12",
+     "property": "https://greggcostin.com",
+     "kind": "page",
+     "status": "not-observed",
+     "impressions": null,
+     "clicks": null,
+     "position": null,
+     "window": {
+      "start": "2026-08-14",
+      "end": "2026-09-10",
+      "searchType": "web",
+      "dimensions": [
+       "page"
+      ],
+      "filters": [],
+      "complete": false,
+      "description": "Exact property and selected dates verified in Search Console and native Filters export. Full workbook archived. Chart contains only August 23-September 10; missing selected days are not assumed zero. No disclosed query rows."
      },
      "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
     }

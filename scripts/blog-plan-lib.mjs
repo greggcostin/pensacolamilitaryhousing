@@ -66,6 +66,7 @@ export function selectWork({ queue, refreshes, events = [], recentPillars = [], 
     const observed = isObservedDemand(e,today,site);
     const covered = recentPillars.filter(p => p === item.pillar).length;
     const reasons = [];
+    if (['completed','published','cancelled'].includes(item.status)) reasons.push('queue request is closed');
     if (site === 'pmh' && /\bFL023\b/.test(JSON.stringify([item.evidence, item.note, item.researchRisks]))) reasons.push('old Eglin MHA in topic evidence; re-verify sources before research');
     if (item.audience === 'civilian' && site === 'pmh') reasons.push('civilian topic: route to the civilian engine');
     if (item.status === 'hold' || item.requiresEditorialReview) reasons.push('editorial/source review required');
@@ -82,13 +83,15 @@ export function selectWork({ queue, refreshes, events = [], recentPillars = [], 
     if (item.gate && !item.notBefore && !item.gateSatisfiedAt) reasons.push('explicit queue gate requires evidence');
     if (item.refreshUrl && !corpus.some(p=>p.url===item.refreshUrl)) reasons.push('refresh destination absent from this checkout; integrate the existing guide before refreshing it');
     if (ownership.verdict === 'INTENT-REVIEW' && !intentReviewed(item,ownership)) reasons.push('existing owner: select a scoped refresh or document distinct intent');
-    const priority = (observed ? 1000 : 0) + Math.max(0, 5-covered)*10 - index/100;
-    return { ...item, observedDemand: observed, coverageCount: covered, priority, runnable: !reasons.length, reasons, ownership };
+    const ownerRequested = item.requestedBy === 'Gregg' && validDay(item.requestedAt) && item.requestedAt <= today && Number.isInteger(item.requestedOrder) && item.requestedOrder > 0;
+    const priority = ownerRequested ? 2000 - item.requestedOrder : (observed ? 1000 : 0) + Math.max(0, 5-covered)*10 - index/100;
+    return { ...item, ownerRequested, observedDemand: observed, coverageCount: covered, priority, runnable: !reasons.length, reasons, ownership };
   }).sort((a,b)=>b.priority-a.priority);
   const event = events.find(e => e.status === 'verified' && e.primarySource && e.checkedAt === today && e.materialImpact && e.ownerUrl && e.date <= today && new Date(e.date).valueOf() >= new Date(today).valueOf()-7*86400000);
   const refresh = [...refreshes].filter(r=>r.site === site && r.priority >= 60).sort((a,b)=>b.priority-a.priority)[0];
   const next = ranked.find(i=>i.runnable);
-  const selected = event ? { kind: 'event', item: event } : refresh ? { kind: 'refresh', item: refresh } : next ? { kind: next.refreshUrl ? 'queued-refresh' : next.observedDemand ? 'observed-demand' : 'editorial-queue', item: next } : null;
+  const requested = ranked.find(i=>i.runnable && i.ownerRequested);
+  const selected = event ? { kind: 'event', item: event } : requested ? { kind: requested.refreshUrl ? 'owner-requested-refresh' : 'owner-requested-topic', item: requested } : refresh ? { kind: 'refresh', item: refresh } : next ? { kind: next.refreshUrl ? 'queued-refresh' : next.observedDemand ? 'observed-demand' : 'editorial-queue', item: next } : null;
   return { selected, ranked };
 }
 export function applyTopicPolicy(queue, policy, site) {

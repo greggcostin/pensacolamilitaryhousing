@@ -23,6 +23,7 @@ import { SITE_DIR, SITE, esc, buildPage, figureBand, breadcrumbs, faqPage, gate 
 import { publisherRef } from "./entity-lib.mjs";
 import { placeQuickAnswer, QA_CSS } from "./quick-answer-lib.mjs";
 import { fileURLToPath } from "node:url";
+import { resolve } from 'node:path';
 import { readResearch, isModern, validateEditorial, voiceFindings, sectionLinks, updateBlogSitemap, sentenceCount, finalizeArticleHtml, plainBlogActions, updateBlogListing } from './civilian-editorial-lib.mjs';
 import { scorePost } from './score-post.mjs';
 import { blogOg } from './civilian-blog-og.mjs';
@@ -34,7 +35,7 @@ const MONTHS = ["January", "February", "March", "April", "May", "June", "July", 
 const longDate = (iso) => { const [y, m, d] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
 const monthYear = (iso) => { const [y, m] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${y}`; };
 
-function loadFragment(path) {
+export function loadFragment(path) {
   const raw = readFileSync(path, "utf8");
   const m = raw.match(/<!--PAGE\s*([\s\S]*?)\s*PAGE-->/);
   if (!m) throw new Error(`${path}: no PAGE header`);
@@ -61,7 +62,7 @@ function articleSchema(spec) {
   };
 }
 
-function buildPost(spec) {
+export function buildPost(spec) {
   // ---- hard gates on the fragment ----
   const errs = [...evidenceGate(spec, spec.body, "gc", ROOT, new Date().toISOString().slice(0,10)).errors];
   errs.push(...voiceFindings(spec, spec.body));
@@ -136,8 +137,10 @@ ${journeyHtml(spec, "gc", ROOT)}
   };
   // geo-03: optional dated quick-answer block after the lead (fragment field "quickAnswer", 2-4 sentences with the post's key figure).
   // buildPage writes the page; the quick-answer pass rewrites that file (fixed 2026-09-04: the block used to be discarded).
-  const canonicalFile=`${SITE_DIR}/${pageSpec.file}`;
-  const existing=existsSync(canonicalFile)?readFileSync(canonicalFile,'utf8'):null;
+  // Preserve the shell in the actual destination. A preview must not silently
+  // borrow a canonical page and thereby hide failures on a genuinely first build.
+  const outputFile=`${spec.outDir || SITE_DIR}/${pageSpec.file}`;
+  const existing=existsSync(outputFile)?readFileSync(outputFile,'utf8'):null;
   let html = buildPage(pageSpec);
   if (spec.quickAnswer) {
     html = placeQuickAnswer(html, { text: spec.quickAnswer, date: monthYear(spec.dateModified || spec.datePublished), by: "Gregg Costin, Realtor, The Costin Team at Levin Rinke Realty" });
@@ -220,17 +223,18 @@ ${cards}
     main, dateISO: new Date().toISOString().slice(0, 10),
     schemaBlocks: [blogSchema, breadcrumbs([{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }])],
   };
-  const existing=existsSync(`${SITE_DIR}/blog.html`)?readFileSync(`${SITE_DIR}/blog.html`,'utf8'):null;
+  const indexFile=`${outDir || SITE_DIR}/blog.html`;
+  const existing=existsSync(indexFile)?readFileSync(indexFile,'utf8'):null;
   const html = preserveBlogShell(existing,plainBlogActions(buildPage({...spec,layout:'article'})));
   writeFileSync(`${outDir || SITE_DIR}/blog.html`, html);
 }
 
-function syncSitemapAndLlms(specs, outDir = SITE_DIR, changedSpecs = specs) {
+export function syncSitemapAndLlms(specs, outDir = SITE_DIR, changedSpecs = specs) {
   const smPath = `${outDir}/sitemap.xml`;
-  const sm = updateBlogSitemap(readFileSync(`${SITE_DIR}/sitemap.xml`, 'utf8'), changedSpecs, SITE);
+  const sm = updateBlogSitemap(readFileSync(existsSync(smPath) ? smPath : `${SITE_DIR}/sitemap.xml`, 'utf8'), changedSpecs, SITE);
   writeFileSync(smPath, sm);
   const llmsPath = `${outDir}/llms.txt`;
-  let llms = readFileSync(`${SITE_DIR}/llms.txt`, "utf8");
+  let llms = readFileSync(existsSync(llmsPath) ? llmsPath : `${SITE_DIR}/llms.txt`, "utf8");
   const START = "## Blog Posts (auto-maintained)";
   const list = specs.sort((a, b) => (a.datePublished < b.datePublished ? 1 : -1)).map((s) => `- [${s.h1}](${SITE}/blog/${s.slug}): ${s.description}`).join("\n");
   const block = `${START}\n\n- [Blog index](${SITE}/blog): all posts\n${list}\n`;
@@ -244,6 +248,7 @@ function syncSitemapAndLlms(specs, outDir = SITE_DIR, changedSpecs = specs) {
    node scripts/civilian-blog-factory.mjs <slug> --out DIR  preview build of one post into DIR/blog/<slug>.html only
                                                             (no index/sitemap/llms/OG side effects; for gate checks
                                                             and eye tests while another session works the site tree) */
+async function main() {
 const argv = process.argv.slice(2);
 const OUT = argv.includes("--out") ? argv[argv.indexOf("--out") + 1].replace(/\\/g, "/").replace(/\/$/, "") : null;
 const BUNDLE = argv.includes('--bundle');
@@ -269,3 +274,5 @@ if (!OUT || BUNDLE) {
   if (!OUT) finishBlogDiscovery('gc');
   console.log(`INDEX rebuilt with ${frags.length} post(s); sitemap + llms synced`);
 }
+}
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await main();

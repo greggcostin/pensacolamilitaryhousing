@@ -1,6 +1,73 @@
 {
-  "note": "Use scripts/civilian-blog-plan.mjs. Verified consequential news, evidence-backed refreshes, then dated observed demand outrank editorial proposals. Coverage gaps break editorial ties. Refresh the existing owner URL when listed; a queued refresh is not permission to create another URL. Recheck historical notes before using any figures.",
+  "note": "Verified material current events may override explicit owner requests. Runnable Gregg requests follow requestedOrder ahead of generated refresh priorities and other topics. All source, timing, hold and intent gates still apply. Owner requests are not observed demand; refresh existing owner URLs only.",
   "queue": [
+    {
+      "slug": "fed-rate-hike-what-it-means",
+      "topic": "Refresh what a Federal Reserve rate decision means for Gulf Coast buyers",
+      "type": "refresh",
+      "status": "queued",
+      "pillar": "financing-macro",
+      "refreshUrl": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "requestedBy": "Gregg",
+      "requestedAt": "2026-09-12",
+      "requestedOrder": 1,
+      "audience": [
+        "buyer",
+        "homeowner",
+        "seller"
+      ],
+      "targetKeywords": [
+        "fed rate hike what it means",
+        "Federal Reserve mortgage rates"
+      ],
+      "decision": "Update the existing guide using current official sources and clearly separate the federal funds rate from mortgage pricing.",
+      "sourcePlan": [
+        "Latest Federal Reserve FOMC statement and release date",
+        "Latest Freddie Mac PMMS release and observation date",
+        "CFPB borrower guidance"
+      ],
+      "evidenceStatus": "Explicit owner request, not inferred demand. Existing URL remains the intent owner. Verify all dated figures at execution.",
+      "note": "Refresh only. Do not infer a rate hike from the legacy slug. Keep publish approval gates."
+    },
+    {
+      "slug": "what-moves-mortgage-rates",
+      "topic": "Refresh the drivers of mortgage rates and how borrowers compare and lock quotes",
+      "type": "refresh",
+      "status": "queued",
+      "pillar": "financing-macro",
+      "refreshUrl": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "requestedBy": "Gregg",
+      "requestedAt": "2026-09-12",
+      "requestedOrder": 2,
+      "audience": [
+        "buyer",
+        "homeowner",
+        "seller"
+      ],
+      "targetKeywords": [
+        "what moves mortgage rates",
+        "mortgage rates explained"
+      ],
+      "decision": "Update the existing guide using current official sources and clearly separate the federal funds rate from mortgage pricing.",
+      "sourcePlan": [
+        "Latest Federal Reserve FOMC statement and release date",
+        "Latest Freddie Mac PMMS release and observation date",
+        "CFPB borrower guidance"
+      ],
+      "evidenceStatus": "Explicit owner request, not inferred demand. Existing URL remains the intent owner. Verify all dated figures at execution.",
+      "note": "Refresh only. Do not infer a rate hike from the legacy slug. Keep publish approval gates.",
+      "intentReview": {
+        "decision": "distinct-intent",
+        "reviewedBy": "Codex gpt-6-astra max",
+        "reviewedAt": "2026-09-12",
+        "comparedTo": [
+          "https://greggcostin.com/blog",
+          "https://greggcostin.com/blog/fed-rate-hike-what-it-means"
+        ],
+        "readerTask": "Understand the market and borrower factors behind a mortgage quote, then compare like-for-like terms and consider a rate lock.",
+        "distinctValue": "The flagged blog hub lists this existing article and is not a competing explainer. Refresh this same URL. Keep the evergreen pricing-mechanics guide separate from the Fed guide, which interprets a current policy decision and its limits for buyers."
+      }
+    },
     {
       "slug": "coastal-alabama-vs-panhandle",
       "topic": "Buying on the Gulf: coastal Alabama (Orange Beach, Gulf Shores, Lillian) vs the Florida Panhandle, taxes, insurance, and lifestyle compared (Gregg is licensed in both states)",
@@ -435,5 +502,5 @@
     }
   ],
   "version": 2,
-  "updated": "2026-09-08"
+  "updated": "2026-09-12"
 }

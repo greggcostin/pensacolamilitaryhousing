@@ -400,6 +400,30 @@
    "type": "operational",
    "rule": "Reapply responsive image markup after ANY generator that rewrites a rendered page, not just after adding an image. The blog factory and build-photography-credits both re-emit <picture> blocks from source and drop the avif/webp srcset sets.",
    "evidence": "Rebuilding closing-costs-florida-buyers replaced its four-width avif plus webp plus jpg srcset with a single '<source srcset=\"/images/closing-costs-review-20260909.webp\">'. build-photography-credits did the same to six pictures on blog.html. Running apply-responsive-images afterwards restored them. Separately, apply-responsive-images re-dirties civilian-site/index.html and resources.html even from a pristine HEAD copy, so that drift is pre-existing on origin/main and those two files must be left out of an unrelated commit."
+  },
+  {
+   "id": "L030",
+   "date": "2026-09-12",
+   "appliesTo": [
+    "build",
+    "verify"
+   ],
+   "status": "active",
+   "type": "operational",
+   "rule": "Exercise a missing output destination and visually check base layout, not only the presence of shared CSS files. A delivery bundle may be before the tracker used as a template extraction boundary.",
+   "evidence": "Sep 12 clean first build passed QA and font-source assertions but rendered a giant unstyled nav and 8px body margin. chrome() began after the bundled base CSS. Restoring the bundle tokens and retaining early styles corrected it; the expanded first-build regression now checks the base reset and navigation grid, and desktop/mobile browser checks confirm the layout."
+  },
+  {
+   "id": "L031",
+   "date": "2026-09-12",
+   "appliesTo": [
+    "measure",
+    "orchestrate"
+   ],
+   "status": "active",
+   "type": "operational",
+   "rule": "Retain both the selected GSC window and actual exported chart coverage. A complete native workbook can still omit dates within the selection; retain those omissions as unknown.",
+   "evidence": "The native greggcostin.com GSC workbook selected Aug 14-Sep 10, 2026 in Filters, but Chart contained only Aug 23-Sep 10 (19 days) and Queries contained headers only. The XLSX, Filters, Pages, Queries and Chart exports are retained under the Sep 12 civilian closeout. source-windows.json records exact property/date metadata and incomplete selected-window coverage."
   }
  ]
 }

@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-09-12",
+  "provider": "codex",
+  "model": "gpt-6-astra",
+  "effort": "max",
+  "clarity": {
+    "status": "available-through-signed-in-browser",
+    "connector": "Military-bound connector was not rebound; civilian browser fallback verified",
+    "projectId": "ydd39cyp64",
+    "property": "https://greggcostin.com/",
+    "start": "2026-09-05T00:00:00-05:00",
+    "end": "2026-09-11T23:59:59.999-05:00",
+    "filter": "Visited URL starts with https://greggcostin.com/",
+    "sessions": 129,
+    "excludedBotSessions": 48,
+    "uniqueUsers": 86,
+    "pagesPerSession": 2.5968992248,
+    "scrollDepthPercent": 34.06,
+    "activeSeconds": 158,
+    "totalSeconds": 272,
+    "limitation": "Sessions containing a production URL; internal traffic exclusion not verified. Local referrers were visible. No organic attribution or qualified conversion claim."
+  },
+  "gsc": {
+    "status": "exported",
+    "property": "https://greggcostin.com/",
+    "propertyType": "URL-prefix",
+    "searchType": "Web",
+    "selectedStart": "2026-08-14",
+    "selectedEnd": "2026-09-10",
+    "filters": {
+      "query": null,
+      "page": null,
+      "country": null,
+      "device": null,
+      "searchAppearance": null
+    },
+    "exportUrl": "https://docs.google.com/spreadsheets/d/1uLBVx1mQCyGL1KntoUx1bFp77EnsdSq3OYtlfht8JV8/edit",
+    "exportTitle": "https://greggcostin.com/-Performance-on-Search-2026-09-12",
+    "createdAt": "2026-09-12T23:48:49.662Z",
+    "chartFirstDate": "2026-08-23",
+    "chartLastDate": "2026-09-10",
+    "chartRows": 19,
+    "completeSelectedWindow": false,
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 6.6,
+    "pageRows": 1,
+    "queryRows": 0,
+    "limitation": "Full native workbook retained, but chart omits August 14-22. No query rows disclosed. Omitted dates/queries are not zeros. Report time zone not independently retained."
+  },
+  "bing": {
+    "status": "indexed-site-with-mixed-url-states",
+    "site": "https://greggcostin.com/",
+    "siteExplorerFilter": "Indexed URLs",
+    "siteExplorerIndexedCount": 5,
+    "siteExplorerExportScope": "Two top-level folder rows, not a five-URL enumeration",
+    "urlInspections": [
+      {
+        "url": "https://greggcostin.com/",
+        "result": "Indexed successfully. URL can appear on Bing.",
+        "lastCrawlVisible": "Yesterday at 13:05",
+        "asOfLocalDate": "2026-09-12",
+        "crawlAllowed": true,
+        "pageFetch": "Successful",
+        "indexingAllowed": true,
+        "discovered": "2025-08-15"
+      },
+      {
+        "url": "https://greggcostin.com/blog",
+        "result": "Discovered but not crawled. URL cannot appear on Bing.",
+        "discovered": "2026-08-26"
+      },
+      {
+        "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+        "result": "Discovered but not crawled. URL cannot appear on Bing.",
+        "discovered": "2026-09-02"
+      },
+      {
+        "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+        "result": "Discovered but not crawled. URL cannot appear on Bing.",
+        "discovered": "2026-08-26"
+      }
+    ],
+    "limitation": "Site Explorer aggregates and URL inspection have different crawl dates. Zero API page-performance rows do not imply zero indexed pages. No indexing request made during read-only inspection."
+  }
+}

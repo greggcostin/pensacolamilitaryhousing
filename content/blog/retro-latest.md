@@ -1,17 +1,21 @@
-# Blog retro, 2026-09-10
+# Blog retro, 2026-09-12
 
 ## greggcostin.com
 
 | Post | Age | Score | Inbound | Google export imp/clk/pos | Bing 28d imp/clk/pos | Flags | Priority |
 |---|---|---|---|---|---|---|---|
-| fed-rate-hike-what-it-means | 9 | 73 C | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW EXPIRED LOW-SCORE | 50 |
-| what-moves-mortgage-rates | 17 | 75 C | 6 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW EXPIRED LOW-SCORE | 50 |
-| closing-costs-florida-buyers | 10 | 100 A | 9 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
-| florida-insurance-relief-2026 | 7 | 100 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
-| home-appraisals-explained | 0 | 96 A | 3 | none | none | DATA-UNAVAILABLE NEW | 0 |
-| property-taxes-escambia-santa-rosa | 14 | 98 A | 5 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
+| closing-costs-florida-buyers | 12 | 100 A | 9 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
+| fed-rate-hike-what-it-means | 11 | 98 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
+| florida-insurance-relief-2026 | 9 | 100 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
+| home-appraisals-explained | 0 | 96 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
+| property-taxes-escambia-santa-rosa | 16 | 98 A | 5 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
+| what-moves-mortgage-rates | 19 | 100 A | 6 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
 
-Site (Bing, data through 2026-09-07): 0 impressions / 0 clicks in the trailing 28-day bin; unrecorded reporting days returned. Completeness is not established. Top pages by 28d impressions: .
+Site (Bing, data through 2026-09-11): 25 impressions / 2 clicks in the trailing 28-day bin; unrecorded reporting days returned. Completeness is not established. Top pages by 28d impressions: .
+
+Striking-distance queries (pos 4-20, 90d): "pensacola christian academy" (10 imp, pos 8).
+
+Uncovered demand (queries earning impressions with no matching target keyword): "pensacola christian academy" (10); "pencicola christian school" (3).
 
 ## Learning status
 
@@ -20,7 +24,5 @@ Attribute correlations are hypotheses only. A numeric quality score is a lint si
 
 ## Refresh queue (selected sites, ranked)
 
-50  gc:fed-rate-hike-what-it-means  [DATA-UNAVAILABLE NEW EXPIRED LOW-SCORE]  1 declared perishable(s) passed their review date; quality score 73/100
-50  gc:what-moves-mortgage-rates  [DATA-UNAVAILABLE NEW EXPIRED LOW-SCORE]  2 declared perishable(s) passed their review date; quality score 75/100
 
 ## Inbound link plan (posts with fewer than 3 inbound links)

@@ -42,7 +42,7 @@ this repo. Stay inside the files you own; never `git add -A`.
 2. Clarity: greggcostin.com has its own project, `ydd39cyp64` (created Sep 4 2026, tag on all
    pages). It lives under Gregg's Microsoft sign-in while the military project `wm7ddbciup`
    lives under a different Clarity identity, so the Clarity MCP may only see one of them: try
-   a per-URL query for `greggcostin.com`; verify the selected project, domain, dates and permissions. An empty response is not proof of the wrong identity. Record the observed result and any access limitation without inventing the cause.
+   a per-URL query for `greggcostin.com`; verify the selected project, domain, dates and permissions. An empty response is not proof of the wrong identity. Record the observed result and any access limitation without inventing the cause. If the connector cannot select the civilian project, use the already signed-in browser for project ydd39cyp64, verify the domain and explicit completed date window, and retain its CSV. This browser fallback was verified September 12, 2026; do not call it a connector rebind. Check content/measure/source-windows.json and the dated native GSC workbook before requesting another export. Retain omitted dates and queries as unknown.
 3. `node scripts/analyze-formatting.mjs` (now covers civilian pages; rows read `gc:/...`).
 4. Append one line per post to `ledger.json` posts[].metrics as before; the Bing snapshot lives
    in posts[].search.
@@ -66,7 +66,7 @@ Refreshes use their existing canonical URL. Low editorial scores alone are not o
 3. **Topic radar.** `docs/topic-radar.md` (regenerate with `node scripts/topic-miner.mjs` when
    older than 30 days). Observed demand (a cluster with site impressions or Bing volume, novelty
    0.5+, audience civilian/both) outranks a guessed queue item; `--append-queue 3` adds the
-   winners to the queue with evidence. Then take the top runnable queue item.
+   winners to the queue with evidence. Then take the top runnable queue item. An explicit Gregg request with requestedBy, requestedAt and requestedOrder outranks generated refresh and topic priorities, while a verified material current event can still override it. Preserve source, timing, hold and existing-destination gates; an owner request is not observed search demand.
 4. **Dedup gate (L003/L011):** before writing anything NEW, `node scripts/blog-dedup-check.mjs
    --site gc --kw "<primary keyword>" --kw "<secondary>"` (both sites and unpublished fragments).
    Run `node scripts/blog-dedup-check.mjs --site gc` over the whole queue at re-ranking. On INTENT-REVIEW,
@@ -161,7 +161,7 @@ Do not overwrite or commit another task's unfinished site changes. Use a clean w
    scored badly). Never an opinion. A run that learned nothing writes nothing.
 5. Report: what the data said (Bing pages/impressions for the domain, top post), what you did
    and why (override / refresh / radar / queue), the score and fix list before and after, the
-   shareHook and who it is for, what is queued next, and what needs Gregg (query access to the existing Clarity project, a verified Bing indexing report, and a GSC export with exact property/window metadata).
+   shareHook and who it is for, what is queued next, and any remaining access or evidence gaps. Verify Clarity, Bing URL inspection and GSC export state for this run before carrying an older needs-Gregg list forward.
 
 ## Standing rules
 - Draft-first unless config says otherwise. Never invent statistics, people, or reviews.

@@ -117,37 +117,37 @@ These summaries mirror the published articles. Use the linked article for its co
 https://greggcostin.com/blog/closing-costs-florida-buyers
 Reviewed: 2026-09-09
 As checked September 9, 2026, Florida taxes a standard recorded mortgage at $0.35 per $100 secured or fraction thereof, according to the Department of Revenue. Your total cash to close also depends on the contract, loan, settlement charges and prepaid costs. Ask for an itemized estimate before deciding how much cash is available for the purchase.
-Sources: [object Object], [object Object], [object Object], [object Object], [object Object]
+Sources: https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx, https://floridarevenue.com/taxes/taxesfees/Pages/nonrecurring_intangible_tax.aspx, https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-estimate-en-1995/, https://www.consumerfinance.gov/ask-cfpb/what-is-a-closing-disclosure-en-1983/, https://www.consumerfinance.gov/owning-a-home/loan-estimate/
 
 ### What should Gulf Coast buyers do about Fed rate-hike talk?
 https://greggcostin.com/blog/fed-rate-hike-what-it-means
 Reviewed: 2026-09-10
 As of September 10, 2026, the Fed's latest scheduled-meeting decision held its target at 3.50% to 3.75% on July 29. The next scheduled meeting is September 15 and 16. Compare the payment and lock terms you can obtain now rather than treating a possible hike as a completed decision.
-Sources: [object Object], [object Object], [object Object], [object Object], [object Object]
+Sources: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm, https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm, https://www.freddiemac.com/pmms, https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/, https://www.consumerfinance.gov/owning-a-home/loan-estimate/
 
 ### Does Florida insurance relief mean a lower bill for your home?
 https://greggcostin.com/blog/florida-insurance-relief-2026
 Reviewed: 2026-09-09
 OIR's July 2026 report found lower average homeowners premiums including wind in 51 counties, using data reported as of March 31. That does not establish a lower renewal for your house. Compare the actual coverage, deductibles and flood requirements before changing the budget; sources were checked September 9, 2026.
-Sources: [object Object], [object Object], [object Object], [object Object]
+Sources: https://floir.gov/docs-sf/default-source/property-and-casualty/stability-unit-reports/july-2026-isu-report.pdf, https://www.citizensfla.com/flood, https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible, https://www.floodsmart.gov/get-insured/eligibility
 
 ### What happens when a home appraisal comes in below the contract price?
 https://greggcostin.com/blog/home-appraisals-explained
-Reviewed: 2026-09-10
-Checked September 10, 2026: Fannie Mae's Selling Guide requires a minimum of three closed comparables in the sales comparison approach, and names FEMA designated flood zone among the factors that shape which sales an appraiser picks. Regulation B separately entitles you to a free copy of every appraisal developed for your application. A low number is a financing problem, not a verdict on the house.
-Sources: [object Object], [object Object], [object Object], [object Object], [object Object], [object Object], [object Object], [object Object], [object Object], [object Object]
+Reviewed: 2026-09-12
+Checked September 12, 2026: Fannie Mae generally requires at least three closed comparable sales and asks appraisers to consider FEMA flood zones when selecting them. Regulation B gives applicants for credit secured by a first lien on a dwelling free copies of appraisals and other written valuations developed for that application. A low appraisal can change the proposed loan and the cash needed to close.
+Sources: https://www.consumerfinance.gov/rules-policy/regulations/1002/14/, https://www.consumerfinance.gov/rules-policy/regulations/1026/42/, https://www.consumerfinance.gov/owning-a-home/loan-estimate/, https://selling-guide.fanniemae.com/sel/b4-1.3-08/comparable-sales, https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance, https://www.consumerfinance.gov/archive/newsroom/agencies-finalize-interagency-guidance-on-reconsiderations-of-value-for-residential-real-estate-valuations/, https://www.consumerfinance.gov/archive/blog/mortgage-borrowers-can-challenge-inaccurate-appraisals-through-the-reconsideration-of-value-process/, https://www2.myfloridalicense.com/real-estate-appraisal-board/, https://reab.alabama.gov/, https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0718/Sections/0718.112.html
 
 ### How should buyers estimate Escambia and Santa Rosa property taxes?
 https://greggcostin.com/blog/property-taxes-escambia-santa-rosa
 Reviewed: 2026-09-09
 For 2026, Florida's additional homestead exemption is up to $26,411 for qualifying non-school value, according to the Department of Revenue. School taxes use a different exemption calculation. Before buying in Escambia or Santa Rosa, obtain a parcel-based estimate that reflects reassessment and your approved benefits; figures were checked September 9, 2026.
-Sources: [object Object], [object Object], [object Object], [object Object], [object Object]
+Sources: https://floridarevenue.com/property/Documents/pt107.pdf, https://floridarevenue.com/property/Documents/cpi_homestead_exemption.pdf, https://srcpa.gov/exemptions/, https://srcpa.gov/ad-valorem-tax/, https://www.escpa.org/
 
 ### What moves mortgage rates, and what should you do about it?
 https://greggcostin.com/blog/what-moves-mortgage-rates
 Reviewed: 2026-09-10
 As of September 10, 2026, Freddie Mac reported a 6.76% national average for a 30-year fixed mortgage. Your quote also reflects the property, borrower, loan terms and fees. Compare written offers with the same assumptions before deciding whether to lock or pay points.
-Sources: [object Object], [object Object], [object Object], [object Object], [object Object], [object Object], [object Object]
+Sources: https://www.freddiemac.com/pmms, https://www.federalreserve.gov/econres/feds/files/2021048pap.pdf, https://www.consumerfinance.gov/ask-cfpb/does-my-credit-score-affect-my-ability-to-get-a-mortgage-loan-or-the-mortgage-rate-i-pay-en-319/, https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/, https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/, https://www.consumerfinance.gov/owning-a-home/loan-estimate/, https://guide-selling.fanniemae.com/sel/b2-1.1-01/occupancy-types
 <!-- BLOG_ANSWERS_END -->
 
 <!-- NATIVE_CALCULATORS -->

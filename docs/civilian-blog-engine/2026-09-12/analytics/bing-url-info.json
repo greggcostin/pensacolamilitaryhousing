@@ -1,0 +1,75 @@
+{
+  "collectedAt": "2026-09-13T00:02:12.336Z",
+  "readOnly": true,
+  "method": "GetUrlInfo",
+  "results": [
+    {
+      "url": "https://greggcostin.com/",
+      "httpStatus": 200,
+      "data": {
+        "d": {
+          "__type": "UrlInfo:#Microsoft.Bing.Webmaster.Api",
+          "AnchorCount": 361,
+          "DiscoveryDate": "/Date(1755241200000)/",
+          "DocumentSize": 135510,
+          "HttpStatus": 0,
+          "IsPage": true,
+          "LastCrawledDate": "/Date(1789149980000)/",
+          "TotalChildUrlCount": 0,
+          "Url": "https://greggcostin.com/"
+        }
+      }
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "httpStatus": 200,
+      "data": {
+        "d": {
+          "__type": "UrlInfo:#Microsoft.Bing.Webmaster.Api",
+          "AnchorCount": 0,
+          "DiscoveryDate": "/Date(-62135596800000)/",
+          "DocumentSize": 0,
+          "HttpStatus": 0,
+          "IsPage": true,
+          "LastCrawledDate": "/Date(-62135596800000)/",
+          "TotalChildUrlCount": 0,
+          "Url": "https://greggcostin.com/blog"
+        }
+      }
+    },
+    {
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "httpStatus": 200,
+      "data": {
+        "d": {
+          "__type": "UrlInfo:#Microsoft.Bing.Webmaster.Api",
+          "AnchorCount": 0,
+          "DiscoveryDate": "/Date(-62135596800000)/",
+          "DocumentSize": 0,
+          "HttpStatus": 0,
+          "IsPage": true,
+          "LastCrawledDate": "/Date(-62135596800000)/",
+          "TotalChildUrlCount": 0,
+          "Url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means"
+        }
+      }
+    },
+    {
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "httpStatus": 200,
+      "data": {
+        "d": {
+          "__type": "UrlInfo:#Microsoft.Bing.Webmaster.Api",
+          "AnchorCount": 0,
+          "DiscoveryDate": "/Date(-62135596800000)/",
+          "DocumentSize": 0,
+          "HttpStatus": 0,
+          "IsPage": true,
+          "LastCrawledDate": "/Date(-62135596800000)/",
+          "TotalChildUrlCount": 0,
+          "Url": "https://greggcostin.com/blog/what-moves-mortgage-rates"
+        }
+      }
+    }
+  ]
+}

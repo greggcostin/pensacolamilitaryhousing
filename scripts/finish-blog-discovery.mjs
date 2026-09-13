@@ -11,7 +11,7 @@ export function finishBlogDiscovery(site,{root=null}={}){
   const answer=strip(html.match(/<p class="qa-text">([\s\S]*?)<\/p>/)?.[1]||'');
   let article;for(const m of html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)){const n=JSON.parse(m[1]);if(['BlogPosting','Article'].includes(n['@type']))article=n;}
   if(!url||!title||!answer||!article?.dateModified)throw Error('Incomplete published blog discovery: '+file);
-  posts.push({slug:file.slice(0,-5),url,title,answer,date:article.dateModified.slice(0,10),sources:article.citation||[]});
+  posts.push({slug:file.slice(0,-5),url,title,answer,date:article.dateModified.slice(0,10),sources:(article.citation||[]).map(s=>typeof s==='string'?s:s.url).filter(Boolean)});
  }
  const block='<!-- BLOG_ANSWERS_START -->\n## Blog answers and supporting sources\n\nThese summaries mirror the published articles. Use the linked article for its complete assumptions, exceptions and source dates.\n\n'+posts.map(p=>'### '+p.title+'\n'+p.url+'\nReviewed: '+p.date+'\n'+p.answer+'\nSources: '+p.sources.join(', ')).join('\n\n')+'\n<!-- BLOG_ANSWERS_END -->';
  const full=dir+'/llms-full.txt',old=readFileSync(full,'utf8'),re=/<!-- BLOG_ANSWERS_START -->[\s\S]*?<!-- BLOG_ANSWERS_END -->/;

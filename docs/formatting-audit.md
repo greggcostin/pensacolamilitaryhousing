@@ -1,6 +1,6 @@
 # Sitewide formatting / scannability audit
 
-Generated 2026-09-10 by scripts/analyze-formatting.mjs.
+Generated 2026-09-13 by scripts/analyze-formatting.mjs.
 Score 100 = highly scannable. Penalties: wall-of-text paragraphs (>85 words),
 sparse headings (>220 words/section), sparse scan aids (>280 words per
 list/table/facts box/figure/FAQ). Rows are sorted worst score first, so the
@@ -12,14 +12,14 @@ where data hides in prose.
 |---|---|---|---|---|---|
 | /photo-credits | 65 | 1060 | 0 (max 53w) | 37 (29w/ea) | 1 (1060w/ea) |
 | /privacy | 65 | 1252 | 0 (max 75w) | 19 (66w/ea) | 1 (1252w/ea) |
-| gc:/photo-credits | 65 | 1020 | 0 (max 53w) | 40 (26w/ea) | 1 (1020w/ea) |
+| gc:/photo-credits | 65 | 1088 | 0 (max 53w) | 44 (25w/ea) | 1 (1088w/ea) |
 | gc:/privacy | 65 | 1099 | 0 (max 75w) | 13 (85w/ea) | 1 (1099w/ea) |
-| gc:/team | 76 | 1060 | 1 (max 233w) | 8 (133w/ea) | 2 (530w/ea) |
-| gc:/schools | 78 | 10044 | 0 (max 74w) | 32 (314w/ea) | 21 (478w/ea) |
-| /schools | 81 | 10307 | 0 (max 74w) | 36 (286w/ea) | 22 (469w/ea) |
+| gc:/team | 68 | 1287 | 1 (max 233w) | 9 (143w/ea) | 2 (644w/ea) |
+| gc:/schools | 81 | 10273 | 0 (max 74w) | 34 (302w/ea) | 23 (447w/ea) |
 | /communities/destin | 82 | 1328 | 3 (max 122w) | 18 (74w/ea) | 7 (190w/ea) |
 | /communities/fort-walton-beach | 82 | 1292 | 3 (max 120w) | 17 (76w/ea) | 7 (185w/ea) |
 | /communities/niceville | 82 | 1372 | 3 (max 96w) | 19 (72w/ea) | 7 (196w/ea) |
+| /schools | 84 | 10534 | 0 (max 74w) | 38 (277w/ea) | 24 (439w/ea) |
 | /nas-pensacola-gates | 88 | 3161 | 2 (max 91w) | 20 (158w/ea) | 20 (158w/ea) |
 | /school-zones-military-families | 88 | 1867 | 2 (max 98w) | 15 (124w/ea) | 14 (133w/ea) |
 | /va-coe-guide | 88 | 2976 | 2 (max 99w) | 26 (114w/ea) | 18 (165w/ea) |
@@ -30,7 +30,7 @@ where data hides in prose.
 | /communities/navy-point-warrington | 88 | 1281 | 2 (max 179w) | 16 (80w/ea) | 8 (160w/ea) |
 | /accessibility | 90 | 418 | 0 (max 64w) | 10 (42w/ea) | 1 (418w/ea) |
 | gc:/mortgage-calculators | 90 | 3688 | 0 (max 67w) | 16 (231w/ea) | 9 (410w/ea) |
-| gc:/reviews | 91 | 413 | 0 (max 55w) | 3 (138w/ea) | 0 (413w/ea) |
+| gc:/reviews | 90 | 417 | 0 (max 55w) | 3 (139w/ea) | 0 (417w/ea) |
 | /bah-to-mortgage-guide | 94 | 1880 | 1 (max 91w) | 16 (118w/ea) | 9 (209w/ea) |
 | /buy | 94 | 1461 | 1 (max 106w) | 21 (70w/ea) | 8 (183w/ea) |
 | /crestview-military-relocation | 94 | 3099 | 1 (max 88w) | 19 (163w/ea) | 20 (155w/ea) |
@@ -46,7 +46,7 @@ where data hides in prose.
 | /communities/crestview | 94 | 1153 | 1 (max 116w) | 16 (72w/ea) | 7 (165w/ea) |
 | /communities/ferry-pass | 94 | 928 | 1 (max 87w) | 14 (66w/ea) | 7 (133w/ea) |
 | /communities/milton | 94 | 1132 | 1 (max 92w) | 17 (67w/ea) | 7 (162w/ea) |
-| gc:/faq | 94 | 1486 | 0 (max 68w) | 5 (297w/ea) | 22 (68w/ea) |
+| gc:/faq | 94 | 1492 | 0 (max 68w) | 5 (298w/ea) | 22 (68w/ea) |
 | gc:/resources/useful-links | 95 | 354 | 0 (max 31w) | 5 (71w/ea) | 0 (354w/ea) |
 | /bases/eglin-afb | 97 | 972 | 0 (max 63w) | 16 (61w/ea) | 3 (324w/ea) |
 | /bases/hurlburt-field | 97 | 971 | 0 (max 59w) | 16 (61w/ea) | 3 (324w/ea) |
@@ -56,6 +56,7 @@ where data hides in prose.
 | /bases/duke-field | 98 | 939 | 0 (max 60w) | 15 (63w/ea) | 3 (313w/ea) |
 | /bases/saufley-field | 98 | 929 | 0 (max 62w) | 15 (62w/ea) | 3 (310w/ea) |
 | gc:/accessibility | 98 | 307 | 0 (max 60w) | 4 (77w/ea) | 1 (307w/ea) |
+| gc:/blog/home-appraisals-explained | 99 | 2563 | 0 (max 73w) | 11 (233w/ea) | 16 (160w/ea) |
 | /assumable-va-loans-pensacola | 100 | 2141 | 0 (max 80w) | 17 (126w/ea) | 13 (165w/ea) |
 | /bah-rates | 100 | 1729 | 0 (max 58w) | 17 (102w/ea) | 8 (216w/ea) |
 | /bah-vs-cost-of-owning-pensacola | 100 | 1403 | 0 (max 62w) | 13 (108w/ea) | 10 (140w/ea) |
@@ -97,9 +98,9 @@ where data hides in prose.
 | /zero-down-home-loans | 100 | 1791 | 0 (max 70w) | 29 (62w/ea) | 22 (81w/ea) |
 | /communities/beulah | 100 | 1647 | 0 (max 78w) | 20 (82w/ea) | 8 (206w/ea) |
 | /communities/cantonment | 100 | 1066 | 0 (max 83w) | 16 (67w/ea) | 6 (178w/ea) |
-| /communities/gulf-breeze | 100 | 1400 | 0 (max 78w) | 18 (78w/ea) | 8 (175w/ea) |
+| /communities/gulf-breeze | 100 | 1060 | 0 (max 78w) | 14 (76w/ea) | 6 (177w/ea) |
 | /communities/mary-esther | 100 | 1912 | 0 (max 84w) | 15 (127w/ea) | 10 (191w/ea) |
-| /communities/navarre | 100 | 1481 | 0 (max 79w) | 17 (87w/ea) | 7 (212w/ea) |
+| /communities/navarre | 100 | 1433 | 0 (max 79w) | 17 (84w/ea) | 7 (205w/ea) |
 | /communities/pace | 100 | 986 | 0 (max 81w) | 16 (62w/ea) | 6 (164w/ea) |
 | /communities/perdido-key | 100 | 2276 | 0 (max 77w) | 27 (84w/ea) | 10 (228w/ea) |
 | /communities/shalimar | 100 | 2041 | 0 (max 79w) | 15 (136w/ea) | 12 (170w/ea) |
@@ -116,16 +117,16 @@ where data hides in prose.
 | /blog/va-loan-assumption-buyers-guide | 100 | 1788 | 0 (max 55w) | 18 (99w/ea) | 13 (138w/ea) |
 | /blog/va-loan-seller-concessions-truth | 100 | 1830 | 0 (max 57w) | 18 (102w/ea) | 13 (141w/ea) |
 | gc:/buy | 100 | 1328 | 0 (max 47w) | 14 (95w/ea) | 10 (133w/ea) |
-| gc:/contact | 100 | 184 | 0 (max 47w) | 6 (31w/ea) | 1 (184w/ea) |
+| gc:/contact | 100 | 183 | 0 (max 47w) | 6 (31w/ea) | 1 (183w/ea) |
 | gc:/gulf-shores-orange-beach | 100 | 1140 | 0 (max 56w) | 20 (57w/ea) | 5 (228w/ea) |
 | gc:/index | 100 | 1416 | 0 (max 60w) | 22 (64w/ea) | 7 (202w/ea) |
 | gc:/neighborhoods | 100 | 1180 | 0 (max 74w) | 17 (69w/ea) | 6 (197w/ea) |
 | gc:/resources | 100 | 822 | 0 (max 29w) | 12 (69w/ea) | 5 (164w/ea) |
-| gc:/sell | 100 | 1030 | 0 (max 53w) | 14 (74w/ea) | 8 (129w/ea) |
-| gc:/resources/buyer-transaction-timeline | 100 | 1358 | 0 (max 44w) | 21 (65w/ea) | 11 (123w/ea) |
+| gc:/sell | 100 | 1053 | 0 (max 53w) | 14 (75w/ea) | 8 (132w/ea) |
+| gc:/resources/buyer-transaction-timeline | 100 | 1389 | 0 (max 44w) | 22 (63w/ea) | 11 (126w/ea) |
 | gc:/resources/client-guides | 100 | 1257 | 0 (max 61w) | 29 (43w/ea) | 5 (251w/ea) |
 | gc:/resources/coastal-ownership-costs | 100 | 1787 | 0 (max 66w) | 26 (69w/ea) | 9 (199w/ea) |
-| gc:/resources/condo-due-diligence | 100 | 1119 | 0 (max 66w) | 19 (59w/ea) | 8 (140w/ea) |
+| gc:/resources/condo-due-diligence | 100 | 1149 | 0 (max 66w) | 20 (57w/ea) | 8 (144w/ea) |
 | gc:/resources/first-time-home-buyer | 100 | 776 | 0 (max 52w) | 7 (111w/ea) | 6 (129w/ea) |
 | gc:/resources/florida-home-insurance | 100 | 2645 | 0 (max 76w) | 19 (139w/ea) | 16 (165w/ea) |
 | gc:/resources/florida-homestead-exemption | 100 | 3620 | 0 (max 79w) | 36 (101w/ea) | 25 (145w/ea) |
@@ -141,18 +142,18 @@ where data hides in prose.
 | gc:/neighborhoods/east-hill-downtown | 100 | 1116 | 0 (max 61w) | 19 (59w/ea) | 5 (223w/ea) |
 | gc:/neighborhoods/foley | 100 | 1468 | 0 (max 84w) | 9 (163w/ea) | 7 (210w/ea) |
 | gc:/neighborhoods/fort-walton-beach | 100 | 994 | 0 (max 56w) | 19 (52w/ea) | 5 (199w/ea) |
-| gc:/neighborhoods/gulf-breeze | 100 | 1211 | 0 (max 58w) | 20 (61w/ea) | 5 (242w/ea) |
+| gc:/neighborhoods/gulf-breeze | 100 | 1501 | 0 (max 76w) | 21 (71w/ea) | 6 (250w/ea) |
 | gc:/neighborhoods/midtown-east-pensacola-heights | 100 | 631 | 0 (max 58w) | 9 (70w/ea) | 6 (105w/ea) |
-| gc:/neighborhoods/navarre | 100 | 1027 | 0 (max 51w) | 8 (128w/ea) | 7 (147w/ea) |
+| gc:/neighborhoods/navarre | 100 | 1253 | 0 (max 54w) | 9 (139w/ea) | 8 (157w/ea) |
 | gc:/neighborhoods/niceville | 100 | 1326 | 0 (max 80w) | 10 (133w/ea) | 5 (265w/ea) |
 | gc:/neighborhoods/pace-milton | 100 | 793 | 0 (max 55w) | 10 (79w/ea) | 6 (132w/ea) |
 | gc:/neighborhoods/pensacola-beach | 100 | 693 | 0 (max 64w) | 9 (77w/ea) | 6 (116w/ea) |
 | gc:/neighborhoods/perdido-key | 100 | 1845 | 0 (max 75w) | 17 (109w/ea) | 10 (185w/ea) |
 | gc:/blog/closing-costs-florida-buyers | 100 | 1827 | 0 (max 58w) | 10 (183w/ea) | 15 (122w/ea) |
-| gc:/blog/fed-rate-hike-what-it-means | 100 | 1783 | 0 (max 55w) | 10 (178w/ea) | 15 (119w/ea) |
+| gc:/blog/fed-rate-hike-what-it-means | 100 | 2129 | 0 (max 58w) | 12 (177w/ea) | 17 (125w/ea) |
 | gc:/blog/florida-insurance-relief-2026 | 100 | 1698 | 0 (max 57w) | 10 (170w/ea) | 15 (113w/ea) |
 | gc:/blog/property-taxes-escambia-santa-rosa | 100 | 1768 | 0 (max 55w) | 10 (177w/ea) | 15 (118w/ea) |
-| gc:/blog/what-moves-mortgage-rates | 100 | 2521 | 0 (max 50w) | 13 (194w/ea) | 19 (133w/ea) |
+| gc:/blog/what-moves-mortgage-rates | 100 | 2497 | 0 (max 50w) | 13 (192w/ea) | 19 (131w/ea) |
 
 ## Reading the numbers
 - **Wall paragraphs**: paragraphs over 85 words; "max" is the single longest.

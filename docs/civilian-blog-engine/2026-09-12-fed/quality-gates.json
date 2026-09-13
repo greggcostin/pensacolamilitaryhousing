@@ -1,0 +1,40 @@
+{
+  "runId": "civilian-blog-engine-2026-09-12-fed",
+  "score": {
+    "before": 98,
+    "after": 100,
+    "evidence": "score-output.txt"
+  },
+  "formatting": {
+    "score": 100,
+    "scope": "Actual complete preview article"
+  },
+  "render": {
+    "quickAnswerFirstChildOfMain": true,
+    "count": 1
+  },
+  "auditCivilian": {
+    "findings": 0,
+    "pages": 322,
+    "scope": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\preview"
+  },
+  "auditEntity": {
+    "findings": 0,
+    "pages": 698,
+    "scope": "Complete GC preview paired with retained PMH release for entity consistency, not a current PMH deployment assertion"
+  },
+  "emDashes": {
+    "findings": 0,
+    "scope": "Source scan completed this run; 373 static pages and App.jsx"
+  },
+  "browser": "browser-qa.json",
+  "sourceChecks": "source-checks.json",
+  "photography": "photography.json",
+  "search": {
+    "pages": 322,
+    "evidence": "search.json"
+  },
+  "candidate": "candidate-inventory.json",
+  "draft": true,
+  "deployed": false
+}

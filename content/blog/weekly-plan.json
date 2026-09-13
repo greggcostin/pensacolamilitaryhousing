@@ -452,6 +452,18 @@
       "type": "operational",
       "rule": "Retain both the selected GSC window and actual exported chart coverage. A complete native workbook can still omit dates within the selection; retain those omissions as unknown.",
       "evidence": "The native greggcostin.com GSC workbook selected Aug 14-Sep 10, 2026 in Filters, but Chart contained only Aug 23-Sep 10 (19 days) and Queries contained headers only. The XLSX, Filters, Pages, Queries and Chart exports are retained under the Sep 12 civilian closeout. source-windows.json records exact property/date metadata and incomplete selected-window coverage."
+    },
+    {
+      "id": "L032",
+      "date": "2026-09-12",
+      "type": "operational",
+      "status": "active",
+      "appliesTo": [
+        "research",
+        "verify"
+      ],
+      "rule": "When refreshing a dated series, check the reporting date in research notes and search-landscape summaries as well as the visible value. A correct current figure can coexist with a stale prior-period label.",
+      "evidence": "The Fed article research searchLandscape called 6.71% the prior August 27 observation after its September 10 refresh. The directly opened September 10 Freddie Mac PMMS page identifies 6.71% as the prior week, September 3. This run corrected the research note and kept the separate hypothetical payment inputs unchanged."
     }
   ],
   "excludedLessons": [],
@@ -833,13 +845,14 @@
       "sourceUrls": [
         "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
         "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
         "https://www.freddiemac.com/pmms",
         "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
         "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/"
       ],
       "contextualInbound": 3,
       "evidencePack": "content/civilian-blog/research/fed-rate-hike-what-it-means.json",
-      "readerTask": "Separate confirmed policy from forecasts and choose a financing or timing action the household can afford.",
+      "readerTask": "Use verified policy, a lender quote and a complete property budget to decide whether locking or waiting fits.",
       "nextStep": {
         "goal": "rate-decision-review",
         "prompt": "Bring the property, current financing terms and the point where the budget stops working.",

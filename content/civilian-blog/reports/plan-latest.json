@@ -50,7 +50,7 @@
       "slug": "fed-rate-hike-what-it-means",
       "topic": "Refresh what a Federal Reserve rate decision means for Gulf Coast buyers",
       "type": "refresh",
-      "status": "queued",
+      "status": "completed",
       "pillar": "financing-macro",
       "refreshUrl": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
       "requestedBy": "Gregg",
@@ -73,12 +73,18 @@
       ],
       "evidenceStatus": "Explicit owner request, not inferred demand. Existing URL remains the intent owner. Verify all dated figures at execution.",
       "note": "Refresh only. Do not infer a rate hike from the legacy slug. Keep publish approval gates.",
+      "completedAt": "2026-09-12",
+      "result": "refresh-staged-awaiting-publication-approval",
+      "runId": "civilian-blog-engine-2026-09-12-fed",
+      "report": "docs/civilian-blog-engine/2026-09-12-fed/README.md",
       "ownerRequested": true,
       "observedDemand": false,
       "coverageCount": 2,
       "priority": 1999,
-      "runnable": true,
-      "reasons": [],
+      "runnable": false,
+      "reasons": [
+        "queue request is closed"
+      ],
       "ownership": {
         "slug": "fed-rate-hike-what-it-means",
         "verdict": "clear",
@@ -175,12 +181,18 @@
         "readerTask": "Understand the market and borrower factors behind a mortgage quote, then compare like-for-like terms and consider a rate lock.",
         "distinctValue": "The flagged blog hub lists this existing article and is not a competing explainer. Refresh this same URL. Keep the evergreen pricing-mechanics guide separate from the Fed guide, which interprets a current policy decision and its limits for buyers."
       },
+      "notBefore": "2026-09-14",
+      "executionTiming": "Next normal civilian-blog-engine run, Monday September 14, 2026 at 6:04 a.m. America/Chicago, plus scheduler jitter.",
+      "requestedTimingAt": "2026-09-12",
+      "publicationPolicy": "Existing autoPublish=false applies. Complete the researched refresh and stage it for approval. No permanent autopublish authorization inferred from the schedule question.",
       "ownerRequested": true,
       "observedDemand": false,
       "coverageCount": 2,
       "priority": 1998,
-      "runnable": true,
-      "reasons": [],
+      "runnable": false,
+      "reasons": [
+        "not runnable before 2026-09-14"
+      ],
       "ownership": {
         "slug": "what-moves-mortgage-rates",
         "verdict": "INTENT-REVIEW",
@@ -208,7 +220,7 @@
           {
             "site": "gc",
             "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike Talk: What Gulf Coast Buyers Should Do",
+            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
             "hasFragment": true,
             "coverage": 0.3,
             "exact": 0,
@@ -813,17 +825,6 @@
           },
           {
             "site": "gc",
-            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike Talk: What Gulf Coast Buyers Should Do",
-            "hasFragment": true,
-            "coverage": 0.33,
-            "exact": 0,
-            "score": 1.3333333333333333,
-            "verdict": "ok",
-            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
-          },
-          {
-            "site": "gc",
             "url": "https://greggcostin.com/resources/seller-net-proceeds",
             "title": "Pensacola Seller Net Proceeds Calculator and Guide",
             "coverage": 0.33,
@@ -831,6 +832,17 @@
             "score": 1.3333333333333333,
             "verdict": "ok",
             "file": "civilian-site/resources/seller-net-proceeds.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
+            "hasFragment": true,
+            "coverage": 0.27,
+            "exact": 0,
+            "score": 1.0666666666666667,
+            "verdict": "ok",
+            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
           },
           {
             "site": "gc",
@@ -997,6 +1009,17 @@
             "file": "content/blog/bah-2026-pensacola-what-can-you-afford.fragment.html"
           },
           {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
+            "hasFragment": true,
+            "coverage": 0.28,
+            "exact": 0,
+            "score": 1.1111111111111112,
+            "verdict": "ok",
+            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
+          },
+          {
             "site": "pmh",
             "url": "https://pensacolamilitaryhousing.com/rent-vs-buy-military-pensacola",
             "title": "Rent vs Buy for a Pensacola PCS: Compare Full Costs",
@@ -1005,17 +1028,6 @@
             "score": 0.8888888888888888,
             "verdict": "ok",
             "file": "public/rent-vs-buy-military-pensacola.html"
-          },
-          {
-            "site": "gc",
-            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike Talk: What Gulf Coast Buyers Should Do",
-            "hasFragment": true,
-            "coverage": 0.22,
-            "exact": 0,
-            "score": 0.8888888888888888,
-            "verdict": "ok",
-            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
           }
         ]
       }
@@ -1511,7 +1523,7 @@
           {
             "site": "gc",
             "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike Talk: What Gulf Coast Buyers Should Do",
+            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
             "hasFragment": true,
             "coverage": 0.25,
             "exact": 0,
@@ -1798,7 +1810,7 @@
           {
             "site": "gc",
             "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike Talk: What Gulf Coast Buyers Should Do",
+            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
             "hasFragment": true,
             "coverage": 0.38,
             "exact": 0,
@@ -1851,82 +1863,60 @@
     }
   ],
   "selected": {
-    "kind": "owner-requested-refresh",
+    "kind": "queued-refresh",
     "item": {
-      "slug": "fed-rate-hike-what-it-means",
-      "topic": "Refresh what a Federal Reserve rate decision means for Gulf Coast buyers",
-      "type": "refresh",
-      "status": "queued",
-      "pillar": "financing-macro",
-      "refreshUrl": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-      "requestedBy": "Gregg",
-      "requestedAt": "2026-09-12",
-      "requestedOrder": 1,
+      "slug": "coastal-alabama-vs-panhandle",
+      "topic": "Buying on the Gulf: coastal Alabama (Orange Beach, Gulf Shores, Lillian) vs the Florida Panhandle, taxes, insurance, and lifestyle compared (Gregg is licensed in both states)",
+      "type": "evergreen",
+      "pillar": "ownership-costs",
       "audience": [
         "buyer",
-        "homeowner",
-        "seller"
+        "vacation-home buyer"
       ],
       "targetKeywords": [
-        "fed rate hike what it means",
-        "Federal Reserve mortgage rates"
+        "coastal ownership costs Florida Alabama",
+        "buying a home Florida versus Alabama"
       ],
-      "decision": "Update the existing guide using current official sources and clearly separate the federal funds rate from mortgage pricing.",
-      "sourcePlan": [
-        "Latest Federal Reserve FOMC statement and release date",
-        "Latest Freddie Mac PMMS release and observation date",
-        "CFPB borrower guidance"
-      ],
-      "evidenceStatus": "Explicit owner request, not inferred demand. Existing URL remains the intent owner. Verify all dated figures at execution.",
-      "note": "Refresh only. Do not infer a rate hike from the legacy slug. Keep publish approval gates.",
-      "ownerRequested": true,
+      "refreshUrl": "https://greggcostin.com/resources/coastal-ownership-costs",
+      "decision": "Compare the complete cost of two specific properties, with jurisdiction and use held explicit.",
+      "evidenceStatus": "Editorial proposal; no observed demand claimed.",
+      "ownerRequested": false,
       "observedDemand": false,
-      "coverageCount": 2,
-      "priority": 1999,
+      "coverageCount": 0,
+      "priority": 49.98,
       "runnable": true,
       "reasons": [],
       "ownership": {
-        "slug": "fed-rate-hike-what-it-means",
+        "slug": "coastal-alabama-vs-panhandle",
         "verdict": "clear",
         "hits": [
           {
             "site": "gc",
-            "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
-            "title": "What Moves Mortgage Rates? A Gulf Coast Buyer's Guide",
-            "hasFragment": true,
-            "coverage": 0.46,
+            "url": "https://greggcostin.com/gulf-shores-orange-beach",
+            "title": "Gulf Shores & Orange Beach Homes Guide | Gregg Costin",
+            "coverage": 0.42,
             "exact": 0,
-            "score": 1.8461538461538463,
+            "score": 1.6842105263157894,
             "verdict": "ok",
-            "file": "content/civilian-blog/what-moves-mortgage-rates.fragment.html"
-          },
-          {
-            "site": "pmh",
-            "url": "https://pensacolamilitaryhousing.com/assumable-va-loans-pensacola",
-            "title": "Assumable VA Loans Pensacola | 2.75% Rates Still Available",
-            "coverage": 0.38,
-            "exact": 0,
-            "score": 1.5384615384615385,
-            "verdict": "ok",
-            "file": "public/assumable-va-loans-pensacola.html"
+            "file": "civilian-site/gulf-shores-orange-beach.html"
           },
           {
             "site": "gc",
-            "url": "https://greggcostin.com/resources/mortgage-preapproval",
-            "title": "Mortgage Preapproval Guide for Gulf Coast Buyers",
-            "coverage": 0.38,
+            "url": "https://greggcostin.com/photo-credits",
+            "title": "Photography Credits | Gregg Costin, The Costin Team",
+            "coverage": 0.37,
             "exact": 0,
-            "score": 1.5384615384615385,
+            "score": 1.4736842105263157,
             "verdict": "ok",
-            "file": "civilian-site/resources/mortgage-preapproval.html"
+            "file": "civilian-site/photo-credits.html"
           },
           {
             "site": "pmh",
             "url": "https://pensacolamilitaryhousing.com/faq",
             "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
-            "coverage": 0.31,
+            "coverage": 0.26,
             "exact": 0,
-            "score": 1.2307692307692308,
+            "score": 1.0526315789473684,
             "verdict": "ok",
             "file": "public/faq.html"
           },
@@ -1934,11 +1924,21 @@
             "site": "pmh",
             "url": "https://pensacolamilitaryhousing.com/va-loan-guide",
             "title": "VA Loan Guide: Pensacola to Destin & Gulf Shores | Gregg Costin",
-            "coverage": 0.31,
+            "coverage": 0.26,
             "exact": 0,
-            "score": 1.2307692307692308,
+            "score": 1.0526315789473684,
             "verdict": "ok",
             "file": "public/va-loan-guide.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/bah-rates",
+            "title": "2026 Pensacola BAH Rates by Rank + Housing Cost Calculator",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8421052631578947,
+            "verdict": "ok",
+            "file": "public/bah-rates.html"
           }
         ]
       }

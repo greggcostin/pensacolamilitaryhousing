@@ -1,0 +1,33 @@
+{
+  "collectedAt": "2026-09-13T01:05:23.073Z",
+  "readOnly": true,
+  "method": "GetUrlInfo",
+  "interpretation": "Year-one date sentinel is missing crawl information, not a crawl event. Earlier September 12 browser URL inspection recorded the Fed URL discovered but not yet crawled and domain explorer showed 5 indexed URLs. Performance API row counts are separate.",
+  "results": [
+    {
+      "url": "https://greggcostin.com/",
+      "httpStatus": 400,
+      "data": {
+        "ErrorCode": 2,
+        "Message": "ERROR!!! UnknownError"
+      }
+    },
+    {
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "httpStatus": 200,
+      "data": {
+        "d": {
+          "__type": "UrlInfo:#Microsoft.Bing.Webmaster.Api",
+          "AnchorCount": 0,
+          "DiscoveryDate": "/Date(-62135596800000)/",
+          "DocumentSize": 0,
+          "HttpStatus": 0,
+          "IsPage": true,
+          "LastCrawledDate": "/Date(-62135596800000)/",
+          "TotalChildUrlCount": 0,
+          "Url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means"
+        }
+      }
+    }
+  ]
+}

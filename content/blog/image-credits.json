@@ -1081,6 +1081,15 @@
       "credit": "Todd Van Hoosear",
       "usedOn": "greggcostin.com/contact",
       "provenanceNote": "Source photograph taken December 16, 2018. Resized and compressed for the website; framing is cropped through CSS. Photograph remains available under CC BY-SA 2.0."
+    },
+    "civilian-site/images/fed-building-20260912.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Eccles Building (26088200676).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AEccles%20Building%20(26088200676).jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Federalreserve",
+      "query": "Eccles Building Federal Reserve exterior"
     }
   }
 }

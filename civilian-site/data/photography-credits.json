@@ -152,16 +152,16 @@
       "provenanceNote": "Reused from public/images/communities/milton.jpg. The existing military guide credits Jesse Hasty / Wikimedia Commons (CC0); the original source URL was not recorded."
     },
     {
-      "id": "photo-fed-decision-review-20260909",
-      "image": "https://greggcostin.com/images/fed-decision-review-20260909.jpg",
-      "path": "/images/fed-decision-review-20260909.jpg",
+      "id": "photo-fed-building-20260912",
+      "image": "https://greggcostin.com/images/fed-building-20260912.jpg",
+      "path": "/images/fed-building-20260912.jpg",
       "sourceSite": "gc",
-      "title": "Federal Reserve Bank Birmingham Branch Nov 2011 02.jpg",
-      "credit": "Chris Pruitt",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AFederal%20Reserve%20Bank%20Birmingham%20Branch%20Nov%202011%2002.jpg",
-      "creditRequired": true,
+      "title": "Eccles Building (26088200676).jpg",
+      "credit": "Federalreserve",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AEccles%20Building%20(26088200676).jpg",
+      "creditRequired": false,
       "uses": [
         "blog.html",
         "blog/fed-rate-hike-what-it-means.html"

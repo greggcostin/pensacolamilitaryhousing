@@ -1,0 +1,21 @@
+{
+  "readAt": "2026-09-13T01:02:41.380Z",
+  "snapshotCapturedAt": "2026-09-11T12:05:22.553367Z",
+  "source": "C:/Users/gregg/costin-ea/state/scheduler-lastrun.json",
+  "civilian": {
+    "lastRunAt": "2026-09-10T11:05:58.699Z",
+    "nextRunAt": "2026-09-14T11:05:20.000Z",
+    "enabled": true,
+    "cron": "4 6 * * 1,4"
+  },
+  "military": {
+    "lastRunAt": "2026-09-08T11:04:12.829Z",
+    "nextRunAt": "2026-09-15T11:03:41.000Z",
+    "enabled": true,
+    "cron": "0 6 * * 2"
+  },
+  "timezone": "America/Chicago",
+  "civilianAutoPublish": false,
+  "scheduleChanged": false,
+  "note": "Read a retained scheduler snapshot, not a live scheduler-health probe. Do not present snapshot freshness as this read time."
+}

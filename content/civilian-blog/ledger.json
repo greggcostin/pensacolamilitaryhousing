@@ -22,6 +22,14 @@
      "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
      "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
      "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-fed",
+     "bingPage": "No page-performance rows; unknown, not zero or indexing proof.",
+     "clarity": "Not queried per URL this run; earlier site CSV retained.",
+     "google": "Native Sep 12 property export retained; article absent, selected Aug 14-Sep 10 with Chart Aug 23-Sep 10. Unknown article performance.",
+     "qualifiedInquiries": "unavailable"
     }
    ],
    "search": [
@@ -406,6 +414,14 @@
      "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
      "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
      "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-fed",
+     "bingPage": "No page-performance rows; unknown, not zero or indexing proof.",
+     "clarity": "Not queried per URL this run; earlier site CSV retained.",
+     "google": "Native Sep 12 property export retained; article absent, selected Aug 14-Sep 10 with Chart Aug 23-Sep 10. Unknown article performance.",
+     "qualifiedInquiries": "unavailable"
     }
    ],
    "millageVerified": "All district totals re-derived from published component rates and reconciled exactly (ESC beach 12.7185 / uninc 13.4035 / Century 13.6389 / Pensacola 17.0080 / Downtown 19.0080; SR 2026 Gulf Breeze 11.2804 / uninc 11.3781 / Milton 13.4261 / Jay 16.5481). Worked examples recomputed from these rates.",
@@ -720,6 +736,14 @@
      "bingPage": "No API page-performance row; direct indexing results in verified-access.json",
      "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
      "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
+     "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-fed",
+     "bingPage": "No page-performance rows; unknown, not zero or indexing proof.",
+     "clarity": "Not queried per URL this run; earlier site CSV retained.",
+     "google": "Native Sep 12 property export retained; article absent, selected Aug 14-Sep 10 with Chart Aug 23-Sep 10. Unknown article performance.",
      "qualifiedInquiries": "unavailable"
     }
    ],
@@ -1061,6 +1085,14 @@
      "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
      "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
      "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-fed",
+     "bingPage": "No page-performance rows; unknown, not zero or indexing proof.",
+     "clarity": "Visited Fed URL cohort Sep 5-11: 1 session, 1 user, 40 pages/session. Session aggregates, internal traffic not excluded; insufficient for performance conclusions.",
+     "google": "Native Sep 12 property export retained; article absent, selected Aug 14-Sep 10 with Chart Aug 23-Sep 10. Unknown article performance.",
+     "qualifiedInquiries": "unavailable"
     }
    ],
    "engineFix": "Fixed a real bug in scripts/civilian-blog-factory.mjs: the llms.txt section-replace built its RegExp from the unescaped literal '## Blog Posts (auto-maintained)', so the parentheses compiled as a capture group and the pattern never matched. llms.txt had been frozen at the first post since Aug 24. Escaped the source and used a function replacer; all 4 posts now listed.",
@@ -1333,6 +1365,23 @@
      "sourceCommit": "1f837d262baaad5363dcee55c723812f5a3c9cd0",
      "deploymentId": "8e0af763-c770-486f-991b-5bb8b78f729e",
      "performanceChange": "not measured"
+    },
+    {
+     "runId": "civilian-blog-engine-2026-09-12-fed",
+     "date": "2026-09-12",
+     "kind": "owner-requested substantive refresh",
+     "provider": "codex",
+     "model": "gpt-6-astra",
+     "effort": "max",
+     "selectionReason": "Explicit user request",
+     "sourceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means.json",
+     "words": 1502,
+     "scoreBefore": 98,
+     "scoreAfter": 100,
+     "formatting": 100,
+     "publication": "staged-not-deployed",
+     "summary": "Adds policy/mortgage distinction and after-announcement quote workflow; confirms existing policy/calendar/PMMS figures and independently recomputes payment comparison; new licensed image.",
+     "performanceChange": "not measured"
     }
    ],
    "currentEvidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
@@ -1375,6 +1424,22 @@
     "indexingReceipt": "content/measure/submissions/2026-09-09T07-45-14-883Z-gc-ccf14765.json",
     "report": "docs/blog-catalog-refresh-2026-09-09.md",
     "releaseRecord": "content/measure/catalog-refresh-2026-09-09.json"
+   },
+   "stagedRevision": {
+    "runId": "civilian-blog-engine-2026-09-12-fed",
+    "dateModified": "2026-09-12",
+    "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
+    "words": 1502,
+    "score": 100,
+    "formatting": 100,
+    "image": "/images/fed-building-20260912.jpg",
+    "shareHook": "Before changing your homebuying plan over a Fed headline, check the payment you can carry and the date your rate lock expires.",
+    "research": "content/civilian-blog/research/fed-rate-hike-what-it-means.json",
+    "preview": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\preview\\blog\\fed-rate-hike-what-it-means.html",
+    "autoPublish": false,
+    "status": "staged-awaiting-publication-approval",
+    "reviewBefore": "2026-09-16",
+    "deployed": false
    }
   },
   {
@@ -1401,6 +1466,14 @@
      "bingPage": "No API page-performance row; direct indexing results in verified-access.json",
      "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
      "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
+     "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-fed",
+     "bingPage": "No page-performance rows; unknown, not zero or indexing proof.",
+     "clarity": "Not queried per URL this run; earlier site CSV retained.",
+     "google": "Native Sep 12 property export retained; article absent, selected Aug 14-Sep 10 with Chart Aug 23-Sep 10. Unknown article performance.",
      "qualifiedInquiries": "unavailable"
     }
    ],
@@ -1770,6 +1843,14 @@
      "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
      "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
      "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-fed",
+     "bingPage": "No page-performance rows; unknown, not zero or indexing proof.",
+     "clarity": "Not queried per URL this run; earlier site CSV retained.",
+     "google": "Native Sep 12 property export retained; article absent, selected Aug 14-Sep 10 with Chart Aug 23-Sep 10. Unknown article performance.",
+     "qualifiedInquiries": "unavailable"
     }
    ],
    "inboundLinks": [
@@ -2072,6 +2153,38 @@
    ],
    "measurement": "Clarity CSV and native GSC workbook retrieved; Bing indexing inspected separately from performance",
    "performanceChange": "not measured"
+  },
+  {
+   "id": "civilian-blog-engine-2026-09-12-fed",
+   "date": "2026-09-12",
+   "status": "staged-awaiting-publication-approval",
+   "provider": "codex",
+   "model": "gpt-6-astra",
+   "effort": "max",
+   "selectionReason": "Explicit user request",
+   "fallbackReason": null,
+   "leaseId": "ef169858-e54b-43d0-96ff-4d22dc22f4f9",
+   "posts": [
+    "fed-rate-hike-what-it-means"
+   ],
+   "score": 100,
+   "formatting": 100,
+   "report": "docs/civilian-blog-engine/2026-09-12-fed/README.md",
+   "next": {
+    "slug": "what-moves-mortgage-rates",
+    "notBefore": "2026-09-14",
+    "cadence": "Mon+Thu 6:04am America/Chicago"
+   },
+   "autoPublish": false,
+   "deployed": false,
+   "performanceChange": "not measured",
+   "hypothesis": {
+    "change": "Explicit policy-versus-quote explanation and comparable-offer checklist",
+    "outcome": "Better informed buyer inquiries from this article",
+    "deploymentStatus": "not deployed",
+    "deploymentDate": null,
+    "reviewWindow": "At least 28 complete days after actual deployment, matched cohorts and accepted/qualified inquiry definitions; inadequate samples remain inconclusive."
+   }
   }
  ]
 }

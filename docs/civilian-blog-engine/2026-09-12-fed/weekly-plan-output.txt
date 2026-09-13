@@ -1,0 +1,62 @@
+{
+  "next": {
+    "kind": "research-intent-gap",
+    "site": "pmh",
+    "brief": "full-payment"
+  },
+  "sourceGaps": [],
+  "experiments": [
+    {
+      "id": "pmh-snippet-2026-09-04-1",
+      "page": "/bah-rates",
+      "outcome": "unknown",
+      "cooldown": true,
+      "comparison": {
+        "comparable": false,
+        "reasons": [
+          "Exact baseline date range and filters are unknown; no separate post-change window yet."
+        ]
+      }
+    },
+    {
+      "id": "pmh-snippet-2026-09-04-2",
+      "page": "/blog/living-in-gulf-breeze-pros-cons",
+      "outcome": "unknown",
+      "cooldown": true,
+      "comparison": {
+        "comparable": false,
+        "reasons": [
+          "Exact baseline date range and filters are unknown; no separate post-change window yet."
+        ]
+      }
+    }
+  ],
+  "articles": 18,
+  "briefs": [
+    {
+      "id": "full-payment",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/blog/bah-2026-pensacola-what-can-you-afford"
+    },
+    {
+      "id": "training-housing",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/flight-school-housing-pensacola"
+    },
+    {
+      "id": "rent-buy-hold",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/on-base-vs-off-base-eglin-afb"
+    },
+    {
+      "id": "property-insurance-packet",
+      "evidence": "editorial-hypothesis",
+      "owner": "/resources/florida-home-insurance"
+    },
+    {
+      "id": "part-year-homestead",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/blog/florida-veteran-property-tax-county-guide"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+analyzed 144 pages -> docs/formatting-audit.md
+
+Worst 10:
+  65  /photo-credits  (0 walls, 29w/heading, 1060w/aid)
+  65  /privacy  (0 walls, 66w/heading, 1252w/aid)
+  65  gc:/photo-credits  (0 walls, 25w/heading, 1088w/aid)
+  65  gc:/privacy  (0 walls, 85w/heading, 1099w/aid)
+  68  gc:/team  (1 walls, 143w/heading, 644w/aid)
+  81  gc:/schools  (0 walls, 302w/heading, 447w/aid)
+  82  /communities/destin  (3 walls, 74w/heading, 190w/aid)
+  82  /communities/fort-walton-beach  (3 walls, 76w/heading, 185w/aid)
+  82  /communities/niceville  (3 walls, 72w/heading, 196w/aid)
+  84  /schools  (0 walls, 277w/heading, 439w/aid)
+
+Best 5:
+  100  gc:/blog/closing-costs-florida-buyers
+  100  gc:/blog/fed-rate-hike-what-it-means
+  100  gc:/blog/florida-insurance-relief-2026
+  100  gc:/blog/property-taxes-escambia-santa-rosa
+  100  gc:/blog/what-moves-mortgage-rates

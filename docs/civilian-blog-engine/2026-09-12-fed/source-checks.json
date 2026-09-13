@@ -1,0 +1,128 @@
+{
+  "reviewDate": "2026-09-12",
+  "provider": "codex",
+  "model": "gpt-6-astra",
+  "reasoningEffort": "max",
+  "selectionReason": "Explicit user request",
+  "sources": [
+    {
+      "id": "fed",
+      "publisher": "Federal Reserve Board",
+      "title": "July 29, 2026 FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+      "evidenceNote": "Read target held at 3.50 to 3.75 percent, 9 to 3 vote with three named dissenters favoring a quarter point increase. No September decision has occurred.",
+      "primary": true,
+      "checkedAt": "2026-09-12",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope",
+      "reportingDate": "2026-07-29"
+    },
+    {
+      "id": "calendar",
+      "publisher": "Federal Reserve Board",
+      "title": "FOMC meeting calendar",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "evidenceNote": "Read next scheduled September 15-16, 2026 meeting; distinguish calendar from a decision or prediction.",
+      "primary": true,
+      "checkedAt": "2026-09-12",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope",
+      "reportingDate": "2026-09-12"
+    },
+    {
+      "id": "pmms",
+      "publisher": "Freddie Mac",
+      "title": "Primary Mortgage Market Survey",
+      "url": "https://www.freddiemac.com/pmms",
+      "evidenceNote": "Opened Freddie Mac PMMS this session: September 10 average 6.76%, previous September 3 average 6.71%. Weekly application observation, not an individual, daily or local quote; Thursday release time noon Eastern.",
+      "primary": true,
+      "checkedAt": "2026-09-12",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope",
+      "reportingDate": "2026-09-10"
+    },
+    {
+      "id": "lock",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Mortgage rate locks",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
+      "evidenceNote": "Read application and closing-window conditions, changed income/credit/loan exceptions and lender-specific extension/float-down questions.",
+      "primary": true,
+      "checkedAt": "2026-09-12",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope",
+      "reportingDate": "2023-05-02"
+    },
+    {
+      "id": "estimate",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Loan Estimate explainer",
+      "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+      "evidenceNote": "Read comparable terms, projected payments, estimated cash to close, services and escrow sections. The total is not just lender fees.",
+      "primary": true,
+      "checkedAt": "2026-09-12",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope"
+    },
+    {
+      "id": "transmission",
+      "publisher": "Federal Reserve Board",
+      "title": "Monetary Policy: What Are Its Goals? How Does It Work?",
+      "url": "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+      "primary": true,
+      "checkedAt": "2026-09-12",
+      "reportingDate": "undated explanatory page reviewed this session",
+      "geography": "United States",
+      "propertyType": "Policy and long-term credit generally",
+      "evidenceNote": "Read federal funds definition as overnight reserve borrowing and the separate role of expected policy and the economy in longer-term rates, sections The federal funds rate and How changes affect the broader economy."
+    }
+  ],
+  "verification": {
+    "date": "2026-09-12",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "max",
+    "method": "Direct primary-source read plus separate Python calculations",
+    "checks": [
+      {
+        "item": "Policy range",
+        "result": "July 29 statement held 3.50% to 3.75%; September calendar has no statement yet."
+      },
+      {
+        "item": "Next meeting",
+        "result": "September 15 and 16, 2026 shown in Federal Reserve calendar."
+      },
+      {
+        "item": "PMMS",
+        "result": "September 10 30-year 6.76%; previous week 6.71%. No new release after September 10 observed."
+      },
+      {
+        "item": "Payment at 6.75%",
+        "result": 2205.233528331933,
+        "display": 2205.23
+      },
+      {
+        "item": "Payment at 7.00%",
+        "result": 2262.02848360922,
+        "display": 2262.03
+      },
+      {
+        "item": "Displayed difference",
+        "result": 56.8,
+        "note": "Unrounded gap 56.794955277287045; arithmetic visibly defined from rounded table values."
+      },
+      {
+        "item": "Amortization check",
+        "result": "360-step balance roll-forward ended within 0.000000002 dollars of zero."
+      }
+    ]
+  },
+  "measurement": {
+    "selection": "owner-requested-refresh",
+    "verifiedOverride": false,
+    "newsReview": "Verified PMMS September 10 and upcoming September Fed calendar. OIR newsroom did not show a newer material property-insurance announcement in returned current results; no verified coastal Alabama event displaced the explicit task.",
+    "bing": "Live September 12 collection: no page rows, 6 query rows, 17 traffic days through September 11, 25 impressions and 2 clicks in producer trailing bin; incomplete coverage.",
+    "clarity": "Civilian project ydd39cyp64, visited URL starts with the exact Fed URL, September 5-11. One session/one user; returning desktop session. Internal exclusion not established. Session aggregates do not describe article-only reading or acquisition.",
+    "gsc": "Verified native September 12 workbook retained: selected August 14-September 10, actual Chart August 23-September 10. Article absent, therefore unknown."
+  }
+}

@@ -424,6 +424,18 @@
    "type": "operational",
    "rule": "Retain both the selected GSC window and actual exported chart coverage. A complete native workbook can still omit dates within the selection; retain those omissions as unknown.",
    "evidence": "The native greggcostin.com GSC workbook selected Aug 14-Sep 10, 2026 in Filters, but Chart contained only Aug 23-Sep 10 (19 days) and Queries contained headers only. The XLSX, Filters, Pages, Queries and Chart exports are retained under the Sep 12 civilian closeout. source-windows.json records exact property/date metadata and incomplete selected-window coverage."
+  },
+  {
+   "id": "L032",
+   "date": "2026-09-12",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "research",
+    "verify"
+   ],
+   "rule": "When refreshing a dated series, check the reporting date in research notes and search-landscape summaries as well as the visible value. A correct current figure can coexist with a stale prior-period label.",
+   "evidence": "The Fed article research searchLandscape called 6.71% the prior August 27 observation after its September 10 refresh. The directly opened September 10 Freddie Mac PMMS page identifies 6.71% as the prior week, September 3. This run corrected the research note and kept the separate hypothetical payment inputs unchanged."
   }
  ]
 }

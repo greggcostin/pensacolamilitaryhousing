@@ -1,0 +1,51 @@
+{
+  "queries": [
+    "Federal Reserve Atlanta building",
+    "Eccles Building Federal Reserve exterior"
+  ],
+  "viewedAll": 6,
+  "selected": "fed-building-20260912.jpg",
+  "reviews": [
+    {
+      "query": 1,
+      "candidate": 1,
+      "decision": "Rejected: portrait Nashville branch facade, less useful landscape composition."
+    },
+    {
+      "query": 1,
+      "candidate": 2,
+      "decision": "Rejected: trees and traffic furniture obscure subject, dated event banner prominent."
+    },
+    {
+      "query": 1,
+      "candidate": 3,
+      "decision": "Rejected: faint corner mark appears to be a watermark; not selected."
+    },
+    {
+      "query": 2,
+      "candidate": 1,
+      "decision": "Rejected: dated monochrome historical scan."
+    },
+    {
+      "query": 2,
+      "candidate": 2,
+      "decision": "Usable alternate: clear color building, less clean tree-obscured framing."
+    },
+    {
+      "query": 2,
+      "candidate": 3,
+      "decision": "Selected: clear frontal color exterior, readable building form, no watermark or recognizable private people. Tiny distant person unidentifiable."
+    }
+  ],
+  "candidates": {
+    "civilian-site/images/fed-building-20260912.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Eccles Building (26088200676).jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AEccles%20Building%20(26088200676).jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Federalreserve",
+      "query": "Eccles Building Federal Reserve exterior"
+    }
+  }
+}

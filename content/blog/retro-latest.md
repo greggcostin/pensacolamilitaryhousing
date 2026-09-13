@@ -5,7 +5,7 @@
 | Post | Age | Score | Inbound | Google export imp/clk/pos | Bing 28d imp/clk/pos | Flags | Priority |
 |---|---|---|---|---|---|---|---|
 | closing-costs-florida-buyers | 12 | 100 A | 9 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
-| fed-rate-hike-what-it-means | 11 | 98 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
+| fed-rate-hike-what-it-means | 11 | 100 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
 | florida-insurance-relief-2026 | 9 | 100 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
 | home-appraisals-explained | 0 | 96 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
 | property-taxes-escambia-santa-rosa | 16 | 98 A | 5 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |

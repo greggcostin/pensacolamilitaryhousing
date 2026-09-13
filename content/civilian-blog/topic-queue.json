@@ -5,7 +5,7 @@
       "slug": "fed-rate-hike-what-it-means",
       "topic": "Refresh what a Federal Reserve rate decision means for Gulf Coast buyers",
       "type": "refresh",
-      "status": "queued",
+      "status": "completed",
       "pillar": "financing-macro",
       "refreshUrl": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
       "requestedBy": "Gregg",
@@ -27,7 +27,11 @@
         "CFPB borrower guidance"
       ],
       "evidenceStatus": "Explicit owner request, not inferred demand. Existing URL remains the intent owner. Verify all dated figures at execution.",
-      "note": "Refresh only. Do not infer a rate hike from the legacy slug. Keep publish approval gates."
+      "note": "Refresh only. Do not infer a rate hike from the legacy slug. Keep publish approval gates.",
+      "completedAt": "2026-09-12",
+      "result": "refresh-staged-awaiting-publication-approval",
+      "runId": "civilian-blog-engine-2026-09-12-fed",
+      "report": "docs/civilian-blog-engine/2026-09-12-fed/README.md"
     },
     {
       "slug": "what-moves-mortgage-rates",
@@ -66,7 +70,11 @@
         ],
         "readerTask": "Understand the market and borrower factors behind a mortgage quote, then compare like-for-like terms and consider a rate lock.",
         "distinctValue": "The flagged blog hub lists this existing article and is not a competing explainer. Refresh this same URL. Keep the evergreen pricing-mechanics guide separate from the Fed guide, which interprets a current policy decision and its limits for buyers."
-      }
+      },
+      "notBefore": "2026-09-14",
+      "executionTiming": "Next normal civilian-blog-engine run, Monday September 14, 2026 at 6:04 a.m. America/Chicago, plus scheduler jitter.",
+      "requestedTimingAt": "2026-09-12",
+      "publicationPolicy": "Existing autoPublish=false applies. Complete the researched refresh and stage it for approval. No permanent autopublish authorization inferred from the schedule question."
     },
     {
       "slug": "coastal-alabama-vs-panhandle",

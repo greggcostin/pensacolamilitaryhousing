@@ -6,16 +6,16 @@
     "slug": "fed-rate-hike-what-it-means",
     "site": "gc"
   },
-  "sessionDate": "2026-09-10",
-  "reader": "Civilian buyer, seller or owner deciding what to do before a scheduled Fed meeting",
-  "decision": "Separate confirmed policy from forecasts and choose a financing or timing action the household can afford.",
-  "readerTask": "Separate confirmed policy from forecasts and choose a financing or timing action the household can afford.",
+  "sessionDate": "2026-09-12",
+  "reader": "Gulf Coast homebuyer deciding whether to lock financing or change a purchase plan around a Fed meeting",
+  "decision": "Use verified policy, a lender quote and a complete property budget to decide whether locking or waiting fits.",
+  "readerTask": "Use verified policy, a lender quote and a complete property budget to decide whether locking or waiting fits.",
   "pillar": "financing-macro",
-  "changeReason": "GEO-06 source freshness: September 10 PMMS release replaces the expired survey reference; retain the approved photography, independent scenarios and existing canonical URL.",
-  "originalValue": "Preserves the news URL while replacing unverified odds and causal narratives with confirmed policy, an independently calculated payment stress test, seller net comparison and rental downside.",
+  "changeReason": "Gregg requested this existing Fed article now on September 12; mortgage pricing guide follows at the normal Monday run. Substantive refresh adds explicit policy-to-mortgage distinction and a post-announcement comparison workflow.",
+  "originalValue": "Separates the next Fed announcement from the buyer mortgage quote, retains independently recomputed payment sensitivity, and adds a before/after offer comparison with local ownership costs.",
   "models": {
-    "research": "Codex / GPT-6 / in-session",
-    "write": "Codex / GPT-6 / in-session"
+    "research": "Codex / gpt-6-astra / max / in-session",
+    "write": "Codex / gpt-6-astra / max / in-session"
   },
   "uncertainFacts": [],
   "sources": [
@@ -26,7 +26,10 @@
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
       "evidenceNote": "Read target held at 3.50 to 3.75 percent, 9 to 3 vote with three named dissenters favoring a quarter point increase. No September decision has occurred.",
       "primary": true,
-      "checkedAt": "2026-09-10"
+      "checkedAt": "2026-09-12",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope",
+      "reportingDate": "2026-07-29"
     },
     {
       "id": "calendar",
@@ -35,16 +38,22 @@
       "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
       "evidenceNote": "Read next scheduled September 15-16, 2026 meeting; distinguish calendar from a decision or prediction.",
       "primary": true,
-      "checkedAt": "2026-09-10"
+      "checkedAt": "2026-09-12",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope",
+      "reportingDate": "2026-09-12"
     },
     {
       "id": "pmms",
       "publisher": "Freddie Mac",
       "title": "Primary Mortgage Market Survey",
       "url": "https://www.freddiemac.com/pmms",
-      "evidenceNote": "Opened September 10 PMMS: 30-year 6.76%, prior September 3 6.71%; weekly conventional purchase application scope. National reference, not a lender quote.",
+      "evidenceNote": "Opened Freddie Mac PMMS this session: September 10 average 6.76%, previous September 3 average 6.71%. Weekly application observation, not an individual, daily or local quote; Thursday release time noon Eastern.",
       "primary": true,
-      "checkedAt": "2026-09-10"
+      "checkedAt": "2026-09-12",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope",
+      "reportingDate": "2026-09-10"
     },
     {
       "id": "lock",
@@ -53,7 +62,10 @@
       "url": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
       "evidenceNote": "Read application and closing-window conditions, changed income/credit/loan exceptions and lender-specific extension/float-down questions.",
       "primary": true,
-      "checkedAt": "2026-09-10"
+      "checkedAt": "2026-09-12",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope",
+      "reportingDate": "2023-05-02"
     },
     {
       "id": "estimate",
@@ -62,7 +74,21 @@
       "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "evidenceNote": "Read comparable terms, projected payments, estimated cash to close, services and escrow sections. The total is not just lender fees.",
       "primary": true,
-      "checkedAt": "2026-09-10"
+      "checkedAt": "2026-09-12",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope"
+    },
+    {
+      "id": "transmission",
+      "publisher": "Federal Reserve Board",
+      "title": "Monetary Policy: What Are Its Goals? How Does It Work?",
+      "url": "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+      "primary": true,
+      "checkedAt": "2026-09-12",
+      "reportingDate": "undated explanatory page reviewed this session",
+      "geography": "United States",
+      "propertyType": "Policy and long-term credit generally",
+      "evidenceNote": "Read federal funds definition as overnight reserve borrowing and the separate role of expected policy and the economy in longer-term rates, sections The federal funds rate and How changes affect the broader economy."
     }
   ],
   "claims": [
@@ -76,17 +102,17 @@
       "scope": "Federal funds policy target, not a mortgage rate",
       "asOf": "2026-07-29",
       "perishable": true,
-      "expires": "2026-09-17",
+      "expires": "2026-09-16",
       "loadBearing": true,
       "verification": "Read the July 29 statement directly and distinguished the target from mortgage pricing.",
       "claim": "The Federal Reserve held its target range at 3.50% to 3.75% on July 29, 2026.",
       "status": "verified",
-      "accessed": "2026-09-10",
+      "accessed": "2026-09-12",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
       "locator": "Read the July 29 statement directly and distinguished the target from mortgage pricing.",
       "independentCheck": {
-        "reviewer": "Codex GPT-6",
-        "date": "2026-09-10",
+        "reviewer": "Codex / gpt-6-astra / max",
+        "date": "2026-09-12",
         "finding": "Read the July 29 statement directly and distinguished the target from mortgage pricing."
       }
     },
@@ -98,19 +124,19 @@
         "calendar"
       ],
       "scope": "Scheduled FOMC meeting, subject to change",
-      "asOf": "2026-09-09",
+      "asOf": "2026-09-12",
       "perishable": true,
-      "expires": "2026-09-17",
+      "expires": "2026-09-16",
       "loadBearing": true,
       "verification": "Checked September calendar entry; no decision exists in that future entry.",
       "claim": "The next scheduled FOMC meeting is September 15 and 16, 2026",
       "status": "verified",
-      "accessed": "2026-09-10",
+      "accessed": "2026-09-12",
       "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
       "locator": "Checked September calendar entry; no decision exists in that future entry.",
       "independentCheck": {
-        "reviewer": "Codex GPT-6",
-        "date": "2026-09-10",
+        "reviewer": "Codex / gpt-6-astra / max",
+        "date": "2026-09-12",
         "finding": "Checked September calendar entry; no decision exists in that future entry."
       }
     },
@@ -129,12 +155,12 @@
       "verification": "Read current release and methodology; no daily or local lending claim.",
       "claim": "Freddie Mac's September 10, 2026 survey reported a 6.76% national average for a 30-year fixed mortgage.",
       "status": "verified",
-      "accessed": "2026-09-10",
+      "accessed": "2026-09-12",
       "sourceUrl": "https://www.freddiemac.com/pmms",
       "locator": "Read current release and methodology; no daily or local lending claim.",
       "independentCheck": {
-        "reviewer": "Codex GPT-6",
-        "date": "2026-09-10",
+        "reviewer": "Codex / gpt-6-astra / max",
+        "date": "2026-09-12",
         "finding": "Read current release and methodology; no daily or local lending claim."
       }
     },
@@ -153,12 +179,12 @@
       "verification": "Read application change exceptions and extension questions; did not promise all locks are absolute.",
       "claim": "A mortgage rate lock depends on closing within the agreed period and keeping the application terms consistent.",
       "status": "verified",
-      "accessed": "2026-09-10",
+      "accessed": "2026-09-12",
       "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
       "locator": "Read application change exceptions and extension questions; did not promise all locks are absolute.",
       "independentCheck": {
-        "reviewer": "Codex GPT-6",
-        "date": "2026-09-10",
+        "reviewer": "Codex / gpt-6-astra / max",
+        "date": "2026-09-12",
         "finding": "Read application change exceptions and extension questions; did not promise all locks are absolute."
       }
     },
@@ -168,7 +194,7 @@
       "text": "6.75% $2,205.23 Starting scenario",
       "claim": "6.75% $2,205.23 Starting scenario",
       "status": "verified",
-      "accessed": "2026-09-10",
+      "accessed": "2026-09-12",
       "asOf": "2026-09-09",
       "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "locator": "Article illustration; source supplies context, not the invented inputs. amortization(340000, 6.75, 360) = 2205.23 USD per month.",
@@ -177,9 +203,9 @@
       "method": "amortization(340000, 6.75, 360) = 2205.23 USD per month.",
       "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
       "independentCheck": {
-        "reviewer": "Codex GPT-6",
-        "date": "2026-09-10",
-        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
+        "reviewer": "Codex / gpt-6-astra / max",
+        "date": "2026-09-12",
+        "finding": "Independently recomputed with Python amortization and a 360-step balance roll-forward; printed cents match. Difference uses displayed rounded payments."
       },
       "calculation": {
         "operation": "amortization",
@@ -202,7 +228,7 @@
       "text": "7.00% $2,262.03 Higher-rate scenario",
       "claim": "7.00% $2,262.03 Higher-rate scenario",
       "status": "verified",
-      "accessed": "2026-09-10",
+      "accessed": "2026-09-12",
       "asOf": "2026-09-09",
       "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "locator": "Article illustration; source supplies context, not the invented inputs. amortization(340000, 7, 360) = 2262.03 USD per month.",
@@ -211,9 +237,9 @@
       "method": "amortization(340000, 7, 360) = 2262.03 USD per month.",
       "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
       "independentCheck": {
-        "reviewer": "Codex GPT-6",
-        "date": "2026-09-10",
-        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
+        "reviewer": "Codex / gpt-6-astra / max",
+        "date": "2026-09-12",
+        "finding": "Independently recomputed with Python amortization and a 360-step balance roll-forward; printed cents match. Difference uses displayed rounded payments."
       },
       "calculation": {
         "operation": "amortization",
@@ -236,7 +262,7 @@
       "text": "Difference $56.80 Using the displayed rounded payments",
       "claim": "Difference $56.80 Using the displayed rounded payments",
       "status": "verified",
-      "accessed": "2026-09-10",
+      "accessed": "2026-09-12",
       "asOf": "2026-09-09",
       "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
       "locator": "Article illustration; source supplies context, not the invented inputs. difference(2262.03, 2205.23) = 56.8 USD per month.",
@@ -245,9 +271,9 @@
       "method": "difference(2262.03, 2205.23) = 56.8 USD per month.",
       "verification": "Recomputed the displayed result from the stated inputs; no rate quote or actual property is implied.",
       "independentCheck": {
-        "reviewer": "Codex GPT-6",
-        "date": "2026-09-10",
-        "finding": "Recomputed the recorded inputs and rounded output; hypothetical property and loan assumptions remain explicit."
+        "reviewer": "Codex / gpt-6-astra / max",
+        "date": "2026-09-12",
+        "finding": "Independently recomputed with Python amortization and a 360-step balance roll-forward; printed cents match. Difference uses displayed rounded payments."
       },
       "calculation": {
         "operation": "difference",
@@ -262,10 +288,56 @@
           "Subtract displayed payments, $2262.03 less $2205.23; precise unrounded gap is $56.794955."
         ]
       }
+    },
+    {
+      "id": "overnight-policy",
+      "kind": "fact",
+      "text": "The federal funds rate concerns overnight borrowing of reserve balances between banks.",
+      "claim": "The federal funds rate concerns overnight borrowing of reserve balances between banks.",
+      "sourceIds": [
+        "transmission"
+      ],
+      "scope": "Federal funds rate definition",
+      "asOf": "2026-09-12",
+      "perishable": false,
+      "loadBearing": true,
+      "verification": "Read Federal Reserve policy explainer sections on overnight funds and longer-term rate expectations directly this session.",
+      "status": "verified",
+      "accessed": "2026-09-12",
+      "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+      "locator": "The federal funds rate; How changes in the federal funds rate affect the broader economy",
+      "independentCheck": {
+        "reviewer": "Codex / gpt-6-astra / max",
+        "date": "2026-09-12",
+        "finding": "Confirmed distinction between overnight reserve borrowing and longer-term rates influenced by expectations; no one-for-one mortgage forecast."
+      }
+    },
+    {
+      "id": "long-term-policy",
+      "kind": "fact",
+      "text": "Longer-term loan rates also reflect expectations about future policy and the broader economy.",
+      "claim": "Longer-term loan rates also reflect expectations about future policy and the broader economy.",
+      "sourceIds": [
+        "transmission"
+      ],
+      "scope": "General long-term credit transmission; not an individual rate quote",
+      "asOf": "2026-09-12",
+      "perishable": false,
+      "loadBearing": true,
+      "verification": "Read Federal Reserve policy explainer sections on overnight funds and longer-term rate expectations directly this session.",
+      "status": "verified",
+      "accessed": "2026-09-12",
+      "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+      "locator": "The federal funds rate; How changes in the federal funds rate affect the broader economy",
+      "independentCheck": {
+        "reviewer": "Codex / gpt-6-astra / max",
+        "date": "2026-09-12",
+        "finding": "Confirmed distinction between overnight reserve borrowing and longer-term rates influenced by expectations; no one-for-one mortgage forecast."
+      }
     }
   ],
   "searchLandscape": {
-    "checkedAt": "2026-09-09",
+    "checkedAt": "2026-09-12",
     "results": [
       {
         "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
@@ -280,7 +352,7 @@
       {
         "url": "https://www.freddiemac.com/pmms",
         "title": "Primary Mortgage Market Survey",
-        "reviewed": "Read September 10, 2026 30-year conventional national average 6.76%, prior August 27 6.71%, weekly Thursday-Wednesday applications and scope. This is not a local VA or investment quote."
+        "reviewed": "Opened Freddie Mac PMMS this session: September 10 average 6.76%, previous September 3 average 6.71%. Weekly application observation, not an individual, daily or local quote; Thursday release time noon Eastern."
       },
       {
         "url": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
@@ -291,64 +363,137 @@
         "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
         "title": "Loan Estimate explainer",
         "reviewed": "Read comparable terms, projected payments, estimated cash to close, services and escrow sections. The total is not just lender fees."
+      },
+      {
+        "url": "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+        "title": "Monetary Policy: What Are Its Goals? How Does It Work?",
+        "reviewed": "Read federal funds definition as overnight reserve borrowing and the separate role of expected policy and the economy in longer-term rates, sections The federal funds rate and How changes affect the broader economy."
       }
     ],
-    "informationGain": "Preserves the news URL while replacing unverified odds and causal narratives with confirmed policy, an independently calculated payment stress test, seller net comparison and rental downside.",
+    "informationGain": "The official results separately establish the current policy target, meeting calendar, weekly mortgage reference and lock conditions. They do not combine these into a Gulf Coast purchase workflow that preserves the same loan assumptions before and after an announcement, includes taxes and insurance, and compares seller proceeds. The refresh supplies that workflow without assigning a cause to a weekly rate move or predicting the meeting.",
     "questions": [
       {
         "question": "Has the Fed raised rates ahead of the September meeting?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+        "checkedAt": "2026-09-12",
+        "provenance": "Separate a confirmed statement from the next scheduled meeting.",
+        "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
+      },
+      {
+        "question": "Does a Fed rate hike add the same amount to my mortgage rate?",
+        "origin": "editorial",
+        "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+        "checkedAt": "2026-09-12",
+        "provenance": "Question formulated from the Fed explanation of long-term expectations.",
+        "source": "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm"
       },
       {
         "question": "What does the latest mortgage average tell a buyer?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.freddiemac.com/pmms",
+        "checkedAt": "2026-09-12",
+        "provenance": "National weekly release, not daily quote.",
+        "source": "https://www.freddiemac.com/pmms"
       },
       {
         "question": "How much would a quarter-point mortgage change cost?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "checkedAt": "2026-09-12",
+        "provenance": "Hypothetical amortization sensitivity, not observed search demand.",
+        "source": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
       },
       {
         "question": "When should you lock rather than wait?",
-        "origin": "editorial"
+        "origin": "source",
+        "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
+        "checkedAt": "2026-09-12",
+        "provenance": "CFPB asks about lock duration, delayed closing and rate changes.",
+        "source": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/"
       },
       {
         "question": "Should a seller offer a credit or reduce the price?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "checkedAt": "2026-09-12",
+        "provenance": "Offer structure as a budget question.",
+        "source": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
       },
       {
         "question": "What should an owner or rental investor stress-test?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "checkedAt": "2026-09-12",
+        "provenance": "Property costs and uncertainty, not a revenue prediction.",
+        "source": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
       },
       {
         "question": "What would make waiting the better choice?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
+        "checkedAt": "2026-09-12",
+        "provenance": "Household risk tolerance and written quote.",
+        "source": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/"
+      },
+      {
+        "question": "What should you recheck after the Fed announcement?",
+        "origin": "editorial",
+        "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+        "checkedAt": "2026-09-12",
+        "provenance": "New statement and apples-to-apples lender terms.",
+        "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
       },
       {
         "question": "Does a Fed hike increase every existing mortgage payment?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "checkedAt": "2026-09-12",
+        "provenance": "Fixed versus adjustable terms.",
+        "source": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
       },
       {
         "question": "Should I wait until after the September meeting to buy?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "checkedAt": "2026-09-12",
+        "provenance": "Meeting timing alone cannot settle the purchase.",
+        "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
       },
       {
         "question": "Is the national mortgage average available to every borrower?",
-        "origin": "editorial"
+        "origin": "source",
+        "sourceUrl": "https://www.freddiemac.com/pmms",
+        "checkedAt": "2026-09-12",
+        "provenance": "PMMS methodology and defined applications.",
+        "source": "https://www.freddiemac.com/pmms"
       },
       {
         "question": "Is a seller credit always better than a lower price?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "checkedAt": "2026-09-12",
+        "provenance": "Net and cash constraints remain transaction-specific.",
+        "source": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
       },
       {
         "question": "Should I plan to refinance if I buy now?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
+        "checkedAt": "2026-09-12",
+        "provenance": "Unknown future terms cannot be required rescue financing.",
+        "source": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/"
       },
       {
         "question": "What should a vacation-rental investor do before a rate decision?",
-        "origin": "editorial"
+        "origin": "editorial",
+        "sourceUrl": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+        "checkedAt": "2026-09-12",
+        "provenance": "Illustrative downside review.",
+        "source": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/"
       }
     ],
-    "provenanceNote": "Questions are editorial formulations after reading the named primary pages, not measured search volume or People Also Ask."
+    "provenanceNote": "Primary source wording and explicitly labeled editorial questions, not People Also Ask, measured volume or observed reader demand. Bing observed query rows were school-related and supplied no Fed-article demand."
   },
   "localApplications": [
     {
@@ -363,25 +508,102 @@
     }
   ],
   "scopeChecks": {
-    "professionalReview": "Agent editorial review only; no invented lender, attorney, tax adviser or Gregg approval.",
-    "numbers": "Hypothetical inputs are labeled; property-specific quotes and eligibility remain individual."
+    "professionalReview": "Agent editorial review only; no lender, attorney, tax adviser or Gregg sign-off claimed.",
+    "numbers": "Latest policy and PMMS figures unchanged after live source reading. Hypothetical loan inputs remain invented illustrations. No forecast odds, local rate, causal weekly-move story or refinance guarantee.",
+    "counterargument": "Waiting can be right when costs or reserves do not fit; a lock can exclude later lower pricing and has lender-specific conditions."
   },
   "image": {
-    "selected": "fed-decision-review-20260909.jpg",
     "source": "Wikimedia Commons",
-    "title": "Federal Reserve Bank Birmingham Branch Nov 2011 02.jpg",
-    "pageUrl": "https://commons.wikimedia.org/wiki/File%3AFederal%20Reserve%20Bank%20Birmingham%20Branch%20Nov%202011%2002.jpg",
-    "license": "CC BY-SA 3.0",
-    "creditRequired": true,
-    "credit": "Chris Pruitt",
-    "query": "Federal Reserve Atlanta Birmingham",
-    "eyeTest": "Viewed every returned candidate in this session. Selected this image for legible subject and accurate archival context; rejected unrelated or duplicate candidates. Caption avoids current-property, valuation or endorsement claims."
+    "title": "Eccles Building (26088200676).jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3AEccles%20Building%20(26088200676).jpg",
+    "license": "Public domain",
+    "creditRequired": false,
+    "credit": "Federalreserve",
+    "query": "Eccles Building Federal Reserve exterior",
+    "selected": "fed-building-20260912.jpg",
+    "eyeTest": "Viewed all six downloaded candidates. Selected the clear color frontal exterior, with no watermark or recognizable private people. Rejected historical scan and a corner-marked panorama. Public-domain source; report lists each decision.",
+    "width": 1400,
+    "height": 952,
+    "processing": "Resized to maximum 1400 pixels, JPEG quality 78, WebP quality 75; responsive pipeline follows."
+  },
+  "reviewHistory": [
+    {
+      "checkedAt": "2026-09-09",
+      "contentHash": "91805360be27c7bf3e74ebf1b1a2dff217dde01f5909849ff8ddd2fd1a274bdd",
+      "evidenceHash": "ee2f4a0e78607a083bf433612846a45294b9c5abad94fa760b5ac872f4b62b9f"
+    },
+    {
+      "provider": "codex",
+      "model": "GPT-6",
+      "checkedAt": "2026-09-10",
+      "selectionReason": "GEO-06 source freshness: September 10 PMMS release replaces the expired survey reference; retain the approved photography, independent scenarios and existing canonical URL.",
+      "checks": {
+        "facts": true,
+        "calculations": true,
+        "voice": true,
+        "scope": true,
+        "sources": true,
+        "counterarguments": true
+      },
+      "notes": "Reopened every cited primary source. Checked PMMS current and prior weeks, Fed calendar and policy where applicable, CFPB credit/points/lock/Loan Estimate guidance and Fannie Mae occupancy limits. Read the complete body and FAQs, retained hypothetical examples and waiting/holding-period caveats, and recomputed all recorded calculations. Approved archival imagery and captions retained under the owner preservation instruction. This is an agent review, not a lender, legal or Gregg sign-off.",
+      "contentHash": "dfb8d79b44b61674771a58a298e266aa994f10eec0ec848dfeb0cc5457871738",
+      "evidenceHash": "c0ca79b5e745c79b2c4510447c1a1c502b77dd2a105587c8c633e26038ec2a73"
+    }
+  ],
+  "independentVerification": {
+    "date": "2026-09-12",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "max",
+    "method": "Direct primary-source read plus separate Python calculations",
+    "checks": [
+      {
+        "item": "Policy range",
+        "result": "July 29 statement held 3.50% to 3.75%; September calendar has no statement yet."
+      },
+      {
+        "item": "Next meeting",
+        "result": "September 15 and 16, 2026 shown in Federal Reserve calendar."
+      },
+      {
+        "item": "PMMS",
+        "result": "September 10 30-year 6.76%; previous week 6.71%. No new release after September 10 observed."
+      },
+      {
+        "item": "Payment at 6.75%",
+        "result": 2205.233528331933,
+        "display": 2205.23
+      },
+      {
+        "item": "Payment at 7.00%",
+        "result": 2262.02848360922,
+        "display": 2262.03
+      },
+      {
+        "item": "Displayed difference",
+        "result": 56.8,
+        "note": "Unrounded gap 56.794955277287045; arithmetic visibly defined from rounded table values."
+      },
+      {
+        "item": "Amortization check",
+        "result": "360-step balance roll-forward ended within 0.000000002 dollars of zero."
+      }
+    ]
+  },
+  "measurementDecision": {
+    "selection": "owner-requested-refresh",
+    "verifiedOverride": false,
+    "newsReview": "Verified PMMS September 10 and upcoming September Fed calendar. OIR newsroom did not show a newer material property-insurance announcement in returned current results; no verified coastal Alabama event displaced the explicit task.",
+    "bing": "Live September 12 collection: no page rows, 6 query rows, 17 traffic days through September 11, 25 impressions and 2 clicks in producer trailing bin; incomplete coverage.",
+    "clarity": "Civilian project ydd39cyp64, visited URL starts with the exact Fed URL, September 5-11. One session/one user; returning desktop session. Internal exclusion not established. Session aggregates do not describe article-only reading or acquisition.",
+    "gsc": "Verified native September 12 workbook retained: selected August 14-September 10, actual Chart August 23-September 10. Article absent, therefore unknown."
   },
   "review": {
     "provider": "codex",
-    "model": "GPT-6",
-    "checkedAt": "2026-09-10",
-    "selectionReason": "GEO-06 source freshness: September 10 PMMS release replaces the expired survey reference; retain the approved photography, independent scenarios and existing canonical URL.",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "max",
+    "checkedAt": "2026-09-12",
+    "selectionReason": "Explicit Codex user request; no quota outage inferred.",
     "checks": {
       "facts": true,
       "calculations": true,
@@ -390,15 +612,8 @@
       "sources": true,
       "counterarguments": true
     },
-    "notes": "Reopened every cited primary source. Checked PMMS current and prior weeks, Fed calendar and policy where applicable, CFPB credit/points/lock/Loan Estimate guidance and Fannie Mae occupancy limits. Read the complete body and FAQs, retained hypothetical examples and waiting/holding-period caveats, and recomputed all recorded calculations. Approved archival imagery and captions retained under the owner preservation instruction. This is an agent review, not a lender, legal or Gregg sign-off.",
-    "contentHash": "dfb8d79b44b61674771a58a298e266aa994f10eec0ec848dfeb0cc5457871738",
-    "evidenceHash": "c0ca79b5e745c79b2c4510447c1a1c502b77dd2a105587c8c633e26038ec2a73"
-  },
-  "reviewHistory": [
-    {
-      "checkedAt": "2026-09-09",
-      "contentHash": "91805360be27c7bf3e74ebf1b1a2dff217dde01f5909849ff8ddd2fd1a274bdd",
-      "evidenceHash": "ee2f4a0e78607a083bf433612846a45294b9c5abad94fa760b5ac872f4b62b9f"
-    }
-  ]
+    "notes": "Read all six cited primary sources this session. Independently verified policy, calendar, PMMS and both payments plus rounded difference. Read the full body and FAQs; maintained fixed/adjustable, nominal/total payment and hypothetical/quote distinctions. Added direct policy-to-mortgage explanation and concrete post-meeting workflow. No unsupported odds, causal weekly-rate explanation or guaranteed refinance. Owner and professional approval are not represented by this agent review. Re-reviewed the final figure, archival caption, public-domain credit and responsive dimensions.",
+    "contentHash": "8ec037c00009fa08aa2ca118e6e2752c0146ab7f3dcc4a1a43700d60b04f738e",
+    "evidenceHash": "d0fe3c7e394a26a987ee1ca2031d08676772a59f9504141681eede5e28cf52fb"
+  }
 }

@@ -1,0 +1,102 @@
+{
+  "recordedAt": "2026-09-13T01:12:33.634Z",
+  "root": "C:\\Users\\gregg\\pensacolamilitaryhousing",
+  "source": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\source",
+  "backup": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\root-backup",
+  "files": [
+    {
+      "path": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html",
+      "before": "3621a69b86aee9102e3f5a55128f2fc09338aa897eb5ac04eb8acb241b1471b0",
+      "after": "46e995714e37a28dc7853fa432e627589c5ab4baaf123fdeaf4365c00c53a86b"
+    },
+    {
+      "path": "content/civilian-blog/research/fed-rate-hike-what-it-means.json",
+      "before": "09474a0f576f6f6a472c4019e95fcfa6950da10247a1e5e4f807babc625a86c1",
+      "after": "b0ba260bfcd931241ce3d3e31fbc6cd778e216eb41de2b501000681a08a65e63"
+    },
+    {
+      "path": "content/civilian-blog/topic-queue.json",
+      "before": "848f7c08f76f23670c9541c90e666ddc665527a7f94aacac815073f306dea866",
+      "after": "32890ddffe72ba34266d7adecd9ed421ae0ccffd76208b6af6c3029cffd81e62"
+    },
+    {
+      "path": "content/civilian-blog/ledger.json",
+      "before": "48eef68cef2ba2c4d7c4be90171e83d41fa3f12c73f80d73150939a00fc099b8",
+      "after": "b2bfe95a8545664b64b2955a5b94e73676a71a9c5c3807e66f48d7ea4de46c73"
+    },
+    {
+      "path": "content/blog/learnings.json",
+      "before": "a257843cd05e8a7f4948267af6b3b2561aeca9529e3dba956707a83bc3b2d306",
+      "after": "74ad4153005603215f5c401272a9800338d65fdeab653e13ef6bfc5528b768e3"
+    },
+    {
+      "path": "content/blog/image-credits.json",
+      "before": "1a2059c645afc90a663f69fb46ab9a3a4002ec413caa7137bee556d70f37c1ee",
+      "after": "fa0b2547137b3b1d2be1278fd4471634293e6c5b01fa1f0988c7a095ccbdf621"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912-1200.avif",
+      "before": null,
+      "after": "d2b5fb20874aff82a737396af010e4456d452b6ebdb218871379dbdbbef193a2"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912-1200.jpg",
+      "before": null,
+      "after": "4f88e7172f67c794062a9b4174f2298182667f879cfed54ad3bfdb7689402291"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912-1200.webp",
+      "before": null,
+      "after": "edeb905854c78dd5c4cca99d7f3b9c7fbf724623044765e77cf54df005731a45"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912-480.avif",
+      "before": null,
+      "after": "8a43b553917ca29d77f27d2c6e445813851d1389627813ca85e8e2b45ff5736b"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912-480.jpg",
+      "before": null,
+      "after": "b3b238e27e89bec0be5a11140040a44ab2ecd5f9ae37b6ee47aa360f69cb5ab1"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912-480.webp",
+      "before": null,
+      "after": "c4489660f027288827c40abf61a5928dc90dabc51960c341f2cafac01d08ff78"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912-768.avif",
+      "before": null,
+      "after": "4bc90f5738b487c7bf5182551de28c1051366052b876289216fef3ef9cc79466"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912-768.jpg",
+      "before": null,
+      "after": "2d85084b9219a503f2661ac6bd0765b31d20b1e2123bb6732a4d318300a9c720"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912-768.webp",
+      "before": null,
+      "after": "d3a399fe02f20d6152b17691aeca47bbc42900604a7fb8f633fdf9e5fc22e46d"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912.avif",
+      "before": null,
+      "after": "2736477dfa94265dac2a326da7df5f49389743caf4f44f231b24685556e19347"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912.jpg",
+      "before": null,
+      "after": "d7c665ca4ceccbf29f2a3dc3cfd4869c4e3483fad9a83e1de652a0d4bcd050ed"
+    },
+    {
+      "path": "civilian-site/images/fed-building-20260912.webp",
+      "before": null,
+      "after": "2f079af1534a20e994106d0e76213dac0fb923bd36c8db4ef5453725a06474d3"
+    }
+  ],
+  "method": "Merged only this run into shared queue, ledger, lessons and image-credit records. Copied the owned refreshed fragment/research and new image files after confirming no concurrent edit. Other entries and dirty files remain intact.",
+  "renderedArtifacts": "The shared checkout has parallel site work. Its rendered pages and global assets were not overwritten. The committed editable source and complete production-based preview are retained separately for publication integration.",
+  "preview": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\preview",
+  "deployed": false
+}

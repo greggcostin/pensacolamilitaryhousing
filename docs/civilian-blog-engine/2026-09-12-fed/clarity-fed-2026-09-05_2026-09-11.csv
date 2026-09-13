@@ -1,0 +1,75 @@
+﻿"Project name","greggcostin.com"
+"Date range","09/05/2026 12:00 AM - 09/11/2026 11:59 PM"
+
+
+"Visited URL starts with","https://greggcostin.com/blog/fed-rate-hike-what-it-means"
+
+"Metric","Sessions"
+"","Total sessions","1"
+"","Bot sessions","0"
+
+"Metric","Pages per session"
+"","Average","40"
+
+"Metric","Scroll depth"
+"","Average","49.6"
+
+"Metric","Active time spent"
+"","Active time","6034"
+"","Total time","7807"
+
+"Metric","Users overview"
+"","Unique users","1"
+"","Sessions with new users","0"
+"","Sessions with returning users","1"
+
+"Metric","Insights","No. of sessions","% of sessions"
+"","Rage clicks","0","0%"
+"","Dead click","1","100%"
+"","Excessive scrolling","0","0%"
+"","Quick back click","1","100%"
+
+"Metric","Browsers","No. of sessions","% of sessions"
+"","Chrome","1","100%"
+
+"Metric","Top pages","No. of sessions"
+"","https://greggcostin.com/","1"
+"","https://greggcostin.com/blog","1"
+"","https://greggcostin.com/blog/closing-costs-florida-buyers","1"
+"","https://greggcostin.com/blog/fed-rate-hike-what-it-means","1"
+"","https://greggcostin.com/contact","1"
+"","https://greggcostin.com/neighborhoods","1"
+"","https://greggcostin.com/photo-credits","1"
+"","https://greggcostin.com/resources","1"
+"","https://greggcostin.com/reviews","1"
+"","https://greggcostin.com/schools","1"
+"","https://greggcostin.com/search","1"
+"","https://greggcostin.com/sell","1"
+
+"Metric","Smart events","No. of sessions","% of sessions"
+"","Search","1","100%"
+"","See reviews","1","100%"
+"","Outbound click","1","100%"
+
+"Metric","Referrer","No. of sessions"
+"","greggcostin.com","1"
+
+"Metric","JavaScript errors"
+"","Sessions with JavaScript errors"
+""," total JavaScript errors","0"
+"","","No. of sessions","% of sessions"
+
+"Metric","Performance overview"
+"","Score","0"
+"","LCP (Largest Contentful Paint)","nulls"
+"","INP (Interaction to Next Paint)","nullms"
+"","CLS (Cumulative Layout Shift)","nulls"
+
+"Metric","Bot traffic"
+"webScraperBotSessions","0"
+"suspiciousDeviceBotSessions","0"
+"suspiciousNetworkBotSessions","0"
+"suspiciousInteractionBotSessions","0"
+"ppcAdFraudBotSessions","0"
+"otherBotsSessions","0"
+"__typename","BotTypes"

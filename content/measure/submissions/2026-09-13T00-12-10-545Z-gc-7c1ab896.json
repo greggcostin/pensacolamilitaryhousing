@@ -1,0 +1,56 @@
+{
+  "id": "7c1ab896-0c52-4f73-9267-a8affb5b146b",
+  "site": "gc",
+  "startedAt": "2026-09-13T00:12:10.545Z",
+  "mode": "submit",
+  "checks": [
+    {
+      "url": "https://greggcostin.com/blog/home-appraisals-explained",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/home-appraisals-explained",
+      "fingerprint": "15cfc158a09d01b4be45cc5e4569d19921f4dfb7e54b717950b6c58925ffe628",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog",
+      "fingerprint": "aad27757836f26617f940bf259d8536a775eca629828f090bafa9092f594114f",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    }
+  ],
+  "engines": {
+    "indexnow": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/blog/home-appraisals-explained",
+          "fingerprint": "15cfc158a09d01b4be45cc5e4569d19921f4dfb7e54b717950b6c58925ffe628"
+        },
+        {
+          "url": "https://greggcostin.com/blog",
+          "fingerprint": "aad27757836f26617f940bf259d8536a775eca629828f090bafa9092f594114f"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    },
+    "bing": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/blog/home-appraisals-explained",
+          "fingerprint": "15cfc158a09d01b4be45cc5e4569d19921f4dfb7e54b717950b6c58925ffe628"
+        },
+        {
+          "url": "https://greggcostin.com/blog",
+          "fingerprint": "aad27757836f26617f940bf259d8536a775eca629828f090bafa9092f594114f"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    }
+  }
+}

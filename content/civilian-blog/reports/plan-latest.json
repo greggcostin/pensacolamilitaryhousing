@@ -317,7 +317,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.93,
+      "priority": 49.94,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -398,7 +398,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.92,
+      "priority": 49.93,
       "runnable": false,
       "reasons": [
         "requires a verified event",
@@ -454,7 +454,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.9,
+      "priority": 49.91,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -540,7 +540,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.89,
+      "priority": 49.9,
       "runnable": false,
       "reasons": [
         "not runnable before 2027-01-01"
@@ -628,7 +628,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.88,
+      "priority": 49.89,
       "runnable": false,
       "reasons": [
         "requires a verified event"
@@ -716,7 +716,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.87,
+      "priority": 49.88,
       "runnable": false,
       "reasons": [
         "editorial/source review required"
@@ -793,7 +793,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.85,
+      "priority": 49.86,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -871,7 +871,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.84,
+      "priority": 49.85,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -957,7 +957,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.83,
+      "priority": 49.84,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1045,7 +1045,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.82,
+      "priority": 49.83,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1122,7 +1122,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.81,
+      "priority": 49.82,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1208,7 +1208,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.8,
+      "priority": 49.81,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1296,7 +1296,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.79,
+      "priority": 49.8,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1381,7 +1381,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.78,
+      "priority": 49.79,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1443,86 +1443,6 @@
       }
     },
     {
-      "slug": "home-appraisals-explained",
-      "topic": "How home appraisals work: who hires the appraiser, what they compare, what happens when the number comes in low",
-      "type": "evergreen",
-      "evidence": "Radar 2026-09-04: how much is a home appraisal in Florida (Bing demand 67, 12 queries). Open with the fee range and who pays.",
-      "pillar": "buying",
-      "audience": [
-        "buyer",
-        "seller"
-      ],
-      "targetKeywords": [
-        "how home appraisals work Florida",
-        "what happens when an appraisal is low"
-      ],
-      "decision": "Evaluate an appraisal gap without assuming the price, value and loan amount are the same.",
-      "evidenceStatus": "Historical discovery note, not verified current civilian impressions or search volume. Recheck against the dated evidence packet.",
-      "ownerRequested": false,
-      "observedDemand": false,
-      "coverageCount": 1,
-      "priority": 39.97,
-      "runnable": true,
-      "reasons": [],
-      "ownership": {
-        "slug": "home-appraisals-explained",
-        "verdict": "overlap",
-        "hits": [
-          {
-            "site": "gc",
-            "url": "https://greggcostin.com/blog/home-appraisals-explained",
-            "title": "How Home Appraisals Work and What a Low One Costs",
-            "hasFragment": true,
-            "coverage": 0.73,
-            "exact": 0,
-            "score": 2.909090909090909,
-            "verdict": "overlap",
-            "file": "content/civilian-blog/home-appraisals-explained.fragment.html"
-          },
-          {
-            "site": "pmh",
-            "url": "https://pensacolamilitaryhousing.com/faq",
-            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
-            "coverage": 0.27,
-            "exact": 0,
-            "score": 1.0909090909090908,
-            "verdict": "ok",
-            "file": "public/faq.html"
-          },
-          {
-            "site": "pmh",
-            "url": "https://pensacolamilitaryhousing.com/va-irrrl-guide",
-            "title": "VA IRRRL: Costs, Eligibility & Refinance Comparison",
-            "coverage": 0.27,
-            "exact": 0,
-            "score": 1.0909090909090908,
-            "verdict": "ok",
-            "file": "public/va-irrrl-guide.html"
-          },
-          {
-            "site": "pmh",
-            "url": "https://pensacolamilitaryhousing.com/va-loan-guide",
-            "title": "VA Loan Guide: Pensacola to Destin & Gulf Shores | Gregg Costin",
-            "coverage": 0.27,
-            "exact": 0,
-            "score": 1.0909090909090908,
-            "verdict": "ok",
-            "file": "public/va-loan-guide.html"
-          },
-          {
-            "site": "pmh",
-            "url": "https://pensacolamilitaryhousing.com/zero-down-home-loans",
-            "title": "Zero-Down Home Loans 2026 Pensacola | Gregg Costin",
-            "coverage": 0.27,
-            "exact": 0,
-            "score": 1.0909090909090908,
-            "verdict": "ok",
-            "file": "public/zero-down-home-loans.html"
-          }
-        ]
-      }
-    },
-    {
       "slug": "title-insurance-explained",
       "topic": "What title insurance is, why lenders require it, and what an owner policy protects in Florida",
       "type": "evergreen",
@@ -1540,7 +1460,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 1,
-      "priority": 39.95,
+      "priority": 39.96,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1619,7 +1539,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 1,
-      "priority": 39.94,
+      "priority": 39.95,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1705,7 +1625,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 1,
-      "priority": 39.86,
+      "priority": 39.87,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1785,7 +1705,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 2,
-      "priority": 29.96,
+      "priority": 29.97,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1866,7 +1786,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 2,
-      "priority": 29.91,
+      "priority": 29.92,
       "runnable": false,
       "reasons": [
         "requires a verified event"

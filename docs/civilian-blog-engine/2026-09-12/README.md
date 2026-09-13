@@ -1,5 +1,7 @@
 # Civilian blog publication follow-up, September 12, 2026
 
+Published: [How Home Appraisals Work and What a Low One Costs](https://greggcostin.com/blog/home-appraisals-explained). Deployment f4e8544d-02aa-43f2-9751-ccf68f59321d completed September 12 at 7:10 p.m. CDT. All 2,524 civilian provider files match; public HTTP and browser checks passed. The original combined verification error concerned a separate military deployment and is reconciled, without retry or rollback, in deployment-reconciliation.json. IndexNow and Bing accepted the two changed article/index URLs; indexing is not yet established for the new article.
+
 Provider: Codex, gpt-6-astra, max. Reason: explicit owner follow-up. Routine lease: 43d33660-4068-4835-b6f2-112c81635e4c. Prior September 10 research and staging history is retained; this follow-up rechecked the article and addresses publication, analytics evidence and the next queue items.
 
 ## Release scope
@@ -8,15 +10,15 @@ The proposed live article is /blog/home-appraisals-explained. Its source was rev
 
 Share hook: "If an appraisal comes in low, the useful move is not arguing about the value. It is reading the comparable sales the appraiser actually used."
 
-The source checkout is isolated from the heavily dirty shared workspace. The delivery candidate starts from complete production copies whose provider file hashes were all verified, including the newer military flood-map release. Only the civilian files listed in candidate-inventory.json change; no files are removed and the military site is byte-preserved. A full current-source delivery pass was rejected because its older contact-page preparation did not match the newer live layout. Its partial shared-asset changes were restored, and preparation was limited to the article and blog hub. No gate was bypassed.
+The source checkout is isolated from the heavily dirty shared workspace. The delivery candidate starts from complete production copies whose provider file hashes were all verified, including the newer military flood-map release. Only the civilian files listed in candidate-inventory.json change; no files are removed and the candidate military copy is byte-preserved. This run did not deploy the military site. A full current-source delivery pass was rejected because its older contact-page preparation did not match the newer live layout. Its partial shared-asset changes were restored, and preparation was limited to the article and blog hub. No gate was bypassed.
 
 ## Generator fixes and verification
 
 - A genuinely missing output destination is used even with --out, so a canonical draft cannot mask a first-build failure. Quick answer is the first child of main exactly once, and first build equals rebuild byte for byte.
 - Template extraction restores bundle tokens and retains styles before the first tracker. The visual check exposed missing base navigation CSS even after the fonts and experience links were restored. Both the base reset and navigation grid are now covered by the regression test.
 - Discovery updates preserve destination-only routes. CreativeWork citations serialize as their actual URLs in llms-full.txt.
-- All 28 targeted tests passed. The prepared candidate passed audit-civilian with zero findings on 322 pages and audit-entity on 698 pages. The standard em-dash checker passed. Desktop and 390px mobile previews showed correct type, header, responsive image and quick answer with no horizontal overflow. FAQ expansion and keyboard section-link activation worked.
-- Final seal and provider/public results are recorded in quality-gates.json, deployment.json, production-verified/ and public-verification.json when publication completes. Those receipts determine publication status.
+- All 29 targeted tests passed, including compatibility with legacy and guarded tracker templates. The prepared candidate passed audit-civilian with zero findings on 322 pages and audit-entity on 698 pages. The standard em-dash checker passed. Desktop and 390px mobile previews showed correct type, header, responsive image and quick answer with no horizontal overflow. FAQ expansion and keyboard section-link activation worked.
+- Final seal and provider/public results are recorded in quality-gates.json, deployment.json, production-verified/ and public-verification.json when publication completes. deployment-reconciliation.json resolves the unrelated military comparison; it and public-verification.json determine the final published status.
 
 ## Analytics evidence
 
@@ -36,3 +38,5 @@ See analytics/verified-access.json, the three raw exports, normalized GSC Pages/
 Both are explicit owner requests, not inferred search demand. Planner priority now honors requestedOrder ahead of generated refresh scores while preserving source/timing/hold/intent gates and material verified current-event overrides. The mortgage article's overlap with the blog listing is documented as a listing relationship, and the Fed/current-decision distinction is recorded. Normal draft and publication gates remain in force for both future refreshes.
 
 Operational lessons L030 and L031 record the reproduced CSS extraction defect and the difference between selected GSC dates and actual export coverage. They make no ranking or conversion claim.
+
+The shared scheduled-task checkout was integrated narrowly, with per-file backups. Its older tracker form and bundle whitespace behavior were reconciled without changing its analytics implementation. Four first-build/style/queue tests passed there, and its planner selected the Fed refresh first with the mortgage-pricing refresh second. Other shared edits and the shared Git index were not staged by this run. The isolated 29-test suite also passed.

@@ -1,0 +1,282 @@
+{
+  "checkedAt": "2026-09-13T00:10:24.118Z",
+  "readOnly": true,
+  "sites": [
+    {
+      "site": "pmh",
+      "project": "pensacolamilitaryhousing",
+      "domain": "pensacolamilitaryhousing.com",
+      "localBaseline": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\pmh",
+      "deploymentId": "007482b9-a686-4d44-8dab-42c1c0e2a20b",
+      "url": "https://007482b9.pensacolamilitaryhousing.pages.dev",
+      "createdOn": "2026-09-12T23:46:00.924393Z",
+      "stage": "success",
+      "commit": "a621c4c0a85e0cbd2b98516cef8b58c8d9ee1e01",
+      "assetCount": 3971,
+      "counts": {
+        "exact": 3912,
+        "lineEndingOnly": 0,
+        "missing": 57,
+        "different": 2
+      },
+      "differences": [
+        {
+          "path": "/assets/flood-mobile.css",
+          "status": "missing"
+        },
+        {
+          "path": "/assets/flood-mobile.js",
+          "status": "missing"
+        },
+        {
+          "path": "/flood-zone-map.html",
+          "status": "different"
+        },
+        {
+          "path": "/pagefind/fragment/en_406e44e.pf_fragment",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_10b3bac.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_13d92ae.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_15b36ff.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_162119b.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_1d64464.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_1dcf2a8.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_1e9c6a4.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_209f70f.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_20ebe3b.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_2973cf3.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_3673aee.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_39b9826.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_4472324.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_452b819.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_45c6ffb.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_4ae82bd.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_4e2fbfb.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_5894d45.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_5a59854.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_5cd6ecb.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_5cef7d3.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_6340439.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_6be6982.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_6e4ce39.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_79361f1.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_7f1ee8a.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_8377732.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_85719cb.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_85d445e.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_898169f.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_8ad07dc.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_980ab19.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_99dd977.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_a39c231.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_b0f9ae8.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_b44784b.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_c373438.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_c51454b.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_c56f5e2.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_c5ec71a.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_cbe938f.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_cebbdf6.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_d0a0f6b.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_d17d561.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_d7e05c2.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_e516ffb.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_e6e1adf.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_e85d25d.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_e8a23bc.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_ebb8692.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_f277a2e.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_f544b5a.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/index/en_fcadce7.pf_index",
+          "status": "missing"
+        },
+        {
+          "path": "/pagefind/pagefind-entry.json",
+          "status": "different"
+        },
+        {
+          "path": "/pagefind/pagefind.en_b4efd34678.pf_meta",
+          "status": "missing"
+        }
+      ]
+    },
+    {
+      "site": "gc",
+      "project": "greggcostin",
+      "domain": "greggcostin.com",
+      "localBaseline": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\gc",
+      "deploymentId": "f4e8544d-02aa-43f2-9751-ccf68f59321d",
+      "url": "https://f4e8544d.greggcostin.pages.dev",
+      "createdOn": "2026-09-13T00:10:11.190302Z",
+      "stage": "success",
+      "commit": "4c82dbbfd2d7e0dc49b548ff3f899b147941a525",
+      "assetCount": 2524,
+      "counts": {
+        "exact": 2524,
+        "lineEndingOnly": 0,
+        "missing": 0,
+        "different": 0
+      },
+      "differences": []
+    }
+  ],
+  "ok": false
+}

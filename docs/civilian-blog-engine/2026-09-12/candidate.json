@@ -1,0 +1,203 @@
+{
+  "builtAt": "2026-09-13T00:09:51.298Z",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release",
+  "production": [
+    {
+      "site": "pmh",
+      "project": "pensacolamilitaryhousing",
+      "domain": "pensacolamilitaryhousing.com",
+      "localBaseline": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.coast-release\\military-flood-map-20260911\\pmh",
+      "deploymentId": "d05633e1-b253-4f9c-8ad1-146e0aaeb4cf",
+      "url": "https://d05633e1.pensacolamilitaryhousing.pages.dev",
+      "createdOn": "2026-09-11T22:47:41.897923Z",
+      "stage": "success",
+      "commit": "a621c4c0a85e0cbd2b98516cef8b58c8d9ee1e01",
+      "assetCount": 3914,
+      "counts": {
+        "exact": 3914,
+        "lineEndingOnly": 0,
+        "missing": 0,
+        "different": 0
+      },
+      "differences": []
+    },
+    {
+      "site": "gc",
+      "project": "greggcostin",
+      "domain": "greggcostin.com",
+      "localBaseline": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.coast-release\\military-flood-map-20260911\\gc",
+      "deploymentId": "3ec62323-654b-4f9d-9baf-22442bd35f52",
+      "url": "https://3ec62323.greggcostin.pages.dev",
+      "createdOn": "2026-09-11T22:06:17.530954Z",
+      "stage": "success",
+      "commit": "a621c4c0a85e0cbd2b98516cef8b58c8d9ee1e01",
+      "assetCount": 2509,
+      "counts": {
+        "exact": 2509,
+        "lineEndingOnly": 0,
+        "missing": 0,
+        "different": 0
+      },
+      "differences": []
+    }
+  ],
+  "changes": [
+    {
+      "site": "gc",
+      "path": "assets/styles/c52e5831d8713e73b849.css",
+      "before": null,
+      "sha256": "c52e5831d8713e73b8491a8756da6e0002020293dbe019b8a310fd0cdafd8f5d"
+    },
+    {
+      "site": "gc",
+      "path": "assets/styles/manifest.json",
+      "before": "a80eb5b4c82c4eed267c333248e2ca22de18f160e288bac264756d66db30b7cc",
+      "sha256": "da7ead9f7da0db85c7ac524c6e1215581af4c72ec57ec22cd821850626e6cb8f"
+    },
+    {
+      "site": "gc",
+      "path": "blog/home-appraisals-explained.html",
+      "before": null,
+      "sha256": "d4f63830953a1fb5716b93f653a59b5a2157a9d5891b9efca168ca6f5e8f154e"
+    },
+    {
+      "site": "gc",
+      "path": "blog.html",
+      "before": "60954421e061b036df7773145150116976c91f7f66f183121ef4de275b0372c5",
+      "sha256": "14eb32fa88ec15f6aa25dd192351d0adef4a750b457d8644d3dfc812d880091b"
+    },
+    {
+      "site": "gc",
+      "path": "data/photography-credits.json",
+      "before": "5807e5f3e5083276be1cdbbceb5de49ebd905f2f442c3b6365e1d41dc8d0c74b",
+      "sha256": "ee4e1b0798bc04853bf90d8ae122b494f49c5a678c911c04527cffe888dfe769"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910-1200.avif",
+      "before": null,
+      "sha256": "a7e1ff04e133a58b33517652558c86b931889efc0dc42e0476ec55666d440216"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910-1200.jpg",
+      "before": null,
+      "sha256": "c5f249fd670033f76d9ad45ced18152f2a2cb8c77a1a2e9a364237db5d5f9908"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910-1200.webp",
+      "before": null,
+      "sha256": "44093f0c585897d1e423c58c307cc210706e3c5822f94cb1aa945e4f4a7ed8b0"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910-480.avif",
+      "before": null,
+      "sha256": "e3bca49358b6cd42c0fabbe55c37d2e768faf2ab02cd80d9e3a6c66c7320d580"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910-480.jpg",
+      "before": null,
+      "sha256": "018b6e857c4a2c677d033756ab292fd0a0c888d1c4a1e0decd5925dc238cf589"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910-480.webp",
+      "before": null,
+      "sha256": "a0458657d8967b02e6a05ec7c36efd47ecf2d303209b3ff594423b716d0c844d"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910-768.avif",
+      "before": null,
+      "sha256": "0c570c32b069b2f92c810531a4c738554dfeffceefd78ef793ae2e89a0bce59c"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910-768.jpg",
+      "before": null,
+      "sha256": "363d15a57898258f200a52138f9b3c906dc90b00c49960c20148a6c548ba2001"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910-768.webp",
+      "before": null,
+      "sha256": "74d4571c8da44ec52252c37a6309e3136c2ff042168fcbcd41808fb6cf9be659"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910.avif",
+      "before": null,
+      "sha256": "b93eed94b2a5b2d730443150c1f58135254e5f1532dd00002231debd66a65986"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910.jpg",
+      "before": null,
+      "sha256": "1902c70792878480df31bc75e0ef258cbc3fc304e0db58a0f07f127e36a399be"
+    },
+    {
+      "site": "gc",
+      "path": "images/appraisal-review-20260910.webp",
+      "before": null,
+      "sha256": "c9e069fd7bb451446d552bd288bf5524a2f61368b72bdfe57c7323361bc1147f"
+    },
+    {
+      "site": "gc",
+      "path": "llms-full.txt",
+      "before": "95261a4a8845c2c37ca36b4d0b190cd7c1d89d7fb3a209ffce15c144c85b32c9",
+      "sha256": "6948026ad45496d60121584889093cbdd2c7896eae2b2ced1641fdedf1995d51"
+    },
+    {
+      "site": "gc",
+      "path": "llms.txt",
+      "before": "f6cf7336a7f98d3548bb06954083d558e0212e8af1a3dee5c5ff90f4d6464e6c",
+      "sha256": "646b1bea7c64d3f74e3b2fbbae91d8c45451d7b4f4d13fdd81213c155e7496b2"
+    },
+    {
+      "site": "gc",
+      "path": "og/blog-home-appraisals-explained.png",
+      "before": null,
+      "sha256": "a284d8338696f02943f4c029791ccc4d3fa1c4c823a494cd5bd4bfcf0a1ae2d3"
+    },
+    {
+      "site": "gc",
+      "path": "photo-credits.html",
+      "before": "c3e4a70981906dd861097a7c967ce0d8755fc1f63ce351db41ea83d2fdd448cf",
+      "sha256": "95fb51ddd8c8e2cd5034908394f0d927b08bd2c27645b22afff10f78dea73ae5"
+    },
+    {
+      "site": "gc",
+      "path": "resources/buyer-transaction-timeline.html",
+      "before": "63665636a48594017d22e7731b850510211bcaaeeeab6db971481d66489db046",
+      "sha256": "e4917c0596f2f6e93e02bb06d65a3ea539b96a57949fc81f4f2f8540133018df"
+    },
+    {
+      "site": "gc",
+      "path": "resources/condo-due-diligence.html",
+      "before": "a30451ccca3dffe2c7cede4ecef524e822299d7134c76f6698bb34953b01b9dc",
+      "sha256": "b8702c206709391044b85c2da51fa12768a60626dc6ae319d886f1d74e3244c1"
+    },
+    {
+      "site": "gc",
+      "path": "sell.html",
+      "before": "ec9c0326b958ee0870149d17cffc6e808d1edeb64253e22f0989bb1a70ac5c63",
+      "sha256": "50965068a188cb507811265903ea689e6af3563d25053827d2e219477422d7f4"
+    },
+    {
+      "site": "gc",
+      "path": "sitemap.xml",
+      "before": "fe529a4de623b3cf4fd5ae6500b4680d9b9bf70e264120b8162fa303cf92fd2a",
+      "sha256": "0a4e0c59126a1ca02db0ca96ca984b49a2fd49def43eb86c77709e301503ef80"
+    }
+  ],
+  "preserved": {
+    "pmh": 3916,
+    "gc": 2501
+  },
+  "removed": [],
+  "sourceCommit": "4c82dbbfd2d7e0dc49b548ff3f899b147941a525",
+  "releaseMessage": "Publish reviewed civilian appraisal guide with isolated production preservation"
+}

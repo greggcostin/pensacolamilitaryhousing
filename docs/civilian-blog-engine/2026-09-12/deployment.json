@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-09-13T00:10:02.071Z",
+  "directory": "artifacts/civilian-blog-engine/2026-09-12/source/docs/civilian-blog-engine/2026-09-12",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release",
+  "candidateFingerprint": "108ce4e31084c6afc43e5f9b6efe51bc29967a5ca186c3a8461fb8eba6e934e6",
+  "sites": [
+    {
+      "site": "gc",
+      "project": "greggcostin",
+      "before": "3ec62323-654b-4f9d-9baf-22442bd35f52",
+      "status": "provider-success",
+      "exitCode": 0,
+      "after": "f4e8544d-02aa-43f2-9751-ccf68f59321d",
+      "url": "https://f4e8544d.greggcostin.pages.dev",
+      "providerStage": "success",
+      "checkedAt": "2026-09-13T00:10:15.603Z"
+    }
+  ],
+  "status": "needs-attention",
+  "error": "Full provider file verification failed; inspect production-verified before any retry"
+}

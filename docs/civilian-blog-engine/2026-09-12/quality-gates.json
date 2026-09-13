@@ -1,0 +1,62 @@
+{
+  "ok": true,
+  "sealedAt": "2026-09-13T00:09:51.833Z",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release",
+  "candidateFingerprint": "108ce4e31084c6afc43e5f9b6efe51bc29967a5ca186c3a8461fb8eba6e934e6",
+  "sourceCommit": "4c82dbbfd2d7e0dc49b548ff3f899b147941a525",
+  "checks": [
+    {
+      "command": "node scripts/audit-civilian.mjs --root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\gc",
+      "exitCode": 0,
+      "output": "AUDIT CLEAN: 322 pages, 0 findings\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/audit-entity.mjs --pmh-root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\pmh --gc-root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\gc",
+      "exitCode": 0,
+      "output": "ENTITY AUDIT CLEAN: 698 pages; full nodes on 3/2/2 pages; every other definition is the canonical compact or publisher shape\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/score-post.mjs home-appraisals-explained --site gc --gate",
+      "exitCode": 0,
+      "output": "home-appraisals-explained (greggcostin.com): 96/100 A\ncomponents: structure 23.8 | evidence 20 | local 10 | seo 17 | geo 15 | share 10\nfacts: {\"words\":1765,\"h2s\":8,\"questionH2s\":8,\"directAnswers\":8,\"walls\":0,\"scanAids\":5,\"numericSentences\":21,\"sourcedSentences\":9,\"datedSentences\":5,\"quotable\":1,\"distinctSources\":5,\"placesPerK\":4,\"links\":7,\"faqs\":7,\"table\":true,\"checklist\":true,\"actionItems\":4,\"workedExample\":true,\"ownVoice\":false,\"quickAnswer\":true,\"takeaways\":true,\"shareHook\":true,\"perishables\":7}\n\nfix list (3):\n  - structure: 1 section(s) run 250+ words with no list or table; add one or a question-shaped h3\n  - structure: 5 scan aids for 1765 words (target one list/table/figure per 250 words)\n  - seo: primary keyword not evident in the H1\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/analyze-formatting.mjs --file C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\gc\\blog\\home-appraisals-explained.html --gate --out C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\source\\docs\\civilian-blog-engine\\2026-09-12\\formatting.md",
+      "exitCode": 0,
+      "output": "analyzed 1 pages -> C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\source\\docs\\civilian-blog-engine\\2026-09-12\\formatting.md\n\nWorst 10:\n  99  C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\gc\\blog\\home-appraisals-explained  (0 walls, 233w/heading, 160w/aid)\n\nBest 5:\n  99  C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\gc\\blog\\home-appraisals-explained\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/check-em-dashes.mjs",
+      "exitCode": 0,
+      "output": "OK: no em dashes in prose across 373 pages + App.jsx.\n",
+      "stderr": ""
+    }
+  ],
+  "regressionTests": {
+    "passed": 28,
+    "evidence": "regression-tests.json"
+  },
+  "visual": {
+    "checkedBy": "Codex",
+    "desktop": true,
+    "mobileWidth": 390,
+    "horizontalOverflow": false,
+    "headingFont": "Playfair Display",
+    "bodyMargin": "0px",
+    "quickAnswer": "first child of main, once",
+    "responsiveImage": "480/1200 avif loaded",
+    "faqExpansion": true,
+    "keyboardSectionNavigation": true,
+    "og": "1200x630 viewed; title fits",
+    "photograph": "staged North Hill house visually rechecked"
+  },
+  "scope": {
+    "changedFiles": 25,
+    "removed": 0,
+    "pmhUnchanged": true
+  }
+}

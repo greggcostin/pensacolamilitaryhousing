@@ -7,8 +7,20 @@ import {fileURLToPath} from 'node:url';
 import {buildPost, loadFragment, syncSitemapAndLlms} from './civilian-blog-factory.mjs';
 import {bundleCivilianStyles} from './civilian-style-bundle.mjs';
 import {auditStyleBundle} from './civilian-style-audit.mjs';
+import {chrome} from './civilian-page-lib.mjs';
 
 const root=fileURLToPath(new URL('..',import.meta.url));
+test('template extraction supports guarded and legacy tracker markup without dropping earlier CSS',()=>{
+  for(const tracker of ['<script data-costin-tracker src="/analytics.js"></script>','<script async src="https://www.googletagmanager.com/gtag/js?id=EXAMPLE"></script>']){
+    const before='<style>body{margin:0}.banner-row{display:grid}</style>',after='<link rel="stylesheet" href="/assets/costin-fonts.css">';
+    const html='<head>'+before+tracker+after+'</head><body><nav class="main-banner">Navigation</nav><footer>'+('Shared footer content. '.repeat(10))+'</footer></body>';
+    const shell=chrome(html);
+    assert(shell.sharedHead.includes(before));
+    assert(shell.sharedHead.includes(after));
+    assert(shell.sharedHead.indexOf(before)<shell.sharedHead.indexOf(after));
+    assert(shell.nav.includes('Navigation'));
+  }
+});
 test('first civilian post build equals rebuild and delivers both shared styles',async()=>{
   const out=mkdtempSync(join(tmpdir(),'costin-first-post-'));
   const canonical=join(root,'civilian-site/blog/home-appraisals-explained.html');

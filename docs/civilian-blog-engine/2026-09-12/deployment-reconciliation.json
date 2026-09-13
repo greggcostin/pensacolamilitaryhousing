@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-09-13T00:16:59.149Z",
+  "status": "published-and-live-verified",
+  "scope": "greggcostin civilian project only",
+  "deploymentId": "f4e8544d-02aa-43f2-9751-ccf68f59321d",
+  "sourceCommit": "4c82dbbfd2d7e0dc49b548ff3f899b147941a525",
+  "providerStage": "success",
+  "providerFiles": {
+    "exact": 2524,
+    "total": 2524,
+    "different": 0,
+    "missing": 0
+  },
+  "publicReadback": "public-verification.json: all 13 requested URLs returned 200; assets exact, HTML exact after reversing observed Cloudflare email obfuscation only",
+  "browser": "Live article visually checked: correct canonical, one quick answer first in main, Playfair heading, responsive image loaded and business email decoded",
+  "initialReceipt": "deployment.json is retained unchanged with its combined-verification error",
+  "unrelatedChange": {
+    "site": "pmh",
+    "before": "d05633e1-b253-4f9c-8ad1-146e0aaeb4cf",
+    "observed": "007482b9-a686-4d44-8dab-42c1c0e2a20b",
+    "createdOn": "2026-09-12T23:46:00.924393Z",
+    "explanation": "A separate military deployment completed before this civilian deployment started. The publisher invoked only greggcostin; its combined checker then compared the unrelated newer military deployment against the earlier baseline. No rollback, retry or military publish was performed."
+  },
+  "indexing": "Article and blog hub accepted by IndexNow and Bing; receipt is not proof of indexing."
+}

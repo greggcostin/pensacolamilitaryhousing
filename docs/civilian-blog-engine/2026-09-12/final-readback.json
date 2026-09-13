@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-09-13T00:22:48.831Z",
+  "testSuites": {
+    "isolatedSource": {
+      "passed": 29,
+      "failed": 0,
+      "commands": [
+        "node --test scripts/civilian-blog-first-build.test.mjs scripts/civilian-editorial.test.mjs scripts/blog-owner-queue.test.mjs scripts/blog-shell.test.mjs scripts/civilian-delivery.test.mjs"
+      ]
+    },
+    "sharedCheckout": {
+      "passed": 4,
+      "failed": 0,
+      "command": "node --test scripts/civilian-blog-first-build.test.mjs scripts/blog-owner-queue.test.mjs",
+      "notes": "Verified after narrow integration. Legacy source needed the existing main-branch bundle whitespace fix; the first-build, delivery-style and queue checks then passed."
+    }
+  },
+  "queue": {
+    "first": "fed-rate-hike-what-it-means",
+    "second": "what-moves-mortgage-rates",
+    "bothRunnable": true,
+    "kind": "owner-requested-refresh",
+    "observedDemand": false,
+    "verifiedIn": [
+      "isolated source",
+      "shared scheduled-task checkout"
+    ]
+  },
+  "integration": {
+    "backupDirectory": "artifacts/civilian-blog-engine/2026-09-12/shared-integration/applied-before",
+    "preservedOtherLessons": true,
+    "preservedOtherContextualLinks": true,
+    "sourcePageAssembly": "Kept shared checkout analytics implementation; added early stylesheet extraction and support for both existing tracker formats.",
+    "sharedGitIndexModifiedByThisRun": false
+  },
+  "publication": {
+    "status": "published-and-live-verified",
+    "deploymentId": "f4e8544d-02aa-43f2-9751-ccf68f59321d",
+    "article": "https://greggcostin.com/blog/home-appraisals-explained",
+    "score": 96,
+    "formatting": 99,
+    "providerFilesExact": 2524
+  },
+  "remainingLimits": [
+    "The Clarity connector itself still selects the military project; the verified civilian browser fallback is documented.",
+    "The GSC selected window has only 19 exported chart days and no disclosed query rows.",
+    "The new article has been submitted; indexing and post-publication outcomes are not established."
+  ]
+}

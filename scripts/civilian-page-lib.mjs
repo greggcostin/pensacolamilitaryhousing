@@ -27,9 +27,10 @@ export function creditFor(srcPath) {
   } catch { return null; }
 }
 
-export function chrome() {
-  const idx = unbundleCivilianStyles(readFileSync(`${SITE_DIR}/index.html`, "utf8"), SITE_DIR);
-  const headStart = idx.search(/<script\b[^>]*data-costin-tracker/);
+export function chrome(indexHtml = readFileSync(`${SITE_DIR}/index.html`, "utf8"), siteDir = SITE_DIR) {
+  const idx = unbundleCivilianStyles(indexHtml, siteDir);
+  const guardedTracker = idx.search(/<script\b[^>]*data-costin-tracker/);
+  const headStart = guardedTracker >= 0 ? guardedTracker : idx.indexOf('<script async src="https://www.googletagmanager.com');
   const headEnd = idx.indexOf("</head>");
   const navStart = idx.indexOf('<nav class="main-banner"');
   const navEnd = idx.indexOf("</nav>") + 6;

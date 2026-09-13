@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
-  "generated": "2026-09-10",
+  "generated": "2026-09-12",
   "mode": "reviewable-plan",
   "maximumArticleChanges": 1,
   "next": {
-    "kind": "verify-expired-facts",
-    "site": "gc",
-    "target": "https://greggcostin.com/blog/fed-rate-hike-what-it-means"
+    "kind": "research-intent-gap",
+    "site": "pmh",
+    "brief": "full-payment"
   },
   "models": {
-    "research": "self",
-    "write": "self",
-    "note": "in-session by default; set opus/fable to mirror the military engine standing order"
+    "research": "opus",
+    "write": "fable",
+    "note": "Standing order Aug 13 2026: Opus researches (rigor, source discipline), Fable writes from the pack (prose). Set by Gregg after A/B testing."
   },
   "modelsBySite": {
     "pmh": {
@@ -392,6 +392,66 @@
         "verify",
         "publish"
       ]
+    },
+    {
+      "id": "L027",
+      "date": "2026-09-10",
+      "appliesTo": [
+        "build",
+        "orchestrate"
+      ],
+      "status": "active",
+      "type": "operational",
+      "rule": "A page generator that is only ever exercised on rebuilds hides first-build defects. When adding the first new article in a while, build it from a deleted output file and require the gate to pass on that clean run, not on the second attempt.",
+      "evidence": "home-appraisals-explained failed blog-render-gate with 'rendered quick answer differs from the reviewed source'. Instrumented positions showed the block at index 18676 and <main> opening at 19274: the civilian interior template renders the h1 and lead in the hero ABOVE <main>, so placeQuickAnswer's lead branch put the quick answer outside <main>. Every existing post passed only because preserveBlogShell relocates the block, and that path needs an existing file. The same clean run also shipped without /assets/costin-fonts.css and /assets/costin-experience.css, because the head template it clones had already had those links folded into a style bundle. A new civilian post could not pass its own gates. Both are now fixed in scripts/civilian-blog-factory.mjs and first build is byte-identical to rebuild."
+    },
+    {
+      "id": "L028",
+      "date": "2026-09-10",
+      "appliesTo": [
+        "build",
+        "verify",
+        "publish"
+      ],
+      "status": "active",
+      "type": "operational",
+      "rule": "Run audit-civilian on a prepared delivery candidate (copy the site, run prepare-civilian-delivery --root, then audit --root), not on the editable working tree. The editable tree legitimately carries style-bundle drift, so its finding count neither proves nor disproves publication readiness.",
+      "evidence": "The working tree reported 319 findings on 2026-09-10, of which 309 were 'style source changed without rebuilding bundle /assets/civilian-header-search.css' and 10 the same for costin-guide-tools.css, on pages this run never touched and with civilian-site/assets clean against origin/main. The identical tree copied and passed through prepare-civilian-delivery audited CLEAN at 0 findings across 321 pages. Judging readiness from the editable tree would have reported a blocked deploy that does not exist, and judging it from the candidate alone would have hidden the two real new-post findings that survived delivery prep."
+    },
+    {
+      "id": "L029",
+      "date": "2026-09-10",
+      "appliesTo": [
+        "build"
+      ],
+      "status": "active",
+      "type": "operational",
+      "rule": "Reapply responsive image markup after ANY generator that rewrites a rendered page, not just after adding an image. The blog factory and build-photography-credits both re-emit <picture> blocks from source and drop the avif/webp srcset sets.",
+      "evidence": "Rebuilding closing-costs-florida-buyers replaced its four-width avif plus webp plus jpg srcset with a single '<source srcset=\"/images/closing-costs-review-20260909.webp\">'. build-photography-credits did the same to six pictures on blog.html. Running apply-responsive-images afterwards restored them. Separately, apply-responsive-images re-dirties civilian-site/index.html and resources.html even from a pristine HEAD copy, so that drift is pre-existing on origin/main and those two files must be left out of an unrelated commit."
+    },
+    {
+      "id": "L030",
+      "date": "2026-09-12",
+      "appliesTo": [
+        "build",
+        "verify"
+      ],
+      "status": "active",
+      "type": "operational",
+      "rule": "Exercise a missing output destination and visually check base layout, not only the presence of shared CSS files. A delivery bundle may be before the tracker used as a template extraction boundary.",
+      "evidence": "Sep 12 clean first build passed QA and font-source assertions but rendered a giant unstyled nav and 8px body margin. chrome() began after the bundled base CSS. Restoring the bundle tokens and retaining early styles corrected it; the expanded first-build regression now checks the base reset and navigation grid, and desktop/mobile browser checks confirm the layout."
+    },
+    {
+      "id": "L031",
+      "date": "2026-09-12",
+      "appliesTo": [
+        "measure",
+        "orchestrate"
+      ],
+      "status": "active",
+      "type": "operational",
+      "rule": "Retain both the selected GSC window and actual exported chart coverage. A complete native workbook can still omit dates within the selection; retain those omissions as unknown.",
+      "evidence": "The native greggcostin.com GSC workbook selected Aug 14-Sep 10, 2026 in Filters, but Chart contained only Aug 23-Sep 10 (19 days) and Queries contained headers only. The XLSX, Filters, Pages, Queries and Chart exports are retained under the Sep 12 civilian closeout. source-windows.json records exact property/date metadata and incomplete selected-window coverage."
     }
   ],
   "excludedLessons": [],
@@ -824,7 +884,7 @@
         "https://selling-guide.fanniemae.com/sel/b4-1.3-08/comparable-sales",
         "https://www.consumerfinance.gov/archive/newsroom/agencies-finalize-interagency-guidance-on-reconsiderations-of-value-for-residential-real-estate-valuations/",
         "https://www.consumerfinance.gov/archive/blog/mortgage-borrowers-can-challenge-inaccurate-appraisals-through-the-reconsideration-of-value-process/",
-        "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance-appraisal-waiver",
+        "https://selling-guide.fanniemae.com/sel/b4-1.4-10/value-acceptance",
         "https://reab.alabama.gov/",
         "https://www2.myfloridalicense.com/real-estate-appraisal-board/",
         "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0718/Sections/0718.112.html"

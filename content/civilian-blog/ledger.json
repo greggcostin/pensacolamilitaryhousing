@@ -14,6 +14,14 @@
      "clarity": "unavailable in this runtime; installed project ydd39cyp64",
      "google": "no currently verified reporting window",
      "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-followup",
+     "bingPage": "No API page-performance row; direct indexing results in verified-access.json",
+     "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
+     "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
+     "qualifiedInquiries": "unavailable"
     }
    ],
    "search": [
@@ -390,6 +398,14 @@
      "clarity": "unavailable in this runtime; installed project ydd39cyp64",
      "google": "no currently verified reporting window",
      "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-followup",
+     "bingPage": "No API page-performance row; direct indexing results in verified-access.json",
+     "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
+     "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
+     "qualifiedInquiries": "unavailable"
     }
    ],
    "millageVerified": "All district totals re-derived from published component rates and reconciled exactly (ESC beach 12.7185 / uninc 13.4035 / Century 13.6389 / Pensacola 17.0080 / Downtown 19.0080; SR 2026 Gulf Breeze 11.2804 / uninc 11.3781 / Milton 13.4261 / Jay 16.5481). Worked examples recomputed from these rates.",
@@ -696,6 +712,14 @@
      "bingPage": "not-observed",
      "clarity": "unavailable in this runtime; installed project ydd39cyp64",
      "google": "no currently verified reporting window",
+     "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-followup",
+     "bingPage": "No API page-performance row; direct indexing results in verified-access.json",
+     "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
+     "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
      "qualifiedInquiries": "unavailable"
     }
    ],
@@ -1028,6 +1052,14 @@
      "bingPage": "not-observed",
      "clarity": "unavailable in this runtime; installed project ydd39cyp64",
      "google": "no currently verified reporting window",
+     "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-followup",
+     "bingPage": "No API page-performance row; direct indexing results in verified-access.json",
+     "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
+     "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
      "qualifiedInquiries": "unavailable"
     }
    ],
@@ -1362,6 +1394,14 @@
      "clarity": "unavailable in this runtime; installed project ydd39cyp64",
      "google": "no currently verified reporting window",
      "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-followup",
+     "bingPage": "No API page-performance row; direct indexing results in verified-access.json",
+     "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
+     "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
+     "qualifiedInquiries": "unavailable"
     }
    ],
    "published": "Catalog refresh published and live-verified 2026-09-09T07:41:17.443Z; deployment 8e0af763-c770-486f-991b-5bb8b78f729e",
@@ -1680,10 +1720,10 @@
    "slug": "home-appraisals-explained",
    "title": "How Home Appraisals Work and What a Low One Costs",
    "url": "https://greggcostin.com/blog/home-appraisals-explained",
-   "datePublished": "2026-09-10",
+   "datePublished": "2026-09-12",
    "type": "new (queue item 2 of the Sep 10 plan; queue head coastal-alabama-vs-panhandle held because the dedup gate returned 'clear (refresh, review remaining overlap)' against /resources/coastal-ownership-costs and /gulf-shores-orange-beach, so it belongs to that page as a refresh, not to a new post)",
    "category": "Buying and selling",
-   "words": 1756,
+   "words": 1765,
    "image": "/images/appraisal-review-20260910.jpg",
    "targetKeywords": [
     "how home appraisals work",
@@ -1693,17 +1733,27 @@
    ],
    "shareHook": "If an appraisal comes in low, the useful move is not arguing about the value. It is reading the comparable sales the appraiser actually used.",
    "currentEvidenceFile": "content/civilian-blog/research/home-appraisals-explained.json",
-   "sources": "CFPB Regulation B 12 CFR 1002.14(a)(1)-(a)(3) (free copy, promptly upon completion or three business days before consummation, third-business-day written notice, no charge for the copy); CFPB Regulation Z 12 CFR 1026.42(c)(1) and (f)(1) (valuation independence, customary and reasonable compensation); CFPB Loan Estimate explainer (appraisal fee in Section B, Services You Cannot Shop For); Fannie Mae Selling Guide B4-1.3-08 dated 06/04/2025 (minimum three closed comparables, 12-month window, FEMA designated flood zone among external factors when selecting comparables); Fannie Mae Selling Guide B4-1.4-10 dated 06/03/2026 (value acceptance; leasehold, two- to four-unit and $1,000,000-or-more transactions ineligible; offer not more than four months old at the note date); CFPB newsroom on the July 18 2024 five-agency interagency ROV guidance and the CFPB consumer post of Oct 6 2022 on ROV grounds; Florida DBPR Real Estate Appraisal Board (Chapter 475 Part II, certified residential appraiser covers one to four residential units); Alabama Real Estate Appraisers Board; section 718.112(2)(g) Florida Statutes (structural integrity reserve study, three habitable stories or higher, at least every 10 years, no completion after December 31 2026). Selling Guide read in the edition published September 2, 2026.",
+   "sources": "Primary sources rechecked September 12, 2026. CFPB first-lien dwelling appraisal-copy rights, Regulation Z independence, Loan Estimate, ROV guidance; Fannie Mae comparable-sale guidance and scoped value acceptance eligibility; Florida conditional SIRS requirements; both state appraisal boards. Full source passages and scope are in the sealed research record; no universal condo deadline is asserted.",
    "currentEventsCheck": "No override. NHC 2:00 AM EDT Sep 10 2026 outlook: no active tropical cyclones in the Atlantic, Caribbean or Gulf. Next FOMC meeting Sep 15-16 2026, so no decision to react to. Latest Freddie Mac PMMS available was the Sep 3 2026 release at 6.71% for the 30-year, five basis points above the prior week, which is drift and not a move under L021. Florida insurance rate news located was the Dec 2025 Citizens filing cycle, already covered by /blog/florida-insurance-relief-2026.",
    "sourcingNotes": "Two figures were deliberately not published. No primary source publishes a local residential appraisal fee range, so the fee FAQ points the reader to Section B of their own Loan Estimate and cites the Regulation Z customary-and-reasonable standard instead of inventing a number. The lower-of-price-or-appraised-value basis is stated as an explicit assumption of the hypothetical rather than as a sourced rule, because the public Selling Guide topics reachable this session did not carry the loan-to-value definition and the Freddie Mac guide viewer returned no text. The worked example ($415,000 contract, $400,000 appraisal, 90 percent LTV, $13,500 of extra cash) is labeled hypothetical and was recomputed by two routes.",
    "decisions": "No verified current event; refresh-queue was empty at DECIDE time (generated 2026-09-09); topic radar of 2026-09-05 carried no civilian demand cluster (its only civilian row was a 2-impression Hurlburt commute query) and its suggestion collection is off; content/measure/client-questions.json does not exist. So selection fell to the runnable editorial queue with coverage as tie-breaker: the buying pillar had zero recent coverage and the strict dedup gate returned clear on both domains.",
-   "score": "score-post 96/100 A (structure 23.8, evidence 20, local 10, seo 17, geo 15, share 10); first pass 91 before adding a visible Sources section, three closing action steps and a lead carrying the reader task. analyze-formatting 99 on the built page. Both evidence gates 0 errors.",
+   "score": 96,
    "provider": "claude",
    "model": "claude-opus-5[1m]",
    "effort": "in-session",
    "published": false,
-   "publication": "staged for approval; autoPublish=false; not deployed",
-   "hypothesis": "Naming the Regulation B copy right, the Fannie Mae comparable-selection rules including FEMA flood zone, and the value acceptance exclusions gives this post information a generic low-appraisal explainer does not carry. Affected URL https://greggcostin.com/blog/home-appraisals-explained plus three inbound hub links. Deployment status: NOT DEPLOYED as of 2026-09-10, so there is no live effect to measure and no review window has started. Primary outcome to review at least 28 complete days after an approved deployment, comparing the same property, source and landing-page cohort: whether the URL records any Bing or GSC impressions at all, since the domain currently records zero.",
+   "publication": {
+    "status": "published-and-live-verified",
+    "deployed": true,
+    "approvedBy": "Gregg",
+    "approval": "Explicit September 12 follow-up requesting the outstanding publication item be handled",
+    "sourceCommit": "4c82dbbfd2d7e0dc49b548ff3f899b147941a525",
+    "deploymentId": "f4e8544d-02aa-43f2-9751-ccf68f59321d",
+    "deployedAt": "2026-09-13T00:10:11.190302Z",
+    "url": "https://greggcostin.com/blog/home-appraisals-explained",
+    "receipt": "docs/civilian-blog-engine/2026-09-12/deployment-reconciliation.json"
+   },
+   "hypothesis": "A source-grounded report checklist and worked cash-gap example may help buyers evaluate their next step. Outcomes remain unknown. Compare this exact URL and property using complete, comparable windows; neither the domain nor page is assumed to have zero traffic from absent rows.",
    "metrics": [
     {
      "date": "2026-09-10",
@@ -1712,6 +1762,14 @@
      "clarity": "unavailable in this runtime; the connector is authenticated to the military project and returned only pensacolamilitaryhousing.com URLs when queried without a domain filter, so project ydd39cyp64 could not be read",
      "google": "no export present in docs/seo-baselines for greggcostin.com",
      "note": "Prepared work has no measured live effect."
+    },
+    {
+     "date": "2026-09-12",
+     "runId": "civilian-blog-engine-2026-09-12-followup",
+     "bingPage": "No API page-performance row; direct indexing results in verified-access.json",
+     "clarity": "Civilian project accessible by signed-in browser; site cohort Sept 5-11 only, not per-post engagement",
+     "google": "Exact property and Aug 14-Sep 10 selected dates retained; 19 chart days, no blog page/query rows",
+     "qualifiedInquiries": "unavailable"
     }
    ],
    "inboundLinks": [
@@ -1782,7 +1840,24 @@
      },
      "note": "URL not present in this export; this is not proof of zero traffic or non-indexing."
     }
-   ]
+   ],
+   "priorStaging": {
+    "date": "2026-09-10",
+    "status": "staged-awaiting-approval",
+    "words": 1756,
+    "sources": "CFPB Regulation B 12 CFR 1002.14(a)(1)-(a)(3) (free copy, promptly upon completion or three business days before consummation, third-business-day written notice, no charge for the copy); CFPB Regulation Z 12 CFR 1026.42(c)(1) and (f)(1) (valuation independence, customary and reasonable compensation); CFPB Loan Estimate explainer (appraisal fee in Section B, Services You Cannot Shop For); Fannie Mae Selling Guide B4-1.3-08 dated 06/04/2025 (minimum three closed comparables, 12-month window, FEMA designated flood zone among external factors when selecting comparables); Fannie Mae Selling Guide B4-1.4-10 dated 06/03/2026 (value acceptance; leasehold, two- to four-unit and $1,000,000-or-more transactions ineligible; offer not more than four months old at the note date); CFPB newsroom on the July 18 2024 five-agency interagency ROV guidance and the CFPB consumer post of Oct 6 2022 on ROV grounds; Florida DBPR Real Estate Appraisal Board (Chapter 475 Part II, certified residential appraiser covers one to four residential units); Alabama Real Estate Appraisers Board; section 718.112(2)(g) Florida Statutes (structural integrity reserve study, three habitable stories or higher, at least every 10 years, no completion after December 31 2026). Selling Guide read in the edition published September 2, 2026.",
+    "hypothesis": "Naming the Regulation B copy right, the Fannie Mae comparable-selection rules including FEMA flood zone, and the value acceptance exclusions gives this post information a generic low-appraisal explainer does not carry. Affected URL https://greggcostin.com/blog/home-appraisals-explained plus three inbound hub links. Deployment status: NOT DEPLOYED as of 2026-09-10, so there is no live effect to measure and no review window has started. Primary outcome to review at least 28 complete days after an approved deployment, comparing the same property, source and landing-page cohort: whether the URL records any Bing or GSC impressions at all, since the domain currently records zero."
+   },
+   "dateStaged": "2026-09-10",
+   "dateModified": "2026-09-12",
+   "formatting": 99,
+   "outcome": {
+    "status": "collecting",
+    "deployedAt": "2026-09-13T00:10:11.190302Z",
+    "earliestComplete28DayReview": "2026-10-11",
+    "primaryOutcome": "Qualified inquiries supported by CRM evidence; unavailable today",
+    "search": "Per-URL Bing/GSC performance not observed. No measured post-publication outcome."
+   }
   }
  ],
  "runs": [
@@ -1974,6 +2049,29 @@
    "auditState": "Isolated complete delivery candidate audits CLEAN at 0 findings across 321 pages. The editable working tree reports 319 findings, all of them the pre-existing 'style source changed without rebuilding bundle' drift on origin/main (309 civilian-header-search.css, 10 costin-guide-tools.css); none touch this post and all clear once prepare-civilian-delivery runs.",
    "indexingReceipt": "none this run; the 14 gc URLs submitted on 2026-09-09 remain the latest receipt and nothing was redeployed",
    "performanceChange": "not measured; nothing deployed"
+  },
+  {
+   "id": "civilian-blog-engine-2026-09-12-followup",
+   "date": "2026-09-12",
+   "status": "published-and-live-verified",
+   "provider": "codex",
+   "model": "gpt-6-astra",
+   "effort": "max",
+   "reason": "Explicit owner follow-up",
+   "leaseId": "43d33660-4068-4835-b6f2-112c81635e4c",
+   "posts": [
+    "home-appraisals-explained"
+   ],
+   "sourceCommit": "4c82dbbfd2d7e0dc49b548ff3f899b147941a525",
+   "deploymentId": "f4e8544d-02aa-43f2-9751-ccf68f59321d",
+   "receipt": "docs/civilian-blog-engine/2026-09-12/deployment-reconciliation.json",
+   "indexingReceipt": "content/measure/submissions/2026-09-13T00-12-10-545Z-gc-7c1ab896.json",
+   "queue": [
+    "fed-rate-hike-what-it-means",
+    "what-moves-mortgage-rates"
+   ],
+   "measurement": "Clarity CSV and native GSC workbook retrieved; Bing indexing inspected separately from performance",
+   "performanceChange": "not measured"
   }
  ]
 }

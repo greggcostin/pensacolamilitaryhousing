@@ -86,23 +86,6 @@
       "evidenceStatus": "Editorial proposal; no observed demand claimed."
     },
     {
-      "slug": "home-appraisals-explained",
-      "topic": "How home appraisals work: who hires the appraiser, what they compare, what happens when the number comes in low",
-      "type": "evergreen",
-      "evidence": "Radar 2026-09-04: how much is a home appraisal in Florida (Bing demand 67, 12 queries). Open with the fee range and who pays.",
-      "pillar": "buying",
-      "audience": [
-        "buyer",
-        "seller"
-      ],
-      "targetKeywords": [
-        "how home appraisals work Florida",
-        "what happens when an appraisal is low"
-      ],
-      "decision": "Evaluate an appraisal gap without assuming the price, value and loan amount are the same.",
-      "evidenceStatus": "Historical discovery note, not verified current civilian impressions or search volume. Recheck against the dated evidence packet."
-    },
-    {
       "slug": "refinance-break-even-math",
       "topic": "When refinancing actually makes sense: the break-even math, costs people forget, and the reset-clock problem",
       "type": "evergreen",

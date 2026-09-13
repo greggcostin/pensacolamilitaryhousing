@@ -1,0 +1,138 @@
+{
+  "checkedAt": "2026-09-13T00:11:51.715Z",
+  "ok": true,
+  "results": [
+    {
+      "url": "https://greggcostin.com/blog/home-appraisals-explained",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "486db302d7e4ad52fbc5fc10699f46b79c75100e7438ac2531dc35f44a29fb9e",
+      "candidateSha256": "d4f63830953a1fb5716b93f653a59b5a2157a9d5891b9efca168ca6f5e8f154e",
+      "canonical": "https://greggcostin.com/blog/home-appraisals-explained",
+      "h1": "What happens when a home appraisal comes in below the contract price?",
+      "quickAnswerFirst": true,
+      "quickAnswerCount": 1,
+      "datePublished": "2026-09-12",
+      "edgeNormalizedSha256": "d4f63830953a1fb5716b93f653a59b5a2157a9d5891b9efca168ca6f5e8f154e",
+      "edgeNormalizedExact": true,
+      "edgeTransform": "Cloudflare email obfuscation decoded and its email-decode script removed for comparison"
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "17746d565957f85ae18b3d3f1ee04b7b93d8b05581a9e769f44e1d83d28aeb89",
+      "candidateSha256": "14eb32fa88ec15f6aa25dd192351d0adef4a750b457d8644d3dfc812d880091b",
+      "canonical": "https://greggcostin.com/blog",
+      "h1": "The Costin Team blog",
+      "edgeNormalizedSha256": "14eb32fa88ec15f6aa25dd192351d0adef4a750b457d8644d3dfc812d880091b",
+      "edgeNormalizedExact": true,
+      "edgeTransform": "Cloudflare email obfuscation decoded and its email-decode script removed for comparison"
+    },
+    {
+      "url": "https://greggcostin.com/resources/buyer-transaction-timeline",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "d411d205101125291d6e84e96c15c9feef4f328148ecb768c4ae52cb1a783497",
+      "candidateSha256": "e4917c0596f2f6e93e02bb06d65a3ea539b96a57949fc81f4f2f8540133018df",
+      "canonical": "https://greggcostin.com/resources/buyer-transaction-timeline",
+      "h1": "Your homebuying transaction, step by step",
+      "appraisalInbound": true,
+      "edgeNormalizedSha256": "e4917c0596f2f6e93e02bb06d65a3ea539b96a57949fc81f4f2f8540133018df",
+      "edgeNormalizedExact": true,
+      "edgeTransform": "Cloudflare email obfuscation decoded and its email-decode script removed for comparison"
+    },
+    {
+      "url": "https://greggcostin.com/resources/condo-due-diligence",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "72e64edf4a946b20d14f28483c7d1e319f4e38b63f4abee976393f7664d590e7",
+      "candidateSha256": "b8702c206709391044b85c2da51fa12768a60626dc6ae319d886f1d74e3244c1",
+      "canonical": "https://greggcostin.com/resources/condo-due-diligence",
+      "h1": "Buy the building, too: Gulf Coast condo due diligence",
+      "appraisalInbound": true,
+      "edgeNormalizedSha256": "b8702c206709391044b85c2da51fa12768a60626dc6ae319d886f1d74e3244c1",
+      "edgeNormalizedExact": true,
+      "edgeTransform": "Cloudflare email obfuscation decoded and its email-decode script removed for comparison"
+    },
+    {
+      "url": "https://greggcostin.com/sell",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "d53f3acdea4cbca738dbe0be78eab012f60bb113b622bc909cc2ee7d7f250deb",
+      "candidateSha256": "50965068a188cb507811265903ea689e6af3563d25053827d2e219477422d7f4",
+      "canonical": "https://greggcostin.com/sell",
+      "h1": "Sell your Pensacola home",
+      "appraisalInbound": true,
+      "edgeNormalizedSha256": "50965068a188cb507811265903ea689e6af3563d25053827d2e219477422d7f4",
+      "edgeNormalizedExact": true,
+      "edgeTransform": "Cloudflare email obfuscation decoded and its email-decode script removed for comparison"
+    },
+    {
+      "url": "https://greggcostin.com/images/appraisal-review-20260910-480.avif",
+      "status": 200,
+      "contentType": "image/avif",
+      "sha256": "e3bca49358b6cd42c0fabbe55c37d2e768faf2ab02cd80d9e3a6c66c7320d580",
+      "candidateSha256": "e3bca49358b6cd42c0fabbe55c37d2e768faf2ab02cd80d9e3a6c66c7320d580"
+    },
+    {
+      "url": "https://greggcostin.com/images/appraisal-review-20260910-1200.avif",
+      "status": 200,
+      "contentType": "image/avif",
+      "sha256": "a7e1ff04e133a58b33517652558c86b931889efc0dc42e0476ec55666d440216",
+      "candidateSha256": "a7e1ff04e133a58b33517652558c86b931889efc0dc42e0476ec55666d440216"
+    },
+    {
+      "url": "https://greggcostin.com/og/blog-home-appraisals-explained.png",
+      "status": 200,
+      "contentType": "image/png",
+      "sha256": "a284d8338696f02943f4c029791ccc4d3fa1c4c823a494cd5bd4bfcf0a1ae2d3",
+      "candidateSha256": "a284d8338696f02943f4c029791ccc4d3fa1c4c823a494cd5bd4bfcf0a1ae2d3"
+    },
+    {
+      "url": "https://greggcostin.com/assets/styles/c52e5831d8713e73b849.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "c52e5831d8713e73b8491a8756da6e0002020293dbe019b8a310fd0cdafd8f5d",
+      "candidateSha256": "c52e5831d8713e73b8491a8756da6e0002020293dbe019b8a310fd0cdafd8f5d"
+    },
+    {
+      "url": "https://greggcostin.com/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "sha256": "0a4e0c59126a1ca02db0ca96ca984b49a2fd49def43eb86c77709e301503ef80",
+      "candidateSha256": "0a4e0c59126a1ca02db0ca96ca984b49a2fd49def43eb86c77709e301503ef80"
+    },
+    {
+      "url": "https://greggcostin.com/llms-full.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "sha256": "6948026ad45496d60121584889093cbdd2c7896eae2b2ced1641fdedf1995d51",
+      "candidateSha256": "6948026ad45496d60121584889093cbdd2c7896eae2b2ced1641fdedf1995d51"
+    },
+    {
+      "url": "https://greggcostin.com/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "1c3d882f25a86376cee6cc044483e96019e37e7475f52c2692fffe31b46c6b10",
+      "candidateSha256": "19c6fd61e49af1b226d82b9589732756a089224aad8957e76517190d633e30dc",
+      "canonical": "https://greggcostin.com/",
+      "h1": "Find your placeon the Gulf Coast.",
+      "edgeNormalizedSha256": "19c6fd61e49af1b226d82b9589732756a089224aad8957e76517190d633e30dc",
+      "edgeNormalizedExact": true,
+      "edgeTransform": "Cloudflare email obfuscation decoded and its email-decode script removed for comparison"
+    },
+    {
+      "url": "https://greggcostin.com/schools",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "5a36db9a1299740d95fe635b73fbe4c0908eaccd76b1318b151771c914007614",
+      "candidateSha256": "1abc2f6f84c19c465948f7477a9a686d8b6f8b6a8f19ebd5700f1a7a17c73a33",
+      "canonical": "https://greggcostin.com/schools",
+      "h1": "Pensacola &amp; Gulf CoastSchool Finder",
+      "edgeNormalizedSha256": "1abc2f6f84c19c465948f7477a9a686d8b6f8b6a8f19ebd5700f1a7a17c73a33",
+      "edgeNormalizedExact": true,
+      "edgeTransform": "Cloudflare email obfuscation decoded and its email-decode script removed for comparison"
+    }
+  ]
+}

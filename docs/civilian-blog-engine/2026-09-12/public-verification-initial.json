@@ -1,0 +1,117 @@
+{
+  "checkedAt": "2026-09-13T00:11:08.521Z",
+  "ok": false,
+  "results": [
+    {
+      "url": "https://greggcostin.com/blog/home-appraisals-explained",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "be64515fd79cb013676dc4b7648050e5cb6189c5fb63ffa0e046bde0c8cac795",
+      "candidateSha256": "d4f63830953a1fb5716b93f653a59b5a2157a9d5891b9efca168ca6f5e8f154e",
+      "canonical": "https://greggcostin.com/blog/home-appraisals-explained",
+      "h1": "What happens when a home appraisal comes in below the contract price?",
+      "quickAnswerFirst": true,
+      "quickAnswerCount": 1,
+      "datePublished": "2026-09-12"
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "b0c4c7b2b08ac2d6ce46f8893cad1878ca3ef9e2e7512f5efaaad1a03cd43879",
+      "candidateSha256": "14eb32fa88ec15f6aa25dd192351d0adef4a750b457d8644d3dfc812d880091b",
+      "canonical": "https://greggcostin.com/blog",
+      "h1": "The Costin Team blog"
+    },
+    {
+      "url": "https://greggcostin.com/resources/buyer-transaction-timeline",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "a8dcdd8ffa832af3dfa454c9b259135538fc1d1583c6f356ec9eab28f1cddfc3",
+      "candidateSha256": "e4917c0596f2f6e93e02bb06d65a3ea539b96a57949fc81f4f2f8540133018df",
+      "canonical": "https://greggcostin.com/resources/buyer-transaction-timeline",
+      "h1": "Your homebuying transaction, step by step",
+      "appraisalInbound": true
+    },
+    {
+      "url": "https://greggcostin.com/resources/condo-due-diligence",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "568d09b87054e81f42c1b7b88aa138dbb42fb40d3bb74fd133d7c84db3144041",
+      "candidateSha256": "b8702c206709391044b85c2da51fa12768a60626dc6ae319d886f1d74e3244c1",
+      "canonical": "https://greggcostin.com/resources/condo-due-diligence",
+      "h1": "Buy the building, too: Gulf Coast condo due diligence",
+      "appraisalInbound": true
+    },
+    {
+      "url": "https://greggcostin.com/sell",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "7d404c9037c69c7d2a0cefa0da2129e69f7639f13fc371c73686ea4eef5db8a1",
+      "candidateSha256": "50965068a188cb507811265903ea689e6af3563d25053827d2e219477422d7f4",
+      "canonical": "https://greggcostin.com/sell",
+      "h1": "Sell your Pensacola home",
+      "appraisalInbound": true
+    },
+    {
+      "url": "https://greggcostin.com/images/appraisal-review-20260910-480.avif",
+      "status": 200,
+      "contentType": "image/avif",
+      "sha256": "e3bca49358b6cd42c0fabbe55c37d2e768faf2ab02cd80d9e3a6c66c7320d580",
+      "candidateSha256": "e3bca49358b6cd42c0fabbe55c37d2e768faf2ab02cd80d9e3a6c66c7320d580"
+    },
+    {
+      "url": "https://greggcostin.com/images/appraisal-review-20260910-1200.avif",
+      "status": 200,
+      "contentType": "image/avif",
+      "sha256": "a7e1ff04e133a58b33517652558c86b931889efc0dc42e0476ec55666d440216",
+      "candidateSha256": "a7e1ff04e133a58b33517652558c86b931889efc0dc42e0476ec55666d440216"
+    },
+    {
+      "url": "https://greggcostin.com/og/blog-home-appraisals-explained.png",
+      "status": 200,
+      "contentType": "image/png",
+      "sha256": "a284d8338696f02943f4c029791ccc4d3fa1c4c823a494cd5bd4bfcf0a1ae2d3",
+      "candidateSha256": "a284d8338696f02943f4c029791ccc4d3fa1c4c823a494cd5bd4bfcf0a1ae2d3"
+    },
+    {
+      "url": "https://greggcostin.com/assets/styles/c52e5831d8713e73b849.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "c52e5831d8713e73b8491a8756da6e0002020293dbe019b8a310fd0cdafd8f5d",
+      "candidateSha256": "c52e5831d8713e73b8491a8756da6e0002020293dbe019b8a310fd0cdafd8f5d"
+    },
+    {
+      "url": "https://greggcostin.com/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "sha256": "0a4e0c59126a1ca02db0ca96ca984b49a2fd49def43eb86c77709e301503ef80",
+      "candidateSha256": "0a4e0c59126a1ca02db0ca96ca984b49a2fd49def43eb86c77709e301503ef80"
+    },
+    {
+      "url": "https://greggcostin.com/llms-full.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "sha256": "6948026ad45496d60121584889093cbdd2c7896eae2b2ced1641fdedf1995d51",
+      "candidateSha256": "6948026ad45496d60121584889093cbdd2c7896eae2b2ced1641fdedf1995d51"
+    },
+    {
+      "url": "https://greggcostin.com/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "616fdda1ca34487c3e9b9e2ed791889952697dfa5455892a2d6ff20c96c83893",
+      "candidateSha256": "19c6fd61e49af1b226d82b9589732756a089224aad8957e76517190d633e30dc",
+      "canonical": "https://greggcostin.com/",
+      "h1": "Find your placeon the Gulf Coast."
+    },
+    {
+      "url": "https://greggcostin.com/schools",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "205aedb665d7d6bbe572ba101d0fe508a4c56a43ea4e252bec4557d7c45441ef",
+      "candidateSha256": "1abc2f6f84c19c465948f7477a9a686d8b6f8b6a8f19ebd5700f1a7a17c73a33",
+      "canonical": "https://greggcostin.com/schools",
+      "h1": "Pensacola &amp; Gulf CoastSchool Finder"
+    }
+  ]
+}

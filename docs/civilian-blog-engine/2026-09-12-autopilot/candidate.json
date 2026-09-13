@@ -1,0 +1,439 @@
+{
+  "builtAt": "2026-09-13T01:29:50.191Z",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\release",
+  "production": [
+    {
+      "site": "gc",
+      "project": "greggcostin",
+      "domain": "greggcostin.com",
+      "localBaseline": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\gc",
+      "deploymentId": "f4e8544d-02aa-43f2-9751-ccf68f59321d",
+      "url": "https://f4e8544d.greggcostin.pages.dev",
+      "createdOn": "2026-09-13T00:10:11.190302Z",
+      "stage": "success",
+      "assetCount": 2524,
+      "counts": {
+        "exact": 2524,
+        "lineEndingOnly": 0,
+        "missing": 0,
+        "different": 0
+      },
+      "differences": []
+    }
+  ],
+  "changes": [
+    {
+      "site": "gc",
+      "path": "assets/styles/47ee7ad7fc00a34fe84a.css",
+      "before": null,
+      "sha256": "47ee7ad7fc00a34fe84a96e019dbedd10d8b1babdc30abe0b09a8dea10dad2a6"
+    },
+    {
+      "site": "gc",
+      "path": "assets/styles/manifest.json",
+      "before": "da7ead9f7da0db85c7ac524c6e1215581af4c72ec57ec22cd821850626e6cb8f",
+      "sha256": "6856c2f8c3857aa5f522a08175e02d8a329ed62b29b1f17aaf8ebd3cd3108ac6"
+    },
+    {
+      "site": "gc",
+      "path": "blog/fed-rate-hike-what-it-means.html",
+      "before": "2c1958848cba535efbb46eca1d623fa10332bedffc6e66ebe0ec5f4faeb91761",
+      "sha256": "72fe96885355b8d929c3375b561d1e72470cb3a26756f56e6abfadc80872d138"
+    },
+    {
+      "site": "gc",
+      "path": "blog.html",
+      "before": "14eb32fa88ec15f6aa25dd192351d0adef4a750b457d8644d3dfc812d880091b",
+      "sha256": "ca3eec85a53484209f0c2170229ed7c4dfaacea4a749c3171931277756c165a0"
+    },
+    {
+      "site": "gc",
+      "path": "data/photography-credits.json",
+      "before": "ee4e1b0798bc04853bf90d8ae122b494f49c5a678c911c04527cffe888dfe769",
+      "sha256": "4631d66078797ad3c3c0234eca5db2c1fe201d9f786c15b9b823dee9c6046957"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912-1200.avif",
+      "before": null,
+      "sha256": "d2b5fb20874aff82a737396af010e4456d452b6ebdb218871379dbdbbef193a2"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912-1200.jpg",
+      "before": null,
+      "sha256": "4f88e7172f67c794062a9b4174f2298182667f879cfed54ad3bfdb7689402291"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912-1200.webp",
+      "before": null,
+      "sha256": "edeb905854c78dd5c4cca99d7f3b9c7fbf724623044765e77cf54df005731a45"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912-480.avif",
+      "before": null,
+      "sha256": "8a43b553917ca29d77f27d2c6e445813851d1389627813ca85e8e2b45ff5736b"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912-480.jpg",
+      "before": null,
+      "sha256": "b3b238e27e89bec0be5a11140040a44ab2ecd5f9ae37b6ee47aa360f69cb5ab1"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912-480.webp",
+      "before": null,
+      "sha256": "c4489660f027288827c40abf61a5928dc90dabc51960c341f2cafac01d08ff78"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912-768.avif",
+      "before": null,
+      "sha256": "4bc90f5738b487c7bf5182551de28c1051366052b876289216fef3ef9cc79466"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912-768.jpg",
+      "before": null,
+      "sha256": "2d85084b9219a503f2661ac6bd0765b31d20b1e2123bb6732a4d318300a9c720"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912-768.webp",
+      "before": null,
+      "sha256": "d3a399fe02f20d6152b17691aeca47bbc42900604a7fb8f633fdf9e5fc22e46d"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912.avif",
+      "before": null,
+      "sha256": "2736477dfa94265dac2a326da7df5f49389743caf4f44f231b24685556e19347"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912.jpg",
+      "before": null,
+      "sha256": "d7c665ca4ceccbf29f2a3dc3cfd4869c4e3483fad9a83e1de652a0d4bcd050ed"
+    },
+    {
+      "site": "gc",
+      "path": "images/fed-building-20260912.webp",
+      "before": null,
+      "sha256": "2f079af1534a20e994106d0e76213dac0fb923bd36c8db4ef5453725a06474d3"
+    },
+    {
+      "site": "gc",
+      "path": "llms-full.txt",
+      "before": "6948026ad45496d60121584889093cbdd2c7896eae2b2ced1641fdedf1995d51",
+      "sha256": "3bd50d46f9e659f3bf99c3c1d76528d4fe6f3b35a78a8962d364062691fc953b"
+    },
+    {
+      "site": "gc",
+      "path": "llms.txt",
+      "before": "646b1bea7c64d3f74e3b2fbbae91d8c45451d7b4f4d13fdd81213c155e7496b2",
+      "sha256": "f589d5b9539e5475e7687a1f0e43400234b20cee43a6c164e46ae57d895909d2"
+    },
+    {
+      "site": "gc",
+      "path": "og/blog-fed-rate-hike-what-it-means.png",
+      "before": "12f28511b8d2b322458870930df948f9c3a278b3ec858ae91bf2372cab14b124",
+      "sha256": "75da6069b74d452b52bdfb1a34bf59c39ae47ecd6b5a6a61ede26be765f078fc"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/fragment/en_1b844e5.pf_fragment",
+      "before": null,
+      "sha256": "1fc50855064aeb85ddc263e556531b65eeb93187b8e85bc2fae8258a84b19971"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/fragment/en_215335a.pf_fragment",
+      "before": null,
+      "sha256": "65295a6962d4c0a2f24f253eb8945820878b9b878ef853da5f733dd1469f586f"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/fragment/en_4451ef4.pf_fragment",
+      "before": null,
+      "sha256": "ffe2cda6a43afc0df043444af7cd46f39626999245c55234514a209425d299bc"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/fragment/en_67224e8.pf_fragment",
+      "before": null,
+      "sha256": "81017529a98fde4363435e637b10831d11a916b78af1f7359f3a9461a67f6826"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/fragment/en_7ebc529.pf_fragment",
+      "before": null,
+      "sha256": "88ef4453cc95ce05f3fe5429b4d671100a9022a0f2dc3011110aa731f4ec9ecb"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/fragment/en_a82542f.pf_fragment",
+      "before": null,
+      "sha256": "e66d354e6323aefcb7f1e1b5dd4e9b11eeef8ea162fdcc5d608e9d3fc49ac40e"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/fragment/en_cae2d21.pf_fragment",
+      "before": null,
+      "sha256": "7eb04ccce1384faa9e0867d95025d22a4c1e32edf34899763ababdfb273f0eb1"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_10d73ae.pf_index",
+      "before": null,
+      "sha256": "ef9df583c7f2fd37f6cedeb99e5889a774fb192bea134426c0163e413309e7ad"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_2f78737.pf_index",
+      "before": null,
+      "sha256": "4df212022f2c3d58aa02a3ec1403353abf38e20777f9572d9814b26c31a50946"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_337513a.pf_index",
+      "before": null,
+      "sha256": "e0b8a7807ebb0b73e4d59ec6eef8b80fe8333a902e9492d3f3c00991dd3ad45f"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_3d3bc93.pf_index",
+      "before": null,
+      "sha256": "6a776b558c1be548a4c81fdfd1a33d16def8051e01360a189ac5db4c37b21046"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_3e7a3c5.pf_index",
+      "before": null,
+      "sha256": "8b5c0bb74f88f7b51af61020ca6499e4f0a043b85465c393fdbe83bbfc938399"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_49efaf7.pf_index",
+      "before": null,
+      "sha256": "c16c24bad7b48098cd0eeb59ff719f350a6e68546f6a93da8c91c498f4e308a1"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_4d7ec17.pf_index",
+      "before": null,
+      "sha256": "69bc91583367fa4923eb8c1a61752d314ba3da83e7a377ba4c063d763e6e7f10"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_4f4bd79.pf_index",
+      "before": null,
+      "sha256": "f0e4f6e2af99c382360e3b330db4c895f90cfce0f764c790522188884ef45d72"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_5cc3c25.pf_index",
+      "before": null,
+      "sha256": "dd52b441511abf67f77898b5a79502893a30f423815381e2b982866572133865"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_603384b.pf_index",
+      "before": null,
+      "sha256": "f62d36d85860ac47e9c2b2ed042932e31ed40093374d605cbc209554bb9ac764"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_642f576.pf_index",
+      "before": null,
+      "sha256": "00223d71437f476ff074c75b2f9df017e40160221f07bb410f160212bb1ecb79"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_64a7ead.pf_index",
+      "before": null,
+      "sha256": "4a4704a6c97650106fb694c1977f059933d12e053544f1368fb37cc5e5e2b6bd"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_67f7ee4.pf_index",
+      "before": null,
+      "sha256": "b171c7d97bd18d4741dd65f339d5c659570c33da56519a585f24cca4f2cfc2da"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_70593d4.pf_index",
+      "before": null,
+      "sha256": "a2802d0359d8e3a3b3d77f557c493df511aa47706f866b93212e346ac6a531fc"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_7149ea6.pf_index",
+      "before": null,
+      "sha256": "d8f37a851910b57760090e50089a9f8f7084939315a67927c83bc4254ea4d692"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_7b997c2.pf_index",
+      "before": null,
+      "sha256": "4a3c9a2409b63db62fe8ca3487f3ac8e66f1c3ba2c4f6d58504ae65a5dc42a32"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_7fe1259.pf_index",
+      "before": null,
+      "sha256": "04ad3abf75ca735e05fbd3584c533797e9b0aa1e9554cd4392074695d2b9df0e"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_81acef4.pf_index",
+      "before": null,
+      "sha256": "41f92cfae37723ec52b35220caac581eafb4465087085c2b499a37c404276f66"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_984cb91.pf_index",
+      "before": null,
+      "sha256": "b18db967c60a87ba70551fe4b01df0de0c98b7683ac1334d78786dd0ca3fafd7"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_98ba416.pf_index",
+      "before": null,
+      "sha256": "2513641bd51887bdade3f6aabded7ba8deb7d8a8e990ef49de9153169c56eb8d"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_a09d2fa.pf_index",
+      "before": null,
+      "sha256": "4ba382d9fa4c4ce7214633eeaa1d4988b8c6caf5ea30ce2fdef76ae768f4b927"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_a55a5f3.pf_index",
+      "before": null,
+      "sha256": "fea40ed15602313d60657d414c0b385945944d06a2164d71511d5194e8292416"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_a696656.pf_index",
+      "before": null,
+      "sha256": "b7147b6e7ea7031162a55f56db6ac7e1b89e179dfc2c8e3cadf9d16df8a0533a"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_abd1605.pf_index",
+      "before": null,
+      "sha256": "f46607618579a35a390c16fdd7eb0e480ff460cb5d7e4951cfabef8280adeed6"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_b54d058.pf_index",
+      "before": null,
+      "sha256": "ba76193c768c26fa2d1fbdff773db160d5c10b2ce347776bad66a44cd7b81419"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_bb80422.pf_index",
+      "before": null,
+      "sha256": "73d87b60845e6349a5d51bdedf785f22ae33141b03fd6372d4954cc094844113"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_be23261.pf_index",
+      "before": null,
+      "sha256": "2e89ba4a59d4ba23a38bf3ba4171768d3e1a5de2772a6e6de37426ecda451a93"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_c7638f8.pf_index",
+      "before": null,
+      "sha256": "08dc1144e49f7da4909a1cc32afe48a58faac6a99bceca0b5368f563eaedb18c"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_c7a5121.pf_index",
+      "before": null,
+      "sha256": "c72dac5eca2aadc580386a83fef74e4ffdb8f56042dec061e7d56d24c4c625a7"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_cade8fb.pf_index",
+      "before": null,
+      "sha256": "b84a271697c066ea2621a31ce53b7b4aecd0a0a93151b8572e38aabf2594127e"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_cb148bf.pf_index",
+      "before": null,
+      "sha256": "76f40ce4dfbae805c063bc91809044d390182e1bfdfbdeac3fd68b876045a4a9"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_cd8ff3b.pf_index",
+      "before": null,
+      "sha256": "7a2a7b4ac2de564dfe901cf92640668a1c11bdc357f680097e80ff3bd26d05fd"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_df9c51c.pf_index",
+      "before": null,
+      "sha256": "4ead577c50c654e72cdc9c0fcbe16c5cbbb82418d812eb96e6b508ef27e46649"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_e03db1b.pf_index",
+      "before": null,
+      "sha256": "c2fa02309505fa132cc6e5c1165014375c128ee3aca14519a604988fe05a0a25"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_e6fcf13.pf_index",
+      "before": null,
+      "sha256": "4b1d33f466313cfef1b3abbb54820db522acb420a493d9e6436e6fb922b0c92e"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_e751850.pf_index",
+      "before": null,
+      "sha256": "22389c9920e03c631dd518cf25a8a940691a58cf85119a394f1c6050f7353183"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/index/en_edfde07.pf_index",
+      "before": null,
+      "sha256": "52b634fdedba804bacdca5dcdf9e98dddf2261599a7bfcf35932adea2b41c875"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/pagefind-entry.json",
+      "before": "d4e97f4d822643c879e2ea98ee696e1d079c80cbfbd1a6a6854ed445043deb17",
+      "sha256": "69d8851de0597c7801ab84ae27b0a6349a901afbd7a6470e3fd7d893dcfef3e4"
+    },
+    {
+      "site": "gc",
+      "path": "pagefind/pagefind.en_fc1b374fd3.pf_meta",
+      "before": null,
+      "sha256": "d11c935a2f1beff2f0d2bbdddbcd586aa2326202032fc5466596c36ee1a59651"
+    },
+    {
+      "site": "gc",
+      "path": "photo-credits.html",
+      "before": "95fb51ddd8c8e2cd5034908394f0d927b08bd2c27645b22afff10f78dea73ae5",
+      "sha256": "731a76e8d3c39e4a29024ca7bd075b92d51a1168b33e1e87c2aac11b8bccdba1"
+    },
+    {
+      "site": "gc",
+      "path": "sitemap.xml",
+      "before": "0a4e0c59126a1ca02db0ca96ca984b49a2fd49def43eb86c77709e301503ef80",
+      "sha256": "6305f2c5e0889993ef861aaeeb8de3a3ba63c8eceb14b6489b4ca18e972924ed"
+    }
+  ],
+  "preserved": {
+    "gc": 2516
+  },
+  "removed": [],
+  "releaseMessage": "Publish reviewed Fed buyer guide; civilian autopilot authorized September 12"
+}

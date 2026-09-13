@@ -74,7 +74,8 @@
       "notBefore": "2026-09-14",
       "executionTiming": "Next normal civilian-blog-engine run, Monday September 14, 2026 at 6:04 a.m. America/Chicago, plus scheduler jitter.",
       "requestedTimingAt": "2026-09-12",
-      "publicationPolicy": "Existing autoPublish=false applies. Complete the researched refresh and stage it for approval. No permanent autopublish authorization inferred from the schedule question."
+      "publicationPolicy": "Gregg explicitly authorized civilian blog autopilot on September 12, 2026. Research, build and automatically publish this refresh during the existing scheduled run only after all evidence, editorial, image and deployment gates pass.",
+      "autoPublishAuthorizedAt": "2026-09-12"
     },
     {
       "slug": "coastal-alabama-vs-panhandle",

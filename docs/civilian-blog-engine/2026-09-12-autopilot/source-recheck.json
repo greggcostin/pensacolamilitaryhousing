@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-09-13T01:29:52.640Z",
+  "sameSessionArticleUnchanged": true,
+  "policy": {
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+    "value": "3.50%-3.75% held July 29, 2026"
+  },
+  "calendar": {
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "nextMeeting": "September 15-16, 2026"
+  },
+  "mortgage": {
+    "url": "https://www.freddiemac.com/pmms",
+    "asOf": "2026-09-10",
+    "thirtyYear": "6.76%",
+    "previousWeek": "6.71%"
+  },
+  "reviewDeadline": "2026-09-16",
+  "reviewMethod": "Directly reopened all three primary sources during this publication follow-up; no content change or new claim introduced."
+}

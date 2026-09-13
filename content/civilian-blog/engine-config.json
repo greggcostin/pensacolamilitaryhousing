@@ -1,5 +1,5 @@
 {
- "autoPublish": false,
+ "autoPublish": true,
  "cadence": "Mon+Thu 6:04am",
  "maxWordsTarget": 1800,
  "editorialPolicy": "content/civilian-blog/editorial-policy.json",

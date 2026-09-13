@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "sealedAt": "2026-09-13T01:29:52.244Z",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\release",
+  "candidateFingerprint": "e4a478b988ec75c8b2527959de042ed7dcdeda0a11e190c826fb3a66df712b5a",
+  "sourceCommit": "036af8f7f92ba358fd7f8b3fdbbaf06d3311a7ec",
+  "checks": [
+    {
+      "command": "node scripts/audit-civilian.mjs --root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\release\\gc",
+      "exitCode": 0,
+      "output": "AUDIT CLEAN: 322 pages, 0 findings\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/audit-entity.mjs --pmh-root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\pmh --gc-root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\release\\gc",
+      "exitCode": 0,
+      "output": "ENTITY AUDIT CLEAN: 698 pages; full nodes on 3/2/2 pages; every other definition is the canonical compact or publisher shape\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/score-post.mjs fed-rate-hike-what-it-means --site gc --gate",
+      "exitCode": 0,
+      "output": "fed-rate-hike-what-it-means (greggcostin.com): 100/100 A\ncomponents: structure 25 | evidence 20 | local 10 | seo 20 | geo 15 | share 10\nfacts: {\"words\":1502,\"h2s\":9,\"questionH2s\":9,\"directAnswers\":7,\"walls\":0,\"scanAids\":7,\"numericSentences\":7,\"sourcedSentences\":5,\"datedSentences\":5,\"quotable\":5,\"distinctSources\":3,\"placesPerK\":2.7,\"links\":10,\"faqs\":6,\"table\":true,\"checklist\":true,\"actionItems\":4,\"workedExample\":true,\"ownVoice\":false,\"quickAnswer\":true,\"takeaways\":true,\"shareHook\":true,\"perishables\":4}\n\nno fails\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/analyze-formatting.mjs --file C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\release\\gc\\blog\\fed-rate-hike-what-it-means.html --gate --out C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\source\\docs\\civilian-blog-engine\\2026-09-12-autopilot\\formatting.md",
+      "exitCode": 0,
+      "output": "analyzed 1 pages -> C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\source\\docs\\civilian-blog-engine\\2026-09-12-autopilot\\formatting.md\n\nWorst 10:\n  100  C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\release\\gc\\blog\\fed-rate-hike-what-it-means  (0 walls, 177w/heading, 125w/aid)\n\nBest 5:\n  100  C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\release\\gc\\blog\\fed-rate-hike-what-it-means\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/check-em-dashes.mjs",
+      "exitCode": 0,
+      "output": "OK: no em dashes in prose across 373 pages + App.jsx.\n",
+      "stderr": ""
+    }
+  ],
+  "renderedParity": true,
+  "reviewedPreviewFingerprint": "e6845f55f8e1575bc193381477313997f01b1fe085c221b420c81649947e054b",
+  "scope": "GC deployment only. Retained PMH root is used for entity consistency, not a current PMH deployment assertion."
+}

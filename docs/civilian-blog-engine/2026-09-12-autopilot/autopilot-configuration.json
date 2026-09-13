@@ -1,0 +1,72 @@
+{
+  "changedAt": "2026-09-13T01:28:22.768Z",
+  "authorization": "have it set for auto pilot, and publish it",
+  "authorizedBy": "Gregg",
+  "scope": "Civilian blog posts and refreshes on the existing Monday/Thursday schedule, after all existing gates pass.",
+  "autoPublish": true,
+  "queue": {
+    "slug": "what-moves-mortgage-rates",
+    "notBefore": "2026-09-14"
+  },
+  "scheduleChanged": false,
+  "newScheduleCreated": false,
+  "militaryPolicyChanged": false,
+  "scheduledTaskFile": "C:/Users/gregg/.claude/scheduled-tasks/civilian-blog-engine/SKILL.md",
+  "codexAutomation": "No matching Codex automation found; updated the existing Claude-owned routine file and canonical repository configuration, without creating a duplicate.",
+  "files": [
+    {
+      "file": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\source\\content\\civilian-blog\\engine-config.json",
+      "backup": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\configuration-backup\\7d745501ffff-engine-config.json",
+      "beforeSha256": "04e19cdf1aa14352c5be719a9fc1e1a8dd27d037c82318579403c8163a6bcd2f",
+      "afterSha256": "836d73c76991524a7e52a50307e44c00e5f1354803b8928f95ed062056ac1ce2"
+    },
+    {
+      "file": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\source\\content\\civilian-blog\\topic-queue.json",
+      "backup": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\configuration-backup\\05ef2b8b8772-topic-queue.json",
+      "beforeSha256": "32890ddffe72ba34266d7adecd9ed421ae0ccffd76208b6af6c3029cffd81e62",
+      "afterSha256": "b486dcda1a4600962744869c0b922c13b119738c0d6ddf2dd8673ddf1ea45ecd"
+    },
+    {
+      "file": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\source\\.agents\\skills\\civilian-blog-engine\\SKILL.md",
+      "backup": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\configuration-backup\\54ae295c641c-SKILL.md",
+      "beforeSha256": "1c7f036e41ddcdc0f21c8ef90a142e73f23673b22cf41aa766f6f8bd21c0393d",
+      "afterSha256": "0e93c44fb6b219dcb0a448ce49e8ac0f3358af8ae94ff0c41756299fa706e39b"
+    },
+    {
+      "file": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\source\\.claude\\skills\\civilian-blog-engine\\SKILL.md",
+      "backup": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\configuration-backup\\a8b6d6daae4c-SKILL.md",
+      "beforeSha256": "1c7f036e41ddcdc0f21c8ef90a142e73f23673b22cf41aa766f6f8bd21c0393d",
+      "afterSha256": "0e93c44fb6b219dcb0a448ce49e8ac0f3358af8ae94ff0c41756299fa706e39b"
+    },
+    {
+      "file": "C:\\Users\\gregg\\pensacolamilitaryhousing\\content\\civilian-blog\\engine-config.json",
+      "backup": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\configuration-backup\\57f498627875-engine-config.json",
+      "beforeSha256": "aef9d9f88ad1b332e0e3c7fe60173e128ee5b63b6f4736ce90cefff0540bd8d2",
+      "afterSha256": "836d73c76991524a7e52a50307e44c00e5f1354803b8928f95ed062056ac1ce2"
+    },
+    {
+      "file": "C:\\Users\\gregg\\pensacolamilitaryhousing\\content\\civilian-blog\\topic-queue.json",
+      "backup": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\configuration-backup\\c6a011ddf07c-topic-queue.json",
+      "beforeSha256": "32890ddffe72ba34266d7adecd9ed421ae0ccffd76208b6af6c3029cffd81e62",
+      "afterSha256": "b486dcda1a4600962744869c0b922c13b119738c0d6ddf2dd8673ddf1ea45ecd"
+    },
+    {
+      "file": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.agents\\skills\\civilian-blog-engine\\SKILL.md",
+      "backup": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\configuration-backup\\d14854424880-SKILL.md",
+      "beforeSha256": "1c7f036e41ddcdc0f21c8ef90a142e73f23673b22cf41aa766f6f8bd21c0393d",
+      "afterSha256": "0e93c44fb6b219dcb0a448ce49e8ac0f3358af8ae94ff0c41756299fa706e39b"
+    },
+    {
+      "file": "C:\\Users\\gregg\\pensacolamilitaryhousing\\.claude\\skills\\civilian-blog-engine\\SKILL.md",
+      "backup": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\configuration-backup\\e011a6963f5a-SKILL.md",
+      "beforeSha256": "1c7f036e41ddcdc0f21c8ef90a142e73f23673b22cf41aa766f6f8bd21c0393d",
+      "afterSha256": "0e93c44fb6b219dcb0a448ce49e8ac0f3358af8ae94ff0c41756299fa706e39b"
+    },
+    {
+      "file": "C:/Users/gregg/.claude/scheduled-tasks/civilian-blog-engine/SKILL.md",
+      "backup": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\configuration-backup\\6189c566f60b-SKILL.md",
+      "beforeSha256": "453abadeae9767bbe3788dedb3d01edd89fc2fac35ec1434b5216ad14b776553",
+      "afterSha256": "5102de187a53986405caef42cc8eaef7f2a8bb3fd4175626ebe035f1fe5478f7"
+    }
+  ]
+}

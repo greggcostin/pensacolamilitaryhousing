@@ -29,9 +29,12 @@
       "evidenceStatus": "Explicit owner request, not inferred demand. Existing URL remains the intent owner. Verify all dated figures at execution.",
       "note": "Refresh only. Do not infer a rate hike from the legacy slug. Keep publish approval gates.",
       "completedAt": "2026-09-12",
-      "result": "refresh-staged-awaiting-publication-approval",
+      "result": "refresh-published-and-live-verified",
       "runId": "civilian-blog-engine-2026-09-12-fed",
-      "report": "docs/civilian-blog-engine/2026-09-12-fed/README.md"
+      "report": "docs/civilian-blog-engine/2026-09-12-fed/README.md",
+      "publicationRunId": "civilian-blog-engine-2026-09-12-autopilot",
+      "publicationReport": "docs/civilian-blog-engine/2026-09-12-autopilot/README.md",
+      "deploymentId": "1e42f109-4804-4dd3-9901-6ae680f4dc30"
     },
     {
       "slug": "what-moves-mortgage-rates",

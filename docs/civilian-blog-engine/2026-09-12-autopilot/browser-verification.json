@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-09-13T01:38:26.980Z",
+  "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+  "desktop": {
+    "width": 2561,
+    "visuallyInspected": true,
+    "imageLoaded": true,
+    "quickAnswerFirstChild": true,
+    "quickAnswerCount": 1,
+    "faqCount": 6
+  },
+  "mobile": {
+    "effectiveWidth": 390,
+    "documentWidth": 367,
+    "tableWidth": 339,
+    "overflow": false,
+    "faqExpandedAndRead": true,
+    "sectionHashChanged": true,
+    "screenshot": "Mobile screenshot capture timed out; actual live DOM measurements and FAQ interaction verified. Earlier reviewed preview had a mobile visual pass and deployment bytes match it."
+  },
+  "blogHub": "Verified the September 12 card, updated title, excerpt and new photograph; clicked through to the correct live article.",
+  "viewport": "Temporary mobile emulation cleared via supported CDP after viewport.reset did not clear it; normal 2561x1347 viewport confirmed.",
+  "formsSubmitted": false
+}

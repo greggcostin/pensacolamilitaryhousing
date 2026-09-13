@@ -1,0 +1,19 @@
+# Civilian autopilot and Fed article publication
+
+Published September 12, 2026 at 8:30 p.m. Central: [Fed Rate Hike: What It Means for Gulf Coast Homebuyers](https://greggcostin.com/blog/fed-rate-hike-what-it-means). Cloudflare deployment: `1e42f109-4804-4dd3-9901-6ae680f4dc30`.
+
+Gregg explicitly instructed: "have it set for auto pilot, and publish it". Civilian `autoPublish` is now true in the canonical scheduled-task checkout and the committed repository. Both provider skill copies and the existing Claude-owned routine instructions now honor that setting. The routine researches, writes, checks and publishes without a separate per-post approval. Failed evidence, editorial, image or delivery gates still block publication. The existing cadence remains Monday and Thursday at 6:04 a.m. America/Chicago, with scheduler jitter. No duplicate schedule was created. The mortgage-rate explainer remains queued for September 14; the canonical planner selects it for that date.
+
+The complete reviewed candidate passed the civilian audit with zero findings across 322 pages, editorial score 100/100, formatting 100/100, rendered parity, entity consistency and the em-dash scan. Its primary policy/calendar/mortgage sources were reopened before release and remained current. All 2,524 prior production files matched the baseline before deployment. All 2582 files in the new provider manifest match the published candidate. Twelve public checks passed for the article, hub, credit page, discovery files, CSS and images.
+
+The first raw HTML comparison detected Cloudflare's email-address protection. It is preserved in public-verification-initial.json. Inspection confirmed that transformation, and exact comparison passed after reversing only that observed email protection. Images, CSS and other assets match raw bytes. No content, styling or security setting was changed to make verification pass, and the deployment was not repeated.
+
+Desktop visual inspection confirmed the live layout, date, quick answer and image. Mobile DOM checks at an effective 390px showed no horizontal overflow and a 339px table; the refinance FAQ expanded correctly. The updated blog card opens the live article. Mobile screenshots timed out; the earlier preview visual check and matching deployment bytes are retained as separate evidence. Temporary emulation was cleared and the normal viewport was confirmed.
+
+IndexNow and Bing each returned HTTP 200 acceptance for exactly two materially changed URLs: the Fed article and /blog. Receipt: `content/measure/submissions/2026-09-13T01-33-31-532Z-gc-74ca0ebf.json`. Acceptance does not establish indexing, ranking or AI citations. No whole-site resubmission was made. Existing Clarity/GSC coverage from the preceding refresh remains the measurement baseline; no new outcome is inferred from publication.
+
+The ledger now points to the current article, research pack and publication receipt while retaining the prior revision and publication history. Retro and weekly planning ran after publication. The outcome remains unmeasured; the content hypothesis needs at least 28 complete days and comparable inquiry/source cohorts. No new performance lesson was asserted. Canonical configuration, queue and ledger were merged narrowly, with backups, while other shared checkout work was preserved.
+
+Share hook: **Before changing your homebuying plan over a Fed headline, check the payment you can carry and the date your rate lock expires.**
+
+Provider Codex, model gpt-6-astra, effort max; explicit user selection, no claimed quota outage. Run `civilian-blog-engine-2026-09-12-autopilot`; lease `5e50f5d7-0e05-4f2d-b164-a18d769a7162`. Autopilot configuration commit: `7b996f6f`. See autopilot-configuration.json, scheduled-task-instructions.md, quality-gates.json, deployment.json, provider-verification.json, public-verification.json and next-run-readback.json for exact records.

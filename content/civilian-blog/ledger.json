@@ -1064,9 +1064,9 @@
    "slug": "fed-rate-hike-what-it-means",
    "datePublished": "2026-09-01",
    "type": "current-events (OVERRIDE of queue head coastal-alabama-vs-panhandle; queue left intact)",
-   "words": 1693,
-   "image": "/images/fed-decision-review-20260909.jpg",
-   "sources": "Freddie Mac PMMS Aug 27 2026 (30-yr 6.66%, prior 6.65%, yr-ago 6.56%; 15-yr 5.98%); BEA Personal Income and Outlays July 2026 (PCE +3.7% y/y, core +3.3%); Dallas Fed trimmed mean PCE 2.3%; FOMC July 28-29 hold at 3.50-3.75%, 5th straight, 9-3 vote (Hammack/Kashkari/Logan dissent for higher), minutes released Aug 19; Bloomberg Aug 31 (10-yr topped 4.75%, first since Jan 2025); Real Estate News Sep 1 (Barr speech quote; 30-yr daily 6.89% vs 6.77% wk-ago; FedWatch 68.2%); Forbes Aug 31 (FedWatch 66%); BLS CPI release schedule (Aug CPI Fri Sep 11 8:30am ET); FOMC meets Sep 15-16; Florida Realtors July 2026 (SF 23,870 closed +5.1%, median 425k +3.7%, 4.5 mo supply; condo 8,194 +11%, median 295k flat, 7.8 mo supply, 12th straight pending increase)",
+   "words": 1502,
+   "image": "/images/fed-building-20260912.jpg",
+   "sources": "Federal Reserve July 29, 2026 statement and current FOMC calendar; Federal Reserve monetary-policy explanation; Freddie Mac PMMS September 10, 2026; CFPB Loan Estimate and rate-lock guidance. Direct sources in the current research pack; publication recheck in docs/civilian-blog-engine/2026-09-12-autopilot/source-recheck.json.",
    "currentEventsCheck": "Sep 1 2026 sweep triggered an override: FedWatch hike odds swung 40% -> 57% -> 66-68% in a week, 10-yr Treasury at a 19-20 month high, Fed governor publicly floating a hike ahead of the Sep 15-16 FOMC. Directional reversal after two years of cut expectations, and time-sensitive before the meeting, so the rate-news-reaction template beat the evergreen queue head.",
    "mathVerified": "Payment math recomputed on a 340k 30-yr loan (20% down on the 425k FL median): 6.75% = 2,205.23/mo, 7.00% = 2,262.03/mo, delta 56.79/mo and 682/yr. Quoted as 'about 57 dollars a month'.",
    "metrics": [
@@ -1096,7 +1096,7 @@
     }
    ],
    "engineFix": "Fixed a real bug in scripts/civilian-blog-factory.mjs: the llms.txt section-replace built its RegExp from the unescaped literal '## Blog Posts (auto-maintained)', so the parentheses compiled as a capture group and the pattern never matched. llms.txt had been frozen at the first post since Aug 24. Escaped the source and used a function replacer; all 4 posts now listed.",
-   "published": "Catalog refresh published and live-verified 2026-09-09T07:41:17.443Z; deployment 8e0af763-c770-486f-991b-5bb8b78f729e",
+   "published": "Reviewed refresh published and live-verified 2026-09-13T01:33:12.077Z; deployment 1e42f109-4804-4dd3-9901-6ae680f4dc30",
    "reviewCountSync": "Same session: verified LIVE counts via browser (Google Maps 55 reviews all five-star, Zillow profile 27 team reviews) and corrected Zillow 25 -> 27 and the combined total 79/80 -> 82 across both sites. scripts/review-counts.mjs did not walk civilian-site and had no combined-total patterns, which is why greggcostin.com kept drifting; both gaps fixed in that script.",
    "search": [
     {
@@ -1382,21 +1382,69 @@
      "publication": "staged-not-deployed",
      "summary": "Adds policy/mortgage distinction and after-announcement quote workflow; confirms existing policy/calendar/PMMS figures and independently recomputes payment comparison; new licensed image.",
      "performanceChange": "not measured"
+    },
+    {
+     "runId": "civilian-blog-engine-2026-09-12-autopilot",
+     "date": "2026-09-12",
+     "kind": "Owner-authorized publication of the reviewed refresh",
+     "provider": "codex",
+     "model": "gpt-6-astra",
+     "effort": "max",
+     "publication": {
+      "status": "published-and-live-verified",
+      "autoPublish": true,
+      "deployed": true,
+      "deployedAt": "2026-09-13T01:30:49.158Z",
+      "deploymentId": "1e42f109-4804-4dd3-9901-6ae680f4dc30",
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "indexNowSubmitted": true,
+      "bingSubmitted": true,
+      "indexingStatus": "Submission accepted by both engines; article indexing, ranking and AI citations remain unconfirmed.",
+      "indexingReceipt": "content/measure/submissions/2026-09-13T01-33-31-532Z-gc-74ca0ebf.json",
+      "report": "docs/civilian-blog-engine/2026-09-12-autopilot/README.md",
+      "releaseRecord": "docs/civilian-blog-engine/2026-09-12-autopilot/deployment.json",
+      "providerVerifiedAssets": 2582,
+      "publicChecks": 12
+     },
+     "previousRevision": {
+      "title": "Fed Rate Hike Talk: What Gulf Coast Buyers Should Do",
+      "dateModified": "2026-09-09",
+      "words": 1693,
+      "image": "/images/fed-decision-review-20260909.jpg",
+      "sources": "Freddie Mac PMMS Aug 27 2026 (30-yr 6.66%, prior 6.65%, yr-ago 6.56%; 15-yr 5.98%); BEA Personal Income and Outlays July 2026 (PCE +3.7% y/y, core +3.3%); Dallas Fed trimmed mean PCE 2.3%; FOMC July 28-29 hold at 3.50-3.75%, 5th straight, 9-3 vote (Hammack/Kashkari/Logan dissent for higher), minutes released Aug 19; Bloomberg Aug 31 (10-yr topped 4.75%, first since Jan 2025); Real Estate News Sep 1 (Barr speech quote; 30-yr daily 6.89% vs 6.77% wk-ago; FedWatch 68.2%); Forbes Aug 31 (FedWatch 66%); BLS CPI release schedule (Aug CPI Fri Sep 11 8:30am ET); FOMC meets Sep 15-16; Florida Realtors July 2026 (SF 23,870 closed +5.1%, median 425k +3.7%, 4.5 mo supply; condo 8,194 +11%, median 295k flat, 7.8 mo supply, 12th straight pending increase)",
+      "currentEvidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
+      "published": "Catalog refresh published and live-verified 2026-09-09T07:41:17.443Z; deployment 8e0af763-c770-486f-991b-5bb8b78f729e",
+      "publication": {
+       "status": "published-and-live-verified",
+       "autoPublish": false,
+       "deployed": true,
+       "deployedAt": "2026-09-09T07:39:57.842Z",
+       "deploymentId": "8e0af763-c770-486f-991b-5bb8b78f729e",
+       "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+       "indexNowSubmitted": true,
+       "bingSubmitted": true,
+       "indexingStatus": "accepted by both IndexNow and Bing; indexing, ranking and AI citations unverified",
+       "indexingReceipt": "content/measure/submissions/2026-09-09T07-45-14-883Z-gc-ccf14765.json",
+       "report": "docs/blog-catalog-refresh-2026-09-09.md",
+       "releaseRecord": "content/measure/catalog-refresh-2026-09-09.json"
+      }
+     },
+     "performanceChange": "Not yet measured"
     }
    ],
-   "currentEvidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means-2026-09-06.json",
+   "currentEvidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means.json",
    "legacyMetrics": "no GSC/Bing data available in-session",
-   "title": "Fed Rate Hike Talk: What Gulf Coast Buyers Should Do",
+   "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
    "category": "Financing and the economy",
-   "dateModified": "2026-09-09",
+   "dateModified": "2026-09-12",
    "targetKeywords": [
-    "Fed rate hike housing",
-    "September 2026 Fed meeting mortgage",
-    "should I lock my mortgage rate",
-    "seller credit versus price reduction"
+    "Fed rate hike",
+    "Federal Reserve mortgage rates",
+    "September 2026 Fed meeting",
+    "mortgage rate lock"
    ],
    "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-   "shareHook": "A Fed headline cannot tell you whether to buy. A payment stress test, a real lock deadline and a cash reserve can.",
+   "shareHook": "Before changing your homebuying plan over a Fed headline, check the payment you can carry and the date your rate lock expires.",
    "catalogRefresh": {
     "date": "2026-09-09",
     "status": "published-and-live-verified",
@@ -1413,17 +1461,19 @@
    },
    "publication": {
     "status": "published-and-live-verified",
-    "autoPublish": false,
+    "autoPublish": true,
     "deployed": true,
-    "deployedAt": "2026-09-09T07:39:57.842Z",
-    "deploymentId": "8e0af763-c770-486f-991b-5bb8b78f729e",
+    "deployedAt": "2026-09-13T01:30:49.158Z",
+    "deploymentId": "1e42f109-4804-4dd3-9901-6ae680f4dc30",
     "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
     "indexNowSubmitted": true,
     "bingSubmitted": true,
-    "indexingStatus": "accepted by both IndexNow and Bing; indexing, ranking and AI citations unverified",
-    "indexingReceipt": "content/measure/submissions/2026-09-09T07-45-14-883Z-gc-ccf14765.json",
-    "report": "docs/blog-catalog-refresh-2026-09-09.md",
-    "releaseRecord": "content/measure/catalog-refresh-2026-09-09.json"
+    "indexingStatus": "Submission accepted by both engines; article indexing, ranking and AI citations remain unconfirmed.",
+    "indexingReceipt": "content/measure/submissions/2026-09-13T01-33-31-532Z-gc-74ca0ebf.json",
+    "report": "docs/civilian-blog-engine/2026-09-12-autopilot/README.md",
+    "releaseRecord": "docs/civilian-blog-engine/2026-09-12-autopilot/deployment.json",
+    "providerVerifiedAssets": 2582,
+    "publicChecks": 12
    },
    "stagedRevision": {
     "runId": "civilian-blog-engine-2026-09-12-fed",
@@ -1436,11 +1486,16 @@
     "shareHook": "Before changing your homebuying plan over a Fed headline, check the payment you can carry and the date your rate lock expires.",
     "research": "content/civilian-blog/research/fed-rate-hike-what-it-means.json",
     "preview": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-fed\\preview\\blog\\fed-rate-hike-what-it-means.html",
-    "autoPublish": false,
-    "status": "staged-awaiting-publication-approval",
+    "autoPublish": true,
+    "status": "published-and-live-verified",
     "reviewBefore": "2026-09-16",
-    "deployed": false
-   }
+    "deployed": true,
+    "publicationRunId": "civilian-blog-engine-2026-09-12-autopilot",
+    "deployedAt": "2026-09-13T01:30:49.158Z",
+    "deploymentId": "1e42f109-4804-4dd3-9901-6ae680f4dc30"
+   },
+   "score": 100,
+   "formatting": 100
   },
   {
    "slug": "florida-insurance-relief-2026",
@@ -2185,6 +2240,40 @@
     "deploymentDate": null,
     "reviewWindow": "At least 28 complete days after actual deployment, matched cohorts and accepted/qualified inquiry definitions; inadequate samples remain inconclusive."
    }
+  },
+  {
+   "id": "civilian-blog-engine-2026-09-12-autopilot",
+   "date": "2026-09-12",
+   "status": "published-and-live-verified",
+   "provider": "codex",
+   "model": "gpt-6-astra",
+   "effort": "max",
+   "selectionReason": "Explicit user request: have it set for auto pilot, and publish it",
+   "fallbackReason": null,
+   "leaseId": "5e50f5d7-0e05-4f2d-b164-a18d769a7162",
+   "posts": [
+    "fed-rate-hike-what-it-means"
+   ],
+   "score": 100,
+   "formatting": 100,
+   "autoPublish": true,
+   "deployed": true,
+   "deployedAt": "2026-09-13T01:30:49.158Z",
+   "deploymentId": "1e42f109-4804-4dd3-9901-6ae680f4dc30",
+   "report": "docs/civilian-blog-engine/2026-09-12-autopilot/README.md",
+   "next": {
+    "slug": "what-moves-mortgage-rates",
+    "notBefore": "2026-09-14",
+    "autoPublish": true
+   },
+   "hypothesis": {
+    "change": "Clearer distinction between Fed policy and mortgage quotes plus a comparable-offer checklist",
+    "outcome": "Better informed buyer inquiries from this article",
+    "deploymentStatus": "published",
+    "deploymentDate": "2026-09-13T01:30:49.158Z",
+    "reviewWindow": "At least 28 complete days after deployment with comparable cohorts and reliable accepted/qualified inquiry definitions; no causal claim from an uncontrolled before/after comparison."
+   },
+   "performanceChange": "Not yet measured"
   }
  ]
 }

@@ -1,0 +1,105 @@
+{
+  "checkedAt": "2026-09-13T01:33:12.077Z",
+  "readOnly": true,
+  "ok": true,
+  "deploymentId": "1e42f109-4804-4dd3-9901-6ae680f4dc30",
+  "candidateFingerprint": "e4a478b988ec75c8b2527959de042ed7dcdeda0a11e190c826fb3a66df712b5a",
+  "results": [
+    {
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "05107c319a172d7db1b95349d904c3d35355b5ac8aae16a359ec26919cce6c72",
+      "verifiedSha256": "72fe96885355b8d929c3375b561d1e72470cb3a26756f56e6abfadc80872d138",
+      "comparison": "Exact after observed Cloudflare email protection reversal only"
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "8912c34aed5aaf369b6490803785b2447a84e4f8d4387bb99ccb24ce13e57db0",
+      "verifiedSha256": "ca3eec85a53484209f0c2170229ed7c4dfaacea4a749c3171931277756c165a0",
+      "comparison": "Exact after observed Cloudflare email protection reversal only"
+    },
+    {
+      "url": "https://greggcostin.com/sitemap.xml",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "6305f2c5e0889993ef861aaeeb8de3a3ba63c8eceb14b6489b4ca18e972924ed",
+      "verifiedSha256": "6305f2c5e0889993ef861aaeeb8de3a3ba63c8eceb14b6489b4ca18e972924ed",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/llms.txt",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "f589d5b9539e5475e7687a1f0e43400234b20cee43a6c164e46ae57d895909d2",
+      "verifiedSha256": "f589d5b9539e5475e7687a1f0e43400234b20cee43a6c164e46ae57d895909d2",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/llms-full.txt",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "3bd50d46f9e659f3bf99c3c1d76528d4fe6f3b35a78a8962d364062691fc953b",
+      "verifiedSha256": "3bd50d46f9e659f3bf99c3c1d76528d4fe6f3b35a78a8962d364062691fc953b",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/robots.txt",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "c0340f7a7bc69b2ef2b8cd8bf9003d814ca2cd5d43f8f699767435cd7a15c166",
+      "verifiedSha256": "c0340f7a7bc69b2ef2b8cd8bf9003d814ca2cd5d43f8f699767435cd7a15c166",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/photo-credits",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "e1dd0063b5f5421f641c9bae11b0e4ab90536d0d4679c1d318846c916a875f61",
+      "verifiedSha256": "731a76e8d3c39e4a29024ca7bd075b92d51a1168b33e1e87c2aac11b8bccdba1",
+      "comparison": "Exact after observed Cloudflare email protection reversal only"
+    },
+    {
+      "url": "https://greggcostin.com/pagefind/pagefind.js",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "252d272bd34d483d19a752060f6a065114d15ab12c42d8f905ca565e2768a009",
+      "verifiedSha256": "252d272bd34d483d19a752060f6a065114d15ab12c42d8f905ca565e2768a009",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/images/fed-building-20260912.jpg",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "d7c665ca4ceccbf29f2a3dc3cfd4869c4e3483fad9a83e1de652a0d4bcd050ed",
+      "verifiedSha256": "d7c665ca4ceccbf29f2a3dc3cfd4869c4e3483fad9a83e1de652a0d4bcd050ed",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/images/fed-building-20260912-1200.avif",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "d2b5fb20874aff82a737396af010e4456d452b6ebdb218871379dbdbbef193a2",
+      "verifiedSha256": "d2b5fb20874aff82a737396af010e4456d452b6ebdb218871379dbdbbef193a2",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/assets/styles/47ee7ad7fc00a34fe84a.css",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "47ee7ad7fc00a34fe84a96e019dbedd10d8b1babdc30abe0b09a8dea10dad2a6",
+      "verifiedSha256": "47ee7ad7fc00a34fe84a96e019dbedd10d8b1babdc30abe0b09a8dea10dad2a6",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/og/blog-fed-rate-hike-what-it-means.png?v=75da6069b74d",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "75da6069b74d452b52bdfb1a34bf59c39ae47ecd6b5a6a61ede26be765f078fc",
+      "verifiedSha256": "75da6069b74d452b52bdfb1a34bf59c39ae47ecd6b5a6a61ede26be765f078fc",
+      "comparison": "Exact raw bytes"
+    }
+  ]
+}

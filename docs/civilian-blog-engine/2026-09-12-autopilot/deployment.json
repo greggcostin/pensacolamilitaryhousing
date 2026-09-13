@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-09-13T01:30:40.293Z",
+  "directory": "C:/Users/gregg/pensacolamilitaryhousing/artifacts/civilian-blog-engine/2026-09-12-fed/source/docs/civilian-blog-engine/2026-09-12-autopilot",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\release",
+  "candidateFingerprint": "e4a478b988ec75c8b2527959de042ed7dcdeda0a11e190c826fb3a66df712b5a",
+  "sites": [
+    {
+      "site": "gc",
+      "project": "greggcostin",
+      "before": "f4e8544d-02aa-43f2-9751-ccf68f59321d",
+      "status": "provider-success",
+      "exitCode": 0,
+      "after": "1e42f109-4804-4dd3-9901-6ae680f4dc30",
+      "url": "https://1e42f109.greggcostin.pages.dev",
+      "providerStage": "success",
+      "checkedAt": "2026-09-13T01:30:49.154Z"
+    }
+  ],
+  "status": "provider-success",
+  "finishedAt": "2026-09-13T01:30:49.158Z"
+}

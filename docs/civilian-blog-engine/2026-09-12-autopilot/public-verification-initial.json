@@ -1,0 +1,78 @@
+{
+  "checkedAt": "2026-09-13T01:31:57.310Z",
+  "readOnly": true,
+  "ok": false,
+  "deploymentId": "1e42f109-4804-4dd3-9901-6ae680f4dc30",
+  "candidateFingerprint": "e4a478b988ec75c8b2527959de042ed7dcdeda0a11e190c826fb3a66df712b5a",
+  "results": [
+    {
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "pass": false,
+      "error": "Public bytes differ from candidate\n+ actual - expected\n\n+ '5a4a823a5d1548c39e916cdf69ca6a0883ec8ffbdc5d49d96db321b597578d58'\n- '72fe96885355b8d929c3375b561d1e72470cb3a26756f56e6abfadc80872d138'\n"
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "pass": false,
+      "error": "Public bytes differ from candidate\n+ actual - expected\n\n+ '65ae1fe71802811cfd0ab89b40a51ae5649a04c07fcdd2852b7c3d51f95fda65'\n- 'ca3eec85a53484209f0c2170229ed7c4dfaacea4a749c3171931277756c165a0'\n"
+    },
+    {
+      "url": "https://greggcostin.com/sitemap.xml",
+      "status": 200,
+      "pass": true,
+      "sha256": "6305f2c5e0889993ef861aaeeb8de3a3ba63c8eceb14b6489b4ca18e972924ed"
+    },
+    {
+      "url": "https://greggcostin.com/llms.txt",
+      "status": 200,
+      "pass": true,
+      "sha256": "f589d5b9539e5475e7687a1f0e43400234b20cee43a6c164e46ae57d895909d2"
+    },
+    {
+      "url": "https://greggcostin.com/llms-full.txt",
+      "status": 200,
+      "pass": true,
+      "sha256": "3bd50d46f9e659f3bf99c3c1d76528d4fe6f3b35a78a8962d364062691fc953b"
+    },
+    {
+      "url": "https://greggcostin.com/robots.txt",
+      "status": 200,
+      "pass": true,
+      "sha256": "c0340f7a7bc69b2ef2b8cd8bf9003d814ca2cd5d43f8f699767435cd7a15c166"
+    },
+    {
+      "url": "https://greggcostin.com/photo-credits",
+      "pass": false,
+      "error": "Public bytes differ from candidate\n+ actual - expected\n\n+ '1a916133d8334d7f9f08a86daba6ee53fa23c3e2fddb3bf92db644e9a853de86'\n- '731a76e8d3c39e4a29024ca7bd075b92d51a1168b33e1e87c2aac11b8bccdba1'\n"
+    },
+    {
+      "url": "https://greggcostin.com/pagefind/pagefind.js",
+      "status": 200,
+      "pass": true,
+      "sha256": "252d272bd34d483d19a752060f6a065114d15ab12c42d8f905ca565e2768a009"
+    },
+    {
+      "url": "https://greggcostin.com/images/fed-building-20260912.jpg",
+      "status": 200,
+      "pass": true,
+      "sha256": "d7c665ca4ceccbf29f2a3dc3cfd4869c4e3483fad9a83e1de652a0d4bcd050ed"
+    },
+    {
+      "url": "https://greggcostin.com/images/fed-building-20260912-1200.avif",
+      "status": 200,
+      "pass": true,
+      "sha256": "d2b5fb20874aff82a737396af010e4456d452b6ebdb218871379dbdbbef193a2"
+    },
+    {
+      "url": "https://greggcostin.com/assets/styles/47ee7ad7fc00a34fe84a.css",
+      "status": 200,
+      "pass": true,
+      "sha256": "47ee7ad7fc00a34fe84a96e019dbedd10d8b1babdc30abe0b09a8dea10dad2a6"
+    },
+    {
+      "url": "https://greggcostin.com/og/blog-fed-rate-hike-what-it-means.png?v=75da6069b74d",
+      "status": 200,
+      "pass": true,
+      "sha256": "75da6069b74d452b52bdfb1a34bf59c39ae47ecd6b5a6a61ede26be765f078fc"
+    }
+  ]
+}

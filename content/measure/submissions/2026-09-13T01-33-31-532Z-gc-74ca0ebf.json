@@ -1,0 +1,56 @@
+{
+  "id": "74ca0ebf-533d-4c20-b05b-905af73f9506",
+  "site": "gc",
+  "startedAt": "2026-09-13T01:33:31.532Z",
+  "mode": "submit",
+  "checks": [
+    {
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "fingerprint": "9282a554c6283fe67936ffe9e3fe56d8830c863377af98a5ffa48414ada876de",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "httpStatus": 200,
+      "canonical": "https://greggcostin.com/blog",
+      "fingerprint": "69be15061273514f18797b998825716387f06ceb948e04610022c98b6489667f",
+      "fingerprintVersion": 2,
+      "status": "ready"
+    }
+  ],
+  "engines": {
+    "indexnow": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+          "fingerprint": "9282a554c6283fe67936ffe9e3fe56d8830c863377af98a5ffa48414ada876de"
+        },
+        {
+          "url": "https://greggcostin.com/blog",
+          "fingerprint": "69be15061273514f18797b998825716387f06ceb948e04610022c98b6489667f"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    },
+    "bing": {
+      "status": "accepted",
+      "urls": [
+        {
+          "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+          "fingerprint": "9282a554c6283fe67936ffe9e3fe56d8830c863377af98a5ffa48414ada876de"
+        },
+        {
+          "url": "https://greggcostin.com/blog",
+          "fingerprint": "69be15061273514f18797b998825716387f06ceb948e04610022c98b6489667f"
+        }
+      ],
+      "skipped": [],
+      "httpStatus": 200
+    }
+  }
+}

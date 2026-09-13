@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-09-13T01:38:26.978Z",
+  "workspace": "C:\\Users\\gregg\\pensacolamilitaryhousing",
+  "simulatedDate": "2026-09-14",
+  "selected": "what-moves-mortgage-rates",
+  "notBefore": "2026-09-14",
+  "autoPublish": true,
+  "cadence": "Mon+Thu 6:04am",
+  "scheduleChanged": false,
+  "scope": "Queue selection with current source/intent gates; future news and scheduler health are not predicted."
+}

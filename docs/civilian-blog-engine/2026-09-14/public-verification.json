@@ -1,0 +1,105 @@
+{
+  "checkedAt": "2026-09-14T18:21:06.243Z",
+  "readOnly": true,
+  "ok": true,
+  "deploymentId": "b8e49fe1-bf6e-4b3b-a236-5250e4fe1009",
+  "candidateFingerprint": "e4caee0de1fc3d7fb92e6047ef5aaa0332fa3763eb5defe1e7435ff295994624",
+  "results": [
+    {
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "edb12adfb9cb31ba6f5935f09dfa3686389817864b64adb87198f15cfe1e3959",
+      "verifiedSha256": "0ec745dd59a3d5d5fc6df075853019f092e1b0f88e416df388080ba98439b09a",
+      "comparison": "Exact after observed Cloudflare email protection reversal only"
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "1c80daa9855fe81725017c8ff683a9b18e469f012c530e565d190be9444d6dad",
+      "verifiedSha256": "f9c17cb53cb0785dd8ce75cbef65b6a178d07f5d52986821453b09adc51b07b1",
+      "comparison": "Exact after observed Cloudflare email protection reversal only"
+    },
+    {
+      "url": "https://greggcostin.com/sitemap.xml",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "4c0e552680a9395c9aaa725082d4c479b0ae09d7218a48f9d458899f37fb9462",
+      "verifiedSha256": "4c0e552680a9395c9aaa725082d4c479b0ae09d7218a48f9d458899f37fb9462",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/llms.txt",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "8138ddb08028e4e3a55d26b9693112d3fe4ac05398a38f7bf48ad876e82ccf3f",
+      "verifiedSha256": "8138ddb08028e4e3a55d26b9693112d3fe4ac05398a38f7bf48ad876e82ccf3f",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/llms-full.txt",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "ba8e7888f3fb59bcf002bdaa658ea2579134662e803e432dc83a00712aee3e83",
+      "verifiedSha256": "ba8e7888f3fb59bcf002bdaa658ea2579134662e803e432dc83a00712aee3e83",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/robots.txt",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "c0340f7a7bc69b2ef2b8cd8bf9003d814ca2cd5d43f8f699767435cd7a15c166",
+      "verifiedSha256": "c0340f7a7bc69b2ef2b8cd8bf9003d814ca2cd5d43f8f699767435cd7a15c166",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/photo-credits",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "950bf838f6a0b50b4ec4a396881d6a40f433ece97b08ba9afd29c0644a40aba9",
+      "verifiedSha256": "daad9d7fddb73a9ffd330001dc9c6387da7d790563a7c925a5b2e6d984e34a2d",
+      "comparison": "Exact after observed Cloudflare email protection reversal only"
+    },
+    {
+      "url": "https://greggcostin.com/pagefind/pagefind.js",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "252d272bd34d483d19a752060f6a065114d15ab12c42d8f905ca565e2768a009",
+      "verifiedSha256": "252d272bd34d483d19a752060f6a065114d15ab12c42d8f905ca565e2768a009",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/images/mortgage-benchmarks-20260914.jpg",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "d5ba075455b322734d523edd35bab4ae1b6e083d03d2554df91914b1ae7ce2fe",
+      "verifiedSha256": "d5ba075455b322734d523edd35bab4ae1b6e083d03d2554df91914b1ae7ce2fe",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/images/mortgage-benchmarks-20260914-1200.avif",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "894ce4f7e83e45af66ad943cd377917de6278bcb8bdfaf3f97011c0db1d9506b",
+      "verifiedSha256": "894ce4f7e83e45af66ad943cd377917de6278bcb8bdfaf3f97011c0db1d9506b",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/images/mortgage-benchmarks-20260914-480.webp",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "9bbcc3e7b64fbc4d78434e6c2a30325b7d3904058711571b175563ea87a141ae",
+      "verifiedSha256": "9bbcc3e7b64fbc4d78434e6c2a30325b7d3904058711571b175563ea87a141ae",
+      "comparison": "Exact raw bytes"
+    },
+    {
+      "url": "https://greggcostin.com/og/blog-what-moves-mortgage-rates.png?v=04d4966b2763",
+      "status": 200,
+      "pass": true,
+      "rawSha256": "04d4966b2763c4d6d3e1fbef9c1c8f709ba8a824c9f47de5ea55603f5c9af892",
+      "verifiedSha256": "04d4966b2763c4d6d3e1fbef9c1c8f709ba8a824c9f47de5ea55603f5c9af892",
+      "comparison": "Exact raw bytes"
+    }
+  ]
+}

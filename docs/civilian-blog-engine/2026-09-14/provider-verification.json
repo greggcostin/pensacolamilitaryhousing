@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-09-14T18:21:04.236Z",
+  "deploymentId": "b8e49fe1-bf6e-4b3b-a236-5250e4fe1009",
+  "stage": "success",
+  "assetCount": 2634,
+  "exact": 2634,
+  "differences": [],
+  "ok": true,
+  "candidateFingerprint": "e4caee0de1fc3d7fb92e6047ef5aaa0332fa3763eb5defe1e7435ff295994624"
+}

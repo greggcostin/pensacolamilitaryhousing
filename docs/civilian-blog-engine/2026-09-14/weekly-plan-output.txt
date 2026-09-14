@@ -1,0 +1,30 @@
+  ],
+  "articles": 18,
+  "briefs": [
+    {
+      "id": "full-payment",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/blog/bah-2026-pensacola-what-can-you-afford"
+    },
+    {
+      "id": "training-housing",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/flight-school-housing-pensacola"
+    },
+    {
+      "id": "rent-buy-hold",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/on-base-vs-off-base-eglin-afb"
+    },
+    {
+      "id": "property-insurance-packet",
+      "evidence": "editorial-hypothesis",
+      "owner": "/resources/florida-home-insurance"
+    },
+    {
+      "id": "part-year-homestead",
+      "evidence": "observed-query-intent-unconfirmed",
+      "owner": "/blog/florida-veteran-property-tax-county-guide"
+    }
+  ]
+}

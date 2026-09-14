@@ -436,6 +436,30 @@
    ],
    "rule": "When refreshing a dated series, check the reporting date in research notes and search-landscape summaries as well as the visible value. A correct current figure can coexist with a stale prior-period label.",
    "evidence": "The Fed article research searchLandscape called 6.71% the prior August 27 observation after its September 10 refresh. The directly opened September 10 Freddie Mac PMMS page identifies 6.71% as the prior week, September 3. This run corrected the research note and kept the separate hypothetical payment inputs unchanged."
+  },
+  {
+   "id": "L033",
+   "date": "2026-09-14",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "build",
+    "orchestrate"
+   ],
+   "rule": "When restoring unowned generated pages after a credits or discovery pass, match only civilian-site/**/*.html (or public/**/*.html). Never restore by a bare .html suffix: content/*.fragment.html ends in .html and is the reviewed source.",
+   "evidence": "September 14 civilian run: a restore loop over git diff --name-only | grep .html$ reverted content/civilian-blog/what-moves-mortgage-rates.fragment.html to HEAD after the factory had already built the refreshed page. The research file kept the new review hash, so the fragment and evidence went out of sync until the refresh, seal and image scripts were re-run from a clean checkout of both files and the page was rebuilt from a deleted output."
+  },
+  {
+   "id": "L034",
+   "date": "2026-09-14",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "verify",
+    "orchestrate"
+   ],
+   "rule": "In an unattended scheduled run, the Browser pane cannot start launch.json servers and screenshots time out while the app window is hidden; serve the sealed candidate with a plain static file server, verify with DOM reads, and record pixel-level mobile layout as unverified when document.visibilityState is hidden and innerWidth reads 0.",
+   "evidence": "September 14 civilian run: preview_start refused (unattended session), screenshot timed out after 5s, desktop DOM checks succeeded (innerWidth 1280, avif hero 760x543, three tables inside the 760px column, quick answer first in main), but after the mobile resize the tab reported visibilityState hidden with innerWidth 0, so only srcset selection (480 variant), FAQ toggling and overflow-x:auto wrappers could be confirmed."
   }
  ]
 }

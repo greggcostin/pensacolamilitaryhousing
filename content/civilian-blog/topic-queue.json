@@ -40,7 +40,7 @@
    "slug": "what-moves-mortgage-rates",
    "topic": "Refresh the drivers of mortgage rates and how borrowers compare and lock quotes",
    "type": "refresh",
-   "status": "in-progress",
+   "status": "completed",
    "pillar": "financing-macro",
    "refreshUrl": "https://greggcostin.com/blog/what-moves-mortgage-rates",
    "requestedBy": "Gregg",
@@ -79,7 +79,10 @@
    "requestedTimingAt": "2026-09-12",
    "publicationPolicy": "Gregg explicitly authorized civilian blog autopilot on September 12, 2026. Research, build and automatically publish this refresh during the existing scheduled run only after all evidence, editorial, image and deployment gates pass.",
    "autoPublishAuthorizedAt": "2026-09-12",
-   "executionRun": "civilian-blog-engine-2026-09-14"
+   "executionRun": "civilian-blog-engine-2026-09-14",
+   "completedAt": "2026-09-14",
+   "completedRun": "civilian-blog-engine-2026-09-14",
+   "publishedDeployment": "b8e49fe1-bf6e-4b3b-a236-5250e4fe1009"
   },
   {
    "slug": "coastal-alabama-vs-panhandle",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generated": "2026-09-12",
+  "generated": "2026-09-14",
   "mode": "reviewable-plan",
   "maximumArticleChanges": 1,
   "next": {
@@ -850,7 +850,7 @@
         "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
         "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/"
       ],
-      "contextualInbound": 3,
+      "contextualInbound": 4,
       "evidencePack": "content/civilian-blog/research/fed-rate-hike-what-it-means.json",
       "readerTask": "Use verified policy, a lender quote and a complete property budget to decide whether locking or waiting fits.",
       "nextStep": {
@@ -942,9 +942,13 @@
       "site": "gc",
       "slug": "what-moves-mortgage-rates",
       "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
-      "linkedSourceDomains": 4,
+      "linkedSourceDomains": 5,
       "sourceUrls": [
         "https://www.freddiemac.com/pmms",
+        "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+        "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
         "https://www.federalreserve.gov/econres/feds/files/2021048pap.pdf",
         "https://www.consumerfinance.gov/ask-cfpb/does-my-credit-score-affect-my-ability-to-get-a-mortgage-loan-or-the-mortgage-rate-i-pay-en-319/",
         "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",

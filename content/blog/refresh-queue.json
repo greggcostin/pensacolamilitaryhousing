@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-12",
+ "generated": "2026-09-14",
  "note": "Evidence policy v2. Missing data and small samples never trigger a rewrite. Expired declared facts take priority; search reviews require valid comparable windows. Contextual links exclude navigation, footer and the global Explore grid. Quality scores flag editorial review, not ranking outcomes.",
  "generatedBySite": {
   "pmh": "2026-09-09",
-  "gc": "2026-09-12"
+  "gc": "2026-09-14"
  },
  "queue": []
 }

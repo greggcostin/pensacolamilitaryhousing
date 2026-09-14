@@ -365,7 +365,7 @@
      "dateModified": "2026-09-14",
      "scoreAfter": 100,
      "formatting": 100,
-     "publication": "sealed candidate",
+     "publication": "published 2026-09-14T18:20:29.779Z deployment b8e49fe1-bf6e-4b3b-a236-5250e4fe1009",
      "performanceChange": "not measured",
      "summary": "New federal-funds section (policy target, overnight-rate definition, expectations channel, September 15-16 meeting), a dated three-benchmark table, a pre-meeting comparison step linking the Fed guide, new licensed image, all sources reopened."
     }
@@ -2411,13 +2411,15 @@
    "hypothesis": {
     "change": "Dated federal-funds versus mortgage-rate section with a three-benchmark table and a pre-meeting quote-comparison step",
     "outcome": "Readers arriving on rate questions reach the buyer or contact path better informed; measured as accepted inquiries from this URL",
-    "deploymentStatus": "prepared",
-    "deploymentDate": null,
+    "deploymentStatus": "published",
+    "deploymentDate": "2026-09-14T18:20:29.779Z",
     "reviewWindow": "At least 28 complete days after deployment, same property/host filters, comparable cohorts; inconclusive if samples are inadequate."
    },
    "performanceChange": "not measured",
-   "deployed": false,
-   "status": "sealed-candidate-awaiting-deployment"
+   "deployed": true,
+   "status": "published-and-live-verified",
+   "deployedAt": "2026-09-14T18:20:29.779Z",
+   "deploymentId": "b8e49fe1-bf6e-4b3b-a236-5250e4fe1009"
   }
  ]
 }

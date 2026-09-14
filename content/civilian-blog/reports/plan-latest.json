@@ -235,7 +235,7 @@
       "slug": "what-moves-mortgage-rates",
       "topic": "Refresh the drivers of mortgage rates and how borrowers compare and lock quotes",
       "type": "refresh",
-      "status": "queued",
+      "status": "completed",
       "pillar": "financing-macro",
       "refreshUrl": "https://greggcostin.com/blog/what-moves-mortgage-rates",
       "requestedBy": "Gregg",
@@ -274,12 +274,18 @@
       "requestedTimingAt": "2026-09-12",
       "publicationPolicy": "Gregg explicitly authorized civilian blog autopilot on September 12, 2026. Research, build and automatically publish this refresh during the existing scheduled run only after all evidence, editorial, image and deployment gates pass.",
       "autoPublishAuthorizedAt": "2026-09-12",
+      "executionRun": "civilian-blog-engine-2026-09-14",
+      "completedAt": "2026-09-14",
+      "completedRun": "civilian-blog-engine-2026-09-14",
+      "publishedDeployment": "b8e49fe1-bf6e-4b3b-a236-5250e4fe1009",
       "ownerRequested": true,
       "observedDemand": false,
       "coverageCount": 2,
       "priority": 1998,
-      "runnable": true,
-      "reasons": [],
+      "runnable": false,
+      "reasons": [
+        "queue request is closed"
+      ],
       "ownership": {
         "slug": "what-moves-mortgage-rates",
         "verdict": "INTENT-REVIEW",
@@ -1074,17 +1080,6 @@
             "file": "civilian-site/mortgage-calculators.html"
           },
           {
-            "site": "gc",
-            "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
-            "title": "What Moves Mortgage Rates? A Gulf Coast Buyer's Guide",
-            "hasFragment": true,
-            "coverage": 0.33,
-            "exact": 0,
-            "score": 1.3333333333333333,
-            "verdict": "ok",
-            "file": "content/civilian-blog/what-moves-mortgage-rates.fragment.html"
-          },
-          {
             "site": "pmh",
             "url": "https://pensacolamilitaryhousing.com/blog/bah-2026-pensacola-what-can-you-afford",
             "title": "2026 Pensacola BAH: Build a Complete Housing Budget",
@@ -1105,6 +1100,17 @@
             "score": 1.1111111111111112,
             "verdict": "ok",
             "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+            "title": "What Moves Mortgage Rates? A Gulf Coast Buyer's Guide",
+            "hasFragment": true,
+            "coverage": 0.28,
+            "exact": 0,
+            "score": 1.1111111111111112,
+            "verdict": "ok",
+            "file": "content/civilian-blog/what-moves-mortgage-rates.fragment.html"
           },
           {
             "site": "pmh",
@@ -1950,90 +1956,82 @@
     }
   ],
   "selected": {
-    "kind": "owner-requested-refresh",
+    "kind": "queued-refresh",
     "item": {
-      "slug": "what-moves-mortgage-rates",
-      "topic": "Refresh the drivers of mortgage rates and how borrowers compare and lock quotes",
-      "type": "refresh",
-      "status": "queued",
-      "pillar": "financing-macro",
-      "refreshUrl": "https://greggcostin.com/blog/what-moves-mortgage-rates",
-      "requestedBy": "Gregg",
-      "requestedAt": "2026-09-12",
-      "requestedOrder": 2,
+      "slug": "coastal-alabama-vs-panhandle",
+      "topic": "Buying on the Gulf: coastal Alabama (Orange Beach, Gulf Shores, Lillian) vs the Florida Panhandle, taxes, insurance, and lifestyle compared (Gregg is licensed in both states)",
+      "type": "evergreen",
+      "pillar": "ownership-costs",
       "audience": [
         "buyer",
-        "homeowner",
-        "seller"
+        "vacation-home buyer"
       ],
       "targetKeywords": [
-        "what moves mortgage rates",
-        "mortgage rates explained"
+        "coastal ownership costs Florida Alabama",
+        "buying a home Florida versus Alabama"
       ],
-      "decision": "Update the existing guide using current official sources and clearly separate the federal funds rate from mortgage pricing.",
-      "sourcePlan": [
-        "Latest Federal Reserve FOMC statement and release date",
-        "Latest Freddie Mac PMMS release and observation date",
-        "CFPB borrower guidance"
-      ],
-      "evidenceStatus": "Explicit owner request, not inferred demand. Existing URL remains the intent owner. Verify all dated figures at execution.",
-      "note": "Refresh only. Do not infer a rate hike from the legacy slug. Keep publish approval gates.",
-      "intentReview": {
-        "decision": "distinct-intent",
-        "reviewedBy": "Codex gpt-6-astra max",
-        "reviewedAt": "2026-09-12",
-        "comparedTo": [
-          "https://greggcostin.com/blog",
-          "https://greggcostin.com/blog/fed-rate-hike-what-it-means"
-        ],
-        "readerTask": "Understand the market and borrower factors behind a mortgage quote, then compare like-for-like terms and consider a rate lock.",
-        "distinctValue": "The flagged blog hub lists this existing article and is not a competing explainer. Refresh this same URL. Keep the evergreen pricing-mechanics guide separate from the Fed guide, which interprets a current policy decision and its limits for buyers."
-      },
-      "notBefore": "2026-09-14",
-      "executionTiming": "Next normal civilian-blog-engine run, Monday September 14, 2026 at 6:04 a.m. America/Chicago, plus scheduler jitter.",
-      "requestedTimingAt": "2026-09-12",
-      "publicationPolicy": "Gregg explicitly authorized civilian blog autopilot on September 12, 2026. Research, build and automatically publish this refresh during the existing scheduled run only after all evidence, editorial, image and deployment gates pass.",
-      "autoPublishAuthorizedAt": "2026-09-12",
-      "ownerRequested": true,
+      "refreshUrl": "https://greggcostin.com/resources/coastal-ownership-costs",
+      "decision": "Compare the complete cost of two specific properties, with jurisdiction and use held explicit.",
+      "evidenceStatus": "Editorial proposal; no observed demand claimed.",
+      "ownerRequested": false,
       "observedDemand": false,
-      "coverageCount": 2,
-      "priority": 1998,
+      "coverageCount": 0,
+      "priority": 49.98,
       "runnable": true,
       "reasons": [],
       "ownership": {
-        "slug": "what-moves-mortgage-rates",
-        "verdict": "INTENT-REVIEW",
+        "slug": "coastal-alabama-vs-panhandle",
+        "verdict": "clear",
         "hits": [
           {
             "site": "gc",
-            "url": "https://greggcostin.com/blog",
-            "title": "Real Estate Blog | The Costin Team, Pensacola",
-            "coverage": 0.3,
-            "exact": 1,
-            "score": 4.2,
-            "verdict": "INTENT-REVIEW",
-            "file": "civilian-site/blog.html"
-          },
-          {
-            "site": "pmh",
-            "url": "https://pensacolamilitaryhousing.com/zero-down-home-loans",
-            "title": "Zero-Down Home Loans 2026 Pensacola | Gregg Costin",
-            "coverage": 0.3,
+            "url": "https://greggcostin.com/gulf-shores-orange-beach",
+            "title": "Gulf Shores & Orange Beach Homes Guide | Gregg Costin",
+            "coverage": 0.42,
             "exact": 0,
-            "score": 1.2,
+            "score": 1.6842105263157894,
             "verdict": "ok",
-            "file": "public/zero-down-home-loans.html"
+            "file": "civilian-site/gulf-shores-orange-beach.html"
           },
           {
             "site": "gc",
-            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
-            "hasFragment": true,
-            "coverage": 0.3,
+            "url": "https://greggcostin.com/photo-credits",
+            "title": "Photography Credits | Gregg Costin, The Costin Team",
+            "coverage": 0.37,
             "exact": 0,
-            "score": 1.2,
+            "score": 1.4736842105263157,
             "verdict": "ok",
-            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
+            "file": "civilian-site/photo-credits.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/faq",
+            "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
+            "coverage": 0.26,
+            "exact": 0,
+            "score": 1.0526315789473684,
+            "verdict": "ok",
+            "file": "public/faq.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/va-loan-guide",
+            "title": "VA Loan Guide: Pensacola to Destin & Gulf Shores | Gregg Costin",
+            "coverage": 0.26,
+            "exact": 0,
+            "score": 1.0526315789473684,
+            "verdict": "ok",
+            "file": "public/va-loan-guide.html"
+          },
+          {
+            "site": "pmh",
+            "url": "https://pensacolamilitaryhousing.com/bah-rates",
+            "title": "2026 Pensacola BAH Rates by Rank + Housing Cost Calculator",
+            "coverage": 0.21,
+            "exact": 0,
+            "score": 0.8421052631578947,
+            "verdict": "ok",
+            "file": "public/bah-rates.html"
           }
         ]
       }

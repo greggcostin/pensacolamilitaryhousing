@@ -782,23 +782,6 @@
       "provenanceNote": ""
     },
     {
-      "id": "photo-mortgage-house-review-20260909",
-      "image": "https://greggcostin.com/images/mortgage-house-review-20260909.jpg",
-      "path": "/images/mortgage-house-review-20260909.jpg",
-      "sourceSite": "gc",
-      "title": "Pensacola NHPD house06a.jpg",
-      "credit": "Ebyabe",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house06a.jpg",
-      "creditRequired": true,
-      "uses": [
-        "blog.html",
-        "blog/what-moves-mortgage-rates.html"
-      ],
-      "provenanceNote": ""
-    },
-    {
       "id": "photo-saenger",
       "image": "https://greggcostin.com/images/saenger.jpg",
       "path": "/images/saenger.jpg",
@@ -831,6 +814,23 @@
         "neighborhoods/east-hill-downtown.html",
         "resources.html",
         "search.html"
+      ],
+      "provenanceNote": ""
+    },
+    {
+      "id": "photo-mortgage-benchmarks-20260914",
+      "image": "https://greggcostin.com/images/mortgage-benchmarks-20260914.jpg",
+      "path": "/images/mortgage-benchmarks-20260914.jpg",
+      "sourceSite": "gc",
+      "title": "PensacolaVictorianBnBB.jpg",
+      "credit": "Infrogmation of New Orleans",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APensacolaVictorianBnBB.jpg",
+      "creditRequired": true,
+      "uses": [
+        "blog.html",
+        "blog/what-moves-mortgage-rates.html"
       ],
       "provenanceNote": ""
     },

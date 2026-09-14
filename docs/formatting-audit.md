@@ -1,6 +1,6 @@
 # Sitewide formatting / scannability audit
 
-Generated 2026-09-13 by scripts/analyze-formatting.mjs.
+Generated 2026-09-14 by scripts/analyze-formatting.mjs.
 Score 100 = highly scannable. Penalties: wall-of-text paragraphs (>85 words),
 sparse headings (>220 words/section), sparse scan aids (>280 words per
 list/table/facts box/figure/FAQ). Rows are sorted worst score first, so the

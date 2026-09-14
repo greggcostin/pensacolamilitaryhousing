@@ -1,0 +1,32 @@
+{
+  "collectedAt": "2026-09-14T17:57:27.133Z",
+  "readOnly": true,
+  "method": "GetUrlInfo",
+  "interpretation": "Year-one date sentinel (/Date(-62135596800000)/) is missing crawl information, not a crawl event. Performance API row counts are separate. Absence of rows is unknown, not proof of exclusion.",
+  "results": [
+    {
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "httpStatus": 400,
+      "data": {
+        "ErrorCode": 2,
+        "Message": "ERROR!!! UnknownError"
+      }
+    },
+    {
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "httpStatus": 400,
+      "data": {
+        "ErrorCode": 2,
+        "Message": "ERROR!!! UnknownError"
+      }
+    },
+    {
+      "url": "https://greggcostin.com/blog",
+      "httpStatus": 400,
+      "data": {
+        "ErrorCode": 2,
+        "Message": "ERROR!!! UnknownError"
+      }
+    }
+  ]
+}

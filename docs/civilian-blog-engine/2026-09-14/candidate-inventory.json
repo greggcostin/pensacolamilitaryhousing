@@ -1,0 +1,342 @@
+{
+  "base": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12-autopilot\\release\\gc",
+  "baseDeploymentId": "1e42f109-4804-4dd3-9901-6ae680f4dc30",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-14\\preview",
+  "changes": [
+    {
+      "path": "blog/what-moves-mortgage-rates.html",
+      "kind": "modified",
+      "sha256": "0ec745dd59a3d5d5fc6df075853019f092e1b0f88e416df388080ba98439b09a"
+    },
+    {
+      "path": "blog.html",
+      "kind": "modified",
+      "sha256": "f9c17cb53cb0785dd8ce75cbef65b6a178d07f5d52986821453b09adc51b07b1"
+    },
+    {
+      "path": "data/photography-credits.json",
+      "kind": "modified",
+      "sha256": "2feef7c48445d5a447bc599ef3c4aa6c3b72186fae9f55591e2d11c5ab8866ae"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914-1200.avif",
+      "kind": "added",
+      "sha256": "894ce4f7e83e45af66ad943cd377917de6278bcb8bdfaf3f97011c0db1d9506b"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914-1200.jpg",
+      "kind": "added",
+      "sha256": "7e4fa94a26469b2fb58a3b740e2984c10962a39b69a6c8c72d6f41a529125e70"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914-1200.webp",
+      "kind": "added",
+      "sha256": "c9e7b67cac0beef081f47b7cb79e0eb3943b801793414c40c90ddc1add969f10"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914-480.avif",
+      "kind": "added",
+      "sha256": "595bfb3776ba5c1b085f8bb094d382f329962c11247488fd17f2534b0fe373f2"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914-480.jpg",
+      "kind": "added",
+      "sha256": "7c89f3454f222239578f20cb793c7741abcae0ef350e0fac5bc299b46f26551b"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914-480.webp",
+      "kind": "added",
+      "sha256": "9bbcc3e7b64fbc4d78434e6c2a30325b7d3904058711571b175563ea87a141ae"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914-768.avif",
+      "kind": "added",
+      "sha256": "09bd4078b5b8257c28f8b9a63a4c7abcefec76280d2dd84e312567c95b7e079d"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914-768.jpg",
+      "kind": "added",
+      "sha256": "1c9d1b40635edf06e7162675dc943a4568db481c6d5950f39db42697e390ab84"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914-768.webp",
+      "kind": "added",
+      "sha256": "3cd4a7c6a6d5d26166f5bd28428334e06a1ce9fe5f1456f0d646c7ce04fc4be1"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914.avif",
+      "kind": "added",
+      "sha256": "5835e46cb13ea1d0dce63ef4b3c0633fc096ad046d07485f951e7eb723cc774e"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914.jpg",
+      "kind": "added",
+      "sha256": "d5ba075455b322734d523edd35bab4ae1b6e083d03d2554df91914b1ae7ce2fe"
+    },
+    {
+      "path": "images/mortgage-benchmarks-20260914.webp",
+      "kind": "added",
+      "sha256": "0c0237f0786e377d59f5f48a9a43089383c4ccadfa4fb46a2445fb1889d587b0"
+    },
+    {
+      "path": "llms-full.txt",
+      "kind": "modified",
+      "sha256": "ba8e7888f3fb59bcf002bdaa658ea2579134662e803e432dc83a00712aee3e83"
+    },
+    {
+      "path": "llms.txt",
+      "kind": "modified",
+      "sha256": "8138ddb08028e4e3a55d26b9693112d3fe4ac05398a38f7bf48ad876e82ccf3f"
+    },
+    {
+      "path": "og/blog-what-moves-mortgage-rates.png",
+      "kind": "modified",
+      "sha256": "04d4966b2763c4d6d3e1fbef9c1c8f709ba8a824c9f47de5ea55603f5c9af892"
+    },
+    {
+      "path": "pagefind/fragment/en_94d4b7f.pf_fragment",
+      "kind": "added",
+      "sha256": "7ad190ffa6fbe35c4d3cb482bc74f84494ae716417b178e490dda072e41c2c2c"
+    },
+    {
+      "path": "pagefind/fragment/en_9da96b2.pf_fragment",
+      "kind": "added",
+      "sha256": "306ca13c401af47ef0df6882d8f4a6f8ba28466f3794e7b842361d966cc55682"
+    },
+    {
+      "path": "pagefind/fragment/en_f3efc56.pf_fragment",
+      "kind": "added",
+      "sha256": "44bd1adcdc2ef552aac01c581c55415a471f5fcef289e7ca4e17ef2e92e706e8"
+    },
+    {
+      "path": "pagefind/index/en_1937b7b.pf_index",
+      "kind": "added",
+      "sha256": "5d0f28e517643ba9c2a4e9863d9d9e88c4e44b2123f5ec4fb98373cf0bbf33a3"
+    },
+    {
+      "path": "pagefind/index/en_216a31a.pf_index",
+      "kind": "added",
+      "sha256": "e329b361c00ce92e4388d75d01c0a44e5c9dba4c3d1bb397b0def4650b3fe6e1"
+    },
+    {
+      "path": "pagefind/index/en_2381ad1.pf_index",
+      "kind": "added",
+      "sha256": "4d32bc9d713925dc2d38e24125269f8fc3a324bc8351c8ed07067d14c10c6e83"
+    },
+    {
+      "path": "pagefind/index/en_303e5ce.pf_index",
+      "kind": "added",
+      "sha256": "d46e17ecab0163cbfd87a7b7736a37cf41504e9887ea20ba9f19cbfb8a6c9407"
+    },
+    {
+      "path": "pagefind/index/en_307d82b.pf_index",
+      "kind": "added",
+      "sha256": "7606974805b4be6194854a3a9d76f9c27281dab331a22e298be1132fc159b46a"
+    },
+    {
+      "path": "pagefind/index/en_413b221.pf_index",
+      "kind": "added",
+      "sha256": "468d956d8cf1e8c889fcd439779a00af6cbd3f14bfff4e3defec42450615062b"
+    },
+    {
+      "path": "pagefind/index/en_500ef85.pf_index",
+      "kind": "added",
+      "sha256": "265fc2fbf665cd0d4ef75911d54620578c113a37762a83b66ec690a6bf3f7d7a"
+    },
+    {
+      "path": "pagefind/index/en_58a97a9.pf_index",
+      "kind": "added",
+      "sha256": "dc2a1c8eef925350d224fa3e1d0ca327a897a4cc11b276e5ceee31d609205c5a"
+    },
+    {
+      "path": "pagefind/index/en_5b84cb4.pf_index",
+      "kind": "added",
+      "sha256": "a4cf96ece7ad2922b9b850bf9b7a11a32ddc494a00ced3effa9bf7e2dd082e63"
+    },
+    {
+      "path": "pagefind/index/en_5c34acb.pf_index",
+      "kind": "added",
+      "sha256": "dca527f68e0a6065f8f1c0aa573e5f6f464c24aa7c61c1f44584a0e3027211d4"
+    },
+    {
+      "path": "pagefind/index/en_5e74cee.pf_index",
+      "kind": "added",
+      "sha256": "4f1bf16d9fd88276c5f0f59c21d69cccd9ed45bf390faa63c3b8e5a59cb69e21"
+    },
+    {
+      "path": "pagefind/index/en_67e0b75.pf_index",
+      "kind": "added",
+      "sha256": "7ed9930834d6eca4126503727d482c3e71f434ba12ed518366831518a84d65fd"
+    },
+    {
+      "path": "pagefind/index/en_696daba.pf_index",
+      "kind": "added",
+      "sha256": "1e959ab37bd2e6e5394ba52b136f55d0428a83ccc2875fb62b12abd1843ab27a"
+    },
+    {
+      "path": "pagefind/index/en_6c1880f.pf_index",
+      "kind": "added",
+      "sha256": "03647004dd0807b7dbadcf86cada6249be1b1c12a87db4cd2277b73e2cb57169"
+    },
+    {
+      "path": "pagefind/index/en_70dc2a9.pf_index",
+      "kind": "added",
+      "sha256": "5ac85266e5e1ac0c8f23303c3c00d7066a4656043b35ada183b42bcbbad2ecb2"
+    },
+    {
+      "path": "pagefind/index/en_76db927.pf_index",
+      "kind": "added",
+      "sha256": "5ad8abc2b060d23003e480e02a949c49d70369c9c50fac0790e71a7a52c897ea"
+    },
+    {
+      "path": "pagefind/index/en_782cad6.pf_index",
+      "kind": "added",
+      "sha256": "a2b3247cee544f92e0db3a7cccb6500be5f4f17805139fec41a58bc54a9750c7"
+    },
+    {
+      "path": "pagefind/index/en_89475f3.pf_index",
+      "kind": "added",
+      "sha256": "134865290154a15e65d80be25e25fc2457ad5674fd8aa87129618ef717b55a17"
+    },
+    {
+      "path": "pagefind/index/en_8b10da4.pf_index",
+      "kind": "added",
+      "sha256": "d19b166d1582ae9200e85bfe1687232a3604fabecbf7937a7b29e9316b702315"
+    },
+    {
+      "path": "pagefind/index/en_91252b6.pf_index",
+      "kind": "added",
+      "sha256": "a15554ea218adb5425bee8a166191c3d5dfc87a1a0e6e1fcff4257aa8a74ee9a"
+    },
+    {
+      "path": "pagefind/index/en_922af44.pf_index",
+      "kind": "added",
+      "sha256": "b1190664a08ae2d3ee853550938b5371372dd09d561cb217a7187c0181a060ab"
+    },
+    {
+      "path": "pagefind/index/en_952fbdb.pf_index",
+      "kind": "added",
+      "sha256": "4a55686795d84c3e880e2fa1661a81d0f1fd58e03e1940d403750870b8b4d3c5"
+    },
+    {
+      "path": "pagefind/index/en_a3f6598.pf_index",
+      "kind": "added",
+      "sha256": "0f5d3629c02d5ca30979707fd0ac4f47b2597bab147bacc99450142fe5d2fd6d"
+    },
+    {
+      "path": "pagefind/index/en_b2a4c5e.pf_index",
+      "kind": "added",
+      "sha256": "a30eb613598193c2cd57c7acd9a53185c091c6316451f45932cedd3831319271"
+    },
+    {
+      "path": "pagefind/index/en_bc7a5ac.pf_index",
+      "kind": "added",
+      "sha256": "8ff7f9c7f73f61602985a549f3d28b072dcc95657df458961325aaeb87c95af2"
+    },
+    {
+      "path": "pagefind/index/en_bea8e82.pf_index",
+      "kind": "added",
+      "sha256": "99d30b52acb7a6a58d19c8392fb65c799fa7c1f5a878b01b74ce85ac87628e2f"
+    },
+    {
+      "path": "pagefind/index/en_c345234.pf_index",
+      "kind": "added",
+      "sha256": "88c447964f16147dbe70027354a3434d9aeb98fe40dc52cf5864734493e58f65"
+    },
+    {
+      "path": "pagefind/index/en_c34523427.pf_index",
+      "kind": "added",
+      "sha256": "7e25dcba1d391dd68602f90113a6e349e259ef18bf89bf291039f7edae23ce97"
+    },
+    {
+      "path": "pagefind/index/en_c8b9433.pf_index",
+      "kind": "added",
+      "sha256": "4af33b67399587b44c3eac966da95054878e9840313d2dbab636ddee41eba5ef"
+    },
+    {
+      "path": "pagefind/index/en_c9ab82a.pf_index",
+      "kind": "added",
+      "sha256": "723119d0fe736f5db1d040019ffd3da595522d08cbe72f393b7247330f3d895e"
+    },
+    {
+      "path": "pagefind/index/en_c9de9a3.pf_index",
+      "kind": "added",
+      "sha256": "863ae5ae058563e620f9e9178a6798c778320d793fc12b703ca8760cb82b787e"
+    },
+    {
+      "path": "pagefind/index/en_e57752c.pf_index",
+      "kind": "added",
+      "sha256": "ff46ec01f8f6cd236bf71d83e69053136407714101344b920dcef11b3424cb2c"
+    },
+    {
+      "path": "pagefind/index/en_eae2beb.pf_index",
+      "kind": "added",
+      "sha256": "9313acb9c026fbe25c2ce8b8a91634567908bb83c2d51af641fbaa7a6f474748"
+    },
+    {
+      "path": "pagefind/index/en_ed6ba92.pf_index",
+      "kind": "added",
+      "sha256": "c04ecde58efff0d3352e8ba8fb71137997b618509d1c89a0be6a3516109aa18c"
+    },
+    {
+      "path": "pagefind/index/en_f1dbfd2.pf_index",
+      "kind": "added",
+      "sha256": "7e7ba5cc5cf0e680ddfff8877e238ea6f8789964b3f7f73a8754987c781f4854"
+    },
+    {
+      "path": "pagefind/index/en_f8fbfe2.pf_index",
+      "kind": "added",
+      "sha256": "1642d3ebafe6df0f00f63a7779dd385a3c2b1a198807a13d7e2ff6715290151b"
+    },
+    {
+      "path": "pagefind/pagefind-entry.json",
+      "kind": "modified",
+      "sha256": "2cf2849c4ea9e1e7f42162e8ed75e07d5fa30826181da3b437c97c3fc6a05608"
+    },
+    {
+      "path": "pagefind/pagefind.en_ad90243225.pf_meta",
+      "kind": "added",
+      "sha256": "2721ae713e3610141861cc97b82eaedd7f3b03985ff866cebfea792bbb94e77b"
+    },
+    {
+      "path": "photo-credits.html",
+      "kind": "modified",
+      "sha256": "daad9d7fddb73a9ffd330001dc9c6387da7d790563a7c925a5b2e6d984e34a2d"
+    },
+    {
+      "path": "sitemap.xml",
+      "kind": "modified",
+      "sha256": "4c0e552680a9395c9aaa725082d4c479b0ae09d7218a48f9d458899f37fb9462"
+    }
+  ],
+  "removed": [],
+  "unexpected": [],
+  "inbound": [
+    {
+      "hub": "buy",
+      "url": "https://greggcostin.com/buy",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "hub": "sell",
+      "url": "https://greggcostin.com/sell",
+      "exists": false,
+      "unchanged": true
+    },
+    {
+      "hub": "resources/mortgage-preapproval",
+      "url": "https://greggcostin.com/resources/mortgage-preapproval",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "hub": "blog/fed-rate-hike-what-it-means",
+      "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+      "exists": true,
+      "unchanged": true
+    }
+  ],
+  "restored": 320,
+  "preparation": "Verified baseline copied; factory --out --bundle wrote the article, hub, OG cards, sitemap and llms; photography credits, responsive markup, style bundle, header tools, coastal theme, page loading, blog discovery and the Pagefind index were applied; every unowned page was restored byte-for-byte from the baseline."
+}

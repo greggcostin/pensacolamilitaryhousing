@@ -1,0 +1,5 @@
+what-moves-mortgage-rates (greggcostin.com): 100/100 A
+components: structure 25 | evidence 20 | local 10 | seo 20 | geo 15 | share 10
+facts: {"words":2194,"h2s":10,"questionH2s":10,"directAnswers":9,"walls":0,"scanAids":9,"numericSentences":20,"sourcedSentences":9,"datedSentences":8,"quotable":2,"distinctSources":5,"placesPerK":2.7,"links":10,"faqs":7,"table":true,"checklist":true,"actionItems":8,"workedExample":true,"ownVoice":false,"quickAnswer":true,"takeaways":true,"shareHook":true,"perishables":6}
+
+no fails

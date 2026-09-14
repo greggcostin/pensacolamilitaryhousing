@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-09-14T18:05:00Z",
+  "runId": "civilian-blog-engine-2026-09-14",
+  "provider": "claude",
+  "model": "claude-opus-5[1m]",
+  "bingApi": {
+    "command": "node --env-file-if-exists=.env.local scripts/blog-measure.mjs --site gc",
+    "result": "2 page rows (/schools/pensacola-christian-academy 20 imp, / 5 imp 2 clicks), 6 query rows, 19 traffic days, data through 2026-09-12, site trailing 28d 43 impressions / 2 clicks",
+    "blogRows": "none for any /blog/* URL; unknown page performance, not zero and not exclusion proof"
+  },
+  "bingGetUrlInfo": {
+    "file": "docs/civilian-blog-engine/2026-09-14/bing-url-info.json",
+    "result": "HTTP 400 UnknownError for /blog/what-moves-mortgage-rates, /blog/fed-rate-hike-what-it-means and /blog this run; API URL info unavailable today"
+  },
+  "bingUrlInspectionBrowser": {
+    "method": "Signed-in Bing Webmaster Tools URL Inspection in Gregg's Chrome (read-only; Request indexing NOT clicked)",
+    "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+    "inspectedAt": "2026-09-14 ~18:00 UTC",
+    "status": "Discovered but not crawled; URL cannot appear on Bing; discovered 26 Aug 2026; Bing reports issues preventing indexation without naming them",
+    "interpretation": "The existing article is not in the Bing index as of this run. Refreshing it does not change that by itself; the post-deployment submit-indexnow step is the only submission this run makes."
+  },
+  "clarity": {
+    "connector": "Microsoft Clarity MCP query for greggcostin.com URLs returned an empty data array; an unfiltered query returned pensacolamilitaryhousing.com URLs (project wm7ddbciup), so the connector is bound to the military project and cannot select ydd39cyp64",
+    "browser": "Project ydd39cyp64 (greggcostin.com) opened in the signed-in Chrome; custom window 2026-09-07 00:00 UTC to 2026-09-13 23:59 UTC (displayed 09/06/2026 07:00 PM - 09/13/2026 06:59 PM local); native CSV exported and retained",
+    "file": "docs/civilian-blog-engine/2026-09-14/analytics/clarity-gc-2026-09-07_2026-09-13.csv",
+    "observed": "145 sessions (40 bot sessions excluded), 89 unique users, 2.52 pages/session, 34.1% average scroll depth; top pages / 99, /schools 16, /sell 16, /reviews 15, /team 14, /flood-zone-map 12; no /blog/* URL in the top-12 page list; referrers include 127.0.0.1 (1) and greggcostin.pages.dev (1), so internal/preview traffic is not excluded",
+    "limits": "Site cohort only; per-article engagement not queried; session aggregates do not describe content effectiveness"
+  },
+  "gsc": {
+    "retained": "docs/civilian-blog-engine/2026-09-12/analytics/gsc-gc-2026-09-12.xlsx (property https://greggcostin.com/, web, selected 2026-08-14 to 2026-09-10, chart rows 2026-08-23 to 2026-09-10, no query rows, article absent)",
+    "thisRun": "No new export requested; the retained workbook is two days old and a new selection would overlap the same unverified window. Article performance in Google remains unknown."
+  },
+  "qualifiedInquiries": "unavailable (content/measure/article-outcomes.json has no window for this article)"
+}

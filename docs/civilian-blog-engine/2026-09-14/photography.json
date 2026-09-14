@@ -1,0 +1,34 @@
+{
+  "queries": [
+    "Gulf Breeze Florida house waterfront (no licensed candidates)",
+    "Pensacola Florida house exterior"
+  ],
+  "viewedAll": 3,
+  "selected": "mortgage-benchmarks-20260914.jpg",
+  "reviews": [
+    {
+      "query": 2,
+      "candidate": 1,
+      "decision": "Rejected: 1968 HABS black-and-white window scan with survey number written on the negative; dated archival scan."
+    },
+    {
+      "query": 2,
+      "candidate": 2,
+      "decision": "Rejected: 1968 HABS black-and-white shutter scan with survey number and film-brand marks; dated archival scan."
+    },
+    {
+      "query": 2,
+      "candidate": 3,
+      "decision": "Selected: clear color exterior of a Victorian house in Pensacola, no recognizable people, no watermark; a parked car at the edge has no readable plate. CC BY-SA 3.0, credit required and recorded."
+    }
+  ],
+  "credit": {
+    "source": "Wikimedia Commons",
+    "title": "PensacolaVictorianBnBB.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacolaVictorianBnBB.jpg",
+    "license": "CC BY-SA 3.0",
+    "creditRequired": true,
+    "credit": "Infrogmation of New Orleans",
+    "query": "Pensacola Florida house exterior"
+  }
+}

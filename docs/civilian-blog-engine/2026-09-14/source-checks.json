@@ -1,0 +1,194 @@
+{
+  "reviewDate": "2026-09-14",
+  "provider": "claude",
+  "model": "claude-opus-5[1m]",
+  "selectionReason": "Scheduled run; Claude primary provider available",
+  "sources": [
+    {
+      "id": "pmms",
+      "publisher": "Freddie Mac",
+      "title": "Primary Mortgage Market Survey",
+      "url": "https://www.freddiemac.com/pmms",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "evidenceNote": "Opened September 14: the live page still shows the September 10, 2026 release, 30-year 6.76%, prior week (September 3) 6.71%, 15-year 6.09%. Methodology text: averages of loan applications submitted through Loan Product Advisor, weekly conventional conforming single-family originations, rates offered the prior Thursday through Wednesday. Next release expected Thursday September 17.",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope",
+      "reportingDate": "2026-09-10"
+    },
+    {
+      "id": "fed-spread",
+      "publisher": "Federal Reserve Board research authors",
+      "title": "How Resilient Is Mortgage Credit Supply? FEDS 2021-048",
+      "url": "https://www.federalreserve.gov/econres/feds/files/2021048pap.pdf",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "evidenceNote": "Re-read section III.A (Decomposing the Mortgage-Treasury Spread) in the PDF text this session: equation (1) splits the mortgage-Treasury spread into the primary-secondary spread and the MBS yield spread; equation (2) splits the MBS yield spread into duration adjustment, option cost and OAS. Front matter states the opinions are the authors' and do not represent the Federal Reserve Board or System.",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope"
+    },
+    {
+      "id": "credit",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Credit scores and mortgage pricing",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/does-my-credit-score-affect-my-ability-to-get-a-mortgage-loan-or-the-mortgage-rate-i-pay-en-319/",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "evidenceNote": "Reopened September 14 (page last reviewed December 31, 2024): credit score and report information determine whether you can get a mortgage and the rate you pay; higher scores make lower rates available; lenders also weigh debt, savings, assets and income.",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope"
+    },
+    {
+      "id": "points",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Lender credits and discount points",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "evidenceNote": "Reopened September 14 (last reviewed October 19, 2023): one point equals one percent of the loan amount; the rate reduction depends on the lender, loan kind and market; points appear on page 2, Section A of the Loan Estimate and Closing Disclosure.",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope"
+    },
+    {
+      "id": "lock",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Mortgage rate locks",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "evidenceNote": "Reopened September 14 (last reviewed May 2, 2023): locks are typically 30, 45 or 60 days and sometimes longer; extending can be expensive; a locked rate can still change if the loan amount, credit score or verified income change.",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope"
+    },
+    {
+      "id": "estimate",
+      "publisher": "Consumer Financial Protection Bureau",
+      "title": "Loan Estimate explainer",
+      "url": "https://www.consumerfinance.gov/owning-a-home/loan-estimate/",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "evidenceNote": "Reopened September 14: request Loan Estimates for the same kind of loan from different lenders; interest rate and estimated total monthly payment on page 1; closing costs and cash to close on page 2; APR is one measure of loan cost and differs from the interest rate.",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope"
+    },
+    {
+      "id": "occupancy",
+      "publisher": "Fannie Mae",
+      "title": "Selling Guide B2-1.1-01, Occupancy Types",
+      "url": "https://guide-selling.fanniemae.com/sel/b2-1.1-01/occupancy-types",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "evidenceNote": "Reopened September 14 (effective October 5, 2022): second home must be occupied by the borrower for some portion of the year, one unit, exclusive control, not rental property and not subject to a management-firm occupancy agreement; investment property is owned but not occupied by the borrower.",
+      "geography": "United States",
+      "propertyType": "Residential mortgage, with stated source scope"
+    },
+    {
+      "id": "fed",
+      "publisher": "Federal Reserve Board",
+      "title": "Federal Reserve issues FOMC statement, July 29, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "reportingDate": "2026-07-29",
+      "geography": "United States",
+      "propertyType": "Monetary policy; not a mortgage product",
+      "evidenceNote": "Opened September 14: statement released July 29, 2026 says the Committee decided to maintain the target range for the federal funds rate at 3-1/2 to 3-3/4 percent; three dissents preferred an increase. No newer statement exists yet."
+    },
+    {
+      "id": "calendar",
+      "publisher": "Federal Reserve Board",
+      "title": "FOMC meeting calendars and information",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "reportingDate": "2026-09-14",
+      "geography": "United States",
+      "propertyType": "Policy calendar",
+      "evidenceNote": "Opened September 14: 2026 calendar lists September 15-16 (with a Summary of Economic Projections), then October 27-28 and December 8-9; no September statement released yet. Each date is tentative until confirmed at the preceding meeting."
+    },
+    {
+      "id": "transmission",
+      "publisher": "Federal Reserve Board",
+      "title": "Monetary Policy: What Are Its Goals? How Does It Work?",
+      "url": "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "reportingDate": "undated explanatory page reviewed this session",
+      "geography": "United States",
+      "propertyType": "Policy and long-term credit generally",
+      "evidenceNote": "Opened September 14: defines the federal funds rate as the interest rate banks pay to borrow reserve balances overnight, and states that rates on longer-term loans relate to expectations of how policy and the economy will evolve over the life of the loan, not just the current federal funds rate."
+    },
+    {
+      "id": "treasury",
+      "publisher": "U.S. Department of the Treasury",
+      "title": "Daily Treasury Par Yield Curve Rates, 2026",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "primary": true,
+      "checkedAt": "2026-09-14",
+      "reportingDate": "2026-09-11",
+      "geography": "United States",
+      "propertyType": "Government securities; not a mortgage product",
+      "evidenceNote": "Downloaded the 2026 daily par yield curve CSV September 14: 10-year par yield 4.96% on September 11, 2026 (4.95% on September 10, 4.83% on September 9). Single-day closes, not a weekly average."
+    }
+  ],
+  "verification": {
+    "date": "2026-09-14",
+    "provider": "claude",
+    "model": "claude-opus-5[1m]",
+    "method": "Direct primary-source reading plus separate Node amortization recomputation",
+    "checks": [
+      {
+        "item": "PMMS current",
+        "result": "September 10, 2026 release 30-year 6.76%; page unchanged September 14; next release September 17."
+      },
+      {
+        "item": "PMMS prior",
+        "result": "6.71% labeled as the prior week (September 3)."
+      },
+      {
+        "item": "Federal funds target",
+        "result": "July 29, 2026 statement maintained 3-1/2 to 3-3/4 percent; no later statement."
+      },
+      {
+        "item": "Next FOMC meeting",
+        "result": "September 15-16, 2026 in the Federal Reserve calendar."
+      },
+      {
+        "item": "10-year Treasury",
+        "result": "4.96% par yield September 11, 2026 from the Treasury daily CSV."
+      },
+      {
+        "item": "Payment at 6.25% / 6.75% / 7.25%",
+        "result": [
+          2462.868801705578,
+          2594.3923862728625,
+          2728.7051202247603
+        ],
+        "display": [
+          2462.87,
+          2594.39,
+          2728.71
+        ]
+      },
+      {
+        "item": "Points break-even",
+        "result": 61.53846153846154,
+        "display": "about 61.5 months"
+      },
+      {
+        "item": "Ownership total",
+        "result": 3844.39,
+        "display": 3844.39
+      }
+    ]
+  },
+  "measurement": {
+    "selection": "owner-requested-refresh (queue requestedOrder 2, notBefore 2026-09-14)",
+    "verifiedOverride": false,
+    "newsReview": "September 14 web review: NHC shows no Gulf threat (only a low-chance Atlantic disturbance far from the U.S.); the Fed decision is scheduled September 16, after this run; Florida insurance coverage repeats the already published Citizens 2026 rate filing; no verified consequential event displaced the owner request.",
+    "bing": "Live September 14 collection: 2 page rows (a school page and the homepage), 6 query rows, 19 traffic days through September 12, site 43 impressions and 2 clicks trailing 28 days; no /blog/* rows (unknown). GetUrlInfo returned HTTP 400 for three URLs. Signed-in URL Inspection: this article is Discovered but not crawled, discovered August 26, 2026, not in the Bing index.",
+    "clarity": "Civilian project ydd39cyp64 opened in the signed-in browser for September 7-13 UTC: 145 sessions (40 bot sessions excluded), 89 unique users; no /blog/* URL among the top 12 pages; internal referrers present. CSV retained. Connector remains bound to the military project.",
+    "gsc": "Retained September 12 workbook (selected August 14-September 10, chart August 23-September 10, article absent); no new export requested. Article performance in Google unknown.",
+    "clientQuestions": "content/measure/client-questions.json is not present in the committed tree used for this run; no verified recurring client questions were available."
+  }
+}

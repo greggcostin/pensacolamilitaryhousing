@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "sealedAt": "2026-09-14T18:16:19.446Z",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-14\\release",
+  "candidateFingerprint": "e4caee0de1fc3d7fb92e6047ef5aaa0332fa3763eb5defe1e7435ff295994624",
+  "sourceCommit": "ef03c52bc93d1fa539800f238f32a2dfa6bf153f",
+  "checks": [
+    {
+      "command": "node scripts/audit-civilian.mjs --root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-14\\release\\gc",
+      "exitCode": 0,
+      "output": "AUDIT CLEAN: 322 pages, 0 findings\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/audit-entity.mjs --pmh-root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\pmh --gc-root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-14\\release\\gc",
+      "exitCode": 0,
+      "output": "ENTITY AUDIT CLEAN: 698 pages; full nodes on 3/2/2 pages; every other definition is the canonical compact or publisher shape\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/score-post.mjs what-moves-mortgage-rates --site gc --gate",
+      "exitCode": 0,
+      "output": "what-moves-mortgage-rates (greggcostin.com): 100/100 A\ncomponents: structure 25 | evidence 20 | local 10 | seo 20 | geo 15 | share 10\nfacts: {\"words\":2194,\"h2s\":10,\"questionH2s\":10,\"directAnswers\":9,\"walls\":0,\"scanAids\":9,\"numericSentences\":20,\"sourcedSentences\":9,\"datedSentences\":8,\"quotable\":2,\"distinctSources\":5,\"placesPerK\":2.7,\"links\":10,\"faqs\":7,\"table\":true,\"checklist\":true,\"actionItems\":8,\"workedExample\":true,\"ownVoice\":false,\"quickAnswer\":true,\"takeaways\":true,\"shareHook\":true,\"perishables\":6}\n\nno fails\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/analyze-formatting.mjs --file C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-14\\release\\gc\\blog\\what-moves-mortgage-rates.html --gate --out C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-14\\source\\docs\\civilian-blog-engine\\2026-09-14\\formatting.md",
+      "exitCode": 0,
+      "output": "analyzed 1 pages -> C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-14\\source\\docs\\civilian-blog-engine\\2026-09-14\\formatting.md\n\nWorst 10:\n  100  C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-14\\release\\gc\\blog\\what-moves-mortgage-rates  (0 walls, 226w/heading, 147w/aid)\n\nBest 5:\n  100  C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-14\\release\\gc\\blog\\what-moves-mortgage-rates\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/check-em-dashes.mjs",
+      "exitCode": 0,
+      "output": "OK: no em dashes in prose across 373 pages + App.jsx.\n",
+      "stderr": ""
+    }
+  ],
+  "renderedParity": true,
+  "reviewedPreviewFingerprint": "47bf9dd0aac76762bbfe647ac246e06dd65a22d460e76fdbe865e1872f69cb81",
+  "scope": "GC deployment only. Retained PMH root (2026-09-12 release) is used for entity consistency, not a current PMH deployment assertion."
+}

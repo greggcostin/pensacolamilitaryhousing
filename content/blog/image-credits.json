@@ -1090,6 +1090,15 @@
       "creditRequired": false,
       "credit": "Federalreserve",
       "query": "Eccles Building Federal Reserve exterior"
+    },
+    "civilian-site/images/mortgage-benchmarks-20260914.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "PensacolaVictorianBnBB.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacolaVictorianBnBB.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Infrogmation of New Orleans",
+      "query": "Pensacola Florida house exterior"
     }
   }
 }

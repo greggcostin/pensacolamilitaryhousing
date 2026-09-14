@@ -145,9 +145,9 @@ Sources: https://floridarevenue.com/property/Documents/pt107.pdf, https://florid
 
 ### What moves mortgage rates, and what should you do about it?
 https://greggcostin.com/blog/what-moves-mortgage-rates
-Reviewed: 2026-09-10
-As of September 10, 2026, Freddie Mac reported a 6.76% national average for a 30-year fixed mortgage. Your quote also reflects the property, borrower, loan terms and fees. Compare written offers with the same assumptions before deciding whether to lock or pay points.
-Sources: https://www.freddiemac.com/pmms, https://www.federalreserve.gov/econres/feds/files/2021048pap.pdf, https://www.consumerfinance.gov/ask-cfpb/does-my-credit-score-affect-my-ability-to-get-a-mortgage-loan-or-the-mortgage-rate-i-pay-en-319/, https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/, https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/, https://www.consumerfinance.gov/owning-a-home/loan-estimate/, https://guide-selling.fanniemae.com/sel/b2-1.1-01/occupancy-types
+Reviewed: 2026-09-14
+As of September 14, 2026, the latest Freddie Mac weekly survey (September 10) put the 30-year fixed average at 6.76%, and the Federal Reserve held its federal funds target at 3.50% to 3.75% on July 29. Neither number is your quote. The property, borrower, loan structure and fees set the rate a lender offers, so compare written offers on the same assumptions before locking or paying points.
+Sources: https://www.freddiemac.com/pmms, https://www.federalreserve.gov/econres/feds/files/2021048pap.pdf, https://www.consumerfinance.gov/ask-cfpb/does-my-credit-score-affect-my-ability-to-get-a-mortgage-loan-or-the-mortgage-rate-i-pay-en-319/, https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/, https://www.consumerfinance.gov/ask-cfpb/whats-a-lock-in-or-a-rate-lock-en-143/, https://www.consumerfinance.gov/owning-a-home/loan-estimate/, https://guide-selling.fanniemae.com/sel/b2-1.1-01/occupancy-types, https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm, https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm, https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm, https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026
 <!-- BLOG_ANSWERS_END -->
 
 <!-- NATIVE_CALCULATORS -->

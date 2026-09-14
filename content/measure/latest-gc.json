@@ -1,8 +1,43 @@
 {
  "site": "gc",
- "asOf": "2026-09-11",
- "generated": "2026-09-12",
- "pages": [],
+ "asOf": "2026-09-12",
+ "generated": "2026-09-14",
+ "pages": [
+  {
+   "key": "/schools/pensacola-christian-academy",
+   "imp28": 20,
+   "clk28": 0,
+   "posI28": 20,
+   "seen28": 1,
+   "seenPrior28": 0,
+   "impPrior28": null,
+   "clkPrior28": null,
+   "imp90": 20,
+   "clk90": 0,
+   "posI90": 20,
+   "first": "2026-09-11",
+   "last": "2026-09-11",
+   "pos28": 7,
+   "pos90": 7
+  },
+  {
+   "key": "/",
+   "imp28": 5,
+   "clk28": 2,
+   "posI28": 5,
+   "seen28": 1,
+   "seenPrior28": 0,
+   "impPrior28": null,
+   "clkPrior28": null,
+   "imp90": 5,
+   "clk90": 2,
+   "posI90": 5,
+   "first": "2026-09-11",
+   "last": "2026-09-11",
+   "pos28": 2,
+   "pos90": 2
+  }
+ ],
  "queries": [
   {
    "key": "pensacola christian academy",
@@ -192,6 +227,16 @@
    "date": "2026-09-10",
    "impressions": 24,
    "clicks": 2
+  },
+  {
+   "date": "2026-09-11",
+   "impressions": 16,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-12",
+   "impressions": 2,
+   "clicks": 0
   }
  ]
 }

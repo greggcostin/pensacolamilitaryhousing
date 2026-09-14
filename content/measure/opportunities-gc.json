@@ -1,12 +1,31 @@
 {
  "site": "gc",
- "asOf": "2026-09-11",
- "generated": "2026-09-12",
+ "asOf": "2026-09-12",
+ "generated": "2026-09-14",
  "site28": {
-  "imp": 25,
+  "imp": 43,
   "clk": 2
  },
- "topPages": [],
+ "topPages": [
+  {
+   "page": "/schools/pensacola-christian-academy",
+   "imp28": 20,
+   "clk28": 0,
+   "pos28": 7,
+   "imp90": 20,
+   "clk90": 0,
+   "pos90": 7
+  },
+  {
+   "page": "/",
+   "imp28": 5,
+   "clk28": 2,
+   "pos28": 2,
+   "imp90": 5,
+   "clk90": 2,
+   "pos90": 2
+  }
+ ],
  "strikingDistance": [
   {
    "query": "pensacola christian academy",

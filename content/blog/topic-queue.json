@@ -43,11 +43,17 @@
       "rerank": "ADDED 2026-09-04 from search-demand mining (lesson L009). Placed #3: it is the only new-post candidate with observed demand behind it.",
       "growthBriefId": "training-housing",
       "intentOwner": "/flight-school-housing-pensacola",
-      "workflowStatus": "review-owner-before-new-post",
+      "workflowStatus": "staged-for-approval",
       "researchRisks": [
         "Do not apply permanent-party allowances or dorm policy to all students.",
         "Queries mention Whiting housing as well as training; inspect intent before grouping them."
-      ]
+      ],
+      "staged": {
+        "date": "2026-09-15",
+        "branch": "blog/nas-pensacola-student-housing-dorms-bah-off-base-20260915",
+        "evidenceFile": "content/blog/research/nas-pensacola-student-housing-dorms-bah-off-base.json",
+        "distinctIntent": "Unaccompanied-housing assignment and BAH entitlement for students in training status (enlisted A/C school, Air Force CSO, TW-5/TW-6); compared against /flight-school-housing-pensacola (officer flight students), /on-base-vs-off-base-nas-pensacola (PCS families) and the three base pages before writing."
+      }
     },
     {
       "slug": "pca-vs-pcs-pensacola-eglin-hurlburt",

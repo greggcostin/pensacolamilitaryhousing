@@ -324,6 +324,27 @@
    "hub": "resources/condo-due-diligence",
    "label": "low-appraisal decision guide",
    "sentence": "Review the appraisal alongside the association budget, reserves and assessments. The {link} explains how to read comparable sales and evaluate a cash gap."
+  },
+  {
+   "site": "pmh",
+   "post": "/blog/nas-pensacola-student-housing-dorms-bah-off-base",
+   "hub": "flight-school-housing-pensacola",
+   "label": "NAS Pensacola student housing guide",
+   "sentence": "Enlisted A school students, CSO students and first-term Sailors follow different dorm rules than flight students. The {link} explains who must live in unaccompanied housing, what BAH-Partial means and what a Certificate of Non-Availability changes."
+  },
+  {
+   "site": "pmh",
+   "post": "/blog/nas-pensacola-student-housing-dorms-bah-off-base",
+   "hub": "bases/corry-station",
+   "label": "NAS Pensacola student housing guide",
+   "sentence": "Arriving on student orders? The {link} covers the Corry Station dorm requirement by pay grade, the PCS versus TDY course-length rule and the 2026 FL064 allowance you would draw off base."
+  },
+  {
+   "site": "pmh",
+   "post": "/blog/nas-pensacola-student-housing-dorms-bah-off-base",
+   "hub": "on-base-vs-off-base-corry-station",
+   "label": "NAS Pensacola student housing guide",
+   "sentence": "Students are a separate case from permanent party. The {link} works through the dorm assignment rule, the Certificate of Non-Availability process and a hypothetical room-share budget."
   }
  ]
 }

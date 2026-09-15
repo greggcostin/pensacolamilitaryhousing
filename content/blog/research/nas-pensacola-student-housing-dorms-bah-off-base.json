@@ -1,0 +1,1219 @@
+{
+  "schemaVersion": 2,
+  "version": 2,
+  "slug": "nas-pensacola-student-housing-dorms-bah-off-base",
+  "article": {
+    "slug": "nas-pensacola-student-housing-dorms-bah-off-base",
+    "site": "pmh"
+  },
+  "sessionDate": "2026-09-15",
+  "models": {
+    "research": "claude / opus-5 subagent",
+    "write": "claude / fable-5.1 subagent"
+  },
+  "readerTask": "Work out, before signing anything, whether training orders to NAS Pensacola, Corry Station or NAS Whiting Field put you in unaccompanied housing or on a housing allowance, which 2026 FL064 rate applies, and only then whether renting, sharing or buying off base is even on the table.",
+  "originalValue": "Reads the actual assignment rules (DoD FMR Vol 7A Ch 26, JTR par. 032201, the CNIC Unaccompanied Housing manual, AFI 32-6000 and the 479 FTG welcome guide) and lays them side by side by service and status, then shows one labeled E-4 room-share margin against the verified 2026 FL064 without-dependents rate.",
+  "reader": "A student on training orders to NAS Pensacola, NAS Pensacola Corry Station or NAS Whiting Field: Navy enlisted A and C school students at IWTC Corry Station, Air Force undergraduate CSO students at the 479th Flying Training Group, Marine and Coast Guard students, and student naval aviators and NFOs.",
+  "decision": "Dorm or allowance first, then rent, share or buy: the answer depends on orders type (PCS or TDY), student versus permanent party status, dependency status, pay grade, years of service, the installation's unaccompanied housing occupancy and the service rule, not on preference.",
+  "pillar": "training-housing",
+  "changeReason": "Bing Webmaster Tools shows the site already surfaces for student housing and BAH queries about NAS Pensacola and Corry Station (training air wing five, nas pensacola bah, nas corry station bah, CSO student housing office, Corry dorm questions) with no page answering the unaccompanied housing and allowance question for students; the existing flight-school page covers officers and the on-base page covers families.",
+  "military": {
+    "audience": "student",
+    "readerSituation": "Arriving on training orders to a Pensacola-area school (Corry Station A or C school, 479 FTG CSO training, TW-5 or TW-6 flight training) and needing to know whether unaccompanied housing is mandatory, whether and at what rate a housing allowance is paid, and what triggers permission to live off base.",
+    "dutyLocations": [
+      "NAS Pensacola",
+      "NAS Pensacola Corry Station",
+      "NAS Whiting Field"
+    ],
+    "topics": [
+      "training-housing",
+      "bah",
+      "pcs-orders"
+    ],
+    "limitations": [
+      "Orders type (PCS versus TDY), student versus permanent party status, dependency status, pay grade and years of service each change the answer; this guide does not award an allowance or a room.",
+      "Installation occupancy and commander decisions govern Certificates of Non-Availability and off-base permission; confirm with the NAS Pensacola Housing Service Center, the Corry Station UH office or the 479 STUS before signing a lease.",
+      "The 2026 FL064 figures are the published rates; your LES and your finance office show your actual entitlement. A housing allowance is not a home-price limit or loan approval.",
+      "Air Force guidance memo overlays and Navy student-specific paragraphs were partly unreadable in the fetched PDFs; see uncertainFacts."
+    ]
+  },
+  "uncertainFacts": [
+    {
+      "fact": "The exact monthly BAH-Partial amount for an E-4 in 2026",
+      "status": "not found in the fetched FMR Vol 7A Ch 26 text (par. 5.5.2 defines it as the December 31, 1997 partial BAQ rate for the grade but prints no table); the DFAS pay tables index reviewed 2026-09-15 listed no partial BAH table",
+      "handling": "State that BAH-Partial exists and is small without quoting an amount."
+    },
+    {
+      "fact": "OPNAVINST 11103.1C (Navy Unaccompanied Housing Management)",
+      "status": "unavailable: the DONI directives library at secnav.navy.mil listed no 11103.1 series document on 2026-09-15 and the supplied URL redirected to the SECNAV front page; the CNIC M-11103.2 CH-1 UH manual (12 Dec 2024) was used instead Removed from the sources list so it is not emitted as a citation; no claim relied on it.",
+      "handling": "Do not cite OPNAVINST 11103.1C; cite CNIC M-11103.2 CH-1."
+    },
+    {
+      "fact": "NAS Pensacola and Corry Station local student UH assignment thresholds beyond the Navy-wide rule",
+      "status": "the Navy Housing NAS Pensacola page states the E1-E3 and E4 under 4 years rule and says E4s may be required to live on base space permitting; no NAS Pensacola-specific instruction with student occupancy numbers was found",
+      "handling": "Attribute the rule to the Navy Housing page and the CNIC manual; say occupancy is decided locally."
+    },
+    {
+      "fact": "The opening sentences of the Students paragraph (section 4, enclosure 1) of CNIC M-11103.2 CH-1",
+      "status": "rendered as unreadable glyph codes in the extracted PDF text; the readable portion covers TEMDU order types, the less-than-20-weeks-with-dependents sentence, the 90 NSF shared-bedroom standard and termination rules",
+      "handling": "Quote only the readable sentences."
+    },
+    {
+      "fact": "AFI 32-6000 DAFGM 2026-01 (reissued 30 April 2026) overlay text",
+      "status": "the guidance memorandum pages at the front of the fetched PDF were mostly unreadable glyph codes; the base instruction paragraphs (1.2.27.16, 1.2.27.36, 7.2.1, 7.6, 7.7.1.1, 7.7.2.1) dated 18 March 2020 were read",
+      "handling": "Cite the base AFI paragraphs and note the GM exists."
+    },
+    {
+      "fact": "Whether a Corry Station student dormitory is comparable to Goodfellow AFB dorms (a Bing query)",
+      "status": "no official comparison exists; the CNIC manual gives the Navy student standard (shared bedrooms, 90 NSF per student, up to four students per bathroom) and AFI 32-6000 par. 7.3.2 describes AETC non-prior-service student housing without dimensions",
+      "handling": "Answer with the Navy standard and say Goodfellow specifics were not verified."
+    },
+    {
+      "fact": "The TLE daily dollar cap cited on the existing flight-school page ($290 per day, attributed to Military.com)",
+      "status": "not present in the JTR par. 050601 text read this session, which says TLE is reimbursed at the locality per diem rate of the PDS",
+      "handling": "Do not repeat the cap figure in this article."
+    },
+    {
+      "fact": "Navy Gateway Inns and Suites phone numbers",
+      "status": "the IWTC Corry Station reporting page lists 850-452-2755 and the 479 FTG welcome guide lists 850-564-7473 for the Navy Gateway Inn",
+      "handling": "If a number is printed, print both with their sources or direct readers to the command page."
+    }
+  ],
+  "sources": [
+    {
+      "id": "fmr-7a-26",
+      "publisher": "Department of Defense, Office of the Under Secretary of Defense (Comptroller)",
+      "title": "DoD 7000.14-R Financial Management Regulation, Volume 7A, Chapter 26: Housing Allowances (May 2025)",
+      "url": "https://comptroller.defense.gov/Portals/45/documents/fmr/current/07a/07a_26.pdf",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "The defense.gov URL returned 403 to scripted fetches and redirected in the browser to comptroller.war.gov, from which the 1.29 MB PDF (revision dated May 2025, previous version August 2024 archived) was downloaded and text-extracted. Read sections 2.0 (introduction), 5.0 (BAH), 5.5 (BAH-Partial), 8.1 (responsibility for assignment of Government quarters), 10.1 (member without dependent, TDY, E-6 and E-7 elections), 10.2.1 (member with dependent), 10.10.3 (new accession pipeline) and Tables 26-19 and 26-20. No partial BAH dollar table appears in the chapter."
+    },
+    {
+      "id": "dtmo-bah",
+      "publisher": "Defense Travel Management Office",
+      "title": "Basic Allowance for Housing (BAH) overview",
+      "url": "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Read in the browser pane (scripted fetch returned 403). Read the BAH definition (compensation when government quarters are not provided), the Individual Rate Protection panel (rate protection ends on PCS, reduction in paygrade or change in dependency status), the BAH-Differential panel and the Entitlement Questions panel directing Navy members to PSD or command and Air Force members to the local finance office."
+    },
+    {
+      "id": "dtmo-bah-faq",
+      "publisher": "Defense Travel Management Office",
+      "title": "BAH Frequently Asked Questions",
+      "url": "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Frequently-Asked-Questions/",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Opened in the browser pane on 2026-09-15; the page rendered the same overview and rate-protection content as the BAH landing page with no separate question-and-answer list visible. Used only to corroborate the rate-protection language; no FAQ-specific claim is drawn from it."
+    },
+    {
+      "id": "bah-2026-archive",
+      "publisher": "Defense Travel Management Office",
+      "title": "2026 BAH rates, all locations, all pay grades (ASCII archive)",
+      "url": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "The repo's official archive (content/client-guides/research/BAH-ASCII-2026.zip, sha256 5446fed831e125c23cc6a407dcde4cae541f108e90ac852aaadeec0aa11e515f) and parsed record content/client-guides/bah-2026.json were re-verified with node scripts/verify-bah-source.mjs on 2026-09-15 (ok: true, 96 rate values checked; a fresh download attempt on 2026-09-08 returned HTTP 403 so the September 6 archive was hash-verified). FL064 (Pensacola, FL) covers NAS Pensacola, NTTC Corry Station and NAS Whiting Field. Values used: E-1 to E-4 $1,794 with / $1,521 without dependents; E-5 $1,863 / $1,644; O-1 $1,914 / $1,719. FL056 (Eglin) was not used."
+    },
+    {
+      "id": "jtr-2026-09",
+      "publisher": "Defense Travel Management Office, Per Diem, Travel and Transportation Allowance Committee",
+      "title": "Joint Travel Regulations, Chapters 1-6 and Appendices (09/01/2026)",
+      "url": "https://media.defense.gov/2022/Jan/04/2002917147/-1/-1/0/JTR.PDF",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Fetched in the browser pane (5.1 MB, page footers dated 09/01/2026) and text-extracted from the content streams. Read Table 1-6 (time limits for travel orders, rule 2 training orders), par. 032201 (courses of instruction at a school or installation: 139 or fewer days TDY, 140 or more days PCS with the course location as the PDS, extensions, Secretarial exceptions, statement of non-availability), section 0506 and par. 050601 (TLE eligibility, Table 5-12 and Table 5-13: 21 days for a PDS in the CONUS, 7 days for OCONUS moves) and Table 5-8 (dependent travel not authorized for a student on a course under 20 weeks in TDY status)."
+    },
+    {
+      "id": "cnic-uh-manual",
+      "publisher": "Commander, Navy Installations Command (N9 Navy Housing)",
+      "title": "CNIC M-11103.2 CH-1, Unaccompanied Housing Operations Manual (change 1 dated 12 December 2024)",
+      "url": "https://ffr.cnic.navy.mil/Portals/76/Navy%20Housing/Headquarters/Policy/CNIC%20M-11103.2%20CH1%20UH%20Manual%2012%20Dec%202024.pdf?ver=bxTVdmGaK76yn1-7qq-y5Q%3D%3D",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Fetched in the browser pane (9.8 MB; scripted fetch returned 403) and text-extracted; some passages are set in a CID font and were unreadable. Read enclosure 1 chapter 2: par. 3.a (permanent party eligibility), 3.b (waitlists including UH residents requesting a CNA and housing allowance), 3.c wait list priorities (Priority 2 Category II sea duty E-1 to E-3 and E-4 under 4 years; Category IV shore duty E-1 to E-3 and E-4 under 4 years; Category V members in a PCS status for a training course of 20 weeks or more; Category VI other services on PCS orders; Category X E-4 over four years), 3.d eligibility to receive housing allowances (written request to the installation CO; temporary or permanent CNA when occupancy is 95 percent or greater; sea duty E-1 to E-3 and E-4 under four years housed in barracks; single E-1 to E-4 on shore duty may request an allowance at 95 percent occupancy; BAH-Partial for single members in single-type quarters), section 4 Students (TEMDU order types, unaccompanied members with dependents assigned under 20 weeks housed in the dormitory without loss of allowances, shared bedrooms with 90 NSF per student and up to four per bathroom, termination rules) and chapter 5 par. 2.b (CNA issued through the eMH UH module; not issued until installation occupancy reaches 95 percent)."
+    },
+    {
+      "id": "navy-housing-nasp",
+      "publisher": "Commander, Navy Installations Command, Navy Housing",
+      "title": "Navy Housing - NAS Pensacola (Contact Housing, Unaccompanied Housing, Housing Services tabs)",
+      "url": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NAS-Pensacola/",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Read in the browser pane. Contact tab: Navy Housing Service Center 1581 Duncan Road, Bldg 735, Pensacola FL 32508, 850-452-5168, Pensacola_Housing@us.navy.mil; UH 905 East Ave (NATTC and Radford desks); Pensacola Corry Station UH, Mariner's Roost, 640 Roberts Ave, Pensacola FL 32511, front desk 850-452-6609. Unaccompanied Housing tab: 'Most personnel, E1-E3 and E4 < 4, are required to live in UH; E4s may be required to live on-base, space permitting'; NAS Pensacola UH houses approximately 4,530 personnel in 14 buildings; Corry Station is a training command about 3 miles from NAS Pensacola housing approximately 1,770 personnel in 17 buildings; all unaccompanied personnel eligible to live off base are encouraged to check in at the HSC first. Page carries no date; treat as current as of the read."
+    },
+    {
+      "id": "navy-housing-whiting",
+      "publisher": "Commander, Navy Installations Command, Navy Housing",
+      "title": "Navy Housing - NAS Whiting Field",
+      "url": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NAS-Whiting-Field/",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Read in the browser pane. HSC 570 Merrill Drive, Milton FL 32570, 850-623-9726, WhitingField_Housing@us.navy.mil; UH 7426 USS Lexington Circle, Bldg 2957, Milton FL, 850-623-7095; same E1-E3 and E4 under 4 UH rule text; UH on NSA Whiting Field houses approximately 40 personnel in 1 building, check-in at Building 2942 room 101; privatized partner Balfour Beatty Communities at 570 Merrill Drive."
+    },
+    {
+      "id": "iwtc-corry-reporting",
+      "publisher": "Naval Education and Training Command, Center for Information Warfare Training",
+      "title": "Information Warfare Training Command Corry Station: Reporting Information",
+      "url": "https://www.netc.navy.mil/Commands/Center-for-Information-Warfare-Training/Information-Warfare-Training-Command-Corry-Station/Reporting-Information/",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Read in the browser pane. Students and staff report with original orders to the main quarterdeck in Building 3714 (24/7, 850-452-6618); students receive housing and school instructions at the quarterdeck; A school students from boot camp are assigned a mentor; fleet returnees and students from other A schools are directed to the Bachelor Enlisted Quarters, Building 1084 (850-452-6541); officer students receive a welcome aboard package and are advised to reserve Navy Gateway Inns and Suites (850-452-2755). Home page (https://www.netc.navy.mil/IWTCCorryStation/) read the same day: CT and IT Block 0 and 1 schools and CW and IP officer courses; located at NAS Pensacola Corry Station, 640 Roberts Ave."
+    },
+    {
+      "id": "afi-32-6000",
+      "publisher": "Department of the Air Force",
+      "title": "AFI 32-6000, Housing Management (18 March 2020) with DAFGM 2026-01 (reissued 30 April 2026)",
+      "url": "https://static.e-publishing.af.mil/production/1/af_a4/publication/afi32-6000/afi32-6000.pdf",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Fetched in the browser pane (2.45 MB; scripted fetch returned 403; dafman32-6003 and dafi32-6000 URLs returned 404). The guidance memorandum overlay pages were largely unreadable glyph codes. Read base instruction paragraphs 1.2.27.16 (house unaccompanied Airmen E-1 to E-3 and E-4 with less than 3 years of service in government UH), 1.2.27.36 (authorize Priority 1 and 2 personnel to relocate off base with allowances when utilization exceeds 95 percent), 1.2.36.8 (BAH waiting list for unaccompanied personnel requesting to reside off base), 7.2.1 (dormitory defined for permanent party E-1 to E-3 and E-4 under three years), 7.3.2 (non-prior-service student housing at AETC locations), 7.6 (one private room standard), 7.7.1.1 (pipeline students not authorized per diem or BAH are Priority 1) and 7.7.2.1 (Priority 2 space required: E-1 to E-3 and E-4 with less than 3 years)."
+    },
+    {
+      "id": "479ftg-aetc",
+      "publisher": "Air Education and Training Command, 12th Flying Training Wing",
+      "title": "479th Flying Training Group unit page",
+      "url": "https://www.aetc.af.mil/Units/19th-Air-Force/12FTW/479th-Flying-Training-Group/",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Read in the browser pane (www.12ftw.af.mil no longer resolves in DNS). The 479 FTG at NAS Pensacola is the Air Force's only training pipeline for combat systems officers; the 479 OSS, 479 STUS, 455 FTS and 451 FTS graduate as many as 400 CSOs annually. Page links the Undergraduate Combat Systems Officer Welcome Guide, a UOQ Resident Brochure and an Incoming Students Memo."
+    },
+    {
+      "id": "479ftg-welcome-guide",
+      "publisher": "479th Flying Training Group, 479th Student Squadron",
+      "title": "479 FTG Undergraduate Combat Systems Officer Welcome Guide (CAO 27 August 2026)",
+      "url": "https://www.aetc.af.mil/Portals/88/12%20FTW/Documents/479%20FTG%20Welcome%20Guide%20(CAO%2027%20August%202026).pdf?ver=sDNNgLqDoH1Dv5coOtXkaQ%3d%3d",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Fetched in the browser pane (3.0 MB) and text-extracted. Pre-Arrival Instructions: reserve billeting through Navy Gateway Inn (850-564-7473) or Navy Lodge; the Air Force pays for the Inn stay up to 21 days; accompanied students may live on or off base (Housing Office 850-456-3120) and must contact the Housing office before signing a lease or closing on a house; 'If you are on unaccompanied orders, you will be assigned to the UOQ upon arrival, regardless of rank or time in service.' UOQ FAQ: assignment dictated by AFI 32-6005 and 32-6000; expect the UOQ if unaccompanied even if Guard or Reserve; accompanied officers may receive a housing allowance after in-processing with finance, with dependents on orders, if they elect to live off base; no pets in the UOQ; STUCON 850-452-0985."
+    },
+    {
+      "id": "cnatra-tw5",
+      "publisher": "Chief of Naval Air Training",
+      "title": "Training Air Wing FIVE",
+      "url": "https://www.cnatra.navy.mil/tw5/",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Fetched 2026-09-15. TW-5 is located 5 miles north of Milton, Florida, aboard NAS Whiting Field; trains aviators from the Navy, Marine Corps, Coast Guard, Air Force and allied nations; squadrons VT-2, VT-3, VT-6, HT-8, HT-18, HT-28. No housing guidance on the page; a Student Check-In resource link exists."
+    },
+    {
+      "id": "cnatra-tw6",
+      "publisher": "Chief of Naval Air Training",
+      "title": "Training Air Wing SIX",
+      "url": "https://www.cnatra.navy.mil/tw6/",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Fetched 2026-09-15. TW-6 is headquartered aboard NAS Pensacola (390 San Carlos Road, Suite C) and conducts Naval Flight Officer training, about 300 Navy, Marine Corps and foreign students graduating annually; squadrons VT-4, VT-10, VT-86. No housing guidance on the page."
+    },
+    {
+      "id": "scra-3955",
+      "publisher": "Legal Information Institute, Cornell Law School (U.S. Code)",
+      "title": "50 U.S.C. 3955, Termination of residential or motor vehicle leases",
+      "url": "https://www.law.cornell.edu/uscode/text/50/3955",
+      "primary": true,
+      "checkedAt": "2026-09-15",
+      "evidenceNote": "Fetched 2026-09-15. Read subsection (b)(1)(B) (lease executed in service followed by PCS orders or deployment orders of 90 days or more), (c) (written notice plus a copy of orders delivered to the lessor or agent), (d)(1) (monthly-rent leases terminate 30 days after the first date the next rent payment is due after delivery of notice) and (e) (prorated rent, no early termination charge)."
+    }
+  ],
+  "claims": [
+    {
+      "id": "bah-basis",
+      "kind": "fact",
+      "text": "Under the DoD Financial Management Regulation, a member on active duty is authorized a housing allowance based on grade, location and whether the member has dependents, and a housing allowance generally is not authorized for a member who is assigned to appropriate and adequate Government quarters.",
+      "claim": "FMR Vol 7A Ch 26 par. 2.0: 'A Service member on Active Duty (AD) entitled to basic pay is authorized basic housing allowance (BAH or OHA) based on their grade, rank, location, and whether the Service member has any dependents. A housing allowance generally is not authorized for a Service member who is assigned to appropriate and adequate Government quarters.' Par. 5.0 repeats that assignment to Government quarters affects BAH eligibility and that a housing allowance other than BAH-Partial or BAH-Diff is generally not authorized for a member assigned adequate quarters.",
+      "status": "verified",
+      "sourceIds": [
+        "fmr-7a-26"
+      ],
+      "sourceUrl": "https://comptroller.defense.gov/Portals/45/documents/fmr/current/07a/07a_26.pdf",
+      "scope": "All uniformed services, United States locations, active duty entitled to basic pay",
+      "asOf": "2025-05-01",
+      "accessed": "2026-09-15",
+      "locator": "DoD 7000.14-R Vol 7A Ch 26 (May 2025), par. 2.0 Introduction (page 26-7) and par. 5.0 (page 26-25)",
+      "loadBearing": true,
+      "verification": "Opened comptroller.war.gov copy of DoD 7000.14-R Vol 7A Ch 26 (May 2025) with curl and pdftotext; par. 2.0 (page 26-7) reads that a member entitled to basic pay is authorized BAH or OHA based on grade, rank, location and dependents and that a housing allowance generally is not authorized when assigned appropriate and adequate Government quarters; par. 5.0 (page 26-25) repeats the quarters rule with the BAH-Partial and BAH-Diff exceptions.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Opened comptroller.war.gov copy of DoD 7000.14-R Vol 7A Ch 26 (May 2025) with curl and pdftotext; par. 2.0 (page 26-7) reads that a member entitled to basic pay is authorized BAH or OHA based on grade, rank, location and dependents and that a housing allowance generally is not authorized when assigned appropriate and adequate Government quarters; par. 5.0 (page 26-25) repeats the quarters rule with the BAH-Partial and BAH-Diff exceptions."
+      },
+      "appliesTo": "Any student or permanent party member; the quarters assignment, not the course, decides the allowance",
+      "limitations": "Members with dependents, members paying child support (BAH-Diff), E-7 and above who elect not to occupy quarters, and members whose quarters are inadequate are treated differently in the same chapter.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "partial-bah",
+      "kind": "fact",
+      "text": "A member without dependents who is assigned single-type Government quarters and is not authorized BAH receives BAH-Partial, a small fixed amount tied to the 1997 partial quarters rate for the pay grade rather than to the Pensacola rental market.",
+      "claim": "FMR Vol 7A Ch 26 par. 5.5.1: 'BAH-Partial is paid to a Service member without a dependent who is assigned to single type Government quarters and is not authorized to receive BAH or OHA.' Par. 5.5.2: 'The BAH-Partial rate is the partial rate of the basic allowance for quarters for the Service member's pay grade that was in effect under 37 U.S.C. 1009(c)(2) on December 31, 1997.' The chapter prints no dollar table.",
+      "status": "verified",
+      "sourceIds": [
+        "fmr-7a-26"
+      ],
+      "sourceUrl": "https://comptroller.defense.gov/Portals/45/documents/fmr/current/07a/07a_26.pdf",
+      "scope": "Members without dependents in single-type Government quarters, all services",
+      "asOf": "2025-05-01",
+      "accessed": "2026-09-15",
+      "locator": "DoD 7000.14-R Vol 7A Ch 26 (May 2025), par. 5.5.1 and 5.5.2 (page 26-28)",
+      "loadBearing": false,
+      "verification": "Read par. 5.5.1 and 5.5.2 (page 26-28) in the comptroller copy: BAH-Partial is paid to a member without a dependent assigned to single type Government quarters and not authorized BAH or OHA; the rate is the partial BAQ rate in effect on December 31, 1997.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Read par. 5.5.1 and 5.5.2 (page 26-28) in the comptroller copy: BAH-Partial is paid to a member without a dependent assigned to single type Government quarters and not authorized BAH or OHA; the rate is the partial BAQ rate in effect on December 31, 1997."
+      },
+      "appliesTo": "Unaccompanied students and permanent party assigned to barracks or dorms",
+      "limitations": "Par. 5.5.3.3.3 withholds BAH-Partial when the assigned single-type quarters exceed the minimum standard for the grade; the amount is not quoted because no official table was read.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "with-dependents-rule",
+      "kind": "fact",
+      "text": "A member with a dependent is authorized the with-dependents housing allowance when adequate Government quarters are not furnished for the member and the dependent without a rental charge, so a married student housed in a dormitory alone does not lose the with-dependents rate.",
+      "claim": "FMR Vol 7A Ch 26 par. 10.2.1: except for a member paying child support and assigned to Government quarters, a member with a dependent entitled to basic pay is authorized BAH or OHA at the with-dependent rate when adequate Government quarters are not furnished for the member and dependent without a rental charge payment (10.2.1.1) or are not furnished for the dependent (10.2.1.2). CNIC M-11103.2 CH-1 section 4 adds that unaccompanied members with dependents assigned for less than 20 weeks are assigned to the dormitory without loss of housing allowances.",
+      "status": "verified",
+      "sourceIds": [
+        "fmr-7a-26",
+        "cnic-uh-manual"
+      ],
+      "sourceUrl": "https://comptroller.defense.gov/Portals/45/documents/fmr/current/07a/07a_26.pdf",
+      "scope": "Members with dependents, all services; Navy student dormitories for the CNIC sentence",
+      "asOf": "2025-05-01",
+      "accessed": "2026-09-15",
+      "locator": "FMR Vol 7A Ch 26 par. 10.2.1.1 and 10.2.1.2 (page 26-48); CNIC M-11103.2 CH-1 enclosure 1 chapter 2 section 4 (page 2-11)",
+      "loadBearing": false,
+      "verification": "Read par. 10.2.1, 10.2.1.1 and 10.2.1.2 (page 26-48): a member with a dependent is authorized the with-dependent rate when adequate Government quarters are not furnished for the member and dependent without a rental charge.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Read par. 10.2.1, 10.2.1.1 and 10.2.1.2 (page 26-48): a member with a dependent is authorized the with-dependent rate when adequate Government quarters are not furnished for the member and dependent without a rental charge."
+      },
+      "appliesTo": "Students with dependents on PCS orders whose family is elsewhere or off base",
+      "limitations": "Dependency must be on the orders and in DEERS; the rate follows the dependent location rules in par. 10.2.2 and 10.10.3.3 for new accessions; TDY students keep the prior PDS rate.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "tdy-rule",
+      "kind": "fact",
+      "text": "A member on TDY with no PCS involved keeps the housing allowance for the permanent duty station if it was authorized before the TDY, but a member below E-7 who is assigned quarters at the permanent duty station gets no allowance during the TDY even after vacating those quarters.",
+      "claim": "FMR Vol 7A Ch 26 par. 10.1.1: 'A Service member on TDY (including permissive travel) when no PCS is involved, is authorized to continue to receive BAH or OHA for the PDS if authorized prior to the TDY, except for: 10.1.1.1 A Service member occupying Government quarters at the TDY location which exceed minimum standards ... or 10.1.1.2 A Service member below grade E-7 if quarters are assigned or furnished at the PDS, even if the Service member vacates the quarters at the beginning of the TDY. BAH or OHA does not accrue if assigned quarters at the PDS.'",
+      "status": "verified",
+      "sourceIds": [
+        "fmr-7a-26"
+      ],
+      "sourceUrl": "https://comptroller.defense.gov/Portals/45/documents/fmr/current/07a/07a_26.pdf",
+      "scope": "Members without dependents on TDY, all services",
+      "asOf": "2025-05-01",
+      "accessed": "2026-09-15",
+      "locator": "DoD 7000.14-R Vol 7A Ch 26 (May 2025), par. 10.1.1, 10.1.1.1 and 10.1.1.2 (pages 26-46 to 26-47)",
+      "loadBearing": false,
+      "verification": "Read par. 10.1.1.2 (pages 26-46 to 26-47): a member below grade E-7 assigned or furnished quarters at the PDS gets no BAH or OHA during the TDY even if the member vacates the quarters at the start of the TDY.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Read par. 10.1.1.2 (pages 26-46 to 26-47): a member below grade E-7 assigned or furnished quarters at the PDS gets no BAH or OHA during the TDY even if the member vacates the quarters at the start of the TDY."
+      },
+      "appliesTo": "C school and short-course students attending Pensacola-area training on TDY orders from another PDS",
+      "limitations": "Applies to members without dependents (section 10.1); members with dependents on TDY follow Table 26-20 rule 4 and keep the PDS allowance as long as the PDS is unchanged.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "accession-pipeline",
+      "kind": "fact",
+      "text": "A member without dependents in the accession pipeline is not authorized BAH, other than BAH-Partial, while at a training location because Government quarters are assigned there, and for BAH authorization a training location of 20 or more weeks is treated as a permanent duty station.",
+      "claim": "FMR Vol 7A Ch 26 par. 10.10.3: the accession pipeline includes a member undergoing initial entry training and a student without prior service until arrival at the first PDS, 'including a training location of 20 or more weeks.' Par. 10.10.3.1: 'For BAH authorization only (not locality rate), the training location is defined as a PDS except for an RC member without a dependent. A Service member without a dependent is not authorized BAH (except BAH-Partial) while at a training location since Government quarters are assigned at that PDS.' Par. 10.10.3.3.1: a new accession with a dependent draws BAH based on the dependent's location in the United States.",
+      "status": "verified",
+      "sourceIds": [
+        "fmr-7a-26"
+      ],
+      "sourceUrl": "https://comptroller.defense.gov/Portals/45/documents/fmr/current/07a/07a_26.pdf",
+      "scope": "New accessions (initial entry training, students without prior service, academy graduates) until the first PDS, all services",
+      "asOf": "2025-05-01",
+      "accessed": "2026-09-15",
+      "locator": "DoD 7000.14-R Vol 7A Ch 26 (May 2025), par. 10.10.3, 10.10.3.1 and 10.10.3.3.1 (pages 26-64 to 26-65) and Table 26-39",
+      "loadBearing": true,
+      "verification": "Read par. 10.10.3 (pages 26-64 to 26-65): the member remains in the accession pipeline until arrival at a PDS, including a training location of 20 or more weeks; par. 10.10.3.1: a member without a dependent is not authorized BAH (except BAH-Partial) while at a training location since Government quarters are assigned at that PDS; par. 10.10.3.3.1: new accession with a dependent is paid on the dependent location in the United States.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Read par. 10.10.3 (pages 26-64 to 26-65): the member remains in the accession pipeline until arrival at a PDS, including a training location of 20 or more weeks; par. 10.10.3.1: a member without a dependent is not authorized BAH (except BAH-Partial) while at a training location since Government quarters are assigned at that PDS; par. 10.10.3.3.1: new accession with a dependent is paid on the dependent location in the United States."
+      },
+      "appliesTo": "A school students arriving at Corry Station from boot camp and other students who have not yet reached a first PDS",
+      "limitations": "Does not apply to fleet returnees or prior-service students on PCS orders, who fall under the ordinary quarters rules in sections 8.0 and 10.1; a new accession with a dependent draws the with-dependent rate for the dependent's location.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "quarters-commander",
+      "kind": "fact",
+      "text": "The commander responsible for the quarters has the authority to assign and terminate Government quarters and decides when quarters are adequate for assignment, which is why the same regulation produces different answers at different installations.",
+      "claim": "FMR Vol 7A Ch 26 par. 8.1.1: 'The commander responsible for the Government quarters has the authority to assign and terminate the assignment of Government quarters. The commander also determines when quarters are adequate and suitable for assignment based on appropriate directives.' Par. 8.1.2: a member without dependents in E-7 or above may elect not to occupy assigned quarters unless denied by the Secretary concerned; par. 10.1.4: an E-6 assigned inadequate quarters may elect an allowance instead unless denied for training mission, discipline or readiness.",
+      "status": "verified",
+      "sourceIds": [
+        "fmr-7a-26"
+      ],
+      "sourceUrl": "https://comptroller.defense.gov/Portals/45/documents/fmr/current/07a/07a_26.pdf",
+      "scope": "All services, all installations",
+      "asOf": "2025-05-01",
+      "accessed": "2026-09-15",
+      "locator": "DoD 7000.14-R Vol 7A Ch 26 (May 2025), par. 8.1.1 and 8.1.2 (pages 26-42 to 26-43), par. 10.1.3 and 10.1.4 (page 26-47)",
+      "loadBearing": false,
+      "verification": "Read section 8.1 and par. 10.1.3 and 10.1.4 in the extracted text on 2026-09-15.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Every student asking why a classmate at another base drew an allowance",
+      "limitations": "The E-6 and E-7 elections can be denied when the exercise would adversely affect a training mission, military discipline or readiness.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "rate-protection",
+      "kind": "fact",
+      "text": "Individual rate protection means a member who keeps the same status receives any published BAH increase but no decrease, and the protection ends on a PCS, a reduction in paygrade or a change in dependency status.",
+      "claim": "DTMO BAH overview, Individual Rate Protection: 'Individual rate protection prevents a member from receiving a lower BAH rate than the previous year, as long as the BAH eligibility status of a service member remains unchanged ... Rate protection continues unless the status of a service member changes due to: Permanent Change of Station (PCS), Reduction in paygrade, Change in dependency status.'",
+      "status": "verified",
+      "sourceIds": [
+        "dtmo-bah",
+        "dtmo-bah-faq"
+      ],
+      "sourceUrl": "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/",
+      "scope": "All services, United States locations",
+      "asOf": "2026-09-15",
+      "accessed": "2026-09-15",
+      "locator": "DTMO Basic Allowance for Housing page, Individual Rate Protection collapsible panel",
+      "loadBearing": false,
+      "verification": "Read the panel text in the browser pane on 2026-09-15.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Students who arrive on PCS orders and stay past a January rate change",
+      "limitations": "Reporting on PCS orders resets the rate to the new PDS; moving from a dorm to an allowance mid-year is a status change decided by the finance office.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "jtr-140-day",
+      "kind": "fact",
+      "text": "Under the Joint Travel Regulations, a course scheduled for 139 or fewer days (less than 20 weeks) is attended in a TDY status, and a course scheduled for 140 or more days (20 weeks) is a PCS with the course location as the permanent duty station.",
+      "claim": "JTR (09/01/2026) par. 032201-A.1: 'a. Courses with a scheduled duration of 139 or fewer days (less than 20 weeks) are TDY. b. Courses with a scheduled duration of 140 or more days (20 weeks) are PCSs, and the course location is the Service member's PDS. c. The scheduled duration is the actual period a Service member receives instruction, including weekends, but not counting holiday periods ... or incidental time spent at the duty station before classes begin or after they end.' Table 1-6 rule 2 states the same rule. Par. 032201-A.3 lets the Secretary concerned designate a course of 140 to 180 days as TDY.",
+      "status": "verified",
+      "sourceIds": [
+        "jtr-2026-09"
+      ],
+      "sourceUrl": "https://media.defense.gov/2022/Jan/04/2002917147/-1/-1/0/JTR.PDF",
+      "scope": "Uniformed service members attending instructional courses at a school or installation",
+      "asOf": "2026-09-01",
+      "accessed": "2026-09-15",
+      "locator": "JTR dated 09/01/2026, Chapter 3 par. 032201-A.1 (page 3B-1 to 3B-2), Table 1-6 rule 2 (page 1-7)",
+      "loadBearing": true,
+      "verification": "Fetched JTR.PDF (dated 09/01/2026) in the browser pane and inflated the page streams; par. 032201-A.1.a and b (page 3B-1) read that courses scheduled for 139 or fewer days (less than 20 weeks) are TDY and courses of 140 or more days (20 weeks) are PCSs with the course location as the PDS; Table 1-6 rule 2 (page 1-7) states the same.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Fetched JTR.PDF (dated 09/01/2026) in the browser pane and inflated the page streams; par. 032201-A.1.a and b (page 3B-1) read that courses scheduled for 139 or fewer days (less than 20 weeks) are TDY and courses of 140 or more days (20 weeks) are PCSs with the course location as the PDS; Table 1-6 rule 2 (page 1-7) states the same."
+      },
+      "appliesTo": "Students whose orders say TDY versus PCS; the scheduled course length, not the student's wish, sets the status",
+      "limitations": "Secretarial exceptions can keep a 140 to 180 day course in TDY status; an extension that pushes total instruction to 140 days converts the assignment to a PCS (par. 032201-A.2); the JTR is republished monthly.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "jtr-non-availability",
+      "kind": "fact",
+      "text": "For a course attended in TDY status, the schoolhouse commander determines whether meals and lodging are available, and if Government quarters are not available a statement of non-availability must be obtained.",
+      "claim": "JTR (09/01/2026) par. 032201-B.2: 'The schoolhouse commander determines the availability of meals and lodging. If Government quarters are not available, then a statement of non-availability must be obtained.'",
+      "status": "verified",
+      "sourceIds": [
+        "jtr-2026-09"
+      ],
+      "sourceUrl": "https://media.defense.gov/2022/Jan/04/2002917147/-1/-1/0/JTR.PDF",
+      "scope": "Members attending training in a TDY status",
+      "asOf": "2026-09-01",
+      "accessed": "2026-09-15",
+      "locator": "JTR dated 09/01/2026, par. 032201-B.2 (page 3B-2)",
+      "loadBearing": false,
+      "verification": "Read JTR 09/01/2026 par. 032201-B.2 (page 3B-2): the schoolhouse commander determines the availability of meals and lodging and a statement of non-availability must be obtained if Government quarters are not available.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Read JTR 09/01/2026 par. 032201-B.2 (page 3B-2): the schoolhouse commander determines the availability of meals and lodging and a statement of non-availability must be obtained if Government quarters are not available."
+      },
+      "appliesTo": "TDY students at NAS Pensacola, Corry Station or Whiting Field",
+      "limitations": "This governs per diem and lodging for TDY students; the PCS-student off-base path runs through the installation UH office and a Certificate of Non-Availability instead.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "jtr-tle-21",
+      "kind": "fact",
+      "text": "Temporary Lodging Expense on a PCS to a permanent duty station in the CONUS is authorized for up to 21 days, and a student on a course under 20 weeks in TDY status is not authorized dependent travel allowances.",
+      "claim": "JTR (09/01/2026) par. 050601-B.2 and Table 5-13 rules 3 and 4: TLE is authorized for 21 days for a member reporting to a PDS in the CONUS, including a first PDS from a home of record or initial technical school; 7 days applies to OCONUS moves. Table 5-8 rule 1.b: dependent travel and transportation allowances are not authorized for a member 'assigned to a school or installation as a student, the course of instruction is less than 20 weeks, and the Service member is in a TDY status.' Par. 050105 defines TLE as partial reimbursement of lodging and meals in temporary lodging in the CONUS during a PCS.",
+      "status": "verified",
+      "sourceIds": [
+        "jtr-2026-09"
+      ],
+      "sourceUrl": "https://media.defense.gov/2022/Jan/04/2002917147/-1/-1/0/JTR.PDF",
+      "scope": "Uniformed service members on PCS orders to a CONUS PDS",
+      "asOf": "2026-09-01",
+      "accessed": "2026-09-15",
+      "locator": "JTR dated 09/01/2026, par. 050601-B.2 and Table 5-13 (pages 5A-29 to 5A-30); Table 5-8 rule 1.b",
+      "loadBearing": false,
+      "verification": "Read JTR 09/01/2026 par. 050601-B.2 and Table 5-13 (pages 5A-29 to 5A-30): TLE for either 7 or 21 days depending on whether the new PDS is in the CONUS, and par. 050602 limits a CONUS advance to 21 days.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Read JTR 09/01/2026 par. 050601-B.2 and Table 5-13 (pages 5A-29 to 5A-30): TLE for either 7 or 21 days depending on whether the new PDS is in the CONUS, and par. 050602 limits a CONUS advance to 21 days."
+      },
+      "appliesTo": "PCS students only; TDY students draw per diem instead",
+      "limitations": "Days are counted against per diem days in transit; extensions up to 60 days exist only for jointly approved housing-shortage or HHG-restriction locations; TLE is not paid for a house-hunting trip before the move.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "navy-uh-required",
+      "kind": "fact",
+      "text": "Navy Housing's NAS Pensacola page states that most personnel in E-1 through E-3, and E-4s with fewer than four years of service, are required to live in unaccompanied housing, and that E-4s may be required to live on base, space permitting.",
+      "claim": "Navy Housing - NAS Pensacola, Unaccompanied Housing tab: 'Depending on assignment status (shore duty, sea duty, student, etc.) and pay grade, unaccompanied housing (UH) options include barracks or dorms, and housing in the local community. BARRACKS AND DORMS Most personnel, E1-E3 and E4 < 4, are required to live in UH; E4s may be required to live on-base, space permitting. More senior personnel may be eligible to live in UH.' The NAS Whiting Field page carries the identical sentence.",
+      "status": "verified",
+      "sourceIds": [
+        "navy-housing-nasp",
+        "navy-housing-whiting",
+        "cnic-uh-manual"
+      ],
+      "sourceUrl": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NAS-Pensacola/",
+      "scope": "Navy unaccompanied personnel at NAS Pensacola, Corry Station and NAS Whiting Field",
+      "asOf": "2026-09-15",
+      "accessed": "2026-09-15",
+      "locator": "Navy Housing - NAS Pensacola page, Unaccompanied Housing tab, 'Barracks and Dorms' paragraph; NAS Whiting Field page, same tab",
+      "loadBearing": true,
+      "verification": "Opened the Navy Housing NAS Pensacola page in the browser pane and read the Unaccompanied Housing tab text: Most personnel, E1-E3 and E4 < 4, are required to live in UH; E4s may be required to live on-base, space permitting. More senior personnel may be eligible to live in UH.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Opened the Navy Housing NAS Pensacola page in the browser pane and read the Unaccompanied Housing tab text: Most personnel, E1-E3 and E4 < 4, are required to live in UH; E4s may be required to live on-base, space permitting. More senior personnel may be eligible to live in UH."
+      },
+      "appliesTo": "Unaccompanied Navy students and permanent party at the three Pensacola-area installations",
+      "limitations": "The page is undated and describes local practice; occupancy, the installation CO and the student's order type decide individual cases, and other services' students are housed under their own service rules and support agreements.",
+      "perishable": true,
+      "expires": "2026-10-15"
+    },
+    {
+      "id": "navy-cna-95",
+      "kind": "fact",
+      "text": "Under the CNIC unaccompanied housing manual, an eligible single Sailor who wants to move off base submits a written request to the installation commanding officer through the chain of command, and a Certificate of Non-Availability is issued only when Government quarters are not available, which the manual defines as barracks occupancy of 95 percent or greater.",
+      "claim": "CNIC M-11103.2 CH-1, enclosure 1 chapter 2 par. 3.d: 'Eligible unaccompanied personnel requesting to move off base will submit a written request to the installation CO via their respective chain of command. A temporary or permanent CNA may be issued if government quarters are not available at the time of check-in (95 percent or greater occupancy excluding GBs ...).' Par. 3.d(3): 'Single E-1 through E-4 Sailors assigned to shore duty, or any type of duty other than unusually arduous sea duty, may request BAH or OHA when barracks occupancy is 95 percent or greater.' Chapter 5 par. 2.b: CNAs are issued and tracked in the eMH UH module and 'will not be issued until occupancy on the Installation has reached 95 percent or greater.'",
+      "status": "verified",
+      "sourceIds": [
+        "cnic-uh-manual",
+        "fmr-7a-26"
+      ],
+      "sourceUrl": "https://ffr.cnic.navy.mil/Portals/76/Navy%20Housing/Headquarters/Policy/CNIC%20M-11103.2%20CH1%20UH%20Manual%2012%20Dec%202024.pdf?ver=bxTVdmGaK76yn1-7qq-y5Q%3D%3D",
+      "scope": "Navy unaccompanied personnel at Navy installations",
+      "asOf": "2024-12-12",
+      "accessed": "2026-09-15",
+      "locator": "CNIC M-11103.2 CH-1 (12 Dec 2024), enclosure 1, chapter 2 par. 3.d and 3.d(3) (pages 2-5 to 2-6); chapter 5 par. 2.b (page 5-2 to 5-3)",
+      "loadBearing": false,
+      "verification": "Read in the extracted manual text on 2026-09-15; the FMR is co-cited for the underlying rule that an allowance is not paid while adequate quarters are assigned.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Single Navy E-1 through E-4 on shore duty, including students on PCS orders",
+      "limitations": "Sea duty E-1 to E-3 and E-4 under four years are housed aboard or in barracks when the ship is in homeport with no allowance; a temporary CNA can be revoked when space opens; the manual is Navy policy and does not bind Air Force or Marine students.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "navy-student-standard",
+      "kind": "fact",
+      "text": "The Navy student dormitory standard is a shared bedroom with at least 90 net square feet per student and no more than four students per bathroom, and members in a PCS status for a training course of 20 weeks or more are a Priority 2 space-required category alongside first-term E-1 to E-4 Sailors.",
+      "claim": "CNIC M-11103.2 CH-1, enclosure 1 chapter 2 section 4.a(2): 'The minimum assignment standard for students, excluding recruits, is shared bedrooms with a minimum of 90 NSF per student and a maximum of four students per bathroom.' Par. 3.c(2): Priority 2 includes '(d) Category IV. Shore duty E-1 through E-3 Sailors and E4 Sailors with less than 4 years of service. (e) Category V. Service Members in a PCS status for training course of 20 weeks or more. (f) Category VI. Service Members from other military services on PCS orders to the Installation.' Section 4 also states students without a designated PDS are on TEMDU for further assignment (six months or less).",
+      "status": "verified",
+      "sourceIds": [
+        "cnic-uh-manual"
+      ],
+      "sourceUrl": "https://ffr.cnic.navy.mil/Portals/76/Navy%20Housing/Headquarters/Policy/CNIC%20M-11103.2%20CH1%20UH%20Manual%2012%20Dec%202024.pdf?ver=bxTVdmGaK76yn1-7qq-y5Q%3D%3D",
+      "scope": "Navy student dormitories and permanent party barracks waitlist priorities",
+      "asOf": "2024-12-12",
+      "accessed": "2026-09-15",
+      "locator": "CNIC M-11103.2 CH-1 (12 Dec 2024), enclosure 1, chapter 2 par. 3.c(2) (pages 2-4 to 2-5) and section 4.a(2) (page 2-11)",
+      "loadBearing": false,
+      "verification": "Read in the extracted manual text on 2026-09-15; the opening sentences of section 4 were unreadable glyphs and are not relied on.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Navy A and C school students at Corry Station and NATTC, and other-service students housed by the Navy",
+      "limitations": "Standards are minimums; actual room type depends on the building; permanent party standards in Table 2-1 differ.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "nasp-uh-capacity",
+      "kind": "fact",
+      "text": "Navy Housing describes NAS Pensacola unaccompanied housing as roughly 4,530 personnel in 14 buildings, and Corry Station as a training command about 3 miles from NAS Pensacola housing roughly 1,770 personnel in 17 buildings.",
+      "claim": "Navy Housing - NAS Pensacola, Unaccompanied Housing tab: 'UH is conveniently located on NAS Pensacola, housing approximately 4,530 personnel in 14 buildings. Accommodations are one or two persons to a room based on pay grade and square footage.' 'Corry Station is a training command located about 3 miles from NAS Pensacola, housing approximately 1,770 personnel in 17 buildings.'",
+      "status": "verified",
+      "sourceIds": [
+        "navy-housing-nasp"
+      ],
+      "sourceUrl": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NAS-Pensacola/",
+      "scope": "NAS Pensacola and Corry Station unaccompanied housing inventory as described by Navy Housing",
+      "asOf": "2026-09-15",
+      "accessed": "2026-09-15",
+      "locator": "Navy Housing - NAS Pensacola page, Unaccompanied Housing tab, Barracks and Dorms paragraphs",
+      "loadBearing": false,
+      "verification": "Read the Navy Housing NAS Pensacola Unaccompanied Housing tab: UH houses approximately 4,530 personnel in 14 buildings; Corry Station is a training command about 3 miles from NAS Pensacola housing approximately 1,770 personnel in 17 buildings.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Read the Navy Housing NAS Pensacola Unaccompanied Housing tab: UH houses approximately 4,530 personnel in 14 buildings; Corry Station is a training command about 3 miles from NAS Pensacola housing approximately 1,770 personnel in 17 buildings."
+      },
+      "appliesTo": "Anyone estimating how likely a CNA is; capacity figures are descriptive, not occupancy",
+      "limitations": "Capacity is not occupancy; the 95 percent trigger is measured by the UH office, not derivable from these figures.",
+      "perishable": true,
+      "expires": "2026-10-15"
+    },
+    {
+      "id": "nasp-hsc-contact",
+      "kind": "fact",
+      "text": "The NAS Pensacola Navy Housing Service Center is at 1581 Duncan Road, Building 735, Pensacola, FL 32508 (850-452-5168, Pensacola_Housing@us.navy.mil), the Corry Station unaccompanied housing office (Mariner's Roost) is at 640 Roberts Ave, Pensacola, FL 32511 (front desk 850-452-6609), and Navy Housing encourages every unaccompanied member eligible to live off base to check in at the Housing Service Center first.",
+      "claim": "Navy Housing - NAS Pensacola, Contact Housing tab: 'NAVY HOUSING SERVICE CENTER (HSC): 1581 Duncan Road, Bldg 735, Pensacola, FL 32508-5310, Phone: 850-452-5168 ... Email: Pensacola_Housing@us.navy.mil'; 'Pensacola Corry Station UH 640 Roberts Ave Pensacola, FL 32511 ... UH Mariner's Roost Front Desk: 850-452-6609'. Unaccompanied Housing tab, Community Housing: 'All unaccompanied personnel eligible to live off-base in CONUS are highly encouraged to first check-in at the Housing Service Center (HSC).'",
+      "status": "verified",
+      "sourceIds": [
+        "navy-housing-nasp"
+      ],
+      "sourceUrl": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NAS-Pensacola/",
+      "scope": "NAS Pensacola and Corry Station housing offices",
+      "asOf": "2026-09-15",
+      "accessed": "2026-09-15",
+      "locator": "Navy Housing - NAS Pensacola page, Contact Housing tab and Unaccompanied Housing tab (Community Housing paragraph)",
+      "loadBearing": false,
+      "verification": "Read the Navy Housing NAS Pensacola Contact Housing tab: HSC 1581 Duncan Road, Bldg 735, Pensacola, FL 32508-5310, 850-452-5168, Pensacola_Housing@us.navy.mil; Corry Station UH 640 Roberts Ave, Pensacola, FL 32511, Mariner's Roost front desk 850-452-6609.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Read the Navy Housing NAS Pensacola Contact Housing tab: HSC 1581 Duncan Road, Bldg 735, Pensacola, FL 32508-5310, 850-452-5168, Pensacola_Housing@us.navy.mil; Corry Station UH 640 Roberts Ave, Pensacola, FL 32511, Mariner's Roost front desk 850-452-6609."
+      },
+      "appliesTo": "All students at NAS Pensacola and Corry Station",
+      "limitations": "Contact details change; the HSC handles referrals and lease review, while the UH office and the student's command decide assignment and CNAs.",
+      "perishable": true,
+      "expires": "2026-10-15"
+    },
+    {
+      "id": "whiting-hsc",
+      "kind": "fact",
+      "text": "NAS Whiting Field's Housing Service Center is at 570 Merrill Drive, Milton, FL 32570 (850-623-9726), its unaccompanied housing office is at 7426 USS Lexington Circle, Building 2957 (850-623-7095), and Navy Housing describes Whiting Field unaccompanied housing as roughly 40 personnel in one building.",
+      "claim": "Navy Housing - NAS Whiting Field, Contact Housing tab: 'Navy Housing Service Center (HSC): 570 Merrill Drive Milton, FL 32570-4157 Phone: 850-623-9726'; 'Unaccompanied Housing (UH): 7426 USS Lexington Circle, Bldg. 2957 Milton, Florida, 32570 Phone: 850-623-7095'. Unaccompanied Housing tab: 'UH is conveniently located on NSA Whiting Field, housing approximately 40 personnel in 1 building ... Building 2942 room 101, serves as the check-in point.'",
+      "status": "verified",
+      "sourceIds": [
+        "navy-housing-whiting"
+      ],
+      "sourceUrl": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NAS-Whiting-Field/",
+      "scope": "NAS Whiting Field housing offices and unaccompanied housing",
+      "asOf": "2026-09-15",
+      "accessed": "2026-09-15",
+      "locator": "Navy Housing - NAS Whiting Field page, Contact Housing and Unaccompanied Housing tabs",
+      "loadBearing": false,
+      "verification": "Read in the browser pane on 2026-09-15.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Students assigned to Training Air Wing FIVE and other Whiting Field commands",
+      "limitations": "Officer flight students are not the population the E-1 to E-4 UH rule targets; the small UH inventory shapes local practice for enlisted students, which the page does not spell out.",
+      "perishable": true,
+      "expires": "2026-10-15"
+    },
+    {
+      "id": "iwtc-reporting",
+      "kind": "fact",
+      "text": "IWTC Corry Station tells arriving students to report with original orders to the main quarterdeck in Building 3714, where they receive their housing and school instructions; A school students from boot camp are assigned a mentor, fleet returnees and students from other A schools are directed to the Bachelor Enlisted Quarters in Building 1084, and officer students are advised to reserve Navy Gateway Inns and Suites.",
+      "claim": "IWTC Corry Station Reporting Information: 'report first with your original orders to the IWTC Corry Station main quarterdeck in Building 3714, manned 24/7, (850) 452-6618'; 'STUDENTS You will receive instructions at the main quarterdeck about your housing and school. \"A\" school students reporting from boot camp will be assigned a mentor ... Fleet returnee students or students reporting from other \"A\" schools will be directed to the Bachelor Enlisted Quarters, Building 1084, (850) 452-6541 ... Officer students will receive a welcome aboard package ... Reservations are recommended at the Naval Air Station Pensacola Navy Gateway Inns & Suites, (850) 452-2755.'",
+      "status": "verified",
+      "sourceIds": [
+        "iwtc-corry-reporting"
+      ],
+      "sourceUrl": "https://www.netc.navy.mil/Commands/Center-for-Information-Warfare-Training/Information-Warfare-Training-Command-Corry-Station/Reporting-Information/",
+      "scope": "Students and staff reporting to IWTC Corry Station",
+      "asOf": "2026-09-15",
+      "accessed": "2026-09-15",
+      "locator": "IWTC Corry Station Reporting Information page, opening paragraph and STUDENTS section",
+      "loadBearing": false,
+      "verification": "Read in the browser pane on 2026-09-15.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Navy CT and IT A and C school students and CW and IP officer students at Corry Station",
+      "limitations": "The page directs students to quarters; it does not say who receives an allowance, which is decided by the UH office and finance under the CNIC manual and the FMR.",
+      "perishable": true,
+      "expires": "2026-10-15"
+    },
+    {
+      "id": "af-uoq-unaccompanied",
+      "kind": "fact",
+      "text": "The 479th Flying Training Group welcome guide tells CSO students that if they are on unaccompanied orders they will be assigned to the Unaccompanied Officers Quarters on arrival regardless of rank or time in service, while students on accompanied orders may live on or off base and must contact the Housing office before signing a lease or closing on a house.",
+      "claim": "479 FTG Undergraduate Combat Systems Officer Welcome Guide (CAO 27 August 2026), Pre-Arrival Instructions: '2. If you are on accompanied orders, you will have the option of living on or off base. For on-base housing, call ahead to the Housing Office (850-456-3120) ... 3. You must contact the Housing office before making any financial obligations such as signing a lease or closing on a house. 4. If you are on unaccompanied orders, you will be assigned to the UOQ upon arrival, regardless of rank or time in service.' UOQ FAQ: 'Assignment to the UOQ is dictated by AFI 32-6005 and 32-6000. If you're coming to Pensacola for UCT and unaccompanied expect to live in the UOQ, even if you're Guard or Reserve'; accompanied officers 'may receive BAH after in-processing with finance and you must have your dependents on your orders, and you elect to live off-base.' The Air Force pays the Navy Gateway Inn stay up to 21 days.",
+      "status": "verified",
+      "sourceIds": [
+        "479ftg-welcome-guide",
+        "479ftg-aetc",
+        "fmr-7a-26"
+      ],
+      "sourceUrl": "https://www.aetc.af.mil/Portals/88/12%20FTW/Documents/479%20FTG%20Welcome%20Guide%20(CAO%2027%20August%202026).pdf?ver=sDNNgLqDoH1Dv5coOtXkaQ%3d%3d",
+      "scope": "Air Force undergraduate CSO students assigned to the 479th Student Squadron at NAS Pensacola",
+      "asOf": "2026-08-27",
+      "accessed": "2026-09-15",
+      "locator": "479 FTG Welcome Guide CAO 27 August 2026, Pre-Arrival Instructions items 1 to 4 (page 5) and 'UOQ and Housing Information' with 'UOQ Frequently Asked Questions' (pages 16 to 17)",
+      "loadBearing": true,
+      "verification": "Fetched the 479 FTG Welcome Guide (CAO 27 August 26) PDF in the browser pane and inflated the text: page 5 Pre-Arrival Instructions item 2 (accompanied orders: option of living on or off base), item 3 (must contact the Housing office before any financial obligation such as signing a lease or closing on a house) and item 4 (unaccompanied orders: assigned to the UOQ upon arrival regardless of rank or time in service); the UOQ FAQ repeats that unaccompanied UCT students should expect the UOQ.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Fetched the 479 FTG Welcome Guide (CAO 27 August 26) PDF in the browser pane and inflated the text: page 5 Pre-Arrival Instructions item 2 (accompanied orders: option of living on or off base), item 3 (must contact the Housing office before any financial obligation such as signing a lease or closing on a house) and item 4 (unaccompanied orders: assigned to the UOQ upon arrival regardless of rank or time in service); the UOQ FAQ repeats that unaccompanied UCT students should expect the UOQ."
+      },
+      "appliesTo": "Unaccompanied and accompanied Air Force CSO student officers (active, Guard and Reserve) at the 479 FTG",
+      "limitations": "The guide is command guidance current as of 27 August 2026 and can change; it applies to UCT students, not to Air Force enlisted or to other services' students; pets are not allowed in the UOQ and no exception is granted for them.",
+      "perishable": true,
+      "expires": "2026-10-15"
+    },
+    {
+      "id": "af-dorm-rule",
+      "kind": "fact",
+      "text": "AFI 32-6000 directs installations to house unaccompanied Airmen in grades E-1 through E-3 and E-4 with less than 3 years of service in government-controlled unaccompanied housing, treats pipeline students who are not authorized per diem or an allowance as Priority 1 residents, and allows Priority 1 and 2 personnel to relocate off base with allowances only when utilization exceeds 95 percent.",
+      "claim": "AFI 32-6000 (18 March 2020), par. 1.2.27.16: 'House unaccompanied Airmen in grades E-1 through E-3 and E-4 with less than 3 years of service in government-controlled UH. (T-1)'; par. 7.7.1.1: 'Pipeline students who are not authorized per diem or BAH are considered Priority 1'; par. 7.7.2.1: Priority 2 space required includes 'Personnel in grades E-1 through E-3 and E-4 with less than 3 years of service'; par. 1.2.27.36: 'Authorize UH Priority 1 and 2 personnel to relocate off-base with allowances when the minimum utilization rate for Priority 1 and 2 personnel exceeds 95 percent. (T-1)'; par. 7.2.1 defines a dormitory as a UH facility for permanent party E-1 to E-3 and E-4 with less than three years; par. 7.3.2 describes non-prior-service student housing at AETC locations.",
+      "status": "verified",
+      "sourceIds": [
+        "afi-32-6000",
+        "fmr-7a-26"
+      ],
+      "sourceUrl": "https://static.e-publishing.af.mil/production/1/af_a4/publication/afi32-6000/afi32-6000.pdf",
+      "scope": "Department of the Air Force installations and Airmen; not the Navy UH at NAS Pensacola",
+      "asOf": "2026-04-30",
+      "accessed": "2026-09-15",
+      "locator": "AFI 32-6000 (18 March 2020, DAFGM 2026-01 reissued 30 April 2026), par. 1.2.27.16, 1.2.27.36, 7.2.1, 7.3.2, 7.7.1.1 and 7.7.2.1",
+      "loadBearing": false,
+      "verification": "Read the base instruction paragraphs in the extracted text on 2026-09-15; the guidance memorandum overlay was not readable and may modify these paragraphs.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Air Force students in general; at NAS Pensacola the Navy operates the quarters, and the 479 FTG applies its own UOQ rule to CSO students",
+      "limitations": "The threshold is 3 years of service for the Air Force versus 4 years in Navy policy; a base supplement or the 2026 guidance memorandum may change details; the Bing question about Goodfellow dorms cannot be answered from this text.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "479-mission",
+      "kind": "fact",
+      "text": "The 479th Flying Training Group at NAS Pensacola is the Air Force's only training pipeline for combat systems officers and graduates as many as 400 CSOs a year through the 479th Student Squadron, the 455th and 451st Flying Training Squadrons and the 479th Operations Support Squadron.",
+      "claim": "AETC 479th Flying Training Group page: 'The 479th Flying Training Group, located at Naval Air Station Pensacola, Fla., is the U.S. Air Force's only training pipeline for combat systems officers. The 479th Operations Support Squadron, 479th Student Squadron, 455th Flying Training Squadron, and the 451st Flying Training Squadron work in concert to graduate as many as 400 CSOs annually.'",
+      "status": "verified",
+      "sourceIds": [
+        "479ftg-aetc"
+      ],
+      "sourceUrl": "https://www.aetc.af.mil/Units/19th-Air-Force/12FTW/479th-Flying-Training-Group/",
+      "scope": "Air Force CSO training at NAS Pensacola",
+      "asOf": "2026-09-15",
+      "accessed": "2026-09-15",
+      "locator": "AETC 479th Flying Training Group unit page, opening paragraph",
+      "loadBearing": false,
+      "verification": "Read in the browser pane on 2026-09-15.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Readers identifying which command a CSO student belongs to",
+      "limitations": "Throughput figures are the unit's description, not a published count for a given year.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "training-air-wings",
+      "kind": "fact",
+      "text": "Training Air Wing FIVE sits aboard NAS Whiting Field about 5 miles north of Milton and trains aviators from the Navy, Marine Corps, Coast Guard, Air Force and allied nations, while Training Air Wing SIX is headquartered aboard NAS Pensacola and produces Naval Flight Officers, with roughly 300 Navy, Marine Corps and foreign students graduating a year.",
+      "claim": "CNATRA TW-5 page: 'located 5 miles north of Milton, Florida on board Naval Air Station Whiting Field'; the wing 'trains aviators from the Navy, Marine Corps, Coast Guard, Air Force, and allied nations' in VT-2, VT-3, VT-6, HT-8, HT-18 and HT-28. CNATRA TW-6 page: headquartered aboard NAS Pensacola at 390 San Carlos Road; Naval Flight Officer training with approximately 300 U.S. Navy, Marine Corps and foreign military students graduating annually in VT-4, VT-10 and VT-86.",
+      "status": "verified",
+      "sourceIds": [
+        "cnatra-tw5",
+        "cnatra-tw6"
+      ],
+      "sourceUrl": "https://www.cnatra.navy.mil/tw5/",
+      "scope": "Naval aviation training commands in the Pensacola area",
+      "asOf": "2026-09-15",
+      "accessed": "2026-09-15",
+      "locator": "CNATRA Training Air Wing FIVE and Training Air Wing SIX home pages, mission and location paragraphs",
+      "loadBearing": false,
+      "verification": "Fetched both pages on 2026-09-15.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Student naval aviators and NFOs deciding which installation their commute actually points at",
+      "limitations": "Neither page publishes housing guidance or phase lengths; the flight-school page on this site covers officer student housing.",
+      "perishable": true,
+      "expires": "2026-12-31"
+    },
+    {
+      "id": "scra-termination",
+      "kind": "fact",
+      "text": "Under 50 U.S.C. 3955, a servicemember who signs a lease and then receives orders for a permanent change of station, or deployment orders of 90 days or more, may terminate it by delivering written notice and a copy of the orders to the landlord; for a lease with monthly rent the termination takes effect 30 days after the next rent due date following delivery, with rent prorated and no early termination charge.",
+      "claim": "50 U.S.C. 3955(b)(1)(B): a lease executed by the servicemember while in military service who 'thereafter receives military orders for a permanent change of station or to deploy with a military unit ... for a period of not less than 90 days'; (c)(1)(A): termination 'by delivery by the lessee of written notice of such termination, and a copy of the servicemember's military orders, to the lessor'; (d)(1): for a lease that 'provides for monthly payment of rent, termination ... is effective 30 days after the first date on which the next rental payment is due and payable after the date on which the notice ... is delivered'; (e): unpaid rent for the period before termination 'shall be paid on a prorated basis' and 'the lessor may not impose an early termination charge.'",
+      "status": "verified",
+      "sourceIds": [
+        "scra-3955"
+      ],
+      "sourceUrl": "https://www.law.cornell.edu/uscode/text/50/3955",
+      "scope": "Servicemembers on active duty in the United States",
+      "asOf": "2026-09-15",
+      "accessed": "2026-09-15",
+      "locator": "50 U.S.C. 3955 subsections (b)(1)(B), (c)(1)(A), (d)(1) and (e)",
+      "loadBearing": false,
+      "verification": "Fetched the LII text on 2026-09-15 and read the four subsections.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Students who rent off base and later receive PCS orders from Pensacola",
+      "limitations": "Being moved into government quarters or finishing a course without new PCS orders is not a statutory trigger; a lease can add a broader military clause but cannot narrow the statute.",
+      "perishable": false,
+      "expires": null
+    },
+    {
+      "id": "bah-e4-without",
+      "kind": "fact",
+      "text": "For 2026, the Pensacola military housing area (FL064, which covers NAS Pensacola, Corry Station and NAS Whiting Field) pays an E-4 without dependents $1,521 a month in BAH.",
+      "claim": "2026 BAH rates, FL064 Pensacola FL, E-4 without dependents: 1521 (identical for E-1 through E-4). From the official DTMO 2026 ASCII archive as parsed into content/client-guides/bah-2026.json and re-verified by scripts/verify-bah-source.mjs on 2026-09-15.",
+      "status": "verified",
+      "sourceIds": [
+        "bah-2026-archive"
+      ],
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "scope": "FL064 Pensacola military housing area, calendar year 2026, E-4 without dependents",
+      "asOf": "2026-01-01",
+      "accessed": "2026-09-15",
+      "locator": "BAH-ASCII-2026.zip, record FL064, E04 without-dependents column; bah-2026.json areas.FL064.rates.E-4.withoutDependents",
+      "loadBearing": false,
+      "verification": "verify-bah-source.mjs ok: true, 96 values, archive sha256 5446fed831e125c23cc6a407dcde4cae541f108e90ac852aaadeec0aa11e515f.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "E-4 students without dependents who hold a CNA or are otherwise authorized BAH at FL064",
+      "limitations": "Paid only when the member is authorized BAH; a student assigned to quarters receives BAH-Partial instead; the LES shows the actual entitlement and this figure is not a rent ceiling or a home-price limit.",
+      "perishable": true,
+      "expires": "2026-12-31",
+      "bahRate": {
+        "year": 2026,
+        "mha": "FL064",
+        "grade": "E-4",
+        "dependency": "withoutDependents",
+        "monthly": 1521
+      }
+    },
+    {
+      "id": "bah-e4-with",
+      "kind": "fact",
+      "text": "The 2026 FL064 with-dependents BAH for an E-4 is $1,794 a month.",
+      "claim": "2026 BAH rates, FL064 Pensacola FL, E-4 with dependents: 1794 (identical for E-1 through E-4).",
+      "status": "verified",
+      "sourceIds": [
+        "bah-2026-archive"
+      ],
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "scope": "FL064 Pensacola military housing area, calendar year 2026, E-4 with dependents",
+      "asOf": "2026-01-01",
+      "accessed": "2026-09-15",
+      "locator": "BAH-ASCII-2026.zip, record FL064, E04 with-dependents column; bah-2026.json areas.FL064.rates.E-4.withDependents",
+      "loadBearing": false,
+      "verification": "verify-bah-source.mjs ok: true on 2026-09-15.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "E-4 students with a dependent on their orders",
+      "limitations": "A new accession with a dependent draws the rate for the dependent's location, which may not be FL064; the LES governs.",
+      "perishable": true,
+      "expires": "2026-12-31",
+      "bahRate": {
+        "year": 2026,
+        "mha": "FL064",
+        "grade": "E-4",
+        "dependency": "withDependents",
+        "monthly": 1794
+      }
+    },
+    {
+      "id": "bah-e5-without",
+      "kind": "fact",
+      "text": "An E-5 without dependents draws $1,644 a month at FL064 in 2026.",
+      "claim": "2026 BAH rates, FL064 Pensacola FL, E-5 without dependents: 1644 (with dependents: 1863, register separately if printed).",
+      "status": "verified",
+      "sourceIds": [
+        "bah-2026-archive"
+      ],
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "scope": "FL064 Pensacola military housing area, calendar year 2026, E-5 without dependents",
+      "asOf": "2026-01-01",
+      "accessed": "2026-09-15",
+      "locator": "BAH-ASCII-2026.zip, record FL064, E05 without-dependents column; bah-2026.json areas.FL064.rates.E-5.withoutDependents",
+      "loadBearing": false,
+      "verification": "verify-bah-source.mjs ok: true on 2026-09-15.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "E-5 fleet returnees at C school who are outside the mandatory UH grades",
+      "limitations": "An E-5 on shore duty may still be assigned UH space-available under Navy priorities; the LES governs.",
+      "perishable": true,
+      "expires": "2026-12-31",
+      "bahRate": {
+        "year": 2026,
+        "mha": "FL064",
+        "grade": "E-5",
+        "dependency": "withoutDependents",
+        "monthly": 1644
+      }
+    },
+    {
+      "id": "bah-o1-without",
+      "kind": "fact",
+      "text": "An O-1 without dependents draws $1,719 a month at FL064 in 2026.",
+      "claim": "2026 BAH rates, FL064 Pensacola FL, O-1 without dependents: 1719 (with dependents: 1914, register separately if printed).",
+      "status": "verified",
+      "sourceIds": [
+        "bah-2026-archive"
+      ],
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "scope": "FL064 Pensacola military housing area, calendar year 2026, O-1 without dependents",
+      "asOf": "2026-01-01",
+      "accessed": "2026-09-15",
+      "locator": "BAH-ASCII-2026.zip, record FL064, O01 without-dependents column; bah-2026.json areas.FL064.rates.O-1.withoutDependents",
+      "loadBearing": false,
+      "verification": "verify-bah-source.mjs ok: true on 2026-09-15.",
+      "independentCheck": {
+        "reviewer": null,
+        "date": null,
+        "finding": null
+      },
+      "appliesTo": "Unaccompanied O-1 students who are authorized BAH; an unaccompanied CSO student assigned to the UOQ does not draw this rate",
+      "limitations": "Officer flight students are covered on the flight-school page; the LES governs.",
+      "perishable": true,
+      "expires": "2026-12-31",
+      "bahRate": {
+        "year": 2026,
+        "mha": "FL064",
+        "grade": "O-1",
+        "dependency": "withoutDependents",
+        "monthly": 1719
+      }
+    },
+    {
+      "id": "calc-room-share-margin",
+      "kind": "calculation",
+      "text": "In this hypothetical, an E-4 student without dependents who holds a Certificate of Non-Availability and rents a $700 room in a shared house keeps a margin of $821 a month from the $1,521 FL064 allowance before utilities, renter's insurance and commuting costs.",
+      "claim": "Hypothetical worked example: difference(1521, 700) = 821 USD per month. The $1,521 input is the verified 2026 FL064 E-4 without-dependents rate; the $700 room-share rent is an invented illustration, not a market quote.",
+      "status": "verified",
+      "sourceIds": [
+        "bah-2026-archive"
+      ],
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "scope": "Illustrative E-4 without dependents on PCS orders to Corry Station with a CNA in hand",
+      "asOf": "2026-01-01",
+      "accessed": "2026-09-15",
+      "locator": "Article illustration; the BAH input comes from the verified 2026 FL064 record and the rent is hypothetical. difference(1521, 700) = 821 USD per month.",
+      "loadBearing": true,
+      "assumptions": "Hypothetical: 1521 is the 2026 FL064 E-4 without-dependents BAH; 700 is an invented monthly room-share rent; no utilities, deposit, insurance or transportation included; the student holds a CNA and is actually authorized BAH.",
+      "method": "difference(1521, 700) = 821 USD per month.",
+      "verification": "Recomputed independently: 1521 minus 700 equals 821 USD per month; the 1521 input matches the verified 2026 FL064 E-4 without-dependents record and the 700 rent is a labeled hypothetical.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Recomputed independently: 1521 minus 700 equals 821 USD per month; the 1521 input matches the verified 2026 FL064 E-4 without-dependents record and the 700 rent is a labeled hypothetical."
+      },
+      "appliesTo": "E-4 students without dependents who are authorized BAH at FL064",
+      "limitations": "The same E-4 assigned to a dormitory receives BAH-Partial, not $1,521, so there is no margin against rent that cannot be signed for; the figure is not a budget recommendation.",
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          1521,
+          700
+        ],
+        "result": 821,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "1521: 2026 FL064 E-4 without dependents BAH (bah-2026-archive)",
+          "700: hypothetical room-share rent chosen for illustration"
+        ]
+      }
+    },
+    {
+      "id": "calc-dependency-gap",
+      "kind": "calculation",
+      "text": "The gap between the E-4 with-dependents rate ($1,794) and the without-dependents rate ($1,521) at FL064 is $273 a month in 2026.",
+      "claim": "difference(1794, 1521) = 273 USD per month, both inputs from the verified 2026 FL064 record.",
+      "status": "verified",
+      "sourceIds": [
+        "bah-2026-archive"
+      ],
+      "sourceUrl": "https://www.travel.dod.mil/Portals/119/Documents/BAH/BAH_Rates_All_Locations_All_Pay_Grades/ASCII/BAH-ASCII-2026.zip",
+      "scope": "FL064, 2026, E-4",
+      "asOf": "2026-01-01",
+      "accessed": "2026-09-15",
+      "locator": "Verified 2026 FL064 E-4 with- and without-dependents rates. difference(1794, 1521) = 273 USD per month.",
+      "loadBearing": false,
+      "assumptions": "Both inputs are the published 2026 FL064 E-4 rates; the comparison says nothing about which rate a given student is authorized.",
+      "method": "difference(1794, 1521) = 273 USD per month.",
+      "verification": "Recomputed independently: 1794 minus 1521 equals 273 USD per month from the verified 2026 FL064 E-4 records.",
+      "independentCheck": {
+        "reviewer": "Claude Opus 5 orchestrator (in-session, separate from the research subagent)",
+        "date": "2026-09-15",
+        "finding": "Recomputed independently: 1794 minus 1521 equals 273 USD per month from the verified 2026 FL064 E-4 records."
+      },
+      "appliesTo": "E-4 students comparing the two dependency statuses",
+      "limitations": "Dependency status must be on the orders and in DEERS; a new accession with a dependent may be paid for the dependent's location rather than FL064.",
+      "calculation": {
+        "operation": "difference",
+        "inputs": [
+          1794,
+          1521
+        ],
+        "result": 273,
+        "units": "USD per month",
+        "tolerance": 0.005,
+        "inputSources": [
+          "1794: 2026 FL064 E-4 with dependents BAH (bah-2026-archive)",
+          "1521: 2026 FL064 E-4 without dependents BAH (bah-2026-archive)"
+        ]
+      }
+    }
+  ],
+  "quickAnswerClaimIds": [
+    "bah-e4-without"
+  ],
+  "answerPassages": [
+    {
+      "question": "Will I live in the dorms or draw BAH as a student at NAS Pensacola or Corry Station?",
+      "answer": "Navy Housing's NAS Pensacola page states that most personnel in E-1 through E-3, and E-4s with fewer than four years of service, are required to live in unaccompanied housing, and that E-4s may be required to live on base, space permitting. For an unaccompanied first-term student at Corry Station, the default is a dorm room and BAH-Partial. Your orders, your dependency status and the installation's occupancy decide your case, and only the UH office and your finance office can confirm it.",
+      "claimIds": [
+        "navy-uh-required"
+      ],
+      "scope": "Unaccompanied Navy students at NAS Pensacola and Corry Station; other services follow their own rule",
+      "caveat": "Your orders, your dependency status and the installation's occupancy decide your case, and only the UH office and your finance office can confirm it."
+    },
+    {
+      "question": "Do Air Force CSO students at the 479th Flying Training Group live in the dorms?",
+      "answer": "The 479th Flying Training Group welcome guide tells CSO students that if they are on unaccompanied orders they will be assigned to the Unaccompanied Officers Quarters on arrival regardless of rank or time in service, while students on accompanied orders may live on or off base and must contact the Housing office before signing a lease or closing on a house. That is command guidance dated 27 August 2026 for Undergraduate CSO Training only; it can change, and it does not describe Air Force enlisted students or the Navy dorms.",
+      "claimIds": [
+        "af-uoq-unaccompanied"
+      ],
+      "scope": "Air Force undergraduate CSO students assigned to the 479 STUS at NAS Pensacola",
+      "caveat": "That is command guidance dated 27 August 2026 for Undergraduate CSO Training only; it can change, and it does not describe Air Force enlisted students or the Navy dorms."
+    },
+    {
+      "question": "Is a Pensacola course a PCS or a TDY, and why does that change my housing?",
+      "answer": "Under the Joint Travel Regulations, a course scheduled for 139 or fewer days (less than 20 weeks) is attended in a TDY status, and a course scheduled for 140 or more days (20 weeks) is a PCS with the course location as the permanent duty station. The status decides which quarters rule and which allowance apply. Read the order type on your actual orders, because the scheduled course length sets the status and the Secretary concerned can designate exceptions.",
+      "claimIds": [
+        "jtr-140-day"
+      ],
+      "scope": "Students on training orders to any Pensacola-area school",
+      "caveat": "Read the order type on your actual orders, because the scheduled course length sets the status and the Secretary concerned can designate exceptions."
+    },
+    {
+      "question": "What is the 2026 BAH for an E-4 student at Corry Station?",
+      "answer": "For 2026, the Pensacola military housing area (FL064, which covers NAS Pensacola, Corry Station and NAS Whiting Field) pays an E-4 without dependents $1,521 a month in BAH. The 2026 FL064 with-dependents BAH for an E-4 is $1,794 a month. Check the BAH line on your LES, because a published rate is not your entitlement and it is not a home-price limit.",
+      "claimIds": [
+        "bah-e4-without",
+        "bah-e4-with"
+      ],
+      "scope": "E-4 at FL064 in calendar year 2026",
+      "caveat": "Check the BAH line on your LES, because a published rate is not your entitlement and it is not a home-price limit."
+    }
+  ],
+  "localApplications": [
+    {
+      "place": "NAS Pensacola Corry Station",
+      "decision": "Test the commute to the Corry Station gate, not the NAS Pensacola main gate, before choosing a rental.",
+      "passage": "Corry Station is a separate campus that Navy Housing describes as about 3 miles from NAS Pensacola, with its own unaccompanied housing office at 640 Roberts Ave. If your orders read IWTC Corry Station and you hold a CNA, drive from the candidate rental to Corry's gate at your class report time, not to the NAS Pensacola main gate, because a route that suits one gate does not always suit the other."
+    },
+    {
+      "place": "NAS Whiting Field (Milton)",
+      "decision": "Same FL064 rate, different housing office and a much smaller UH inventory, so plan the Milton commute separately.",
+      "passage": "Training Air Wing FIVE students report to NAS Whiting Field, which sits in the same FL064 military housing area as NAS Pensacola, so the 2026 rate does not change, but the housing office, the much smaller dorm inventory and the commute do. A Pensacola-side lease that works for a Corry classmate can add a long daily drive to Milton for a Whiting student, so test that route at your actual report time."
+    }
+  ],
+  "searchLandscape": {
+    "checkedAt": "2026-09-15",
+    "questions": [
+      {
+        "question": "training air wing five",
+        "origin": "bing-wmt-pmh 90d ending 2026-09-13 (15 impressions, position 9.7)",
+        "source": "Bing Webmaster Tools search performance export for pensacolamilitaryhousing.com, 90 days ending 2026-09-13"
+      },
+      {
+        "question": "nas pensacola base housing office for air force cso students",
+        "origin": "bing-wmt-pmh 90d ending 2026-09-13 (4 impressions, position 7)",
+        "source": "Bing Webmaster Tools search performance export for pensacolamilitaryhousing.com, 90 days ending 2026-09-13"
+      },
+      {
+        "question": "is the corry station tech school dorm at nas pensacola similar to the goodfellow air force base dorms?",
+        "origin": "bing-wmt-pmh 90d ending 2026-09-13 (4 impressions, position 5)",
+        "source": "Bing Webmaster Tools search performance export for pensacolamilitaryhousing.com, 90 days ending 2026-09-13"
+      },
+      {
+        "question": "best place to live for flight school milton florida",
+        "origin": "bing-wmt-pmh 90d ending 2026-09-13 (3 impressions, position 1)",
+        "source": "Bing Webmaster Tools search performance export for pensacolamilitaryhousing.com, 90 days ending 2026-09-13"
+      },
+      {
+        "question": "nas pensacola bah",
+        "origin": "bing-wmt-pmh 90d ending 2026-09-13 (6 impressions, position 6.2)",
+        "source": "Bing Webmaster Tools search performance export for pensacolamilitaryhousing.com, 90 days ending 2026-09-13"
+      },
+      {
+        "question": "nas corry station bah",
+        "origin": "bing-wmt-pmh 90d ending 2026-09-13 (4 impressions, position 4)",
+        "source": "Bing Webmaster Tools search performance export for pensacolamilitaryhousing.com, 90 days ending 2026-09-13"
+      },
+      {
+        "question": "Will I live in the dorms or draw BAH as a student at NAS Pensacola or Corry Station?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Is a Pensacola course a PCS or a TDY, and why does that change my housing?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What is a Certificate of Non-Availability and when does Corry Station issue one?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Do Air Force CSO students at the 479th Flying Training Group live in the dorms?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What is the 2026 BAH for an E-4 student at Corry Station?",
+        "origin": "editorial"
+      },
+      {
+        "question": "What happens to my allowance if I have dependents but arrive alone?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Can a student rent, share or buy off base, and what should be in the lease?",
+        "origin": "editorial"
+      },
+      {
+        "question": "Where do I check in for housing at NAS Pensacola, Corry Station and Whiting Field?",
+        "origin": "editorial"
+      }
+    ],
+    "results": [
+      {
+        "url": "https://pensacolamilitaryhousing.com/flight-school-housing-pensacola",
+        "title": "Flight School Housing Pensacola | NIFE to Whiting Field",
+        "reviewed": "Existing site page (public/flight-school-housing-pensacola.html). Intent: officer flight students, NIFE and Whiting, O-1 and O-2 without-dependents BAH ($1,719 and $1,842), roommate houses, SCRA and 21-day TLE. Does not cover enlisted or Air Force students, unaccompanied housing assignment, BAH-Partial or CNAs. Its 21-day CONUS TLE statement matches the JTR read this session; its $290 per day cap is attributed to Military.com and was not found in the JTR text."
+      },
+      {
+        "url": "https://pensacolamilitaryhousing.com/on-base-vs-off-base-nas-pensacola",
+        "title": "On-Base vs Off-Base: NAS Pensacola 2026",
+        "reviewed": "Existing site page. Intent: PCS families weighing privatized family housing against off-base rent, wait lists and the BAH-for-rent trade. It frames E-1 to E-4 on a short tour as 'on-base preferred' as if it were a choice; for unaccompanied E-1 to E-3 and E-4 under four years the Navy Housing page says UH is required, and the FMR treats privatized family housing as not Government quarters (BAH is paid and rent is paid to the partner), so 'forfeit' is shorthand."
+      },
+      {
+        "url": "https://pensacolamilitaryhousing.com/bases/nas-pensacola",
+        "title": "NAS Pensacola Housing: PCS, BAH and Home Planning",
+        "reviewed": "Existing base page. Intent: installation overview, FL064 rate table and community picks. No unaccompanied housing rule or student order-type treatment."
+      },
+      {
+        "url": "https://pensacolamilitaryhousing.com/bases/corry-station",
+        "title": "Corry Station Housing and 2026 BAH",
+        "reviewed": "Existing base page. Intent: Corry overview and FL064 table; states Corry is a separate reporting destination and that a course title does not establish BAH eligibility. Does not explain the E-1 to E-4 UH rule, CNAs or BAH-Partial."
+      },
+      {
+        "url": "https://pensacolamilitaryhousing.com/bases/whiting-field",
+        "title": "NAS Whiting Field Housing: PCS, BAH and Home Planning",
+        "reviewed": "Existing base page. Intent: Whiting overview and FL064 table, flight-training purchase question. No UH or student allowance treatment."
+      },
+      {
+        "url": "https://ffr.cnic.navy.mil/Navy-Housing/Housing-By-Region/Southeast/NAS-Pensacola/",
+        "title": "Navy Housing - NAS Pensacola",
+        "reviewed": "Official. Gives the E1-E3 and E4 under 4 UH rule, capacities, Corry distance and all housing office contacts, but not the CNA mechanics or allowance rules."
+      },
+      {
+        "url": "https://ffr.cnic.navy.mil/Portals/76/Navy%20Housing/Headquarters/Policy/CNIC%20M-11103.2%20CH1%20UH%20Manual%2012%20Dec%202024.pdf?ver=bxTVdmGaK76yn1-7qq-y5Q%3D%3D",
+        "title": "CNIC M-11103.2 CH-1 Unaccompanied Housing Operations Manual",
+        "reviewed": "Official. Priority categories, the 95 percent CNA trigger, the written request to the installation CO, student dormitory standards and the under-20-weeks-with-dependents sentence."
+      },
+      {
+        "url": "https://comptroller.defense.gov/Portals/45/documents/fmr/current/07a/07a_26.pdf",
+        "title": "DoD FMR Vol 7A Ch 26 Housing Allowances (May 2025)",
+        "reviewed": "Official. Quarters rule, BAH-Partial, with-dependents rule, TDY rule, accession pipeline and commander authority. No partial BAH dollar table."
+      },
+      {
+        "url": "https://media.defense.gov/2022/Jan/04/2002917147/-1/-1/0/JTR.PDF",
+        "title": "Joint Travel Regulations (09/01/2026)",
+        "reviewed": "Official. Par. 032201 (139 or fewer days TDY, 140 or more PCS), statement of non-availability, TLE 21 days CONUS, Table 5-8 dependent travel for TDY students."
+      },
+      {
+        "url": "https://www.aetc.af.mil/Portals/88/12%20FTW/Documents/479%20FTG%20Welcome%20Guide%20(CAO%2027%20August%202026).pdf?ver=sDNNgLqDoH1Dv5coOtXkaQ%3d%3d",
+        "title": "479 FTG Undergraduate CSO Welcome Guide (CAO 27 August 2026)",
+        "reviewed": "Official command guidance. UOQ assignment for unaccompanied students regardless of rank, accompanied students' on- or off-base option, housing office contact before a lease, Inn stay paid up to 21 days."
+      },
+      {
+        "url": "https://static.e-publishing.af.mil/production/1/af_a4/publication/afi32-6000/afi32-6000.pdf",
+        "title": "AFI 32-6000 Housing Management",
+        "reviewed": "Official. E-1 to E-3 and E-4 under 3 years in UH, pipeline students Priority 1, 95 percent relocation threshold. Guidance memorandum overlay unreadable."
+      },
+      {
+        "url": "https://www.netc.navy.mil/Commands/Center-for-Information-Warfare-Training/Information-Warfare-Training-Command-Corry-Station/Reporting-Information/",
+        "title": "IWTC Corry Station Reporting Information",
+        "reviewed": "Official. Quarterdeck reporting, mentor for A school students, BEQ Building 1084 for fleet returnees, Navy Gateway Inns for officer students."
+      },
+      {
+        "url": "https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/",
+        "title": "DTMO Basic Allowance for Housing",
+        "reviewed": "Official. Definition, rate protection and its three status-change exceptions, entitlement-question routing."
+      }
+    ],
+    "informationGain": "None of the reviewed pages puts the student's actual decision tree in one place: order type under JTR par. 032201, the service-specific mandatory UH grades (Navy E-4 under four years, Air Force E-4 under three years, CSO students UOQ regardless of rank), the 95 percent occupancy CNA trigger and written request route, BAH-Partial versus the $1,521 FL064 rate, the with-dependents exception, and a labeled room-share margin. The existing site pages cover officer flight students and PCS families; the official pages each hold one piece."
+  },
+  "review": {
+    "provider": "claude",
+    "model": "claude-opus-5 (orchestrator review; research subagent claude-opus-5, writer claude-fable-5.1)",
+    "checkedAt": "2026-09-15",
+    "notes": "Orchestrator re-opened FMR Vol 7A Ch 26 (May 2025) via comptroller.war.gov, JTR 09/01/2026 and the 479 FTG Welcome Guide (CAO 27 Aug 26) in the browser pane, and the Navy Housing NAS Pensacola page; recomputed 1521-700=821 and 1794-1521=273; read the full fragment for voice, scope (student orders, LES, not a loan approval), source links and the downside section. The unavailable OPNAVINST entry was dropped from sources so it is not cited. Hashes cover the exact final fragment and pack.",
+    "checks": {
+      "facts": true,
+      "calculations": true,
+      "voice": true,
+      "scope": true,
+      "sources": true,
+      "counterarguments": true
+    },
+    "contentHash": "83a929cb48588aaa189b806ae4a84c6487eb8f32dafb0255f7d137e5800e8dee",
+    "evidenceHash": "79465baaee76eb83b70bee09005e230c71a05e4667ce9a04d287eb5089bc563b"
+  }
+}

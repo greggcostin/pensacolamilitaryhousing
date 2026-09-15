@@ -1099,6 +1099,24 @@
       "creditRequired": true,
       "credit": "Infrogmation of New Orleans",
       "query": "Pensacola Florida house exterior"
+    },
+    "/images/blog/student-housing-review-20260915.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Sailor in formation, information warfare course, Naval Air Station Pensacola Corry Station.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3ASailor%20in%20formation%2C%20information%20warfare%20course%2C%20Naval%20Air%20Station%20Pensacola%20Corry%20Station.jpg",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "Navy Petty Officer 3rd Class Neo Greene",
+      "query": "Corry Station Pensacola Navy"
+    },
+    "/images/blog/tw5-review-20260915.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Aerial view of the U.S. Naval Air Station Whiting Field, Florida (USA), on 29 March 2021 (210329-N-QF733-0002).JPG",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3AAerial%20view%20of%20the%20U.S.%20Naval%20Air%20Station%20Whiting%20Field%2C%20Florida%20(USA)%2C%20on%2029%20March%202021%20(210329-N-QF733-0002).JPG",
+      "license": "Public domain",
+      "creditRequired": false,
+      "credit": "U.S. Navy photo by Julie Ziegenhorn",
+      "query": "NAS Whiting Field"
     }
   }
 }

@@ -51,7 +51,18 @@
             "bah pensacola",
             "pensacola bah",
             "bah pensacola 2026"
-          ]
+          ],
+          "property": "https://pensacolamilitaryhousing.com",
+          "sourceFile": "bing-keywords-2026-08-22.csv",
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": null,
+            "filters": null,
+            "complete": false,
+            "description": "Selected date range and filters were not saved with this export."
+          }
         },
         {
           "slug": "bah-2026-pensacola-what-can-you-afford",
@@ -170,6 +181,18 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "bah-2026-pensacola-what-can-you-afford",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
       ],
       "image": "/images/blog/bah-budget-review-20260909.jpg",
@@ -278,7 +301,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 23,
-          "position": 9.7
+          "position": 9.7,
+          "url": "/blog/best-neighborhoods-eglin-afb-families",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         },
         {
           "slug": "best-neighborhoods-eglin-afb-families",
@@ -358,6 +397,18 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "best-neighborhoods-eglin-afb-families",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
       ],
       "image": "/images/blog/eglin-bay-final-20260909.jpg",
@@ -466,7 +517,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 39,
-          "position": 11.1
+          "position": 11.1,
+          "url": "/blog/florida-homestead-exemption-military",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         },
         {
           "slug": "florida-homestead-exemption-military",
@@ -546,6 +613,18 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "florida-homestead-exemption-military",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
       ],
       "image": "/images/blog/military-homestead-review-20260909.jpg",
@@ -654,7 +733,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 19,
-          "position": 6.3
+          "position": 6.3,
+          "url": "/blog/pcs-to-pensacola-2026-complete-guide",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         },
         {
           "slug": "pcs-to-pensacola-2026-complete-guide",
@@ -734,6 +829,18 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "pcs-to-pensacola-2026-complete-guide",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
       ],
       "image": "/images/blog/pcs-aerial-review-20260909.jpg",
@@ -848,7 +955,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 41,
-          "position": 7.9
+          "position": 7.9,
+          "url": "/blog/personal-property-activity-pcs-2026",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         },
         {
           "slug": "personal-property-activity-pcs-2026",
@@ -928,6 +1051,18 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "personal-property-activity-pcs-2026",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
       ],
       "image": "/images/blog/ppa-packing-review-20260909.jpg",
@@ -1057,7 +1192,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 226,
-          "position": 22.1
+          "position": 22.1,
+          "url": "/blog/va-loan-seller-concessions-truth",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         },
         {
           "slug": "va-loan-seller-concessions-truth",
@@ -1137,6 +1288,18 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "va-loan-seller-concessions-truth",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
       ],
       "image": "/images/blog/va-concession-residence-review-20260909.jpg",
@@ -1245,7 +1408,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 15,
-          "position": 6
+          "position": 6,
+          "url": "/blog/moving-to-pensacola-2026-guide",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         },
         {
           "slug": "moving-to-pensacola-2026-guide",
@@ -1325,6 +1504,34 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "moving-to-pensacola-2026-guide",
+          "url": "/blog/moving-to-pensacola-2026-guide",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "window": {
+            "start": "2026-08-17",
+            "end": "2026-09-13",
+            "searchType": "web",
+            "dimensions": [
+              "page"
+            ],
+            "filters": {},
+            "complete": false,
+            "description": "Trailing bins from returned API rows; report completeness and row aggregation must be confirmed before trend claims."
+          },
+          "clicks": 0,
+          "impressions": 3,
+          "position": 9,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": 3,
+          "clicks90": 0,
+          "position90": 9
         }
       ],
       "image": "/images/blog/pensacola-review-20260909.jpg",
@@ -1433,7 +1640,23 @@
           "kind": "page",
           "clicks": 1,
           "impressions": 29,
-          "position": 10.5
+          "position": 10.5,
+          "url": "/blog/best-pensacola-neighborhoods-by-rank-bah",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0.034482758620689655,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         },
         {
           "slug": "best-pensacola-neighborhoods-by-rank-bah",
@@ -1513,6 +1736,18 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "best-pensacola-neighborhoods-by-rank-bah",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
       ],
       "image": "/images/blog/bah-area-review-20260909.jpg",
@@ -1621,7 +1856,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 53,
-          "position": 4.4
+          "position": 4.4,
+          "url": "/blog/living-in-gulf-breeze-pros-cons",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         },
         {
           "slug": "living-in-gulf-breeze-pros-cons",
@@ -1701,6 +1952,18 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "living-in-gulf-breeze-pros-cons",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
       ],
       "image": "/images/blog/gulf-breeze-review-20260909.jpg",
@@ -1809,7 +2072,23 @@
           "kind": "page",
           "clicks": 3,
           "impressions": 130,
-          "position": 20.2
+          "position": 20.2,
+          "url": "/blog/florida-veteran-property-tax-county-guide",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0.023076923076923078,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         },
         {
           "slug": "florida-veteran-property-tax-county-guide",
@@ -1889,6 +2168,34 @@
           "impressions90": 4,
           "clicks90": 0,
           "position90": 6
+        },
+        {
+          "slug": "florida-veteran-property-tax-county-guide",
+          "url": "/blog/florida-veteran-property-tax-county-guide",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "window": {
+            "start": "2026-08-17",
+            "end": "2026-09-13",
+            "searchType": "web",
+            "dimensions": [
+              "page"
+            ],
+            "filters": {},
+            "complete": false,
+            "description": "Trailing bins from returned API rows; report completeness and row aggregation must be confirmed before trend claims."
+          },
+          "clicks": 0,
+          "impressions": 6,
+          "position": 5,
+          "impressionsPrior28": null,
+          "clicksPrior28": null,
+          "impressions90": 6,
+          "clicks90": 0,
+          "position90": 5
         }
       ],
       "image": "/images/blog/veteran-tax-review-20260909.jpg",
@@ -1990,7 +2297,23 @@
           "kind": "page",
           "clicks": 0,
           "impressions": 13,
-          "position": 7
+          "position": 7,
+          "url": "/blog/va-loan-assumption-buyers-guide",
+          "sourceFile": "gsc-pages-2026-09-04.csv",
+          "property": "https://pensacolamilitaryhousing.com",
+          "status": "observed",
+          "ctr": 0,
+          "window": {
+            "start": null,
+            "end": null,
+            "searchType": null,
+            "dimensions": [
+              "page"
+            ],
+            "filters": null,
+            "complete": false,
+            "description": "Existing audit describes a three-month report. Exact selected dates, filters and coverage were not retained; do not infer them from the filename."
+          }
         },
         {
           "slug": "va-loan-assumption-buyers-guide",
@@ -2070,6 +2393,18 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "va-loan-assumption-buyers-guide",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
       ],
       "image": "/images/blog/va-assumption-review-20260909.jpg",
@@ -2209,6 +2544,18 @@
           "impressions90": null,
           "clicks90": null,
           "position90": null
+        },
+        {
+          "slug": "moving-to-navarre-2026-guide",
+          "property": "https://pensacolamilitaryhousing.com",
+          "source": "bing-api",
+          "date": "2026-09-13",
+          "kind": "page",
+          "status": "not-observed",
+          "clicks": null,
+          "impressions": null,
+          "position": null,
+          "note": "no Bing rows for this URL; coverage unknown"
         }
       ],
       "image": "/images/blog/navarre-review-20260909.jpg",
@@ -2256,6 +2603,20 @@
           "performanceChange": "not measured"
         }
       ]
+    },
+    "nas-pensacola-student-housing-dorms-bah-off-base": {
+      "title": "NAS Pensacola Student Housing: Dorms, BAH and Living Off Base",
+      "category": "Training Housing",
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "targetKeywords": [
+        "nas pensacola student housing",
+        "corry station dorms",
+        "training air wing five housing",
+        "cso students nas pensacola housing"
+      ],
+      "url": "https://pensacolamilitaryhousing.com/blog/nas-pensacola-student-housing-dorms-bah-off-base",
+      "metrics": []
     }
   },
   "runs": [
@@ -2525,6 +2886,70 @@
       "deploymentId": "6982ec12-9640-4a25-9ed2-55fbed9837fc",
       "report": "docs/blog-catalog-refresh-2026-09-09.md",
       "indexingReceipt": "content/measure/submissions/2026-09-09T07-45-33-349Z-pmh-1976f51a.json",
+      "performanceChange": "not measured"
+    },
+    {
+      "id": "blog-engine-weekly-2026-09-15",
+      "date": "2026-09-15",
+      "type": "weekly loop (scheduled task blog-engine-weekly)",
+      "status": "staged-for-approval",
+      "provider": "claude",
+      "lease": "764501a3-c556-4ac1-abb5-b0a108a26f91",
+      "models": {
+        "orchestrate": "claude-opus-5 (Claude Code, 1M context)",
+        "research": "claude-opus-5 subagent",
+        "write": "claude-fable-5.1 subagent",
+        "review": "claude-opus-5 orchestrator (independent re-open of FMR Vol 7A Ch 26, JTR 09/01/2026, Navy Housing NAS Pensacola, 479 FTG Welcome Guide CAO 27 Aug 2026; recomputed both calculations)"
+      },
+      "action": "new article",
+      "slug": "nas-pensacola-student-housing-dorms-bah-off-base",
+      "title": "NAS Pensacola Student Housing: Dorms, BAH and Living Off Base",
+      "pillar": "training-housing",
+      "selectionReason": "No verified consequential event (2026 BAH release is December 2025 news; FOMC decision is 2026-09-16, unchecked); military refresh queue empty; selected the queue item with dated observed demand (Bing WMT 90d ending 2026-09-13: training air wing five 15 imp pos 9.7, CSO student housing office 4 imp, Corry tech school dorm 4 imp) and the only pillar with zero recent coverage. Dedup flagged five overlaps; distinct intent documented in topic-queue and searchLandscape.",
+      "sources": {
+        "bing": "live API, 70 pages, 374 queries, data through 2026-09-13; 12 per-post snapshots added; per-post rows mostly null (DATA-UNAVAILABLE / LOW-SAMPLE); site 28d 874 imp / 15 clicks",
+        "gsc": "no fresh export this run; saved exports only",
+        "clarity": "not queried this run (MCP present, article-level data unavailable for an unpublished page)",
+        "semrush": "not queried this run (API units previously exhausted; not retried)",
+        "bahSource": "verify-bah-source.mjs ok, 96 values, archive sha256 5446fed8 (retrieved 2026-09-06)"
+      },
+      "gates": {
+        "scorePost": 95,
+        "formatting": 93,
+        "auditMilitary": "0 findings / 371 pages",
+        "auditEntity": "clean",
+        "auditLinks": "0 broken / 0 orphans",
+        "emDashes": "clean",
+        "checkBlogSources": "ok",
+        "npmBuild": "passed (Pagefind indexed 376 pages)",
+        "warnings": [
+          "one 90-word paragraph (the CSO answer passage; claim text plus required caveat)"
+        ]
+      },
+      "evidence": {
+        "researchFile": "content/blog/research/nas-pensacola-student-housing-dorms-bah-off-base.json",
+        "sources": 15,
+        "claims": 28,
+        "loadBearingIndependentlyVerified": 6,
+        "unavailable": [
+          "OPNAVINST 11103.1C (not on DONI; CNIC M-11103.2 CH-1 used)",
+          "DAFMAN 32-6003 (404; AFI 32-6000 used)",
+          "2026 BAH-Partial dollar table (not printed)"
+        ]
+      },
+      "images": {
+        "hero": "/images/blog/student-housing-review-20260915.jpg (Wikimedia Commons, US Navy, public domain; query 1 of 4, candidate 2 of 3 viewed)",
+        "inline": "/images/blog/tw5-review-20260915.jpg (Wikimedia Commons, US Navy aerial 2021, public domain; query 4, candidate 3 of 3 viewed)",
+        "rejected": "two query variants returned nothing; 1982/2002/2009 ceremony photos rejected on view"
+      },
+      "inboundLinks": [
+        "flight-school-housing-pensacola",
+        "bases/corry-station",
+        "on-base-vs-off-base-corry-station"
+      ],
+      "canonicalCorrections": "none applied (canonFixes=staged). Report-only flags: on-base-vs-off-base-nas-pensacola frames junior-enlisted UH as a preference and privatized family housing as BAH forfeiture; flight-school-housing-pensacola cites a $290/day TLE cap not present in JTR 050601 (locality per diem rate).",
+      "branch": "blog/nas-pensacola-student-housing-dorms-bah-off-base-20260915",
+      "publication": "not deployed; autoPublish=false",
       "performanceChange": "not measured"
     }
   ],

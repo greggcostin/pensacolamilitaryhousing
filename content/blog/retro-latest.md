@@ -1,21 +1,28 @@
-# Blog retro, 2026-09-14
+# Blog retro, 2026-09-15
 
-## greggcostin.com
+## pensacolamilitaryhousing.com
 
 | Post | Age | Score | Inbound | Google export imp/clk/pos | Bing 28d imp/clk/pos | Flags | Priority |
 |---|---|---|---|---|---|---|---|
-| closing-costs-florida-buyers | 14 | 100 A | 9 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
-| fed-rate-hike-what-it-means | 13 | 100 A | 4 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
-| florida-insurance-relief-2026 | 11 | 100 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
-| home-appraisals-explained | 2 | 96 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
-| property-taxes-escambia-santa-rosa | 18 | 98 A | 5 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
-| what-moves-mortgage-rates | 21 | 100 A | 6 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
+| bah-2026-pensacola-what-can-you-afford | 179 | 95 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE | 0 |
+| best-neighborhoods-eglin-afb-families | 171 | 92 A | 3 | 23/0/9.7 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE | 0 |
+| best-pensacola-neighborhoods-by-rank-bah | 34 | 99 A | 3 | 29/1/10.5 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW | 0 |
+| florida-homestead-exemption-military | 163 | 98 A | 3 | 39/0/11.1 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE | 0 |
+| florida-veteran-property-tax-county-guide | 24 | 98 A | 3 | 130/3/20.2 | 6/0/5 | LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW | 0 |
+| living-in-gulf-breeze-pros-cons | 33 | 94 A | 3 | 53/0/4.4 | null/null/- | EXPERIMENT-RUNNING LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW | 0 |
+| moving-to-navarre-2026-guide | 14 | 96 A | 3 | null/null/- | null/null/- | DATA-UNAVAILABLE NEW | 0 |
+| moving-to-pensacola-2026-guide | 34 | 95 A | 3 | 15/0/6 | 3/0/9 | LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW | 0 |
+| nas-pensacola-student-housing-dorms-bah-off-base | 0 | 95 A | 3 | none | none | DATA-UNAVAILABLE NEW | 0 |
+| pcs-to-pensacola-2026-complete-guide | 153 | 99 A | 3 | 19/0/6.3 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE | 0 |
+| personal-property-activity-pcs-2026 | 97 | 94 A | 3 | 41/0/7.9 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE | 0 |
+| va-loan-assumption-buyers-guide | 23 | 95 A | 3 | 13/0/7 | null/null/- | LOW-SAMPLE MEASUREMENT-INCOMPLETE NEW | 0 |
+| va-loan-seller-concessions-truth | 158 | 95 A | 3 | 226/0/22.1 | null/null/- | MEASUREMENT-INCOMPLETE | 0 |
 
-Site (Bing, data through 2026-09-12): 43 impressions / 2 clicks in the trailing 28-day bin; unrecorded reporting days returned. Completeness is not established. Top pages by 28d impressions: /schools/pensacola-christian-academy (20, pos 7); / (5, pos 2).
+Site (Bing, data through 2026-09-13): 874 impressions / 15 clicks in the trailing 28-day bin; unrecorded reporting days returned. Completeness is not established. Top pages by 28d impressions: /va-disability-property-tax-florida (201, pos 5.9); /bah-rates (20, pos 6.7); / (29, pos 4.2); /bases/saufley-field (25, pos 5.7); /bases/whiting-field (1, pos 8); /bases/hurlburt-field (20, pos 7).
 
-Striking-distance queries (pos 4-20, 90d): "pensacola christian academy" (10 imp, pos 8).
+Striking-distance queries (pos 4-20, 90d): "training air wing five" (15 imp, pos 9.7); "buying a home near nas pensacola" (8 imp, pos 5.4); "nas pensacola bah" (6 imp, pos 6.2); "military friendly realtor pensacola fl" (6 imp, pos 5); "if i buy a home in florida and are 100% va p&t disabled do i need to pay property tax? what about if it is my part time home and i live in nc half of the year?" (6 imp, pos 8); "bah hurlburt field" (5 imp, pos 8); "pensacola bah" (5 imp, pos 10); "santa rosa business taxes exemption for veterans" (5 imp, pos 7); "nas pensacola realtor" (5 imp, pos 4); "hurlburt field bah" (4 imp, pos 9); "nas pensacola base housing office for air force cso students" (4 imp, pos 7); "property for sale near nas pensacola" (4 imp, pos 4).
 
-Uncovered demand (queries earning impressions with no matching target keyword): "pensacola christian academy" (10); "pencicola christian school" (3).
+Uncovered demand (queries earning impressions with no matching target keyword): "training air wing five" (15); "if i buy a home in florida and are 100% va p&t disabled do i need to pay property tax? what about if it is my part time home and i live in nc half of the year?" (6); "bah hurlburt field" (5); "hurlburt field bah" (4); "nas pensacola base housing office for air force cso students" (4); "is the corry station tech school dorm at nas pensacola similar to the goodfellow air force base dorms?" (4); "florida escambia county tax exemptions for veterans" (4); "are 100 disabled veterans exempt from property taxes in florida" (4); "pensacola florida elementary school military kids going to school not in there zoned" (4); "navy point elementary" (4); "campus map radford m locklin technical college" (4); "do condos in pensacola florida off of veterans any special" (4).
 
 ## Learning status
 

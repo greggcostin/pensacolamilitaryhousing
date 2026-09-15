@@ -1,6 +1,6 @@
 # Sitewide formatting / scannability audit
 
-Generated 2026-09-14 by scripts/analyze-formatting.mjs.
+Generated 2026-09-15 by scripts/analyze-formatting.mjs.
 Score 100 = highly scannable. Penalties: wall-of-text paragraphs (>85 words),
 sparse headings (>220 words/section), sparse scan aids (>280 words per
 list/table/facts box/figure/FAQ). Rows are sorted worst score first, so the
@@ -12,7 +12,7 @@ where data hides in prose.
 |---|---|---|---|---|---|
 | /photo-credits | 65 | 1060 | 0 (max 53w) | 37 (29w/ea) | 1 (1060w/ea) |
 | /privacy | 65 | 1252 | 0 (max 75w) | 19 (66w/ea) | 1 (1252w/ea) |
-| gc:/photo-credits | 65 | 1088 | 0 (max 53w) | 44 (25w/ea) | 1 (1088w/ea) |
+| gc:/photo-credits | 65 | 1089 | 0 (max 53w) | 44 (25w/ea) | 1 (1089w/ea) |
 | gc:/privacy | 65 | 1099 | 0 (max 75w) | 13 (85w/ea) | 1 (1099w/ea) |
 | gc:/team | 68 | 1287 | 1 (max 233w) | 9 (143w/ea) | 2 (644w/ea) |
 | gc:/schools | 81 | 10273 | 0 (max 74w) | 34 (302w/ea) | 23 (447w/ea) |
@@ -153,7 +153,7 @@ where data hides in prose.
 | gc:/blog/fed-rate-hike-what-it-means | 100 | 2129 | 0 (max 58w) | 12 (177w/ea) | 17 (125w/ea) |
 | gc:/blog/florida-insurance-relief-2026 | 100 | 1698 | 0 (max 57w) | 10 (170w/ea) | 15 (113w/ea) |
 | gc:/blog/property-taxes-escambia-santa-rosa | 100 | 1768 | 0 (max 55w) | 10 (177w/ea) | 15 (118w/ea) |
-| gc:/blog/what-moves-mortgage-rates | 100 | 2497 | 0 (max 50w) | 13 (192w/ea) | 19 (131w/ea) |
+| gc:/blog/what-moves-mortgage-rates | 100 | 2934 | 0 (max 79w) | 13 (226w/ea) | 20 (147w/ea) |
 
 ## Reading the numbers
 - **Wall paragraphs**: paragraphs over 85 words; "max" is the single longest.

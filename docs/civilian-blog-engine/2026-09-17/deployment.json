@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-09-17T10:36:36.229Z",
+  "directory": "artifacts/civilian-blog-engine/2026-09-17/source/docs/civilian-blog-engine/2026-09-17",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-17\\release",
+  "candidateFingerprint": "5c129e3f4cd15612c337e0c0ef2e0c300356e1cd859126eb8aff579cf47b6124",
+  "sites": [
+    {
+      "site": "gc",
+      "project": "greggcostin",
+      "before": "b8e49fe1-bf6e-4b3b-a236-5250e4fe1009",
+      "status": "provider-success",
+      "exitCode": 0,
+      "after": "6ad4e685-f127-4b15-a016-e7859dae306a",
+      "url": "https://6ad4e685.greggcostin.pages.dev",
+      "providerStage": "success",
+      "checkedAt": "2026-09-17T10:36:49.084Z"
+    }
+  ],
+  "status": "provider-success",
+  "finishedAt": "2026-09-17T10:36:49.087Z"
+}

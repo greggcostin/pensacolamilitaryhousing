@@ -313,7 +313,7 @@
           {
             "site": "gc",
             "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
+            "title": "Fed Rate Hike to 3.75%-4%: What It Means for Gulf Coast Buyers",
             "hasFragment": true,
             "coverage": 0.3,
             "exact": 0,
@@ -343,7 +343,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.98,
+      "priority": 49.97,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -422,7 +422,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.94,
+      "priority": 49.93,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -503,7 +503,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.93,
+      "priority": 49.92,
       "runnable": false,
       "reasons": [
         "requires a verified event",
@@ -559,7 +559,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.91,
+      "priority": 49.9,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -645,7 +645,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.9,
+      "priority": 49.89,
       "runnable": false,
       "reasons": [
         "not runnable before 2027-01-01"
@@ -733,7 +733,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.89,
+      "priority": 49.88,
       "runnable": false,
       "reasons": [
         "requires a verified event"
@@ -821,7 +821,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.88,
+      "priority": 49.87,
       "runnable": false,
       "reasons": [
         "editorial/source review required"
@@ -898,7 +898,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.86,
+      "priority": 49.85,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -925,17 +925,6 @@
             "score": 1.3333333333333333,
             "verdict": "ok",
             "file": "civilian-site/resources/seller-net-proceeds.html"
-          },
-          {
-            "site": "gc",
-            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
-            "hasFragment": true,
-            "coverage": 0.27,
-            "exact": 0,
-            "score": 1.0666666666666667,
-            "verdict": "ok",
-            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
           },
           {
             "site": "gc",
@@ -976,7 +965,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.85,
+      "priority": 49.84,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1062,7 +1051,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.84,
+      "priority": 49.83,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1092,17 +1081,6 @@
           },
           {
             "site": "gc",
-            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
-            "hasFragment": true,
-            "coverage": 0.28,
-            "exact": 0,
-            "score": 1.1111111111111112,
-            "verdict": "ok",
-            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
-          },
-          {
-            "site": "gc",
             "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
             "title": "What Moves Mortgage Rates? A Gulf Coast Buyer's Guide",
             "hasFragment": true,
@@ -1121,6 +1099,17 @@
             "score": 0.8888888888888888,
             "verdict": "ok",
             "file": "public/rent-vs-buy-military-pensacola.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+            "title": "Fed Rate Hike to 3.75%-4%: What It Means for Gulf Coast Buyers",
+            "hasFragment": true,
+            "coverage": 0.22,
+            "exact": 0,
+            "score": 0.8888888888888888,
+            "verdict": "ok",
+            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
           }
         ]
       }
@@ -1150,7 +1139,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.83,
+      "priority": 49.82,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1227,7 +1216,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.82,
+      "priority": 49.81,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1313,7 +1302,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.81,
+      "priority": 49.8,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1401,7 +1390,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.8,
+      "priority": 49.79,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1486,7 +1475,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.79,
+      "priority": 49.78,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1565,7 +1554,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 1,
-      "priority": 39.96,
+      "priority": 39.95,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1616,7 +1605,7 @@
           {
             "site": "gc",
             "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
+            "title": "Fed Rate Hike to 3.75%-4%: What It Means for Gulf Coast Buyers",
             "hasFragment": true,
             "coverage": 0.25,
             "exact": 0,
@@ -1644,7 +1633,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 1,
-      "priority": 39.95,
+      "priority": 39.94,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1730,7 +1719,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 1,
-      "priority": 39.87,
+      "priority": 39.86,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1792,6 +1781,53 @@
       }
     },
     {
+      "slug": "mortgage-guide-policy-range-refresh",
+      "topic": "Refresh the mortgage-rate guide's federal funds section and three-benchmark table after the September 16, 2026 FOMC increase",
+      "type": "refresh",
+      "pillar": "financing-macro",
+      "audience": [
+        "buyer",
+        "homeowner"
+      ],
+      "targetKeywords": [
+        "what moves mortgage rates",
+        "federal funds rate vs mortgage rates"
+      ],
+      "refreshUrl": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "decision": "Replace the July 29 hold (3.50% to 3.75%) with the September 16 raise (3.75% to 4.00%) in the section, table and quick answer; re-verify PMMS (September 17 and 24 releases) and the Treasury benchmark; keep the existing canonical URL.",
+      "evidenceStatus": "Perishable EXPIRED: the guide's fed-target and meeting claims expired 2026-09-16 and the live page still describes the decision as pending. Verified event, not inferred demand.",
+      "priority": 30,
+      "priorityReason": "EXPIRED perishable on a live page (refresh-queue rule: 60+ outranks a new topic)",
+      "requestedBy": "civilian-blog-engine-2026-09-17",
+      "requestedAt": "2026-09-17",
+      "notBefore": "2026-09-21",
+      "status": "queued",
+      "ownerRequested": false,
+      "observedDemand": false,
+      "coverageCount": 2,
+      "runnable": false,
+      "reasons": [
+        "not runnable before 2026-09-21"
+      ],
+      "ownership": {
+        "slug": "mortgage-guide-policy-range-refresh",
+        "verdict": "clear",
+        "hits": [
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+            "title": "Fed Rate Hike to 3.75%-4%: What It Means for Gulf Coast Buyers",
+            "hasFragment": true,
+            "coverage": 0.4,
+            "exact": 0,
+            "score": 1.6,
+            "verdict": "ok",
+            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
+          }
+        ]
+      }
+    },
+    {
       "slug": "refinance-break-even-math",
       "topic": "When refinancing actually makes sense: the break-even math, costs people forget, and the reset-clock problem",
       "type": "evergreen",
@@ -1810,7 +1846,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 2,
-      "priority": 29.97,
+      "priority": 29.96,
       "runnable": true,
       "reasons": [],
       "ownership": {
@@ -1888,10 +1924,21 @@
       "refreshUrl": "https://greggcostin.com/blog/what-moves-mortgage-rates",
       "decision": "Refresh the existing rate explainer only when a verified release changes a reader decision.",
       "evidenceStatus": "Editorial proposal; no observed demand claimed.",
+      "executions": [
+        {
+          "runId": "civilian-blog-engine-2026-09-17",
+          "date": "2026-09-17",
+          "executedAs": "refresh of https://greggcostin.com/blog/fed-rate-hike-what-it-means (the intent owner for the Fed decision) rather than the mortgage guide named as refreshUrl; the template stays reusable",
+          "event": "FOMC raised the target range to 3.75% to 4.00% on September 16, 2026 (12 to 0)",
+          "status": "completed",
+          "completedAt": "2026-09-17",
+          "publishedDeployment": "6ad4e685-f127-4b15-a016-e7859dae306a"
+        }
+      ],
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 2,
-      "priority": 29.92,
+      "priority": 29.91,
       "runnable": false,
       "reasons": [
         "requires a verified event"
@@ -1901,17 +1948,6 @@
         "verdict": "clear",
         "hits": [
           {
-            "site": "gc",
-            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
-            "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
-            "hasFragment": true,
-            "coverage": 0.38,
-            "exact": 0,
-            "score": 1.5238095238095237,
-            "verdict": "ok",
-            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
-          },
-          {
             "site": "pmh",
             "url": "https://pensacolamilitaryhousing.com/faq",
             "title": "Pensacola Military PCS FAQ | BAH, VA Loan, NAS Pensacola",
@@ -1920,6 +1956,17 @@
             "score": 1.3333333333333333,
             "verdict": "ok",
             "file": "public/faq.html"
+          },
+          {
+            "site": "gc",
+            "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+            "title": "Fed Rate Hike to 3.75%-4%: What It Means for Gulf Coast Buyers",
+            "hasFragment": true,
+            "coverage": 0.33,
+            "exact": 0,
+            "score": 1.3333333333333333,
+            "verdict": "ok",
+            "file": "content/civilian-blog/fed-rate-hike-what-it-means.fragment.html"
           },
           {
             "site": "pmh",
@@ -1976,7 +2023,7 @@
       "ownerRequested": false,
       "observedDemand": false,
       "coverageCount": 0,
-      "priority": 49.98,
+      "priority": 49.97,
       "runnable": true,
       "reasons": [],
       "ownership": {

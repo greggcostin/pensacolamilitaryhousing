@@ -460,6 +460,43 @@
    ],
    "rule": "In an unattended scheduled run, the Browser pane cannot start launch.json servers and screenshots time out while the app window is hidden; serve the sealed candidate with a plain static file server, verify with DOM reads, and record pixel-level mobile layout as unverified when document.visibilityState is hidden and innerWidth reads 0.",
    "evidence": "September 14 civilian run: preview_start refused (unattended session), screenshot timed out after 5s, desktop DOM checks succeeded (innerWidth 1280, avif hero 760x543, three tables inside the 760px column, quick answer first in main), but after the mobile resize the tab reported visibilityState hidden with innerWidth 0, so only srcset selection (480 variant), FAQ toggling and overflow-x:auto wrappers could be confirmed."
+  },
+  {
+   "id": "L035",
+   "date": "2026-09-17",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "measure",
+    "ship",
+    "report"
+   ],
+   "rule": "An accepted IndexNow or Bing URL submission is a notification, not a crawl. When URL Inspection shows a page Discovered but not crawled for weeks while its Live URL test passes, more submissions will not change the state; record it as a crawl-selection gap for Gregg (manual Request indexing in Bing Webmaster Tools is a write action the engine does not take) and keep submitting only exact changed URLs once per publication.",
+   "evidence": "September 17 civilian run: all three inspected greggcostin.com blog URLs (Fed article discovered September 4, mortgage guide August 26, appraisal article September 12) still read Discovered but not crawled, URL cannot appear on Bing, after IndexNow and Bing submissions were accepted on September 12 and September 14 (receipts retained). The Live URL test on the Fed article the same morning returned URL can be indexed by Bing, no SEO/GEO issues, 2 markup types."
+  },
+  {
+   "id": "L036",
+   "date": "2026-09-17",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "decide",
+    "retro"
+   ],
+   "rule": "When a scheduled event (FOMC decision, BAH release, rate publication) is the review date on more than one live article, the run after the event refreshes one article and must treat the others as the next work item by reading blog-weekly-plan.mjs next (verify-expired-facts) and the retro EXPIRED flags, not the planner ranking alone: the retro scores an expired perishable at 50 (below the 60 refresh threshold) and the planner recomputes topic-queue priority from coverage (a hand-set priority field is ignored), so a stale live figure otherwise loses to a new editorial topic at the next run.",
+   "evidence": "September 17 civilian run: the Fed article and the mortgage guide both carried fed-target and meeting perishables expiring September 16. After refreshing the Fed article, blog-retro.mjs ranked the mortgage guide at priority 50 with flags EXPIRED and LOW-SCORE (four expired perishables, score 75); blog-weekly-plan.mjs next = verify-expired-facts for that URL; the queued topic item mortgage-guide-policy-range-refresh (priority field 70, notBefore 2026-09-21) was recomputed by the planner to 30, below coastal-alabama-vs-panhandle at 49.97."
+  },
+  {
+   "id": "L037",
+   "date": "2026-09-17",
+   "type": "operational",
+   "status": "active",
+   "appliesTo": [
+    "measure",
+    "orchestrate"
+   ],
+   "rule": "In an unattended run, a Clarity dashboard CSV export from the signed-in Chrome can stay as a Chrome .tmp file in Downloads (the renderer froze on the screenshot after the click); the .tmp already holds the complete CSV, so retain it by copying the .tmp into the run analytics folder under the dated name and verify the project name and date-range header lines inside it.",
+   "evidence": "September 17 civilian run: after clicking Download CSV on project ydd39cyp64 (window 09/09/2026 08:00 PM to 09/16/2026 07:59 PM local), Downloads held only 2e075c6e-9bb4-4dbd-b8e8-8dfe0e698a32.tmp (2,559 bytes) whose first lines read Project name greggcostin.com and the exact date range; it was copied to docs/civilian-blog-engine/2026-09-17/analytics/clarity-gc-2026-09-10_2026-09-16.csv and contains the sessions, users, pages, referrers and bot breakdown."
   }
  ]
 }

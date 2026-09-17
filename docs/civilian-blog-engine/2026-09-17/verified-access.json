@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-09-17T10:20:00Z",
+  "runId": "civilian-blog-engine-2026-09-17",
+  "provider": "claude",
+  "model": "claude-opus-5[1m]",
+  "bingApi": {
+    "command": "node --env-file-if-exists=.env.local scripts/blog-measure.mjs --site gc",
+    "result": "2 page rows (/schools/pensacola-christian-academy 20 imp, / 5 imp 2 clicks), 6 query rows, 22 traffic days, data through 2026-09-15, site trailing 28d 64 impressions / 2 clicks",
+    "blogRows": "none for any /blog/* URL; unknown page performance, not zero and not exclusion proof"
+  },
+  "bingUrlInspectionBrowser": {
+    "method": "Signed-in Bing Webmaster Tools URL Inspection in Gregg's Chrome (read-only; Request indexing NOT clicked)",
+    "results": [
+      {
+        "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+        "status": "Discovered but not crawled; URL cannot appear on Bing; discovered 26 Aug 2026"
+      },
+      {
+        "url": "https://greggcostin.com/blog/home-appraisals-explained",
+        "status": "Discovered but not crawled; discovered 12 Sept 2026"
+      },
+      {
+        "url": "https://greggcostin.com/blog/fed-rate-hike-what-it-means",
+        "status": "Discovered but not crawled; discovered 04 Sept 2026",
+        "liveUrlTest": "Tested 2026-09-17 06:17 local: URL can be indexed by Bing; No SEO/GEO issues found; 2 Markup types found"
+      }
+    ],
+    "inspectedAt": "2026-09-17 ~10:15-10:20 UTC",
+    "interpretation": "Pages are fetchable and indexable; Bing has not crawled them despite accepted IndexNow/Bing submissions on September 12 and 14. Not a reason to resubmit."
+  },
+  "clarity": {
+    "connector": "Microsoft Clarity MCP query filtered to greggcostin.com returned an empty data array; an unfiltered query returned https://pensacolamilitaryhousing.com/ (military project), so the connector is bound to the military project and cannot select ydd39cyp64",
+    "browser": "Project ydd39cyp64 (greggcostin.com) opened in the signed-in Chrome; custom window 2026-09-10 00:00 UTC to 2026-09-16 23:59 UTC (displayed 09/09/2026 08:00 PM - 09/16/2026 07:59 PM local); native CSV exported (recovered from Chrome pending .tmp, header lines verified) and retained",
+    "file": "docs/civilian-blog-engine/2026-09-17/analytics/clarity-gc-2026-09-10_2026-09-16.csv",
+    "observed": "105 sessions (30 bot sessions excluded), 64 unique users, 2.56 pages/session, 32.61% average scroll depth; top pages / 80, /flood-zone-map 14, /schools 10, /team 10, /mortgage-calculators 9, /reviews 8, /buy 7, /contact 7, /search 6, /sell 6, /resources/coastal-ownership-costs 5, /neighborhoods 4; no /blog/* URL in the top-12 page list; referrers greggcostin.com 37, facebook.com 18, lm.facebook.com 14, greggc.levinrinkerealty.com 4, pensacolamilitaryhousing.com 2",
+    "limits": "Site cohort only; per-article engagement not queried; session aggregates do not describe content effectiveness"
+  },
+  "gsc": {
+    "retained": "docs/civilian-blog-engine/2026-09-12/analytics/gsc-gc-2026-09-12.xlsx (property https://greggcostin.com/, web, selected 2026-08-14 to 2026-09-10, chart rows 2026-08-23 to 2026-09-10, no query rows, article absent)",
+    "thisRun": "No new export requested; the retained workbook is five days old. Article performance in Google remains unknown."
+  },
+  "qualifiedInquiries": "unavailable (content/measure/article-outcomes.json has no window for this article)"
+}

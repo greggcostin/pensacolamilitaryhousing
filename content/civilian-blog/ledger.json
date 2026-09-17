@@ -1573,7 +1573,7 @@
      "dateModified": "2026-09-17",
      "scoreAfter": 100,
      "formatting": 99,
-     "publication": "sealed candidate",
+     "publication": "published 2026-09-17T10:36:49.087Z deployment 6ad4e685-f127-4b15-a016-e7859dae306a",
      "performanceChange": "not measured",
      "summary": "Rewrote the opening and first three sections around the actual September 16 decision (3.75% to 4.00%, 12 to 0) with a July-versus-September decision table, the SEP median and Figure 2 distribution, the 10-year Treasury on September 15 and 16, the PMMS window relative to the vote and a benchmark list; updated title, description, h1, lead, quick answer, takeaways, share hook, perishables and three FAQs; new licensed image; all sources reopened."
     }
@@ -2558,13 +2558,15 @@
    "hypothesis": {
     "change": "Post-decision refresh: actual September 16 decision and vote beside the July hold, projection distribution read from the SEP, one-day Treasury observation, PMMS window explanation, post-decision recheck workflow",
     "outcome": "Readers arriving on Fed rate hike questions after the decision reach the buyer or contact path with the decision, the projections and their own lock terms separated; measured as accepted inquiries from this URL",
-    "deploymentStatus": "prepared",
-    "deploymentDate": null,
+    "deploymentStatus": "published",
+    "deploymentDate": "2026-09-17T10:36:49.087Z",
     "reviewWindow": "At least 28 complete days after deployment, same property/host filters, comparable cohorts; inconclusive if samples are inadequate."
    },
    "performanceChange": "not measured",
-   "deployed": false,
-   "status": "sealed-candidate-awaiting-deployment"
+   "deployed": true,
+   "status": "published-and-live-verified",
+   "deployedAt": "2026-09-17T10:36:49.087Z",
+   "deploymentId": "6ad4e685-f127-4b15-a016-e7859dae306a"
   }
  ]
 }

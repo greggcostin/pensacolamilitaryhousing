@@ -230,7 +230,9 @@
      "date": "2026-09-17",
      "executedAs": "refresh of https://greggcostin.com/blog/fed-rate-hike-what-it-means (the intent owner for the Fed decision) rather than the mortgage guide named as refreshUrl; the template stays reusable",
      "event": "FOMC raised the target range to 3.75% to 4.00% on September 16, 2026 (12 to 0)",
-     "status": "in-progress"
+     "status": "completed",
+     "completedAt": "2026-09-17",
+     "publishedDeployment": "6ad4e685-f127-4b15-a016-e7859dae306a"
     }
    ]
   },

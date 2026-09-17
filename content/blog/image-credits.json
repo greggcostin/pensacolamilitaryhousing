@@ -1099,6 +1099,15 @@
       "creditRequired": true,
       "credit": "Infrogmation of New Orleans",
       "query": "Pensacola Florida house exterior"
+    },
+    "civilian-site/images/fed-hike-20260917.jpg": {
+      "source": "Wikimedia Commons",
+      "title": "Pensacola NHPD house05.jpg",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house05.jpg",
+      "license": "CC BY-SA 3.0",
+      "creditRequired": true,
+      "credit": "Ebyabe",
+      "query": "Pensacola Florida historic district house"
     }
   }
 }

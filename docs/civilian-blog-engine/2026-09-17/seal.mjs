@@ -1,0 +1,23 @@
+// Seal the reviewed candidate: run every delivery gate on the complete production-based preview and record the fingerprint.
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {spawnSync,execFileSync} from 'node:child_process';
+import {fingerprint,inventory,save} from './source/scripts/isolated-release-lib.mjs';
+import {loadFragment} from './source/scripts/civilian-blog-factory.mjs';
+import {assertBlogRendered} from './source/scripts/blog-render-gate.mjs';
+const slug='fed-rate-hike-what-it-means',photo='fed-hike-20260917';
+const base=import.meta.dirname,source=path.join(base,'source'),report=path.join(source,'docs/civilian-blog-engine/2026-09-17'),preview=path.join(base,'preview'),candidate=path.join(base,'release');
+const before=JSON.parse(fs.readFileSync(path.join(report,'production-before.json'),'utf8'));assert(before.ok);
+assert(!fs.existsSync(candidate),'Candidate already exists; inspect it before any reuse');fs.mkdirSync(candidate,{recursive:true});fs.cpSync(preview,path.join(candidate,'gc'),{recursive:true,errorOnExist:true,force:false});
+const c=inventory({ok:true,sites:before.sites},candidate);c.releaseMessage='Publish owner-requested refresh of the mortgage-rate guide; civilian autopilot (September 14, 2026 scheduled run)';
+const own=new Set(['blog/'+slug+'.html','blog.html','og/blog-'+slug+'.png','og/blog.png','sitemap.xml','llms.txt','llms-full.txt','photo-credits.html','data/photography-credits.json','assets/photo-credits.json']);
+const allow=rel=>rel.startsWith('pagefind/')||rel.startsWith('images/'+photo)||rel.startsWith('assets/styles/')||own.has(rel);
+assert(c.changes.every(f=>allow(f.path)),JSON.stringify(c.changes.filter(f=>!allow(f.path))));assert.equal(c.removed.length,0);save(path.join(report,'candidate.json'),c);
+const page=path.join(candidate,'gc/blog/'+slug+'.html'),spec=loadFragment(path.join(source,'content/civilian-blog/'+slug+'.fragment.html'));spec.outDir=path.join(candidate,'gc');assertBlogRendered(spec,fs.readFileSync(page,'utf8'));
+const checks=[];const run=args=>{const r=spawnSync(process.execPath,args,{cwd:source,encoding:'utf8'});checks.push({command:'node '+args.join(' '),exitCode:r.status,output:r.stdout.slice(-4000),stderr:r.stderr.slice(-2000)});if(r.status!==0){save(path.join(report,'failed-gates.json'),checks);throw Error(r.stdout+r.stderr);}console.log(r.stdout.trim().slice(-500));};
+run(['scripts/audit-civilian.mjs','--root',path.join(candidate,'gc')]);
+run(['scripts/audit-entity.mjs','--pmh-root',path.resolve(base,'../2026-09-12/release/pmh'),'--gc-root',path.join(candidate,'gc')]);
+run(['scripts/score-post.mjs',slug,'--site','gc','--gate']);
+run(['scripts/analyze-formatting.mjs','--file',page,'--gate','--out',path.join(report,'formatting.md')]);
+run(['scripts/check-em-dashes.mjs']);
+const sourceCommit=execFileSync('git',['rev-parse','HEAD'],{cwd:source,encoding:'utf8'}).trim();
+save(path.join(report,'quality-gates.json'),{ok:true,sealedAt:new Date().toISOString(),candidate,candidateFingerprint:fingerprint(candidate),sourceCommit,checks,renderedParity:true,reviewedPreviewFingerprint:fingerprint(preview),scope:'GC deployment only. Retained PMH root (2026-09-12 release) is used for entity consistency, not a current PMH deployment assertion.'});
+console.log(JSON.stringify({baselineVerifiedFiles:before.sites[0].counts.exact,changes:c.changes.length,removed:c.removed.length,candidate,fingerprint:fingerprint(candidate)}));

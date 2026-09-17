@@ -1,0 +1,65 @@
+{
+  "queries": [
+    "Pensacola Florida neighborhood houses street (3 HABS black-and-white scans of naval station quarters, all rejected)",
+    "Gulf Breeze Florida home (2 Hurricane Ivan flood photographs and 1 FEMA photographer portrait, all rejected)",
+    "Pensacola Florida historic district house"
+  ],
+  "viewedAll": 9,
+  "selected": "fed-hike-20260917.jpg",
+  "reviews": [
+    {
+      "query": 1,
+      "candidate": 1,
+      "decision": "Rejected: black-and-white HABS scan, film border and survey number, naval station officers quarters."
+    },
+    {
+      "query": 1,
+      "candidate": 2,
+      "decision": "Rejected: same HABS series, black-and-white scan with survey number."
+    },
+    {
+      "query": 1,
+      "candidate": 3,
+      "decision": "Rejected: HABS porch detail scan with survey number written on the negative."
+    },
+    {
+      "query": 2,
+      "candidate": 1,
+      "decision": "Rejected: Hurricane Ivan street flooding through a broken window; disaster imagery."
+    },
+    {
+      "query": 2,
+      "candidate": 2,
+      "decision": "Rejected: Hurricane Ivan flooded yard, blurred, date stamp; disaster imagery."
+    },
+    {
+      "query": 2,
+      "candidate": 3,
+      "decision": "Rejected: recognizable FEMA photographer in front of storm debris."
+    },
+    {
+      "query": 3,
+      "candidate": 1,
+      "decision": "Rejected: historical marker plaque, not a house."
+    },
+    {
+      "query": 3,
+      "candidate": 2,
+      "decision": "Rejected: clear house exterior but a readable third-party law-firm sign in the frame."
+    },
+    {
+      "query": 3,
+      "candidate": 3,
+      "decision": "Selected: clear color exterior of a pink Victorian house in the North Hill Preservation District, no people, no watermark, no signage. CC BY-SA 3.0, credit Ebyabe recorded."
+    }
+  ],
+  "credit": {
+    "source": "Wikimedia Commons",
+    "title": "Pensacola NHPD house05.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house05.jpg",
+    "license": "CC BY-SA 3.0",
+    "creditRequired": true,
+    "credit": "Ebyabe",
+    "query": "Pensacola Florida historic district house"
+  }
+}

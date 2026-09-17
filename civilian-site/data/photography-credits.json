@@ -152,23 +152,6 @@
       "provenanceNote": "Reused from public/images/communities/milton.jpg. The existing military guide credits Jesse Hasty / Wikimedia Commons (CC0); the original source URL was not recorded."
     },
     {
-      "id": "photo-fed-building-20260912",
-      "image": "https://greggcostin.com/images/fed-building-20260912.jpg",
-      "path": "/images/fed-building-20260912.jpg",
-      "sourceSite": "gc",
-      "title": "Eccles Building (26088200676).jpg",
-      "credit": "Federalreserve",
-      "license": "Public domain",
-      "licenseUrl": "",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AEccles%20Building%20(26088200676).jpg",
-      "creditRequired": false,
-      "uses": [
-        "blog.html",
-        "blog/fed-rate-hike-what-it-means.html"
-      ],
-      "provenanceNote": ""
-    },
-    {
       "id": "photo-insurance-house-review-20260909",
       "image": "https://greggcostin.com/images/insurance-house-review-20260909.jpg",
       "path": "/images/insurance-house-review-20260909.jpg",
@@ -629,20 +612,21 @@
       "provenanceNote": ""
     },
     {
-      "id": "photo-palafox-night",
-      "image": "https://greggcostin.com/images/palafox-night.jpg",
-      "path": "/images/palafox-night.jpg",
+      "id": "photo-pensacola-bay-bridge-night-20260910",
+      "image": "https://greggcostin.com/images/pensacola-bay-bridge-night-20260910.jpg",
+      "path": "/images/pensacola-bay-bridge-night-20260910.jpg",
       "sourceSite": "gc",
-      "title": "Pensacola at night December 2018.jpg",
-      "credit": "Todd Van Hoosear",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pensacola_at_night_December_2018.jpg",
-      "creditRequired": true,
+      "title": "Pensacola Bay Bridge at night",
+      "credit": "Image supplied by The Costin Team",
+      "license": "",
+      "licenseUrl": "",
+      "sourceUrl": "",
+      "creditRequired": false,
       "uses": [
-        "contact.html"
+        "contact.html",
+        "neighborhoods.html"
       ],
-      "provenanceNote": "Source photograph taken December 16, 2018. Resized and compressed for the website; framing is cropped through CSS. Photograph remains available under CC BY-SA 2.0."
+      "provenanceNote": "Gregg supplied IMG_2599-1024x683.jpeg on September 10, 2026 and selected it for the website. Original image bytes preserved; responsive derivatives resized and compressed. Photographer and original license were not supplied."
     },
     {
       "id": "photo-three-mile-bridge",
@@ -782,18 +766,19 @@
       "provenanceNote": ""
     },
     {
-      "id": "photo-saenger",
-      "image": "https://greggcostin.com/images/saenger.jpg",
-      "path": "/images/saenger.jpg",
+      "id": "photo-fed-hike-20260917",
+      "image": "https://greggcostin.com/images/fed-hike-20260917.jpg",
+      "path": "/images/fed-hike-20260917.jpg",
       "sourceSite": "gc",
-      "title": "Pensacola Saenger Thtr01.jpg",
+      "title": "Pensacola NHPD house05.jpg",
       "credit": "Ebyabe",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20Saenger%20Thtr01.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APensacola%20NHPD%20house05.jpg",
       "creditRequired": true,
       "uses": [
-        "neighborhoods.html"
+        "blog.html",
+        "blog/fed-rate-hike-what-it-means.html"
       ],
       "provenanceNote": ""
     },

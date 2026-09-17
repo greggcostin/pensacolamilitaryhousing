@@ -2,6 +2,29 @@
  "note": "Verified material current events may override explicit owner requests. Runnable Gregg requests follow requestedOrder ahead of generated refresh priorities and other topics. All source, timing, hold and intent gates still apply. Owner requests are not observed demand; refresh existing owner URLs only.",
  "queue": [
   {
+   "slug": "mortgage-guide-policy-range-refresh",
+   "topic": "Refresh the mortgage-rate guide's federal funds section and three-benchmark table after the September 16, 2026 FOMC increase",
+   "type": "refresh",
+   "pillar": "financing-macro",
+   "audience": [
+    "buyer",
+    "homeowner"
+   ],
+   "targetKeywords": [
+    "what moves mortgage rates",
+    "federal funds rate vs mortgage rates"
+   ],
+   "refreshUrl": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+   "decision": "Replace the July 29 hold (3.50% to 3.75%) with the September 16 raise (3.75% to 4.00%) in the section, table and quick answer; re-verify PMMS (September 17 and 24 releases) and the Treasury benchmark; keep the existing canonical URL.",
+   "evidenceStatus": "Perishable EXPIRED: the guide's fed-target and meeting claims expired 2026-09-16 and the live page still describes the decision as pending. Verified event, not inferred demand.",
+   "priority": 70,
+   "priorityReason": "EXPIRED perishable on a live page (refresh-queue rule: 60+ outranks a new topic)",
+   "requestedBy": "civilian-blog-engine-2026-09-17",
+   "requestedAt": "2026-09-17",
+   "notBefore": "2026-09-21",
+   "status": "queued"
+  },
+  {
    "slug": "fed-rate-hike-what-it-means",
    "topic": "Refresh what a Federal Reserve rate decision means for Gulf Coast buyers",
    "type": "refresh",
@@ -200,7 +223,16 @@
    ],
    "refreshUrl": "https://greggcostin.com/blog/what-moves-mortgage-rates",
    "decision": "Refresh the existing rate explainer only when a verified release changes a reader decision.",
-   "evidenceStatus": "Editorial proposal; no observed demand claimed."
+   "evidenceStatus": "Editorial proposal; no observed demand claimed.",
+   "executions": [
+    {
+     "runId": "civilian-blog-engine-2026-09-17",
+     "date": "2026-09-17",
+     "executedAs": "refresh of https://greggcostin.com/blog/fed-rate-hike-what-it-means (the intent owner for the Fed decision) rather than the mortgage guide named as refreshUrl; the template stays reusable",
+     "event": "FOMC raised the target range to 3.75% to 4.00% on September 16, 2026 (12 to 0)",
+     "status": "in-progress"
+    }
+   ]
   },
   {
    "slug": "baldwin-county-property-taxes",
@@ -501,5 +533,5 @@
   }
  ],
  "version": 2,
- "updated": "2026-09-14"
+ "updated": "2026-09-17"
 }

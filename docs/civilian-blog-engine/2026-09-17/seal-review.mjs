@@ -1,0 +1,14 @@
+// Final editorial passes (facts, calculations, scope, sources, counterarguments, voice) were performed on the exact draft; this seals the hashes.
+import {readFileSync,writeFileSync} from 'node:fs';
+import {contentHash,evidenceHash,validateEditorial} from './source/scripts/civilian-editorial-lib.mjs';
+const root=new URL('./source/',import.meta.url),slug='fed-rate-hike-what-it-means',date='2026-09-17';
+const f=new URL('content/civilian-blog/'+slug+'.fragment.html',root),rp=new URL('content/civilian-blog/research/'+slug+'.json',root);
+const text=readFileSync(f,'utf8'),m=text.match(/<!--PAGE\s+([\s\S]*?)\s+PAGE-->/),spec=JSON.parse(m[1]);const body=text.slice(m[0].length).trim().replace(/\r\n/g,'\n');
+const research=JSON.parse(readFileSync(rp,'utf8'));
+delete research.review;
+research.review={provider:'claude',model:'claude-opus-5[1m]',reasoningEffort:'default',checkedAt:date,selectionReason:'Scheduled Thursday run; Claude primary provider available, no fallback.',checks:{facts:true,calculations:true,voice:true,scope:true,sources:true,counterarguments:true},
+ notes:'Opened all nine cited primary sources this session (September 16 and July 29 FOMC statements, the September SEP accessible tables, the FOMC calendar, the Treasury 2026 daily par yield CSV, the PMMS page, two CFPB pages and the Fed policy explainer). Facts: decision size, range, vote, July comparison, projection median and Figure 2 distribution (4/12/2, sum 18), Treasury 5.00/5.01, PMMS 6.76/6.71 and the survey window all read from the source text. Calculations: the three retained payment rows recomputed with the shared calculate() helper and an independent closed-form amortization in Node; cents match; the difference row uses displayed rounded values. Scope: no forecast of the October decision, no causal story for the one-day Treasury move, no daily-versus-weekly spread, hypothetical loan inputs labeled, the September 17 PMMS release (due after this run) disclosed as pending. Voice/read-aloud: "the bond market barely moved" narrowed to "the long-term benchmark barely moved" because the 2-year moved seven basis points; "the benchmark that fixed mortgage pricing tracks most closely" softened to "most often compared with fixed mortgage pricing"; a three-line benchmark list added so the rates section is not a 250-word run of paragraphs. Counterarguments retained: waiting can fit a budget better; a lock can exclude later lower pricing and carries conditions; projections are individual judgments that change with the data. Owner and professional approval are not represented by this agent review.',
+ contentHash:contentHash(spec,body),evidenceHash:evidenceHash(research)};
+writeFileSync(rp,JSON.stringify(research,null,2)+'\n');
+const v=validateEditorial(spec,body,research,{today:date,site:'gc'});
+console.log(JSON.stringify({errors:v.errors,sources:v.sources,claims:v.claims,local:v.localApplications,words:body.replace(/<[^>]+>/g,' ').trim().split(/\s+/).length}));

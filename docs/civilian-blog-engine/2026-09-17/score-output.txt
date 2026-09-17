@@ -1,0 +1,5 @@
+fed-rate-hike-what-it-means (greggcostin.com): 100/100 A
+components: structure 25 | evidence 20 | local 10 | seo 20 | geo 15 | share 10
+facts: {"words":1921,"h2s":9,"questionH2s":9,"directAnswers":8,"walls":0,"scanAids":8,"numericSentences":19,"sourcedSentences":10,"datedSentences":15,"quotable":5,"distinctSources":4,"placesPerK":2.1,"links":9,"faqs":7,"table":true,"checklist":true,"actionItems":4,"workedExample":true,"ownVoice":false,"quickAnswer":true,"takeaways":true,"shareHook":true,"perishables":7}
+
+no fails

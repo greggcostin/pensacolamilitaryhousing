@@ -1,7 +1,7 @@
 {
  "site": "gc",
- "asOf": "2026-09-12",
- "generated": "2026-09-14",
+ "asOf": "2026-09-15",
+ "generated": "2026-09-17",
  "pages": [
   {
    "key": "/schools/pensacola-christian-academy",
@@ -108,23 +108,6 @@
    "pos90": 2
   },
   {
-   "key": "greg costin agent fl",
-   "imp28": 1,
-   "clk28": 0,
-   "posI28": 1,
-   "seen28": 1,
-   "seenPrior28": 0,
-   "impPrior28": null,
-   "clkPrior28": null,
-   "imp90": 1,
-   "clk90": 0,
-   "posI90": 1,
-   "first": "2026-09-11",
-   "last": "2026-09-11",
-   "pos28": 2,
-   "pos90": 2
-  },
-  {
    "key": "gregg costin joanna bradford helena ciappina justin johnson realtor contact info",
    "imp28": 1,
    "clk28": 0,
@@ -140,6 +123,23 @@
    "last": "2026-09-11",
    "pos28": 3,
    "pos90": 3
+  },
+  {
+   "key": "greg costin agent fl",
+   "imp28": 1,
+   "clk28": 0,
+   "posI28": 1,
+   "seen28": 1,
+   "seenPrior28": 0,
+   "impPrior28": null,
+   "clkPrior28": null,
+   "imp90": 1,
+   "clk90": 0,
+   "posI90": 1,
+   "first": "2026-09-11",
+   "last": "2026-09-11",
+   "pos28": 2,
+   "pos90": 2
   }
  ],
  "traffic": [
@@ -236,6 +236,21 @@
   {
    "date": "2026-09-12",
    "impressions": 2,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-13",
+   "impressions": 5,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-14",
+   "impressions": 8,
+   "clicks": 0
+  },
+  {
+   "date": "2026-09-15",
+   "impressions": 8,
    "clicks": 0
   }
  ]

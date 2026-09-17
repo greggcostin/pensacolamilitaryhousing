@@ -282,6 +282,18 @@
      "impressions": null,
      "position": null,
      "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "what-moves-mortgage-rates",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-15",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
     }
    ],
    "legacyMetrics": "no GSC/Bing data available in-session",
@@ -704,6 +716,18 @@
      "impressions": null,
      "position": null,
      "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "property-taxes-escambia-santa-rosa",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-15",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
     }
    ],
    "legacyMetrics": "no GSC/Bing data available in-session",
@@ -1040,6 +1064,18 @@
      "impressions": null,
      "position": null,
      "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "closing-costs-florida-buyers",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-15",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
     }
    ],
    "refreshHistory": [
@@ -1126,7 +1162,7 @@
    "datePublished": "2026-09-01",
    "type": "current-events (OVERRIDE of queue head coastal-alabama-vs-panhandle; queue left intact)",
    "words": 1502,
-   "image": "/images/fed-building-20260912.jpg",
+   "image": "/images/fed-hike-20260917.jpg",
    "sources": "Federal Reserve July 29, 2026 statement and current FOMC calendar; Federal Reserve monetary-policy explanation; Freddie Mac PMMS September 10, 2026; CFPB Loan Estimate and rate-lock guidance. Direct sources in the current research pack; publication recheck in docs/civilian-blog-engine/2026-09-12-autopilot/source-recheck.json.",
    "currentEventsCheck": "Sep 1 2026 sweep triggered an override: FedWatch hike odds swung 40% -> 57% -> 66-68% in a week, 10-yr Treasury at a 19-20 month high, Fed governor publicly floating a hike ahead of the Sep 15-16 FOMC. Directional reversal after two years of cut expectations, and time-sensitive before the meeting, so the rate-news-reaction template beat the evergreen queue head.",
    "mathVerified": "Payment math recomputed on a 340k 30-yr loan (20% down on the 425k FL median): 6.75% = 2,205.23/mo, 7.00% = 2,262.03/mo, delta 56.79/mo and 682/yr. Quoted as 'about 57 dollars a month'.",
@@ -1153,6 +1189,14 @@
      "bingPage": "No page-performance rows; unknown, not zero or indexing proof.",
      "clarity": "Visited Fed URL cohort Sep 5-11: 1 session, 1 user, 40 pages/session. Session aggregates, internal traffic not excluded; insufficient for performance conclusions.",
      "google": "Native Sep 12 property export retained; article absent, selected Aug 14-Sep 10 with Chart Aug 23-Sep 10. Unknown article performance.",
+     "qualifiedInquiries": "unavailable"
+    },
+    {
+     "date": "2026-09-17",
+     "runId": "civilian-blog-engine-2026-09-17",
+     "bingPage": "No API page row (unknown); URL Inspection: Discovered but not crawled since 2026-09-04; Live URL test indexable",
+     "clarity": "Site cohort 2026-09-10..16 via browser CSV; per-post not queried",
+     "google": "Retained 2026-09-12 workbook; article absent (unknown)",
      "qualifiedInquiries": "unavailable"
     }
    ],
@@ -1401,6 +1445,18 @@
      "impressions": null,
      "position": null,
      "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "fed-rate-hike-what-it-means",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-15",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
     }
    ],
    "refreshHistory": [
@@ -1503,13 +1559,30 @@
       }
      },
      "performanceChange": "Not yet measured"
+    },
+    {
+     "runId": "civilian-blog-engine-2026-09-17",
+     "date": "2026-09-17",
+     "kind": "current-events substantive refresh (September 16 FOMC decision)",
+     "models": {
+      "research": "claude-opus-5[1m]",
+      "write": "claude-opus-5[1m]"
+     },
+     "evidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means.json",
+     "datePublished": "2026-09-01",
+     "dateModified": "2026-09-17",
+     "scoreAfter": 100,
+     "formatting": 99,
+     "publication": "sealed candidate",
+     "performanceChange": "not measured",
+     "summary": "Rewrote the opening and first three sections around the actual September 16 decision (3.75% to 4.00%, 12 to 0) with a July-versus-September decision table, the SEP median and Figure 2 distribution, the 10-year Treasury on September 15 and 16, the PMMS window relative to the vote and a benchmark list; updated title, description, h1, lead, quick answer, takeaways, share hook, perishables and three FAQs; new licensed image; all sources reopened."
     }
    ],
    "currentEvidenceFile": "content/civilian-blog/research/fed-rate-hike-what-it-means.json",
    "legacyMetrics": "no GSC/Bing data available in-session",
    "title": "Fed Rate Hike: What It Means for Gulf Coast Homebuyers",
    "category": "Financing and the economy",
-   "dateModified": "2026-09-12",
+   "dateModified": "2026-09-17",
    "targetKeywords": [
     "Fed rate hike",
     "Federal Reserve mortgage rates",
@@ -1848,6 +1921,18 @@
      "impressions": null,
      "position": null,
      "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "florida-insurance-relief-2026",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-15",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
     }
    ],
    "refreshHistory": [
@@ -2066,6 +2151,18 @@
      "property": "https://greggcostin.com",
      "source": "bing-api",
      "date": "2026-09-12",
+     "kind": "page",
+     "status": "not-observed",
+     "clicks": null,
+     "impressions": null,
+     "position": null,
+     "note": "no Bing rows for this URL; coverage unknown"
+    },
+    {
+     "slug": "home-appraisals-explained",
+     "property": "https://greggcostin.com",
+     "source": "bing-api",
+     "date": "2026-09-15",
      "kind": "page",
      "status": "not-observed",
      "clicks": null,
@@ -2420,6 +2517,54 @@
    "status": "published-and-live-verified",
    "deployedAt": "2026-09-14T18:20:29.779Z",
    "deploymentId": "b8e49fe1-bf6e-4b3b-a236-5250e4fe1009"
+  },
+  {
+   "id": "civilian-blog-engine-2026-09-17",
+   "date": "2026-09-17",
+   "provider": "claude",
+   "model": "claude-opus-5[1m]",
+   "effort": "default",
+   "selectionReason": "Scheduled Thursday run; Claude primary provider available (no fallback)",
+   "fallbackReason": null,
+   "leaseId": "d1c80b1e-6b8e-49f7-a596-554f74ab0d84",
+   "posts": [
+    "fed-rate-hike-what-it-means"
+   ],
+   "kind": "current-events-override-refresh",
+   "score": 100,
+   "formatting": 99,
+   "autoPublish": true,
+   "report": "docs/civilian-blog-engine/2026-09-17/README.md",
+   "decision": "Current-events override: the FOMC raised the target range to 3.75% to 4.00% on September 16, 2026 (12 to 0), read at federalreserve.gov. The Fed article's fed-target and meeting perishables expired that day and its opening framed the decision as pending. The planner had selected the coastal-ownership-costs refresh (priority 49.98, editorial proposal); a verified consequential current event outranks it. Dedup INTENT-REVIEW pointed at this article, the mortgage guide and the hub, so the existing URL is refreshed in place. One refresh only; the mortgage guide's July policy-range row is queued as a perishable-expired refresh for the next run.",
+   "sources": [
+    "Federal Reserve FOMC statement September 16, 2026 (raise to 3.75%-4.00%, 12-0)",
+    "Federal Reserve FOMC statement July 29, 2026 (hold, 9-3)",
+    "Federal Reserve Summary of Economic Projections September 16, 2026 (median 4.1 for 2026; Figure 2: 4/12/2 at 4.375/4.125/3.875)",
+    "FOMC calendar (October 27-28, December 8-9)",
+    "U.S. Treasury daily par yield curve 2026 CSV (10-year 5.00 on 9/15, 5.01 on 9/16)",
+    "Freddie Mac PMMS as of September 10, 2026 (6.76%, prior 6.71%)",
+    "CFPB rate-lock page",
+    "CFPB Loan Estimate explainer",
+    "Federal Reserve policy explainer"
+   ],
+   "image": "/images/fed-hike-20260917.jpg (Wikimedia Commons, Ebyabe, CC BY-SA 3.0); 9 candidates viewed across 3 queries, 8 rejected (HABS scans, hurricane damage, a recognizable person, a plaque, a third-party business sign)",
+   "words": 1921,
+   "measurement": {
+    "bing": "2 page rows, 6 query rows, 22 traffic days through 2026-09-15, site 64 imp / 2 clicks; no blog rows (unknown). URL Inspection (signed-in Chrome, read-only): this article, the mortgage guide and the appraisal article all Discovered but not crawled (discovered Sep 4, Aug 26, Sep 12); Live URL test on this article: URL can be indexed by Bing, no SEO/GEO issues, 2 markup types. Request indexing not clicked.",
+    "clarity": "Connector bound to the military project. Project ydd39cyp64 via signed-in Chrome, 2026-09-10 00:00 to 2026-09-16 23:59 UTC: 105 sessions (30 bots excluded), 64 users, 2.56 pages/session; no blog URL in top 12; CSV retained.",
+    "gsc": "Retained 2026-09-12 workbook; no new export; article unknown.",
+    "qualifiedInquiries": "unavailable"
+   },
+   "hypothesis": {
+    "change": "Post-decision refresh: actual September 16 decision and vote beside the July hold, projection distribution read from the SEP, one-day Treasury observation, PMMS window explanation, post-decision recheck workflow",
+    "outcome": "Readers arriving on Fed rate hike questions after the decision reach the buyer or contact path with the decision, the projections and their own lock terms separated; measured as accepted inquiries from this URL",
+    "deploymentStatus": "prepared",
+    "deploymentDate": null,
+    "reviewWindow": "At least 28 complete days after deployment, same property/host filters, comparable cohorts; inconclusive if samples are inadequate."
+   },
+   "performanceChange": "not measured",
+   "deployed": false,
+   "status": "sealed-candidate-awaiting-deployment"
   }
  ]
 }

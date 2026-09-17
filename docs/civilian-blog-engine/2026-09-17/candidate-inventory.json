@@ -1,0 +1,342 @@
+{
+  "base": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-14\\release\\gc",
+  "baseDeploymentId": "b8e49fe1-bf6e-4b3b-a236-5250e4fe1009",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-17\\preview",
+  "changes": [
+    {
+      "path": "blog/fed-rate-hike-what-it-means.html",
+      "kind": "modified",
+      "sha256": "2eb3d6f90a2178337d59bb5ea111931fe559fd85bcc76fa177facd3c1c9454f1"
+    },
+    {
+      "path": "blog.html",
+      "kind": "modified",
+      "sha256": "7661ff7aa09a05a2e0493887369a9329865f6d5849fbb321eca1f280de17a7fb"
+    },
+    {
+      "path": "data/photography-credits.json",
+      "kind": "modified",
+      "sha256": "f5517e4ee9fc4fa1806c19d0e7459f4a42de4c9772bec63ab3cd0d015292e5b6"
+    },
+    {
+      "path": "images/fed-hike-20260917-1200.avif",
+      "kind": "added",
+      "sha256": "1a037c9fc3eeb31d79e33e097c2f175762b9bf01a3f4c45ac8e934608a32535b"
+    },
+    {
+      "path": "images/fed-hike-20260917-1200.jpg",
+      "kind": "added",
+      "sha256": "b31b4637e24bf758ccf84fb73967d906ab88297206a31fb48608a217f5f78d2e"
+    },
+    {
+      "path": "images/fed-hike-20260917-1200.webp",
+      "kind": "added",
+      "sha256": "4616ebc53e41704fb4d9363fb34b6c4befe30f12483ce1f757618bc6c444f05f"
+    },
+    {
+      "path": "images/fed-hike-20260917-480.avif",
+      "kind": "added",
+      "sha256": "5f95ea3d76a4206866f3d299c57f1aeb81fc49e87f9a517df059d706931667ed"
+    },
+    {
+      "path": "images/fed-hike-20260917-480.jpg",
+      "kind": "added",
+      "sha256": "11e534e7ce474c196b0fb1119fd648c0a96710059b9909da6bd8ebd8dae61391"
+    },
+    {
+      "path": "images/fed-hike-20260917-480.webp",
+      "kind": "added",
+      "sha256": "db05ed8d412f800fadd842ef6fbb0415d91997ad68d23371519ea19df8e650a5"
+    },
+    {
+      "path": "images/fed-hike-20260917-768.avif",
+      "kind": "added",
+      "sha256": "b8a290e4f959d114980c6fad1063a5f4f3a436408bff3c2344c5ab0e58a593da"
+    },
+    {
+      "path": "images/fed-hike-20260917-768.jpg",
+      "kind": "added",
+      "sha256": "4215baa96c236355fa5e0a0c54699a2f99990d589f471488f04ee1f6b3d8b87d"
+    },
+    {
+      "path": "images/fed-hike-20260917-768.webp",
+      "kind": "added",
+      "sha256": "37055412a76714b426afcc49198a4f2eb7fc788d55b5722e311d131d4d7199fa"
+    },
+    {
+      "path": "images/fed-hike-20260917.avif",
+      "kind": "added",
+      "sha256": "33971101d2f58e0853508af26c26cd03703ed1d0e6e981bbda8759fbe6e75fb3"
+    },
+    {
+      "path": "images/fed-hike-20260917.jpg",
+      "kind": "added",
+      "sha256": "40f930302d2fb8881478d6d56302b433c7177740016f3d242135b82d83d8c326"
+    },
+    {
+      "path": "images/fed-hike-20260917.webp",
+      "kind": "added",
+      "sha256": "b823330cf1ca315e7eaa09118f8243f2585675375f859683332f91c16e2f3058"
+    },
+    {
+      "path": "llms-full.txt",
+      "kind": "modified",
+      "sha256": "6d334530f76c3d67f25a078869b2950054c7e8c8a99855d4771a9395665a62ec"
+    },
+    {
+      "path": "llms.txt",
+      "kind": "modified",
+      "sha256": "3c1ebdbb57eda0219ba243b73860ff51f55701e8025f3dfe4d860a7fdbbc7bab"
+    },
+    {
+      "path": "og/blog-fed-rate-hike-what-it-means.png",
+      "kind": "modified",
+      "sha256": "b52ea3a02f12184d78a9f8d648c97e492ca780694e5381c362d10900e899596d"
+    },
+    {
+      "path": "pagefind/fragment/en_14e5267.pf_fragment",
+      "kind": "added",
+      "sha256": "f0a287aaab73e89e159a3e66591f2e093e7bd7cbbfd4c849f45d3491fff5edf3"
+    },
+    {
+      "path": "pagefind/fragment/en_48d0216.pf_fragment",
+      "kind": "added",
+      "sha256": "973e13247c361c53105c9709bdba0f9c09ae6ac9ba3b9bb097690c5b51a25acc"
+    },
+    {
+      "path": "pagefind/fragment/en_f21d84c.pf_fragment",
+      "kind": "added",
+      "sha256": "011cb8d19f2ec97ac6d6fdd5afa7c37a29413f85a03c070142a72b45e9bb2aa7"
+    },
+    {
+      "path": "pagefind/index/en_168425f.pf_index",
+      "kind": "added",
+      "sha256": "14c5094bc872448e761fb36a93ff998e40e09b0c6ce18e26fa4568c49a457e51"
+    },
+    {
+      "path": "pagefind/index/en_217de83.pf_index",
+      "kind": "added",
+      "sha256": "cb1cc84e9be06f1af779d6e7891c14a9ecab018a66f0c3d1d9627602c46d64ff"
+    },
+    {
+      "path": "pagefind/index/en_258df58.pf_index",
+      "kind": "added",
+      "sha256": "2b8af0f99dbcb35af5e5b40393b25b484f68fba795e6a44b5d369ddad27daab2"
+    },
+    {
+      "path": "pagefind/index/en_31af1ba.pf_index",
+      "kind": "added",
+      "sha256": "1273975ddd819beeac379b2e9b9e3a919af0d207c9c575252d991c675e3a0c46"
+    },
+    {
+      "path": "pagefind/index/en_39ed5cc.pf_index",
+      "kind": "added",
+      "sha256": "5a024bb0d7c5060b7dfedc32560cbad2382f12f155be3830ffc44f63c8ef7ab4"
+    },
+    {
+      "path": "pagefind/index/en_3d4938e.pf_index",
+      "kind": "added",
+      "sha256": "07dc025a3b54474fc6f3d6c61ef4cba710f01424e5d614b7b271f1d7346d9c1c"
+    },
+    {
+      "path": "pagefind/index/en_3ec14bc.pf_index",
+      "kind": "added",
+      "sha256": "5b32c9556284d64503ce083f26999a0ccaa44f03c239772270c9b884211702eb"
+    },
+    {
+      "path": "pagefind/index/en_417af07.pf_index",
+      "kind": "added",
+      "sha256": "40e7959d5920f8157409ba7b55b370d1e69334d341022f959f54edeac216a19f"
+    },
+    {
+      "path": "pagefind/index/en_5085e7d.pf_index",
+      "kind": "added",
+      "sha256": "5e859bf21887380d7515a115552a2c7eb285956bf248d9ff8f0faec91b13e530"
+    },
+    {
+      "path": "pagefind/index/en_53f28e7.pf_index",
+      "kind": "added",
+      "sha256": "4b65fe5cdd663a7b74fd44d34d2d398a893ffc095ffc1389cca0b81e96ced825"
+    },
+    {
+      "path": "pagefind/index/en_54a5796.pf_index",
+      "kind": "added",
+      "sha256": "be1e8a1c5dbdea5decd92f8c21e96c43f213e7f93b5602fde93ef3d69423341f"
+    },
+    {
+      "path": "pagefind/index/en_63efd59.pf_index",
+      "kind": "added",
+      "sha256": "2bb47124f49e4fcaaeb1bdbf1df7f42d711ae563214501aed4b46d8c90036ef2"
+    },
+    {
+      "path": "pagefind/index/en_6429b65.pf_index",
+      "kind": "added",
+      "sha256": "06e850600e0570145f4d978ab89d57f1265b210c326e13efaaf65932abb347e9"
+    },
+    {
+      "path": "pagefind/index/en_72c233a.pf_index",
+      "kind": "added",
+      "sha256": "ae7c03a91fbdf1c14b969d54c4eb0992f351b5d5bcfa3f8d1b15a9b2dedfac19"
+    },
+    {
+      "path": "pagefind/index/en_79cf68f.pf_index",
+      "kind": "added",
+      "sha256": "1990b5c04472fb43f4f3aa8d7eb8f2449e5cd5bb9bbd27143f02c8e17eed6879"
+    },
+    {
+      "path": "pagefind/index/en_81ff83a.pf_index",
+      "kind": "added",
+      "sha256": "9d56532af49c3bada2612abb17cc2cd3f5a19e1c0ffc5e3390f0e8b8a3e3944e"
+    },
+    {
+      "path": "pagefind/index/en_85ce5f6.pf_index",
+      "kind": "added",
+      "sha256": "95869eda33085fe5647b3de59a3240b5d7b191deb319491e88e828d125dc5f9c"
+    },
+    {
+      "path": "pagefind/index/en_941a70d.pf_index",
+      "kind": "added",
+      "sha256": "5586564a9bb60339c2a8346e6f0e15b0c1e90f9c2f463fc3328a603835894d54"
+    },
+    {
+      "path": "pagefind/index/en_958db6e.pf_index",
+      "kind": "added",
+      "sha256": "a054d15de3f23747c5cc882452d564211434c8537f51bbf552037f4824f3589b"
+    },
+    {
+      "path": "pagefind/index/en_9a4206e.pf_index",
+      "kind": "added",
+      "sha256": "a7ece4239f0b11693c3b0ea2abc307e3911a2932eb427220bd871ce014c3c3f1"
+    },
+    {
+      "path": "pagefind/index/en_9a65a4d.pf_index",
+      "kind": "added",
+      "sha256": "7ae97b61b31d37e72485c26334664b58fa65924e41bbeefa8cabb3a6c073d266"
+    },
+    {
+      "path": "pagefind/index/en_9eba066.pf_index",
+      "kind": "added",
+      "sha256": "24c5bbae7fbe4f2a71caa7cae58f673d5fbe4ef37daeb080c869ce843baf53fd"
+    },
+    {
+      "path": "pagefind/index/en_a45f6a5.pf_index",
+      "kind": "added",
+      "sha256": "d73c3e786c0f40610650a38c0331e1a767150781ebaa5a5f88a9432034858d17"
+    },
+    {
+      "path": "pagefind/index/en_a5f9f16.pf_index",
+      "kind": "added",
+      "sha256": "4d0fbe5ec73d5eb9e1b012b578a73b13918e69c609d6b14e8d188fb1960935f7"
+    },
+    {
+      "path": "pagefind/index/en_ad4857b.pf_index",
+      "kind": "added",
+      "sha256": "f737da5394e3437aed32ef4af68a644c06206e6aa26f20ed2a63df3fb27ff73b"
+    },
+    {
+      "path": "pagefind/index/en_b0449d8.pf_index",
+      "kind": "added",
+      "sha256": "b1562599d250fec074ff72fd0266946d2e21120d5c145f587cc7b7bcb1b9b063"
+    },
+    {
+      "path": "pagefind/index/en_b64d4a4.pf_index",
+      "kind": "added",
+      "sha256": "5d7d64413d10bdc36b42941777f72e0402e0b987d860f7d7a50e235de566a1f7"
+    },
+    {
+      "path": "pagefind/index/en_bf2e6d9.pf_index",
+      "kind": "added",
+      "sha256": "03e3df8c3333bc1d03e78a60881ff6d41e208af9119422fed956ae0be8b13029"
+    },
+    {
+      "path": "pagefind/index/en_cf54d87.pf_index",
+      "kind": "added",
+      "sha256": "f684547192fd8d4fd7574e6721e03e385419e6f34f6547e434f53afb2bf9b01e"
+    },
+    {
+      "path": "pagefind/index/en_d444db8.pf_index",
+      "kind": "added",
+      "sha256": "9e451a6677ecc9a8aae43bcba3f6a74800b63364f75311039dbc9bb0d056aa1b"
+    },
+    {
+      "path": "pagefind/index/en_dc3a1f7.pf_index",
+      "kind": "added",
+      "sha256": "f1771d27c38c4f56453add0fd720a88251719a6e030839cfdbe68b514d762909"
+    },
+    {
+      "path": "pagefind/index/en_df91ee3.pf_index",
+      "kind": "added",
+      "sha256": "434ba178b1a93f524f68525fc16cd2c8f352a00930462490541ad83f3d1e5bba"
+    },
+    {
+      "path": "pagefind/index/en_efc7573.pf_index",
+      "kind": "added",
+      "sha256": "abccff796f0ec56346fe8b2a7543836cb8894ca7e120915ab1044c48d5537f4f"
+    },
+    {
+      "path": "pagefind/index/en_f151799.pf_index",
+      "kind": "added",
+      "sha256": "4fabdc6681b0e39f0a3ec669a6558de2fad961f5a32998e5503a9662ad5c4fbe"
+    },
+    {
+      "path": "pagefind/index/en_f21a196.pf_index",
+      "kind": "added",
+      "sha256": "c310ed6047e1454be03cb4020defe1ba9f7dc0f55157819a9da7d21403d6f162"
+    },
+    {
+      "path": "pagefind/index/en_fc429de.pf_index",
+      "kind": "added",
+      "sha256": "76016390be5339b6b2fa13975170868698d1242ec5f170d9b853b31f59141cfb"
+    },
+    {
+      "path": "pagefind/pagefind-entry.json",
+      "kind": "modified",
+      "sha256": "8acc6a853bfe09cc17c6a09b082c1cc64cd701132e8e4816d7443a6d45e74f99"
+    },
+    {
+      "path": "pagefind/pagefind.en_5a4b20aeea.pf_meta",
+      "kind": "added",
+      "sha256": "e2c4a8dd5683c655a1b47d0e5909052d1178ddae8d4537955045decea2a18a93"
+    },
+    {
+      "path": "photo-credits.html",
+      "kind": "modified",
+      "sha256": "c873a1a79775e913946588f2ab6ad7da09899e2c94636da9c3d22d9877a82253"
+    },
+    {
+      "path": "sitemap.xml",
+      "kind": "modified",
+      "sha256": "dddfda4b41b6eb12d862401ed2a17e3c51255fbe569e395c003314f5c780b824"
+    }
+  ],
+  "removed": [],
+  "unexpected": [],
+  "inbound": [
+    {
+      "hub": "buy",
+      "url": "https://greggcostin.com/buy",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "hub": "sell",
+      "url": "https://greggcostin.com/sell",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "hub": "resources/mortgage-preapproval",
+      "url": "https://greggcostin.com/resources/mortgage-preapproval",
+      "exists": true,
+      "unchanged": true
+    },
+    {
+      "hub": "blog/what-moves-mortgage-rates",
+      "url": "https://greggcostin.com/blog/what-moves-mortgage-rates",
+      "exists": true,
+      "unchanged": true
+    }
+  ],
+  "restored": 321,
+  "preparation": "Verified baseline copied; factory --out --bundle wrote the article, hub, OG cards, sitemap and llms; photography credits, responsive markup, style bundle, header tools, coastal theme, page loading, blog discovery and the Pagefind index were applied; every unowned page was restored byte-for-byte from the baseline."
+}

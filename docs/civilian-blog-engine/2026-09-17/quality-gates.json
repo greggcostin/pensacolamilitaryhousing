@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "sealedAt": "2026-09-17T10:32:13.802Z",
+  "candidate": "C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-17\\release",
+  "candidateFingerprint": "5c129e3f4cd15612c337e0c0ef2e0c300356e1cd859126eb8aff579cf47b6124",
+  "sourceCommit": "ddc7c738e36f13b3d91c86d51cf8fde496c1b6c0",
+  "checks": [
+    {
+      "command": "node scripts/audit-civilian.mjs --root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-17\\release\\gc",
+      "exitCode": 0,
+      "output": "AUDIT CLEAN: 322 pages, 0 findings\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/audit-entity.mjs --pmh-root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-12\\release\\pmh --gc-root C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-17\\release\\gc",
+      "exitCode": 0,
+      "output": "ENTITY AUDIT CLEAN: 698 pages; full nodes on 3/2/2 pages; every other definition is the canonical compact or publisher shape\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/score-post.mjs fed-rate-hike-what-it-means --site gc --gate",
+      "exitCode": 0,
+      "output": "fed-rate-hike-what-it-means (greggcostin.com): 100/100 A\ncomponents: structure 25 | evidence 20 | local 10 | seo 20 | geo 15 | share 10\nfacts: {\"words\":1921,\"h2s\":9,\"questionH2s\":9,\"directAnswers\":8,\"walls\":0,\"scanAids\":8,\"numericSentences\":19,\"sourcedSentences\":10,\"datedSentences\":15,\"quotable\":5,\"distinctSources\":4,\"placesPerK\":2.1,\"links\":9,\"faqs\":7,\"table\":true,\"checklist\":true,\"actionItems\":4,\"workedExample\":true,\"ownVoice\":false,\"quickAnswer\":true,\"takeaways\":true,\"shareHook\":true,\"perishables\":7}\n\nno fails\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/analyze-formatting.mjs --file C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-17\\release\\gc\\blog\\fed-rate-hike-what-it-means.html --gate --out C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-17\\source\\docs\\civilian-blog-engine\\2026-09-17\\formatting.md",
+      "exitCode": 0,
+      "output": "analyzed 1 pages -> C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-17\\source\\docs\\civilian-blog-engine\\2026-09-17\\formatting.md\n\nWorst 10:\n  99  C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-17\\release\\gc\\blog\\fed-rate-hike-what-it-means  (0 walls, 227w/heading, 143w/aid)\n\nBest 5:\n  99  C:\\Users\\gregg\\pensacolamilitaryhousing\\artifacts\\civilian-blog-engine\\2026-09-17\\release\\gc\\blog\\fed-rate-hike-what-it-means\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/check-em-dashes.mjs",
+      "exitCode": 0,
+      "output": "OK: no em dashes in prose across 373 pages + App.jsx.\n",
+      "stderr": ""
+    }
+  ],
+  "renderedParity": true,
+  "reviewedPreviewFingerprint": "ce860c05fefdea653ac2a82d6f3f4edd9e79b4b3e0f72cb66166839b1474e818",
+  "scope": "GC deployment only. Retained PMH root (2026-09-12 release) is used for entity consistency, not a current PMH deployment assertion."
+}

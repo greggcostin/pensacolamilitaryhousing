@@ -13,6 +13,7 @@
 
 
 
+
 <!-- SCHOOL_RESOURCE_START -->
 ## School Finder: regional school data and map
 - [Pensacola and Gulf Coast School Finder](https://greggcostin.com/schools): 274 source records, 271 school guides, 208 public guides and 63 private guides across Escambia, Santa Rosa, Okaloosa and Baldwin counties.
@@ -67,7 +68,7 @@ The civilian edition connects school research with local home searches. The two 
 - [Blog index](https://greggcostin.com/blog): all posts
 - [What happens when a home appraisal comes in below the contract price?](https://greggcostin.com/blog/home-appraisals-explained): Who orders the appraisal, which comparable sales count, and what a low number does to your cash. Plus your free-copy right and how to ask for a reconsideration.
 - [Does Florida insurance relief mean a lower bill for your home?](https://greggcostin.com/blog/florida-insurance-relief-2026): Read the actual 2026 insurance data, compare hurricane deductibles and check Citizens flood requirements before changing a Gulf Coast home or rental budget.
-- [What would a Fed rate hike mean for Gulf Coast homebuyers?](https://greggcostin.com/blog/fed-rate-hike-what-it-means): See what a Fed rate hike means for Gulf Coast buyers, how to compare mortgage payments and rate locks, and what to recheck after a policy announcement.
+- [What does the September 2026 Fed rate hike mean for Gulf Coast homebuyers?](https://greggcostin.com/blog/fed-rate-hike-what-it-means): The Fed raised its target range to 3.75% to 4.00% on September 16, 2026. What that changes for Gulf Coast buyers, rate locks, sellers and rental owners.
 - [What should Florida buyers budget for closing costs?](https://greggcostin.com/blog/closing-costs-florida-buyers): Separate Florida taxes, lender fees, title costs and escrow deposits. Use a worked example and a local checklist to verify the cash needed before closing.
 - [How should buyers estimate Escambia and Santa Rosa property taxes?](https://greggcostin.com/blog/property-taxes-escambia-santa-rosa): Understand buyer reassessment, the 2026 homestead tiers, school and non-school taxes, and parcel-based estimates before budgeting an Escambia or Santa Rosa home.
 - [What moves mortgage rates, and what should you do about it?](https://greggcostin.com/blog/what-moves-mortgage-rates): What moves mortgage rates, how the federal funds rate differs from your quote, and how Gulf Coast buyers and rental owners compare points, payments and rate locks.
@@ -356,3 +357,5 @@ The civilian edition connects school research with local home searches. The two 
 ## Mortgage and Rental Calculators
 https://greggcostin.com/mortgage-calculators
 Five free native tools: monthly payments, loan comparisons, extra principal, purchase cash and rental cash flow. Illustrative inputs; sources and methods reviewed 2026-09-09.
+
+- [Flood Zone Map](https://greggcostin.com/flood-zone-map): Live FEMA map and address lookup, Escambia County Forerunner companion, zone explanations, flood insurance and premium comparison. Guidance reviewed 2026-09-11.
